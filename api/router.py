@@ -951,11 +951,9 @@ async def _abstat_sample_stream(request: ABSTATSampleRunRequest, user: SupabaseU
                     yield _sse_message("done", payload)
                     break
         finally:
-            stop_event.set()
-            skip_event.set()
-            skip_mining_event.set()
-            if task.done():
-                await task
+            # Client disconnected from SSE stream (closed tab, dropped network).
+            # The background worker continues executing and persisting events/subgraphs to DB.
+            pass
 
     return StreamingResponse(stream(), media_type="text/event-stream", headers=_stream_headers())
 
@@ -1202,6 +1200,11 @@ async def _abstat_llm_stream(request: ABSTATLLMRunRequest, user: SupabaseUser = 
     async def stream():
         queue: asyncio.Queue[tuple[str, dict[str, Any]]] = asyncio.Queue()
         loop = asyncio.get_running_loop()
+        stop_event = threading.Event()
+        _active_stop_events[run_id] = stop_event
+        if llm_request.sample_run_id:
+            _active_stop_events[llm_request.sample_run_id] = stop_event
+        _active_run_owners[run_id] = user.id
 
         def enqueue(kind: str, payload: dict[str, Any]) -> None:
             loop.call_soon_threadsafe(queue.put_nowait, (kind, payload))
@@ -1248,6 +1251,7 @@ async def _abstat_llm_stream(request: ABSTATLLMRunRequest, user: SupabaseUser = 
                         f"run:{llm_request.sample_run_id}",
                         f"sample-run-{llm_request.sample_run_id}.yaml",
                         event_sink,
+                        stop_event,
                     )
                 else:
                     if not llm_request.input_yaml_path:
@@ -1304,6 +1308,10 @@ async def _abstat_llm_stream(request: ABSTATLLMRunRequest, user: SupabaseUser = 
                     )
                 enqueue("error", {"run_id": run_id, "error": str(exc)})
             finally:
+                _active_stop_events.pop(run_id, None)
+                if llm_request.sample_run_id:
+                    _active_stop_events.pop(llm_request.sample_run_id, None)
+                _active_run_owners.pop(run_id, None)
                 enqueue("done", {"run_id": run_id})
 
         task = asyncio.create_task(asyncio.to_thread(worker))

@@ -567,9 +567,14 @@
     endpoint = run.endpoint || run.config?.endpoint || "";
     resetRunWorkspace();
     try {
+      const targetSampleRunId =
+        run.kind === "llm"
+          ? run.config?.sample_run_id || run.result?.sample_run_id || run.id
+          : run.id;
+
       const [storedEvents, storedSubgraphs] = await Promise.all([
         loadRunEvents(token, run.id),
-        loadRunSubgraphs(token, run.id),
+        loadRunSubgraphs(token, targetSampleRunId),
       ]);
       if (Array.isArray(storedEvents)) {
         for (const row of storedEvents) {
@@ -587,7 +592,7 @@
           });
         }
       }
-      if (Array.isArray(storedSubgraphs)) {
+      if (Array.isArray(storedSubgraphs) && storedSubgraphs.length > 0) {
         for (const row of storedSubgraphs) {
           const idx = row.subgraph_index;
           if (typeof idx !== "number") continue;
@@ -600,9 +605,33 @@
               data: {
                 index: idx,
                 dbId: row.id,
-                subgraph: row.payload,
+                subgraph: row.payload || row,
                 graph: row.graph,
                 support: row.support,
+              },
+            },
+          });
+        }
+      } else if (Array.isArray(run.result?.subgraphs) && run.result.subgraphs.length > 0) {
+        for (let idx = 0; idx < run.result.subgraphs.length; idx++) {
+          const sg = run.result.subgraphs[idx];
+          const actualIdx =
+            typeof sg?.source_subgraph_index === "number"
+              ? sg.source_subgraph_index
+              : typeof sg?.index === "number"
+                ? sg.index
+                : idx;
+          seenSubgraphIndexes.add(actualIdx);
+          handleStreamFrame({
+            event: "subgraph.discovered",
+            data: {
+              type: "subgraph.discovered",
+              stage: "mining",
+              data: {
+                index: actualIdx,
+                subgraph: sg,
+                graph: sg?.graph,
+                support: sg?.support,
               },
             },
           });

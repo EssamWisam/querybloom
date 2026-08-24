@@ -1,6 +1,6 @@
 <script>
   import hljs from "highlight.js";
-  import { loadRunQaPairs, streamLlm } from "../api.js";
+  import { cancelRun, loadRunQaPairs, streamLlm } from "../api.js";
   import FieldHelp from "./FieldHelp.svelte";
   import MiniSubgraphGraphs from "./MiniSubgraphGraphs.svelte";
   import {
@@ -833,6 +833,21 @@
       .length;
   }
 
+  let activeAbortController = null;
+
+  async function cancelGeneration() {
+    if (activeAbortController) {
+      activeAbortController.abort();
+      activeAbortController = null;
+    }
+    if (sampleRunId && token) {
+      await cancelRun(token, sampleRunId).catch(() => {});
+    }
+    running = false;
+    runningIndexes = new Set();
+    await hydrateStoredQa(sampleRunId, { force: true });
+  }
+
   async function generateSubgraphs(indexes) {
     const requested = [...new Set(indexes.map(Number))].filter(Number.isFinite);
     if (!requested.length) return;
@@ -845,6 +860,7 @@
       nextQaMap[index] = { index, status: "scheduled", qa_pairs: [] };
     }
     qaMap = nextQaMap;
+    activeAbortController = new AbortController();
 
     try {
       await streamLlm(
@@ -865,14 +881,18 @@
           },
         },
         addFrame,
+        activeAbortController.signal,
       );
       await hydrateStoredQa(sampleRunId, { force: true });
     } catch (err) {
-      error = err?.message || "QA generation failed";
+      if (err?.name !== "AbortError" && !String(err?.message || "").includes("aborted")) {
+        error = err?.message || "QA generation failed";
+      }
       await hydrateStoredQa(sampleRunId, { force: true });
     } finally {
       running = false;
       runningIndexes = new Set();
+      activeAbortController = null;
     }
   }
 
@@ -999,12 +1019,18 @@
     </div>
     {#if error}<p class="error">{error}</p>{/if}
     <div class="form-actions">
-      <button
-        type="submit"
-        disabled={running || !token || !sampleRunId || !selectedSubgraphCount}
-      >
-        {#if running}Generating…{:else}Generate {selectedSubgraphCount} selected{/if}
-      </button>
+      {#if running}
+        <button class="danger-btn" type="button" on:click={cancelGeneration}>
+          Cancel Generation
+        </button>
+      {:else}
+        <button
+          type="submit"
+          disabled={!token || !sampleRunId || !selectedSubgraphCount}
+        >
+          Generate {selectedSubgraphCount} selected
+        </button>
+      {/if}
       <button
         class="secondary-action"
         type="button"
@@ -1528,6 +1554,22 @@
     cursor: pointer;
     font-weight: 800;
     font-size: 0.88rem;
+  }
+
+  .danger-btn {
+    border: 0;
+    border-radius: 6px;
+    padding: 9px 13px;
+    background: #e53e3e;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 0.88rem;
+    transition: background 0.15s ease;
+  }
+
+  .danger-btn:hover {
+    background: #c53030;
   }
 
   button[type="submit"]:disabled {

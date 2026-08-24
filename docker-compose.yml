@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  querybloom-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: querybloom-prod
+    ports:
+      - "8002:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/workspace/querybloom
+      - /workspace/querybloom/.venv
+      - /workspace/querybloom/webapp/node_modules
+    restart: unless-stopped
+
+  querybloom-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: querybloom-dev
+    ports:
+      - "8003:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/workspace/querybloom
+      - /workspace/querybloom/.venv
+      - /workspace/querybloom/webapp/node_modules
+    restart: unless-stopped

@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field
 from litellm import batch_completion, completion
 from jinja2 import Environment, FileSystemLoader, Template
 import os
+import threading
 import yaml
 from tqdm import tqdm
 
@@ -483,20 +484,16 @@ def process_single_subgraph_pipeline(
     reword_questions_step: bool = True,
     reword_template: Any = None,
     event_sink: EventSink | None = None,
+    stop_event: Optional[threading.Event] = None,
 ) -> Dict[str, Any]:
-    """
-    Process a single subgraph: Generate questions -> Execute SPARQL -> (optional) Complexity Introduction -> (optional) Verify -> (optional) Reword.
-
-    Args:
-        verify_iterations: Number of verification rounds (0 = no verification, behaves as before).
-            1 = generate, execute, verify & mark but don't re-generate.
-            N>1 = up to N-1 re-generation attempts on failure; last verify is final.
-        introduce_complexity_step: If True, run the complexity introducer after initial generation
-            and before the verifier. Each pair is augmented with one non-trivial complexity
-            construct (FILTER, OPTIONAL, UNION, ORDER_BY_LIMIT, EXISTS, or SUBQUERY).
-        reword_questions_step: If True, audit NL questions for KG terminology / URI leakage
-            and rewrite only the question text of clean (correct) pairs.
-    """
+    if stop_event is not None and stop_event.is_set():
+        return {
+            **subgraph,
+            "is_meaningful": False,
+            "cancelled": True,
+            "qa_pairs": [],
+            "source_subgraph_index": subgraph_index,
+        }
     emit_event(
         event_sink,
         "subgraph.started",
@@ -907,6 +904,7 @@ def process_subgraphs_data(
     input_label: str = "in-memory",
     input_filename: str = "subgraphs.yaml",
     event_sink: EventSink | None = None,
+    stop_event: Optional[threading.Event] = None,
 ) -> tuple[List[Dict[str, Any]], str | None]:
     """
     Process subgraphs in memory, generate questions, execute queries,
@@ -1020,6 +1018,7 @@ def process_subgraphs_data(
                 reword_questions_step,
                 rw_template,
                 event_sink,
+                stop_event,
             ): (output_index, source_index)
             for output_index, (source_index, sg) in enumerate(indexed_subgraphs)
         }
@@ -1030,6 +1029,17 @@ def process_subgraphs_data(
             total=len(subgraphs),
             desc="Pipeline Progress (Gen + Exec)",
         ):
+            if stop_event is not None and stop_event.is_set():
+                for f in future_to_index:
+                    f.cancel()
+                emit_event(
+                    event_sink,
+                    "run.cancelled",
+                    "llm.batch",
+                    "QA generation cancelled by user",
+                    {"stage": "llm.batch"},
+                )
+                break
             output_index, source_index = future_to_index[future]
             try:
                 result = future.result()

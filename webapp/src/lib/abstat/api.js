@@ -1,3 +1,5 @@
+import { base } from "$app/paths";
+
 const SESSION_KEY = "grasp:abstat-session";
 
 function jsonHeaders(token = null) {
@@ -41,7 +43,7 @@ export function clearStoredSession() {
 }
 
 export async function login(email, password) {
-  const response = await fetch("/api/v1/auth/login", {
+  const response = await fetch(base + "/api/v1/auth/login", {
     method: "POST",
     headers: jsonHeaders(),
     body: JSON.stringify({ email, password }),
@@ -50,7 +52,7 @@ export async function login(email, password) {
 }
 
 export async function signup(email, password, displayName = null) {
-  const response = await fetch("/api/v1/auth/signup", {
+  const response = await fetch(base + "/api/v1/auth/signup", {
     method: "POST",
     headers: jsonHeaders(),
     body: JSON.stringify({ email, password, display_name: displayName || null }),
@@ -59,26 +61,26 @@ export async function signup(email, password, displayName = null) {
 }
 
 export async function loadDefaults() {
-  const response = await fetch("/api/v1/abstat/defaults");
+  const response = await fetch(base + "/api/v1/abstat/defaults");
   return readJson(response);
 }
 
 export async function loadRuns(token, limit = 30) {
-  const response = await fetch(`/api/v1/runs?limit=${limit}`, {
+  const response = await fetch(`${base}/api/v1/runs?limit=${limit}`, {
     headers: jsonHeaders(token),
   });
   return readJson(response);
 }
 
 export async function loadRun(token, runId) {
-  const response = await fetch(`/api/v1/runs/${encodeURIComponent(runId)}`, {
+  const response = await fetch(`${base}/api/v1/runs/${encodeURIComponent(runId)}`, {
     headers: jsonHeaders(token),
   });
   return readJson(response);
 }
 
 export async function cleanupStaleRuns(token) {
-  const response = await fetch("/api/v1/runs/cleanup-stale", {
+  const response = await fetch(base + "/api/v1/runs/cleanup-stale", {
     method: "POST",
     headers: jsonHeaders(token),
   });
@@ -86,7 +88,7 @@ export async function cleanupStaleRuns(token) {
 }
 
 export async function deleteRun(token, runId) {
-  const response = await fetch(`/api/v1/runs/${runId}`, {
+  const response = await fetch(`${base}/api/v1/runs/${runId}`, {
     method: "DELETE",
     headers: jsonHeaders(token),
   });
@@ -94,7 +96,7 @@ export async function deleteRun(token, runId) {
 }
 
 export async function cancelRun(token, runId) {
-  const response = await fetch(`/api/v1/abstat/sample/${encodeURIComponent(runId)}/cancel`, {
+  const response = await fetch(`${base}/api/v1/abstat/sample/${encodeURIComponent(runId)}/cancel`, {
     method: "POST",
     headers: jsonHeaders(token),
   });
@@ -106,14 +108,14 @@ export async function loadRunEvents(token, runId, options = {}) {
   if (options.after) params.set("after", options.after);
   if (options.limit) params.set("limit", String(options.limit));
   const query = params.toString();
-  const response = await fetch(`/api/v1/runs/${runId}/events${query ? `?${query}` : ""}`, {
+  const response = await fetch(`${base}/api/v1/runs/${runId}/events${query ? `?${query}` : ""}`, {
     headers: jsonHeaders(token),
   });
   return readJson(response);
 }
 
 export async function loadRunSubgraphs(token, runId) {
-  const response = await fetch(`/api/v1/runs/${runId}/subgraphs`, {
+  const response = await fetch(`${base}/api/v1/runs/${runId}/subgraphs`, {
     headers: jsonHeaders(token),
   });
   return readJson(response);
@@ -124,7 +126,7 @@ export async function loadRunQaPairs(token, runId, options = {}) {
   if (options.activeOnly === false) params.set("active_only", "false");
   const query = params.toString();
   const response = await fetch(
-    `/api/v1/runs/${runId}/qa-pairs${query ? `?${query}` : ""}`,
+    `${base}/api/v1/runs/${runId}/qa-pairs${query ? `?${query}` : ""}`,
     { headers: jsonHeaders(token) },
   );
   return readJson(response);
@@ -181,23 +183,23 @@ async function streamPost(url, token, payload, onFrame, signal = null) {
 }
 
 export function streamSampling(token, payload, onFrame, signal = null) {
-  return streamPost("/api/v1/abstat/sample/stream", token, payload, onFrame, signal);
+  return streamPost(base + "/api/v1/abstat/sample/stream", token, payload, onFrame, signal);
 }
 
 export async function skipDiscovery(token, runId) {
-  return fetch(`/api/v1/abstat/sample/${encodeURIComponent(runId)}/skip-discovery`, {
+  return fetch(`${base}/api/v1/abstat/sample/${encodeURIComponent(runId)}/skip-discovery`, {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
   });
 }
 
 export async function skipSubgraphs(token, runId) {
-  return fetch(`/api/v1/abstat/sample/${encodeURIComponent(runId)}/skip-subgraphs`, {
+  return fetch(`${base}/api/v1/abstat/sample/${encodeURIComponent(runId)}/skip-subgraphs`, {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
   });
 }
 
 export function streamLlm(token, payload, onFrame, signal = null) {
-  return streamPost("/api/v1/abstat/llm/stream", token, payload, onFrame, signal);
+  return streamPost(base + "/api/v1/abstat/llm/stream", token, payload, onFrame, signal);
 }
