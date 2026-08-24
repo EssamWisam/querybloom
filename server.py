@@ -55,7 +55,10 @@ if webapp_build_dir.exists():
             if file_path.exists() and file_path.is_file():
                 return FileResponse(str(file_path))
 
-        return FileResponse(str(webapp_build_dir / "index.html"))
+        return FileResponse(
+            str(webapp_build_dir / "index.html"),
+            headers={"Cache-Control": "no-cache, no-store, must-revalidate"},
+        )
 
 
 def run():

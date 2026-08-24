@@ -46,7 +46,7 @@ jobs:
                 echo "Detected dependency or Dockerfile changes: $CHANGED"
                 echo "rebuild=true" >> $GITHUB_OUTPUT
               else
-                echo "Only application code changed. No rebuild required."
+                echo "Only application code changed. No full container rebuild required."
                 echo "rebuild=false" >> $GITHUB_OUTPUT
               fi
             else
@@ -70,13 +70,28 @@ jobs:
             fi
           fi
 
+      - name: Rebuild Frontend Bundle if webapp files changed
+        run: |
+          cd /home/essam/querybloom
+          PREV="${{ steps.pull_code.outputs.prev_commit }}"
+          NEW="${{ steps.pull_code.outputs.new_commit }}"
+          REBUILD="${{ steps.check_rebuild.outputs.rebuild }}"
+          
+          # If container was not just fully rebuilt, recompile webapp build inside container
+          if [ "$REBUILD" != "true" ]; then
+            if [ "$PREV" != "$NEW" ] && git diff --name-only $PREV $NEW | grep -q '^webapp/'; then
+              echo "Frontend source files changed. Rebuilding SvelteKit static bundle inside container..."
+              docker exec querybloom-prod sh -c "cd /workspace/querybloom/webapp && rm -rf build .svelte-kit && BASE_PATH=/querybloom npm run build"
+            fi
+          fi
+
       - name: Verify Backend & Show Logs
         run: |
-          echo "Waiting 10s for backend reload & frontend build..."
-          sleep 10
+          echo "Waiting 5s for backend reload..."
+          sleep 5
           
           echo "====================== CONTAINER LOGS ======================"
-          docker logs --tail 50 querybloom-prod || true
+          docker logs --tail 40 querybloom-prod || true
           echo "============================================================"
           
           # Check health endpoint
