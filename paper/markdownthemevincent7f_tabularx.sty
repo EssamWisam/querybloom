@@ -1,0 +1,95 @@
+\ProvidesPackage{markdownthemevincent7f_tabularx}[2021/12/30]
+
+\RequirePackage{tabularx}
+\RequirePackage{ragged2e}
+
+\markdownSetup{
+  pipeTables = true,
+  tableCaptions = true,
+}
+
+\newcount\markdownLaTeXRowCounter
+\newcount\markdownLaTeXRowTotal
+\newcount\markdownLaTeXColumnCounter
+\newcount\markdownLaTeXColumnTotal
+\newtoks\markdownLaTeXTable
+\newtoks\markdownLaTeXTableAlignment
+\newtoks\markdownLaTeXTableEnd
+
+\markdownSetup{
+  renderers = {
+    table = {%
+      \markdownLaTeXTable={}%
+      \markdownLaTeXTableAlignment={}%
+      \markdownLaTeXTableEnd={%
+        \end{tabularx}\endgroup\par\addvspace{1em}%
+      }%
+      \ifx\empty#1\empty\else
+        \addto@hook\markdownLaTeXTable{%
+          \begin{table}
+          \caption{#1}
+          \centering
+        }%
+        \addto@hook\markdownLaTeXTableEnd{%
+          \end{table}%
+        }%
+      \fi
+      \addto@hook\markdownLaTeXTable{
+        \begingroup
+        \renewcommand{\arraystretch}{1.08}%
+        \begin{tabularx}{\linewidth}%
+      }%
+      \markdownLaTeXRowCounter=0%
+      \markdownLaTeXRowTotal=#2%
+      \markdownLaTeXColumnTotal=#3%
+      \markdownLaTeXRenderTableRow
+    }
+  }
+}
+
+\def\markdownLaTeXRenderTableRow#1{%
+  \markdownLaTeXColumnCounter=0%
+  \ifnum\markdownLaTeXRowCounter=0\relax
+    \markdownLaTeXReadAlignments#1%
+    \markdownLaTeXTable=\expandafter\expandafter\expandafter{%
+      \expandafter\the\expandafter\markdownLaTeXTable\expandafter{%
+        \the\markdownLaTeXTableAlignment
+      }%
+    }%
+    \addto@hook\markdownLaTeXTable{\hline}%
+  \else
+    \markdownLaTeXRenderTableCell#1%
+    \addto@hook\markdownLaTeXTable{\hline}%
+  \fi
+  \advance\markdownLaTeXRowCounter by 1\relax
+  \ifnum\markdownLaTeXRowCounter>\markdownLaTeXRowTotal\relax
+    \expandafter\the\expandafter\markdownLaTeXTable
+    \the\markdownLaTeXTableEnd
+    \expandafter\@gobble
+  \fi\markdownLaTeXRenderTableRow
+}
+
+\def\markdownLaTeXReadAlignments#1{%
+  \advance\markdownLaTeXColumnCounter by 1\relax
+  \if#1d%
+    \addto@hook\markdownLaTeXTableAlignment{|X<{\RaggedRight}}%
+  \else
+    \addto@hook\markdownLaTeXTableAlignment{|#1<{\RaggedRight}}%
+  \fi
+  \ifnum\markdownLaTeXColumnCounter<\markdownLaTeXColumnTotal
+    \relax
+  \else
+    \addto@hook\markdownLaTeXTableAlignment{|}%
+    \expandafter\@gobble
+  \fi\markdownLaTeXReadAlignments
+}
+
+\def\markdownLaTeXRenderTableCell#1{%
+  \advance\markdownLaTeXColumnCounter by 1\relax
+  \ifnum\markdownLaTeXColumnCounter<\markdownLaTeXColumnTotal\relax
+    \addto@hook\markdownLaTeXTable{#1&}%
+  \else
+    \addto@hook\markdownLaTeXTable{#1\\}%
+    \expandafter\@gobble
+  \fi\markdownLaTeXRenderTableCell
+}

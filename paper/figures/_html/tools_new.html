@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRASP Agent Tools</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #fff;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .phase-container {
+            position: relative;
+            padding: 50px 40px 40px 40px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            width: 100%;
+            box-sizing: border-box;
+            background: #f8fafc;
+        }
+
+        .phase-label {
+            position: absolute;
+            top: -18px;
+            left: 30px;
+            background: #fff;
+            padding: 5px 15px;
+            font-size: 18px;
+            font-weight: 800;
+            color: #475569;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tools-row {
+            display: grid;
+            grid-template-columns: repeat(var(--cols, 4), 1fr);
+            gap: 40px;
+        }
+
+        .tool {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tool-visual {
+            width: 100%;
+            aspect-ratio: 1.15;
+            border: 1.5px solid #d1d5db;
+            border-radius: 8px;
+            background: #fafbfc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        .tool-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-align: center;
+            color: #334155;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            line-height: 1.2;
+        }
+
+        .tool-fn {
+            font-size: 9px;
+            font-family: "SF Mono", Consolas, monospace;
+            color: #94a3b8;
+            text-align: center;
+            margin-top: -4px;
+        }
+
+        svg {
+            overflow: visible;
+        }
+
+        .rows-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .category-row {
+            display: flex;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .category-group {
+            position: relative;
+            padding: 30px 10px 10px 10px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .category-label-inner {
+            position: absolute;
+            top: -13px;
+            left: 14px;
+            background: #fff;
+            padding: 2px 10px;
+            font-size: 10px;
+            font-weight: 800;
+            border-radius: 6px;
+            border: 1.5px solid #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+    </style>
+</head>
+
+<body>
+    <svg style="position:absolute;width:0;height:0" aria-hidden="true">
+        <defs>
+            <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                <path d="M0 0L10 5L0 10z" fill="#2563eb" />
+            </marker>
+            <marker id="av" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                <path d="M0 0L10 5L0 10z" fill="#7c3aed" />
+            </marker>
+            <marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                <path d="M0 0L10 5L0 10z" fill="#d97706" />
+            </marker>
+            <marker id="at" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                <path d="M0 0L10 5L0 10z" fill="#0d9488" />
+            </marker>
+            <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                <path d="M0 0L10 5L0 10z" fill="#e11d48" />
+            </marker>
+            <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                <path d="M0 0L10 5L0 10z" fill="#16a34a" />
+            </marker>
+        </defs>
+    </svg>
+
+    <div class="container">
+        <div class="phase-container">
+            <div class="phase-label">KG Voyager Tools</div>
+            <div class="rows-wrapper">
+                <div class="category-row">
+                    <div class="category-group" style="flex:3; --cols:3; border-color:#93c5fd; background:#f8fbff;">
+                        <div class="category-label-inner" style="border-color:#93c5fd; color:#1d4ed8;">Search</div>
+                        <div class="tools-row" id="grid-search"></div>
+                    </div>
+                </div>
+                <div class="category-row">
+                    <div class="category-group" style="flex:2; --cols:2; border-color:#fde68a; background:#fffef8;">
+                        <div class="category-label-inner" style="border-color:#fde68a; color:#92400e;">Exploration</div>
+                        <div class="tools-row" id="grid-explore"></div>
+                    </div>
+                    <div class="category-group" style="flex:1; --cols:1; border-color:#86efac; background:#f8fdfb;">
+                        <div class="category-label-inner" style="border-color:#86efac; color:#166534;">Verification
+                        </div>
+                        <div class="tools-row" id="grid-exec"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
+    <script>
+        const VB_W = 160, VB_H = 108;
+
+        const R = (x, y, w, h, o = {}) => {
+            const { f = '#f1f5f9', s = '#334155', sw = 1.2, rx = 3, d = '' } = o;
+            return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${f}" stroke="${s}" stroke-width="${sw}"${d ? ` stroke-dasharray="${d}"` : ''}/>`
+        };
+        const T = (x, y, t, o = {}) => {
+            const { sz = '8', f = '#334155', a = 'middle', w = 'bold', fm = 'monospace', tr = '' } = o;
+            return `<text x="${x}" y="${y}" text-anchor="${a}" font-family="${fm}" font-size="${sz}" font-weight="${w}" fill="${f}"${tr ? ` transform="${tr}"` : ''}>${t}</text>`
+        };
+        const L = (x1, y1, x2, y2, o = {}) => {
+            const { s = '#64748b', sw = 1.2, m = '', d = '' } = o;
+            return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${s}" stroke-width="${sw}"${m ? ` marker-end="url(#${m})"` : ''} ${d ? `stroke-dasharray="${d}"` : ''}/>`
+        };
+        const C = (cx, cy, r, o = {}) => {
+            const { f = '#eff6ff', s = '#2563eb', sw = 1.5 } = o;
+            return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${f}" stroke="${s}" stroke-width="${sw}"/>`;
+        };
+        const P = (d, o = {}) => {
+            const { f = 'none', s = '#64748b', sw = 1.2, m = '' } = o;
+            return `<path d="${d}" fill="${f}" stroke="${s}" stroke-width="${sw}"${m ? ` marker-end="url(#${m})"` : ''}/>`
+        };
+        const S = (c) => `<svg width="100%" viewBox="0 0 ${VB_W} ${VB_H}" preserveAspectRatio="xMidYMid meet">${c}</svg>`;
+
+        const tools = [
+            {
+                id: 'class-search',
+                name: 'Class Search',
+                fn: 'search_all_classes',
+                svg: () => {
+                    let s = '';
+                    s += R(4, 2, 142, 16, { f: '#fff', s: '#2563eb', rx: 8 });
+                    s += T(14, 13, '🔍 "Model"', { sz: '7', f: '#64748b', a: 'start', fm: 'sans-serif', w: '500' });
+                    s += L(75, 18, 75, 26, { s: '#2563eb', sw: 1, m: 'ab' });
+                    s += R(8, 28, 134, 18, { f: '#eff6ff', s: '#2563eb', sw: 1, rx: 4 });
+                    s += T(14, 40, 'cgi:Model', { sz: '6.5', f: '#1e40af', a: 'start', w: '600' });
+                    s += R(108, 31, 30, 12, { f: '#dbeafe', s: '#93c5fd', sw: .6, rx: 6 });
+                    s += T(123, 40, '.252', { sz: '6', f: '#1d4ed8', w: '600' });
+                    s += L(8, 50, 136, 50, { s: '#ef4444', sw: .8, d: '3,2' });
+                    s += T(140, 53, '✂', { sz: '8', f: '#ef4444', a: 'start', fm: 'sans-serif' });
+                    const rest = [{ u: 'cgi:Method', sc: '.002' }, { u: 'cgi:Sim.Type', sc: '.002' }];
+                    rest.forEach((c, i) => {
+                        const y = 54 + i * 20;
+                        s += R(8, y, 134, 17, { f: '#f8fafc', s: '#e2e8f0', sw: .7, rx: 4 });
+                        s += T(14, y + 11, c.u, { sz: '6.5', f: '#94a3b8', a: 'start', w: '500' });
+                        s += R(108, y + 3, 30, 11, { f: '#f1f5f9', s: '#e2e8f0', sw: .4, rx: 5 });
+                        s += T(123, y + 11, c.sc, { sz: '6', f: '#94a3b8', w: '500' });
+                    });
+                    return S(s);
+                }
+            },
+            {
+                id: 'instance-lookup',
+                name: 'Instance Lookup',
+                fn: 'lookup_class_instances',
+                svg: () => {
+                    let s = '';
+                    s += R(33, 2, 84, 18, { f: '#f5f3ff', s: '#7c3aed', sw: 1.5, rx: 4 });
+                    s += T(75, 14, 'cgi:Model', { sz: '7.5', f: '#5b21b6', w: '700' });
+                    const inst = [{ x: 4, l: 'TaiESM' }, { x: 53, l: 'FIO-ESMv2' }, { x: 99, l: 'ACCESS-CM2' }];
+                    inst.forEach((o, i) => {
+                        s += L(75, 20, o.x + 24, 38, { s: '#7c3aed', sw: 1, m: 'av' });
+                        s += R(o.x, 42, 48, 16, { f: i === 0 ? '#f5f3ff' : '#fff', s: i === 0 ? '#7c3aed' : '#a78bfa', sw: i === 0 ? 2 : 1, rx: 4 });
+                        s += T(o.x + 24, 53, o.l, { sz: '6', f: i === 0 ? '#4c1d95' : '#6d28d9' });
+                    });
+                    s += T(75, 72, '· · ·', { sz: '10', f: '#c4b5fd', w: '400', fm: 'sans-serif' });
+                    s += R(12, 80, 126, 18, { f: '#faf5ff', s: '#c4b5fd', sw: 1, rx: 9, d: '3,2' });
+                    s += T(27, 92, '🔎 filter: "TaiESM" → ✓', { sz: '7', f: '#7c3aed', a: 'start', fm: 'sans-serif', w: '600' });
+                    return S(s);
+                }
+            },
+            {
+                id: 'property-search',
+                name: 'Property Search',
+                fn: 'search_all_properties',
+                svg: () => {
+                    let s = '';
+                    s += R(4, 2, 142, 16, { f: '#fff', s: '#0d9488', rx: 8 });
+                    s += T(14, 13, '🔍 "discuss"', { sz: '7', f: '#64748b', a: 'start', fm: 'sans-serif', w: '500' });
+                    s += L(75, 18, 75, 28, { s: '#0d9488', sw: 1, m: 'at' });
+                    const ps = [
+                        { u: 'cgi:PaperMentions', sc: '.042' },
+                        { u: 'cgi:MethodSolves', sc: '.037' },
+                    ];
+                    ps.forEach((p, i) => {
+                        const y = 30 + i * 20;
+                        s += R(8, y, 134, 17, { f: i === 0 ? '#f0fdfa' : '#fff', s: i === 0 ? '#0d9488' : '#cbd5e1', sw: 1, rx: 4 });
+                        s += T(14, y + 11, p.u, { sz: '6', f: '#134e4a', a: 'start', w: '600' });
+                        s += R(101, y + 3, 34, 11, { f: '#ccfbf1', s: '#99f6e4', sw: .5, rx: 5 });
+                        s += T(118, y + 11, p.sc, { sz: '5.5', f: '#0f766e', w: '700' });
+                    });
+                    s += L(8, 72, 142, 72, { s: '#ef4444', sw: .8, d: '3,2' });
+                    s += T(146, 75, '✂', { sz: '8', f: '#ef4444', a: 'start', fm: 'sans-serif' });
+                    s += R(8, 75, 134, 17, { f: '#f8fafc', s: '#e2e8f0', sw: 1, rx: 4 });
+                    s += T(14, 86, 'cgi:pubYear', { sz: '6', f: '#94a3b8', a: 'start', w: '600' });
+                    s += R(101, 78, 34, 11, { f: '#f1f5f9', s: '#e2e8f0', sw: .5, rx: 5 });
+                    s += T(118, 86, '.000', { sz: '5.5', f: '#94a3b8', w: '700' });
+                    return S(s);
+                }
+            },
+            {
+                id: 'entity-relations',
+                name: 'Entity Relations Exploration',
+                fn: 'explore_entity_relations',
+                svg: () => {
+                    let s = '';
+                    s += R(48, 40, 54, 20, { f: '#fef3c7', s: '#d97706', sw: 2, rx: 4 });
+                    s += T(75, 54, 'TaiESM', { sz: '8', f: '#92400e', w: '800' });
+                    const out = [
+                        { x: 117, y: 8, l: 'Problem', el: 'Solves', ex: 108, ey: 33, ea: -66 },
+                        { x: 122, y: 48, l: 'Task', el: 'UsedIn', ex: 112, ey: 50, ea: 18 },
+                        { x: 118, y: 82, l: 'Result', el: 'HasResult', ex: 110, ey: 67, ea: 68 },
+                    ];
+                    out.forEach((o, i) => {
+                        s += L(102, 50, o.x, o.y + 8, { s: '#d97706', sw: 1, m: 'aa' });
+                        s += T(o.ex, o.ey, o.el, { sz: '3.5', f: '#d97706', a: 'middle', fm: 'sans-serif', w: '600', tr: `rotate(${o.ea},${o.ex},${o.ey})` });
+                        s += R(o.x, o.y, 38, 16, { f: '#fff', s: '#fbbf24', sw: 1, rx: 3 });
+                        s += T(o.x + 19, o.y + 11, o.l, { sz: '6.5', f: '#78350f' });
+                    });
+                    const inc = [
+                        { x: 0, y: 12, l: 'Method', el: 'MethodUses', ex: 42, ey: 30, ea: 68 },
+                        { x: 0, y: 68, l: 'Paper', el: 'PaperHas', ex: 44, ey: 69, ea: -65 },
+                    ];
+                    inc.forEach((o, i) => {
+                        s += L(o.x + 36, o.y + 8, 48, 50, { s: '#f59e0b', sw: 1, m: 'aa' });
+                        s += T(o.ex, o.ey, o.el, { sz: '3.5', f: '#f59e0b', a: 'middle', fm: 'sans-serif', w: '600', tr: `rotate(${o.ea},${o.ex},${o.ey})` });
+                        s += R(o.x, o.y, 36, 16, { f: '#fff', s: '#fbbf24', sw: 1, rx: 3 });
+                        s += T(o.x + 18, o.y + 11, o.l, { sz: '6.5', f: '#78350f' });
+                    });
+                    return S(s);
+                }
+            },
+            {
+                id: 'property-usage',
+                name: 'Property Usage Exploration',
+                fn: 'explore_property_usage',
+                svg: () => {
+                    let s = '';
+                    s += R(12, 2, 126, 16, { f: '#fff1f2', s: '#e11d48', sw: 1.5, rx: 8 });
+                    s += T(75, 13, 'cgi:PaperMentions', { sz: '6.5', f: '#9f1239', w: '700' });
+                    s += L(75, 18, 75, 28, { s: '#e11d48', sw: 1, m: 'ar' });
+                    s += R(4, 30, 142, 70, { f: '#fff', s: '#fda4af', sw: 1, rx: 4 });
+                    s += R(4, 30, 142, 16, { f: '#fff1f2', s: '#fda4af', sw: 1, rx: 4 });
+                    s += T(28, 41, 'Domain', { sz: '6', f: '#9f1239', w: '700' });
+                    s += T(75, 41, 'Range', { sz: '6', f: '#9f1239', w: '700' });
+                    s += T(120, 41, 'Count', { sz: '6', f: '#9f1239', w: '700' });
+                    const rows = [{ d: 'Paper', r: 'Experiment', c: '41' }, { d: 'Paper', r: 'Project', c: '28' }, { d: 'Paper', r: 'Activity', c: '19' }];
+                    rows.forEach((r, i) => {
+                        const y = 50 + i * 16;
+                        s += L(4, y, 146, y, { s: '#fecdd3', sw: .4 });
+                        s += T(28, y + 11, r.d, { sz: '6', f: '#334155', w: '500' });
+                        s += T(75, y + 11, r.r, { sz: '6', f: '#334155', w: '500' });
+                        s += T(120, y + 11, r.c, { sz: '6', f: '#be123c', w: '700' });
+                    });
+                    return S(s);
+                }
+            },
+            {
+                id: 'execute-query',
+                name: 'Execute Query',
+                fn: 'execute_query',
+                svg: () => {
+                    let s = '';
+                    s += R(4, 2, 142, 52, { f: '#1e293b', s: '#334155', sw: 1.2, rx: 5 });
+                    s += C(12, 9, 2, { f: '#ff5f56', s: 'none', sw: 0 });
+                    s += C(19, 9, 2, { f: '#ffbd2e', s: 'none', sw: 0 });
+                    s += C(26, 9, 2, { f: '#27c93f', s: 'none', sw: 0 });
+                    s += T(10, 22, 'SELECT ?meth ?innov WHERE {', { sz: '5.5', f: '#94a3b8', a: 'start', w: '500' });
+                    s += T(10, 31, '  ?meth UsesModel ?m .', { sz: '5.5', f: '#38bdf8', a: 'start', w: '500' });
+                    s += T(10, 40, '  ?m cgi:name "TaiESM" .', { sz: '5.5', f: '#4ade80', a: 'start', w: '500' });
+                    s += T(10, 49, '  ?meth HasInnovation ?innov }', { sz: '5.5', f: '#38bdf8', a: 'start', w: '500' });
+                    s += P('M72 58 L80 63 L72 68 Z', { f: '#16a34a', s: '#16a34a', sw: 0 });
+                    s += R(6, 74, 138, 28, { f: '#fff', s: '#86efac', sw: 1.2, rx: 4 });
+                    s += R(6, 74, 138, 12, { f: '#f0fdf4', s: '#86efac', sw: 1.2, rx: 4 });
+                    s += T(42, 83, '?meth', { sz: '5.5', f: '#166534', w: '700' });
+                    s += T(112, 83, '?innov', { sz: '5.5', f: '#166534', w: '700' });
+                    s += L(75, 74, 75, 102, { s: '#bbf7d0', sw: .5 });
+                    s += T(38, 96, 'Deep Convection', { sz: '5', f: '#475569', w: '500' });
+                    s += T(112, 96, 'New trigger function…', { sz: '4.5', f: '#475569', w: '500' });
+                    return S(s);
+                }
+            },
+        ];
+
+        const groupMap = {
+            'search_all_classes': 'search',
+            'lookup_class_instances': 'search',
+            'search_all_properties': 'search',
+            'explore_entity_relations': 'explore',
+            'explore_property_usage': 'explore',
+            'execute_query': 'exec',
+        };
+        tools.forEach(t => t.group = groupMap[t.fn]);
+
+        ['search', 'exec', 'explore'].forEach(g => {
+            document.getElementById('grid-' + g).innerHTML = tools
+                .filter(t => t.group === g)
+                .map(t => `
+        <div class="tool" id="tool-${t.id}">
+            <div class="tool-visual">${t.svg()}</div>
+            <div class="tool-label">${t.name}</div>
+            <div class="tool-fn">${t.fn}()</div>
+        </div>
+    `).join('');
+        });
+
+        const lines = [];
+        function drawLines() {
+            lines.forEach(l => l.remove());
+            lines.length = 0;
+
+            const el = id => document.getElementById('tool-' + id);
+
+            lines.push(new LeaderLine(
+                el('class-search'), el('instance-lookup'),
+                {
+                    color: 'rgba(148, 163, 184, 0.75)', size: 2, path: 'straight',
+                    startSocket: 'right', endSocket: 'left',
+                    startPlug: 'disc', startPlugSize: 1.5,
+                    endPlug: 'arrow1', endPlugSize: 2,
+                    dash: { len: 6, gap: 4 },
+                }
+            ));
+            lines.push(new LeaderLine(
+                el('class-search'), el('entity-relations'),
+                {
+                    color: 'rgba(148, 163, 184, 0.75)', size: 2, path: 'grid',
+                    startSocket: 'left', endSocket: 'left',
+                    startSocketGravity: 30, endSocketGravity: 30,
+                    startPlug: 'disc', startPlugSize: 1.5,
+                    endPlug: 'arrow1', endPlugSize: 2,
+                    dash: { len: 6, gap: 4 },
+                }
+            ));
+            lines.push(new LeaderLine(
+                el('property-search'), el('property-usage'),
+                {
+                    color: 'rgba(148, 163, 184, 0.75)', size: 2, path: 'grid',
+                    startSocket: 'left', endSocket: 'right',
+                    startSocketGravity: 10, endSocketGravity: 30,
+                    startPlug: 'disc', startPlugSize: 1.5,
+                    endPlug: 'arrow1', endPlugSize: 2,
+                    dash: { len: 6, gap: 4 },
+                }
+            ));
+        }
+
+        window.addEventListener('load', () => {
+            requestAnimationFrame(drawLines);
+        });
+
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => lines.forEach(l => l.position()), 100);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            lines.forEach(l => l.position());
+        });
+        window.addEventListener('afterprint', () => {
+            lines.forEach(l => l.position());
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,964 @@
+metadata:
+  source_file: AgCros.xlsx
+  generated_at: '2026-02-18 10:59:59'
+  total_sheets: 31
+  note: Columns marked with * have 100% null values
+sheets:
+- name: metacitations
+  row_count: 177
+  column_count: 12
+  columns:
+  - id
+  - location_id
+  - date_published
+  - citation_type
+  - title
+  - is_part_of
+  - author
+  - correspond_author
+  - identifier_usda_ars
+  - description
+  - citation
+  - citation_url *
+- name: metalocationoverview
+  row_count: 58
+  column_count: 10
+  columns:
+  - id
+  - location_id
+  - location_name
+  - location_descriptor
+  - site_descriptor *
+  - research_unit *
+  - funding_source
+  - start_date
+  - end_date
+  - keyword_list *
+- name: metapersons
+  row_count: 158
+  column_count: 16
+  columns:
+  - id
+  - location_id
+  - orcid *
+  - last_name
+  - first_name
+  - middle_name
+  - suffix
+  - role_in_study
+  - primary_contact
+  - department
+  - organization
+  - profession
+  - email
+  - telephone
+  - web_site
+  - note
+- name: metasites
+  row_count: 65
+  column_count: 15
+  columns:
+  - id
+  - location_id
+  - site_id
+  - city
+  - county
+  - state_province
+  - country
+  - postal_code
+  - spatial_description
+  - lat_dec_deg *
+  - long_dec_deg *
+  - elevation_m *
+  - mlra *
+  - native_veg *
+  - site_history *
+- name: metatreatments
+  row_count: 774
+  column_count: 19
+  columns:
+  - id
+  - location_id
+  - treatment_id
+  - start_date
+  - treatment_descriptor
+  - rotation_descriptor
+  - tillage_descriptor
+  - n_treatment_descriptor
+  - project_scenario
+  - fertilizer_amendment_class
+  - cover_crop
+  - residue_removal
+  - irrigation
+  - organic_management
+  - grazing_rate
+  - animal_species
+  - operation *
+  - tile_drainage
+  - project_names
+- name: metaunits
+  row_count: 4059
+  column_count: 11
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - site_id
+  - start_date
+  - end_date
+  - keyword_list *
+  - unit_url
+  - change_in_management *
+  - soil_series *
+  - soil_classification *
+- name: allcellcomments
+  row_count: 533
+  column_count: 7
+  columns:
+  - id
+  - location_id
+  - date_entered
+  - sheet_name
+  - field_name
+  - reporting_person_name
+  - comment
+- name: comometeorology
+  row_count: 149774
+  column_count: 23
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - date
+  - time
+  - treatment_id
+  - temp_max_degc
+  - temp_min_degc
+  - precip_mm_d
+  - bad_value_flag
+  - rh_pct
+  - dew_point_degc
+  - wind_speed_m_s
+  - solar_radiation_veg_mj_m2_d
+  - solar_radiation_bare_mj_m2_d
+  - soil_temp_5cm_degc
+  - soil_temp_10cm_degc
+  - wind_direction_deg_from_n
+  - open_pan_evap_mm_d
+  - closed_pan_evap_mm_d *
+  - atmos_n_deposition_kg_ha_d
+  - total_net_radiation_mj_m2_d
+  - snow_mm_d *
+- name: measbiomasscho
+  row_count: 1367
+  column_count: 34
+  columns:
+  - location_id
+  - unit_id
+  - date
+  - treatment_id
+  - growth_stage
+  - crop
+  - plant_fraction
+  - glucan_g_kg
+  - xylan_g_kg
+  - galactan_g_kg
+  - arabinan_g_kg
+  - mannan_g_kg *
+  - lignin_g_kg
+  - neutral_det_fiber_g_kg
+  - acid_det_fiber_g_kg
+  - acid_soluble_lignin_g_kg *
+  - acid_insoluble_lignin_g_kg *
+  - crude_protein_g_kg
+  - non_fiber_carbs_g_kg
+  - ash_g_kg
+  - glucan_std_g_kg *
+  - xylan_std_g_kg *
+  - galactan_std_g_kg *
+  - arabinan_std_g_kg *
+  - mannan_std_g_kg *
+  - lignin_std_g_kg *
+  - neutral_det_fiber_std_g_kg *
+  - acid_det_fiber_std_g_kg *
+  - acid_soluble_lignin_std_g_kg *
+  - acid_insoluble_lignin_std_g_kg *
+  - crude_protein_std_g_kg *
+  - non_fiber_carbs_std_g_kg *
+  - ash_std_g_kg *
+  - id
+- name: measbiomassenergy
+  row_count: 799
+  column_count: 14
+  columns:
+  - location_id
+  - unit_id
+  - date
+  - treatment_id
+  - growth_stage
+  - crop
+  - plant_fraction
+  - volatile_matter_g_kg *
+  - mineral_matter_g_kg
+  - gross_calorific_value_mj_kg
+  - volatile_matter_std_g_kg *
+  - ash_std_g_kg *
+  - gross_calorific_value_std_mj_kg *
+  - id
+- name: measbiomassminan
+  row_count: 6739
+  column_count: 38
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - date
+  - treatment_id
+  - growth_stage
+  - crop
+  - plant_fraction
+  - c_concentration_g_kg
+  - n_concentration_g_kg
+  - p_concentration_g_kg
+  - k_concentration_g_kg
+  - ca_concentration_g_kg
+  - mg_concentration_g_kg
+  - s_concentration_g_kg
+  - na_concentration_g_kg
+  - cl_concentration_g_kg *
+  - al_concentration_mg_kg
+  - b_concentration_mg_kg
+  - cu_concentration_mg_kg
+  - fe_concentration_mg_kg
+  - mn_concentration_mg_kg
+  - zn_concentration_mg_kg
+  - c_concentration_std_g_kg *
+  - n_concentration_std_g_kg *
+  - p_concentration_std_g_kg *
+  - k_concentration_std_g_kg *
+  - ca_concentration_std_g_kg *
+  - mg_concentration_std_g_kg *
+  - s_concentration_std_g_kg *
+  - na_concentration_std_g_kg *
+  - cl_concentration_std_g_kg *
+  - al_concentration_std_mg_kg *
+  - b_concentration_std_mg_kg *
+  - cu_concentration_std_mg_kg *
+  - fe_concentration_std_mg_kg *
+  - mn_concentration_std_mg_kg *
+  - zn_concentration_std_mg_kg *
+- name: measgasnutrientloss
+  row_count: 2231
+  column_count: 18
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - date
+  - time *
+  - treatment_id
+  - growth_stage
+  - crop
+  - sampling_start_stop_interval
+  - model_if_simulated
+  - nox_n_g_ha_day *
+  - n2_n_g_ha_day *
+  - n2o_n_g_ha_day
+  - nh3_n_kg_ha_day
+  - nox_n_std_g_ha_day *
+  - n2_n_std_g_ha_day *
+  - n2o_n_std_g_ha_day *
+  - nh3_n_std_kg_ha_day *
+- name: measghgflux
+  row_count: 132766
+  column_count: 24
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - date
+  - time
+  - treatment_id
+  - crop
+  - chamber_placement
+  - n2o_gn_ha_d
+  - n2o_interp_eq_0_obs_eq_1
+  - co2_gc_ha_d
+  - co2_interp_eq_0_obs_eq_1
+  - ch4_gc_ha_d
+  - ch4_interp_eq_0_obs_eq_1
+  - air_temp_degc
+  - soil_temp_degc
+  - soil_moisture_pct_vol
+  - soil_moisture_depth_cm
+  - n2o_std_gn_ha_d
+  - co2_std_gc_ha_d
+  - ch4_std_gc_ha_d
+  - air_temp_std_degc
+  - soil_temp_std_degc
+  - soil_moisture_std_pct_vol
+- name: measgrazingplants
+  row_count: 6996
+  column_count: 39
+  columns:
+  - location_id
+  - unit_id
+  - date
+  - treatment_id
+  - species_mix
+  - growth_stage
+  - functional_groups *
+  - broadleaf_vs_grass
+  - abovegr_bio_kg_ha_dry
+  - surface_litter_kg_ha_dry
+  - standing_dead_kg_ha_dry
+  - lai_kg_ha_dry
+  - biomass_n_pct
+  - lignin_pct *
+  - ground_cover_pct *
+  - abovegr_bio_c_kgc_ha
+  - abovegr_bio_n_kgn_ha
+  - belowgr_bio_c_kgc_ha *
+  - belowgr_bio_n_kgn_ha *
+  - anpp_c_kgc_ha_yr *
+  - anpp_n_kgn_ha_yr *
+  - bnpp_c_kgc_ha_yr *
+  - bnpp_n_kgn_ha_yr *
+  - abovegr_bio_std_kg_ha_dry *
+  - surface_litter_std_kg_ha_dry *
+  - standing_dead_std_kg_ha_dry *
+  - lai_std_kg_ha *
+  - biomass_n_std_pct *
+  - lignin_std_pct *
+  - ground_cover_std_pct *
+  - abovegr_bio_c_std_kgc_ha *
+  - abovegr_bio_n_std_kgn_ha *
+  - belowgr_bio_c_std_kgc_ha *
+  - belowgr_bio_n_std_kgn_ha *
+  - anpp_c_std_kgc_ha_yr *
+  - anpp_n_std_kgn_ha_yr *
+  - bnpp_c_std_kgc_ha_yr *
+  - bnpp_n_std_kgn_ha_yr *
+  - id
+- name: measharvestfraction
+  row_count: 9470
+  column_count: 20
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - sampling_date
+  - treatment_id
+  - growth_stage
+  - crop
+  - plant_fraction
+  - frac_fresh_matt_kg_ha
+  - frac_dry_matt_kg_ha
+  - frac_moist_pct
+  - frac_c_kgc_ha
+  - frac_n_kgn_ha
+  - grain_weight_mg_kernel *
+  - frac_fresh_matt_std_kg_ha *
+  - frac_dry_matt_std_kg_ha *
+  - frac_moist_std_pct *
+  - frac_c_std_kgc_ha *
+  - frac_n_std_kgn_ha *
+  - grain_weight_std_mg_kernel *
+- name: measnutreff
+  row_count: 5159
+  column_count: 13
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - date
+  - treatment_id
+  - growth_stage
+  - crop
+  - plant_fraction
+  - fraction_n_kgn_ha
+  - nitrogen_use_efficiency_pct
+  - agronomic_efficiency_kg_kg
+  - nutrient_efficiency_ratio_kg_kg
+  - nitrogen15_use_efficiency_kgn_ha *
+- name: measresiduemgnt
+  row_count: 18512
+  column_count: 46
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - date
+  - treatment_id
+  - growth_stage
+  - crop
+  - harvested_frac
+  - corn_ear_height_cm *
+  - above_g_biomass_kg_ha
+  - unit_grain_weight_mg
+  - grain_dry_matt_kg_ha
+  - grain_moist_pct
+  - grain_c_kgc_ha
+  - grain_n_kgn_ha
+  - harv_nongrain_bio_kg_ha
+  - harv_res_moist_pct
+  - harv_res_c_kgc_ha
+  - harv_res_n_kgn_ha
+  - nonharv_nongrain_bio_kg_ha
+  - nonharv_res_moist_pct
+  - nonharv_res_c_kgc_ha
+  - nonharv_res_n_kgn_ha
+  - root_dry_matt_kg_ha *
+  - root_moist_pct *
+  - root_c_kgc_ha *
+  - root_n_kgn_ha *
+  - corn_ear_height_std_cm *
+  - above_g_biomass_std_kg_ha
+  - unit_grain_weight_std_mg *
+  - grain_dry_matt_std_kg_ha
+  - grain_moist_std_pct
+  - grain_c_std_kgc_ha
+  - grain_n_std_kgn_ha
+  - harv_nongrain_bio_std_kg_ha *
+  - harv_res_moist_std_pct *
+  - harv_res_c_std_kgc_ha
+  - harv_res_n_std_kgn_ha
+  - nonharv_nongrain_bio_std_kg_ha *
+  - nonharv_res_moist_std_pct *
+  - nonharv_res_c_std_kgc_ha *
+  - nonharv_res_n_std_kgn_ha *
+  - root_dry_matt_std_kg_ha *
+  - root_moist_std_pct *
+  - root_c_std_kgc_ha *
+  - root_n_std_kgn_ha *
+- name: meassoilbiol
+  row_count: 18273
+  column_count: 66
+  columns:
+  - location_id
+  - unit_id
+  - date
+  - treatment_id
+  - upper_cm
+  - lower_cm
+  - model_if_simulated *
+  - phenol_oxidase_umol_product_dopachrome_g_1_dry_soil_h_1 *
+  - beta_glucosidase_mg_kg_hr
+  - beta_glucosaminidase_nag_mg_kg_hr
+  - acid_phosphatase_mg_kg_hr
+  - alkaline_phosphatase_mg_kg_hr
+  - phosphodiesterase *
+  - arylsulfatase *
+  - combined_assay_h_i_j_m *
+  - urease_mg_nh4plus_kg_hr *
+  - l_asparaginase_mg_nh4plus_kg_hr *
+  - l_glutaminase_mg_nh4plus_kg_hr *
+  - fluorescein_diacetate_hydrolysis_mg_kg_hr
+  - ammonia_oxidation_mg_no2_kg_1_soil_h_1 *
+  - ace_protein_kg_kg *
+  - glomalin_g_kg *
+  - iden_plant_material_c_g_kg *
+  - pom_c_g_kg
+  - microbial_biomass_c_mg_kg
+  - microbial_biomass_n_mg_kg
+  - net_nh4_n_mg_n_kg_dry_soil *
+  - n2_fixed_µmol_kg_dry_soil *
+  - _7_0d_amm_mg_g *
+  - _28_0d_amm_mg_g *
+  - _7_0d_nit_mg_g *
+  - _28_0d_nit_mg_g *
+  - _7_0d_nmin_mg_g *
+  - _28_0d_nmin_mg_g *
+  - nifh_qpcr_ct *
+  - rhizosphere_nifh_qpcr_ct *
+  - phenol_oxidase_std_umol_product_dopachrome_g_1_dry_soil_h_1 *
+  - beta_glucosidase_std_mg_kg_hr *
+  - beta_glucosaminidase_nag_std_mg_kg_hr *
+  - acid_phosphatase_std_mg_kg_hr *
+  - alkaline_phosphatase_std_mg_kg_hr *
+  - phosphodiesterase_std *
+  - arylsulfatase_std *
+  - combined_assay_h_i_j_m_std *
+  - urease_std_mg_nh4plus_kg_hr *
+  - l_asparaginase_std_mg_nh4plus_kg_hr *
+  - l_glutaminase_std_mg_nh4plus_kg_hr *
+  - fluorescein_diacetate_hydrolysis_std_mg_kg_hr *
+  - ammonia_oxidation_std_mg_no2_kg_1_soil_h_1 *
+  - ace_protein_std_g_kg *
+  - glomalin_std_g_kg *
+  - iden_plant_material_c_std_g_kg *
+  - pom_c_std_g_kg *
+  - microbial_biomass_c_std_mgc_kg *
+  - microbial_biomass_n_std_mgn_kg *
+  - net_nh4_n_std_mg_n_kg_dry_soil *
+  - n2_fixed_std_µmol_kg_dry_soil *
+  - _7_0d_amm_std_mg_g *
+  - _28_0d_amm_std_mg_g *
+  - _7_0d_nit_std_mg_g *
+  - _28_0d_nit_std_mg_g *
+  - _7_0d_nmin_std_mg_g *
+  - _28_0d_nmin_std_mg_g *
+  - nifh_qpcr_ct_std *
+  - rhizosphere_nifh_qpcr_ct_std *
+  - id
+- name: meassoilchem
+  row_count: 54269
+  column_count: 60
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - date
+  - treatment_id
+  - upper_cm
+  - lower_cm
+  - model_if_simulated
+  - delta_13cvpdb_pm *
+  - delta_15nair_pm *
+  - pctc *
+  - pctn *
+  - ph
+  - tsc_gc_kg
+  - tsn_gn_kg
+  - inorganic_c_gc_kg
+  - organic_c_gc_kg
+  - mineral_c_gc_kg
+  - cec_cmol_kg
+  - electric_conduc_siemens_m
+  - soluble_c_mgc_kg *
+  - nh4_mgn_kg
+  - no3_mgn_kg
+  - p_mgp_kg
+  - k_mgk_kg
+  - ca_mgca_kg
+  - mg_mgmg_kg
+  - cu_mgcu_kg
+  - fe_mgfe_kg
+  - mn_mgmn_kg
+  - zn_mgzn_kg
+  - mineralizable_n_gn_kg *
+  - nitrite_mgn_kg *
+  - cesium_137_bq_kg
+  - lead_210_bq_kg
+  - beryllium_7_bq_kg
+  - ph_std
+  - tsc_std_gc_kg
+  - tsn_std_gn_kg
+  - inorganic_c_std_gc_kg *
+  - organic_std_gc_kg *
+  - mineral_c_std_gc_kg *
+  - cec_std_cmol_kg *
+  - electric_conduc_std_siemens_m *
+  - soluble_c_std_mgc_kg *
+  - nh4_std_mgn_kg
+  - no3_std_mgn_kg
+  - p_std_mgp_kg *
+  - k_std_mgk_kg *
+  - ca_std_mgca_kg *
+  - mg_std_mgmg_kg *
+  - cu_std_mgcu_kg *
+  - fe_std_mgfe_kg *
+  - mn_std_mgmn_kg *
+  - zn_std_mgzn_kg *
+  - mineralizable_n_std_gn_kg *
+  - nitrite_std_mgn_kg *
+  - cesium_137_std_bq_kg *
+  - lead_210_std_bq_kg *
+  - beryllium_7_std_bq_kg *
+- name: meassoilcover
+  row_count: 1034
+  column_count: 8
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - date
+  - treatment_id
+  - timing_descriptor
+  - crop
+  - soil_w_residue_pct *
+- name: meassoilphys
+  row_count: 28237
+  column_count: 28
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - date
+  - treatment_id
+  - upper_cm
+  - lower_cm
+  - model_if_simulated
+  - sand_pct
+  - silt_pct
+  - clay_pct
+  - bulk_density_g_cm3
+  - wilting_point_pct_volume
+  - field_capacity_pct_volume
+  - ksat_cm_sec
+  - moisture_release_curve *
+  - soil_heat_flux_mj_m2 *
+  - aggregation_pct *
+  - h2o_stable_aggregates_pct
+  - near_infrared_c_gc_kg *
+  - bulk_density_std_g_cm3
+  - wilting_point_std_pct_volume *
+  - field_capacity_std_pct_volume
+  - ksat_std_cm_sec
+  - soil_heat_flux_std_mj_m2 *
+  - macro_aggregates_std_pct *
+  - h2o_stable_aggregates_std_pct *
+  - near_infrared_c_std_gc_kg *
+- name: measwaterqualityarea
+  row_count: 681
+  column_count: 70
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - date
+  - time *
+  - treatment_id
+  - growth_stage *
+  - crop *
+  - sampling_start_stop_interval *
+  - model_if_simulated *
+  - surface_or_leaching
+  - sampling_depth_cm
+  - losses_or_deposition
+  - erosion_method *
+  - erosion_t_sediment_ha *
+  - erosion_total_suspended_solids_t_ha *
+  - erosion_total_solidst_ha
+  - soil_organic_matter_kg_ha *
+  - soil_organic_carbon_kg_c_ha *
+  - water_mm
+  - kg_total_n_ha
+  - kg_total_p_ha
+  - kg_nh4_n_ha
+  - kg_no3_n_ha
+  - total_dissolved_n_kg_n_ha *
+  - kg_total_dissolved_p_ha
+  - kg_total_cl_ha *
+  - ph *
+  - ec_ms_cm *
+  - dissolved_kg_k_ha *
+  - dissolved_kg_s_ha *
+  - dissolved_kg_ca_ha *
+  - dissolved_kg_mg_ha *
+  - dissolved_g_cu_ha *
+  - dissolved_g_fe_ha *
+  - dissolved_g_mn_ha *
+  - dissolved_g_zn_ha *
+  - dissolved_g_b_ha *
+  - dissolved_g_mo_ha *
+  - dissolved_kg_al_ha *
+  - dissolved_kg_na_ha *
+  - dissolved_kg_si_ha *
+  - erosion_t_sediment_ha_std *
+  - erosion_total_suspended_solids_t_ha_std *
+  - erosion_total_solids_t_ha_std *
+  - soil_organic_matter_kg_ha_std *
+  - soil_organic_carbon_kg_c_ha_std *
+  - water_mm_std *
+  - kg_total_n_ha_std *
+  - kg_total_p_ha_std *
+  - kg_nh4_n_ha_std *
+  - kg_no3_n_ha_std *
+  - total_dissolved_n_kg_n_ha_std *
+  - kg_total_dissolved_p_ha_std *
+  - kg_total_cl_ha_std *
+  - ph_std *
+  - ec_ms_cm_std *
+  - dissolved_kg_k_ha_std *
+  - dissolved_kg_s_ha_std *
+  - dissolved_kg_ca_ha_std *
+  - dissolved_kg_mg_ha_std *
+  - dissolved_g_cu_ha_std *
+  - dissolved_g_fe_ha_std *
+  - dissolved_g_mn_ha_std *
+  - dissolved_g_zn_ha_std *
+  - dissolved_g_b_ha_std *
+  - dissolved_g_mo_ha_std *
+  - dissolved_kg_al_ha_std *
+  - dissolved_kg_na_ha_std *
+  - dissolved_kg_si_ha_std *
+- name: measwaterqualityconc
+  row_count: 2305
+  column_count: 70
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - date
+  - time *
+  - treatment_id
+  - growth_stage
+  - crop
+  - sampling_start_stop_interval
+  - model_if_simulated
+  - surface_or_leaching
+  - sampling_depth_cm
+  - losses_or_deposition *
+  - erosion_method *
+  - erosion_kg_sediment *
+  - erosion_total_suspended_solids_kg *
+  - erosion_total_solids_kg *
+  - soil_organic_matter_mg_som_l *
+  - soil_organic_carbon_mg_c_l *
+  - water_mm
+  - mg_total_n_l
+  - mg_total_p_l
+  - mg_nh4_n_l
+  - mg_no3_n_l
+  - total_dissolved_n_mg_l *
+  - mg_total_dissolved_p_l
+  - mg_cl_l *
+  - ph *
+  - ec_ms_cm_ *
+  - dissolved_mg_k_l *
+  - dissolved_mg_s_l *
+  - dissolved_mg_ca_l *
+  - dissolved_mg_mg_l *
+  - dissolved_ug_cu_l *
+  - dissolved_ug_fe_l *
+  - dissolved_ug_mn_l *
+  - dissolved_ug_zn_l *
+  - dissolved_ug_b_l *
+  - dissolved_ug_mo_l *
+  - dissolved_mg_al_l *
+  - dissolved_mg_na_l *
+  - dissolved_mg_si_l *
+  - erosion_kg_sediment_std *
+  - erosion_total_suspended_solids_kg_std *
+  - erosion_total_solids_kg_std *
+  - soil_organic_matter_mg_som_l_std *
+  - soil_organic_carbon_mg_c_l_std *
+  - water_mm_std *
+  - mg_total_n_l_std *
+  - mg_total_p_l_std *
+  - mg_nh4_n_l_std *
+  - mg_no3_n_l_std *
+  - total_dissolved_n_mg_l_std *
+  - mg_total_dissolved_p_l_std *
+  - mg_cl_l_std *
+  - ph_std *
+  - ec_ms_cm_std *
+  - dissolved_mg_k_l_std *
+  - dissolved_mg_s_l_std *
+  - dissolved_mg_ca_l_std *
+  - dissolved_mg_mg_l_std *
+  - dissolved_ug_cu_l_std *
+  - dissolved_ug_fe_l_std *
+  - dissolved_ug_mn_l_std *
+  - dissolved_ug_zn_l_std *
+  - dissolved_ug_b_l_std *
+  - dissolved_ug_mo_l_std *
+  - dissolved_mg_al_l_std *
+  - dissolved_mg_na_l_std *
+  - dissolved_mg_si_l_std *
+- name: measwinderosionarea
+  row_count: 34
+  column_count: 56
+  columns:
+  - location_id
+  - unit_id
+  - date
+  - time *
+  - treatment_id
+  - growth_stage
+  - crop *
+  - sampling_start_stop_interval
+  - model_if_simulated
+  - erosion_method *
+  - losses_or_deposition
+  - soil_t_ha
+  - soil_organic_matter_kg_ha *
+  - soil_organic_carbon_kg_c_ha *
+  - ph *
+  - ec_ms_cm *
+  - kg_total_n_ha *
+  - kg_nh4_n_ha *
+  - kg_no3_n_ha *
+  - kg_p_ha *
+  - kg_k_ha *
+  - kg_s_ha *
+  - kg_ca_ha *
+  - kg_mg_ha *
+  - g_cu_ha *
+  - g_fe_ha *
+  - g_mn_ha *
+  - g_zn_ha *
+  - g_b_ha *
+  - g_mo_ha *
+  - kg_al_ha *
+  - kg_na_ha *
+  - kg_si_ha *
+  - soil_t_ha_std
+  - soil_organic_matter_kg_ha_std *
+  - soil_organic_carbon_kg_c_ha_std *
+  - ph_std *
+  - ec_ms_cm_std *
+  - kg_total_n_ha_std *
+  - kg_nh4_n_ha_std *
+  - kg_no3_n_ha_std *
+  - kg_p_ha_std *
+  - kg_k_ha_std *
+  - kg_s_ha_std *
+  - kg_ca_ha_std *
+  - kg_mg_ha_std *
+  - g_cu_ha_std *
+  - g_fe_ha_std *
+  - g_mn_ha_std *
+  - g_zn_ha_std *
+  - g_b_ha_std *
+  - g_mo_ha_std *
+  - kg_al_ha_std *
+  - kg_na_ha_std *
+  - kg_si_ha_std *
+  - id
+- name: measyieldnutuptake
+  row_count: 704
+  column_count: 41
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - sampling_date
+  - treatment_id
+  - growth_stage
+  - crop
+  - plant_fraction
+  - model_if_simulated *
+  - frac_dry_matt_kg_ha_ynu
+  - frac_moist_pct_ynu
+  - frac_c_kgc_ha_ynu
+  - frac_n_kgn_ha_ynu
+  - frac_p_kgp_ha *
+  - frac_k_kgk_ha *
+  - frac_s_kgs_ha *
+  - frac_ca_kgca_ha *
+  - frac_mg_kgmg_ha *
+  - frac_cu_gcu_ha
+  - frac_fe_gfe_ha
+  - frac_mn_gmn_ha
+  - frac_zn_gzn_ha
+  - frac_b_gb_ha *
+  - frac_mo_gmo_ha *
+  - grain_weight_mg_kernel_ynu *
+  - frac_dry_matt_std_kg_ha_ynu
+  - frac_moist_std_pct_ynu *
+  - frac_c_std_kgc_ha_ynu
+  - frac_n_std_kgn_ha_ynu
+  - frac_p_std_kgp_ha *
+  - frac_k_std_kgk_ha *
+  - frac_s_std_kgs_ha *
+  - frac_ca_std_kgca_ha *
+  - frac_mg_std_kgmg_ha *
+  - frac_cu_std_gcu_ha
+  - frac_fe_std_gfe_ha
+  - frac_mn_std_gmn_ha
+  - frac_zn_std_gzn_ha
+  - frac_b_std_gb_ha *
+  - frac_mo_std_gmo_ha *
+  - grain_weight_std_mg_kernel_ynu *
+- name: mgtamendments
+  row_count: 47106
+  column_count: 22
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - start_date
+  - end_date *
+  - treatment_id
+  - crop
+  - amend_placement
+  - amend_depth_cm
+  - amend_type
+  - total_amend_amount_kg_ha
+  - total_n_amount_kgn_ha
+  - total_p_amount_kgp_ha
+  - total_k_amount_kgk_ha
+  - total_non_npk_nutrient_amount_kg_ha *
+  - total_pest_amount_kg_ha
+  - active_ingredient_type
+  - pest_target
+  - pest_placement
+  - irrigation_amount_cm
+  - irrigation_type
+  - irrigation_n_mg_l
+- name: mgtgrazing
+  row_count: 1951
+  column_count: 12
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - start_date
+  - end_date
+  - treatment_id
+  - stocking_rate_noanimals_ha
+  - animal_species
+  - animal_class
+  - other_events
+  - burn_frequency_years_between_burns *
+  - burn_intensity *
+- name: mgtgrowthstages
+  row_count: 5148
+  column_count: 7
+  columns:
+  - location_id
+  - unit_id
+  - date
+  - treatment_id
+  - crop
+  - growth_stage
+  - id
+- name: mgtplanting
+  row_count: 23728
+  column_count: 13
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - start_date
+  - end_date *
+  - treatment_id
+  - crop
+  - cultivar
+  - planting_rate_seeds_ha
+  - planting_density_kg_ha
+  - planting_method
+  - planting_depth_cm
+  - row_width_cm
+- name: mgtresidue
+  row_count: 3334
+  column_count: 12
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - start_date
+  - end_date *
+  - treatment_id
+  - crop
+  - equipment_type
+  - cutting_height_material_harvested
+  - rows_harvested_pct
+  - stand_age_years
+  - stage_at_harvest
+- name: mgttillage
+  row_count: 27450
+  column_count: 10
+  columns:
+  - id
+  - location_id
+  - unit_id
+  - start_date
+  - end_date *
+  - treatment_id
+  - crop
+  - tillage_event
+  - tillage_event_depth_cm
+  - tillage_event_method

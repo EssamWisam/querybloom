@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRASP Tools — Hierarchy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f1f5f9;
+            padding: 24px;
+            display: flex;
+            justify-content: center;
+            color: #334155;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        /* ── Phase wrapper ── */
+        .phase-container {
+            position: relative;
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 40px 24px 24px 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .phase-label {
+            position: absolute;
+            top: -16px;
+            left: 24px;
+            background: #fff;
+            padding: 4px 14px;
+            font-size: 16px;
+            font-weight: 800;
+            color: #475569;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ── Category groups ── */
+        .rows-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .category-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+            padding: 28px 16px 16px 16px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+        }
+
+        .category-label {
+            position: absolute;
+            top: -12px;
+            left: 16px;
+            background: #fff;
+            padding: 2px 10px;
+            font-size: 11px;
+            font-weight: 800;
+            border-radius: 6px;
+            border: 1.5px solid #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        /* Category Specific Colors */
+        .cat-hier { background: #faf8ff; border-color: #c4b5fd; }
+        .cat-hier .category-label { color: #5b21b6; border-color: #c4b5fd; }
+        .cat-hier .tool-icon { background: #faf5ff; color: #7c3aed; border: 1px solid #f3e8ff; }
+
+        /* ── Tool card ── */
+        .tool-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .tool-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            border-color: #cbd5e1;
+        }
+
+        /* ── Header ── */
+        .tool-header {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .tool-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+
+        .tool-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+        }
+
+        .tool-meta {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .tool-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .tool-fn {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 12px;
+            color: #475569;
+            background: #fff;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
+        }
+
+        /* ── Description ── */
+        .tool-desc {
+            padding: 16px;
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.5;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* ── I/O ── */
+        .tool-io {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .io-section {
+            padding: 16px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .io-section:first-child {
+            flex: 3;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .io-section:last-child {
+            flex: 2;
+            background: #f8fafc;
+        }
+
+        .io-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .io-title::before {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #cbd5e1;
+        }
+
+        /* ── Params ── */
+        .param {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .param:last-child {
+            margin-bottom: 0;
+        }
+
+        .p-name {
+            font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+            font-size: 12px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .p-type {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 2px 4px;
+            border-radius: 4px;
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+        }
+
+        .p-req {
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        .req {
+            background: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+        }
+
+        .opt {
+            background: #f8fafc;
+            color: #64748b;
+            border: 1px solid #e2e8f0;
+        }
+
+        .p-desc {
+            font-size: 12.5px;
+            color: #475569;
+            flex-basis: 100%;
+            margin-top: 2px;
+        }
+
+        /* ── Output ── */
+        .out-type {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .out-type.table {
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+        }
+
+        .out-type.dict {
+            background: #faf5ff;
+            color: #7c3aed;
+            border: 1px solid #ddd6fe;
+        }
+
+        .out-type.multi {
+            background: #fff7ed;
+            color: #c2410c;
+            border: 1px solid #fed7aa;
+        }
+
+        .col-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+            font-size: 11px;
+            padding: 3px 6px;
+            border-radius: 4px;
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            color: #334155;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+        }
+
+        .chip.opt {
+            border-style: dashed;
+            color: #64748b;
+        }
+
+        .out-group {
+            margin-bottom: 12px;
+        }
+
+        .out-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .out-group-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+
+        .dict-row {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .dict-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .dict-key {
+            font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+            font-size: 12px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .dict-arrow {
+            color: #94a3b8;
+            font-size: 11px;
+        }
+
+        .dict-val {
+            font-size: 12px;
+            color: #475569;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="phase-container">
+            <div class="phase-label">KG Voyager Tools — Hierarchy</div>
+            <div class="rows-wrapper">
+
+                <!-- ════════ HIERARCHY ════════ -->
+                <div class="category-group cat-hier">
+                    <div class="category-label">Hierarchy</div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                                </svg>
+                            </div>
+                            <div class="tool-meta">
+                                <span class="tool-name">Ancestor Exploration</span>
+                                <span class="tool-fn">explore_class_ancestors(class_uri, max_hops)</span>
+                            </div>
+                        </div>
+                        <div class="tool-desc">Find all ancestor (superior) classes of a given class URI by traversing
+                            subclass relationships. Returns results as a pandas DataFrame with class URIs and distances.
+                        </div>
+                        <div class="tool-io">
+                            <div class="io-section">
+                                <div class="io-title">Input Schema</div>
+                                <div class="param">
+                                    <span class="p-name">class_uri</span><span class="p-type">string</span><span
+                                        class="p-req req">req</span>
+                                    <span class="p-desc">Full URI of the class to find ancestors for (must be complete
+                                        URI, prefixed forms like 'prefix:localName' are NOT allowed).</span>
+                                </div>
+                                <div class="param">
+                                    <span class="p-name">max_hops</span><span class="p-type">number</span><span
+                                        class="p-req opt">opt</span>
+                                    <span class="p-desc">Maximum number of hops to traverse up the hierarchy (default:
+                                        5).</span>
+                                </div>
+                            </div>
+                            <div class="io-section">
+                                <div class="io-title">Output Format</div>
+                                <div class="out-type table">▤ Table with columns:</div>
+                                <div class="col-chips"><span class="chip">ancestor_class</span><span
+                                        class="chip">label</span><span class="chip">distance</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                </svg>
+                            </div>
+                            <div class="tool-meta">
+                                <span class="tool-name">Descendant Exploration</span>
+                                <span class="tool-fn">explore_subclass_tree(superclass_uri, max_depth, max_children,
+                                    pretty_print)</span>
+                            </div>
+                        </div>
+                        <div class="tool-desc">Build a tree of all subclasses starting from a given superclass URI.
+                            Returns a dictionary where keys are class URIs and values are lists of their direct
+                            subclasses. Optionally prints a pretty tree visualization.</div>
+                        <div class="tool-io">
+                            <div class="io-section">
+                                <div class="io-title">Input Schema</div>
+                                <div class="param">
+                                    <span class="p-name">superclass_uri</span><span class="p-type">string</span><span
+                                        class="p-req req">req</span>
+                                    <span class="p-desc">Full URI of the superclass to start the tree from (must be
+                                        complete URI, prefixed forms like 'prefix:localName' are NOT allowed).</span>
+                                </div>
+                                <div class="param">
+                                    <span class="p-name">max_depth</span><span class="p-type">number</span><span
+                                        class="p-req opt">opt</span>
+                                    <span class="p-desc">Maximum depth to traverse down the hierarchy (default:
+                                        5).</span>
+                                </div>
+                                <div class="param">
+                                    <span class="p-name">max_children</span><span class="p-type">number</span><span
+                                        class="p-req opt">opt</span>
+                                    <span class="p-desc">Maximum number of children to consider at each level (default:
+                                        15).</span>
+                                </div>
+                                <div class="param">
+                                    <span class="p-name">pretty_print</span><span class="p-type">boolean</span><span
+                                        class="p-req opt">opt</span>
+                                    <span class="p-desc">Whether to print a formatted tree visualization (default:
+                                        True).</span>
+                                </div>
+                            </div>
+                            <div class="io-section">
+                                <div class="io-title">Output Format</div>
+                                <div class="out-type dict">◆ Dictionary:</div>
+                                <div class="dict-row"><span class="dict-key">tree</span><span
+                                        class="dict-arrow">→</span><span class="dict-val">class_uri →
+                                        subclass_uri[]</span></div>
+                                <div class="dict-row"><span class="dict-key">labels</span><span
+                                        class="dict-arrow">→</span><span class="dict-val">uri → label string</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><!-- rows-wrapper -->
+        </div><!-- phase-container -->
+    </div><!-- container -->
+
+</body>
+
+</html>

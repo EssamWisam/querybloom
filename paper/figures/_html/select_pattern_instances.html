@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPARQL Pattern to Instances</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0
+        }
+
+        body {
+            background: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 8px
+        }
+
+        .figure {
+            width: 680px;
+            padding: 8px 10px
+        }
+
+        .title {
+            font-size: 12px;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: .3px
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 210px 0px 410px;
+            gap: 0;
+            align-items: center;
+            justify-content: center
+        }
+
+        .row>.panel:first-child {
+            grid-column: 1;
+            margin-top: 20px;
+            padding-right: 0;
+        }
+
+        .row>.panel:last-child {
+            grid-column: 3;
+            padding-left: 0;
+        }
+
+        .panel {
+            padding: 6px
+        }
+
+        .panel h2 {
+            font-size: 9px;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+            color: #64748b;
+            margin-bottom: 4px
+        }
+
+        .query-box {
+            border: none;
+            border-radius: 5px;
+            background: transparent;
+            color: #334155;
+            padding: 6px 2px 6px 8px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 15px;
+            line-height: 1.7;
+            white-space: normal
+        }
+
+        .query-line {
+            white-space: nowrap
+        }
+
+        .q-indent {
+            display: inline-block;
+            width: 8ch
+        }
+
+        .query-box .kw {
+            color: #2563eb;
+            font-weight: 700
+        }
+
+        .query-box .var {
+            color: #64748b;
+            font-weight: 700
+        }
+
+        .query-box .var-main {
+            color: #d97706;
+            font-weight: 700
+        }
+
+        .query-box .iri {
+            color: #475569;
+            font-weight: 700
+        }
+
+        .query-box .const {
+            color: #166534;
+            font-weight: 800
+        }
+
+        .query-box .lit {
+            color: #334155
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            width: 84%;
+            gap: 8px;
+            margin-top: -4px;
+            font-size: 9px;
+            color: #475569;
+            font-weight: 600
+        }
+
+        .lg {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px
+        }
+
+        .sw {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            border: 1px solid #94a3b8;
+            background: #fff
+        }
+
+        .sw.sel {
+            background: #fde68a;
+            border-color: #d97706
+        }
+
+        .sw.const {
+            background: #dcfce7;
+            border-color: #16a34a
+        }
+    </style>
+</head>
+
+<body>
+    <section class="figure">
+        <div class="row">
+            <div class="panel">
+                <div class="query-box">
+                    <div class="query-line"><span class="kw">SELECT</span> <span class="var-main">?person</span> <span
+                            class="var-main">?city</span></div>
+                    <div class="query-line"><span class="kw">WHERE</span> {</div>
+                    <div class="query-line"><span class="var-main">?person</span> <span class="iri">ex:worksAt</span>
+                        <span class="const">ex:IBM</span> ;
+                    </div>
+                    <div class="query-line"><span class="q-indent"></span><span class="iri">ex:livesIn</span> <span
+                            class="var-main">?city</span> ;
+                    </div>
+                    <div class="query-line"><span class="q-indent"></span><span class="iri">ex:age</span> <span
+                            class="var">?age</span>
+                        .</div>
+                    <div class="query-line"><span class="kw">FILTER</span>(<span class="var">?age</span> &gt; <span
+                            class="lit">30</span>)</div>
+                    <div class="query-line">}</div>
+                </div>
+            </div>
+            <div class="panel">
+                <svg viewBox="0 0 185 135" style="width:84%;height:auto;display:block;margin:0"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5"
+                            orient="auto-start-reverse">
+                            <path d="M0 0L10 5L0 10z" fill="#64748b" />
+                        </marker>
+                    </defs>
+                    <!-- Layer 3 -->
+                    <g opacity=".25" transform="translate(10,0) scale(0.8)">
+                        <line x1="88" y1="82" x2="182" y2="46" stroke="#94a3b8" stroke-width="1.5"
+                            marker-end="url(#arr)" />
+                        <line x1="88" y1="82" x2="182" y2="128" stroke="#94a3b8" stroke-width="1.5"
+                            marker-end="url(#arr)" />
+                        <line x1="88" y1="82" x2="52" y2="140" stroke="#94a3b8" stroke-width="1.5"
+                            marker-end="url(#arr)" />
+                        <rect x="48" y="68" width="80" height="26" rx="4" fill="#fef3c7" stroke="#f59e0b"
+                            stroke-width="1" />
+                        <text x="88" y="85" text-anchor="middle" font-family="monospace" font-size="10"
+                            font-weight="700" fill="#92400e">Alice</text>
+                        <rect x="152" y="33" width="50" height="26" rx="4" fill="#dcfce7" stroke="#16a34a"
+                            stroke-width="1" />
+                        <text x="177" y="50" text-anchor="middle" font-family="monospace" font-size="9"
+                            font-weight="700" fill="#166534">IBM</text>
+                        <rect x="152" y="115" width="50" height="26" rx="4" fill="#fef3c7" stroke="#f59e0b"
+                            stroke-width="1" />
+                        <text x="177" y="132" text-anchor="middle" font-family="monospace" font-size="9"
+                            font-weight="700" fill="#92400e">Austin</text>
+                        <rect x="18" y="127" width="62" height="26" rx="4" fill="#e2e8f0" stroke="#64748b"
+                            stroke-width="1" />
+                        <text x="49" y="144" text-anchor="middle" font-family="monospace" font-size="9"
+                            font-weight="700" fill="#334155">44</text>
+                    </g>
+                    <!-- Layer 2 -->
+                    <g opacity=".45" transform="translate(5,-2) scale(0.8)">
+                        <line x1="88" y1="82" x2="182" y2="46" stroke="#94a3b8" stroke-width="1.5"
+                            marker-end="url(#arr)" />
+                        <line x1="88" y1="82" x2="182" y2="128" stroke="#94a3b8" stroke-width="1.5"
+                            marker-end="url(#arr)" />
+                        <line x1="88" y1="82" x2="52" y2="140" stroke="#94a3b8" stroke-width="1.5"
+                            marker-end="url(#arr)" />
+                        <rect x="48" y="68" width="80" height="26" rx="4" fill="#fef3c7" stroke="#f59e0b"
+                            stroke-width="1" />
+                        <text x="88" y="85" text-anchor="middle" font-family="monospace" font-size="10"
+                            font-weight="700" fill="#92400e">Sam</text>
+                        <rect x="152" y="33" width="50" height="26" rx="4" fill="#dcfce7" stroke="#16a34a"
+                            stroke-width="1" />
+                        <text x="177" y="50" text-anchor="middle" font-family="monospace" font-size="9"
+                            font-weight="700" fill="#166534">IBM</text>
+                        <rect x="152" y="115" width="50" height="26" rx="4" fill="#fef3c7" stroke="#f59e0b"
+                            stroke-width="1" />
+                        <text x="177" y="132" text-anchor="middle" font-family="monospace" font-size="9"
+                            font-weight="700" fill="#92400e">Dallas</text>
+                        <rect x="18" y="127" width="62" height="26" rx="4" fill="#e2e8f0" stroke="#64748b"
+                            stroke-width="1" />
+                        <text x="49" y="144" text-anchor="middle" font-family="monospace" font-size="9"
+                            font-weight="700" fill="#334155">33</text>
+                    </g>
+                    <!-- Layer 1 (top) -->
+                    <g transform="translate(0,-5) scale(0.8)">
+                        <path id="edge-worksat" d="M88 82 L182 46" fill="none" stroke="#475569" stroke-width="1.8"
+                            marker-end="url(#arr)" />
+                        <path id="edge-livesin" d="M88 82 L182 128" fill="none" stroke="#475569" stroke-width="1.8"
+                            marker-end="url(#arr)" />
+                        <path id="edge-age" d="M88 82 L52 140" fill="none" stroke="#475569" stroke-width="1.8"
+                            marker-end="url(#arr)" />
+                        <text x="135" y="64" dy="-4" text-anchor="middle" transform="rotate(-21 135 64)"
+                            font-family="monospace" font-size="7" font-weight="700" fill="#475569" stroke="#ffffff"
+                            stroke-width="0.8" paint-order="stroke fill">worksAt</text>
+                        <text x="141" y="108" dy="-4" text-anchor="middle" transform="rotate(26 141 108)"
+                            font-family="monospace" font-size="7" font-weight="700" fill="#475569" stroke="#ffffff"
+                            stroke-width="0.8" paint-order="stroke fill">livesIn</text>
+                        <text x="70" y="111" dy="-4" text-anchor="middle" transform="rotate(-58 70 111)"
+                            font-family="monospace" font-size="7" font-weight="700" fill="#475569" stroke="#ffffff"
+                            stroke-width="0.8" paint-order="stroke fill">age</text>
+                        <text x="88" y="47" text-anchor="middle" font-family="monospace" font-size="9" font-weight="700"
+                            fill="#94a3b8" opacity="0.55">...</text>
+                        <line x1="84" y1="68" x2="78" y2="58" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"
+                            opacity="0.45" />
+                        <line x1="92" y1="68" x2="98" y2="58" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"
+                            opacity="0.45" />
+                        <rect x="48" y="68" width="80" height="26" rx="4" fill="#fde68a" stroke="#d97706"
+                            stroke-width="1.6" />
+                        <text x="88" y="85" text-anchor="middle" font-family="monospace" font-size="10"
+                            font-weight="800" fill="#92400e">John</text>
+                        <line x1="152" y1="43" x2="140" y2="37" stroke="#94a3b8" stroke-width="1.4"
+                            stroke-linecap="round" opacity="0.45" />
+                        <rect x="152" y="33" width="50" height="26" rx="4" fill="#dcfce7" stroke="#16a34a"
+                            stroke-width="1.3" />
+                        <text x="177" y="50" text-anchor="middle" font-family="monospace" font-size="9"
+                            font-weight="700" fill="#166534">IBM</text>
+                        <rect x="152" y="115" width="50" height="26" rx="4" fill="#fde68a" stroke="#d97706"
+                            stroke-width="1.6" />
+                        <text x="177" y="132" text-anchor="middle" font-family="monospace" font-size="9"
+                            font-weight="800" fill="#92400e">NYC</text>
+                        <rect x="18" y="127" width="62" height="26" rx="4" fill="#e2e8f0" stroke="#64748b"
+                            stroke-width="1.2" />
+                        <text x="49" y="144" text-anchor="middle" font-family="monospace" font-size="9"
+                            font-weight="700" fill="#334155">35</text>
+                    </g>
+                </svg>
+                <div class="legend">
+                    <span class="lg"><span class="sw sel"></span>Selected</span>
+                    <span class="lg"><span class="sw"></span>Matched</span>
+                    <span class="lg"><span class="sw const"></span>Constant</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

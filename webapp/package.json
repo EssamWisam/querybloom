@@ -1,0 +1,25 @@
+{
+  "name": "querybloom-webapp",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --port 5173",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.9",
+    "@sveltejs/kit": "^2.43.2",
+    "@sveltejs/vite-plugin-svelte": "^6.2.0",
+    "svelte": "^5.39.5",
+    "vite": "^7.1.7"
+  },
+  "dependencies": {
+    "@antv/g6": "^5.1.0",
+    "cytoscape": "^3.33.1",
+    "cytoscape-cola": "^2.5.1",
+    "highlight.js": "^11.11.1"
+  }
+}

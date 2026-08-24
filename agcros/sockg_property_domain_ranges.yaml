@@ -1,0 +1,121 @@
+AllDifferent:
+  distinctMembers: List
+Amendment:
+  hasPesticideActiveIngredient: ActiveIngredient
+  hasPesticideTarget: PesticideTarget
+  usesIrrigation: Irrigation
+  withPesticidePlacement: PesticidePlacement
+  withPlacement: AmendmentPlacement
+BibliographicResource:
+  correspondingAuthor: string
+Class:
+  complementOf: Class
+  disjointWith: Class
+  equivalentClass: Class
+  intersectionOf: List
+  oneOf: List
+  unionOf: List
+CropRelatedMeasurement:
+  hasCrop: null
+ErosionMeasurement:
+  hasLossesOrDeposition: LossesOrDeposition
+ExperimentalUnit:
+  inferred: boolean
+  unitHasAmendment: Amendment
+  unitHasGrazingManagement: GrazingManagement
+  unitHasGrowthStageManagement: GrowthStageManagement
+  unitHasPlantingManagement: PlantingManagement
+  unitHasResidueManagement: ResidueManagement
+  unitHasTillageManagement: TillageManagement
+  unitUrl: anyURI
+GHGFlux:
+  hasChamberPlacement: ChamberPlacement
+GrazingManagement:
+  hasAnimalClass: AnimalClass
+  hasOtherEvents: OtherEvents
+GrazingPlants:
+  hasBroadleafOrGrass: BroadleafOrGrass
+  hasSpeciesMix: SpeciesMix
+GrowthStageRelatedMeasurement:
+  hasGrowthStage: GrowthStage
+Location:
+  cites: BibliographicResource
+  endDate: date
+  fundedBy: FundingSource
+  hasTreatment: Treatment
+  startDate: date
+MeasurableEntity:
+  hasMeasurement: Measurement
+Measurement:
+  of: Parameter
+ObjectProperty:
+  inverseOf: ObjectProperty
+Ontology:
+  backwardCompatibleWith: Ontology
+  imports: Ontology
+  incompatibleWith: Ontology
+  priorVersion: Ontology
+PlantFractionRelatedMeasurement:
+  hasPlantFraction: PlantFraction
+PlantingManagement:
+  hasCultivar: Cultivar
+  usesPlantingMethod: PlantingMethod
+PossiblySimulatedMeasurement:
+  usesModel: SimulationModel
+QualityMeasurement:
+  hasSurfaceOrLeaching: SurfaceOrLeaching
+  withStartStopInterval: StartStopInterval
+QuantityValue:
+  hasStandardDeviation: QuantityValue
+  isInterpolated: boolean
+ResidueManagement:
+  usesEquipment: Equipment
+  withCuttingHeight: CuttingHeight
+ResidueMeasurement:
+  hasHarvestedFraction: HarvestedFraction
+Restriction:
+  allValuesFrom: Class
+  cardinality: nonNegativeInteger
+  hasValue: null
+  maxCardinality: nonNegativeInteger
+  minCardinality: nonNegativeInteger
+  onProperty: Property
+  someValuesFrom: Class
+Sample:
+  fromUnit: ExperimentalUnit
+  usesTreatment: Treatment
+SoilCover:
+  hasTiming: Timing
+SoilSample:
+  lowerDepth: QuantityValue
+  upperDepth: QuantityValue
+SpatialObject:
+  spatiallyRelatedTo: SpatialObject
+Thing:
+  differentFrom: Thing
+  sameAs: Thing
+TillageManagement:
+  hasTillageEvent: TillageEvent
+  usesTillageMethod: TillageMethod
+Treatment:
+  fromProject: Project
+  hasAnimalSpecies: AnimalSpecies
+  hasGrazingRate: GrazingRate
+  hasProjectScenario: ProjectScenario
+  hasRotation: Rotation
+  hasTillage: Tillage
+  irrigation: boolean
+  organicManagement: boolean
+  tileDrainage: boolean
+  treatmentHasAmendment: Amendment
+  treatmentHasGrazingManagement: GrazingManagement
+  treatmentHasGrowthStageManagement: GrowthStageManagement
+  treatmentHasPlantingManagement: PlantingManagement
+  treatmentHasResidueManagement: ResidueManagement
+  treatmentHasTillageManagement: TillageManagement
+  usesCoverCrop: CoverCrop
+  usesFertilizerAmendment: FertilizerAmendment
+  usesResidueRemoval: ResidueRemoval
+WeatherObservation:
+  badValueFlag: boolean
+  weatherAt: Location

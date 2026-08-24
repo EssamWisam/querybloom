@@ -1,0 +1,370 @@
+📊
+Benchmark Viewer
+Knowledge Graph
+All
+ck25
+climatemodelskg
+dblp
+dbpedia
+freebase
+imdb
+orkg-2023
+osm-planet
+sockg
+uniprot
+wikidata
+sockg / gpt5_custom_small_test2-11-02-2026
+← Back to Results
+⚙️ Configuration
+▼ Show
+replicating small on test 2 after bug fix
+30
+Samples
+0.142
+Avg BLEU
+0.771
+Avg F1
+10.8
+Avg Iterations
+62.2
+Avg Time (s)
+0.21
+Total Cost ($)
+40.5K
+Avg Input Tokens
+3.2K
+Avg Output Tokens
+Tool Usage
+search_all_properties
+72
+search_all_classes
+63
+explore_entity_relations
+60
+execute_query
+43
+lookup_class_instances
+36
+answer
+30
+explore_property_usage
+19
+Samples
+11_3
+0.67
+12_2
+0.52
+22_3
+0.96
+30_0
+1.00
+31_2
+1.00
+33_1
+1.00
+34_1
+1.00
+37_2
+0.33
+40_3
+1.00
+44_1
+0.67
+55_2
+0.00
+56_3
+0.75
+57_1
+1.00
+58_1
+0.32
+61_2
+1.00
+62_1
+0.67
+65_0
+1.00
+70_3
+1.00
+74_1
+0.03
+78_0
+1.00
+82_3
+1.00
+87_0
+0.67
+92_1
+1.00
+97_2
+1.00
+102_3
+1.00
+103_3
+0.71
+106_2
+1.00
+111_0
+1.00
+116_2
+0.15
+117_0
+0.70
+Conversation
+Trace
+Analyze Query
+Analyze Output
+Analyze Conversation
+Analyze Duration
+13 iterations • $0.0095 • 75.1s
+Question
+For each S2 level-13 cell, how many sites are contained in the locations it is spatially connected to? Return the top 20 cells by site count.
+system
+You are a question answering assistant. Your job is to generate a SPARQL query to answer a given user question.
+
+You should follow a step-by-step approach to generate the SPARQL query:
+
+Determine possible entities and properties implied by the user question.
+Search for the entities and properties in the knowledge graphs. Where applicable, constrain the searches with already identified entities and properties.
+Gradually build up the SPARQL query using the identified entities and properties. Start with simple queries and add more complexity as needed. Execute intermediate queries to get feedback and to verify your assumptions. You may need to refine or rethink your current plan based on the query results and go back to step 2 if needed, possibly multiple times.
+Use the answer or cancel function to finalize your answer and stop the generation process.
+Available knowledge graphs:
+
+sockg at http://localhost:8890/sparql
+Additional rules to follow:
+
+Explain your thought process before and after each step and function call.
+Do not ask the user for clarification until you have made an initial attempt at completing the task. When the task input is incomplete or ambiguous, proceed based on reasonable assumptions.
+Always execute your final SPARQL query before giving an answer to make sure it returns the expected results.
+The SPARQL query should always return the actual identifiers / IRIs of the items in its result. It additionally may return labels or other human-readable information, but they are optional and should be put within optional clauses unless explicitly requested by the user.
+Do not stop early if there are still obvious improvements to be made to the SPARQL query. For example, keep refining your SPARQL query if its result contains irrelevant items or is missing items you expected.
+Do not perform additional computation (e.g. filtering, sorting, calculations) on the result of the SPARQL query to determine the answer. All computation should be done solely within SPARQL.
+For questions with a "True" or "False" answer the SPARQL query should be an ASK query.
+assistant
+I will first search the graph for classes related to S2 cells (level-13) and for properties linking cells to locations and locations to sites. I'll start by searching for classes with "S2" and "cell" in their labels.
+
+search_all_classes(limit=20, search_term="S2 cell") 0.257s
+call_BDjIQr0TiDe6myMIErKCuBj8
+Result
+result_of: search_all_classes({'search_term': 'S2 cell', 'limit': 20})
+Prefixes: {'ius': 'https://idir.uta.edu/sockg-ontology#', 'sgul': 'http://stko-kwg.geog.ucsb.edu/lod/ontology/'}
+Got 3 rows and 4 columns:
+| class_uri               | label               |   count |       score |
+|:------------------------|:--------------------|--------:|------------:|
+| sgul:S2Cell_Level13     | S2Cell_Level13      |    1069 | 0.865794    |
+| ius:GasNutrientLoss     | GasNutrientLoss     |    2231 | 0.000811809 |
+| ius:YieldNutrientUptake | YieldNutrientUptake |     704 | 0.000237842 |
+assistant
+search_all_properties(limit=20, search_term="spatially connected") 0.305s
+call_AC1Ylit700F1ORs72T1fVYoy
+Result
+result_of: search_all_properties({'search_term': 'spatially connected', 'limit': 20})
+Prefixes: {'sgul': 'http://stko-kwg.geog.ucsb.edu/lod/ontology/', 'psss': 'http://purl.org/spatialai/spatial/spatial-full#'}
+Got 3 rows and 6 columns:
+| property_uri     | label       | domain   | range   |   count |       score |
+|:-----------------|:------------|:---------|:--------|--------:|------------:|
+| psss:connectedTo | connectedTo |          |         |    2322 | 0.685046    |
+| sgul:sfContains  | sfContains  |          |         |    9259 | 0.000477012 |
+| sgul:sfWithin    | sfWithin    |          |         |    9259 | 4.1027e-05  |
+assistant
+search_all_classes(limit=20, search_term="Location") 0.602s
+call_JwpDlmiMu7Usy1tgy0mEGH1Z
+Result
+result_of: search_all_classes({'search_term': 'Location', 'limit': 20})
+Prefixes: {'ius': 'https://idir.uta.edu/sockg-ontology#', 'osv': 'http://www.openlinksw.com/schemas/virtrdf#', 'oog': 'http://www.opengis.net/ont/geosparql#'}
+Got 3 rows and 4 columns:
+| class_uri         | label         |   count |       score |
+|:------------------|:--------------|--------:|------------:|
+| ius:Location      | Location      |      58 | 0.0448142   |
+| osv:QuadMapFormat | QuadMapFormat |     130 | 0.000533673 |
+| oog:Geometry      | Geometry      |      41 | 0.000421029 |
+assistant
+search_all_classes(limit=20, search_term="Site") 0.645s
+call_xyXEEwlq7L7IC1PZeBmYIMjW
+Result
+result_of: search_all_classes({'search_term': 'Site', 'limit': 20})
+Prefixes: {'ius': 'https://idir.uta.edu/sockg-ontology#'}
+Got 3 rows and 4 columns:
+| class_uri                 | label                 |   count |       score |
+|:--------------------------|:----------------------|--------:|------------:|
+| ius:Site                  | Site                  |      60 | 0.0332147   |
+| ius:GrowthStageManagement | GrowthStageManagement |    5148 | 0.000109535 |
+| ius:JournalArticle        | JournalArticle        |     149 | 9.21309e-05 |
+assistant
+explore_property_usage(limit=20, property_uri="http://purl.org/spatialai/spatial/spatial-full#connectedTo") 0.084s
+call_fEAyJlo5XTFAGVroFk3Q49rW
+Result
+result_of: explore_property_usage({'property_uri': 'http://purl.org/spatialai/spatial/spatial-full#connectedTo', 'limit': 20})
+Prefixes: {'ius': 'https://idir.uta.edu/sockg-ontology#', 'iusi': 'https://idir.uta.edu/sockg-ontology/individuals/', 'sgul': 'http://stko-kwg.geog.ucsb.edu/lod/ontology/', 'sgulr': 'http://stko-kwg.geog.ucsb.edu/lod/resource/'}
+Got 2 rows and 9 columns:
+| Domain              |   Domain Label | Range        | Range Label   | Example Subject                      |   Subject Label | Example Object         | Object Label   |   Count |
+|:--------------------|---------------:|:-------------|:--------------|:-------------------------------------|----------------:|:-----------------------|:---------------|--------:|
+| sgul:S2Cell_Level13 |            nan | ius:Location |               | sgulr:s2.level13.9839318811512143872 |             nan | iusi:Location.ALAUEVS  | GRACEnet       |     490 |
+| ius:Site            |            nan | ius:Location |               | iusi:Site.BOZOISKY-SELECT_PASTURE    |             nan | iusi:Location.CONUNRBS | GRACEnet       |      10 |
+assistant
+explore_property_usage(limit=20, property_uri="http://stko-kwg.geog.ucsb.edu/lod/ontology/sfContains") 0.110s
+call_0raqZfpDeOoNIcKJmW3t80Dz
+Result
+result_of: explore_property_usage({'property_uri': 'http://stko-kwg.geog.ucsb.edu/lod/ontology/sfContains', 'limit': 20})
+Prefixes: {'iusi': 'https://idir.uta.edu/sockg-ontology/individuals/', 'ius': 'https://idir.uta.edu/sockg-ontology#'}
+Got 3 rows and 9 columns:
+| Domain       |   Domain Label | Range                | Range Label   | Example Subject        | Subject Label   | Example Object                     |   Object Label |   Count |
+|:-------------|---------------:|:---------------------|:--------------|:-----------------------|:----------------|:-----------------------------------|---------------:|--------:|
+| ius:Location |            nan | ius:ExperimentalUnit |               | iusi:Location.IAAM7071 | REAP            | iusi:ExperimentalUnit.IAAM7071_101 |            nan |     238 |
+| ius:Site     |            nan | ius:ExperimentalUnit |               | iusi:Site.GHG          | nan             | iusi:ExperimentalUnit.KYBGGHG_101  |            nan |     237 |
+| nan          |            nan | ius:ExperimentalUnit |               | iusi:Site.KYGHG        | nan             | iusi:ExperimentalUnit.KYBGGHG_101  |            nan |      25 |
+assistant
+search_all_properties(limit=20, search_term="Location Site") 2.314s
+call_zBid4EEsfGoVFjiqtLk7Kikc
+Result
+result_of: search_all_properties({'search_term': 'Location Site', 'limit': 20})
+Prefixes: {'ius': 'https://idir.uta.edu/sockg-ontology#', 'schema': 'https://schema.org/', 'oog': 'http://www.opengis.net/ont/geosparql#', 'dct': 'http://purl.org/dc/terms/', 'xsd': 'http://www.w3.org/2001/XMLSchema#', 'qsq': 'http://qudt.org/schema/qudt/'}
+Got 20 rows and 6 columns, showing the first 5 and last 5 rows below:
+| property_uri                                               | label                          | domain                     | range                     | count   | score                 |
+|:-----------------------------------------------------------|:-------------------------------|:---------------------------|:--------------------------|:--------|:----------------------|
+| schema:workLocation                                        | workLocation                   |                            |                           | 158     | 0.0035826966632157564 |
+| http://purl.org/spatialai/spatial/spatial-full#connectedTo | connectedTo                    |                            |                           | 2322    | 0.0030872076749801636 |
+| http://www.w3.org/1999/02/22-rdf-syntax-ns#type            | type                           |                            |                           | 7117607 | 0.002914696466177702  |
+| ius:hasCrop                                                | hasCrop                        | ius:CropRelatedMeasurement |                           | 278818  | 0.0018659738125279546 |
+| ius:cites                                                  | cites                          | ius:Location               | dct:BibliographicResource | 177     | 0.0018238079501315951 |
+| ...                                                        | ...                            | ...                        | ...                       | ...     | ...                   |
+| ius:hasPesticideActiveIngredient                           | hasPesticideActiveIngredient   | ius:Amendment              | ius:ActiveIngredient      | 16104   | 0.0010386992944404483 |
+| ius:treatmentHasPlantingManagement                         | treatmentHasPlantingManagement | ius:Treatment              | ius:PlantingManagement    | 23728   | 0.0010278323898091912 |
+| dct:date                                                   | date                           |                            |                           | 443351  | 0.0009031007648445666 |
+| oog:asWKT                                                  | asWKT                          |                            |                           | 41      | 0.0008736840100027621 |
+| ius:unitHasTillageManagement                               | unitHasTillageManagement       | ius:ExperimentalUnit       | ius:TillageManagement     | 27449   | 0.0008338716579601169 |
+assistant
+explore_entity_relations(entity_uri="https://idir.uta.edu/sockg-ontology/individuals/Location.ALAUEVS", limit=50, num_ents=5) 0.127s
+call_uS3qAP2vlzEjeuKDdKopSqR9
+Result
+result_of: explore_entity_relations({'entity_uri': 'https://idir.uta.edu/sockg-ontology/individuals/Location.ALAUEVS', 'num_ents': 5, 'limit': 50})
+Prefixes: {'iusi': 'https://idir.uta.edu/sockg-ontology/individuals/', 'sgulr': 'http://stko-kwg.geog.ucsb.edu/lod/resource/', 'sgul': 'http://stko-kwg.geog.ucsb.edu/lod/ontology/', 'ius': 'https://idir.uta.edu/sockg-ontology#', 'psss': 'http://purl.org/spatialai/spatial/spatial-full#', 'rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#', 'rdfs': 'http://www.w3.org/2000/01/rdf-schema#', 'dbg': 'https://datacommons.org/browser/geoId/'}
+Got 6 rows and 4 columns:
+| property         | direction   | example_neighbors                                                                                                                                                                            | example_neighbors_labels   |
+|:-----------------|:------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------|
+| psss:connectedTo | outgoing    | sgulr:s2.level13.9839318811512143872                                                                                                                                                         |                            |
+| sgul:sfContains  | outgoing    | iusi:ExperimentalUnit.ALAUEVS_103EVS; iusi:ExperimentalUnit.ALAUEVS_104EVS; iusi:ExperimentalUnit.ALAUEVS_105EVS; iusi:ExperimentalUnit.ALAUEVS_106EVS; iusi:ExperimentalUnit.ALAUEVS_109EVS | ; ; ; ;                    |
+| sgul:sfWithin    | outgoing    | sgulr:administrativeRegion.USA.01; dbg:01; sgulr:administrativeRegion.USA                                                                                                                    | AL; AL; United States      |
+| rdf:type         | outgoing    | ius:Location                                                                                                                                                                                 |                            |
+| rdfs:label       | outgoing    | GRACEnet                                                                                                                                                                                     |                            |
+| ius:fundedBy     | outgoing    | iusi:FundingSource.7                                                                                                                                                                         | USDA-ARS                   |
+assistant
+explore_entity_relations(entity_uri="https://idir.uta.edu/sockg-ontology/individuals/Site.GHG", limit=50, num_ents=5) 0.046s
+call_NkvQkfnWHVi8tX5TDjboYJ53
+Result
+result_of: explore_entity_relations({'entity_uri': 'https://idir.uta.edu/sockg-ontology/individuals/Site.GHG', 'num_ents': 5, 'limit': 50})
+Prefixes: {'iusi': 'https://idir.uta.edu/sockg-ontology/individuals/', 'sgulr': 'http://stko-kwg.geog.ucsb.edu/lod/resource/', 'sgul': 'http://stko-kwg.geog.ucsb.edu/lod/ontology/', 'dbg': 'https://datacommons.org/browser/geoId/', 'dct': 'http://purl.org/dc/terms/', 'psss': 'http://purl.org/spatialai/spatial/spatial-full#', 'rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#', 'schema': 'https://schema.org/', 'ius': 'https://idir.uta.edu/sockg-ontology#'}
+Got 8 rows and 4 columns:
+| property          | direction   | example_neighbors                                                                                                                                                             | example_neighbors_labels   |
+|:------------------|:------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------|
+| dct:identifier    | outgoing    | GHG                                                                                                                                                                           |                            |
+| psss:connectedTo  | outgoing    | dbg:21227; sgulr:administrativeRegion.USA.21227                                                                                                                               | ;                          |
+| sgul:sfContains   | incoming    | iusi:Location.KYBGGHG; sgulr:administrativeRegion.USA.21; dbg:21; sgulr:administrativeRegion.USA                                                                              | GHG; KY; KY; United States |
+| sgul:sfContains   | outgoing    | iusi:ExperimentalUnit.KYBGGHG_101; iusi:ExperimentalUnit.KYBGGHG_102; iusi:ExperimentalUnit.KYBGGHG_103; iusi:ExperimentalUnit.KYBGGHG_104; iusi:ExperimentalUnit.KYBGGHG_105 | ; ; ; ;                    |
+| sgul:sfWithin     | incoming    | iusi:ExperimentalUnit.KYBGGHG_101; iusi:ExperimentalUnit.KYBGGHG_102; iusi:ExperimentalUnit.KYBGGHG_103; iusi:ExperimentalUnit.KYBGGHG_104; iusi:ExperimentalUnit.KYBGGHG_105 | ; ; ; ;                    |
+| sgul:sfWithin     | outgoing    | iusi:Location.KYBGGHG; sgulr:administrativeRegion.USA.21; dbg:21; sgulr:administrativeRegion.USA                                                                              | GHG; KY; KY; United States |
+| rdf:type          | outgoing    | ius:Site                                                                                                                                                                      |                            |
+| schema:postalCode | outgoing    | 42104.0                                                                                                                                                                       |                            |
+assistant
+explore_entity_relations(entity_uri="https://idir.uta.edu/sockg-ontology/individuals/Location.KYBGGHG", limit=50, num_ents=10) 0.125s
+call_733pbXOj1X8NN0DDAeuzd1a0
+Result
+result_of: explore_entity_relations({'entity_uri': 'https://idir.uta.edu/sockg-ontology/individuals/Location.KYBGGHG', 'num_ents': 10, 'limit': 50})
+Prefixes: {'iusi': 'https://idir.uta.edu/sockg-ontology/individuals/', 'ius': 'https://idir.uta.edu/sockg-ontology#', 'sgul': 'http://stko-kwg.geog.ucsb.edu/lod/ontology/', 'sgulr': 'http://stko-kwg.geog.ucsb.edu/lod/resource/', 'rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#', 'rdfs': 'http://www.w3.org/2000/01/rdf-schema#', 'dbg': 'https://datacommons.org/browser/geoId/'}
+Got 9 rows and 4 columns:
+| property         | direction   | example_neighbors                                                                                                                                                                                                                                                                                                                                            | example_neighbors_labels                                                                                       |
+|:-----------------|:------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
+| sgul:sfContains  | outgoing    | iusi:ExperimentalUnit.KYBGGHG_101; iusi:ExperimentalUnit.KYBGGHG_102; iusi:ExperimentalUnit.KYBGGHG_103; iusi:ExperimentalUnit.KYBGGHG_104; iusi:ExperimentalUnit.KYBGGHG_105; iusi:ExperimentalUnit.KYBGGHG_106; iusi:ExperimentalUnit.KYBGGHG_107; iusi:ExperimentalUnit.KYBGGHG_108; iusi:ExperimentalUnit.KYBGGHG_109; iusi:ExperimentalUnit.KYBGGHG_201 | ; ; ; ; ; ; ; ; ;                                                                                              |
+| sgul:sfWithin    | outgoing    | sgulr:administrativeRegion.USA.21; dbg:21; sgulr:administrativeRegion.USA                                                                                                                                                                                                                                                                                    | KY; KY; United States                                                                                          |
+| rdf:type         | outgoing    | ius:Location                                                                                                                                                                                                                                                                                                                                                 |                                                                                                                |
+| rdfs:label       | outgoing    | GHG                                                                                                                                                                                                                                                                                                                                                          |                                                                                                                |
+| ius:cites        | outgoing    | iusi:Publication.KYBGGHG.162; iusi:Publication.KYBGGHG.163; iusi:Publication.KYBGGHG.164; iusi:Publication.KYBGGHG.175                                                                                                                                                                                                                                       | Journal article about data; Journal article about data; Journal article about data; Journal article about data |
+| ius:endDate      | outgoing    | 2011-09-13                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                |
+| ius:fundedBy     | outgoing    | iusi:FundingSource.5                                                                                                                                                                                                                                                                                                                                         | NP212                                                                                                          |
+| ius:hasTreatment | outgoing    | iusi:Treatment.KYBGGHG_1; iusi:Treatment.KYBGGHG_2; iusi:Treatment.KYBGGHG_3; iusi:Treatment.KYBGGHG_4; iusi:Treatment.KYBGGHG_5; iusi:Treatment.KYBGGHG_6; iusi:Treatment.KYBGGHG_7; iusi:Treatment.KYBGGHG_8; iusi:Treatment.KYBGGHG_9                                                                                                                     | ; ; ; ; ; ; ; ;                                                                                                |
+| ius:startDate    | outgoing    | 2009-05-01                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                |
+assistant
+Now I'll run a SPARQL query to count, for each S2 level-13 cell, the number of distinct sites that are contained in locations the cell is connected to. I'll group by the cell and order by site count descending, limiting to top 20.
+
+execute_query(query="PREFIX sgul: <http://stko-kwg.geog.ucsb.edu/lod/ontology/> PREFIX psss: <http://purl.org/spatialai/spatial/spatial-full#> PREFIX ius: <https://idir.uta.edu/sockg-ontology#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?cell (COUNT(DISTINCT ?site) AS ?siteCount) (SAMPLE(?cellLabel) AS ?cellLabel) WHERE { ?cell a sgul:S2Cell_Level13 . OPTIONAL { ?cell rdfs:label ?cellLabel } ?cell psss:connectedTo ?loc . ?loc a ius:Location . ?loc sgul:sfContains ?site . ?site a ius:Site . } GROUP BY ?cell ORDER BY DESC(?siteCount) LIMIT 20") 0.033s
+call_o4oeNqLwxPlRy8MZ0xmkuRs4
+Result
+result_of: execute_query
+Prefixes: {'sgulr': 'http://stko-kwg.geog.ucsb.edu/lod/resource/'}
+Got 20 rows and 3 columns, showing the first 5 and last 5 rows below:
+| cell                                 | siteCount   | cellLabel   |
+|:-------------------------------------|:------------|:------------|
+| sgulr:s2.level13.9758960523159797760 | 3           | nan         |
+| sgulr:s2.level13.5965661247171985408 | 3           | nan         |
+| sgulr:s2.level13.5965661281531723776 | 3           | nan         |
+| sgulr:s2.level13.5969398281036365824 | 2           | nan         |
+| sgulr:s2.level13.9768683573203697664 | 2           | nan         |
+| ...                                  | ...         | ...         |
+| sgulr:s2.level13.9794898198152609792 | 1           | nan         |
+| sgulr:s2.level13.9770173720696979456 | 1           | nan         |
+| sgulr:s2.level13.9766516298346397696 | 1           | nan         |
+| sgulr:s2.level13.9766516641943781376 | 1           | nan         |
+| sgulr:s2.level13.9766516332706136064 | 1           | nan         |
+assistant
+I'll re-run the same query to retrieve the full set of top 20 results so I can list each cell IRI and its site count in the final answer.
+
+execute_query(query="PREFIX sgul: <http://stko-kwg.geog.ucsb.edu/lod/ontology/> PREFIX psss: <http://purl.org/spatialai/spatial/spatial-full#> PREFIX ius: <https://idir.uta.edu/sockg-ontology#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?cell (COUNT(DISTINCT ?site) AS ?siteCount) (SAMPLE(?cellLabel) AS ?cellLabel) WHERE { ?cell a sgul:S2Cell_Level13 . OPTIONAL { ?cell rdfs:label ?cellLabel } ?cell psss:connectedTo ?loc . ?loc a ius:Location . ?loc sgul:sfContains ?site . ?site a ius:Site . } GROUP BY ?cell ORDER BY DESC(?siteCount) LIMIT 20") 0.030s
+call_hsfWsUBwYqSmI0zXq7lkEXcV
+Result
+result_of: execute_query
+Prefixes: {'sgulr': 'http://stko-kwg.geog.ucsb.edu/lod/resource/'}
+Got 20 rows and 3 columns, showing the first 5 and last 5 rows below:
+| cell                                 | siteCount   | cellLabel   |
+|:-------------------------------------|:------------|:------------|
+| sgulr:s2.level13.9758960523159797760 | 3           | nan         |
+| sgulr:s2.level13.5965661247171985408 | 3           | nan         |
+| sgulr:s2.level13.5965661281531723776 | 3           | nan         |
+| sgulr:s2.level13.5969398281036365824 | 2           | nan         |
+| sgulr:s2.level13.9768683573203697664 | 2           | nan         |
+| ...                                  | ...         | ...         |
+| sgulr:s2.level13.9794898198152609792 | 1           | nan         |
+| sgulr:s2.level13.9770173720696979456 | 1           | nan         |
+| sgulr:s2.level13.9766516298346397696 | 1           | nan         |
+| sgulr:s2.level13.9766516641943781376 | 1           | nan         |
+| sgulr:s2.level13.9766516332706136064 | 1           | nan         |
+assistant
+answer(answer="I ran a query that, for each sgul:S2Cell_Level13 cell, finds locations the cell is connected to (psss:connectedTo), finds sites contained in those locations (sgul:sfContains with rdf:type ius:Site), counts distinct sites per cell, and returns the top 20 cells by site count. Top 20 results (cell IRI — siteCount) returned by the query: 1. sgulr:s2.level13.9758960523159797760 — 3 2. sgulr:s2.level13.5965661247171985408 — 3 3. sgulr:s2.level13.5965661281531723776 — 3 4. sgulr:s2.level13.5969398281036365824 — 2 5. sgulr:s2.level13.9768683573203697664 — 2 6. (remaining entries include cells with siteCount = 2 or 1) ... 20. sgulr:s2.level13.9766516332706136064 — 1 Notes: - The query returns the actual cell IRIs (as shown) and the site counts. Some cells have an rdfs:label but many do not (labels shown as nan in the query output); if you want readable labels for cells and locations, we can expand the query to include labels for the connected locations and/or for the sites. - If you want the full list with site IRIs (not just counts) or to break counts down by location, I can modify the query accordingly.", kg="sockg", sparql="PREFIX sgul: <http://stko-kwg.geog.ucsb.edu/lod/ontology/> PREFIX psss: <http://purl.org/spatialai/spatial/spatial-full#> PREFIX ius: <https://idir.uta.edu/sockg-ontology#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?cell (COUNT(DISTINCT ?site) AS ?siteCount) (SAMPLE(?cellLabel) AS ?cellLabel) WHERE { ?cell a sgul:S2Cell_Level13 . OPTIONAL { ?cell rdfs:label ?cellLabel } ?cell psss:connectedTo ?loc . ?loc a ius:Location . ?loc sgul:sfContains ?site . ?site a ius:Site . } GROUP BY ?cell ORDER BY DESC(?siteCount) LIMIT 20") 0.000s
+call_73QtHIzypR7I0vE8icjsApat
+Result
+Stopping
+Generated SPARQL
+PREFIX psss: <http://purl.org/spatialai/spatial/spatial-full#>
+PREFIX ius: <https://idir.uta.edu/sockg-ontology#>
+PREFIX sgul: <http://stko-kwg.geog.ucsb.edu/lod/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?cell ( COUNT( DISTINCT ?site ) AS ?siteCount ) ( SAMPLE( ?cellLabel ) AS ?cellLabel ) WHERE {
+  ?cell a sgul:S2Cell_Level13 .
+  OPTIONAL {
+    ?cell rdfs:label ?cellLabel
+  }
+  ?cell psss:connectedTo ?loc .
+  ?loc a ius:Location .
+  ?loc sgul:sfContains ?site .
+  ?site a ius:Site .
+}
+GROUP BY ?cell
+ORDER BY DESC ( ?siteCount )
+LIMIT 20
+Ground Truth SPARQL
+PREFIX sockg: <https://idir.uta.edu/sockg-ontology#>
+PREFIX kwg: <http://stko-kwg.geog.ucsb.edu/lod/ontology/>
+PREFIX saw: <http://purl.org/spatialai/spatial/spatial-full#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?cell (COUNT(DISTINCT ?site) AS ?siteCount)
+WHERE {
+  ?cell a kwg:S2Cell_Level13 ;
+        saw:connectedTo ?location .
+  ?location a sockg:Location ;
+            kwg:sfContains ?site .
+  ?site a sockg:Site .
+}
+GROUP BY ?cell
+HAVING (COUNT(DISTINCT ?site) > 0)
+ORDER BY DESC(?siteCount)
+LIMIT 20

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRASP Tools — Search</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f1f5f9;
+            padding: 24px;
+            display: flex;
+            justify-content: center;
+            color: #334155;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        /* ── Phase wrapper ── */
+        .phase-container {
+            position: relative;
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 40px 24px 24px 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .phase-label {
+            position: absolute;
+            top: -16px;
+            left: 24px;
+            background: #fff;
+            padding: 4px 14px;
+            font-size: 16px;
+            font-weight: 800;
+            color: #475569;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ── Category groups ── */
+        .rows-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .category-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+            padding: 28px 16px 16px 16px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+        }
+
+        .category-label {
+            position: absolute;
+            top: -12px;
+            left: 16px;
+            background: #fff;
+            padding: 2px 10px;
+            font-size: 11px;
+            font-weight: 800;
+            border-radius: 6px;
+            border: 1.5px solid #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        /* Category Specific Colors */
+        .cat-search {
+            background: #f8fbff;
+            border-color: #93c5fd;
+        }
+
+        .cat-search .category-label {
+            color: #1d4ed8;
+            border-color: #93c5fd;
+        }
+
+        .cat-search .tool-icon {
+            background: #eff6ff;
+            color: #2563eb;
+            border: 1px solid #dbeafe;
+        }
+
+        .cat-explore {
+            background: #fffef8;
+            border-color: #fde68a;
+        }
+
+        .cat-explore .category-label {
+            color: #92400e;
+            border-color: #fde68a;
+        }
+
+        .cat-explore .tool-icon {
+            background: #fffbeb;
+            color: #d97706;
+            border: 1px solid #fef3c7;
+        }
+
+        .cat-exec {
+            background: #f8fdfb;
+            border-color: #86efac;
+        }
+
+        .cat-exec .category-label {
+            color: #166534;
+            border-color: #86efac;
+        }
+
+        .cat-exec .tool-icon {
+            background: #f0fdf4;
+            color: #16a34a;
+            border: 1px solid #dcfce7;
+        }
+
+        .cat-hier {
+            background: #faf8ff;
+            border-color: #c4b5fd;
+        }
+
+        .cat-hier .category-label {
+            color: #5b21b6;
+            border-color: #c4b5fd;
+        }
+
+        .cat-hier .tool-icon {
+            background: #faf5ff;
+            color: #7c3aed;
+            border: 1px solid #f3e8ff;
+        }
+
+        /* ── Tool card ── */
+        .tool-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .tool-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            border-color: #cbd5e1;
+        }
+
+        /* ── Header ── */
+        .tool-header {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .tool-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+
+        .tool-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+        }
+
+        .tool-meta {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .tool-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .tool-fn {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 12px;
+            color: #475569;
+            background: #fff;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
+        }
+
+        /* ── Description ── */
+        .tool-desc {
+            padding: 16px;
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.5;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* ── I/O ── */
+        .tool-io {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .io-section {
+            padding: 16px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .io-section:first-child {
+            flex: 3;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .io-section:last-child {
+            flex: 2;
+            background: #f8fafc;
+        }
+
+        .io-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .io-title::before {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #cbd5e1;
+        }
+
+        /* ── Params ── */
+        .param {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .param:last-child {
+            margin-bottom: 0;
+        }
+
+        .p-name {
+            font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+            font-size: 12px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .p-type {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 2px 4px;
+            border-radius: 4px;
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+        }
+
+        .p-req {
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        .req {
+            background: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+        }
+
+        .opt {
+            background: #f8fafc;
+            color: #64748b;
+            border: 1px solid #e2e8f0;
+        }
+
+        .p-desc {
+            font-size: 12.5px;
+            color: #475569;
+            flex-basis: 100%;
+            margin-top: 2px;
+        }
+
+        /* ── Output ── */
+        .out-type {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .out-type.table {
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+        }
+
+        .out-type.dict {
+            background: #faf5ff;
+            color: #7c3aed;
+            border: 1px solid #ddd6fe;
+        }
+
+        .out-type.multi {
+            background: #fff7ed;
+            color: #c2410c;
+            border: 1px solid #fed7aa;
+        }
+
+        .col-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+            font-size: 11px;
+            padding: 3px 6px;
+            border-radius: 4px;
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            color: #334155;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+        }
+
+        .chip.opt {
+            border-style: dashed;
+            color: #64748b;
+        }
+
+        .out-group {
+            margin-bottom: 12px;
+        }
+
+        .out-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .out-group-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+
+        .dict-row {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .dict-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .dict-key {
+            font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+            font-size: 12px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .dict-arrow {
+            color: #94a3b8;
+            font-size: 11px;
+        }
+
+        .dict-val {
+            font-size: 12px;
+            color: #475569;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="phase-container">
+            <div class="phase-label">KG Voyager Tools</div>
+            <div class="rows-wrapper">
+
+                <!-- ════════ SEARCH ════════ -->
+                <div class="category-group cat-search">
+                    <div class="category-label">Search</div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </div>
+                            <div class="tool-meta">
+                                <span class="tool-name">Class Search</span>
+                                <span class="tool-fn">search_all_classes(search_term, limit)</span>
+                            </div>
+                        </div>
+                        <div class="tool-desc">Search for classes in the Knowledge Graph by name or concept. Uses hybrid
+                            retrieval (semantic + keyword) to find relevant classes. Low-relevance results are
+                            automatically pruned.<br><br><b>Purpose:</b> Use natural-language terms from the question to
+                            find candidate class URIs.</div>
+                        <div class="tool-io">
+                            <div class="io-section">
+                                <div class="io-title">Input Schema</div>
+                                <div class="param">
+                                    <span class="p-name">search_term</span><span class="p-type">string</span><span
+                                        class="p-req req">req</span>
+                                    <span class="p-desc">The concept, keyword, or class name to search for. Utilizes
+                                        semantic search to find relevant matches.</span>
+                                </div>
+                                <div class="param">
+                                    <span class="p-name">limit</span><span class="p-type">number</span><span
+                                        class="p-req opt">opt</span>
+                                    <span class="p-desc">Maximum number of results to return (default: 10).</span>
+                                </div>
+                            </div>
+                            <div class="io-section">
+                                <div class="io-title">Output Format</div>
+                                <div class="out-type table">▤ Table with columns:</div>
+                                <div class="col-chips">
+                                    <span class="chip">class_uri</span><span class="chip">label</span><span
+                                        class="chip">count</span><span class="chip">score</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                                </svg>
+                            </div>
+                            <div class="tool-meta">
+                                <span class="tool-name">Instance Lookup</span>
+                                <span class="tool-fn">lookup_class_instances(class_uri, search_term, limit, mode)</span>
+                            </div>
+                        </div>
+                        <div class="tool-desc">Retrieve instances of a specific class, optionally filtered by
+                            name.<br><br><b>Purpose:</b> The primary way to resolve named entities mentioned in the
+                            question (e.g., 'France', 'Albert Einstein') to their URIs. First identify the entity's
+                            class via class search, then use this tool with the entity name as search_term.</div>
+                        <div class="tool-io">
+                            <div class="io-section">
+                                <div class="io-title">Input Schema</div>
+                                <div class="param">
+                                    <span class="p-name">class_uri</span><span class="p-type">string</span><span
+                                        class="p-req req">req</span>
+                                    <span class="p-desc">The full absolute URI of the class. Do not use
+                                        prefixed/abbreviated URIs.</span>
+                                </div>
+                                <div class="param">
+                                    <span class="p-name">search_term</span><span class="p-type">string</span><span
+                                        class="p-req opt">opt</span>
+                                    <span class="p-desc">Optional keyword to filter entities by label/name.</span>
+                                </div>
+                                <div class="param">
+                                    <span class="p-name">limit</span><span class="p-type">number</span><span
+                                        class="p-req opt">opt</span>
+                                    <span class="p-desc">Maximum number of entities to return (default: 10).</span>
+                                </div>
+                                <div class="param">
+                                    <span class="p-name">mode</span><span class="p-type">string</span><span
+                                        class="p-req opt">opt</span>
+                                    <span class="p-desc">Result mode: 'labels_only' (default) searches only entity
+                                        label; 'all_attributes' searches across all literal values.</span>
+                                </div>
+                            </div>
+                            <div class="io-section">
+                                <div class="io-title">Output Format</div>
+                                <div class="out-type table">▤ Table with columns:</div>
+                                <div class="col-chips">
+                                    <span class="chip">entity</span><span class="chip">displayLabel</span><span
+                                        class="chip opt">searchProp</span><span class="chip opt">searchVal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />
+                                </svg>
+                            </div>
+                            <div class="tool-meta">
+                                <span class="tool-name">Property Search</span>
+                                <span class="tool-fn">search_all_properties(search_term, limit)</span>
+                            </div>
+                        </div>
+                        <div class="tool-desc">Search for properties in the Knowledge Graph by name or concept. Uses
+                            hybrid retrieval (semantic + keyword) to find relevant properties. Low-relevance results are
+                            automatically pruned.<br><br><b>Purpose:</b> Find candidate property URIs. Use the domain
+                            and range columns to understand how the property connects different entity types.</div>
+                        <div class="tool-io">
+                            <div class="io-section">
+                                <div class="io-title">Input Schema</div>
+                                <div class="param">
+                                    <span class="p-name">search_term</span><span class="p-type">string</span><span
+                                        class="p-req opt">opt</span>
+                                    <span class="p-desc">The concept, keyword, or property name to search for. Utilizes
+                                        semantic search to find relevant matches.</span>
+                                </div>
+                                <div class="param">
+                                    <span class="p-name">limit</span><span class="p-type">number</span><span
+                                        class="p-req opt">opt</span>
+                                    <span class="p-desc">Maximum number of results to return (default: 10).</span>
+                                </div>
+                            </div>
+                            <div class="io-section">
+                                <div class="io-title">Output Format</div>
+                                <div class="out-type table">▤ Table with columns:</div>
+                                <div class="col-chips">
+                                    <span class="chip">property_uri</span><span class="chip">label</span><span
+                                        class="chip opt">aliases</span><span class="chip opt">domain</span><span
+                                        class="chip opt">range</span><span class="chip opt">count</span><span
+                                        class="chip">score</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><!-- rows-wrapper -->
+        </div><!-- phase-container -->
+    </div><!-- container -->
+
+</body>
+
+</html>

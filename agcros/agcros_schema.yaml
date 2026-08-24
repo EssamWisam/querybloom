@@ -1,0 +1,9697 @@
+metadata:
+  source_file: AgCros.xlsx
+  generated_at: '2026-02-18 10:59:08'
+  total_sheets: 31
+sheets:
+- name: metacitations
+  row_count: 177
+  column_count: 12
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 177
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 177
+    min: 1.0
+    max: 177.0
+    mean: 89.0
+    sample_values:
+    - 11
+    - 10
+    - 149
+    - 1
+    - 2
+  - name: location_id
+    type: object
+    non_null_count: 177
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 46
+    sample_values:
+    - GAJPCSR1
+    - GAJPCSR1
+    - WIPDBARN
+    - COFOARD2
+    - COFOARD2
+  - name: date_published
+    type: object
+    non_null_count: 177
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 97
+    sample_values:
+    - '2005-01-01'
+    - '2004-01-01'
+    - '2018-01-01'
+    - '2010-01-08'
+    - '2010-06-25'
+  - name: citation_type
+    type: object
+    non_null_count: 163
+    null_count: 14
+    null_percentage: 7.91
+    unique_values: 7
+    sample_values:
+    - Journal article about data
+    - Journal article about data
+    - Journal article about data
+    - Journal article about data
+    - Journal article about data
+  - name: title
+    type: object
+    non_null_count: 146
+    null_count: 31
+    null_percentage: 17.51
+    unique_values: 136
+    sample_values:
+    - Nutrient concentrations in leachate and runoff from dairy cattle lots with different surface materials
+    - Tillage and inorganic nitrogen source effects on nitous oxide emissions from irrigated cropping systems
+    - Nitrogen source effects on nitrous oxide emissions from irrigated no-till corn
+    - Irrigated corn and barley response to nitrogen under no-till in northern Colorado
+    - Irrigated corn and soybean response to nitrogen under no-till in northern Colorado.
+  - name: is_part_of
+    type: object
+    non_null_count: 2
+    null_count: 175
+    null_percentage: 98.87
+    unique_values: 2
+    sample_values:
+    - Fractal Frontiers
+    - Farm Land Erosion in Temperate Plains Environments and Hills
+  - name: author
+    type: object
+    non_null_count: 173
+    null_count: 4
+    null_percentage: 2.26
+    unique_values: 75
+    sample_values:
+    - Franzluebbers
+    - Franzluebbers
+    - Halvorson
+    - Halvorson
+    - Halvorson
+  - name: correspond_author
+    type: object
+    non_null_count: 136
+    null_count: 41
+    null_percentage: 23.16
+    unique_values: 58
+    sample_values:
+    - Halvorson
+    - Halvorson
+    - Halvorson
+    - Halvorson
+    - Halvorson
+  - name: identifier_usda_ars
+    type: object
+    non_null_count: 130
+    null_count: 47
+    null_percentage: 26.55
+    unique_values: 114
+    sample_values:
+    - https://www.soils.org/publications/sssaj
+    - https://www.agronomy.org/publications/aj
+    - ' doi:10.2136/sssaj2009.0072'
+    - doi:10.2134/jeq2010.0041
+    - doi:10.2134/agronj2006.0356
+  - name: description
+    type: object
+    non_null_count: 60
+    null_count: 117
+    null_percentage: 66.1
+    unique_values: 46
+    sample_values:
+    - N2O
+    - N2O
+    - corn/barley yields
+    - corn/soybean ylds
+    - soil quality
+  - name: citation
+    type: object
+    non_null_count: 177
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 169
+    sample_values:
+    - Franzluebbers AJ, Stuedemann JA. 2005. Bermudagrass management in the Southern Piedmont USA. VII. Soil-profile organic
+      carbon and total nitrogen. Soil Science Society of America Journal 69, 1455-1462.
+    - Franzluebbers AJ, Wilkinson SR, Stuedemann JA. 2004. Bermudagrass management in the Southern Piedmont USA. X. Coastal
+      productivity and persistence as affected by fertilization and defoliation regimes. Agronomy Journal 96, 1400-1411.
+    - in prep
+    - Halvorson, A.D., S.J. Del Grosso, F. Alluvione 2010. Tillage and inorganic nitrogen  source effects on nitrous oxide
+      emissions from irrigated cropping systems, Soil  Science Society of America Journal, 74:436–445, doi:10.2136/sssaj2009.0072.
+    - 'Halvorson, A.D., S.J. Del Grosso, and F. Alluvione 2010. Nitrogen Source Effects on  Nitrous Oxide Emissions from Irrigated
+      No-Till Corn. Journal of Environmental  Quality, 39: 5: 1554-1562, doi:10.2134/jeq2010.0041.'
+  - name: citation_url
+    type: float64
+    non_null_count: 0
+    null_count: 177
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: metalocationoverview
+  row_count: 58
+  column_count: 10
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 58
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 58
+    min: 1.0
+    max: 58.0
+    mean: 29.5
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  - name: location_id
+    type: object
+    non_null_count: 58
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 58
+    sample_values:
+    - ALAUSDR
+    - COFOARD2
+    - COFOARD3
+    - CONUNRBS
+    - GAJPCSR1
+  - name: location_name
+    type: object
+    non_null_count: 58
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 9
+    sample_values:
+    - GRACEnet
+    - GRACEnet
+    - GRACEnet
+    - GRACEnet
+    - GRACEnet
+  - name: location_descriptor
+    type: object
+    non_null_count: 58
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 55
+    sample_values:
+    - Auburn Soil Dynamics Research
+    - Fort Collins, CO N Source
+    - Fort Collins, CO High Efficiency
+    - CPER Trace Gas Emissions from Cattle Excrement
+    - GAJPCSR1
+  - name: site_descriptor
+    type: float64
+    non_null_count: 0
+    null_count: 58
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: research_unit
+    type: float64
+    non_null_count: 0
+    null_count: 58
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: funding_source
+    type: object
+    non_null_count: 54
+    null_count: 4
+    null_percentage: 6.9
+    unique_values: 7
+    sample_values:
+    - USDA-ARS
+    - USDA-ARS
+    - USDA-ARS
+    - USDA-ARS
+    - USDA-ARS
+  - name: start_date
+    type: object
+    non_null_count: 58
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 47
+    sample_values:
+    - '2000-09-01'
+    - '2007-01-01'
+    - '2009-01-01'
+    - '2012-06-19'
+    - '1994-04-11'
+  - name: end_date
+    type: object
+    non_null_count: 58
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 38
+    sample_values:
+    - '2006-10-01'
+    - '2008-12-31'
+    - '2012-03-19'
+    - '2014-05-27'
+    - '1998-12-28'
+  - name: keyword_list
+    type: float64
+    non_null_count: 0
+    null_count: 58
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: metapersons
+  row_count: 158
+  column_count: 16
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 158
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 158
+    min: 1.0
+    max: 158.0
+    mean: 79.5
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  - name: location_id
+    type: object
+    non_null_count: 158
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 58
+    sample_values:
+    - COFOARD1
+    - COFOARD1
+    - COFOARD1
+    - COFOARD1
+    - COFOARD1
+  - name: orcid
+    type: float64
+    non_null_count: 0
+    null_count: 158
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: last_name
+    type: object
+    non_null_count: 158
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 86
+    sample_values:
+    - Del Grosso
+    - Halvorson
+    - Reyes-Fox
+    - Delgado
+    - Stewart
+  - name: first_name
+    type: object
+    non_null_count: 158
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 75
+    sample_values:
+    - Steve
+    - Ardell
+    - Melissa
+    - Jorge
+    - Cathy
+  - name: middle_name
+    type: object
+    non_null_count: 120
+    null_count: 38
+    null_percentage: 24.05
+    unique_values: 36
+    sample_values:
+    - ' '
+    - ' '
+    - ' '
+    - A.
+    - ' '
+  - name: suffix
+    type: object
+    non_null_count: 95
+    null_count: 63
+    null_percentage: 39.87
+    unique_values: 7
+    sample_values:
+    - Ph.D
+    - Ph.D
+    - M.S.
+    - Ph.D
+    - Ph.D
+  - name: role_in_study
+    type: object
+    non_null_count: 154
+    null_count: 4
+    null_percentage: 2.53
+    unique_values: 40
+    sample_values:
+    - PI
+    - PI
+    - Collect and enter data
+    - PI
+    - PI
+  - name: primary_contact
+    type: object
+    non_null_count: 150
+    null_count: 8
+    null_percentage: 5.06
+    unique_values: 9
+    sample_values:
+    - 'Yes'
+    - 'No'
+    - 'No'
+    - 'Yes'
+    - ' '
+  - name: department
+    type: object
+    non_null_count: 146
+    null_count: 12
+    null_percentage: 7.59
+    unique_values: 34
+    sample_values:
+    - USDA ARS
+    - USDA ARS
+    - USDA ARS
+    - USDA ARS
+    - USDA ARS
+  - name: organization
+    type: object
+    non_null_count: 155
+    null_count: 3
+    null_percentage: 1.9
+    unique_values: 30
+    sample_values:
+    - Soil Plant Nutrient Research Unit
+    - Soil Plant Nutrient Research Unit
+    - Soil Plant Nutrient Research Unit
+    - Soil Management and Sugar Beet Research Unit
+    - Soil Management and Sugar Beet Research Unit
+  - name: profession
+    type: object
+    non_null_count: 154
+    null_count: 4
+    null_percentage: 2.53
+    unique_values: 38
+    sample_values:
+    - Soil Scientist
+    - Soil Scientist (retired)
+    - Technician
+    - Soil Scientist
+    - Soil Scientist
+  - name: email
+    type: object
+    non_null_count: 149
+    null_count: 9
+    null_percentage: 5.7
+    unique_values: 80
+    sample_values:
+    - steve.delgrosso@ars.usda.gov
+    - ardell.halvorson@ars.usda.gov
+    - melissa.reyes@ars.usda.gov
+    - ' '
+    - ' '
+  - name: telephone
+    type: object
+    non_null_count: 142
+    null_count: 16
+    null_percentage: 10.13
+    unique_values: 73
+    sample_values:
+    - 970-492-7281
+    - 970-492-7230
+    - 970-492-7284
+    - 970-492-7260
+    - ' '
+  - name: web_site
+    type: object
+    non_null_count: 106
+    null_count: 52
+    null_percentage: 32.91
+    unique_values: 31
+    sample_values:
+    - http://www.ars.usda.gov/pandp/people/people.htm?personid=36958
+    - http://www.ars.usda.gov/pandp/people/people.htm?personid=2254
+    - http://www.ars.usda.gov/pandp/people/people.htm?personid=40148
+    - ' '
+    - ' '
+  - name: note
+    type: object
+    non_null_count: 84
+    null_count: 74
+    null_percentage: 46.84
+    unique_values: 19
+    sample_values:
+    - ' '
+    - ' '
+    - ' '
+    - ' '
+    - ' '
+- name: metasites
+  row_count: 65
+  column_count: 15
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 65
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 65
+    min: 1.0
+    max: 65.0
+    mean: 33.0
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  - name: location_id
+    type: object
+    non_null_count: 65
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 58
+    sample_values:
+    - ALAUSDR
+    - COFOARD2
+    - COFOARD3
+    - CONUNRBS
+    - CONUNRBS
+  - name: site_id
+    type: object
+    non_null_count: 65
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 60
+    sample_values:
+    - ALAuburn
+    - COFOARD2
+    - COFOARD3
+    - Native Rangeland
+    - Bozoisky-Select Pasture
+  - name: city
+    type: object
+    non_null_count: 61
+    null_count: 4
+    null_percentage: 6.15
+    unique_values: 33
+    sample_values:
+    - Shorter
+    - Fort Collins
+    - Fort Collins
+    - Nunn
+    - Nunn
+  - name: county
+    type: object
+    non_null_count: 65
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 33
+    sample_values:
+    - Macon
+    - Larimer
+    - Larimer
+    - Weld
+    - Weld
+  - name: state_province
+    type: object
+    non_null_count: 65
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 20
+    sample_values:
+    - AL
+    - CO
+    - CO
+    - CO
+    - CO
+  - name: country
+    type: object
+    non_null_count: 65
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 3
+    sample_values:
+    - USA
+    - USA
+    - USA
+    - USA
+    - USA
+  - name: postal_code
+    type: float64
+    non_null_count: 62
+    null_count: 3
+    null_percentage: 4.62
+    unique_values: 34
+    min: 0.0
+    max: 97801.0
+    mean: 55960.87
+    sample_values:
+    - 36075.0
+    - 80524.0
+    - 80524.0
+    - 80648.0
+    - 80648.0
+  - name: spatial_description
+    type: object
+    non_null_count: 65
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 54
+    sample_values:
+    - Bounding Box:,-85.897912,32.423849,-85.895231,32.421965
+    - Bounding Box:,-104.999980,40.651930,-104.998263,40.650690
+    - Bounding Box:,-104.999245,40.651888,-104.998269,40.650709
+    - Bounding Box:,-104.706257,40.842485,-104.704846,40.837804
+    - Bounding Box:,-104.706257,40.842485,-104.704846,40.837804
+  - name: lat_dec_deg
+    type: float64
+    non_null_count: 0
+    null_count: 65
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: long_dec_deg
+    type: float64
+    non_null_count: 0
+    null_count: 65
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: elevation_m
+    type: float64
+    non_null_count: 0
+    null_count: 65
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mlra
+    type: float64
+    non_null_count: 0
+    null_count: 65
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: native_veg
+    type: float64
+    non_null_count: 0
+    null_count: 65
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: site_history
+    type: float64
+    non_null_count: 0
+    null_count: 65
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: metatreatments
+  row_count: 774
+  column_count: 19
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 774
+    min: 1.0
+    max: 774.0
+    mean: 387.5
+    sample_values:
+    - 2
+    - 86
+    - 1
+    - 3
+    - 4
+  - name: location_id
+    type: object
+    non_null_count: 774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 58
+    sample_values:
+    - NDMAH3
+    - CONUNRBS
+    - MNMOFS
+    - ALAUSDR
+    - ALAUSDR
+  - name: treatment_id
+    type: object
+    non_null_count: 774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 769
+    sample_values:
+    - NDMAH3_C
+    - CONUNRBS_BS-Cb
+    - MNMOFS_5
+    - ALAUSDR_ALAuburn_CTM1
+    - ALAUSDR_ALAuburn_CTM2
+  - name: start_date
+    type: object
+    non_null_count: 774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 83
+    sample_values:
+    - '2008-06-03'
+    - '2012-06-19'
+    - '2002-03-01'
+    - '2004-09-01'
+    - '2004-09-01'
+  - name: treatment_descriptor
+    type: object
+    non_null_count: 774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 568
+    sample_values:
+    - Control
+    - Blank
+    - ConvSys 4yr rot  CT NF
+    - Conventional tillage + dairy manure (~10 Mg/ha; dry weight)
+    - Conventional tillage + dairy manure (~10 Mg/ha; dry weight)
+  - name: rotation_descriptor
+    type: object
+    non_null_count: 766
+    null_count: 8
+    null_percentage: 1.03
+    unique_values: 66
+    sample_values:
+    - Rangeland
+    - Pasture
+    - Corn, Soybean, Wheat/Alfalfa, Alfalfa
+    - Corn, Cotton
+    - Corn, Cotton
+  - name: tillage_descriptor
+    type: object
+    non_null_count: 724
+    null_count: 50
+    null_percentage: 6.46
+    unique_values: 9
+    sample_values:
+    - Conventional Till
+    - Conventional Till
+    - Conventional Till
+    - Conventional Till
+    - Conventional Till
+  - name: n_treatment_descriptor
+    type: object
+    non_null_count: 755
+    null_count: 19
+    null_percentage: 2.45
+    unique_values: 113
+    sample_values:
+    - 0 kg N ha-1
+    - no fertilizer
+    - No N treatments, N was part of the management and an additional 113 kg N/ha supplied by dairy manure
+    - No N treatments, N was part of the management and an additional 113 kg N/ha supplied by dairy manure
+    - No N treatments, N was part of the management and an additional 113 kg N/ha supplied by dairy manure
+  - name: project_scenario
+    type: object
+    non_null_count: 774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 22
+    sample_values:
+    - 5=Other
+    - 1=Business as usual
+    - 5=Other
+    - 1=Business as usual
+    - 1=Business as usual
+  - name: fertilizer_amendment_class
+    type: object
+    non_null_count: 658
+    null_count: 116
+    null_percentage: 14.99
+    unique_values: 4
+    sample_values:
+    - Integrated (Combination of organic and synthetic)
+    - Integrated (Combination of organic and synthetic)
+    - Integrated (Combination of organic and synthetic)
+    - Integrated (Combination of organic and synthetic)
+    - Integrated (Combination of organic and synthetic)
+  - name: cover_crop
+    type: object
+    non_null_count: 194
+    null_count: 580
+    null_percentage: 74.94
+    unique_values: 8
+    sample_values:
+    - Avena strigosa/Secale cereale (Black Oat/Rye)
+    - Avena strigosa/Secale cereale (Black Oat/Rye)
+    - Avena strigosa/Secale cereale (Black Oat/Rye)
+    - Avena strigosa/Secale cereale (Black Oat/Rye)
+    - Avena strigosa/Secale cereale (Black Oat/Rye)
+  - name: residue_removal
+    type: object
+    non_null_count: 774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 3
+    sample_values:
+    - 'No'
+    - 'No'
+    - 'No'
+    - 'No'
+    - 'No'
+  - name: irrigation
+    type: object
+    non_null_count: 774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - 'No'
+    - 'No'
+    - 'No'
+    - 'No'
+    - 'No'
+  - name: organic_management
+    type: object
+    non_null_count: 774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - 'No'
+    - 'No'
+    - 'No'
+    - 'Yes'
+    - 'Yes'
+  - name: grazing_rate
+    type: object
+    non_null_count: 20
+    null_count: 754
+    null_percentage: 97.42
+    unique_values: 3
+    sample_values:
+    - Low
+    - High
+    - Low
+    - High
+    - Low
+  - name: animal_species
+    type: object
+    non_null_count: 3
+    null_count: 771
+    null_percentage: 99.61
+    unique_values: 1
+    sample_values:
+    - Dairy Cattle
+    - Dairy Cattle
+    - Dairy Cattle
+  - name: operation
+    type: float64
+    non_null_count: 0
+    null_count: 774
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: tile_drainage
+    type: object
+    non_null_count: 443
+    null_count: 331
+    null_percentage: 42.76
+    unique_values: 1
+    sample_values:
+    - 'No'
+    - 'No'
+    - 'No'
+    - 'No'
+    - 'No'
+  - name: project_names
+    type: object
+    non_null_count: 774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - GRACEnet
+    - GRACEnet
+    - GRACEnet
+    - GRACEnet
+    - GRACEnet
+- name: metaunits
+  row_count: 4059
+  column_count: 11
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 4059
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 4059
+    min: 1.0
+    max: 4059.0
+    mean: 2030.0
+    sample_values:
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43
+  - name: location_id
+    type: object
+    non_null_count: 4059
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 54
+    sample_values:
+    - MTSIFERE
+    - MTSIFERE
+    - MTSIFERE
+    - MTSIFERE
+    - MTSIFERE
+  - name: unit_id
+    type: object
+    non_null_count: 4059
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 3809
+    sample_values:
+    - MTSIFERE_GrazW-P/B-F3w2
+    - MTSIFERE_GrazW-P/B-F1pb1
+    - MTSIFERE_GrazW-P/B-F1pb2
+    - MTSIFERE_GrazW-P/B-F2pb1
+    - MTSIFERE_GrazW-P/B-F2pb2
+  - name: site_id
+    type: object
+    non_null_count: 4056
+    null_count: 3
+    null_percentage: 0.07
+    unique_values: 60
+    sample_values:
+    - FEREC
+    - FEREC
+    - FEREC
+    - FEREC
+    - FEREC
+  - name: start_date
+    type: object
+    non_null_count: 3428
+    null_count: 631
+    null_percentage: 15.55
+    unique_values: 130
+    sample_values:
+    - '2009-01-01'
+    - '2009-01-01'
+    - '2009-01-01'
+    - '2009-01-01'
+    - '2009-01-01'
+  - name: end_date
+    type: object
+    non_null_count: 2028
+    null_count: 2031
+    null_percentage: 50.04
+    unique_values: 42
+    sample_values:
+    - '2011-12-31'
+    - '2011-12-31'
+    - '2011-12-31'
+    - '2011-12-31'
+    - '2011-12-31'
+  - name: keyword_list
+    type: float64
+    non_null_count: 0
+    null_count: 4059
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: unit_url
+    type: object
+    non_null_count: 23
+    null_count: 4036
+    null_percentage: 99.43
+    unique_values: 13
+    sample_values:
+    - http://hprcc1.unl.edu/cgi-hpcc/stnsel.cgi
+    - http://hprcc1.unl.edu/cgi-hpcc/stnsel.cgi
+    - http://awdn.unl.edu/classic/dr3.cgi
+    - http://mesonet.agron.iastate.edu/sites/site.php?station=A130209&network=ISUAG
+    - http://www.wcc.nrcs.usda.gov/nwcc/site?sitenum=2031&state=ia
+  - name: change_in_management
+    type: float64
+    non_null_count: 0
+    null_count: 4059
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_series
+    type: float64
+    non_null_count: 0
+    null_count: 4059
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_classification
+    type: float64
+    non_null_count: 0
+    null_count: 4059
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: allcellcomments
+  row_count: 533
+  column_count: 7
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 533
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 533
+    min: 1.0
+    max: 533.0
+    mean: 267.0
+    sample_values:
+    - 148
+    - 1
+    - 301
+    - 391
+    - 2
+  - name: location_id
+    type: object
+    non_null_count: 533
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 50
+    sample_values:
+    - MTSINVND
+    - SDaltrot
+    - ALAUTVS
+    - SCFLSGI
+    - SDaltrot
+  - name: date_entered
+    type: object
+    non_null_count: 533
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 143
+    sample_values:
+    - '2015-10-05'
+    - '2013-09-05'
+    - '2012-01-20'
+    - '2012-01-22'
+    - '2014-07-09'
+  - name: sheet_name
+    type: object
+    non_null_count: 514
+    null_count: 19
+    null_percentage: 3.56
+    unique_values: 34
+    sample_values:
+    - FieldSites
+    - ValidationData
+    - WeatherDaily
+    - FieldSites
+    - ValidationData
+  - name: field_name
+    type: object
+    non_null_count: 485
+    null_count: 48
+    null_percentage: 9.01
+    unique_values: 184
+    sample_values:
+    - County
+    - Max CO2 Emission
+    - RH
+    - longitude
+    - Max Planting Rate
+  - name: reporting_person_name
+    type: object
+    non_null_count: 524
+    null_count: 9
+    null_percentage: 1.69
+    unique_values: 26
+    sample_values:
+    - M. Reyes-Fox
+    - Nancy Barbour
+    - Franscisco Arriaga
+    - Nancy Barbour
+    - Nancy Barbour
+  - name: comment
+    type: object
+    non_null_count: 533
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 417
+    sample_values:
+    - Added Williams county to tab
+    - changed DS11 to 40,000 for  max CO2 Emission on MeasGHG
+    - Notes for RH
+    - changed to negative
+    - changed BY9 to 3,500,000 for  seed density on MgtPlanting
+- name: comometeorology
+  row_count: 149774
+  column_count: 23
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 149774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 149774
+    min: 1.0
+    max: 149774.0
+    mean: 74887.5
+    sample_values:
+    - 106
+    - 107
+    - 108
+    - 109
+    - 110
+  - name: location_id
+    type: object
+    non_null_count: 149774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 51
+    sample_values:
+    - NDMAGWP
+    - NDMAGWP
+    - NDMAGWP
+    - NDMAGWP
+    - NDMAGWP
+  - name: unit_id
+    type: object
+    non_null_count: 149774
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 51
+    sample_values:
+    - NDMAGWP
+    - NDMAGWP
+    - NDMAGWP
+    - NDMAGWP
+    - NDMAGWP
+  - name: date
+    type: object
+    non_null_count: 148679
+    null_count: 1095
+    null_percentage: 0.73
+    unique_values: 32614
+    sample_values:
+    - '2003-11-22'
+    - '2003-11-23'
+    - '2003-11-24'
+    - '2003-11-25'
+    - '2003-11-26'
+  - name: time
+    type: object
+    non_null_count: 1095
+    null_count: 148679
+    null_percentage: 99.27
+    unique_values: 1
+    sample_values:
+    - 00:00:00
+    - 00:00:00
+    - 00:00:00
+    - 00:00:00
+    - 00:00:00
+  - name: treatment_id
+    type: object
+    non_null_count: 40066
+    null_count: 109708
+    null_percentage: 73.25
+    unique_values: 13
+    sample_values:
+    - MEADAGROFARM
+    - MEADAGROFARM
+    - MEADAGROFARM
+    - MEADAGROFARM
+    - MEADAGROFARM
+  - name: temp_max_degc
+    type: float64
+    non_null_count: 147088
+    null_count: 2686
+    null_percentage: 1.79
+    unique_values: 16704
+    min: -36.922222
+    max: 361.66666
+    mean: 16.29
+    sample_values:
+    - -10.25
+    - -11.25
+    - -7.86
+    - -0.913
+    - 0.656
+  - name: temp_min_degc
+    type: float64
+    non_null_count: 147031
+    null_count: 2743
+    null_percentage: 1.83
+    unique_values: 18245
+    min: -51.3
+    max: 36.9
+    mean: 3.95
+    sample_values:
+    - -13.32
+    - -20.05
+    - -25.97
+    - -8.19
+    - -13.45
+  - name: precip_mm_d
+    type: float64
+    non_null_count: 149693
+    null_count: 81
+    null_percentage: 0.05
+    unique_values: 1776
+    min: 0.0
+    max: 1012.444
+    mean: 1.72
+    sample_values:
+    - 2.54
+    - 2.54
+    - 0.508
+    - 1.524
+    - 0.0
+  - name: bad_value_flag
+    type: float64
+    non_null_count: 1833
+    null_count: 147941
+    null_percentage: 98.78
+    unique_values: 1
+    min: -999.0
+    max: -999.0
+    mean: -999.0
+    sample_values:
+    - -999.0
+    - -999.0
+    - -999.0
+    - -999.0
+    - -999.0
+  - name: rh_pct
+    type: float64
+    non_null_count: 141165
+    null_count: 8609
+    null_percentage: 5.75
+    unique_values: 20575
+    min: 0.0
+    max: 104.36
+    mean: 41.72
+    sample_values:
+    - 95.9
+    - 77.4
+    - 78.4
+    - 74.7
+    - 76.9
+  - name: dew_point_degc
+    type: float64
+    non_null_count: 122396
+    null_count: 27378
+    null_percentage: 18.28
+    unique_values: 6152
+    min: -35.049
+    max: 25.639
+    mean: 0.32
+    sample_values:
+    - -14.168
+    - -17.327
+    - -18.238
+    - -8.319
+    - -10.986
+  - name: wind_speed_m_s
+    type: float64
+    non_null_count: 93963
+    null_count: 55811
+    null_percentage: 37.26
+    unique_values: 26799
+    min: 0.0
+    max: 43.452
+    mean: 3.51
+    sample_values:
+    - 3.781
+    - 4.375
+    - 3.056
+    - 7.057
+    - 3.733
+  - name: solar_radiation_veg_mj_m2_d
+    type: float64
+    non_null_count: 121351
+    null_count: 28423
+    null_percentage: 18.98
+    unique_values: 4070
+    min: 0.0
+    max: 34.153183
+    mean: 0.45
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: solar_radiation_bare_mj_m2_d
+    type: float64
+    non_null_count: 38764
+    null_count: 111010
+    null_percentage: 74.12
+    unique_values: 20075
+    min: 0.0
+    max: 31.9788
+    mean: 10.86
+    sample_values:
+    - 3.964
+    - 6.051
+    - 6.584
+    - 7.825
+    - 7.934
+  - name: soil_temp_5cm_degc
+    type: float64
+    non_null_count: 44412
+    null_count: 105362
+    null_percentage: 70.35
+    unique_values: 11172
+    min: -21.541111
+    max: 35.24179
+    mean: 9.92
+    sample_values:
+    - 11.27
+    - 11.72
+    - 11.35
+    - 8.63
+    - 9.17
+  - name: soil_temp_10cm_degc
+    type: float64
+    non_null_count: 141366
+    null_count: 8408
+    null_percentage: 5.61
+    unique_values: 19744
+    min: -20.498333
+    max: 43.9
+    mean: 6.38
+    sample_values:
+    - 11.03
+    - 11.17
+    - 11.38
+    - 9.2
+    - 9.1
+  - name: wind_direction_deg_from_n
+    type: float64
+    non_null_count: 51242
+    null_count: 98532
+    null_percentage: 65.79
+    unique_values: 5431
+    min: 0.0
+    max: 360.0
+    mean: 171.61
+    sample_values:
+    - 13.15
+    - 330.5
+    - 161.3
+    - 278.8
+    - 239.3
+  - name: open_pan_evap_mm_d
+    type: float64
+    non_null_count: 132888
+    null_count: 16886
+    null_percentage: 11.27
+    unique_values: 1175
+    min: -1.016
+    max: 62.484
+    mean: 1.01
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: closed_pan_evap_mm_d
+    type: float64
+    non_null_count: 0
+    null_count: 149774
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: atmos_n_deposition_kg_ha_d
+    type: float64
+    non_null_count: 954
+    null_count: 148820
+    null_percentage: 99.36
+    unique_values: 29
+    min: 0.0
+    max: 0.01041
+    mean: 0.0
+    sample_values:
+    - 0.00178
+    - 0.00051
+    - 0.00229
+    - 0.00254
+    - 0.0033
+  - name: total_net_radiation_mj_m2_d
+    type: float64
+    non_null_count: 8225
+    null_count: 141549
+    null_percentage: 94.51
+    unique_values: 3673
+    min: 0.2095
+    max: 51.5
+    mean: 15.58
+    sample_values:
+    - 3.964
+    - 6.051
+    - 6.584
+    - 7.825
+    - 7.934
+  - name: snow_mm_d
+    type: float64
+    non_null_count: 0
+    null_count: 149774
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: measbiomasscho
+  row_count: 1367
+  column_count: 34
+  columns:
+  - name: location_id
+    type: object
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - MNSPReap
+    - MNSPReap
+    - MNSPReap
+    - MNSPReap
+    - MNSPReap
+  - name: unit_id
+    type: object
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 84
+    sample_values:
+    - MNSPReap_101LA
+    - MNSPReap_101LA
+    - MNSPReap_101LA
+    - MNSPReap_101LA
+    - MNSPReap_101LA
+  - name: date
+    type: object
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 8
+    sample_values:
+    - '2009-10-01'
+    - '2010-10-01'
+    - '2008-10-01'
+    - '2009-10-01'
+    - '2010-10-01'
+  - name: treatment_id
+    type: object
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 11
+    sample_values:
+    - MNSPReap_ST100
+    - MNSPReap_ST100
+    - MNSPReap_ST100
+    - MNSPReap_ST100
+    - MNSPReap_ST100
+  - name: growth_stage
+    type: object
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - Maturity
+    - Maturity
+    - Maturity
+    - Maturity
+    - Maturity
+  - name: crop
+    type: object
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1
+    sample_values:
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+  - name: plant_fraction
+    type: object
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 9
+    sample_values:
+    - Above earshank
+    - Above earshank
+    - Below earshank
+    - Below earshank
+    - Below earshank
+  - name: glucan_g_kg
+    type: float64
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 569
+    min: 0.0
+    max: 503.1879
+    mean: 189.94
+    sample_values:
+    - 441.3036
+    - 441.64722
+    - 467.64612
+    - 459.041
+    - 453.69778
+  - name: xylan_g_kg
+    type: float64
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 569
+    min: 0.0
+    max: 16.877115
+    mean: 3.13
+    sample_values:
+    - 6.2741723
+    - 7.5293555
+    - 6.4648886
+    - 5.45723
+    - 5.7403183
+  - name: galactan_g_kg
+    type: float64
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 99
+    min: 0.0
+    max: 2.82
+    mean: 0.15
+    sample_values:
+    - 0.32
+    - 0.67
+    - 0.29
+    - 0.27
+    - 0.35
+  - name: arabinan_g_kg
+    type: float64
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 210
+    min: 0.0
+    max: 20.67
+    mean: 2.27
+    sample_values:
+    - 5.9
+    - 5.67
+    - 5.5
+    - 3.4
+    - 4.03
+  - name: mannan_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: lignin_g_kg
+    type: float64
+    non_null_count: 799
+    null_count: 568
+    null_percentage: 41.55
+    unique_values: 148
+    min: 0.0
+    max: 231.0
+    mean: 62.21
+    sample_values:
+    - 42.0
+    - 15.0
+    - 17.0
+    - 39.0
+    - 17.0
+  - name: neutral_det_fiber_g_kg
+    type: float64
+    non_null_count: 799
+    null_count: 568
+    null_percentage: 41.55
+    unique_values: 259
+    min: 0.0
+    max: 942.0
+    mean: 772.32
+    sample_values:
+    - 800.0
+    - 791.0
+    - 775.0
+    - 782.0
+    - 825.0
+  - name: acid_det_fiber_g_kg
+    type: float64
+    non_null_count: 799
+    null_count: 568
+    null_percentage: 41.55
+    unique_values: 246
+    min: 0.0
+    max: 712.0
+    mean: 454.3
+    sample_values:
+    - 378.0
+    - 393.0
+    - 382.0
+    - 378.0
+    - 380.0
+  - name: acid_soluble_lignin_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: acid_insoluble_lignin_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: crude_protein_g_kg
+    type: float64
+    non_null_count: 799
+    null_count: 568
+    null_percentage: 41.55
+    unique_values: 109
+    min: 0.0
+    max: 162.0
+    mean: 60.05
+    sample_values:
+    - 58.0
+    - 48.0
+    - 51.0
+    - 54.0
+    - 31.0
+  - name: non_fiber_carbs_g_kg
+    type: float64
+    non_null_count: 751
+    null_count: 616
+    null_percentage: 45.06
+    unique_values: 194
+    min: 7.0
+    max: 801.0
+    mean: 142.42
+    sample_values:
+    - 119.0
+    - 137.0
+    - 151.0
+    - 153.0
+    - 115.0
+  - name: ash_g_kg
+    type: float64
+    non_null_count: 799
+    null_count: 568
+    null_percentage: 41.55
+    unique_values: 411
+    min: 0.0
+    max: 122.1
+    mean: 42.16
+    sample_values:
+    - 44.3
+    - 41.5
+    - 38.6
+    - 28.8
+    - 46.2
+  - name: glucan_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: xylan_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: galactan_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: arabinan_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mannan_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: lignin_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: neutral_det_fiber_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: acid_det_fiber_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: acid_soluble_lignin_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: acid_insoluble_lignin_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: crude_protein_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: non_fiber_carbs_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ash_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 1367
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: id
+    type: int64
+    non_null_count: 1367
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1367
+    min: 1.0
+    max: 1367.0
+    mean: 684.0
+    sample_values:
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+- name: measbiomassenergy
+  row_count: 799
+  column_count: 14
+  columns:
+  - name: location_id
+    type: object
+    non_null_count: 799
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1
+    sample_values:
+    - SCFLSGI
+    - SCFLSGI
+    - SCFLSGI
+    - SCFLSGI
+    - SCFLSGI
+  - name: unit_id
+    type: object
+    non_null_count: 799
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 20
+    sample_values:
+    - SCFLSGI_245
+    - SCFLSGI_254
+    - SCFLSGI_314
+    - SCFLSGI_321
+    - SCFLSGI_335
+  - name: date
+    type: object
+    non_null_count: 799
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - '2008-09-04'
+    - '2008-09-04'
+    - '2008-09-04'
+    - '2008-09-04'
+    - '2008-09-04'
+  - name: treatment_id
+    type: object
+    non_null_count: 799
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - SCFLSGI_100R
+    - SCFLSGI_75R
+    - SCFLSGI_75R
+    - SCFLSGI_0R
+    - SCFLSGI_100R
+  - name: growth_stage
+    type: object
+    non_null_count: 799
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1
+    sample_values:
+    - Harvest
+    - Harvest
+    - Harvest
+    - Harvest
+    - Harvest
+  - name: crop
+    type: object
+    non_null_count: 799
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1
+    sample_values:
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+  - name: plant_fraction
+    type: object
+    non_null_count: 799
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 8
+    sample_values:
+    - Below earshank leaves
+    - Below earshank leaves
+    - Below earshank leaves
+    - Below earshank leaves
+    - Below earshank leaves
+  - name: volatile_matter_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 799
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mineral_matter_g_kg
+    type: float64
+    non_null_count: 799
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 411
+    min: 0.0
+    max: 122.1
+    mean: 42.16
+    sample_values:
+    - 73.2
+    - 93.2
+    - 116.3
+    - 74.2
+    - 84.0
+  - name: gross_calorific_value_mj_kg
+    type: float64
+    non_null_count: 795
+    null_count: 4
+    null_percentage: 0.5
+    unique_values: 781
+    min: 16.4171
+    max: 20.4548
+    mean: 18.41
+    sample_values:
+    - 18.6668
+    - 18.0309
+    - 17.46
+    - 18.8098
+    - 18.0666
+  - name: volatile_matter_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 799
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ash_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 799
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: gross_calorific_value_std_mj_kg
+    type: float64
+    non_null_count: 0
+    null_count: 799
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: id
+    type: int64
+    non_null_count: 799
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 799
+    min: 1.0
+    max: 799.0
+    mean: 400.0
+    sample_values:
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+- name: measbiomassminan
+  row_count: 6739
+  column_count: 38
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 6739
+    min: 1.0
+    max: 6739.0
+    mean: 3370.0
+    sample_values:
+    - 6117
+    - 6118
+    - 6241
+    - 6242
+    - 6243
+  - name: location_id
+    type: object
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 9
+    sample_values:
+    - NECCIRR
+    - NECCIRR
+    - MNSPReap
+    - MNSPReap
+    - MNSPReap
+  - name: unit_id
+    type: object
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 625
+    sample_values:
+    - NECCIRR_423
+    - NECCIRR_424
+    - MNSPReap_103LA
+    - MNSPReap_104LA
+    - MNSPReap_105LA
+  - name: date
+    type: object
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 67
+    sample_values:
+    - '2018-10-04'
+    - '2018-10-04'
+    - '2010-10-01'
+    - '2010-10-01'
+    - '2010-10-01'
+  - name: treatment_id
+    type: object
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 153
+    sample_values:
+    - FullM125N
+    - FullM200A
+    - MNSPReap_ST050
+    - MNSPReap_CT000
+    - MNSPReap_CT100
+  - name: growth_stage
+    type: object
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 6
+    sample_values:
+    - Maturity
+    - Maturity
+    - Maturity
+    - Maturity
+    - Maturity
+  - name: crop
+    type: object
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+  - name: plant_fraction
+    type: object
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 13
+    sample_values:
+    - Stover (all non-grain biomass)
+    - Stover (all non-grain biomass)
+    - Cobs
+    - Cobs
+    - Cobs
+  - name: c_concentration_g_kg
+    type: float64
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2253
+    min: 0.0
+    max: 541.0
+    mean: 340.75
+    sample_values:
+    - 444.47818
+    - 444.71408
+    - 476.8658
+    - 476.24213
+    - 479.96188
+  - name: n_concentration_g_kg
+    type: float64
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 3558
+    min: 0.0
+    max: 71.67
+    mean: 11.98
+    sample_values:
+    - 5.063977
+    - 5.951322
+    - 4.5584946
+    - 4.9022474
+    - 5.2585907
+  - name: p_concentration_g_kg
+    type: float64
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2310
+    min: 0.0
+    max: 7.178
+    mean: 1.24
+    sample_values:
+    - 2.31
+    - 1.62
+    - 0.39
+    - 0.38
+    - 0.34
+  - name: k_concentration_g_kg
+    type: float64
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2587
+    min: 0.0
+    max: 39.9
+    mean: 8.91
+    sample_values:
+    - 19.2
+    - 15.8
+    - 5.74
+    - 6.08
+    - 5.49
+  - name: ca_concentration_g_kg
+    type: float64
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1991
+    min: 0.0
+    max: 31.181
+    mean: 2.24
+    sample_values:
+    - 2.94
+    - 3.66
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: mg_concentration_g_kg
+    type: float64
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1992
+    min: 0.0
+    max: 10.311
+    mean: 1.36
+    sample_values:
+    - 1.26
+    - 1.23
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: s_concentration_g_kg
+    type: float64
+    non_null_count: 5090
+    null_count: 1649
+    null_percentage: 24.47
+    unique_values: 1527
+    min: 0.06
+    max: 4.043
+    mean: 0.88
+    sample_values:
+    - 0.63
+    - 0.62
+    - 1.2
+    - 1.0
+    - 1.0
+  - name: na_concentration_g_kg
+    type: float64
+    non_null_count: 6431
+    null_count: 308
+    null_percentage: 4.57
+    unique_values: 767
+    min: 0.0
+    max: 1.0
+    mean: 0.05
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: cl_concentration_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: al_concentration_mg_kg
+    type: float64
+    non_null_count: 6269
+    null_count: 470
+    null_percentage: 6.97
+    unique_values: 3431
+    min: 0.0
+    max: 4187.4
+    mean: 53.61
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: b_concentration_mg_kg
+    type: float64
+    non_null_count: 3983
+    null_count: 2756
+    null_percentage: 40.9
+    unique_values: 1944
+    min: 0.0
+    max: 88.06
+    mean: 9.22
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: cu_concentration_mg_kg
+    type: float64
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2571
+    min: 0.0
+    max: 244.3
+    mean: 4.65
+    sample_values:
+    - 3.2
+    - 3.8
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: fe_concentration_mg_kg
+    type: float64
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 4234
+    min: 0.0
+    max: 5333.4
+    mean: 104.75
+    sample_values:
+    - 56.0
+    - 51.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: mn_concentration_mg_kg
+    type: float64
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 3514
+    min: 0.0
+    max: 1263.0
+    mean: 25.46
+    sample_values:
+    - 18.0
+    - 25.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: zn_concentration_mg_kg
+    type: float64
+    non_null_count: 6739
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 3239
+    min: 0.0
+    max: 504.38596
+    mean: 15.6
+    sample_values:
+    - 20.0
+    - 17.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: c_concentration_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: n_concentration_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: p_concentration_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: k_concentration_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ca_concentration_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mg_concentration_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: s_concentration_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: na_concentration_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: cl_concentration_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: al_concentration_std_mg_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: b_concentration_std_mg_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: cu_concentration_std_mg_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: fe_concentration_std_mg_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mn_concentration_std_mg_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: zn_concentration_std_mg_kg
+    type: float64
+    non_null_count: 0
+    null_count: 6739
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: measgasnutrientloss
+  row_count: 2231
+  column_count: 18
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 2231
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2231
+    min: 1.0
+    max: 2231.0
+    mean: 1116.0
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  - name: location_id
+    type: object
+    non_null_count: 2231
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - IAAMKELL
+    - IAAMKELL
+    - IAAMKELL
+    - IAAMKELL
+    - IAAMKELL
+  - name: unit_id
+    type: object
+    non_null_count: 2231
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 11
+    sample_values:
+    - IAAMKELL__116
+    - IAAMKELL__116
+    - IAAMKELL__116
+    - IAAMKELL__116
+    - IAAMKELL__116
+  - name: date
+    type: object
+    non_null_count: 2231
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 112
+    sample_values:
+    - '2008-05-01'
+    - '2008-06-01'
+    - '2008-07-01'
+    - '2008-08-01'
+    - '2008-09-01'
+  - name: time
+    type: float64
+    non_null_count: 0
+    null_count: 2231
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: treatment_id
+    type: object
+    non_null_count: 2231
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - IAAMKELL_NCC
+    - IAAMKELL_NCC
+    - IAAMKELL_NCC
+    - IAAMKELL_NCC
+    - IAAMKELL_NCC
+  - name: growth_stage
+    type: object
+    non_null_count: 64
+    null_count: 2167
+    null_percentage: 97.13
+    unique_values: 1
+    sample_values:
+    - Pre-graze
+    - Pre-graze
+    - Pre-graze
+    - Pre-graze
+    - Pre-graze
+  - name: crop
+    type: object
+    non_null_count: 50
+    null_count: 2181
+    null_percentage: 97.76
+    unique_values: 2
+    sample_values:
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+  - name: sampling_start_stop_interval
+    type: object
+    non_null_count: 64
+    null_count: 2167
+    null_percentage: 97.13
+    unique_values: 3
+    sample_values:
+    - Stop-Start
+    - Stop-Start
+    - Stop-Start
+    - Stop-Start
+    - Stop-Start
+  - name: model_if_simulated
+    type: object
+    non_null_count: 56
+    null_count: 2175
+    null_percentage: 97.49
+    unique_values: 1
+    sample_values:
+    - RZWQM
+    - RZWQM
+    - RZWQM
+    - RZWQM
+    - RZWQM
+  - name: nox_n_g_ha_day
+    type: float64
+    non_null_count: 0
+    null_count: 2231
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: n2_n_g_ha_day
+    type: float64
+    non_null_count: 0
+    null_count: 2231
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: n2o_n_g_ha_day
+    type: float64
+    non_null_count: 2231
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1867
+    min: 0.0
+    max: 12778.54
+    mean: 236.31
+    sample_values:
+    - 10.366667
+    - 46.245163
+    - 106.43
+    - 40.019356
+    - 11.9
+  - name: nh3_n_kg_ha_day
+    type: float64
+    non_null_count: 2231
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 827
+    min: 0.0
+    max: 15.214994
+    mean: 0.22
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: nox_n_std_g_ha_day
+    type: float64
+    non_null_count: 0
+    null_count: 2231
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: n2_n_std_g_ha_day
+    type: float64
+    non_null_count: 0
+    null_count: 2231
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: n2o_n_std_g_ha_day
+    type: float64
+    non_null_count: 0
+    null_count: 2231
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: nh3_n_std_kg_ha_day
+    type: float64
+    non_null_count: 0
+    null_count: 2231
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: measghgflux
+  row_count: 132766
+  column_count: 24
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 132766
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 132766
+    min: 1.0
+    max: 132766.0
+    mean: 66383.5
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  - name: location_id
+    type: object
+    non_null_count: 132766
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 31
+    sample_values:
+    - NDMAGWP
+    - NDMAGWP
+    - NDMAGWP
+    - NDMAGWP
+    - NDMAGWP
+  - name: unit_id
+    type: object
+    non_null_count: 132766
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 864
+    sample_values:
+    - NDMAGWP_MG
+    - NDMAGWP_MG
+    - NDMAGWP_MG
+    - NDMAGWP_MG
+    - NDMAGWP_MG
+  - name: date
+    type: object
+    non_null_count: 132766
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 4094
+    sample_values:
+    - '2004-07-28'
+    - '2004-08-03'
+    - '2004-08-10'
+    - '2004-08-17'
+    - '2004-08-24'
+  - name: time
+    type: object
+    non_null_count: 5471
+    null_count: 127295
+    null_percentage: 95.88
+    unique_values: 362
+    sample_values:
+    - '10:38:00'
+    - '10:49:00'
+    - 09:17:00
+    - '11:20:00'
+    - 09:15:00
+  - name: treatment_id
+    type: object
+    non_null_count: 132766
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 290
+    sample_values:
+    - NDMAGWP_MG
+    - NDMAGWP_MG
+    - NDMAGWP_MG
+    - NDMAGWP_MG
+    - NDMAGWP_MG
+  - name: crop
+    type: object
+    non_null_count: 128975
+    null_count: 3791
+    null_percentage: 2.86
+    unique_values: 23
+    sample_values:
+    - Rangeland
+    - Rangeland
+    - Rangeland
+    - Rangeland
+    - Rangeland
+  - name: chamber_placement
+    type: object
+    non_null_count: 127419
+    null_count: 5347
+    null_percentage: 4.03
+    unique_values: 7
+    sample_values:
+    - Rangeland
+    - Rangeland
+    - Rangeland
+    - Rangeland
+    - Rangeland
+  - name: n2o_gn_ha_d
+    type: float64
+    non_null_count: 132507
+    null_count: 259
+    null_percentage: 0.2
+    unique_values: 104696
+    min: -48.46128
+    max: 4298.17
+    mean: 10.2
+    sample_values:
+    - 1.9509982
+    - 4.4131975
+    - 4.885919
+    - 3.7513862
+    - 4.6516676
+  - name: n2o_interp_eq_0_obs_eq_1
+    type: int64
+    non_null_count: 132766
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    min: 0.0
+    max: 1.0
+    mean: 0.65
+    sample_values:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+  - name: co2_gc_ha_d
+    type: float64
+    non_null_count: 132562
+    null_count: 204
+    null_percentage: 0.15
+    unique_values: 116127
+    min: -76638.71
+    max: 422392.3
+    mean: 15997.81
+    sample_values:
+    - 42532.562
+    - 32436.535
+    - 27347.184
+    - 31950.78
+    - 31699.234
+  - name: co2_interp_eq_0_obs_eq_1
+    type: int64
+    non_null_count: 132766
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    min: 0.0
+    max: 1.0
+    mean: 0.61
+    sample_values:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+  - name: ch4_gc_ha_d
+    type: float64
+    non_null_count: 132502
+    null_count: 264
+    null_percentage: 0.2
+    unique_values: 99211
+    min: -666.25
+    max: 1401.1718
+    mean: 0.04
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: ch4_interp_eq_0_obs_eq_1
+    type: int64
+    non_null_count: 132766
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    min: 0.0
+    max: 1.0
+    mean: 0.6
+    sample_values:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+  - name: air_temp_degc
+    type: float64
+    non_null_count: 132762
+    null_count: 4
+    null_percentage: 0.0
+    unique_values: 6566
+    min: -55.259113
+    max: 155.64734
+    mean: 8.35
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: soil_temp_degc
+    type: float64
+    non_null_count: 132764
+    null_count: 2
+    null_percentage: 0.0
+    unique_values: 2091
+    min: -18.0
+    max: 37.0
+    mean: 8.65
+    sample_values:
+    - 18.55
+    - 19.616667
+    - 14.1
+    - 20.2
+    - 15.416667
+  - name: soil_moisture_pct_vol
+    type: float64
+    non_null_count: 132412
+    null_count: 354
+    null_percentage: 0.27
+    unique_values: 17622
+    min: 0.0
+    max: 96.0
+    mean: 13.05
+    sample_values:
+    - 24.444445
+    - 16.333334
+    - 23.777779
+    - 14.833333
+    - 31.0
+  - name: soil_moisture_depth_cm
+    type: int64
+    non_null_count: 132766
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 7
+    min: 0.0
+    max: 30.0
+    mean: 5.56
+    sample_values:
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+  - name: n2o_std_gn_ha_d
+    type: float64
+    non_null_count: 126520
+    null_count: 6246
+    null_percentage: 4.7
+    unique_values: 50282
+    min: 0.0
+    max: 122.005615
+    mean: 0.58
+    sample_values:
+    - 3.370294
+    - 6.750615
+    - 6.048769
+    - 7.7389426
+    - 5.442799
+  - name: co2_std_gc_ha_d
+    type: float64
+    non_null_count: 126520
+    null_count: 6246
+    null_percentage: 4.7
+    unique_values: 49948
+    min: 0.0
+    max: 74443.984
+    mean: 916.19
+    sample_values:
+    - 5284.696
+    - 5176.048
+    - 5093.5913
+    - 7002.101
+    - 4899.342
+  - name: ch4_std_gc_ha_d
+    type: float64
+    non_null_count: 126520
+    null_count: 6246
+    null_percentage: 4.7
+    unique_values: 48268
+    min: -6.175161
+    max: 571.27466
+    mean: 0.37
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: air_temp_std_degc
+    type: float64
+    non_null_count: 7598
+    null_count: 125168
+    null_percentage: 94.28
+    unique_values: 288
+    min: 0.0
+    max: 6.7175145
+    mean: 1.09
+    sample_values:
+    - 2.419883
+    - 1.8481973
+    - 1.1169153
+    - 1.1590226
+    - 1.4338177
+  - name: soil_temp_std_degc
+    type: float64
+    non_null_count: 7657
+    null_count: 125109
+    null_percentage: 94.23
+    unique_values: 1014
+    min: 0.0
+    max: 21.566757
+    mean: 0.92
+    sample_values:
+    - 0.77
+    - 1.2554276
+    - 0.5773527
+    - 8.732315
+    - 1.3428825
+  - name: soil_moisture_std_pct_vol
+    type: float64
+    non_null_count: 6061
+    null_count: 126705
+    null_percentage: 95.43
+    unique_values: 1285
+    min: 0.0
+    max: 64.2053
+    mean: 2.27
+    sample_values:
+    - 1.7156146
+    - 1.0066446
+    - 8.626123
+    - 1.4177446
+    - 0.7094599
+- name: measgrazingplants
+  row_count: 6996
+  column_count: 39
+  columns:
+  - name: location_id
+    type: object
+    non_null_count: 6996
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 4
+    sample_values:
+    - GAJPCSR1
+    - GAJPCSR1
+    - GAJPCSR1
+    - GAJPCSR1
+    - GAJPCSR1
+  - name: unit_id
+    type: object
+    non_null_count: 6996
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 197
+    sample_values:
+    - GAJPCSR1_B3P110F1H1X450Y60
+    - GAJPCSR1_B2P205F3H3W
+    - GAJPCSR1_B2P206F3H0E
+    - GAJPCSR1_B2P206F3H0W
+    - GAJPCSR1_B3P207F2H3E
+  - name: date
+    type: object
+    non_null_count: 6996
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 250
+    sample_values:
+    - '1997-07-10'
+    - '1995-08-14'
+    - '1995-08-14'
+    - '1995-08-14'
+    - '1995-08-14'
+  - name: treatment_id
+    type: object
+    non_null_count: 6996
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 20
+    sample_values:
+    - GAJPCSR1_F1H1
+    - GAJPCSR1_F3H3
+    - GAJPCSR1_F3H0
+    - GAJPCSR1_F3H0
+    - GAJPCSR1_F2H3
+  - name: species_mix
+    type: object
+    non_null_count: 6996
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 7
+    sample_values:
+    - Bermuda
+    - Bermuda
+    - Bermuda
+    - Bermuda
+    - Bermuda
+  - name: growth_stage
+    type: object
+    non_null_count: 6684
+    null_count: 312
+    null_percentage: 4.46
+    unique_values: 3
+    sample_values:
+    - Maturity
+    - Maturity
+    - Maturity
+    - Maturity
+    - Maturity
+  - name: functional_groups
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: broadleaf_vs_grass
+    type: object
+    non_null_count: 6996
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - Grass
+    - Grass
+    - Grass
+    - Grass
+    - Grass
+  - name: abovegr_bio_kg_ha_dry
+    type: float64
+    non_null_count: 6996
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2321
+    min: 0.0
+    max: 15520.0
+    mean: 2943.43
+    sample_values:
+    - 3600.0
+    - 0.0
+    - 8480.0
+    - 13440.0
+    - 0.0
+  - name: surface_litter_kg_ha_dry
+    type: float64
+    non_null_count: 1902
+    null_count: 5094
+    null_percentage: 72.81
+    unique_values: 796
+    min: 32.84
+    max: 37440.0
+    mean: 6478.33
+    sample_values:
+    - 5440.0
+    - 3920.0
+    - 3760.0
+    - 2720.0
+    - 5360.0
+  - name: standing_dead_kg_ha_dry
+    type: float64
+    non_null_count: 311
+    null_count: 6685
+    null_percentage: 95.55
+    unique_values: 311
+    min: 27.075378
+    max: 2078.66
+    mean: 488.9
+    sample_values:
+    - 481.96924
+    - 311.21964
+    - 347.92203
+    - 183.87706
+    - 331.74023
+  - name: lai_kg_ha_dry
+    type: float64
+    non_null_count: 312
+    null_count: 6684
+    null_percentage: 95.54
+    unique_values: 308
+    min: 0.001776
+    max: 1.326208
+    mean: 0.22
+    sample_values:
+    - 0.406624
+    - 0.414784
+    - 0.341264
+    - 0.80232
+    - 0.526336
+  - name: biomass_n_pct
+    type: float64
+    non_null_count: 2149
+    null_count: 4847
+    null_percentage: 69.28
+    unique_values: 1898
+    min: 0.72808
+    max: 8.349
+    mean: 2.0
+    sample_values:
+    - 1.41935
+    - 1.11026
+    - 1.88405
+    - 1.09115
+    - 1.58125
+  - name: lignin_pct
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ground_cover_pct
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: abovegr_bio_c_kgc_ha
+    type: float64
+    non_null_count: 2149
+    null_count: 4847
+    null_percentage: 69.28
+    unique_values: 2144
+    min: 27.39934
+    max: 7260.256
+    mean: 1181.79
+    sample_values:
+    - 2391.4712
+    - 2171.712
+    - 1569.7751
+    - 2853.4895
+    - 2760.2017
+  - name: abovegr_bio_n_kgn_ha
+    type: float64
+    non_null_count: 2149
+    null_count: 4847
+    null_percentage: 69.28
+    unique_values: 2147
+    min: 1.063864
+    max: 306.66495
+    mean: 49.78
+    sample_values:
+    - 76.07716
+    - 53.29248
+    - 64.81132
+    - 68.08776
+    - 98.67
+  - name: belowgr_bio_c_kgc_ha
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: belowgr_bio_n_kgn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: anpp_c_kgc_ha_yr
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: anpp_n_kgn_ha_yr
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: bnpp_c_kgc_ha_yr
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: bnpp_n_kgn_ha_yr
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: abovegr_bio_std_kg_ha_dry
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: surface_litter_std_kg_ha_dry
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: standing_dead_std_kg_ha_dry
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: lai_std_kg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: biomass_n_std_pct
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: lignin_std_pct
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ground_cover_std_pct
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: abovegr_bio_c_std_kgc_ha
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: abovegr_bio_n_std_kgn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: belowgr_bio_c_std_kgc_ha
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: belowgr_bio_n_std_kgn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: anpp_c_std_kgc_ha_yr
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: anpp_n_std_kgn_ha_yr
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: bnpp_c_std_kgc_ha_yr
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: bnpp_n_std_kgn_ha_yr
+    type: float64
+    non_null_count: 0
+    null_count: 6996
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: id
+    type: int64
+    non_null_count: 6996
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 6996
+    min: 1.0
+    max: 6996.0
+    mean: 3498.5
+    sample_values:
+    - 4224
+    - 1
+    - 2
+    - 3
+    - 4
+- name: measharvestfraction
+  row_count: 9470
+  column_count: 20
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 9470
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 9470
+    min: 1.0
+    max: 9470.0
+    mean: 4735.5
+    sample_values:
+    - 652
+    - 1810
+    - 4462
+    - 4533
+    - 4654
+  - name: location_id
+    type: object
+    non_null_count: 9470
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 18
+    sample_values:
+    - MNMOFS
+    - MNMOFS
+    - IAAM7071
+    - IAAM7071
+    - IAAM7071
+  - name: unit_id
+    type: object
+    non_null_count: 9470
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 747
+    sample_values:
+    - MNMOFS_3
+    - MNMOFS_18
+    - IAAM7071_213
+    - IAAM7071_403
+    - IAAM7071_415
+  - name: sampling_date
+    type: object
+    non_null_count: 9470
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 176
+    sample_values:
+    - '2006-06-19'
+    - '2005-07-27'
+    - '2011-07-20'
+    - '2011-07-20'
+    - '2009-10-09'
+  - name: treatment_id
+    type: object
+    non_null_count: 9470
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 179
+    sample_values:
+    - MNMOFS_13
+    - MNMOFS_15
+    - IAAM7071_3
+    - IAAM7071_16
+    - IAAM7071_8
+  - name: growth_stage
+    type: object
+    non_null_count: 9407
+    null_count: 63
+    null_percentage: 0.67
+    unique_values: 12
+    sample_values:
+    - V7
+    - R1
+    - R1
+    - R1
+    - Maturity
+  - name: crop
+    type: object
+    non_null_count: 9470
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 16
+    sample_values:
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+  - name: plant_fraction
+    type: object
+    non_null_count: 9470
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 26
+    sample_values:
+    - Roots
+    - Roots
+    - Ear Leaf
+    - Ear Leaf
+    - Cobs
+  - name: frac_fresh_matt_kg_ha
+    type: float64
+    non_null_count: 360
+    null_count: 9110
+    null_percentage: 96.2
+    unique_values: 313
+    min: 0.72
+    max: 70300.0
+    mean: 7137.52
+    sample_values:
+    - 17.41
+    - 11.59
+    - 14.56
+    - 11.63
+    - 12.32
+  - name: frac_dry_matt_kg_ha
+    type: float64
+    non_null_count: 7547
+    null_count: 1923
+    null_percentage: 20.31
+    unique_values: 7042
+    min: 0.0
+    max: 32010.566
+    mean: 4793.52
+    sample_values:
+    - 79.6
+    - 183.1
+    - 2039.134
+    - 2173.7
+    - 2526.1
+  - name: frac_moist_pct
+    type: float64
+    non_null_count: 846
+    null_count: 8624
+    null_percentage: 91.07
+    unique_values: 612
+    min: 3.239
+    max: 86.45494
+    mean: 33.4
+    sample_values:
+    - 49.014095
+    - 27.96023
+    - 26.580133
+    - 42.14743
+    - 36.42933
+  - name: frac_c_kgc_ha
+    type: float64
+    non_null_count: 9110
+    null_count: 360
+    null_percentage: 3.8
+    unique_values: 5519
+    min: 0.0
+    max: 13834.037
+    mean: 1308.77
+    sample_values:
+    - 35.6
+    - 85.7
+    - 0.0
+    - 0.0
+    - 932.49603
+  - name: frac_n_kgn_ha
+    type: float64
+    non_null_count: 9110
+    null_count: 360
+    null_percentage: 3.8
+    unique_values: 5475
+    min: 0.0
+    max: 3836.2876
+    mean: 45.13
+    sample_values:
+    - 1.38
+    - 2.31
+    - 0.0
+    - 0.0
+    - 11.623064
+  - name: grain_weight_mg_kernel
+    type: float64
+    non_null_count: 0
+    null_count: 9470
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_fresh_matt_std_kg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 9470
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_dry_matt_std_kg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 9470
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_moist_std_pct
+    type: float64
+    non_null_count: 0
+    null_count: 9470
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_c_std_kgc_ha
+    type: float64
+    non_null_count: 0
+    null_count: 9470
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_n_std_kgn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 9470
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: grain_weight_std_mg_kernel
+    type: float64
+    non_null_count: 0
+    null_count: 9470
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: measnutreff
+  row_count: 5159
+  column_count: 13
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 5159
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5159
+    min: 1.0
+    max: 5159.0
+    mean: 2580.0
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  - name: location_id
+    type: object
+    non_null_count: 5159
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 8
+    sample_values:
+    - MNMOCAL
+    - MNMOCAL
+    - MNMOCAM
+    - MNMOCAL
+    - MNMOCAL
+  - name: unit_id
+    type: object
+    non_null_count: 5159
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 328
+    sample_values:
+    - MNMOCAL_614
+    - MNMOCAL_625
+    - MNMOCAM_659
+    - MNMOCAL_615
+    - MNMOCAL_621
+  - name: date
+    type: object
+    non_null_count: 5159
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 53
+    sample_values:
+    - '2014-09-15'
+    - '2014-09-15'
+    - '2015-08-11'
+    - '2014-09-15'
+    - '2014-09-15'
+  - name: treatment_id
+    type: object
+    non_null_count: 5159
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 65
+    sample_values:
+    - MNMOCAL_N67
+    - MNMOCAL_N67
+    - MNMOCAM_N34
+    - MNMOCAL_N202
+    - MNMOCAL_N34
+  - name: growth_stage
+    type: object
+    non_null_count: 5159
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - Maturity
+    - Maturity
+    - Maturity
+    - Maturity
+    - Maturity
+  - name: crop
+    type: object
+    non_null_count: 5159
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 6
+    sample_values:
+    - Calendula officinalis L. (Calendula)
+    - Calendula officinalis L. (Calendula)
+    - Camelina sativa L. (Camelina)
+    - Calendula officinalis L. (Calendula)
+    - Calendula officinalis L. (Calendula)
+  - name: plant_fraction
+    type: object
+    non_null_count: 5051
+    null_count: 108
+    null_percentage: 2.09
+    unique_values: 4
+    sample_values:
+    - Seed Oil
+    - Seed Oil
+    - Grain
+    - Seed Oil
+    - Seed Oil
+  - name: fraction_n_kgn_ha
+    type: float64
+    non_null_count: 5159
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 379
+    min: 0.0
+    max: 350.28253
+    mean: 10.16
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: nitrogen_use_efficiency_pct
+    type: float64
+    non_null_count: 5159
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 295
+    min: -60.860306
+    max: 165.4953
+    mean: 2.03
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: agronomic_efficiency_kg_kg
+    type: float64
+    non_null_count: 232
+    null_count: 4927
+    null_percentage: 95.5
+    unique_values: 214
+    min: -5.257762
+    max: 81.72545
+    mean: 16.12
+    sample_values:
+    - 4.4750867
+    - 0.45932505
+    - 0.2903136
+    - 0.8888573
+    - 8.127374
+  - name: nutrient_efficiency_ratio_kg_kg
+    type: float64
+    non_null_count: 4865
+    null_count: 294
+    null_percentage: 5.7
+    unique_values: 4507
+    min: 0.40459242
+    max: 422.0541
+    mean: 85.78
+    sample_values:
+    - 2.0984745
+    - 2.5150352
+    - 33.54481
+    - 0.8589118
+    - 4.0850835
+  - name: nitrogen15_use_efficiency_kgn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 5159
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: measresiduemgnt
+  row_count: 18512
+  column_count: 46
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 18512
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 18512
+    min: 1.0
+    max: 18512.0
+    mean: 9256.5
+    sample_values:
+    - 8641
+    - 8715
+    - 8843
+    - 9268
+    - 9332
+  - name: location_id
+    type: object
+    non_null_count: 18512
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 30
+    sample_values:
+    - PAHAW
+    - PAHAW
+    - PAHAW
+    - PAHAW
+    - PAHAW
+  - name: unit_id
+    type: object
+    non_null_count: 18512
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1568
+    sample_values:
+    - PAHAW_211
+    - PAHAW_204
+    - PAHAW_110
+    - PAHAW_111
+    - PAHAW_102
+  - name: date
+    type: object
+    non_null_count: 18460
+    null_count: 52
+    null_percentage: 0.28
+    unique_values: 434
+    sample_values:
+    - '2007-11-14'
+    - '2008-10-20'
+    - '2009-10-27'
+    - '2012-09-21'
+    - '2013-10-25'
+  - name: treatment_id
+    type: object
+    non_null_count: 18512
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 381
+    sample_values:
+    - PAHAW_ROT1
+    - PAHAW_ROT8
+    - PAHAW_ROT7
+    - PAHAW_ROT4
+    - PAHAW_ROT2
+  - name: growth_stage
+    type: object
+    non_null_count: 17385
+    null_count: 1127
+    null_percentage: 6.09
+    unique_values: 4
+    sample_values:
+    - Harvest
+    - Maturity
+    - Maturity
+    - Maturity
+    - Maturity
+  - name: crop
+    type: object
+    non_null_count: 18512
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 19
+    sample_values:
+    - Glycine max (Soybean)
+    - Glycine max (Soybean)
+    - Glycine max (Soybean)
+    - Glycine max (Soybean)
+    - Zea mays (Corn)
+  - name: harvested_frac
+    type: object
+    non_null_count: 18154
+    null_count: 358
+    null_percentage: 1.93
+    unique_values: 12
+    sample_values:
+    - Grain
+    - Grain
+    - Grain
+    - Grain
+    - Grain
+  - name: corn_ear_height_cm
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: above_g_biomass_kg_ha
+    type: float64
+    non_null_count: 11841
+    null_count: 6671
+    null_percentage: 36.04
+    unique_values: 10021
+    min: 5.891457
+    max: 37206.766
+    mean: 10413.29
+    sample_values:
+    - 11451.771
+    - 12003.414
+    - 11781.01
+    - 4519.685
+    - 5765.7896
+  - name: unit_grain_weight_mg
+    type: float64
+    non_null_count: 120
+    null_count: 18392
+    null_percentage: 99.35
+    unique_values: 113
+    min: 216.1
+    max: 5618.1
+    mean: 2231.23
+    sample_values:
+    - 894.7
+    - 296.1
+    - 654.9
+    - 2404.2
+    - 5290.3
+  - name: grain_dry_matt_kg_ha
+    type: float64
+    non_null_count: 15458
+    null_count: 3054
+    null_percentage: 16.5
+    unique_values: 11412
+    min: 0.0
+    max: 17583.4
+    mean: 5321.38
+    sample_values:
+    - 3518.6533
+    - 3391.4956
+    - 3224.0884
+    - 9986.423
+    - 2971.4697
+  - name: grain_moist_pct
+    type: float64
+    non_null_count: 8553
+    null_count: 9959
+    null_percentage: 53.8
+    unique_values: 242
+    min: 0.0
+    max: 70.0
+    mean: 5.74
+    sample_values:
+    - 21.3
+    - 15.2
+    - 15.0
+    - 13.3
+    - 14.1
+  - name: grain_c_kgc_ha
+    type: float64
+    non_null_count: 13777
+    null_count: 4735
+    null_percentage: 25.58
+    unique_values: 10204
+    min: 0.0
+    max: 14163.287
+    mean: 1947.71
+    sample_values:
+    - 3887.817
+    - 0.0
+    - 1866.0881
+    - 1093.786
+    - 2167.8936
+  - name: grain_n_kgn_ha
+    type: float64
+    non_null_count: 11261
+    null_count: 7251
+    null_percentage: 39.17
+    unique_values: 10831
+    min: 0.686
+    max: 298.813
+    mean: 113.28
+    sample_values:
+    - 85.732254
+    - 53.5428
+    - 99.826164
+    - 102.15058
+    - 90.27492
+  - name: harv_nongrain_bio_kg_ha
+    type: float64
+    non_null_count: 1929
+    null_count: 16583
+    null_percentage: 89.58
+    unique_values: 1480
+    min: 0.0
+    max: 43681.645
+    mean: 4196.33
+    sample_values:
+    - 22531.85
+    - 22892.098
+    - 20796.111
+    - 21090.86
+    - 22106.104
+  - name: harv_res_moist_pct
+    type: float64
+    non_null_count: 1140
+    null_count: 17372
+    null_percentage: 93.84
+    unique_values: 929
+    min: 0.44642857
+    max: 100.0
+    mean: 26.98
+    sample_values:
+    - 67.86667
+    - 71.41001
+    - 70.28571
+    - 70.4915
+    - 70.46707
+  - name: harv_res_c_kgc_ha
+    type: float64
+    non_null_count: 1016
+    null_count: 17496
+    null_percentage: 94.51
+    unique_values: 888
+    min: 0.0
+    max: 10609.294
+    mean: 2380.08
+    sample_values:
+    - 9402.808
+    - 9703.933
+    - 8816.738
+    - 8877.925
+    - 9172.188
+  - name: harv_res_n_kgn_ha
+    type: float64
+    non_null_count: 680
+    null_count: 17832
+    null_percentage: 96.33
+    unique_values: 548
+    min: 0.0
+    max: 293.54205
+    mean: 47.49
+    sample_values:
+    - 255.00664
+    - 256.54724
+    - 211.84906
+    - 252.73944
+    - 276.62042
+  - name: nonharv_nongrain_bio_kg_ha
+    type: float64
+    non_null_count: 10754
+    null_count: 7758
+    null_percentage: 41.91
+    unique_values: 8831
+    min: 0.0
+    max: 71690.0
+    mean: 5696.08
+    sample_values:
+    - 1104.5
+    - 1260.0
+    - 1486.0
+    - 1516.0
+    - 1605.0
+  - name: nonharv_res_moist_pct
+    type: float64
+    non_null_count: 1372
+    null_count: 17140
+    null_percentage: 92.59
+    unique_values: 1173
+    min: 1.9949067
+    max: 99.969
+    mean: 48.82
+    sample_values:
+    - 3.0555556
+    - 2.2425773
+    - 7.5383415
+    - 3.3163948
+    - 5.8546267
+  - name: nonharv_res_c_kgc_ha
+    type: float64
+    non_null_count: 9217
+    null_count: 9295
+    null_percentage: 50.21
+    unique_values: 9127
+    min: 87.4
+    max: 9823.181
+    mean: 2442.16
+    sample_values:
+    - 455.95312
+    - 575.66754
+    - 604.76935
+    - 521.368
+    - 654.5238
+  - name: nonharv_res_n_kgn_ha
+    type: float64
+    non_null_count: 10384
+    null_count: 8128
+    null_percentage: 43.91
+    unique_values: 9890
+    min: 0.616
+    max: 204.32933
+    mean: 45.53
+    sample_values:
+    - 11.293842
+    - 13.026686
+    - 17.2715
+    - 7.298765
+    - 19.206816
+  - name: root_dry_matt_kg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: root_moist_pct
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: root_c_kgc_ha
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: root_n_kgn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: corn_ear_height_std_cm
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: above_g_biomass_std_kg_ha
+    type: float64
+    non_null_count: 32
+    null_count: 18480
+    null_percentage: 99.83
+    unique_values: 32
+    min: 133.09
+    max: 4912.19
+    mean: 1446.52
+    sample_values:
+    - 334.0
+    - 550.0
+    - 1211.48
+    - 973.79
+    - 298.49
+  - name: unit_grain_weight_std_mg
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: grain_dry_matt_std_kg_ha
+    type: float64
+    non_null_count: 50
+    null_count: 18462
+    null_percentage: 99.73
+    unique_values: 50
+    min: 22.7
+    max: 1839.5602
+    mean: 489.68
+    sample_values:
+    - 618.18463
+    - 165.8842
+    - 688.9207
+    - 261.5478
+    - 545.1345
+  - name: grain_moist_std_pct
+    type: float64
+    non_null_count: 30
+    null_count: 18482
+    null_percentage: 99.84
+    unique_values: 25
+    min: 0.0
+    max: 1.53
+    mean: 0.39
+    sample_values:
+    - 0.1
+    - 0.57
+    - 0.05
+    - 0.2
+    - 0.15
+  - name: grain_c_std_kgc_ha
+    type: float64
+    non_null_count: 72
+    null_count: 18440
+    null_percentage: 99.61
+    unique_values: 55
+    min: 0.0
+    max: 483.17
+    mean: 92.16
+    sample_values:
+    - 248.0
+    - 219.0
+    - 106.23
+    - 142.11
+    - 130.25
+  - name: grain_n_std_kgn_ha
+    type: float64
+    non_null_count: 70
+    null_count: 18442
+    null_percentage: 99.62
+    unique_values: 37
+    min: 0.0
+    max: 23.42
+    mean: 4.7
+    sample_values:
+    - 7.88
+    - 6.02
+    - 16.31
+    - 5.37
+    - 14.8
+  - name: harv_nongrain_bio_std_kg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: harv_res_moist_std_pct
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: harv_res_c_std_kgc_ha
+    type: float64
+    non_null_count: 40
+    null_count: 18472
+    null_percentage: 99.78
+    unique_values: 28
+    min: 0.01
+    max: 0.64
+    mean: 0.17
+    sample_values:
+    - 0.26
+    - 0.03
+    - 0.57
+    - 0.24
+    - 0.33
+  - name: harv_res_n_std_kgn_ha
+    type: float64
+    non_null_count: 40
+    null_count: 18472
+    null_percentage: 99.78
+    unique_values: 5
+    min: 0.0
+    max: 0.04
+    mean: 0.02
+    sample_values:
+    - 0.0
+    - 0.02
+    - 0.04
+    - 0.03
+    - 0.01
+  - name: nonharv_nongrain_bio_std_kg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: nonharv_res_moist_std_pct
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: nonharv_res_c_std_kgc_ha
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: nonharv_res_n_std_kgn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: root_dry_matt_std_kg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: root_moist_std_pct
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: root_c_std_kgc_ha
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: root_n_std_kgn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 18512
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: meassoilbiol
+  row_count: 18273
+  column_count: 66
+  columns:
+  - name: location_id
+    type: object
+    non_null_count: 18273
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 11
+    sample_values:
+    - GAJPCSR1
+    - GAJPCSR1
+    - GAJPCSR1
+    - GAJPCSR1
+    - GAJPCSR1
+  - name: unit_id
+    type: object
+    non_null_count: 18273
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 967
+    sample_values:
+    - GAJPCSR1_B2P105F3H1X600Y390
+    - GAJPCSR1_B2P105F3H1X630Y330
+    - GAJPCSR1_B2P105F3H1X630Y360
+    - GAJPCSR1_B2P105F3H1X630Y390
+    - GAJPCSR1_B2P105F3H1X630Y420
+  - name: date
+    type: object
+    non_null_count: 18273
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 76
+    sample_values:
+    - '1994-04-11'
+    - '1994-04-11'
+    - '1994-04-11'
+    - '1994-04-11'
+    - '1994-04-11'
+  - name: treatment_id
+    type: object
+    non_null_count: 18273
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 164
+    sample_values:
+    - GAJPCSR1_F3H1
+    - GAJPCSR1_F3H1
+    - GAJPCSR1_F3H1
+    - GAJPCSR1_F3H1
+    - GAJPCSR1_F3H1
+  - name: upper_cm
+    type: int64
+    non_null_count: 18273
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 15
+    min: 0.0
+    max: 150.0
+    mean: 25.91
+    sample_values:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+  - name: lower_cm
+    type: int64
+    non_null_count: 18273
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 15
+    min: 2.0
+    max: 180.0
+    mean: 40.06
+    sample_values:
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+  - name: model_if_simulated
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: phenol_oxidase_umol_product_dopachrome_g_1_dry_soil_h_1
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: beta_glucosidase_mg_kg_hr
+    type: float64
+    non_null_count: 1555
+    null_count: 16718
+    null_percentage: 91.49
+    unique_values: 1539
+    min: 3.2390711
+    max: 565.02637
+    mean: 109.55
+    sample_values:
+    - 147.73994
+    - 74.59425
+    - 159.63945
+    - 111.403755
+    - 113.23379
+  - name: beta_glucosaminidase_nag_mg_kg_hr
+    type: float64
+    non_null_count: 640
+    null_count: 17633
+    null_percentage: 96.5
+    unique_values: 603
+    min: 2.125
+    max: 133.97313
+    mean: 16.98
+    sample_values:
+    - 62.93184
+    - 41.218235
+    - 77.40943
+    - 61.102177
+    - 58.039577
+  - name: acid_phosphatase_mg_kg_hr
+    type: float64
+    non_null_count: 252
+    null_count: 18021
+    null_percentage: 98.62
+    unique_values: 249
+    min: 9.1875
+    max: 578.4
+    mean: 141.96
+    sample_values:
+    - 23.144531
+    - 13.1953125
+    - 18.585938
+    - 12.597656
+    - 9.1875
+  - name: alkaline_phosphatase_mg_kg_hr
+    type: float64
+    non_null_count: 504
+    null_count: 17769
+    null_percentage: 97.24
+    unique_values: 441
+    min: 22.214844
+    max: 256.36
+    mean: 88.38
+    sample_values:
+    - 135.16406
+    - 122.48828
+    - 97.56641
+    - 105.02734
+    - 108.23047
+  - name: phosphodiesterase
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: arylsulfatase
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: combined_assay_h_i_j_m
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: urease_mg_nh4plus_kg_hr
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: l_asparaginase_mg_nh4plus_kg_hr
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: l_glutaminase_mg_nh4plus_kg_hr
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: fluorescein_diacetate_hydrolysis_mg_kg_hr
+    type: float64
+    non_null_count: 40
+    null_count: 18233
+    null_percentage: 99.78
+    unique_values: 40
+    min: 0.07311177
+    max: 0.2272057
+    mean: 0.13
+    sample_values:
+    - 0.11386333
+    - 0.08554537
+    - 0.10860276
+    - 0.15174688
+    - 0.16030216
+  - name: ammonia_oxidation_mg_no2_kg_1_soil_h_1
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ace_protein_kg_kg
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: glomalin_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: iden_plant_material_c_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: pom_c_g_kg
+    type: float64
+    non_null_count: 18273
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5838
+    min: 0.0
+    max: 94.172
+    mean: 3.82
+    sample_values:
+    - 3.9661317
+    - 5.356762
+    - 5.0624847
+    - 3.1933908
+    - 6.369611
+  - name: microbial_biomass_c_mg_kg
+    type: float64
+    non_null_count: 18273
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 3652
+    min: 0.0
+    max: 7779.0557
+    mean: 166.23
+    sample_values:
+    - 444.08194
+    - 535.961
+    - 423.6644
+    - 316.4722
+    - 449.18634
+  - name: microbial_biomass_n_mg_kg
+    type: float64
+    non_null_count: 2119
+    null_count: 16154
+    null_percentage: 88.4
+    unique_values: 768
+    min: 0.014
+    max: 76.01
+    mean: 3.44
+    sample_values:
+    - 0.122
+    - 0.083
+    - 0.07
+    - 0.089
+    - 0.081
+  - name: net_nh4_n_mg_n_kg_dry_soil
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: n2_fixed_µmol_kg_dry_soil
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _7_0d_amm_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _28_0d_amm_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _7_0d_nit_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _28_0d_nit_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _7_0d_nmin_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _28_0d_nmin_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: nifh_qpcr_ct
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: rhizosphere_nifh_qpcr_ct
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: phenol_oxidase_std_umol_product_dopachrome_g_1_dry_soil_h_1
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: beta_glucosidase_std_mg_kg_hr
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: beta_glucosaminidase_nag_std_mg_kg_hr
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: acid_phosphatase_std_mg_kg_hr
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: alkaline_phosphatase_std_mg_kg_hr
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: phosphodiesterase_std
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: arylsulfatase_std
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: combined_assay_h_i_j_m_std
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: urease_std_mg_nh4plus_kg_hr
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: l_asparaginase_std_mg_nh4plus_kg_hr
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: l_glutaminase_std_mg_nh4plus_kg_hr
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: fluorescein_diacetate_hydrolysis_std_mg_kg_hr
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ammonia_oxidation_std_mg_no2_kg_1_soil_h_1
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ace_protein_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: glomalin_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: iden_plant_material_c_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: pom_c_std_g_kg
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: microbial_biomass_c_std_mgc_kg
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: microbial_biomass_n_std_mgn_kg
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: net_nh4_n_std_mg_n_kg_dry_soil
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: n2_fixed_std_µmol_kg_dry_soil
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _7_0d_amm_std_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _28_0d_amm_std_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _7_0d_nit_std_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _28_0d_nit_std_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _7_0d_nmin_std_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: _28_0d_nmin_std_mg_g
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: nifh_qpcr_ct_std
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: rhizosphere_nifh_qpcr_ct_std
+    type: float64
+    non_null_count: 0
+    null_count: 18273
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: id
+    type: int64
+    non_null_count: 18273
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 18273
+    min: 1.0
+    max: 18273.0
+    mean: 9137.0
+    sample_values:
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+- name: meassoilchem
+  row_count: 54269
+  column_count: 60
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 54269
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 54269
+    min: 1.0
+    max: 54269.0
+    mean: 27135.0
+    sample_values:
+    - 30859
+    - 125
+    - 1
+    - 2
+    - 3
+  - name: location_id
+    type: object
+    non_null_count: 54269
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 44
+    sample_values:
+    - MNMOFS
+    - NEMLTCRS
+    - IDKM
+    - IDKM
+    - NEMLTCRS
+  - name: unit_id
+    type: object
+    non_null_count: 54269
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2754
+    sample_values:
+    - MNMOFS_52
+    - NEMLTCRS_101S
+    - IDKM_201
+    - IDKM_305
+    - NEMLTCRS_101N
+  - name: date
+    type: object
+    non_null_count: 54269
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 328
+    sample_values:
+    - '2007-10-29'
+    - '1987-02-11'
+    - '2015-09-28'
+    - '2015-09-28'
+    - '1987-03-06'
+  - name: treatment_id
+    type: object
+    non_null_count: 54269
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 514
+    sample_values:
+    - MNMOFS_44
+    - NEMLTCRS_ROT50
+    - IDKM_SUPU
+    - IDKM_SUPU
+    - NEMLTCRS_ROT52
+  - name: upper_cm
+    type: float64
+    non_null_count: 54269
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 26
+    min: 0.0
+    max: 150.0
+    mean: 24.11
+    sample_values:
+    - 10.0
+    - 15.0
+    - 15.0
+    - 30.0
+    - 60.0
+  - name: lower_cm
+    type: float64
+    non_null_count: 54269
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 85
+    min: 2.0
+    max: 180.0
+    mean: 41.31
+    sample_values:
+    - 15.0
+    - 30.0
+    - 30.0
+    - 60.0
+    - 90.0
+  - name: model_if_simulated
+    type: float64
+    non_null_count: 6
+    null_count: 54263
+    null_percentage: 99.99
+    unique_values: 1
+    min: 7.7
+    max: 7.7
+    mean: 7.7
+    sample_values:
+    - 7.7
+    - 7.7
+    - 7.7
+    - 7.7
+    - 7.7
+  - name: delta_13cvpdb_pm
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: delta_15nair_pm
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: pctc
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: pctn
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ph
+    type: float64
+    non_null_count: 18367
+    null_count: 35902
+    null_percentage: 66.16
+    unique_values: 949
+    min: 3.586
+    max: 9.1
+    mean: 6.62
+    sample_values:
+    - 8.06
+    - 8.23
+    - 5.38
+    - 6.13
+    - 6.2
+  - name: tsc_gc_kg
+    type: float64
+    non_null_count: 44509
+    null_count: 9760
+    null_percentage: 17.98
+    unique_values: 14736
+    min: 0.0
+    max: 113.38
+    mean: 11.82
+    sample_values:
+    - 30.7
+    - 0.0
+    - 0.0
+    - 16.4
+    - 12.5
+  - name: tsn_gn_kg
+    type: float64
+    non_null_count: 46540
+    null_count: 7729
+    null_percentage: 14.24
+    unique_values: 13681
+    min: 0.0
+    max: 30.7931
+    mean: 1.21
+    sample_values:
+    - 2.5
+    - 0.0
+    - 0.0
+    - 0.973
+    - 0.923
+  - name: inorganic_c_gc_kg
+    type: float64
+    non_null_count: 5397
+    null_count: 48872
+    null_percentage: 90.06
+    unique_values: 2323
+    min: 0.0
+    max: 54.0
+    mean: 7.72
+    sample_values:
+    - 0.6600704
+    - 2.6834111
+    - 3.6978943
+    - 3.581632
+    - 4.2041984
+  - name: organic_c_gc_kg
+    type: float64
+    non_null_count: 8362
+    null_count: 45907
+    null_percentage: 84.59
+    unique_values: 5997
+    min: 0.0
+    max: 281.20975
+    mean: 27.37
+    sample_values:
+    - 9.2231245
+    - 9.963553
+    - 9.118856
+    - 13.740794
+    - 9.889339
+  - name: mineral_c_gc_kg
+    type: float64
+    non_null_count: 3343
+    null_count: 50926
+    null_percentage: 93.84
+    unique_values: 3070
+    min: 0.0
+    max: 6.427706
+    mean: 0.81
+    sample_values:
+    - 6.427706
+    - 2.9470267
+    - 2.8153884
+    - 5.8181343
+    - 2.747063
+  - name: cec_cmol_kg
+    type: float64
+    non_null_count: 3398
+    null_count: 50871
+    null_percentage: 93.74
+    unique_values: 2024
+    min: 0.95
+    max: 68.71
+    mean: 22.03
+    sample_values:
+    - 51.18
+    - 30.97
+    - 22.02
+    - 32.33
+    - 32.96
+  - name: electric_conduc_siemens_m
+    type: float64
+    non_null_count: 5570
+    null_count: 48699
+    null_percentage: 89.74
+    unique_values: 885
+    min: 0.011
+    max: 321.8
+    mean: 23.54
+    sample_values:
+    - 0.307
+    - 0.386
+    - 41.0
+    - 42.0
+    - 26.0
+  - name: soluble_c_mgc_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: nh4_mgn_kg
+    type: float64
+    non_null_count: 35328
+    null_count: 18941
+    null_percentage: 34.9
+    unique_values: 10037
+    min: 0.0
+    max: 182.3411
+    mean: 6.9
+    sample_values:
+    - 3.94
+    - 5.72
+    - 4.34
+    - 5.43
+    - 8.14
+  - name: no3_mgn_kg
+    type: float64
+    non_null_count: 37118
+    null_count: 17151
+    null_percentage: 31.6
+    unique_values: 8587
+    min: 0.0
+    max: 349.6415
+    mean: 6.79
+    sample_values:
+    - 1.28
+    - 4.01
+    - 4.89
+    - 2.74
+    - 9.76
+  - name: p_mgp_kg
+    type: float64
+    non_null_count: 13491
+    null_count: 40778
+    null_percentage: 75.14
+    unique_values: 5669
+    min: 0.0
+    max: 475.4
+    mean: 31.57
+    sample_values:
+    - 12.31
+    - 49.37
+    - 18.45
+    - 14.31
+    - 8.93
+  - name: k_mgk_kg
+    type: float64
+    non_null_count: 11001
+    null_count: 43268
+    null_percentage: 79.73
+    unique_values: 3155
+    min: 0.0
+    max: 7373.5435
+    mean: 251.64
+    sample_values:
+    - 159.0
+    - 169.0
+    - 153.0
+    - 158.0
+    - 155.0
+  - name: ca_mgca_kg
+    type: float64
+    non_null_count: 3336
+    null_count: 50933
+    null_percentage: 93.85
+    unique_values: 2753
+    min: 19.6
+    max: 183011.77
+    mean: 10271.9
+    sample_values:
+    - 57705.633
+    - 67172.33
+    - 85785.33
+    - 74565.25
+    - 55343.805
+  - name: mg_mgmg_kg
+    type: float64
+    non_null_count: 3337
+    null_count: 50932
+    null_percentage: 93.85
+    unique_values: 2085
+    min: 53.0
+    max: 24847.44
+    mean: 2044.1
+    sample_values:
+    - 11341.876
+    - 12835.916
+    - 17316.623
+    - 20755.555
+    - 16909.379
+  - name: cu_mgcu_kg
+    type: float64
+    non_null_count: 1314
+    null_count: 52955
+    null_percentage: 97.58
+    unique_values: 243
+    min: 0.2
+    max: 4.18135
+    mean: 0.99
+    sample_values:
+    - 0.7
+    - 0.8
+    - 0.8
+    - 1.1
+    - 1.9
+  - name: fe_mgfe_kg
+    type: float64
+    non_null_count: 1742
+    null_count: 52527
+    null_percentage: 96.79
+    unique_values: 1127
+    min: 2.6
+    max: 20510.797
+    mean: 3490.1
+    sample_values:
+    - 16954.752
+    - 16191.779
+    - 13986.914
+    - 14029.913
+    - 15853.472
+  - name: mn_mgmn_kg
+    type: float64
+    non_null_count: 2932
+    null_count: 51337
+    null_percentage: 94.6
+    unique_values: 1962
+    min: 1.2
+    max: 527.46783
+    mean: 92.81
+    sample_values:
+    - 176.17781
+    - 167.96892
+    - 152.47173
+    - 153.12367
+    - 166.406
+  - name: zn_mgzn_kg
+    type: float64
+    non_null_count: 2952
+    null_count: 51317
+    null_percentage: 94.56
+    unique_values: 1725
+    min: 1.0e-05
+    max: 73.28946
+    mean: 7.66
+    sample_values:
+    - 64.33093
+    - 59.607334
+    - 43.21382
+    - 44.440193
+    - 49.558758
+  - name: mineralizable_n_gn_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: nitrite_mgn_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: cesium_137_bq_kg
+    type: float64
+    non_null_count: 228
+    null_count: 54041
+    null_percentage: 99.58
+    unique_values: 218
+    min: 0.0
+    max: 1030.6
+    mean: 39.7
+    sample_values:
+    - 1.757885
+    - 2.959137
+    - 0.62188965
+    - 0.70107305
+    - 0.767703
+  - name: lead_210_bq_kg
+    type: float64
+    non_null_count: 192
+    null_count: 54077
+    null_percentage: 99.65
+    unique_values: 192
+    min: 0.00402518
+    max: 0.79036254
+    mean: 0.2
+    sample_values:
+    - 0.2177832
+    - 0.14553893
+    - 0.08821132
+    - 0.07877455
+    - 0.06748655
+  - name: beryllium_7_bq_kg
+    type: float64
+    non_null_count: 24
+    null_count: 54245
+    null_percentage: 99.96
+    unique_values: 24
+    min: 49.171345
+    max: 798.781
+    mean: 288.92
+    sample_values:
+    - 469.85132
+    - 273.4308
+    - 82.33586
+    - 112.07761
+    - 184.0348
+  - name: ph_std
+    type: float64
+    non_null_count: 54
+    null_count: 54215
+    null_percentage: 99.9
+    unique_values: 30
+    min: 0.4689923
+    max: 4.938032
+    mean: 2.14
+    sample_values:
+    - 3.6684053
+    - 0.4932161
+    - 0.6223109
+    - 4.049508
+    - 0.64170486
+  - name: tsc_std_gc_kg
+    type: float64
+    non_null_count: 768
+    null_count: 53501
+    null_percentage: 98.58
+    unique_values: 744
+    min: 0.026154796
+    max: 18.75
+    mean: 0.7
+    sample_values:
+    - 0.23990224
+    - 0.06623083
+    - 0.07342509
+    - 0.32504347
+    - 0.05286181
+  - name: tsn_std_gn_kg
+    type: float64
+    non_null_count: 720
+    null_count: 53549
+    null_percentage: 98.67
+    unique_values: 720
+    min: 0.002933124
+    max: 3.362066
+    mean: 0.07
+    sample_values:
+    - 2.7734804
+    - 0.6611913
+    - 0.6229266
+    - 3.362066
+    - 0.5696989
+  - name: inorganic_c_std_gc_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: organic_std_gc_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mineral_c_std_gc_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: cec_std_cmol_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: electric_conduc_std_siemens_m
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soluble_c_std_mgc_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: nh4_std_mgn_kg
+    type: float64
+    non_null_count: 354
+    null_count: 53915
+    null_percentage: 99.35
+    unique_values: 306
+    min: 0.0136496
+    max: 35.340763
+    mean: 1.15
+    sample_values:
+    - 2.2238412
+    - 0.342141
+    - 0.12269603
+    - 7.2792177
+    - 0.32205036
+  - name: no3_std_mgn_kg
+    type: float64
+    non_null_count: 354
+    null_count: 53915
+    null_percentage: 99.35
+    unique_values: 333
+    min: 0.0478046
+    max: 23.235634
+    mean: 3.39
+    sample_values:
+    - 6.502024
+    - 1.9029411
+    - 2.2275538
+    - 15.936798
+    - 3.9058836
+  - name: p_std_mgp_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: k_std_mgk_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ca_std_mgca_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mg_std_mgmg_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: cu_std_mgcu_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: fe_std_mgfe_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mn_std_mgmn_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: zn_std_mgzn_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mineralizable_n_std_gn_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: nitrite_std_mgn_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: cesium_137_std_bq_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: lead_210_std_bq_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: beryllium_7_std_bq_kg
+    type: float64
+    non_null_count: 0
+    null_count: 54269
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: meassoilcover
+  row_count: 1034
+  column_count: 8
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 1034
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1034
+    min: 1.0
+    max: 1034.0
+    mean: 517.5
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  - name: location_id
+    type: object
+    non_null_count: 1034
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 4
+    sample_values:
+    - IAAM7071
+    - IAAM7071
+    - IAAM7071
+    - IAAM7071
+    - IAAM7071
+  - name: unit_id
+    type: object
+    non_null_count: 1034
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 214
+    sample_values:
+    - IAAM7071_115
+    - IAAM7071_208
+    - IAAM7071_322
+    - IAAM7071_420
+    - IAAM7071_106
+  - name: date
+    type: object
+    non_null_count: 1034
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 20
+    sample_values:
+    - '2011-11-07'
+    - '2011-11-07'
+    - '2011-11-14'
+    - '2011-11-14'
+    - '2011-11-07'
+  - name: treatment_id
+    type: object
+    non_null_count: 1034
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 47
+    sample_values:
+    - IAAM7071_1
+    - IAAM7071_1
+    - IAAM7071_1
+    - IAAM7071_1
+    - IAAM7071_2
+  - name: timing_descriptor
+    type: object
+    non_null_count: 1034
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 7
+    sample_values:
+    - Post harvest (2-4 weeks after harvest)
+    - Post harvest (2-4 weeks after harvest)
+    - Post harvest (2-4 weeks after harvest)
+    - Post harvest (2-4 weeks after harvest)
+    - Post harvest (2-4 weeks after harvest)
+  - name: crop
+    type: object
+    non_null_count: 1034
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+  - name: soil_w_residue_pct
+    type: float64
+    non_null_count: 0
+    null_count: 1034
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: meassoilphys
+  row_count: 28237
+  column_count: 28
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 28237
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 28237
+    min: 1.0
+    max: 28237.0
+    mean: 14119.0
+    sample_values:
+    - 23794
+    - 26438
+    - 7367
+    - 1
+    - 2
+  - name: location_id
+    type: object
+    non_null_count: 28237
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 37
+    sample_values:
+    - NECCIRR
+    - PAUP
+    - MNMOFS
+    - ALAUSDR
+    - ALAUSDR
+  - name: unit_id
+    type: object
+    non_null_count: 28237
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1939
+    sample_values:
+    - NECCIRR_305
+    - PAUP_207
+    - MNMOFS_123
+    - ALAUSDR_04summit17r1
+    - ALAUSDR_04summit22r2
+  - name: date
+    type: object
+    non_null_count: 28237
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 194
+    sample_values:
+    - '2010-10-27'
+    - '2008-05-27'
+    - '2002-10-04'
+    - '2000-12-01'
+    - '2000-12-01'
+  - name: treatment_id
+    type: object
+    non_null_count: 28237
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 428
+    sample_values:
+    - FullX200A
+    - PAUP_11
+    - MNMOFS_40
+    - ALAUSDR_ALAuburn_CT1
+    - ALAUSDR_ALAuburn_CT2
+  - name: upper_cm
+    type: float64
+    non_null_count: 28237
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 25
+    min: 0.0
+    max: 150.0
+    mean: 26.41
+    sample_values:
+    - 15.0
+    - 15.0
+    - 15.0
+    - 0.0
+    - 0.0
+  - name: lower_cm
+    type: float64
+    non_null_count: 28237
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 112
+    min: 2.0
+    max: 180.0
+    mean: 42.68
+    sample_values:
+    - 30.0
+    - 30.0
+    - 30.5
+    - 30.0
+    - 30.0
+  - name: model_if_simulated
+    type: float64
+    non_null_count: 36
+    null_count: 28201
+    null_percentage: 99.87
+    unique_values: 7
+    min: 36.0
+    max: 40.9
+    mean: 39.69
+    sample_values:
+    - 40.2
+    - 40.2
+    - 40.2
+    - 40.2
+    - 40.2
+  - name: sand_pct
+    type: float64
+    non_null_count: 27265
+    null_count: 972
+    null_percentage: 3.44
+    unique_values: 957
+    min: 0.0
+    max: 92.0
+    mean: 8.33
+    sample_values:
+    - 0.0
+    - 0.0
+    - 57.2437
+    - 56.235
+    - 53.8965
+  - name: silt_pct
+    type: float64
+    non_null_count: 27267
+    null_count: 970
+    null_percentage: 3.44
+    unique_values: 902
+    min: 0.0
+    max: 80.85405
+    mean: 9.33
+    sample_values:
+    - 0.0
+    - 0.0
+    - 25.6533
+    - 24.6715
+    - 26.3055
+  - name: clay_pct
+    type: float64
+    non_null_count: 27267
+    null_count: 970
+    null_percentage: 3.44
+    unique_values: 737
+    min: 0.0
+    max: 62.5
+    mean: 5.75
+    sample_values:
+    - 0.0
+    - 0.0
+    - 17.103
+    - 19.0935
+    - 19.798
+  - name: bulk_density_g_cm3
+    type: float64
+    non_null_count: 19823
+    null_count: 8414
+    null_percentage: 29.8
+    unique_values: 8615
+    min: 0.05928987
+    max: 2.4615
+    mean: 1.37
+    sample_values:
+    - 1.26
+    - 1.09
+    - 1.068
+    - 1.256
+    - 1.32
+  - name: wilting_point_pct_volume
+    type: float64
+    non_null_count: 24
+    null_count: 28213
+    null_percentage: 99.92
+    unique_values: 22
+    min: 17.7
+    max: 33.47
+    mean: 25.99
+    sample_values:
+    - 21.2
+    - 17.7
+    - 21.7
+    - 21.2
+    - 17.8
+  - name: field_capacity_pct_volume
+    type: float64
+    non_null_count: 24
+    null_count: 28213
+    null_percentage: 99.92
+    unique_values: 22
+    min: 28.3
+    max: 44.48
+    mean: 37.6
+    sample_values:
+    - 29.2
+    - 28.3
+    - 28.5
+    - 29.2
+    - 30.5
+  - name: ksat_cm_sec
+    type: float64
+    non_null_count: 33
+    null_count: 28204
+    null_percentage: 99.88
+    unique_values: 19
+    min: 0.0
+    max: 4.42
+    mean: 1.1
+    sample_values:
+    - 0.00069444
+    - 0.00155556
+    - 0.00115833
+    - 0.00069444
+    - 0.00155556
+  - name: moisture_release_curve
+    type: float64
+    non_null_count: 0
+    null_count: 28237
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_heat_flux_mj_m2
+    type: float64
+    non_null_count: 0
+    null_count: 28237
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: aggregation_pct
+    type: float64
+    non_null_count: 0
+    null_count: 28237
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: h2o_stable_aggregates_pct
+    type: float64
+    non_null_count: 42
+    null_count: 28195
+    null_percentage: 99.85
+    unique_values: 42
+    min: 3.3071635
+    max: 14.676914
+    mean: 6.94
+    sample_values:
+    - 8.593992
+    - 11.631752
+    - 4.9409213
+    - 5.313684
+    - 7.4119625
+  - name: near_infrared_c_gc_kg
+    type: float64
+    non_null_count: 0
+    null_count: 28237
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: bulk_density_std_g_cm3
+    type: float64
+    non_null_count: 50
+    null_count: 28187
+    null_percentage: 99.82
+    unique_values: 30
+    min: 0.0
+    max: 0.14502873
+    mean: 0.06
+    sample_values:
+    - 0.07
+    - 0.1
+    - 0.04
+    - 0.1
+    - 0.09
+  - name: wilting_point_std_pct_volume
+    type: float64
+    non_null_count: 0
+    null_count: 28237
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: field_capacity_std_pct_volume
+    type: float64
+    non_null_count: 18
+    null_count: 28219
+    null_percentage: 99.94
+    unique_values: 18
+    min: 0.6010408
+    max: 5.1335955
+    mean: 1.78
+    sample_values:
+    - 1.1101576
+    - 1.4000714
+    - 2.0647519
+    - 1.039447
+    - 0.98287845
+  - name: ksat_std_cm_sec
+    type: float64
+    non_null_count: 27
+    null_count: 28210
+    null_percentage: 99.9
+    unique_values: 17
+    min: 0.0
+    max: 4.890276
+    mean: 1.17
+    sample_values:
+    - 0.39038444
+    - 0.0
+    - 0.0
+    - 0.21071307
+    - 0.0
+  - name: soil_heat_flux_std_mj_m2
+    type: float64
+    non_null_count: 0
+    null_count: 28237
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: macro_aggregates_std_pct
+    type: float64
+    non_null_count: 0
+    null_count: 28237
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: h2o_stable_aggregates_std_pct
+    type: float64
+    non_null_count: 0
+    null_count: 28237
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: near_infrared_c_std_gc_kg
+    type: float64
+    non_null_count: 0
+    null_count: 28237
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: measwaterqualityarea
+  row_count: 681
+  column_count: 70
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 681
+    min: 1.0
+    max: 681.0
+    mean: 341.0
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  - name: location_id
+    type: object
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1
+    sample_values:
+    - WIPDBARN
+    - WIPDBARN
+    - WIPDBARN
+    - WIPDBARN
+    - WIPDBARN
+  - name: unit_id
+    type: object
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 9
+    sample_values:
+    - WIPDBARN_2
+    - WIPDBARN_2
+    - WIPDBARN_2
+    - WIPDBARN_2
+    - WIPDBARN_2
+  - name: date
+    type: object
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 103
+    sample_values:
+    - '2011-04-12'
+    - '2011-06-06'
+    - '2011-06-14'
+    - '2011-06-28'
+    - '2011-08-26'
+  - name: time
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: treatment_id
+    type: object
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 3
+    sample_values:
+    - WIPDBARN_SOIL
+    - WIPDBARN_SOIL
+    - WIPDBARN_SOIL
+    - WIPDBARN_SOIL
+    - WIPDBARN_SOIL
+  - name: growth_stage
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: crop
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: sampling_start_stop_interval
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: model_if_simulated
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: surface_or_leaching
+    type: object
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - Surface
+    - Surface
+    - Surface
+    - Surface
+    - Surface
+  - name: sampling_depth_cm
+    type: float64
+    non_null_count: 549
+    null_count: 132
+    null_percentage: 19.38
+    unique_values: 1
+    min: 110.0
+    max: 110.0
+    mean: 110.0
+    sample_values:
+    - 110.0
+    - 110.0
+    - 110.0
+    - 110.0
+    - 110.0
+  - name: losses_or_deposition
+    type: object
+    non_null_count: 132
+    null_count: 549
+    null_percentage: 80.62
+    unique_values: 1
+    sample_values:
+    - Deposition
+    - Deposition
+    - Deposition
+    - Deposition
+    - Deposition
+  - name: erosion_method
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_t_sediment_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_total_suspended_solids_t_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_total_solidst_ha
+    type: float64
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 133
+    min: 0.0
+    max: 1.3064578
+    mean: 0.06
+    sample_values:
+    - 0.22964607
+    - 0.38412145
+    - 0.21086194
+    - 0.26939297
+    - 0.18244568
+  - name: soil_organic_matter_kg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_organic_carbon_kg_c_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: water_mm
+    type: float64
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 618
+    min: 1.0936701
+    max: 178.01634
+    mean: 36.76
+    sample_values:
+    - 33.611656
+    - 16.805828
+    - 6.1112103
+    - 16.805828
+    - 6.6204777
+  - name: kg_total_n_ha
+    type: float64
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 680
+    min: 0.03486201
+    max: 382.8146
+    mean: 18.38
+    sample_values:
+    - 4.6989093
+    - 8.861713
+    - 4.313292
+    - 6.130766
+    - 1.10893
+  - name: kg_total_p_ha
+    type: float64
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 681
+    min: 0.00083235
+    max: 18.984785
+    mean: 2.12
+    sample_values:
+    - 2.0758398
+    - 1.2246797
+    - 2.231948
+    - 0.9565371
+    - 0.8603569
+  - name: kg_nh4_n_ha
+    type: float64
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 679
+    min: 0.0006579
+    max: 173.00122
+    mean: 2.74
+    sample_values:
+    - 3.270414
+    - 1.5990745
+    - 0.9502932
+    - 0.71592826
+    - 0.6560893
+  - name: kg_no3_n_ha
+    type: float64
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 680
+    min: -0.00158617
+    max: 206.33934
+    mean: 6.51
+    sample_values:
+    - 0.02023422
+    - 0.00794916
+    - 0.00245365
+    - 0.00728533
+    - 0.00240985
+  - name: total_dissolved_n_kg_n_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_total_dissolved_p_ha
+    type: float64
+    non_null_count: 681
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 681
+    min: 0.00021073
+    max: 15.006635
+    mean: 1.3
+    sample_values:
+    - 1.409174
+    - 0.34465423
+    - 0.19641033
+    - 0.3927934
+    - 0.17410694
+  - name: kg_total_cl_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ph
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ec_ms_cm
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_k_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_s_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_ca_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_mg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_cu_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_fe_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_mn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_zn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_b_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_mo_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_al_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_na_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_si_ha
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_t_sediment_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_total_suspended_solids_t_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_total_solids_t_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_organic_matter_kg_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_organic_carbon_kg_c_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: water_mm_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_total_n_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_total_p_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_nh4_n_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_no3_n_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: total_dissolved_n_kg_n_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_total_dissolved_p_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_total_cl_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ph_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ec_ms_cm_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_k_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_s_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_ca_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_mg_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_cu_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_fe_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_mn_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_zn_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_b_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_g_mo_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_al_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_na_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_kg_si_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 681
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: measwaterqualityconc
+  row_count: 2305
+  column_count: 70
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 2305
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2305
+    min: 1.0
+    max: 2305.0
+    mean: 1153.0
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  - name: location_id
+    type: object
+    non_null_count: 2305
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - IAAMKELL
+    - IAAMKELL
+    - IAAMKELL
+    - IAAMKELL
+    - IAAMKELL
+  - name: unit_id
+    type: object
+    non_null_count: 2305
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 11
+    sample_values:
+    - IAAMKELL__120
+    - IAAMKELL__120
+    - IAAMKELL__120
+    - IAAMKELL__120
+    - IAAMKELL__120
+  - name: date
+    type: object
+    non_null_count: 2305
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 528
+    sample_values:
+    - '2003-05-13'
+    - '2003-05-17'
+    - '2003-05-20'
+    - '2003-05-25'
+    - '2003-05-28'
+  - name: time
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: treatment_id
+    type: object
+    non_null_count: 2305
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - IAAMKELL_CC
+    - IAAMKELL_CC
+    - IAAMKELL_CC
+    - IAAMKELL_CC
+    - IAAMKELL_CC
+  - name: growth_stage
+    type: object
+    non_null_count: 1624
+    null_count: 681
+    null_percentage: 29.54
+    unique_values: 1
+    sample_values:
+    - Pre-graze
+    - Pre-graze
+    - Pre-graze
+    - Pre-graze
+    - Pre-graze
+  - name: crop
+    type: object
+    non_null_count: 1106
+    null_count: 1199
+    null_percentage: 52.02
+    unique_values: 3
+    sample_values:
+    - Glycine max (Soybean)
+    - Glycine max (Soybean)
+    - Glycine max (Soybean)
+    - Glycine max (Soybean)
+    - Glycine max (Soybean)
+  - name: sampling_start_stop_interval
+    type: object
+    non_null_count: 1624
+    null_count: 681
+    null_percentage: 29.54
+    unique_values: 3
+    sample_values:
+    - Stop-Start
+    - Stop-Start
+    - Stop-Start
+    - Stop-Start
+    - Stop-Start
+  - name: model_if_simulated
+    type: object
+    non_null_count: 811
+    null_count: 1494
+    null_percentage: 64.82
+    unique_values: 1
+    sample_values:
+    - RZWQM
+    - RZWQM
+    - RZWQM
+    - RZWQM
+    - RZWQM
+  - name: surface_or_leaching
+    type: object
+    non_null_count: 2305
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - Leaching
+    - Leaching
+    - Leaching
+    - Leaching
+    - Leaching
+  - name: sampling_depth_cm
+    type: int64
+    non_null_count: 2305
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 3
+    min: 0.0
+    max: 120.0
+    mean: 110.75
+    sample_values:
+    - 120
+    - 120
+    - 120
+    - 120
+    - 120
+  - name: losses_or_deposition
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_method
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_kg_sediment
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_total_suspended_solids_kg
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_total_solids_kg
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_organic_matter_mg_som_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_organic_carbon_mg_c_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: water_mm
+    type: float64
+    non_null_count: 2305
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1844
+    min: -2.0
+    max: 2046.9553
+    mean: 22.98
+    sample_values:
+    - 70.85973
+    - 38.93349
+    - 8.08824
+    - 5.28795
+    - 1.5033709
+  - name: mg_total_n_l
+    type: float64
+    non_null_count: 681
+    null_count: 1624
+    null_percentage: 70.46
+    unique_values: 581
+    min: 2.7
+    max: 249.72
+    mean: 45.05
+    sample_values:
+    - 11.6
+    - 10.6
+    - 11.2
+    - 46.0
+    - 11.8
+  - name: mg_total_p_l
+    type: float64
+    non_null_count: 681
+    null_count: 1624
+    null_percentage: 70.46
+    unique_values: 681
+    min: 0.02180452
+    max: 36.52219
+    mean: 5.41
+    sample_values:
+    - 2.683277
+    - 3.935898
+    - 4.3475494
+    - 7.933275
+    - 4.7592006
+  - name: mg_nh4_n_l
+    type: float64
+    non_null_count: 681
+    null_count: 1624
+    null_percentage: 70.46
+    unique_values: 605
+    min: 0.0136
+    max: 118.066666
+    mean: 5.36
+    sample_values:
+    - 5.615
+    - 4.52
+    - 4.6
+    - 6.21
+    - 4.91
+  - name: mg_no3_n_l
+    type: float64
+    non_null_count: 2305
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1382
+    min: -0.0253
+    max: 134.44
+    mean: 10.28
+    sample_values:
+    - 9.65735
+    - 9.43443
+    - 9.41714
+    - 9.24102
+    - 9.00519
+  - name: total_dissolved_n_mg_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mg_total_dissolved_p_l
+    type: float64
+    non_null_count: 681
+    null_count: 1624
+    null_percentage: 70.46
+    unique_values: 680
+    min: 0.00262742
+    max: 11.932827
+    mean: 3.06
+    sample_values:
+    - 1.7549886
+    - 1.7655244
+    - 2.1192713
+    - 1.4561871
+    - 1.1242821
+  - name: mg_cl_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ph
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ec_ms_cm_
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_k_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_s_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_ca_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_mg_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_cu_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_fe_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_mn_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_zn_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_b_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_mo_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_al_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_na_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_si_l
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_kg_sediment_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_total_suspended_solids_kg_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: erosion_total_solids_kg_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_organic_matter_mg_som_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_organic_carbon_mg_c_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: water_mm_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mg_total_n_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mg_total_p_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mg_nh4_n_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mg_no3_n_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: total_dissolved_n_mg_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mg_total_dissolved_p_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: mg_cl_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ph_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ec_ms_cm_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_k_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_s_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_ca_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_mg_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_cu_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_fe_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_mn_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_zn_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_b_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_ug_mo_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_al_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_na_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: dissolved_mg_si_l_std
+    type: float64
+    non_null_count: 0
+    null_count: 2305
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: measwinderosionarea
+  row_count: 34
+  column_count: 56
+  columns:
+  - name: location_id
+    type: object
+    non_null_count: 34
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1
+    sample_values:
+    - TXBSWEWC
+    - TXBSWEWC
+    - TXBSWEWC
+    - TXBSWEWC
+    - TXBSWEWC
+  - name: unit_id
+    type: object
+    non_null_count: 34
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - TXBSWEWC_COMP2
+    - TXBSWEWC_COMP3
+    - TXBSWEWC_COMP4
+    - TXBSWEWC_COMP4
+    - TXBSWEWC_COMP5
+  - name: date
+    type: object
+    non_null_count: 34
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - '2001-03-15'
+    - '2001-03-15'
+    - '1993-03-15'
+    - '2001-03-15'
+    - '1993-03-15'
+  - name: time
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: treatment_id
+    type: object
+    non_null_count: 34
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - TXBSWEWC_N1985
+    - TXBSWEWC_N1915
+    - TXBSWEWC_ERODE
+    - TXBSWEWC_ERODE
+    - TXBSWEWC_DEPOS
+  - name: growth_stage
+    type: object
+    non_null_count: 34
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1
+    sample_values:
+    - Pre-graze
+    - Pre-graze
+    - Pre-graze
+    - Pre-graze
+    - Pre-graze
+  - name: crop
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: sampling_start_stop_interval
+    type: object
+    non_null_count: 34
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - Stop
+    - Stop
+    - Stop
+    - Stop
+    - Stop
+  - name: model_if_simulated
+    type: object
+    non_null_count: 14
+    null_count: 20
+    null_percentage: 58.82
+    unique_values: 3
+    sample_values:
+    - Linear Proportional
+    - Linear Proportional
+    - Linear Proportional
+    - Linear Proportional
+    - Linear Proportional
+  - name: erosion_method
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: losses_or_deposition
+    type: object
+    non_null_count: 17
+    null_count: 17
+    null_percentage: 50.0
+    unique_values: 2
+    sample_values:
+    - Losses
+    - Losses
+    - Losses
+    - Losses
+    - Losses
+  - name: soil_t_ha
+    type: float64
+    non_null_count: 34
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 16
+    min: 0.0
+    max: 4140.8
+    mean: 1042.64
+    sample_values:
+    - 987.2
+    - 2135.6
+    - 1686.0
+    - 2370.4
+    - 1686.0
+  - name: soil_organic_matter_kg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_organic_carbon_kg_c_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ph
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ec_ms_cm
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_total_n_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_nh4_n_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_no3_n_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_p_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_k_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_s_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_ca_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_mg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_cu_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_fe_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_mn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_zn_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_b_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_mo_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_al_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_na_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_si_ha
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_t_ha_std
+    type: float64
+    non_null_count: 34
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 13
+    min: 0.0
+    max: 25.455845
+    mean: 3.74
+    sample_values:
+    - 4.4
+    - 6.164414
+    - 5.477226
+    - 14.707821
+    - 5.477226
+  - name: soil_organic_matter_kg_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: soil_organic_carbon_kg_c_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ph_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: ec_ms_cm_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_total_n_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_nh4_n_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_no3_n_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_p_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_k_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_s_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_ca_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_mg_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_cu_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_fe_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_mn_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_zn_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_b_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: g_mo_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_al_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_na_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: kg_si_ha_std
+    type: float64
+    non_null_count: 0
+    null_count: 34
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: id
+    type: int64
+    non_null_count: 34
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 34
+    min: 1.0
+    max: 34.0
+    mean: 17.5
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+- name: measyieldnutuptake
+  row_count: 704
+  column_count: 41
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 704
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 704
+    min: 1.0
+    max: 704.0
+    mean: 352.5
+    sample_values:
+    - 497
+    - 377
+    - 1
+    - 2
+    - 3
+  - name: location_id
+    type: object
+    non_null_count: 704
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 6
+    sample_values:
+    - MNSP4R
+    - MNSP4R
+    - ALAURye
+    - ALAURye
+    - ALAURye
+  - name: unit_id
+    type: object
+    non_null_count: 704
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 174
+    sample_values:
+    - MNSP4R_U-S100B
+    - MNSP4R_UI-Sp85B
+    - ALAURye_101
+    - ALAURye_102
+    - ALAURye_103
+  - name: sampling_date
+    type: object
+    non_null_count: 704
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 26
+    sample_values:
+    - '2014-11-01'
+    - '2014-11-01'
+    - '2006-04-20'
+    - '2006-04-20'
+    - '2006-04-20'
+  - name: treatment_id
+    type: object
+    non_null_count: 704
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 38
+    sample_values:
+    - MNSP4R_U-S100
+    - MNSP4R_UI-Sp85
+    - ALAURye_FLfert3
+    - ALAURye_FLfert0
+    - ALAURye_FLfert1
+  - name: growth_stage
+    type: object
+    non_null_count: 704
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 4
+    sample_values:
+    - Harvest
+    - Harvest
+    - Harvest
+    - Harvest
+    - Harvest
+  - name: crop
+    type: object
+    non_null_count: 704
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Secale cereale (Rye)
+    - Secale cereale (Rye)
+    - Secale cereale (Rye)
+  - name: plant_fraction
+    type: object
+    non_null_count: 704
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 7
+    sample_values:
+    - Grain
+    - Grain
+    - Aboveground biomass
+    - Aboveground biomass
+    - Aboveground biomass
+  - name: model_if_simulated
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_dry_matt_kg_ha_ynu
+    type: float64
+    non_null_count: 704
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 656
+    min: 0.0
+    max: 22246.875
+    mean: 4578.38
+    sample_values:
+    - 10409.256
+    - 9872.124
+    - 6320.0
+    - 3260.0
+    - 3080.0
+  - name: frac_moist_pct_ynu
+    type: float64
+    non_null_count: 20
+    null_count: 684
+    null_percentage: 97.16
+    unique_values: 18
+    min: 12.2
+    max: 30.7
+    mean: 19.37
+    sample_values:
+    - 25.8
+    - 30.7
+    - 23.5
+    - 24.1
+    - 21.7
+  - name: frac_c_kgc_ha_ynu
+    type: float64
+    non_null_count: 704
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 361
+    min: 0.0
+    max: 5468.704
+    mean: 796.36
+    sample_values:
+    - 0.0
+    - 0.0
+    - 3065.832
+    - 1552.738
+    - 1492.26
+  - name: frac_n_kgn_ha_ynu
+    type: float64
+    non_null_count: 704
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 517
+    min: 0.0
+    max: 263.07068
+    mean: 49.84
+    sample_values:
+    - 136.1334
+    - 133.37541
+    - 70.5312
+    - 33.4476
+    - 26.17692
+  - name: frac_p_kgp_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_k_kgk_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_s_kgs_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_ca_kgca_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_mg_kgmg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_cu_gcu_ha
+    type: float64
+    non_null_count: 30
+    null_count: 674
+    null_percentage: 95.74
+    unique_values: 30
+    min: 0.93082225
+    max: 56.147774
+    mean: 17.21
+    sample_values:
+    - 4.0027165
+    - 10.819462
+    - 13.045856
+    - 14.071056
+    - 10.511529
+  - name: frac_fe_gfe_ha
+    type: float64
+    non_null_count: 30
+    null_count: 674
+    null_percentage: 95.74
+    unique_values: 30
+    min: 32.350426
+    max: 1545.5924
+    mean: 421.75
+    sample_values:
+    - 32.350426
+    - 37.892017
+    - 51.34775
+    - 72.225204
+    - 44.779037
+  - name: frac_mn_gmn_ha
+    type: float64
+    non_null_count: 30
+    null_count: 674
+    null_percentage: 95.74
+    unique_values: 30
+    min: 5.503505
+    max: 653.541
+    mean: 167.9
+    sample_values:
+    - 6.5869217
+    - 14.801108
+    - 17.089027
+    - 22.202751
+    - 19.448074
+  - name: frac_zn_gzn_ha
+    type: float64
+    non_null_count: 30
+    null_count: 674
+    null_percentage: 95.74
+    unique_values: 30
+    min: 22.845861
+    max: 276.41098
+    mean: 136.93
+    sample_values:
+    - 34.68527
+    - 31.871552
+    - 29.694187
+    - 29.780128
+    - 28.717947
+  - name: frac_b_gb_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_mo_gmo_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: grain_weight_mg_kernel_ynu
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_dry_matt_std_kg_ha_ynu
+    type: float64
+    non_null_count: 30
+    null_count: 674
+    null_percentage: 95.74
+    unique_values: 30
+    min: 37.819748
+    max: 1742.1852
+    mean: 471.91
+    sample_values:
+    - 242.4871
+    - 76.15117
+    - 121.055084
+    - 46.357307
+    - 172.87857
+  - name: frac_moist_std_pct_ynu
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_c_std_kgc_ha_ynu
+    type: float64
+    non_null_count: 30
+    null_count: 674
+    null_percentage: 95.74
+    unique_values: 30
+    min: 15.007117
+    max: 727.0641
+    mean: 203.95
+    sample_values:
+    - 113.05807
+    - 34.857346
+    - 59.22958
+    - 15.007117
+    - 80.96178
+  - name: frac_n_std_kgn_ha_ynu
+    type: float64
+    non_null_count: 30
+    null_count: 674
+    null_percentage: 95.74
+    unique_values: 30
+    min: 0.26276356
+    max: 18.245483
+    mean: 5.58
+    sample_values:
+    - 1.0589515
+    - 1.3881211
+    - 0.317937
+    - 0.48818713
+    - 1.2131305
+  - name: frac_p_std_kgp_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_k_std_kgk_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_s_std_kgs_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_ca_std_kgca_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_mg_std_kgmg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_cu_std_gcu_ha
+    type: float64
+    non_null_count: 30
+    null_count: 674
+    null_percentage: 95.74
+    unique_values: 30
+    min: 0.33370438
+    max: 28.438095
+    mean: 6.87
+    sample_values:
+    - 2.3931985
+    - 8.329342
+    - 2.2521114
+    - 10.616595
+    - 4.5540323
+  - name: frac_fe_std_gfe_ha
+    type: float64
+    non_null_count: 30
+    null_count: 674
+    null_percentage: 95.74
+    unique_values: 30
+    min: 1.424018
+    max: 588.93555
+    mean: 81.45
+    sample_values:
+    - 19.13825
+    - 16.259205
+    - 20.174948
+    - 37.246094
+    - 8.078897
+  - name: frac_mn_std_gmn_ha
+    type: float64
+    non_null_count: 30
+    null_count: 674
+    null_percentage: 95.74
+    unique_values: 30
+    min: 1.5238081
+    max: 174.7735
+    mean: 32.91
+    sample_values:
+    - 2.7330818
+    - 6.6042953
+    - 9.529116
+    - 9.060619
+    - 4.284343
+  - name: frac_zn_std_gzn_ha
+    type: float64
+    non_null_count: 30
+    null_count: 674
+    null_percentage: 95.74
+    unique_values: 30
+    min: 0.9279858
+    max: 87.56834
+    mean: 20.52
+    sample_values:
+    - 3.931503
+    - 3.9362626
+    - 8.801289
+    - 1.8257434
+    - 5.23225
+  - name: frac_b_std_gb_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: frac_mo_std_gmo_ha
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: grain_weight_std_mg_kernel_ynu
+    type: float64
+    non_null_count: 0
+    null_count: 704
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: mgtamendments
+  row_count: 47106
+  column_count: 22
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 47106
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 47106
+    min: 1.0
+    max: 47106.0
+    mean: 23553.5
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  - name: location_id
+    type: object
+    non_null_count: 47106
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 47
+    sample_values:
+    - PAHAW
+    - PAHAW
+    - PAHAW
+    - MNMOFS
+    - NDMAHGPE
+  - name: unit_id
+    type: object
+    non_null_count: 47106
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2318
+    sample_values:
+    - PAHAW_212
+    - PAHAW_105
+    - PAHAW_112
+    - MNMOFS_9
+    - NDMAHGPE_NOAPPExclosure3
+  - name: start_date
+    type: object
+    non_null_count: 47106
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1170
+    sample_values:
+    - '2012-06-05'
+    - '2004-03-12'
+    - '2010-06-18'
+    - '2002-10-30'
+    - '2005-07-13'
+  - name: end_date
+    type: float64
+    non_null_count: 0
+    null_count: 47106
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: treatment_id
+    type: object
+    non_null_count: 47106
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 514
+    sample_values:
+    - PAHAW_ROT4
+    - PAHAW_ROT1
+    - PAHAW_ROT6
+    - MNMOFS_16
+    - NDMAHGPE_NOAPP
+  - name: crop
+    type: object
+    non_null_count: 45261
+    null_count: 1845
+    null_percentage: 3.92
+    unique_values: 31
+    sample_values:
+    - Glycine max (Soybean)
+    - Zea mays (Corn)
+    - Glycine max (Soybean)
+    - Glycine max (Soybean)
+    - Rangeland
+  - name: amend_placement
+    type: object
+    non_null_count: 24794
+    null_count: 22312
+    null_percentage: 47.37
+    unique_values: 10
+    sample_values:
+    - Broadcast Surface
+    - Injected
+    - Broadcast Surface
+    - Injected
+    - Broadcast Surface
+  - name: amend_depth_cm
+    type: float64
+    non_null_count: 13139
+    null_count: 33967
+    null_percentage: 72.11
+    unique_values: 148
+    min: 0.0
+    max: 150.0
+    mean: 5.29
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: amend_type
+    type: object
+    non_null_count: 25357
+    null_count: 21749
+    null_percentage: 46.17
+    unique_values: 73
+    sample_values:
+    - Lime
+    - Hog Manure
+    - 19-17-0
+    - 0-0-60
+    - Urea
+  - name: total_amend_amount_kg_ha
+    type: float64
+    non_null_count: 18906
+    null_count: 28200
+    null_percentage: 59.86
+    unique_values: 429
+    min: 0.0
+    max: 242550.0
+    mean: 1288.95
+    sample_values:
+    - 3363.0
+    - 280.04535
+    - 16285.0
+    - 16800.0
+    - 560.0
+  - name: total_n_amount_kgn_ha
+    type: float64
+    non_null_count: 23310
+    null_count: 23796
+    null_percentage: 50.52
+    unique_values: 483
+    min: 0.0
+    max: 1223.0
+    mean: 85.91
+    sample_values:
+    - 0.0
+    - 180.0
+    - 168.15
+    - 9.0
+    - 175.0
+  - name: total_p_amount_kgp_ha
+    type: float64
+    non_null_count: 9712
+    null_count: 37394
+    null_percentage: 79.38
+    unique_values: 306
+    min: 0.0
+    max: 124.0
+    mean: 18.29
+    sample_values:
+    - 57.6504
+    - 19.6
+    - 49.28
+    - 49.28
+    - 49.28
+  - name: total_k_amount_kgk_ha
+    type: float64
+    non_null_count: 7355
+    null_count: 39751
+    null_percentage: 84.39
+    unique_values: 269
+    min: 0.0
+    max: 305.0
+    mean: 37.93
+    sample_values:
+    - 139.49619
+    - 37.2
+    - 92.96
+    - 92.96
+    - 92.96
+  - name: total_non_npk_nutrient_amount_kg_ha
+    type: float64
+    non_null_count: 0
+    null_count: 47106
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: total_pest_amount_kg_ha
+    type: float64
+    non_null_count: 44014
+    null_count: 3092
+    null_percentage: 6.56
+    unique_values: 192
+    min: 0.0
+    max: 3000.0
+    mean: 2.03
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: active_ingredient_type
+    type: object
+    non_null_count: 16104
+    null_count: 31002
+    null_percentage: 65.81
+    unique_values: 84
+    sample_values:
+    - 2,4-D; CAS No. 94-75-7
+    - Mesotrione; CAS No. 104206-82-8
+    - Bromoxynil; CAS No. 1689-84-5
+    - Tefluthrine; CSA No. 79538-32-2
+    - Tefluthrine; CSA No. 79538-32-2
+  - name: pest_target
+    type: object
+    non_null_count: 12841
+    null_count: 34265
+    null_percentage: 72.74
+    unique_values: 43
+    sample_values:
+    - weeds
+    - Insect pests
+    - Insect pests
+    - Insect pests
+    - Insect pests
+  - name: pest_placement
+    type: object
+    non_null_count: 9498
+    null_count: 37608
+    null_percentage: 79.84
+    unique_values: 5
+    sample_values:
+    - Under soil with planter
+    - Under soil with planter
+    - Under soil with planter
+    - Under soil with planter
+    - Under soil with planter
+  - name: irrigation_amount_cm
+    type: float64
+    non_null_count: 6277
+    null_count: 40829
+    null_percentage: 86.67
+    unique_values: 43
+    min: 0.9398
+    max: 5.334
+    mean: 2.95
+    sample_values:
+    - 2.54
+    - 2.17
+    - 2.17
+    - 2.17
+    - 2.17
+  - name: irrigation_type
+    type: object
+    non_null_count: 6063
+    null_count: 41043
+    null_percentage: 87.13
+    unique_values: 4
+    sample_values:
+    - Traveling Gun
+    - Lateral Move Sprinkler
+    - Lateral Move Sprinkler
+    - Lateral Move Sprinkler
+    - Lateral Move Sprinkler
+  - name: irrigation_n_mg_l
+    type: float64
+    non_null_count: 180
+    null_count: 46926
+    null_percentage: 99.62
+    unique_values: 1
+    min: 0.0
+    max: 0.0
+    mean: 0.0
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+- name: mgtgrazing
+  row_count: 1951
+  column_count: 12
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 1951
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1951
+    min: 1.0
+    max: 1951.0
+    mean: 976.0
+    sample_values:
+    - 1158
+    - 1397
+    - 1398
+    - 1399
+    - 1400
+  - name: location_id
+    type: object
+    non_null_count: 1951
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - PAHAW
+    - PAHAW
+    - PAHAW
+    - PAHAW
+    - PAHAW
+  - name: unit_id
+    type: object
+    non_null_count: 1951
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 77
+    sample_values:
+    - PAHAW_P3
+    - PAHAW_P4
+    - PAHAW_P5
+    - PAHAW_P6
+    - PAHAW_P7
+  - name: start_date
+    type: object
+    non_null_count: 1951
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 244
+    sample_values:
+    - '2006-05-08'
+    - '2005-05-23'
+    - '2005-05-23'
+    - '2005-05-23'
+    - '2005-05-23'
+  - name: end_date
+    type: object
+    non_null_count: 1951
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 261
+    sample_values:
+    - '2006-05-12'
+    - '2005-05-27'
+    - '2005-05-27'
+    - '2005-05-27'
+    - '2005-05-27'
+  - name: treatment_id
+    type: object
+    non_null_count: 1951
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 20
+    sample_values:
+    - PAHAW_PAST2
+    - PAHAW_PAST1
+    - PAHAW_PAST2
+    - PAHAW_PAST1
+    - PAHAW_PAST1
+  - name: stocking_rate_noanimals_ha
+    type: float64
+    non_null_count: 1951
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 115
+    min: 0.0
+    max: 543.0
+    mean: 39.73
+    sample_values:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - name: animal_species
+    type: object
+    non_null_count: 1951
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2
+    sample_values:
+    - Beef Cattle
+    - Beef Cattle
+    - Beef Cattle
+    - Beef Cattle
+    - Beef Cattle
+  - name: animal_class
+    type: object
+    non_null_count: 1833
+    null_count: 118
+    null_percentage: 6.05
+    unique_values: 4
+    sample_values:
+    - Neutered male
+    - Neutered male
+    - Neutered male
+    - Neutered male
+    - Neutered male
+  - name: other_events
+    type: object
+    non_null_count: 4
+    null_count: 1947
+    null_percentage: 99.79
+    unique_values: 2
+    sample_values:
+    - Across rows
+    - fertilizer application
+    - fertilizer application
+    - fertilizer application
+  - name: burn_frequency_years_between_burns
+    type: float64
+    non_null_count: 0
+    null_count: 1951
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: burn_intensity
+    type: float64
+    non_null_count: 0
+    null_count: 1951
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+- name: mgtgrowthstages
+  row_count: 5148
+  column_count: 7
+  columns:
+  - name: location_id
+    type: object
+    non_null_count: 5148
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 8
+    sample_values:
+    - INWLREAP
+    - INWLACRE
+    - INWLACRE
+    - INWLACRE
+    - INWLACRE
+  - name: unit_id
+    type: object
+    non_null_count: 5148
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 218
+    sample_values:
+    - INWLREAP_R-202
+    - INWLACRE_NP_A35
+    - INWLACRE_NP_A35
+    - INWLACRE_NP_A35
+    - INWLACRE_NP_A55
+  - name: date
+    type: object
+    non_null_count: 5148
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 172
+    sample_values:
+    - '2011-08-31'
+    - '2008-08-08'
+    - '2008-08-12'
+    - '2008-08-19'
+    - '2008-09-09'
+  - name: treatment_id
+    type: object
+    non_null_count: 5148
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 43
+    sample_values:
+    - INWLREAP_R50
+    - INWLACRE_NP
+    - INWLACRE_NP
+    - INWLACRE_NP
+    - INWLACRE_NP
+  - name: crop
+    type: object
+    non_null_count: 5148
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5
+    sample_values:
+    - Zea mays (Corn)
+    - Glycine max (Soybean)
+    - Glycine max (Soybean)
+    - Glycine max (Soybean)
+    - Zea mays (Corn)
+  - name: growth_stage
+    type: object
+    non_null_count: 5148
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 26
+    sample_values:
+    - R6
+    - V4
+    - V4
+    - V4
+    - R2
+  - name: id
+    type: int64
+    non_null_count: 5148
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 5148
+    min: 1.0
+    max: 5148.0
+    mean: 2574.5
+    sample_values:
+    - 4903
+    - 1
+    - 2
+    - 3
+    - 82
+- name: mgtplanting
+  row_count: 23728
+  column_count: 13
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 23728
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 23728
+    min: 1.0
+    max: 23728.0
+    mean: 11864.5
+    sample_values:
+    - 121
+    - 219
+    - 9729
+    - 11469
+    - 13538
+  - name: location_id
+    type: object
+    non_null_count: 23728
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 45
+    sample_values:
+    - MNMOFS
+    - MNMOFS
+    - PAHAW
+    - NDMASQMF
+    - NECCIRR
+  - name: unit_id
+    type: object
+    non_null_count: 23728
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 2148
+    sample_values:
+    - MNMOFS_71
+    - MNMOFS_45
+    - PAHAW_410
+    - NDMASQMF_SW-SR
+    - NECCIRR_105
+  - name: start_date
+    type: object
+    non_null_count: 23728
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 475
+    sample_values:
+    - '2004-11-04'
+    - '2004-11-04'
+    - '2005-05-05'
+    - '2006-09-29'
+    - '2013-10-24'
+  - name: end_date
+    type: float64
+    non_null_count: 0
+    null_count: 23728
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: treatment_id
+    type: object
+    non_null_count: 23728
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 527
+    sample_values:
+    - MNMOFS_38
+    - MNMOFS_26
+    - PAHAW_ROT1
+    - NDMASQMF_SR
+    - FullC125N
+  - name: crop
+    type: object
+    non_null_count: 23728
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 40
+    sample_values:
+    - Secale cereale (Rye)
+    - Secale cereale (Rye)
+    - Zea mays (Corn)
+    - Secale cereale (Rye)
+    - Secale cereale (Rye)
+  - name: cultivar
+    type: object
+    non_null_count: 20926
+    null_count: 2802
+    null_percentage: 11.81
+    unique_values: 308
+    sample_values:
+    - Rye
+    - Rye
+    - DKC 57-84
+    - Dekalb DKC42-72 RR/YG
+    - Dekalb DKC42-72 RR/YG
+  - name: planting_rate_seeds_ha
+    type: float64
+    non_null_count: 17438
+    null_count: 6290
+    null_percentage: 26.51
+    unique_values: 117
+    min: 14300.0
+    max: 3433300.0
+    mean: 201918.62
+    sample_values:
+    - 69188.0
+    - 3200000.0
+    - 87500.0
+    - 87500.0
+    - 87500.0
+  - name: planting_density_kg_ha
+    type: float64
+    non_null_count: 22792
+    null_count: 936
+    null_percentage: 3.94
+    unique_values: 83
+    min: 0.0
+    max: 4300.0
+    mean: 21.69
+    sample_values:
+    - 151.0
+    - 151.0
+    - 0.0
+    - 0.0
+    - 112.0
+  - name: planting_method
+    type: object
+    non_null_count: 22592
+    null_count: 1136
+    null_percentage: 4.79
+    unique_values: 6
+    sample_values:
+    - Broadcast
+    - Broadcast
+    - Row
+    - Drill
+    - Row
+  - name: planting_depth_cm
+    type: float64
+    non_null_count: 20800
+    null_count: 2928
+    null_percentage: 12.34
+    unique_values: 18
+    min: 0.0
+    max: 5.72
+    mean: 4.18
+    sample_values:
+    - 0.0
+    - 0.0
+    - 4.0
+    - 3.0
+    - 5.08
+  - name: row_width_cm
+    type: float64
+    non_null_count: 23728
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 21
+    min: 0.0
+    max: 101.0
+    mean: 59.41
+    sample_values:
+    - 0.0
+    - 0.0
+    - 76.2
+    - 0.0
+    - 15.0
+- name: mgtresidue
+  row_count: 3334
+  column_count: 12
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 3334
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 3334
+    min: 1.0
+    max: 3334.0
+    mean: 1667.5
+    sample_values:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  - name: location_id
+    type: object
+    non_null_count: 3334
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 11
+    sample_values:
+    - PAHAW
+    - PAHAW
+    - PAHAW
+    - PAHAW
+    - PAHAW
+  - name: unit_id
+    type: object
+    non_null_count: 3334
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 512
+    sample_values:
+    - PAHAW_212
+    - PAHAW_302
+    - PAHAW_303
+    - PAHAW_305
+    - PAHAW_308
+  - name: start_date
+    type: object
+    non_null_count: 3334
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 191
+    sample_values:
+    - '2011-10-05'
+    - '2011-10-05'
+    - '2011-09-29'
+    - '2011-10-05'
+    - '2011-10-05'
+  - name: end_date
+    type: float64
+    non_null_count: 0
+    null_count: 3334
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: treatment_id
+    type: object
+    non_null_count: 3334
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 100
+    sample_values:
+    - PAHAW_ROT4
+    - PAHAW_ROT3
+    - PAHAW_ROT5
+    - PAHAW_ROT2
+    - PAHAW_ROT4
+  - name: crop
+    type: object
+    non_null_count: 3334
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 10
+    sample_values:
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+    - Glycine max (Soybean)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+  - name: equipment_type
+    type: object
+    non_null_count: 3070
+    null_count: 264
+    null_percentage: 7.92
+    unique_values: 12
+    sample_values:
+    - Single Row Forage Harvester
+    - Single Row Forage Harvester
+    - Hege Harvester
+    - Single Row Forage Harvester
+    - Single Row Forage Harvester
+  - name: cutting_height_material_harvested
+    type: object
+    non_null_count: 2954
+    null_count: 380
+    null_percentage: 11.4
+    unique_values: 17
+    sample_values:
+    - 3 cm
+    - 3 cm
+    - 6.4 cm
+    - 3 cm
+    - 3 cm
+  - name: rows_harvested_pct
+    type: int64
+    non_null_count: 3334
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 4
+    min: 0.0
+    max: 100.0
+    mean: 55.0
+    sample_values:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+  - name: stand_age_years
+    type: float64
+    non_null_count: 827
+    null_count: 2507
+    null_percentage: 75.19
+    unique_values: 10
+    min: 1.0
+    max: 10.0
+    mean: 3.42
+    sample_values:
+    - 4.0
+    - 4.0
+    - 4.0
+    - 4.0
+    - 4.0
+  - name: stage_at_harvest
+    type: object
+    non_null_count: 1675
+    null_count: 1659
+    null_percentage: 49.76
+    unique_values: 2
+    sample_values:
+    - Maturity
+    - Maturity
+    - Maturity
+    - Maturity
+    - Maturity
+- name: mgttillage
+  row_count: 27450
+  column_count: 10
+  columns:
+  - name: id
+    type: int64
+    non_null_count: 27450
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 27450
+    min: 1.0
+    max: 27450.0
+    mean: 13725.5
+    sample_values:
+    - 309
+    - 7822
+    - 11776
+    - 11843
+    - 11908
+  - name: location_id
+    type: object
+    non_null_count: 27450
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 30
+    sample_values:
+    - NEMLTCRS
+    - PAHAW
+    - MNMOFS
+    - MNMOFS
+    - MNMOFS
+  - name: unit_id
+    type: object
+    non_null_count: 27450
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 1468
+    sample_values:
+    - NEMLTCRS_105N
+    - PAHAW_407
+    - MNMOFS_5
+    - MNMOFS_29
+    - MNMOFS_3
+  - name: start_date
+    type: object
+    non_null_count: 27450
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 508
+    sample_values:
+    - '1987-04-30'
+    - '2004-03-29'
+    - '2007-11-10'
+    - '2006-10-03'
+    - '2006-11-01'
+  - name: end_date
+    type: float64
+    non_null_count: 0
+    null_count: 27450
+    null_percentage: 100.0
+    unique_values: 0
+    min: null
+    max: null
+    mean: null
+  - name: treatment_id
+    type: object
+    non_null_count: 27450
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 321
+    sample_values:
+    - NEMLTCRS_ROT72
+    - PAHAW_ROT4
+    - MNMOFS_33
+    - MNMOFS_30
+    - MNMOFS_13
+  - name: crop
+    type: object
+    non_null_count: 27432
+    null_count: 18
+    null_percentage: 0.07
+    unique_values: 21
+    sample_values:
+    - Zea mays (Corn)
+    - Glycine max (Soybean)
+    - Medicago sativa (Alfalfa)
+    - Zea mays (Corn)
+    - Zea mays (Corn)
+  - name: tillage_event
+    type: object
+    non_null_count: 27450
+    null_count: 0
+    null_percentage: 0.0
+    unique_values: 18
+    sample_values:
+    - Disk
+    - Disk
+    - Strip Till
+    - Strip Till
+    - Moldboard Plow
+  - name: tillage_event_depth_cm
+    type: float64
+    non_null_count: 27022
+    null_count: 428
+    null_percentage: 1.56
+    unique_values: 32
+    min: 0.0
+    max: 36.0
+    mean: 13.58
+    sample_values:
+    - 15.0
+    - 10.2
+    - 25.0
+    - 25.0
+    - 23.0
+  - name: tillage_event_method
+    type: object
+    non_null_count: 24709
+    null_count: 2741
+    null_percentage: 9.99
+    unique_values: 64
+    sample_values:
+    - Tandem Disk
+    - Tandem disk
+    - Tandem Disk
+    - Tandem Disk
+    - Tandem Disk

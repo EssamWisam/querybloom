@@ -1,0 +1,229 @@
+OpenReview
+.net
+Search articles, authors and reviews...
+Notifications5
+Activity
+Tasks
+Essam Wisam 
+back arrowGo to ACL ARR 2026 May homepage
+KG Voyager: Knowledge Graph Agnostic Question Answering via Agentic Navigation
+Download PDF
+Essam Wisam, Chengkai Li 
+26 May 2026 (modified: 01 Jul 2026)
+ACL ARR 2026 May Submission
+Everyone
+Revisions
+BibTeX
+CC BY 4.0
+Keywords: knowledge graph question answering, KGQA, SPARQL, RDF, text-to-SPARQL, LLM agents, agentic navigation, semantic parsing, domain-specific knowledge graphs
+Abstract:
+Knowledge Graph Question Answering (KGQA) over RDF graphs remains challenging in domain-specific settings, where formal ontologies and curated text–SPARQL pairs are often unavailable. We present KGVoyager, a KG-agnostic agentic architecture that generates SPARQL queries from natural language questions by dynamically discovering graph structure and semantics, requiring only a query endpoint of the underlying graph. Using a think–act–observe loop with search, exploration, and execution tools, KGVoyager maps terms to graph IRIs, uncovers structure, and refines queries through execution feedback—all without pre-existing ontologies or examples. Unlike the prior state of the art, KGVoyager requires only a lightweight class index which renders it applicable for far more real-world endpoints. Across four benchmarks, KGVoyager improves F1 by 
+8 points while cutting cost and runtime by 
+22% each.
+
+Paper Type: Long
+Research Area: Question Answering
+Research Area Keywords: question answering, knowledge graph question answering, semantic parsing, LLM agents, information retrieval, resources and evaluation
+Contribution Types: NLP engineering experiment, Approaches to low-resource settings, Publicly available software and/or pre-trained models
+Languages Studied: English
+EMNLP 2026 AI Reviewing Experiment: yes
+TLDR: KG Voyager is a KG-agnostic LLM agent that uses search, exploration, and execution tools to generate SPARQL queries that answer user questions, requiring only a SPARQL query endpoint exposing the knowledge graph to function.
+Reassignment Request Area Chair: This is not a resubmission
+Reassignment Request Reviewers: This is not a resubmission
+Preprint: yes
+Preprint Status: There is no non-anonymous preprint and we do not intend to release one. (this option is binding)
+Preferred Venue: EMNLP
+Visa Needs: no
+Country Of Origin: US
+Consent To Share Data: yes
+Consent To Share Submission Details: On behalf of all authors, we agree to the terms above to share our submission details.
+A1 Limitations Section: This paper has a limitations section.
+A2 Potential Risks: Yes
+A2 Elaboration: Section "Ethical Considerations" (unnumbered)
+B Use Or Create Scientific Artifacts: Yes
+B1 Cite Creators Of Artifacts: Yes
+B1 Elaboration: Sections "Related Work" and "Experiment Results" cite the creators or sources of the key artifacts used, including GRASP, ToG, Spinach, Expasy, QLever, okn.us, SOCKG, DBLP-QuAD, and the evaluated backbone models. The bibliography includes the corresponding references.
+B2 Discuss The License For Artifacts: Yes
+B2 Elaboration: Yes. See the Ethical Considerations section.
+B3 Artifact Use Consistent With Intended Use: Yes
+B3 Elaboration: Yes. See the Ethical Considerations section.
+B4 Data Contains Personally Identifying Info Or Offensive Content: N/A
+B5 Documentation Of Artifacts: N/A
+B6 Statistics For Data: Yes
+B6 Elaboration: See "Experiment Results" section.
+C Computational Experiments: Yes
+C1 Model Size And Budget: Yes
+C1 Elaboration: See "Experiment Results" section. Though, for closed models, the number of parameters was unknown.
+C2 Experimental Setup And Hyperparameters: Yes
+C2 Elaboration: See "Experiment Results" section (ablations).
+C3 Descriptive Statistics: Yes
+C3 Elaboration: See "Experiment Results" section. Average of three runs was considered.
+C4 Parameters For Packages: N/A
+D Human Subjects Including Annotators: No
+D1 Instructions Given To Participants: N/A
+D2 Recruitment And Payment: N/A
+D3 Data Consent: N/A
+D4 Ethics Review Board Approval: N/A
+E Ai Assistants In Research Or Writing: Yes
+E1 Information About Use Of Ai Assistants: Yes
+E1 Elaboration: Yes. AI assistants were used for coding support and manuscript drafting/editing support. All AI-assisted final code or text were reviewed and verified by the authors.
+Author Submission Checklist: yes
+Association For Computational Linguistics - Blind Submission License Agreement: On behalf of all authors, I agree for this and all previous versions of this submission
+Submission Number: 16054
+Discussion
+Filter by reply type...
+Filter by author...
+Search keywords...
+
+Sort: Newest First
+3 / 3 replies shown
+Add:
+Official Review of Submission16054 by Reviewer fPxe
+Official Reviewby Reviewer fPxe06 Jul 2026, 15:28 (modified: 08 Jul 2026, 07:59)Program Chairs, Senior Area Chairs, Area Chairs, Reviewers Submitted, Authors, Reviewer fPxeRevisions
+Paper Summary:
+The paper addresses question answering over arbitrary RDF knowledge graphs where only a SPARQL endpoint is available and no ontology documentation, text–SPARQL demonstrations, or pre-built entity index can be assumed. The proposed system, KGVoyager, is a ReAct-style agent that dynamically discovers the structure of an unknown knowledge graph using a suite of search, exploration, and execution tools before constructing a SPARQL query. The key design decision is replacing the large entity index required by GRASP with a lightweight class index combined with on-demand instance lookup and empirical property exploration. The system is evaluated on four domain-specific benchmarks using four backbone LLMs and is compared primarily against GRASP. The authors further present an endpoint feasibility study over 29 real-world Open Knowledge Network endpoints demonstrating that class indexing is substantially more deployable than entity indexing. The paper positions its contribution primarily as a practical systems improvement for enterprise KGQA rather than a new learning algorithm. Overall, I believe I understood the intended contribution correctly: the novelty lies in making agentic KGQA applicable to previously unseen SPARQL endpoints with minimal assumptions through careful system design rather than through a fundamentally new retrieval or reasoning algorithm.
+
+Summary Of Strengths:
+S1. The paper addresses a genuinely important deployment scenario that has received relatively little attention. Much previous work assumes complete ontologies, manually curated demonstrations, or public KGs such as Wikidata or DBpedia. Supporting arbitrary enterprise RDF endpoints using only endpoint access is a realistic and practically valuable goal.
+
+S2. The endpoint feasibility study across 29 Open Knowledge Network endpoints is one of the strongest aspects of the paper. Rather than merely claiming broader applicability, the authors empirically demonstrate that entity-index construction frequently fails while lightweight class indexing succeeds on the majority of tested endpoints. This directly supports the central motivation behind the proposed architecture and provides evidence beyond standard benchmark comparisons.
+
+S3. Class-level retrieval, class-scoped instance lookup, empirical property usage exploration, iterative query execution, and execution feedback naturally complement each other. The design choices are individually motivated and the running DBLP example clearly illustrates how the agent incrementally discovers an unknown schema before constructing the final SPARQL query.
+
+Summary Of Weaknesses:
+W1. The evaluation consists of approximately 220 questions in total, with some datasets being extremely small (e.g., DREAM-KG contains only 14 questions). Although results are averaged across three runs, the paper reports neither standard deviations nor statistical significance tests. Consequently, it is difficult to determine whether several reported improvements—particularly the smaller gains in DBLP or the relatively small ablation differences—are statistically meaningful. Reporting variance would substantially strengthen the empirical evidence.
+
+W2. The empirical comparison focuses almost exclusively on GRASP because it shares the endpoint-only setting. While this is understandable, the paper does not sufficiently position itself relative to broader agentic KGQA systems such as Think-on-Graph (ToG) or Plan-onGraph(PoG). Although ToG assumes local graph deployment, it remains one of the closest reasoning-based approaches in the literature. Either an empirical comparison under adapted settings or a deeper discussion of expected differences in assumptions, efficiency, and reasoning capabilities would better contextualize the contribution.
+
+W3. No analysis of reasoning complexity or multi-hop performance. One of the main motivations of KGVoyager is iterative exploration of previously unseen knowledge graphs. Surprisingly, the evaluation never analyzes question complexity. Results are not broken down by reasoning depth, hop count, number of joins, aggregation operations, or compositional complexity. Consequently, it remains unclear whether the proposed exploration strategy provides its greatest benefit on genuinely difficult multi-hop reasoning problems or primarily on relatively simple schema discovery tasks.
+
+W4. The running example requires approximately 10 tool calls to answer a relatively simple query. Although KGVoyager assumes only endpoint access whereas systems such as Think-on-Graph (ToG) operate under different assumptions, a comparison of reasoning efficiency (e.g., number of reasoning/tool steps or endpoint queries) would better position the proposed approach. Such an analysis would help readers understand the trade-off between the broader applicability of KGVoyager and the additional interaction cost introduced by dynamic schema exploration.
+
+W5. Missing error analysis. The paper reports aggregate F1 scores but does not investigate failure modes. It would be informative to categorize errors into incorrect entity resolution, incorrect property selection, failed schema exploration, SPARQL construction errors, endpoint failures, or reasoning mistakes. Such an analysis would help explain where the proposed agent succeeds and where future improvements should focus.
+
+W6. Several implementation details affecting reproducibility are omitted. Several important implementation choices are absent from the paper itself. In particular, the adaptive filtering threshold (δ), dense embedding model, retrieval parameters, Reciprocal Rank Fusion configuration, caching strategy, and vector indexing details are not explicitly reported. These design choices directly affect retrieval quality and runtime and should be documented within the paper.
+
+Comments Suggestions And Typos:
+Report per-dataset standard deviations and statistical significance tests alongside the average F1 scores.
+
+Include a discussion or comparison with Think-on-Graph (ToG), even if only qualitatively, to better position the work relative to recent agentic KGQA literature.
+
+Analyze performance as a function of reasoning complexity (e.g., hop count, joins, aggregation, compositional questions).
+
+Report the distribution of tool invocations per question together with endpoint query counts and latency.
+
+Add an error analysis identifying the dominant failure modes of the agent.
+
+Explicitly report implementation parameters including δ, embedding model, retrieval configuration, vector index, and caching strategy.
+
+Clarify how runtime scales with endpoint latency and graph size.
+
+Confidence: 4 = Quite sure. I tried to check the important points carefully. It's unlikely, though conceivable, that I missed something that should affect my ratings.
+Soundness: 3 = Acceptable: This study provides sufficient support for its main claims. Some minor points may need extra support or details.
+Excitement: 3 = Interesting: I might mention some points of this paper to others and/or attend its presentation in a conference if there's time.
+Overall Assessment: 2 = Resubmit next cycle: I think this paper needs substantial revisions that can be completed by the next ARR cycle.
+Ethical Concerns:
+There are no concerns with this submission
+
+Reproducibility: 4 = They could mostly reproduce the results, but there may be some variation because of sample variance or minor variations in their interpretation of the protocol or method.
+Datasets: 3 = Potentially useful: Someone might find the new datasets useful for their work.
+Software: 3 = Potentially useful: Someone might find the new software useful for their work.
+Knowledge Of Or Educated Guess At Author Identity: No
+Knowledge Of Paper: N/A, I do not know anything about the paper from outside sources
+Knowledge Of Paper Source: N/A, I do not know anything about the paper from outside sources
+Impact Of Knowledge Of Paper: N/A, I do not know anything about the paper from outside sources
+Reviewer Certification: I certify that the review I entered accurately reflects my assessment of the work. If you used any type of automated tool to help you craft your review, I hereby certify that its use was restricted to improving grammar and style, and the substance of the review is either my own work or the work of an acknowledged secondary reviewer.
+Publication Ethics Policy Compliance: I did not use any generative AI tools for this review
+Add:
+Official Review of Submission16054 by Reviewer ZvBS
+Official Reviewby Reviewer ZvBS01 Jul 2026, 23:07 (modified: 08 Jul 2026, 07:59)Program Chairs, Senior Area Chairs, Area Chairs, Reviewers Submitted, Authors, Reviewer ZvBSRevisions
+Paper Summary:
+This paper presents KGVoyager, an agent-based KGQA system for generating SPARQL queries over RDF knowledge graphs when the user only has access to a SPARQL endpoint.
+
+Summary Of Strengths:
+The paper targets a limitation of existing KGQA systems: many domain-specific RDF graphs do not come with well-documented ontologies or enough text-SPARQL training examples
+
+The tool design is technically sensible.
+
+Summary Of Weaknesses:
+The claim of being “KG-agnostic” is somewhat overstated. The method still assumes that the endpoint exposes classes and instance membership through standard RDFS/RDF typing patterns. This means the method is better described as RDFS-compatible endpoint-only KGQA, rather than fully KG-agnostic KGQA.
+
+The benchmark scale is too small. DREAM-KG has only 14 questions, Climate Models KG has 52, and SOCKG has 54. Even DBLP-QuAD is evaluated on only a random sample of 100 test questions.
+
+The baseline comparison is too narrow and the ablations are limited. GRASP is the most relevant baseline, but the paper would be stronger with additional comparisons, such as a direct LLM text-to-SPARQL baseline using only endpoint-provided schema snippets, a ReAct agent without the proposed exploration tools, and possibly a schema-aware baseline where partial ontology information is available. Without these, it is hard to isolate whether the gain comes from the proposed tool suite, from prompting, from retrieval, or from execution-based self-correction. They are run only with Gemini 3 Flash Preview and mainly on SOCKG/DBLP. The paper should test the ablations across more models and datasets.
+
+Comments Suggestions And Typos:
+Please see the weakness part.
+
+Confidence: 4 = Quite sure. I tried to check the important points carefully. It's unlikely, though conceivable, that I missed something that should affect my ratings.
+Soundness: 2.5
+Excitement: 2.5
+Overall Assessment: 2.5 = Borderline Findings
+Ethical Concerns:
+There are no concerns with this submission
+
+Reproducibility: 3 = They could reproduce the results with some difficulty. The settings of parameters are underspecified or subjectively determined, and/or the training/evaluation data are not widely available.
+Datasets: 1 = No usable datasets submitted.
+Software: 1 = No usable software released.
+Knowledge Of Or Educated Guess At Author Identity: No
+Knowledge Of Paper: N/A, I do not know anything about the paper from outside sources
+Knowledge Of Paper Source: N/A, I do not know anything about the paper from outside sources
+Impact Of Knowledge Of Paper: N/A, I do not know anything about the paper from outside sources
+Reviewer Certification: I certify that the review I entered accurately reflects my assessment of the work. If you used any type of automated tool to help you craft your review, I hereby certify that its use was restricted to improving grammar and style, and the substance of the review is either my own work or the work of an acknowledged secondary reviewer.
+Publication Ethics Policy Compliance: I did not use any generative AI tools for this review
+Add:
+Official Review of Submission16054 by Reviewer s2hs
+Official Reviewby Reviewer s2hs28 Jun 2026, 08:00 (modified: 08 Jul 2026, 07:59)Program Chairs, Senior Area Chairs, Area Chairs, Reviewers Submitted, Authors, Reviewer s2hsRevisions
+Paper Summary:
+The paper proposes KGVoyager, an endpoint-only Knowledge Graph Question Answering (KGQA) agent that generates SPARQL queries over arbitrary RDF knowledge graphs without curated ontologies or text-SPARQL examples. Its key idea is to replace GRASP’s complete entity index with a lightweight class-level index, and to use search, exploration, and execution tools in a think-act-observe loop. Experiments show around 8-point F1 improvement over GRASP, with lower cost and runtime.
+
+Summary Of Strengths:
+The problem is well motivated. Endpoint-only KGQA is practical and important for domain-specific knowledge graphs.
+The feasibility study is strong. The class-index vs. entity-index comparison gives concrete evidence for the main design choice.
+The tool design is clear and sensible. The running example helps explain the workflow.
+The evaluation covers multiple benchmarks and backbone models, and the comparison against GRASP under its best-case setting is relatively fair.
+Summary Of Weaknesses:
+The empirical evidence is still limited. Some benchmarks are very small, but no variance, confidence interval, or significance test is reported.
+The main F1 comparison is conditional on GRASP’s entity index being available, while the paper’s motivation is that this index is often unavailable.
+Some analysis is over-scoped. Tool-use dynamics are shown for only two models, and all ablations are conducted with one model.
+The robustness of key hyperparameters, such as the adaptive filtering threshold and sampling size, is not studied.
+The claimed KG-agnostic applicability still depends on RDFS-style class/type conventions.
+Comments Suggestions And Typos:
+Please report standard deviations or confidence intervals for the three-run averages, especially because DREAM-KG has only 14 questions.
+Please clarify that the F1 comparison with GRASP is under GRASP’s best-case setting with an available entity index, not a pure endpoint-only comparison.
+Please test whether the tool-use dynamics and ablation conclusions hold across more backbone models, or scope the claims accordingly.
+Please add sensitivity analysis for the adaptive filtering threshold and the property-usage sampling size.
+Please clarify the RDFS assumption more carefully. The system is KG-agnostic only for graphs that expose compatible class/type structures.
+Confidence: 4 = Quite sure. I tried to check the important points carefully. It's unlikely, though conceivable, that I missed something that should affect my ratings.
+Soundness: 4 = Strong: This study provides sufficient support for all of its claims. Some extra experiments could be nice, but not essential.
+Excitement: 4 = Exciting: I would mention this paper to others and/or make an effort to attend its presentation in a conference.
+Overall Assessment: 4 = Conference: I think this paper could be accepted to an *ACL conference.
+Limitations And Societal Impact:
+Yes, the limitation on general graphs is a valid point
+
+Ethical Concerns:
+There are no concerns with this submission
+
+Needs Ethics Review: No
+Reproducibility: 4 = They could mostly reproduce the results, but there may be some variation because of sample variance or minor variations in their interpretation of the protocol or method.
+Datasets: 4 = Useful: I would recommend the new datasets to other researchers or developers for their ongoing work.
+Software: 3 = Potentially useful: Someone might find the new software useful for their work.
+Knowledge Of Or Educated Guess At Author Identity: No
+Knowledge Of Paper: N/A, I do not know anything about the paper from outside sources
+Knowledge Of Paper Source: N/A, I do not know anything about the paper from outside sources
+Impact Of Knowledge Of Paper: N/A, I do not know anything about the paper from outside sources
+Reviewer Certification: I certify that the review I entered accurately reflects my assessment of the work. If you used any type of automated tool to help you craft your review, I hereby certify that its use was restricted to improving grammar and style, and the substance of the review is either my own work or the work of an acknowledged secondary reviewer.
+Publication Ethics Policy Compliance: I did not use any generative AI tools for this review
+Add:
+About OpenReview
+Contact
+FAQ
+Hosting a Venue
+Sponsors
+Terms of Use / Privacy Policy
+All Venues
+Donate
+News
+OpenReview is a long-term project to advance science through improved peer review with legal nonprofit status. We gratefully acknowledge the support of the OpenReview Sponsors. © 2026 OpenReview
+
+KG Voyager: Knowledge Graph Agnostic Question Answering via Agentic Navigation | OpenReview

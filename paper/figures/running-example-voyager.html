@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRASP Good Example</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 440px;
+      max-width: 440px;
+    }
+
+    .question-box {
+      background: #f0f9ff;
+      border: 2px solid #0ea5e9;
+      border-radius: 10px;
+      padding: 12px 24px;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .question-box .qlabel {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0369a1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .question-box .qtext {
+      font-size: 13px;
+      color: #0c4a6e;
+      line-height: 1.4;
+    }
+
+    .q-class {
+      color: #2563eb;
+    }
+
+    .q-entity {
+      color: #0284c7;
+    }
+
+    .q-prop {
+      color: #0d9488;
+    }
+
+    .phase-container {
+      position: relative;
+      padding: 44px 24px 24px 24px;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      margin-bottom: 28px;
+      background: #f8fafc;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .phase-label {
+      position: absolute;
+      top: -16px;
+      left: 24px;
+      background: #fff;
+      padding: 4px 14px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #475569;
+      border: 2px solid #cbd5e1;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .step-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .step-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-card {
+      flex: 1;
+      border: 1.5px solid #d1d5db;
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .step-card.full {
+      flex: 1 1 100%;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 10px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #fff;
+      font-family: "SF Mono", Consolas, monospace;
+    }
+
+    .header-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      flex-wrap: wrap;
+    }
+
+    .header-arg {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #f8fafc;
+      font-weight: 800;
+    }
+
+    .step-badge {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .step-body {
+      padding: 8px 10px;
+    }
+
+    .search-bar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 10px;
+      color: #64748b;
+      margin-bottom: 6px;
+      font-family: inherit;
+    }
+
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: "SF Mono", Consolas, monospace;
+      font-size: 9.5px;
+      margin-bottom: 2px;
+      gap: 10px;
+    }
+
+    .result-row.hl {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+    }
+
+    .result-row.hl .r-uri {
+      color: #1e40af;
+      font-weight: 700;
+    }
+
+    .result-row.hl .r-score {
+      color: #1d4ed8;
+      font-weight: 700;
+    }
+
+    .result-row .r-uri {
+      color: #94a3b8;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .result-row .r-score {
+      color: #94a3b8;
+      font-size: 9px;
+      flex-shrink: 0;
+    }
+
+    .score-pill {
+      background: #dbeafe;
+      border: 1px solid #93c5fd;
+      border-radius: 8px;
+      padding: 1px 8px;
+      font-size: 8px;
+      display: inline-block;
+    }
+
+    .score-pill.dim {
+      background: #f1f5f9;
+      border-color: #e2e8f0;
+    }
+
+    .entity-label {
+      text-align: center;
+      font-family: "SF Mono", Consolas, monospace;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 0 6px;
+    }
+
+    .lookup-box {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .lookup-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 9px;
+      color: #0369a1;
+      font-weight: 700;
+      font-family: "SF Mono", Consolas, monospace;
+    }
+
+    .lookup-result {
+      background: #fff;
+      border: 1.5px solid #7dd3fc;
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    .lookup-uri {
+      font-family: "SF Mono", Consolas, monospace;
+      font-size: 10px;
+      font-weight: 700;
+      color: #075985;
+      margin-bottom: 4px;
+      overflow-wrap: anywhere;
+    }
+
+    .lookup-name {
+      font-size: 10px;
+      color: #0284c7;
+      line-height: 1.35;
+    }
+
+    .mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9px;
+      font-family: "SF Mono", Consolas, monospace;
+      table-layout: fixed;
+    }
+
+    .mini-table th {
+      text-align: left;
+      padding: 4px 8px;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 8.5px;
+      font-weight: 700;
+      border-bottom: 1.5px solid #e2e8f0;
+    }
+
+    .mini-table td {
+      padding: 3px 8px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #475569;
+      overflow-wrap: anywhere;
+      vertical-align: top;
+    }
+
+    .mini-table tr.hl td {
+      background: #fef3c7;
+      color: #92400e;
+      font-weight: 600;
+    }
+
+    .mini-table tr.hl-green td {
+      background: #ecfdf5;
+      color: #065f46;
+      font-weight: 600;
+    }
+
+    .more-rows {
+      text-align: center;
+      padding: 4px;
+      font-size: 9px;
+      color: #94a3b8;
+      font-style: italic;
+    }
+
+    .annotation {
+      margin: 12px 0;
+      padding: 12px 14px 12px 16px;
+      background: linear-gradient(135deg, #fdf4ff 0%, #faf5ff 100%);
+      border: 1px solid #e9d5ff;
+      border-left: 5px solid #c026d3;
+      border-radius: 8px;
+      font-size: 11.5px;
+      color: #581c87;
+      line-height: 1.6;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .annotation::before {
+      content: "Comment from Author";
+      display: block;
+      font-size: 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #a21caf;
+      margin-bottom: 6px;
+    }
+
+    .annotation b,
+    .annotation strong {
+      color: inherit;
+      font-weight: 600;
+    }
+
+    .annotation .ann-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      border-radius: 999px;
+      background: #f5d0fe;
+      color: #86198f;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 10px;
+      vertical-align: text-bottom;
+    }
+
+    .sparql-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .sparql-left {
+      flex: none;
+    }
+
+    .sparql-right {
+      flex: none;
+    }
+
+    .sparql-editor {
+      background: #1e293b;
+      border-radius: 0;
+      padding: 10px 12px;
+      padding-top: 22px;
+      font-size: 9.5px;
+      line-height: 1.55;
+      font-family: "SF Mono", Consolas, monospace;
+      color: #e2e8f0;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .sparql-editor .dots {
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      display: flex;
+      gap: 4px;
+    }
+
+    .sparql-editor .dots span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .sparql-kw {
+      color: #93c5fd;
+    }
+
+    .sparql-var {
+      color: #86efac;
+    }
+
+    .sparql-uri {
+      color: #fbbf24;
+    }
+
+    .results-panel {
+      border: 1.5px solid #86efac;
+      border-radius: 6px;
+      overflow: hidden;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+    }
+
+    .results-header {
+      background: #16a34a;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 5px 10px;
+      text-align: center;
+    }
+
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9px;
+      font-family: "SF Mono", Consolas, monospace;
+      flex: 1;
+    }
+
+    .results-table th {
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 700;
+      padding: 4px 10px;
+      text-align: left;
+    }
+
+    .results-table td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #f0fdf4;
+      color: #475569;
+    }
+
+    .results-table td.only-value {
+      text-align: right;
+      color: #0f766e;
+      font-weight: 700;
+    }
+
+    .results-table .cnt {
+      text-align: right;
+      color: #0f766e;
+      font-weight: 700;
+    }
+
+    .results-footer {
+      background: #dcfce7;
+      text-align: center;
+      font-size: 9px;
+      font-weight: 700;
+      color: #166534;
+      padding: 5px;
+    }
+
+    .answer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: #f0fdf4;
+      border: 2px solid #16a34a;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #15803d;
+      margin-bottom: 24px;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .stat-pill {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 4px 14px;
+      font-size: 10px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    @media print {
+      @page {
+        size: 20mm auto;
+        margin: 5mm;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        background: #fff !important;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .phase-container,
+      .step-card,
+      .sparql-row,
+      .results-panel,
+      .question-box,
+      .annotation,
+      .answer-bar,
+      .stats-row {
+        break-inside: avoid;
+      }
+
+      .phase-container,
+      .step-card,
+      .annotation,
+      .results-panel,
+      .sparql-editor,
+      .answer-bar,
+      .stat-pill {
+        box-shadow: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="question-box">
+      <div class="qlabel">Question</div>
+      <div class="qtext">Count the number of <b class="q-class">papers</b> that <b class="q-entity">Jake
+          Grozdanovski</b> has <b class="q-prop">published</b> in International <b class="q-class">Conference</b> on <b
+          class="q-entity">Software and Data Technologies</b>.</div>
+    </div>
+
+    <div class="phase-container" style="border-color:#93c5fd; background:#f8fbff;">
+      <div class="phase-label" style="border-color:#93c5fd; color:#1d4ed8;">&#x2460; Search</div>
+      <div class="step-row">
+        <div class="step-card" style="border-color:#2563eb;" id="s1"></div>
+        <div class="step-card" style="border-color:#2563eb;" id="s2"></div>
+      </div>
+      <div class="step-row">
+        <div class="step-card" style="border-color:#2563eb;" id="s3"></div>
+        <div class="step-card" style="border-color:#0d9488;" id="s4"></div>
+      </div>
+      <div class="step-row">
+        <div class="step-card full" style="border-color:#0d9488;" id="s5"></div>
+      </div>
+
+      <div class="step-row" style="margin-top: 12px;">
+        <div class="step-card" style="border-color:#0ea5e9;" id="s6"></div>
+        <div class="step-card" style="border-color:#0ea5e9;" id="s7"></div>
+      </div>
+
+    </div>
+
+    <div class="phase-container" style="border-color:#fde68a; background:#fffef8; margin-bottom:28px;">
+      <div class="phase-label" style="border-color:#fde68a; color:#92400e;">&#x2461; Explore</div>
+      <div class="step-row">
+        <div class="step-card" style="border-color:#d97706;" id="s8"></div>
+        <div class="step-card" style="border-color:#0d9488;" id="s9"></div>
+      </div>
+
+    </div>
+
+    <div class="phase-container verification-page" style="border-color:#86efac; background:#f0fdf4;">
+      <div class="phase-label" style="border-color:#86efac; color:#166534;">&#x2462; Execution</div>
+      <div class="sparql-row" id="s10-row"></div>
+    </div>
+
+  </div>
+
+  <script>
+    function headerCall(fn, arg) {
+      return '<span class="header-call">' + fn + '(<span class="header-arg">' + arg + '</span>)</span>';
+    }
+
+    function searchCard(id, step, fn, query, color, results) {
+      var h = '';
+      h += '<div class="step-header" style="background:' + color + '">';
+      h += '<span class="step-badge">' + step + '</span>' + headerCall(fn, '"' + query + '"');
+      h += '</div>';
+      h += '<div class="step-body">';
+      results.forEach(function (r) {
+        h += '<div class="result-row' + (r.hl ? ' hl' : '') + '">';
+        h += '<span class="r-uri">' + r.uri + '</span>';
+        h += '<span class="r-score"><span class="score-pill' + (r.hl ? '' : ' dim') + '">' + r.score + '</span></span>';
+        h += '</div>';
+      });
+      h += '</div>';
+      document.getElementById(id).innerHTML = h;
+    }
+
+    function searchCardWithExtras(id, step, fn, query, color, results, moreText) {
+      var h = '';
+      h += '<div class="step-header" style="background:' + color + '">';
+      h += '<span class="step-badge">' + step + '</span>' + headerCall(fn, '"' + query + '"');
+      h += '</div>';
+      h += '<div class="step-body">';
+      results.forEach(function (r) {
+        h += '<div class="result-row' + (r.hl ? ' hl' : '') + '">';
+        h += '<span class="r-uri">' + r.uri + (r.extra ? ' <span style="color:#94a3b8;">' + r.extra + '</span>' : '') + '</span>';
+        h += '<span class="r-score"><span class="score-pill' + (r.hl ? '' : ' dim') + '">' + r.score + '</span></span>';
+        h += '</div>';
+      });
+      if (moreText) {
+        h += '<div class="more-rows">' + moreText + '</div>';
+      }
+      h += '</div>';
+      document.getElementById(id).innerHTML = h;
+    }
+
+    function lookupCard(id, step, fn, klass, searchTerm, uri, label, color) {
+      var h = '';
+      h += '<div class="step-header" style="background:' + color + '">';
+      h += '<span class="step-badge">' + step + '</span>' + headerCall(fn, klass + ', "' + searchTerm + '"');
+      h += '</div>';
+      h += '<div class="step-body">';
+      h += '<div class="lookup-box">';
+      h += '<div class="lookup-result" style="display:flex;align-items:center;gap:10px;">';
+      h += '<div class="lookup-uri" style="flex-shrink:0;margin-bottom:0;">' + uri + '</div>';
+      h += '<div class="lookup-name" style="border-left:1px solid #bae6fd;padding-left:10px;">' + label + '</div>';
+      h += '</div>';
+      h += '</div>';
+      h += '</div>';
+      document.getElementById(id).innerHTML = h;
+    }
+
+    function entityRelCard(id, step, entity, color, rows) {
+      var h = '';
+      h += '<div class="step-header" style="background:' + color + '">';
+      h += '<span class="step-badge">' + step + '</span>' + headerCall('explore_entity_relations', entity);
+      h += '</div>';
+      h += '<div class="step-body">';
+      h += '<table class="mini-table">';
+      h += '<colgroup><col style="width:30%"><col style="width:10%"><col style="width:60%"></colgroup>';
+      h += '<thead><tr><th>Property</th><th>Dir</th><th>Example neighbor</th></tr></thead><tbody>';
+      rows.forEach(function (r) {
+        h += '<tr class="' + (r.hl ? 'hl' : '') + '">';
+        h += '<td>' + r.prop + '</td><td>' + r.dir + '</td><td>' + r.val + '</td></tr>';
+      });
+      h += '</tbody></table></div>';
+      document.getElementById(id).innerHTML = h;
+    }
+
+    searchCard('s1', 1, 'search_all_classes', 'author', '#2563eb', [
+      { score: '0.0249', uri: 'psc:AuthorSelfCitation', hl: false },
+      { score: '0.0066', uri: 'ds:AuthorSignature', hl: false },
+      { score: '0.0008', uri: 'ds:Creator', hl: true }
+    ]);
+
+    searchCard('s2', 2, 'search_all_classes', 'paper', '#2563eb', [
+      { score: '0.0004', uri: 'psc:JournalSelfCitation', hl: false },
+      { score: '0.0003', uri: 'ds:Publication', hl: true },
+      { score: '0.0001', uri: 'psc:Citation', hl: false }
+    ]);
+
+    searchCard('s3', 3, 'search_all_classes', 'conference', '#2563eb', [
+      { score: '0.4207', uri: 'ds:Conference', hl: true },
+      { score: '0.0002', uri: 'psc:Citation', hl: false },
+      { score: '0.0001', uri: 'psc:AuthorSelfCitation', hl: false }
+    ]);
+
+    searchCardWithExtras('s4', 4, 'search_all_properties', 'author', '#0d9488', [
+      { score: '0.0010', uri: 'ds:authoredBy', extra: '(Publication -> Creator)', hl: true },
+      { score: '0.0009', uri: 'ds:creatorNote', extra: '(Creator -> string)', hl: false },
+      { score: '0.0008', uri: 'ds:publishedInBook', extra: '(Publication -> string)', hl: false }
+    ]);
+
+    searchCardWithExtras('s5', 5, 'search_all_properties', 'published', '#0d9488', [
+      { score: '0.4299', uri: 'ds:publishedInSeriesVolume', extra: '(Publication -> string)', hl: false },
+      { score: '0.4264', uri: 'ds:publishedInBook', extra: '(Publication -> string)', hl: false },
+      { score: '0.3110', uri: 'ds:publishedAsPartOf', extra: '(Publication -> Publication)', hl: false },
+      { score: '0.2815', uri: 'ds:publishedInJournal', extra: '(Publication -> string)', hl: false }
+    ]);
+
+    lookupCard(
+      's6',
+      6,
+      'lookup_class_instances',
+      'ds:Conference',
+      'Software and Data Technologies',
+      'dsc:icsoft',
+      'International Conference on Software and Data Technologies (ICSOFT)',
+      '#0ea5e9'
+    );
+
+    lookupCard(
+      's7',
+      7,
+      'lookup_class_instances',
+      'ds:Creator',
+      'Jake Grozdanovski',
+      'dp2:9368',
+      'Jake Grozdanovski',
+      '#0ea5e9'
+    );
+
+    entityRelCard('s8', 8, 'dsc:icsoft', '#d97706', [
+      { prop: 'rdfs:label', dir: 'out', val: 'International Conference on Software and Data Technologies (ICSOFT)', hl: false },
+      { prop: 'ds:primaryStreamTitle', dir: 'out', val: 'International Conference on Software and Data Technologies (ICSOFT)', hl: false },
+      { prop: 'ds:streamTitle', dir: 'out', val: 'International Conference on Software and Data Technologies (ICSOFT)', hl: false },
+      { prop: 'ds:publishedInStream', dir: 'in', val: 'drci:0001BR24; drci:0001CM0T21; ...', hl: true }
+    ]);
+
+    searchCardWithExtras('s9', 9, 'search_all_properties', 'publishedInStream', '#0d9488', [
+      { score: '0.9178', uri: 'ds:publishedInStream', extra: '(Publication -> Stream)', hl: true },
+      { score: '0.0072', uri: 'ds:publishedInSeriesVolume', extra: '(Publication -> string)', hl: false },
+      { score: '0.0043', uri: 'ds:publishedInSeries', extra: '(Publication -> string)', hl: false }
+    ]);
+
+    (function () {
+      var row = document.getElementById('s10-row');
+
+      var left = '<div class="sparql-left">';
+      left += '<div class="step-card" style="border-color:#16a34a;">';
+      left += '<div class="step-header" style="background:#16a34a">';
+      left += '<span class="step-badge">10</span>' + headerCall('execute_query', 'query');
+      left += '</div>';
+      left += '<div class="step-body" style="padding:0">';
+      left += '<div class="sparql-editor">';
+      left += '<div class="dots">';
+      left += '<span style="background:#ff5f56"></span>';
+      left += '<span style="background:#ffbd2e"></span>';
+      left += '<span style="background:#27c93f"></span>';
+      left += '</div>';
+      left += '<span class="sparql-kw">PREFIX</span> ds: <span class="sparql-uri">&lt;https://dblp.org/rdf/schema#&gt;</span><br>';
+      left += '<span class="sparql-kw">PREFIX</span> dsc: <span class="sparql-uri">&lt;https://dblp.org/streams/conf/&gt;</span><br>';
+      left += '<span class="sparql-kw">PREFIX</span> dp2: <span class="sparql-uri">&lt;https://dblp.org/pid/297/&gt;</span><br><br>';
+      left += '<span class="sparql-kw">SELECT</span> (<span class="sparql-kw">COUNT</span>(<span class="sparql-kw">DISTINCT</span> <span class="sparql-var">?paper</span>) <span class="sparql-kw">AS</span> <span class="sparql-var">?count</span>) <span class="sparql-kw">WHERE</span> {<br>';
+      left += '&nbsp;&nbsp;<span class="sparql-var">?paper</span> <span class="sparql-kw">a</span> <span class="sparql-uri">ds:Publication</span> ;<br>';
+      left += '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sparql-uri">ds:authoredBy</span> <span class="sparql-uri">dp2:9368</span> ;<br>';
+      left += '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sparql-uri">ds:publishedInStream</span> <span class="sparql-uri">dsc:icsoft</span> .<br>';
+      left += '}';
+      left += '</div></div></div></div>';
+
+      var right = '<div class="sparql-right">';
+      right += '<div class="results-panel" style="flex-direction:row; align-items:center; padding:6px 10px; gap:12px;">';
+      right += '<span style="font-size:9px;font-weight:700;color:#166534;">Results</span>';
+      right += '<span style="font-family:\'SF Mono\',Consolas,monospace;font-size:9px;color:#475569;">count = <span style="color:#0f766e;font-weight:700;">1</span></span>';
+      right += '<span style="font-size:8px;color:#166534;margin-left:auto;">1 row &middot; 0.46s</span>';
+      right += '</div></div>';
+
+      row.innerHTML = left + right;
+    })();
+  </script>
+</body>
+
+</html>

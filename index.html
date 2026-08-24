@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Bloom Pipeline</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --border-color: #333;
+            --accent-color: #2563eb;
+            --card-bg: #fff;
+            --phase-label-bg: #fff;
+            --phase-border: #e5e7eb;
+            --arrow-color: #4b5563;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* Phase Styling */
+        .phase-container {
+            position: relative;
+            padding: 40px 16px 20px 16px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            width: 100%;
+            box-sizing: border-box;
+            background: #f8fafc;
+        }
+
+        .phase-container.phase-2 {
+            background: #f0fdf4;
+            border-color: #86efac;
+        }
+
+        .phase-label {
+            position: absolute;
+            top: -18px;
+            left: 30px;
+            background: var(--phase-label-bg);
+            padding: 5px 15px;
+            font-size: 18px;
+            font-weight: 800;
+            color: #475569;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .phase-2 .phase-label {
+            color: #166534;
+            border-color: #86efac;
+        }
+
+        /* Flow Layout */
+        .steps-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .steps-grid-3 {
+            display: grid;
+            grid-template-columns: auto 1fr auto 1fr auto;
+            align-items: center;
+            width: 100%;
+            row-gap: 10px;
+        }
+
+        .steps-grid-4 {
+            display: grid;
+            grid-template-columns: auto 1fr auto 1fr auto 1fr auto;
+            align-items: center;
+            width: 100%;
+            row-gap: 10px;
+        }
+
+        .grid-arrow {
+            display: flex;
+            align-items: center;
+            min-width: 20px;
+            margin-top: -30px;
+        }
+
+        .grid-arrow::before {
+            content: '';
+            flex: 1;
+            height: 0;
+            border-top: 2px solid var(--arrow-color);
+        }
+
+        .grid-arrow::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-left: 10px solid var(--arrow-color);
+        }
+
+        .grid-arrow-left {
+            display: flex;
+            align-items: center;
+            min-width: 20px;
+            margin-top: -30px;
+            flex-direction: row-reverse;
+        }
+
+        .grid-arrow-left::before {
+            content: '';
+            flex: 1;
+            height: 0;
+            border-top: 2px solid var(--arrow-color);
+        }
+
+        .grid-arrow-left::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-right: 10px solid var(--arrow-color);
+        }
+
+        .grid-arrow-down {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 80px;
+            font-size: 0;
+            line-height: 0;
+            color: transparent;
+            margin: -4px 0;
+        }
+
+        .grid-arrow-down::before {
+            content: '';
+            width: 0;
+            height: 16px;
+            border-left: 2px solid var(--arrow-color);
+            margin-right: 6px;
+        }
+
+        .grid-arrow-down::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 10px solid var(--arrow-color);
+        }
+
+        .grid-arrow-double {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+            min-width: 30px;
+            margin-top: -30px;
+        }
+
+        .double-arrow-r,
+        .double-arrow-l {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .double-arrow-l {
+            flex-direction: row-reverse;
+        }
+
+        .double-arrow-r::before,
+        .double-arrow-l::before {
+            content: '';
+            flex: 1;
+            height: 0;
+            border-top: 2px solid var(--arrow-color);
+        }
+
+        .double-arrow-r::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-left: 10px solid var(--arrow-color);
+        }
+
+        .double-arrow-l::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-right: 10px solid var(--arrow-color);
+        }
+
+        /* Feedback / Light Arrows */
+        .arrow-light::before {
+            border-color: #94a3b8 !important;
+        }
+
+        .double-arrow-r.arrow-light::after {
+            border-left-color: #94a3b8 !important;
+        }
+
+        .double-arrow-l.arrow-light::after {
+            border-right-color: #94a3b8 !important;
+        }
+
+        .steps-extra-row {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* Card / Figure Style */
+        .figure-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 200px;
+            /* Bigger width */
+            flex-shrink: 0;
+        }
+
+        .visual-block {
+            width: 200px;
+            height: 160px;
+            /* Bigger height */
+            background: #ffffff;
+            border: 2px dashed #94a3b8;
+            /* Dashed block around graph */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .visual-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .phase-2 .visual-block {
+            border-color: #4ade80;
+        }
+
+        .figure-title {
+            font-size: 14px;
+            /* Title below */
+            font-weight: 700;
+            text-align: center;
+            color: #334155;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Arrows */
+        .arrow-right {
+            align-self: center;
+            color: var(--arrow-color);
+            font-size: 24px;
+            margin-top: -30px;
+            /* Align visually with center of block */
+        }
+
+        .arrow-down-large {
+            font-size: 40px;
+            color: var(--arrow-color);
+            margin: -20px 0;
+        }
+
+        /* SVG Internal Styles */
+        svg {
+            overflow: visible;
+        }
+
+        .node-rect {
+            fill: #f1f5f9;
+            stroke: #334155;
+            stroke-width: 1.5;
+            rx: 4;
+        }
+
+        .node-circle {
+            fill: #eff6ff;
+            stroke: #2563eb;
+            stroke-width: 2;
+        }
+
+        .edge-path {
+            fill: none;
+            stroke: #64748b;
+            stroke-width: 1.5;
+            marker-end: url(#arrowhead);
+        }
+
+        .text-label {
+            font-family: monospace;
+            font-size: 10px;
+            fill: #334155;
+            text-anchor: middle;
+            font-weight: bold;
+        }
+
+        .edge-label {
+            font-family: monospace;
+            font-size: 9px;
+            fill: #64748b;
+            text-anchor: middle;
+            background: white;
+        }
+
+        /* Specific Phase 2 colors */
+        .p2-node {
+            fill: #f0fdf4;
+            stroke: #16a34a;
+        }
+
+        .p2-edge {
+            stroke: #16a34a;
+        }
+
+        /* Step 2 specific styles for table */
+        .table-rect {
+            fill: #fff;
+            stroke: #94a3b8;
+            stroke-width: 1;
+        }
+
+        .table-header {
+            fill: #f1f5f9;
+        }
+
+        .table-text {
+            font-family: monospace;
+            font-size: 9px;
+            fill: #475569;
+        }
+
+
+        /* Evolution View - Multi-Agent Distiller */
+        .evo-container {
+            position: relative;
+            padding: 50px 40px 40px;
+            border: 2px dashed #86efac;
+            border-radius: 12px;
+            width: 100%;
+            box-sizing: border-box;
+            background: #f0fdf4;
+        }
+
+        .evo-section-divider {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: #166534;
+            letter-spacing: 0.5px;
+            margin: 28px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .evo-section-divider::before,
+        .evo-section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #86efac;
+        }
+
+        .mad-entry-arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            margin: 18px 0 8px;
+        }
+
+        .mad-entry-line {
+            width: 1.5px;
+            height: 22px;
+            background: #93c5fd;
+        }
+
+        .mad-entry-label {
+            font-size: 9px;
+            font-weight: 600;
+            color: #2563eb;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+        }
+
+        .evo-stages {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 24px;
+        }
+
+        .evo-stage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            min-width: 130px;
+        }
+
+        .evo-badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 13px;
+            color: white;
+        }
+
+        .evo-stage-name {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .evo-stage-detail {
+            font-size: 10px;
+            color: #64748b;
+            text-align: center;
+            max-width: 150px;
+            line-height: 1.3;
+        }
+
+        .evo-connector {
+            display: flex;
+            align-items: center;
+            padding: 0 2px;
+            margin-top: -18px;
+        }
+
+        .evo-connector-line {
+            width: 32px;
+            height: 0;
+            border-top: 2px solid #cbd5e1;
+        }
+
+        .evo-connector-tip {
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 7px solid #cbd5e1;
+        }
+
+        .evo-body {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 14px;
+        }
+
+        .evo-pair {
+            width: 100%;
+            border-radius: 10px;
+            border: 1.5px solid;
+            overflow: hidden;
+        }
+
+        .evo-pair-header {
+            padding: 7px 16px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .evo-pair-initial {
+            border-color: #93c5fd;
+        }
+
+        .evo-pair-initial .evo-pair-header {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .evo-pair-complexity {
+            border-color: #fde68a;
+        }
+
+        .evo-pair-complexity .evo-pair-header {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .evo-pair-verify {
+            border-color: #86efac;
+        }
+
+        .evo-pair-verify .evo-pair-header {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .evo-verify-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .evo-bidir-arrows {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .evo-execute-block {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 14px;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 8px;
+            background: #f8fafc;
+            font-size: 10px;
+            font-weight: 600;
+            color: #475569;
+            white-space: nowrap;
+        }
+
+        .evo-execute-block svg {
+            width: 13px;
+            height: 13px;
+            flex-shrink: 0;
+        }
+
+        .evo-horiz-arrow {
+            color: #94a3b8;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .evo-pair-reword {
+            border-color: #d8b4fe;
+        }
+
+        .evo-pair-reword .evo-pair-header {
+            background: #ede9fe;
+            color: #5b21b6;
+        }
+
+        .evo-pair-final {
+            border-color: #86efac;
+        }
+
+        .evo-pair-final .evo-pair-header {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .evo-pair-question {
+            padding: 10px 16px 6px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #1e293b;
+        }
+
+        .evo-pair-question .q-label {
+            font-weight: 800;
+            color: #2563eb;
+            margin-right: 4px;
+        }
+
+        .evo-pair-sparql {
+            margin: 0 16px 12px;
+            background: #1e293b;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .evo-code-bar {
+            display: flex;
+            gap: 5px;
+            padding: 6px 10px 0;
+        }
+
+        .evo-code-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+        }
+
+        .evo-pair-sparql pre {
+            margin: 0;
+            padding: 6px 12px 10px;
+            font-family: 'SF Mono', Menlo, monospace;
+            font-size: 11.5px;
+            line-height: 1.55;
+            color: #94a3b8;
+            white-space: pre-wrap;
+        }
+
+        .evo-pair-sparql .kw {
+            color: #38bdf8;
+        }
+
+        .evo-pair-sparql .hl {
+            color: #fbbf24;
+            font-weight: 700;
+        }
+
+        .evo-transforms {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .evo-transform {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 18px;
+            font-size: 11.5px;
+            font-weight: 600;
+            border: 1.5px solid;
+        }
+
+        .evo-tf-num {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 800;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .evo-flow-arrow {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .evo-agent-icon {
+            margin-right: 5px;
+            display: inline-flex;
+            vertical-align: -2px;
+        }
+
+        .evo-agent-icon svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .evo-status-badge {
+            display: inline-block;
+            margin-left: 8px;
+            padding: 1px 8px;
+            border-radius: 10px;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 9px;
+            font-weight: 700;
+            border: 1px solid #86efac;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .evo-verify-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .evo-loop-label {
+            font-size: 11px;
+            color: #16a34a;
+            font-weight: 600;
+        }
+
+        .evo-verify-note {
+            padding: 4px 16px 10px;
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        .evo-reword-note {
+            padding: 4px 16px 10px;
+            font-size: 10px;
+            color: #7c3aed;
+            font-style: italic;
+        }
+
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .visual-block {
+                box-shadow: none !important;
+            }
+
+            .visual-block:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SVG Definitions for markers -->
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+        <defs>
+            <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b" />
+            </marker>
+            <marker id="arrowhead-small" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4"
+                orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b" />
+            </marker>
+            <marker id="arrowhead-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6"
+                orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a" />
+            </marker>
+            <marker id="arrowhead-green-small" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4"
+                orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a" />
+            </marker>
+            <marker id="arrowhead-blue-small" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4"
+                orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb" />
+            </marker>
+        </defs>
+    </svg>
+
+    <div id="app" class="container"></div>
+
+    <script>
+        // =====================================================================
+        //  SVG PRIMITIVE HELPERS
+        //  Reusable building blocks for constructing SVG diagrams.
+        //  To add a new step, define its svg() using these helpers + raw SVG.
+        // =====================================================================
+
+        /** Wrap content in an <svg> element with matching viewBox. */
+        const svgEl = (w, h, content) =>
+            `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${content}</svg>`;
+
+        /**
+         * Labeled rectangle node.
+         * Text is auto-centered: textY = y + round(h/2) + 4.
+         * Pass label=null to render only the rect (e.g. attribute boxes).
+         *
+         * opts: { style, textFill, fontSize, cls, attrs }
+         */
+        const node = (x, y, w, h, label, opts = {}) => {
+            const { style = '', textFill = '', fontSize = '', cls = 'node-rect', attrs = '' } = opts;
+            const textY = y + Math.round(h / 2) + 4;
+            let html = `<rect x="${x}" y="${y}" width="${w}" height="${h}" class="${cls}"`;
+            if (style) html += ` style="${style}"`;
+            if (attrs) html += ` ${attrs}`;
+            html += ' />';
+            if (label) {
+                html += `<text x="${x + w / 2}" y="${textY}" class="text-label"`;
+                if (textFill) html += ` fill="${textFill}"`;
+                if (fontSize) html += ` style="font-size:${fontSize}"`;
+                html += `>${label}</text>`;
+            }
+            return html;
+        };
+
+        /** SVG <path> element, defaults to class="edge-path" (with arrowhead marker). */
+        const pathEl = (d, { cls = 'edge-path', style = '', attrs = '' } = {}) => {
+            let html = `<path d="${d}"`;
+            if (cls) html += ` class="${cls}"`;
+            if (style) html += ` style="${style}"`;
+            if (attrs) html += ` ${attrs}`;
+            html += ' />';
+            return html;
+        };
+
+        /** Simple line from (x1,y1)→(x2,y2). No CSS class, no arrowhead. */
+        const line = (x1, y1, x2, y2, stroke = '#64748b', sw = null, attrs = '') => {
+            let html = `<path d="M${x1} ${y1} L${x2} ${y2}" fill="none" stroke="${stroke}"`;
+            if (sw !== null) html += ` stroke-width="${sw}"`;
+            if (attrs) html += ` ${attrs}`;
+            html += ' />';
+            return html;
+        };
+
+        /** Text label inside SVG. */
+        const label = (x, y, text, { cls = 'text-label', fill = '', fontSize = '', attrs = '' } = {}) => {
+            let html = `<text x="${x}" y="${y}" class="${cls}"`;
+            if (fill) html += ` fill="${fill}"`;
+            if (fontSize) html += ` font-size="${fontSize}"`;
+            if (attrs) html += ` ${attrs}`;
+            html += `>${text}</text>`;
+            return html;
+        };
+
+        /** Small edge label (monospace, gray). */
+        const edgeLabel = (x, y, text) =>
+            `<text x="${x}" y="${y}" class="edge-label">${text}</text>`;
+
+        /** Small numbered circle (white bg, colored border). */
+        const numCircle = (x, y, num, color = '#64748b', opts = {}) => {
+            const { radius = 5.5, fontSize = 7, textY = 2.5, strokeWidth = 1 } = opts;
+            return `<g transform="translate(${x}, ${y})">
+            <circle cx="0" cy="0" r="${radius}" fill="white" stroke="${color}" stroke-width="${strokeWidth}" />
+            <text x="0" y="${textY}" text-anchor="middle" font-size="${fontSize}" font-weight="900" fill="${color}">${num}</text>
+        </g>`;
+        };
+
+        // =====================================================================
+        //  COMPOSITE SVG COMPONENTS
+        // =====================================================================
+
+
+        const triplePattern = (tx, ty, leftLabel, rightLabel, edgeLbl) =>
+            `<g transform="translate(${tx}, ${ty})">
+            ${node(0, 0, 40, 20, leftLabel)}
+            ${node(80, 0, 40, 20, rightLabel)}
+            ${pathEl('M40 10 L80 10')}
+            ${edgeLabel(60, 8, edgeLbl)}
+        </g>`;
+
+        /**
+         * Mini triple (no labels, smaller boxes) for the adjacency index table.
+         * To add more rows, add another miniTriple() at a new (tx, ty).
+         */
+        const miniTriple = (tx, ty, opts = {}) => {
+            const { rectStyle = '' } = opts;
+            return `<g transform="translate(${tx}, ${ty})">
+            <rect x="0" y="0" width="25" height="12" class="node-rect" stroke-width="1" ${rectStyle ? `style="${rectStyle}"` : ''} />
+            <path d="M25 6 L45 6" class="edge-path" stroke-width="1" />
+            <rect x="45" y="0" width="25" height="12" class="node-rect" stroke-width="1" ${rectStyle ? `style="${rectStyle}"` : ''} />
+        </g>`;
+        };
+
+        // =====================================================================
+        //  LAYOUT HELPERS
+        // =====================================================================
+
+        /** Figure card: visual-block wrapper + title underneath. */
+        const figureCard = (title, svgContent, { cardStyle = '', blockStyle = '', titleStyle = '' } = {}) =>
+            `<div class="figure-card"${cardStyle ? ` style="${cardStyle}"` : ''}>
+            <div class="visual-block"${blockStyle ? ` style="${blockStyle}"` : ''}>
+                ${svgContent}
+            </div>
+            <div class="figure-title"${titleStyle ? ` style="${titleStyle}"` : ''}>${title}</div>
+        </div>`;
+
+        /** Right-pointing arrow between steps. */
+        const arrowRight = (style = '') =>
+            `<div class="arrow-right"${style ? ` style="${style}"` : ''}>➜</div>`;
+
+        /** Down-pointing arrow between phases. */
+        const arrowDown = () =>
+            `<div class="arrow-down-large">⬇</div>`;
+
+        /**
+         * Render a phase container with label, steps, and arrows between them.
+         * { label, className, rowStyle, arrowStyle, steps: [{ title, svg(), ...opts }] }
+         */
+        const renderPhase = ({ label: phaseLabel, className = '', rowStyle = '', arrowStyle = '', layout = 'flow', steps }) => {
+            let content = '';
+
+            if (layout === 'grid-3x2') {
+                const ga = '<div class="grid-arrow"></div>';
+                const gal = '<div class="grid-arrow-left"></div>';
+                const row1 = steps.slice(0, 3).map(s => figureCard(s.title, s.svg(), s));
+                const row2 = steps.slice(3, 6).map(s => figureCard(s.title, s.svg(), s)).reverse();
+                const gridHTML = [
+                    row1[0], ga, row1[1], ga, row1[2],
+                    '<div class="grid-arrow-down">⬇</div>',
+                    row2[0], gal, row2[1], gal, row2[2]
+                ].join('\n');
+
+                const extraSteps = steps.slice(6).map((step) =>
+                    figureCard(step.title, step.svg(), step)
+                ).join('\n');
+
+                content = `<div class="steps-grid-3">${gridHTML}</div>`
+                    + (extraSteps ? `<div class="steps-extra-row">${extraSteps}</div>` : '');
+            } else if (layout === 'grid-4x2') {
+                const ga = '<div class="grid-arrow"></div>';
+                const gal = '<div class="grid-arrow-left"></div>';
+                // Row 1 double arrow (3<->4): Forward is Right (row1[2]->row1[3]), Feedback is Left (row1[3]->row1[2])
+                const gad1 = '<div class="grid-arrow-double"><div class="double-arrow-l arrow-light"></div><div class="double-arrow-r"></div></div>';
+                // Row 2 double arrow (7<->8): Forward is Left (row2[1]->row2[0]), Feedback is Right (row2[0]->row2[1])
+                const gad2 = '<div class="grid-arrow-double"><div class="double-arrow-l"></div><div class="double-arrow-r arrow-light"></div></div>';
+
+                const row1 = steps.slice(0, 4).map(s => figureCard(s.title, s.svg(), s));
+                const row2 = steps.slice(4, 8).map(s => figureCard(s.title, s.svg(), s)).reverse();
+                const gridHTML = [
+                    row1[0], ga, row1[1], ga, row1[2], gad1, row1[3],
+                    '<div class="grid-arrow-down">⬇</div>',
+                    row2[0], gad2, row2[1], gal, row2[2], gal, row2[3]
+                ].join('\n');
+
+                content = `<div class="steps-grid-4">${gridHTML}</div>`;
+
+            } else {
+                content = steps.map((step, i) => {
+                    const card = figureCard(step.title, step.svg(), step);
+                    return i < steps.length - 1 ? card + arrowRight(arrowStyle) : card;
+                }).join('\n');
+            }
+
+            return `<div class="phase-container ${className}">
+            <div class="phase-label">${phaseLabel}</div>
+            <div class="steps-row"${rowStyle ? ` style="${rowStyle}"` : ''}>
+                ${content}
+            </div>
+        </div>`;
+        };
+
+        // =====================================================================
+        //  PIPELINE DEFINITION
+        //  To add a new step: push an object with { title, svg() } into a phase.
+        //  To add a new phase: push a new object into this array.
+        // =====================================================================
+
+
+        // =====================================================================
+        //  EVOLUTION VIEW - Multi-Agent Distiller Running Example
+        // =====================================================================
+
+        const buildEvolutionView = () => `
+    <div class="mad-entry-arrow">
+        <div class="mad-entry-line"></div>
+        <div class="mad-entry-label">serialize</div>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polyline points="3,4 8,12 13,4" fill="none" stroke="#93c5fd" stroke-width="2" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="evo-body">
+        <div class="evo-pair evo-pair-initial">
+            <div class="evo-pair-header"><span class="evo-agent-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v4.5L18 18a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L9 7.5V3z"/><path d="M8 3h8"/><path d="M10 12h4"/></svg></span> Distiller Agent</div>
+            <div class="evo-pair-question"><span class="q-label">Q:</span> \u201cFor each country, how many Grand Prix events had a first driver from there?\u201d</div>
+            <div class="evo-pair-sparql">
+                <div class="evo-code-bar"><span class="evo-code-dot" style="background:#ff5f56"></span><span class="evo-code-dot" style="background:#ffbd2e"></span><span class="evo-code-dot" style="background:#27c93f"></span></div>
+                <pre><span class="kw">SELECT</span> ?country (<span class="kw">COUNT</span>(?gp) <span class="kw">AS</span> ?eventCount) <span class="kw">WHERE</span> {
+  ?gp a dbo:GrandPrix ; dbo:firstDriverCountry ?country .
+} <span class="kw">GROUP BY</span> ?country</pre>
+            </div>
+        </div>
+        <div class="evo-flow-arrow"><svg width="16" height="36" viewBox="0 0 16 36" fill="none"><line x1="8" y1="0" x2="8" y2="28" stroke="#94a3b8" stroke-width="1.5"/><polyline points="3,23 8,29 13,23" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <div class="evo-pair evo-pair-complexity">
+            <div class="evo-pair-header"><span class="evo-agent-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="6" rx="1"/><rect x="5" y="12" width="14" height="6" rx="1"/><rect x="7" y="21" width="10" height="0" rx="0"/><line x1="12" y1="9" x2="12" y2="12"/></svg></span> Complexity Agent <span style="font-weight:400;opacity:0.8;font-size:9px;margin-left:6px;">ORDER BY / LIMIT</span></div>
+            <div class="evo-pair-question"><span class="q-label" style="color:#92400e;">Q:</span> \u201cWhich top 5 countries had the highest number of Grand Prix events with a first driver from there?\u201d</div>
+            <div class="evo-pair-sparql">
+                <div class="evo-code-bar"><span class="evo-code-dot" style="background:#ff5f56"></span><span class="evo-code-dot" style="background:#ffbd2e"></span><span class="evo-code-dot" style="background:#27c93f"></span></div>
+                <pre><span class="kw">SELECT</span> ?country (<span class="kw">COUNT</span>(?gp) <span class="kw">AS</span> ?eventCount) <span class="kw">WHERE</span> {
+  ?gp a dbo:GrandPrix ; dbo:firstDriverCountry ?country .
+} <span class="kw">GROUP BY</span> ?country <span class="hl">ORDER BY DESC</span>(?eventCount) <span class="hl">LIMIT 5</span></pre>
+            </div>
+        </div>
+        <div class="evo-flow-arrow evo-verify-flow">
+            <div style="display:flex;flex-direction:column;align-items:center;position:relative;">
+                <svg width="16" height="36" viewBox="0 0 16 36" fill="none"><line x1="8" y1="0" x2="8" y2="28" stroke="#16a34a" stroke-width="1.5"/><polyline points="3,23 8,29 13,23" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <span class="evo-loop-label" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);white-space:nowrap;">\u21BB \u00d72 iterations</span>
+            </div>
+        </div>
+        <div class="evo-verify-row">
+            <div class="evo-pair evo-pair-verify" style="padding:8px 14px;margin:0;flex:1;">
+                <div class="evo-pair-header" style="margin-bottom:0;"><span class="evo-agent-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span> Verifier Agent <span class="evo-status-badge">&#10003; correct</span></div>
+            </div>
+            <div class="evo-bidir-arrows">
+                <svg width="48" height="12" viewBox="0 0 48 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="2" y1="3" x2="44" y2="3" stroke="#64748b" stroke-width="1.5"/>
+                    <polyline points="39,0 44,3 39,6" fill="none" stroke="#64748b" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+                <svg width="48" height="12" viewBox="0 0 48 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4" y1="3" x2="46" y2="3" stroke="#94a3b8" stroke-width="1.5"/>
+                    <polyline points="9,0 4,3 9,6" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="evo-execute-block">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Execute SPARQL
+            </div>
+        </div>
+        <div class="evo-flow-arrow"><svg width="16" height="36" viewBox="0 0 16 36" fill="none"><line x1="8" y1="0" x2="8" y2="28" stroke="#94a3b8" stroke-width="1.5"/><polyline points="3,23 8,29 13,23" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <div class="evo-pair evo-pair-reword">
+            <div class="evo-pair-header"><span class="evo-agent-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h8"/><path d="M8 14h4"/></svg></span> Rewording Agent</div>
+            <div class="evo-pair-question"><span class="q-label" style="color:#5b21b6;">Q:</span> \u201cWhich 5 countries have had the most Grand Prix races with <span style="color:#7c3aed;font-weight:600;">winning drivers</span>?\u201d</div>
+            <div class="evo-pair-sparql">
+                <div class="evo-code-bar"><span class="evo-code-dot" style="background:#ff5f56"></span><span class="evo-code-dot" style="background:#ffbd2e"></span><span class="evo-code-dot" style="background:#27c93f"></span></div>
+                <pre><span class="kw">SELECT</span> ?country (<span class="kw">COUNT</span>(?gp) <span class="kw">AS</span> ?eventCount) <span class="kw">WHERE</span> {
+  ?gp a dbo:GrandPrix ; dbo:firstDriverCountry ?country .
+} <span class="kw">GROUP BY</span> ?country <span class="kw">ORDER BY DESC</span>(?eventCount) <span class="kw">LIMIT</span> 5</pre>
+            </div>
+        </div>
+    </div>
+`;
+
+        const pipeline = [
+            // ── Unified Pipeline ──
+            {
+                label: 'Query Bloom Pipeline',
+                layout: 'grid-3x2',
+                steps: [
+                    {
+                        title: 'Pattern Pool',
+                        svg: () => svgEl(180, 140,
+                            label(90, 18, 'Discovered Patterns', { fontSize: '12' })
+                            + triplePattern(10, 35, 'GPrix', 'Ctry', '1stDrvC')
+                            + triplePattern(40, 65, 'GPrix', 'Racer', '1stDrv')
+                            + triplePattern(10, 95, 'Auto', 'Comp', 'maker')
+                        )
+                    },
+                    {
+                        title: 'Adjacency Index',
+                        svg: () => svgEl(180, 140,
+                            `<rect x="10" y="10" width="160" height="120" class="table-rect" rx="4" />`
+                            + line(10, 40, 170, 40, '#94a3b8')
+                            + line(60, 10, 60, 130, '#94a3b8')
+                            + label(35, 30, 'Type', { fontSize: '12' })
+                            + label(115, 30, 'Patterns (List)', { fontSize: '12' })
+                            + label(35, 60, 'GrandP')
+                            + miniTriple(70, 50)
+                            + miniTriple(70, 65, { rectStyle: 'stroke:#d97706;fill:#fef3c7;' })
+                            + label(35, 100, 'Country')
+                            + miniTriple(70, 95)
+                        )
+                    },
+                    {
+                        title: 'DISCOVERED SUBGRAPH',
+                        svg: () => svgEl(180, 140,
+                            pathEl('M72 55 L102 55', { cls: '', style: 'stroke:#64748b;stroke-width:1.5;fill:none;marker-end:url(#arrowhead-small);' })
+                            + pathEl('M44 65 L44 92', { cls: '', style: 'stroke:#64748b;stroke-width:1.5;fill:none;marker-end:url(#arrowhead-small);' })
+                            + pathEl('M120 65 L120 92', { cls: '', style: 'stroke:#64748b;stroke-width:1.5;fill:none;marker-end:url(#arrowhead-small);' })
+                            + numCircle(87, 55, 1, '#64748b', { radius: 4.25, fontSize: 6, textY: 2.1 })
+                            + numCircle(44, 79, 2, '#64748b', { radius: 4.25, fontSize: 6, textY: 2.1 })
+                            + numCircle(120, 79, 3, '#64748b', { radius: 4.25, fontSize: 6, textY: 2.1 })
+                            + node(15, 45, 57, 20, 'GrandPrix', { style: 'stroke:#d97706;fill:#fef3c7;' })
+                            + node(102, 45, 48, 20, 'Country', { style: 'stroke:#d97706;fill:#fef3c7;' })
+                            + node(18, 92, 52, 20, 'Company', { style: 'stroke:#d97706;fill:#fef3c7;' })
+                            + node(96, 92, 58, 20, 'F1 Racer', { style: 'stroke:#d97706;fill:#fef3c7;' })
+                            + label(90, 18, 'DFS Pop & Extend', { fontSize: '12' })
+                        )
+                    },
+                    {
+                        title: 'Verified Subgraph',
+                        svg: () => svgEl(180, 140,
+                            pathEl('M72 55 L102 55', { cls: '', style: 'stroke:#16a34a;stroke-width:1.8;fill:none;marker-end:url(#arrowhead-green-small);' })
+                            + pathEl('M44 65 L44 92', { cls: '', style: 'stroke:#16a34a;stroke-width:1.8;fill:none;marker-end:url(#arrowhead-green-small);' })
+                            + pathEl('M120 65 L120 92', { cls: '', style: 'stroke:#16a34a;stroke-width:1.8;fill:none;marker-end:url(#arrowhead-green-small);' })
+                            + node(15, 45, 57, 20, 'GrandPrix', { style: 'stroke:#16a34a;fill:#dcfce7;', textFill: '#166534' })
+                            + node(102, 45, 48, 20, 'Country', { style: 'stroke:#16a34a;fill:#dcfce7;', textFill: '#166534' })
+                            + node(18, 92, 52, 20, 'Company', { style: 'stroke:#16a34a;fill:#dcfce7;', textFill: '#166534' })
+                            + node(96, 92, 58, 20, 'F1 Racer', { style: 'stroke:#16a34a;fill:#dcfce7;', textFill: '#166534' })
+                            + pathEl('M150 115 L160 125 L180 100', { cls: '', style: 'stroke:#16a34a;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round;' })
+                            + label(90, 18, 'Check Support >= m', { fontSize: '12' })
+                        )
+                    },
+                    {
+                        title: 'Extended Subgraph',
+                        svg: () => svgEl(180, 140,
+                            pathEl('M72 55 L102 55', { cls: '', style: 'stroke:#16a34a;stroke-width:1.8;fill:none;marker-end:url(#arrowhead-green-small);' })
+                            + pathEl('M120 65 L120 92', { cls: '', style: 'stroke:#16a34a;stroke-width:1.8;fill:none;marker-end:url(#arrowhead-green-small);' })
+                            + pathEl('M50 65 L50 92', { cls: '', style: 'stroke:#16a34a;stroke-width:1.3;fill:none;marker-end:url(#arrowhead-green-small);' })
+                            + node(15, 45, 57, 20, 'GrandPrix', { style: 'stroke:#16a34a;fill:#dcfce7;', textFill: '#166534' })
+                            + node(102, 45, 48, 20, 'Country', { style: 'stroke:#16a34a;fill:#dcfce7;', textFill: '#166534' })
+                            + node(96, 92, 58, 20, 'F1 Racer', { style: 'stroke:#16a34a;fill:#dcfce7;', textFill: '#166534' })
+                            + node(24, 92, 52, 18, 'Company', { style: 'stroke:#16a34a;fill:#dcfce7;', textFill: '#166534' })
+                            + line(31, 65, 31, 70, '#64748b', 1.2)
+                            + node(16, 70, 28, 14, 'year', { style: 'fill:#f1f5f9;stroke:#64748b;', fontSize: '7px' })
+                            + label(90, 18, 'Attach Attributes & Verify', { fontSize: '12' })
+                        )
+                    },
+                    {
+                        title: 'Subgraph Instances',
+                        svg: () => svgEl(180, 140,
+                            // Stacked card layers
+                            `<rect x="22" y="24" width="156" height="82" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" opacity="0.3" />`
+                            + `<rect x="18" y="28" width="156" height="82" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" opacity="0.55" />`
+                            + `<rect x="14" y="32" width="156" height="90" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />`
+                            + pathEl('M68 58 L112 58', { cls: '', style: 'stroke:#2563eb;stroke-width:1.8;fill:none;marker-end:url(#arrowhead-blue-small);' })
+                            + pathEl('M50 68 L50 90', { cls: '', style: 'stroke:#2563eb;stroke-width:1.8;fill:none;marker-end:url(#arrowhead-blue-small);' })
+                            + pathEl('M134 68 L134 90', { cls: '', style: 'stroke:#2563eb;stroke-width:1.8;fill:none;marker-end:url(#arrowhead-blue-small);' })
+                            + node(18, 48, 50, 20, '1981 GP', { style: 'stroke:#2563eb;fill:#dbeafe;', textFill: '#1d4ed8', fontSize: '8px' })
+                            + node(112, 48, 44, 20, 'France', { style: 'stroke:#2563eb;fill:#dbeafe;', textFill: '#1d4ed8', fontSize: '8px' })
+                            + node(18, 90, 64, 20, 'Renault', { style: 'stroke:#2563eb;fill:#dbeafe;', textFill: '#1d4ed8', fontSize: '8px' })
+                            + node(102, 90, 64, 20, 'Jabouille', { style: 'stroke:#2563eb;fill:#dbeafe;', textFill: '#1d4ed8', fontSize: '8px' })
+                            + line(31, 68, 31, 75, '#7c3aed', 1.1)
+                            + node(18, 75, 24, 12, '1981', { style: 'fill:#ede9fe;stroke:#7c3aed;', fontSize: '7px' })
+                            + label(90, 16, 'Sample Subgraph Instances', { fontSize: '12' })
+                        )
+                    }
+                ]
+            },
+            // ── Multi-Agent Distiller — Running Example ──
+            {
+                html: buildEvolutionView()
+            }
+        ];
+
+        // =====================================================================
+        //  RENDER
+        // =====================================================================
+
+        document.getElementById('app').innerHTML = (() => {
+            const p = pipeline[0];
+            const evoHTML = pipeline[1].html;
+            // Build phase1 manually so we can append evoHTML inside the same container
+            let content = '';
+            if (p.layout === 'grid-3x2') {
+                const ga = '<div class="grid-arrow"></div>';
+                const gal = '<div class="grid-arrow-left"></div>';
+                const row1 = p.steps.slice(0, 3).map(s => figureCard(s.title, s.svg(), s));
+                const row2 = p.steps.slice(3, 6).map(s => figureCard(s.title, s.svg(), s)).reverse();
+                // row2[0]=Subgraph Instances, row2[1]=Extended Subgraph, row2[2]=Verified Subgraph
+                // Highlight the last two (Subgraph Instances + Extended Subgraph) as MAD input
+                const galGroup = '<div class="grid-arrow-left" style="min-width:60px;flex-shrink:0;"></div>';
+                const groupWrapper = `<div class="mad-input-group" style="grid-column:1/4;display:flex;align-items:center;background:#dbeafe33;border:1.5px dashed #93c5fd;border-radius:10px;padding:6px;gap:0;">${row2[0]}${galGroup}${row2[1]}</div>`;
+                const gridHTML = [
+                    row1[0], ga, row1[1], ga, row1[2],
+                    '<div class="grid-arrow-down">⬇</div>',
+                    groupWrapper, gal, row2[2]
+                ].join('\n');
+                content = `<div class="steps-grid-3">${gridHTML}</div>`;
+            }
+            return `<div class="phase-container">
+            <div class="phase-label">${p.label}</div>
+            <div class="steps-row">${content}</div>
+            ${evoHTML}
+        </div>`;
+        })();
+    </script>
+
+</body>
+
+</html>

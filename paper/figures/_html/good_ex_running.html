@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRASP Good Example</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 12px 8px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .question-box {
+      background: #f0f9ff;
+      border: 2px solid #0ea5e9;
+      border-radius: 10px;
+      padding: 12px 24px;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .question-box .qlabel {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0369a1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .question-box .qtext {
+      font-size: 13px;
+      color: #0c4a6e;
+      line-height: 1.4;
+    }
+
+    .q-class {
+      color: #2563eb;
+    }
+
+    .q-entity {
+      color: #0284c7;
+    }
+
+    .q-prop {
+      color: #0d9488;
+    }
+
+    .phase-container {
+      position: relative;
+      padding: 44px 24px 24px 24px;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      margin-bottom: 28px;
+      background: #f8fafc;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .phase-label {
+      position: absolute;
+      top: -16px;
+      left: 24px;
+      background: #fff;
+      padding: 4px 14px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #475569;
+      border: 2px solid #cbd5e1;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .step-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .step-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-card {
+      flex: 1;
+      border: 1.5px solid #d1d5db;
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .step-card.full {
+      flex: 1 1 100%;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 10px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #fff;
+      font-family: "SF Mono", Consolas, monospace;
+    }
+
+    .header-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      flex-wrap: wrap;
+    }
+
+    .header-arg {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #f8fafc;
+      font-weight: 800;
+    }
+
+    .step-badge {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .step-body {
+      padding: 8px 10px;
+    }
+
+    .search-bar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 10px;
+      color: #64748b;
+      margin-bottom: 6px;
+      font-family: inherit;
+    }
+
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: "SF Mono", Consolas, monospace;
+      font-size: 9.5px;
+      margin-bottom: 2px;
+      gap: 10px;
+    }
+
+    .result-row.hl {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+    }
+
+    .result-row.hl .r-uri {
+      color: #1e40af;
+      font-weight: 700;
+    }
+
+    .result-row.hl .r-score {
+      color: #1d4ed8;
+      font-weight: 700;
+    }
+
+    .result-row .r-uri {
+      color: #94a3b8;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .result-row .r-score {
+      color: #94a3b8;
+      font-size: 9px;
+      flex-shrink: 0;
+    }
+
+    .score-pill {
+      background: #dbeafe;
+      border: 1px solid #93c5fd;
+      border-radius: 8px;
+      padding: 1px 8px;
+      font-size: 8px;
+      display: inline-block;
+    }
+
+    .score-pill.dim {
+      background: #f1f5f9;
+      border-color: #e2e8f0;
+    }
+
+    .entity-label {
+      text-align: center;
+      font-family: "SF Mono", Consolas, monospace;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 0 6px;
+    }
+
+    .lookup-box {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .lookup-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 9px;
+      color: #0369a1;
+      font-weight: 700;
+      font-family: "SF Mono", Consolas, monospace;
+    }
+
+    .lookup-result {
+      background: #fff;
+      border: 1.5px solid #7dd3fc;
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    .lookup-uri {
+      font-family: "SF Mono", Consolas, monospace;
+      font-size: 10px;
+      font-weight: 700;
+      color: #075985;
+      margin-bottom: 4px;
+      overflow-wrap: anywhere;
+    }
+
+    .lookup-name {
+      font-size: 10px;
+      color: #0284c7;
+      line-height: 1.35;
+    }
+
+    .mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9px;
+      font-family: "SF Mono", Consolas, monospace;
+      table-layout: fixed;
+    }
+
+    .mini-table th {
+      text-align: left;
+      padding: 4px 8px;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 8.5px;
+      font-weight: 700;
+      border-bottom: 1.5px solid #e2e8f0;
+    }
+
+    .mini-table td {
+      padding: 3px 8px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #475569;
+      overflow-wrap: anywhere;
+      vertical-align: top;
+    }
+
+    .mini-table tr.hl td {
+      background: #fef3c7;
+      color: #92400e;
+      font-weight: 600;
+    }
+
+    .mini-table tr.hl-green td {
+      background: #ecfdf5;
+      color: #065f46;
+      font-weight: 600;
+    }
+
+    .more-rows {
+      text-align: center;
+      padding: 4px;
+      font-size: 9px;
+      color: #94a3b8;
+      font-style: italic;
+    }
+
+    .annotation {
+      position: relative;
+      margin: 18px 0;
+      padding: 16px 18px 16px 22px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f5 50%, #e9ecef 100%);
+      border: 2px solid #adb5bd;
+      border-left: 7px solid #868e96;
+      border-radius: 10px;
+      font-size: 11.5px;
+      color: #343a40;
+      line-height: 1.65;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .annotation::before {
+      content: "Author Comment";
+      display: block;
+      width: fit-content;
+      font-size: 9px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #495057;
+      background: #dee2e6;
+      border: 1.5px solid #adb5bd;
+      border-radius: 4px;
+      padding: 2px 10px;
+      margin-bottom: 8px;
+    }
+
+    .annotation b,
+    .annotation strong {
+      color: #212529;
+      font-weight: 700;
+    }
+
+    .annotation code {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid #ced4da;
+      border-radius: 3px;
+      padding: 0 3px;
+    }
+
+    .annotation .ann-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      border-radius: 999px;
+      background: #dee2e6;
+      color: #495057;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 10px;
+      vertical-align: text-bottom;
+    }
+
+    .annotation ul {
+      margin: 4px 0 2px 0;
+      padding-left: 8px;
+      list-style-position: inside;
+    }
+
+    .annotation li {
+      margin-bottom: 3px;
+    }
+
+    .sparql-row {
+      display: flex;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .sparql-left {
+      flex: 1.15;
+    }
+
+    .sparql-right {
+      flex: 0.85;
+    }
+
+    .sparql-editor {
+      background: #1e293b;
+      border-radius: 6px;
+      padding: 10px 12px;
+      padding-top: 22px;
+      font-size: 9.5px;
+      line-height: 1.55;
+      font-family: "SF Mono", Consolas, monospace;
+      color: #e2e8f0;
+      position: relative;
+      min-height: 100%;
+      box-sizing: border-box;
+    }
+
+    .sparql-editor .dots {
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      display: flex;
+      gap: 4px;
+    }
+
+    .sparql-editor .dots span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .sparql-kw {
+      color: #93c5fd;
+    }
+
+    .sparql-var {
+      color: #86efac;
+    }
+
+    .sparql-uri {
+      color: #fbbf24;
+    }
+
+    .results-panel {
+      border: 1.5px solid #86efac;
+      border-radius: 6px;
+      overflow: hidden;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+    }
+
+    .results-header {
+      background: #16a34a;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 5px 10px;
+      text-align: center;
+    }
+
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9px;
+      font-family: "SF Mono", Consolas, monospace;
+      flex: 1;
+    }
+
+    .results-table th {
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 700;
+      padding: 4px 10px;
+      text-align: left;
+    }
+
+    .results-table td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #f0fdf4;
+      color: #475569;
+    }
+
+    .results-table td.only-value {
+      text-align: right;
+      color: #0f766e;
+      font-weight: 700;
+    }
+
+    .results-table .cnt {
+      text-align: right;
+      color: #0f766e;
+      font-weight: 700;
+    }
+
+    .results-footer {
+      background: #dcfce7;
+      text-align: center;
+      font-size: 9px;
+      font-weight: 700;
+      color: #166534;
+      padding: 5px;
+    }
+
+    .answer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: #f0fdf4;
+      border: 2px solid #16a34a;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #15803d;
+      margin-bottom: 24px;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .stat-pill {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 4px 14px;
+      font-size: 10px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    @media print {
+      body {
+        padding: 20px;
+        display: block;
+        overflow: hidden;
+        background: #fff !important;
+      }
+
+      .container {
+        max-width: none;
+        width: 100%;
+      }
+
+      .phase-container,
+      .step-card,
+      .sparql-row,
+      .results-panel,
+      .question-box,
+      .annotation,
+      .answer-bar,
+      .stats-row {
+        break-inside: avoid;
+      }
+
+      .phase-container,
+      .step-card,
+      .annotation,
+      .results-panel,
+      .sparql-editor,
+      .answer-bar,
+      .stat-pill {
+        box-shadow: none !important;
+      }
+
+      .verification-page {
+        break-before: page;
+        page-break-before: always;
+        margin-top: 18px !important;
+        padding-top: 56px !important;
+      }
+
+      .verification-page .phase-label {
+        top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="question-box">
+      <div class="qlabel">Question</div>
+      <div class="qtext">Count the number of <b class="q-class">papers</b> that <b class="q-entity">Jake
+          Grozdanovski</b> has <b class="q-prop">published</b> in International <b class="q-class">Conference</b> on <b
+          class="q-entity">Software and Data Technologies</b>.</div>
+    </div>
+
+    <div class="phase-container" style="border-color:#93c5fd; background:#f8fbff;">
+      <div class="phase-label" style="border-color:#93c5fd; color:#1d4ed8;">&#x2460; Search & Resolve</div>
+      <div class="step-row">
+        <div class="step-card" style="border-color:#2563eb;" id="s1"></div>
+        <div class="step-card" style="border-color:#2563eb;" id="s2"></div>
+      </div>
+      <div class="step-row">
+        <div class="step-card" style="border-color:#2563eb;" id="s3"></div>
+        <div class="step-card" style="border-color:#0d9488;" id="s4"></div>
+      </div>
+      <div class="step-row">
+        <div class="step-card full" style="border-color:#0d9488;" id="s5"></div>
+      </div>
+      <div class="annotation">
+        <ul>
+          <li>Maps question terms to KG concepts: <b>author</b>, <b>publication</b>, <b>conference</b>; finds
+            <b><code>ds:authoredBy</code></b>.</li>
+          <li>Venue-linking property not yet found.</li>
+        </ul>
+      </div>
+
+      <div class="step-row" style="margin-top: 12px;">
+        <div class="step-card" style="border-color:#0ea5e9;" id="s6"></div>
+        <div class="step-card" style="border-color:#0ea5e9;" id="s7"></div>
+      </div>
+      <div class="annotation">
+        <ul>
+          <li>Grounds venue → <b><code>dsc:icsoft</code></b>, person → <b><code>dp2:9368</code></b>; query now has
+            concrete graph nodes.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-container" style="border-color:#fde68a; background:#fffef8;">
+      <div class="phase-label" style="border-color:#fde68a; color:#92400e;">&#x2461; Explore</div>
+      <div class="step-row">
+        <div class="step-card" style="border-color:#d97706;" id="s8"></div>
+        <div class="step-card" style="border-color:#0d9488;" id="s9"></div>
+      </div>
+      <div class="annotation">
+        <ul>
+          <li>Inspects <b><code>dsc:icsoft</code></b>; discovers <b><code>ds:publishedInStream</code></b> — the missing
+            venue-linking property.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-container verification-page" style="border-color:#86efac; background:#f0fdf4;">
+      <div class="phase-label" style="border-color:#86efac; color:#166534;">&#x2462; Verification</div>
+      <div class="sparql-row" id="s10-row"></div>
+      <div class="annotation" style="margin-top:10px;">All triples resolved: <b><code>rdf:type</code></b>,
+        <b><code>ds:authoredBy → dp2:9368</code></b>, <b><code>ds:publishedInStream → dsc:icsoft</code></b>. First
+        execution returns <b><code>1</code></b> — answer finalized.
+      </div>
+    </div>
+
+    <div class="answer-bar">Verified answer: Jake Grozdanovski has 1 paper in ICSOFT.</div>
+
+    <div class="stats-row">
+      <div class="stat-pill">Knowledge graph: dblp</div>
+      <div class="stat-pill">Tools used: 10</div>
+      <div class="stat-pill">Final count: 1</div>
+    </div>
+  </div>
+
+  <script>
+    function headerCall(fn, arg) {
+      return '<span class="header-call">' + fn + '(<span class="header-arg">' + arg + '</span>)</span>';
+    }
+
+    function searchCard(id, step, fn, query, color, results) {
+      var h = '';
+      h += '<div class="step-header" style="background:' + color + '">';
+      h += '<span class="step-badge">' + step + '</span>' + headerCall(fn, '"' + query + '"');
+      h += '</div>';
+      h += '<div class="step-body">';
+      results.forEach(function (r) {
+        h += '<div class="result-row' + (r.hl ? ' hl' : '') + '">';
+        h += '<span class="r-uri">' + r.uri + '</span>';
+        h += '<span class="r-score"><span class="score-pill' + (r.hl ? '' : ' dim') + '">' + r.score + '</span></span>';
+        h += '</div>';
+      });
+      h += '</div>';
+      document.getElementById(id).innerHTML = h;
+    }
+
+    function searchCardWithExtras(id, step, fn, query, color, results, moreText) {
+      var h = '';
+      h += '<div class="step-header" style="background:' + color + '">';
+      h += '<span class="step-badge">' + step + '</span>' + headerCall(fn, '"' + query + '"');
+      h += '</div>';
+      h += '<div class="step-body">';
+      results.forEach(function (r) {
+        h += '<div class="result-row' + (r.hl ? ' hl' : '') + '">';
+        h += '<span class="r-uri">' + r.uri + (r.extra ? ' <span style="color:#94a3b8;">' + r.extra + '</span>' : '') + '</span>';
+        h += '<span class="r-score"><span class="score-pill' + (r.hl ? '' : ' dim') + '">' + r.score + '</span></span>';
+        h += '</div>';
+      });
+      if (moreText) {
+        h += '<div class="more-rows">' + moreText + '</div>';
+      }
+      h += '</div>';
+      document.getElementById(id).innerHTML = h;
+    }
+
+    function lookupCard(id, step, fn, klass, searchTerm, uri, label, color) {
+      var h = '';
+      h += '<div class="step-header" style="background:' + color + '">';
+      h += '<span class="step-badge">' + step + '</span>' + headerCall(fn, klass + ', "' + searchTerm + '"');
+      h += '</div>';
+      h += '<div class="step-body">';
+      h += '<div class="lookup-box">';
+      h += '<div class="lookup-meta"><span>' + klass + '</span><span>lookup</span></div>';
+      h += '<div class="lookup-result">';
+      h += '<div class="lookup-uri">' + uri + '</div>';
+      h += '<div class="lookup-name">' + label + '</div>';
+      h += '</div>';
+      h += '</div>';
+      h += '</div>';
+      document.getElementById(id).innerHTML = h;
+    }
+
+    function entityRelCard(id, step, entity, color, rows) {
+      var h = '';
+      h += '<div class="step-header" style="background:' + color + '">';
+      h += '<span class="step-badge">' + step + '</span>' + headerCall('explore_entity_relations', entity);
+      h += '</div>';
+      h += '<div class="step-body">';
+      h += '<div class="entity-label" style="color:' + color + '">' + entity + '</div>';
+      h += '<table class="mini-table">';
+      h += '<colgroup><col style="width:30%"><col style="width:10%"><col style="width:60%"></colgroup>';
+      h += '<thead><tr><th>Property</th><th>Dir</th><th>Example neighbor</th></tr></thead><tbody>';
+      rows.forEach(function (r) {
+        h += '<tr class="' + (r.hl ? 'hl' : '') + '">';
+        h += '<td>' + r.prop + '</td><td>' + r.dir + '</td><td>' + r.val + '</td></tr>';
+      });
+      h += '</tbody></table></div>';
+      document.getElementById(id).innerHTML = h;
+    }
+
+    searchCard('s1', 1, 'search_all_classes', 'author', '#2563eb', [
+      { score: '0.0249', uri: 'psc:AuthorSelfCitation', hl: false },
+      { score: '0.0066', uri: 'ds:AuthorSignature', hl: false },
+      { score: '0.0008', uri: 'ds:Creator', hl: true }
+    ]);
+
+    searchCard('s2', 2, 'search_all_classes', 'paper', '#2563eb', [
+      { score: '0.0004', uri: 'psc:JournalSelfCitation', hl: false },
+      { score: '0.0003', uri: 'ds:Publication', hl: true },
+      { score: '0.0001', uri: 'psc:Citation', hl: false }
+    ]);
+
+    searchCard('s3', 3, 'search_all_classes', 'conference', '#2563eb', [
+      { score: '0.4207', uri: 'ds:Conference', hl: true },
+      { score: '0.0002', uri: 'psc:Citation', hl: false },
+      { score: '0.0001', uri: 'psc:AuthorSelfCitation', hl: false }
+    ]);
+
+    searchCardWithExtras('s4', 4, 'search_all_properties', 'author', '#0d9488', [
+      { score: '0.0010', uri: 'ds:authoredBy', extra: '(Publication -> Creator)', hl: true },
+      { score: '0.0009', uri: 'ds:creatorNote', extra: '(Creator -> string)', hl: false },
+      { score: '0.0008', uri: 'ds:publishedInBook', extra: '(Publication -> string)', hl: false }
+    ]);
+
+    searchCardWithExtras('s5', 5, 'search_all_properties', 'published', '#0d9488', [
+      { score: '0.4299', uri: 'ds:publishedInSeriesVolume', extra: '(Publication -> string)', hl: false },
+      { score: '0.4264', uri: 'ds:publishedInBook', extra: '(Publication -> string)', hl: false },
+      { score: '0.3110', uri: 'ds:publishedAsPartOf', extra: '(Publication -> Publication)', hl: false },
+      { score: '0.2815', uri: 'ds:publishedInJournal', extra: '(Publication -> string)', hl: false }
+    ], 'No clear conference-stream property yet');
+
+    lookupCard(
+      's6',
+      6,
+      'lookup_class_instances',
+      'ds:Conference',
+      'Software and Data Technologies',
+      'dsc:icsoft',
+      'International Conference on Software and Data Technologies (ICSOFT)',
+      '#0ea5e9'
+    );
+
+    lookupCard(
+      's7',
+      7,
+      'lookup_class_instances',
+      'ds:Creator',
+      'Jake Grozdanovski',
+      'dp2:9368',
+      'Jake Grozdanovski',
+      '#0ea5e9'
+    );
+
+    entityRelCard('s8', 8, 'dsc:icsoft', '#d97706', [
+      { prop: 'rdfs:label', dir: 'out', val: 'International Conference on Software and Data Technologies (ICSOFT)', hl: false },
+      { prop: 'ds:primaryStreamTitle', dir: 'out', val: 'International Conference on Software and Data Technologies (ICSOFT)', hl: false },
+      { prop: 'ds:streamTitle', dir: 'out', val: 'International Conference on Software and Data Technologies (ICSOFT)', hl: false },
+      { prop: 'ds:publishedInStream', dir: 'in', val: 'drci:0001BR24; drci:0001CM0T21; ...', hl: true }
+    ]);
+
+    searchCardWithExtras('s9', 9, 'search_all_properties', 'publishedInStream', '#0d9488', [
+      { score: '0.9178', uri: 'ds:publishedInStream', extra: '(Publication -> Stream)', hl: true },
+      { score: '0.0072', uri: 'ds:publishedInSeriesVolume', extra: '(Publication -> string)', hl: false },
+      { score: '0.0043', uri: 'ds:publishedInSeries', extra: '(Publication -> string)', hl: false }
+    ]);
+
+    (function () {
+      var row = document.getElementById('s10-row');
+
+      var left = '<div class="sparql-left">';
+      left += '<div class="step-card" style="border-color:#16a34a;">';
+      left += '<div class="step-header" style="background:#16a34a">';
+      left += '<span class="step-badge">10</span>' + headerCall('execute_query', 'query');
+      left += '</div>';
+      left += '<div class="step-body" style="padding:0">';
+      left += '<div class="sparql-editor">';
+      left += '<div class="dots">';
+      left += '<span style="background:#ff5f56"></span>';
+      left += '<span style="background:#ffbd2e"></span>';
+      left += '<span style="background:#27c93f"></span>';
+      left += '</div>';
+      left += '<span class="sparql-kw">PREFIX</span> ds: <span class="sparql-uri">&lt;https://dblp.org/rdf/schema#&gt;</span><br>';
+      left += '<span class="sparql-kw">PREFIX</span> dsc: <span class="sparql-uri">&lt;https://dblp.org/streams/conf/&gt;</span><br>';
+      left += '<span class="sparql-kw">PREFIX</span> dp2: <span class="sparql-uri">&lt;https://dblp.org/pid/297/&gt;</span><br><br>';
+      left += '<span class="sparql-kw">SELECT</span> (<span class="sparql-kw">COUNT</span>(<span class="sparql-kw">DISTINCT</span> <span class="sparql-var">?paper</span>) <span class="sparql-kw">AS</span> <span class="sparql-var">?count</span>) <span class="sparql-kw">WHERE</span> {<br>';
+      left += '&nbsp;&nbsp;<span class="sparql-var">?paper</span> <span class="sparql-kw">a</span> <span class="sparql-uri">ds:Publication</span> ;<br>';
+      left += '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sparql-uri">ds:authoredBy</span> <span class="sparql-uri">dp2:9368</span> ;<br>';
+      left += '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sparql-uri">ds:publishedInStream</span> <span class="sparql-uri">dsc:icsoft</span> .<br>';
+      left += '}';
+      left += '</div></div></div></div>';
+
+      var right = '<div class="sparql-right">';
+      right += '<div class="results-panel">';
+      right += '<div class="results-header">Results</div>';
+      right += '<table class="results-table"><thead><tr><th>count</th></tr></thead><tbody>';
+      right += '<tr><td class="only-value">1</td></tr>';
+      right += '</tbody></table>';
+      right += '<div class="results-footer">1 row &middot; execution time 0.46s</div>';
+      right += '</div></div>';
+
+      row.innerHTML = left + right;
+    })();
+  </script>
+</body>
+
+</html>

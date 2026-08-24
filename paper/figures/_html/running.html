@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRASP Running Example</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    /* Question banner */
+    .question-box {
+      background: #f0f9ff;
+      border: 2px solid #0ea5e9;
+      border-radius: 10px;
+      padding: 12px 24px;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .question-box .qlabel {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0369a1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .question-box .qtext {
+      font-size: 13px;
+      color: #0c4a6e;
+      line-height: 1.4;
+    }
+
+    /* Phase containers — matches tools.html */
+    .phase-container {
+      position: relative;
+      padding: 44px 24px 24px 24px;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      margin-bottom: 28px;
+      background: #f8fafc;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .phase-label {
+      position: absolute;
+      top: -16px;
+      left: 24px;
+      background: #fff;
+      padding: 4px 14px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #475569;
+      border: 2px solid #cbd5e1;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Step rows */
+    .step-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .step-row:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Step cards */
+    .step-card {
+      flex: 1;
+      border: 1.5px solid #d1d5db;
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .step-card.full {
+      flex: 1 1 100%;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 10px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #fff;
+      font-family: "SF Mono", Consolas, monospace;
+    }
+
+    .step-badge {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .step-body {
+      padding: 8px 10px;
+    }
+
+    /* Search bar */
+    .search-bar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 10px;
+      color: #64748b;
+      margin-bottom: 6px;
+      font-family: inherit;
+    }
+
+    /* Result rows */
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: "SF Mono", Consolas, monospace;
+      font-size: 9.5px;
+      margin-bottom: 2px;
+    }
+
+    .result-row.hl {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+    }
+
+    .result-row.hl .r-uri {
+      color: #1e40af;
+      font-weight: 700;
+    }
+
+    .result-row.hl .r-score {
+      color: #1d4ed8;
+      font-weight: 700;
+    }
+
+    .result-row .r-uri {
+      color: #94a3b8;
+    }
+
+    .result-row .r-score {
+      color: #94a3b8;
+      font-size: 9px;
+    }
+
+    .score-pill {
+      background: #dbeafe;
+      border: 1px solid #93c5fd;
+      border-radius: 8px;
+      padding: 1px 8px;
+      font-size: 8px;
+      display: inline-block;
+    }
+
+    .score-pill.dim {
+      background: #f1f5f9;
+      border-color: #e2e8f0;
+    }
+
+    /* Entity label */
+    .entity-label {
+      text-align: center;
+      font-family: "SF Mono", Consolas, monospace;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 0 4px;
+    }
+
+    /* Mini tables */
+    .mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9px;
+      font-family: "SF Mono", Consolas, monospace;
+    }
+
+    .mini-table th {
+      text-align: left;
+      padding: 4px 8px;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 8.5px;
+      font-weight: 700;
+      border-bottom: 1.5px solid #e2e8f0;
+    }
+
+    .mini-table td {
+      padding: 3px 8px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #475569;
+    }
+
+    .mini-table tr.hl td {
+      background: #fef3c7;
+      color: #92400e;
+      font-weight: 600;
+    }
+
+    .mini-table tr.hl-green td {
+      background: #ecfdf5;
+      color: #065f46;
+      font-weight: 600;
+    }
+
+    /* More rows */
+    .more-rows {
+      text-align: center;
+      padding: 4px;
+      font-size: 9px;
+      color: #94a3b8;
+      font-style: italic;
+    }
+
+    /* SPARQL editor */
+    .sparql-editor {
+      background: #1e293b;
+      border-radius: 6px;
+      padding: 10px 12px;
+      padding-top: 22px;
+      font-size: 9.5px;
+      line-height: 1.55;
+      font-family: "SF Mono", Consolas, monospace;
+      color: #e2e8f0;
+      position: relative;
+    }
+
+    .sparql-editor .dots {
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      display: flex;
+      gap: 4px;
+    }
+
+    .sparql-editor .dots span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .sparql-kw {
+      color: #93c5fd;
+    }
+
+    .sparql-var {
+      color: #86efac;
+    }
+
+    .sparql-uri {
+      color: #fbbf24;
+    }
+
+    /* Results panel */
+    .results-panel {
+      border: 1.5px solid #86efac;
+      border-radius: 6px;
+      overflow: hidden;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .results-header {
+      background: #16a34a;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 5px 10px;
+      text-align: center;
+    }
+
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5px;
+      font-family: "SF Mono", Consolas, monospace;
+      flex: 1;
+    }
+
+    .results-table th {
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 700;
+      padding: 4px 10px;
+      text-align: left;
+    }
+
+    .results-table td {
+      padding: 2px 10px;
+      border-bottom: 1px solid #f0fdf4;
+      color: #475569;
+    }
+
+    .results-table .cnt {
+      text-align: right;
+      color: #0f766e;
+      font-weight: 600;
+    }
+
+    .results-table .ellipsis td {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 12px;
+      padding: 1px;
+    }
+
+    .results-footer {
+      background: #dcfce7;
+      text-align: center;
+      font-size: 9px;
+      font-weight: 700;
+      color: #166534;
+      padding: 5px;
+    }
+
+    /* Confirm banner */
+    .confirm-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: #f0fdf4;
+      border: 1.5px solid #16a34a;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #166534;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Answer bar */
+    .answer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: #f0fdf4;
+      border: 2px solid #16a34a;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #15803d;
+      margin-bottom: 24px;
+    }
+
+    /* Stats row */
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .stat-pill {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 4px 14px;
+      font-size: 10px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    /* Annotation blobs */
+    .annotation {
+      margin: 8px 0;
+      padding: 6px 14px;
+      background: #fff;
+      border-left: 3px solid #94a3b8;
+      border-radius: 0 6px 6px 0;
+      font-size: 11px;
+      color: #475569;
+      line-height: 1.45;
+      font-style: italic;
+    }
+
+    .annotation .ann-icon {
+      margin-right: 4px;
+      font-style: normal;
+    }
+
+    /* Side-by-side SPARQL layout */
+    .sparql-row {
+      display: flex;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .sparql-left {
+      flex: 1.15;
+    }
+
+    .sparql-right {
+      flex: 0.85;
+    }
+
+    /* Print */
+    @media print {
+      body {
+        padding: 20px;
+      }
+
+      .phase-container,
+      .step-card,
+      .sparql-row,
+      .results-panel,
+      .question-box,
+      .annotation {
+        break-inside: avoid;
+      }
+
+      .page-break {
+        break-before: page;
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Question -->
+    <div class="question-box">
+      <div class="qlabel">Question</div>
+      <div class="qtext">For each S2 cell at level 13, how many sites are spatially connected to a location that
+        contains that cell?</div>
+    </div>
+
+    <!-- Phase 1: IDENTIFY -->
+    <div class="phase-container" style="border-color:#93c5fd; background:#f8fbff;">
+      <div class="phase-label" style="border-color:#93c5fd; color:#1d4ed8;">&#x2460; Identify</div>
+      <div class="step-row">
+        <div class="step-card" style="border-color:#2563eb;" id="s1"></div>
+        <div class="step-card" style="border-color:#0d9488;" id="s2"></div>
+      </div>
+      <div class="step-row">
+        <div class="step-card" style="border-color:#2563eb;" id="s3"></div>
+        <div class="step-card" style="border-color:#2563eb;" id="s4"></div>
+      </div>
+      <div class="annotation"><span class="ann-icon">🤔</span> Identified the key classes (<b>S2Cell_Level13</b>,
+        <b>Location</b>, <b>Site</b>) and the property <b>connectedTo</b>. But how are they connected?
+      </div>
+    </div>
+
+    <!-- Phase 2: EXPLORE -->
+    <div class="phase-container" style="border-color:#fde68a; background:#fffef8;">
+      <div class="phase-label" style="border-color:#fde68a; color:#92400e;">&#x2461; Explore</div>
+      <div class="step-row">
+        <div class="step-card" style="border-color:#d97706;" id="s5"></div>
+        <div class="step-card" style="border-color:#d97706;" id="s6"></div>
+      </div>
+      <div class="annotation"><span class="ann-icon">🤔</span> <b>connectedTo</b> links S2Cell→Location (490 triples).
+        <b>sfContains</b> links Location→ExperimentalUnit, not Site. Still missing the Location→Site link.
+      </div>
+      <div class="step-row">
+        <div class="step-card full" style="border-color:#0d9488;" id="s7"></div>
+      </div>
+      <div class="annotation"><span class="ann-icon">❓</span> Broad property search for Location↔Site link — no useful
+        results. Falling back to entity-level exploration.</div>
+    </div>
+
+    <!-- Phase 2 cont'd (page 2) -->
+    <div class="phase-container page-break" style="border-color:#fde68a; background:#fffef8;">
+      <div class="phase-label" style="border-color:#fde68a; color:#92400e;">&#x2461; Explore <span
+          style="font-size:10px; font-weight:500; text-transform:none;">(cont.)</span></div>
+      <div class="step-row">
+        <div class="step-card" style="border-color:#7c3aed;" id="s8"></div>
+        <div class="step-card" style="border-color:#7c3aed;" id="s9"></div>
+      </div>
+      <div class="annotation"><span class="ann-icon">🤔</span> Step 9 reveals <b>sfContains</b> incoming from Location
+        to Site — the missing link! Step 10 confirms from the Location side.</div>
+      <div class="step-row">
+        <div class="step-card full" style="border-color:#7c3aed;" id="s10"></div>
+      </div>
+      <div class="annotation"><span class="ann-icon">✅</span> Full path resolved: <b>S2Cell</b> —<i>connectedTo</i>→
+        <b>Location</b> —<i>sfContains</i>→ <b>Site</b>. Ready to compose SPARQL.
+      </div>
+    </div>
+
+    <!-- Phase 3: VERIFICATION -->
+    <div class="phase-container" style="border-color:#86efac; background:#f0fdf4;">
+      <div class="phase-label" style="border-color:#86efac; color:#166534;">&#x2462; Verification</div>
+      <div class="sparql-row" id="s11-row"></div>
+      <div class="annotation" style="margin-top:10px;"><span class="ann-icon">✅</span> First execution returns 20 rows.
+        Agent re-runs to confirm determinism. F1 = 1.00</div>
+    </div>
+  </div>
+
+  <script>
+    /* ════════════════════════════════════════════════════════════════════
+       CARD BUILDERS
+       ════════════════════════════════════════════════════════════════════ */
+
+    function searchCard(id, step, fn, query, color, results) {
+      var h = '';
+      h += '<div class="step-header" style="background:' + color + '">';
+      h += '<span class="step-badge">' + step + '</span>' + fn + '()';
+      h += '</div>';
+      h += '<div class="step-body">';
+      h += '<div class="search-bar">\uD83D\uDD0D ' + query + '</div>';
+      results.forEach(function (r) {
+        h += '<div class="result-row' + (r.hl ? ' hl' : '') + '">';
+        h += '<span class="r-uri">' + r.uri + '</span>';
+        h += '<span class="r-score"><span class="score-pill' + (r.hl ? '' : ' dim') + '">' + r.score + '</span></span>';
+        h += '</div>';
+      });
+      h += '</div>';
+      document.getElementById(id).innerHTML = h;
+    }
+
+    function propUsageCard(id, step, prop, color, rows) {
+      var h = '';
+      h += '<div class="step-header" style="background:' + color + '">';
+      h += '<span class="step-badge">' + step + '</span>explore_property_usage()';
+      h += '</div>';
+      h += '<div class="step-body">';
+      h += '<div class="entity-label" style="color:' + color + '">' + prop + '</div>';
+      h += '<table class="mini-table"><thead><tr><th>Domain</th><th>Range</th><th>Ex. Subject</th><th>Ex. Object</th><th>Count</th></tr></thead><tbody>';
+      rows.forEach(function (r) {
+        h += '<tr class="' + (r.hl ? 'hl' : '') + '">';
+        h += '<td>' + r.dom + '</td><td>' + r.range + '</td>';
+        h += '<td>' + (r.exs || '') + '</td><td>' + (r.exo || '') + '</td>';
+        h += '<td>' + (r.hl ? '\u2605 ' : '') + r.cnt + '</td></tr>';
+      });
+      h += '</tbody></table></div>';
+      document.getElementById(id).innerHTML = h;
+    }
+
+    function entityRelCard(id, step, entity, color, rows) {
+      var h = '';
+      h += '<div class="step-header" style="background:' + color + '">';
+      h += '<span class="step-badge">' + step + '</span>explore_entity_relations()';
+      h += '</div>';
+      h += '<div class="step-body">';
+      h += '<div class="entity-label" style="color:' + color + '">' + entity + '</div>';
+      h += '<table class="mini-table"><thead><tr><th>Property</th><th>Dir</th><th>Example neighbor</th></tr></thead><tbody>';
+      rows.forEach(function (r) {
+        h += '<tr class="' + (r.hl ? 'hl-green' : '') + '">';
+        h += '<td>' + r.prop + '</td><td>' + r.dir + '</td><td>' + r.val + '</td></tr>';
+      });
+      h += '</tbody></table></div>';
+      document.getElementById(id).innerHTML = h;
+    }
+
+    /* ════════════════════════════════════════════════════════════════════
+       BUILD ALL STEPS
+       ════════════════════════════════════════════════════════════════════ */
+
+    // ── Step 1 ──
+    searchCard('s1', 1, 'search_all_classes', '"S2 cell"', '#2563eb', [
+      { score: '0.866', uri: 'sgul:S2Cell_Level13', hl: true },
+      { score: '0.001', uri: 'sgul:GasNutrientLoss', hl: false },
+      { score: '0.000', uri: 'sgul:YieldNutrientUptake', hl: false }
+    ]);
+
+    // ── Step 2 ──
+    searchCard('s2', 2, 'search_all_properties', '"spatially connected"', '#0d9488', [
+      { score: '0.685', uri: 'psss:connectedTo', hl: true },
+      { score: '0.000', uri: 'sgul:sfContains', hl: false },
+      { score: '0.000', uri: 'sgul:sfWithin', hl: false }
+    ]);
+
+    // ── Step 3 ──
+    searchCard('s3', 3, 'search_all_classes', '"Location"', '#2563eb', [
+      { score: '0.045', uri: 'ius:Location', hl: true },
+      { score: '0.001', uri: 'osv:QuadMapFormat', hl: false },
+      { score: '0.000', uri: 'oog:Geometry', hl: false }
+    ]);
+
+    // ── Step 4 ──
+    searchCard('s4', 4, 'search_all_classes', '"Site"', '#2563eb', [
+      { score: '0.033', uri: 'ius:Site', hl: true },
+      { score: '0.000', uri: 'ius:GrowthStageManagement', hl: false },
+      { score: '0.000', uri: 'ius:JournalArticle', hl: false }
+    ]);
+
+    // ── Step 5 ──
+    propUsageCard('s5', 5, 'psss:connectedTo', '#d97706', [
+      { dom: 'S2Cell_Level13', range: 'Location', exs: 's2.level13.983…', exo: 'Location.ALAUEVS', cnt: '490', hl: true },
+      { dom: 'ius:Site', range: 'Location', exs: 'Site.BOZOISKY…', exo: 'Location.CONUNRBS', cnt: '10', hl: false }
+    ]);
+
+    // ── Step 6 ──
+    propUsageCard('s6', 6, 'sgul:sfContains', '#d97706', [
+      { dom: 'ius:Location', range: 'ExperimentalUnit', exs: 'Location.IAAM7071', exo: 'EU.IAAM7071_101', cnt: '238', hl: true },
+      { dom: 'ius:Site', range: 'ExperimentalUnit', exs: 'Site.GHG', exo: 'EU.KYBGGHG_101', cnt: '237', hl: true },
+      { dom: 'unknown', range: 'ExperimentalUnit', exs: 'Site.KYGHG', exo: 'EU.KYBGGHG_101', cnt: '25', hl: false }
+    ]);
+
+    // ── Step 7 (full-width) ──
+    (function () {
+      var props = [
+        { uri: 'schema:workLocation', score: '0.0036' },
+        { uri: 'psss:connectedTo', score: '0.0031' },
+        { uri: 'rdf:type', score: '0.0029' },
+        { uri: 'ius:hasCrop', score: '0.0019' },
+        { uri: 'ius:cites', score: '0.0018' }
+      ];
+      var h = '';
+      h += '<div class="step-header" style="background:#0d9488">';
+      h += '<span class="step-badge">7</span>search_all_properties()';
+      h += '</div>';
+      h += '<div class="step-body">';
+      h += '<div class="search-bar">\uD83D\uDD0D "Location Site"</div>';
+      props.forEach(function (p) {
+        h += '<div class="result-row">';
+        h += '<span class="r-uri">' + p.uri + '</span>';
+        h += '<span class="r-score"><span class="score-pill dim">' + p.score + '</span></span>';
+        h += '</div>';
+      });
+      h += '<div class="more-rows">\u2026 15 more rows</div>';
+      h += '</div>';
+      document.getElementById('s7').innerHTML = h;
+    })();
+
+    // ── Step 8 ──
+    entityRelCard('s8', 8, 'ius:Location.ALAUEVS', '#7c3aed', [
+      { prop: 'psss:connectedTo', dir: 'out', val: 's2.level13.983\u2026', hl: true },
+      { prop: 'sgul:sfContains', dir: 'out', val: 'EU.ALAUEVS_103\u2026', hl: false },
+      { prop: 'sgul:sfWithin', dir: 'out', val: 'adminRegion.USA.01', hl: false },
+      { prop: 'rdf:type', dir: 'out', val: 'ius:Location', hl: false },
+      { prop: 'rdfs:label', dir: 'out', val: 'GRACEnet', hl: false },
+      { prop: 'ius:fundedBy', dir: 'out', val: 'FundingSource.7', hl: false }
+    ]);
+
+    // ── Step 9 ──
+    entityRelCard('s9', 9, 'ius:Site.GHG', '#7c3aed', [
+      { prop: 'psss:connectedTo', dir: 'out', val: 'adminRegion.USA.21227', hl: false },
+      { prop: 'sgul:sfContains', dir: 'in', val: 'Location.KYBGGHG\u2026', hl: true },
+      { prop: 'sgul:sfContains', dir: 'out', val: 'EU.KYBGGHG_101\u2026', hl: false },
+      { prop: 'sgul:sfWithin', dir: 'in', val: 'EU.KYBGGHG_101\u2026', hl: false },
+      { prop: 'sgul:sfWithin', dir: 'out', val: 'Location.KYBGGHG\u2026', hl: false },
+      { prop: 'rdf:type', dir: 'out', val: 'ius:Site', hl: false },
+      { prop: 'dct:identifier', dir: 'out', val: 'GHG', hl: false }
+    ]);
+
+    // ── Step 10 (full-width) ──
+    entityRelCard('s10', 10, 'ius:Location.KYBGGHG', '#7c3aed', [
+      { prop: 'sgul:sfContains', dir: 'out', val: 'EU.KYBGGHG_101\u2026', hl: true },
+      { prop: 'sgul:sfWithin', dir: 'out', val: 'adminRegion.USA.21', hl: false },
+      { prop: 'rdf:type', dir: 'out', val: 'ius:Location', hl: false },
+      { prop: 'rdfs:label', dir: 'out', val: 'GHG', hl: false },
+      { prop: 'ius:hasTreatment', dir: 'out', val: 'Treatment.KYBGGHG_1\u2026', hl: false },
+      { prop: 'ius:cites', dir: 'out', val: 'Publication.KYBGGHG.162\u2026', hl: false },
+      { prop: 'ius:fundedBy', dir: 'out', val: 'FundingSource.5 (NP212)', hl: false },
+      { prop: 'ius:startDate', dir: 'out', val: '2009-05-01', hl: false },
+      { prop: 'ius:endDate', dir: 'out', val: '2011-09-13', hl: false }
+    ]);
+
+    // ── Step 11 (SPARQL + results side-by-side) ──
+    (function () {
+      var row = document.getElementById('s11-row');
+
+      // SPARQL editor
+      var left = '<div class="sparql-left">';
+      left += '<div class="step-card" style="border-color:#16a34a;">';
+      left += '<div class="step-header" style="background:#16a34a">';
+      left += '<span class="step-badge">11</span>execute_query()';
+      left += '</div>';
+      left += '<div class="step-body" style="padding:0">';
+      left += '<div class="sparql-editor">';
+      left += '<div class="dots">';
+      left += '<span style="background:#ff5f56"></span>';
+      left += '<span style="background:#ffbd2e"></span>';
+      left += '<span style="background:#27c93f"></span>';
+      left += '</div>';
+      left += '<span class="sparql-kw">SELECT</span> <span class="sparql-var">?cell</span><br>';
+      left += '&nbsp;&nbsp;(<span class="sparql-kw">COUNT</span>(<span class="sparql-kw">DISTINCT</span> <span class="sparql-var">?site</span>) <span class="sparql-kw">AS</span> <span class="sparql-var">?cnt</span>)<br>';
+      left += '<span class="sparql-kw">WHERE</span> {<br>';
+      left += '&nbsp;&nbsp;<span class="sparql-var">?cell</span> <span class="sparql-kw">a</span> <span class="sparql-uri">sgul:S2Cell_Level13</span> .<br>';
+      left += '&nbsp;&nbsp;<span class="sparql-var">?cell</span> <span class="sparql-uri">psss:connectedTo</span> <span class="sparql-var">?loc</span> .<br>';
+      left += '&nbsp;&nbsp;<span class="sparql-var">?loc</span> <span class="sparql-kw">a</span> <span class="sparql-uri">ius:Location</span> .<br>';
+      left += '&nbsp;&nbsp;<span class="sparql-var">?loc</span> <span class="sparql-uri">sgul:sfContains</span> <span class="sparql-var">?site</span> .<br>';
+      left += '&nbsp;&nbsp;<span class="sparql-var">?site</span> <span class="sparql-kw">a</span> <span class="sparql-uri">ius:Site</span> .<br>';
+      left += '}<br>';
+      left += '<span class="sparql-kw">GROUP BY</span> <span class="sparql-var">?cell</span><br>';
+      left += '<span class="sparql-kw">ORDER BY DESC</span>(<span class="sparql-var">?cnt</span>)<br>';
+      left += '<span class="sparql-kw">LIMIT</span> 20';
+      left += '</div></div></div></div>';
+
+      // Results panel
+      var right = '<div class="sparql-right">';
+      right += '<div class="results-panel">';
+      right += '<div class="results-header">Results</div>';
+      right += '<table class="results-table"><thead><tr><th>?cell</th><th style="text-align:right">?cnt</th></tr></thead><tbody>';
+
+      var top5 = [
+        ['s2.level13.9758960523\u2026', '3'],
+        ['s2.level13.5965661247\u2026', '3'],
+        ['s2.level13.5965661281\u2026', '3'],
+        ['s2.level13.5969398281\u2026', '2'],
+        ['s2.level13.5969530437\u2026', '2']
+      ];
+      top5.forEach(function (r) {
+        right += '<tr><td>' + r[0] + '</td><td class="cnt">' + r[1] + '</td></tr>';
+      });
+      right += '<tr class="ellipsis"><td colspan="2">\u22EE</td></tr>';
+
+      var bot5 = [
+        ['s2.level13.5965726243\u2026', '1'],
+        ['s2.level13.5965726247\u2026', '1'],
+        ['s2.level13.5969201523\u2026', '1'],
+        ['s2.level13.5969398243\u2026', '1'],
+        ['s2.level13.5969398247\u2026', '1']
+      ];
+      bot5.forEach(function (r) {
+        right += '<tr><td>' + r[0] + '</td><td class="cnt">' + r[1] + '</td></tr>';
+      });
+      right += '</tbody></table>';
+      right += '<div class="results-footer">20 rows &middot; ORDER BY DESC &middot; F1 = 1.00</div>';
+      right += '</div></div>';
+
+      row.innerHTML = left + right;
+    })();
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+classes:
+  '7140':
+    label: string
+  ActiveIngredient:
+    casNumber: string
+    label: string
+  AdministrativeRegion_0:
+    sfContains:
+    - AdministrativeRegion_1
+    - AdministrativeRegion_2
+    - Location
+    - S2Cell_Level13
+    - Site
+  AdministrativeRegion_1:
+    label: string
+    sfContains:
+    - Location
+    - Site
+    sfWithin: AdministrativeRegion_0
+  AdministrativeRegion_2:
+    sfWithin: AdministrativeRegion_0
+  Amendment:
+    hasAmendmentType: AmendmentType
+    hasCrop: '7140'
+    hasPesticideActiveIngredient: ActiveIngredient
+    hasPesticideTarget: PesticideTarget
+    startDate: date
+    usesIrrigation: Irrigation
+    withPesticidePlacement: PesticidePlacement
+    withPlacement: AmendmentPlacement
+  AmendmentPlacement:
+    label: string
+  AmendmentType:
+    label: string
+  BiomassCarbohydrate:
+    date: date
+    fromUnit: ExperimentalUnit
+    hasCrop: '7140'
+    hasGrowthStage: GrowthStage
+    hasMeasurement: Measurement
+    hasPlantFraction: PlantFraction
+    usesTreatment: Treatment
+  BiomassEnergy:
+    date: date
+    fromUnit: ExperimentalUnit
+    hasCrop: '7140'
+    hasGrowthStage: GrowthStage
+    hasMeasurement: Measurement
+    hasPlantFraction: PlantFraction
+    usesTreatment: Treatment
+  BiomassMineral:
+    date: date
+    fromUnit: ExperimentalUnit
+    hasCrop: '7140'
+    hasGrowthStage: GrowthStage
+    hasMeasurement: Measurement
+    hasPlantFraction: PlantFraction
+    usesTreatment: Treatment
+  Class:
+    label: string
+    subClassOf: Class
+  Cultivar:
+    label: string
+  CuttingHeight:
+    label: string
+  DatatypeProperty:
+    domain: Class
+  Equipment:
+    label: string
+  ExperimentalUnit:
+    endDate: date
+    identifier: string
+    inferred: boolean
+    sfWithin:
+    - Location
+    - Resource
+    - Site
+    startDate: date
+    unitHasAmendment: Amendment
+    unitHasGrazingManagement: GrazingManagement
+    unitHasGrowthStageManagement: GrowthStageManagement
+    unitHasPlantingManagement: PlantingManagement
+    unitHasResidueManagement: ResidueManagement
+    unitHasTillageManagement: TillageManagement
+    unitUrl: anyURI
+  GHGFlux:
+    hasChamberPlacement: ChamberPlacement
+    hasCrop: '7140'
+  GasNutrientLoss:
+    date: date
+    fromUnit: ExperimentalUnit
+    hasCrop: '7140'
+    hasGrowthStage: GrowthStage
+    usesModel: SimulationModel
+    usesTreatment: Treatment
+    withStartStopInterval: StartStopInterval
+  Geometry:
+    asWKT: wktLiteral
+  GrazingManagement:
+    endDate: date
+    hasAnimalClass: AnimalClass
+    hasAnimalSpecies: AnimalSpecies
+    startDate: date
+  GrazingPlants:
+    date: date
+    fromUnit: ExperimentalUnit
+    hasBroadleafOrGrass: BroadleafOrGrass
+    hasGrowthStage: GrowthStage
+    hasSpeciesMix: SpeciesMix
+    usesTreatment: Treatment
+  GrowthStage:
+    label: string
+  GrowthStageManagement:
+    date: date
+    hasCrop: '7140'
+    hasGrowthStage: GrowthStage
+  HarvestFraction:
+    date: date
+    fromUnit: ExperimentalUnit
+    hasCrop: '7140'
+    hasGrowthStage: GrowthStage
+    hasPlantFraction: PlantFraction
+    usesTreatment: Treatment
+  HarvestedFraction:
+    label: string
+  JournalArticle:
+    bibliographicCitation: string
+    correspondingAuthor: string
+    creator: string
+    description: string
+    identifier:
+    - anyURI
+    - string
+    issued: date
+    label: string
+    title: string
+  Location:
+    cites: JournalArticle
+    connectedTo:
+    - S2Cell_Level13
+    - Site
+    description: string
+    endDate: date
+    fundedBy: FundingSource
+    hasGeometry: Geometry
+    hasTreatment: Treatment
+    identifier: string
+    label: string
+    sfContains:
+    - ExperimentalUnit
+    - Site
+    sfWithin:
+    - AdministrativeRegion_0
+    - AdministrativeRegion_1
+    startDate: date
+  Measurement:
+    of: Parameter
+    quantityValue: QuantityValue
+  NutrientEfficiency:
+    hasCrop: '7140'
+    hasGrowthStage: GrowthStage
+    hasPlantFraction: PlantFraction
+  ObjectProperty:
+    domain: Class
+    range: Class
+  Occupation:
+    label: string
+  Organization:
+    label: string
+  Parameter:
+    label: string
+  Person:
+    additionalName: Text
+    affiliation: Organization
+    description: string
+    email: Text
+    familyName: Text
+    givenName: Text
+    hasOccupation: Occupation
+    honorificSuffix: Text
+    isPrimaryContact: boolean
+    role: string
+    telephone: Text
+    workLocation: Location
+  PesticideTarget:
+    label: string
+  PlantFraction:
+    label: string
+  PlantingManagement:
+    hasCrop: '7140'
+    hasCultivar: Cultivar
+    startDate: date
+    usesPlantingMethod: PlantingMethod
+  ProjectScenario:
+    description: string
+  Property:
+    label: string
+  QuadMapFormat:
+    inheritFrom: QuadMapFormat
+    noInherit: Resource
+    qmfBoolOfShortTmpl: string
+    qmfBoolTmpl: string
+    qmfCmpFuncName: string
+    qmfColumnCount: integer
+    qmfCustomString1: string
+    qmfDatatypeOfShortTmpl: string
+    qmfHasCheapSqlval: integer
+    qmfIidOfShortTmpl: string
+    qmfIsBijection: integer
+    qmfIsStable: integer
+    qmfIsblankOfShortTmpl: string
+    qmfIslitOfShortTmpl: string
+    qmfIsnumericOfShortTmpl: string
+    qmfIsrefOfShortTmpl: string
+    qmfIsuriOfShortTmpl: string
+    qmfLanguageOfShortTmpl: string
+    qmfLongOfShortTmpl: string
+    qmfLongTmpl: string
+    qmfMapsOnlyNullToNull: integer
+    qmfName: string
+    qmfOkForAnySqlvalue: integer
+    qmfShortOfLongTmpl: string
+    qmfShortOfSqlvalTmpl: string
+    qmfShortOfTypedsqlvalTmpl: string
+    qmfShortOfUriTmpl: string
+    qmfShortTmpl: string
+    qmfSparqlEbvOfShortTmpl: string
+    qmfSparqlEbvTmpl: string
+    qmfSqlvalOfShortTmpl: string
+    qmfSqlvalTmpl: string
+    qmfStrsqlvalOfShortTmpl: string
+    qmfSuperFormats: array-of-QuadMapFormat
+    qmfTypemaxTmpl: string
+    qmfTypeminTmpl: string
+    qmfUriIdOffset: integer
+    qmfUriOfShortTmpl: string
+    qmfValRange-rvrRestrictions: Resource
+  QuantityValue:
+    hasUnit: Unit
+    isInterpolated: boolean
+    numericValue: decimal
+    standardUncertainty: decimal
+  ResidueManagement:
+    hasCrop: '7140'
+    hasGrowthStage: GrowthStage
+    startDate: date
+    usesEquipment: Equipment
+    withCuttingHeight: CuttingHeight
+  ResidueMeasurement:
+    date: date
+    fromUnit: ExperimentalUnit
+    hasCrop: '7140'
+    hasGrowthStage: GrowthStage
+    hasHarvestedFraction: HarvestedFraction
+    hasMeasurement: Measurement
+    usesTreatment: Treatment
+  Rotation:
+    description: string
+  S2Cell_Level13:
+    connectedTo: Location
+    sfWithin: AdministrativeRegion_0
+  SimulationModel:
+    label: string
+  Site:
+    connectedTo:
+    - AdministrativeRegion_2
+    - Location
+    identifier: string
+    postalCode: string
+    sfContains: ExperimentalUnit
+    sfWithin:
+    - AdministrativeRegion_0
+    - AdministrativeRegion_1
+    - Location
+  SoilBiologicalSample:
+    date: date
+    fromUnit: ExperimentalUnit
+    lowerDepth: QuantityValue
+    upperDepth: QuantityValue
+    usesTreatment: Treatment
+  SoilChemicalSample:
+    date: date
+    fromUnit: ExperimentalUnit
+    hasMeasurement: Measurement
+    lowerDepth: QuantityValue
+    upperDepth: QuantityValue
+    usesTreatment: Treatment
+  SoilCover:
+    hasCrop: '7140'
+    hasTiming: Timing
+  SoilPhysicalSample:
+    date: date
+    fromUnit: ExperimentalUnit
+    lowerDepth: QuantityValue
+    upperDepth: QuantityValue
+    usesModel: SimulationModel
+    usesTreatment: Treatment
+  TillageEvent:
+    label: string
+  TillageManagement:
+    hasCrop: '7140'
+    hasTillageEvent: TillageEvent
+    startDate: date
+    usesTillageMethod: TillageMethod
+  TillageMethod:
+    label: string
+  Treatment:
+    description: string
+    fromProject: Project
+    hasGrazingRate: GrazingRate
+    hasProjectScenario: ProjectScenario
+    hasRotation: Rotation
+    hasTillage: Tillage
+    identifier: string
+    irrigation: boolean
+    organicManagement: boolean
+    startDate: date
+    tileDrainage: boolean
+    treatmentHasAmendment: Amendment
+    treatmentHasGrazingManagement: GrazingManagement
+    treatmentHasGrowthStageManagement: GrowthStageManagement
+    treatmentHasPlantingManagement: PlantingManagement
+    treatmentHasResidueManagement: ResidueManagement
+    treatmentHasTillageManagement: TillageManagement
+    usesCoverCrop: CoverCrop
+    usesFertilizerAmendment: FertilizerAmendment
+    usesResidueRemoval: ResidueRemoval
+  WaterQualityArea:
+    hasLossesOrDeposition: LossesOrDeposition
+    hasSurfaceOrLeaching: SurfaceOrLeaching
+  WaterQualityConcentration:
+    hasCrop: '7140'
+    hasGrowthStage: GrowthStage
+    hasSurfaceOrLeaching: SurfaceOrLeaching
+    usesModel: SimulationModel
+    withStartStopInterval: StartStopInterval
+  WeatherObservation:
+    badValueFlag: boolean
+    date: date
+    fromUnit: Resource
+    usesTreatment: Resource
+    weatherAt: Location
+  WindErosionArea:
+    hasGrowthStage: GrowthStage
+    hasLossesOrDeposition: LossesOrDeposition
+    usesModel: SimulationModel
+    withStartStopInterval: StartStopInterval
+  YieldNutrientUptake:
+    hasCrop: '7140'
+    hasGrowthStage: GrowthStage
+    hasPlantFraction: PlantFraction
+  array-of-QuadMapFormat:
+    _1: QuadMapFormat
+    _2: QuadMapFormat
+    _3: QuadMapFormat

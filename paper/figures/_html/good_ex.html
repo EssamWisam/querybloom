@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRASP Agent Trace – Good Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #fff;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1380px;
+            position: relative;
+        }
+
+        /* Question Banner */
+        .question-banner {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: #f1f5f9;
+            padding: 18px 26px;
+            border-radius: 12px;
+            margin-bottom: 44px;
+            font-size: 14.5px;
+            line-height: 1.55;
+        }
+
+        .q-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .q-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #94a3b8;
+        }
+
+        .q-kg {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Phase Groups */
+        .phase-group {
+            position: relative;
+            padding: 44px 28px 28px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            margin-bottom: 52px;
+        }
+
+        .phase-badge {
+            position: absolute;
+            top: -16px;
+            left: 26px;
+            background: #fff;
+            padding: 4px 14px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            border: 2px solid;
+        }
+
+        .phase-content {
+            display: flex;
+            gap: 40px;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        /* Tool Blocks */
+        .tool {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tool-sm {
+            width: 210px;
+        }
+
+        .tool-md {
+            width: 250px;
+        }
+
+        .tool-lg {
+            width: 290px;
+        }
+
+        .tool-visual-wrap {
+            position: relative;
+            width: 100%;
+        }
+
+        .tool-step {
+            position: absolute;
+            top: -9px;
+            left: -9px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 9px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            z-index: 5;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        }
+
+        .tool-visual {
+            width: 100%;
+            aspect-ratio: 1.35;
+            border: 1.5px solid #d1d5db;
+            border-radius: 8px;
+            background: #fafbfc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            overflow: hidden;
+        }
+
+        .tool-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-align: center;
+            color: #334155;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            line-height: 1.2;
+        }
+
+        .tool-fn {
+            font-size: 8.5px;
+            font-family: "SF Mono", Consolas, monospace;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        .tool-time {
+            font-size: 8px;
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+
+        .tool.informational .tool-visual {
+            opacity: 0.55;
+        }
+
+        .tool.informational .tool-label,
+        .tool.informational .tool-fn {
+            opacity: 0.55;
+        }
+
+        svg {
+            overflow: visible;
+        }
+
+        #arrow-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hidden SVG defs for arrow markers -->
+    <svg style="position:absolute;width:0;height:0" aria-hidden="true">
+        <defs>
+            <marker id="ah-3b82f6" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6"
+                orient="auto">
+                <path d="M0 0L10 5L0 10z" fill="#3b82f6" />
+            </marker>
+            <marker id="ah-7c3aed" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6"
+                orient="auto">
+                <path d="M0 0L10 5L0 10z" fill="#7c3aed" />
+            </marker>
+            <marker id="ah-0d9488" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6"
+                orient="auto">
+                <path d="M0 0L10 5L0 10z" fill="#0d9488" />
+            </marker>
+            <marker id="ah-d97706" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6"
+                orient="auto">
+                <path d="M0 0L10 5L0 10z" fill="#d97706" />
+            </marker>
+            <marker id="ah-16a34a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6"
+                orient="auto">
+                <path d="M0 0L10 5L0 10z" fill="#16a34a" />
+            </marker>
+        </defs>
+    </svg>
+
+    <div class="container" id="main-container">
+        <svg id="arrow-svg"></svg>
+
+        <!-- Question -->
+        <div class="question-banner">
+            <div class="q-header">
+                <span class="q-label">Question</span>
+                <span class="q-kg">dblp</span>
+            </div>
+            Count the number of papers that Jake Grozdanovski has published in International Conference on Software and
+            Data Technologies.
+        </div>
+
+        <!-- Phase 1: Search -->
+        <div class="phase-group" style="border-color:#93c5fd; background:#f8fbff;">
+            <div class="phase-badge" style="border-color:#93c5fd; color:#1d4ed8;">1 · Search</div>
+            <div class="phase-content" id="phase-search"></div>
+        </div>
+
+        <!-- Phase 2: Entity Resolution -->
+        <div class="phase-group" style="border-color:#c4b5fd; background:#faf8ff;">
+            <div class="phase-badge" style="border-color:#c4b5fd; color:#5b21b6;">2 · Entity Resolution</div>
+            <div class="phase-content" id="phase-resolve"></div>
+        </div>
+
+        <!-- Phase 3: Exploration -->
+        <div class="phase-group" style="border-color:#fde68a; background:#fffef8;">
+            <div class="phase-badge" style="border-color:#fde68a; color:#92400e;">3 · Exploration</div>
+            <div class="phase-content" id="phase-explore"></div>
+        </div>
+
+        <!-- Phase 4: Construct & Verify -->
+        <div class="phase-group" style="border-color:#86efac; background:#f8fdfb;">
+            <div class="phase-badge" style="border-color:#86efac; color:#166534;">4 · Construct &amp; Verify</div>
+            <div class="phase-content" id="phase-verify"></div>
+        </div>
+    </div>
+
+    <script>
+        const VB_W = 190, VB_H = 115;
+
+        /* -------- SVG helpers (same as tools_new2) -------- */
+        const R = (x, y, w, h, o = {}) => {
+            const { f = '#f1f5f9', s = '#334155', sw = 1.2, rx = 3, d = '' } = o;
+            return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${f}" stroke="${s}" stroke-width="${sw}"${d ? ` stroke-dasharray="${d}"` : ''}/>`;
+        };
+        const T = (x, y, t, o = {}) => {
+            const { sz = '8', f = '#334155', a = 'middle', w = 'bold', fm = 'monospace', tr = '' } = o;
+            return `<text x="${x}" y="${y}" text-anchor="${a}" font-family="${fm}" font-size="${sz}" font-weight="${w}" fill="${f}"${tr ? ` transform="${tr}"` : ''}>${t}</text>`;
+        };
+        const L = (x1, y1, x2, y2, o = {}) => {
+            const { s = '#64748b', sw = 1.2, m = '', d = '' } = o;
+            return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${s}" stroke-width="${sw}"${m ? ` marker-end="url(#${m})"` : ''} ${d ? `stroke-dasharray="${d}"` : ''}/>`;
+        };
+        const C = (cx, cy, r, o = {}) => {
+            const { f = '#eff6ff', s = '#2563eb', sw = 1.5 } = o;
+            return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${f}" stroke="${s}" stroke-width="${sw}"/>`;
+        };
+        const P = (d, o = {}) => {
+            const { f = 'none', s = '#64748b', sw = 1.2, m = '' } = o;
+            return `<path d="${d}" fill="${f}" stroke="${s}" stroke-width="${sw}"${m ? ` marker-end="url(#${m})"` : ''}/>`;
+        };
+        const SV = (c) => `<svg width="100%" viewBox="0 0 ${VB_W} ${VB_H}" preserveAspectRatio="xMidYMid meet">${c}</svg>`;
+
+        /* -------- SVG Template: Search Results -------- */
+        function svgSearch(term, rows, outLabel, accent) {
+            let s = '';
+            s += R(4, 2, 172, 16, { f: '#fff', s: accent, rx: 8, sw: 1.2 });
+            s += T(14, 13, '\u{1F50D} "' + term + '"', { sz: '7', f: '#64748b', a: 'start', fm: 'sans-serif', w: '500' });
+            s += L(90, 18, 90, 27, { s: accent, sw: 1 });
+            rows.forEach((r, i) => {
+                const y = 29 + i * 21;
+                s += R(8, y, 164, 18, {
+                    f: r.hi ? '#eff6ff' : '#f8fafc',
+                    s: r.hi ? accent : '#e2e8f0',
+                    sw: r.hi ? 1.5 : 0.7, rx: 4
+                });
+                s += T(14, y + 12, r.label, {
+                    sz: '6', f: r.hi ? '#1e3a5f' : '#94a3b8', a: 'start', w: r.hi ? '700' : '500'
+                });
+                if (r.extra) {
+                    s += T(100, y + 12, r.extra, { sz: '5', f: '#94a3b8', a: 'start', w: '400', fm: 'sans-serif' });
+                }
+                s += R(140, y + 3, 28, 12, {
+                    f: r.hi ? '#dbeafe' : '#f1f5f9',
+                    s: r.hi ? '#93c5fd' : '#e2e8f0',
+                    sw: 0.5, rx: 5
+                });
+                s += T(154, y + 12, r.score, {
+                    sz: '5.5', f: r.hi ? '#1d4ed8' : '#94a3b8', w: r.hi ? '700' : '500'
+                });
+            });
+            if (outLabel) {
+                s += T(8, VB_H - 4, '\u2192 ' + outLabel, {
+                    sz: '5.5', f: accent, a: 'start', w: '700'
+                });
+            }
+            return SV(s);
+        }
+
+        /* -------- SVG Template: Instance Lookup -------- */
+        function svgLookup(className, searchTerm, entityUri, entityLabel, accent) {
+            let s = '';
+            s += R(28, 0, 124, 22, { f: '#dbeafe', s: '#60a5fa', sw: 1, rx: 5 });
+            s += R(30, 2, 120, 18, { f: '#1e3a8a', s: '#1e40af', sw: 1.8, rx: 4 });
+            s += T(90, 14, className, { sz: '7', f: '#ffffff', w: '700' });
+            s += L(90, 22, 90, 32, { s: '#2563eb', sw: 1.2 });
+            s += R(10, 34, 160, 16, { f: '#fff', s: '#a78bfa', rx: 8 });
+            s += T(20, 45, '\u{1F50E} "' + searchTerm + '"', { sz: '6', f: '#64748b', a: 'start', fm: 'sans-serif', w: '500' });
+            s += L(90, 50, 90, 60, { s: '#7c3aed', sw: 1 });
+            s += R(14, 62, 152, 22, { f: '#f5f3ff', s: '#7c3aed', sw: 2, rx: 5 });
+            s += T(90, 73, entityUri, { sz: '6.5', f: '#5b21b6', w: '700' });
+            s += T(90, 82, entityLabel, { sz: '5', f: '#7c3aed', w: '500', fm: 'sans-serif' });
+            s += T(8, VB_H - 4, '\u2192 ' + entityUri, { sz: '5.5', f: '#7c3aed', a: 'start', w: '700' });
+            return SV(s);
+        }
+
+        /* -------- SVG: Entity Relations -------- */
+        function svgExplore() {
+            let s = '';
+            s += R(56, 40, 68, 22, { f: '#fef3c7', s: '#d97706', sw: 2, rx: 5 });
+            s += T(90, 55, 'dsc:icsoft', { sz: '7', f: '#92400e', w: '800' });
+
+            const outgoing = [
+                { x: 140, y: 10, l: 'label', el: 'rdfs:label' },
+                { x: 140, y: 36, l: 'streamTitle', el: 'ds:streamTitle' },
+                { x: 140, y: 62, l: 'indexPage', el: 'ds:indexPage' },
+            ];
+            outgoing.forEach(o => {
+                s += L(124, 50, o.x, o.y + 8, { s: '#fbbf24', sw: 0.8 });
+                s += R(o.x, o.y, 46, 14, { f: '#fff', s: '#fde68a', sw: 1, rx: 3 });
+                s += T(o.x + 23, o.y + 10, o.l, { sz: '5', f: '#78350f', fm: 'sans-serif', w: '500' });
+            });
+
+            s += L(16, 34, 56, 48, { s: '#d97706', sw: 1.5 });
+            s += R(0, 20, 60, 16, { f: '#fff7ed', s: '#d97706', sw: 1.8, rx: 4 });
+            s += T(30, 31, 'publishedInStream', { sz: '4.5', f: '#92400e', w: '700', fm: 'sans-serif' });
+            s += T(30, 14, '(incoming)', { sz: '4', f: '#d97706', w: '600', fm: 'sans-serif' });
+
+            s += R(10, 76, 160, 14, { f: '#fffbeb', s: '#fcd34d', sw: 0.8, rx: 3 });
+            s += T(90, 86, 'Publications link here via ds:publishedInStream', { sz: '4.5', f: '#92400e', fm: 'sans-serif', w: '500' });
+
+            s += T(8, VB_H - 2, '\u2192 publishedInStream', { sz: '5.5', f: '#d97706', a: 'start', w: '700' });
+            return SV(s);
+        }
+
+        /* -------- SVG: Execute Query -------- */
+        function svgExecute() {
+            let s = '';
+            s += R(4, 2, 172, 62, { f: '#1e293b', s: '#334155', sw: 1.2, rx: 5 });
+            s += C(12, 9, 2, { f: '#ff5f56', s: 'none', sw: 0 });
+            s += C(19, 9, 2, { f: '#ffbd2e', s: 'none', sw: 0 });
+            s += C(26, 9, 2, { f: '#27c93f', s: 'none', sw: 0 });
+            s += T(10, 22, 'SELECT (COUNT(?paper) AS ?cnt)', { sz: '5', f: '#94a3b8', a: 'start', w: '500' });
+            s += T(10, 30, 'WHERE {', { sz: '5', f: '#94a3b8', a: 'start', w: '500' });
+            s += T(16, 38, '?paper a ds:Publication ;', { sz: '5', f: '#38bdf8', a: 'start', w: '500' });
+            s += T(22, 46, 'ds:authoredBy dp2:9368 ;', { sz: '5', f: '#4ade80', a: 'start', w: '500' });
+            s += T(22, 54, 'ds:publishedInStream dsc:icsoft', { sz: '5', f: '#c084fc', a: 'start', w: '500' });
+            s += T(10, 62, '}', { sz: '5', f: '#94a3b8', a: 'start', w: '500' });
+            s += P('M82 68 L90 73 L82 78 Z', { f: '#16a34a', s: '#16a34a', sw: 0 });
+            s += R(6, 82, 168, 24, { f: '#fff', s: '#86efac', sw: 1.2, rx: 4 });
+            s += R(6, 82, 168, 11, { f: '#f0fdf4', s: '#86efac', sw: 1.2, rx: 4 });
+            s += T(90, 91, '?cnt', { sz: '6', f: '#166534', w: '700' });
+            s += L(6, 93, 174, 93, { s: '#bbf7d0', sw: 0.4 });
+            s += T(90, 102, '1', { sz: '8', f: '#166534', w: '800' });
+            return SV(s);
+        }
+
+        /* -------- SVG: Answer -------- */
+        function svgAnswer() {
+            let s = '';
+            s += C(90, 28, 18, { f: '#dcfce7', s: '#16a34a', sw: 2 });
+            s += T(90, 33, '\u2713', { sz: '16', f: '#16a34a', w: '800', fm: 'sans-serif' });
+            s += T(90, 56, '1 paper', { sz: '10', f: '#166534', w: '800', fm: 'sans-serif' });
+            s += T(90, 68, 'Jake Grozdanovski in ICSOFT', { sz: '5.5', f: '#64748b', w: '500', fm: 'sans-serif' });
+            s += R(30, 78, 120, 16, { f: '#f0fdf4', s: '#86efac', sw: 1, rx: 8 });
+            s += T(90, 89, 'SPARQL query verified \u2713', { sz: '5.5', f: '#166534', w: '600', fm: 'sans-serif' });
+            return SV(s);
+        }
+
+        /* -------- Block Definitions -------- */
+        const blocks = [
+            {
+                id: 'block-1', phase: 'phase-search', size: 'tool-sm',
+                label: 'Class Search', fn: 'search_all_classes("author")', time: '0.30s',
+                step: 1, stepColor: '#3b82f6',
+                svg: () => svgSearch('author', [
+                    { label: 'AuthorSelfCitation', score: '.025' },
+                    { label: 'AuthorSignature', score: '.007' },
+                    { label: 'Creator', score: '.001', hi: true },
+                ], 'ds:Creator', '#3b82f6')
+            },
+            {
+                id: 'block-2', phase: 'phase-search', size: 'tool-sm', informational: true,
+                label: 'Class Search', fn: 'search_all_classes("paper")', time: '0.26s',
+                step: 2, stepColor: '#3b82f6',
+                svg: () => svgSearch('paper', [
+                    { label: 'JournalSelfCitation', score: '.000' },
+                    { label: 'Publication', score: '.000', hi: true },
+                    { label: 'Citation', score: '.000' },
+                ], null, '#3b82f6')
+            },
+            {
+                id: 'block-3', phase: 'phase-search', size: 'tool-sm',
+                label: 'Class Search', fn: 'search_all_classes("conference")', time: '0.54s',
+                step: 3, stepColor: '#3b82f6',
+                svg: () => svgSearch('conference', [
+                    { label: 'Conference', score: '.421', hi: true },
+                    { label: 'Citation', score: '.000' },
+                    { label: 'AuthorSelfCitation', score: '.000' },
+                ], 'ds:Conference', '#3b82f6')
+            },
+            {
+                id: 'block-4', phase: 'phase-search', size: 'tool-sm',
+                label: 'Property Search', fn: 'search_all_properties("author")', time: '0.36s',
+                step: 4, stepColor: '#0d9488',
+                svg: () => svgSearch('author', [
+                    { label: 'authoredBy', score: '.001', extra: 'Pub\u2192Creator', hi: true },
+                    { label: 'creatorNote', score: '.001', extra: 'Creator\u2192str' },
+                    { label: 'publishedInBook', score: '.001', extra: 'Pub\u2192str' },
+                ], 'ds:authoredBy', '#0d9488')
+            },
+            {
+                id: 'block-5', phase: 'phase-search', size: 'tool-sm', informational: true,
+                label: 'Property Search', fn: 'search_all_properties("published")', time: '0.36s',
+                step: 5, stepColor: '#0d9488',
+                svg: () => svgSearch('published', [
+                    { label: 'pubInSeriesVol', score: '.430', extra: 'Pub\u2192str' },
+                    { label: 'publishedInBook', score: '.426', extra: 'Pub\u2192str' },
+                    { label: 'publishedAsPartOf', score: '.311', extra: 'Pub\u2192Pub' },
+                ], null, '#0d9488')
+            },
+            {
+                id: 'block-6', phase: 'phase-resolve', size: 'tool-md',
+                label: 'Instance Lookup', fn: 'lookup_class_instances(Conference, ...)', time: '0.96s',
+                step: 6, stepColor: '#7c3aed',
+                svg: () => svgLookup('ds:Conference', 'Software and Data Tech\u2026', 'dsc:icsoft', 'Int\'l Conf. on Software and Data Technologies (ICSOFT)', '#7c3aed')
+            },
+            {
+                id: 'block-7', phase: 'phase-resolve', size: 'tool-md',
+                label: 'Instance Lookup', fn: 'lookup_class_instances(Creator, ...)', time: '10.52s',
+                step: 7, stepColor: '#7c3aed',
+                svg: () => svgLookup('ds:Creator', 'Jake Grozdanovski', 'dp2:9368', 'Jake Grozdanovski', '#7c3aed')
+            },
+            {
+                id: 'block-8', phase: 'phase-explore', size: 'tool-md',
+                label: 'Entity Relations', fn: 'explore_entity_relations(icsoft)', time: '1.09s',
+                step: 8, stepColor: '#d97706',
+                svg: svgExplore
+            },
+            {
+                id: 'block-9', phase: 'phase-explore', size: 'tool-md',
+                label: 'Property Search', fn: 'search_all_properties("publishedInStream")', time: '1.03s',
+                step: 9, stepColor: '#0d9488',
+                svg: () => svgSearch('publishedInStream', [
+                    { label: 'publishedInStream', score: '.918', extra: 'Pub\u2192Stream', hi: true },
+                    { label: 'pubInSeriesVolume', score: '.007', extra: 'Pub\u2192str' },
+                    { label: 'publishedInSeries', score: '.004', extra: 'Pub\u2192str' },
+                ], 'ds:publishedInStream', '#0d9488')
+            },
+            {
+                id: 'block-10', phase: 'phase-verify', size: 'tool-lg',
+                label: 'Execute Query', fn: 'execute_query(SPARQL)', time: '0.46s',
+                step: 10, stepColor: '#16a34a',
+                svg: svgExecute
+            },
+            {
+                id: 'block-11', phase: 'phase-verify', size: 'tool-lg',
+                label: 'Answer', fn: 'answer(sparql, answer_text)', time: '',
+                step: 11, stepColor: '#16a34a',
+                svg: svgAnswer
+            },
+        ];
+
+        /* -------- Render Blocks -------- */
+        blocks.forEach(b => {
+            const container = document.getElementById(b.phase);
+            const div = document.createElement('div');
+            div.className = `tool ${b.size}${b.informational ? ' informational' : ''}`;
+            div.id = b.id;
+            div.innerHTML = `
+                <div class="tool-visual-wrap">
+                    <div class="tool-step" style="background:${b.stepColor}">S${b.step}</div>
+                    <div class="tool-visual">${b.svg()}</div>
+                </div>
+                <div class="tool-label">${b.label}</div>
+                <div class="tool-fn">${b.fn}</div>
+                ${b.time ? `<div class="tool-time">${b.time}</div>` : ''}
+            `;
+            container.appendChild(div);
+        });
+
+        /* -------- Draw Arrows -------- */
+        const arrowDefs = [
+            { from: 'block-1', to: 'block-7', color: '#3b82f6', label: 'ds:Creator', fs: 'bottom', ts: 'top', ly: 0 },
+            { from: 'block-3', to: 'block-6', color: '#3b82f6', label: 'ds:Conference', fs: 'bottom', ts: 'top', ly: 0 },
+            { from: 'block-6', to: 'block-8', color: '#7c3aed', label: 'dsc:icsoft', fs: 'bottom', ts: 'top', lx: -30, ly: 0 },
+            { from: 'block-8', to: 'block-9', color: '#d97706', label: 'publishedInStream', fs: 'right', ts: 'left', ly: -18 },
+            { from: 'block-10', to: 'block-11', color: '#16a34a', label: 'count = 1', fs: 'right', ts: 'left', ly: -18 },
+        ];
+
+        function getAnchor(el, side, cRect) {
+            const r = el.getBoundingClientRect();
+            switch (side) {
+                case 'bottom': return { x: r.left + r.width / 2 - cRect.left, y: r.bottom - cRect.top };
+                case 'top': return { x: r.left + r.width / 2 - cRect.left, y: r.top - cRect.top };
+                case 'right': return { x: r.right - cRect.left, y: r.top + r.height / 2 - cRect.top };
+                case 'left': return { x: r.left - cRect.left, y: r.top + r.height / 2 - cRect.top };
+            }
+        }
+
+        function drawArrows() {
+            const container = document.getElementById('main-container');
+            const svg = document.getElementById('arrow-svg');
+            const cRect = container.getBoundingClientRect();
+
+            svg.setAttribute('width', container.scrollWidth);
+            svg.setAttribute('height', container.scrollHeight);
+            svg.setAttribute('viewBox', `0 0 ${container.scrollWidth} ${container.scrollHeight}`);
+            svg.innerHTML = '';
+
+            arrowDefs.forEach(a => {
+                const fromEl = document.getElementById(a.from);
+                const toEl = document.getElementById(a.to);
+                const p1 = getAnchor(fromEl, a.fs, cRect);
+                const p2 = getAnchor(toEl, a.ts, cRect);
+
+                let d;
+                if (a.arc === 'under') {
+                    const midX = (p1.x + p2.x) / 2;
+                    const drop = 36;
+                    d = `M${p1.x},${p1.y} C${p1.x},${p1.y + drop} ${p2.x},${p2.y + drop} ${p2.x},${p2.y}`;
+                } else if (a.fs === 'bottom' && a.ts === 'top') {
+                    const dy = p2.y - p1.y;
+                    const cpOff = Math.min(Math.abs(dy) * 0.42, 120);
+                    d = `M${p1.x},${p1.y} C${p1.x},${p1.y + cpOff} ${p2.x},${p2.y - cpOff} ${p2.x},${p2.y}`;
+                } else if (a.fs === 'right' && a.ts === 'left') {
+                    const dx = p2.x - p1.x;
+                    const cpOff = Math.max(Math.abs(dx) * 0.4, 30);
+                    d = `M${p1.x},${p1.y} C${p1.x + cpOff},${p1.y} ${p2.x - cpOff},${p2.y} ${p2.x},${p2.y}`;
+                }
+
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                path.setAttribute('d', d);
+                path.setAttribute('fill', 'none');
+                path.setAttribute('stroke', a.color);
+                path.setAttribute('stroke-width', '1.5');
+                path.setAttribute('stroke-dasharray', '7,4');
+                path.setAttribute('opacity', '0.6');
+                path.setAttribute('marker-end', `url(#ah-${a.color.replace('#', '')})`);
+                svg.appendChild(path);
+
+                if (a.label) {
+                    const mx = (p1.x + p2.x) / 2;
+                    const my = (p1.y + p2.y) / 2;
+                    const lx = a.lx || 0;
+                    const ly = a.ly || 0;
+                    const baseOffY = a.arc === 'under' ? 22 : -5;
+                    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    text.setAttribute('x', mx + lx);
+                    text.setAttribute('y', my + baseOffY + ly);
+                    text.setAttribute('text-anchor', 'middle');
+                    text.setAttribute('font-family', 'SF Mono, Consolas, monospace');
+                    text.setAttribute('font-size', '8');
+                    text.setAttribute('fill', a.color);
+                    text.setAttribute('font-weight', '600');
+                    text.setAttribute('style', 'paint-order: stroke; stroke: white; stroke-width: 4px; stroke-linecap: round; stroke-linejoin: round;');
+                    text.textContent = a.label;
+                    svg.appendChild(text);
+                }
+            });
+        }
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(drawArrows);
+        });
+        window.addEventListener('resize', drawArrows);
+    </script>
+</body>
+
+</html>

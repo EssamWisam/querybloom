@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{titling}
+
+\setlength{\droptitle}{-3.5em}
+
+\title{\vspace{-1em}QueryBloom: Automated Text--SPARQL Example Synthesis\\ via Subgraph Sampling}
+
+\author{
+  Essam Abdelghany and Chengkai Li \\[0.3em]
+  \normalsize Department of Computer Science and Engineering \\
+  \normalsize The University of Texas at Arlington \\
+  \normalsize Field of Study: Computer Science (Natural Language Processing / Machine Learning)
+}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2.5em}
+
+Knowledge graphs (KGs) store vast amounts of structured, domain-specific knowledge, and question answering systems that generate SPARQL queries from natural language empower researchers to directly access such knowledge. Training, tuning, and
+evaluating such systems depends on Text--SPARQL example sets, which supply the
+in-context demonstrations, fine-tuning data, and evaluation benchmarks these systems
+require. Building these sets by hand is
+slow and costly, since it requires annotators fluent in both the target domain and the
+KG's ontology. As a result, curated examples exist almost exclusively for a few
+open-domain graphs, leaving domain-specific KGs in various fields like biomedicine and
+geoscience with little coverage.
+
+We address this gap with \textbf{QueryBloom}, an automated, KG-agnostic method that
+synthesizes diverse, execution-verified Text--SPARQL examples from a given RDF knowledge
+graph using only its SPARQL endpoint. QueryBloom builds on the observation that every
+SPARQL query implicitly describes a subgraph pattern over the graph, and inverts this
+correspondence. It first mines a diverse set of type patterns that capture which properties connect which kinds of entities, then grows structurally diverse multi-hop subgraphs by extending these patterns, verifying against the endpoint that each retains sufficient support. A reflective
+large language model then verbalizes each grounded subgraph pattern into a natural language
+question and a corresponding SPARQL query, using execution feedback to iteratively
+verify and correct every pair.
+
+
+We evaluated QueryBloom against the human-authored DBpedia QALD-9 and
+machine-generated DBLP-QuAD benchmarks, finding that it matches or exceeds both in
+query complexity, linguistic variety, and schema coverage. Because each example
+combines repeated endpoint verification with iterative model inference, the total computational
+cost scales with the target dataset size, making high-performance resources such as those at TACC imperative for practical dataset generation at scale. By requiring only a query endpoint, QueryBloom makes it practical to
+bootstrap high-quality KGQA datasets for domain-specific knowledge graphs that
+previously had none.
+
+\end{document}
