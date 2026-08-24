@@ -19,7 +19,7 @@ elif [ -f "$REPO_ROOT/kg-voyager/.venv/bin/python3" ]; then
     source "$REPO_ROOT/kg-voyager/.venv/bin/activate" 2>/dev/null || true
 fi
 
-export PYTHONPATH="$REPO_ROOT:$DIR:$PYTHONPATH"
+export PYTHONPATH="$DIR/src:$REPO_ROOT/src:$DIR:$REPO_ROOT:$PYTHONPATH"
 
 # 1. Start backend server
 echo "Starting QueryBloom Backend API on http://localhost:8000..."

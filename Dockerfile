@@ -33,7 +33,7 @@ EXPOSE 8000
 
 # Set environment path for uv and python
 ENV PATH="/workspace/querybloom/.venv/bin:$PATH"
-ENV PYTHONPATH="/workspace:$PYTHONPATH"
+ENV PYTHONPATH="/workspace/querybloom/src:/workspace:$PYTHONPATH"
 
 RUN chmod +x /workspace/querybloom/start.sh
 

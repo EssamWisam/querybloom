@@ -10,4 +10,5 @@ npm run build
 
 # 2. Start Uvicorn backend with reload
 cd /workspace/querybloom
-exec uv run uvicorn server:app --host 0.0.0.0 --port 8000 --reload
+export PYTHONPATH="/workspace/querybloom/src:/workspace:$PYTHONPATH"
+exec uv run uvicorn querybloom.server:app --host 0.0.0.0 --port 8000 --reload
