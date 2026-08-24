@@ -3,10 +3,12 @@ set -e
 
 export BASE_PATH=/querybloom
 
-# 1. Clean previous build and build fresh bundle on startup
+# 1. Build frontend bundle if missing
 cd /workspace/querybloom/webapp
-rm -rf build .svelte-kit
-npm run build
+if [ ! -d "build" ] || [ ! -f "build/index.html" ]; then
+    echo "Frontend build missing or incomplete, compiling SvelteKit bundle..."
+    npm run build
+fi
 
 # 2. Start Uvicorn backend with reload
 cd /workspace/querybloom

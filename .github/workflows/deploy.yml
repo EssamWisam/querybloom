@@ -87,15 +87,25 @@ jobs:
 
       - name: Verify Backend & Show Logs
         run: |
-          echo "Waiting 5s for backend reload..."
-          sleep 5
+          echo "Waiting for backend to be ready..."
+          MAX_RETRIES=20
+          RETRY_COUNT=0
+          HTTP_STATUS="000"
+          
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+            HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8002/api/v1/health || echo "000")
+            if [ "$HTTP_STATUS" = "200" ]; then
+              echo "Backend is ready! (HTTP 200 OK after ${RETRY_COUNT} retries)"
+              break
+            fi
+            echo "Attempt $((RETRY_COUNT + 1))/$MAX_RETRIES: HTTP status is $HTTP_STATUS, waiting 2s..."
+            sleep 2
+            RETRY_COUNT=$((RETRY_COUNT + 1))
+          done
           
           echo "====================== CONTAINER LOGS ======================"
           docker logs --tail 40 querybloom-prod || true
           echo "============================================================"
-          
-          # Check health endpoint
-          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8002/api/v1/health || echo "000")
           
           if [ "$HTTP_STATUS" != "200" ]; then
             echo "::error::❌ Health check failed with HTTP status: $HTTP_STATUS"
