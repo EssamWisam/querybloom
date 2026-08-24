@@ -37,104 +37,108 @@
 </script>
 
 <section class="auth-shell">
-  <div class="auth-panel">
-    <div class="brand">
-      <svg
-        class="qb-logo"
-        viewBox="0 0 36 36"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <circle cx="14" cy="14" r="10" stroke="#00c896" stroke-width="3" />
-        <line
-          x1="21"
-          y1="21"
-          x2="31"
-          y2="31"
-          stroke="#00c896"
-          stroke-width="3"
-          stroke-linecap="round"
-        />
-        <circle cx="14" cy="14" r="4" fill="#00c896" opacity="0.25" />
-      </svg>
-      <div>
-        <span class="brand-name">QueryBloom</span>
-        <p class="brand-tagline">KG Subgraph Mining & Text-SPARQL Synthesis</p>
+  <div class="auth-container">
+    <header class="hero-brand">
+      <div class="logo-wrapper">
+        <svg
+          class="qb-logo"
+          viewBox="0 0 36 36"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <circle cx="14" cy="14" r="10" stroke="#00c896" stroke-width="3" />
+          <line
+            x1="21"
+            y1="21"
+            x2="31"
+            y2="31"
+            stroke="#00c896"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+          <circle cx="14" cy="14" r="4" fill="#00c896" opacity="0.35" />
+        </svg>
       </div>
-    </div>
+      <h1 class="brand-title">QueryBloom</h1>
+      <p class="brand-description">
+        Automated Knowledge Graph Subgraph Mining &amp; Text-SPARQL Dataset Synthesis
+      </p>
+    </header>
 
-    <div class="mode-switch" role="tablist" aria-label="Authentication mode">
-      <button
-        class:active={mode === "login"}
-        type="button"
-        on:click={() => (mode = "login")}>Log In</button
-      >
-      <button
-        class:active={mode === "signup"}
-        type="button"
-        on:click={() => (mode = "signup")}>Sign Up</button
-      >
-    </div>
+    <div class="auth-panel">
+      <div class="mode-switch" role="tablist" aria-label="Authentication mode">
+        <button
+          class:active={mode === "login"}
+          type="button"
+          on:click={() => (mode = "login")}>Log In</button
+        >
+        <button
+          class:active={mode === "signup"}
+          type="button"
+          on:click={() => (mode = "signup")}>Sign Up</button
+        >
+      </div>
 
-    <form on:submit|preventDefault={submit}>
-      {#if mode === "signup"}
+      <form on:submit|preventDefault={submit}>
+        {#if mode === "signup"}
+          <label>
+            <span>Display Name</span>
+            <input
+              bind:value={displayName}
+              placeholder="Dr. Jane Doe"
+              autocomplete="name"
+            />
+          </label>
+        {/if}
         <label>
-          <span>Display Name</span>
+          <span>Email Address</span>
           <input
-            bind:value={displayName}
-            placeholder="Dr. Jane Doe"
-            autocomplete="name"
+            bind:value={email}
+            type="email"
+            placeholder="researcher@institution.edu"
+            autocomplete="email"
+            required
           />
         </label>
-      {/if}
-      <label>
-        <span>Email Address</span>
-        <input
-          bind:value={email}
-          type="email"
-          placeholder="researcher@institution.edu"
-          autocomplete="email"
-          required
-        />
-      </label>
-      <label>
-        <span>Password</span>
-        <input
-          bind:value={password}
-          type="password"
-          placeholder="••••••••••••"
-          autocomplete={mode === "login" ? "current-password" : "new-password"}
-          required
-        />
-      </label>
-      {#if error}
-        <div class="alert error" role="alert">
-          <svg class="alert-icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-          </svg>
-          <span>{error}</span>
-        </div>
-      {/if}
-      {#if success}
-        <div class="alert success" role="status">
-          <svg class="alert-icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-          </svg>
-          <span>{success}</span>
-        </div>
-      {/if}
-      <button class="primary" type="submit" disabled={busy}>
-        {#if busy}
-          <span class="spinner" aria-hidden="true"></span>
-          <span>Processing...</span>
-        {:else if mode === "login"}
-          <span>Sign In</span>
-        {:else}
-          <span>Create Account</span>
+        <label>
+          <span>Password</span>
+          <input
+            bind:value={password}
+            type="password"
+            placeholder="••••••••••••"
+            autocomplete={mode === "login" ? "current-password" : "new-password"}
+            required
+          />
+        </label>
+        {#if error}
+          <div class="alert error" role="alert">
+            <svg class="alert-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+            <span>{error}</span>
+          </div>
         {/if}
-      </button>
-    </form>
+        {#if success}
+          <div class="alert success" role="status">
+            <svg class="alert-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>{success}</span>
+          </div>
+        {/if}
+        <button class="primary" type="submit" disabled={busy}>
+          {#if busy}
+            <span class="spinner" aria-hidden="true"></span>
+            <span>Processing...</span>
+          {:else if mode === "login"}
+            <span>Sign In</span>
+          {:else}
+            <span>Create Account</span>
+          {/if}
+        </button>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -143,46 +147,70 @@
     min-height: 100vh;
     display: grid;
     place-items: center;
-    padding: 24px;
+    padding: 32px 20px;
+    background: radial-gradient(circle at 50% 15%, rgba(0, 200, 150, 0.05) 0%, transparent 60%),
+                radial-gradient(circle at 50% 85%, rgba(52, 74, 154, 0.04) 0%, transparent 50%);
   }
 
-  .auth-panel {
+  .auth-container {
     width: min(440px, 100%);
-    border: 1px solid var(--border-default);
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: var(--shadow-md);
-    padding: 28px;
-    transition: box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
   }
 
-  .brand {
+  .hero-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(0, 200, 150, 0.12) 0%, rgba(52, 74, 154, 0.08) 100%);
+    border: 1px solid rgba(0, 200, 150, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 200, 150, 0.15);
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 22px;
+    justify-content: center;
+    margin-bottom: 14px;
   }
 
   .qb-logo {
     width: 38px;
     height: 38px;
-    flex-shrink: 0;
   }
 
-  .brand-name {
-    font-size: 1.3rem;
+  .brand-title {
+    font-size: 1.85rem;
     font-weight: 800;
     color: var(--color-uni-dark-blue);
-    letter-spacing: -0.01em;
-    display: block;
+    letter-spacing: -0.02em;
+    margin: 0;
     line-height: 1.2;
   }
 
-  .brand-tagline {
-    font-size: 0.76rem;
+  .brand-description {
+    font-size: 0.88rem;
     color: var(--text-subtle);
-    margin: 2px 0 0 0;
+    margin: 8px 0 0 0;
+    line-height: 1.45;
+    max-width: 360px;
     font-weight: 500;
+  }
+
+  .auth-panel {
+    width: 100%;
+    border: 1px solid var(--border-default);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 6px 24px rgba(0, 1, 73, 0.07), 0 1px 4px rgba(0, 0, 0, 0.03);
+    padding: 28px;
+    transition: box-shadow 0.2s ease;
   }
 
   .mode-switch {
@@ -193,7 +221,7 @@
     border: 1px solid #dfe4f2;
     border-radius: 8px;
     background: #f7f8fc;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   .mode-switch button,
