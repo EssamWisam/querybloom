@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - prod
+  workflow_dispatch:
+    inputs:
+      force_rebuild:
+        description: 'Force Docker Rebuild (--build)?'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   deploy:
@@ -11,11 +18,48 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Pull latest code
+        id: pull_code
         run: |
           cd /home/essam/querybloom
+          PREV_COMMIT=$(git rev-parse HEAD)
           git fetch origin prod
           git checkout prod
           git pull origin prod
+          NEW_COMMIT=$(git rev-parse HEAD)
+          echo "prev_commit=$PREV_COMMIT" >> $GITHUB_OUTPUT
+          echo "new_commit=$NEW_COMMIT" >> $GITHUB_OUTPUT
+
+      - name: Check if rebuild is needed
+        id: check_rebuild
+        run: |
+          if [ "${{ inputs.force_rebuild }}" = "true" ]; then
+            echo "Manual force rebuild requested."
+            echo "rebuild=true" >> $GITHUB_OUTPUT
+          else
+            cd /home/essam/querybloom
+            PREV="${{ steps.pull_code.outputs.prev_commit }}"
+            NEW="${{ steps.pull_code.outputs.new_commit }}"
+            
+            if [ "$PREV" != "$NEW" ]; then
+              CHANGED=$(git diff --name-only $PREV $NEW | grep -E '(Dockerfile|docker-compose|uv\.lock|pyproject\.toml|package.*\.json|start\.sh)' || true)
+              if [ -n "$CHANGED" ]; then
+                echo "Detected dependency or Dockerfile changes: $CHANGED"
+                echo "rebuild=true" >> $GITHUB_OUTPUT
+              else
+                echo "Only application code changed. No rebuild required."
+                echo "rebuild=false" >> $GITHUB_OUTPUT
+              fi
+            else
+              echo "rebuild=false" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Rebuild Docker Container (if dependencies changed)
+        if: steps.check_rebuild.outputs.rebuild == 'true'
+        run: |
+          echo "Rebuilding and restarting querybloom-prod container..."
+          cd /home/essam/querybloom
+          docker compose up -d --build querybloom-prod
 
       - name: Verify Backend & Show Logs
         run: |
