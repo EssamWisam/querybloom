@@ -17,14 +17,14 @@ jobs:
     name: Deploy and Verify Health
     runs-on: self-hosted
     steps:
-      - name: Pull latest code
+      - name: Pull latest code (clean mirror)
         id: pull_code
         run: |
           cd /home/essam/querybloom
-          PREV_COMMIT=$(git rev-parse HEAD)
+          PREV_COMMIT=$(git rev-parse HEAD 2>/dev/null || echo "HEAD")
           git fetch origin prod
           git checkout prod
-          git pull origin prod
+          git reset --hard origin/prod
           NEW_COMMIT=$(git rev-parse HEAD)
           echo "prev_commit=$PREV_COMMIT" >> $GITHUB_OUTPUT
           echo "new_commit=$NEW_COMMIT" >> $GITHUB_OUTPUT
@@ -54,12 +54,21 @@ jobs:
             fi
           fi
 
-      - name: Rebuild Docker Container (if dependencies changed)
-        if: steps.check_rebuild.outputs.rebuild == 'true'
+      - name: Ensure container is running or rebuild if needed
         run: |
-          echo "Rebuilding and restarting querybloom-prod container..."
           cd /home/essam/querybloom
-          docker compose up -d --build querybloom-prod
+          REBUILD="${{ steps.check_rebuild.outputs.rebuild }}"
+          
+          if [ "$REBUILD" = "true" ]; then
+            echo "Rebuilding and starting querybloom-prod..."
+            docker compose up -d --build querybloom-prod
+          else
+            # Ensure container is running if it was stopped
+            if [ -z "$(docker ps -q -f name=querybloom-prod)" ]; then
+              echo "Container was stopped. Starting querybloom-prod..."
+              docker compose up -d querybloom-prod
+            fi
+          fi
 
       - name: Verify Backend & Show Logs
         run: |
