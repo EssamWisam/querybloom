@@ -7,12 +7,30 @@ on:
 
 jobs:
   deploy:
-    name: Update Server Code
+    name: Deploy and Verify Health
     runs-on: self-hosted
     steps:
-      - name: Pull latest changes on server
+      - name: Pull latest code
         run: |
           cd /home/essam/querybloom
           git fetch origin prod
           git checkout prod
           git pull origin prod
+
+      - name: Verify Backend & Surface Errors
+        run: |
+          echo "Waiting for live reload..."
+          sleep 2
+          
+          # Check health endpoint
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8002/api/v1/health || echo "000")
+          
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "::error::❌ Health check failed with HTTP status: $HTTP_STATUS"
+            echo "====================== CONTAINER LOGS ======================"
+            docker logs --tail 60 querybloom-prod
+            echo "============================================================"
+            exit 1
+          fi
+          
+          echo "✅ Deployment successful! Health status: 200 OK"
