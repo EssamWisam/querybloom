@@ -8,6 +8,9 @@ const config = {
     }),
     paths: {
       base: process.env.BASE_PATH || ''
+    },
+    version: {
+      name: '1.0.0'
     }
   }
 };
