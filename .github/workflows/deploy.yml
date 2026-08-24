@@ -17,19 +17,20 @@ jobs:
           git checkout prod
           git pull origin prod
 
-      - name: Verify Backend & Surface Errors
+      - name: Verify Backend & Show Logs
         run: |
-          echo "Waiting for live reload..."
-          sleep 2
+          echo "Waiting 10s for backend reload & frontend build..."
+          sleep 10
+          
+          echo "====================== CONTAINER LOGS ======================"
+          docker logs --tail 50 querybloom-prod || true
+          echo "============================================================"
           
           # Check health endpoint
           HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8002/api/v1/health || echo "000")
           
           if [ "$HTTP_STATUS" != "200" ]; then
             echo "::error::❌ Health check failed with HTTP status: $HTTP_STATUS"
-            echo "====================== CONTAINER LOGS ======================"
-            docker logs --tail 60 querybloom-prod
-            echo "============================================================"
             exit 1
           fi
           
