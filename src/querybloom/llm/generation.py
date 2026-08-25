@@ -18,6 +18,7 @@ def generate_questions_batch(
     template_path: str = None,
     focus_entity_qa: bool = False,
     additional_instructions: str = "",
+    kg_title: Optional[str] = None,
 ) -> List[SubgraphGenerationResult]:
     """
     Generate question-query pairs for multiple subgraphs using batch completion.
@@ -32,6 +33,7 @@ def generate_questions_batch(
             template,
             focus_entity_qa=focus_entity_qa,
             additional_instructions=additional_instructions,
+            kg_title=kg_title,
         )
         messages_batch.append([{"role": "user", "content": prompt}])
 
@@ -56,6 +58,7 @@ def generate_questions_single(
     template_path: str = None,
     focus_entity_qa: bool = False,
     additional_instructions: str = "",
+    kg_title: Optional[str] = None,
 ) -> SubgraphGenerationResult:
     """
     Generate question-query pairs for a single subgraph.
@@ -66,6 +69,7 @@ def generate_questions_single(
         template_path=template_path,
         focus_entity_qa=focus_entity_qa,
         additional_instructions=additional_instructions,
+        kg_title=kg_title,
     )
     return results[0]
 
@@ -82,6 +86,7 @@ def generate_and_execute(
     focus_entity_qa: bool,
     additional_instructions: str = "",
     event_sink: EventSink | None = None,
+    kg_title: Optional[str] = None,
 ) -> Tuple[SubgraphGenerationResult, List[Dict[str, Any]]]:
     """Generate QA pairs and execute them. Returns (gen_result, qa_pairs_dicts)."""
     prompt = render_prompt(
@@ -90,6 +95,7 @@ def generate_and_execute(
         template,
         focus_entity_qa=focus_entity_qa,
         additional_instructions=additional_instructions,
+        kg_title=kg_title,
     )
     emit_event(
         event_sink,

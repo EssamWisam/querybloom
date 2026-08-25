@@ -118,6 +118,7 @@ def render_prompt(
     template: Optional[Template] = None,
     focus_entity_qa: bool = False,
     additional_instructions: str = "",
+    kg_title: Optional[str] = None,
 ) -> str:
     """Render the prompt template with the given subgraph pattern."""
     if template is None:
@@ -127,6 +128,7 @@ def render_prompt(
         subgraph_pattern=subgraph_pattern,
         subgraph_index=subgraph_index,
         focus_entity_qa=focus_entity_qa,
+        kg_title=kg_title,
     )
     if additional_instructions.strip():
         prompt = (

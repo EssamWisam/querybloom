@@ -1,5 +1,4 @@
-You are an expert in SPARQL and knowledge graph question design. Your task is to augment
-already-generated question-query pairs with meaningful structural complexities.
+You are an expert in SPARQL and knowledge graph question design. Your task is to augment already-generated question-query pairs with meaningful structural complexity.
 
 ### Original Subgraph Pattern (for grounding):
 <Subgraph>
@@ -22,67 +21,68 @@ Notes on the YAML structure:
 ```
 - **Execution Success:** {{ qa.execution_results.success }}
 - **Result Count:** {{ qa.execution_results.count }}
-{% if qa.execution_results.result_preview %}- **Result Preview (first 5 rows):** {{ qa.execution_results.result_preview
-}}{% endif %}
+{% if qa.execution_results.result_preview %}- **Result Preview (first 5 rows):** {{ qa.execution_results.result_preview }}{% endif %}
 
 {% endfor %}
 
 ### Task:
-For each pair, augment it with **one or more** complexity constructs, so long as every added construct satisfies all
-rules below (especially Meaningful). Add as many as the subgraph and domain meaningfully support, but never force one.
-Produce one `ComplexityAugmentation` entry per pair, in the same order (0-based index matches pair order above).
+For each pair, add one or more complexity constructs — but only where the subgraph and domain naturally support them;
+never force one where none fits. Every added construct must satisfy all rules below, especially the first.
+Produce one `ComplexityAugmentation` entry per pair, in the same order as above (0-based index matching the pair order).
 
 ### Rules:
 
-**1. Grounded**
+**1. Meaningful & High Utility**
+- The added complexity MUST represent something a knowledgeable domain expert would plausibly ask.
+- Avoid purely synthetic or arbitrary constraints, such a low-utility arbitrary substring match or constraint.
+- The augmented question should feel like a realistic information need in the domain.
+- YOU WILL BE PENALIZED if you introduce complexity that turns out to be meaningless, trivial, or of no real value to a domain expert.
+- Golden tip: for each question, consider multiple complexity augmentations. If at least one of them seems meaningful or of high-utility, choose the one that maximizes that. 
+- It will hurt more than help if domain expert reviews the augmented question and finds the complexity to be trivial or of low utility. Think carefully and creatively of meaningful complexity augmentations and skip the question if you can find none.
+
+**2. Grounded**
 The added constraint must use only classes, properties, or attributes that appear in the subgraph YAML above.
 Never invent predicates or values not present in the subgraph.
 
-**2. Bilateral**
-You must ensure the complexity is reflected on both the text question and the SPARQL query with perfect alignment:
-- The NL question must explicitly state the constraint in natural language (e.g., "… that have at least one …", "…
-ordered by …", "… whose … is greater than …").
+**3. Bilateral**
+You must ensure the complexity is reflected in both the text question and the SPARQL query, with perfect alignment between them:
+- The NL question must explicitly state the constraint in natural language.
 - The SPARQL must encode exactly and only that constraint — no hidden SPARQL-only additions, no missing constraints.
 
-**3. New complexity types**
-Choose complexity types that are **not already present** in the original SPARQL query. However, if an existing
-complexity exists that is most likely trivial, it is okay to replace it.
+**4. New complexity types**
+Choose complexity types that are **not already present** in the original SPARQL query. However, if the original query
+already contains a complexity construct that is most likely trivial, you may replace it.
 Each added construct must be a distinct type from the list below:
-- `FILTER` — add a meaningful inclusion/exclusion filter on an attribute value, range, or string pattern
-- `OPTIONAL` — introduce an optional property to retrieve additional information that may not exist for all results
-- `UNION` — combine two alternative triple patterns from the subgraph into a single unified result
-- `ORDER_BY_LIMIT` — turn the question into a ranking or superlative (top-N, most X, least Y)
-- `EXISTS` — add a `FILTER EXISTS` or `FILTER NOT EXISTS` guard based on a related pattern in the subgraph
-- `SUBQUERY` — restructure as a nested subquery to compute something intermediate (e.g., count per group, then filter)
+- `FILTER` — add a meaningful, high-utility inclusion/exclusion filter on an attribute value, range, or string pattern.
+- `OPTIONAL` — introduce a meaningful optional property to retrieve additional information that may not exist for all results.
+- `UNION` — combine two alternative triple patterns from the subgraph so that a result matching either one is included.
+- `ORDER_BY_LIMIT` — turn the question into a ranking or superlative (top-N, most X, least Y). Use this once at in one question.
+- `EXISTS` — add a `FILTER EXISTS` or `FILTER NOT EXISTS` guard based on a related pattern in the subgraph.
+- `SUBQUERY` — restructure part of the query as a nested subquery to compute something intermediate (e.g., count per group, then filter).
 - `PROPERTY_PATH` — replace one or more triple patterns with a SPARQL 1.1 property path (e.g., `pred+`, `pred*`,
 `pred1/pred2`, `pred1|pred2`) to traverse multi-hop or alternative chains; the NL question must reflect the transitive
-or alternative nature of the traversal
+or alternative nature of the traversal.
 
-**4. Non-trivial**
-The added complexity must genuinely change what is being asked—it must not be redundant.
-Examples of trivial complexities to avoid:
-- Using `LIMIT 100` when the result most likely will be less than 100.
-- Using `ORDER BY` alphabetically when it's actually the case that the data is already sorted alphabetically.
+**5. Non-trivial**
+The added complexity must genuinely change what is being asked — it must not be redundant. The results will be
+evaluated for redundancy, so only add a construct you are confident is genuinely non-redundant.
+Examples of trivial complexity to avoid:
+- Using `LIMIT 100` when the result count will most likely already be under 100.
+- Using `ORDER BY` alphabetically when the results would already come back in alphabetical order.
 - Adding an `OPTIONAL` on a property that always exists.
-- Adding a `FILTER` that no row can fail, or an `EXISTS` on a pattern every result already satisfies.
+- Adding a `FILTER` that every row already satisfies, or an `EXISTS` check on a pattern every result already meets.
+- So on.
 The construct must demonstrably narrow, expand, reorder, or reshape the output.
 
-**5. Additive, not destructive**
+**6. Additive, not destructive**
 - The augmented pair must still be answerable and return results.
 - Avoid constraints so restrictive they would empty the result set.
-- If the `Result Count` above is unrealistically too big, adjust the complexity to meaningfully narrow it down, but do not make it zero. 
+- If the `Result Count` above is unrealistically large, adjust the complexity to meaningfully narrow it down — but not to zero.
 
-**6. Natural phrasing**
-The augmented NL question must be fluent, natural, and end with a question mark.
-Do not use SPARQL or graph terminology in the question.
-
-**7. Meaningful**
-The added complexity must represent something a knowledgeable domain expert would plausibly ask.
-Avoid purely synthetic or arbitrary constraints. The augmented question should feel
-like a realistic information need in the domain. YOU WILL BE PENALIZED if you choose to introduce complexity that turns
-out to be meaningless, trivial or of not actual value to a domain expert.
+**7. Natural phrasing**
+The augmented NL question must be fluent, natural, and end with a question mark. Do not use SPARQL or graph terminology in the question.
 
 ### When to skip:
-Set `skipped: true` (with a concise `skip_reason`) if no **meaningful** complexity can be added to a given pair — i.e.,
-the subgraph lacks the attributes/properties needed to ground any non-trivial, domain-relevant complexity.
-Do not force a complexity construct just because one is technically possible; skip instead.
+Set `skipped: true` (with a concise `skip_reason`) if no **meaningful/high-utility** complexity can be added to a given pair — i.e.,
+the subgraph lacks the attributes/properties needed to ground any non-trivial, valuable domain-relevant complexity.
+Do not force a complexity construct just because one is technically possible; skip instead. The questions will be evaluated by domain experts and any low-utility complexity will hurt more than help.

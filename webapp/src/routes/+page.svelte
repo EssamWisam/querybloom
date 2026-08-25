@@ -754,8 +754,15 @@
                   <span
                     class="run-status"
                     class:is-running={run.status === "running"}
-                    >{run.status} · {run.endpoint || "endpoint"}</span
                   >
+                    {run.status} · {run.endpoint || "endpoint"}
+                    {#if run.result?.num_patterns != null}
+                      · {run.result.num_patterns} patterns
+                    {/if}
+                    {#if run.result?.num_subgraphs != null}
+                      · {run.result.num_subgraphs} subgraphs
+                    {/if}
+                  </span>
                   {#if run.created_at}
                     <span class="run-ts"
                       >{new Date(run.created_at).toLocaleString()}</span

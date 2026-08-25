@@ -33,70 +33,66 @@ meet the support property).
 ### Task:
 First, assess whether this subgraph allows for meaningful questions. If the subgraph is too trivial, lacks interesting
 relationships (eg, graph metadata as opposed to actual knowledge), or doesn't support generating useful and meaningful
-questions, set is_meaningful to false and return an empty questions
-list.
+questions, set is_meaningful to false and return an empty questions list. 
+Otherwise, if you can see at some meaningful concepts and relationsips to elecit a a meaningful and high utility question then return True.
 
-If is_meaningful is true, generate 2-4 question-query pairs as a JSON array where each item has:
+If you set is_meaningful to true, generate 2-4 question-query pairs as a JSON array where each item has:
 - text_query: the natural language question
 - sparql_query: the corresponding SPARQL query
 
 
-
 ### Requirements:
-1. SPARQL queries must be stand-alone executable against a SPARQL endpoint containing the full graph.
-2. Generate 2-4 question-query pairs depending on your assessment of the subgraph's richness. Try to attain high
+
+#### A. Generation Task
+1. Generate 2-4 question-query pairs depending on your assessment of the subgraph's richness. Try to attain high
 coverage of all the meaningful aspects of the subgraph in the question-query pairs.
-3. Questions must be grounded exclusively in the classes, entities, relationships, and attributes present in this YAML
-subgraph. Never use knowledge graph terminology (properties, types, etc.), mention URIs/prefixes, or reference the
-YAML/subgraph in the natural language question — each question and query must be fully self-contained.
-4. Questions should be certainly answerable and avoid ontology/schema/documentation questions
-5. Focus on questions that are interesting and meaningful (avoid meaningless questions like "what/how many entities are
-linked to.../useless patterns...")
 {% if focus_entity_qa %}
-6. Great questions are often centered around interesting entities in the graph (entities with a proper name, well-known
-identifier, or specific real-world referent — not blank nodes or anonymous instances). All of the questions you produce
-must be entity centric.
-Meanwhile, set is_meaningful to False if no interesting entities are available.
-7. You must make the 2-4 questions diverse in style (what, who, whom, whose, when, which, yes/no (ASK) questions, how
-compounds, aggegate statistics, superlatives/comparative, etc.) and complexity while ultimately maintaining quality,
+2. Great questions are often centered around interesting entities in the graph (entities with a proper natural language label/name or specific real-world referent — not blank nodes, meaningless identifiers, or anonymous instances). All of the questions you produce
+must be entity centric. Meanwhile, set is_meaningful to False if no interesting entities are available.
+3. You must make the 2-4 questions diverse in style (what, who, whom, whose, when, which, yes/no (ASK) questions, how
+compounds, aggregate statistics, superlatives/comparative, etc.) and complexity while ultimately maintaining quality,
 meaningfulness and utility of the questions.
 {% else %}
-6. Whenever there is an interesting entity in the graph (one with a proper name, well-known identifier, or specific
-real-world referent), it's good to have a question or two specifically about it.
-{# Maybe I switch the following with 7 above
-7. Make questions diverse in style (SELECT, SELECT + AGGREGATION, ASK, as appropriate) and complexity
-(MIN/MAX/AVG/COUNT/SUM, GROUP BY/FILTER/HAVING, EXISTS/OPTIONAL, nesting, etc.) but while maintaining the quality of the
-questions and meaningfulness #}
-7. You must make the 2-4 questions diverse in style (what, who, whom, whose, when, which, yes/no (ASK) questions, how
-compounds, aggegate statistics, superlatives/comparative, etc.) and complexity while ultimately maintaining quality,
+2. Whenever there is an interesting entity in the graph (one with a proper natural language label/name or specific real-world referent as opposed to a meaningless identifier/uri), it's good to have a question or two specifically about it. 
+3. You must make the 2-4 questions diverse in style (what, who, whom, whose, when, which, yes/no (ASK) questions, how
+compounds, aggregate statistics, superlatives/comparative, etc.) and complexity while ultimately maintaining quality,
 meaningfulness and utility of the questions.
 {% endif %}
-8. Declare meaningful prefixes in the query based on the URIs in the yaml
-9. Use proper SPARQL syntax to generate valid queries. Your sparql query must produce exactly the results expected by
-the text query. Before finalizing each pair, verify: does the SPARQL query contain every constraint stated in the
-question, and no constraints absent from the question?
-10. If the question does not have one answer/result, you may or may not use LIMIT in SELECT queries (e.g., LIMIT 100) to
-avoid too many results. BUT MAKE SURE to REFLECT THIS in the text query!
-11. If a term is awkward in the graph, and you are confident it can be rephrased naturally without being inaccurate, do
-so
-12. The phrasing of the natural language question should be always natural, fluent and not awkward or stilted. Question
-should always end with a question mark.
 
-### Final Note:
+#### B. Natural Language Question Quality:
+4. Questions must be grounded exclusively in the meaningful classes, entities, relationships, and attributes present in this YAML
+subgraph. Never use uninformative knowledge graph specific terminology (generic properties, types, etc.), mention URIs/IDs/prefixes, or reference the
+YAML/subgraph in the natural language question — each question and query must be fully self-contained.
+5. The phrasing of the natural language question should always be natural, fluent and not awkward or stilted. Question
+should always end with a question mark. If a concept term is awkward in the graph, and you are confident it can be rephrased naturally
+without being inaccurate, do so.
+6. Questions should be certainly answerable and avoid ontology/schema/documentation questions. Focus on questions that
+are interesting and meaningful (avoid meaningless questions like "what/how many entities are linked to.../useless patterns...").
+7. Focus on questions that would be of high utility to the people in the domain. Never produce a low utility question to avoid being penalized!
+
+#### C. SPARQL Accuracy & Question-Query Alignment:
+8. SPARQL queries must be stand-alone executable against a SPARQL endpoint containing the full graph. Declare meaningful
+prefixes in the query based on the URIs in the YAML.
+9. Use proper SPARQL syntax to generate valid queries. Your SPARQL query must produce exactly the results expected by
+the text query; not more and not less. Before finalizing each pair, verify: does the SPARQL query contain every constraint stated in the
+question, and no constraints absent from the question?
+10. If the question does not have one answer/result, you may optionally use LIMIT in SELECT queries (e.g., LIMIT 100) to
+avoid too many results. BUT MAKE SURE to REFLECT THIS in the text query!
+
+### Crucial Notes:
 The ultimate goal is to produce high-quality, diverse, and very meaningful questions together with their corresponding
 accurate SPARQL queries that can be executed against the full knowledge graph.
 
-Another essential property is that an expert in the knowledge graph should be able to reproduce the same sparql query
-when given text question only.
-- You will be rewarded when you generate questions an expert in the domain would ask where the sparql query being
+An expert in the knowledge graph should be able to reproduce the same sparql query when given text question only.
+- You will be rewarded when you generate high-utility questions an expert in the domain would ask where the sparql query is 
 perfectly aligned to the question and accurately answering it.
 - You will be penalized if the generated SPARQL query and the text question do not properly align (eg, the sparql query
-has constraints unrequested in the question... or misses requested ones)
+has constraints unrequested in the question... or misses constraints from the question)
 - You will be also highly penalized if the generated SPARQL query incorrectly answer the text question or provides no
 answer when there is one.
-- You will be penalized if your question styles are not diverse enough, if questions are of low quality or are phrased
+- You will be penalized if your question styles are not diverse enough, if questions are of low quality or low utility or are phrased
 awkwardly.
 - Flagging the subgraph as not meaningful when it's hard to generate high quality questions is better than generating
 low quality questions.
-- Generating fewer high quality questions that a DOMAIN EXPERT may ask is MUCH better than generating more low quality
+- Generating fewer high quality and high utility questions that a DOMAIN EXPERT may ask is MUCH better than generating more low quality
 questions. Quality over quantity.

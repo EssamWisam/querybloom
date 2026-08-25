@@ -12,6 +12,7 @@ class LLMRunRequest(BaseModel):
     endpoint: str
     model: str = "openai/gpt-5.4"
     template_path: str | None = None
+    kg_title: str | None = None
     output_dir: str | None = None
     timeout: int = 70
     max_workers: int = 10
