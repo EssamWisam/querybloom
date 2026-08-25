@@ -77,7 +77,9 @@
   $: qaSampleRunId =
     activeRun?.kind === "llm"
       ? activeRun?.result?.sample_run_id || latestSampleRunId
-      : latestSampleRunId;
+      : activeRun?.kind === "sample"
+        ? activeRun.id
+        : latestSampleRunId;
   $: liveRunActive = running || pollingRunId === activeRun?.id;
   $: samplingRunActive = liveRunActive && activeRun?.kind === "sample";
   $: llmRunActive = liveRunActive && activeRun?.kind === "llm";
