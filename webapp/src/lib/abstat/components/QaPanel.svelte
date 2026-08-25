@@ -698,9 +698,16 @@
     const payload = data.data ?? {};
     const event = frame.event;
     const stage = data.stage;
-    const index = payload.subgraph_index ?? payload.index;
+    const index = payload.subgraph_index ?? payload.index ?? data.subgraph_index ?? data.index;
 
-    if (event === "subgraph.started") {
+    if (event === "error") {
+      const errMsg =
+        payload.error || payload.message || data.error || data.message || "QA generation failed";
+      error = errMsg;
+      if (index != null) {
+        updateSubgraph(index, { status: "failed", error: errMsg });
+      }
+    } else if (event === "subgraph.started") {
       updateSubgraph(index, { status: "pending" });
       if (selectedIndex == null) selectedIndex = index;
     } else if (event === "stage.started" && stage === "llm.generate") {
@@ -800,9 +807,12 @@
           : (entry?.qa_pairs ?? []),
       });
     } else if (event === "subgraph.failed") {
+      const errMsg =
+        payload.error ?? payload.message ?? data.error ?? data.message ?? "Pipeline failed";
+      error = errMsg;
       updateSubgraph(index, {
         status: "failed",
-        error: payload.error ?? payload.message ?? "Pipeline failed",
+        error: errMsg,
       });
     }
   }
@@ -862,6 +872,7 @@
     qaMap = nextQaMap;
     activeAbortController = new AbortController();
 
+    let streamHadErrors = false;
     try {
       await streamLlm(
         token,
@@ -880,15 +891,33 @@
             reword_questions_step: true,
           },
         },
-        addFrame,
+        (frame) => {
+          if (frame.event === "error" || frame.event === "subgraph.failed") {
+            streamHadErrors = true;
+          }
+          addFrame(frame);
+        },
         activeAbortController.signal,
       );
-      await hydrateStoredQa(sampleRunId, { force: true });
+
+      const hasFailures = requested.some(
+        (idx) => qaMap[idx]?.status === "failed",
+      );
+      if (!streamHadErrors && !hasFailures && !error) {
+        await hydrateStoredQa(sampleRunId, { force: true });
+      }
     } catch (err) {
       if (err?.name !== "AbortError" && !String(err?.message || "").includes("aborted")) {
         error = err?.message || "QA generation failed";
       }
-      await hydrateStoredQa(sampleRunId, { force: true });
+      for (const index of requested) {
+        if (qaMap[index]?.status !== "completed") {
+          updateSubgraph(index, {
+            status: "failed",
+            error: error || "Generation failed",
+          });
+        }
+      }
     } finally {
       running = false;
       runningIndexes = new Set();

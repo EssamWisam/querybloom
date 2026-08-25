@@ -505,9 +505,16 @@ def process_subgraphs_data(
                 }
                 emit_event(
                     event_sink,
+                    "subgraph.failed",
+                    "llm.subgraph",
+                    f"Error processing subgraph {source_index}: {e}",
+                    {"subgraph_index": source_index, "error": str(e)},
+                )
+                emit_event(
+                    event_sink,
                     "error",
                     "llm.batch",
-                    f"Error processing subgraph {source_index}",
+                    f"Error processing subgraph {source_index}: {e}",
                     {"subgraph_index": source_index, "error": str(e)},
                 )
 

@@ -361,6 +361,16 @@ def _load_sample_run_subgraphs(client: SupabaseClient, user: SupabaseUser, sampl
         if not isinstance(payload, dict):
             continue
         merged = dict(payload)
+        sg_idx = row.get("subgraph_index")
+        if sg_idx is not None:
+            try:
+                merged["subgraph_index"] = int(sg_idx)
+                merged["index"] = int(sg_idx)
+            except (ValueError, TypeError):
+                pass
+        if row.get("id"):
+            merged["id"] = row["id"]
+            merged["dbId"] = row["id"]
         graph = row.get("graph")
         if isinstance(graph, dict) and graph and "graph" not in merged:
             merged["graph"] = graph
@@ -375,7 +385,19 @@ def _load_sample_run_subgraphs(client: SupabaseClient, user: SupabaseUser, sampl
     result = run.get("result") if isinstance(run.get("result"), dict) else {}
     result_subgraphs = result.get("subgraphs") if isinstance(result, dict) else None
     if isinstance(result_subgraphs, list):
-        return [item for item in result_subgraphs if isinstance(item, dict)]
+        items = []
+        for idx, item in enumerate(result_subgraphs):
+            if isinstance(item, dict):
+                merged_item = dict(item)
+                sg_idx = item.get("source_subgraph_index", item.get("subgraph_index", item.get("index", idx)))
+                try:
+                    merged_item["subgraph_index"] = int(sg_idx)
+                    merged_item["index"] = int(sg_idx)
+                except (ValueError, TypeError):
+                    merged_item["subgraph_index"] = idx
+                    merged_item["index"] = idx
+                items.append(merged_item)
+        return items
 
     raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Sample run has no stored subgraphs")
 
@@ -456,6 +478,7 @@ def _persist_qa_pairs_for_subgraph_best_effort(
     subgraph_row = subgraph_row_by_index.get(subgraph_index)
     subgraph_id = subgraph_row.get("id") if isinstance(subgraph_row, dict) else None
     if not subgraph_id:
+        print(f"[QA persist] Warning: no subgraph_id found for subgraph_index {subgraph_index} in sample run {sample_run_id}")
         return
     try:
         _soft_delete_qa_pairs_for_subgraph(
@@ -1047,11 +1070,13 @@ async def _abstat_llm(request: ABSTATLLMRunRequest, user: SupabaseUser = Depends
         subgraph_rows = await asyncio.to_thread(
             _load_sample_run_subgraph_rows, client, user, llm_request.sample_run_id
         )
-        subgraph_row_by_index = {
-            int(row["subgraph_index"]): row
-            for row in subgraph_rows
-            if isinstance(row.get("subgraph_index"), int)
-        }
+        for row in subgraph_rows:
+            sg_idx = row.get("subgraph_index")
+            if sg_idx is not None:
+                try:
+                    subgraph_row_by_index[int(sg_idx)] = row
+                except (ValueError, TypeError):
+                    pass
 
     def event_sink(event: PipelineEvent) -> None:
         _persist_event_best_effort(client, user, run_id, event)
@@ -1192,11 +1217,13 @@ async def _abstat_llm_stream(request: ABSTATLLMRunRequest, user: SupabaseUser = 
         subgraph_rows = await asyncio.to_thread(
             _load_sample_run_subgraph_rows, client, user, llm_request.sample_run_id
         )
-        subgraph_row_by_index = {
-            int(row["subgraph_index"]): row
-            for row in subgraph_rows
-            if isinstance(row.get("subgraph_index"), int)
-        }
+        for row in subgraph_rows:
+            sg_idx = row.get("subgraph_index")
+            if sg_idx is not None:
+                try:
+                    subgraph_row_by_index[int(sg_idx)] = row
+                except (ValueError, TypeError):
+                    pass
 
     async def stream():
         queue: asyncio.Queue[tuple[str, dict[str, Any]]] = asyncio.Queue()
