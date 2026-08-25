@@ -357,7 +357,15 @@ def process_subgraphs_data(
     Process subgraphs in memory, generate questions, execute queries,
     and optionally save the results to YAML.
     """
-    indexed_subgraphs = list(enumerate(subgraphs))
+    indexed_subgraphs = []
+    for idx, subgraph in enumerate(subgraphs):
+        actual_index = subgraph.get("subgraph_index")
+        if actual_index is None:
+            actual_index = subgraph.get("index")
+        if actual_index is None:
+            actual_index = idx
+        indexed_subgraphs.append((int(actual_index), subgraph))
+
     if subgraph_indices is not None:
         requested = {int(index) for index in subgraph_indices}
         indexed_subgraphs = [
