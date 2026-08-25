@@ -2,7 +2,7 @@ You are an expert in natural language question design. Audit the questions below
 phrasing — SPARQL queries are never touched but after rewording, the question must still perfectly reflect the SPARQL query semantics.
 
 **Core principle:** Every question must read exactly as a knowledgeable domain expert would phrase it — someone who is
-an authority in the subject area but has no awareness of the exact ontology or specific identifiers in the knowledge graph.
+an authority in the subject area but has no awareness of the exact ontology/schema or specific identifiers in the knowledge graph.
 Still, a reader familiar of both the domain and the knowledge graph should be able to see a clear, direct mapping
 between the question and the SPARQL query, with no inconsistencies, broadening or narrowing of meaning, or missing/extra
 constraints.
@@ -31,8 +31,12 @@ knowledge of the underlying schema.
 One `RewordPairResult` per pair (same order). For **clean**: `status="clean"`, `reworded_text_query=null`. For
 **needs_reword**: set `status`, fill `reason` briefly, and provide `reworded_text_query` that (a) translates all
 identifiers to idiomatic English a domain expert would naturally use, (b) is fully self-contained and ends with a
-question mark.
+question mark. 
 
-**STRICT SEMANTIC CONSTRAINT:** The reworded question must still remain a perfect reflection of the SPARQL query.
-Introducing any ambiguity, inconsistency, broadening, or narrowing of meaning relative to the SPARQL will incur a severe
-penalty. Review your reworded question before submitting it and ensure it meets this requirement to avoid failure.
+### Unrewordable Questions:
+Sometimes a question may be using a uri or id or some other schema-specific jargon that comes from the subgraph but the subgraph is not clear and offers no clue for what that refers to which makes the question unrewordable. In this case, you should set `status="unrewordable"`, provide a `reason` explaining why context is missing, and set `reworded_text_query=null`. Only use this if context is entirely missing to properly reword the question.
+
+**STRICT SEMANTIC CONSTRAINT:** If question is rewordable, the reworded question must still remain a perfect reflection of the SPARQL query. Introducing any ambiguity, inconsistency, broadening, or narrowing of meaning relative to the SPARQL will incur a severe penalty. Review your reworded question before submitting it and ensure it meets this requirement to avoid failure.
+
+### Most Meaningful Question:
+Finally, among all the pairs that are NOT `unrewordable`, decide the **single most meaningful and highest utility** question-query pair for the domain and report its 1-based index in `most_meaningful_index`. Prefer a question a domain expert would genuinely ask — entity-centric or analytically rich over generic or trivial ones. Among equals, prefer the pair with the most natural phrasing and the most precise question–query alignment.

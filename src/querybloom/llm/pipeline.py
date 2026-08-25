@@ -43,6 +43,7 @@ def process_single_subgraph_pipeline(
     reword_template: Any = None,
     event_sink: EventSink | None = None,
     stop_event: Optional[threading.Event] = None,
+    kg_title: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
     Execute full multi-agent pipeline for a single subgraph:
@@ -88,6 +89,7 @@ def process_single_subgraph_pipeline(
         focus_entity_qa=focus_entity_qa,
         additional_instructions=additional_instructions,
         event_sink=event_sink,
+        kg_title=kg_title,
     )
 
     output_sg = dict(subgraph)
@@ -144,15 +146,37 @@ def process_single_subgraph_pipeline(
                 {"subgraph_index": subgraph_index, "num_pairs": len(qa_pairs)},
             )
             rw_result = reword_questions(qa_pairs, model, reword_template)
+            
+            for qa in qa_pairs:
+                qa.pop("is_most_meaningful", None)
+            chosen = rw_result.most_meaningful_index - 1
+            if 0 <= chosen < len(qa_pairs):
+                qa_pairs[chosen]["is_most_meaningful"] = True
+            elif qa_pairs:
+                qa_pairs[0]["is_most_meaningful"] = True
+
+            unrewordable_indices = set()
             for idx, rw in enumerate(rw_result.pairs):
-                if (
-                    idx < len(qa_pairs)
-                    and rw.status == "needs_reword"
-                    and rw.reworded_text_query
-                ):
-                    qa_pairs[idx]["pre_reword_question"] = qa_pairs[idx]["question"]
-                    qa_pairs[idx]["question"] = rw.reworded_text_query
-                    qa_pairs[idx]["reword_reason"] = rw.reason
+                if idx < len(qa_pairs):
+                    if rw.status == "needs_reword" and rw.reworded_text_query:
+                        qa_pairs[idx]["pre_reword_question"] = qa_pairs[idx]["question"]
+                        qa_pairs[idx]["question"] = rw.reworded_text_query
+                        qa_pairs[idx]["reword_reason"] = rw.reason
+                    elif rw.status == "unrewordable":
+                        unrewordable_indices.add(idx)
+                        
+            if unrewordable_indices:
+                qa_pairs = [qa for idx, qa in enumerate(qa_pairs) if idx not in unrewordable_indices]
+            
+            new_most_meaningful = 0
+            for i, qa in enumerate(qa_pairs):
+                if qa.get("is_most_meaningful"):
+                    new_most_meaningful = i + 1
+                    break
+            if new_most_meaningful == 0 and qa_pairs:
+                new_most_meaningful = 1
+                qa_pairs[0]["is_most_meaningful"] = True
+            output_sg["most_meaningful_index"] = new_most_meaningful
             emit_event(
                 event_sink,
                 "stage.completed",
@@ -163,6 +187,9 @@ def process_single_subgraph_pipeline(
                     "pairs": [p.model_dump() for p in rw_result.pairs],
                 },
             )
+        if "most_meaningful_index" not in output_sg and qa_pairs:
+            output_sg["most_meaningful_index"] = 1
+            qa_pairs[0]["is_most_meaningful"] = True
         output_sg["qa_pairs"] = qa_pairs
         emit_event(
             event_sink,
@@ -232,10 +259,9 @@ def process_single_subgraph_pipeline(
     output_sg["verification_status"] = (
         "correct" if v_result.all_correct else "needs_fix"
     )
-    output_sg["most_meaningful_index"] = v_result.most_meaningful_index
-    chosen = v_result.most_meaningful_index - 1
-    if 0 <= chosen < len(qa_pairs):
-        qa_pairs[chosen]["is_most_meaningful"] = True
+    output_sg["most_meaningful_index"] = 1
+    if qa_pairs:
+        qa_pairs[0]["is_most_meaningful"] = True
 
     # --- Question reword step ---
     if reword_questions_step and qa_pairs:
@@ -254,11 +280,35 @@ def process_single_subgraph_pipeline(
                 {"subgraph_index": subgraph_index, "num_pairs": len(correct_pairs)},
             )
             rw_result = reword_questions(correct_pairs, model, reword_template)
+            
+            for qa in qa_pairs:
+                qa.pop("is_most_meaningful", None)
+            chosen_in_correct = rw_result.most_meaningful_index - 1
+            if 0 <= chosen_in_correct < len(correct_pairs):
+                correct_pairs[chosen_in_correct]["is_most_meaningful"] = True
+            elif correct_pairs:
+                correct_pairs[0]["is_most_meaningful"] = True
+
+            unrewordable_ci = set()
             for ci, rw in zip(correct_indices, rw_result.pairs):
                 if rw.status == "needs_reword" and rw.reworded_text_query:
                     qa_pairs[ci]["pre_reword_question"] = qa_pairs[ci]["question"]
                     qa_pairs[ci]["question"] = rw.reworded_text_query
                     qa_pairs[ci]["reword_reason"] = rw.reason
+                elif rw.status == "unrewordable":
+                    unrewordable_ci.add(ci)
+            
+            if unrewordable_ci:
+                qa_pairs = [qa for i, qa in enumerate(qa_pairs) if i not in unrewordable_ci]
+                new_most_meaningful = 0
+                for i, qa in enumerate(qa_pairs):
+                    if qa.get("is_most_meaningful"):
+                        new_most_meaningful = i + 1
+                        break
+                if new_most_meaningful == 0 and qa_pairs:
+                    new_most_meaningful = 1
+                    qa_pairs[0]["is_most_meaningful"] = True
+                output_sg["most_meaningful_index"] = new_most_meaningful
             emit_event(
                 event_sink,
                 "stage.completed",
@@ -301,6 +351,7 @@ def process_subgraphs_data(
     input_filename: str = "subgraphs.yaml",
     event_sink: EventSink | None = None,
     stop_event: Optional[threading.Event] = None,
+    kg_title: Optional[str] = None,
 ) -> Tuple[List[Dict[str, Any]], Optional[str]]:
     """
     Process subgraphs in memory, generate questions, execute queries,
@@ -401,6 +452,7 @@ def process_subgraphs_data(
                 rw_template,
                 event_sink,
                 stop_event,
+                kg_title,
             ): (output_index, source_index)
             for output_index, (source_index, sg) in enumerate(indexed_subgraphs)
         }
@@ -515,6 +567,7 @@ def process_subgraphs_yaml(
     introduce_complexity_step: bool = True,
     reword_questions_step: bool = True,
     event_sink: EventSink | None = None,
+    kg_title: Optional[str] = None,
 ) -> str:
     """Backward-compatible file-based wrapper around process_subgraphs_data."""
     with open(input_yaml_path, "r") as f:
@@ -544,6 +597,7 @@ def process_subgraphs_yaml(
         input_label=input_yaml_path,
         input_filename=os.path.basename(input_yaml_path),
         event_sink=event_sink,
+        kg_title=kg_title,
     )
     assert output_path is not None
     return output_path

@@ -1246,6 +1246,9 @@
                       </button>
                       <div class="qa-summary-actions">
                         <div class="badges">
+                          {#if pair.is_most_meaningful}
+                            <span class="badge badge-best">★ Best Question</span>
+                          {/if}
                           {#if pair.execution_results != null}
                             {#if pair.execution_results === false || executionError(pair.execution_results)}
                               <span class="badge badge-fail">✗ no results</span>
@@ -2138,6 +2141,11 @@
   .badge-neutral {
     background: #eef1fa;
     color: #3a4a7a;
+  }
+  .badge-best {
+    background: #fff4e5;
+    color: #e67e22;
+    border: 1px solid #ffe0b2;
   }
 
   /* ── Empty / hint states ─────────────────────────────── */

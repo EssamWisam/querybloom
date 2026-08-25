@@ -83,10 +83,8 @@ class TestLlmPackage(unittest.TestCase):
         v_res = VerificationResult(
             all_correct=False,
             pairs=[pair_v],
-            most_meaningful_index=1,
         )
         self.assertFalse(v_res.all_correct)
-        self.assertEqual(v_res.most_meaningful_index, 1)
 
     def test_complexity_models(self):
         """Test ComplexityAugmentation and ComplexityIntroducerResult schemas."""
@@ -111,8 +109,9 @@ class TestLlmPackage(unittest.TestCase):
         )
         self.assertEqual(rw.status, "needs_reword")
 
-        rw_res = RewordResult(pairs=[rw])
+        rw_res = RewordResult(pairs=[rw], most_meaningful_index=1)
         self.assertEqual(len(rw_res.pairs), 1)
+        self.assertEqual(rw_res.most_meaningful_index, 1)
 
     def test_parse_structured_response_standard(self):
         """Test parsing standard OpenAI-style response."""

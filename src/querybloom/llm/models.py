@@ -47,9 +47,6 @@ class VerificationResult(BaseModel):
     pairs: List[VerificationPairResult] = Field(
         description="Per-pair verification results, aligned with input order"
     )
-    most_meaningful_index: int = Field(
-        description="1-based index of the single most meaningful and informative question-query pair"
-    )
 
 
 class ComplexityAugmentation(BaseModel):
@@ -98,8 +95,8 @@ class ComplexityIntroducerResult(BaseModel):
 class RewordPairResult(BaseModel):
     """Reword audit result for a single NL question."""
 
-    status: Literal["clean", "needs_reword"] = Field(
-        description="Whether the question is clean or needs rewording"
+    status: Literal["clean", "needs_reword", "unrewordable"] = Field(
+        description="Whether the question is clean, needs rewording, or cannot be reworded due to missing context"
     )
     reason: str = Field(
         default="", description="Brief and short explanation if needs_reword"
@@ -115,4 +112,7 @@ class RewordResult(BaseModel):
 
     pairs: List[RewordPairResult] = Field(
         description="Per-pair reword results, aligned with input order"
+    )
+    most_meaningful_index: int = Field(
+        description="1-based index of the single most meaningful and highest utility question-query pair for the domain. Must be chosen from the pairs that are NOT unrewordable."
     )
