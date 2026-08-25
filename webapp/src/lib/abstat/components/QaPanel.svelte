@@ -995,11 +995,6 @@
           {#if errorModalDetails}
             <p class="modal-error-text">{errorModalDetails}</p>
           {/if}
-          {#if (errorModalDetails || "").includes("no credits remaining") || (errorModalDetails || "").includes("RateLimitError") || (errorModalDetails || "").includes("OpenAIException")}
-            <div class="modal-tip">
-              <strong>Tip:</strong> The selected model failed because the provider ran out of API credits or hit a rate limit. Try selecting a Gemini model (e.g. <code>gemini/gemini-3-flash-preview</code>) from the Model dropdown, or adding credits to your account.
-            </div>
-          {/if}
         </div>
         <div class="modal-actions">
           <button class="modal-primary-btn" type="button" on:click={closeErrorModal}>Dismiss</button>
@@ -2376,23 +2371,6 @@
     word-break: break-word;
     max-height: 200px;
     overflow-y: auto;
-  }
-
-  .modal-tip {
-    font-size: 0.85rem;
-    line-height: 1.45;
-    color: #2c5282;
-    background: #ebf8ff;
-    border: 1px solid #bee3f8;
-    border-radius: 6px;
-    padding: 10px 12px;
-  }
-
-  .modal-tip code {
-    background: #e2e8f0;
-    padding: 2px 4px;
-    border-radius: 4px;
-    font-size: 0.8rem;
   }
 
   .modal-actions {
