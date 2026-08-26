@@ -12,6 +12,7 @@
     cleanupStaleRuns,
     clearStoredSession,
     deleteRun,
+    ensureFreshSession,
     extractAccessToken,
     loadDefaults,
     loadRun,
@@ -19,6 +20,7 @@
     loadRunSubgraphs,
     loadRuns,
     loadStoredSession,
+    onAuthChange,
     saveStoredSession,
     skipDiscovery,
     skipSubgraphs,
@@ -682,18 +684,29 @@
     }
   }
 
+  let unsubscribeAuth = null;
+
   onMount(async () => {
-    const stored = loadStoredSession();
-    if (stored) {
-      session = stored;
-      token = extractAccessToken(stored);
+    unsubscribeAuth = onAuthChange((nextSession, nextToken) => {
+      session = nextSession;
+      token = nextToken;
+    });
+
+    const fresh = await ensureFreshSession();
+    if (fresh && extractAccessToken(fresh)) {
+      session = fresh;
+      token = extractAccessToken(fresh);
       await handleRefreshRuns();
+    } else {
+      session = null;
+      token = null;
     }
     defaults = await loadDefaults().catch(() => null);
     authReady = true;
   });
 
   onDestroy(() => {
+    if (unsubscribeAuth) unsubscribeAuth();
     clearEventPolling();
   });
 </script>

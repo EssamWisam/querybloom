@@ -154,6 +154,14 @@ class SupabaseClient:
             access_token=access_token,
         )
 
+    def auth_refresh(self, refresh_token: str) -> Any:
+        return self._request(
+            "POST",
+            f"{self.settings.auth_url}/token",
+            params={"grant_type": "refresh_token"},
+            payload={"refresh_token": refresh_token},
+        )
+
     def get_user(self, access_token: str) -> SupabaseUser:
         payload = self._request(
             "GET",
