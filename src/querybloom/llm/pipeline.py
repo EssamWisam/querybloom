@@ -44,6 +44,7 @@ def process_single_subgraph_pipeline(
     event_sink: EventSink | None = None,
     stop_event: Optional[threading.Event] = None,
     kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
     Execute full multi-agent pipeline for a single subgraph:
@@ -98,6 +99,7 @@ def process_single_subgraph_pipeline(
         additional_instructions=additional_instructions,
         event_sink=event_sink,
         kg_title=kg_title,
+        kg_description=kg_description,
         return_usage=True,
     )
     if isinstance(gen_usage, dict):
@@ -126,6 +128,8 @@ def process_single_subgraph_pipeline(
             complexity_template=complexity_template,
             additional_instructions=additional_instructions,
             return_usage=True,
+            kg_title=kg_title,
+            kg_description=kg_description,
         )
         if isinstance(ci_usage, dict):
             subgraph_usage["total_cost_usd"] += ci_usage.get("cost_usd", 0.0)
@@ -260,6 +264,8 @@ def process_single_subgraph_pipeline(
             verify_template=verify_template,
             additional_instructions=additional_instructions,
             return_usage=True,
+            kg_title=kg_title,
+            kg_description=kg_description,
         )
         if isinstance(v_usage, dict):
             subgraph_usage["total_cost_usd"] += v_usage.get("cost_usd", 0.0)
@@ -419,6 +425,7 @@ def process_subgraphs_data(
     event_sink: EventSink | None = None,
     stop_event: Optional[threading.Event] = None,
     kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
 ) -> Tuple[List[Dict[str, Any]], Optional[str]]:
     """
     Process subgraphs in memory, generate questions, execute queries,
@@ -528,6 +535,7 @@ def process_subgraphs_data(
                 event_sink,
                 stop_event,
                 kg_title,
+                kg_description,
             ): (output_index, source_index)
             for output_index, (source_index, sg) in enumerate(indexed_subgraphs)
         }
@@ -660,6 +668,7 @@ def process_subgraphs_yaml(
     reword_questions_step: bool = True,
     event_sink: EventSink | None = None,
     kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
 ) -> str:
     """Backward-compatible file-based wrapper around process_subgraphs_data."""
     with open(input_yaml_path, "r") as f:
@@ -690,6 +699,7 @@ def process_subgraphs_yaml(
         input_filename=os.path.basename(input_yaml_path),
         event_sink=event_sink,
         kg_title=kg_title,
+        kg_description=kg_description,
     )
     assert output_path is not None
     return output_path

@@ -1,0 +1,13 @@
+{% if kg_title %}
+**Knowledge Graph Title:** {{ kg_title }}
+{% endif %}
+{% if kg_description %}
+**Knowledge Graph Description:** {{ kg_description }}
+{% endif %}
+### Subgraph Pattern:
+<Subgraph>
+    {{ subgraph_pattern }}
+</Subgraph>
+
+Generate natural language questions that could be answered by querying the full knowledge graph, along with their
+corresponding SPARQL queries. Carefully follow all instructions and guidelines defined in the system prompt.

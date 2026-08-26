@@ -1,20 +1,7 @@
 You are an expert in analyzing a subgraph sampled from a knowledge graph and generating natural language questions,
 along with their corresponding SPARQL queries.
 
-{% if kg_title %}
-**Knowledge Graph Title:** {{ kg_title }}
-{% endif %}
-{% if kg_description %}
-**Knowledge Graph Description:** {{ kg_description }}
-{% endif %}
-
-Given the following subgraph description, loaded from a YAML file, generate natural language questions that could be
-answered by querying the full knowledge graph, along with their corresponding SPARQL queries.
-
-### YAML Subgraph Description:
-<Subgraph>
-  {{ subgraph_pattern }}
-</Subgraph>
+You will be given a subgraph description loaded from a YAML file, potentially accompanied by knowledge graph metadata (title and description).
 
 Notes on the YAML structure (generic, do not assume any specific KG):
 - Each subgraph includes: subgraph_id, num_types, min_support, types, edges, and predicate_uris.
@@ -28,7 +15,7 @@ cause the graph to fall below the subgraph's support threshold.
 - Attributes marked with "*" fall below the subgraph's support threshold and are optional.
 
 ### Task:
-First, assess whether this subgraph allows for meaningful questions. If the subgraph is too trivial, lacks interesting
+First, assess whether the subgraph allows for meaningful questions. If the subgraph is too trivial, lacks interesting
 relationships (e.g., graph metadata rather than actual knowledge), or cannot support useful, meaningful questions, set
 is_meaningful to false and return an empty questions list. If it at least has some meaningful concepts and natural
 domain terms to elicit a question of decent or high utility, set is_meaningful to true.
@@ -59,8 +46,8 @@ the quality, meaningfulness, and utility of the questions.
 
 
 #### B. Natural Language Question Quality:
-4. Questions must be grounded exclusively in the classes, entities, relationships, and attributes present in this YAML
-subgraph. Never use knowledge-graph jargon (generic properties, types, etc.), mention URIs/prefixes/IDs, or reference
+4. Questions must be grounded exclusively in the meaningful classes, entities, relationships, and attributes present in
+the YAML subgraph. Never use knowledge-graph jargon (generic properties, types, etc.), mention URIs/prefixes/IDs, or reference
 the YAML/subgraph in the natural language question — each question and query must be fully self-contained.
 5. The phrasing of each natural language question should always be natural, fluent, and not awkward or stilted. Each
 question should always end with a question mark. If a term drawn from the graph reads awkwardly, and you are confident

@@ -67,26 +67,25 @@ def _resolve_template_path(filename: str) -> str:
         return filename
 
     base = os.path.basename(filename)
-    search_paths = [
-        os.path.join(_TEMPLATES_DIR, base),
-        os.path.join(_PROMPTS_DIR, base),
-        os.path.join(_ROOT_DIR, base),
-    ]
+    search_dirs = [_TEMPLATES_DIR, _PROMPTS_DIR, _ROOT_DIR]
 
-    for candidate in search_paths:
-        if os.path.isfile(candidate):
-            return candidate
+    for search_dir in search_dirs:
+        path = os.path.join(search_dir, base)
+        if os.path.isfile(path):
+            return path
 
     if os.path.isfile(filename):
         return os.path.abspath(filename)
 
-    raise FileNotFoundError(f"Template not found: {filename} (searched {', '.join(search_paths)})")
+    raise FileNotFoundError(
+        f"Template not found: {filename} (searched {', '.join(search_dirs)})"
+    )
 
 
 def load_prompt_template(template_path: Optional[str] = None) -> Template:
     """Load and return a compiled Jinja2 template."""
     if template_path is None:
-        resolved = _resolve_template_path("generate.jinja")
+        resolved = _resolve_template_path("generate_user.jinja")
     else:
         resolved = _resolve_template_path(template_path)
 
@@ -97,19 +96,81 @@ def load_prompt_template(template_path: Optional[str] = None) -> Template:
     return env.get_template(template_name)
 
 
-def load_verify_template() -> Template:
-    """Load the verification Jinja2 template."""
-    return load_prompt_template("verify.jinja")
+def load_system_template(filename: str) -> Template:
+    """Load a system prompt Jinja2 template."""
+    return load_prompt_template(filename)
 
 
-def load_complexity_template() -> Template:
-    """Load the complexity introduction Jinja2 template."""
-    return load_prompt_template("complexity.jinja")
+def load_generate_system_template(template_path: Optional[str] = None) -> Template:
+    """Load the question generation system Jinja2 template."""
+    return load_prompt_template(template_path or "generate_system.jinja")
 
 
-def load_reword_template() -> Template:
-    """Load the question reword Jinja2 template."""
-    return load_prompt_template("reword.jinja")
+def load_verify_template(template_path: Optional[str] = None) -> Template:
+    """Load the verification user Jinja2 template."""
+    return load_prompt_template(template_path or "verify_user.jinja")
+
+
+def load_verify_system_template(template_path: Optional[str] = None) -> Template:
+    """Load the verification system Jinja2 template."""
+    return load_prompt_template(template_path or "verify_system.jinja")
+
+
+def load_complexity_template(template_path: Optional[str] = None) -> Template:
+    """Load the complexity introduction user Jinja2 template."""
+    return load_prompt_template(template_path or "complexity_user.jinja")
+
+
+def load_complexity_system_template(template_path: Optional[str] = None) -> Template:
+    """Load the complexity introduction system Jinja2 template."""
+    return load_prompt_template(template_path or "complexity_system.jinja")
+
+
+def load_reword_template(template_path: Optional[str] = None) -> Template:
+    """Load the question reword user Jinja2 template."""
+    return load_prompt_template(template_path or "reword_user.jinja")
+
+
+def load_reword_system_template(template_path: Optional[str] = None) -> Template:
+    """Load the question reword system Jinja2 template."""
+    return load_prompt_template(template_path or "reword_system.jinja")
+
+
+def render_prompt_messages(
+    subgraph_pattern: str,
+    subgraph_index: int,
+    template: Optional[Template] = None,
+    system_template: Optional[Template] = None,
+    focus_entity_qa: bool = False,
+    additional_instructions: str = "",
+    kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
+) -> List[Dict[str, str]]:
+    """Render the generation system and user messages."""
+    if system_template is None:
+        system_template = load_generate_system_template()
+    if template is None:
+        template = load_prompt_template()
+
+    system_prompt = system_template.render(focus_entity_qa=focus_entity_qa).strip()
+    user_prompt = template.render(
+        subgraph_pattern=subgraph_pattern,
+        subgraph_index=subgraph_index,
+        focus_entity_qa=focus_entity_qa,
+        kg_title=kg_title,
+        kg_description=kg_description,
+    ).strip()
+
+    if additional_instructions.strip():
+        user_prompt = (
+            f"{user_prompt}\n\n"
+            f"### Additional Instructions\n{additional_instructions.strip()}"
+        )
+
+    return [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt},
+    ]
 
 
 def render_prompt(
@@ -119,8 +180,9 @@ def render_prompt(
     focus_entity_qa: bool = False,
     additional_instructions: str = "",
     kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
 ) -> str:
-    """Render the prompt template with the given subgraph pattern."""
+    """Render the user prompt template with the given subgraph pattern (backward compatible)."""
     if template is None:
         template = load_prompt_template()
 
@@ -129,6 +191,7 @@ def render_prompt(
         subgraph_index=subgraph_index,
         focus_entity_qa=focus_entity_qa,
         kg_title=kg_title,
+        kg_description=kg_description,
     )
     if additional_instructions.strip():
         prompt = (
@@ -136,6 +199,41 @@ def render_prompt(
             f"### Additional Instructions\n{additional_instructions.strip()}\n"
         )
     return prompt
+
+
+def render_complexity_messages(
+    subgraph_pattern: str,
+    qa_pairs: List[Dict[str, Any]],
+    complexity_template: Optional[Template] = None,
+    system_template: Optional[Template] = None,
+    additional_instructions: str = "",
+    kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
+) -> List[Dict[str, str]]:
+    """Render the complexity system and user messages."""
+    if system_template is None:
+        system_template = load_complexity_system_template()
+    if complexity_template is None:
+        complexity_template = load_complexity_template()
+
+    system_prompt = system_template.render().strip()
+    user_prompt = complexity_template.render(
+        subgraph_pattern=subgraph_pattern,
+        qa_pairs=qa_pairs,
+        kg_title=kg_title,
+        kg_description=kg_description,
+    ).strip()
+
+    if additional_instructions.strip():
+        user_prompt = (
+            f"{user_prompt}\n\n"
+            f"### Additional Instructions\n{additional_instructions.strip()}"
+        )
+
+    return [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt},
+    ]
 
 
 def render_complexity_prompt(
@@ -143,12 +241,17 @@ def render_complexity_prompt(
     qa_pairs: List[Dict[str, Any]],
     complexity_template: Optional[Template] = None,
     additional_instructions: str = "",
+    kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
 ) -> str:
-    """Render the complexity introduction prompt with subgraph and executed pairs."""
+    """Render the complexity introduction user prompt (backward compatible)."""
     if complexity_template is None:
         complexity_template = load_complexity_template()
     prompt = complexity_template.render(
-        subgraph_pattern=subgraph_pattern, qa_pairs=qa_pairs
+        subgraph_pattern=subgraph_pattern,
+        qa_pairs=qa_pairs,
+        kg_title=kg_title,
+        kg_description=kg_description,
     )
     if additional_instructions.strip():
         prompt = (
@@ -158,14 +261,69 @@ def render_complexity_prompt(
     return prompt
 
 
+def render_reword_messages(
+    qa_pairs: List[Dict[str, Any]],
+    reword_template: Optional[Template] = None,
+    system_template: Optional[Template] = None,
+) -> List[Dict[str, str]]:
+    """Render the reword system and user messages."""
+    if system_template is None:
+        system_template = load_reword_system_template()
+    if reword_template is None:
+        reword_template = load_reword_template()
+
+    system_prompt = system_template.render().strip()
+    user_prompt = reword_template.render(qa_pairs=qa_pairs).strip()
+
+    return [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt},
+    ]
+
+
 def render_reword_prompt(
     qa_pairs: List[Dict[str, Any]],
     reword_template: Optional[Template] = None,
 ) -> str:
-    """Render the reword prompt with the correct pairs to audit."""
+    """Render the reword user prompt (backward compatible)."""
     if reword_template is None:
         reword_template = load_reword_template()
     return reword_template.render(qa_pairs=qa_pairs)
+
+
+def render_verify_messages(
+    subgraph_pattern: str,
+    qa_pairs: List[Dict[str, Any]],
+    verify_template: Optional[Template] = None,
+    system_template: Optional[Template] = None,
+    additional_instructions: str = "",
+    kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
+) -> List[Dict[str, str]]:
+    """Render the verification system and user messages."""
+    if system_template is None:
+        system_template = load_verify_system_template()
+    if verify_template is None:
+        verify_template = load_verify_template()
+
+    system_prompt = system_template.render().strip()
+    user_prompt = verify_template.render(
+        subgraph_pattern=subgraph_pattern,
+        qa_pairs=qa_pairs,
+        kg_title=kg_title,
+        kg_description=kg_description,
+    ).strip()
+
+    if additional_instructions.strip():
+        user_prompt = (
+            f"{user_prompt}\n\n"
+            f"### Additional Instructions\n{additional_instructions.strip()}"
+        )
+
+    return [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt},
+    ]
 
 
 def render_verify_prompt(
@@ -173,12 +331,17 @@ def render_verify_prompt(
     qa_pairs: List[Dict[str, Any]],
     verify_template: Optional[Template] = None,
     additional_instructions: str = "",
+    kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
 ) -> str:
-    """Render the verification prompt with subgraph and execution results."""
+    """Render the verification user prompt (backward compatible)."""
     if verify_template is None:
         verify_template = load_verify_template()
     prompt = verify_template.render(
-        subgraph_pattern=subgraph_pattern, qa_pairs=qa_pairs
+        subgraph_pattern=subgraph_pattern,
+        qa_pairs=qa_pairs,
+        kg_title=kg_title,
+        kg_description=kg_description,
     )
     if additional_instructions.strip():
         prompt = (

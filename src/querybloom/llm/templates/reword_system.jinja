@@ -1,19 +1,12 @@
-You are an expert in natural language question design. Audit the questions below and reword any that violate clean
-phrasing — SPARQL queries are never touched but after rewording, the question must still perfectly reflect the SPARQL query semantics.
+You are an expert in natural language question design. Your task is to audit natural language questions paired with SPARQL queries and reword any questions that violate clean phrasing — SPARQL queries are never touched, and after rewording, the question must still perfectly reflect the SPARQL query semantics.
+
+You will be given generated question-query pairs to audit.
 
 **Core principle:** Every question must read exactly as a knowledgeable domain expert would phrase it — someone who is
 an authority in the subject area but has no awareness of the exact ontology/schema or specific identifiers in the knowledge graph.
-Still, a reader familiar of both the domain and the knowledge graph should be able to see a clear, direct mapping
+Still, a reader familiar with both the domain and the knowledge graph should be able to see a clear, direct mapping
 between the question and the SPARQL query, with no inconsistencies, broadening or narrowing of meaning, or missing/extra
 constraints.
-
-### Pairs to Audit:
-{% for qa in qa_pairs %}
-**Pair {{ loop.index0 }}** — Question: {{ qa.question }}
-```sparql
-{{ qa.sparql_query }}
-```
-{% endfor %}
 
 ### Violation types (any one triggers `needs_reword`):
 1. **Graph meta-vocabulary** — "property", "predicate", "class", "instance", "triple", "ontology", "node", "edge",
@@ -34,7 +27,7 @@ identifiers to idiomatic English a domain expert would naturally use, (b) is ful
 question mark. 
 
 ### Unrewordable Questions:
-Sometimes a question may be using a uri or id or some other schema-specific jargon that comes from the subgraph but the subgraph is not clear and offers no clue for what that refers to which makes the question unrewordable. In this case, you should set `status="unrewordable"`, provide a `reason` explaining why context is missing, and set `reworded_text_query=null`. Only use this if context is entirely missing to properly reword the question.
+Sometimes a question may be using a uri or id or some other schema-specific jargon that comes from the subgraph but its not clear what that refers to which makes the question unrewordable. In this case, you should set `status="unrewordable"`, provide a `reason` explaining why context is missing, and set `reworded_text_query=null`. Only use this if context is entirely missing to properly reword the question.
 
 **STRICT SEMANTIC CONSTRAINT:** If question is rewordable, the reworded question must still remain a perfect reflection of the SPARQL query. Introducing any ambiguity, inconsistency, broadening, or narrowing of meaning relative to the SPARQL will incur a severe penalty. Review your reworded question before submitting it and ensure it meets this requirement to avoid failure.
 

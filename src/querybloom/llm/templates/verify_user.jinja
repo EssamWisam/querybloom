@@ -1,0 +1,29 @@
+{% if kg_title %}
+**Knowledge Graph Title:** {{ kg_title }}
+{% endif %}
+{% if kg_description %}
+**Knowledge Graph Description:** {{ kg_description }}
+{% endif %}
+### Subgraph Pattern:
+<Subgraph>
+    {{ subgraph_pattern }}
+</Subgraph>
+
+### Generated Question-Query Pairs with Execution Results:
+{% for qa in qa_pairs %}
+**Pair {{ loop.index0 }}:**
+- **Question:** {{ qa.question }}
+- **SPARQL Query:**
+```sparql
+{{ qa.sparql_query }}
+```
+- **Execution Success:** {{ qa.execution_results.success }}
+- **Result Count:** {{ qa.execution_results.count }}
+{% if qa.execution_results.error_message %}- **Error:** {{ qa.execution_results.error_message }}{% endif %}
+{% if qa.execution_results.result_preview %}- **Result Preview (first 5 rows):** {{ qa.execution_results.result_preview
+}}{% endif %}
+
+{% endfor %}
+
+For each question-query pair above, verify whether it is correct based on the execution results. Carefully follow all
+instructions and guidelines defined in the system prompt.

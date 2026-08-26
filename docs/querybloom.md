@@ -109,7 +109,7 @@ User fills QaPanel form (model, max_subgraphs, verify_iterations) → submit()
                     ├── 1. GENERATOR AGENT
                     │     LLM call (structured output: SubgraphGenerationResult)
                     │     Decides if subgraph is meaningful; generates NL + SPARQL pairs
-                    │     Template: ABSTAT/generate.jinja
+                    │     Templates: generate_system.jinja + generate_user.jinja
                     │
                     ├── 2. SPARQL EXECUTOR
                     │     Each generated SPARQL query is executed against the live endpoint
@@ -120,20 +120,20 @@ User fills QaPanel form (model, max_subgraphs, verify_iterations) → submit()
                     │     Rewrites each pair with one non-trivial construct:
                     │     FILTER, OPTIONAL, UNION, ORDER_BY_LIMIT, EXISTS, SUBQUERY,
                     │     PROPERTY_PATH — re-executes the augmented queries
-                    │     Template: ABSTAT/complexity.jinja
+                    │     Templates: complexity_system.jinja + complexity_user.jinja
                     │
                     ├── 4. VERIFIER AGENT  (if verify_iterations > 0)
                     │     LLM call (structured output: VerificationResult)
                     │     Reviews pairs with execution results; marks correct / needs_fix
                     │     Picks most_meaningful_index; applies fixes and re-executes
                     │     Up to verify_iterations cycles
-                    │     Template: ABSTAT/verify.jinja
+                    │     Templates: verify_system.jinja + verify_user.jinja
                     │
                     └── 5. REWORD AGENT  (if reword_questions_step=True)
                           LLM call (structured output: RewordResult)
                           Audits NL questions for KG URI leakage / jargon
                           Rewrites only the question text of correct pairs
-                          Template: ABSTAT/reword.jinja
+                          Templates: reword_system.jinja + reword_user.jinja
 
 SSE frames → QaPanel addFrame():
   run.started         → batch started

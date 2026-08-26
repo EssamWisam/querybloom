@@ -10,7 +10,11 @@ from querybloom.llm.client import parse_structured_response
 from querybloom.llm.cost import extract_usage_and_cost
 from querybloom.llm.execution import execute_sparql_and_get_result
 from querybloom.llm.models import SubgraphGenerationResult
-from querybloom.llm.prompts import load_prompt_template, render_prompt
+from querybloom.llm.prompts import (
+    load_generate_system_template,
+    load_prompt_template,
+    render_prompt_messages,
+)
 
 
 def generate_questions_batch(
@@ -20,23 +24,27 @@ def generate_questions_batch(
     focus_entity_qa: bool = False,
     additional_instructions: str = "",
     kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
 ) -> List[SubgraphGenerationResult]:
     """
     Generate question-query pairs for multiple subgraphs using batch completion.
     """
     template = load_prompt_template(template_path)
+    system_template = load_generate_system_template()
 
     messages_batch = []
     for i, pattern in enumerate(subgraph_patterns):
-        prompt = render_prompt(
+        messages = render_prompt_messages(
             pattern,
             i,
-            template,
+            template=template,
+            system_template=system_template,
             focus_entity_qa=focus_entity_qa,
             additional_instructions=additional_instructions,
             kg_title=kg_title,
+            kg_description=kg_description,
         )
-        messages_batch.append([{"role": "user", "content": prompt}])
+        messages_batch.append(messages)
 
     responses = batch_completion(
         model=model,
@@ -60,6 +68,7 @@ def generate_questions_single(
     focus_entity_qa: bool = False,
     additional_instructions: str = "",
     kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
 ) -> SubgraphGenerationResult:
     """
     Generate question-query pairs for a single subgraph.
@@ -71,6 +80,7 @@ def generate_questions_single(
         focus_entity_qa=focus_entity_qa,
         additional_instructions=additional_instructions,
         kg_title=kg_title,
+        kg_description=kg_description,
     )
     return results[0]
 
@@ -88,16 +98,18 @@ def generate_and_execute(
     additional_instructions: str = "",
     event_sink: EventSink | None = None,
     kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
     return_usage: bool = False,
 ) -> Tuple[SubgraphGenerationResult, List[Dict[str, Any]]] | Tuple[SubgraphGenerationResult, List[Dict[str, Any]], Dict[str, Any]]:
     """Generate QA pairs and execute them. Returns (gen_result, qa_pairs_dicts) or (gen_result, qa_pairs_dicts, usage)."""
-    prompt = render_prompt(
+    messages = render_prompt_messages(
         pattern_str,
         subgraph_index,
-        template,
+        template=template,
         focus_entity_qa=focus_entity_qa,
         additional_instructions=additional_instructions,
         kg_title=kg_title,
+        kg_description=kg_description,
     )
     emit_event(
         event_sink,
@@ -108,7 +120,7 @@ def generate_and_execute(
     )
     response = completion(
         model=model,
-        messages=[{"role": "user", "content": prompt}],
+        messages=messages,
         response_format=SubgraphGenerationResult,
         reasoning_effort="high",
     )

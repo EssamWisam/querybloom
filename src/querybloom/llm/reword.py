@@ -8,7 +8,7 @@ from litellm import completion
 from querybloom.llm.client import parse_structured_response
 from querybloom.llm.cost import extract_usage_and_cost
 from querybloom.llm.models import RewordResult
-from querybloom.llm.prompts import render_reword_prompt
+from querybloom.llm.prompts import render_reword_messages
 
 
 def reword_questions(
@@ -18,10 +18,10 @@ def reword_questions(
     return_usage: bool = False,
 ) -> Union[RewordResult, Tuple[RewordResult, Dict[str, Any]]]:
     """Call the LLM to audit and fix NL question phrasing for the given pairs."""
-    prompt = render_reword_prompt(qa_pairs, reword_template)
+    messages = render_reword_messages(qa_pairs, reword_template=reword_template)
     response = completion(
         model=model,
-        messages=[{"role": "user", "content": prompt}],
+        messages=messages,
         response_format=RewordResult,
         reasoning_effort="high",
     )

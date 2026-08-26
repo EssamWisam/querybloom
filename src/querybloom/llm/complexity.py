@@ -8,7 +8,7 @@ from litellm import completion
 from querybloom.llm.client import parse_structured_response
 from querybloom.llm.cost import extract_usage_and_cost
 from querybloom.llm.models import ComplexityIntroducerResult
-from querybloom.llm.prompts import render_complexity_prompt
+from querybloom.llm.prompts import render_complexity_messages
 
 
 def introduce_complexity(
@@ -18,17 +18,21 @@ def introduce_complexity(
     complexity_template: Any = None,
     additional_instructions: str = "",
     return_usage: bool = False,
+    kg_title: Optional[str] = None,
+    kg_description: Optional[str] = None,
 ) -> Union[ComplexityIntroducerResult, Tuple[ComplexityIntroducerResult, Dict[str, Any]]]:
     """Call the LLM to augment each QA pair with one non-trivial complexity construct."""
-    prompt = render_complexity_prompt(
+    messages = render_complexity_messages(
         subgraph_pattern,
         qa_pairs,
-        complexity_template,
+        complexity_template=complexity_template,
         additional_instructions=additional_instructions,
+        kg_title=kg_title,
+        kg_description=kg_description,
     )
     response = completion(
         model=model,
-        messages=[{"role": "user", "content": prompt}],
+        messages=messages,
         response_format=ComplexityIntroducerResult,
         reasoning_effort="high",
     )

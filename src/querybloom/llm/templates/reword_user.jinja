@@ -1,0 +1,10 @@
+### Pairs to Audit:
+{% for qa in qa_pairs %}
+**Pair {{ loop.index0 }}** — Question: {{ qa.question }}
+```sparql
+{{ qa.sparql_query }}
+```
+{% endfor %}
+
+For each question-query pair above, audit the natural language question and reword any that violate clean phrasing.
+Carefully follow all instructions and guidelines defined in the system prompt.

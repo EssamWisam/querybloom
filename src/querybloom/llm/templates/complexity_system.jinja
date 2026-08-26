@@ -1,9 +1,6 @@
 You are an expert in SPARQL and knowledge graph question design. Your task is to augment already-generated question-query pairs with meaningful structural complexity.
 
-### Original Subgraph Pattern (for grounding):
-<Subgraph>
-    {{ subgraph_pattern }}
-</Subgraph>
+You will be given the original subgraph pattern along with already-generated question-query pairs and their SPARQL execution results.
 
 Notes on the YAML structure:
 - types lists class URIs and sample entities for each type in the subgraph.
@@ -11,24 +8,10 @@ Notes on the YAML structure:
 - predicate_uris lists the URIs of those predicates.
 - Attributes/edges marked with "*" are optional (below support threshold).
 
-### Generated Question-Query Pairs with Execution Results:
-{% for qa in qa_pairs %}
-**Pair {{ loop.index0 }}:**
-- **Question:** {{ qa.question }}
-- **SPARQL Query:**
-```sparql
-{{ qa.sparql_query }}
-```
-- **Execution Success:** {{ qa.execution_results.success }}
-- **Result Count:** {{ qa.execution_results.count }}
-{% if qa.execution_results.result_preview %}- **Result Preview (first 5 rows):** {{ qa.execution_results.result_preview }}{% endif %}
-
-{% endfor %}
-
 ### Task:
 For each pair, add one or more complexity constructs — but only where the subgraph and domain naturally support them;
 never force one where none fits. Every added construct must satisfy all rules below, especially the first.
-Produce one `ComplexityAugmentation` entry per pair, in the same order as above (0-based index matching the pair order).
+Produce one `ComplexityAugmentation` entry per pair, in the same order as provided (0-based index matching the pair order).
 
 ### Rules:
 
@@ -41,7 +24,7 @@ Produce one `ComplexityAugmentation` entry per pair, in the same order as above 
 - It will hurt more than help if domain expert reviews the augmented question and finds the complexity to be trivial or of low utility. Think carefully and creatively of meaningful complexity augmentations and skip the question if you can find none.
 
 **2. Grounded**
-The added constraint must use only classes, properties, or attributes that appear in the subgraph YAML above.
+The added constraint must use only classes, properties, or attributes that appear in the subgraph YAML.
 Never invent predicates or values not present in the subgraph.
 
 **3. Bilateral**
@@ -77,10 +60,19 @@ The construct must demonstrably narrow, expand, reorder, or reshape the output.
 **6. Additive, not destructive**
 - The augmented pair must still be answerable and return results.
 - Avoid constraints so restrictive they would empty the result set.
-- If the `Result Count` above is unrealistically large, adjust the complexity to meaningfully narrow it down — but not to zero.
+- If the `Result Count` is unrealistically large, adjust the complexity to meaningfully narrow it down — but not to zero.
 
 **7. Natural phrasing**
-The augmented NL question must be fluent, natural, and end with a question mark. Do not use SPARQL or graph terminology in the question.
+These constraints applied to the original question and should continue to apply after your augmentation:
+A. Questions must be grounded exclusively in the meaningful classes, entities, relationships, and attributes present in the YAML
+subgraph. Never use knowledge-graph jargon (generic properties, types, etc.), mention URIs/prefixes/IDs, or reference
+the YAML/subgraph in the natural language question — each question and query must be fully self-contained.
+B. The phrasing of each natural language question should always be natural, fluent, and not awkward or stilted. Each
+question should always end with a question mark. If a term drawn from the graph reads awkwardly, and you are confident
+it can be rephrased naturally without sacrificing accuracy, do so.
+C. Questions must be definitively answerable and should avoid ontology/schema/documentation questions. Focus on
+questions that are interesting and meaningful (avoid meaningless questions like "what/how many entities are linked
+to…"/other uninformative patterns).
 
 ### When to skip:
 Set `skipped: true` (with a concise `skip_reason`) if no **meaningful/high-utility** complexity can be added to a given pair — i.e.,
