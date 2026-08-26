@@ -25,6 +25,7 @@ from querybloom.api.models import (
     ABSTATSampleRunRequest,
     ArtifactCreate,
     AuthLoginRequest,
+    AuthRefreshRequest,
     AuthSignupRequest,
     EventCreate,
     LLMRunRequest,
@@ -566,6 +567,12 @@ async def _auth_login(request: AuthLoginRequest):
     return await asyncio.to_thread(client.auth_login, request.email, request.password)
 
 
+@api_router.post("/auth/refresh")
+async def _auth_refresh(request: AuthRefreshRequest):
+    client = get_supabase_client(required=True)
+    return await asyncio.to_thread(client.auth_refresh, request.refresh_token)
+
+
 @api_router.post("/auth/logout")
 async def _auth_logout(user: SupabaseUser = Depends(require_user)):
     client = get_supabase_client(required=True)
@@ -966,7 +973,11 @@ async def _abstat_sample_stream(request: ABSTATSampleRunRequest, user: SupabaseU
         yield _sse_message("run.created", {"run": run})
         try:
             while True:
-                kind, payload = await queue.get()
+                try:
+                    kind, payload = await asyncio.wait_for(queue.get(), timeout=15.0)
+                except asyncio.TimeoutError:
+                    yield ": ping\n\n"
+                    continue
                 if kind == "event":
                     yield _sse_message(payload.get("type", "event"), payload)
                 elif kind == "result":
@@ -1368,7 +1379,11 @@ async def _abstat_llm_stream(request: ABSTATLLMRunRequest, user: SupabaseUser = 
         yield _sse_message("run.created", {"run": run})
         try:
             while True:
-                kind, payload = await queue.get()
+                try:
+                    kind, payload = await asyncio.wait_for(queue.get(), timeout=15.0)
+                except asyncio.TimeoutError:
+                    yield ": ping\n\n"
+                    continue
                 if kind == "event":
                     yield _sse_message(payload.get("type", "event"), payload)
                 elif kind == "result":

@@ -72,6 +72,10 @@ class AuthLoginRequest(BaseModel):
     password: str
 
 
+class AuthRefreshRequest(BaseModel):
+    refresh_token: str
+
+
 class ProjectCreate(BaseModel):
     name: str
     description: str | None = None
