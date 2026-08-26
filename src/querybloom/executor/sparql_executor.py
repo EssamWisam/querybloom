@@ -200,14 +200,18 @@ def execute_sparql_enhanced(
 ) -> SparqlExecutionResult:
     """Execute a SPARQL query with optional retry logic.
 
-    FRINK-hosted KGs are automatically wrapped with the appropriate FROM clause
-    and routed through the FRINK federation endpoint. This works for catalog
-    aliases and for raw FRINK endpoint URLs.
+    By default (federated=False), queries execute directly against the endpoint URL.
+    When federated=True is requested for a Proto-OKN/FRINK endpoint, the query is
+    automatically wrapped with the appropriate FROM clause and routed through the
+    federation endpoint (FEDERATED_URL).
     """
-    # Apply FRINK federation wrapping when requested
+    # Apply FRINK federation wrapping only when federated=True is explicitly requested
     actual_query = query
     actual_url = endpoint_url
-    should_federate = _endpoint_should_use_federation(endpoint_name, endpoint_url)
+    should_federate = federated and (
+        _endpoint_should_use_federation(endpoint_name, endpoint_url)
+        or _endpoint_url_is_frink(endpoint_url)
+    )
     if should_federate:
         graph_uri = _endpoint_url_to_graph_uri(endpoint_url)
         actual_query = _insert_from_clause(query, graph_uri)
@@ -258,9 +262,9 @@ def execute_sparql_query(
 ) -> Dict[str, Any]:
     """Execute a SPARQL query against a named endpoint.
 
-    Known FRINK endpoint aliases are automatically routed through the federation
-    SPARQL service with an injected FROM dataset clause. Raw/custom endpoint URLs
-    execute directly.
+    By default, queries execute directly against the named endpoint URL.
+    If federated=True is specified for a Proto-OKN endpoint, the query is
+    routed through the federation SPARQL service with an injected FROM dataset clause.
     """
     # If endpoint is a known shortname, use its URL; otherwise treat it as a custom URL
     endpoint_url = ENDPOINTS.get(endpoint, endpoint)
