@@ -80,25 +80,27 @@ jobs:
           # If container was not just fully rebuilt, recompile webapp build inside container
           if [ "$REBUILD" != "true" ]; then
             if [ "$PREV" != "$NEW" ] && git diff --name-only $PREV $NEW | grep -q '^webapp/'; then
-              echo "Frontend source files changed. Rebuilding SvelteKit static bundle inside container..."
-              docker exec querybloom-prod sh -c "cd /workspace/querybloom/webapp && rm -rf build .svelte-kit && BASE_PATH=/querybloom npm run build"
+              echo "Frontend source files changed. Rebuilding SvelteKit static bundle with zero downtime..."
+              docker exec querybloom-prod sh -c "cd /workspace/querybloom/webapp && rm -rf build_tmp .svelte-kit && BUILD_DIR=build_tmp BASE_PATH=/querybloom npm run build && rm -rf build_old && (mv build build_old || true) && mv build_tmp build && rm -rf build_old"
             fi
           fi
 
       - name: Verify Backend & Show Logs
         run: |
-          echo "Waiting for backend to be ready..."
+          echo "Waiting for backend and frontend to be ready..."
           MAX_RETRIES=20
           RETRY_COUNT=0
           HTTP_STATUS="000"
+          FRONTEND_STATUS="000"
           
           while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
             HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8002/api/v1/health || echo "000")
-            if [ "$HTTP_STATUS" = "200" ]; then
-              echo "Backend is ready! (HTTP 200 OK after ${RETRY_COUNT} retries)"
+            FRONTEND_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8002/ || echo "000")
+            if [ "$HTTP_STATUS" = "200" ] && [ "$FRONTEND_STATUS" = "200" ]; then
+              echo "Application is ready! (HTTP 200 OK after ${RETRY_COUNT} retries)"
               break
             fi
-            echo "Attempt $((RETRY_COUNT + 1))/$MAX_RETRIES: HTTP status is $HTTP_STATUS, waiting 2s..."
+            echo "Attempt $((RETRY_COUNT + 1))/$MAX_RETRIES: API status is $HTTP_STATUS, Frontend is $FRONTEND_STATUS, waiting 2s..."
             sleep 2
             RETRY_COUNT=$((RETRY_COUNT + 1))
           done
@@ -107,8 +109,8 @@ jobs:
           docker logs --tail 40 querybloom-prod || true
           echo "============================================================"
           
-          if [ "$HTTP_STATUS" != "200" ]; then
-            echo "::error::❌ Health check failed with HTTP status: $HTTP_STATUS"
+          if [ "$HTTP_STATUS" != "200" ] || [ "$FRONTEND_STATUS" != "200" ]; then
+            echo "::error::❌ Health check failed! API: $HTTP_STATUS, Frontend: $FRONTEND_STATUS"
             exit 1
           fi
           

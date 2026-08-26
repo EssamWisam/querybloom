@@ -32,14 +32,16 @@ app.include_router(api_router, prefix="/querybloom")
 webapp_build_dir = Path(__file__).resolve().parents[2] / "webapp" / "build"
 if not webapp_build_dir.exists():
     webapp_build_dir = Path(__file__).resolve().parent / "webapp" / "build"
-if webapp_build_dir.exists():
-    app_dir = webapp_build_dir / "_app"
-    if app_dir.exists():
-        app.mount("/querybloom/_app", StaticFiles(directory=str(app_dir)), name="querybloom_app")
-        app.mount("/_app", StaticFiles(directory=str(app_dir)), name="_app")
 
-    @app.get("/{full_path:path}")
-    async def serve_spa(full_path: str):
+# Always ensure the directories exist so StaticFiles doesn't crash on startup if temporarily missing
+app_dir = webapp_build_dir / "_app"
+app_dir.mkdir(parents=True, exist_ok=True)
+
+app.mount("/querybloom/_app", StaticFiles(directory=str(app_dir)), name="querybloom_app")
+app.mount("/_app", StaticFiles(directory=str(app_dir)), name="_app")
+
+@app.get("/{full_path:path}")
+async def serve_spa(full_path: str):
         # 1. Try direct path
         file_path = webapp_build_dir / full_path
         if file_path.exists() and file_path.is_file():

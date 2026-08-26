@@ -47,6 +47,18 @@
   let running = false;
   let hydratingQa = false;
   let error = "";
+  let errorModalMessage = null;
+  let errorModalDetails = null;
+
+  function showErrorModal(message, details = "") {
+    errorModalMessage = message;
+    errorModalDetails = details;
+  }
+
+  function closeErrorModal() {
+    errorModalMessage = null;
+    errorModalDetails = null;
+  }
   let selectedIndex = null;
   let hydratedSampleRunId = null;
   let showSubgraphInspector = false;
@@ -178,7 +190,14 @@
     try {
       const rows = await loadRunQaPairs(token, runId);
       if (runId !== sampleRunId) return;
-      qaMap = buildQaMapFromRows(rows);
+      const restored = buildQaMapFromRows(rows);
+      const merged = { ...restored };
+      for (const [idxStr, entry] of Object.entries(qaMap)) {
+        if (entry.status === "failed") {
+          merged[Number(idxStr)] = entry;
+        }
+      }
+      qaMap = merged;
       hydratedSampleRunId = runId;
     } catch (err) {
       console.warn("QA pair restore failed:", err);
@@ -698,9 +717,17 @@
     const payload = data.data ?? {};
     const event = frame.event;
     const stage = data.stage;
-    const index = payload.subgraph_index ?? payload.index;
+    const index = payload.subgraph_index ?? payload.index ?? data.subgraph_index ?? data.index;
 
-    if (event === "subgraph.started") {
+    if (event === "error") {
+      const errMsg =
+        payload.error || payload.message || data.error || data.message || "QA generation failed";
+      error = errMsg;
+      showErrorModal("QA Generation Failed", errMsg);
+      if (index != null) {
+        updateSubgraph(index, { status: "failed", error: errMsg });
+      }
+    } else if (event === "subgraph.started") {
       updateSubgraph(index, { status: "pending" });
       if (selectedIndex == null) selectedIndex = index;
     } else if (event === "stage.started" && stage === "llm.generate") {
@@ -800,9 +827,13 @@
           : (entry?.qa_pairs ?? []),
       });
     } else if (event === "subgraph.failed") {
+      const errMsg =
+        payload.error ?? payload.message ?? data.error ?? data.message ?? "Pipeline failed";
+      error = errMsg;
+      showErrorModal("Subgraph Generation Failed", errMsg);
       updateSubgraph(index, {
         status: "failed",
-        error: payload.error ?? payload.message ?? "Pipeline failed",
+        error: errMsg,
       });
     }
   }
@@ -862,6 +893,7 @@
     qaMap = nextQaMap;
     activeAbortController = new AbortController();
 
+    let streamHadErrors = false;
     try {
       await streamLlm(
         token,
@@ -880,15 +912,34 @@
             reword_questions_step: true,
           },
         },
-        addFrame,
+        (frame) => {
+          if (frame.event === "error" || frame.event === "subgraph.failed") {
+            streamHadErrors = true;
+          }
+          addFrame(frame);
+        },
         activeAbortController.signal,
       );
-      await hydrateStoredQa(sampleRunId, { force: true });
+
+      const hasFailures = requested.some(
+        (idx) => qaMap[idx]?.status === "failed",
+      );
+      if (!streamHadErrors && !hasFailures && !error) {
+        await hydrateStoredQa(sampleRunId, { force: true });
+      }
     } catch (err) {
       if (err?.name !== "AbortError" && !String(err?.message || "").includes("aborted")) {
         error = err?.message || "QA generation failed";
+        showErrorModal("QA Generation Error", error);
       }
-      await hydrateStoredQa(sampleRunId, { force: true });
+      for (const index of requested) {
+        if (qaMap[index]?.status !== "completed") {
+          updateSubgraph(index, {
+            status: "failed",
+            error: error || "Generation failed",
+          });
+        }
+      }
     } finally {
       running = false;
       runningIndexes = new Set();
@@ -917,6 +968,41 @@
 </script>
 
 <section class="qa-panel">
+  {#if errorModalMessage}
+    <div
+      class="modal-backdrop"
+      role="presentation"
+      on:click={closeErrorModal}
+      on:keydown={(e) => e.key === "Escape" && closeErrorModal()}
+    >
+      <div
+        class="modal-card"
+        role="dialog"
+        tabindex="-1"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        on:click|stopPropagation
+        on:keydown|stopPropagation
+      >
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <span class="modal-icon" aria-hidden="true">⚠️</span>
+            <h3 id="modal-title">{errorModalMessage}</h3>
+          </div>
+          <button class="modal-close-btn" type="button" aria-label="Close" on:click={closeErrorModal}>✕</button>
+        </div>
+        <div class="modal-body">
+          {#if errorModalDetails}
+            <p class="modal-error-text">{errorModalDetails}</p>
+          {/if}
+        </div>
+        <div class="modal-actions">
+          <button class="modal-primary-btn" type="button" on:click={closeErrorModal}>Dismiss</button>
+        </div>
+      </div>
+    </div>
+  {/if}
+
   <!-- Form bar -->
   <form on:submit|preventDefault={submit}>
     <div class="form-head">
@@ -2187,5 +2273,127 @@
     .qa-summary-actions {
       justify-content: flex-start;
     }
+  }
+
+  /* ── Modal / Popup ───────────────────────────────────── */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .modal-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    max-width: 540px;
+    width: 100%;
+    overflow: hidden;
+    animation: modalPop 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes modalPop {
+    from {
+      opacity: 0;
+      transform: scale(0.96) translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #fff5f5;
+    border-bottom: 1px solid #fed7d7;
+  }
+
+  .modal-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .modal-icon {
+    font-size: 1.25rem;
+  }
+
+  .modal-header h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #c53030;
+  }
+
+  .modal-close-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    color: #a0aec0;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    line-height: 1;
+  }
+
+  .modal-close-btn:hover {
+    color: #4a5568;
+    background: #edf2f7;
+  }
+
+  .modal-body {
+    padding: 20px;
+    display: grid;
+    gap: 14px;
+  }
+
+  .modal-error-text {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #2d3748;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    word-break: break-word;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 20px 16px;
+    background: #f8fafc;
+    border-top: 1px solid #edf2f7;
+  }
+
+  .modal-primary-btn {
+    background: #e53e3e;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  .modal-primary-btn:hover {
+    background: #c53030;
   }
 </style>
