@@ -90,6 +90,13 @@
     errorModalMessage = null;
     errorModalDetails = null;
   }
+
+  let showExportModal = false;
+  let exportFormat = "yaml";
+  let exportIncludeValidReason = false;
+  let exportIgnoreNoResults = true;
+  let exportIgnoreNeedsFix = false;
+
   let selectedIndex = null;
   let hydratedSampleRunId = null;
   let showSubgraphInspector = false;
@@ -161,13 +168,37 @@
     selectedSubgraphIndexes = new Set(subgraphs.map((sg) => sg.index));
   }
   $: selectedSubgraphCount = selectedSubgraphIndexes.size;
-  $: exportRows = qaList.flatMap((sg) =>
-    (sg.qa_pairs ?? []).map((pair) => ({
-      subgraphId: displaySubgraphId(sg.index),
-      text: pair.text_query ?? pair.question ?? "",
-      query: pair.sparql_query ?? "",
-    })),
+  $: allExportRows = qaList.flatMap((sg) =>
+    (sg.qa_pairs ?? []).map((pair) => {
+      const count = executionCount(pair.execution_results);
+      const hasResults =
+        count > 0 ||
+        typeof pair.execution_results === "boolean" ||
+        typeof pair.execution_results?.boolean === "boolean";
+      const isNeedsFix = pair.verification_status === "needs_fix";
+      const isValid = getPairValid(pair);
+      const reason = getPairReason(pair);
+      const snippet = formatResultSnippet(pair.execution_results, 3);
+
+      return {
+        id: displaySubgraphId(sg.index),
+        text: pair.text_query ?? pair.question ?? "",
+        query: pair.sparql_query ?? "",
+        result_count: count,
+        result_snippet: snippet,
+        valid: isValid,
+        reason,
+        hasResults,
+        isNeedsFix,
+      };
+    }),
   );
+
+  $: filteredExportRows = allExportRows.filter((row) => {
+    if (exportIgnoreNoResults && !row.hasResults) return false;
+    if (exportIgnoreNeedsFix && row.isNeedsFix) return false;
+    return true;
+  });
 
   function displaySubgraphId(index) {
     const info = subgraphByIndex[index];
@@ -254,34 +285,111 @@
     }
   }
 
-  function escapeHtml(value) {
-    return String(value ?? "")
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;");
+  function formatYamlBlockScalar(str, indent = 4) {
+    const prefix = " ".repeat(indent);
+    const normalized = String(str ?? "")
+      .replace(/\r\n/g, "\n")
+      .replace(/\r/g, "\n")
+      .trimEnd();
+    if (!normalized) return ' ""';
+    const lines = normalized.split("\n");
+    return (
+      " |\n" + lines.map((l) => (l.length > 0 ? prefix + l : "")).join("\n")
+    );
   }
 
-  function downloadExcel() {
-    if (!exportRows.length) return;
-    const rows = exportRows
-      .map(
-        (row) =>
-          `<tr><td>${escapeHtml(row.subgraphId)}</td><td>${escapeHtml(
-            row.text,
-          )}</td><td>${escapeHtml(row.query)}</td></tr>`,
-      )
-      .join("");
-    const html = `<!doctype html><html><head><meta charset="utf-8"></head><body><table><thead><tr><th>subgraph id</th><th>text</th><th>query</th></tr></thead><tbody>${rows}</tbody></table></body></html>`;
-    const blob = new Blob([html], {
-      type: "application/vnd.ms-excel;charset=utf-8",
+  function buildYamlString(rows, includeValidReason) {
+    const entries = rows.map((r) => {
+      const lines = [
+        `- id: ${JSON.stringify(r.id)}`,
+        `  text: ${JSON.stringify(r.text)}`,
+        `  query:${formatYamlBlockScalar(r.query, 4)}`,
+        `  result_count: ${r.result_count}`,
+        `  result_snippet:${formatYamlBlockScalar(r.result_snippet, 4)}`,
+      ];
+      if (includeValidReason) {
+        lines.push(`  valid: ${r.valid ? "true" : "false"}`);
+        lines.push(`  reason: ${JSON.stringify(r.reason || "")}`);
+      }
+      return lines.join("\n");
     });
+    return entries.join("\n") + "\n";
+  }
+
+  function csvEscape(value) {
+    if (value == null) return "";
+    if (typeof value === "boolean") return value ? "true" : "false";
+    const str = String(value);
+    if (
+      str.includes(",") ||
+      str.includes('"') ||
+      str.includes("\n") ||
+      str.includes("\r")
+    ) {
+      return `"${str.replaceAll('"', '""')}"`;
+    }
+    return str;
+  }
+
+  function buildCsvString(rows, includeValidReason) {
+    const headers = ["id", "text", "query", "result_count", "result_snippet"];
+    if (includeValidReason) {
+      headers.push("valid", "reason");
+    }
+    const lines = [
+      headers.join(","),
+      ...rows.map((r) => {
+        const cols = [
+          csvEscape(r.id),
+          csvEscape(r.text),
+          csvEscape(r.query),
+          csvEscape(r.result_count),
+          csvEscape(r.result_snippet),
+        ];
+        if (includeValidReason) {
+          cols.push(csvEscape(r.valid), csvEscape(r.reason));
+        }
+        return cols.join(",");
+      }),
+    ];
+    return lines.join("\n") + "\n";
+  }
+
+  function triggerDownload(content, filename, mimeType) {
+    const blob = new Blob([content], { type: mimeType });
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement("a");
     anchor.href = url;
-    anchor.download = `querybloom-text-query-${sampleRunId || Date.now()}.xls`;
+    anchor.download = filename;
     anchor.click();
     URL.revokeObjectURL(url);
+  }
+
+  function executeExport() {
+    if (!filteredExportRows.length) return;
+    const filenameBase = `querybloom-qa-${sampleRunId || Date.now()}`;
+    if (exportFormat === "yaml") {
+      const yamlContent = buildYamlString(
+        filteredExportRows,
+        exportIncludeValidReason,
+      );
+      triggerDownload(
+        yamlContent,
+        `${filenameBase}.yaml`,
+        "application/x-yaml;charset=utf-8",
+      );
+    } else {
+      const csvContent = buildCsvString(
+        filteredExportRows,
+        exportIncludeValidReason,
+      );
+      triggerDownload(
+        csvContent,
+        `${filenameBase}.csv`,
+        "text/csv;charset=utf-8",
+      );
+    }
+    showExportModal = false;
   }
 
   function typeLabels(entry) {
@@ -607,6 +715,8 @@
     if (Array.isArray(result?.results)) return result.results.length;
     if (Array.isArray(result?.result_preview?.rows))
       return result.result_preview.rows.length;
+    if (typeof result?.boolean === "boolean" || typeof result === "boolean")
+      return 1;
     return 0;
   }
 
@@ -646,6 +756,97 @@
       return JSON.stringify(value);
     }
     return String(value);
+  }
+
+  function getPairValid(pair) {
+    if (typeof pair?.valid === "boolean") return pair.valid;
+    if (typeof pair?.valid === "string")
+      return pair.valid.toLowerCase() === "true";
+    if (pair?.verification_status) {
+      return pair.verification_status === "correct";
+    }
+    if (pair?.execution_results != null) {
+      if (pair.execution_results === false) return false;
+      if (executionError(pair.execution_results)) return false;
+      if (executionCount(pair.execution_results) === 0) return false;
+      if (typeof pair.execution_results?.success === "boolean")
+        return pair.execution_results.success;
+      return true;
+    }
+    return true;
+  }
+
+  function getPairReason(pair) {
+    if (pair?.reason != null && pair.reason !== "") return String(pair.reason);
+    if (pair?.verification_reason != null && pair.verification_reason !== "")
+      return String(pair.verification_reason);
+    if (pair?.reword_reason != null && pair.reword_reason !== "")
+      return String(pair.reword_reason);
+    const execErr = executionError(pair?.execution_results);
+    if (execErr) return String(execErr);
+    return "";
+  }
+
+  function formatResultSnippet(result, maxRows = 3) {
+    if (result == null) return "";
+    if (typeof result === "boolean") return result ? "true" : "false";
+    if (typeof result?.boolean === "boolean")
+      return result.boolean ? "true" : "false";
+    const err = executionError(result);
+    if (err) return `Error: ${err}`;
+
+    const preview = executionPreview(result);
+    if (preview?.rows?.length) {
+      const cols = preview.columns || [];
+      const rows = preview.rows.slice(0, maxRows);
+      if (cols.length === 1) {
+        return rows.map((r) => previewCell(r, cols[0])).join("\n");
+      }
+      return rows
+        .map((r) => cols.map((c) => `${c}: ${previewCell(r, c)}`).join(" | "))
+        .join("\n");
+    }
+    if (Array.isArray(result?.results) && result.results.length) {
+      const rows = result.results.slice(0, maxRows);
+      const first = rows[0];
+      if (first && typeof first === "object") {
+        const cols = Object.keys(first);
+        if (cols.length === 1) {
+          return rows.map((r) => previewCell(r, cols[0])).join("\n");
+        }
+        return rows
+          .map((r) => cols.map((c) => `${c}: ${previewCell(r, c)}`).join(" | "))
+          .join("\n");
+      }
+      return rows.map(String).join("\n");
+    }
+    if (Array.isArray(result) && result.length) {
+      const rows = result.slice(0, maxRows);
+      const first = rows[0];
+      if (first && typeof first === "object") {
+        const cols = Object.keys(first);
+        if (cols.length === 1) {
+          return rows.map((r) => previewCell(r, cols[0])).join("\n");
+        }
+        return rows
+          .map((r) => cols.map((c) => `${c}: ${previewCell(r, c)}`).join(" | "))
+          .join("\n");
+      }
+      return rows.map(String).join("\n");
+    }
+    return "";
+  }
+
+  function hasReachedVerification(subgraph, pair) {
+    if (!pair) return false;
+    if (pair.verification_status != null) return true;
+    const status = subgraph?.status;
+    return (
+      status === "verified" ||
+      status === "rewording" ||
+      status === "reworded" ||
+      status === "completed"
+    );
   }
 
   function sameSnapshot(left, right) {
@@ -1075,6 +1276,126 @@
     </div>
   {/if}
 
+  {#if showExportModal}
+    <div
+      class="modal-backdrop"
+      role="presentation"
+      on:click={() => (showExportModal = false)}
+      on:keydown={(e) => e.key === "Escape" && (showExportModal = false)}
+    >
+      <div
+        class="modal-card export-modal"
+        role="dialog"
+        tabindex="-1"
+        aria-modal="true"
+        aria-labelledby="export-modal-title"
+        on:click|stopPropagation
+        on:keydown|stopPropagation
+      >
+        <div class="modal-header export-modal-header">
+          <div class="modal-title-wrap">
+            <span class="modal-icon" aria-hidden="true">📥</span>
+            <h3 id="export-modal-title">Download QA Dataset</h3>
+          </div>
+          <button
+            class="modal-close-btn"
+            type="button"
+            aria-label="Close"
+            on:click={() => (showExportModal = false)}>✕</button
+          >
+        </div>
+        <div class="modal-body export-modal-body">
+          <div class="export-section">
+            <span class="export-section-label">File Format</span>
+            <div class="format-toggle-group">
+              <label class="format-pill" class:active={exportFormat === "yaml"}>
+                <input
+                  type="radio"
+                  name="exportFormat"
+                  value="yaml"
+                  bind:group={exportFormat}
+                />
+                <span class="format-pill-text">YAML</span>
+                <span class="format-pill-badge">.yaml</span>
+              </label>
+              <label class="format-pill" class:active={exportFormat === "csv"}>
+                <input
+                  type="radio"
+                  name="exportFormat"
+                  value="csv"
+                  bind:group={exportFormat}
+                />
+                <span class="format-pill-text">CSV</span>
+                <span class="format-pill-badge">.csv</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="export-section">
+            <span class="export-section-label">Dataset Filters & Options</span>
+            <div class="export-options-list">
+              <label class="export-option-row">
+                <input
+                  type="checkbox"
+                  bind:checked={exportIgnoreNoResults}
+                />
+                <div class="option-text">
+                  <span class="option-title">Ignore queries with no results</span>
+                  <span class="option-desc">Excludes queries returning 0 results or execution errors (Default)</span>
+                </div>
+              </label>
+              <label class="export-option-row">
+                <input
+                  type="checkbox"
+                  bind:checked={exportIgnoreNeedsFix}
+                />
+                <div class="option-text">
+                  <span class="option-title">Ignore unfixed queries</span>
+                  <span class="option-desc">Excludes queries flagged by the verifier as needing fixes</span>
+                </div>
+              </label>
+              <label class="export-option-row">
+                <input
+                  type="checkbox"
+                  bind:checked={exportIncludeValidReason}
+                />
+                <div class="option-text">
+                  <span class="option-title">Include valid and reason fields</span>
+                  <span class="option-desc">Appends valid (true/false) and reason columns/fields to the export</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="export-summary-box">
+            <span class="export-summary-count">
+              {#if filteredExportRows.length > 0}
+                Ready to export <strong>{filteredExportRows.length}</strong> of {allExportRows.length} question-query pairs
+              {:else}
+                <span class="export-warn">No pairs match the selected filters ({allExportRows.length} total generated)</span>
+              {/if}
+            </span>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button
+            class="secondary-action modal-cancel-btn"
+            type="button"
+            on:click={() => (showExportModal = false)}>Cancel</button
+          >
+          <button
+            class="modal-export-btn"
+            type="button"
+            disabled={!filteredExportRows.length}
+            on:click={executeExport}
+          >
+            Download {exportFormat.toUpperCase()}
+          </button>
+        </div>
+      </div>
+    </div>
+  {/if}
+
   <!-- Form bar -->
   <form on:submit|preventDefault={submit}>
     <div class="form-head">
@@ -1206,8 +1527,8 @@
       <button
         class="secondary-action"
         type="button"
-        disabled={!exportRows.length}
-        on:click={downloadExcel}>Download Excel</button
+        disabled={!allExportRows.length}
+        on:click={() => (showExportModal = true)}>Download</button
       >
       {#if hydratingQa}<span class="restore-note">Loading saved questions…</span
         >{/if}
@@ -1442,9 +1763,13 @@
                           {#if pair.is_most_meaningful}
                             <span class="badge badge-best">★ Best Question</span>
                           {/if}
-                          {#if pair.execution_results != null}
-                            {#if pair.execution_results === false || executionError(pair.execution_results)}
-                              <span class="badge badge-fail">✗ no results</span>
+                          {#if hasReachedVerification(selected, pair) && pair.execution_results != null}
+                            {#if pair.execution_results === false || executionError(pair.execution_results) || executionCount(pair.execution_results) === 0}
+                              <span class="badge badge-fail"
+                                >✗ {executionCount(pair.execution_results) === 0
+                                  ? "0 results"
+                                  : "no results"}</span
+                              >
                             {:else}
                               <span class="badge badge-ok"
                                 >✓ {executionCount(pair.execution_results)} result{executionCount(
@@ -1499,7 +1824,7 @@
                           </div>
                         {/if}
 
-                        {#if pair.execution_results != null}
+                        {#if hasReachedVerification(selected, pair) && pair.execution_results != null}
                           <div class="qa-section">
                             <span class="section-label">Output</span>
                             <div class="result-panel">
@@ -2603,5 +2928,191 @@
 
   .modal-primary-btn:hover {
     background: #c53030;
+  }
+
+  /* ── Export Modal ─────────────────────────────────────── */
+  .export-modal-header {
+    background: #f0f4ff;
+    border-bottom: 1px solid #d8e2fd;
+  }
+
+  .export-modal-header h3 {
+    color: #1e3a8a;
+  }
+
+  .export-modal-body {
+    padding: 20px 24px;
+    gap: 18px;
+  }
+
+  .export-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .export-section-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+  }
+
+  .format-toggle-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .format-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+    background: #f8fafc;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .format-pill input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .format-pill:hover {
+    border-color: #cbd5e1;
+    background: #f1f5f9;
+  }
+
+  .format-pill.active {
+    border-color: #3b82f6;
+    background: #eff6ff;
+  }
+
+  .format-pill-text {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+  }
+
+  .format-pill.active .format-pill-text {
+    color: #1d4ed8;
+  }
+
+  .format-pill-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #e2e8f0;
+    color: #475569;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .format-pill.active .format-pill-badge {
+    background: #bfdbfe;
+    color: #1e40af;
+  }
+
+  .export-options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  .export-option-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background 0.12s ease;
+  }
+
+  .export-option-row:hover {
+    background: #f1f5f9;
+  }
+
+  .export-option-row input[type="checkbox"] {
+    margin-top: 3px;
+    accent-color: #2563eb;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  .option-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .option-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+
+  .option-desc {
+    font-size: 0.75rem;
+    color: #64748b;
+    line-height: 1.35;
+  }
+
+  .export-summary-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+  }
+
+  .export-summary-count {
+    font-size: 0.84rem;
+    color: #166534;
+  }
+
+  .export-summary-count strong {
+    font-weight: 700;
+    color: #14532d;
+  }
+
+  .export-warn {
+    color: #b45309;
+    font-weight: 600;
+  }
+
+  .modal-cancel-btn {
+    margin-right: 8px;
+  }
+
+  .modal-export-btn {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  .modal-export-btn:hover:not(:disabled) {
+    background: #1d4ed8;
+  }
+
+  .modal-export-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 </style>
