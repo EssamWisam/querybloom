@@ -7,6 +7,7 @@ from litellm import batch_completion, completion
 
 from querybloom.events import EventSink, emit_event
 from querybloom.llm.client import parse_structured_response
+from querybloom.llm.cost import extract_usage_and_cost
 from querybloom.llm.execution import execute_sparql_and_get_result
 from querybloom.llm.models import SubgraphGenerationResult
 from querybloom.llm.prompts import load_prompt_template, render_prompt
@@ -87,8 +88,9 @@ def generate_and_execute(
     additional_instructions: str = "",
     event_sink: EventSink | None = None,
     kg_title: Optional[str] = None,
-) -> Tuple[SubgraphGenerationResult, List[Dict[str, Any]]]:
-    """Generate QA pairs and execute them. Returns (gen_result, qa_pairs_dicts)."""
+    return_usage: bool = False,
+) -> Tuple[SubgraphGenerationResult, List[Dict[str, Any]]] | Tuple[SubgraphGenerationResult, List[Dict[str, Any]], Dict[str, Any]]:
+    """Generate QA pairs and execute them. Returns (gen_result, qa_pairs_dicts) or (gen_result, qa_pairs_dicts, usage)."""
     prompt = render_prompt(
         pattern_str,
         subgraph_index,
@@ -111,6 +113,7 @@ def generate_and_execute(
         reasoning_effort="high",
     )
     gen_result = parse_structured_response(response, SubgraphGenerationResult)
+    usage = extract_usage_and_cost(response, model=model)
     emit_event(
         event_sink,
         "stage.completed",
@@ -121,6 +124,8 @@ def generate_and_execute(
             "is_meaningful": gen_result.is_meaningful,
             "num_questions": len(gen_result.questions),
             "questions": [q.model_dump() for q in gen_result.questions],
+            "cost_usd": usage["cost_usd"],
+            "usage": usage,
         },
     )
 
@@ -165,4 +170,6 @@ def generate_and_execute(
                     "original_sparql_query": qa.sparql_query,
                 }
             )
+    if return_usage:
+        return gen_result, qa_pairs, usage
     return gen_result, qa_pairs

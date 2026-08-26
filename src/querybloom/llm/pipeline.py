@@ -76,8 +76,16 @@ def process_single_subgraph_pipeline(
         {"subgraph_index": subgraph_index, "pattern": pattern_str},
     )
 
+    subgraph_usage: Dict[str, Any] = {
+        "total_cost_usd": 0.0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "stages": {},
+    }
+
     # --- Initial generate + execute ---
-    gen_result, qa_pairs = generate_and_execute(
+    gen_result, qa_pairs, gen_usage = generate_and_execute(
         subgraph=subgraph,
         subgraph_index=subgraph_index,
         endpoint=endpoint,
@@ -90,7 +98,14 @@ def process_single_subgraph_pipeline(
         additional_instructions=additional_instructions,
         event_sink=event_sink,
         kg_title=kg_title,
+        return_usage=True,
     )
+    if isinstance(gen_usage, dict):
+        subgraph_usage["total_cost_usd"] += gen_usage.get("cost_usd", 0.0)
+        subgraph_usage["prompt_tokens"] += gen_usage.get("prompt_tokens", 0)
+        subgraph_usage["completion_tokens"] += gen_usage.get("completion_tokens", 0)
+        subgraph_usage["total_tokens"] += gen_usage.get("total_tokens", 0)
+        subgraph_usage["stages"]["generate"] = gen_usage
 
     output_sg = dict(subgraph)
     output_sg["is_meaningful"] = gen_result.is_meaningful
@@ -104,13 +119,20 @@ def process_single_subgraph_pipeline(
             f"Introducing complexity for subgraph {subgraph_index}",
             {"subgraph_index": subgraph_index, "num_pairs": len(qa_pairs)},
         )
-        ci_result = introduce_complexity(
+        ci_result, ci_usage = introduce_complexity(
             subgraph_pattern=pattern_str,
             qa_pairs=qa_pairs,
             model=model,
             complexity_template=complexity_template,
             additional_instructions=additional_instructions,
+            return_usage=True,
         )
+        if isinstance(ci_usage, dict):
+            subgraph_usage["total_cost_usd"] += ci_usage.get("cost_usd", 0.0)
+            subgraph_usage["prompt_tokens"] += ci_usage.get("prompt_tokens", 0)
+            subgraph_usage["completion_tokens"] += ci_usage.get("completion_tokens", 0)
+            subgraph_usage["total_tokens"] += ci_usage.get("total_tokens", 0)
+            subgraph_usage["stages"]["complexity"] = ci_usage
         for i, aug in enumerate(ci_result.augmentations):
             if aug.skipped or i >= len(qa_pairs):
                 continue
@@ -132,6 +154,8 @@ def process_single_subgraph_pipeline(
             {
                 "subgraph_index": subgraph_index,
                 "augmentations": [a.model_dump() for a in ci_result.augmentations],
+                "cost_usd": ci_usage.get("cost_usd", 0.0) if isinstance(ci_usage, dict) else 0.0,
+                "usage": ci_usage,
             },
         )
 
@@ -145,7 +169,15 @@ def process_single_subgraph_pipeline(
                 f"Rewording questions for subgraph {subgraph_index}",
                 {"subgraph_index": subgraph_index, "num_pairs": len(qa_pairs)},
             )
-            rw_result = reword_questions(qa_pairs, model, reword_template)
+            rw_result, rw_usage = reword_questions(
+                qa_pairs, model, reword_template, return_usage=True
+            )
+            if isinstance(rw_usage, dict):
+                subgraph_usage["total_cost_usd"] += rw_usage.get("cost_usd", 0.0)
+                subgraph_usage["prompt_tokens"] += rw_usage.get("prompt_tokens", 0)
+                subgraph_usage["completion_tokens"] += rw_usage.get("completion_tokens", 0)
+                subgraph_usage["total_tokens"] += rw_usage.get("total_tokens", 0)
+                subgraph_usage["stages"]["reword"] = rw_usage
             
             for qa in qa_pairs:
                 qa.pop("is_most_meaningful", None)
@@ -185,18 +217,27 @@ def process_single_subgraph_pipeline(
                 {
                     "subgraph_index": subgraph_index,
                     "pairs": [p.model_dump() for p in rw_result.pairs],
+                    "cost_usd": rw_usage.get("cost_usd", 0.0) if isinstance(rw_usage, dict) else 0.0,
+                    "usage": rw_usage,
                 },
             )
         if "most_meaningful_index" not in output_sg and qa_pairs:
             output_sg["most_meaningful_index"] = 1
             qa_pairs[0]["is_most_meaningful"] = True
         output_sg["qa_pairs"] = qa_pairs
+        output_sg["cost_usd"] = round(subgraph_usage["total_cost_usd"], 6)
+        output_sg["llm_usage"] = subgraph_usage
         emit_event(
             event_sink,
             "subgraph.completed",
             "llm.subgraph",
             f"Completed subgraph {subgraph_index}",
-            {"subgraph_index": subgraph_index, "result": output_sg},
+            {
+                "subgraph_index": subgraph_index,
+                "result": output_sg,
+                "cost_usd": output_sg["cost_usd"],
+                "llm_usage": output_sg["llm_usage"],
+            },
         )
         return output_sg
 
@@ -212,13 +253,20 @@ def process_single_subgraph_pipeline(
             f"Verification cycle {iteration} for subgraph {subgraph_index}",
             {"subgraph_index": subgraph_index, "iteration": iteration},
         )
-        v_result = verify_qa_pairs(
+        v_result, v_usage = verify_qa_pairs(
             subgraph_pattern=pattern_str,
             qa_pairs=qa_pairs,
             model=model,
             verify_template=verify_template,
             additional_instructions=additional_instructions,
+            return_usage=True,
         )
+        if isinstance(v_usage, dict):
+            subgraph_usage["total_cost_usd"] += v_usage.get("cost_usd", 0.0)
+            subgraph_usage["prompt_tokens"] += v_usage.get("prompt_tokens", 0)
+            subgraph_usage["completion_tokens"] += v_usage.get("completion_tokens", 0)
+            subgraph_usage["total_tokens"] += v_usage.get("total_tokens", 0)
+            subgraph_usage["stages"][f"verify_{iteration}"] = v_usage
         emit_event(
             event_sink,
             "stage.completed",
@@ -228,6 +276,8 @@ def process_single_subgraph_pipeline(
                 "subgraph_index": subgraph_index,
                 "iteration": iteration,
                 "verification": v_result.model_dump(),
+                "cost_usd": v_usage.get("cost_usd", 0.0) if isinstance(v_usage, dict) else 0.0,
+                "usage": v_usage,
             },
         )
 
@@ -279,7 +329,15 @@ def process_single_subgraph_pipeline(
                 f"Rewording correct questions for subgraph {subgraph_index}",
                 {"subgraph_index": subgraph_index, "num_pairs": len(correct_pairs)},
             )
-            rw_result = reword_questions(correct_pairs, model, reword_template)
+            rw_result, rw_usage = reword_questions(
+                correct_pairs, model, reword_template, return_usage=True
+            )
+            if isinstance(rw_usage, dict):
+                subgraph_usage["total_cost_usd"] += rw_usage.get("cost_usd", 0.0)
+                subgraph_usage["prompt_tokens"] += rw_usage.get("prompt_tokens", 0)
+                subgraph_usage["completion_tokens"] += rw_usage.get("completion_tokens", 0)
+                subgraph_usage["total_tokens"] += rw_usage.get("total_tokens", 0)
+                subgraph_usage["stages"]["reword"] = rw_usage
             
             for qa in qa_pairs:
                 qa.pop("is_most_meaningful", None)
@@ -317,15 +375,24 @@ def process_single_subgraph_pipeline(
                 {
                     "subgraph_index": subgraph_index,
                     "pairs": [p.model_dump() for p in rw_result.pairs],
+                    "cost_usd": rw_usage.get("cost_usd", 0.0) if isinstance(rw_usage, dict) else 0.0,
+                    "usage": rw_usage,
                 },
             )
 
+    output_sg["cost_usd"] = round(subgraph_usage["total_cost_usd"], 6)
+    output_sg["llm_usage"] = subgraph_usage
     emit_event(
         event_sink,
         "subgraph.completed",
         "llm.subgraph",
         f"Completed subgraph {subgraph_index}",
-        {"subgraph_index": subgraph_index, "result": output_sg},
+        {
+            "subgraph_index": subgraph_index,
+            "result": output_sg,
+            "cost_usd": output_sg["cost_usd"],
+            "llm_usage": output_sg["llm_usage"],
+        },
     )
     return output_sg
 
@@ -550,6 +617,15 @@ def process_subgraphs_data(
             print(f"  After cycle {it}: {rate} pairs correct")
         print("──────────────────────────")
 
+    total_cost_usd = round(
+        sum(
+            sg.get("cost_usd", 0.0)
+            for sg in final_subgraphs
+            if isinstance(sg, dict) and isinstance(sg.get("cost_usd"), (int, float))
+        ),
+        6,
+    )
+
     emit_event(
         event_sink,
         "run.completed",
@@ -559,6 +635,7 @@ def process_subgraphs_data(
             "output_path": output_path,
             "num_subgraphs": len(final_subgraphs),
             "subgraph_indices": [index for index, _ in indexed_subgraphs],
+            "total_cost_usd": total_cost_usd,
         },
     )
     return final_subgraphs, output_path

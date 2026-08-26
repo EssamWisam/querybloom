@@ -31,6 +31,37 @@
     return status;
   }
 
+  function formatCost(cost) {
+    if (cost == null || isNaN(Number(cost))) return "";
+    const num = Number(cost);
+    if (num === 0) return "$0.00";
+    if (num < 0.0001) return "< $0.0001";
+    if (num < 0.01) return `$${num.toFixed(4)}`;
+    return `$${num.toFixed(3)}`;
+  }
+
+  function costTooltip(entry) {
+    if (!entry) return "";
+    const cost = entry.cost_usd;
+    const usage = entry.llm_usage;
+    let text = "";
+    if (cost != null && !isNaN(Number(cost))) {
+      text = `Estimated LLM Cost: $${Number(cost).toFixed(6)}`;
+    }
+    if (usage && typeof usage === "object") {
+      const tokens =
+        usage.total_tokens ??
+        ((usage.prompt_tokens || 0) + (usage.completion_tokens || 0));
+      if (tokens) {
+        text += `${text ? " • " : ""}Tokens: ${Number(tokens).toLocaleString()}`;
+        if (usage.prompt_tokens || usage.completion_tokens) {
+          text += ` (Prompt: ${(usage.prompt_tokens || 0).toLocaleString()}, Completion: ${(usage.completion_tokens || 0).toLocaleString()})`;
+        }
+      }
+    }
+    return text;
+  }
+
   const MODEL_OPTIONS = [
     "openai/gpt-5.6-sol",
     "openai/gpt-5.4",
@@ -172,11 +203,26 @@
           row.verification_status ?? storedPair.verification_status,
         metadata,
       };
+      const costUsd =
+        metadata.cost_usd ??
+        metadata.subgraph_cost_usd ??
+        metadata.llm_usage?.total_cost_usd ??
+        storedPair.cost_usd ??
+        null;
+      const llmUsage = metadata.llm_usage ?? storedPair.llm_usage ?? null;
       const entry = restored[index] ?? {
         index,
         status: "completed",
+        cost_usd: costUsd,
+        llm_usage: llmUsage,
         qa_pairs: [],
       };
+      if (entry.cost_usd == null && costUsd != null) {
+        entry.cost_usd = costUsd;
+      }
+      if (entry.llm_usage == null && llmUsage != null) {
+        entry.llm_usage = llmUsage;
+      }
       entry.qa_pairs = [...entry.qa_pairs, pair];
       restored[index] = entry;
     }
@@ -742,6 +788,8 @@
       updateSubgraph(index, {
         status: "generated",
         is_meaningful: payload.is_meaningful,
+        cost_usd: payload.cost_usd ?? payload.usage?.cost_usd,
+        llm_usage: payload.usage,
         qa_pairs: pairs,
       });
     } else if (event === "stage.started" && stage === "sparql.execute") {
@@ -772,7 +820,11 @@
             complexity_types: aug.complexity_types,
           };
         });
-        updateSubgraph(index, { status: "generated", qa_pairs: pairs });
+        const patch = { status: "generated", qa_pairs: pairs };
+        if (payload.cost_usd != null) {
+          patch.cost_usd = (entry.cost_usd ?? 0) + Number(payload.cost_usd);
+        }
+        updateSubgraph(index, patch);
       }
     } else if (event === "stage.started" && stage === "llm.verify") {
       updateSubgraph(index, { status: "verifying" });
@@ -789,7 +841,11 @@
             verification_reason: vp.reason,
           };
         });
-        updateSubgraph(index, { status: "verified", qa_pairs: pairs });
+        const patch = { status: "verified", qa_pairs: pairs };
+        if (payload.cost_usd != null) {
+          patch.cost_usd = (entry.cost_usd ?? 0) + Number(payload.cost_usd);
+        }
+        updateSubgraph(index, patch);
       }
     } else if (event === "stage.started" && stage === "llm.reword") {
       updateSubgraph(index, { status: "rewording" });
@@ -812,16 +868,32 @@
             reword_reason: rw.reason,
           };
         });
-        updateSubgraph(index, { status: "reworded", qa_pairs: pairs });
+        const patch = { status: "reworded", qa_pairs: pairs };
+        if (payload.cost_usd != null) {
+          patch.cost_usd = (entry.cost_usd ?? 0) + Number(payload.cost_usd);
+        }
+        updateSubgraph(index, patch);
       }
     } else if (event === "subgraph.completed") {
       // Final state — use streamed qa_pairs already built, just mark completed
       const result = payload.result ?? payload;
       const entry = qaMap[index];
+      const costUsd =
+        result.cost_usd ??
+        payload.cost_usd ??
+        entry?.cost_usd ??
+        null;
+      const llmUsage =
+        result.llm_usage ??
+        payload.llm_usage ??
+        entry?.llm_usage ??
+        null;
       // Prefer the final result's qa_pairs (most complete) but fall back to streamed
       updateSubgraph(index, {
         status: "completed",
         is_meaningful: result.is_meaningful,
+        cost_usd: costUsd,
+        llm_usage: llmUsage,
         qa_pairs: result.qa_pairs?.length
           ? result.qa_pairs
           : (entry?.qa_pairs ?? []),
@@ -1182,15 +1254,29 @@
                 </span>
               </div>
               {#if types.length > 0}
-                <div class="chips">
-                  {#each types.slice(0, 3) as t}<span class="chip">{t}</span
-                    >{/each}
-                  {#if types.length > 3}<span class="chip more"
-                      >+{types.length - 3}</span
-                    >{/if}
+                <div class="sg-card-meta-row">
+                  <div class="chips">
+                    {#each types.slice(0, 3) as t}<span class="chip">{t}</span
+                      >{/each}
+                    {#if types.length > 3}<span class="chip more"
+                        >+{types.length - 3}</span
+                      >{/if}
+                  </div>
+                  {#if sg.cost_usd != null}
+                    <span class="sg-cost" title={costTooltip(sg)}>
+                      {formatCost(sg.cost_usd)}
+                    </span>
+                  {/if}
                 </div>
               {:else}
-                <p class="no-type">No type info</p>
+                <div class="sg-card-meta-row">
+                  <p class="no-type">No type info</p>
+                  {#if sg.cost_usd != null}
+                    <span class="sg-cost" title={costTooltip(sg)}>
+                      {formatCost(sg.cost_usd)}
+                    </span>
+                  {/if}
+                </div>
               {/if}
             </button>
             <label
@@ -1216,7 +1302,15 @@
           <p class="empty-hint">Select a subgraph to see details.</p>
         {:else}
           <header class="detail-head">
-            <h3>Subgraph {displaySubgraphId(selected.index)}</h3>
+            <div class="detail-head-left">
+              <h3>Subgraph {displaySubgraphId(selected.index)}</h3>
+              {#if selected.cost_usd != null}
+                <span class="batch-cost-badge" title={costTooltip(selected)}>
+                  <span class="cost-label">Batch Cost:</span>
+                  <span class="cost-val">{formatCost(selected.cost_usd)}</span>
+                </span>
+              {/if}
+            </div>
             <span class="pill pill-{selected.status}"
               >{statusLabel(selected.status)}</span
             >
@@ -1302,6 +1396,19 @@
             {:else if pairs.length === 0}
               <p class="empty-hint">No questions generated.</p>
             {:else}
+              <div class="qa-section-header">
+                <span class="qa-section-title">
+                  Generated Questions ({pairs.length})
+                </span>
+                {#if selected.cost_usd != null}
+                  <span class="batch-cost-note" title={costTooltip(selected)}>
+                    LLM batch cost: <strong>{formatCost(selected.cost_usd)}</strong>
+                    {#if selected.llm_usage?.total_tokens}
+                      <span class="tokens-count">({selected.llm_usage.total_tokens.toLocaleString()} tokens)</span>
+                    {/if}
+                  </span>
+                {/if}
+              </div>
               <ol class="qa-list">
                 {#each pairs as pair, i}
                   {@const key = questionKey(selected.index, i)}
@@ -1762,6 +1869,26 @@
     margin-bottom: 6px;
   }
 
+  .sg-card-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .sg-cost {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #4a5c88;
+    background: #edf2fc;
+    border-radius: 4px;
+    padding: 1px 5px;
+    margin-left: auto;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
   .sg-check {
     display: grid;
     place-items: center;
@@ -1920,13 +2047,94 @@
   .detail-head {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 14px;
+  }
+
+  .detail-head-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .batch-cost-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #f0f4ff;
+    border: 1px solid #d4e0fc;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.76rem;
+    color: #2b4580;
+    font-weight: 600;
+  }
+
+  .batch-cost-badge .cost-label {
+    color: #6a7c9f;
+    font-weight: 500;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .batch-cost-badge .cost-val {
+    font-weight: 700;
+    color: #1a3c87;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+  }
+
+  .qa-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #eef2fa;
+  }
+
+  .qa-section-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #65708c;
+  }
+
+  .batch-cost-note {
+    font-size: 0.76rem;
+    color: #667290;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #f6f8fd;
+    border: 1px solid #e2e8f5;
+    border-radius: 5px;
+    padding: 2px 7px;
+  }
+
+  .batch-cost-note strong {
+    color: #1a3c87;
+    font-weight: 700;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tokens-count {
+    color: #8c97b2;
+    font-size: 0.72rem;
   }
 
   h3 {
     color: var(--color-uni-dark-blue);
     font-size: 0.95rem;
+    margin: 0;
   }
 
   .info-box {

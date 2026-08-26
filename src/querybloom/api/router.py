@@ -515,6 +515,9 @@ def _persist_qa_pairs_for_subgraph_best_effort(
                             "model": llm_request.model,
                             "verify_iterations": llm_request.verify_iterations,
                             "focus_entity_qa": llm_request.focus_entity_qa,
+                            "cost_usd": result.get("cost_usd"),
+                            "subgraph_cost_usd": result.get("cost_usd"),
+                            "llm_usage": result.get("llm_usage"),
                             "qa_pair": pair,
                         },
                     },
@@ -1151,10 +1154,19 @@ async def _abstat_llm(request: ABSTATLLMRunRequest, user: SupabaseUser = Depends
                 "payload": output_subgraphs or None,
             },
         )
+        total_cost_usd = round(
+            sum(
+                sg.get("cost_usd", 0.0)
+                for sg in output_subgraphs
+                if isinstance(sg, dict) and isinstance(sg.get("cost_usd"), (int, float))
+            ),
+            6,
+        ) if output_subgraphs else None
         result = {
             "output_path": output_path,
             "sample_run_id": llm_request.sample_run_id,
             "num_subgraphs": len(output_subgraphs) if output_subgraphs else None,
+            "total_cost_usd": total_cost_usd,
         }
         updated = await asyncio.to_thread(
             _update_run_best_effort,
@@ -1313,10 +1325,19 @@ async def _abstat_llm_stream(request: ABSTATLLMRunRequest, user: SupabaseUser = 
                         "payload": output_subgraphs or None,
                     },
                 )
+                total_cost_usd = round(
+                    sum(
+                        sg.get("cost_usd", 0.0)
+                        for sg in output_subgraphs
+                        if isinstance(sg, dict) and isinstance(sg.get("cost_usd"), (int, float))
+                    ),
+                    6,
+                ) if output_subgraphs else None
                 result = {
                     "output_path": output_path,
                     "sample_run_id": llm_request.sample_run_id,
                     "num_subgraphs": len(output_subgraphs) if output_subgraphs else None,
+                    "total_cost_usd": total_cost_usd,
                 }
                 updated = None
                 if not attach_to_sample_run:

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from querybloom.llm.client import parse_structured_response
 from querybloom.llm.complexity import introduce_complexity
+from querybloom.llm.cost import calculate_completion_cost, extract_usage_and_cost
 from querybloom.llm.execution import execute_sparql_and_get_result
 from querybloom.llm.generation import (
     generate_and_execute,
@@ -49,6 +50,8 @@ __all__ = [
     "RewordPairResult",
     "RewordResult",
     "parse_structured_response",
+    "calculate_completion_cost",
+    "extract_usage_and_cost",
     "subsample_subgraph_entities",
     "load_prompt_template",
     "load_verify_template",
