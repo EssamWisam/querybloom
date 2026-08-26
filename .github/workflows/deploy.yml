@@ -54,35 +54,21 @@ jobs:
             fi
           fi
 
-      - name: Ensure container is running or rebuild if needed
+      - name: Deploy application and rebuild frontend
         run: |
           cd /home/essam/querybloom
           REBUILD="${{ steps.check_rebuild.outputs.rebuild }}"
           
           if [ "$REBUILD" = "true" ]; then
-            echo "Rebuilding and starting querybloom-prod..."
+            echo "Rebuilding container and starting querybloom-prod..."
             docker compose up -d --build querybloom-prod
           else
-            # Ensure container is running if it was stopped
-            if [ -z "$(docker ps -q -f name=querybloom-prod)" ]; then
-              echo "Container was stopped. Starting querybloom-prod..."
-              docker compose up -d querybloom-prod
-            fi
-          fi
-
-      - name: Rebuild Frontend Bundle if webapp files changed
-        run: |
-          cd /home/essam/querybloom
-          PREV="${{ steps.pull_code.outputs.prev_commit }}"
-          NEW="${{ steps.pull_code.outputs.new_commit }}"
-          REBUILD="${{ steps.check_rebuild.outputs.rebuild }}"
-          
-          # If container was not just fully rebuilt, recompile webapp build inside container
-          if [ "$REBUILD" != "true" ]; then
-            if [ "$PREV" != "$NEW" ] && git diff --name-only $PREV $NEW | grep -q '^webapp/'; then
-              echo "Frontend source files changed. Rebuilding SvelteKit static bundle with zero downtime..."
-              docker exec querybloom-prod sh -c "cd /workspace/querybloom/webapp && rm -rf build_tmp .svelte-kit && BUILD_DIR=build_tmp BASE_PATH=/querybloom npm run build && rm -rf build_old && (mv build build_old || true) && mv build_tmp build && rm -rf build_old"
-            fi
+            echo "Ensuring querybloom-prod is running..."
+            docker compose up -d querybloom-prod
+            echo "Compiling latest frontend webapp bundle..."
+            docker exec querybloom-prod sh -c "cd /workspace/querybloom/webapp && BASE_PATH=/querybloom npm run build"
+            echo "Restarting querybloom-prod to apply backend and frontend changes..."
+            docker compose restart querybloom-prod
           fi
 
       - name: Verify Backend & Show Logs
