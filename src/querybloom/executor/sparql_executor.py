@@ -42,16 +42,16 @@ with open(_endpoints_file) as f:
     RAW_ENDPOINTS: Dict[str, Any] = _data
 
 # Federated endpoint URL for FRINK KGs
-_federated_raw = _data.get("federated", "https://frink.apps.renci.org/federation/sparql")
+_federated_raw = _data.get("federated", "https://apps.okn.us/federation/sparql")
 FEDERATED_URL: str = (
-    _federated_raw.get("url", "https://frink.apps.renci.org/federation/sparql")
+    _federated_raw.get("url", "https://apps.okn.us/federation/sparql")
     if isinstance(_federated_raw, dict)
     else _federated_raw
 )
 
 
 def _endpoint_is_frink(endpoint_name: str) -> bool:
-    """Return True if the named endpoint uses FRINK federation (default True for frink.apps.renci.org)."""
+    """Return True if the named endpoint uses FRINK federation (default True for apps.okn.us / frink.apps.renci.org)."""
     raw = RAW_ENDPOINTS.get(endpoint_name)
     if raw is None:
         return False
@@ -81,7 +81,7 @@ def _endpoint_url_is_frink(endpoint_url: str) -> bool:
         if raw_url and _normalized_endpoint_url(raw_url) == normalized_url:
             return _raw_endpoint_is_frink(raw)
 
-    return bool(re.search(r"frink\.apps\.renci\.org/[^/]+/sparql/?$", endpoint_url))
+    return bool(re.search(r"(?:frink\.apps\.renci\.org|apps\.okn\.us)/[^/]+/sparql/?$", endpoint_url))
 
 
 def _endpoint_should_use_federation(
@@ -93,10 +93,10 @@ def _endpoint_should_use_federation(
 def _endpoint_url_to_graph_uri(endpoint_url: str) -> str:
     """Convert a FRINK endpoint URL to its named graph URI.
 
-    e.g. https://frink.apps.renci.org/sockg/sparql
+    e.g. https://apps.okn.us/sockg/sparql
          -> https://purl.org/okn/frink/kg/sockg
     """
-    match = re.search(r"frink\.apps\.renci\.org/([^/]+)/sparql", endpoint_url)
+    match = re.search(r"(?:frink\.apps\.renci\.org|apps\.okn\.us)/([^/]+)/sparql", endpoint_url)
     if match:
         return f"https://purl.org/okn/frink/kg/{match.group(1)}"
     return endpoint_url  # fallback: use the URL itself as the graph name
