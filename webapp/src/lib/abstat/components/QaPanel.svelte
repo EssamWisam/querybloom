@@ -168,8 +168,10 @@
     selectedSubgraphIndexes = new Set(subgraphs.map((sg) => sg.index));
   }
   $: selectedSubgraphCount = selectedSubgraphIndexes.size;
-  $: allExportRows = qaList.flatMap((sg) =>
-    (sg.qa_pairs ?? []).map((pair) => {
+  $: allExportRows = qaList
+    .filter((sg) => selectedSubgraphIndexes.has(sg.index))
+    .flatMap((sg) =>
+      (sg.qa_pairs ?? []).map((pair) => {
       const count = executionCount(pair.execution_results);
       const hasResults =
         count > 0 ||
@@ -1370,9 +1372,11 @@
           <div class="export-summary-box">
             <span class="export-summary-count">
               {#if filteredExportRows.length > 0}
-                Ready to export <strong>{filteredExportRows.length}</strong> of {allExportRows.length} question-query pairs
+                Ready to export <strong>{filteredExportRows.length}</strong> of {allExportRows.length} pairs (from {selectedSubgraphCount} selected subgraph{selectedSubgraphCount === 1 ? "" : "s"})
+              {:else if allExportRows.length > 0}
+                <span class="export-warn">No pairs match the selected filters ({allExportRows.length} pairs in {selectedSubgraphCount} selected subgraphs)</span>
               {:else}
-                <span class="export-warn">No pairs match the selected filters ({allExportRows.length} total generated)</span>
+                <span class="export-warn">No generated pairs found in the {selectedSubgraphCount} selected subgraph{selectedSubgraphCount === 1 ? "" : "s"}</span>
               {/if}
             </span>
           </div>
