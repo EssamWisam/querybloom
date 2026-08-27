@@ -1790,12 +1790,10 @@
                             <span class="badge badge-best">★ Best Question</span>
                           {/if}
                           {#if hasReachedVerification(selected, pair) && pair.execution_results != null}
-                            {#if pair.execution_results === false || executionError(pair.execution_results) || executionCount(pair.execution_results) === 0}
-                              <span class="badge badge-fail"
-                                >✗ {executionCount(pair.execution_results) === 0
-                                  ? "0 results"
-                                  : "no results"}</span
-                              >
+                            {#if pair.execution_results === false || executionError(pair.execution_results)}
+                              <span class="badge badge-fail">✗ error</span>
+                            {:else if executionCount(pair.execution_results) === 0}
+                              <span class="badge badge-neutral">0 results</span>
                             {:else}
                               <span class="badge badge-ok"
                                 >✓ {executionCount(pair.execution_results)} result{executionCount(
