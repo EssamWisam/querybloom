@@ -181,11 +181,13 @@
       const isValid = getPairValid(pair);
       const reason = getPairReason(pair);
       const snippet = formatResultSnippet(pair.execution_results, 3);
+      const llmBest = getPairLlmBest(pair);
 
       return {
         id: displaySubgraphId(sg.index),
         text: pair.text_query ?? pair.question ?? "",
         query: pair.sparql_query ?? "",
+        llm_best: llmBest,
         result_count: count,
         result_snippet: snippet,
         valid: isValid,
@@ -306,6 +308,7 @@
         `- id: ${JSON.stringify(r.id)}`,
         `  text: ${JSON.stringify(r.text)}`,
         `  query:${formatYamlBlockScalar(r.query, 4)}`,
+        `  llm_best: ${r.llm_best ? "true" : '""'}`,
         `  result_count: ${r.result_count}`,
         `  result_snippet:${formatYamlBlockScalar(r.result_snippet, 4)}`,
       ];
@@ -334,7 +337,14 @@
   }
 
   function buildCsvString(rows, includeValidReason) {
-    const headers = ["id", "text", "query", "result_count", "result_snippet"];
+    const headers = [
+      "id",
+      "text",
+      "query",
+      "llm_best",
+      "result_count",
+      "result_snippet",
+    ];
     if (includeValidReason) {
       headers.push("valid", "reason");
     }
@@ -345,6 +355,7 @@
           csvEscape(r.id),
           csvEscape(r.text),
           csvEscape(r.query),
+          csvEscape(r.llm_best ? "true" : ""),
           csvEscape(r.result_count),
           csvEscape(r.result_snippet),
         ];
@@ -776,6 +787,17 @@
       return true;
     }
     return true;
+  }
+
+  function getPairLlmBest(pair) {
+    if (pair?.llm_best === true || pair?.llm_best === "true") return true;
+    if (
+      pair?.is_most_meaningful === true ||
+      pair?.is_most_meaningful === "true"
+    )
+      return true;
+    if (pair?.is_best === true || pair?.is_best === "true") return true;
+    return false;
   }
 
   function getPairReason(pair) {
