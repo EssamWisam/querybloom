@@ -93,6 +93,7 @@
 
   let showExportModal = false;
   let exportFormat = "yaml";
+  let exportQuerySelection = "all";
   let exportIncludeValidReason = false;
   let exportIgnoreNoResults = true;
   let exportIgnoreNeedsFix = false;
@@ -205,11 +206,55 @@
     : [];
 
   $: filteredExportRows = showExportModal
-    ? allExportRows.filter((row) => {
-        if (exportIgnoreNoResults && !row.hasResults) return false;
-        if (exportIgnoreNeedsFix && row.isNeedsFix) return false;
-        return true;
-      })
+    ? qaList
+        .filter((sg) => selectedSubgraphIndexes.has(sg.index))
+        .flatMap((sg) => {
+          const pairRows = (sg.qa_pairs ?? []).map((pair) => {
+            const count = executionCount(pair.execution_results);
+            const hasResults =
+              count > 0 ||
+              typeof pair.execution_results === "boolean" ||
+              typeof pair.execution_results?.boolean === "boolean";
+            const isNeedsFix = pair.verification_status === "needs_fix";
+            const isValid = getPairValid(pair);
+            const reason = getPairReason(pair);
+            const snippet = formatResultSnippet(pair.execution_results, 3);
+            const llmBest = getPairLlmBest(pair);
+
+            return {
+              src_id: displaySubgraphId(sg.index),
+              text: pair.text_query ?? pair.question ?? "",
+              query: pair.sparql_query ?? "",
+              llm_best: llmBest,
+              result_count: count,
+              result_snippet: snippet,
+              valid: isValid,
+              reason,
+              hasResults,
+              isNeedsFix,
+            };
+          });
+
+          const eligible = pairRows.filter((row) => {
+            if (exportIgnoreNoResults && !row.hasResults) return false;
+            if (exportIgnoreNeedsFix && row.isNeedsFix) return false;
+            return true;
+          });
+
+          if (!eligible.length) return [];
+
+          if (exportQuerySelection === "best") {
+            const best = eligible.find((r) => r.llm_best) || eligible[0];
+            return [best];
+          }
+
+          if (exportQuerySelection === "random") {
+            const idx = Math.abs((sg.index * 1103515245 + 12345) % eligible.length);
+            return [eligible[idx]];
+          }
+
+          return eligible;
+        })
     : [];
 
   function displaySubgraphId(index) {
@@ -405,7 +450,7 @@
         "application/x-yaml;charset=utf-8",
       );
     } else {
-      const csvContent = buildCsvString(
+      const csvContent = "\uFEFF" + buildCsvString(
         filteredExportRows,
         exportIncludeValidReason,
       );
@@ -1364,6 +1409,48 @@
                 />
                 <span class="format-pill-text">CSV</span>
                 <span class="format-pill-badge">.csv</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="export-section">
+            <span class="export-section-label">Query Selection per Graph</span>
+            <div class="query-selection-group">
+              <label class="selection-pill" class:active={exportQuerySelection === "all"}>
+                <input
+                  type="radio"
+                  name="exportQuerySelection"
+                  value="all"
+                  bind:group={exportQuerySelection}
+                />
+                <div class="option-text">
+                  <span class="option-title">Keep all text-query pairs</span>
+                  <span class="option-desc">Includes every generated pair that passes filters</span>
+                </div>
+              </label>
+              <label class="selection-pill" class:active={exportQuerySelection === "best"}>
+                <input
+                  type="radio"
+                  name="exportQuerySelection"
+                  value="best"
+                  bind:group={exportQuerySelection}
+                />
+                <div class="option-text">
+                  <span class="option-title">Keep best LLM query per graph</span>
+                  <span class="option-desc">Keeps the single highest-utility question annotated by the LLM</span>
+                </div>
+              </label>
+              <label class="selection-pill" class:active={exportQuerySelection === "random"}>
+                <input
+                  type="radio"
+                  name="exportQuerySelection"
+                  value="random"
+                  bind:group={exportQuerySelection}
+                />
+                <div class="option-text">
+                  <span class="option-title">Keep random LLM query per graph</span>
+                  <span class="option-desc">Keeps at most one random valid pair per subgraph</span>
+                </div>
               </label>
             </div>
           </div>
@@ -3052,6 +3139,44 @@
   .format-pill.active .format-pill-badge {
     background: #bfdbfe;
     color: #1e40af;
+  }
+
+  .query-selection-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 8px;
+  }
+
+  .selection-pill {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.12s ease;
+  }
+
+  .selection-pill:hover {
+    background: #f1f5f9;
+  }
+
+  .selection-pill.active {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+  }
+
+  .selection-pill input[type="radio"] {
+    margin-top: 3px;
+    accent-color: #2563eb;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
   }
 
   .export-options-list {
