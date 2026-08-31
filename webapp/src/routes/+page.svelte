@@ -116,25 +116,30 @@
   }
 
   function storedEventKey(row) {
-    if (row?.id) return row.id;
-    const payload = JSON.stringify(row?.payload || {});
-    return [
-      row?.event_type,
-      row?.stage || "",
-      row?.message || "",
-      payload,
-    ].join("|");
+    if (row?.id) return String(row.id);
+    const p = row?.payload || {};
+    const subIdx = p?.subgraph_index ?? p?.index ?? "";
+    const qaIdx = p?.qa_index ?? "";
+    const uri = p?.uri ?? "";
+    const ts = row?.created_at || "";
+    const msg = row?.message || "";
+    const stage = row?.stage || "";
+    const eventType = row?.event_type || "";
+    return `${eventType}|${stage}|${subIdx}|${qaIdx}|${uri}|${ts}|${msg}`;
   }
 
   function frameEventKey(event, data) {
     const payload =
       data?.data ?? data?.payload ?? data?.result ?? data?.run?.id ?? {};
-    return [
-      event,
-      data?.stage || "",
-      data?.message || "",
-      JSON.stringify(payload),
-    ].join("|");
+    const subIdx =
+      payload?.subgraph_index ?? payload?.index ?? data?.subgraph_index ?? data?.index ?? "";
+    const qaIdx = payload?.qa_index ?? "";
+    const uri = payload?.uri ?? payload?.source_property ?? "";
+    const runId = data?.run_id ?? data?.run?.id ?? payload?.run_id ?? payload?.id ?? "";
+    const ts = data?.timestamp || "";
+    const msg = data?.message || "";
+    const stage = data?.stage || "";
+    return `${event}|${stage}|${subIdx}|${qaIdx}|${uri}|${runId}|${ts}|${msg}`;
   }
 
   function freshGraphElements(previousGraph, nextGraph, sourceProperty = null) {

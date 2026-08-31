@@ -168,41 +168,49 @@
     selectedSubgraphIndexes = new Set(subgraphs.map((sg) => sg.index));
   }
   $: selectedSubgraphCount = selectedSubgraphIndexes.size;
-  $: allExportRows = qaList
+  $: totalSelectedGeneratedPairs = qaList
     .filter((sg) => selectedSubgraphIndexes.has(sg.index))
-    .flatMap((sg) =>
-      (sg.qa_pairs ?? []).map((pair) => {
-      const count = executionCount(pair.execution_results);
-      const hasResults =
-        count > 0 ||
-        typeof pair.execution_results === "boolean" ||
-        typeof pair.execution_results?.boolean === "boolean";
-      const isNeedsFix = pair.verification_status === "needs_fix";
-      const isValid = getPairValid(pair);
-      const reason = getPairReason(pair);
-      const snippet = formatResultSnippet(pair.execution_results, 3);
-      const llmBest = getPairLlmBest(pair);
+    .reduce((sum, sg) => sum + (sg.qa_pairs?.length || 0), 0);
 
-      return {
-        id: displaySubgraphId(sg.index),
-        text: pair.text_query ?? pair.question ?? "",
-        query: pair.sparql_query ?? "",
-        llm_best: llmBest,
-        result_count: count,
-        result_snippet: snippet,
-        valid: isValid,
-        reason,
-        hasResults,
-        isNeedsFix,
-      };
-    }),
-  );
+  $: allExportRows = showExportModal
+    ? qaList
+        .filter((sg) => selectedSubgraphIndexes.has(sg.index))
+        .flatMap((sg) =>
+          (sg.qa_pairs ?? []).map((pair) => {
+            const count = executionCount(pair.execution_results);
+            const hasResults =
+              count > 0 ||
+              typeof pair.execution_results === "boolean" ||
+              typeof pair.execution_results?.boolean === "boolean";
+            const isNeedsFix = pair.verification_status === "needs_fix";
+            const isValid = getPairValid(pair);
+            const reason = getPairReason(pair);
+            const snippet = formatResultSnippet(pair.execution_results, 3);
+            const llmBest = getPairLlmBest(pair);
 
-  $: filteredExportRows = allExportRows.filter((row) => {
-    if (exportIgnoreNoResults && !row.hasResults) return false;
-    if (exportIgnoreNeedsFix && row.isNeedsFix) return false;
-    return true;
-  });
+            return {
+              src_id: displaySubgraphId(sg.index),
+              text: pair.text_query ?? pair.question ?? "",
+              query: pair.sparql_query ?? "",
+              llm_best: llmBest,
+              result_count: count,
+              result_snippet: snippet,
+              valid: isValid,
+              reason,
+              hasResults,
+              isNeedsFix,
+            };
+          }),
+        )
+    : [];
+
+  $: filteredExportRows = showExportModal
+    ? allExportRows.filter((row) => {
+        if (exportIgnoreNoResults && !row.hasResults) return false;
+        if (exportIgnoreNeedsFix && row.isNeedsFix) return false;
+        return true;
+      })
+    : [];
 
   function displaySubgraphId(index) {
     const info = subgraphByIndex[index];
@@ -303,9 +311,11 @@
   }
 
   function buildYamlString(rows, includeValidReason) {
-    const entries = rows.map((r) => {
+    const entries = rows.map((r, idx) => {
+      const questionId = idx + 1;
       const lines = [
-        `- id: ${JSON.stringify(r.id)}`,
+        `- id: ${questionId}`,
+        `  src_id: ${JSON.stringify(r.src_id)}`,
         `  text: ${JSON.stringify(r.text)}`,
         `  query:${formatYamlBlockScalar(r.query, 4)}`,
         `  llm_best: ${r.llm_best ? "true" : '""'}`,
@@ -313,8 +323,8 @@
         `  result_snippet:${formatYamlBlockScalar(r.result_snippet, 4)}`,
       ];
       if (includeValidReason) {
-        lines.push(`  valid: ${r.valid ? "true" : "false"}`);
-        lines.push(`  reason: ${JSON.stringify(r.reason || "")}`);
+        lines.push('  valid: ""');
+        lines.push('  reason: ""');
       }
       return lines.join("\n");
     });
@@ -339,6 +349,7 @@
   function buildCsvString(rows, includeValidReason) {
     const headers = [
       "id",
+      "src_id",
       "text",
       "query",
       "llm_best",
@@ -350,9 +361,11 @@
     }
     const lines = [
       headers.join(","),
-      ...rows.map((r) => {
+      ...rows.map((r, idx) => {
+        const questionId = idx + 1;
         const cols = [
-          csvEscape(r.id),
+          csvEscape(questionId),
+          csvEscape(r.src_id),
           csvEscape(r.text),
           csvEscape(r.query),
           csvEscape(r.llm_best ? "true" : ""),
@@ -360,7 +373,7 @@
           csvEscape(r.result_snippet),
         ];
         if (includeValidReason) {
-          cols.push(csvEscape(r.valid), csvEscape(r.reason));
+          cols.push("", "");
         }
         return cols.join(",");
       }),
@@ -1384,8 +1397,8 @@
                   bind:checked={exportIncludeValidReason}
                 />
                 <div class="option-text">
-                  <span class="option-title">Include valid and reason fields</span>
-                  <span class="option-desc">Appends valid (true/false) and reason columns/fields to the export</span>
+                  <span class="option-title">Add empty valid and reason fields</span>
+                  <span class="option-desc">Appends empty valid and reason columns/fields for external annotation</span>
                 </div>
               </label>
             </div>
@@ -1553,7 +1566,7 @@
       <button
         class="secondary-action"
         type="button"
-        disabled={!allExportRows.length}
+        disabled={!totalSelectedGeneratedPairs}
         on:click={() => (showExportModal = true)}>Download</button
       >
       {#if hydratingQa}<span class="restore-note">Loading saved questions…</span
