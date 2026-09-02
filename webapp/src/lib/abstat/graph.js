@@ -86,8 +86,14 @@ export function subgraphEdgeKeys(entry) {
 }
 
 export function upsertSubgraph(list, next) {
-  const index = Number(next.index ?? list.length);
-  const existing = list.find((item) => item.index === index);
-  if (!existing) return [...list, { index, ...next }].sort((a, b) => a.index - b.index);
-  return list.map((item) => (item.index === index ? { ...item, ...next } : item));
+  if (!next) return list;
+  const rawIdx = next.index ?? next.subgraph_index;
+  const index = Number.isFinite(Number(rawIdx)) ? Number(rawIdx) : list.length;
+  const existingIdx = list.findIndex((item) => Number(item.index) === index);
+  if (existingIdx === -1) {
+    return [...list, { ...next, index }].sort((a, b) => Number(a.index) - Number(b.index));
+  }
+  const copy = [...list];
+  copy[existingIdx] = { ...copy[existingIdx], ...next, index };
+  return copy;
 }

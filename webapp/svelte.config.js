@@ -9,7 +9,7 @@ const config = {
       fallback: 'index.html'
     }),
     paths: {
-      base: process.env.BASE_PATH || ''
+      base: process.env.BASE_PATH ?? '/querybloom'
     },
     version: {
       name: '1.0.0'

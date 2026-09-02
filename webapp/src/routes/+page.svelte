@@ -758,7 +758,7 @@
           {#if !runs.length}
             <p class="muted">No runs loaded yet.</p>
           {/if}
-          {#each runs as run (run.id)}
+          {#each runs as run, index (run.id || `run-${index}`)}
             <article
               class:active={activeRun?.id === run.id}
               class:restoring={restoringRunId === run.id}

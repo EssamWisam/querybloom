@@ -530,6 +530,23 @@ def _persist_qa_pairs_for_subgraph_best_effort(
         return
 
 
+@api_router.post("/client-logs")
+async def _client_logs(payload: dict[str, Any]):
+    msg = payload.get("message") or "Unknown client error"
+    stack = payload.get("stack")
+    url = payload.get("url")
+    ctx = payload.get("context")
+    out = f"[BROWSER ERROR] {msg}"
+    if url:
+        out += f"\n  URL: {url}"
+    if ctx:
+        out += f"\n  Context: {ctx}"
+    if stack:
+        out += f"\n  Stack:\n{stack}"
+    print(out, flush=True)
+    return {"status": "ok"}
+
+
 @api_router.get("/health")
 async def _health():
     client = get_supabase_client(required=False)

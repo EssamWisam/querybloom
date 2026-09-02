@@ -58,7 +58,7 @@
       </p>
     {/if}
 
-    {#each properties as item (item.uri)}
+    {#each properties as item, idx (item.uri || `prop-${idx}`)}
       <article
         class:processing={item.status === "processing"}
         class:completed={item.status === "completed"}

@@ -138,6 +138,8 @@ def process_single_subgraph_pipeline(
             subgraph_usage["total_tokens"] += ci_usage.get("total_tokens", 0)
             subgraph_usage["stages"]["complexity"] = ci_usage
         for i, aug in enumerate(ci_result.augmentations):
+            if i < len(qa_pairs):
+                qa_pairs[i].setdefault("stage_outputs", {})["complexity"] = aug.model_dump()
             if aug.skipped or i >= len(qa_pairs):
                 continue
             exec_result = execute_sparql_and_get_result(
@@ -194,6 +196,7 @@ def process_single_subgraph_pipeline(
             unrewordable_indices = set()
             for idx, rw in enumerate(rw_result.pairs):
                 if idx < len(qa_pairs):
+                    qa_pairs[idx].setdefault("stage_outputs", {})["reword"] = rw.model_dump()
                     if rw.status == "needs_reword" and rw.reworded_text_query:
                         qa_pairs[idx]["pre_reword_question"] = qa_pairs[idx]["question"]
                         qa_pairs[idx]["question"] = rw.reworded_text_query
@@ -293,6 +296,8 @@ def process_single_subgraph_pipeline(
             qa["verification_status"] = status
             qa["verification_reason"] = pair_v.reason if pair_v else ""
             qa.setdefault("verification_status_by_cycle", []).append(status)
+            if pair_v:
+                qa.setdefault("stage_outputs", {})["verify"] = pair_v.model_dump()
 
         if v_result.all_correct or iteration == verify_iterations:
             break
@@ -355,6 +360,8 @@ def process_single_subgraph_pipeline(
 
             unrewordable_ci = set()
             for ci, rw in zip(correct_indices, rw_result.pairs):
+                if ci < len(qa_pairs):
+                    qa_pairs[ci].setdefault("stage_outputs", {})["reword"] = rw.model_dump()
                 if rw.status == "needs_reword" and rw.reworded_text_query:
                     qa_pairs[ci]["pre_reword_question"] = qa_pairs[ci]["question"]
                     qa_pairs[ci]["question"] = rw.reworded_text_query

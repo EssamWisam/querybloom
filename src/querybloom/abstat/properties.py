@@ -52,6 +52,8 @@ def get_distinct_properties(
     limit_clause = f"LIMIT {limit}" if limit is not None else ""
     print(f"Fetching {action} (limit={limit})...")
 
+    is_frequency_result = frequency and not is_wikidata
+
     if is_wikidata:
         print("Wikidata mode: Using wikibase:Property query (counts disabled) with labels.")
         query = f"""
@@ -69,6 +71,8 @@ def get_distinct_properties(
         ORDER BY RAND()
         {limit_clause}
         """
+        result = execute_sparql_query(query, endpoint=endpoint, format_type="csv")
+        df = result.get("results") if result.get("success", False) else None
     elif frequency:
         query = f"""
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -83,6 +87,43 @@ def get_distinct_properties(
         ORDER BY DESC(?count) 
         {limit_clause}
         """
+        result = execute_sparql_query(query, endpoint=endpoint, format_type="csv")
+        df = result.get("results") if result.get("success", False) else None
+
+        # If frequency query failed or returned no results, fall back to simple distinct query
+        if not result.get("success", False) or not isinstance(df, pd.DataFrame) or df.empty:
+            print(f"Frequency property query failed or returned 0 rows for {endpoint}. Falling back to simple distinct query...")
+            query = f"""
+            SELECT DISTINCT ?p WHERE {{
+                ?s ?p ?o .
+            }} 
+            {limit_clause}
+            """
+            result = execute_sparql_query(query, endpoint=endpoint, format_type="csv")
+            df = result.get("results") if result.get("success", False) else None
+            is_frequency_result = False
+
+        # If still failed or returned no results, fall back to ontology property definitions
+        if not result.get("success", False) or not isinstance(df, pd.DataFrame) or df.empty:
+            print(f"Triple-scan property query failed or returned 0 rows for {endpoint}. Falling back to ontology property definitions (rdf:Property / owl:Property)...")
+            query = f"""
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+            SELECT DISTINCT ?p WHERE {{
+                {{ ?p a rdf:Property . }}
+                UNION
+                {{ ?p a owl:ObjectProperty . }}
+                UNION
+                {{ ?p a owl:DatatypeProperty . }}
+                UNION
+                {{ ?p a owl:AnnotationProperty . }}
+            }}
+            {limit_clause}
+            """
+            result = execute_sparql_query(query, endpoint=endpoint, format_type="csv")
+            df = result.get("results") if result.get("success", False) else None
+            is_frequency_result = False
     else:
         query = f"""
         SELECT DISTINCT ?p WHERE {{
@@ -90,8 +131,29 @@ def get_distinct_properties(
         }} 
         {limit_clause}
         """
+        result = execute_sparql_query(query, endpoint=endpoint, format_type="csv")
+        df = result.get("results") if result.get("success", False) else None
 
-    result = execute_sparql_query(query, endpoint=endpoint, format_type="csv")
+        # If distinct query failed or returned no results, fall back to ontology property definitions
+        if not result.get("success", False) or not isinstance(df, pd.DataFrame) or df.empty:
+            print(f"Distinct property query failed or returned 0 rows for {endpoint}. Falling back to ontology property definitions (rdf:Property / owl:Property)...")
+            query = f"""
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+            SELECT DISTINCT ?p WHERE {{
+                {{ ?p a rdf:Property . }}
+                UNION
+                {{ ?p a owl:ObjectProperty . }}
+                UNION
+                {{ ?p a owl:DatatypeProperty . }}
+                UNION
+                {{ ?p a owl:AnnotationProperty . }}
+            }}
+            {limit_clause}
+            """
+            result = execute_sparql_query(query, endpoint=endpoint, format_type="csv")
+            df = result.get("results") if result.get("success", False) else None
 
     if not result.get("success", False):
         error_message = result.get("error") or "Unknown error"
@@ -141,7 +203,7 @@ def get_distinct_properties(
         if "p" in df.columns:
             for _, row in df.iterrows():
                 properties.append((row["p"], None, get_label(row)))
-    elif frequency:
+    elif is_frequency_result:
         if "p" in df.columns and "count" in df.columns:
             for _, row in df.iterrows():
                 p = row["p"]

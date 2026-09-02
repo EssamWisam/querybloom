@@ -366,9 +366,20 @@
     detailsOpen = !detailsOpen;
   }
 
-  $: filteredSubgraphs = pinnedNodeId
-    ? subgraphs.filter((item) => subgraphNodeIds(item).has(pinnedNodeId))
-    : subgraphs;
+  $: filteredSubgraphs = (() => {
+    const list = pinnedNodeId
+      ? subgraphs.filter((item) => subgraphNodeIds(item).has(pinnedNodeId))
+      : subgraphs;
+    const seen = new Set();
+    const result = [];
+    for (const item of list) {
+      const idx = Number.isFinite(Number(item?.index)) ? Number(item.index) : 0;
+      if (seen.has(idx)) continue;
+      seen.add(idx);
+      result.push({ ...item, index: idx });
+    }
+    return result;
+  })();
 </script>
 
 <section class="subgraph-workspace">
@@ -502,7 +513,7 @@
                 <h3>Classes</h3>
                 {#if classes.length}
                   <div class="class-chips">
-                    {#each classes as item (item.uri || item.label)}
+                    {#each classes as item, idx (item.uri || `${item.label || "class"}-${idx}`)}
                       <span class="class-chip" title={item.uri}
                         >{item.label}</span
                       >

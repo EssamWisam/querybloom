@@ -3,6 +3,7 @@
   import { cancelRun, loadRunQaPairs, streamLlm } from "../api.js";
   import FieldHelp from "./FieldHelp.svelte";
   import MiniSubgraphGraphs from "./MiniSubgraphGraphs.svelte";
+  import QaEvolution from "./QaEvolution.svelte";
   import {
     normalizeGraph,
     shortName,
@@ -109,13 +110,7 @@
   let runningIndexes = new Set();
 
   /**
-   * @type {Record<number, {
-   *   index: number,
-   *   status: string,
-   *   qa_pairs?: any[],
-   *   is_meaningful?: boolean,
-   *   error?: string
-   * }>}
+   * @type {Record<number, any>}
    */
   let qaMap = {};
 
@@ -130,14 +125,22 @@
     "reworded",
   ]);
 
-  $: qaList = subgraphs
-    .map((sg) => ({
-      index: sg.index,
-      status: "ready",
-      qa_pairs: [],
-      ...(qaMap[sg.index] ?? {}),
-    }))
-    .sort((a, b) => a.index - b.index);
+  $: qaList = (() => {
+    const seen = new Set();
+    const list = [];
+    for (const sg of subgraphs) {
+      const idx = Number.isFinite(Number(sg?.index)) ? Number(sg.index) : 0;
+      if (seen.has(idx)) continue;
+      seen.add(idx);
+      list.push({
+        index: idx,
+        status: "ready",
+        qa_pairs: [],
+        ...(qaMap[idx] ?? qaMap[sg?.index] ?? {}),
+      });
+    }
+    return list.sort((a, b) => a.index - b.index);
+  })();
   $: subgraphByIndex = Object.fromEntries(subgraphs.map((s) => [s.index, s]));
   $: selected =
     selectedIndex != null
@@ -289,6 +292,7 @@
         execution_results: row.execution_result ?? storedPair.execution_results,
         verification_status:
           row.verification_status ?? storedPair.verification_status,
+        stage_outputs: storedPair.stage_outputs ?? row.stage_outputs ?? null,
         metadata,
       };
       const costUsd =
@@ -774,10 +778,17 @@
   }
 
   function toggleEvolution(key) {
+    const willExpand = !expandedEvolutions[key];
     expandedEvolutions = {
       ...expandedEvolutions,
-      [key]: !expandedEvolutions[key],
+      [key]: willExpand,
     };
+    if (willExpand && !expandedQuestions[key]) {
+      expandedQuestions = {
+        ...expandedQuestions,
+        [key]: true,
+      };
+    }
   }
 
   function executionCount(result) {
@@ -931,84 +942,6 @@
     );
   }
 
-  function sameSnapshot(left, right) {
-    return (
-      (left?.question ?? "") === (right?.question ?? "") &&
-      (left?.sparql ?? "") === (right?.sparql ?? "")
-    );
-  }
-
-  function pairEvolutionStages(pair) {
-    const stages = [];
-    const generated = {
-      label: "Generate",
-      agent: "Generator",
-      question: pair.original_question ?? pair.question ?? "",
-      sparql: pair.original_sparql_query ?? pair.sparql_query ?? "",
-      note: null,
-    };
-    stages.push(generated);
-
-    if (
-      pair.pre_verify_question ||
-      pair.pre_verify_sparql_query ||
-      pair.complexity_types?.length
-    ) {
-      const complexity = {
-        label: "Complexity",
-        agent: "Complexity agent",
-        question: pair.pre_verify_question ?? pair.question ?? "",
-        sparql: pair.pre_verify_sparql_query ?? pair.sparql_query ?? "",
-        note: pair.complexity_types?.length
-          ? `Added ${pair.complexity_types.join(", ")}`
-          : null,
-      };
-      if (!sameSnapshot(complexity, generated) || complexity.note)
-        stages.push(complexity);
-    }
-
-    if (
-      pair.verification_status ||
-      pair.verification_reason ||
-      pair.pre_reword_question
-    ) {
-      const verified = {
-        label: "Verify",
-        agent: "Verifier",
-        question: pair.pre_reword_question ?? pair.question ?? "",
-        sparql: pair.sparql_query ?? pair.pre_verify_sparql_query ?? "",
-        note:
-          pair.verification_reason ||
-          (pair.verification_status
-            ? `Status: ${pair.verification_status}`
-            : null),
-      };
-      if (!sameSnapshot(verified, stages[stages.length - 1]) || verified.note)
-        stages.push(verified);
-    }
-
-    const finalStage = {
-      label:
-        pair.pre_reword_question || pair.reword_reason ? "Reword" : "Final",
-      agent:
-        pair.pre_reword_question || pair.reword_reason
-          ? "Reword agent"
-          : "Stored result",
-      question: pair.question ?? "",
-      sparql: pair.sparql_query ?? "",
-      note: pair.reword_reason || null,
-    };
-    if (
-      !sameSnapshot(finalStage, stages[stages.length - 1]) ||
-      finalStage.note ||
-      stages.length === 1
-    ) {
-      stages.push(finalStage);
-    }
-
-    return stages;
-  }
-
   $: selectedPatternProperties = selectedInfo
     ? subgraphProperties(selectedInfo)
     : [];
@@ -1067,6 +1000,7 @@
       const pairs = questions.map((q) => ({
         question: q.text_query ?? q.question,
         sparql_query: q.sparql_query,
+        stage_outputs: { generate: q },
       }));
       updateSubgraph(index, {
         status: "generated",
@@ -1095,12 +1029,18 @@
       if (entry) {
         const pairs = [...(entry.qa_pairs ?? [])];
         augmentations.forEach((aug, i) => {
-          if (aug.skipped || !pairs[i]) return;
+          if (!pairs[i]) return;
+          const currentStageOutputs = pairs[i].stage_outputs ?? {};
           pairs[i] = {
             ...pairs[i],
-            question: aug.augmented_text_query ?? pairs[i].question,
-            sparql_query: aug.augmented_sparql_query ?? pairs[i].sparql_query,
-            complexity_types: aug.complexity_types,
+            stage_outputs: { ...currentStageOutputs, complexity: aug },
+            ...(aug.skipped
+              ? {}
+              : {
+                  question: aug.augmented_text_query ?? pairs[i].question,
+                  sparql_query: aug.augmented_sparql_query ?? pairs[i].sparql_query,
+                  complexity_types: aug.complexity_types,
+                }),
           };
         });
         const patch = { status: "generated", qa_pairs: pairs };
@@ -1118,10 +1058,12 @@
         const pairs = [...(entry.qa_pairs ?? [])];
         verPairs.forEach((vp, i) => {
           if (!pairs[i]) return;
+          const currentStageOutputs = pairs[i].stage_outputs ?? {};
           pairs[i] = {
             ...pairs[i],
             verification_status: vp.status,
             verification_reason: vp.reason,
+            stage_outputs: { ...currentStageOutputs, verify: vp },
           };
         });
         const patch = { status: "verified", qa_pairs: pairs };
@@ -1138,17 +1080,18 @@
       if (entry) {
         const pairs = [...(entry.qa_pairs ?? [])];
         rwPairs.forEach((rw, i) => {
-          if (
-            !pairs[i] ||
-            rw.status !== "needs_reword" ||
-            !rw.reworded_text_query
-          )
-            return;
+          if (!pairs[i]) return;
+          const currentStageOutputs = pairs[i].stage_outputs ?? {};
           pairs[i] = {
             ...pairs[i],
-            pre_reword_question: pairs[i].question,
-            question: rw.reworded_text_query,
-            reword_reason: rw.reason,
+            stage_outputs: { ...currentStageOutputs, reword: rw },
+            ...(rw.status === "needs_reword" && rw.reworded_text_query
+              ? {
+                  pre_reword_question: pairs[i].question,
+                  question: rw.reworded_text_query,
+                  reword_reason: rw.reason,
+                }
+              : {}),
           };
         });
         const patch = { status: "reworded", qa_pairs: pairs };
@@ -1860,7 +1803,6 @@
                 {#each pairs as pair, i}
                   {@const key = questionKey(selected.index, i)}
                   {@const preview = executionPreview(pair.execution_results)}
-                  {@const evolution = pairEvolutionStages(pair)}
                   <li
                     class="qa-item"
                     class:expanded={expandedQuestions[key] ||
@@ -1935,6 +1877,10 @@
                       </div>
                     </div>
 
+                    {#if expandedEvolutions[key]}
+                      <QaEvolution {pair} />
+                    {/if}
+
                     {#if expandedQuestions[key]}
                       <div class="qa-body">
                         {#if pair.sparql_query}
@@ -1995,54 +1941,6 @@
                             </div>
                           </div>
                         {/if}
-                      </div>
-                    {/if}
-
-                    {#if expandedEvolutions[key]}
-                      <div class="qa-body qa-evolution-body">
-                        <div class="qa-section">
-                          <span class="section-label">Evolution</span>
-                          <ol class="evolution-list">
-                            {#each evolution as stage, stageIndex}
-                              <li class="evolution-step">
-                                <div class="evolution-head">
-                                  <div>
-                                    <strong
-                                      >{stageIndex + 1}. {stage.label}</strong
-                                    >
-                                    <span class="muted evolution-agent"
-                                      >{stage.agent}</span
-                                    >
-                                  </div>
-                                  {#if stage.note}
-                                    <span class="badge badge-neutral">note</span
-                                    >
-                                  {/if}
-                                </div>
-                                {#if stage.note}
-                                  <p class="evolution-note">{stage.note}</p>
-                                {/if}
-                                <div class="evolution-block">
-                                  <span class="evolution-label">Text</span>
-                                  <p class="evolution-text">
-                                    {stage.question || "—"}
-                                  </p>
-                                </div>
-                                {#if stage.sparql}
-                                  <div class="evolution-block">
-                                    <span class="evolution-label">SPARQL</span>
-                                    <pre class="sparql"><code
-                                        class="hljs language-sql"
-                                        >{@html highlightSparql(
-                                          stage.sparql,
-                                        )}</code
-                                      ></pre>
-                                  </div>
-                                {/if}
-                              </li>
-                            {/each}
-                          </ol>
-                        </div>
                       </div>
                     {/if}
                   </li>
@@ -2628,12 +2526,6 @@
     gap: 16px;
   }
 
-  .evolution-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
   .compact {
     padding: 0;
   }
@@ -2749,8 +2641,7 @@
     gap: 8px;
   }
 
-  .section-label,
-  .evolution-label {
+  .section-label {
     color: #66708a;
     font-size: 0.74rem;
     font-weight: 800;
@@ -2822,44 +2713,6 @@
     background: #eef1fa;
     color: #334269;
     font-weight: 700;
-  }
-
-  .evolution-list {
-    display: grid;
-    gap: 12px;
-  }
-
-  .evolution-step {
-    border: 1px solid #e4e8f4;
-    border-radius: 8px;
-    background: #f9fafd;
-    padding: 12px;
-    display: grid;
-    gap: 10px;
-  }
-
-  .evolution-head {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    align-items: flex-start;
-  }
-
-  .evolution-agent {
-    display: block;
-    margin-top: 2px;
-  }
-
-  .evolution-note,
-  .evolution-text {
-    margin: 0;
-    color: #334269;
-    font-size: 0.82rem;
-  }
-
-  .evolution-block {
-    display: grid;
-    gap: 6px;
   }
 
   .badge {

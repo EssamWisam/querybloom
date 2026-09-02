@@ -180,6 +180,9 @@ def generate_and_execute(
                     "execution_results": exec_result,
                     "original_question": qa.text_query,
                     "original_sparql_query": qa.sparql_query,
+                    "stage_outputs": {
+                        "generate": qa.model_dump(),
+                    },
                 }
             )
     if return_usage:
