@@ -1003,19 +1003,6 @@
         </div>
       {/if}
 
-      <!-- Raw Version Action Button on Toolbar Right -->
-      <div class="toolbar-section toolbar-right">
-        <button
-          type="button"
-          class="raw-toggle-btn"
-          class:active={viewMode === "raw"}
-          on:click={() => setViewMode(viewMode === "raw" ? "both" : "raw")}
-          title={viewMode === "raw" ? "Return to visual graphs" : "View subgraph and samples in raw YAML format"}
-        >
-          <span class="raw-btn-icon">{viewMode === "raw" ? "⊞" : "📄"}</span>
-          <span>{viewMode === "raw" ? "Visual Graphs" : "Raw Version"}</span>
-        </button>
-      </div>
     </section>
 
     <!-- Main Graphs / Raw Workspace -->
@@ -1589,42 +1576,7 @@
     grid-template-columns: 1fr;
   }
 
-  .toolbar-right {
-    margin-left: auto;
-  }
 
-  .raw-toggle-btn {
-    border: 1px solid #cbd5e1;
-    background: #f8fafc;
-    color: #334155;
-    padding: 5px 12px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: all 0.15s ease;
-  }
-
-  .raw-toggle-btn:hover {
-    background: #f1f5f9;
-    border-color: #94a3b8;
-    color: #0f172a;
-  }
-
-  .raw-toggle-btn.active {
-    background: #eff6ff;
-    border-color: #93c5fd;
-    color: #1d4ed8;
-    font-weight: 700;
-  }
-
-  .raw-btn-icon {
-    font-size: 0.85rem;
-    line-height: 1;
-  }
 
   /* ── Raw YAML View ────────────────────────────────────── */
   .raw-yaml-card {
