@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher, onDestroy, onMount, tick } from "svelte";
+  import hljs from "highlight.js";
   import {
     isUri,
     shortName,
@@ -21,13 +22,17 @@
   const dispatch = createEventDispatcher();
 
   // Switching States
-  // viewMode: "both" | "pattern" | "sample"
+  // viewMode: "both" | "pattern" | "sample" | "raw"
   let viewMode = "both";
   let currentSample = 0;
 
   // Active hover tooltip for truncated node labels
   // { text: string, rawUri?: string, sublabel?: string, x: number, y: number, kind: "pattern" | "sample" }
   let activeTooltip = null;
+
+  // Copy state for YAML raw view
+  let copyStatus = ""; // "" | "copied" | "error"
+  let copyTimeout = null;
 
   // Cytoscape References & State
   let patternContainer;
@@ -93,6 +98,7 @@
   });
 
   onDestroy(() => {
+    if (copyTimeout) clearTimeout(copyTimeout);
     if (resizeObserver) {
       resizeObserver.disconnect();
       resizeObserver = null;
@@ -135,17 +141,19 @@
     if (viewMode === mode) return;
     viewMode = mode;
     activeTooltip = null;
-    await tick();
-    requestAnimationFrame(() => {
-      if (patternCy && !patternCy.destroyed()) {
-        patternCy.resize();
-        patternCy.fit(patternCy.elements(), 30);
-      }
-      if (sampleCy && !sampleCy.destroyed()) {
-        sampleCy.resize();
-        sampleCy.fit(sampleCy.elements(), 30);
-      }
-    });
+    if (mode !== "raw") {
+      await tick();
+      requestAnimationFrame(() => {
+        if (patternCy && !patternCy.destroyed()) {
+          patternCy.resize();
+          patternCy.fit(patternCy.elements(), 30);
+        }
+        if (sampleCy && !sampleCy.destroyed()) {
+          sampleCy.resize();
+          sampleCy.fit(sampleCy.elements(), 30);
+        }
+      });
+    }
   }
 
   function handleClose() {
@@ -216,6 +224,175 @@
   function displaySubgraphId(index) {
     const info = subgraphs.find((s) => s.index === index);
     return info?.subgraph?.subgraph_id ?? info?.subgraph_id ?? index + 1;
+  }
+
+  // YAML Generation & Copy Helpers
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function toYaml(data, indent = 0, seen = new Set()) {
+    if (data === null || data === undefined) return "null";
+    if (typeof data === "number" || typeof data === "boolean") return String(data);
+    const pad = "  ".repeat(indent);
+    if (typeof data === "string") {
+      if (data.includes("\n")) {
+        const lines = data.split("\n").map((l) => pad + "  " + l).join("\n");
+        return "|\n" + lines;
+      }
+      if (
+        data === "" ||
+        /^[0-9]/.test(data) ||
+        /[:#{}[\]&*?|>!%@`~,\-]/.test(data) ||
+        data === "true" ||
+        data === "false" ||
+        data === "null" ||
+        data.trim() !== data
+      ) {
+        return JSON.stringify(data);
+      }
+      return data;
+    }
+    if (typeof data === "object") {
+      if (seen.has(data)) return "[Circular]";
+      seen.add(data);
+    }
+    if (Array.isArray(data)) {
+      if (data.length === 0) return "[]";
+      return data
+        .map((item) => {
+          if (typeof item === "object" && item !== null && !Array.isArray(item)) {
+            const entries = Object.entries(item).filter(([_, v]) => v !== undefined && typeof v !== "function");
+            if (entries.length === 0) return `${pad}- {}`;
+            const [firstKey, firstVal] = entries[0];
+            const rest = entries.slice(1);
+            let result = `${pad}- ${firstKey}:`;
+            if (typeof firstVal === "object" && firstVal !== null) {
+              result += `\n${pad}    ${toYaml(firstVal, indent + 2, seen).trimStart()}`;
+            } else {
+              result += ` ${toYaml(firstVal, 0, seen)}`;
+            }
+            for (const [k, v] of rest) {
+              if (typeof v === "object" && v !== null) {
+                result += `\n${pad}  ${k}:\n${toYaml(v, indent + 2, seen)}`;
+              } else {
+                result += `\n${pad}  ${k}: ${toYaml(v, 0, seen)}`;
+              }
+            }
+            return result;
+          }
+          return `${pad}- ${toYaml(item, indent + 1, seen).trimStart()}`;
+        })
+        .join("\n");
+    }
+    if (typeof data === "object") {
+      const entries = Object.entries(data).filter(([_, v]) => v !== undefined && typeof v !== "function");
+      if (entries.length === 0) return "{}";
+      return entries
+        .map(([k, v]) => {
+          const keyStr = /[:#{}[\]&*?|>!%@`~,\-]/.test(k) ? JSON.stringify(k) : k;
+          if (typeof v === "object" && v !== null) {
+            if (Array.isArray(v) && v.length === 0) return `${pad}${keyStr}: []`;
+            if (!Array.isArray(v) && Object.keys(v).length === 0) return `${pad}${keyStr}: {}`;
+            return `${pad}${keyStr}:\n${toYaml(v, indent + 1, seen)}`;
+          }
+          return `${pad}${keyStr}: ${toYaml(v, 0, seen)}`;
+        })
+        .join("\n");
+    }
+    return String(data);
+  }
+
+  function buildYamlPayload(idx, info, props, attrs, samps) {
+    const sId = displaySubgraphId(idx);
+    const types = typeLabels(info);
+
+    return {
+      subgraph: {
+        id: sId,
+        support: info?.support ?? info?.subgraph?.support ?? null,
+        types: types.length > 0 ? types : [],
+        object_patterns: (props || []).map((p) => ({
+          source: p.source,
+          predicate: p.label,
+          target: p.target,
+          optional: Boolean(p.optional),
+          ...(p.sourceUri ? { source_uri: p.sourceUri } : {}),
+          ...(p.targetUri ? { target_uri: p.targetUri } : {}),
+          ...(p.predicateUri ? { predicate_uri: p.predicateUri } : {}),
+        })),
+        attribute_patterns: (attrs || []).map((a) => ({
+          class: a.typeLabel || a.typeUri,
+          predicate: a.label,
+          datatype: a.datatype || "literal",
+          ...(a.typeUri ? { class_uri: a.typeUri } : {}),
+          ...(a.uri ? { property_uri: a.uri } : {}),
+          ...(a.support != null ? { support: a.support } : {}),
+        })),
+      },
+      samples: (samps || []).map((s, sIdx) => ({
+        instance: sIdx + 1,
+        triples: (s.triples || []).map((t) => ({
+          subject: t.src,
+          predicate: t.prop,
+          object: t.tgt ?? null,
+          kind: t.kind === "attr-triple" ? "attribute" : "object",
+          ...(t.optional ? { optional: true } : {}),
+        })),
+      })),
+      ...(info?.subgraph ? { raw_subgraph: info.subgraph } : {}),
+    };
+  }
+
+  $: yamlPayload = buildYamlPayload(
+    selectedIndex,
+    currentSubgraphInfo,
+    properties,
+    attributes,
+    samples,
+  );
+  $: yamlString = toYaml(yamlPayload);
+  $: highlightedYaml = (() => {
+    if (!yamlString) return "";
+    try {
+      return hljs.highlight(yamlString, { language: "yaml" }).value;
+    } catch (_) {
+      return escapeHtml(yamlString);
+    }
+  })();
+
+  async function copyYaml() {
+    try {
+      if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(yamlString);
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = yamlString;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+      }
+      copyStatus = "copied";
+      if (copyTimeout) clearTimeout(copyTimeout);
+      copyTimeout = setTimeout(() => {
+        copyStatus = "";
+      }, 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+      copyStatus = "error";
+      if (copyTimeout) clearTimeout(copyTimeout);
+      copyTimeout = setTimeout(() => {
+        copyStatus = "";
+      }, 2000);
+    }
   }
 
   function typeLabels(entry) {
@@ -775,6 +952,16 @@
             <span class="icon">◈</span>
             <span>Sample Only</span>
           </button>
+          <button
+            type="button"
+            class="mode-btn"
+            class:active={viewMode === "raw"}
+            on:click={() => setViewMode("raw")}
+            title="View subgraph and samples as raw YAML"
+          >
+            <span class="icon">📄</span>
+            <span>Raw Version</span>
+          </button>
         </div>
       </div>
 
@@ -818,10 +1005,64 @@
           </div>
         </div>
       {/if}
+
+      <!-- Raw Version Action Button on Toolbar Right -->
+      <div class="toolbar-section toolbar-right">
+        <button
+          type="button"
+          class="raw-toggle-btn"
+          class:active={viewMode === "raw"}
+          on:click={() => setViewMode(viewMode === "raw" ? "both" : "raw")}
+          title={viewMode === "raw" ? "Return to visual graphs" : "View subgraph and samples in raw YAML format"}
+        >
+          <span class="raw-btn-icon">{viewMode === "raw" ? "⊞" : "📄"}</span>
+          <span>{viewMode === "raw" ? "Visual Graphs" : "Raw Version"}</span>
+        </button>
+      </div>
     </section>
 
-    <!-- Main Graphs Area -->
+    <!-- Main Graphs / Raw Workspace -->
     <main class="graphs-workspace mode-{viewMode}">
+      <!-- Raw YAML View -->
+      {#if viewMode === "raw"}
+        <section class="raw-yaml-card">
+          <header class="raw-yaml-header">
+            <div class="raw-title-group">
+              <span class="yaml-badge">YAML</span>
+              <h4>
+                Subgraph {displaySubgraphId(selectedIndex)} Raw Representation
+              </h4>
+              <span class="raw-stats-pill">
+                {(properties || []).length} patterns · {(attributes || []).length} attributes · {(samples || []).length} samples
+              </span>
+            </div>
+            <div class="raw-actions">
+              <button
+                type="button"
+                class="copy-btn"
+                class:copied={copyStatus === "copied"}
+                on:click={copyYaml}
+                title="Copy YAML to clipboard"
+              >
+                {#if copyStatus === "copied"}
+                  <span class="copy-icon">✓</span>
+                  <span>Copied!</span>
+                {:else if copyStatus === "error"}
+                  <span class="copy-icon">⚠</span>
+                  <span>Failed to copy</span>
+                {:else}
+                  <span class="copy-icon">📋</span>
+                  <span>Copy YAML</span>
+                {/if}
+              </button>
+            </div>
+          </header>
+
+          <div class="raw-code-container">
+            <pre class="raw-code-pre"><code class="language-yaml">{@html highlightedYaml}</code></pre>
+          </div>
+        </section>
+      {/if}
       <!-- Pattern Graph Card -->
       {#if viewMode === "both" || viewMode === "pattern"}
         <section class="graph-card">
@@ -1344,8 +1585,176 @@
   }
 
   .graphs-workspace.mode-pattern,
-  .graphs-workspace.mode-sample {
+  .graphs-workspace.mode-sample,
+  .graphs-workspace.mode-raw {
     grid-template-columns: 1fr;
+  }
+
+  .toolbar-right {
+    margin-left: auto;
+  }
+
+  .raw-toggle-btn {
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    color: #334155;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+  }
+
+  .raw-toggle-btn:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+    color: #0f172a;
+  }
+
+  .raw-toggle-btn.active {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    color: #1d4ed8;
+    font-weight: 700;
+  }
+
+  .raw-btn-icon {
+    font-size: 0.85rem;
+    line-height: 1;
+  }
+
+  /* ── Raw YAML View ────────────────────────────────────── */
+  .raw-yaml-card {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .raw-yaml-header {
+    padding: 10px 16px;
+    background: #1e293b;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .raw-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .yaml-badge {
+    background: #38bdf8;
+    color: #0c4a6e;
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  .raw-title-group h4 {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #f1f5f9;
+  }
+
+  .raw-stats-pill {
+    background: rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    font-size: 0.74rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  .copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #2563eb;
+    color: #ffffff;
+    border: 1px solid #3b82f6;
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .copy-btn:hover {
+    background: #1d4ed8;
+    border-color: #2563eb;
+  }
+
+  .copy-btn.copied {
+    background: #059669;
+    border-color: #10b981;
+    color: #ffffff;
+  }
+
+  .copy-icon {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+
+  .raw-code-container {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    padding: 16px 20px;
+    background: #0b1120;
+  }
+
+  .raw-code-pre {
+    margin: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    white-space: pre;
+  }
+
+  .raw-code-pre code {
+    font-family: inherit;
+  }
+
+  :global(.raw-code-container .hljs-attr) {
+    color: #7dd3fc;
+    font-weight: 600;
+  }
+
+  :global(.raw-code-container .hljs-string) {
+    color: #86efac;
+  }
+
+  :global(.raw-code-container .hljs-number) {
+    color: #fca5a5;
+  }
+
+  :global(.raw-code-container .hljs-literal) {
+    color: #f472b6;
+    font-weight: 600;
+  }
+
+  :global(.raw-code-container .hljs-comment) {
+    color: #64748b;
+    font-style: italic;
   }
 
   .graph-card {
