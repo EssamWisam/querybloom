@@ -2,7 +2,7 @@
   import hljs from "highlight.js";
   import { cancelRun, loadRunQaPairs, streamLlm } from "../api.js";
   import FieldHelp from "./FieldHelp.svelte";
-  import MiniSubgraphGraphs from "./MiniSubgraphGraphs.svelte";
+  import QaPatternSamplesModal from "./QaPatternSamplesModal.svelte";
   import QaEvolution from "./QaEvolution.svelte";
   import {
     normalizeGraph,
@@ -155,7 +155,6 @@
     selectedIndex != null ? (subgraphByIndex[selectedIndex] ?? null) : null;
   $: if (selectedIndex !== lastInspectorIndex) {
     lastInspectorIndex = selectedIndex;
-    showSubgraphInspector = false;
   }
   $: if (sampleRunId && sampleRunId !== hydratedSampleRunId && !running) {
     hydrateStoredQa(sampleRunId);
@@ -1465,6 +1464,24 @@
     </div>
   {/if}
 
+  <!-- Large Subgraph Pattern & Samples Popup Modal -->
+  {#if showSubgraphInspector && selectedInfo}
+    <QaPatternSamplesModal
+      subgraphs={subgraphs}
+      selectedIndex={selectedIndex}
+      properties={selectedPatternProperties}
+      attributes={selectedPatternAttributes}
+      samples={selectedSamples}
+      emptySamplesText={samplePayload(selectedInfo)
+        ? "No samples could be formed for this subgraph."
+        : "Sample entities will appear once mining completes."}
+      onClose={() => (showSubgraphInspector = false)}
+      onSelectSubgraph={(idx) => (selectedIndex = idx)}
+      on:close={() => (showSubgraphInspector = false)}
+      on:selectSubgraph={(e) => (selectedIndex = e.detail)}
+    />
+  {/if}
+
   <!-- Form bar -->
   <form on:submit|preventDefault={submit}>
     <div class="form-head">
@@ -1740,28 +1757,13 @@
               <button
                 class="inspector-toggle"
                 type="button"
-                on:click={() =>
-                  (showSubgraphInspector = !showSubgraphInspector)}
+                on:click={() => (showSubgraphInspector = true)}
+                title="Open large pattern and samples popup"
               >
-                {showSubgraphInspector
-                  ? "Hide pattern and samples"
-                  : "Show pattern and samples"}
+                <span class="inspector-btn-icon" aria-hidden="true">🔍</span>
+                <span>Show pattern and samples</span>
               </button>
             </div>
-
-            {#if showSubgraphInspector}
-              <section class="inspector-card">
-                <MiniSubgraphGraphs
-                  properties={selectedPatternProperties}
-                  attributes={selectedPatternAttributes}
-                  samples={selectedSamples}
-                  idPrefix={`qa-${selectedInfo.index}`}
-                  emptySamplesText={samplePayload(selectedInfo)
-                    ? "No samples could be formed for this subgraph."
-                    : "Sample entities will appear once mining completes."}
-                />
-              </section>
-            {/if}
           {/if}
 
           <!-- State-specific content -->
@@ -2511,20 +2513,31 @@
 
   .inspector-toggle,
   .evolution-toggle {
-    padding: 7px 10px;
+    padding: 7px 12px;
     font-size: 0.8rem;
     font-weight: 700;
   }
 
-  .inspector-card {
-    border: 1px solid #e4e8f4;
-    border-radius: 8px;
-    background: #f9fafd;
-    padding: 12px 14px;
-    margin-bottom: 16px;
-    display: grid;
-    gap: 16px;
+  .inspector-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    transition: all 0.15s ease;
   }
+
+  .inspector-toggle:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    color: #1d4ed8;
+  }
+
+  .inspector-btn-icon {
+    font-size: 0.88rem;
+    line-height: 1;
+  }
+
 
   .compact {
     padding: 0;
