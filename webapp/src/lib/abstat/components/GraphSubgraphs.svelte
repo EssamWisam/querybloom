@@ -1,6 +1,7 @@
 <script>
   import { onDestroy, onMount } from "svelte";
   import AbstatGraph from "./AbstatGraph.svelte";
+  import QaPatternSamplesModal from "./QaPatternSamplesModal.svelte";
   import {
     normalizeGraph,
     shortName,
@@ -340,30 +341,24 @@
 
   let pinnedNodeId = null;
   let pinnedNodeLabel = null;
-  let detailsOpen = false;
+  let showPatternModal = false;
 
   function handleNodeClick(info) {
     pinnedNodeId = info?.id ?? null;
     pinnedNodeLabel = info?.label ?? null;
     if (pinnedNodeId) {
       onSelect(null);
-      detailsOpen = false;
     }
   }
 
   function selectSubgraph(index) {
     const nextIndex = index === selectedIndex ? null : index;
     onSelect(nextIndex);
-    detailsOpen = false;
   }
 
-  function toggleSubgraphDetails(index) {
-    if (index !== selectedIndex) {
-      onSelect(index);
-      detailsOpen = true;
-      return;
-    }
-    detailsOpen = !detailsOpen;
+  function openPatternModal(index) {
+    onSelect(index);
+    showPatternModal = true;
   }
 
   $: filteredSubgraphs = (() => {
@@ -466,151 +461,36 @@
           </button>
 
           <button
-            class="details-toggle"
+            class="open-modal-btn"
             type="button"
-            on:click={() => toggleSubgraphDetails(item.index)}
-            aria-expanded={item.index === selectedIndex && detailsOpen}
-            aria-label={item.index === selectedIndex && detailsOpen
-              ? "Hide pattern and samples"
-              : "Show pattern and samples"}
-            title={item.index === selectedIndex && detailsOpen
-              ? "Hide pattern and samples"
-              : "Show pattern and samples"}
+            on:click|stopPropagation={() => openPatternModal(item.index)}
+            aria-label={`View Subgraph ${item.index + 1} pattern and samples in popup`}
+            title={`View Subgraph ${item.index + 1} pattern and samples in popup`}
           >
-            <span
-              class="chevron"
-              class:open={item.index === selectedIndex && detailsOpen}
-              aria-hidden="true"
-            ></span>
+            <span class="open-icon" aria-hidden="true">↗</span>
           </button>
-
-          {#if item.index === selectedIndex && detailsOpen && selected}
-            <section class="selected-details">
-              <dl>
-                <div>
-                  <dt>Support</dt>
-                  <dd>
-                    {selected.subgraph?.support || selected.support || "-"}
-                  </dd>
-                </div>
-                <div>
-                  <dt>Classes</dt>
-                  <dd>
-                    {selected.subgraph?.num_types || selected.numTypes || "-"}
-                  </dd>
-                </div>
-                <div>
-                  <dt>Props</dt>
-                  <dd>
-                    {selected.subgraph?.edges?.length ||
-                      selected.samples?.edges?.length ||
-                      "-"}
-                  </dd>
-                </div>
-              </dl>
-
-              <section class="detail-section">
-                <h3>Classes</h3>
-                {#if classes.length}
-                  <div class="class-chips">
-                    {#each classes as item, idx (item.uri || `${item.label || "class"}-${idx}`)}
-                      <span class="class-chip" title={item.uri}
-                        >{item.label}</span
-                      >
-                    {/each}
-                  </div>
-                {:else}
-                  <p class="detail-empty">No class details available.</p>
-                {/if}
-              </section>
-
-              <section class="detail-section">
-                <h3>Object patterns</h3>
-                {#if properties.length}
-                  <ul class="pattern-list">
-                    {#each properties as prop, index (`${prop.source}-${prop.label}-${prop.target}-${index}`)}
-                      <li>
-                        <span class="term">{prop.source}</span>
-                        <span class="predicate object">{prop.label}</span>
-                        <span class="term">{prop.target}</span>
-                        {#if prop.optional}<span class="optional">optional</span
-                          >{/if}
-                      </li>
-                    {/each}
-                  </ul>
-                {:else}
-                  <p class="detail-empty">
-                    No object patterns for this subgraph.
-                  </p>
-                {/if}
-              </section>
-
-              <section class="detail-section">
-                <h3>Attribute patterns</h3>
-                {#if attributes.length}
-                  <ul class="pattern-list">
-                    {#each attributes as attr, index (`${attr.typeLabel}-${attr.label}-${index}`)}
-                      <li>
-                        <span class="term">{attr.typeLabel}</span>
-                        <span class="predicate attribute">{attr.label}</span>
-                        <span class="term literal"
-                          >{attr.datatype || "literal"}</span
-                        >
-                      </li>
-                    {/each}
-                  </ul>
-                {:else}
-                  <p class="detail-empty">
-                    No attribute patterns for this subgraph.
-                  </p>
-                {/if}
-              </section>
-
-              <section class="detail-section">
-                <h3>Samples</h3>
-                {#if samples.length}
-                  <div class="sample-list">
-                    {#each samples as sample, sampleIndex}
-                      <article class="sample-card">
-                        <h4>Sample {sampleIndex + 1}</h4>
-                        <ul class="sample-triples">
-                          {#each sample.triples as triple, tripleIndex (`${sampleIndex}-${triple.src}-${triple.prop}-${triple.tgt}-${tripleIndex}`)}
-                            <li>
-                              <span class="term">{triple.src}</span>
-                              <span
-                                class:attribute={triple.kind === "attr-triple"}
-                                class="predicate">{triple.prop}</span
-                              >
-                              {#if triple.tgt != null}
-                                <span
-                                  class="term"
-                                  class:literal={triple.kind === "attr-triple"}
-                                  >{triple.tgt}</span
-                                >
-                              {/if}
-                            </li>
-                          {/each}
-                        </ul>
-                      </article>
-                    {/each}
-                  </div>
-                {:else if samplePayload(selected)}
-                  <p class="detail-empty">
-                    No samples could be formed for this subgraph.
-                  </p>
-                {:else}
-                  <p class="detail-empty">
-                    Sample entities will appear once mining completes.
-                  </p>
-                {/if}
-              </section>
-            </section>
-          {/if}
         </div>
       {/each}
     </div>
   </aside>
 </section>
+
+{#if showPatternModal && selected}
+  <QaPatternSamplesModal
+    subgraphs={subgraphs}
+    selectedIndex={selectedIndex}
+    properties={properties}
+    attributes={attributes}
+    samples={samples}
+    emptySamplesText={samplePayload(selected)
+      ? "No samples could be formed for this subgraph."
+      : "Sample entities will appear once mining completes."}
+    onClose={() => (showPatternModal = false)}
+    onSelectSubgraph={(idx) => onSelect(idx)}
+    on:close={() => (showPatternModal = false)}
+    on:selectSubgraph={(e) => onSelect(e.detail)}
+  />
+{/if}
 
 <style>
   .subgraph-workspace {
@@ -732,9 +612,7 @@
 
   header p,
   .empty,
-  small,
-  dd,
-  dt {
+  small {
     color: #65708c;
     font-size: 0.8rem;
   }
@@ -748,40 +626,34 @@
     align-content: start;
   }
 
-  .selected-details {
-    border-top: 1px solid var(--border-default);
-    padding: 10px 2px 2px;
-    display: grid;
-    gap: 12px;
-  }
-
-  .details-toggle {
+  .open-modal-btn {
     grid-column: 2;
     grid-row: 1;
     align-self: center;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     display: grid;
     place-items: center;
     padding: 0;
-    border-color: rgba(52, 74, 154, 0.22);
+    border: 1px solid rgba(52, 74, 154, 0.25);
     border-radius: 6px;
     background: #f7f9ff;
-    color: var(--color-uni-blue);
+    color: var(--color-uni-blue, #273763);
     cursor: pointer;
+    transition: all 0.15s ease;
   }
 
-  .chevron {
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
-    transform: translateY(-2px) rotate(45deg);
-    transition: transform 0.15s ease;
+  .open-modal-btn:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    color: #1d4ed8;
+    transform: translate(1px, -1px);
   }
 
-  .chevron.open {
-    transform: translateY(2px) rotate(225deg);
+  .open-icon {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1;
   }
 
   .subgraph-card {
@@ -812,9 +684,7 @@
     cursor: pointer;
   }
 
-  .selected-details {
-    grid-column: 1 / -1;
-  }
+
 
   .subgraph-select span {
     color: #17203b;
@@ -837,157 +707,7 @@
     color: #66708a;
   }
 
-  dl {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin: 10px 0;
-  }
 
-  dl div {
-    border: 1px solid #e4e8f4;
-    border-radius: 7px;
-    padding: 8px;
-  }
-
-  dt {
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-
-  dd {
-    margin: 2px 0 0;
-    color: #171f3b;
-    font-weight: 800;
-  }
-
-  .detail-section {
-    display: grid;
-    gap: 7px;
-  }
-
-  .detail-section h3,
-  .sample-card h4 {
-    margin: 0;
-    color: #24335f;
-    font-size: 0.78rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0;
-  }
-
-  .class-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-
-  .class-chip {
-    max-width: 100%;
-    border: 1px solid #dbe4fb;
-    border-radius: 5px;
-    background: #eef3ff;
-    color: #273763;
-    padding: 3px 7px;
-    font-size: 0.76rem;
-    font-weight: 800;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .pattern-list,
-  .sample-triples {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 6px;
-  }
-
-  .pattern-list li,
-  .sample-triples li {
-    border: 1px solid #e4e8f4;
-    border-radius: 6px;
-    background: #fff;
-    padding: 7px;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 4px;
-  }
-
-  .term,
-  .predicate,
-  .optional {
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .term {
-    color: #1e2947;
-    font-size: 0.78rem;
-    font-weight: 800;
-  }
-
-  .term.literal {
-    color: #9a5318;
-  }
-
-  .predicate {
-    justify-self: start;
-    border-radius: 4px;
-    background: #edf3ff;
-    color: #2e51b7;
-    padding: 2px 6px;
-    font-size: 0.72rem;
-    font-weight: 900;
-  }
-
-  .predicate.attribute {
-    background: #fff3e4;
-    color: #a65b16;
-  }
-
-  .optional {
-    justify-self: start;
-    border-radius: 999px;
-    background: #f0f1f5;
-    color: #69728d;
-    padding: 1px 6px;
-    font-size: 0.68rem;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-
-  .sample-list {
-    display: grid;
-    gap: 8px;
-  }
-
-  .sample-card {
-    border: 1px solid #e4e8f4;
-    border-radius: 7px;
-    background: #fbfcff;
-    padding: 8px;
-    display: grid;
-    gap: 7px;
-  }
-
-  .sample-card h4 {
-    color: #66708a;
-    font-size: 0.72rem;
-  }
-
-  .detail-empty {
-    border: 1px dashed #d9dfef;
-    border-radius: 6px;
-    background: #fbfcff;
-    padding: 8px;
-    color: #7b849f;
-    font-size: 0.78rem;
-  }
 
   @media (max-width: 1100px) {
     .subgraph-workspace {
