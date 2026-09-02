@@ -588,22 +588,22 @@
             name: "cola",
             animate: false,
             fit: true,
-            padding: 32,
+            padding: 36,
             avoidOverlap: true,
             handleDisconnected: true,
             nodeDimensionsIncludeLabels: true,
-            nodeSpacing: () => 32,
-            edgeLength: 124,
-            maxSimulationTime: 700,
+            nodeSpacing: () => 52,
+            edgeLength: 195,
+            maxSimulationTime: 850,
             convergenceThreshold: 0.015,
             stop: fitGraphNow,
           })
         : cy.layout({
             name: "grid",
             fit: true,
-            padding: 32,
+            padding: 36,
             avoidOverlap: true,
-            spacingFactor: 0.95,
+            spacingFactor: 1.35,
             stop: fitGraphNow,
           });
       layout.run();

@@ -637,7 +637,7 @@
             fit: shouldFit,
             padding: 40,
             avoidOverlap: true,
-            spacingFactor: 1.15,
+            spacingFactor: 1.3,
           }).run();
           saveCyPositions();
           applyFreshHighlight();
@@ -648,8 +648,8 @@
           cy.layout({
             name: layoutName,
             animate: false,
-            nodeSpacing: 28,
-            edgeLength: 220,
+            nodeSpacing: 44,
+            edgeLength: 250,
             randomize: isFirstRender,
             fit: shouldFit,
             padding: 40,

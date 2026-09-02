@@ -13,7 +13,7 @@
   export let graph = null;
   export let subgraphs = [];
   export let selectedIndex = null;
-  export let onSelect = () => {};
+  export let onSelect = (_idx = null) => {};
   export let running = false;
   export let miningPhase = false;
   export let skipSubgraphsPending = false;
