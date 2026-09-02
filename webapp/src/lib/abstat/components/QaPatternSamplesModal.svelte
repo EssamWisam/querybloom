@@ -308,65 +308,52 @@
     return String(data);
   }
 
-  function buildYamlPayload(idx, info, props, attrs, samps) {
+  function getOfficialYamlPayload(idx, info) {
+    if (!info) return null;
     const sId = displaySubgraphId(idx);
-    const types = typeLabels(info);
+    const sampleData = info.samples?.samples || info.samples || null;
 
-    return {
-      subgraph: {
-        id: sId,
-        support: info?.support ?? info?.subgraph?.support ?? null,
-        types: types.length > 0 ? types : [],
-        object_patterns: (props || []).map((p) => ({
-          source: p.source,
-          predicate: p.label,
-          target: p.target,
-          optional: Boolean(p.optional),
-          ...(p.sourceUri ? { source_uri: p.sourceUri } : {}),
-          ...(p.targetUri ? { target_uri: p.targetUri } : {}),
-          ...(p.predicateUri ? { predicate_uri: p.predicateUri } : {}),
-        })),
-        attribute_patterns: (() => {
-          const seen = new Set();
-          const list = [];
-          for (const a of attrs || []) {
-            const key = `${a.typeUri || a.typeLabel}|${a.uri || a.label}|${a.datatype || ""}`;
-            if (seen.has(key)) continue;
-            seen.add(key);
-            list.push({
-              class: a.typeLabel || a.typeUri,
-              predicate: a.label,
-              datatype: a.datatype || "literal",
-              ...(a.typeUri ? { class_uri: a.typeUri } : {}),
-              ...(a.uri ? { property_uri: a.uri } : {}),
-              ...(a.support != null ? { support: a.support } : {}),
-            });
-          }
-          return list;
-        })(),
-      },
-      samples: (samps || []).map((s, sIdx) => ({
-        instance: sIdx + 1,
-        triples: (s.triples || []).map((t) => ({
-          subject: t.src,
-          predicate: t.prop,
-          object: t.tgt ?? null,
-          kind: t.kind === "attr-triple" ? "attribute" : "object",
-          ...(t.optional ? { optional: true } : {}),
-        })),
-      })),
-      ...(info?.subgraph ? { raw_subgraph: info.subgraph } : {}),
-    };
+    // If the official yaml_data produced by prepare_subgraph_yaml_data is available:
+    if (
+      sampleData &&
+      typeof sampleData === "object" &&
+      (sampleData.subgraph_id != null || sampleData.edges || sampleData.instances || sampleData.types)
+    ) {
+      return {
+        subgraph_id: sampleData.subgraph_id ?? sId,
+        num_types: sampleData.num_types ?? info.subgraph?.num_types ?? (sampleData.types ? Object.keys(sampleData.types).length : undefined),
+        min_support: sampleData.min_support ?? sampleData.support ?? info.subgraph?.support ?? info.support,
+        edges: sampleData.edges ?? [],
+        predicate_uris: sampleData.predicate_uris ?? [],
+        attribute_uris: sampleData.attribute_uris ?? [],
+        ...(sampleData.sample_mode ? { sample_mode: sampleData.sample_mode } : {}),
+        ...(sampleData.sample_query ? { sample_query: sampleData.sample_query } : {}),
+        ...(sampleData.sample_query_success != null ? { sample_query_success: sampleData.sample_query_success } : {}),
+        instances: sampleData.instances ?? [],
+        types: sampleData.types ?? {},
+      };
+    }
+
+    // Fallback if samples have not been mined yet:
+    if (info.subgraph) {
+      return {
+        subgraph_id: sId,
+        num_types: info.subgraph.num_types,
+        min_support: info.subgraph.support,
+        edges: info.subgraph.edges ?? [],
+        predicate_uris: [],
+        attribute_uris: [],
+        instances: [],
+        types: info.subgraph.types ?? [],
+        ...(info.subgraph.type_attributes ? { type_attributes: info.subgraph.type_attributes } : {}),
+      };
+    }
+
+    return null;
   }
 
-  $: yamlPayload = buildYamlPayload(
-    selectedIndex,
-    currentSubgraphInfo,
-    properties,
-    attributes,
-    samples,
-  );
-  $: yamlString = toYaml(yamlPayload);
+  $: yamlPayload = getOfficialYamlPayload(selectedIndex, currentSubgraphInfo);
+  $: yamlString = yamlPayload ? toYaml(yamlPayload) : "# No official subgraph YAML stored.";
   $: highlightedYaml = (() => {
     if (!yamlString) return "";
     try {
@@ -1040,11 +1027,13 @@
             <div class="raw-title-group">
               <span class="yaml-badge">YAML</span>
               <h4>
-                Subgraph {displaySubgraphId(selectedIndex)} Raw Representation
+                Subgraph {displaySubgraphId(selectedIndex)}
               </h4>
-              <span class="raw-stats-pill">
-                {(properties || []).length} patterns · {(attributes || []).length} attributes · {(samples || []).length} samples
-              </span>
+              {#if yamlPayload?.instances}
+                <span class="raw-stats-pill">
+                  {yamlPayload.instances.length} instances · {(yamlPayload.edges || []).length} patterns · {(yamlPayload.attribute_uris || []).length} attributes
+                </span>
+              {/if}
             </div>
             <div class="raw-actions">
               <button
