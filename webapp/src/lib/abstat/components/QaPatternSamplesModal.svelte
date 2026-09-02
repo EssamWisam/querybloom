@@ -17,7 +17,7 @@
   export let emptySamplesText = "No samples could be formed for this subgraph.";
   export let idPrefix = "qa-modal";
   export let onClose = () => {};
-  export let onSelectSubgraph = () => {};
+  export let onSelectSubgraph = (_idx = null) => {};
 
   const dispatch = createEventDispatcher();
 
@@ -326,14 +326,24 @@
           ...(p.targetUri ? { target_uri: p.targetUri } : {}),
           ...(p.predicateUri ? { predicate_uri: p.predicateUri } : {}),
         })),
-        attribute_patterns: (attrs || []).map((a) => ({
-          class: a.typeLabel || a.typeUri,
-          predicate: a.label,
-          datatype: a.datatype || "literal",
-          ...(a.typeUri ? { class_uri: a.typeUri } : {}),
-          ...(a.uri ? { property_uri: a.uri } : {}),
-          ...(a.support != null ? { support: a.support } : {}),
-        })),
+        attribute_patterns: (() => {
+          const seen = new Set();
+          const list = [];
+          for (const a of attrs || []) {
+            const key = `${a.typeUri || a.typeLabel}|${a.uri || a.label}|${a.datatype || ""}`;
+            if (seen.has(key)) continue;
+            seen.add(key);
+            list.push({
+              class: a.typeLabel || a.typeUri,
+              predicate: a.label,
+              datatype: a.datatype || "literal",
+              ...(a.typeUri ? { class_uri: a.typeUri } : {}),
+              ...(a.uri ? { property_uri: a.uri } : {}),
+              ...(a.support != null ? { support: a.support } : {}),
+            });
+          }
+          return list;
+        })(),
       },
       samples: (samps || []).map((s, sIdx) => ({
         instance: sIdx + 1,

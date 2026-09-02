@@ -683,22 +683,32 @@
         for (const attr of parseAttrs(entity?.attributes)) {
           const uri =
             attributeUriForLabel(attributeUris, attr.label) || attr.label;
+          const displayAttrLabel = displayUri(uri, labels) || attr.label;
           const exists = rows.some(
-            (row) => row.typeUri === typeUri && row.label === attr.label,
+            (row) =>
+              (row.typeUri && typeUri && row.typeUri === typeUri && row.uri === uri) ||
+              (row.typeLabel === (typeUri ? displayUri(typeUri, labels) : typeName) &&
+                (row.uri === uri || row.label === displayAttrLabel || row.label === attr.label)),
           );
           if (!exists) {
             rows.push({
               typeUri,
               typeLabel: typeUri ? displayUri(typeUri, labels) : typeName,
               uri,
-              label: displayUri(uri, labels) || attr.label,
+              label: displayAttrLabel,
               datatype: attr.datatype || "literal",
             });
           }
         }
       }
     }
-    return rows;
+    const seen = new Set();
+    return rows.filter((row) => {
+      const key = `${row.typeUri || row.typeLabel}|${row.uri || row.label}|${row.datatype || ""}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
   }
 
   function buildSamples(entry) {
