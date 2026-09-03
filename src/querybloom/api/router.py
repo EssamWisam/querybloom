@@ -48,6 +48,15 @@ from querybloom.api.supabase import (
 api_router = APIRouter(prefix="/api/v1", tags=["api-v1"])
 
 
+def _subgraph_num_types(subgraph: dict[str, Any]) -> int | None:
+    if subgraph.get("num_types") is not None:
+        return subgraph.get("num_types")
+    types = subgraph.get("types")
+    if isinstance(types, (dict, list, set, tuple)):
+        return len(types)
+    return None
+
+
 class _SkipEvent:
     _prefix = "grasp_skip"
 
@@ -228,7 +237,7 @@ def _persist_subgraph_best_effort(
                     "run_id": run_id,
                     "subgraph_index": subgraph_index,
                     "support": subgraph.get("support"),
-                    "num_types": subgraph.get("num_types"),
+                    "num_types": _subgraph_num_types(subgraph),
                     "graph": graph or {},
                     "payload": subgraph,
                 },
@@ -269,7 +278,7 @@ def _upsert_subgraph_result_best_effort(
         "run_id": run_id,
         "subgraph_index": subgraph_index,
         "support": payload.get("support"),
-        "num_types": payload.get("num_types"),
+        "num_types": _subgraph_num_types(payload),
         "graph": graph if isinstance(graph, dict) else {},
         "payload": payload,
     }

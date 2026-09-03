@@ -248,22 +248,123 @@ function parseSseFrame(frame) {
     if (line.startsWith("data:")) dataLines.push(line.slice(5).trimStart());
   }
   if (isCommentOnly) return null;
-  const rawData = dataLines.join("\n");
+  let rawData;
+  try {
+    rawData = dataLines.join("\n");
+  } catch (err) {
+    throw enrichStreamError(err, {
+      phase: "join-sse-data",
+      dataLineCount: dataLines.length,
+      event,
+    });
+  }
   let data = rawData;
   if (rawData) {
     try {
       data = JSON.parse(rawData);
-    } catch {
+    } catch (err) {
+      if (isCapacityError(err)) {
+        throw enrichStreamError(err, {
+          phase: "parse-sse-json",
+          event,
+          rawChars: rawData.length,
+        });
+      }
       data = rawData;
     }
   }
   return { event, data };
 }
 
+function isCapacityError(err) {
+  const message = String(err?.message || err || "");
+  return /invalid string length|maximum call stack|out of memory|allocation failed/i.test(message);
+}
+
+export function formatCaughtError(err) {
+  const name = err?.name || err?.constructor?.name || "Error";
+  const message = err?.message || String(err);
+  const parts = [`${name}: ${message}`];
+  if (err?.context && typeof err.context === "object") {
+    try {
+      parts.push(`context: ${JSON.stringify(err.context, null, 2)}`);
+    } catch {
+      parts.push("context: [unserializable]");
+    }
+  }
+  if (err && typeof err === "object") {
+    const extras = [];
+    for (const key of Object.getOwnPropertyNames(err)) {
+      if (["name", "message", "stack", "context", "cause"].includes(key)) continue;
+      try {
+        extras.push(`${key}: ${JSON.stringify(err[key])}`);
+      } catch {
+        extras.push(`${key}: [unserializable]`);
+      }
+    }
+    if (extras.length) parts.push(extras.join("\n"));
+  }
+  if (err?.stack) parts.push(err.stack);
+  if (err?.cause?.stack && err.cause.stack !== err.stack) {
+    parts.push(`caused by: ${err.cause.stack}`);
+  }
+  return {
+    name,
+    message,
+    details: parts.filter(Boolean).join("\n\n"),
+  };
+}
+
+export function reportBrowserError(err, context = {}) {
+  if (typeof window === "undefined") return;
+  const formatted = formatCaughtError(err);
+  try {
+    const body = JSON.stringify({
+      message: formatted.message,
+      stack: err?.stack || "",
+      url: window.location.href,
+      context: {
+        ...context,
+        name: formatted.name,
+        details: formatted.details.slice(0, 8000),
+      },
+    });
+    const targetUrl = (base || "") + "/api/v1/client-logs";
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(targetUrl, body);
+    } else {
+      fetch(targetUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body,
+      }).catch(() => { });
+    }
+  } catch {
+    // Never let diagnostics throw over the original error.
+  }
+}
+
+function enrichStreamError(err, context) {
+  const formatted = formatCaughtError(err);
+  const wrapped = new Error(`${formatted.message} (${Object.entries(context).map(([k, v]) => `${k}=${v}`).join(", ")})`);
+  wrapped.name = err?.name || "Error";
+  wrapped.cause = err;
+  wrapped.context = context;
+  wrapped.stack = err?.stack || wrapped.stack;
+  return wrapped;
+}
+
 async function streamPost(url, token, payload, onFrame, signal = null) {
+  let body;
+  try {
+    body = JSON.stringify(payload);
+  } catch (err) {
+    throw enrichStreamError(err, { phase: "stringify-request", url });
+  }
+
   const response = await authFetch(url, {
     method: "POST",
-    body: JSON.stringify(payload),
+    body,
     signal,
   }, token);
   if (!response.ok || !response.body) await readJson(response);
@@ -271,18 +372,54 @@ async function streamPost(url, token, payload, onFrame, signal = null) {
   const reader = response.body.getReader();
   const decoder = new TextDecoder();
   let buffer = "";
+  let chunkCount = 0;
 
   while (true) {
     const { value, done } = await reader.read();
     if (done) break;
-    buffer += decoder.decode(value, { stream: true });
+    chunkCount += 1;
+    const chunkBytes = value?.byteLength ?? 0;
+    try {
+      buffer += decoder.decode(value, { stream: true });
+    } catch (err) {
+      throw enrichStreamError(err, {
+        phase: "append-sse-chunk",
+        url,
+        chunkCount,
+        chunkBytes,
+        bufferChars: buffer.length,
+      });
+    }
     let boundary = buffer.indexOf("\n\n");
     while (boundary !== -1) {
       const frame = buffer.slice(0, boundary).trim();
       buffer = buffer.slice(boundary + 2);
       if (frame) {
-        const parsed = parseSseFrame(frame);
-        if (parsed) onFrame(parsed);
+        let parsed;
+        try {
+          parsed = parseSseFrame(frame);
+        } catch (err) {
+          throw enrichStreamError(err, {
+            phase: "parse-sse-frame",
+            url,
+            chunkCount,
+            frameChars: frame.length,
+            bufferChars: buffer.length,
+          });
+        }
+        if (parsed) {
+          try {
+            onFrame(parsed);
+          } catch (err) {
+            throw enrichStreamError(err, {
+              phase: "handle-sse-frame",
+              url,
+              event: parsed.event,
+              chunkCount,
+              frameChars: frame.length,
+            });
+          }
+        }
       }
       boundary = buffer.indexOf("\n\n");
     }
@@ -290,8 +427,30 @@ async function streamPost(url, token, payload, onFrame, signal = null) {
 
   const tail = buffer.trim();
   if (tail) {
-    const parsed = parseSseFrame(tail);
-    if (parsed) onFrame(parsed);
+    let parsed;
+    try {
+      parsed = parseSseFrame(tail);
+    } catch (err) {
+      throw enrichStreamError(err, {
+        phase: "parse-sse-tail",
+        url,
+        chunkCount,
+        frameChars: tail.length,
+      });
+    }
+    if (parsed) {
+      try {
+        onFrame(parsed);
+      } catch (err) {
+        throw enrichStreamError(err, {
+          phase: "handle-sse-tail",
+          url,
+          event: parsed.event,
+          chunkCount,
+          frameChars: tail.length,
+        });
+      }
+    }
   }
 }
 

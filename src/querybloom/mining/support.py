@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Any, Dict, List, Optional, Set, Tuple
 
 from querybloom.executor.sparql_executor import execute_sparql_query as execute
+from querybloom.mining.constraints import parallel_edge_pairs
 from querybloom.mining.utils import extract_binding_rows
 
 
@@ -28,6 +29,8 @@ def get_support(
     for t, var in type_to_var.items():
         clauses.append(f"{var} a <{t}> .")
 
+    edge_data = [{"s": s, "p": p, "o": o} for s, p, o in edges]
+
     # Structure constraints
     for s, p, o in edges:
         v_s = type_to_var[s]
@@ -40,6 +43,14 @@ def get_support(
             # Regular edge: entity -> entity
             v_o = type_to_var[o]
             clauses.append(f"{v_s} <{p}> {v_o} .")
+
+    for left_index, right_index in parallel_edge_pairs(edge_data):
+        left_target = edge_data[left_index]["o"]
+        right_target = edge_data[right_index]["o"]
+        if left_target in type_to_var and right_target in type_to_var:
+            clauses.append(
+                f"FILTER({type_to_var[left_target]} != {type_to_var[right_target]})"
+            )
 
     query_body = "\n".join(clauses)
 

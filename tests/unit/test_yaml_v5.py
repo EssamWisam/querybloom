@@ -1,6 +1,7 @@
 from querybloom.mining.yaml_v5 import (
     build_subgraph_yaml,
     dump_subgraph_yaml,
+    format_value,
     is_v5_subgraph,
     parse_relationship_line,
 )
@@ -160,6 +161,11 @@ def test_native_v5_dump_is_yaml_and_omits_legacy_fields():
     assert "num_types" not in dumped
     assert "min_support" not in dumped
     assert "-->*" in dumped
+
+
+def test_format_value_doubles_inner_quotes():
+    assert format_value("O'Brien") == "'O''Brien'"
+    assert format_value("plain") == "'plain'"
 
 
 def test_parse_relationship_line_accepts_old_and_v5_arrows():

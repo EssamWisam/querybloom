@@ -43,6 +43,7 @@ def mine_subgraphs(
     event_sink: EventSink | None = None,
     stop_event: Any | None = None,
     skip_event: Any | None = None,
+    max_entity_reuse: int = 3,
 ) -> Tuple[List[Dict[str, Any]], Optional[str]]:
     """
     Search and mine connected subgraphs with K types matching support thresholds.
@@ -216,15 +217,41 @@ def mine_subgraphs(
                     if type_attributes:
                         subgraph["type_attributes"] = type_attributes
 
-                found_subgraphs.append(subgraph)
-                found_signatures.add(sig)
-                k_slots[c.target_k] -= 1
-
                 graph = subgraph_to_cytoscape(
                     subgraph,
                     type_labels=type_labels,
                     property_labels=property_labels,
                 )
+
+                yaml_data = prepare_subgraph_yaml_data(
+                    subgraph=subgraph,
+                    index=len(found_subgraphs),
+                    endpoint=endpoint,
+                    min_support=min_support,
+                    m=m,
+                    max_entity_reuse=max_entity_reuse,
+                    max_attr_len=max_attr_len,
+                    abstat_labels=type_labels,
+                )
+                if not yaml_data.get("instances"):
+                    emit_event(
+                        event_sink,
+                        "subgraph.rejected",
+                        "mining.samples",
+                        "Rejected subgraph because no grounded instances were found",
+                        {
+                            "subgraph": subgraph,
+                            "graph": graph,
+                            "k": c.target_k,
+                            "reason": "no_grounded_instances",
+                        },
+                    )
+                    continue
+
+                found_subgraphs.append(subgraph)
+                found_signatures.add(sig)
+                k_slots[c.target_k] -= 1
+
                 emit_event(
                     event_sink,
                     "subgraph.discovered",
@@ -244,16 +271,6 @@ def mine_subgraphs(
                     optional_count += 1
                 pbar.update(1)
                 seed_usage[c.seed_pattern] += 1
-
-                yaml_data = prepare_subgraph_yaml_data(
-                    subgraph=subgraph,
-                    index=len(found_subgraphs) - 1,
-                    endpoint=endpoint,
-                    min_support=min_support,
-                    m=m,
-                    max_attr_len=max_attr_len,
-                    abstat_labels=type_labels,
-                )
                 emit_event(
                     event_sink,
                     "subgraph.samples",

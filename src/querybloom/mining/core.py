@@ -203,16 +203,15 @@ class SubgraphMiner:
         type_label_cache: Dict[str, str],
         m: int = 5,
         timeout: int = 60,
-        max_attr_len: int = 200,
+        max_entity_reuse: int = 3,
     ) -> List[Dict[str, Any]]:
         return sample_subgraph_instances(
             endpoint=self.endpoint,
             subgraph=subgraph,
             type_label_cache=type_label_cache,
-            min_support=self.min_support,
             m=m,
             timeout=timeout,
-            max_attr_len=max_attr_len,
+            max_entity_reuse=max_entity_reuse,
         )
 
     def get_type_label(self, type_uri: str, timeout: int = 10) -> Optional[str]:
@@ -258,6 +257,7 @@ class SubgraphMiner:
         index: int,
         m: int = 5,
         max_attr_len: int = 200,
+        max_entity_reuse: int = 3,
     ) -> Dict[str, Any]:
         return prepare_subgraph_yaml_data(
             subgraph=subgraph,
@@ -265,6 +265,7 @@ class SubgraphMiner:
             endpoint=self.endpoint,
             min_support=self.min_support,
             m=m,
+            max_entity_reuse=max_entity_reuse,
             max_attr_len=max_attr_len,
             abstat_labels=self.abstat.type_labels if hasattr(self, "abstat") else None,
         )
@@ -322,6 +323,7 @@ class SubgraphMiner:
         event_sink: EventSink | None = None,
         stop_event: Any | None = None,
         skip_event: Any | None = None,
+        max_entity_reuse: int = 3,
     ) -> List[Dict[str, Any]]:
         subgraphs, export_path = mine_subgraphs(
             endpoint=self.endpoint,
@@ -344,6 +346,7 @@ class SubgraphMiner:
             max_attr_len=max_attr_len,
             strategy=strategy,
             uniform_types=uniform_types,
+            max_entity_reuse=max_entity_reuse,
             event_sink=event_sink,
             stop_event=stop_event,
             skip_event=skip_event,

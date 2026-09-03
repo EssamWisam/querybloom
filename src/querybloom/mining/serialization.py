@@ -21,6 +21,7 @@ def prepare_subgraph_yaml_data(
     m: int = 5,
     max_attr_len: int = 200,
     abstat_labels: Optional[Dict[str, str]] = None,
+    max_entity_reuse: int = 3,
 ) -> Dict[str, Any]:
     """Prepare a mined subgraph as compact v5 YAML data."""
     type_uris = list(subgraph["types"])
@@ -35,9 +36,8 @@ def prepare_subgraph_yaml_data(
         endpoint=endpoint,
         subgraph=subgraph,
         type_label_cache=type_labels,
-        min_support=min_support,
         m=m,
-        max_attr_len=max_attr_len,
+        max_entity_reuse=max_entity_reuse,
     )
 
     return build_subgraph_yaml(

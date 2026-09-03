@@ -1,6 +1,6 @@
 <script>
   import hljs from "highlight.js";
-  import { cancelRun, loadRunQaPairs, streamLlm } from "../api.js";
+  import { cancelRun, formatCaughtError, loadRunQaPairs, reportBrowserError, streamLlm } from "../api.js";
   import FieldHelp from "./FieldHelp.svelte";
   import QaPatternSamplesModal from "./QaPatternSamplesModal.svelte";
   import QaEvolution from "./QaEvolution.svelte";
@@ -1215,8 +1215,15 @@
       }
     } catch (err) {
       if (err?.name !== "AbortError" && !String(err?.message || "").includes("aborted")) {
-        error = err?.message || "QA generation failed";
-        showErrorModal("QA Generation Error", error);
+        const formatted = formatCaughtError(err);
+        error = formatted.message || "QA generation failed";
+        console.error("QA generation failed", err, formatted);
+        reportBrowserError(err, {
+          source: "QaPanel.generateSubgraphs",
+          sampleRunId,
+          subgraphIndexes: requested,
+        });
+        showErrorModal("QA Generation Error", formatted.details);
       }
       for (const index of requested) {
         if (qaMap[index]?.status !== "completed") {
@@ -1272,14 +1279,13 @@
       >
         <div class="modal-header">
           <div class="modal-title-wrap">
-            <span class="modal-icon" aria-hidden="true">⚠️</span>
             <h3 id="modal-title">{errorModalMessage}</h3>
           </div>
           <button class="modal-close-btn" type="button" aria-label="Close" on:click={closeErrorModal}>✕</button>
         </div>
         <div class="modal-body">
           {#if errorModalDetails}
-            <p class="modal-error-text">{errorModalDetails}</p>
+            <pre class="modal-error-text">{errorModalDetails}</pre>
           {/if}
         </div>
         <div class="modal-actions">
@@ -2872,17 +2878,18 @@
 
   .modal-error-text {
     margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.5;
+    font-size: 0.78rem;
+    line-height: 1.45;
     color: #2d3748;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 6px;
     padding: 12px 14px;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    white-space: pre-wrap;
     word-break: break-word;
-    max-height: 200px;
-    overflow-y: auto;
+    max-height: 420px;
+    overflow: auto;
   }
 
   .modal-actions {

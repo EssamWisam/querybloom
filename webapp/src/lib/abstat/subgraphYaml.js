@@ -4,12 +4,12 @@ export function isV5Subgraph(obj) {
   const types = obj?.types;
   return Boolean(
     obj &&
-      obj.prefixes != null &&
-      Array.isArray(obj.relationships) &&
-      types &&
-      typeof types === "object" &&
-      !Array.isArray(types) &&
-      Object.values(types).some((value) => typeof value === "string"),
+    obj.prefixes != null &&
+    Array.isArray(obj.relationships) &&
+    types &&
+    typeof types === "object" &&
+    !Array.isArray(types) &&
+    Object.values(types).some((value) => typeof value === "string"),
   );
 }
 
@@ -93,7 +93,9 @@ export function parseAttrs(str) {
       ? shortName(match[2].trim()) || "literal"
       : "literal";
     let value = match[3].trim();
-    if (value.startsWith("'") && value.endsWith("'")) value = value.slice(1, -1);
+    if (value.startsWith("'") && value.endsWith("'")) {
+      value = value.slice(1, -1).replace(/''/g, "'");
+    }
     entries.push({
       label,
       datatype,
@@ -234,9 +236,61 @@ export function supportValue(entry) {
   );
 }
 
+const LLM_V5_KEYS = [
+  "subgraph_id",
+  "support",
+  "prefixes",
+  "types",
+  "attributes",
+  "relationships",
+  "instances",
+];
+
+const LLM_INSTANCE_KEYS = ["relationships", "attributes"];
+
+export function orderLikeLlmYaml(payload) {
+  if (!isV5Subgraph(payload)) return payload;
+
+  const ordered = {};
+  for (const key of LLM_V5_KEYS) {
+    if (payload[key] === undefined) continue;
+    ordered[key] =
+      key === "instances" ? orderInstancesLikeLlm(payload.instances) : payload[key];
+  }
+  for (const key of Object.keys(payload)) {
+    if (ordered[key] === undefined && payload[key] !== undefined) {
+      ordered[key] = payload[key];
+    }
+  }
+  return ordered;
+}
+
+function orderInstancesLikeLlm(instances) {
+  if (!instances || typeof instances !== "object" || Array.isArray(instances)) {
+    return instances;
+  }
+
+  const ordered = {};
+  const keys = Object.keys(instances).sort((a, b) => Number(a) - Number(b));
+  for (const key of keys) {
+    const instance = instances[key] || {};
+    const next = {};
+    for (const field of LLM_INSTANCE_KEYS) {
+      if (instance[field] !== undefined) next[field] = instance[field];
+    }
+    for (const field of Object.keys(instance)) {
+      if (next[field] === undefined && instance[field] !== undefined) {
+        next[field] = instance[field];
+      }
+    }
+    ordered[key] = next;
+  }
+  return ordered;
+}
+
 export function officialYamlPayload(entry, subgraphId) {
   const payload = samplePayload(entry);
-  if (isV5Subgraph(payload)) return payload;
+  if (isV5Subgraph(payload)) return orderLikeLlmYaml(payload);
   if (
     payload &&
     typeof payload === "object" &&
@@ -295,9 +349,9 @@ export function yamlStats(payload) {
     const relCount = (payload.relationships || []).length;
     const attrCount = payload.attributes
       ? Object.values(payload.attributes).reduce((sum, value) => {
-          if (typeof value !== "string") return sum;
-          return sum + value.split("|").filter(Boolean).length;
-        }, 0)
+        if (typeof value !== "string") return sum;
+        return sum + value.split("|").filter(Boolean).length;
+      }, 0)
       : 0;
     return `${instanceCount} instances · ${relCount} patterns · ${attrCount} attributes`;
   }

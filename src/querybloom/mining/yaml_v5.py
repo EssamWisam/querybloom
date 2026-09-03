@@ -39,7 +39,7 @@ def format_value(value: Any, max_attr_len: int = 200) -> str:
     text = "" if value is None else str(value)
     if len(text) > max_attr_len:
         text = f"{text[:max_attr_len]}..."
-    return f"'{text}'"
+    return "'" + text.replace("'", "''") + "'"
 
 
 def parse_relationship_line(line: str) -> Optional[Dict[str, Any]]:

@@ -1,18 +1,19 @@
 You are an expert in analyzing a subgraph sampled from a knowledge graph and generating natural language questions,
 along with their corresponding SPARQL queries.
 
-You will be given a subgraph description loaded from a YAML file, potentially accompanied by knowledge graph metadata (title and description).
+You will be given a subgraph description loaded from a YAML file, potentially accompanied by knowledge graph metadata
+(title and description).
 
 Notes on the YAML structure (generic, do not assume any specific KG):
-- Each subgraph includes: subgraph_id, num_types, min_support, types, edges, and predicate_uris.
-- types is a mapping from type label to:
-- uri (class URI)
-- sample_entities (a few example entity URIs, sometimes with attributes shown as a compact string like attr:type=value)
-- edges is a list of triples in a readable form: "TypeA --predicateLabel--> TypeB".
-- If an edge ends with "*" after the arrow, it denotes an optional property — meaning that including this edge would
-cause the graph to fall below the subgraph's support threshold.
-- predicate_uris lists the predicate URIs corresponding to each edge.
-- Attributes marked with "*" fall below the subgraph's support threshold and are optional.
+- Each subgraph includes: subgraph_id, support, prefixes, types, attributes, relationships, and instances.
+- prefixes maps prefix → namespace URI; types maps type display name → class CURIE.
+- Important: the YAML prefixes are auto-generated shorthand and must not be copied as-is. Expand CURIEs using those
+namespace URIs, then declare more meaningful SPARQL prefixes yourself.
+- attributes maps a type name to compact property lines: "--name (curie)--> datatype", joined by " | ".
+- relationships lists schema edges as "TypeA --predicateCURIE--> TypeB".
+- instances maps 1..n grounded examples of the subgraph pattern
+- A name ending in ^ came from rdfs:label as opposed to being extracted from URI. An arrow "-->*" marks an optional edge
+or attribute (below the subgraph's support threshold).
 
 ### Task:
 First, assess whether the subgraph allows for meaningful questions. If the subgraph is too trivial, lacks interesting
@@ -47,7 +48,8 @@ the quality, meaningfulness, and utility of the questions.
 
 #### B. Natural Language Question Quality:
 4. Questions must be grounded exclusively in the meaningful classes, entities, relationships, and attributes present in
-the YAML subgraph. Never use knowledge-graph jargon (generic properties, types, etc.), mention URIs/prefixes/IDs, or reference
+the YAML subgraph. Never use knowledge-graph jargon (generic properties, types, etc.), mention URIs/prefixes/IDs, or
+reference
 the YAML/subgraph in the natural language question — each question and query must be fully self-contained.
 5. The phrasing of each natural language question should always be natural, fluent, and not awkward or stilted. Each
 question should always end with a question mark. If a term drawn from the graph reads awkwardly, and you are confident
@@ -61,7 +63,8 @@ experts and need to have sufficient value and meaning.
 
 #### C. SPARQL Accuracy & Question-Query Alignment:
 8. SPARQL queries must be standalone and executable against a SPARQL endpoint containing the full graph. Declare
-meaningful prefixes in the query based on the URIs in the YAML.
+meaningful prefixes in the query based on the namespace URIs in the YAML; do not reuse the auto-generated YAML prefix
+names.
 9. Use proper SPARQL syntax to generate valid queries. The SPARQL query must produce exactly the results expected by the
 text query. Before finalizing each pair, verify: does the SPARQL query include every constraint stated in the question,
 and does it avoid any constraints not stated in the question?

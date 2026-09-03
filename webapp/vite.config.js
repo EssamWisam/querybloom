@@ -23,6 +23,10 @@ export default defineConfig({
       '/api': {
         target: `http://${backendHost}:${backendPort}`,
         changeOrigin: true,
+      },
+      '/querybloom/api': {
+        target: `http://${backendHost}:${backendPort}`,
+        changeOrigin: true,
       }
     }
   }
