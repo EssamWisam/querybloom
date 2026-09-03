@@ -22,6 +22,10 @@ from querybloom.mining import (
     sample_subgraph_instances,
     sample_target_k,
     save_all_subgraphs_to_yaml,
+    build_subgraph_yaml,
+    dump_subgraph_yaml,
+    is_v5_subgraph,
+    parse_relationship_line,
 )
 
 __all__ = [
@@ -39,6 +43,10 @@ __all__ = [
     "get_attribute_values",
     "prepare_subgraph_yaml_data",
     "save_all_subgraphs_to_yaml",
+    "build_subgraph_yaml",
+    "dump_subgraph_yaml",
+    "is_v5_subgraph",
+    "parse_relationship_line",
     "plot_ontology_graph",
     "plot_subgraphs_from_yaml",
 ]

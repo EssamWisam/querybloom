@@ -4,12 +4,13 @@ from __future__ import annotations
 
 from datetime import datetime
 import os
-from typing import Any, Dict, List, Optional, Set
+from typing import Any, Dict, List, Optional
 
 import yaml
 
 from querybloom.mining.instances import sample_subgraph_instances
 from querybloom.mining.support import get_type_label
+from querybloom.mining.yaml_v5 import build_subgraph_yaml, local_name
 
 
 def prepare_subgraph_yaml_data(
@@ -21,61 +22,35 @@ def prepare_subgraph_yaml_data(
     max_attr_len: int = 200,
     abstat_labels: Optional[Dict[str, str]] = None,
 ) -> Dict[str, Any]:
-    """
-    Prepare subgraph data for YAML export with graph info and sample entities per type.
-    """
-    type_label_cache: Dict[str, str] = {}
-    for type_uri in subgraph["types"]:
-        label = get_type_label(endpoint, type_uri, abstat_labels=abstat_labels)
-        if label:
-            type_label_cache[type_uri] = label
-        else:
-            type_label_cache[type_uri] = type_uri.split("/")[-1].split("#")[-1]
+    """Prepare a mined subgraph as compact v5 YAML data."""
+    type_uris = list(subgraph["types"])
+    type_labels: Dict[str, str] = {}
+    for type_uri in type_uris:
+        type_labels[type_uri] = (
+            get_type_label(endpoint, type_uri, abstat_labels=abstat_labels)
+            or local_name(type_uri)
+        )
 
-    sample_payload = sample_subgraph_instances(
+    instance_rows = sample_subgraph_instances(
         endpoint=endpoint,
         subgraph=subgraph,
-        type_label_cache=type_label_cache,
+        type_label_cache=type_labels,
         min_support=min_support,
         m=m,
         max_attr_len=max_attr_len,
     )
-    type_samples = sample_payload["types"]
-    attribute_uris = set(sample_payload.get("attribute_uris", []))
 
-    formatted_edges: List[str] = []
-    predicate_uris: List[str] = []
-    for edge in subgraph["edges"]:
-        s, p, o = edge["s"], edge["p"], edge["o"]
-        is_optional = edge.get("is_optional", False)
-
-        if p not in predicate_uris:
-            predicate_uris.append(p)
-
-        s_label = type_label_cache.get(s, s.split("/")[-1].split("#")[-1])
-        o_label = type_label_cache.get(o, o.split("/")[-1].split("#")[-1])
-
-        p_label = get_type_label(endpoint, p, abstat_labels=abstat_labels)
-        if not p_label:
-            p_label = p.split("/")[-1].split("#")[-1]
-
-        arrow = "-->*" if is_optional else "-->"
-        edge_str = f"{s_label} --{p_label} {arrow} {o_label}"
-        formatted_edges.append(edge_str)
-
-    return {
-        "subgraph_id": index + 1,
-        "num_types": subgraph["num_types"],
-        "min_support": subgraph["support"],
-        "edges": formatted_edges,
-        "predicate_uris": predicate_uris,
-        "attribute_uris": sorted(list(attribute_uris)),
-        "sample_mode": sample_payload.get("sample_mode", "grounded"),
-        "sample_query": sample_payload.get("sample_query"),
-        "sample_query_success": sample_payload.get("sample_query_success"),
-        "instances": sample_payload.get("instances", []),
-        "types": type_samples,
-    }
+    return build_subgraph_yaml(
+        subgraph_id=index + 1,
+        support=subgraph["support"],
+        type_uris=type_uris,
+        type_labels=type_labels,
+        edges=subgraph["edges"],
+        type_attributes=subgraph.get("type_attributes") or {},
+        instance_rows=instance_rows,
+        min_support=min_support,
+        max_attr_len=max_attr_len,
+    )
 
 
 def save_all_subgraphs_to_yaml(

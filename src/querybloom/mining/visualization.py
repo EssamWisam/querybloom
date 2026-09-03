@@ -9,6 +9,8 @@ import re
 from typing import Any, Dict, List, Optional, Set, Tuple
 import yaml
 
+from querybloom.mining.yaml_v5 import parse_relationship_line
+
 
 def plot_ontology_graph(
     patterns: List[Tuple[str, str, str]],
@@ -134,22 +136,59 @@ def plot_ontology_graph(
 # NetworkX & Matplotlib Subgraph Plotting Helpers
 # ---------------------------------------------------------------------------
 
+def _relationship_lines(subgraph: Dict[str, Any]) -> List[str]:
+    relationships = subgraph.get("relationships")
+    if isinstance(relationships, list) and relationships:
+        return [str(line) for line in relationships]
+    return [str(line) for line in subgraph.get("edges") or []]
+
+
+def _schema_attribute_names(subgraph: Dict[str, Any]) -> Dict[str, List[str]]:
+    names: Dict[str, List[str]] = {}
+    attributes = subgraph.get("attributes")
+    if isinstance(attributes, dict):
+        for type_name, value in attributes.items():
+            if not isinstance(value, str):
+                continue
+            parsed = []
+            for part in value.split("|"):
+                line = part.strip()
+                if " --" in line or line.startswith("--"):
+                    label = line.lstrip("-").split("(", 1)[0].strip()
+                    if label:
+                        parsed.append(label)
+            if parsed:
+                names[type_name] = parsed
+        if names:
+            return names
+    for type_name, type_data in (subgraph.get("types") or {}).items():
+        if not isinstance(type_data, dict):
+            continue
+        attr_names = []
+        for entity in type_data.get("sample_entities") or []:
+            attr_str = entity.get("attributes") or ""
+            if attr_str.startswith("(") and attr_str.endswith(")"):
+                attr_str = attr_str[1:-1]
+            for attr_pair in attr_str.split(","):
+                attr_pair = attr_pair.strip()
+                if "=" in attr_pair:
+                    attr_names.append(attr_pair.split("=")[0].strip().rstrip("*"))
+        if attr_names:
+            names[type_name] = sorted(set(attr_names))
+    return names
+
+
 def _build_class_graph(subgraph: Dict[str, Any]):
     import networkx as nx
     G = nx.DiGraph()
     type_names = list(subgraph.get("types", {}).keys())
     for type_name in type_names:
         G.add_node(type_name)
-    for edge_str in subgraph.get("edges", []):
-        if "-->*" in edge_str:
-            left_part, right_part = edge_str.split("-->*", 1)
-        elif "-->" in edge_str:
-            left_part, right_part = edge_str.split("-->", 1)
-        else:
+    for edge_str in _relationship_lines(subgraph):
+        parsed = parse_relationship_line(str(edge_str))
+        if not parsed:
             continue
-        left_parts = left_part.strip().split(" ")
-        source = left_parts[0] if left_parts else ""
-        target = right_part.strip()
+        source, target = parsed["source"], parsed["target"]
         if source in type_names and target in type_names:
             G.add_edge(source, target)
     return G
@@ -332,46 +371,24 @@ def _plot_single_subgraph(subgraph: Dict[str, Any], ax):
         G.add_node(type_name, node_type="class")
 
     edge_labels = {}
-    for edge_str in subgraph.get("edges", []):
-        if "-->*" in edge_str:
-            left_part, right_part = edge_str.split("-->*", 1)
-        elif "-->" in edge_str:
-            left_part, right_part = edge_str.split("-->", 1)
-        else:
+    for edge_str in _relationship_lines(subgraph):
+        parsed = parse_relationship_line(str(edge_str))
+        if not parsed:
             continue
-
-        left_parts = left_part.strip().split(" ")
-        if len(left_parts) >= 2:
-            source = left_parts[0]
-            predicate = " ".join(left_parts[1:]).strip("-").strip()
-        else:
-            continue
-
-        target = right_part.strip()
+        source, target, predicate = parsed["source"], parsed["target"], parsed["predicate"]
         if source and target:
             G.add_edge(source, target, edge_type="object_property")
             edge_labels[(source, target)] = predicate
 
     attribute_edges = []
-    for type_name, type_data in subgraph.get("types", {}).items():
-        if type_name in type_names and "sample_entities" in type_data:
-            attr_names = set()
-            for entity in type_data["sample_entities"]:
-                if "attributes" in entity:
-                    attr_str = entity["attributes"]
-                    if attr_str.startswith("(") and attr_str.endswith(")"):
-                        attr_str = attr_str[1:-1]
-                        for attr_pair in attr_str.split(","):
-                            attr_pair = attr_pair.strip()
-                            if "=" in attr_pair:
-                                attr_name = attr_pair.split("=")[0].strip().rstrip("*")
-                                attr_names.add(attr_name)
-
-            for attr_name in attr_names:
-                attr_node = f"{attr_name}"
-                G.add_node(attr_node, node_type="attribute")
-                G.add_edge(type_name, attr_node, edge_type="datatype_property")
-                attribute_edges.append((type_name, attr_node))
+    for type_name, attr_names in _schema_attribute_names(subgraph).items():
+        if type_name not in type_names:
+            continue
+        for attr_name in attr_names:
+            attr_node = f"{attr_name}"
+            G.add_node(attr_node, node_type="attribute")
+            G.add_edge(type_name, attr_node, edge_type="datatype_property")
+            attribute_edges.append((type_name, attr_node))
 
     pos = nx.spring_layout(G, k=1.5, iterations=50, seed=42, scale=0.9)
     class_nodes = [n for n, d in G.nodes(data=True) if d.get("node_type") == "class"]
@@ -410,7 +427,7 @@ def _plot_single_subgraph(subgraph: Dict[str, Any], ax):
 
     subgraph_id = subgraph.get("subgraph_id", "unknown")
     num_types = subgraph.get("num_types", len(type_names))
-    support = subgraph.get("min_support", 0)
+    support = subgraph.get("support", subgraph.get("min_support", 0))
     has_optional = subgraph.get("has_optional_edges", False)
     optional_marker = "*" if has_optional else ""
 

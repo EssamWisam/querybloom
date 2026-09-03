@@ -204,7 +204,7 @@ class SubgraphMiner:
         m: int = 5,
         timeout: int = 60,
         max_attr_len: int = 200,
-    ) -> Dict[str, Any]:
+    ) -> List[Dict[str, Any]]:
         return sample_subgraph_instances(
             endpoint=self.endpoint,
             subgraph=subgraph,

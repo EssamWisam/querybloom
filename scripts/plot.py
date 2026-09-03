@@ -6,6 +6,8 @@ import networkx as nx
 from collections import defaultdict
 from typing import List, Dict, Any
 
+from querybloom.mining.yaml_v5 import parse_relationship_line
+
 
 def plot_subgraphs_from_yaml(
     yaml_path: str,
@@ -141,22 +143,59 @@ def _group_by_isomorphism(subgraphs: List[Dict[str, Any]]):
     return [(rep_sg, len(ids), ids) for _, rep_sg, ids in groups]
 
 
+def _relationship_lines(subgraph: Dict[str, Any]) -> List[str]:
+    relationships = subgraph.get("relationships")
+    if isinstance(relationships, list) and relationships:
+        return [str(line) for line in relationships]
+    return [str(line) for line in subgraph.get("edges") or []]
+
+
+def _schema_attribute_names(subgraph: Dict[str, Any]) -> Dict[str, List[str]]:
+    names: Dict[str, List[str]] = {}
+    attributes = subgraph.get("attributes")
+    if isinstance(attributes, dict):
+        for type_name, value in attributes.items():
+            if not isinstance(value, str):
+                continue
+            parsed = []
+            for part in value.split("|"):
+                line = part.strip()
+                if " --" in line or line.startswith("--"):
+                    label = line.lstrip("-").split("(", 1)[0].strip()
+                    if label:
+                        parsed.append(label)
+            if parsed:
+                names[type_name] = parsed
+        if names:
+            return names
+    for type_name, type_data in (subgraph.get("types") or {}).items():
+        if not isinstance(type_data, dict):
+            continue
+        attr_names = []
+        for entity in type_data.get("sample_entities") or []:
+            attr_str = entity.get("attributes") or ""
+            if attr_str.startswith("(") and attr_str.endswith(")"):
+                attr_str = attr_str[1:-1]
+            for attr_pair in attr_str.split(","):
+                attr_pair = attr_pair.strip()
+                if "=" in attr_pair:
+                    attr_names.append(attr_pair.split("=")[0].strip().rstrip("*"))
+        if attr_names:
+            names[type_name] = sorted(set(attr_names))
+    return names
+
+
 def _build_class_graph(subgraph: Dict[str, Any]) -> nx.DiGraph:
     """Return a DiGraph containing only class nodes and object-property edges."""
     G = nx.DiGraph()
-    type_names = list(subgraph["types"].keys())
+    type_names = list((subgraph.get("types") or {}).keys())
     for type_name in type_names:
         G.add_node(type_name)
-    for edge_str in subgraph["edges"]:
-        if "-->*" in edge_str:
-            left_part, right_part = edge_str.split("-->*", 1)
-        elif "-->" in edge_str:
-            left_part, right_part = edge_str.split("-->", 1)
-        else:
+    for edge_str in _relationship_lines(subgraph):
+        parsed = parse_relationship_line(str(edge_str))
+        if not parsed:
             continue
-        left_parts = left_part.strip().split(" ")
-        source = left_parts[0] if left_parts else ""
-        target = right_part.strip()
+        source, target = parsed["source"], parsed["target"]
         if source in type_names and target in type_names:
             G.add_edge(source, target)
     return G
@@ -325,7 +364,7 @@ def _plot_shape(subgraph: Dict[str, Any], ax, count: int = 1, ids: List = None):
         min_target_margin=12,
     )
 
-    n_types = subgraph["num_types"]
+    n_types = subgraph.get("num_types", len(subgraph.get("types") or {}))
     count_label = f"  ×{count}" if count > 1 else ""
     id_summary = f"#{ids[0]}" if ids and len(ids) == 1 else f"#{ids[0]}…" if ids else ""
     ax.set_title(
@@ -352,70 +391,31 @@ def _plot_single_subgraph(subgraph: Dict[str, Any], ax):
     G = nx.DiGraph()
 
     # Extract type names from the types dictionary
-    type_names = list(subgraph["types"].keys())
+    type_names = list((subgraph.get("types") or {}).keys())
 
     # Add nodes (types)
     for type_name in type_names:
         G.add_node(type_name, node_type="class")
 
-    # Parse edges and add to graph
     edge_labels = {}
-    for edge_str in subgraph["edges"]:
-        # Parse edge string like "WeatherObservation --usesTreatment --> Resource"
-        # or "SimulationModel --usesSoilPhysicalSample -->* SoilPhysicalSample"
-        # Handle cases where arrow might be stuck to target like "-->*Resource"
-
-        # Split by the arrow pattern
-        if "-->*" in edge_str:
-            left_part, right_part = edge_str.split("-->*", 1)
-            is_optional = True
-        elif "-->" in edge_str:
-            left_part, right_part = edge_str.split("-->", 1)
-            is_optional = False
-        else:
-            continue  # Skip malformed edges
-
-        # Parse left side (source and predicate)
-        left_parts = left_part.strip().split(" ")
-        if len(left_parts) >= 2:
-            source = left_parts[0]
-            predicate = " ".join(left_parts[1:]).strip("-").strip()
-        else:
+    for edge_str in _relationship_lines(subgraph):
+        parsed = parse_relationship_line(str(edge_str))
+        if not parsed:
             continue
-
-        # Parse right side (target)
-        target = right_part.strip()
-
+        source, target, predicate = parsed["source"], parsed["target"], parsed["predicate"]
         if source and target:
-            # Add edge
             G.add_edge(source, target, edge_type="object_property")
             edge_labels[(source, target)] = predicate
 
-    # Add attribute nodes from sample entities
     attribute_edges = []
-    for type_name, type_data in subgraph["types"].items():
-        if type_name in type_names and "sample_entities" in type_data:
-            # Collect unique attribute names from all samples
-            attr_names = set()
-            for entity in type_data["sample_entities"]:
-                if "attributes" in entity:
-                    # Parse attributes string like "(date='1948-10-07', badValueFlag='0')"
-                    attr_str = entity["attributes"]
-                    if attr_str.startswith("(") and attr_str.endswith(")"):
-                        attr_str = attr_str[1:-1]  # Remove parentheses
-                        # Split by comma and extract attribute names
-                        for attr_pair in attr_str.split(","):
-                            attr_pair = attr_pair.strip()
-                            if "=" in attr_pair:
-                                attr_name = attr_pair.split("=")[0].strip().rstrip("*")
-                                attr_names.add(attr_name)
-
-            # Add attribute nodes and edges
-            for attr_name in attr_names:
-                attr_node = f"{attr_name}"
-                G.add_node(attr_node, node_type="attribute")
-                G.add_edge(type_name, attr_node, edge_type="datatype_property")
-                attribute_edges.append((type_name, attr_node))
+    for type_name, attr_names in _schema_attribute_names(subgraph).items():
+        if type_name not in type_names:
+            continue
+        for attr_name in attr_names:
+            attr_node = f"{attr_name}"
+            G.add_node(attr_node, node_type="attribute")
+            G.add_edge(type_name, attr_node, edge_type="datatype_property")
+            attribute_edges.append((type_name, attr_node))
 
     # Layout with better spacing
     pos = nx.spring_layout(G, k=1.5, iterations=50, seed=42, scale=0.9)
@@ -496,9 +496,9 @@ def _plot_single_subgraph(subgraph: Dict[str, Any], ax):
     )
 
     # Title
-    subgraph_id = subgraph["subgraph_id"]
-    num_types = subgraph["num_types"]
-    support = subgraph["min_support"]
+    subgraph_id = subgraph.get("subgraph_id", "unknown")
+    num_types = subgraph.get("num_types", len(subgraph.get("types") or {}))
+    support = subgraph.get("support", subgraph.get("min_support", 0))
     has_optional = subgraph.get("has_optional_edges", False)
     optional_marker = "*" if has_optional else ""
 

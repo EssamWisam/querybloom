@@ -263,9 +263,7 @@ def mine_subgraphs(
                         "index": len(found_subgraphs) - 1,
                         "subgraph_id": yaml_data.get("subgraph_id"),
                         "types": yaml_data.get("types", {}),
-                        "edges": yaml_data.get("edges", []),
-                        "predicate_uris": yaml_data.get("predicate_uris", []),
-                        "attribute_uris": yaml_data.get("attribute_uris", []),
+                        "relationships": yaml_data.get("relationships", []),
                         "samples": yaml_data,
                     },
                 )

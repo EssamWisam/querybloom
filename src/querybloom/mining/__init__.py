@@ -17,6 +17,12 @@ from querybloom.mining.serialization import (
     prepare_subgraph_yaml_data,
     save_all_subgraphs_to_yaml,
 )
+from querybloom.mining.yaml_v5 import (
+    build_subgraph_yaml,
+    dump_subgraph_yaml,
+    is_v5_subgraph,
+    parse_relationship_line,
+)
 from querybloom.mining.support import (
     get_entity_labels,
     get_support,
@@ -42,6 +48,10 @@ __all__ = [
     "get_attribute_values",
     "prepare_subgraph_yaml_data",
     "save_all_subgraphs_to_yaml",
+    "build_subgraph_yaml",
+    "dump_subgraph_yaml",
+    "is_v5_subgraph",
+    "parse_relationship_line",
     "plot_ontology_graph",
     "plot_subgraphs_from_yaml",
 ]

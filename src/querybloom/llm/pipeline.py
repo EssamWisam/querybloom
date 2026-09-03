@@ -22,6 +22,7 @@ from querybloom.llm.prompts import (
 )
 from querybloom.llm.reword import reword_questions
 from querybloom.llm.verification import verify_qa_pairs
+from querybloom.mining.yaml_v5 import dump_subgraph_yaml
 
 
 def process_single_subgraph_pipeline(
@@ -66,9 +67,7 @@ def process_single_subgraph_pipeline(
         {"subgraph_index": subgraph_index},
     )
     subgraph_for_prompt = subsample_subgraph_entities(subgraph, ents_ratio=ents_ratio)
-    pattern_str = yaml.dump(
-        subgraph_for_prompt, default_flow_style=False, sort_keys=False
-    )
+    pattern_str = dump_subgraph_yaml(subgraph_for_prompt)
     emit_event(
         event_sink,
         "prompt.ready",

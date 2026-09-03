@@ -66,10 +66,8 @@ def find_and_verify_attributes(
         )
 
         if support >= 1:
-            p_label = get_type_label(endpoint, p, abstat_labels=abstat_labels)
-            if not p_label:
-                p_label = p.split("/")[-1].split("#")[-1]
-
+            fetched_label = get_type_label(endpoint, p, abstat_labels=abstat_labels)
+            p_label = fetched_label or p.split("/")[-1].split("#")[-1]
             o_label = o.split("/")[-1].split("#")[-1]
 
             type_attributes[s].append(
@@ -79,6 +77,7 @@ def find_and_verify_attributes(
                     "datatype": o,
                     "datatype_label": o_label,
                     "support": support,
+                    "label_from_rdfs": bool(fetched_label),
                 }
             )
 

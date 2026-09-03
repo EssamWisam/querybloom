@@ -145,7 +145,7 @@ def sample_subgraph_instances(
     m: int = 5,
     timeout: int = 60,
     max_attr_len: int = 200,
-) -> Dict[str, Any]:
+) -> List[Dict[str, Any]]:
     """
     Ground a mined subgraph pattern with concrete instance entities and attribute bindings.
     """
@@ -170,23 +170,8 @@ def sample_subgraph_instances(
 
     res = execute(query, endpoint=endpoint, timeout=timeout)
     rows = extract_binding_rows(res) if res.get("success") else []
-
-    type_samples = {
-        type_label_cache[type_uri]: {"uri": type_uri, "sample_entities": []}
-        for type_uri in type_uris
-    }
-    instances = []
-    attribute_uris = set()
-
     if not rows:
-        return {
-            "sample_mode": "grounded",
-            "sample_query": query,
-            "sample_query_success": False,
-            "types": type_samples,
-            "instances": instances,
-            "attribute_uris": [],
-        }
+        return []
 
     entity_uris = []
     for row in rows:
@@ -197,24 +182,25 @@ def sample_subgraph_instances(
     label_map = get_entity_labels(endpoint, entity_uris)
 
     attribute_info_by_type = {}
-    if "type_attributes" in subgraph:
-        for type_uri, attrs_info in subgraph["type_attributes"].items():
-            property_uris = [attr["property"] for attr in attrs_info]
-            attribute_uris.update(property_uris)
-            attribute_info_by_type[type_uri] = {
-                "property_uris": property_uris,
-                "property_labels": {
-                    attr["property"]: attr["property_label"] for attr in attrs_info
-                },
-                "property_supports": {
-                    attr["property"]: attr["support"] for attr in attrs_info
-                },
-                "property_datatype_labels": {
-                    attr["property"]: attr["datatype_label"]
-                    for attr in attrs_info
-                },
-            }
+    for type_uri, attrs_info in (subgraph.get("type_attributes") or {}).items():
+        attribute_info_by_type[type_uri] = {
+            "property_uris": [attr["property"] for attr in attrs_info],
+            "property_labels": {
+                attr["property"]: attr["property_label"] for attr in attrs_info
+            },
+            "property_supports": {
+                attr["property"]: attr["support"] for attr in attrs_info
+            },
+            "property_datatype_labels": {
+                attr["property"]: attr["datatype_label"] for attr in attrs_info
+            },
+            "property_label_from_rdfs": {
+                attr["property"]: bool(attr.get("label_from_rdfs"))
+                for attr in attrs_info
+            },
+        }
 
+    instances: List[Dict[str, Any]] = []
     for row_index, row in enumerate(rows):
         bindings = {}
         instance_triples = []
@@ -237,36 +223,22 @@ def sample_subgraph_instances(
                     entity_uri=entity_uri,
                     properties=attrs_info["property_uris"],
                 )
-                if attr_values:
-                    attr_parts = []
-                    for prop, val in attr_values.items():
-                        label = attrs_info["property_labels"][prop]
-                        support = attrs_info["property_supports"][prop]
-                        dtype_label = attrs_info["property_datatype_labels"][prop]
-                        marker = "*" if support < min_support else ""
-                        if isinstance(val, str):
-                            if len(val) > max_attr_len:
-                                val_str = f"'{val[:max_attr_len]}...'"
-                            else:
-                                val_str = f"'{val}'"
-                        else:
-                            val_str = str(val)
-                        attr_parts.append(f"{label}{marker}:{dtype_label}={val_str}")
-                        instance_attributes.append(
-                            {
-                                "source_type": type_uri,
-                                "source": entity_uri,
-                                "property": prop,
-                                "property_label": label,
-                                "value": val,
-                                "datatype_label": dtype_label,
-                            }
-                        )
-                    sample["attributes"] = f"({', '.join(attr_parts)})"
+                for prop, val in (attr_values or {}).items():
+                    instance_attributes.append(
+                        {
+                            "source_type": type_uri,
+                            "source": entity_uri,
+                            "property": prop,
+                            "property_label": attrs_info["property_labels"][prop],
+                            "value": val,
+                            "datatype_label": attrs_info["property_datatype_labels"][prop],
+                            "label_from_rdfs": attrs_info["property_label_from_rdfs"].get(
+                                prop, False
+                            ),
+                        }
+                    )
 
-            type_label = type_label_cache[type_uri]
-            type_samples[type_label]["sample_entities"].append(sample)
-            bindings[type_label] = sample
+            bindings[type_label_cache[type_uri]] = sample
 
         for edge in subgraph["edges"]:
             source_uri = row.get(type_to_var[edge["s"]])
@@ -292,11 +264,4 @@ def sample_subgraph_instances(
             }
         )
 
-    return {
-        "sample_mode": "grounded",
-        "sample_query": query,
-        "sample_query_success": True,
-        "types": type_samples,
-        "instances": instances,
-        "attribute_uris": sorted(list(attribute_uris)),
-    }
+    return instances

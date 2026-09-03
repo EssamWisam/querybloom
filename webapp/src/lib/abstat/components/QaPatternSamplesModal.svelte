@@ -7,6 +7,7 @@
     SUBGRAPH_PALETTE,
     uriFallbackLabel,
   } from "../graph.js";
+  import { officialYamlPayload, yamlStats } from "../subgraphYaml.js";
 
   export let subgraphs = [];
   export let selectedIndex = null;
@@ -309,47 +310,7 @@
   }
 
   function getOfficialYamlPayload(idx, info) {
-    if (!info) return null;
-    const sId = displaySubgraphId(idx);
-    const sampleData = info.samples?.samples || info.samples || null;
-
-    // If the official yaml_data produced by prepare_subgraph_yaml_data is available:
-    if (
-      sampleData &&
-      typeof sampleData === "object" &&
-      (sampleData.subgraph_id != null || sampleData.edges || sampleData.instances || sampleData.types)
-    ) {
-      return {
-        subgraph_id: sampleData.subgraph_id ?? sId,
-        num_types: sampleData.num_types ?? info.subgraph?.num_types ?? (sampleData.types ? Object.keys(sampleData.types).length : undefined),
-        min_support: sampleData.min_support ?? sampleData.support ?? info.subgraph?.support ?? info.support,
-        edges: sampleData.edges ?? [],
-        predicate_uris: sampleData.predicate_uris ?? [],
-        attribute_uris: sampleData.attribute_uris ?? [],
-        ...(sampleData.sample_mode ? { sample_mode: sampleData.sample_mode } : {}),
-        ...(sampleData.sample_query ? { sample_query: sampleData.sample_query } : {}),
-        ...(sampleData.sample_query_success != null ? { sample_query_success: sampleData.sample_query_success } : {}),
-        instances: sampleData.instances ?? [],
-        types: sampleData.types ?? {},
-      };
-    }
-
-    // Fallback if samples have not been mined yet:
-    if (info.subgraph) {
-      return {
-        subgraph_id: sId,
-        num_types: info.subgraph.num_types,
-        min_support: info.subgraph.support,
-        edges: info.subgraph.edges ?? [],
-        predicate_uris: [],
-        attribute_uris: [],
-        instances: [],
-        types: info.subgraph.types ?? [],
-        ...(info.subgraph.type_attributes ? { type_attributes: info.subgraph.type_attributes } : {}),
-      };
-    }
-
-    return null;
+    return officialYamlPayload(info, displaySubgraphId(idx));
   }
 
   $: yamlPayload = getOfficialYamlPayload(selectedIndex, currentSubgraphInfo);
@@ -395,10 +356,8 @@
   function typeLabels(entry) {
     if (!entry) return [];
     const samplesTypes = entry.samples?.types ?? {};
-    if (Object.keys(samplesTypes).length > 0) {
-      return Object.keys(samplesTypes).map(
-        (uri) => uriFallbackLabel(uri) || shortName(uri) || uri,
-      );
+    if (samplesTypes && typeof samplesTypes === "object" && !Array.isArray(samplesTypes) && Object.keys(samplesTypes).length > 0) {
+      return Object.keys(samplesTypes);
     }
     const raw = entry.subgraph?.types ?? [];
     if (Array.isArray(raw))
@@ -1016,9 +975,9 @@
               <h4>
                 Subgraph {displaySubgraphId(selectedIndex)}
               </h4>
-              {#if yamlPayload?.instances}
+              {#if yamlPayload}
                 <span class="raw-stats-pill">
-                  {yamlPayload.instances.length} instances · {(yamlPayload.edges || []).length} patterns · {(yamlPayload.attribute_uris || []).length} attributes
+                  {yamlStats(yamlPayload)}
                 </span>
               {/if}
             </div>

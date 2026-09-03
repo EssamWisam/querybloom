@@ -16,30 +16,36 @@ _PROMPTS_DIR = os.path.join(_ROOT_DIR, "prompts")
 def subsample_subgraph_entities(
     subgraph: Dict[str, Any], ents_ratio: float = 0.4
 ) -> Dict[str, Any]:
-    """
-    Randomly subsample sample_entities in each type of the subgraph.
+    """Randomly subsample grounded instances shown to the LLM."""
+    instances = subgraph.get("instances")
+    if isinstance(instances, dict) and instances:
+        keys = sorted(instances, key=lambda key: int(key) if str(key).isdigit() else str(key))
+        num_to_keep = max(1, round(len(keys) * ents_ratio))
+        kept_keys = sorted(random.sample(keys, min(num_to_keep, len(keys))))
+        sg = copy.deepcopy(subgraph)
+        sg["instances"] = {
+            index + 1: instances[key] for index, key in enumerate(kept_keys)
+        }
+        return sg
 
-    All types are assumed to have the same number of entities (n). A fraction
-    `ents_ratio` of n indices is sampled once and applied uniformly to every
-    type, so the LLM always sees a consistent, varied slice rather than the
-    fixed head of the list. If a type happens to have fewer entities than a
-    sampled index, a random available entity (not already kept) is used as a
-    fallback.
-    """
     types = subgraph.get("types", {})
-    if not types:
+    if not isinstance(types, dict):
         return subgraph
-
-    counts = [len(t.get("sample_entities", [])) for t in types.values()]
+    counts = [
+        len(t.get("sample_entities", []))
+        for t in types.values()
+        if isinstance(t, dict)
+    ]
     if not counts or max(counts) == 0:
         return subgraph
 
     max_count = max(counts)
     num_to_keep = max(1, round(max_count * ents_ratio))
     indices = sorted(random.sample(range(max_count), min(num_to_keep, max_count)))
-
     sg = copy.deepcopy(subgraph)
     for type_data in sg["types"].values():
+        if not isinstance(type_data, dict):
+            continue
         entities = type_data.get("sample_entities", [])
         if not entities:
             continue

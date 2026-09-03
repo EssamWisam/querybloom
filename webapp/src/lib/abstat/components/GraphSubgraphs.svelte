@@ -9,6 +9,18 @@
     SUBGRAPH_PALETTE,
     uriFallbackLabel,
   } from "../graph.js";
+  import {
+    displayEntity,
+    isV5Subgraph,
+    parseAttrs,
+    parseRelationshipLine,
+    samplePayload,
+    supportValue,
+    typeCount,
+    v5Attributes,
+    v5Properties,
+    v5Samples,
+  } from "../subgraphYaml.js";
 
   export let graph = null;
   export let subgraphs = [];
@@ -38,40 +50,11 @@
 
   $: selected = subgraphs.find((item) => item.index === selectedIndex) || null;
 
-  function parseAttrs(str) {
-    if (!str) return [];
-    const inner = str.replace(/^\(|\)$/g, "");
-    const re = /([^,=]+):([^=]+)=('(?:[^']|'')*'|[^,]+)/g;
-    const entries = [];
-    let m;
-    while ((m = re.exec(inner)) !== null) {
-      const label = m[1].trim();
-      const datatype = shortName(m[2].trim()) || "literal";
-      let value = m[3].trim();
-      if (value.startsWith("'") && value.endsWith("'"))
-        value = value.slice(1, -1);
-      value = shortName(value) || value;
-      entries.push({ label, datatype, value });
-    }
-    return entries;
-  }
-
-  function embeddedSamplePayload(entry) {
-    const types = entry?.subgraph?.types;
-    if (!types || Array.isArray(types) || typeof types !== "object")
-      return null;
-    const hasSampleEntities = Object.values(types).some((typeEntry) =>
-      Array.isArray(typeEntry?.sample_entities),
-    );
-    return hasSampleEntities ? entry.subgraph : null;
-  }
-
-  function samplePayload(entry) {
-    return entry?.samples || entry?.sampleData || embeddedSamplePayload(entry);
-  }
-
   function samplesFor(entry) {
-    return samplePayload(entry)?.types || {};
+    const payload = samplePayload(entry);
+    const types = payload?.types;
+    if (!types || Array.isArray(types) || typeof types !== "object") return {};
+    return types;
   }
 
   function labelMapFor(entry) {
@@ -107,22 +90,15 @@
     );
   }
 
-  function displayEntity(entity, fallback = "?") {
-    return (
-      entity?.label || uriFallbackLabel(entity?.uri) || entity?.uri || fallback
-    );
-  }
-
   function parseReadableEdge(edge) {
-    if (typeof edge !== "string") return null;
-    const match = edge.match(/^(.+?)\s+--(.+?)\s+-->(\*)?\s+(.+)$/);
-    if (!match) return null;
+    const parsed = parseRelationshipLine(edge);
+    if (!parsed) return null;
     return {
-      source: match[1].trim(),
-      label: match[2].trim(),
-      target: match[4].trim(),
-      optional: Boolean(match[3]),
-      readable: edge,
+      source: parsed.source,
+      label: parsed.label,
+      target: parsed.target,
+      optional: parsed.optional,
+      readable: parsed.readable,
     };
   }
 
@@ -213,9 +189,11 @@
   }
 
   function subgraphProperties(entry) {
+    const payload = samplePayload(entry);
+    if (isV5Subgraph(payload)) return v5Properties(payload);
     const labels = labelMapFor(entry);
     const rawEdges = entry?.subgraph?.edges || [];
-    const readableEdges = samplePayload(entry)?.edges || [];
+    const readableEdges = payload?.edges || [];
     const edges = rawEdges.length ? rawEdges : readableEdges;
     return edges
       .map((edge, index) =>
@@ -225,8 +203,10 @@
   }
 
   function subgraphAttributes(entry) {
+    const payload = samplePayload(entry);
+    if (isV5Subgraph(payload)) return v5Attributes(payload);
     const labels = labelMapFor(entry);
-    const samples = samplePayload(entry);
+    const samples = payload;
     const rows = [];
     const byType = entry?.subgraph?.type_attributes || {};
     for (const [typeUri, attrs] of Object.entries(byType)) {
@@ -283,6 +263,8 @@
   $: sampleEntries = selected ? Object.entries(samplesFor(selected)) : [];
 
   function buildSamples(entry) {
+    const payload = samplePayload(entry);
+    if (isV5Subgraph(payload)) return v5Samples(payload);
     const typeData = samplesFor(entry);
     const props = subgraphProperties(entry);
 
@@ -465,8 +447,8 @@
               Subgraph {item.index + 1}
             </span>
             <small
-              >{item.subgraph?.num_types || item.numTypes || "?"} types · support
-              {item.subgraph?.support || item.support || "?"}</small
+              >{typeCount(item)} types · support
+              {supportValue(item)}</small
             >
           </button>
 
