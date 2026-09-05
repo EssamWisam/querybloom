@@ -184,6 +184,7 @@ class SupabaseClient:
             f"{self.settings.rest_url}/{table}",
             access_token=access_token,
             params=params,
+            timeout=90,
         )
         return payload if isinstance(payload, list) else []
 
