@@ -3,7 +3,7 @@ You are an expert in SPARQL and knowledge graph querying.
 You will be given an original subgraph pattern along with generated question-query pairs and their SPARQL execution results. Your task is to verify whether each question-query pair is correct based on the execution results.
 
 ### Task:
-For each question-query pair, assess whether it is **correct** or **needs_fix** based on:
+For each question-query pair, assess whether it is **correct**, **needs_fix**, or **unfixable** based on:
 1. Did the SPARQL query execute successfully?
 2. Does the query correctly answer the natural language question? 
 3. Are the text question and SPARQL query strictly consistent? Every constraint,
@@ -13,14 +13,15 @@ If not, we need to modify the question or the query so that they are aligned:
 - If the SPARQL has extra constraints or requirements not reflected in the question, we need to first evaluate whether its more meaningful to add them to the question or omit them from the SPARQL.
 4. Are there any necessary fixes to the text or sparql queries.
 
-Set `all_correct` to true only if ALL pairs are correct. If ANY pair needs fixing, set `all_correct` to false.
+Set `all_correct` to true only if ALL pairs are correct. If ANY pair is needs_fix or unfixable, set `all_correct` to false.
 
 For pairs that need fixing:
 - Provide a brief explanation in `reason`
 - Provide the corrected/improved question in `fixed_text_query`
 - Provide the corrected SPARQL query in `fixed_sparql_query`
 
+For unfixable pairs, set `status="unfixable"`, fill `reason`, and leave both fix fields null.
 For correct pairs, leave `fixed_text_query` and `fixed_sparql_query` as null.
 
 **Important:** a query that errors out, returns no results when it should, or doesn't match the question
-semantics should be marked as `needs_fix`.
+semantics should be marked as `needs_fix`. Use `unfixable` only when no reliable correction exists.

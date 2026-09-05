@@ -1,6 +1,12 @@
 <script>
   import hljs from "highlight.js";
-  import { cancelRun, formatCaughtError, loadRunQaPairs, reportBrowserError, streamLlm } from "../api.js";
+  import {
+    cancelRun,
+    formatCaughtError,
+    loadRunQaPairs,
+    reportBrowserError,
+    streamLlm,
+  } from "../api.js";
   import FieldHelp from "./FieldHelp.svelte";
   import QaPatternSamplesModal from "./QaPatternSamplesModal.svelte";
   import QaEvolution from "./QaEvolution.svelte";
@@ -62,7 +68,7 @@
     if (usage && typeof usage === "object") {
       const tokens =
         usage.total_tokens ??
-        ((usage.prompt_tokens || 0) + (usage.completion_tokens || 0));
+        (usage.prompt_tokens || 0) + (usage.completion_tokens || 0);
       if (tokens) {
         text += `${text ? " • " : ""}Tokens: ${Number(tokens).toLocaleString()}`;
         if (usage.prompt_tokens || usage.completion_tokens) {
@@ -195,7 +201,9 @@
               count > 0 ||
               typeof pair.execution_results === "boolean" ||
               typeof pair.execution_results?.boolean === "boolean";
-            const isNeedsFix = pair.verification_status === "needs_fix";
+            const isNeedsFix =
+              pair.verification_status === "needs_fix" ||
+              pair.verification_status === "unfixable";
             const isValid = getPairValid(pair);
             const reason = getPairReason(pair);
             const snippet = formatResultSnippet(pair.execution_results, 3);
@@ -227,7 +235,9 @@
               count > 0 ||
               typeof pair.execution_results === "boolean" ||
               typeof pair.execution_results?.boolean === "boolean";
-            const isNeedsFix = pair.verification_status === "needs_fix";
+            const isNeedsFix =
+              pair.verification_status === "needs_fix" ||
+              pair.verification_status === "unfixable";
             const isValid = getPairValid(pair);
             const reason = getPairReason(pair);
             const snippet = formatResultSnippet(pair.execution_results, 3);
@@ -261,7 +271,9 @@
           }
 
           if (exportQuerySelection === "random") {
-            const idx = Math.abs((sg.index * 1103515245 + 12345) % eligible.length);
+            const idx = Math.abs(
+              (sg.index * 1103515245 + 12345) % eligible.length,
+            );
             return [eligible[idx]];
           }
 
@@ -463,10 +475,8 @@
         "application/x-yaml;charset=utf-8",
       );
     } else {
-      const csvContent = "\uFEFF" + buildCsvString(
-        filteredExportRows,
-        exportIncludeValidReason,
-      );
+      const csvContent =
+        "\uFEFF" + buildCsvString(filteredExportRows, exportIncludeValidReason);
       triggerDownload(
         csvContent,
         `${filenameBase}.csv`,
@@ -480,7 +490,11 @@
     if (!entry) return [];
     const payload = samplePayload(entry);
     const samplesTypes = payload?.types ?? {};
-    if (samplesTypes && typeof samplesTypes === "object" && !Array.isArray(samplesTypes)) {
+    if (
+      samplesTypes &&
+      typeof samplesTypes === "object" &&
+      !Array.isArray(samplesTypes)
+    ) {
       return Object.keys(samplesTypes).map((name) => name);
     }
     const raw = entry.subgraph?.types ?? [];
@@ -663,9 +677,15 @@
           const displayAttrLabel = displayUri(uri, labels) || attr.label;
           const exists = rows.some(
             (row) =>
-              (row.typeUri && typeUri && row.typeUri === typeUri && row.uri === uri) ||
-              (row.typeLabel === (typeUri ? displayUri(typeUri, labels) : typeName) &&
-                (row.uri === uri || row.label === displayAttrLabel || row.label === attr.label)),
+              (row.typeUri &&
+                typeUri &&
+                row.typeUri === typeUri &&
+                row.uri === uri) ||
+              (row.typeLabel ===
+                (typeUri ? displayUri(typeUri, labels) : typeName) &&
+                (row.uri === uri ||
+                  row.label === displayAttrLabel ||
+                  row.label === attr.label)),
           );
           if (!exists) {
             rows.push({
@@ -967,11 +987,19 @@
     const payload = data.data ?? {};
     const event = frame.event;
     const stage = data.stage;
-    const index = payload.subgraph_index ?? payload.index ?? data.subgraph_index ?? data.index;
+    const index =
+      payload.subgraph_index ??
+      payload.index ??
+      data.subgraph_index ??
+      data.index;
 
     if (event === "error") {
       const errMsg =
-        payload.error || payload.message || data.error || data.message || "QA generation failed";
+        payload.error ||
+        payload.message ||
+        data.error ||
+        data.message ||
+        "QA generation failed";
       error = errMsg;
       showErrorModal("QA Generation Failed", errMsg);
       if (index != null) {
@@ -993,6 +1021,7 @@
       updateSubgraph(index, {
         status: "generated",
         is_meaningful: payload.is_meaningful,
+        skip_reason: payload.skip_reason ?? "",
         cost_usd: payload.cost_usd ?? payload.usage?.cost_usd,
         llm_usage: payload.usage,
         qa_pairs: pairs,
@@ -1022,11 +1051,13 @@
           pairs[i] = {
             ...pairs[i],
             stage_outputs: { ...currentStageOutputs, complexity: aug },
+            complexity_reason: aug.reason ?? "",
             ...(aug.skipped
               ? {}
               : {
                   question: aug.augmented_text_query ?? pairs[i].question,
-                  sparql_query: aug.augmented_sparql_query ?? pairs[i].sparql_query,
+                  sparql_query:
+                    aug.augmented_sparql_query ?? pairs[i].sparql_query,
                   complexity_types: aug.complexity_types,
                 }),
           };
@@ -1093,19 +1124,14 @@
       const result = payload.result ?? payload;
       const entry = qaMap[index];
       const costUsd =
-        result.cost_usd ??
-        payload.cost_usd ??
-        entry?.cost_usd ??
-        null;
+        result.cost_usd ?? payload.cost_usd ?? entry?.cost_usd ?? null;
       const llmUsage =
-        result.llm_usage ??
-        payload.llm_usage ??
-        entry?.llm_usage ??
-        null;
+        result.llm_usage ?? payload.llm_usage ?? entry?.llm_usage ?? null;
       // Prefer the final result's qa_pairs (most complete) but fall back to streamed
       updateSubgraph(index, {
         status: "completed",
         is_meaningful: result.is_meaningful,
+        skip_reason: result.skip_reason ?? entry?.skip_reason ?? "",
         cost_usd: costUsd,
         llm_usage: llmUsage,
         qa_pairs: result.qa_pairs?.length
@@ -1114,7 +1140,11 @@
       });
     } else if (event === "subgraph.failed") {
       const errMsg =
-        payload.error ?? payload.message ?? data.error ?? data.message ?? "Pipeline failed";
+        payload.error ??
+        payload.message ??
+        data.error ??
+        data.message ??
+        "Pipeline failed";
       error = errMsg;
       showErrorModal("Subgraph Generation Failed", errMsg);
       updateSubgraph(index, {
@@ -1214,7 +1244,10 @@
         await hydrateStoredQa(sampleRunId, { force: true });
       }
     } catch (err) {
-      if (err?.name !== "AbortError" && !String(err?.message || "").includes("aborted")) {
+      if (
+        err?.name !== "AbortError" &&
+        !String(err?.message || "").includes("aborted")
+      ) {
         const formatted = formatCaughtError(err);
         error = formatted.message || "QA generation failed";
         console.error("QA generation failed", err, formatted);
@@ -1281,7 +1314,12 @@
           <div class="modal-title-wrap">
             <h3 id="modal-title">{errorModalMessage}</h3>
           </div>
-          <button class="modal-close-btn" type="button" aria-label="Close" on:click={closeErrorModal}>✕</button>
+          <button
+            class="modal-close-btn"
+            type="button"
+            aria-label="Close"
+            on:click={closeErrorModal}>✕</button
+          >
         </div>
         <div class="modal-body">
           {#if errorModalDetails}
@@ -1289,7 +1327,11 @@
           {/if}
         </div>
         <div class="modal-actions">
-          <button class="modal-primary-btn" type="button" on:click={closeErrorModal}>Dismiss</button>
+          <button
+            class="modal-primary-btn"
+            type="button"
+            on:click={closeErrorModal}>Dismiss</button
+          >
         </div>
       </div>
     </div>
@@ -1353,7 +1395,10 @@
           <div class="export-section">
             <span class="export-section-label">Query Selection per Graph</span>
             <div class="query-selection-group">
-              <label class="selection-pill" class:active={exportQuerySelection === "all"}>
+              <label
+                class="selection-pill"
+                class:active={exportQuerySelection === "all"}
+              >
                 <input
                   type="radio"
                   name="exportQuerySelection"
@@ -1362,10 +1407,15 @@
                 />
                 <div class="option-text">
                   <span class="option-title">Keep all text-query pairs</span>
-                  <span class="option-desc">Includes every generated pair that passes filters</span>
+                  <span class="option-desc"
+                    >Includes every generated pair that passes filters</span
+                  >
                 </div>
               </label>
-              <label class="selection-pill" class:active={exportQuerySelection === "best"}>
+              <label
+                class="selection-pill"
+                class:active={exportQuerySelection === "best"}
+              >
                 <input
                   type="radio"
                   name="exportQuerySelection"
@@ -1373,11 +1423,18 @@
                   bind:group={exportQuerySelection}
                 />
                 <div class="option-text">
-                  <span class="option-title">Keep best LLM query per graph</span>
-                  <span class="option-desc">Keeps the single highest-utility question annotated by the LLM</span>
+                  <span class="option-title">Keep best LLM query per graph</span
+                  >
+                  <span class="option-desc"
+                    >Keeps the single highest-utility question annotated by the
+                    LLM</span
+                  >
                 </div>
               </label>
-              <label class="selection-pill" class:active={exportQuerySelection === "random"}>
+              <label
+                class="selection-pill"
+                class:active={exportQuerySelection === "random"}
+              >
                 <input
                   type="radio"
                   name="exportQuerySelection"
@@ -1385,8 +1442,12 @@
                   bind:group={exportQuerySelection}
                 />
                 <div class="option-text">
-                  <span class="option-title">Keep random LLM query per graph</span>
-                  <span class="option-desc">Keeps at most one random valid pair per subgraph</span>
+                  <span class="option-title"
+                    >Keep random LLM query per graph</span
+                  >
+                  <span class="option-desc"
+                    >Keeps at most one random valid pair per subgraph</span
+                  >
                 </div>
               </label>
             </div>
@@ -1396,23 +1457,25 @@
             <span class="export-section-label">Dataset Filters & Options</span>
             <div class="export-options-list">
               <label class="export-option-row">
-                <input
-                  type="checkbox"
-                  bind:checked={exportIgnoreNoResults}
-                />
+                <input type="checkbox" bind:checked={exportIgnoreNoResults} />
                 <div class="option-text">
-                  <span class="option-title">Ignore queries with no results</span>
-                  <span class="option-desc">Excludes queries returning 0 results or execution errors (Default)</span>
+                  <span class="option-title"
+                    >Ignore queries with no results</span
+                  >
+                  <span class="option-desc"
+                    >Excludes queries returning 0 results or execution errors
+                    (Default)</span
+                  >
                 </div>
               </label>
               <label class="export-option-row">
-                <input
-                  type="checkbox"
-                  bind:checked={exportIgnoreNeedsFix}
-                />
+                <input type="checkbox" bind:checked={exportIgnoreNeedsFix} />
                 <div class="option-text">
                   <span class="option-title">Ignore unfixed queries</span>
-                  <span class="option-desc">Excludes queries flagged by the verifier as needing fixes</span>
+                  <span class="option-desc"
+                    >Excludes queries flagged by the verifier as needing fixes
+                    or unfixable</span
+                  >
                 </div>
               </label>
               <label class="export-option-row">
@@ -1421,8 +1484,13 @@
                   bind:checked={exportIncludeValidReason}
                 />
                 <div class="option-text">
-                  <span class="option-title">Add empty valid and reason fields</span>
-                  <span class="option-desc">Appends empty valid and reason columns/fields for external annotation</span>
+                  <span class="option-title"
+                    >Add empty valid and reason fields</span
+                  >
+                  <span class="option-desc"
+                    >Appends empty valid and reason columns/fields for external
+                    annotation</span
+                  >
                 </div>
               </label>
             </div>
@@ -1431,11 +1499,21 @@
           <div class="export-summary-box">
             <span class="export-summary-count">
               {#if filteredExportRows.length > 0}
-                Ready to export <strong>{filteredExportRows.length}</strong> of {allExportRows.length} pairs (from {selectedSubgraphCount} selected subgraph{selectedSubgraphCount === 1 ? "" : "s"})
+                Ready to export <strong>{filteredExportRows.length}</strong> of {allExportRows.length}
+                pairs (from {selectedSubgraphCount} selected subgraph{selectedSubgraphCount ===
+                1
+                  ? ""
+                  : "s"})
               {:else if allExportRows.length > 0}
-                <span class="export-warn">No pairs match the selected filters ({allExportRows.length} pairs in {selectedSubgraphCount} selected subgraphs)</span>
+                <span class="export-warn"
+                  >No pairs match the selected filters ({allExportRows.length} pairs
+                  in {selectedSubgraphCount} selected subgraphs)</span
+                >
               {:else}
-                <span class="export-warn">No generated pairs found in the {selectedSubgraphCount} selected subgraph{selectedSubgraphCount === 1 ? "" : "s"}</span>
+                <span class="export-warn"
+                  >No generated pairs found in the {selectedSubgraphCount} selected
+                  subgraph{selectedSubgraphCount === 1 ? "" : "s"}</span
+                >
               {/if}
             </span>
           </div>
@@ -1462,8 +1540,8 @@
   <!-- Large Subgraph Pattern & Samples Popup Modal -->
   {#if showSubgraphInspector && selectedInfo}
     <QaPatternSamplesModal
-      subgraphs={subgraphs}
-      selectedIndex={selectedIndex}
+      {subgraphs}
+      {selectedIndex}
       properties={selectedPatternProperties}
       attributes={selectedPatternAttributes}
       samples={selectedSamples}
@@ -1768,7 +1846,9 @@
             </p>
           {:else if selected.is_meaningful === false}
             <p class="not-meaningful">
-              LLM determined this subgraph does not yield meaningful questions.
+              LLM determined this subgraph does not yield meaningful questions{selected.skip_reason
+                ? `: ${selected.skip_reason}`
+                : "."}
             </p>
           {:else}
             {@const pairs = selected.qa_pairs ?? []}
@@ -1789,9 +1869,13 @@
                 </span>
                 {#if selected.cost_usd != null}
                   <span class="batch-cost-note" title={costTooltip(selected)}>
-                    LLM batch cost: <strong>{formatCost(selected.cost_usd)}</strong>
+                    LLM batch cost: <strong
+                      >{formatCost(selected.cost_usd)}</strong
+                    >
                     {#if selected.llm_usage?.total_tokens}
-                      <span class="tokens-count">({selected.llm_usage.total_tokens.toLocaleString()} tokens)</span>
+                      <span class="tokens-count"
+                        >({selected.llm_usage.total_tokens.toLocaleString()} tokens)</span
+                      >
                     {/if}
                   </span>
                 {/if}
@@ -1826,7 +1910,8 @@
                       <div class="qa-summary-actions">
                         <div class="badges">
                           {#if pair.is_most_meaningful}
-                            <span class="badge badge-best">★ Best Question</span>
+                            <span class="badge badge-best">★ Best Question</span
+                            >
                           {/if}
                           {#if hasReachedVerification(selected, pair) && pair.execution_results != null}
                             {#if pair.execution_results === false || executionError(pair.execution_results)}
@@ -1850,7 +1935,10 @@
                                 ? 'ok'
                                 : pair.verification_status === 'needs_fix'
                                   ? 'warn'
-                                  : 'neutral'}">{pair.verification_status}</span
+                                  : pair.verification_status === 'unfixable'
+                                    ? 'fail'
+                                    : 'neutral'}"
+                              >{pair.verification_status}</span
                             >
                           {/if}
                           {#if pair.complexity_types?.length}
@@ -2533,7 +2621,6 @@
     line-height: 1;
   }
 
-
   .compact {
     padding: 0;
   }
@@ -2809,7 +2896,9 @@
   .modal-card {
     background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.2),
+      0 10px 10px -5px rgba(0, 0, 0, 0.1);
     border: 1px solid #e2e8f0;
     max-width: 540px;
     width: 100%;
@@ -2885,7 +2974,8 @@
     border: 1px solid #e2e8f0;
     border-radius: 6px;
     padding: 12px 14px;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      monospace;
     white-space: pre-wrap;
     word-break: break-word;
     max-height: 420px;

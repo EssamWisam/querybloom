@@ -1,17 +1,26 @@
-You are an expert in SPARQL and knowledge graph question design. Your task is to augment already-generated question-query pairs with meaningful structural complexity.
+You are an expert in SPARQL and knowledge graph question design. Your task is to augment already-generated
+question-query pairs with meaningful structural complexity.
 
-You will be given the original subgraph pattern along with already-generated question-query pairs and their SPARQL execution results.
+You will be given the original subgraph pattern along with already-generated question-query pairs and their SPARQL
+execution results.
 
 Notes on the YAML structure:
 - prefixes maps prefix → namespace; types maps type name → class CURIE.
-- Important: the prefixes in the YAML are auto-generated and must not be copied as-is; use the more meaningful SPARQL prefixes declared in the given queries.
+- Important: the prefixes in the YAML are auto-generated and must not be copied as-is; use the more meaningful SPARQL
+prefixes declared in the given queries.
 - attributes and relationships describe schema properties/edges; instances are grounded examples.
-- A name ending in ^ came from rdfs:label. An arrow "-->*" marks an optional edge or attribute (below support threshold).
+- A name ending in ^ came from rdfs:label. An arrow "-->*" marks an optional edge or attribute (below support
+threshold).
 
 ### Task:
-For each pair, add one or more complexity constructs — but only where the subgraph and domain naturally support them;
+For each pair, add zero, one, or more complexity constructs — where the subgraph and domain naturally support them;
 never force one where none fits. Every added construct must satisfy all rules below, especially the first.
-Produce one `ComplexityAugmentation` entry per pair, in the same order as provided (0-based index matching the pair order).
+Produce one `ComplexityAugmentation` entry per pair, in the same order as provided (0-based index matching the pair
+order). Maximize utility over complexity, that is:
+- If the pair already represents a very meaningful question of high utility and wouldn't benefit from much complexity, leave it as-is. 
+- If adding a single meaningful complexity construct would significantly improve the question's utility, add it and put a brief `reason` for that utility.
+- If it looks quite easy that you can add more and arrive at a very high-utility meaningful question, do so as well.
+Basically, never add complexity for its own sake. At the same time, be smart and diligent; you should often add no complexity for at most one of the questions.
 
 ### Rules:
 
@@ -19,29 +28,37 @@ Produce one `ComplexityAugmentation` entry per pair, in the same order as provid
 - The added complexity MUST represent something a knowledgeable domain expert would plausibly ask.
 - Avoid purely synthetic or arbitrary constraints, such a low-utility arbitrary substring match or constraint.
 - The augmented question should feel like a realistic information need in the domain.
-- YOU WILL BE PENALIZED if you introduce complexity that turns out to be meaningless, trivial, or of no real value to a domain expert.
-- Golden tip: for each question, consider multiple complexity augmentations. If at least one of them seems meaningful or of high-utility, choose the one that maximizes that. 
-- It will hurt more than help if domain expert reviews the augmented question and finds the complexity to be trivial or of low utility. Think carefully and creatively of meaningful complexity augmentations and skip the question if you can find none.
+- YOU WILL BE PENALIZED if you introduce complexity that turns out to be meaningless, trivial, or of no real value to a
+domain expert.
+- Golden tip: for each question, consider multiple complexity augmentations. If at least one of them seems meaningful or
+of high-utility, choose the one that maximizes that.
+- It will hurt more than help if domain expert reviews the augmented question and finds the complexity to be trivial or
+of low utility. Think carefully and creatively of meaningful complexity augmentations and skip the question if you can
+find none.
 
 **2. Grounded**
 The added constraint must use only classes, properties, or attributes that appear in the subgraph YAML.
 Never invent predicates or values not present in the subgraph.
 
 **3. Bilateral**
-You must ensure the complexity is reflected in both the text question and the SPARQL query, with perfect alignment between them:
+You must ensure the complexity is reflected in both the text question and the SPARQL query, with perfect alignment
+between them:
 - The NL question must explicitly state the constraint in natural language.
 - The SPARQL must encode exactly and only that constraint — no hidden SPARQL-only additions, no missing constraints.
 
 **4. New complexity types**
-Choose complexity types that are **not already present** in the original SPARQL query. However, if the original query
+Choose complexity types that are not already present in the original SPARQL query. However, if the original query
 already contains a complexity construct that is most likely trivial, you may replace it.
 Each added construct must be a distinct type from the list below:
 - `FILTER` — add a meaningful, high-utility inclusion/exclusion filter on an attribute value, range, or string pattern.
-- `OPTIONAL` — introduce a meaningful optional property to retrieve additional information that may not exist for all results.
+- `OPTIONAL` — introduce a meaningful optional property to retrieve additional information that may not exist for all
+results.
 - `UNION` — combine two alternative triple patterns from the subgraph so that a result matching either one is included.
-- `ORDER_BY_LIMIT` — turn the question into a ranking or superlative (top-N, most X, least Y). Use this once at in one question.
+- `ORDER_BY_LIMIT` — turn the question into a ranking or superlative (top-N, most X, least Y). Use this once at in one
+question.
 - `EXISTS` — add a `FILTER EXISTS` or `FILTER NOT EXISTS` guard based on a related pattern in the subgraph.
-- `SUBQUERY` — restructure part of the query as a nested subquery to compute something intermediate (e.g., count per group, then filter).
+- `SUBQUERY` — restructure part of the query as a nested subquery to compute something intermediate (e.g., count per
+group, then filter).
 - `PROPERTY_PATH` — replace one or more triple patterns with a SPARQL 1.1 property path (e.g., `pred+`, `pred*`,
 `pred1/pred2`, `pred1|pred2`) to traverse multi-hop or alternative chains; the NL question must reflect the transitive
 or alternative nature of the traversal.
@@ -60,21 +77,28 @@ The construct must demonstrably narrow, expand, reorder, or reshape the output.
 **6. Additive, not destructive**
 - The augmented pair must still be answerable and return results.
 - Avoid constraints so restrictive they would empty the result set.
-- If the `Result Count` is unrealistically large, adjust the complexity to meaningfully narrow it down — but not to zero.
+- If the `Result Count` is unrealistically large, adjust the complexity to meaningfully narrow it down — but not to
+zero.
 
 **7. Natural phrasing**
 These constraints applied to the original question and should continue to apply after your augmentation:
-A. Questions must be grounded exclusively in the meaningful classes, entities, relationships, and attributes present in the YAML
+A. Questions must be grounded exclusively in the meaningful classes, entities, relationships, and attributes present in
+the YAML
 subgraph. Never use knowledge-graph jargon (generic properties, types, etc.), mention URIs/prefixes/IDs, or reference
 the YAML/subgraph in the natural language question — each question and query must be fully self-contained.
-B. The phrasing of each natural language question should always be natural, fluent, and not awkward or stilted. Each
+B. Questions do not use internal knowledge graph identifiers that a domain expert would never use if they would phrase
+the question. Only use an identifier in the question if you have a strong reason to believe a domain expert would use it
+to refer to the same concept in natural language.
+C. The phrasing of each natural language question should always be natural, fluent, and not awkward or stilted. Each
 question should always end with a question mark. If a term drawn from the graph reads awkwardly, and you are confident
 it can be rephrased naturally without sacrificing accuracy, do so.
-C. Questions must be definitively answerable and should avoid ontology/schema/documentation questions. Focus on
+D. Questions must be definitively answerable and should avoid ontology/schema/documentation questions. Focus on
 questions that are interesting and meaningful (avoid meaningless questions like "what/how many entities are linked
 to…"/other uninformative patterns).
 
 ### When to skip:
-Set `skipped: true` (with a concise `skip_reason`) if no **meaningful/high-utility** complexity can be added to a given pair — i.e.,
+Set `skipped: true` (with a concise `reason`) if no **meaningful/high-utility** complexity can be added to a given
+pair — i.e.,
 the subgraph lacks the attributes/properties needed to ground any non-trivial, valuable domain-relevant complexity.
-Do not force a complexity construct just because one is technically possible; skip instead. The questions will be evaluated by domain experts and any low-utility complexity will hurt more than help.
+Do not force a complexity construct just because one is technically possible; skip instead. The questions will be
+evaluated by domain experts and any low-utility complexity will hurt more than help.

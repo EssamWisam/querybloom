@@ -124,8 +124,8 @@ User fills QaPanel form (model, max_subgraphs, verify_iterations) → submit()
                     │
                     ├── 4. VERIFIER AGENT  (if verify_iterations > 0)
                     │     LLM call (structured output: VerificationResult)
-                    │     Reviews pairs with execution results; marks correct / needs_fix
-                    │     Picks most_meaningful_index; applies fixes and re-executes
+                    │     Reviews pairs with execution results; marks correct / needs_fix / unfixable
+                    │     Applies fixes and re-executes
                     │     Up to verify_iterations cycles
                     │     Templates: verify_system.jinja + verify_user.jinja
                     │
@@ -175,7 +175,7 @@ SSE frames → QaPanel addFrame():
 | `run.started` | `llm.batch` | `num_subgraphs`, `model`, `label` |
 | `subgraph.started` | `llm.subgraph` | `subgraph_index` |
 | `prompt.ready` | `llm.prompt` | `subgraph_index`, `pattern` |
-| `stage.started/completed` | `llm.generate` | `subgraph_index`, `model`, `is_meaningful`, `num_questions`, `questions[]` |
+| `stage.started/completed` | `llm.generate` | `subgraph_index`, `model`, `is_meaningful`, `skip_reason`, `num_questions`, `questions[]` |
 | `stage.started/completed` | `sparql.execute` | `subgraph_index`, `qa_index`, `question`, `sparql_query`, `execution_results` |
 | `stage.started/completed` | `llm.complexity` | `subgraph_index`, `num_pairs`, `augmentations[]` |
 | `stage.started/completed` | `llm.verify` | `subgraph_index`, `iteration`, `verification` |
@@ -220,6 +220,7 @@ parallel across subgraphs via `ThreadPoolExecutor`). All agents use **litellm** 
 Prompt: `generate.jinja` — receives the subgraph YAML (with a random subsample of
 representative entities via `subsample_subgraph_entities()`) and produces:
 - `is_meaningful: bool` — gate; meaningless subgraphs are skipped
+- `skip_reason: str` — brief reason when `is_meaningful` is false
 - `questions: list[QuestionQueryPair]` — each has `text_query` + `sparql_query`
 
 ### Agent 2 — SPARQL Executor (not an LLM)
@@ -231,25 +232,25 @@ Results are attached to the pair so downstream agents see whether the query actu
 Prompt: `complexity.jinja` — optional, enabled by `introduce_complexity_step=True`.
 For each pair augments the SPARQL with exactly one non-trivial construct:
 `FILTER | OPTIONAL | UNION | ORDER_BY_LIMIT | EXISTS | SUBQUERY | PROPERTY_PATH`
-`skipped=True` means the pair can't be meaningfully augmented. Augmented queries are
+`skipped=True` means the pair can't be meaningfully augmented; `reason` explains the skip
+or why the added complexity is high-utility. Augmented queries are
 re-executed to confirm they still return results.
 
 ### Agent 4 — Verifier (`VerificationResult`)
 Prompt: `verify.jinja` — optional, enabled by `verify_iterations > 0`.
 Receives the subgraph pattern + all pairs with their execution results. Returns:
-- `pairs[]: VerificationPairResult` — `status: correct | needs_fix`, `reason`,
+- `pairs[]: VerificationPairResult` — `status: correct | needs_fix | unfixable`, `reason`,
   optional `fixed_text_query` / `fixed_sparql_query`
 - `all_correct: bool`
-- `most_meaningful_index: int` (1-based)
 Runs for up to `verify_iterations` cycles; fixes are applied and queries re-executed
-between cycles until all pairs pass or the limit is reached.
+between cycles until all pairs pass or the limit is reached. Unfixable pairs are left unchanged.
 
 ### Agent 5 — Reword Agent (`RewordResult`)
 Prompt: `reword.jinja` — optional, enabled by `reword_questions_step=True`.
 Audits NL questions only (not SPARQL) for KG URI leakage, technical jargon, and
 phrasing that a human user wouldn't naturally write. Rewrites the question text of
-any flagged pair; SPARQL stays unchanged.
-
+any flagged pair; SPARQL stays unchanged. Also reports `issue_types` and a 1-based
+`most_meaningful_index` among pairs that are not unrewordable.
 ### LLM run config (`LLMRunRequest`)
 ```python
 LLMRunRequest

@@ -18,8 +18,8 @@ or attribute (below the subgraph's support threshold).
 ### Task:
 First, assess whether the subgraph allows for meaningful questions. If the subgraph is too trivial, lacks interesting
 relationships (e.g., graph metadata rather than actual knowledge), or cannot support useful, meaningful questions, set
-is_meaningful to false and return an empty questions list. If it at least has some meaningful concepts and natural
-domain terms to elicit a question of decent or high utility, set is_meaningful to true.
+is_meaningful to false, set skip_reason briefly, and return an empty questions list. If it at least has some meaningful concepts and natural
+domain terms to elicit a question of decent or high utility, set is_meaningful to true and leave skip_reason empty.
 
 If is_meaningful is true, generate 2-4 question-query pairs as a JSON array where each item has:
 - text_query: the natural language question
@@ -28,7 +28,8 @@ If is_meaningful is true, generate 2-4 question-query pairs as a JSON array wher
 ### Requirements:
 
 #### A. Task Information
-1. Generate 2-4 question-query pairs depending on your assessment of the subgraph's richness. Try to achieve high
+1. Generate 2-4 diverse question-query pairs depending on your assessment of the subgraph's richness. Try to achieve
+high
 coverage of all the meaningful aspects of the subgraph across the question-query pairs.
 {% if focus_entity_qa %}
 2. Great questions are often centered on interesting entities in the graph (entities with a proper natural language
@@ -49,26 +50,32 @@ the quality, meaningfulness, and utility of the questions.
 #### B. Natural Language Question Quality:
 4. Questions must be grounded exclusively in the meaningful classes, entities, relationships, and attributes present in
 the YAML subgraph. Never use knowledge-graph jargon (generic properties, types, etc.), mention URIs/prefixes/IDs, or
-reference
-the YAML/subgraph in the natural language question — each question and query must be fully self-contained.
-5. The phrasing of each natural language question should always be natural, fluent, and not awkward or stilted. Each
+reference the YAML/subgraph in the natural language question — each question and query must be fully self-contained.
+5. Following on the previous point, never use internal knowledge graph identifiers that a domain expert would never use
+if they would phrase the question. Only use an
+identifier in the question if you have a strong reason to believe a domain expert would use it to refer to the same
+concept in natural language and if it is possible to phrase
+it naturally within the question.
+6. The phrasing of each natural language question should always be natural, fluent, and not awkward or stilted. Each
 question should always end with a question mark. If a term drawn from the graph reads awkwardly, and you are confident
 it can be rephrased naturally without sacrificing accuracy, do so.
-6. Questions must be definitively answerable and should avoid ontology/schema/documentation questions. Focus on
+7. Questions must be definitively answerable and should avoid ontology/schema/documentation questions. Focus on
 questions that are interesting and meaningful (avoid meaningless questions like "what/how many entities are linked
 to…"/other uninformative patterns).
-7. Only write questions that would be of high-utility to domain experts. The questions will be reviewed by domain
+8. Only write questions that would be of high-utility to domain experts. The questions will be reviewed by domain
 experts and need to have sufficient value and meaning.
 
 
+
 #### C. SPARQL Accuracy & Question-Query Alignment:
-8. SPARQL queries must be standalone and executable against a SPARQL endpoint containing the full graph. Declare
+9. SPARQL queries must be standalone and executable against a SPARQL endpoint containing the full graph. Declare
 meaningful prefixes in the query based on the namespace URIs in the YAML; do not reuse the auto-generated YAML prefix
 names.
-9. Use proper SPARQL syntax to generate valid queries. The SPARQL query must produce exactly the results expected by the
+10. Use proper SPARQL syntax to generate valid queries. The SPARQL query must produce exactly the results expected by
+the
 text query. Before finalizing each pair, verify: does the SPARQL query include every constraint stated in the question,
 and does it avoid any constraints not stated in the question?
-10. If the question does not have one answer/result, you may or may not use LIMIT in SELECT queries (e.g., LIMIT 100) to
+11. If the question does not have one answer/result, you may or may not use LIMIT in SELECT queries (e.g., LIMIT 100) to
 avoid too many results. BUT MAKE SURE TO REFLECT THIS IN THE TEXT QUERY!
 
 ### Crucial Notes:

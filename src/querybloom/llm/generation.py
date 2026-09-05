@@ -134,6 +134,7 @@ def generate_and_execute(
         {
             "subgraph_index": subgraph_index,
             "is_meaningful": gen_result.is_meaningful,
+            "skip_reason": gen_result.skip_reason,
             "num_questions": len(gen_result.questions),
             "questions": [q.model_dump() for q in gen_result.questions],
             "cost_usd": usage["cost_usd"],

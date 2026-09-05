@@ -76,6 +76,7 @@ class TestLlmPackage(unittest.TestCase):
             ],
         )
         self.assertTrue(res.is_meaningful)
+        self.assertEqual(res.skip_reason, "")
         self.assertEqual(len(res.questions), 2)
 
     def test_verification_models(self):
@@ -88,6 +89,8 @@ class TestLlmPackage(unittest.TestCase):
         )
         self.assertEqual(pair_v.status, "needs_fix")
         self.assertEqual(pair_v.fixed_text_query, "Fixed Q")
+        unfixable = VerificationPairResult(status="unfixable", reason="No grounded repair")
+        self.assertEqual(unfixable.status, "unfixable")
 
         v_res = VerificationResult(
             all_correct=False,
@@ -99,11 +102,13 @@ class TestLlmPackage(unittest.TestCase):
         """Test ComplexityAugmentation and ComplexityIntroducerResult schemas."""
         aug = ComplexityAugmentation(
             skipped=False,
+            reason="Filter to a publication year is a realistic expert constraint",
             complexity_types=["FILTER", "OPTIONAL"],
             augmented_text_query="What are books published after 2000?",
             augmented_sparql_query="SELECT ?b WHERE { ?b a :Book . FILTER(?year > 2000) }",
         )
         self.assertFalse(aug.skipped)
+        self.assertEqual(aug.reason, "Filter to a publication year is a realistic expert constraint")
         self.assertEqual(aug.complexity_types, ["FILTER", "OPTIONAL"])
 
         ci_res = ComplexityIntroducerResult(augmentations=[aug])
@@ -114,9 +119,11 @@ class TestLlmPackage(unittest.TestCase):
         rw = RewordPairResult(
             status="needs_reword",
             reason="Grammar improvement",
+            issue_types=["phrasing"],
             reworded_text_query="Which books were published by Tolkien?",
         )
         self.assertEqual(rw.status, "needs_reword")
+        self.assertEqual(rw.issue_types, ["phrasing"])
 
         rw_res = RewordResult(pairs=[rw], most_meaningful_index=1)
         self.assertEqual(len(rw_res.pairs), 1)

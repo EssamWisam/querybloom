@@ -19,6 +19,10 @@ class SubgraphGenerationResult(BaseModel):
     is_meaningful: bool = Field(
         description="Whether the subgraph allows for meaningful questions about the knowledge graph"
     )
+    skip_reason: str = Field(
+        default="",
+        description="Brief reason if is_meaningful is false; empty otherwise",
+    )
     questions: List[QuestionQueryPair] = Field(
         default_factory=list,
         description="List of generated question-query pairs (empty if is_meaningful is False)",
@@ -28,10 +32,12 @@ class SubgraphGenerationResult(BaseModel):
 class VerificationPairResult(BaseModel):
     """Verification result for a single QA pair."""
 
-    status: Literal["correct", "needs_fix"] = Field(
-        description="Whether the pair is correct or needs fixing"
+    status: Literal["correct", "needs_fix", "unfixable"] = Field(
+        description="Whether the pair is correct, needs fixing, or cannot be fixed"
     )
-    reason: str = Field(default="", description="Brief explanation if needs_fix")
+    reason: str = Field(
+        default="", description="Brief explanation if needs_fix or unfixable"
+    )
     fixed_text_query: Optional[str] = Field(
         default=None, description="Fixed natural language question (only if needs_fix)"
     )
@@ -55,8 +61,9 @@ class ComplexityAugmentation(BaseModel):
     skipped: bool = Field(
         description="True if no meaningful non-trivial complexity can be added to this pair"
     )
-    skip_reason: str = Field(
-        default="", description="Explanation of why augmentation was skipped"
+    reason: str = Field(
+        default="",
+        description="Brief reason for skipping, or why the added complexity is high-utility",
     )
     complexity_types: Optional[
         List[
@@ -100,6 +107,18 @@ class RewordPairResult(BaseModel):
     )
     reason: str = Field(
         default="", description="Brief and short explanation if needs_reword"
+    )
+    issue_types: List[
+        Literal[
+            "jargon",
+            "identifier",
+            "phrasing",
+            "verbose",
+            "superfluous_hop",
+        ]
+    ] = Field(
+        default_factory=list,
+        description="Issue categories for needs_reword/unrewordable; empty if clean",
     )
     reworded_text_query: Optional[str] = Field(
         default=None,

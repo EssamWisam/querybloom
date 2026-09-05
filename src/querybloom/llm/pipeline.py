@@ -110,6 +110,7 @@ def process_single_subgraph_pipeline(
 
     output_sg = dict(subgraph)
     output_sg["is_meaningful"] = gen_result.is_meaningful
+    output_sg["skip_reason"] = gen_result.skip_reason
 
     # --- Complexity introduction step ---
     if introduce_complexity_step and gen_result.is_meaningful and qa_pairs:
@@ -137,9 +138,11 @@ def process_single_subgraph_pipeline(
             subgraph_usage["total_tokens"] += ci_usage.get("total_tokens", 0)
             subgraph_usage["stages"]["complexity"] = ci_usage
         for i, aug in enumerate(ci_result.augmentations):
-            if i < len(qa_pairs):
-                qa_pairs[i].setdefault("stage_outputs", {})["complexity"] = aug.model_dump()
-            if aug.skipped or i >= len(qa_pairs):
+            if i >= len(qa_pairs):
+                continue
+            qa_pairs[i].setdefault("stage_outputs", {})["complexity"] = aug.model_dump()
+            qa_pairs[i]["complexity_reason"] = aug.reason
+            if aug.skipped:
                 continue
             exec_result = execute_sparql_and_get_result(
                 aug.augmented_sparql_query,
@@ -196,6 +199,7 @@ def process_single_subgraph_pipeline(
             for idx, rw in enumerate(rw_result.pairs):
                 if idx < len(qa_pairs):
                     qa_pairs[idx].setdefault("stage_outputs", {})["reword"] = rw.model_dump()
+                    qa_pairs[idx]["reword_issue_types"] = rw.issue_types
                     if rw.status == "needs_reword" and rw.reworded_text_query:
                         qa_pairs[idx]["pre_reword_question"] = qa_pairs[idx]["question"]
                         qa_pairs[idx]["question"] = rw.reworded_text_query
@@ -316,9 +320,13 @@ def process_single_subgraph_pipeline(
 
     output_sg["qa_pairs"] = qa_pairs
     output_sg["finalized_at_iteration"] = iteration
-    output_sg["verification_status"] = (
-        "correct" if v_result.all_correct else "needs_fix"
-    )
+    pair_statuses = {p.status for p in v_result.pairs}
+    if "needs_fix" in pair_statuses:
+        output_sg["verification_status"] = "needs_fix"
+    elif "unfixable" in pair_statuses:
+        output_sg["verification_status"] = "unfixable"
+    else:
+        output_sg["verification_status"] = "correct"
     output_sg["most_meaningful_index"] = 1
     if qa_pairs:
         qa_pairs[0]["is_most_meaningful"] = True
@@ -361,6 +369,7 @@ def process_single_subgraph_pipeline(
             for ci, rw in zip(correct_indices, rw_result.pairs):
                 if ci < len(qa_pairs):
                     qa_pairs[ci].setdefault("stage_outputs", {})["reword"] = rw.model_dump()
+                    qa_pairs[ci]["reword_issue_types"] = rw.issue_types
                 if rw.status == "needs_reword" and rw.reworded_text_query:
                     qa_pairs[ci]["pre_reword_question"] = qa_pairs[ci]["question"]
                     qa_pairs[ci]["question"] = rw.reworded_text_query
