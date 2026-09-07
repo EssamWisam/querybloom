@@ -32,7 +32,6 @@ def process_single_subgraph_pipeline(
     model: str,
     template: Any,
     timeout: int,
-    fail_empty: bool = True,
     verify_iterations: int = 0,
     verify_template: Any = None,
     focus_entity_qa: bool = False,
@@ -92,7 +91,6 @@ def process_single_subgraph_pipeline(
         model=model,
         template=template,
         timeout=timeout,
-        fail_empty=fail_empty,
         pattern_str=pattern_str,
         focus_entity_qa=focus_entity_qa,
         additional_instructions=additional_instructions,
@@ -148,7 +146,6 @@ def process_single_subgraph_pipeline(
                 aug.augmented_sparql_query,
                 endpoint=endpoint,
                 timeout=timeout,
-                fail_empty=fail_empty,
             )
             qa_pairs[i]["question"] = aug.augmented_text_query
             qa_pairs[i]["sparql_query"] = aug.augmented_sparql_query
@@ -315,7 +312,6 @@ def process_single_subgraph_pipeline(
                     qa["sparql_query"],
                     endpoint=endpoint,
                     timeout=timeout,
-                    fail_empty=fail_empty,
                 )
 
     output_sg["qa_pairs"] = qa_pairs
@@ -426,7 +422,6 @@ def process_subgraphs_data(
     output_dir: str = None,
     timeout: int = 70,
     max_workers: int = 10,
-    fail_empty: bool = False,
     verify_iterations: int = 0,
     max_subgraphs: int = None,
     subgraph_indices: List[int] | None = None,
@@ -537,7 +532,6 @@ def process_subgraphs_data(
                 model,
                 template,
                 timeout,
-                fail_empty,
                 verify_iterations,
                 v_template,
                 focus_entity_qa,
@@ -672,7 +666,6 @@ def process_subgraphs_yaml(
     output_dir: str = None,
     timeout: int = 70,
     max_workers: int = 10,
-    fail_empty: bool = False,
     verify_iterations: int = 0,
     max_subgraphs: int = None,
     subgraph_indices: List[int] | None = None,
@@ -701,7 +694,6 @@ def process_subgraphs_yaml(
         output_dir=output_dir,
         timeout=timeout,
         max_workers=max_workers,
-        fail_empty=fail_empty,
         verify_iterations=verify_iterations,
         max_subgraphs=max_subgraphs,
         subgraph_indices=subgraph_indices,

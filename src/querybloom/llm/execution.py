@@ -10,7 +10,6 @@ def execute_sparql_and_get_result(
     sparql_query: str,
     endpoint: str,
     timeout: int = 30,
-    fail_empty: bool = True,
 ) -> Dict[str, Any]:
     """
     Execute a SPARQL query and return structured execution results.
@@ -19,7 +18,6 @@ def execute_sparql_and_get_result(
         sparql_query: The SPARQL query to execute
         endpoint: SPARQL endpoint URL
         timeout: Query timeout in seconds
-        fail_empty: If True, set success=False when result count is 0 (default: True)
 
     Returns:
         Dict with success, count, error_message, and result_preview
@@ -81,8 +79,5 @@ def execute_sparql_and_get_result(
                     "columns": columns,
                     "rows": preview_rows,
                 }
-
-    if fail_empty and execution_result["count"] == 0:
-        execution_result["success"] = False
 
     return execution_result

@@ -92,7 +92,6 @@ def generate_and_execute(
     model: str,
     template: Any,
     timeout: int,
-    fail_empty: bool,
     pattern_str: str,
     focus_entity_qa: bool,
     additional_instructions: str = "",
@@ -161,7 +160,6 @@ def generate_and_execute(
                 qa.sparql_query,
                 endpoint=endpoint,
                 timeout=timeout,
-                fail_empty=fail_empty,
             )
             emit_event(
                 event_sink,

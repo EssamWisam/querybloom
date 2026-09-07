@@ -1,3 +1,4 @@
+from querybloom.api.models import llm_ui_metadata
 from querybloom.sampling_service import SAMPLING_PRESETS, sampling_ui_metadata
 
 
@@ -67,3 +68,15 @@ def test_ui_metadata_exposes_backend_presets():
         "preprocess.rand_offset",
     ):
         assert key in metadata["fields"], key
+
+
+def test_llm_ui_metadata_exposes_advanced_fields():
+    fields = llm_ui_metadata()["fields"]
+    for key in (
+        "introduce_complexity_step",
+        "reword_questions_step",
+        "timeout",
+        "max_workers",
+        "kg_title",
+    ):
+        assert key in fields, key

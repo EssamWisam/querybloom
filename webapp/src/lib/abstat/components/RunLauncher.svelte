@@ -1,5 +1,6 @@
 <script>
   import FieldHelp from "./FieldHelp.svelte";
+  import SettingsModal from "./SettingsModal.svelte";
   import endpointCatalog from "$endpoints";
 
   /** @type {any} */
@@ -286,43 +287,17 @@
     </label>
   </div>
 
-  <button
-    class="plain"
-    type="button"
-    on:click={() => (advancedOpen = true)}
-  >
+  <button class="plain" type="button" on:click={() => (advancedOpen = true)}>
     Show advanced sampling settings
   </button>
 </form>
 
-{#if advancedOpen}
-  <div
-    class="modal-backdrop"
-    role="presentation"
-    on:click={() => (advancedOpen = false)}
-    on:keydown={(e) => e.key === "Escape" && (advancedOpen = false)}
-  >
-    <div
-      class="modal-card"
-      role="dialog"
-      tabindex="-1"
-      aria-modal="true"
-      aria-labelledby="advanced-sampling-title"
-      on:click|stopPropagation
-      on:keydown|stopPropagation
-    >
-      <div class="modal-header">
-        <div class="modal-title-wrap">
-          <h3 id="advanced-sampling-title">Advanced sampling settings</h3>
-        </div>
-        <button
-          class="modal-close-btn"
-          type="button"
-          aria-label="Close"
-          on:click={() => (advancedOpen = false)}>✕</button
-        >
-      </div>
-      <div class="modal-body">
+<SettingsModal
+  open={advancedOpen}
+  title="Advanced sampling settings"
+  titleId="advanced-sampling-title"
+  onClose={() => (advancedOpen = false)}
+>
         <section class="advanced-section">
           <h4>Mining</h4>
           <div class="advanced">
@@ -334,7 +309,7 @@
                 <FieldHelp
                   description={fieldDescription(
                     "mine.k",
-                    "Allowed subgraph sizes by number of types. Use one number or comma-separated sizes. Pair with type size weights.",
+                    "Allowed subgraph sizes by number of types. Use one number or comma-separated sizes. Pair with concept size weights.",
                   )}
                 />
               </span>
@@ -343,7 +318,7 @@
             <label>
               <span class="label-row">
                 <span class="label-text"
-                  >{fieldLabel("mine.k_weights", "Type size weights")}</span
+                  >{fieldLabel("mine.k_weights", "Concept size weights")}</span
                 >
                 <FieldHelp
                   description={fieldDescription(
@@ -501,7 +476,10 @@
             <label class="full">
               <span class="label-row">
                 <span class="label-text"
-                  >{fieldLabel("preprocess.seed_property", "Seed property")}</span
+                  >{fieldLabel(
+                    "preprocess.seed_property",
+                    "Seed property",
+                  )}</span
                 >
                 <FieldHelp
                   description={fieldDescription(
@@ -518,7 +496,10 @@
             <label>
               <span class="label-row">
                 <span class="label-text"
-                  >{fieldLabel("preprocess.property_limit", "Property limit")}</span
+                  >{fieldLabel(
+                    "preprocess.property_limit",
+                    "Property limit",
+                  )}</span
                 >
                 <FieldHelp
                   description={fieldDescription(
@@ -608,17 +589,7 @@
             </label>
           </div>
         </section>
-      </div>
-      <div class="modal-actions">
-        <button
-          class="modal-primary-btn"
-          type="button"
-          on:click={() => (advancedOpen = false)}>Done</button
-        >
-      </div>
-    </div>
-  </div>
-{/if}
+</SettingsModal>
 
 <style>
   .launcher {
@@ -703,116 +674,10 @@
     background: #fff;
   }
 
-  .grid,
-  .advanced {
+  .grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
-  }
-
-  .advanced-section {
-    display: grid;
-    gap: 10px;
-  }
-
-  .advanced-section h4 {
-    margin: 0;
-    color: var(--color-uni-dark-blue);
-    font-size: 0.78rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-
-  .full {
-    grid-column: 1 / -1;
-  }
-
-  .modal-backdrop {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    background: rgba(15, 23, 42, 0.65);
-    backdrop-filter: blur(4px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .modal-card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow:
-      0 20px 25px -5px rgba(0, 0, 0, 0.2),
-      0 10px 10px -5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e2e8f0;
-    max-width: 760px;
-    width: 100%;
-    max-height: min(88vh, 900px);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 20px;
-    background: #f8fafc;
-    border-bottom: 1px solid #e2e8f0;
-  }
-
-  .modal-title-wrap h3 {
-    margin: 0;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--color-uni-dark-blue);
-  }
-
-  .modal-close-btn {
-    background: transparent;
-    border: none;
-    font-size: 1.1rem;
-    color: #a0aec0;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 4px;
-    line-height: 1;
-  }
-
-  .modal-close-btn:hover {
-    color: #4a5568;
-    background: #edf2f7;
-  }
-
-  .modal-body {
-    display: grid;
-    gap: 18px;
-    padding: 16px 20px 8px;
-    overflow: auto;
-  }
-
-  .modal-actions {
-    display: flex;
-    justify-content: flex-end;
-    padding: 12px 20px 16px;
-    border-top: 1px solid #e2e8f0;
-  }
-
-  .modal-primary-btn {
-    background: var(--color-uni-blue);
-  }
-
-  .toggle-row {
-    align-content: start;
-  }
-
-  .toggle-row input {
-    width: auto;
-    justify-self: start;
-    accent-color: var(--color-uni-green);
   }
 
   button {
@@ -833,8 +698,7 @@
   }
 
   @media (max-width: 920px) {
-    .grid,
-    .advanced {
+    .grid {
       grid-template-columns: 1fr;
     }
   }

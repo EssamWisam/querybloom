@@ -16,7 +16,6 @@ class LLMRunRequest(BaseModel):
     output_dir: str | None = None
     timeout: int = 70
     max_workers: int = 10
-    fail_empty: bool = False
     verify_iterations: int = 0
     max_subgraphs: int | None = None
     subgraph_indices: list[int] | None = None
@@ -48,6 +47,26 @@ LLM_UI_FIELDS = {
     "focus_entity_qa": {
         "label": "Entity-focused QA",
         "description": "Bias generation toward questions about concrete sample entities instead of only schema-level relations.",
+    },
+    "introduce_complexity_step": {
+        "label": "Introduce complexity",
+        "description": "Run the complexity agent after generation to add SPARQL constructs such as OPTIONAL, FILTER, or aggregations.",
+    },
+    "reword_questions_step": {
+        "label": "Reword questions",
+        "description": "Run the rewording agent to remove KG URIs and jargon from natural-language questions.",
+    },
+    "timeout": {
+        "label": "SPARQL timeout (s)",
+        "description": "Seconds allowed for each SPARQL execution against the live endpoint during generation and verification.",
+    },
+    "max_workers": {
+        "label": "Parallel workers",
+        "description": "How many subgraphs to process in parallel during QA generation.",
+    },
+    "kg_title": {
+        "label": "KG title",
+        "description": "Optional knowledge-graph name shown to the LLM for context, for example DBLP or DBpedia.",
     },
 }
 

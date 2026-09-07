@@ -117,7 +117,7 @@ SAMPLING_UI_FIELDS = {
     },
     "mine.k": {
         "label": "Concept sizes",
-        "description": "Allowed subgraph sizes by number of types. Use one number or comma-separated sizes. Pair with type size weights.",
+        "description": "Allowed subgraph sizes by number of types. Use one number or comma-separated sizes. Pair with concept size weights.",
     },
     "preprocess.use_cache": {
         "label": "Use cache",
@@ -132,8 +132,8 @@ SAMPLING_UI_FIELDS = {
         "description": "Maximum number of properties to inspect during preprocessing, or the BFS expansion budget when using a seed property.",
     },
     "mine.k_weights": {
-        "label": "Type size weights",
-        "description": "Optional comma-separated weights matching the type sizes. They are normalized automatically to bias sampled subgraph sizes.",
+        "label": "Concept size weights",
+        "description": "Optional comma-separated weights matching the concept sizes. They are normalized automatically to bias sampled subgraph sizes.",
     },
     "preprocess.max_triples": {
         "label": "Max triples per property",

@@ -8,6 +8,7 @@
     streamLlm,
   } from "../api.js";
   import FieldHelp from "./FieldHelp.svelte";
+  import SettingsModal from "./SettingsModal.svelte";
   import QaPatternSamplesModal from "./QaPatternSamplesModal.svelte";
   import QaEvolution from "./QaEvolution.svelte";
   import {
@@ -92,6 +93,12 @@
   let focusEntityQa = false;
   let entsRatio = 0.4;
   let additionalInstructions = "";
+  let introduceComplexityStep = true;
+  let rewordQuestionsStep = true;
+  let sparqlTimeout = 70;
+  let maxWorkers = 10;
+  let kgTitle = "";
+  let advancedOpen = false;
   let running = false;
   let hydratingQa = false;
   let error = "";
@@ -1224,8 +1231,11 @@
             focus_entity_qa: focusEntityQa,
             ents_ratio: Number(entsRatio),
             additional_instructions: additionalInstructions,
-            introduce_complexity_step: true,
-            reword_questions_step: true,
+            introduce_complexity_step: introduceComplexityStep,
+            reword_questions_step: rewordQuestionsStep,
+            timeout: Number(sparqlTimeout),
+            max_workers: Number(maxWorkers),
+            kg_title: kgTitle.trim() || null,
           },
         },
         (frame) => {
@@ -1689,10 +1699,106 @@
         disabled={!totalSelectedGeneratedPairs}
         on:click={() => (showExportModal = true)}>Download</button
       >
+      <button
+        class="plain"
+        type="button"
+        on:click={() => (advancedOpen = true)}
+      >
+        Show advanced QA settings
+      </button>
       {#if hydratingQa}<span class="restore-note">Loading saved questions…</span
         >{/if}
     </div>
   </form>
+
+  <SettingsModal
+    open={advancedOpen}
+    title="Advanced QA settings"
+    titleId="advanced-qa-title"
+    onClose={() => (advancedOpen = false)}
+  >
+    <section class="advanced-section">
+      <h4>Pipeline</h4>
+      <div class="advanced">
+        <label class="toggle-row">
+          <span class="label-row">
+            <span class="label-text"
+              >{fieldLabel(
+                "introduce_complexity_step",
+                "Introduce complexity",
+              )}</span
+            >
+            <FieldHelp
+              description={fieldDescription(
+                "introduce_complexity_step",
+                "Run the complexity agent after generation to add SPARQL constructs such as OPTIONAL, FILTER, or aggregations.",
+              )}
+            />
+          </span>
+          <input bind:checked={introduceComplexityStep} type="checkbox" />
+        </label>
+        <label class="toggle-row">
+          <span class="label-row">
+            <span class="label-text"
+              >{fieldLabel("reword_questions_step", "Reword questions")}</span
+            >
+            <FieldHelp
+              description={fieldDescription(
+                "reword_questions_step",
+                "Run the rewording agent to remove KG URIs and jargon from natural-language questions.",
+              )}
+            />
+          </span>
+          <input bind:checked={rewordQuestionsStep} type="checkbox" />
+        </label>
+      </div>
+    </section>
+    <section class="advanced-section">
+      <h4>Execution</h4>
+      <div class="advanced">
+        <label>
+          <span class="label-row">
+            <span class="label-text"
+              >{fieldLabel("timeout", "SPARQL timeout (s)")}</span
+            >
+            <FieldHelp
+              description={fieldDescription(
+                "timeout",
+                "Seconds allowed for each SPARQL execution against the live endpoint during generation and verification.",
+              )}
+            />
+          </span>
+          <input bind:value={sparqlTimeout} type="number" min="1" />
+        </label>
+        <label>
+          <span class="label-row">
+            <span class="label-text"
+              >{fieldLabel("max_workers", "Parallel workers")}</span
+            >
+            <FieldHelp
+              description={fieldDescription(
+                "max_workers",
+                "How many subgraphs to process in parallel during QA generation.",
+              )}
+            />
+          </span>
+          <input bind:value={maxWorkers} type="number" min="1" />
+        </label>
+        <label class="full">
+          <span class="label-row">
+            <span class="label-text">{fieldLabel("kg_title", "KG title")}</span>
+            <FieldHelp
+              description={fieldDescription(
+                "kg_title",
+                "Optional knowledge-graph name shown to the LLM for context, for example DBLP or DBpedia.",
+              )}
+            />
+          </span>
+          <input bind:value={kgTitle} placeholder="Optional, e.g. DBLP" />
+        </label>
+      </div>
+    </section>
+  </SettingsModal>
 
   <!-- Workspace: list + detail -->
   {#if qaList.length > 0}
@@ -2219,6 +2325,16 @@
   .secondary-action:disabled {
     cursor: not-allowed;
     opacity: 0.5;
+  }
+
+  .plain {
+    border: 0;
+    background: transparent;
+    color: var(--color-uni-blue);
+    cursor: pointer;
+    padding: 8px 0;
+    font-size: 0.85rem;
+    font-weight: 800;
   }
 
   .restore-note {
