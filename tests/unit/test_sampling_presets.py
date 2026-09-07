@@ -30,6 +30,12 @@ def test_named_notebook_presets_exist():
     assert "dblp-notebook" in SAMPLING_PRESETS
     assert SAMPLING_PRESETS["dblp-notebook"]["label"] == "DBLP"
     assert SAMPLING_PRESETS["dblp-notebook"]["config"]["endpoint"] == "dblp"
+    dblp_mine = SAMPLING_PRESETS["dblp-notebook"]["config"]["mine"]
+    assert dblp_mine["num_subgraphs"] == 48
+    assert dblp_mine["max_subgraphs_per_seed"] == 4
+    assert dblp_mine["m"] == 30
+    assert dblp_mine["num_attrs"] == [20, 25]
+    assert dblp_mine["k"] == {3: 0.2, 4: 0.5, 5: 0.3}
     assert SAMPLING_PRESETS["dbpedia-notebook"]["config"]["endpoint"] == "dbpedia-qlever"
 
 
@@ -51,3 +57,13 @@ def test_ui_metadata_exposes_backend_presets():
     assert metadata["presets"]["dblp-notebook"]["config"]["min_support"] == 10
     metadata["presets"]["dblp-notebook"]["config"]["min_support"] = 999
     assert SAMPLING_PRESETS["dblp-notebook"]["config"]["min_support"] == 10
+    for key in (
+        "mine.max_subgraphs_per_seed",
+        "mine.m",
+        "mine.num_attrs",
+        "mine.verif_timeout",
+        "mine.exact_support",
+        "mine.uniform_types",
+        "preprocess.rand_offset",
+    ):
+        assert key in metadata["fields"], key

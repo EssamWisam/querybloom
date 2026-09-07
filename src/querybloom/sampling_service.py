@@ -116,8 +116,8 @@ SAMPLING_UI_FIELDS = {
         "description": "Target number of representative subgraphs to mine after ABSTAT preprocessing.",
     },
     "mine.k": {
-        "label": "Concept Size",
-        "description": "Allowed subgraph sizes by number of types. Use one number or comma-separated sizes.",
+        "label": "Concept sizes",
+        "description": "Allowed subgraph sizes by number of types. Use one number or comma-separated sizes. Pair with type size weights.",
     },
     "preprocess.use_cache": {
         "label": "Use cache",
@@ -150,6 +150,34 @@ SAMPLING_UI_FIELDS = {
     "preprocess.exclude_properties": {
         "label": "Exclude property substrings",
         "description": "Skip properties whose URI contains any of these comma-separated substrings.",
+    },
+    "preprocess.rand_offset": {
+        "label": "Random offset",
+        "description": "Randomize the triple-scan offset per property so pattern estimates are not always taken from the start of the endpoint results.",
+    },
+    "mine.max_subgraphs_per_seed": {
+        "label": "Max subgraphs per seed",
+        "description": "Maximum successful subgraphs allowed from a single start pattern. 1 is a hard cap near the pattern-pool size.",
+    },
+    "mine.m": {
+        "label": "Entities per type (m)",
+        "description": "Number of sample entities fetched per type when verifying and instantiating a candidate subgraph.",
+    },
+    "mine.num_attrs": {
+        "label": "Attributes per subgraph",
+        "description": "How many data attributes to attach per subgraph. Use one number or a min, max pair such as 20, 25.",
+    },
+    "mine.verif_timeout": {
+        "label": "Verification timeout (s)",
+        "description": "Seconds allowed for each SPARQL support-verification query before the candidate is skipped.",
+    },
+    "mine.exact_support": {
+        "label": "Exact support",
+        "description": "If enabled, compute exact pattern support instead of the faster LIMIT-based estimate.",
+    },
+    "mine.uniform_types": {
+        "label": "Uniform types",
+        "description": "Sample type combinations more uniformly instead of biasing toward frequent patterns.",
     },
 }
 
@@ -228,14 +256,17 @@ SAMPLING_PRESETS = {
                 "exclude_classes": [],
                 "exclude_properties": ["label", "description", "identifier"],
             },
+            # Match the successful DBLP notebook mine() (52 graphs). The later
+            # cell with max_subgraphs_per_seed=1 only found 1. Target 48 is the
+            # preprocess pattern-pool size from that notebook.
             "mine": {
-                "k": {3: 0.1, 4: 0.3, 5: 0.4, 6: 0.2},
-                "num_subgraphs": 500,
-                "max_subgraphs_per_seed": 1,
+                "k": {3: 0.2, 4: 0.5, 5: 0.3},
+                "num_subgraphs": 48,
+                "max_subgraphs_per_seed": 4,
                 "exact_support": False,
                 "verif_timeout": 20,
-                "m": 10,
-                "num_attrs": [9, 13],
+                "m": 30,
+                "num_attrs": [20, 25],
                 "uniform_types": True,
             },
         },
