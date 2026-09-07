@@ -1,13 +1,23 @@
 from typing import Optional, Dict, Any
+import logging
 import requests
 import json
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as FuturesTimeoutError
 from enum import Enum
 import pandas as pd
 from io import StringIO
 
 from rdflib.plugins.sparql import parser
 from rdflib.plugins.sparql.parser import parseQuery
+
+_logger = logging.getLogger(__name__)
+
+# Bound the number of concurrently abandoned (wall-clock-timed-out) requests so
+# stuck HTTP calls cannot exhaust threads or sockets during a long mining run.
+_DEADLINE_POOL = ThreadPoolExecutor(
+    max_workers=16, thread_name_prefix="sparql-deadline"
+)
 
 
 def check_sparql_syntax(query):
@@ -322,3 +332,36 @@ def make_request(
         }
 
     return requests.get(endpoint_url, params=params, headers=headers, timeout=timeout)
+
+
+def execute_with_deadline(
+    endpoint_url: str,
+    query: str,
+    fmt: str,
+    user_agent: str,
+    timeout: int,
+) -> requests.Response:
+    """Run an HTTP SPARQL request with a hard wall-clock deadline.
+
+    The scalar ``timeout`` passed to ``requests.get`` only bounds the time
+    between received bytes, so a server that keeps the connection alive (e.g.
+    Virtuoso streaming a slow result) can hold a call open indefinitely. This
+    wrapper runs the request in a worker thread and abandons it once the
+    wall-clock deadline passes, closing the response to release the socket.
+
+    Raises ``FuturesTimeoutError`` when the deadline is exceeded.
+    """
+    future = _DEADLINE_POOL.submit(
+        make_request, endpoint_url, query, fmt, user_agent, timeout
+    )
+    try:
+        return future.result(timeout=timeout)
+    except FuturesTimeoutError:
+        future.cancel()  # best effort: only stops the task if it hasn't started
+        _logger.warning(
+            "SPARQL wall-clock deadline exceeded after %ss for %s (query prefix: %.120r)",
+            timeout,
+            endpoint_url,
+            query,
+        )
+        raise

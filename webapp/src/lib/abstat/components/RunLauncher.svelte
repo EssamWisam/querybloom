@@ -62,6 +62,7 @@
     useCache = preprocess.use_cache ?? false;
     exactSupport = mine.exact_support ?? false;
     verifTimeout = mine.verif_timeout ?? 30;
+    sparqlTimeout = mine.sparql_timeout ?? 90;
     m = mine.m ?? 7;
     numAttrs = clonePresetValue(mine.num_attrs ?? [5, 9]);
     numAttrsRaw = Array.isArray(numAttrs)
@@ -88,6 +89,7 @@
   let useCache = false;
   let exactSupport = false;
   let verifTimeout = 30;
+  let sparqlTimeout = 60;
   let m = 7;
   let numAttrs = [5, 9];
   let numAttrsRaw = "5, 9";
@@ -197,6 +199,7 @@
           m: Number(m),
           max_subgraphs_per_seed: Number(maxSubgraphsPerSeed),
           verif_timeout: Number(verifTimeout),
+          sparql_timeout: Number(sparqlTimeout),
           prob_optional: 0,
           num_attrs: parseNumAttrs(numAttrsRaw),
           max_attr_len: 200,
@@ -393,6 +396,23 @@
                 />
               </span>
               <input bind:value={verifTimeout} type="number" min="1" />
+            </label>
+            <label>
+              <span class="label-row">
+                <span class="label-text"
+                  >{fieldLabel(
+                    "mine.sparql_timeout",
+                    "SPARQL timeout (s)",
+                  )}</span
+                >
+                <FieldHelp
+                  description={fieldDescription(
+                    "mine.sparql_timeout",
+                    "Hard wall-clock limit for the heavier SPARQL queries used when grounding a subgraph (instance sampling and label fetches). The query is abandoned once this many seconds elapse, even if the endpoint trickles results.",
+                  )}
+                />
+              </span>
+              <input bind:value={sparqlTimeout} type="number" min="1" />
             </label>
             <label class="toggle-row">
               <span class="label-row">

@@ -47,6 +47,7 @@
   let subgraphs = [];
   let selectedSubgraphIndex = null;
   let properties = [];
+  let runConfig = null;
   let propertySummary = {
     listedCount: 0,
     filteredCount: 0,
@@ -575,6 +576,7 @@
     activeRun = run;
     endpoint = run.endpoint || run.config?.endpoint || "";
     resetRunWorkspace();
+    runConfig = run.config || null;
     try {
       const targetSampleRunId =
         run.kind === "llm"
@@ -665,6 +667,7 @@
     endpoint = payload.config.endpoint;
     clearEventPolling();
     resetRunWorkspace();
+    runConfig = payload.config;
     try {
       await streamSampling(
         token,
@@ -878,6 +881,8 @@
             <PropertiesPanel
               {properties}
               summary={propertySummary}
+              propertyLimit={runConfig?.preprocess?.property_limit}
+              seedProperty={runConfig?.preprocess?.seed_property}
               running={liveRunActive}
             />
           </div>
@@ -887,6 +892,8 @@
               {graph}
               {properties}
               summary={propertySummary}
+              propertyLimit={runConfig?.preprocess?.property_limit}
+              seedProperty={runConfig?.preprocess?.seed_property}
               running={liveRunActive}
               {discoveryPhase}
               {skipDiscoveryPending}
@@ -898,6 +905,7 @@
             <GraphSubgraphs
               {graph}
               {subgraphs}
+              targetCount={runConfig?.mine?.num_subgraphs}
               selectedIndex={selectedSubgraphIndex}
               onSelect={(index) => (selectedSubgraphIndex = index)}
               running={liveRunActive}

@@ -490,7 +490,7 @@ def sample_subgraph_instances(
             uri = row.get(target_var)
             if uri:
                 entity_uris.append(uri)
-    label_map = get_entity_labels(endpoint, entity_uris)
+    label_map = get_entity_labels(endpoint, entity_uris, timeout=min(timeout, 30))
 
     attribute_info_by_type = {}
     for type_uri, attrs_info in (subgraph.get("type_attributes") or {}).items():

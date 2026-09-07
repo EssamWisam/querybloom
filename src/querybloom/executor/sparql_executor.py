@@ -11,6 +11,7 @@ import json
 import re
 import requests
 import time
+from concurrent.futures import TimeoutError as FuturesTimeoutError
 from pathlib import Path
 from typing import Dict, Any, Optional, Tuple
 
@@ -20,7 +21,7 @@ from querybloom.executor.sparql_executor_utils import (
     handle_http_response,
     should_retry_status,
     determine_optimal_format,
-    make_request,
+    execute_with_deadline,
 )
 
 # Load endpoints catalog from local querybloom package
@@ -150,8 +151,10 @@ def execute_single_sparql_request(
     try:
         user_agent = "NL2SPARQL-Enhanced-Evaluator"
 
-        # Make initial request with the determined format
-        response = make_request(endpoint_url, query, actual_format, user_agent, timeout)
+        # Make initial request with the determined format. The hard wall-clock
+        # deadline guarantees the call is abandoned after `timeout` seconds
+        # even if the endpoint keeps the socket alive by trickling bytes.
+        response = execute_with_deadline(endpoint_url, query, actual_format, user_agent, timeout)
         execution_time = time.time() - start_time
 
         result = handle_http_response(response, execution_time, actual_format)
@@ -160,7 +163,7 @@ def execute_single_sparql_request(
 
         return result, should_retry
 
-    except requests.exceptions.Timeout:
+    except (requests.exceptions.Timeout, FuturesTimeoutError):
         execution_time = time.time() - start_time
         result = SparqlExecutionResult(
             status=SparqlStatus.TIMEOUT,

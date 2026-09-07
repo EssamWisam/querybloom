@@ -21,9 +21,11 @@
     v5Properties,
     v5Samples,
   } from "../subgraphYaml.js";
+  import { formatProgress } from "../progress.js";
 
   export let graph = null;
   export let subgraphs = [];
+  export let targetCount = 0;
   export let selectedIndex = null;
   export let onSelect = (_idx = null) => {};
   export let running = false;
@@ -418,7 +420,7 @@
           >
         </p>
       {:else}
-        <p>{subgraphs.length} discovered</p>
+        <p>{formatProgress(subgraphs.length, targetCount)} discovered</p>
       {/if}
     </header>
     <div class="rows">

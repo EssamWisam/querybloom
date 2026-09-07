@@ -44,6 +44,7 @@ def mine_subgraphs(
     stop_event: Any | None = None,
     skip_event: Any | None = None,
     max_entity_reuse: int = 3,
+    sparql_timeout: int = 90,
 ) -> Tuple[List[Dict[str, Any]], Optional[str]]:
     """
     Search and mine connected subgraphs with K types matching support thresholds.
@@ -232,6 +233,7 @@ def mine_subgraphs(
                     max_entity_reuse=max_entity_reuse,
                     max_attr_len=max_attr_len,
                     abstat_labels=type_labels,
+                    sparql_timeout=sparql_timeout,
                 )
                 if not yaml_data.get("instances"):
                     emit_event(

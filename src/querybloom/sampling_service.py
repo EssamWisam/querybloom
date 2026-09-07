@@ -169,7 +169,11 @@ SAMPLING_UI_FIELDS = {
     },
     "mine.verif_timeout": {
         "label": "Verification timeout (s)",
-        "description": "Seconds allowed for each SPARQL support-verification query before the candidate is skipped.",
+        "description": "Hard wall-clock limit for each candidate support-verification SPARQL query. The candidate is skipped once this many seconds elapse, even if the endpoint keeps the connection open.",
+    },
+    "mine.sparql_timeout": {
+        "label": "SPARQL timeout (s)",
+        "description": "Hard wall-clock limit for other SPARQL queries used when grounding a subgraph (e.g., instance sampling and label fetches). The query is abandoned once this many seconds elapse, even if the endpoint trickles results.",
     },
     "mine.exact_support": {
         "label": "Exact support",
@@ -298,6 +302,7 @@ class SamplingMineConfig(BaseModel):
     output_dir: str | None = "./subgraphs_output"
     max_subgraphs_per_seed: int = 1
     verif_timeout: int = 30
+    sparql_timeout: int = 90
     prob_optional: float = 0.0
     num_attrs: int | tuple[int, int] = (5, 9)
     max_attr_len: int = 200

@@ -1,8 +1,11 @@
 <script>
   import { shortName } from "../graph.js";
+  import { formatProgress, propertyProgressTotal } from "../progress.js";
 
   export let properties = [];
   export let summary = {};
+  export let propertyLimit = 0;
+  export let seedProperty = null;
   export let running = false;
 
   $: completedCount = properties.filter(
@@ -11,6 +14,12 @@
   $: processingCount = properties.filter(
     (item) => item.status === "processing",
   ).length;
+  $: progressTotal = propertyProgressTotal({
+    listedCount: summary.listedCount,
+    filteredCount: summary.filteredCount,
+    propertyLimit,
+    seedProperty,
+  });
 
   function displayName(item) {
     return item.label || item.short_name || shortName(item.uri) || "Property";
@@ -44,10 +53,18 @@
         <strong>{summary.listedCount || 0}</strong><span>Listed</span>
       </article>
       <article>
-        <strong>{summary.filteredCount || 0}</strong><span>Ready</span>
+        <strong
+          >{formatProgress(
+            summary.filteredCount,
+            summary.listedCount,
+          )}</strong
+        ><span>Ready</span>
       </article>
       <article><strong>{processingCount}</strong><span>Active</span></article>
-      <article><strong>{completedCount}</strong><span>Done</span></article>
+      <article
+        ><strong>{formatProgress(completedCount, progressTotal)}</strong
+        ><span>Done</span></article
+      >
     </div>
   </header>
 

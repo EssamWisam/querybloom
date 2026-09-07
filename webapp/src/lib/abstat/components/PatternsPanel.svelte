@@ -1,16 +1,25 @@
 <script>
   import AbstatGraph from "./AbstatGraph.svelte";
   import { shortName } from "../graph.js";
+  import { formatProgress, propertyProgressTotal } from "../progress.js";
 
   export let graph = null;
   export let properties = [];
   export let summary = {};
+  export let propertyLimit = 0;
+  export let seedProperty = null;
   export let running = false;
   export let discoveryPhase = false;
   export let skipDiscoveryPending = false;
   export let onSkipDiscovery = null;
 
   $: completed = properties.filter((item) => item.status === "completed");
+  $: progressTotal = propertyProgressTotal({
+    listedCount: summary.listedCount,
+    filteredCount: summary.filteredCount,
+    propertyLimit,
+    seedProperty,
+  });
   $: graphRelevant = completed.filter(
     (item) => (item.added_object_patterns || 0) > 0,
   );
@@ -73,11 +82,11 @@
     <dl>
       <div>
         <dt>Properties done</dt>
-        <dd>{completed.length}</dd>
+        <dd>{formatProgress(completed.length, progressTotal)}</dd>
       </div>
       <div>
         <dt>Graph updates</dt>
-        <dd>{graphRelevant.length}</dd>
+        <dd>{formatProgress(graphRelevant.length, progressTotal)}</dd>
       </div>
       <div>
         <dt>Object patterns</dt>

@@ -324,6 +324,7 @@ class SubgraphMiner:
         stop_event: Any | None = None,
         skip_event: Any | None = None,
         max_entity_reuse: int = 3,
+        sparql_timeout: int = 90,
     ) -> List[Dict[str, Any]]:
         subgraphs, export_path = mine_subgraphs(
             endpoint=self.endpoint,
@@ -350,6 +351,7 @@ class SubgraphMiner:
             event_sink=event_sink,
             stop_event=stop_event,
             skip_event=skip_event,
+            sparql_timeout=sparql_timeout,
         )
         self.last_export_path = export_path
         return subgraphs
