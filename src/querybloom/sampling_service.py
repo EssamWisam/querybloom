@@ -153,6 +153,8 @@ SAMPLING_UI_FIELDS = {
     },
 }
 
+# Single source of truth for sampling presets. The web UI loads these from
+# GET /api/v1/abstat/defaults and must not redefine them.
 SAMPLING_PRESETS = {
     "custom": {
         "label": "Custom",
@@ -195,6 +197,34 @@ SAMPLING_PRESETS = {
                 "rand_offset": True,
                 "use_cache": False,
                 "include_classes": ["http://dbpedia.org/ontology/"],
+                "exclude_classes": [],
+                "exclude_properties": ["label", "description", "identifier"],
+            },
+            "mine": {
+                "k": {3: 0.1, 4: 0.3, 5: 0.4, 6: 0.2},
+                "num_subgraphs": 500,
+                "max_subgraphs_per_seed": 1,
+                "exact_support": False,
+                "verif_timeout": 20,
+                "m": 10,
+                "num_attrs": [9, 13],
+                "uniform_types": True,
+            },
+        },
+    },
+    "dblp-notebook": {
+        "label": "DBLP",
+        "config": {
+            "endpoint": "dblp",
+            "min_support": 10,
+            "preprocess": {
+                "property_limit": 1500,
+                "max_triples": 30000,
+                "seed_property": "",
+                "minimize_patterns": True,
+                "rand_offset": True,
+                "use_cache": False,
+                "include_classes": [],
                 "exclude_classes": [],
                 "exclude_properties": ["label", "description", "identifier"],
             },
@@ -274,7 +304,7 @@ def sampling_ui_metadata() -> dict[str, Any]:
     """Return frontend metadata owned by the backend config surface."""
     return {
         "fields": SAMPLING_UI_FIELDS,
-        "presets": SAMPLING_PRESETS,
+        "presets": deepcopy(SAMPLING_PRESETS),
     }
 
 

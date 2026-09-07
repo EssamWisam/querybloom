@@ -5,52 +5,6 @@
   export let defaults = null;
   export let onStart = () => {};
 
-  const CLIMATEMODELSKG_PRESET_CONFIG = {
-    endpoint: "climatemodelskg",
-    min_support: 5,
-    preprocess: {
-      property_limit: 300,
-      max_triples: 30000,
-      seed_property: "",
-      minimize_patterns: true,
-      rand_offset: true,
-      use_cache: false,
-      include_classes: [],
-      exclude_classes: [],
-      exclude_properties: ["label", "description", "identifier"],
-    },
-    mine: {
-      k: { 2: 0.1, 3: 0.4, 4: 0.3, 5: 0.2 },
-      num_subgraphs: 120,
-      max_subgraphs_per_seed: 3,
-      exact_support: false,
-      verif_timeout: 10,
-      m: 10,
-      num_attrs: [6, 10],
-      uniform_types: false,
-    },
-  };
-
-  function isFrinkEndpoint(endpoint) {
-    if (typeof endpoint === "string") return true;
-    if (endpoint && typeof endpoint === "object") {
-      return Boolean(endpoint.url) && (endpoint.frink ?? true);
-    }
-    return false;
-  }
-
-  function isIntuitiveEndpoint(endpoint) {
-    return (
-      endpoint && typeof endpoint === "object" && endpoint.intuitive === true
-    );
-  }
-
-  function endpointLabel(endpointId, endpoint) {
-    if (endpoint && typeof endpoint === "object")
-      return endpoint.title || endpointId;
-    return endpointId;
-  }
-
   function endpointUrl(endpointIdOrUrl) {
     const endpoint = endpointCatalog[endpointIdOrUrl];
     if (typeof endpoint === "string") return endpoint;
@@ -59,87 +13,13 @@
     return endpointIdOrUrl;
   }
 
-  function climatemodelskgConfigForEndpoint(endpointId) {
-    const config = JSON.parse(JSON.stringify(CLIMATEMODELSKG_PRESET_CONFIG));
-    config.endpoint = endpointId;
-    return config;
-  }
-
-  const FRINK_PRESETS = Object.fromEntries(
-    Object.entries(endpointCatalog)
-      .filter(
-        ([endpointId, endpoint]) =>
-          endpointId !== "federated" &&
-          isFrinkEndpoint(endpoint) &&
-          isIntuitiveEndpoint(endpoint),
-      )
-      .map(([endpointId, endpoint]) => [
-        endpointId,
-        {
-          label: endpointLabel(endpointId, endpoint),
-          config: climatemodelskgConfigForEndpoint(endpointId),
-        },
-      ]),
-  );
-
-  const PRESETS = {
-    custom: {
-      label: "Custom",
-      endpoint: "",
-      minSupport: 10,
-      propertyLimit: 50,
-      maxTriples: 50000,
-      seedProperty: "",
-      minimizePatterns: true,
-      randOffset: false,
-      includeClasses: [],
-      excludeClasses: [],
-      excludeProperties: [],
-      k: 3,
-      numSubgraphs: 30,
-      maxSubgraphsPerSeed: 1,
-      useCache: false,
-      exactSupport: false,
-      verifTimeout: 30,
-      m: 7,
-      numAttrs: [5, 9],
-      uniformTypes: false,
-    },
-    "dbpedia-notebook": {
-      label: "DBPedia",
-      endpoint: "dbpedia-qlever",
-      minSupport: 100,
-      propertyLimit: 1500,
-      maxTriples: 30000,
-      seedProperty: "http://dbpedia.org/ontology/spouse",
-      minimizePatterns: true,
-      randOffset: true,
-      includeClasses: ["http://dbpedia.org/ontology/"],
-      excludeClasses: [],
-      excludeProperties: ["label", "description", "identifier"],
-      k: { 3: 0.1, 4: 0.3, 5: 0.4, 6: 0.2 },
-      numSubgraphs: 500,
-      maxSubgraphsPerSeed: 1,
-      useCache: false,
-      exactSupport: false,
-      verifTimeout: 20,
-      m: 10,
-      numAttrs: [9, 13],
-      uniformTypes: true,
-    },
-    ...FRINK_PRESETS,
-  };
-
-  function mergePresets(configuredPresets) {
-    if (!configuredPresets) return PRESETS;
-    const { ["sockg-notebook"]: _legacyClimateModelsPreset, ...presets } =
-      configuredPresets;
-    return { ...PRESETS, ...presets, ...FRINK_PRESETS };
-  }
-
   $: samplingUi = defaults?.ui?.sampling ?? {};
   $: samplingFields = samplingUi.fields ?? {};
-  $: presets = mergePresets(samplingUi.presets);
+  $: presets = samplingUi.presets ?? {};
+  $: presetsLoaded = Object.keys(presets).length > 0;
+  $: defaultsError = presetsLoaded
+    ? ""
+    : "Could not load sampling presets from the backend. Check that the API is running and refresh.";
 
   function fieldLabel(key, fallback) {
     return samplingFields[key]?.label ?? fallback;
@@ -156,17 +36,18 @@
   }
 
   function applyPreset(presetId) {
-    const preset = presets[presetId] || presets.custom || PRESETS.custom;
-    const config = preset.config || preset;
+    const preset = presets[presetId] || presets.custom;
+    if (!preset) return;
+    const config = preset.config || {};
     const preprocess = config.preprocess || {};
     const mine = config.mine || {};
-    const k = mine.k ?? preset.k;
-    endpoint = endpointUrl(config.endpoint ?? preset.endpoint ?? "");
-    seedProperty = preprocess.seed_property ?? preset.seedProperty ?? "";
-    minSupport = config.min_support ?? preset.minSupport ?? 10;
-    propertyLimit = preprocess.property_limit ?? preset.propertyLimit ?? 50;
-    maxTriples = preprocess.max_triples ?? preset.maxTriples ?? 50000;
-    numSubgraphs = mine.num_subgraphs ?? preset.numSubgraphs ?? 30;
+    const k = mine.k;
+    endpoint = endpointUrl(config.endpoint ?? "");
+    seedProperty = preprocess.seed_property ?? "";
+    minSupport = config.min_support ?? 10;
+    propertyLimit = preprocess.property_limit ?? 50;
+    maxTriples = preprocess.max_triples ?? 50000;
+    numSubgraphs = mine.num_subgraphs ?? 30;
     if (typeof k === "number") {
       kRaw = String(k);
       kProbsRaw = "";
@@ -174,32 +55,18 @@
       kRaw = Object.keys(k).join(", ");
       kProbsRaw = Object.values(k).join(", ");
     }
-    maxSubgraphsPerSeed =
-      mine.max_subgraphs_per_seed ?? preset.maxSubgraphsPerSeed ?? 1;
-    useCache = preprocess.use_cache ?? preset.useCache ?? false;
-    exactSupport = mine.exact_support ?? preset.exactSupport ?? false;
-    verifTimeout = mine.verif_timeout ?? preset.verifTimeout ?? 30;
-    m = mine.m ?? preset.m ?? 7;
-    numAttrs = clonePresetValue(mine.num_attrs ?? preset.numAttrs ?? [5, 9]);
-    uniformTypes = mine.uniform_types ?? preset.uniformTypes ?? false;
-    minimizePatterns =
-      preprocess.minimize_patterns ?? preset.minimizePatterns ?? true;
-    randOffset = preprocess.rand_offset ?? preset.randOffset ?? false;
-    includeClassesRaw = (
-      preprocess.include_classes ??
-      preset.includeClasses ??
-      []
-    ).join(", ");
-    excludeClassesRaw = (
-      preprocess.exclude_classes ??
-      preset.excludeClasses ??
-      []
-    ).join(", ");
-    excludePropertiesRaw = (
-      preprocess.exclude_properties ??
-      preset.excludeProperties ??
-      []
-    ).join(", ");
+    maxSubgraphsPerSeed = mine.max_subgraphs_per_seed ?? 1;
+    useCache = preprocess.use_cache ?? false;
+    exactSupport = mine.exact_support ?? false;
+    verifTimeout = mine.verif_timeout ?? 30;
+    m = mine.m ?? 7;
+    numAttrs = clonePresetValue(mine.num_attrs ?? [5, 9]);
+    uniformTypes = mine.uniform_types ?? false;
+    minimizePatterns = preprocess.minimize_patterns ?? true;
+    randOffset = preprocess.rand_offset ?? false;
+    includeClassesRaw = (preprocess.include_classes ?? []).join(", ");
+    excludeClassesRaw = (preprocess.exclude_classes ?? []).join(", ");
+    excludePropertiesRaw = (preprocess.exclude_properties ?? []).join(", ");
   }
 
   let selectedPreset = "dbpedia-notebook";
@@ -228,7 +95,11 @@
   $: if (defaults?.sampling?.endpoint && !endpoint)
     endpoint = defaults.sampling.endpoint;
 
-  $: if (selectedPreset && presets) applyPreset(selectedPreset);
+  $: if (presetsLoaded && !presets[selectedPreset]) {
+    selectedPreset = presets.custom ? "custom" : Object.keys(presets)[0];
+  }
+
+  $: if (presets[selectedPreset]) applyPreset(selectedPreset);
 
   function parseList(raw) {
     return raw
@@ -270,6 +141,7 @@
   }
 
   function submit() {
+    if (!presetsLoaded) return;
     const preset = presets[selectedPreset] || null;
     const config = preset?.config || preset || {};
     const presetEndpoint = config.endpoint ?? preset?.endpoint ?? "";
@@ -325,8 +197,12 @@
     <div>
       <h2>New sampling run</h2>
       <p>Discover properties, form patterns, and stream subgraphs live.</p>
-    </div>
-    <button type="submit">Start</button>
+    </div> disabled={!presetsLoaded}>Start</button>
+  </div>
+
+  {#if defaultsError}
+    <p class="error">{defaultsError}</p>
+  {/if}ton type="submit">Start</button>
   </div>
 
   <label>
@@ -603,6 +479,19 @@
   p {
     color: #66708a;
     font-size: 0.82rem;
+  }
+
+  .error {
+    color: #b42318;
+    background: #fef3f2;
+    border: 1px solid #fecdca;
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+
+  button[type="submit"]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
   label {
