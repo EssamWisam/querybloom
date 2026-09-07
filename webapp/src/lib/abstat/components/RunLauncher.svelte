@@ -2,8 +2,10 @@
   import FieldHelp from "./FieldHelp.svelte";
   import endpointCatalog from "$endpoints";
 
+  /** @type {any} */
   export let defaults = null;
-  export let onStart = () => {};
+  /** @type {(payload: { title: string, config: Record<string, any> }) => void} */
+  export let onStart = (_payload) => {};
 
   function endpointUrl(endpointIdOrUrl) {
     const endpoint = endpointCatalog[endpointIdOrUrl];
@@ -197,13 +199,13 @@
     <div>
       <h2>New sampling run</h2>
       <p>Discover properties, form patterns, and stream subgraphs live.</p>
-    </div> disabled={!presetsLoaded}>Start</button>
+    </div>
+    <button type="submit" disabled={!presetsLoaded}>Start</button>
   </div>
 
   {#if defaultsError}
     <p class="error">{defaultsError}</p>
-  {/if}ton type="submit">Start</button>
-  </div>
+  {/if}
 
   <label>
     <span class="label-row">
