@@ -301,314 +301,301 @@
   titleId="advanced-sampling-title"
   onClose={() => (advancedOpen = false)}
 >
-        <section class="advanced-section">
-          <h4>Mining</h4>
-          <div class="advanced">
-            <label>
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel("mine.k", "Concept sizes")}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "mine.k",
-                    "Allowed subgraph sizes by number of types. Use one number or comma-separated sizes. Pair with concept size weights.",
-                  )}
-                />
-              </span>
-              <input bind:value={kRaw} placeholder="3, 4, 5" />
-            </label>
-            <label>
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel("mine.k_weights", "Concept size weights")}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "mine.k_weights",
-                    "Optional comma-separated weights matching the type sizes. They are normalized automatically to bias sampled subgraph sizes.",
-                  )}
-                />
-              </span>
-              <input bind:value={kProbsRaw} placeholder="0.2, 0.5, 0.3" />
-            </label>
-            <label>
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel(
-                    "mine.max_subgraphs_per_seed",
-                    "Max subgraphs per seed",
-                  )}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "mine.max_subgraphs_per_seed",
-                    "Maximum successful subgraphs allowed from a single start pattern. 1 is a hard cap near the pattern-pool size.",
-                  )}
-                />
-              </span>
-              <input bind:value={maxSubgraphsPerSeed} type="number" min="1" />
-            </label>
-            <label>
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel("mine.m", "Entities per type (m)")}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "mine.m",
-                    "Number of sample entities fetched per type when verifying and instantiating a candidate subgraph.",
-                  )}
-                />
-              </span>
-              <input bind:value={m} type="number" min="1" />
-            </label>
-            <label>
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel(
-                    "mine.num_attrs",
-                    "Attributes per subgraph",
-                  )}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "mine.num_attrs",
-                    "How many data attributes to attach per subgraph. Use one number or a min, max pair such as 20, 25.",
-                  )}
-                />
-              </span>
-              <input bind:value={numAttrsRaw} placeholder="20, 25" />
-            </label>
-            <label>
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel(
-                    "mine.verif_timeout",
-                    "Verification timeout (s)",
-                  )}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "mine.verif_timeout",
-                    "Seconds allowed for each SPARQL support-verification query before the candidate is skipped.",
-                  )}
-                />
-              </span>
-              <input bind:value={verifTimeout} type="number" min="1" />
-            </label>
-            <label>
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel(
-                    "mine.sparql_timeout",
-                    "SPARQL timeout (s)",
-                  )}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "mine.sparql_timeout",
-                    "Hard wall-clock limit for the heavier SPARQL queries used when grounding a subgraph (instance sampling and label fetches). The query is abandoned once this many seconds elapse, even if the endpoint trickles results.",
-                  )}
-                />
-              </span>
-              <input bind:value={sparqlTimeout} type="number" min="1" />
-            </label>
-            <label class="toggle-row">
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel("mine.exact_support", "Exact support")}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "mine.exact_support",
-                    "If enabled, compute exact pattern support instead of the faster LIMIT-based estimate.",
-                  )}
-                />
-              </span>
-              <input bind:checked={exactSupport} type="checkbox" />
-            </label>
-            <label class="toggle-row">
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel("mine.uniform_types", "Uniform types")}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "mine.uniform_types",
-                    "Sample type combinations more uniformly instead of biasing toward frequent patterns.",
-                  )}
-                />
-              </span>
-              <input bind:checked={uniformTypes} type="checkbox" />
-            </label>
-          </div>
-        </section>
+  <section class="advanced-section">
+    <h4>Mining</h4>
+    <div class="advanced">
+      <label>
+        <span class="label-row">
+          <span class="label-text">{fieldLabel("mine.k", "Concept sizes")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "mine.k",
+              "Allowed subgraph sizes by number of types. Use one number or comma-separated sizes. Pair with concept size weights.",
+            )}
+          />
+        </span>
+        <input bind:value={kRaw} placeholder="3, 4, 5" />
+      </label>
+      <label>
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel("mine.k_weights", "Concept size weights")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "mine.k_weights",
+              "Optional comma-separated weights matching the type sizes. They are normalized automatically to bias sampled subgraph sizes.",
+            )}
+          />
+        </span>
+        <input bind:value={kProbsRaw} placeholder="0.2, 0.5, 0.3" />
+      </label>
+      <label>
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel(
+              "mine.max_subgraphs_per_seed",
+              "Max subgraphs per seed",
+            )}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "mine.max_subgraphs_per_seed",
+              "Maximum successful subgraphs allowed from a single start pattern. 1 is a hard cap near the pattern-pool size.",
+            )}
+          />
+        </span>
+        <input bind:value={maxSubgraphsPerSeed} type="number" min="1" />
+      </label>
+      <label>
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel("mine.m", "Entities per type (m)")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "mine.m",
+              "Number of sample entities fetched per type when verifying and instantiating a candidate subgraph.",
+            )}
+          />
+        </span>
+        <input bind:value={m} type="number" min="1" />
+      </label>
+      <label>
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel("mine.num_attrs", "Attributes per subgraph")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "mine.num_attrs",
+              "How many data attributes to attach per subgraph. Use one number or a min, max pair such as 20, 25.",
+            )}
+          />
+        </span>
+        <input bind:value={numAttrsRaw} placeholder="20, 25" />
+      </label>
+      <label>
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel(
+              "mine.verif_timeout",
+              "Verification timeout (s)",
+            )}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "mine.verif_timeout",
+              "Seconds allowed for each SPARQL support-verification query before the candidate is skipped.",
+            )}
+          />
+        </span>
+        <input bind:value={verifTimeout} type="number" min="1" />
+      </label>
+      <label>
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel("mine.sparql_timeout", "SPARQL timeout (s)")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "mine.sparql_timeout",
+              "Hard wall-clock limit for the heavier SPARQL queries used when grounding a subgraph (instance sampling and label fetches). The query is abandoned once this many seconds elapse, even if the endpoint trickles results.",
+            )}
+          />
+        </span>
+        <input bind:value={sparqlTimeout} type="number" min="1" />
+      </label>
+      <label class="toggle-row">
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel("mine.exact_support", "Exact support")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "mine.exact_support",
+              "If enabled, compute exact pattern support instead of the faster LIMIT-based estimate.",
+            )}
+          />
+        </span>
+        <input bind:checked={exactSupport} type="checkbox" />
+      </label>
+      <label class="toggle-row">
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel("mine.uniform_types", "Uniform types")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "mine.uniform_types",
+              "Sample type combinations more uniformly instead of biasing toward frequent patterns.",
+            )}
+          />
+        </span>
+        <input bind:checked={uniformTypes} type="checkbox" />
+      </label>
+    </div>
+  </section>
 
-        <section class="advanced-section">
-          <h4>Preprocessing</h4>
-          <div class="advanced">
-            <label class="toggle-row">
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel("preprocess.use_cache", "Use cache")}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "preprocess.use_cache",
-                    "Reuse cached property and pattern results when available to avoid re-querying the endpoint.",
-                  )}
-                />
-              </span>
-              <input bind:checked={useCache} type="checkbox" />
-            </label>
-            <label class="toggle-row">
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel(
-                    "preprocess.minimize_patterns",
-                    "Minimize patterns",
-                  )}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "preprocess.minimize_patterns",
-                    "Apply paper-style instance-level type minimization. This can be expensive because it may prefetch subclass hierarchies and run additional type checks.",
-                  )}
-                />
-              </span>
-              <input bind:checked={minimizePatterns} type="checkbox" />
-            </label>
-            <label class="toggle-row">
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel("preprocess.rand_offset", "Random offset")}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "preprocess.rand_offset",
-                    "Randomize the triple-scan offset per property so pattern estimates are not always taken from the start of the endpoint results.",
-                  )}
-                />
-              </span>
-              <input bind:checked={randOffset} type="checkbox" />
-            </label>
-            <label class="full">
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel(
-                    "preprocess.seed_property",
-                    "Seed property",
-                  )}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "preprocess.seed_property",
-                    "Optional predicate URI used to start BFS-style property discovery near a known relation. Leave empty for the normal property scan.",
-                  )}
-                />
-              </span>
-              <input
-                bind:value={seedProperty}
-                placeholder="Optional property URI for dynamic discovery"
-              />
-            </label>
-            <label>
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel(
-                    "preprocess.property_limit",
-                    "Property limit",
-                  )}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "preprocess.property_limit",
-                    "Maximum number of properties to inspect during preprocessing, or the BFS expansion budget when using a seed property.",
-                  )}
-                />
-              </span>
-              <input bind:value={propertyLimit} type="number" min="1" />
-            </label>
-            <label>
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel(
-                    "preprocess.max_triples",
-                    "Max triples per property",
-                  )}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "preprocess.max_triples",
-                    "Maximum triples sampled for each property when estimating pattern counts.",
-                  )}
-                />
-              </span>
-              <input bind:value={maxTriples} type="number" min="1" />
-            </label>
-            <label class="full">
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel(
-                    "preprocess.include_classes",
-                    "Include class prefixes",
-                  )}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "preprocess.include_classes",
-                    "Only keep patterns whose classes start with one of these comma-separated URI prefixes.",
-                  )}
-                />
-              </span>
-              <input
-                bind:value={includeClassesRaw}
-                placeholder="http://dbpedia.org/ontology/, ..."
-              />
-            </label>
-            <label class="full">
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel(
-                    "preprocess.exclude_classes",
-                    "Exclude class prefixes",
-                  )}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "preprocess.exclude_classes",
-                    "Drop patterns whose classes start with one of these comma-separated URI prefixes.",
-                  )}
-                />
-              </span>
-              <input
-                bind:value={excludeClassesRaw}
-                placeholder="http://www.w3.org/2002/07/owl#, ..."
-              />
-            </label>
-            <label class="full">
-              <span class="label-row">
-                <span class="label-text"
-                  >{fieldLabel(
-                    "preprocess.exclude_properties",
-                    "Exclude property substrings",
-                  )}</span
-                >
-                <FieldHelp
-                  description={fieldDescription(
-                    "preprocess.exclude_properties",
-                    "Skip properties whose URI contains any of these comma-separated substrings.",
-                  )}
-                />
-              </span>
-              <input
-                bind:value={excludePropertiesRaw}
-                placeholder="label, description, identifier"
-              />
-            </label>
-          </div>
-        </section>
+  <section class="advanced-section">
+    <h4>Preprocessing</h4>
+    <div class="advanced">
+      <label class="toggle-row">
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel("preprocess.use_cache", "Use cache")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "preprocess.use_cache",
+              "Reuse cached property and pattern results when available to avoid re-querying the endpoint.",
+            )}
+          />
+        </span>
+        <input bind:checked={useCache} type="checkbox" />
+      </label>
+      <label class="toggle-row">
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel(
+              "preprocess.minimize_patterns",
+              "Minimize patterns",
+            )}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "preprocess.minimize_patterns",
+              "Apply paper-style instance-level type minimization. This can be expensive because it may prefetch subclass hierarchies and run additional type checks.",
+            )}
+          />
+        </span>
+        <input bind:checked={minimizePatterns} type="checkbox" />
+      </label>
+      <label class="toggle-row">
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel("preprocess.rand_offset", "Random offset")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "preprocess.rand_offset",
+              "Randomize the triple-scan offset per property so pattern estimates are not always taken from the start of the endpoint results.",
+            )}
+          />
+        </span>
+        <input bind:checked={randOffset} type="checkbox" />
+      </label>
+      <label class="full">
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel("preprocess.seed_property", "Seed property")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "preprocess.seed_property",
+              "Optional predicate URI used to start BFS-style property discovery near a known relation. Leave empty for the normal property scan.",
+            )}
+          />
+        </span>
+        <input
+          bind:value={seedProperty}
+          placeholder="Optional property URI for dynamic discovery"
+        />
+      </label>
+      <label>
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel("preprocess.property_limit", "Property limit")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "preprocess.property_limit",
+              "Maximum number of properties to inspect during preprocessing, or the BFS expansion budget when using a seed property.",
+            )}
+          />
+        </span>
+        <input bind:value={propertyLimit} type="number" min="1" />
+      </label>
+      <label>
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel(
+              "preprocess.max_triples",
+              "Max triples per property",
+            )}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "preprocess.max_triples",
+              "Maximum triples sampled for each property when estimating pattern counts.",
+            )}
+          />
+        </span>
+        <input bind:value={maxTriples} type="number" min="1" />
+      </label>
+      <label class="full">
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel(
+              "preprocess.include_classes",
+              "Include class prefixes",
+            )}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "preprocess.include_classes",
+              "Only keep patterns whose classes start with one of these comma-separated URI prefixes.",
+            )}
+          />
+        </span>
+        <input
+          bind:value={includeClassesRaw}
+          placeholder="http://dbpedia.org/ontology/, ..."
+        />
+      </label>
+      <label class="full">
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel(
+              "preprocess.exclude_classes",
+              "Exclude class prefixes",
+            )}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "preprocess.exclude_classes",
+              "Drop patterns whose classes start with one of these comma-separated URI prefixes.",
+            )}
+          />
+        </span>
+        <input
+          bind:value={excludeClassesRaw}
+          placeholder="http://www.w3.org/2002/07/owl#, ..."
+        />
+      </label>
+      <label class="full">
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel(
+              "preprocess.exclude_properties",
+              "Exclude property substrings",
+            )}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "preprocess.exclude_properties",
+              "Skip properties whose URI contains any of these comma-separated substrings.",
+            )}
+          />
+        </span>
+        <input
+          bind:value={excludePropertiesRaw}
+          placeholder="label, description, identifier"
+        />
+      </label>
+    </div>
+  </section>
 </SettingsModal>
 
 <style>

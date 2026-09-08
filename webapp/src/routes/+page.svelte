@@ -133,10 +133,15 @@
     const payload =
       data?.data ?? data?.payload ?? data?.result ?? data?.run?.id ?? {};
     const subIdx =
-      payload?.subgraph_index ?? payload?.index ?? data?.subgraph_index ?? data?.index ?? "";
+      payload?.subgraph_index ??
+      payload?.index ??
+      data?.subgraph_index ??
+      data?.index ??
+      "";
     const qaIdx = payload?.qa_index ?? "";
     const uri = payload?.uri ?? payload?.source_property ?? "";
-    const runId = data?.run_id ?? data?.run?.id ?? payload?.run_id ?? payload?.id ?? "";
+    const runId =
+      data?.run_id ?? data?.run?.id ?? payload?.run_id ?? payload?.id ?? "";
     const ts = data?.timestamp || "";
     const msg = data?.message || "";
     const stage = data?.stage || "";
@@ -216,6 +221,18 @@
     }
     if (sampleAbortController) sampleAbortController.abort();
     logout();
+  }
+
+  function upsertRun(run) {
+    if (!run?.id) return;
+    const existing = runs.findIndex((item) => item.id === run.id);
+    if (existing === -1) {
+      runs = [run, ...runs];
+      return;
+    }
+    const next = [...runs];
+    next[existing] = { ...next[existing], ...run };
+    runs = next;
   }
 
   async function refreshRuns() {
@@ -408,8 +425,14 @@
       miningPhase = false;
     }
 
-    if (event === "run.created" && frameData?.run) activeRun = frameData.run;
-    if (event === "result" && frameData?.run) activeRun = frameData.run;
+    if (event === "run.created" && frameData?.run) {
+      activeRun = frameData.run;
+      upsertRun(frameData.run);
+    }
+    if (event === "result" && frameData?.run) {
+      activeRun = frameData.run;
+      upsertRun(frameData.run);
+    }
     if (event === "stage.started" && frameData?.stage === "preprocess")
       discoveryPhase = true;
     if (event === "stage.completed" && frameData?.stage === "preprocess")
@@ -623,7 +646,10 @@
             },
           });
         }
-      } else if (Array.isArray(run.result?.subgraphs) && run.result.subgraphs.length > 0) {
+      } else if (
+        Array.isArray(run.result?.subgraphs) &&
+        run.result.subgraphs.length > 0
+      ) {
         for (let idx = 0; idx < run.result.subgraphs.length; idx++) {
           const sg = run.result.subgraphs[idx];
           const actualIdx =
