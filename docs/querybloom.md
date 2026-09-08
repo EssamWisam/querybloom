@@ -359,6 +359,7 @@ For production use `docker-compose.prod.yml`.
 | `OPENROUTER_API_KEY` | optional | |
 | `SUPABASE_URL` | yes (for persistence) | |
 | `SUPABASE_ANON_KEY` | yes (for persistence) | |
+| `SUPABASE_SERVICE_ROLE_KEY` | yes (for background persistence) | Server-only; never expose to the webapp. |
 | `GRASP_RELOAD` | dev only | enables FastAPI hot-reload |
 | `DOCKER_ENDPOINT_MAP` | Docker only | remaps SPARQL endpoint URLs inside container |
 

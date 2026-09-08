@@ -14,6 +14,7 @@ from fastapi import Header, HTTPException, status
 class SupabaseSettings:
     url: str
     anon_key: str
+    service_role_key: str
 
     @property
     def configured(self) -> bool:
@@ -36,6 +37,12 @@ class SupabaseUser:
     raw: dict[str, Any]
 
 
+@dataclass(frozen=True)
+class SupabasePersistenceIdentity:
+    owner_id: str
+    access_token: str
+
+
 def _settings_from_env() -> SupabaseSettings:
     # Load .env by traversing parent directories to workspace/project root
     for p in Path(__file__).resolve().parents:
@@ -49,6 +56,7 @@ def _settings_from_env() -> SupabaseSettings:
     return SupabaseSettings(
         url=os.environ.get("SUPABASE_URL", "").rstrip("/"),
         anon_key=os.environ.get("SUPABASE_ANON_KEY", ""),
+        service_role_key=os.environ.get("SUPABASE_SERVICE_ROLE_KEY", ""),
     )
 
 
@@ -90,10 +98,26 @@ class SupabaseClient:
         if not self.configured:
             raise _supabase_unavailable()
 
+    def persistence_identity(self, owner_id: str) -> SupabasePersistenceIdentity:
+        if not self.settings.service_role_key:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Background persistence requires SUPABASE_SERVICE_ROLE_KEY.",
+            )
+        return SupabasePersistenceIdentity(
+            owner_id=owner_id,
+            access_token=self.settings.service_role_key,
+        )
+
     def _headers(self, access_token: str | None = None, prefer: str | None = None) -> dict[str, str]:
         self._ensure_configured()
+        api_key = (
+            self.settings.service_role_key
+            if access_token and access_token == self.settings.service_role_key
+            else self.settings.anon_key
+        )
         headers = {
-            "apikey": self.settings.anon_key,
+            "apikey": api_key,
             "Authorization": f"Bearer {access_token or self.settings.anon_key}",
             "Content-Type": "application/json",
         }

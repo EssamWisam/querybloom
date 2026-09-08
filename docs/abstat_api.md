@@ -8,6 +8,7 @@ Required for Supabase-backed endpoints:
 
 - `SUPABASE_URL`: Supabase project URL, for example `https://project-ref.supabase.co`.
 - `SUPABASE_ANON_KEY`: Supabase anon/public API key.
+- `SUPABASE_SERVICE_ROLE_KEY`: server-only key used by long-running workers to persist events, subgraphs, artifacts, QA pairs, and final run status after the launching user's JWT expires. Never expose this key to the browser.
 
 Optional:
 
