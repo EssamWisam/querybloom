@@ -92,3 +92,69 @@ def test_failed_subgraph_is_logged_and_not_marked_persisted(monkeypatch, caplog)
     assert "table=subgraphs" in caplog.text
     assert "status=401" in caplog.text
     assert SERVICE_KEY not in caplog.text
+
+
+def test_meaningless_qa_result_is_persisted_without_qa_pair_rows():
+    class Client:
+        def __init__(self):
+            self.updates = []
+            self.inserts = []
+
+        def rest_select(self, _access_token, _table, _params):
+            return []
+
+        def rest_update(self, access_token, table, filters, payload):
+            self.updates.append((access_token, table, filters, payload))
+            return [{"id": "subgraph-1"}]
+
+        def rest_insert(self, access_token, table, payload):
+            self.inserts.append((access_token, table, payload))
+            return []
+
+    client = Client()
+    result = {
+        "is_meaningful": False,
+        "skip_reason": "No useful domain question can be generated.",
+        "qa_pairs": [],
+        "cost_usd": 0.002,
+        "llm_usage": {"total_tokens": 42},
+    }
+
+    router._persist_qa_pairs_for_subgraph_best_effort(
+        client,
+        IDENTITY,
+        "sample-run-1",
+        3,
+        result,
+        "llm-run-1",
+        router.LLMRunRequest(endpoint="https://example.test/sparql"),
+        {
+            3: {
+                "id": "subgraph-1",
+                "payload": {"support": 7, "types": ["Example"]},
+            }
+        },
+    )
+
+    assert client.inserts == []
+    assert client.updates == [
+        (
+            SERVICE_KEY,
+            "subgraphs",
+            {"id": "eq.subgraph-1"},
+            {
+                "payload": {
+                    "support": 7,
+                    "types": ["Example"],
+                    "qa_result": {
+                        "status": "completed",
+                        "is_meaningful": False,
+                        "skip_reason": "No useful domain question can be generated.",
+                        "cost_usd": 0.002,
+                        "llm_usage": {"total_tokens": 42},
+                        "llm_run_id": "llm-run-1",
+                    },
+                }
+            },
+        )
+    ]

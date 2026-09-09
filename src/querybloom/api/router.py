@@ -18,6 +18,7 @@ from querybloom.events import PipelineEvent
 from querybloom.llm import process_subgraphs_data, process_subgraphs_yaml
 from querybloom.sampling_service import (
     SamplingRunConfig,
+    run_mining_from_patterns,
     run_sampling,
     sampling_defaults,
     sampling_ui_metadata,
@@ -579,9 +580,28 @@ def _persist_qa_pairs_for_subgraph_best_effort(
     if not subgraph_id:
         print(f"[QA persist] Warning: no subgraph_id found for subgraph_index {subgraph_index} in sample run {sample_run_id}")
         return
+    subgraph_payload = (
+        subgraph_row.get("payload")
+        if isinstance(subgraph_row.get("payload"), dict)
+        else {}
+    )
+    qa_result = {
+        "status": "completed",
+        "is_meaningful": result.get("is_meaningful"),
+        "skip_reason": result.get("skip_reason") or "",
+        "cost_usd": result.get("cost_usd"),
+        "llm_usage": result.get("llm_usage"),
+        "llm_run_id": llm_run_id,
+    }
     def persist() -> None:
         _soft_delete_qa_pairs_for_subgraph(
             client, identity, sample_run_id, subgraph_id, llm_run_id
+        )
+        client.rest_update(
+            identity.access_token,
+            "subgraphs",
+            _id_filter(subgraph_id),
+            {"payload": {**subgraph_payload, "qa_result": qa_result}},
         )
         now = _now_iso()
         rows: list[dict[str, Any]] = []
@@ -1179,6 +1199,165 @@ async def _skip_subgraphs(run_id: str, user: SupabaseUser = Depends(require_user
     else:
         _SkipEvent.write_sentinel(run_id)
     return {"status": "ok", "run_id": run_id}
+
+
+@api_router.post("/abstat/sample/{run_id}/restart-mining")
+async def _restart_subgraph_mining(
+    run_id: str,
+    overwrite: bool = Query(default=False),
+    user: SupabaseUser = Depends(require_user),
+):
+    client = get_supabase_client(required=True)
+    persistence_identity = client.persistence_identity(user.id)
+    run_rows = await asyncio.to_thread(
+        client.rest_select,
+        user.access_token,
+        "runs",
+        {**_id_filter(run_id), "limit": "1"},
+    )
+    run = _first_or_404(run_rows, "sampling run")
+    if run.get("kind") != "sample":
+        raise HTTPException(status_code=400, detail="Run is not a sampling run")
+    if run_id in _active_stop_events or run.get("status") == "running":
+        raise HTTPException(status_code=409, detail="Run is already active")
+
+    subgraph_rows = await asyncio.to_thread(
+        client.rest_select,
+        user.access_token,
+        "subgraphs",
+        {**_run_filter(run_id), "select": "id"},
+    )
+    if subgraph_rows and not overwrite:
+        raise HTTPException(
+            status_code=409,
+            detail=f"Run already has {len(subgraph_rows)} subgraphs; confirm overwrite to replace them",
+        )
+
+    pattern_data = (run.get("result") or {}).get("patterns")
+    if not isinstance(pattern_data, dict):
+        raise HTTPException(
+            status_code=409,
+            detail="Run has no persisted patterns to restart mining from",
+        )
+
+    if subgraph_rows:
+        await asyncio.to_thread(
+            client.rest_delete,
+            user.access_token,
+            "subgraphs",
+            _run_filter(run_id),
+        )
+
+    stored_config = SamplingRunConfig.model_validate(run.get("config") or {})
+    config = stored_config.model_copy(
+        update={
+            "run_id": run_id,
+            "mine": stored_config.mine.model_copy(update={"output_dir": None}),
+        }
+    )
+    updated_rows = await asyncio.to_thread(
+        client.rest_update,
+        user.access_token,
+        "runs",
+        _id_filter(run_id),
+        {
+            "status": "running",
+            "error": None,
+            "completed_at": None,
+            "started_at": _now_iso(),
+        },
+    )
+    active_run = _first_or_empty(updated_rows) or run
+    owner_id = user.id
+
+    async def stream():
+        queue: asyncio.Queue[tuple[str, dict[str, Any]]] = asyncio.Queue()
+        loop = asyncio.get_running_loop()
+        stop_event = threading.Event()
+        skip_mining_event = _SkipEvent(run_id)
+        skip_mining_event.clear()
+        _active_stop_events[run_id] = stop_event
+        _active_skip_mining_events[run_id] = skip_mining_event
+        _active_run_owners[run_id] = owner_id
+        persistent_event_sink = _sample_event_sink(
+            client, persistence_identity, run_id
+        )
+
+        def enqueue(kind: str, payload: dict[str, Any]) -> None:
+            loop.call_soon_threadsafe(queue.put_nowait, (kind, payload))
+
+        def event_sink(event: PipelineEvent) -> None:
+            if event.run_id is None:
+                event.run_id = run_id
+            persistent_event_sink(event)
+            enqueue("event", event.to_dict())
+
+        def worker() -> None:
+            try:
+                result = run_mining_from_patterns(
+                    config,
+                    pattern_data,
+                    event_sink,
+                    stop_event,
+                    skip_mining_event,
+                )
+                result_payload = {
+                    **(run.get("result") or {}),
+                    **result.model_dump(mode="json"),
+                }
+                run_status = "cancelled" if stop_event.is_set() else "completed"
+                persisted = getattr(persistent_event_sink, "persisted_subgraphs", set())
+                for index, subgraph in enumerate(result_payload.get("subgraphs", [])):
+                    if index not in persisted and isinstance(subgraph, dict):
+                        _persist_subgraph_best_effort(
+                            client, persistence_identity, run_id, index, subgraph
+                        )
+                updated = _update_run_best_effort(
+                    client,
+                    persistence_identity,
+                    run_id,
+                    {
+                        "status": run_status,
+                        "result": result_payload,
+                        "completed_at": _now_iso(),
+                    },
+                )
+                enqueue("result", {"run": updated or active_run, "result": result_payload})
+            except Exception as exc:
+                _update_run_best_effort(
+                    client,
+                    persistence_identity,
+                    run_id,
+                    {"status": "failed", "error": str(exc), "completed_at": _now_iso()},
+                )
+                enqueue("error", {"run_id": run_id, "error": str(exc)})
+            finally:
+                mining_event = _active_skip_mining_events.pop(run_id, None)
+                if mining_event is not None:
+                    mining_event.clear()
+                _active_stop_events.pop(run_id, None)
+                _active_run_owners.pop(run_id, None)
+                enqueue("done", {"run_id": run_id})
+
+        asyncio.create_task(asyncio.to_thread(worker))
+        yield _sse_message("run.created", {"run": active_run})
+        while True:
+            try:
+                kind, payload = await asyncio.wait_for(queue.get(), timeout=15.0)
+            except asyncio.TimeoutError:
+                yield ": ping\n\n"
+                continue
+            if kind == "event":
+                yield _sse_message(payload.get("type", "event"), payload)
+            elif kind == "result":
+                yield _sse_message("result", payload)
+            elif kind == "error":
+                yield _sse_message("error", payload)
+            elif kind == "done":
+                yield _sse_message("done", payload)
+                break
+
+    return StreamingResponse(stream(), media_type="text/event-stream", headers=_stream_headers())
 
 
 @api_router.post("/abstat/llm")

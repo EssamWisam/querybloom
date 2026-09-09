@@ -458,6 +458,17 @@ export function streamSampling(token, payload, onFrame, signal = null) {
   return streamPost(base + "/api/v1/abstat/sample/stream", token, payload, onFrame, signal);
 }
 
+export function streamRestartMining(token, runId, overwrite, onFrame, signal = null) {
+  const params = new URLSearchParams({ overwrite: String(Boolean(overwrite)) });
+  return streamPost(
+    `${base}/api/v1/abstat/sample/${encodeURIComponent(runId)}/restart-mining?${params}`,
+    token,
+    {},
+    onFrame,
+    signal,
+  );
+}
+
 export async function skipDiscovery(token, runId) {
   return authFetch(`${base}/api/v1/abstat/sample/${encodeURIComponent(runId)}/skip-discovery`, {
     method: "POST",

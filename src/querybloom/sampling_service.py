@@ -13,6 +13,10 @@ from pydantic import BaseModel, Field
 from querybloom.events import EventSink, emit_event
 from querybloom.graph_serialization import patterns_to_cytoscape
 from querybloom.mining import SubgraphMiner
+from querybloom.pattern_snapshot import (
+    load_pattern_data,
+    pattern_data_from_miner,
+)
 
 
 DEFAULT_K_DISTRIBUTION = {3: 0.7, 4: 0.2, 5: 0.1}
@@ -326,6 +330,7 @@ class SamplingRunResult(BaseModel):
     min_support: int
     num_patterns: int
     num_subgraphs: int
+    patterns: dict[str, Any] | None = None
     output_path: str | None = None
     ontology_graph: dict[str, Any] | None = None
     subgraphs: list[dict[str, Any]]
@@ -342,6 +347,55 @@ def sampling_ui_metadata() -> dict[str, Any]:
         "fields": SAMPLING_UI_FIELDS,
         "presets": deepcopy(SAMPLING_PRESETS),
     }
+
+
+def run_mining_from_patterns(
+    config: SamplingRunConfig | dict[str, Any],
+    pattern_data: dict[str, Any],
+    event_sink: EventSink | None = None,
+    stop_event: Any | None = None,
+    skip_mining_event: Any | None = None,
+) -> SamplingRunResult:
+    """Restart subgraph mining from complete pattern state stored with a run."""
+    if not isinstance(config, SamplingRunConfig):
+        config = SamplingRunConfig.model_validate(config)
+
+    run_id = config.run_id or str(uuid4())
+    miner = SubgraphMiner(endpoint=config.endpoint, min_support=config.min_support)
+    load_pattern_data(miner, pattern_data)
+    mine_args = config.mine.model_dump()
+
+    emit_event(
+        event_sink,
+        "stage.started",
+        "mining",
+        "Subgraph mining restarted",
+        mine_args,
+        run_id=run_id,
+    )
+    subgraphs = miner.mine(
+        **mine_args,
+        event_sink=event_sink,
+        stop_event=stop_event,
+        skip_event=skip_mining_event,
+    )
+    emit_event(
+        event_sink,
+        "stage.completed",
+        "mining",
+        "Subgraph mining completed",
+        {"num_subgraphs": len(subgraphs), "output_path": miner.last_export_path},
+        run_id=run_id,
+    )
+    return SamplingRunResult(
+        endpoint=config.endpoint,
+        min_support=config.min_support,
+        num_patterns=len(miner.patterns),
+        num_subgraphs=len(subgraphs),
+        patterns=pattern_data,
+        output_path=miner.last_export_path,
+        subgraphs=subgraphs,
+    )
 
 
 def run_sampling(
@@ -387,6 +441,7 @@ def run_sampling(
         run_id=run_id,
     )
     miner.preprocess(**preprocess_args, event_sink=bound_event_sink, skip_event=skip_event)
+    pattern_data = pattern_data_from_miner(miner)
     emit_event(
         event_sink,
         "stage.completed",
@@ -428,6 +483,7 @@ def run_sampling(
             min_support=config.min_support,
             num_patterns=len(miner.patterns),
             num_subgraphs=0,
+            patterns=pattern_data,
             output_path=miner.last_export_path,
             ontology_graph=ontology_graph,
             subgraphs=[],
@@ -462,6 +518,7 @@ def run_sampling(
         min_support=config.min_support,
         num_patterns=len(miner.patterns),
         num_subgraphs=len(subgraphs),
+        patterns=pattern_data,
         output_path=miner.last_export_path,
         ontology_graph=ontology_graph,
         subgraphs=subgraphs,

@@ -32,6 +32,9 @@
   export let miningPhase = false;
   export let skipSubgraphsPending = false;
   export let onSkipSubgraphs = null;
+  export let canRestartMining = false;
+  export let restartMiningPending = false;
+  export let onRestartMining = null;
 
   let showGraph = false;
   let graphFrameOne = null;
@@ -234,9 +237,15 @@
           const displayAttrLabel = displayUri(uri, labels) || attr.label;
           const exists = rows.some(
             (row) =>
-              (row.typeUri && typeUri && row.typeUri === typeUri && row.uri === uri) ||
-              (row.typeLabel === (typeUri ? displayUri(typeUri, labels) : typeName) &&
-                (row.uri === uri || row.label === displayAttrLabel || row.label === attr.label)),
+              (row.typeUri &&
+                typeUri &&
+                row.typeUri === typeUri &&
+                row.uri === uri) ||
+              (row.typeLabel ===
+                (typeUri ? displayUri(typeUri, labels) : typeName) &&
+                (row.uri === uri ||
+                  row.label === displayAttrLabel ||
+                  row.label === attr.label)),
           );
           if (!exists) {
             rows.push({
@@ -407,6 +416,19 @@
             : "Skip to questions →"}</button
         >
       {/if}
+      {#if !running && canRestartMining && onRestartMining}
+        <button
+          class="skip-btn"
+          type="button"
+          disabled={restartMiningPending}
+          on:click={onRestartMining}
+          >{restartMiningPending
+            ? "Starting..."
+            : subgraphs.length
+              ? "Regenerate subgraphs"
+              : "Generate subgraphs"}</button
+        >
+      {/if}
       {#if pinnedNodeId}
         <p class="filter-notice">
           Filtered by <strong>{pinnedNodeLabel || pinnedNodeId}</strong>
@@ -471,11 +493,11 @@
 
 {#if showPatternModal && selected}
   <QaPatternSamplesModal
-    subgraphs={subgraphs}
-    selectedIndex={selectedIndex}
-    properties={properties}
-    attributes={attributes}
-    samples={samples}
+    {subgraphs}
+    {selectedIndex}
+    {properties}
+    {attributes}
+    {samples}
     emptySamplesText={samplePayload(selected)
       ? "No samples could be formed for this subgraph."
       : "Sample entities will appear once mining completes."}
@@ -678,8 +700,6 @@
     cursor: pointer;
   }
 
-
-
   .subgraph-select span {
     color: #17203b;
     font-weight: 800;
@@ -700,8 +720,6 @@
     height: 100%;
     color: #66708a;
   }
-
-
 
   @media (max-width: 1100px) {
     .subgraph-workspace {

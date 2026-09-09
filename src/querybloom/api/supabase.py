@@ -55,8 +55,8 @@ def _settings_from_env() -> SupabaseSettings:
 
     return SupabaseSettings(
         url=os.environ.get("SUPABASE_URL", "").rstrip("/"),
-        anon_key=os.environ.get("SUPABASE_ANON_KEY", ""),
-        service_role_key=os.environ.get("SUPABASE_SERVICE_ROLE_KEY", ""),
+        anon_key=os.environ.get("SUPABASE_ANON_KEY") or os.environ.get("ANON_KEY", ""),
+        service_role_key=os.environ.get("SUPABASE_SERVICE_ROLE_KEY") or os.environ.get("SERVICE_ROLE_KEY", ""),
     )
 
 

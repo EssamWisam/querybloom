@@ -24,6 +24,7 @@
     saveStoredSession,
     skipDiscovery,
     skipSubgraphs,
+    streamRestartMining,
     streamSampling,
   } from "$lib/abstat/api.js";
   import {
@@ -61,6 +62,7 @@
   let miningPhase = false;
   let skipDiscoveryPending = false;
   let skipSubgraphsPending = false;
+  let restartMiningPending = false;
   let restoringRunId = null;
   let deletingRunId = null;
   let eventPollTimer = null;
@@ -90,6 +92,7 @@
   $: patternsTabBusy = samplingRunActive && discoveryPhase;
   $: subgraphsTabBusy = samplingRunActive && miningPhase;
   $: qaTabBusy = llmRunActive;
+  $: canRestartMining = activeRun?.kind === "sample" && !liveRunActive;
   $: if (!liveRunActive || !discoveryPhase) skipDiscoveryPending = false;
   $: if (!liveRunActive || !miningPhase) skipSubgraphsPending = false;
 
@@ -576,6 +579,56 @@
     }
   }
 
+  async function handleRestartMining() {
+    if (!token || !activeRun?.id || liveRunActive || restartMiningPending)
+      return;
+    const overwrite = subgraphs.length > 0;
+    if (
+      overwrite &&
+      !confirm(
+        `This run already has ${subgraphs.length} subgraphs. Regenerate and overwrite them?`,
+      )
+    )
+      return;
+
+    const previousSubgraphs = subgraphs;
+    restartMiningPending = true;
+    running = true;
+    streamError = "";
+    miningPhase = false;
+    activeTab = "subgraphs";
+    subgraphs = [];
+    selectedSubgraphIndex = null;
+    seenSubgraphIndexes = new Set();
+    sampleAbortController = new AbortController();
+    clearEventPolling();
+    try {
+      await streamRestartMining(
+        token,
+        activeRun.id,
+        overwrite,
+        handleStreamFrame,
+        sampleAbortController.signal,
+      );
+      await refreshRuns();
+    } catch (error) {
+      if (error?.name !== "AbortError") {
+        subgraphs = previousSubgraphs;
+        streamError = displayStreamError(
+          error?.message,
+          "Could not restart subgraph generation",
+        );
+      }
+      await refreshRuns();
+    } finally {
+      running = false;
+      miningPhase = false;
+      restartMiningPending = false;
+      sampleAbortController = null;
+      clearEventPolling();
+    }
+  }
+
   async function handleDeleteRun(run) {
     if (deletingRunId) return;
     deletingRunId = run.id;
@@ -938,6 +991,9 @@
               {miningPhase}
               {skipSubgraphsPending}
               onSkipSubgraphs={handleSkipSubgraphs}
+              {canRestartMining}
+              {restartMiningPending}
+              onRestartMining={handleRestartMining}
             />
           </div>
         {/if}

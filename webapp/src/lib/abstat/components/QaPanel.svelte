@@ -4,6 +4,7 @@
     cancelRun,
     formatCaughtError,
     loadRunQaPairs,
+    loadRunSubgraphs,
     reportBrowserError,
     streamLlm,
   } from "../api.js";
@@ -44,7 +45,8 @@
     return llmFields[key]?.description ?? fallback;
   }
 
-  function statusLabel(status) {
+  function statusLabel(status, isMeaningful) {
+    if (status === "completed" && isMeaningful === false) return "Meaningless";
     if (status === "generated") return "Drafted";
     return status;
   }
@@ -349,17 +351,48 @@
     return restored;
   }
 
+  function buildQaMapFromSubgraphs(sourceSubgraphs = subgraphs) {
+    const restored = {};
+    for (const subgraph of sourceSubgraphs) {
+      const result =
+        subgraph?.subgraph?.qa_result ??
+        subgraph?.payload?.qa_result ??
+        subgraph?.qa_result;
+      const index = Number(subgraph?.index ?? subgraph?.subgraph_index);
+      if (result?.status !== "completed" || !Number.isFinite(index)) continue;
+      restored[index] = {
+        index,
+        status: "completed",
+        is_meaningful: result.is_meaningful,
+        skip_reason: result.skip_reason ?? "",
+        cost_usd: result.cost_usd ?? null,
+        llm_usage: result.llm_usage ?? null,
+        qa_pairs: [],
+      };
+    }
+    return restored;
+  }
+
   async function hydrateStoredQa(runId, { force = false } = {}) {
     if (!token || !runId || hydratingQa) return;
     if (!force && runId === hydratedSampleRunId) return;
     hydratingQa = true;
     try {
-      const rows = await loadRunQaPairs(token, runId);
+      const [rows, storedSubgraphs] = await Promise.all([
+        loadRunQaPairs(token, runId),
+        loadRunSubgraphs(token, runId),
+      ]);
       if (runId !== sampleRunId) return;
-      const restored = buildQaMapFromRows(rows);
+      const restored = {
+        ...buildQaMapFromSubgraphs(storedSubgraphs),
+        ...buildQaMapFromRows(rows),
+      };
       const merged = { ...restored };
       for (const [idxStr, entry] of Object.entries(qaMap)) {
-        if (entry.status === "failed") {
+        if (
+          entry.status === "failed" ||
+          (entry.status === "completed" && entry.is_meaningful === false)
+        ) {
           merged[Number(idxStr)] = entry;
         }
       }
@@ -1026,7 +1059,7 @@
         stage_outputs: { generate: q },
       }));
       updateSubgraph(index, {
-        status: "generated",
+        status: payload.is_meaningful === false ? "completed" : "generated",
         is_meaningful: payload.is_meaningful,
         skip_reason: payload.skip_reason ?? "",
         cost_usd: payload.cost_usd ?? payload.usage?.cost_usd,
@@ -1831,12 +1864,15 @@
                   ></span>
                   Subgraph {displaySubgraphId(sg.index)}
                 </span>
-                <span class="pill pill-{sg.status}">
+                <span
+                  class="pill pill-{sg.status}"
+                  class:pill-meaningless={sg.is_meaningful === false}
+                >
                   {#if ACTIVE_STATUSES.has(sg.status)}<span
                       class="pulse"
                       aria-hidden="true"
                     ></span>{/if}
-                  {statusLabel(sg.status)}
+                  {statusLabel(sg.status, sg.is_meaningful)}
                 </span>
               </div>
               {#if types.length > 0}
@@ -1897,8 +1933,10 @@
                 </span>
               {/if}
             </div>
-            <span class="pill pill-{selected.status}"
-              >{statusLabel(selected.status)}</span
+            <span
+              class="pill pill-{selected.status}"
+              class:pill-meaningless={selected.is_meaningful === false}
+              >{statusLabel(selected.status, selected.is_meaningful)}</span
             >
           </header>
 
@@ -2530,6 +2568,10 @@
   .pill-completed {
     background: #edfcf0;
     color: #1a7a30;
+  }
+  .pill-meaningless {
+    background: #f0f1f5;
+    color: #626a7d;
   }
   .pill-failed {
     background: #fdeeed;
