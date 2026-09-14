@@ -20,7 +20,8 @@ def execute_sparql_and_get_result(
         timeout: Query timeout in seconds
 
     Returns:
-        Dict with success, count, error_message, and result_preview
+        Dict with success, count, error_message, result_preview, and an
+        optional boolean value for ASK queries
     """
     res = execute(sparql_query, endpoint=endpoint, timeout=timeout)
 
@@ -34,8 +35,12 @@ def execute_sparql_and_get_result(
     if res.get("success"):
         results = res.get("results", [])
 
+        # Handle ASK results
+        if isinstance(results, bool):
+            execution_result["boolean"] = results
+            execution_result["count"] = 1
         # Handle DataFrame results
-        if hasattr(results, "to_dict") and callable(getattr(results, "to_dict")):
+        elif hasattr(results, "to_dict") and callable(getattr(results, "to_dict")):
             records = results.to_dict("records")
             execution_result["count"] = len(records)
             if records:

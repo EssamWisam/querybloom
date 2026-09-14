@@ -68,6 +68,7 @@
   let eventPollTimer = null;
   let pollingRunId = null;
   let pollingEvents = false;
+  let eventPollingGeneration = 0;
   let seenStoredEventKeys = new Set();
   let seenFrameKeys = new Set();
   let seenSubgraphIndexes = new Set();
@@ -81,7 +82,9 @@
   $: latestSampleRunId = latestSampleRun?.id || "";
   $: qaSampleRunId =
     activeRun?.kind === "llm"
-      ? activeRun?.result?.sample_run_id || latestSampleRunId
+      ? activeRun?.config?.sample_run_id ||
+        activeRun?.result?.sample_run_id ||
+        activeRun.id
       : activeRun?.kind === "sample"
         ? activeRun.id
         : latestSampleRunId;
@@ -193,6 +196,7 @@
   }
 
   function clearEventPolling() {
+    eventPollingGeneration += 1;
     if (eventPollTimer) clearInterval(eventPollTimer);
     eventPollTimer = null;
     pollingRunId = null;
@@ -265,12 +269,16 @@
 
   async function pollRunEvents(runId) {
     if (!token || pollingEvents || activeRun?.id !== runId) return;
+    const generation = eventPollingGeneration;
+    const isCurrentPoll = () =>
+      generation === eventPollingGeneration && activeRun?.id === runId;
     pollingEvents = true;
     try {
       const storedEvents = await loadRunEvents(token, runId, {
         after: latestStoredEventCreatedAt,
         limit: 250,
       });
+      if (!isCurrentPoll()) return;
       if (Array.isArray(storedEvents)) {
         for (const row of storedEvents) {
           const key = storedEventKey(row);
@@ -290,6 +298,7 @@
         }
       }
       const storedSubgraphs = await loadRunSubgraphs(token, runId);
+      if (!isCurrentPoll()) return;
       if (Array.isArray(storedSubgraphs)) {
         for (const row of storedSubgraphs) {
           const idx = row.subgraph_index;
@@ -312,12 +321,13 @@
         }
       }
       const latest = await loadRun(token, runId).catch(() => null);
+      if (!isCurrentPoll()) return;
       if (latest) activeRun = latest;
       if (!latest || latest.status !== "running") clearEventPolling();
     } catch (err) {
       console.warn("run event polling failed:", err);
     } finally {
-      pollingEvents = false;
+      if (generation === eventPollingGeneration) pollingEvents = false;
     }
   }
 
@@ -1003,13 +1013,15 @@
           class:hidden-panel={activeTab !== "qa"}
           aria-hidden={activeTab !== "qa"}
         >
-          <QaPanel
-            {token}
-            {endpoint}
-            sampleRunId={qaSampleRunId}
-            {subgraphs}
-            {defaults}
-          />
+          {#key qaSampleRunId}
+            <QaPanel
+              {token}
+              {endpoint}
+              sampleRunId={qaSampleRunId}
+              {subgraphs}
+              {defaults}
+            />
+          {/key}
         </div>
       </div>
     </section>

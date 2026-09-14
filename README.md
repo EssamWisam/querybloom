@@ -2,6 +2,47 @@
 
 This module powers QueryBloom's frequent subgraph mining workflow for knowledge graphs.
 
+## Live Frontend In Docker
+
+The public frontend uses SvelteKit's Vite development server with HMR. This is an
+intentional single-user development deployment, not a hardened production server.
+Source edits under `webapp/src` appear automatically in an open browser. No
+frontend build or backend restart is needed. Vite can reload the page for changes
+that cannot be hot-updated, so avoid editing during critical browser operations.
+
+Start the frontend alongside the existing backend:
+
+```sh
+docker compose up -d querybloom-frontend
+```
+
+It listens on `127.0.0.1:5174` and forwards API requests to
+`querybloom-prod:8000`. The HTTPS proxy's `/querybloom/` location must preserve
+the prefix and forward WebSockets:
+
+```nginx
+location /querybloom/ {
+    proxy_pass http://127.0.0.1:5174;
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_buffering off;
+    proxy_read_timeout 86400s;
+}
+```
+
+After dependency manifest changes, run
+`docker compose restart querybloom-frontend` to reinstall dependencies. After
+Compose configuration changes, run `docker compose up -d --no-deps querybloom-frontend`.
+The frontend installs locked dependencies on startup and restarts automatically
+with Docker. Backend reload behavior is unchanged. The static bundle served on
+port 8002 remains available but is not used by the public frontend after the proxy
+is switched to Vite.
+
 ## Overview
 
 - **ABSTAT**: Extracts frequent (subject_type, predicate, object_type) patterns from a knowledge graph

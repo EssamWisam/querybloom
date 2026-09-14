@@ -126,6 +126,7 @@
 
   let selectedIndex = null;
   let hydratedSampleRunId = null;
+  let qaHydrationSequence = 0;
   let showSubgraphInspector = false;
   let expandedQuestions = {};
   let expandedEvolutions = {};
@@ -205,17 +206,18 @@
         .filter((sg) => selectedSubgraphIndexes.has(sg.index))
         .flatMap((sg) =>
           (sg.qa_pairs ?? []).map((pair) => {
-            const count = executionCount(pair.execution_results);
-            const hasResults =
-              count > 0 ||
-              typeof pair.execution_results === "boolean" ||
-              typeof pair.execution_results?.boolean === "boolean";
+            const count = executionCount(pair.execution_results, pair);
+            const hasResults = count > 0;
             const isNeedsFix =
               pair.verification_status === "needs_fix" ||
               pair.verification_status === "unfixable";
             const isValid = getPairValid(pair);
             const reason = getPairReason(pair);
-            const snippet = formatResultSnippet(pair.execution_results, 3);
+            const snippet = formatResultSnippet(
+              pair.execution_results,
+              3,
+              pair,
+            );
             const llmBest = getPairLlmBest(pair);
 
             return {
@@ -239,17 +241,18 @@
         .filter((sg) => selectedSubgraphIndexes.has(sg.index))
         .flatMap((sg) => {
           const pairRows = (sg.qa_pairs ?? []).map((pair) => {
-            const count = executionCount(pair.execution_results);
-            const hasResults =
-              count > 0 ||
-              typeof pair.execution_results === "boolean" ||
-              typeof pair.execution_results?.boolean === "boolean";
+            const count = executionCount(pair.execution_results, pair);
+            const hasResults = count > 0;
             const isNeedsFix =
               pair.verification_status === "needs_fix" ||
               pair.verification_status === "unfixable";
             const isValid = getPairValid(pair);
             const reason = getPairReason(pair);
-            const snippet = formatResultSnippet(pair.execution_results, 3);
+            const snippet = formatResultSnippet(
+              pair.execution_results,
+              3,
+              pair,
+            );
             const llmBest = getPairLlmBest(pair);
 
             return {
@@ -374,26 +377,32 @@
   }
 
   async function hydrateStoredQa(runId, { force = false } = {}) {
-    if (!token || !runId || hydratingQa) return;
+    if (!token || !runId) return;
     if (!force && runId === hydratedSampleRunId) return;
+    const preserveCurrentRunState = runId === hydratedSampleRunId;
+    const hydrationSequence = ++qaHydrationSequence;
+    if (!preserveCurrentRunState) qaMap = {};
     hydratingQa = true;
     try {
       const [rows, storedSubgraphs] = await Promise.all([
         loadRunQaPairs(token, runId),
         loadRunSubgraphs(token, runId),
       ]);
-      if (runId !== sampleRunId) return;
+      if (hydrationSequence !== qaHydrationSequence || runId !== sampleRunId)
+        return;
       const restored = {
         ...buildQaMapFromSubgraphs(storedSubgraphs),
         ...buildQaMapFromRows(rows),
       };
       const merged = { ...restored };
-      for (const [idxStr, entry] of Object.entries(qaMap)) {
-        if (
-          entry.status === "failed" ||
-          (entry.status === "completed" && entry.is_meaningful === false)
-        ) {
-          merged[Number(idxStr)] = entry;
+      if (preserveCurrentRunState) {
+        for (const [idxStr, entry] of Object.entries(qaMap)) {
+          if (
+            entry.status === "failed" ||
+            (entry.status === "completed" && entry.is_meaningful === false)
+          ) {
+            merged[Number(idxStr)] = entry;
+          }
         }
       }
       qaMap = merged;
@@ -401,9 +410,11 @@
     } catch (err) {
       console.warn("QA pair restore failed:", err);
       if (force) error = err?.message || "Could not reload generated pairs";
-      hydratedSampleRunId = runId;
+      if (hydrationSequence === qaHydrationSequence && runId === sampleRunId) {
+        hydratedSampleRunId = runId;
+      }
     } finally {
-      hydratingQa = false;
+      if (hydrationSequence === qaHydrationSequence) hydratingQa = false;
     }
   }
 
@@ -839,14 +850,25 @@
     }
   }
 
-  function executionCount(result) {
+  function isAskQuery(pair) {
+    return /\bASK\s*(?:WHERE\s*)?\{/i.test(pair?.sparql_query ?? "");
+  }
+
+  function executionBoolean(result, pair = null) {
+    if (typeof result === "boolean") return result;
+    if (typeof result?.boolean === "boolean") return result.boolean;
+    if (pair?.verification_status === "correct" && isAskQuery(pair))
+      return true;
+    return null;
+  }
+
+  function executionCount(result, pair = null) {
+    if (executionBoolean(result, pair) !== null) return 1;
     if (Array.isArray(result)) return result.length;
     if (typeof result?.count === "number") return result.count;
     if (Array.isArray(result?.results)) return result.results.length;
     if (Array.isArray(result?.result_preview?.rows))
       return result.result_preview.rows.length;
-    if (typeof result?.boolean === "boolean" || typeof result === "boolean")
-      return 1;
     return 0;
   }
 
@@ -898,7 +920,7 @@
     if (pair?.execution_results != null) {
       if (pair.execution_results === false) return false;
       if (executionError(pair.execution_results)) return false;
-      if (executionCount(pair.execution_results) === 0) return false;
+      if (executionCount(pair.execution_results, pair) === 0) return false;
       if (typeof pair.execution_results?.success === "boolean")
         return pair.execution_results.success;
       return true;
@@ -928,11 +950,10 @@
     return "";
   }
 
-  function formatResultSnippet(result, maxRows = 3) {
+  function formatResultSnippet(result, maxRows = 3, pair = null) {
     if (result == null) return "";
-    if (typeof result === "boolean") return result ? "true" : "false";
-    if (typeof result?.boolean === "boolean")
-      return result.boolean ? "true" : "false";
+    const boolean = executionBoolean(result, pair);
+    if (boolean !== null) return boolean ? "true" : "false";
     const err = executionError(result);
     if (err) return `Error: ${err}`;
 
@@ -2058,14 +2079,18 @@
                             >
                           {/if}
                           {#if hasReachedVerification(selected, pair) && pair.execution_results != null}
-                            {#if pair.execution_results === false || executionError(pair.execution_results)}
+                            {#if executionError(pair.execution_results)}
                               <span class="badge badge-fail">✗ error</span>
-                            {:else if executionCount(pair.execution_results) === 0}
+                            {:else if executionCount(pair.execution_results, pair) === 0}
                               <span class="badge badge-neutral">0 results</span>
                             {:else}
                               <span class="badge badge-ok"
-                                >✓ {executionCount(pair.execution_results)} result{executionCount(
+                                >✓ {executionCount(
                                   pair.execution_results,
+                                  pair,
+                                )} result{executionCount(
+                                  pair.execution_results,
+                                  pair,
                                 ) !== 1
                                   ? "s"
                                   : ""}</span
@@ -2131,6 +2156,7 @@
                                 <span class="badge badge-neutral"
                                   >count {executionCount(
                                     pair.execution_results,
+                                    pair,
                                   )}</span
                                 >
                                 {#if executionError(pair.execution_results)}
@@ -2162,7 +2188,7 @@
                                     </tbody>
                                   </table>
                                 </div>
-                              {:else if !executionError(pair.execution_results)}
+                              {:else if executionBoolean(pair.execution_results, pair) === null && !executionError(pair.execution_results)}
                                 <p class="empty-hint compact">
                                   No preview rows returned.
                                 </p>
