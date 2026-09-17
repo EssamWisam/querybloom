@@ -1,0 +1,2539 @@
+- id: 1
+  src_id: 1
+  text: "What conference papers has Yue Lu authored from 2018 onward, and what are their publication years and, where recorded, their titles, venues, page ranges, and listed author counts?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX person: <https://dblp.org/pid/74/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?paper ?title ?year ?venue ?pages ?authorCount
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:authoredBy person:6493 ;
+             dblp:yearOfPublication ?year .
+      FILTER (xsd:integer(STR(?year)) >= 2018)
+      OPTIONAL { ?paper dblp:title ?title . }
+      OPTIONAL { ?paper dblp:publishedIn ?venue . }
+      OPTIONAL { ?paper dblp:pagination ?pages . }
+      OPTIONAL { ?paper dblp:numberOfCreators ?authorCount . }
+    }
+    ORDER BY ?year ?title
+  llm_best: true
+  result_count: 33
+  result_snippet: |
+    paper: https://dblp.org/rec/conf/apccas/LuKL18 | title: A Bit-Serial Variable-Accuracy FFT Processor For Energy-Harvesting Systems. | year: 2018 | venue: APCCAS | pages: 299-304 | authorCount: 3
+    paper: https://dblp.org/rec/conf/fdl/LuDK18 | title: A New Ageing-Aware Approach Via Path Isolation. | year: 2018 | venue: FDL | pages: 5-16 | authorCount: 3
+    paper: https://dblp.org/rec/conf/momm/TianLLY18 | title: Betweenness Centrality Based k-Anonymity for Privacy Preserving in Social Networks. | year: 2018 | venue: MoMM | pages: 3-7 | authorCount: 4
+- id: 2
+  src_id: 1
+  text: "Which conference papers has Yue Lu authored and which publications has Yue Lu edited, and, where recorded, what are their titles, publication years, venues, publishers, series, series volumes, and ISBNs?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX person: <https://dblp.org/pid/74/>
+
+    SELECT DISTINCT ?publication ?title ?year ?venue ?publisher ?series ?seriesVolume ?isbn
+    WHERE {
+      {
+        ?publication a dblp:Inproceedings ;
+                     dblp:authoredBy person:6493 .
+      }
+      UNION
+      {
+        ?publication a dblp:Editorship ;
+                     dblp:editedBy person:6493 .
+      }
+      OPTIONAL { ?publication dblp:title ?title . }
+      OPTIONAL { ?publication dblp:yearOfPublication ?year . }
+      OPTIONAL { ?publication dblp:publishedIn ?venue . }
+      OPTIONAL { ?publication dblp:publishedBy ?publisher . }
+      OPTIONAL { ?publication dblp:publishedInSeries ?series . }
+      OPTIONAL { ?publication dblp:publishedInSeriesVolume ?seriesVolume . }
+      OPTIONAL { ?publication dblp:isbn ?isbn . }
+    }
+    ORDER BY ?year ?title
+  llm_best: ""
+  result_count: 65
+  result_snippet: |
+    publication: https://dblp.org/rec/conf/icdar/LuSWR99 | title: An Implementation of Postal Numerals Segmentation and Recognition System for Chinese Business Letters. | year: 1999 | venue: ICDAR
+    publication: https://dblp.org/rec/conf/recomb/SzeLY05 | title: A Polynomial Time Solvable Formulation of Multiple Sequence Alignment. | year: 2005 | venue: RECOMB
+    publication: https://dblp.org/rec/conf/icpr/LuXL06 | title: A Hybrid Recognition Scheme Based on Partially Labeled SOM and MLP. | year: 2006 | venue: ICPR (2)
+- id: 3
+  src_id: 1
+  text: "At which venue or venues did Yue Lu publish the greatest number of conference papers, and how many did Yue Lu publish at each?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX person: <https://dblp.org/pid/74/>
+
+    SELECT ?venue ?paperCount
+    WHERE {
+      {
+        SELECT ?venue (COUNT(DISTINCT ?paper) AS ?paperCount)
+        WHERE {
+          ?paper a dblp:Inproceedings ;
+                 dblp:authoredBy person:6493 ;
+                 dblp:publishedIn ?venue .
+        }
+        GROUP BY ?venue
+      }
+      {
+        SELECT (MAX(?countForVenue) AS ?maxCount)
+        WHERE {
+          {
+            SELECT ?venueForMax (COUNT(DISTINCT ?paperForMax) AS ?countForVenue)
+            WHERE {
+              ?paperForMax a dblp:Inproceedings ;
+                           dblp:authoredBy person:6493 ;
+                           dblp:publishedIn ?venueForMax .
+            }
+            GROUP BY ?venueForMax
+          }
+        }
+      }
+      FILTER (?paperCount = ?maxCount)
+    }
+    ORDER BY ?venue
+  llm_best: ""
+  result_count: 4
+  result_snippet: |
+    venue: ICDAR | paperCount: 3
+    venue: KSEM (2) | paperCount: 3
+    venue: PDCAT | paperCount: 3
+- id: 4
+  src_id: 1
+  text: "Which publications include an authorship credit attributed to Yue Lu but have no recorded publication venue?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX person: <https://dblp.org/pid/74/>
+
+    SELECT DISTINCT ?publication
+    WHERE {
+      ?signature dblp:signatureCreator person:6493 ;
+                 dblp:signaturePublication ?publication .
+      FILTER NOT EXISTS {
+        ?publication dblp:publishedIn ?venue .
+      }
+    }
+    ORDER BY ?publication
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    https://dblp.org/rec/phd/basesearch/Lu09a
+- id: 5
+  src_id: 2
+  text: "Which conference papers authored by Yue Lu have either an online document page or an archived webpage, and what are their titles and page links?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT DISTINCT ?paper ?title ?onlinePage
+    WHERE {
+      ?creator rdf:type dblp:AmbiguousCreator ;
+               dblp:primaryCreatorName "Yue Lu" .
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:createdBy ?creator ;
+             dblp:title ?title .
+      {
+        ?paper dblp:documentPage ?onlinePage .
+      }
+      UNION
+      {
+        ?paper dblp:archivedWebpage ?onlinePage .
+      }
+    }
+    ORDER BY ?title
+  llm_best: ""
+  result_count: 73
+  result_snippet: |
+    paper: https://dblp.org/rec/conf/isscc/WuZLDLLWZQYWHSWLGYCZ26 | title: 29.1 A 48-Day-Duration Pasting Bioelectronic Device Realizing Closed-Loop Realtime Detection and Precision Treatment for Type-1 Diabetes. | onlinePage: https://doi.org/10.1109/ISSCC49663.2026.11409025
+    paper: https://dblp.org/rec/conf/apccas/LuKL18 | title: A Bit-Serial Variable-Accuracy FFT Processor For Energy-Harvesting Systems. | onlinePage: https://doi.org/10.1109/APCCAS.2018.8605629
+    paper: https://dblp.org/rec/conf/icnc/XuLH07 | title: A Combined Genetic Algorithm and Orthogonal Transformation for Designing Feedforward Neural Networks. | onlinePage: https://doi.org/10.1109/ICNC.2007.13
+- id: 6
+  src_id: 2
+  text: "Which volumes did Yue Lu edit, and what are their titles and publication years, along with their series, ISBNs, and primary document-page links where available?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT DISTINCT ?volume ?title ?year ?series ?isbn ?primaryDocumentPage
+    WHERE {
+      ?creator rdf:type dblp:AmbiguousCreator ;
+               dblp:primaryCreatorName "Yue Lu" .
+      ?volume rdf:type dblp:Editorship ;
+              dblp:editedBy ?creator ;
+              dblp:title ?title ;
+              dblp:yearOfPublication ?year .
+      OPTIONAL { ?volume dblp:publishedInSeries ?series . }
+      OPTIONAL { ?volume dblp:isbn ?isbn . }
+      OPTIONAL { ?volume dblp:primaryDocumentPage ?primaryDocumentPage . }
+    }
+    ORDER BY ?year ?title
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    volume: https://dblp.org/rec/conf/iftc/2012 | title: Advances on Digital Television and Wireless Multimedia Communications - 9th International Forum on Digital TV and Wireless Multimedia Communication, IFTC 2012, Shanghai, China, November 9-10, 2012. Proceedings | year: 2012 | series: Communications in Computer and Information Science | isbn: urn:isbn:9783642345944 | primaryDocumentPage: https://doi.org/10.1007/978-3-642-34595-1
+- id: 7
+  src_id: 2
+  text: "Which informal publications did Yue Lu author in venues other than CoRR, and in which venues were they published?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT DISTINCT ?publication ?venue
+    WHERE {
+      ?creator rdf:type dblp:AmbiguousCreator ;
+               dblp:primaryCreatorName "Yue Lu" .
+      ?signature rdf:type dblp:AuthorSignature ;
+                 dblp:signatureCreator ?creator ;
+                 dblp:signaturePublication ?publication .
+      ?publication rdf:type dblp:Informal ;
+                   dblp:publishedIn ?venue .
+      FILTER(STR(?venue) != "CoRR")
+    }
+    ORDER BY ?venue ?publication
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    publication: https://dblp.org/rec/conf/tac/ZhuZL11 | venue: TAC
+- id: 8
+  src_id: 2
+  text: "Did Yue Lu both edit a 2012 volume in the Communications in Computer and Information Science series and author the conference paper “Skywork-daVinci: A Novel CPSS-based Painting Support System.”?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    ASK
+    WHERE {
+      ?creator rdf:type dblp:AmbiguousCreator ;
+               dblp:primaryCreatorName "Yue Lu" .
+      ?volume rdf:type dblp:Editorship ;
+              dblp:editedBy ?creator ;
+              dblp:yearOfPublication "2012"^^xsd:gYear ;
+              dblp:publishedInSeries "Communications in Computer and Information Science" .
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:createdBy ?creator ;
+             dblp:title "Skywork-daVinci: A Novel CPSS-based Painting Support System." .
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 9
+  src_id: 3
+  text: "What are the publication year and page range of Uwe Rohm’s contribution to Ausgezeichnete Informatikdissertationen, and what are the LNI volume number, ISBN, and online-access URL of the edited volume containing it?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?contribution ?contributionYear ?pages ?editedVolume ?lniVolume ?isbn ?volumePage
+    WHERE {
+      ?signature a dblp:AuthorSignature ;
+                 dblp:signatureCreator <https://dblp.org/pid/r/UweRohm> ;
+                 dblp:signaturePublication ?contribution .
+      ?contribution a dblp:Incollection ;
+                    dblp:publishedInBook "Ausgezeichnete Informatikdissertationen" ;
+                    dblp:yearOfPublication ?contributionYear ;
+                    dblp:pagination ?pages ;
+                    dblp:publishedAsPartOf ?editedVolume .
+      ?editedVolume a dblp:Editorship ;
+                    dblp:publishedInSeries "LNI" ;
+                    dblp:publishedInSeriesVolume ?lniVolume ;
+                    dblp:isbn ?isbn ;
+                    (dblp:documentPage|dblp:primaryDocumentPage) ?volumePage .
+    }
+  llm_best: ""
+  result_count: 2
+  result_snippet: |
+    contribution: https://dblp.org/rec/conf/gi/Rohm02 | contributionYear: 2002 | pages: 133-142 | editedVolume: https://dblp.org/rec/conf/gi/2002diss | lniVolume: D-3 | isbn: urn:isbn:3885794071 | volumePage: https://dl.gi.de/handle/20.500.12116/4398
+    contribution: https://dblp.org/rec/conf/gi/Rohm02 | contributionYear: 2002 | pages: 133-142 | editedVolume: https://dblp.org/rec/conf/gi/2002diss | lniVolume: D-3 | isbn: urn:isbn:3885794071 | volumePage: https://subs.emis.de/LNI/Dissertation/Dissertation3.html
+- id: 10
+  src_id: 3
+  text: "Which authors with a Germany-based affiliation contributed to the 2015 entries in Ausgezeichnete Informatikdissertationen but have no ORCID recorded, and what affiliation and page range are recorded for each?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?person ?contribution ?affiliation ?pages
+    WHERE {
+      ?signature a dblp:AuthorSignature ;
+                 dblp:signatureCreator ?person ;
+                 dblp:signaturePublication ?contribution .
+      ?person a dblp:Person ;
+              dblp:affiliation ?affiliation .
+      ?contribution a dblp:Incollection ;
+                    dblp:publishedInBook "Ausgezeichnete Informatikdissertationen" ;
+                    dblp:yearOfPublication "2015"^^xsd:gYear ;
+                    dblp:pagination ?pages .
+      FILTER(CONTAINS(LCASE(STR(?affiliation)), "germany"))
+      FILTER NOT EXISTS {
+        ?person dblp:orcid ?recordedOrcid .
+      }
+    }
+  llm_best: ""
+  result_count: 4
+  result_snippet: |
+    person: https://dblp.org/pid/121/4050 | contribution: https://dblp.org/rec/conf/gi/Breuer15 | affiliation: University of Jena, Germany | pages: 41-50
+    person: https://dblp.org/pid/15/7442 | contribution: https://dblp.org/rec/conf/gi/Liebig15 | affiliation: University of Passau, Germany | pages: 189-198
+    person: https://dblp.org/pid/157/1650 | contribution: https://dblp.org/rec/conf/gi/Winkler15 | affiliation: University of Regensburg, Department of Genetic Epidemiology, Germany | pages: 359-368
+- id: 11
+  src_id: 3
+  text: "Among the LNI edited volumes containing entries in Ausgezeichnete Informatikdissertationen and having at least two distinct contributing authors, which five have the most distinct authors, and what are each volume’s number, publication year, number of distinct contributions, and number of distinct authors?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT ?editedVolume ?volumeNumber ?volumeYear
+           (COUNT(DISTINCT ?contribution) AS ?contributionCount)
+           (COUNT(DISTINCT ?person) AS ?authorCount)
+    WHERE {
+      ?editedVolume a dblp:Editorship ;
+                    dblp:publishedInSeries "LNI" ;
+                    dblp:publishedInSeriesVolume ?volumeNumber ;
+                    dblp:yearOfPublication ?volumeYear .
+      ?contribution a dblp:Incollection ;
+                    dblp:publishedInBook "Ausgezeichnete Informatikdissertationen" ;
+                    dblp:publishedAsPartOf ?editedVolume .
+      ?signature a dblp:AuthorSignature ;
+                 dblp:signaturePublication ?contribution ;
+                 dblp:signatureCreator ?person .
+      ?person a dblp:Person .
+    }
+    GROUP BY ?editedVolume ?volumeNumber ?volumeYear
+    HAVING (COUNT(DISTINCT ?person) >= 2)
+    ORDER BY DESC(?authorCount)
+    LIMIT 5
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    editedVolume: https://dblp.org/rec/conf/gi/2015diss | volumeNumber: D-16 | volumeYear: 2016 | contributionCount: 38 | authorCount: 38
+    editedVolume: https://dblp.org/rec/conf/gi/2010diss | volumeNumber: D-11 | volumeYear: 2011 | contributionCount: 36 | authorCount: 36
+    editedVolume: https://dblp.org/rec/series/gidiss/2020 | volumeNumber: D-21 | volumeYear: 2021 | contributionCount: 35 | authorCount: 35
+- id: 12
+  src_id: 3
+  text: "Does Can Türker’s 1999 contribution to Ausgezeichnete Informatikdissertationen have a DOI URL, either linked directly to the contribution or provided as an online-access URL for its containing edited volume, which was published in 2000?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    ASK {
+      ?signature dblp:signatureCreator <https://dblp.org/pid/t/CanTurker> ;
+                 dblp:signaturePublication <https://dblp.org/rec/conf/gi/Turker99> .
+
+      <https://dblp.org/rec/conf/gi/Turker99>
+          dblp:publishedInBook "Ausgezeichnete Informatikdissertationen" ;
+          dblp:yearOfPublication "1999"^^xsd:gYear ;
+          dblp:publishedAsPartOf <https://dblp.org/rec/conf/gi/1999diss> .
+
+      <https://dblp.org/rec/conf/gi/1999diss>
+          dblp:yearOfPublication "2000"^^xsd:gYear .
+
+      {
+        <https://dblp.org/rec/conf/gi/Turker99> owl:sameAs ?doi .
+      }
+      UNION
+      {
+        <https://dblp.org/rec/conf/gi/1999diss> dblp:documentPage ?doi .
+      }
+      UNION
+      {
+        <https://dblp.org/rec/conf/gi/1999diss> dblp:primaryDocumentPage ?doi .
+      }
+
+      FILTER(
+        STRSTARTS(LCASE(STR(?doi)), "http://dx.doi.org/") ||
+        STRSTARTS(LCASE(STR(?doi)), "https://dx.doi.org/") ||
+        STRSTARTS(LCASE(STR(?doi)), "http://doi.org/") ||
+        STRSTARTS(LCASE(STR(?doi)), "https://doi.org/")
+      )
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 13
+  src_id: 4
+  text: "What are the publication years and available ISBNs of the five most recent proceedings edited by Vincent Ng, and who co-edited each one with him?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?proceedings ?year ?isbn ?coEditorName
+    WHERE {
+      {
+        SELECT DISTINCT ?proceedings ?year
+        WHERE {
+          ?proceedings a dblp:Editorship ;
+                       dblp:editedBy <https://dblp.org/pid/67/3142> ;
+                       dblp:yearOfPublication ?year .
+        }
+        ORDER BY DESC(?year) ?proceedings
+        LIMIT 5
+      }
+      OPTIONAL { ?proceedings dblp:isbn ?isbn . }
+      OPTIONAL {
+        ?proceedings dblp:editedBy ?coEditor .
+        FILTER (?coEditor != <https://dblp.org/pid/67/3142>)
+        ?coEditor dblp:primaryCreatorName ?coEditorName .
+      }
+    }
+    ORDER BY DESC(?year) ?proceedings ?coEditorName
+  llm_best: true
+  result_count: 25
+  result_snippet: |
+    proceedings: https://dblp.org/rec/conf/emnlp/2019-1 | year: 2019 | isbn: urn:isbn:9781950737901 | coEditorName: Jing Jiang
+    proceedings: https://dblp.org/rec/conf/emnlp/2019-1 | year: 2019 | isbn: urn:isbn:9781950737901 | coEditorName: Kentaro Inui
+    proceedings: https://dblp.org/rec/conf/emnlp/2019-1 | year: 2019 | isbn: urn:isbn:9781950737901 | coEditorName: Xiaojun Wan
+- id: 14
+  src_id: 4
+  text: "Which 2015 Springer proceedings in Lecture Notes in Computer Science were co-edited by Fei Wu and Junmo Kim, and what are their series volume numbers and DOIs?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?proceedings ?seriesVolume ?doi
+    WHERE {
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy <https://dblp.org/pid/84/3254-1> ;
+                   dblp:editedBy <https://dblp.org/pid/40/240> ;
+                   dblp:yearOfPublication "2015"^^xsd:gYear ;
+                   dblp:publishedBy "Springer" ;
+                   dblp:publishedIn "Lecture Notes in Computer Science" ;
+                   dblp:publishedInSeriesVolume ?seriesVolume ;
+                   dblp:doi ?doi .
+    }
+    ORDER BY ?seriesVolume
+  llm_best: ""
+  result_count: 2
+  result_snippet: |
+    proceedings: https://dblp.org/rec/conf/pcm/2015-1 | seriesVolume: 9314 | doi: https://doi.org/10.1007/978-3-319-24075-6
+    proceedings: https://dblp.org/rec/conf/pcm/2015-2 | seriesVolume: 9315 | doi: https://doi.org/10.1007/978-3-319-24078-7
+- id: 15
+  src_id: 4
+  text: "Which of Dilek Hakkani-Tür’s informal publications appeared at TAC, and what are their titles?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?publication ?title ?venue
+    WHERE {
+      ?signature a dblp:AuthorSignature ;
+                 dblp:signatureCreator <https://dblp.org/pid/h/DilekZHakkaniTur> ;
+                 dblp:signaturePublication ?publication .
+      ?publication a dblp:Informal ;
+                   dblp:title ?title ;
+                   dblp:publishedIn ?venue .
+      FILTER (STR(?venue) = "TAC")
+    }
+    ORDER BY ?title
+  llm_best: ""
+  result_count: 2
+  result_snippet: |
+    publication: https://dblp.org/rec/conf/tac/GillickFH08 | title: The ICSI Summarization System at TAC 2008. | venue: TAC
+    publication: https://dblp.org/rec/conf/tac/GillickFHB0X09 | title: The ICSI/UTD Summarization System at TAC 2009. | venue: TAC
+- id: 16
+  src_id: 4
+  text: "Did Peter Wegner co-edit with Paul R. Wilson an ACM proceedings volume published in 1991 with ISBN 978-0-89791-411-6, and did he also author an informal publication titled “A Database Approach to Languages, Libraries and Environments”?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    ASK {
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy <https://dblp.org/pid/w/PeterWegner> ;
+                   dblp:yearOfPublication "1991"^^xsd:gYear ;
+                   dblp:publishedBy "ACM" ;
+                   dblp:isbn <urn:isbn:9780897914116> .
+
+      FILTER EXISTS {
+        ?proceedings dblp:editedBy <https://dblp.org/pid/43/1901> .
+      }
+
+      ?signature a dblp:AuthorSignature ;
+                 dblp:signatureCreator <https://dblp.org/pid/w/PeterWegner> ;
+                 dblp:signaturePublication ?publication .
+      ?publication a dblp:Informal ;
+                   dblp:title "A Database Approach to Languages, Libraries and Environments." .
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 17
+  src_id: 5
+  text: "Which authors of “Fashion-GPT: Integrating LLMs with Fashion Retrieval System.” have both an ORCID and a primary affiliation, what are their ORCIDs and primary affiliations, and how many distinct proceedings papers has each authored?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?authorName ?orcid ?primaryAffiliation ?paperCount
+    WHERE {
+      {
+        SELECT ?author (COUNT(DISTINCT ?publication) AS ?paperCount)
+        WHERE {
+          ?publication a dblp:Inproceedings ;
+                       dblp:authoredBy ?author .
+        }
+        GROUP BY ?author
+      }
+
+      ?paper a dblp:Inproceedings ;
+             dblp:title "Fashion-GPT: Integrating LLMs with Fashion Retrieval System." ;
+             dblp:authoredBy ?author .
+      ?author a dblp:Person ;
+              dblp:creatorName ?authorName ;
+              dblp:orcid ?orcid ;
+              dblp:primaryAffiliation ?primaryAffiliation .
+    }
+    ORDER BY ?authorName
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    authorName: Zheng Wang | orcid: https://orcid.org/0000-0002-7064-6267 | primaryAffiliation: Nanyang Technological University, School of Computer Science and Engineering, Singapore | paperCount: 20
+- id: 18
+  src_id: 5
+  text: "What are the publisher and DOI of the proceedings volume containing “Peripersonal Space Tele-Operation in Virtual Reality: The Role of Tactile - Force Feedback.”, and which five papers in that volume have the highest recorded creator counts?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?publisher ?proceedingsDoi ?paperTitle ?creatorCount
+    WHERE {
+      ?targetPaper a dblp:Inproceedings ;
+                   dblp:title "Peripersonal Space Tele-Operation in Virtual Reality: The Role of Tactile - Force Feedback." ;
+                   dblp:publishedAsPartOf ?proceedings .
+      ?proceedings a dblp:Editorship ;
+                   dblp:publishedBy ?publisher ;
+                   dblp:doi ?proceedingsDoi .
+      ?paper a dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:title ?paperTitle ;
+             dblp:numberOfCreators ?creatorCount .
+    }
+    ORDER BY DESC(?creatorCount) ?paperTitle
+    LIMIT 5
+  llm_best: ""
+  result_count: 5
+  result_snippet: |
+    publisher: Springer | proceedingsDoi: https://doi.org/10.1007/978-3-031-46839-1 | paperTitle: Multi-modal Sensing-Based Interactive Glove System for Teleoperation and VR/AR. | creatorCount: 7
+    publisher: Springer | proceedingsDoi: https://doi.org/10.1007/978-3-031-46839-1 | paperTitle: Optimal Design of Braille Display Based on Adaptive-Network-based Fuzzy Inference. | creatorCount: 6
+    publisher: Springer | proceedingsDoi: https://doi.org/10.1007/978-3-031-46839-1 | paperTitle: Effects of Duration and Envelope of Vibrotactile Alerts on Urgency, Annoyance, and Acceptance. | creatorCount: 5
+- id: 19
+  src_id: 5
+  text: "Is any editor of the proceedings volume containing “Workshop Organizers' Message.” also listed as an author of that paper?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    ASK {
+      ?paper a dblp:Inproceedings ;
+             dblp:title "Workshop Organizers' Message." ;
+             dblp:publishedAsPartOf ?proceedings ;
+             ^dblp:signaturePublication/dblp:signatureCreator ?editor .
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy ?editor .
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 20
+  src_id: 5
+  text: "For “Spatial-Angular Decoupling Interaction Networks for Light Field Angular Super-Resolution.”, what are the event year, publication year, venue, and recorded author count, and how many distinct authors are listed for the paper?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?eventYear ?publicationYear ?venue ?recordedCreatorCount ?linkedCreatorCount
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:title "Spatial-Angular Decoupling Interaction Networks for Light Field Angular Super-Resolution." ;
+             dblp:yearOfEvent ?eventYear ;
+             dblp:yearOfPublication ?publicationYear ;
+             dblp:publishedIn ?venue ;
+             dblp:numberOfCreators ?recordedCreatorCount .
+
+      {
+        SELECT ?paper (COUNT(DISTINCT ?creator) AS ?linkedCreatorCount)
+        WHERE {
+          ?paper a dblp:Inproceedings ;
+                 dblp:authoredBy ?creator .
+        }
+        GROUP BY ?paper
+      }
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    eventYear: 2023 | publicationYear: 2024 | venue: IFTC (1) | recordedCreatorCount: 4 | linkedCreatorCount: 4
+- id: 21
+  src_id: 6
+  text: "Which five papers in the PRICAI proceedings with DOI 10.1007/978-981-96-0122-6 have the most authors, with ties broken by paper identifier in ascending order, and what are each paper’s DOI, publication year, and author count?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?paper ?paperDoi ?publicationYear ?creatorCount
+    WHERE {
+      ?proceedings a dblp:Editorship ;
+                   dblp:doi <https://doi.org/10.1007/978-981-96-0122-6> .
+
+      ?paper a dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:primaryDocumentPage ?paperDoi ;
+             dblp:yearOfPublication ?publicationYear ;
+             dblp:numberOfCreators ?creatorCount .
+    }
+    ORDER BY DESC(xsd:integer(?creatorCount)) ?paper
+    LIMIT 5
+  llm_best: ""
+  result_count: 5
+  result_snippet: |
+    paper: https://dblp.org/rec/conf/pricai/ZhuHLGLWYH24 | paperDoi: https://doi.org/10.1007/978-981-96-0122-6_39 | publicationYear: 2025 | creatorCount: 8
+    paper: https://dblp.org/rec/conf/pricai/ChenYLLWZZ24 | paperDoi: https://doi.org/10.1007/978-981-96-0122-6_9 | publicationYear: 2025 | creatorCount: 7
+    paper: https://dblp.org/rec/conf/pricai/WangQQLJLD24 | paperDoi: https://doi.org/10.1007/978-981-96-0122-6_25 | publicationYear: 2025 | creatorCount: 7
+- id: 22
+  src_id: 6
+  text: "Which PRICAI papers in Springer’s Lecture Notes in Computer Science proceedings have the highest author count, and what are each paper’s DOI, author count, and proceedings DOI?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?paper ?paperDoi ?creatorCount ?proceedingsDoi
+    WHERE {
+      ?proceedings a dblp:Editorship ;
+                   dblp:publishedIn "Lecture Notes in Computer Science" ;
+                   dblp:publishedBy "Springer" ;
+                   dblp:doi ?proceedingsDoi .
+
+      ?paper a dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:publishedIn ?venue ;
+             dblp:primaryDocumentPage ?paperDoi ;
+             dblp:numberOfCreators ?creatorCount .
+      FILTER(STRSTARTS(STR(?venue), "PRICAI"))
+
+      {
+        SELECT (MAX(xsd:integer(?candidateCount)) AS ?maximumCreatorCount)
+        WHERE {
+          ?candidateProceedings a dblp:Editorship ;
+                                dblp:publishedIn "Lecture Notes in Computer Science" ;
+                                dblp:publishedBy "Springer" .
+          ?candidatePaper a dblp:Inproceedings ;
+                          dblp:publishedAsPartOf ?candidateProceedings ;
+                          dblp:publishedIn ?candidateVenue ;
+                          dblp:numberOfCreators ?candidateCount .
+          FILTER(STRSTARTS(STR(?candidateVenue), "PRICAI"))
+        }
+      }
+
+      FILTER(xsd:integer(?creatorCount) = ?maximumCreatorCount)
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    paper: https://dblp.org/rec/conf/pricai/DaiCDLHPSZLWFZ25 | paperDoi: https://doi.org/10.1007/978-981-95-7078-2_41 | creatorCount: 12 | proceedingsDoi: https://doi.org/10.1007/978-981-95-7078-2
+- id: 23
+  src_id: 6
+  text: "Does the PRICAI paper with DOI 10.1007/978-981-96-0122-6_37 have both a recorded author-name entry and an attributed author whose identity is ambiguous, and was it published in a Lecture Notes in Computer Science proceedings volume issued by Springer?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    ASK WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:primaryDocumentPage <https://doi.org/10.1007/978-981-96-0122-6_37> ;
+             dblp:publishedIn ?venue ;
+             dblp:authoredBy ?creator .
+      FILTER(STRSTARTS(STR(?venue), "PRICAI"))
+
+      ?creator a dblp:AmbiguousCreator .
+      ?signature a dblp:AuthorSignature ;
+                 dblp:signaturePublication ?paper .
+
+      FILTER EXISTS {
+        ?paper dblp:publishedAsPartOf ?proceedings .
+        ?proceedings a dblp:Editorship ;
+                     dblp:publishedIn "Lecture Notes in Computer Science" ;
+                     dblp:publishedBy "Springer" .
+      }
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 24
+  src_id: 7
+  text: "Were the proceedings containing “Reinforcement Learning Approaches to Coordination in Cooperative Multi-agent Systems” and “Comparing Resource Sharing with Information Exchange in Co-operative Agents, and the Role of Environment Structure” published in different years but edited by the same editor?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    ASK WHERE {
+      ?firstPaper dblp:title "Reinforcement Learning Approaches to Coordination in Cooperative Multi-agent Systems." ;
+                  dblp:publishedAsPartOf ?firstProceedings .
+      ?secondPaper dblp:title "Comparing Resource Sharing with Information Exchange in Co-operative Agents, and the Role of Environment Structure." ;
+                   dblp:publishedAsPartOf ?secondProceedings .
+      ?firstProceedings dblp:editedBy ?sharedEditor ;
+                        dblp:yearOfPublication ?firstPublicationYear .
+      ?secondProceedings dblp:editedBy ?sharedEditor ;
+                         dblp:yearOfPublication ?secondPublicationYear .
+      FILTER(?firstPublicationYear != ?secondPublicationYear)
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 25
+  src_id: 7
+  text: "Which papers by the researcher with ORCID 0000-0002-3692-6732 had the highest author count among that researcher’s papers published in the proceedings of the 2015 IWSDS event, and what are their titles, DOI links, and author counts?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?paper ?title ?doi ?authorCount
+    WHERE {
+      ?researcher dblp:orcid <https://orcid.org/0000-0002-3692-6732> .
+      ?paper dblp:createdBy ?researcher ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:publishedIn "IWSDS" ;
+             dblp:yearOfEvent "2015"^^xsd:gYear ;
+             dblp:title ?title ;
+             dblp:doi ?doi ;
+             dblp:numberOfCreators ?authorCount .
+
+      {
+        SELECT (MAX(xsd:integer(STR(?candidateAuthorCount))) AS ?maxAuthorCount)
+        WHERE {
+          ?candidateResearcher dblp:orcid <https://orcid.org/0000-0002-3692-6732> .
+          ?candidatePaper dblp:createdBy ?candidateResearcher ;
+                          dblp:publishedAsPartOf ?candidateProceedings ;
+                          dblp:publishedIn "IWSDS" ;
+                          dblp:yearOfEvent "2015"^^xsd:gYear ;
+                          dblp:numberOfCreators ?candidateAuthorCount .
+        }
+      }
+
+      FILTER(xsd:integer(STR(?authorCount)) = ?maxAuthorCount)
+    }
+    ORDER BY ?title
+  llm_best: ""
+  result_count: 2
+  result_snippet: |
+    paper: https://dblp.org/rec/books/sp/15/RyuSKKL15 | title: Detecting Multiple Domains from User's Utterance in Spoken Dialog System. | doi: https://doi.org/10.1007/978-3-319-19291-8_10 | authorCount: 5
+    paper: https://dblp.org/rec/books/sp/15/ParkSHKL15 | title: Multi-Source Hybrid Question Answering System. | doi: https://doi.org/10.1007/978-3-319-19291-8_23 | authorCount: 5
+- id: 26
+  src_id: 7
+  text: "For Michael Thielscher's paper “The Scalability of the HyperPlay Technique for Imperfect-Information Games,” what venue and event year are recorded, when were its proceedings published, and where is the archived proceedings page?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?venue ?eventYear ?proceedingsPublicationYear ?archivedProceedingsPage
+    WHERE {
+      ?paper dblp:title "The Scalability of the HyperPlay Technique for Imperfect-Information Games." ;
+             dblp:createdBy <https://dblp.org/pid/t/MichaelThielscher> ;
+             dblp:publishedIn ?venue ;
+             dblp:yearOfEvent ?eventYear ;
+             dblp:publishedAsPartOf ?proceedings .
+      ?proceedings dblp:yearOfPublication ?proceedingsPublicationYear ;
+                   dblp:archivedWebpage ?archivedProceedingsPage .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    venue: AAAI Workshop: Computer Poker and Imperfect Information Games | eventYear: 2016 | proceedingsPublicationYear: 2016 | archivedProceedingsPage: http://www.aaai.org/Library/Workshops/ws16-06.php
+- id: 27
+  src_id: 7
+  text: "Among papers in 6GN or 6GN (1) that were published one calendar year after their event, which 10 had the highest author counts? For each paper, give its title, venue, event year, publication year, author count, and the DOI of the proceedings in which it appeared."
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?paper ?title ?venue ?eventYear ?publicationYear ?authorCount ?proceedingsDoi
+    WHERE {
+      VALUES ?venue { "6GN" "6GN (1)" }
+      ?paper dblp:title ?title ;
+             dblp:publishedIn ?venue ;
+             dblp:yearOfEvent ?eventYear ;
+             dblp:yearOfPublication ?publicationYear ;
+             dblp:numberOfCreators ?authorCount ;
+             dblp:publishedAsPartOf ?proceedings .
+      ?proceedings dblp:doi ?proceedingsDoi .
+      FILTER(
+        xsd:integer(STR(?publicationYear)) =
+        xsd:integer(STR(?eventYear)) + 1
+      )
+    }
+    ORDER BY DESC(xsd:integer(STR(?authorCount)))
+    LIMIT 10
+  llm_best: ""
+  result_count: 10
+  result_snippet: |
+    paper: https://dblp.org/rec/conf/5gwn/YinDLMYZLSZ23 | title: A New Combination Model for Offshore Wind Power Prediction Considering the Number of Climbing Features. | venue: 6GN (1) | eventYear: 2023 | publicationYear: 2024 | authorCount: 9 | proceedingsDoi: https://doi.org/10.1007/978-3-031-53401-0
+    paper: https://dblp.org/rec/conf/5gwn/ZhangZCLYDYC21 | title: Acceptance and Use of Mobile-Assisted Language Learning for Vocational College Students. | venue: 6GN | eventYear: 2021 | publicationYear: 2022 | authorCount: 8 | proceedingsDoi: https://doi.org/10.1007/978-3-031-04245-4
+    paper: https://dblp.org/rec/conf/5gwn/SuiWWYXZZ23 | title: Aluminum Defect Detection Based on Weighted Feature Fusion Mechanism. | venue: 6GN (1) | eventYear: 2023 | publicationYear: 2024 | authorCount: 7 | proceedingsDoi: https://doi.org/10.1007/978-3-031-53401-0
+- id: 28
+  src_id: 8
+  text: "Who are the authors whose identities have been resolved for “Enhancing Multimodal Rumor Detection with Statistical Image Features and Modal Alignment via Contrastive Learning,” what affiliations are listed for them where available, and which author names on the paper remain unresolved?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?authorName ?authorAffiliation ?unresolvedCreatorName
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:title "Enhancing Multimodal Rumor Detection with Statistical Image Features and Modal Alignment via Contrastive Learning." ;
+             dblp:authoredBy ?author ;
+             dblp:createdBy ?creator .
+      ?author a dblp:Person ;
+              dblp:primaryCreatorName ?authorName .
+      OPTIONAL {
+        ?author dblp:primaryAffiliation ?authorAffiliation .
+      }
+      ?creator a dblp:AmbiguousCreator ;
+               dblp:creatorName ?unresolvedCreatorName .
+    }
+    ORDER BY ?authorName
+  llm_best: true
+  result_count: 12
+  result_snippet: |
+    authorName: Chenyu Zhou | authorAffiliation: Xinjiang University, Ürümqi, China | unresolvedCreatorName: Bin Chen
+    authorName: Chenyu Zhou | authorAffiliation: Xinjiang University, Ürümqi, China | unresolvedCreatorName: Fan Chen
+    authorName: Chenyu Zhou | authorAffiliation: Xinjiang University, Ürümqi, China | unresolvedCreatorName: Xiuhong Li
+- id: 29
+  src_id: 8
+  text: "Which PRICAI papers list Jindong Wang as a disambiguated author, as an unresolved author name, or both; how is the name represented in each case; and what year and unresolved author names are recorded for each paper?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?paperTitle ?year ?association ?unresolvedCreatorName
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:title ?paperTitle ;
+             dblp:publishedInBook ?book ;
+             dblp:yearOfEvent ?year ;
+             dblp:createdBy ?creator .
+      {
+        ?paper dblp:authoredBy ?matchedAuthor .
+        ?matchedAuthor a dblp:Person ;
+                       dblp:primaryCreatorName "Jindong Wang" .
+        BIND("identified author" AS ?association)
+      }
+      UNION
+      {
+        ?paper dblp:createdBy ?matchedCreator .
+        ?matchedCreator a dblp:AmbiguousCreator ;
+                        dblp:creatorName "Jindong Wang" .
+        BIND("unresolved creator" AS ?association)
+      }
+      ?creator a dblp:AmbiguousCreator ;
+               dblp:creatorName ?unresolvedCreatorName .
+      FILTER(STRSTARTS(STR(?book), "PRICAI"))
+    }
+    ORDER BY ?year ?paperTitle ?association
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    paperTitle: A Study of Players' Experiences During Brain Games Play. | year: 2016 | association: identified author | unresolvedCreatorName: Faizan Ahmad
+- id: 30
+  src_id: 8
+  text: "Does the PRICAI (2) paper “Learning Vietnamese-English Code-Switching Speech Synthesis Model Under Limited Code-Switched Data Scenario” have a DOI, list Cuong Manh Nguyen and Viet Lam Phung as disambiguated authors, and include “Huy Nguyen Tien” as an unresolved author name?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    ASK {
+      ?paper a dblp:Inproceedings ;
+             dblp:title "Learning Vietnamese-English Code-Switching Speech Synthesis Model Under Limited Code-Switched Data Scenario." ;
+             dblp:createdBy ?creator ;
+             dblp:authoredBy ?cuong, ?viet .
+      ?creator a dblp:AmbiguousCreator ;
+               dblp:creatorName "Huy Nguyen Tien" .
+      ?cuong a dblp:Person ;
+             dblp:primaryCreatorName "Cuong Manh Nguyen" .
+      ?viet a dblp:Person ;
+            dblp:primaryCreatorName "Viet Lam Phung" .
+      FILTER(?cuong != ?viet)
+      FILTER EXISTS {
+        ?paper dblp:publishedInBook "PRICAI (2)" ;
+               dblp:doi ?doi .
+      }
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 31
+  src_id: 8
+  text: "Among PRICAI papers that include Xiuhong Li, Leilei Zhang, or Huy Nguyen Tien as an unresolved author name, which paper has the largest number of distinct disambiguated authors, and what is that number?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT ?paperTitle
+           (COUNT(DISTINCT ?author) AS ?identifiedAuthorCount)
+    WHERE {
+      VALUES ?unresolvedCreatorName {
+        "Xiuhong Li"
+        "Leilei Zhang"
+        "Huy Nguyen Tien"
+      }
+      ?creator a dblp:AmbiguousCreator ;
+               dblp:creatorName ?unresolvedCreatorName .
+      ?paper a dblp:Inproceedings ;
+             dblp:createdBy ?creator ;
+             dblp:title ?paperTitle ;
+             dblp:publishedInBook ?book .
+      FILTER(STRSTARTS(STR(?book), "PRICAI"))
+      OPTIONAL {
+        ?paper dblp:authoredBy ?author .
+        ?author a dblp:Person .
+      }
+    }
+    GROUP BY ?paper ?paperTitle
+    ORDER BY DESC(?identifiedAuthorCount)
+    LIMIT 1
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    paperTitle: Multi-task Text Normalization Approach for Speech Synthesis. | identifiedAuthorCount: 5
+- id: 32
+  src_id: 9
+  text: "What venue, event year, publication year, page range, and DOI are recorded for “An In-Label Prioritizing Variable Branching Strategy of SAT Solvers for a Preferred Extension of Argumentation Frameworks.”?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT ?venue ?eventYear ?publicationYear ?pages ?doi
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:title "An In-Label Prioritizing Variable Branching Strategy of SAT Solvers for a Preferred Extension of Argumentation Frameworks." ;
+             dblp:publishedIn ?venue ;
+             dblp:yearOfEvent ?eventYear ;
+             dblp:yearOfPublication ?publicationYear ;
+             dblp:pagination ?pages ;
+             dblp:doi ?doi .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    venue: PRICAI (5) | eventYear: 2024 | publicationYear: 2025 | pages: 216-231 | doi: https://doi.org/10.1007/978-981-96-0128-8_19
+- id: 33
+  src_id: 9
+  text: "Which identified researchers coauthored “An In-Label Prioritizing Variable Branching Strategy of SAT Solvers for a Preferred Extension of Argumentation Frameworks.” alongside the unresolved author name “Jun Wu,” and what primary affiliation and primary homepage are available for each, if any? List the researchers alphabetically by name."
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?researcher ?researcherName ?primaryAffiliation ?primaryHomepage
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:title "An In-Label Prioritizing Variable Branching Strategy of SAT Solvers for a Preferred Extension of Argumentation Frameworks." ;
+             dblp:authoredBy ?ambiguousAuthor ;
+             dblp:createdBy ?researcher .
+
+      ?ambiguousAuthor a dblp:AmbiguousCreator ;
+                       dblp:creatorName "Jun Wu" .
+
+      ?researcher a dblp:Person ;
+                  dblp:primaryCreatorName ?researcherName .
+
+      OPTIONAL {
+        ?researcher dblp:primaryAffiliation ?primaryAffiliation .
+      }
+      OPTIONAL {
+        ?researcher dblp:primaryHomepage ?primaryHomepage .
+      }
+    }
+    ORDER BY ?researcherName
+  llm_best: ""
+  result_count: 5
+  result_snippet: |
+    researcher: https://dblp.org/pid/21/4828 | researcherName: Caiquan Xiong
+    researcher: https://dblp.org/pid/392/1034 | researcherName: Jiao Xiong
+    researcher: https://dblp.org/pid/204/3001 | researcherName: Mao Luo
+- id: 34
+  src_id: 9
+  text: "What is the order of the author names listed for “An In-Label Prioritizing Variable Branching Strategy of SAT Solvers for a Preferred Extension of Argumentation Frameworks.”, and, where available, which identified researcher or unresolved author entry is associated with each name?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT ?position ?authorName ?identifiedResearcher ?ambiguousIdentity
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:title "An In-Label Prioritizing Variable Branching Strategy of SAT Solvers for a Preferred Extension of Argumentation Frameworks." .
+
+      ?signature a dblp:AuthorSignature ;
+                 dblp:signaturePublication ?paper ;
+                 dblp:signatureOrdinal ?position ;
+                 dblp:signatureDblpName ?authorName .
+
+      OPTIONAL {
+        {
+          ?paper dblp:createdBy ?identifiedResearcher .
+          ?identifiedResearcher a dblp:Person ;
+                                dblp:primaryCreatorName ?authorName .
+        }
+        UNION
+        {
+          ?paper dblp:authoredBy ?ambiguousIdentity .
+          ?ambiguousIdentity a dblp:AmbiguousCreator ;
+                             dblp:creatorName ?authorName .
+        }
+      }
+    }
+    ORDER BY ?position
+  llm_best: ""
+  result_count: 6
+  result_snippet: |
+    position: 1 | authorName: Mao Luo | identifiedResearcher: https://dblp.org/pid/204/3001
+    position: 2 | authorName: Jiao Xiong | identifiedResearcher: https://dblp.org/pid/392/1034
+    position: 3 | authorName: Ningning He | identifiedResearcher: https://dblp.org/pid/162/0546
+- id: 35
+  src_id: 9
+  text: "Does the number of entries in the author list for “An In-Label Prioritizing Variable Branching Strategy of SAT Solvers for a Preferred Extension of Argumentation Frameworks.” match its stated author count, and does every entry include both an author name and a list position?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    ASK {
+      {
+        SELECT ?paper ?statedCreatorCount
+               (COUNT(DISTINCT ?signature) AS ?signatureCount)
+        WHERE {
+          ?paper a dblp:Inproceedings ;
+                 dblp:title "An In-Label Prioritizing Variable Branching Strategy of SAT Solvers for a Preferred Extension of Argumentation Frameworks." ;
+                 dblp:numberOfCreators ?statedCreatorCount .
+
+          OPTIONAL {
+            ?signature a dblp:AuthorSignature ;
+                       dblp:signaturePublication ?paper .
+          }
+        }
+        GROUP BY ?paper ?statedCreatorCount
+      }
+
+      FILTER(?signatureCount = ?statedCreatorCount)
+
+      FILTER NOT EXISTS {
+        ?signatureWithoutPosition a dblp:AuthorSignature ;
+                                  dblp:signaturePublication ?paper .
+        FILTER NOT EXISTS {
+          ?signatureWithoutPosition dblp:signatureOrdinal ?position .
+        }
+      }
+
+      FILTER NOT EXISTS {
+        ?signatureWithoutName a dblp:AuthorSignature ;
+                              dblp:signaturePublication ?paper .
+        FILTER NOT EXISTS {
+          ?signatureWithoutName dblp:signatureDblpName ?authorName .
+        }
+      }
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 36
+  src_id: 10
+  text: "What are the titles and publication years of the proceedings volumes that Thanaruk Theeramunkong edited and in which Theeramunkong authored more than one paper, together with the link to the online document page for each of those papers?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT DISTINCT ?proceedingsTitle ?publicationYear ?paperDoi
+    WHERE {
+      {
+        SELECT ?person ?proceedings
+        WHERE {
+          ?person rdf:type dblp:Person ;
+                  dblp:creatorName "Thanaruk Theeramunkong" .
+
+          ?proceedings rdf:type dblp:Editorship ;
+                       dblp:createdBy ?person .
+
+          ?countedPaper rdf:type dblp:Inproceedings ;
+                        dblp:publishedAsPartOf ?proceedings ;
+                        dblp:createdBy ?person .
+        }
+        GROUP BY ?person ?proceedings
+        HAVING (COUNT(DISTINCT ?countedPaper) > 1)
+      }
+
+      ?proceedings dblp:title ?proceedingsTitle ;
+                   dblp:yearOfPublication ?publicationYear .
+
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:createdBy ?person ;
+             dblp:documentPage ?paperDoi .
+    }
+    ORDER BY ?publicationYear ?proceedingsTitle ?paperDoi
+  llm_best: ""
+  result_count: 7
+  result_snippet: |
+    proceedingsTitle: Advances in Knowledge Discovery and Data Mining, 13th Pacific-Asia Conference, PAKDD 2009, Bangkok, Thailand, April 27-30, 2009, Proceedings | publicationYear: 2009 | paperDoi: https://doi.org/10.1007/978-3-642-01307-2_111
+    proceedingsTitle: Advances in Knowledge Discovery and Data Mining, 13th Pacific-Asia Conference, PAKDD 2009, Bangkok, Thailand, April 27-30, 2009, Proceedings | publicationYear: 2009 | paperDoi: https://doi.org/10.1007/978-3-642-01307-2_49
+    proceedingsTitle: Advances in Knowledge Discovery and Data Mining, 13th Pacific-Asia Conference, PAKDD 2009, Bangkok, Thailand, April 27-30, 2009, Proceedings | publicationYear: 2009 | paperDoi: https://doi.org/10.1007/978-3-642-01307-2_50
+- id: 37
+  src_id: 10
+  text: "Among proceedings volumes published in 2015 or later, who are the top 20 researchers ranked by the number of volumes they both edited and contributed a paper to, and what is that number for each researcher?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT ?researcher ?researcherName
+           (COUNT(DISTINCT ?proceedings) AS ?sharedVolumeCount)
+    WHERE {
+      ?researcher rdf:type dblp:Person ;
+                  dblp:creatorName ?researcherName .
+
+      ?proceedings rdf:type dblp:Editorship ;
+                   dblp:createdBy ?researcher ;
+                   dblp:yearOfPublication ?publicationYear .
+
+      FILTER(?publicationYear >= "2015"^^xsd:gYear)
+
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:createdBy ?researcher .
+    }
+    GROUP BY ?researcher ?researcherName
+    ORDER BY DESC(?sharedVolumeCount) ?researcherName
+    LIMIT 20
+  llm_best: true
+  result_count: 20
+  result_snippet: |
+    researcher: https://dblp.org/pid/09/6391 | researcherName: Leonard Barolli | sharedVolumeCount: 93
+    researcher: https://dblp.org/pid/32/2721 | researcherName: Beniamino Murgante | sharedVolumeCount: 32
+    researcher: https://dblp.org/pid/a/AAbraham | researcherName: Ajith Abraham | sharedVolumeCount: 31
+- id: 38
+  src_id: 10
+  text: "Did Quan Bai edit a proceedings volume and also coauthor a paper with exactly six authors in that same volume that was published in PRICAI?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    ASK WHERE {
+      ?person rdf:type dblp:Person ;
+              dblp:creatorName "Quan Bai" .
+
+      ?proceedings rdf:type dblp:Editorship ;
+                   dblp:createdBy ?person .
+
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:createdBy ?person ;
+             dblp:numberOfCreators 6 ;
+             dblp:publishedInBook ?venueName .
+
+      FILTER(?venueName = "PRICAI")
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 39
+  src_id: 10
+  text: "What are the titles of the proceedings volumes that Bing Xue edited and in which Xue also authored a paper with exactly eight authors, together with Xue’s ORCID, Wikipedia page, and the link to each paper’s online document page?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT DISTINCT ?proceedingsTitle ?orcid ?wikipediaPage ?paperDoi
+    WHERE {
+      ?person rdf:type dblp:Person ;
+              dblp:creatorName "Bing Xue" ;
+              dblp:orcid ?orcid ;
+              dblp:wikipedia ?wikipediaPage .
+
+      ?proceedings rdf:type dblp:Editorship ;
+                   dblp:createdBy ?person ;
+                   dblp:title ?proceedingsTitle .
+
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:createdBy ?person ;
+             dblp:numberOfCreators 8 ;
+             dblp:documentPage ?paperDoi .
+    }
+    ORDER BY ?proceedingsTitle ?paperDoi
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    proceedingsTitle: PRICAI 2025: Trends in Artificial Intelligence - 22nd Pacific Rim International Conference on Artificial Intelligence, PRICAI 2025, Wellington, New Zealand, November 17-21, 2025, Proceedings, Part II | orcid: https://orcid.org/0000-0002-4865-8026 | wikipediaPage: https://en.wikipedia.org/wiki/Bing_Xue | paperDoi: https://doi.org/10.1007/978-981-95-7072-0_38
+- id: 40
+  src_id: 11
+  text: "Which Springer-published proceedings with a DOI were edited by an author of “Chinese Medical Named Entity Recognition Using External Knowledge.”? For each, give the author’s name, the proceedings title, the DOI, and, when available, the OpenCitations Meta identifier."
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?authorName ?proceedingsTitle ?doi ?omid
+    WHERE {
+      VALUES ?paperTitle {
+        "Chinese Medical Named Entity Recognition Using External Knowledge."
+      }
+      VALUES ?publisher { "Springer" }
+
+      ?paper a dblp:Inproceedings ;
+             dblp:title ?paperTitle ;
+             dblp:createdBy ?author .
+
+      ?author dblp:primaryCreatorName ?authorName .
+
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy ?author ;
+                   dblp:title ?proceedingsTitle ;
+                   dblp:publishedBy ?publisher ;
+                   dblp:doi ?doi .
+
+      OPTIONAL {
+        ?proceedings dblp:omid ?omid .
+      }
+    }
+  llm_best: ""
+  result_count: 3
+  result_snippet: |
+    authorName: Lin Zhang | proceedingsTitle: AsiaSim 2012 - Asia Simulation Conference 2012, Shanghai, China, October 27-30, 2012. Proceedings, Part I | doi: https://doi.org/10.1007/978-3-642-34384-1
+    authorName: Lin Zhang | proceedingsTitle: AsiaSim 2012 - Asia Simulation Conference 2012, Shanghai, China, October 27-30, 2012. Proceedings, Part II | doi: https://doi.org/10.1007/978-3-642-34390-2
+    authorName: Lin Zhang | proceedingsTitle: AsiaSim 2012 - Asia Simulation Conference 2012, Shanghai, China, October 27-30, 2012. Proceedings, Part III | doi: https://doi.org/10.1007/978-3-642-34387-2
+- id: 41
+  src_id: 11
+  text: "Which authors of “ICDT: Incremental Context Guided Deliberation Transformer for Image Captioning.” have edited more than one distinct proceedings volume, and how many distinct volumes have they edited?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT ?authorName (COUNT(DISTINCT ?proceedings) AS ?proceedingsCount)
+    WHERE {
+      VALUES ?paperTitle {
+        "ICDT: Incremental Context Guided Deliberation Transformer for Image Captioning."
+      }
+
+      ?paper a dblp:Inproceedings ;
+             dblp:title ?paperTitle ;
+             dblp:createdBy ?author .
+
+      ?author dblp:primaryCreatorName ?authorName .
+
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy ?author .
+    }
+    GROUP BY ?author ?authorName
+    HAVING (COUNT(DISTINCT ?proceedings) > 1)
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    authorName: Gang Li | proceedingsCount: 3
+    authorName: Jiang Zhong | proceedingsCount: 2
+- id: 42
+  src_id: 11
+  text: "Does the paper titled “An End-to-End Preprocessor Based on Adversiarial Learning for Mongolian Historical Document OCR.” have exactly one credited author named “Yue Zhang,” and did that author edit two distinct proceedings whose titles contain “SIGHAN Workshop on Chinese Language Processing,” with one title also containing “2015” and the other containing “2017”?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    ASK WHERE {
+      VALUES ?paperTitle {
+        "An End-to-End Preprocessor Based on Adversiarial Learning for Mongolian Historical Document OCR."
+      }
+      VALUES ?authorName { "Yue Zhang" }
+
+      ?paper a dblp:Inproceedings ;
+             dblp:title ?paperTitle ;
+             dblp:createdBy ?author .
+      ?author dblp:primaryCreatorName ?authorName .
+
+      FILTER NOT EXISTS {
+        ?paper dblp:createdBy ?otherAuthor .
+        ?otherAuthor dblp:primaryCreatorName "Yue Zhang" .
+        FILTER (?otherAuthor != ?author)
+      }
+
+      ?proceedings2015 a dblp:Editorship ;
+                       dblp:editedBy ?author ;
+                       dblp:title ?title2015 .
+      FILTER(CONTAINS(STR(?title2015), "SIGHAN Workshop on Chinese Language Processing"))
+      FILTER(CONTAINS(STR(?title2015), "2015"))
+
+      ?proceedings2017 a dblp:Editorship ;
+                       dblp:editedBy ?author ;
+                       dblp:title ?title2017 .
+      FILTER(CONTAINS(STR(?title2017), "SIGHAN Workshop on Chinese Language Processing"))
+      FILTER(CONTAINS(STR(?title2017), "2017"))
+      FILTER(?proceedings2015 != ?proceedings2017)
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 43
+  src_id: 12
+  text: "Which of Ling Feng’s papers with at least five listed authors appeared in proceedings that she also edited? Include each paper’s title, author count, and any available venue, publication year, and DOI."
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?paper ?title ?creatorCount ?venue ?year ?doi
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:authoredBy <https://dblp.org/pid/58/4464> ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:title ?title ;
+             dblp:numberOfCreators ?creatorCount .
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy <https://dblp.org/pid/58/4464> .
+      FILTER(?creatorCount >= 5)
+      OPTIONAL { ?paper dblp:publishedIn ?venue . }
+      OPTIONAL { ?paper dblp:yearOfPublication ?year . }
+      OPTIONAL { ?paper dblp:doi ?doi . }
+    }
+    ORDER BY ?year LCASE(STR(?title))
+  llm_best: ""
+  result_count: 2
+  result_snippet: |
+    paper: https://dblp.org/rec/conf/otm/DillonFJGBLV05 | title: SWWS 2005 PC Co-chairs' Message. | creatorCount: 7 | venue: OTM Workshops | year: 2005 | doi: https://doi.org/10.1007/11575863_101
+    paper: https://dblp.org/rec/conf/dasfaa/LiFWKF13 | title: ReTweet  p : Modeling and Predicting Tweets Spread Using an Extended Susceptible-Infected- Susceptible Epidemic Model. | creatorCount: 5 | venue: DASFAA (2) | year: 2013 | doi: https://doi.org/10.1007/978-3-642-37450-0_35
+- id: 44
+  src_id: 12
+  text: "Did Shihao Xu and Wei Shi both coauthor “Fashion-GPT: Integrating LLMs with Fashion Retrieval System” and both edit the proceedings in which it appeared?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    ASK {
+      ?paper a dblp:Inproceedings ;
+             dblp:title "Fashion-GPT: Integrating LLMs with Fashion Retrieval System." ;
+             dblp:authoredBy <https://dblp.org/pid/71/6199>,
+                             <https://dblp.org/pid/44/4066> ;
+             dblp:publishedAsPartOf ?proceedings .
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy <https://dblp.org/pid/71/6199>,
+                                 <https://dblp.org/pid/44/4066> .
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 45
+  src_id: 12
+  text: "From 2022 onward, which ten researchers have authored the most papers that appeared in proceedings they also edited, and how many such papers did each have? Treat multiple recorded name variants for the same researcher as one researcher, display one of those names, and break count ties alphabetically by the displayed name."
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT ?researcher (SAMPLE(?nameVariant) AS ?name) ?paperCount
+    WHERE {
+      {
+        SELECT ?researcher (COUNT(DISTINCT ?paper) AS ?paperCount)
+        WHERE {
+          ?paper a dblp:Inproceedings ;
+                 dblp:authoredBy ?researcher ;
+                 dblp:publishedAsPartOf ?proceedings ;
+                 dblp:yearOfPublication ?year .
+          ?proceedings a dblp:Editorship ;
+                       dblp:editedBy ?researcher .
+          FILTER(?year >= "2022"^^xsd:gYear)
+        }
+        GROUP BY ?researcher
+      }
+      ?researcher dblp:creatorName ?nameVariant .
+    }
+    GROUP BY ?researcher ?paperCount
+    ORDER BY DESC(?paperCount) LCASE(STR(?name))
+    LIMIT 10
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    researcher: https://dblp.org/pid/09/6391 | name: Leonard Barolli | paperCount: 232
+    researcher: https://dblp.org/pid/131/7133 | name: Andreas Maier | paperCount: 99
+    researcher: https://dblp.org/pid/67/1486 | name: Hossain Shahriar | paperCount: 67
+- id: 46
+  src_id: 13
+  text: "Who has coauthored articles with Mohammad Arif Ul Alam in EAI Endorsed Transactions on Ubiquitous Environments, how many such articles did each person coauthor with him, and how many articles in total has each person authored in that journal? Order the results by the shared-article count in descending order, then by the total journal-article count in descending order, and finally alphabetically by coauthor name."
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX journals: <https://dblp.org/streams/journals/>
+
+    SELECT ?coauthor ?coauthorName ?sharedArticleCount ?totalJournalArticleCount
+    WHERE {
+      {
+        SELECT ?coauthor (COUNT(DISTINCT ?article) AS ?sharedArticleCount)
+        WHERE {
+          ?alamSignature dblp:signatureCreator <https://dblp.org/pid/136/4531> ;
+                         dblp:signaturePublication ?article .
+          ?article dblp:publishedInStream journals:ue .
+          ?coauthorSignature dblp:signaturePublication ?article ;
+                             dblp:signatureCreator ?coauthor .
+          FILTER(?coauthor != <https://dblp.org/pid/136/4531>)
+        }
+        GROUP BY ?coauthor
+      }
+      {
+        SELECT ?coauthor (COUNT(DISTINCT ?journalArticle) AS ?totalJournalArticleCount)
+        WHERE {
+          ?journalSignature dblp:signatureCreator ?coauthor ;
+                            dblp:signaturePublication ?journalArticle .
+          ?journalArticle dblp:publishedInStream journals:ue .
+        }
+        GROUP BY ?coauthor
+      }
+      ?coauthor dblp:primaryCreatorName ?coauthorName .
+    }
+    ORDER BY DESC(?sharedArticleCount) DESC(?totalJournalArticleCount) ?coauthorName
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    coauthor: https://dblp.org/pid/164/6600 | coauthorName: Nilavra Pathak | sharedArticleCount: 1 | totalJournalArticleCount: 1
+    coauthor: https://dblp.org/pid/79/1526 | coauthorName: Nirmalya Roy | sharedArticleCount: 1 | totalJournalArticleCount: 1
+- id: 47
+  src_id: 13
+  text: "Has John Perry authored a single-author article in the combined issue 5–6 of Applicable Algebra in Engineering, Communication and Computing?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX journals: <https://dblp.org/streams/journals/>
+
+    ASK {
+      ?signature dblp:signatureCreator <https://dblp.org/pid/04/5854-1> ;
+                 dblp:signaturePublication ?article .
+      ?article dblp:publishedInStream journals:aaecc ;
+               dblp:numberOfCreators 1 ;
+               dblp:publishedInJournalVolumeIssue ?issue .
+      FILTER(STR(?issue) = "5-6")
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 48
+  src_id: 13
+  text: "Which 10 authors have written the most multi-author articles in Applied Artificial Intelligence, and how many such articles has each written? Rank them by article count in descending order, breaking ties alphabetically by author name."
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX journals: <https://dblp.org/streams/journals/>
+
+    SELECT ?author ?authorName (COUNT(DISTINCT ?article) AS ?articleCount)
+    WHERE {
+      ?signature dblp:signatureCreator ?author ;
+                 dblp:signaturePublication ?article .
+      ?article dblp:publishedInStream journals:aai ;
+               dblp:numberOfCreators ?creatorCount .
+      FILTER(?creatorCount > 1)
+      ?author dblp:primaryCreatorName ?authorName .
+    }
+    GROUP BY ?author ?authorName
+    ORDER BY DESC(?articleCount) ?authorName
+    LIMIT 10
+  llm_best: ""
+  result_count: 10
+  result_snippet: |
+    author: https://dblp.org/pid/z/ShichaoZhang | authorName: Shichao Zhang | articleCount: 11
+    author: https://dblp.org/pid/71/964 | authorName: Chengqi Zhang | articleCount: 10
+    author: https://dblp.org/pid/j/NicholasRJennings | authorName: Nicholas R. Jennings | articleCount: 8
+- id: 49
+  src_id: 14
+  text: "Which ten conference papers appearing in proceedings edited by Atilla Baskurt have the most recent recorded event years, with ties broken alphabetically by title, and what venues, DOIs, and proceedings publishers are recorded for them?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT DISTINCT ?paper ?title ?eventYear ?venue ?doi ?publisher
+    WHERE {
+      {
+        SELECT DISTINCT ?paper ?title ?eventYear ?proceedings
+        WHERE {
+          ?paper rdf:type dblp:Inproceedings ;
+                 dblp:title ?title ;
+                 dblp:yearOfEvent ?eventYear ;
+                 dblp:publishedAsPartOf ?proceedings .
+
+          ?proceedings rdf:type dblp:Editorship ;
+                       dblp:createdBy <https://dblp.org/pid/b/AtillaBaskurt> .
+        }
+        ORDER BY DESC(?eventYear) ASC(?title)
+        LIMIT 10
+      }
+
+      OPTIONAL { ?paper dblp:publishedIn ?venue . }
+      OPTIONAL { ?paper dblp:doi ?doi . }
+      OPTIONAL { ?proceedings dblp:publishedBy ?publisher . }
+    }
+    ORDER BY DESC(?eventYear) ASC(?title)
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    paper: https://dblp.org/rec/conf/3dica/HanFDSG14 | title: 3D face recognition via conformal representation. | eventYear: 2014 | venue: Three-Dimensional Image Processing, Measurement (3DIPM), and Applications | doi: https://doi.org/10.1117/12.2039542 | publisher: SPIE
+    paper: https://dblp.org/rec/conf/3dica/HachaniZP14 | title: 3D mesh indexing based on structural analysis. | eventYear: 2014 | venue: Three-Dimensional Image Processing, Measurement (3DIPM), and Applications | doi: https://doi.org/10.1117/12.2042755 | publisher: SPIE
+    paper: https://dblp.org/rec/conf/3dica/CaoXYG14 | title: A multiple wavelength unwrapping algorithm for digital fringe profilometry based on spatial shift estimation. | eventYear: 2014 | venue: Three-Dimensional Image Processing, Measurement (3DIPM), and Applications | doi: https://doi.org/10.1117/12.2038954 | publisher: SPIE
+- id: 50
+  src_id: 14
+  text: "Which 3D-GIS conference papers were published in proceedings co-edited by the researcher whose ORCID is 0000-0002-0413-8977 and at least one other researcher with a different ORCID? For each paper, what is its DOI, if available, and what is the ORCID of each such co-editor?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT DISTINCT ?paper ?title ?doi ?coeditorOrcid
+    WHERE {
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:title ?title ;
+             dblp:publishedIn "3D-GIS" ;
+             dblp:publishedAsPartOf ?proceedings .
+
+      ?proceedings rdf:type dblp:Editorship ;
+                   dblp:createdBy ?editor ;
+                   dblp:createdBy ?coeditor .
+
+      ?editor rdf:type dblp:Person ;
+              dblp:orcid <https://orcid.org/0000-0002-0413-8977> .
+
+      ?coeditor rdf:type dblp:Person ;
+                dblp:orcid ?coeditorOrcid .
+
+      FILTER(
+        ?coeditor != ?editor &&
+        ?coeditorOrcid != <https://orcid.org/0000-0002-0413-8977>
+      )
+
+      OPTIONAL { ?paper dblp:doi ?doi . }
+    }
+    ORDER BY ?title ?coeditorOrcid
+  llm_best: ""
+  result_count: 56
+  result_snippet: |
+    paper: https://dblp.org/rec/conf/3dgis/Tet-KhuanA06 | title: 0-D Feature in 3D Planar Polygon Testing for 3D Spatial Analysis. | doi: https://doi.org/10.1007/978-3-540-36998-1_13 | coeditorOrcid: https://orcid.org/0000-0002-8766-0487
+    paper: https://dblp.org/rec/conf/3dgis/SuwardhiS06 | title: 3D Geo-database Implementation using Craniofacial Geometric Morphometrics Database System. | doi: https://doi.org/10.1007/978-3-540-36998-1_22 | coeditorOrcid: https://orcid.org/0000-0002-8766-0487
+    paper: https://dblp.org/rec/conf/3dgis/Zlatanova06 | title: 3D Geometries in Spatial DBMS. | doi: https://doi.org/10.1007/978-3-540-36998-1_1 | coeditorOrcid: https://orcid.org/0000-0002-8766-0487
+- id: 51
+  src_id: 14
+  text: "Which editors whose primary affiliation is Warsaw University of Technology, Poland, edited a volume in the SPIE Proceedings series containing the paper “Person and gesture tracking with smart stereo cameras.”, and what ORCID or Wikidata identifiers are recorded for them?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT DISTINCT ?editor ?identifier
+    WHERE {
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:title "Person and gesture tracking with smart stereo cameras." ;
+             dblp:publishedAsPartOf ?proceedings .
+
+      ?proceedings rdf:type dblp:Editorship ;
+                   dblp:publishedInSeries "SPIE Proceedings" ;
+                   dblp:createdBy ?editor .
+
+      ?editor rdf:type dblp:Person ;
+              dblp:primaryAffiliation "Warsaw University of Technology, Poland" ;
+              (dblp:orcid|dblp:wikidata) ?identifier .
+    }
+  llm_best: ""
+  result_count: 2
+  result_snippet: |
+    editor: https://dblp.org/pid/36/5740 | identifier: http://www.wikidata.org/entity/Q61105182
+    editor: https://dblp.org/pid/36/5740 | identifier: https://orcid.org/0000-0002-8156-5462
+- id: 52
+  src_id: 14
+  text: "For each 3D-GIS proceedings volume edited by at least one researcher with an ORCID identifier, how many distinct 3D-GIS papers did it contain, and how many distinct ORCID-identified editors did it have?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT ?proceedings ?orcidEditorCount
+           (COUNT(DISTINCT ?paper) AS ?paperCount)
+    WHERE {
+      {
+        SELECT ?proceedings (COUNT(DISTINCT ?editor) AS ?orcidEditorCount)
+        WHERE {
+          ?proceedings rdf:type dblp:Editorship ;
+                       dblp:createdBy ?editor .
+
+          ?editor rdf:type dblp:Person ;
+                  dblp:orcid ?orcid .
+        }
+        GROUP BY ?proceedings
+      }
+
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:publishedIn "3D-GIS" ;
+             dblp:publishedAsPartOf ?proceedings .
+    }
+    GROUP BY ?proceedings ?orcidEditorCount
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    proceedings: https://dblp.org/rec/conf/3dgis/2006 | orcidEditorCount: 2 | paperCount: 56
+- id: 53
+  src_id: 15
+  text: "What are the DOIs, venues, and publication years of conference papers authored by Makoto Amamiya that appeared in proceedings he also edited?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?doi ?venue ?year
+    WHERE {
+      VALUES ?person { <https://dblp.org/pid/a/MakotoAmamiya> }
+
+      ?paper a dblp:Inproceedings ;
+             dblp:createdBy ?person ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:doi ?doi ;
+             dblp:publishedIn ?venue ;
+             dblp:yearOfPublication ?year .
+
+      ?proceedings a dblp:Editorship ;
+                   dblp:createdBy ?person .
+    }
+    ORDER BY ?year ?venue ?doi
+  llm_best: ""
+  result_count: 3
+  result_snippet: |
+    doi: https://doi.org/10.1007/BFB0024208 | venue: ISHPC | year: 1997
+    doi: https://doi.org/10.1007/BFB0024220 | venue: ISHPC | year: 1997
+    doi: https://doi.org/10.1007/11596356_55 | venue: EUC | year: 2005
+- id: 54
+  src_id: 15
+  text: "Which three researchers who edited the 2009 AIED proceedings with ISBN 978-1-60750-028-5 authored the most papers with recorded DOIs in that volume? For each researcher, how many such papers did they author, and what are the papers and their DOIs?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?researcher ?paperCount ?paper ?doi
+    WHERE {
+      {
+        SELECT ?researcher (COUNT(DISTINCT ?countedPaper) AS ?paperCount)
+        WHERE {
+          ?researcher a dblp:Person .
+
+          ?countedProceedings a dblp:Editorship ;
+                              owl:sameAs <urn:isbn:9781607500285> ;
+                              dblp:yearOfPublication "2009"^^xsd:gYear ;
+                              dblp:createdBy ?researcher .
+
+          ?countedPaper a dblp:Inproceedings ;
+                        dblp:publishedAsPartOf ?countedProceedings ;
+                        dblp:publishedIn "AIED" ;
+                        dblp:createdBy ?researcher ;
+                        dblp:doi ?countedDoi .
+        }
+        GROUP BY ?researcher
+        ORDER BY DESC(?paperCount)
+        LIMIT 3
+      }
+
+      ?proceedings a dblp:Editorship ;
+                   owl:sameAs <urn:isbn:9781607500285> ;
+                   dblp:yearOfPublication "2009"^^xsd:gYear ;
+                   dblp:createdBy ?researcher .
+
+      ?paper a dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:publishedIn "AIED" ;
+             dblp:createdBy ?researcher ;
+             dblp:doi ?doi .
+    }
+    ORDER BY DESC(?paperCount) ?researcher ?doi
+  llm_best: true
+  result_count: 17
+  result_snippet: |
+    researcher: https://dblp.org/pid/22/5977 | paperCount: 9 | paper: https://dblp.org/rec/conf/aied/RusLGM09 | doi: https://doi.org/10.3233/978-1-60750-028-5-165
+    researcher: https://dblp.org/pid/22/5977 | paperCount: 9 | paper: https://dblp.org/rec/conf/aied/WallaceGMHCBMW09 | doi: https://doi.org/10.3233/978-1-60750-028-5-602
+    researcher: https://dblp.org/pid/22/5977 | paperCount: 9 | paper: https://dblp.org/rec/conf/aied/AzevedoWGMCSCRL09 | doi: https://doi.org/10.3233/978-1-60750-028-5-635
+- id: 55
+  src_id: 15
+  text: "How many distinct papers in the 2005 ICCE proceedings with ISBN 1-58603-573-8 were authored by one of that volume’s editors but do not have a DOI recorded?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT (COUNT(DISTINCT ?paper) AS ?paperCount)
+    WHERE {
+      ?proceedings a dblp:Editorship ;
+                   owl:sameAs <urn:isbn:1586035738> ;
+                   dblp:yearOfPublication "2005"^^xsd:gYear ;
+                   dblp:createdBy ?editor .
+
+      ?paper a dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:publishedIn "ICCE" ;
+             dblp:yearOfPublication "2005"^^xsd:gYear ;
+             dblp:createdBy ?editor .
+
+      FILTER NOT EXISTS {
+        ?paper dblp:doi ?doi .
+      }
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    6
+- id: 56
+  src_id: 16
+  text: "Who edited the proceedings containing “A knowledge graph constructed for job-related crimes.”, in what year and series volume were the proceedings published, and what DOI or primary document-page link is available for them?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?editorName ?publicationYear ?seriesVolume ?accessLink
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:title "A knowledge graph constructed for job-related crimes." ;
+             dblp:publishedAsPartOf ?proceedings .
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy ?editor ;
+                   dblp:yearOfPublication ?publicationYear ;
+                   dblp:publishedInSeriesVolume ?seriesVolume ;
+                   (dblp:doi|dblp:primaryDocumentPage) ?accessLink .
+      ?editor dblp:creatorName ?editorName .
+    }
+  llm_best: ""
+  result_count: 11
+  result_snippet: |
+    editorName: Daji Ergu | publicationYear: 2022 | seriesVolume: 199 | accessLink: https://www.sciencedirect.com/journal/procedia-computer-science/vol/199/
+    editorName: Daniel Berg | publicationYear: 2022 | seriesVolume: 199 | accessLink: https://www.sciencedirect.com/journal/procedia-computer-science/vol/199/
+    editorName: James M. Tien | publicationYear: 2022 | seriesVolume: 199 | accessLink: https://www.sciencedirect.com/journal/procedia-computer-science/vol/199/
+- id: 57
+  src_id: 16
+  text: "Which 10 ITQM papers published in the same proceedings as “A knowledge graph constructed for job-related crimes.” have the largest numbers of listed authors, breaking ties by case-insensitive alphabetical order of title, and what are their titles, page ranges, DOIs, and author counts?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?paperTitle ?pageRange ?doi ?authorCount
+    WHERE {
+      ?referencePaper a dblp:Inproceedings ;
+                      dblp:title "A knowledge graph constructed for job-related crimes." ;
+                      dblp:publishedAsPartOf ?proceedings .
+      ?paper a dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:publishedInBook "ITQM" ;
+             dblp:title ?paperTitle ;
+             dblp:pagination ?pageRange ;
+             dblp:doi ?doi ;
+             dblp:numberOfCreators ?authorCount .
+    }
+    ORDER BY DESC(?authorCount) LCASE(STR(?paperTitle))
+    LIMIT 10
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    paperTitle: A multicriteria decision-making approach to classify military bases for the Brazilian Navy. | pageRange: 79-86 | doi: https://doi.org/10.1016/J.PROCS.2022.01.198 | authorCount: 7
+    paperTitle: A Novel Machine Lip Reading Model. | pageRange: 1432-1437 | doi: https://doi.org/10.1016/J.PROCS.2022.01.181 | authorCount: 7
+    paperTitle: Evaluation of drones for public security: a multicriteria approach by the PROMETHEE-SAPEVO-M1 systematic. | pageRange: 125-133 | doi: https://doi.org/10.1016/J.PROCS.2022.01.016 | authorCount: 7
+- id: 58
+  src_id: 16
+  text: "Did Yong Wang edit proceedings that contain both “A knowledge graph constructed for job-related crimes.” and “Internal Control Quality, Related Party Transactions and Accounting Information Comparability.”, and is he also credited as an author of at least one journal article?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    ASK
+    WHERE {
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy ?editor .
+      ?editor dblp:creatorName "Yong Wang" .
+      ?firstPaper a dblp:Inproceedings ;
+                  dblp:title "A knowledge graph constructed for job-related crimes." ;
+                  dblp:publishedAsPartOf ?proceedings .
+      ?secondPaper a dblp:Inproceedings ;
+                   dblp:title "Internal Control Quality, Related Party Transactions and Accounting Information Comparability." ;
+                   dblp:publishedAsPartOf ?proceedings .
+      FILTER(?firstPaper != ?secondPaper)
+      FILTER EXISTS {
+        ?signature a dblp:AuthorSignature ;
+                   dblp:signatureCreator ?editor ;
+                   dblp:signaturePublication ?article .
+        ?article a dblp:Article .
+      }
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 59
+  src_id: 16
+  text: "Which journal articles list Yong Wang—the editor of the proceedings containing “A knowledge graph constructed for job-related crimes.”—as the first author, and in which journal issue was each article published? Sort the results lexicographically by journal issue and then by article identifier."
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?article ?journalIssue
+    WHERE {
+      ?conferencePaper a dblp:Inproceedings ;
+                       dblp:title "A knowledge graph constructed for job-related crimes." ;
+                       dblp:publishedAsPartOf ?proceedings .
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy ?editor .
+      ?editor dblp:creatorName "Yong Wang" .
+      ?signature a dblp:AuthorSignature ;
+                 dblp:signatureCreator ?editor ;
+                 dblp:signaturePublication ?article ;
+                 dblp:signatureOrdinal ?authorPosition .
+      FILTER(?authorPosition = 1)
+      ?article a dblp:Article ;
+               dblp:publishedInJournalVolumeIssue ?journalIssue .
+    }
+    ORDER BY STR(?journalIssue) STR(?article)
+  llm_best: ""
+  result_count: 123
+  result_snippet: |
+    article: https://dblp.org/rec/journals/ase/WangCGFL24 | journalIssue: 1
+    article: https://dblp.org/rec/journals/bmcbi/WangLZZXMZC24 | journalIssue: 1
+    article: https://dblp.org/rec/journals/csse/WangWQHCH21 | journalIssue: 1
+- id: 60
+  src_id: 17
+  text: "For the five papers with the highest recorded author counts among those published in proceedings volumes edited by Michael D. Noseworthy, what are the document-page URLs, event years, author counts, and proceedings titles?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?proceedingsTitle ?eventYear ?creatorCount ?paperWebpage
+    WHERE {
+      VALUES ?person { <https://dblp.org/pid/13/3126> }
+
+      ?person a dblp:Person ;
+              dblp:primaryCreatorName "Michael D. Noseworthy" .
+
+      ?proceedings a dblp:Editorship ;
+                   dblp:createdBy ?person ;
+                   dblp:title ?proceedingsTitle .
+
+      ?paper a dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:yearOfEvent ?eventYear ;
+             dblp:numberOfCreators ?creatorCount ;
+             dblp:documentPage ?paperWebpage .
+    }
+    ORDER BY DESC(?creatorCount)
+    LIMIT 5
+  llm_best: ""
+  result_count: 5
+  result_snippet: |
+    proceedingsTitle: Proceedings of the AAAI 2021 Fall Symposium on Human Partnership with Medical AI: Design, Operationalization, and Ethics (AAAI-HUMAN 2021), Virtual Event, November 4-6, 2021. | eventYear: 2021 | creatorCount: 9 | paperWebpage: https://ceur-ws.org/Vol-3068/short7.pdf
+    proceedingsTitle: Proceedings of the AAAI 2021 Fall Symposium on Human Partnership with Medical AI: Design, Operationalization, and Ethics (AAAI-HUMAN 2021), Virtual Event, November 4-6, 2021. | eventYear: 2021 | creatorCount: 5 | paperWebpage: https://ceur-ws.org/Vol-3068/short6.pdf
+    proceedingsTitle: Proceedings of the AAAI 2021 Fall Symposium on Human Partnership with Medical AI: Design, Operationalization, and Ethics (AAAI-HUMAN 2021), Virtual Event, November 4-6, 2021. | eventYear: 2021 | creatorCount: 4 | paperWebpage: https://ceur-ws.org/Vol-3068/short2.pdf
+- id: 61
+  src_id: 17
+  text: "Who are the editors of \"6GN for Future Wireless Networks - 6th EAI International Conference, 6GN 2023, Shanghai, China, October 7-8, 2023, Proceedings, Part I,\" what ORCID, affiliation, and webpage information is recorded for each editor, and how many distinct papers are included in the volume?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?creatorName ?orcid ?affiliation ?webpage ?paperCount
+    WHERE {
+      {
+        SELECT ?proceedings (COUNT(DISTINCT ?paper) AS ?paperCount)
+        WHERE {
+          ?proceedings a dblp:Editorship ;
+                       dblp:title ?proceedingsTitle .
+          FILTER(STR(?proceedingsTitle) = "6GN for Future Wireless Networks - 6th EAI International Conference, 6GN 2023, Shanghai, China, October 7-8, 2023, Proceedings, Part I")
+
+          ?paper a dblp:Inproceedings ;
+                 dblp:publishedAsPartOf ?proceedings .
+        }
+        GROUP BY ?proceedings
+      }
+
+      ?proceedings dblp:createdBy ?creator .
+      ?creator a dblp:Person ;
+               dblp:primaryCreatorName ?creatorName .
+
+      OPTIONAL { ?creator dblp:orcid ?orcid . }
+      OPTIONAL { ?creator dblp:affiliation ?affiliation . }
+      OPTIONAL { ?creator dblp:webpage ?webpage . }
+    }
+    ORDER BY ?creatorName
+  llm_best: true
+  result_count: 3
+  result_snippet: |
+    creatorName: Bin Zhang | orcid: https://orcid.org/0000-0002-2577-6257 | affiliation: Kanagawa University, Department of Mechanical Engineering, Yokohama, Japan | webpage: https://ieeexplore.ieee.org/author/37087080691 | paperCount: 35
+    creatorName: Bin Zhang | orcid: https://orcid.org/0000-0002-2577-6257 | affiliation: University of Electro-Communications, Department of Mechanical Engineering and Intelligent Systems, Tokyo, Japan | webpage: https://ieeexplore.ieee.org/author/37087080691 | paperCount: 35
+    creatorName: Yulong Ying | orcid: — | affiliation: — | webpage: — | paperCount: 35
+- id: 62
+  src_id: 17
+  text: "How many distinct papers in \"Natural Language Dialog Systems and Intelligent Assistants, 6th International Workshop on Spoken Dialogue Systems, IWSDS 2015, Busan, Korea, January 11-13, 2015\" have a recorded author count of at least three?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT (COUNT(DISTINCT ?paper) AS ?paperCount)
+    WHERE {
+      ?proceedings a dblp:Editorship ;
+                   dblp:title ?proceedingsTitle .
+      FILTER(STR(?proceedingsTitle) = "Natural Language Dialog Systems and Intelligent Assistants, 6th International Workshop on Spoken Dialogue Systems, IWSDS 2015, Busan, Korea, January 11-13, 2015")
+
+      ?paper a dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings .
+
+      FILTER EXISTS {
+        ?paper dblp:numberOfCreators ?creatorCount .
+        FILTER(?creatorCount >= 3)
+      }
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    24
+- id: 63
+  src_id: 17
+  text: "Which editor or editors have the highest total number of distinct papers across the proceedings volumes they edited, and what is that number?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT ?creatorName ?paperCount
+    WHERE {
+      {
+        SELECT ?creator ?creatorName (COUNT(DISTINCT ?paper) AS ?paperCount)
+        WHERE {
+          ?creator a dblp:Person ;
+                   dblp:primaryCreatorName ?creatorName .
+          ?proceedings a dblp:Editorship ;
+                       dblp:createdBy ?creator .
+          ?paper a dblp:Inproceedings ;
+                 dblp:publishedAsPartOf ?proceedings .
+        }
+        GROUP BY ?creator ?creatorName
+      }
+      {
+        SELECT (MAX(?countForCreator) AS ?maximumPaperCount)
+        WHERE {
+          {
+            SELECT ?candidate (COUNT(DISTINCT ?candidatePaper) AS ?countForCreator)
+            WHERE {
+              ?candidate a dblp:Person ;
+                         dblp:primaryCreatorName ?candidateName .
+              ?candidateProceedings a dblp:Editorship ;
+                                    dblp:createdBy ?candidate .
+              ?candidatePaper a dblp:Inproceedings ;
+                              dblp:publishedAsPartOf ?candidateProceedings .
+            }
+            GROUP BY ?candidate
+          }
+        }
+      }
+      FILTER(?paperCount = ?maximumPaperCount)
+    }
+    ORDER BY ?creatorName
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    creatorName: Joaquim Filipe | paperCount: 15066
+- id: 64
+  src_id: 19
+  text: "Which three papers have the highest author counts among those authored by Bin Zhang, whose primary affiliation is the Department of Mechanical Engineering at Kanagawa University in Yokohama, Japan, in the proceedings he edited titled “6GN for Future Wireless Networks — 6th EAI International Conference, 6GN 2023, Shanghai, China, October 7–8, 2023, Proceedings, Part I”? Give each paper’s DOI, page range, publication year, and author count."
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?doi ?pagination ?publicationYear ?numberOfCreators
+    WHERE {
+      ?person rdf:type dblp:Person ;
+              dblp:primaryCreatorName "Bin Zhang" ;
+              dblp:primaryAffiliation "Kanagawa University, Department of Mechanical Engineering, Yokohama, Japan" .
+
+      ?proceedings rdf:type dblp:Editorship ;
+                   dblp:title "6GN for Future Wireless Networks - 6th EAI International Conference, 6GN 2023, Shanghai, China, October 7-8, 2023, Proceedings, Part I" ;
+                   dblp:editedBy ?person .
+
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:authoredBy ?person ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:doi ?doi ;
+             dblp:pagination ?pagination ;
+             dblp:yearOfPublication ?publicationYear ;
+             dblp:numberOfCreators ?numberOfCreators .
+    }
+    ORDER BY DESC(xsd:integer(?numberOfCreators))
+    LIMIT 3
+  llm_best: ""
+  result_count: 3
+  result_snippet: |
+    doi: https://doi.org/10.1007/978-3-031-53401-0_11 | pagination: 105-116 | publicationYear: 2024 | numberOfCreators: 6
+    doi: https://doi.org/10.1007/978-3-031-53401-0_2 | pagination: 10-16 | publicationYear: 2024 | numberOfCreators: 4
+    doi: https://doi.org/10.1007/978-3-031-53401-0_3 | pagination: 17-22 | publicationYear: 2024 | numberOfCreators: 4
+- id: 65
+  src_id: 19
+  text: "Among conference papers with DOIs that were coauthored by at least one editor of the proceedings in which they appeared, which paper or papers have the highest author count? Give each paper’s DOI, author count, and proceedings title, together with each editor-coauthor’s name and primary affiliation, if recorded."
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?doi ?numberOfCreators ?proceedingsTitle ?editorAuthor ?editorAffiliation
+    WHERE {
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:doi ?doi ;
+             dblp:numberOfCreators ?numberOfCreators ;
+             dblp:authoredBy ?person ;
+             dblp:publishedAsPartOf ?proceedings .
+
+      ?proceedings rdf:type dblp:Editorship ;
+                   dblp:title ?proceedingsTitle ;
+                   dblp:editedBy ?person .
+
+      ?person rdf:type dblp:Person ;
+              dblp:primaryCreatorName ?editorAuthor .
+
+      OPTIONAL {
+        ?person dblp:primaryAffiliation ?editorAffiliation .
+      }
+
+      {
+        SELECT (MAX(xsd:integer(?candidateCreatorCount)) AS ?largestTeamSize)
+        WHERE {
+          ?candidatePaper rdf:type dblp:Inproceedings ;
+                          dblp:doi ?candidateDoi ;
+                          dblp:numberOfCreators ?candidateCreatorCount ;
+                          dblp:authoredBy ?candidatePerson ;
+                          dblp:publishedAsPartOf ?candidateProceedings .
+
+          ?candidateProceedings rdf:type dblp:Editorship ;
+                                dblp:editedBy ?candidatePerson .
+
+          ?candidatePerson rdf:type dblp:Person .
+        }
+      }
+
+      FILTER(xsd:integer(?numberOfCreators) = ?largestTeamSize)
+    }
+    ORDER BY ?doi ?editorAuthor
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    doi: https://doi.org/10.1145/3552437.3558545 | numberOfCreators: 94 | proceedingsTitle: MMSports@MM 2022: Proceedings of the 5th International ACM Workshop on Multimedia Content Analysis in Sports, Lisboa, Portugal, 14 October 2022 | editorAuthor: Thomas B. Moeslund | editorAffiliation: Aalborg University, Denmark
+- id: 66
+  src_id: 19
+  text: "Which papers with DOIs were published in proceedings whose titles contain “5GWN” or “6GN,” have a publication year later than their event year, and were coauthored by at least one editor of those proceedings? For each paper, give its DOI, proceedings title, event year, publication year, the number of editor-coauthors, and their names."
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT ?doi ?proceedingsTitle ?eventYear ?publicationYear ?editorAuthorCount ?editorAuthors
+    WHERE {
+      {
+        SELECT ?paper ?doi ?proceedingsTitle ?eventYear ?publicationYear
+               (COUNT(DISTINCT ?person) AS ?editorAuthorCount)
+               (GROUP_CONCAT(DISTINCT ?editorAuthor; SEPARATOR=", ") AS ?editorAuthors)
+        WHERE {
+          ?paper rdf:type dblp:Inproceedings ;
+                 dblp:doi ?doi ;
+                 dblp:yearOfEvent ?eventYear ;
+                 dblp:yearOfPublication ?publicationYear ;
+                 dblp:authoredBy ?person ;
+                 dblp:publishedAsPartOf ?proceedings .
+
+          ?proceedings rdf:type dblp:Editorship ;
+                       dblp:title ?proceedingsTitle ;
+                       dblp:editedBy ?person .
+
+          ?person rdf:type dblp:Person ;
+                  dblp:primaryCreatorName ?editorAuthor .
+
+          FILTER(
+            CONTAINS(STR(?proceedingsTitle), "5GWN") ||
+            CONTAINS(STR(?proceedingsTitle), "6GN")
+          )
+          FILTER(
+            xsd:integer(STR(?publicationYear)) >
+            xsd:integer(STR(?eventYear))
+          )
+        }
+        GROUP BY ?paper ?doi ?proceedingsTitle ?eventYear ?publicationYear
+      }
+    }
+    ORDER BY ?eventYear ?doi
+  llm_best: true
+  result_count: 37
+  result_snippet: |
+    doi: https://doi.org/10.1007/978-3-319-72823-0_18 | proceedingsTitle: 5G for Future Wireless Networks - First International Conference, 5GWN 2017, Beijing, China, April 21-23, 2017, Proceedings | eventYear: 2017 | publicationYear: 2018 | editorAuthorCount: 1 | editorAuthors: Zhiyong Feng
+    doi: https://doi.org/10.1007/978-3-319-72823-0_19 | proceedingsTitle: 5G for Future Wireless Networks - First International Conference, 5GWN 2017, Beijing, China, April 21-23, 2017, Proceedings | eventYear: 2017 | publicationYear: 2018 | editorAuthorCount: 1 | editorAuthors: Zhongshan Zhang
+    doi: https://doi.org/10.1007/978-3-319-72823-0_27 | proceedingsTitle: 5G for Future Wireless Networks - First International Conference, 5GWN 2017, Beijing, China, April 21-23, 2017, Proceedings | eventYear: 2017 | publicationYear: 2018 | editorAuthorCount: 1 | editorAuthors: Zhongshan Zhang
+- id: 67
+  src_id: 19
+  text: "Did Remco C. Veltkamp, whose primary affiliation is Utrecht University in the Netherlands, edit the proceedings titled “12th Eurographics Workshop on 3D Object Retrieval, 3DOR@Eurographics 2019, Genoa, Italy, May 5–6, 2019” and also author a paper in those proceedings with 27 credited authors?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    ASK {
+      ?person rdf:type dblp:Person ;
+              dblp:primaryCreatorName "Remco C. Veltkamp" ;
+              dblp:primaryAffiliation "Utrecht University, Netherlands" .
+
+      ?proceedings rdf:type dblp:Editorship ;
+                   dblp:title "12th Eurographics Workshop on 3D Object Retrieval, 3DOR@Eurographics 2019, Genoa, Italy, May 5-6, 2019" ;
+                   dblp:editedBy ?person .
+
+      ?paper rdf:type dblp:Inproceedings ;
+             dblp:authoredBy ?person ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:numberOfCreators ?creatorCount .
+
+      FILTER(xsd:integer(?creatorCount) = 27)
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    true
+- id: 68
+  src_id: 20
+  text: "Which researchers other than Shuo Wang coauthored a conference paper with him and also edited its proceedings volume? For each such researcher and paper, what are the paper’s venue and primary access page, the proceedings series, volume number, publisher, and publication year, and the researcher’s primary homepage and Wikidata profile, if available?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?researcherName ?researcherHomepage ?researcherWikidata
+                    ?paperVenue ?paperPage ?proceedingsSeries
+                    ?seriesVolume ?publisher ?publicationYear
+    WHERE {
+      ?shuo dblp:primaryCreatorName "Shuo Wang" .
+
+      ?paper a dblp:Inproceedings ;
+             dblp:authoredBy ?shuo, ?researcher ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:publishedIn ?paperVenue ;
+             dblp:primaryDocumentPage ?paperPage .
+
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy ?researcher ;
+                   dblp:publishedIn ?proceedingsSeries ;
+                   dblp:publishedInSeriesVolume ?seriesVolume ;
+                   dblp:publishedBy ?publisher ;
+                   dblp:yearOfPublication ?publicationYear .
+
+      ?researcher dblp:primaryCreatorName ?researcherName .
+      FILTER(?researcher != ?shuo)
+
+      OPTIONAL { ?researcher dblp:primaryHomepage ?researcherHomepage . }
+      OPTIONAL { ?researcher dblp:wikidata ?researcherWikidata . }
+    }
+    ORDER BY ?researcherName
+  llm_best: ""
+  result_count: 12
+  result_snippet: |
+    researcherName: Luís Torgo | researcherHomepage: http://www.liaad.up.pt/~ltorgo/ | researcherWikidata: http://www.wikidata.org/entity/Q57985882 | paperVenue: LIDTA | paperPage: https://proceedings.mlr.press/v183/moniz22a.html | proceedingsSeries: Proceedings of Machine Learning Research | seriesVolume: 183 | publisher: PMLR | publicationYear: 2022
+    researcherName: Luís Torgo | researcherHomepage: http://www.liaad.up.pt/~ltorgo/ | researcherWikidata: http://www.wikidata.org/entity/Q57985882 | paperVenue: LIDTA@ECML/PKDD | paperPage: https://proceedings.mlr.press/v154/moniz21a.html | proceedingsSeries: Proceedings of Machine Learning Research | seriesVolume: 154 | publisher: PMLR | publicationYear: 2021
+    researcherName: Michal Wozniak | researcherHomepage: — | researcherWikidata: http://www.wikidata.org/entity/Q62051325 | paperVenue: LIDTA | paperPage: https://proceedings.mlr.press/v183/moniz22a.html | proceedingsSeries: Proceedings of Machine Learning Research | seriesVolume: 183 | publisher: PMLR | publicationYear: 2022
+- id: 69
+  src_id: 20
+  text: "For one of the conference papers with the latest publication year among those coauthored by Huan Liu and Yvan Saeys and included in a proceedings volume they both edited, what are the paper’s venue and primary access page and the proceedings volume’s series, volume number, publisher, and publication year?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?paperVenue ?paperPage ?proceedingsSeries
+                    ?seriesVolume ?publisher ?publicationYear
+    WHERE {
+      ?huanLiu dblp:primaryCreatorName "Huan Liu" .
+      ?yvanSaeys dblp:primaryCreatorName "Yvan Saeys" .
+
+      ?paper a dblp:Inproceedings ;
+             dblp:authoredBy ?huanLiu, ?yvanSaeys ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:publishedIn ?paperVenue ;
+             dblp:primaryDocumentPage ?paperPage .
+
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy ?huanLiu, ?yvanSaeys ;
+                   dblp:publishedIn ?proceedingsSeries ;
+                   dblp:publishedInSeriesVolume ?seriesVolume ;
+                   dblp:publishedBy ?publisher ;
+                   dblp:yearOfPublication ?publicationYear .
+    }
+    ORDER BY DESC(?publicationYear)
+    LIMIT 1
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    paperVenue: FSDM | paperPage: http://proceedings.mlr.press/v4/saeys08a/saeys08a.pdf | proceedingsSeries: JMLR Proceedings | seriesVolume: 4 | publisher: JMLR.org | publicationYear: 2008
+- id: 70
+  src_id: 20
+  text: "For each conference paper coauthored by Min Zhang and Volker Stolz whose proceedings volume they both edited, what are the paper’s venue and primary access page, the proceedings series, volume number, publisher, and publication year, and, if available, its OpenCitations Meta identifier?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?paperVenue ?proceedingsSeries ?publicationYear
+                    ?seriesVolume ?publisher ?paperPage ?openCitationsMetaId
+    WHERE {
+      ?minZhang dblp:primaryCreatorName "Min Zhang" .
+      ?volkerStolz dblp:primaryCreatorName "Volker Stolz" .
+
+      ?paper a dblp:Inproceedings ;
+             dblp:authoredBy ?minZhang, ?volkerStolz ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:publishedIn ?paperVenue ;
+             dblp:primaryDocumentPage ?paperPage .
+
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy ?minZhang, ?volkerStolz ;
+                   dblp:publishedIn ?proceedingsSeries ;
+                   dblp:yearOfPublication ?publicationYear ;
+                   dblp:publishedInSeriesVolume ?seriesVolume ;
+                   dblp:publishedBy ?publisher .
+
+      OPTIONAL { ?paper dblp:omid ?openCitationsMetaId . }
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    paperVenue: TTSS | proceedingsSeries: Electronic Notes in Theoretical Computer Science | publicationYear: 2011 | seriesVolume: 274 | publisher: Elsevier | paperPage: https://doi.org/10.1016/J.ENTCS.2011.07.002
+- id: 71
+  src_id: 20
+  text: "Which researchers authored the greatest number of conference papers appearing in proceedings volumes they also edited, how many such papers did each researcher author, and which Wikidata or Wikipedia profile links are available for them?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?researcher ?researcherName ?paperCount ?externalProfile
+    WHERE {
+      {
+        SELECT ?researcher (COUNT(DISTINCT ?paper) AS ?paperCount)
+        WHERE {
+          ?paper a dblp:Inproceedings ;
+                 dblp:authoredBy ?researcher ;
+                 dblp:publishedAsPartOf ?proceedings .
+          ?proceedings a dblp:Editorship ;
+                       dblp:editedBy ?researcher .
+        }
+        GROUP BY ?researcher
+      }
+      {
+        SELECT (MAX(?candidateCount) AS ?maxCount)
+        WHERE {
+          {
+            SELECT ?candidate (COUNT(DISTINCT ?candidatePaper) AS ?candidateCount)
+            WHERE {
+              ?candidatePaper a dblp:Inproceedings ;
+                              dblp:authoredBy ?candidate ;
+                              dblp:publishedAsPartOf ?candidateProceedings .
+              ?candidateProceedings a dblp:Editorship ;
+                                    dblp:editedBy ?candidate .
+            }
+            GROUP BY ?candidate
+          }
+        }
+      }
+
+      ?researcher dblp:primaryCreatorName ?researcherName .
+      FILTER(?paperCount = ?maxCount)
+
+      OPTIONAL {
+        { ?researcher dblp:wikidata ?externalProfile . }
+        UNION
+        { ?researcher dblp:wikipedia ?externalProfile . }
+      }
+    }
+    ORDER BY ?researcherName
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    researcher: https://dblp.org/pid/09/6391 | researcherName: Leonard Barolli | paperCount: 774 | externalProfile: http://www.wikidata.org/entity/Q102149988
+- id: 72
+  src_id: 21
+  text: "Who authored “Fashion-GPT: Integrating LLMs with Fashion Retrieval System,” and what ORCID iDs and affiliations, if any, are listed for each author?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?authorName ?orcid ?affiliation
+    WHERE {
+      ?paper dblp:title "Fashion-GPT: Integrating LLMs with Fashion Retrieval System." ;
+             dblp:authoredBy ?author .
+      ?author dblp:primaryCreatorName ?authorName .
+      OPTIONAL { ?author dblp:orcid ?orcid . }
+      OPTIONAL { ?author dblp:affiliation ?affiliation . }
+    }
+    ORDER BY LCASE(STR(?authorName))
+  llm_best: ""
+  result_count: 7
+  result_snippet: |
+    Maowen Nie
+    Qianqian Chen
+    Shihao Xu
+- id: 73
+  src_id: 21
+  text: "Which authors of “Fashion-GPT: Integrating LLMs with Fashion Retrieval System” also edited the proceedings volume in which it appeared, and what ORCID iDs and affiliations, if any, are listed for each?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?authorName ?orcid ?affiliation
+    WHERE {
+      ?paper dblp:title "Fashion-GPT: Integrating LLMs with Fashion Retrieval System." ;
+             dblp:authoredBy ?author ;
+             dblp:publishedAsPartOf ?proceedings .
+      ?proceedings dblp:editedBy ?author .
+      ?author dblp:primaryCreatorName ?authorName .
+      OPTIONAL { ?author dblp:orcid ?orcid . }
+      OPTIONAL { ?author dblp:affiliation ?affiliation . }
+    }
+    ORDER BY LCASE(STR(?authorName))
+  llm_best: ""
+  result_count: 4
+  result_snippet: |
+    Shihao Xu
+    Wei Shi
+    Zhao Cao
+- id: 74
+  src_id: 21
+  text: "Among the conference papers authored by Zheng Wang (ORCID iD 0000-0002-7064-6267) that appeared in proceedings volumes he also edited, which one has the largest author list, what year was it published, and how many authors are listed?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?title ?year ?creatorCount
+    WHERE {
+      ?person a dblp:Person ;
+              dblp:primaryCreatorName "Zheng Wang" ;
+              dblp:orcid <https://orcid.org/0000-0002-7064-6267> .
+      ?paper a dblp:Inproceedings ;
+             dblp:title ?title ;
+             dblp:yearOfPublication ?year ;
+             dblp:numberOfCreators ?creatorCount ;
+             dblp:authoredBy ?person ;
+             dblp:publishedAsPartOf ?proceedings .
+      ?proceedings dblp:editedBy ?person .
+    }
+    ORDER BY DESC(?creatorCount)
+    LIMIT 1
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    title: Fashion-GPT: Integrating LLMs with Fashion Retrieval System. | year: 2023 | creatorCount: 7
+- id: 75
+  src_id: 21
+  text: "For “Fashion-GPT: Integrating LLMs with Fashion Retrieval System,” what are the publication year, venue, number of authors, and link to the primary document page, and how many of its authors also edited the proceedings volume in which it appeared?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?year ?venue ?creatorCount ?documentLink ?authorEditorCount
+    WHERE {
+      {
+        SELECT ?paper (COUNT(DISTINCT ?author) AS ?authorEditorCount)
+        WHERE {
+          ?paper dblp:title "Fashion-GPT: Integrating LLMs with Fashion Retrieval System." ;
+                 dblp:authoredBy ?author ;
+                 dblp:publishedAsPartOf ?proceedings .
+          ?proceedings dblp:editedBy ?author .
+        }
+        GROUP BY ?paper
+      }
+      ?paper dblp:yearOfPublication ?year ;
+             dblp:publishedIn ?venue ;
+             dblp:numberOfCreators ?creatorCount ;
+             dblp:primaryDocumentPage ?documentLink .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    year: 2023 | venue: LGM3A@MM | creatorCount: 7 | documentLink: https://doi.org/10.1145/3607827.3616844 | authorEditorCount: 4
+- id: 76
+  src_id: 22
+  text: "Which papers in the ISSTA 2024 proceedings edited by Maria Christakis have an OpenCitations Meta identifier or a Wikidata link, and what are their titles and external references?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?paper ?paperTitle ?externalReference
+    WHERE {
+      ?proceedings a dblp:Editorship ;
+                   dblp:title ?proceedingsTitle ;
+                   dblp:createdBy ?editor .
+      ?editor a dblp:Person ;
+              dblp:primaryCreatorName ?editorName .
+      ?paper a dblp:Inproceedings ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:title ?paperTitle .
+      ?paper (dblp:omid|dblp:wikidata) ?externalReference .
+      FILTER(STR(?proceedingsTitle) = "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis, ISSTA 2024, Vienna, Austria, September 16-20, 2024")
+      FILTER(STR(?editorName) = "Maria Christakis")
+    }
+  llm_best: ""
+  result_count: 300
+  result_snippet: |
+    paper: https://dblp.org/rec/conf/issta/000124 | paperTitle: Decomposition of Deep Neural Networks into Modules via Mutation Analysis. | externalReference: https://w3id.org/oc/meta/br/06280557848
+    paper: https://dblp.org/rec/conf/issta/0001MFSC24 | paperTitle: ESBMC-Python: A Bounded Model Checker for Python Programs. | externalReference: http://www.wikidata.org/entity/Q131109725
+    paper: https://dblp.org/rec/conf/issta/0001MFSC24 | paperTitle: ESBMC-Python: A Bounded Model Checker for Python Programs. | externalReference: https://w3id.org/oc/meta/br/06604828695
+- id: 77
+  src_id: 22
+  text: "Who edited the ISSTA 2024 proceedings that included “ESBMC-Python: A Bounded Model Checker for Python Programs,” and what is each editor's primary homepage, if available?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?editor ?editorName ?primaryHomepage
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:title ?paperTitle ;
+             dblp:publishedAsPartOf ?proceedings .
+      ?proceedings a dblp:Editorship ;
+                   dblp:title ?proceedingsTitle ;
+                   dblp:createdBy ?editor .
+      ?editor a dblp:Person ;
+              dblp:primaryCreatorName ?editorName .
+      OPTIONAL {
+        ?editor dblp:primaryHomepage ?primaryHomepage .
+      }
+      FILTER(STR(?paperTitle) = "ESBMC-Python: A Bounded Model Checker for Python Programs.")
+      FILTER(STR(?proceedingsTitle) = "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis, ISSTA 2024, Vienna, Austria, September 16-20, 2024")
+    }
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    editor: https://dblp.org/pid/05/7730 | editorName: Maria Christakis | primaryHomepage: https://mariachris.github.io/
+    editor: https://dblp.org/pid/25/2188 | editorName: Michael Pradel | primaryHomepage: https://software-lab.org/people/Michael_Pradel.html
+- id: 78
+  src_id: 22
+  text: "Where is the main online document page for the ISSTA 2024 proceedings edited by Maria Christakis, and what archived webpage is available, if any?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?documentPage ?archivedWebpage
+    WHERE {
+      ?proceedings a dblp:Editorship ;
+                   dblp:title ?proceedingsTitle ;
+                   dblp:createdBy ?editor ;
+                   dblp:primaryDocumentPage ?documentPage .
+      ?editor a dblp:Person ;
+              dblp:primaryCreatorName ?editorName .
+      OPTIONAL {
+        ?proceedings dblp:archivedWebpage ?archivedWebpage .
+      }
+      FILTER(STR(?proceedingsTitle) = "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis, ISSTA 2024, Vienna, Austria, September 16-20, 2024")
+      FILTER(STR(?editorName) = "Maria Christakis")
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    https://doi.org/10.1145/3650212
+- id: 79
+  src_id: 22
+  text: "How many papers are in the ISSTA 2024 proceedings edited by Maria Christakis, how many have an OpenCitations Meta identifier, how many do not, and what percentage have one?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT ?paperCount ?withOmidCount
+           ((?paperCount - ?withOmidCount) AS ?withoutOmidCount)
+           ((100.0 * ?withOmidCount / ?paperCount) AS ?omidCoveragePercent)
+    WHERE {
+      {
+        SELECT (COUNT(DISTINCT ?paper) AS ?paperCount)
+               (COUNT(DISTINCT ?paperWithOmid) AS ?withOmidCount)
+        WHERE {
+          ?proceedings a dblp:Editorship ;
+                       dblp:title ?proceedingsTitle ;
+                       dblp:createdBy ?editor .
+          ?editor a dblp:Person ;
+                  dblp:primaryCreatorName ?editorName .
+          ?paper a dblp:Inproceedings ;
+                 dblp:publishedAsPartOf ?proceedings .
+          OPTIONAL {
+            ?paper dblp:omid ?omid .
+            BIND(?paper AS ?paperWithOmid)
+          }
+          FILTER(STR(?proceedingsTitle) = "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis, ISSTA 2024, Vienna, Austria, September 16-20, 2024")
+          FILTER(STR(?editorName) = "Maria Christakis")
+        }
+      }
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    paperCount: 170 | withOmidCount: 170 | withoutOmidCount: 0 | omidCoveragePercent: 100.0
+- id: 80
+  src_id: 23
+  text: "What is Makoto Amamiya’s most recent conference paper among those that appeared in proceedings he edited, and what were its venue and event year?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+
+    SELECT DISTINCT ?paper ?title ?venue ?eventYear
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:authoredBy <https://dblp.org/pid/a/MakotoAmamiya> ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:title ?title ;
+             dblp:publishedIn ?venue ;
+             dblp:yearOfEvent ?eventYear .
+
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy <https://dblp.org/pid/a/MakotoAmamiya> .
+    }
+    ORDER BY DESC(?eventYear)
+    LIMIT 1
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    paper: https://dblp.org/rec/conf/euc/YuMA05 | title: Agent-Community-Based P2P Semantic Web Information Retrieval System Architecture. | venue: EUC | eventYear: 2005
+- id: 81
+  src_id: 23
+  text: "Which author of “Structuring Learning/Instructional Strategies through a State-based Modeling” also edited the proceedings in which it appeared? What are that author’s ORCID and affiliation, and how many conference papers in total did they author that appeared in proceedings they edited?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX aied: <https://dblp.org/rec/conf/aied/>
+
+    SELECT DISTINCT ?author ?orcid ?affiliation ?selfEditedPaperCount
+    WHERE {
+      {
+        SELECT ?author (COUNT(DISTINCT ?otherPaper) AS ?selfEditedPaperCount)
+        WHERE {
+          aied:HayashiBM09 a dblp:Inproceedings ;
+                            dblp:title ?title ;
+                            dblp:authoredBy ?author ;
+                            dblp:publishedAsPartOf ?targetProceedings .
+          FILTER(STR(?title) = "Structuring Learning/Instructional Strategies through a State-based Modeling.")
+
+          ?targetProceedings a dblp:Editorship ;
+                             dblp:editedBy ?author .
+
+          ?otherPaper a dblp:Inproceedings ;
+                      dblp:authoredBy ?author ;
+                      dblp:publishedAsPartOf ?otherProceedings .
+          ?otherProceedings a dblp:Editorship ;
+                            dblp:editedBy ?author .
+        }
+        GROUP BY ?author
+      }
+
+      ?author a dblp:Person ;
+              dblp:orcid ?orcid ;
+              dblp:affiliation ?affiliation .
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    author: https://dblp.org/pid/16/645 | orcid: https://orcid.org/0000-0001-7048-2904 | affiliation: Japan Advanced Institute for Science and Technology (JAIST), Japan | selfEditedPaperCount: 11
+- id: 82
+  src_id: 23
+  text: "When were the proceedings containing Makoto Amamiya’s paper “Agent-Community-Based P2P Semantic Web Information Retrieval System Architecture” published, what were their series volume, ISBN, and DOI, and who edited those proceedings?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX euc: <https://dblp.org/rec/conf/euc/>
+
+    SELECT DISTINCT ?publicationYear ?seriesVolume ?isbn ?doi ?editor
+    WHERE {
+      euc:YuMA05 a dblp:Inproceedings ;
+                  dblp:title ?paperTitle ;
+                  dblp:authoredBy <https://dblp.org/pid/a/MakotoAmamiya> ;
+                  dblp:publishedAsPartOf ?proceedings .
+      FILTER(STR(?paperTitle) = "Agent-Community-Based P2P Semantic Web Information Retrieval System Architecture.")
+
+      ?proceedings a dblp:Editorship ;
+                   dblp:yearOfPublication ?publicationYear ;
+                   dblp:publishedInSeriesVolume ?seriesVolume ;
+                   dblp:isbn ?isbn ;
+                   dblp:doi ?doi .
+
+      euc:YuMA05 dblp:publishedAsPartOf/dblp:editedBy ?editor .
+    }
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    publicationYear: 2005 | seriesVolume: 3824 | isbn: urn:isbn:3540308075 | doi: https://doi.org/10.1007/11596356 | editor: https://dblp.org/pid/77/35-1
+    publicationYear: 2005 | seriesVolume: 3824 | isbn: urn:isbn:3540308075 | doi: https://doi.org/10.1007/11596356 | editor: https://dblp.org/pid/99/6797
+    publicationYear: 2005 | seriesVolume: 3824 | isbn: urn:isbn:3540308075 | doi: https://doi.org/10.1007/11596356 | editor: https://dblp.org/pid/a/MakotoAmamiya
+- id: 83
+  src_id: 23
+  text: "Which of Makoto Amamiya’s conference papers that appeared in proceedings he edited had the most authors, and how many authors did each have?"
+  query: |
+    PREFIX dblp: <https://dblp.org/rdf/schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?paper ?title ?authorCount
+    WHERE {
+      ?paper a dblp:Inproceedings ;
+             dblp:authoredBy <https://dblp.org/pid/a/MakotoAmamiya> ;
+             dblp:publishedAsPartOf ?proceedings ;
+             dblp:title ?title ;
+             dblp:numberOfCreators ?authorCount .
+
+      ?proceedings a dblp:Editorship ;
+                   dblp:editedBy <https://dblp.org/pid/a/MakotoAmamiya> .
+
+      {
+        SELECT (MAX(xsd:integer(?candidateCount)) AS ?maxAuthorCount)
+        WHERE {
+          ?candidatePaper a dblp:Inproceedings ;
+                          dblp:authoredBy <https://dblp.org/pid/a/MakotoAmamiya> ;
+                          dblp:publishedAsPartOf ?candidateProceedings ;
+                          dblp:numberOfCreators ?candidateCount .
+
+          ?candidateProceedings a dblp:Editorship ;
+                                dblp:editedBy <https://dblp.org/pid/a/MakotoAmamiya> .
+        }
+      }
+
+      FILTER(xsd:integer(?authorCount) = ?maxAuthorCount)
+    }
+    ORDER BY ?title
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    paper: https://dblp.org/rec/conf/ishpc/InenagaKMA97 | title: Hybrid Approach for Non-strict Dataflow Program on Commodity Machine. | authorCount: 4

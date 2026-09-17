@@ -1,0 +1,172 @@
+\section{Diversity and Comprehensiveness Evaluation on DBLP}
+\label{sec:dblp-diversity}
+
+A benchmark is only as informative as the space of behaviours it exercises. We therefore
+evaluate \textsc{QueryBloom} along \emph{three orthogonal axes of diversity} --- the
+diversity of the natural-language \emph{questions} (input space), the diversity of the
+\emph{answers} returned by the queries (output space), and the diversity of the
+\emph{SPARQL programs} that connect them (program space) --- and, separately, along a
+\emph{comprehensiveness} axis that measures how much of the knowledge graph and of the
+SPARQL~1.1 language the benchmark actually touches. Diversity without coverage is
+redundancy in disguise; coverage without diversity is a narrow probe repeated many times.
+Both are needed, and we report both.
+
+All results below compare \textsc{QueryBloom} against the human-curated DBLP baseline. To
+remove any size confound, the larger set is uniformly downsampled so that both benchmarks
+contain exactly $N{=}83$ question--query pairs. Every SPARQL statistic is computed from the
+\texttt{rdflib} abstract syntax tree of the query rather than from surface text, and every
+answer statistic is obtained by executing the query against the live DBLP endpoint.
+
+\subsection{Axis 1: Semantic diversity of the questions}
+
+We embed each NL question with \textsc{bge-large-en-v1.5} and $\ell_2$-normalise the
+resulting vectors, so that inner products are cosine similarities. Over the set of
+embeddings $E=\{e_1,\dots,e_N\}$ we report two complementary statistics:
+
+\paragraph{Average pairwise distance (APD).} The mean cosine distance between all distinct
+pairs,
+\[
+\mathrm{APD}(E)=\frac{2}{N(N-1)}\sum_{i<j}\bigl(1-e_i^{\top}e_j\bigr),
+\]
+a measure of the \emph{global spread} of the question set.
+
+\paragraph{Vendi Score.} Let $K$ be the $N\times N$ cosine-similarity matrix and
+$\lambda_1,\dots,\lambda_N$ the eigenvalues of $K/N$. The Vendi Score is the exponential of
+the von Neumann (matrix) entropy of that kernel,
+\[
+\mathrm{VS}(E)=\exp\Bigl(-\sum_i \lambda_i \log \lambda_i\Bigr),
+\]
+and is interpretable as the \emph{effective number of distinct questions}: a set of $N$
+mutually orthogonal questions scores $N$, while $N$ paraphrases of one question score $1$.
+Unlike APD, it is insensitive to duplicated modes and therefore penalises clustered
+redundancy directly.
+
+Figure~\ref{fig:semantic-dblp} shows the $t$-SNE projection of both question sets.
+\textsc{QueryBloom} attains $\mathrm{APD}=0.385$ and $\mathrm{VS}=8.62$, against
+$\mathrm{APD}=0.423$ and $\mathrm{VS}=10.99$ for the baseline. The two point clouds occupy
+comparable regions of the embedding space with no visible collapse or clustering on either
+side: on this axis the two benchmarks are essentially on par, with the human set retaining a
+small edge. This is the expected --- and the intended --- outcome. Question embeddings are
+dominated by lexical and topical variation, which human annotators produce effortlessly and
+which is largely orthogonal to whether a benchmark actually stresses a query engine.
+Semantic diversity is thus best read as a \emph{sanity floor}: it confirms that
+\textsc{QueryBloom} does not generate paraphrase-like questions from a handful of prompts,
+so that the gains reported on the remaining axes are not bought by sacrificing linguistic
+variety. It is precisely because the input space is matched that the divergence in the
+output and program spaces is attributable to the benchmarks themselves.
+
+\subsection{Axis 2: Output (answer) diversity}
+
+A question is characterised not only by how it is phrased but by the \emph{shape of its
+answer}. We execute every query against the DBLP endpoint and record two per-query
+quantities: the number of result \emph{rows} (answer cardinality) and the number of result
+\emph{columns} (projected variables, i.e.\ the arity of the answer). Panel~(b) of
+Figure~\ref{fig:diversity-dblp} shows the back-to-back distributions of both, with medians
+marked.
+
+The baseline is concentrated on a single answer shape: its median answer has $1$ row and
+$1$ column (mean arity $1.02$, column standard deviation $0.47$), i.e.\ almost every
+question asks for one atomic value or a boolean. \textsc{QueryBloom} spans a genuinely
+multi-modal output space --- median $2$ rows and $3$ columns, with column standard deviation
+$1.78$ and row standard deviation $36.7$ versus $16.8$ for the baseline. In other words, it
+mixes single-fact lookups with list-valued, aggregate, and multi-attribute tabular answers.
+This matters for evaluation, because systems that are only ever asked for one value are
+never tested on projection, ordering, or grouping correctness, and the metrics used to score
+them (exact match on a single cell) do not generalise to the tabular answers that real users
+request.
+
+\subsection{Axis 3: SPARQL (program) diversity}
+
+The third axis characterises the queries themselves. Panel~(a) of
+Figure~\ref{fig:diversity-dblp} summarises it as a radar plot; each spoke is normalised
+independently by the larger of the two benchmark values, so the shape encodes relative
+standing while the printed numbers give the raw values.
+
+\paragraph{Template ratio.} Each query is reduced to a structural skeleton by stripping
+\texttt{PREFIX} declarations and replacing every variable, IRI, literal, and prefixed name
+by a placeholder; the metric is the number of distinct skeletons divided by $N$ (maximum
+$1.0$). \textsc{QueryBloom} scores $1.000$: all $83$ queries are structurally distinct. The
+baseline scores $0.627$, meaning that over a third of its queries are re-instantiations of a
+skeleton already present --- the same graph pattern with different entities. The same
+picture holds inside filter expressions, where the analogous \emph{filter template ratio}
+is $0.338$ for \textsc{QueryBloom} against $0.114$ for the baseline: the baseline reuses a
+small number of filter idioms almost exclusively.
+
+\paragraph{Entity diversity.} The ratio of distinct entity IRIs to total entity mentions
+across the benchmark. Here the baseline is nominally higher ($0.695$ vs.\ $0.601$). The
+metric is normalised by \emph{mentions}, so it is mechanically depressed by queries that
+reference several entities at once, and \textsc{QueryBloom} deliberately revisits the same
+entities in different structural roles --- as a filter argument, as a join anchor, as a
+grouping key --- to isolate the effect of query structure from the effect of topic. As the
+coverage figures below show, this is not schema narrowness: \textsc{QueryBloom} touches
+strictly more of the ontology than the baseline while reusing individual entities more
+often.
+
+\paragraph{Feature entropy.} Let $f_k$ be the fraction of queries using SPARQL feature $k$
+over the $13$ tracked features, and $p_k=f_k/\sum_j f_j$. Feature entropy is the Shannon
+entropy $-\sum_k p_k\log_2 p_k$, maximised at $\log_2 13 = 3.70$ when the benchmark's usage
+mass is spread evenly across all features and minimised when it concentrates on a few.
+\textsc{QueryBloom} reaches $3.241$ of the $3.70$ ceiling; the baseline reaches $2.697$,
+reflecting a distribution dominated by plain \texttt{SELECT}/\texttt{ASK} patterns.
+
+\paragraph{Complexity spread.} Panel~(b) additionally reports the number of structural
+operators per query (all tracked features excluding the \texttt{SELECT}/\texttt{ASK} query
+form). \textsc{QueryBloom} has a median of $3$ operators per query (mean $3.25$, standard
+deviation $1.51$) against a median of $1$ for the baseline (mean $1.47$, standard deviation
+$0.998$). The relevant observation is not merely that \textsc{QueryBloom} queries are
+harder, but that they are harder \emph{at a range of difficulties}: the baseline
+distribution is a spike at one operator, so it cannot separate systems by the complexity
+they can sustain, whereas \textsc{QueryBloom}'s wider spread yields a graded difficulty
+signal.
+
+\paragraph{Feature distribution.} Panel~(c) breaks the aggregate entropy into per-feature
+usage rates (percentage of queries containing each feature; \textsc{QueryBloom} above the
+axis, baseline below). \textsc{QueryBloom} dominates on every construct that exercises
+non-trivial query planning: \texttt{OPTIONAL} $27.7\%$ vs.\ $0.0\%$, \texttt{ORDER BY}
+$57.8\%$ vs.\ $3.6\%$, \texttt{GROUP BY} $24.1\%$ vs.\ $3.6\%$, \texttt{LIMIT} $21.7\%$
+vs.\ $3.6\%$, \texttt{FILTER} $54.2\%$ vs.\ $37.3\%$, and property paths $7.2\%$ vs.\
+$0.0\%$; \texttt{UNION} is the one construct where the two are comparable ($7.2\%$ vs.\
+$8.4\%$). Conversely, the baseline's mass concentrates on the \texttt{ASK} form
+($34.9\%$ vs.\ $16.9\%$), whose answers are a single boolean. Three constructs
+(\texttt{OPTIONAL}, \texttt{HAVING}, property paths) never appear in the baseline at all,
+which means no system evaluated on it is ever tested on optional matching, post-aggregation
+filtering, or path traversal.
+
+\subsection{Comprehensiveness: how much is covered}
+
+Diversity says how different the items are from one another; comprehensiveness says how much
+of the target space they collectively occupy. We define three coverage ratios, all computed
+against the DBLP ontology index and reported as raw fractions on the radar in
+panel~(a) of Figure~\ref{fig:diversity-dblp}.
+
+\paragraph{Class coverage.} For every query we resolve, from its AST, the ontology classes
+it constrains --- both explicitly (via \texttt{rdf:type} or class IRIs appearing in triple
+patterns) and implicitly, by resolving the types of the concrete entities it mentions
+against the endpoint. Class coverage is the size of the union of these classes over the
+benchmark, intersected with the ontology's class set to discard meta-level IRIs, divided by
+the number of ontology classes. \textsc{QueryBloom} covers $12/29$ classes ($41.4\%$)
+against $8/29$ ($27.6\%$) for the baseline.
+
+\paragraph{Property coverage.} Defined analogously over predicate positions: the fraction of
+ontology properties that appear in at least one query. This is the sharpest separation in
+the study --- $35/81$ ($43.2\%$) for \textsc{QueryBloom} against $8/81$ ($9.9\%$) for the
+baseline, a $4.4\times$ gap. The baseline exercises eight relations of the DBLP schema;
+a system could score well on it while failing on nine tenths of the graph's vocabulary.
+
+\paragraph{Feature coverage.} The fraction of the $13$ tracked SPARQL~1.1 constructs used at
+least once. \textsc{QueryBloom} attains $13/13$ ($1.00$) --- full coverage of the tracked
+language surface --- against $10/13$ ($0.77$) for the baseline.
+
+\subsection{Summary}
+
+Across the three diversity axes and the coverage axis, the pattern is consistent.
+\textsc{QueryBloom} matches the human-curated baseline where input-side linguistic variety is
+concerned (APD $0.385$ vs.\ $0.423$; Vendi $8.62$ vs.\ $10.99$), and improves on it
+substantially everywhere the benchmark's discriminative power actually resides: structurally
+unique queries ($1.000$ vs.\ $0.627$), balance of language-feature usage (entropy $3.241$
+vs.\ $2.697$ out of $3.70$), operator complexity (median $3$ vs.\ $1$), answer-shape variety
+(median arity $3$ vs.\ $1$), schema coverage ($41.4\%$ vs.\ $27.6\%$ of classes; $43.2\%$
+vs.\ $9.9\%$ of properties), and language coverage ($13/13$ vs.\ $10/13$ features). The
+matched semantic axis is what licenses this reading: the two benchmarks pose comparably
+varied questions, and the difference lies in what those questions demand of the system that
+must answer them.

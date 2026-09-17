@@ -39,12 +39,14 @@ def disk_cache(namespace: str):
             if os.environ.get("METRICS_NO_CACHE") == "1":
                 return func(*args, **kwargs)
 
+            rewrite_cache = kwargs.get("rewrite_cache", False)
+            cache_kwargs = {k: v for k, v in kwargs.items() if k != "rewrite_cache"}
             cache_dir = os.path.join(_CACHE_ROOT, namespace)
             os.makedirs(cache_dir, exist_ok=True)
-            key = _make_key(*args, **kwargs)
+            key = _make_key(*args, **cache_kwargs)
             path = os.path.join(cache_dir, f"{key}.json")
 
-            if os.path.exists(path):
+            if not rewrite_cache and os.path.exists(path):
                 try:
                     with open(path) as f:
                         return json.load(f)

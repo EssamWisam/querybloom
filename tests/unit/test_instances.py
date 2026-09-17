@@ -1,5 +1,6 @@
 import querybloom.mining.instances as instances_module
 from querybloom.mining.instances import (
+    _instance_query,
     _sample_instance_rows,
     build_instance_sparql,
     mixed_row_is_complete,
@@ -203,3 +204,78 @@ def test_sampling_requeries_after_entity_reaches_reuse_cap(monkeypatch):
     assert len(rows) == 5
     assert exclusions[1]["v0"] == {"city-a"}
     assert [row["v0"] for row in rows].count("city-a") == 3
+
+
+def test_instance_query_preserves_rdf_term_types(monkeypatch):
+    monkeypatch.setattr(
+        instances_module,
+        "execute",
+        lambda *args, **kwargs: {
+            "success": True,
+            "results": [
+                {
+                    "v0": {"type": "uri", "value": "http://ex.org/person"},
+                    "v1": {"type": "bnode", "value": "signature-1"},
+                }
+            ],
+        },
+    )
+
+    rows = _instance_query(
+        "endpoint",
+        [PERSON, CITY],
+        [EDGES[0]],
+        optionalize=False,
+        timeout=60,
+        limit=1,
+    )
+
+    assert rows[0]["v0"] == "http://ex.org/person"
+    assert rows[0]["v1"] == "signature-1"
+    assert rows[0]["__term_types__"] == {"v0": "uri", "v1": "bnode"}
+
+
+def test_sampling_does_not_push_blank_node_exclusions(monkeypatch):
+    batches = [
+        [
+            {
+                "v0": "city-a",
+                "v1": f"signature-{index}",
+                "__term_types__": {"v0": "uri", "v1": "bnode"},
+            }
+            for index in range(5)
+        ],
+        [
+            {
+                "v0": "city-b",
+                "v1": "signature-3",
+                "__term_types__": {"v0": "uri", "v1": "bnode"},
+            },
+            {
+                "v0": "city-b",
+                "v1": "signature-4",
+                "__term_types__": {"v0": "uri", "v1": "bnode"},
+            },
+        ],
+    ]
+    exclusions = []
+
+    def fake_query(*args, excluded_values=None, **kwargs):
+        exclusions.append(excluded_values)
+        return batches[len(exclusions) - 1]
+
+    monkeypatch.setattr(instances_module, "_instance_query", fake_query)
+
+    rows = _sample_instance_rows(
+        "endpoint",
+        [PERSON, CITY],
+        [EDGES[0]],
+        optionalize=False,
+        timeout=60,
+        m=5,
+        max_entity_reuse=3,
+    )
+
+    assert len(rows) == 5
+    assert exclusions[1]["v0"] == {"city-a"}
+    assert exclusions[1]["v1"] == set()

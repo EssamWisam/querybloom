@@ -5,13 +5,15 @@ import sys
 import re
 import json
 import hashlib
+import logging
 import numpy as np
 import warnings
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 sys.path.append(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "src"))
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "src"))
+)
 try:
     from querybloom.executor.sparql_executor import (
         execute_sparql_query as _execute_sparql_query,
@@ -19,11 +21,15 @@ try:
 except Exception:
     _execute_sparql_query = None
 
+logger = logging.getLogger(__name__)
+
 from .parsing import (
     analyze_sparql_features,
     extract_filter_subtypes,
     extract_filter_templates,
     parse_and_extract_rdflib_metrics,
+    resolve_terms,
+    normalize_sparql,
     anonymise_query,
     FEATURE_KEYS,
 )
@@ -42,6 +48,7 @@ except ImportError:
 
 
 from ._cache import _make_key, _CACHE_ROOT
+from ontology_loader import load_ontology_classes
 
 _EMB_CACHE_DIR = os.path.join(_CACHE_ROOT, "embeddings")
 
@@ -61,7 +68,7 @@ def _get_model_name(model):
     return model_name
 
 
-def compute_embeddings(questions, model):
+def compute_embeddings(questions, model, rewrite_cache=False):
     """Encode questions with given SentenceTransformer model, L2-normalised.
 
     Results are cached on disk (as .npy) so repeated calls with the same
@@ -73,7 +80,7 @@ def compute_embeddings(questions, model):
         os.makedirs(_EMB_CACHE_DIR, exist_ok=True)
         cache_path = os.path.join(_EMB_CACHE_DIR, f"{cache_key}.npy")
 
-        if os.path.exists(cache_path):
+        if not rewrite_cache and os.path.exists(cache_path):
             return np.load(cache_path)
     else:
         model_name = _get_model_name(model)
@@ -148,15 +155,31 @@ def feature_distribution_entropy(feature_matrix: np.ndarray) -> float:
     return float(-np.sum(p * np.log2(p)))
 
 
-def entity_diversity_ratio(queries, endpoint="dblp"):
-    """unique entities / total entity mentions across all queries."""
+def avg_entities_per_query(
+    queries, endpoint="dblp", kg_name=None, kgs_data_dir=None, query_source=None
+):
+    """Distinct entities across the benchmark divided by the number of queries.
+
+    Literals are excluded (they are tracked separately by the parser) and so are
+    URIs that turn out to be ontology classes rather than instances.
+    """
+    ontology_classes = (
+        load_ontology_classes(kg_name, kgs_data_dir) if kg_name else set()
+    )
     unique = set()
-    total = 0
-    for q in queries:
-        m = parse_and_extract_rdflib_metrics(q, endpoint)
+    for query_index, q in enumerate(queries, start=1):
+        m = parse_and_extract_rdflib_metrics(q, endpoint, query_source, query_index)
+        resolve_terms(
+            m,
+            endpoint,
+            kg_name,
+            kgs_data_dir,
+            query_source,
+            query_index,
+            ontology_classes,
+        )
         unique.update(m["entities"])
-        total += len(m["entities"])
-    return len(unique) / total if total > 0 else 0.0
+    return len(unique) / len(queries) if queries else 0.0
 
 
 # ---------------------------------------------------------------------------
@@ -181,17 +204,31 @@ def per_query_triple_count(queries, endpoint="dblp"):
     )
 
 
-def per_query_result_and_column_count(queries, query_endpoint=None, max_workers=7):
+def per_query_result_and_column_count(
+    queries,
+    query_endpoint=None,
+    max_workers=7,
+    rewrite_cache=False,
+    query_source=None,
+):
     """Execute each query and return (row_counts, col_counts) arrays.
 
     Queries are dispatched in parallel (up to *max_workers* concurrent requests).
     Results are cached on disk so repeated calls with the same queries and
     endpoint skip the network entirely.
 
-    Falls back to zeros if query_endpoint is None or executor unavailable.
+    Failed queries retain the default result of zero rows and zero columns.
+    ``query_source`` identifies the dataset file in the corresponding log.
+
+    Returns zeros only when result counting is explicitly disabled by passing
+    ``query_endpoint=None``.
     """
-    if _execute_sparql_query is None or query_endpoint is None:
+    if query_endpoint is None:
         return np.zeros(len(queries), dtype=int), np.zeros(len(queries), dtype=int)
+    if _execute_sparql_query is None:
+        raise RuntimeError(
+            "SPARQL result counting requires querybloom.executor.sparql_executor"
+        )
 
     _CACHE_DIR = os.path.join(
         os.path.dirname(__file__), "..", "..", "cache", "query_counts"
@@ -205,19 +242,17 @@ def per_query_result_and_column_count(queries, query_endpoint=None, max_workers=
         return os.path.join(_CACHE_DIR, f"{key}.json")
 
     def _fetch(idx: int, q: str):
+        q = normalize_sparql(q, query_source)
         key = _cache_key(q)
         path = _cache_path(key)
         is_ask = bool(re.search(r"\bASK\b", q, re.IGNORECASE))
-        if os.path.exists(path):
+        if not rewrite_cache and os.path.exists(path):
             try:
                 with open(path) as f:
                     cached = json.load(f)
+                if not cached.get("success", False):
+                    raise ValueError("stale or failed cache entry")
                 rows, cols = cached["rows"], cached["cols"]
-                # Correct stale cache entries for ASK queries (previously stored as rows/cols=0)
-                if is_ask and cols == 0:
-                    cols = 1
-                if is_ask and rows == 0:
-                    rows = 1
                 return idx, rows, cols
             except Exception:
                 pass
@@ -225,8 +260,8 @@ def per_query_result_and_column_count(queries, query_endpoint=None, max_workers=
         try:
             res = _execute_sparql_query(q, endpoint=query_endpoint)
             if is_ask:
-                # ASK queries return a single boolean — treat as 1 row, 1 col
-                rows, cols = 1, 1
+                if res.get("success"):
+                    rows, cols = 1, 1
             elif res.get("success") and res.get("results") is not None:
                 results = res["results"]
                 rows = len(results) if isinstance(results, list) else 0
@@ -238,11 +273,36 @@ def per_query_result_and_column_count(queries, query_endpoint=None, max_workers=
                         cols = len(raw.get("head", {}).get("vars", []))
                     except Exception:
                         cols = 0
-        except Exception:
-            pass
+            if not res.get("success"):
+                logger.warning(
+                    "[metrics.diversity] --- result count failed ---\n"
+                    "source=%s query_index=%d endpoint=%s\n"
+                    "fallback=row_count=0,column_count=0\n"
+                    "reason=%s (%s) query=%s",
+                    query_source or "<unspecified>",
+                    idx + 1,
+                    query_endpoint,
+                    res.get("error_message") or res.get("error") or "unknown error",
+                    res.get("status", "unknown status"),
+                    q[:500],
+                )
+                return idx, rows, cols
+        except Exception as exc:
+            logger.warning(
+                "[metrics.diversity] --- result count failed ---\n"
+                "source=%s query_index=%d endpoint=%s\n"
+                "fallback=row_count=0,column_count=0\n"
+                "reason=%s query=%s",
+                query_source or "<unspecified>",
+                idx + 1,
+                query_endpoint,
+                exc,
+                q[:500],
+            )
+            return idx, rows, cols
         try:
             with open(_cache_path(key), "w") as f:
-                json.dump({"rows": rows, "cols": cols}, f)
+                json.dump({"success": True, "rows": rows, "cols": cols}, f)
         except Exception:
             pass
         return idx, rows, cols
@@ -266,7 +326,15 @@ def per_query_result_and_column_count(queries, query_endpoint=None, max_workers=
 
 
 def measure_diversity(
-    queries, questions, endpoint="dblp", sbert_model=None, query_endpoint=None
+    queries,
+    questions,
+    endpoint="dblp",
+    sbert_model=None,
+    query_endpoint=None,
+    kg_name=None,
+    kgs_data_dir=None,
+    rewrite_cache=False,
+    query_source=None,
 ):
     """Compute all diversity metrics for one benchmark.
 
@@ -277,6 +345,9 @@ def measure_diversity(
         sbert_model: a loaded SentenceTransformer instance (or None to skip semantic).
         query_endpoint: SPARQL endpoint to execute queries against for result-row counts.
                         If None, result counts will be all zeros.
+        kg_name: KG ontology name used to exclude class URIs from entity counts.
+        rewrite_cache: Recompute and replace cached embeddings and query counts.
+        query_source: Dataset file path included in result-count failure logs.
 
     Returns:
         dict with scalar metrics and per-query arrays.
@@ -285,7 +356,7 @@ def measure_diversity(
 
     # -- Semantic --
     if sbert_model is not None and questions:
-        embs = compute_embeddings(questions, sbert_model)
+        embs = compute_embeddings(questions, sbert_model, rewrite_cache=rewrite_cache)
         apd, vendi = embedding_diversity_metrics(embs)
         result["apd"] = round(apd, 4)
         result["vendi"] = round(vendi, 4)
@@ -295,8 +366,10 @@ def measure_diversity(
     if queries:
         result["unique_template_ratio"] = round(unique_template_ratio(queries), 4)
         result["filter_template_ratio"] = round(filter_template_ratio(queries), 4)
-        result["entity_diversity_ratio"] = round(
-            entity_diversity_ratio(queries, endpoint), 4
+        result["avg_entities_per_query"] = round(
+            avg_entities_per_query(
+                queries, endpoint, kg_name, kgs_data_dir, query_source
+            ),
         )
 
         # Feature matrix (N × 10)
@@ -324,7 +397,12 @@ def measure_diversity(
         # -- Complexity spread --
         result["_operator_counts"] = per_query_operator_count(queries)
         result["_result_counts"], result["_column_counts"] = (
-            per_query_result_and_column_count(queries, query_endpoint)
+            per_query_result_and_column_count(
+                queries,
+                query_endpoint,
+                rewrite_cache=rewrite_cache,
+                query_source=query_source,
+            )
         )
         result["operator_count_std"] = round(float(result["_operator_counts"].std()), 4)
         result["result_count_std"] = round(float(result["_result_counts"].std()), 4)

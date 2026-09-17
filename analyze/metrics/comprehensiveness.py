@@ -7,6 +7,7 @@ from ._cache import disk_cache
 from .parsing import (
     analyze_sparql_features,
     parse_and_extract_rdflib_metrics,
+    resolve_terms,
     FEATURE_KEYS,
 )
 
@@ -15,16 +16,43 @@ from .parsing import (
 from ontology_loader import load_ontology_classes, load_ontology_properties
 
 
-def class_coverage(queries, kg_name, endpoint="dblp", kgs_data_dir=None):
+def gather_coverage_sets(
+    queries, endpoint="dblp", kg_name=None, kgs_data_dir=None, query_source=None
+):
+    """Pool properties and classes referenced by the benchmark queries."""
+    ontology_classes = (
+        load_ontology_classes(kg_name, kgs_data_dir) if kg_name else set()
+    )
+    classes, properties = set(), set()
+    for query_index, query in enumerate(queries, start=1):
+        metrics = parse_and_extract_rdflib_metrics(
+            query, endpoint, query_source, query_index
+        )
+        resolve_terms(
+            metrics,
+            endpoint,
+            kg_name,
+            kgs_data_dir,
+            query_source,
+            query_index,
+            ontology_classes,
+        )
+        classes.update(metrics["classes"])
+        properties.update(metrics["properties"])
+    return classes, properties
+
+
+def class_coverage(
+    queries, kg_name, endpoint="dblp", kgs_data_dir=None, query_source=None
+):
     """Fraction of ontology classes exercised by the benchmark queries.
 
     Returns:
         (ratio, benchmark_count, ontology_count)
     """
-    benchmark_classes = set()
-    for q in queries:
-        m = parse_and_extract_rdflib_metrics(q, endpoint)
-        benchmark_classes.update(m["classes"])
+    benchmark_classes, _ = gather_coverage_sets(
+        queries, endpoint, kg_name, kgs_data_dir, query_source
+    )
 
     ontology_classes = load_ontology_classes(kg_name, kgs_data_dir)
     if not ontology_classes:
@@ -37,16 +65,20 @@ def class_coverage(queries, kg_name, endpoint="dblp", kgs_data_dir=None):
     return round(ratio, 4), len(benchmark_classes), len(ontology_classes)
 
 
-def property_coverage(queries, kg_name, endpoint="dblp", kgs_data_dir=None):
+def property_coverage(
+    queries, kg_name, endpoint="dblp", kgs_data_dir=None, query_source=None
+):
     """Fraction of ontology properties exercised by the benchmark queries.
 
     Returns:
         (ratio, benchmark_count, ontology_count)
     """
     benchmark_props = set()
-    for q in queries:
-        m = parse_and_extract_rdflib_metrics(q, endpoint)
-        benchmark_props.update(m["properties"])
+    for query_index, query in enumerate(queries, start=1):
+        metrics = parse_and_extract_rdflib_metrics(
+            query, endpoint, query_source, query_index
+        )
+        benchmark_props.update(metrics["properties"])
 
     ontology_props = load_ontology_properties(kg_name, kgs_data_dir)
     if not ontology_props:
@@ -74,15 +106,28 @@ def feature_coverage(queries):
     return round(len(used) / total, 4), len(used), total
 
 
-@disk_cache("comprehensiveness")
-def measure_comprehensiveness(queries, kg_name, endpoint="dblp", kgs_data_dir=None):
+@disk_cache("comprehensiveness_v4")
+def measure_comprehensiveness(
+    queries,
+    kg_name,
+    endpoint="dblp",
+    kgs_data_dir=None,
+    rewrite_cache=False,
+    query_source=None,
+):
     """Compute all comprehensiveness metrics for one benchmark.
+
+    Set ``rewrite_cache=True`` to recompute and replace the matching disk cache.
 
     Returns:
         dict with scalar ratios and raw counts.
     """
-    cc, cc_bench, cc_onto = class_coverage(queries, kg_name, endpoint, kgs_data_dir)
-    pc, pc_bench, pc_onto = property_coverage(queries, kg_name, endpoint, kgs_data_dir)
+    cc, cc_bench, cc_onto = class_coverage(
+        queries, kg_name, endpoint, kgs_data_dir, query_source
+    )
+    pc, pc_bench, pc_onto = property_coverage(
+        queries, kg_name, endpoint, kgs_data_dir, query_source
+    )
     fc, fc_used, fc_total = feature_coverage(queries)
 
     n_queries = len(queries)

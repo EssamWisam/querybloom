@@ -14,6 +14,13 @@ from querybloom.mining.support import get_entity_labels
 from querybloom.mining.utils import extract_binding_rows
 
 
+_TERM_TYPES_KEY = "__term_types__"
+
+
+def _row_binding_is_uri(row: Dict[str, Any], variable: str) -> bool:
+    return row.get(_TERM_TYPES_KEY, {}).get(variable, "uri") == "uri"
+
+
 def sample_entities_for_type(
     endpoint: str,
     type_uri: str,
@@ -261,7 +268,33 @@ def _instance_query(
         excluded_values=excluded_values,
     )
     res = execute(query, endpoint=endpoint, timeout=timeout)
-    return extract_binding_rows(res) if res.get("success") else []
+    if not res.get("success"):
+        print(
+            "[instance_query] Failed to ground subgraph instances: "
+            f"status={res.get('status')}, error={res.get('error')}"
+        )
+        return []
+    rows = extract_binding_rows(res)
+    bindings = res.get("results", [])
+    if isinstance(bindings, list):
+        for row, binding in zip(rows, bindings):
+            term_types = {
+                variable: value["type"]
+                for variable, value in binding.items()
+                if isinstance(value, dict) and value.get("type")
+            }
+            if term_types:
+                row[_TERM_TYPES_KEY] = term_types
+    elif isinstance(bindings, dict) and isinstance(bindings.get("bindings"), list):
+        for row, binding in zip(rows, bindings["bindings"]):
+            term_types = {
+                variable: value["type"]
+                for variable, value in binding.items()
+                if isinstance(value, dict) and value.get("type")
+            }
+            if term_types:
+                row[_TERM_TYPES_KEY] = term_types
+    return rows
 
 
 def _sample_instance_rows(
@@ -287,6 +320,11 @@ def _sample_instance_rows(
                 value
                 for value, count in value_counts[variable].items()
                 if count >= max_entity_reuse
+                and any(
+                    row.get(variable) == value
+                    and _row_binding_is_uri(row, variable)
+                    for row in selected
+                )
             }
             for variable in core_variables
         }

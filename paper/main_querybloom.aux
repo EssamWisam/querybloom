@@ -5,6 +5,7 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{auer2007dbpedia,vrandecic2014wikidata}
 \citation{frink_proto-okn}
+\citation{ali2022survey}
 \citation{wikisp2023,zahera2024generating,dabramo-etal-2025-investigating,emonet2024llm}
 \citation{sgpt2022generative,neural2022machine}
 \citation{dubey2019lcquad,usbeck2019qald,usbeck2021qald}
@@ -17,22 +18,30 @@
 \citation{liu2024spinach,zahera2024generating,sgpt2022generative,kacupaj2023sparqlgen,banerjee2022modern,diallo2025frase,sun2022think,wikisp2023}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \newlabel{sec:introduction}{{1}{1}{Introduction}{section.1}{}}
-\@writefile{tdo}{\contentsline {todo}{Can we merge these publications into earlier item about ``in-context demonstrations''? Whether the approaches depend on them or not doesn't appear to be important in our context.}{1}{section*.1}\protected@file@percent }
-\pgfsyspdfmark {pgfid1}{23319967}{40436401}
-\pgfsyspdfmark {pgfid4}{37068865}{40322194}
-\pgfsyspdfmark {pgfid5}{38985793}{40194205}
-\@writefile{tdo}{\contentsline {todo}{this disrupts the flow. Maybe merge into the 1st paragraph.}{1}{section*.2}\protected@file@percent }
-\pgfsyspdfmark {pgfid6}{24723374}{36871241}
-\pgfsyspdfmark {pgfid9}{37068865}{35045768}
-\pgfsyspdfmark {pgfid10}{38985793}{34917779}
-\@writefile{tdo}{\contentsline {todo}{Make it clear that QALD and so on are such existing benchmarks on open-domain KGs.}{1}{section*.3}\protected@file@percent }
-\pgfsyspdfmark {pgfid11}{26985654}{23501891}
-\@writefile{tdo}{\contentsline {todo}{Unclear why we discuss each benchmark's creation}{1}{section*.4}\protected@file@percent }
-\pgfsyspdfmark {pgfid16}{26985654}{23501891}
-\pgfsyspdfmark {pgfid14}{37068865}{23387684}
-\pgfsyspdfmark {pgfid15}{38985793}{23259695}
-\pgfsyspdfmark {pgfid19}{37068865}{20323818}
-\pgfsyspdfmark {pgfid20}{38985793}{20195829}
+\@writefile{tdo}{\contentsline {todo}{discussing KGQA in the context of Ai.}{1}{section*.1}\protected@file@percent }
+\pgfsyspdfmark {pgfid1}{15913134}{4784801}
+\@writefile{tdo}{\contentsline {todo}{the users are not just researchers. it could be domain experts, non experts, and agentic systems too.}{1}{section*.2}\protected@file@percent }
+\pgfsyspdfmark {pgfid6}{15913134}{4784801}
+\@writefile{tdo}{\contentsline {todo}{make it more convincing and explicit that SPARQL is still crucial.}{1}{section*.3}\protected@file@percent }
+\pgfsyspdfmark {pgfid11}{15913134}{4784801}
+\pgfsyspdfmark {pgfid2}{2056643}{4670594}
+\pgfsyspdfmark {pgfid3}{3973571}{4542605}
+\pgfsyspdfmark {pgfid7}{2056643}{3064184}
+\pgfsyspdfmark {pgfid8}{3973571}{2936195}
+\pgfsyspdfmark {pgfid12}{2056643}{-377234}
+\pgfsyspdfmark {pgfid13}{3973571}{-505223}
+\@writefile{tdo}{\contentsline {todo}{More systematic exploration of the distinction between 3 natural language query formats: keywords, questions, and commands.}{1}{section*.4}\protected@file@percent }
+\pgfsyspdfmark {pgfid16}{26259706}{39545111}
+\pgfsyspdfmark {pgfid19}{37068865}{39430904}
+\pgfsyspdfmark {pgfid20}{38985793}{39302915}
+\@writefile{tdo}{\contentsline {todo}{Make it clear that QALD and so on are such existing benchmarks on open-domain KGs.}{1}{section*.5}\protected@file@percent }
+\pgfsyspdfmark {pgfid21}{26985654}{18154151}
+\@writefile{tdo}{\contentsline {todo}{Unclear why we discuss each benchmark's creation}{1}{section*.6}\protected@file@percent }
+\pgfsyspdfmark {pgfid26}{26985654}{18154151}
+\pgfsyspdfmark {pgfid24}{37068865}{18039944}
+\pgfsyspdfmark {pgfid25}{38985793}{17911955}
+\pgfsyspdfmark {pgfid29}{37068865}{14976078}
+\pgfsyspdfmark {pgfid30}{38985793}{14848089}
 \citation{usbeck2019qald,usbeck2021qald}
 \citation{trivedi2017lc}
 \citation{dubey2019lcquad}
@@ -47,85 +56,91 @@
 \citation{trivedi2017lc}
 \citation{labate2025synthetic}
 \citation{zhang2025kgqagen}
-\@writefile{tdo}{\contentsline {todo}{Need to articulate the motivations behind the methodology design before you detail the methods.}{2}{section*.5}\protected@file@percent }
-\pgfsyspdfmark {pgfid21}{16148518}{49349301}
-\pgfsyspdfmark {pgfid22}{2056643}{49235094}
-\pgfsyspdfmark {pgfid23}{3973571}{49107105}
-\@writefile{tdo}{\contentsline {todo}{Explain the evaluation, summarize the results, and other aspects before the ``summary''.}{2}{section*.6}\protected@file@percent }
-\pgfsyspdfmark {pgfid26}{4661699}{26175761}
-\pgfsyspdfmark {pgfid27}{2056643}{26061554}
-\pgfsyspdfmark {pgfid28}{3973571}{25933565}
-\@writefile{tdo}{\contentsline {todo}{can have more bullet points.}{2}{section*.7}\protected@file@percent }
-\pgfsyspdfmark {pgfid31}{6198813}{24393181}
-\pgfsyspdfmark {pgfid32}{2056643}{22997688}
-\pgfsyspdfmark {pgfid33}{3973571}{22869699}
+\@writefile{tdo}{\contentsline {todo}{Need to articulate the motivations behind the methodology design before you detail the methods.}{2}{section*.7}\protected@file@percent }
+\pgfsyspdfmark {pgfid31}{16148518}{44001561}
+\pgfsyspdfmark {pgfid32}{2056643}{43887354}
+\pgfsyspdfmark {pgfid33}{3973571}{43759365}
+\@writefile{tdo}{\contentsline {todo}{Explain the evaluation, summarize the results, and other aspects before the ``summary''.}{2}{section*.8}\protected@file@percent }
+\pgfsyspdfmark {pgfid36}{4661699}{20767728}
+\pgfsyspdfmark {pgfid37}{2056643}{20653521}
+\pgfsyspdfmark {pgfid38}{3973571}{20525532}
+\@writefile{tdo}{\contentsline {todo}{can have more bullet points.}{2}{section*.9}\protected@file@percent }
+\pgfsyspdfmark {pgfid41}{6198813}{18924855}
+\pgfsyspdfmark {pgfid42}{2056643}{17529362}
+\pgfsyspdfmark {pgfid43}{3973571}{17401373}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
 \newlabel{sec:related}{{2}{2}{Related Work}{section.2}{}}
-\@writefile{tdo}{\contentsline {todo}{Are there related work in terms of methodology?}{2}{section*.8}\protected@file@percent }
-\pgfsyspdfmark {pgfid36}{4661699}{4784801}
-\pgfsyspdfmark {pgfid37}{2056643}{4670594}
-\pgfsyspdfmark {pgfid38}{3973571}{4542605}
-\@writefile{tdo}{\contentsline {todo}{It seems obvious that they cannot be transferred.}{2}{section*.9}\protected@file@percent }
-\pgfsyspdfmark {pgfid41}{25973475}{36871241}
-\pgfsyspdfmark {pgfid44}{37068865}{36757034}
-\pgfsyspdfmark {pgfid45}{38985793}{36629045}
-\@writefile{tdo}{\contentsline {todo}{you mentioned these are not fully accurate.}{2}{section*.10}\protected@file@percent }
-\pgfsyspdfmark {pgfid46}{27461920}{26175761}
-\pgfsyspdfmark {pgfid49}{37068865}{26061554}
-\pgfsyspdfmark {pgfid50}{38985793}{25933565}
+\@writefile{tdo}{\contentsline {todo}{Are there related work in terms of methodology?}{2}{section*.10}\protected@file@percent }
+\pgfsyspdfmark {pgfid46}{20138548}{45129360}
+\pgfsyspdfmark {pgfid49}{37068865}{45015153}
+\pgfsyspdfmark {pgfid50}{38985793}{44887164}
+\@writefile{tdo}{\contentsline {todo}{It seems obvious that they cannot be transferred.}{2}{section*.11}\protected@file@percent }
+\pgfsyspdfmark {pgfid51}{29080737}{30789884}
+\pgfsyspdfmark {pgfid54}{37068865}{30675677}
+\pgfsyspdfmark {pgfid55}{38985793}{30547688}
+\@writefile{tdo}{\contentsline {todo}{you mentioned these are not fully accurate.}{2}{section*.12}\protected@file@percent }
+\pgfsyspdfmark {pgfid56}{27461920}{20015567}
+\pgfsyspdfmark {pgfid59}{37068865}{19901360}
+\pgfsyspdfmark {pgfid60}{38985793}{19773371}
 \citation{Spahiu2016ABSTATOL}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Correspondence between a SPARQL query and its matched knowledge graph subgraph.}}{3}{figure.caption.13}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:sparql-subgraph}{{1}{3}{Correspondence between a SPARQL query and its matched knowledge graph subgraph}{figure.caption.13}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{3}{section.3}\protected@file@percent }
 \newlabel{sec:methodology}{{3}{3}{Methodology}{section.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Overview of the QueryBloom methodology.}}{3}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:querybloom-pipeline}{{2}{3}{Overview of the QueryBloom methodology}{figure.caption.14}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Pattern Discovery and Adjacency Indexing}{3}{subsection.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Subgraph Discovery}{3}{subsection.3.2}\protected@file@percent }
 \citation{openai2024structured}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Subgraph Discovery}{4}{subsection.3.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}LLM-Driven Text-SPARQL Distillation}{4}{subsection.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Generation.}{4}{section*.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Complexity Introduction.}{4}{section*.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Verification.}{4}{section*.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Question Rewording.}{4}{section*.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Design Principles}{4}{subsection.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Comprehensiveness.}{4}{section*.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Diversity.}{4}{section*.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Quality.}{4}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Generation.}{4}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Complexity Introduction.}{4}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Verification.}{4}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Question Rewording.}{5}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Design Principles}{5}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Comprehensiveness.}{5}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Diversity.}{5}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Quality.}{5}{section*.21}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4}Results}{5}{section.4}\protected@file@percent }
 \newlabel{sec:evaluation}{{4}{5}{Results}{section.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Dataset Quality and Diversity}{5}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{5}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{9}{section.5}\protected@file@percent }
 \bibdata{references}
 \bibcite{adamu2025climatepub4kg}{{1}{2025}{{Adamu et~al.}}{{Adamu, Zhang, Pan, Latecki, and Dragut}}}
-\bibcite{auer2007dbpedia}{{2}{2007}{{Auer et~al.}}{{Auer, Bizer, Kobilarov, Lehmann, Cyganiak, and Ives}}}
-\bibcite{banerjee2022modern}{{3}{2022}{{Banerjee et~al.}}{{Banerjee, Nair, Kaur, Usbeck, and Biemann}}}
-\bibcite{kgs2025biomedical}{{4}{2025}{{Consortium}}{{}}}
-\bibcite{dabramo-etal-2025-investigating}{{5}{2025}{{D{'}Abramo et~al.}}{{D{'}Abramo, Zugarini, and Torroni}}}
-\bibcite{diallo2025frase}{{6}{2025}{{Diallo et~al.}}{{Diallo, Reyd, and Zouaq}}}
-\bibcite{dubey2019lcquad}{{7}{2019}{{Dubey et~al.}}{{Dubey, Banerjee, Abdelkawi, and Lehmann}}}
-\bibcite{emonet2024llm}{{8}{2024}{{Emonet et~al.}}{{Emonet, Bolleman, Duvaud, de~Farias, and Sima}}}
-\bibcite{kacupaj2023sparqlgen}{{9}{2023}{{Kacupaj et~al.}}{{Kacupaj, Plepi, Singh, Thakkar, and Lehmann}}}
-\bibcite{labate2025synthetic}{{10}{2025}{{Labate et~al.}}{{Labate, Carvalho, Fiorini, and Silva}}}
-\bibcite{liu2024spinach}{{11}{2024}{{Liu et~al.}}{{Liu, Semnani, Triedman, Xu, Zhao, and Lam}}}
-\bibcite{openai2024structured}{{12}{2024}{{OpenAI}}{{}}}
-\bibcite{frink_proto-okn}{{13}{2024}{{RENCI}}{{}}}
-\bibcite{sgpt2022generative}{{14}{2022}{{Rony et~al.}}{{Rony, Kumar, Teucher, Kovriguina, and Lehmann}}}
-\bibcite{sockg2025}{{15}{2025}{{Shirvani-Mahdavi et~al.}}{{Shirvani-Mahdavi, Wingfield, Gutierrez, Tran, Zhu, and Zhang}}}
-\bibcite{Spahiu2016ABSTATOL}{{16}{2016}{{Spahiu et~al.}}{{Spahiu, Porrini, Palmonari, Rula, and Maurino}}}
-\bibcite{sun2022think}{{17}{2024}{{Sun et~al.}}{{Sun, Xu, Tang, Wang, Lin, Gong, Ni, Shum, and Guo}}}
-\bibcite{trivedi2017lc}{{18}{2017}{{Trivedi et~al.}}{{Trivedi, Maheshwari, Dubey, and Lehmann}}}
-\bibcite{uniprot_sparql_examples}{{19}{2025}{{UniProt Consortium}}{{}}}
-\bibcite{usbeck2019qald}{{20}{2018}{{Usbeck et~al.}}{{Usbeck, Gusmita, Ngomo, and Saleem}}}
-\bibcite{usbeck2021qald}{{21}{2024}{{Usbeck et~al.}}{{Usbeck, Yan, Perevalov, Jiang, Schulz, Kraft, M{\"o}ller, Huang, Reineke, Ngonga~Ngomo, Saleem, and Both}}}
-\bibcite{vrandecic2014wikidata}{{22}{2014}{{Vrande{\v {c}}i{\'c} and Kr{\"o}tzsch}}{{}}}
-\bibcite{walter2025grasp}{{23}{2025}{{Walter and Bast}}{{}}}
-\bibcite{wikidata_sparql_examples}{{24}{2025}{{Wikidata Contributors}}{{}}}
-\bibcite{wikisp2023}{{25}{2023}{{Xu et~al.}}{{Xu, Liu, Culhane, Pertseva, Wu, Semnani, and Lam}}}
-\bibcite{neural2022machine}{{26}{2021}{{Yin et~al.}}{{Yin, Gromann, and Rudolph}}}
-\bibcite{zahera2024generating}{{27}{2024}{{Zahera et~al.}}{{Zahera, Manzoor, Sherif, Moussallem, and Ngomo}}}
-\bibcite{zhang2025kgqagen}{{28}{2025}{{Zhang et~al.}}{{Zhang, Jiang, Chi, Chen, Elkoumy, Wang, Wu, Zhou, Pan, Wang, and Ma}}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Prompts}{8}{appendix.A}\protected@file@percent }
-\newlabel{sec:appendix_prompt}{{A}{8}{Prompts}{appendix.A}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}QueryBloom Generation Prompt}{8}{subsection.A.1}\protected@file@percent }
-\newlabel{sec:appendix_prompt_generate}{{A.1}{8}{QueryBloom Generation Prompt}{subsection.A.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}QueryBloom Verification Prompt}{8}{subsection.A.2}\protected@file@percent }
-\newlabel{sec:appendix_prompt_verify}{{A.2}{8}{QueryBloom Verification Prompt}{subsection.A.2}{}}
+\bibcite{ali2022survey}{{2}{2022}{{Ali et~al.}}{{Ali, Saleem, Yao, Hogan, and Ngonga~Ngomo}}}
+\bibcite{auer2007dbpedia}{{3}{2007}{{Auer et~al.}}{{Auer, Bizer, Kobilarov, Lehmann, Cyganiak, and Ives}}}
+\bibcite{banerjee2022modern}{{4}{2022}{{Banerjee et~al.}}{{Banerjee, Nair, Kaur, Usbeck, and Biemann}}}
+\bibcite{kgs2025biomedical}{{5}{2025}{{Consortium}}{{}}}
+\bibcite{dabramo-etal-2025-investigating}{{6}{2025}{{D{'}Abramo et~al.}}{{D{'}Abramo, Zugarini, and Torroni}}}
+\bibcite{diallo2025frase}{{7}{2025}{{Diallo et~al.}}{{Diallo, Reyd, and Zouaq}}}
+\bibcite{dubey2019lcquad}{{8}{2019}{{Dubey et~al.}}{{Dubey, Banerjee, Abdelkawi, and Lehmann}}}
+\bibcite{emonet2024llm}{{9}{2024}{{Emonet et~al.}}{{Emonet, Bolleman, Duvaud, de~Farias, and Sima}}}
+\bibcite{kacupaj2023sparqlgen}{{10}{2023}{{Kacupaj et~al.}}{{Kacupaj, Plepi, Singh, Thakkar, and Lehmann}}}
+\bibcite{labate2025synthetic}{{11}{2025}{{Labate et~al.}}{{Labate, Carvalho, Fiorini, and Silva}}}
+\bibcite{liu2024spinach}{{12}{2024}{{Liu et~al.}}{{Liu, Semnani, Triedman, Xu, Zhao, and Lam}}}
+\bibcite{openai2024structured}{{13}{2024}{{OpenAI}}{{}}}
+\bibcite{frink_proto-okn}{{14}{2024}{{RENCI}}{{}}}
+\bibcite{sgpt2022generative}{{15}{2022}{{Rony et~al.}}{{Rony, Kumar, Teucher, Kovriguina, and Lehmann}}}
+\bibcite{sockg2025}{{16}{2025}{{Shirvani-Mahdavi et~al.}}{{Shirvani-Mahdavi, Wingfield, Gutierrez, Tran, Zhu, and Zhang}}}
+\bibcite{Spahiu2016ABSTATOL}{{17}{2016}{{Spahiu et~al.}}{{Spahiu, Porrini, Palmonari, Rula, and Maurino}}}
+\bibcite{sun2022think}{{18}{2024}{{Sun et~al.}}{{Sun, Xu, Tang, Wang, Lin, Gong, Ni, Shum, and Guo}}}
+\bibcite{trivedi2017lc}{{19}{2017}{{Trivedi et~al.}}{{Trivedi, Maheshwari, Dubey, and Lehmann}}}
+\bibcite{uniprot_sparql_examples}{{20}{2025}{{UniProt Consortium}}{{}}}
+\bibcite{usbeck2019qald}{{21}{2018}{{Usbeck et~al.}}{{Usbeck, Gusmita, Ngomo, and Saleem}}}
+\bibcite{usbeck2021qald}{{22}{2024}{{Usbeck et~al.}}{{Usbeck, Yan, Perevalov, Jiang, Schulz, Kraft, M{\"o}ller, Huang, Reineke, Ngonga~Ngomo, Saleem, and Both}}}
+\bibcite{vrandecic2014wikidata}{{23}{2014}{{Vrande{\v {c}}i{\'c} and Kr{\"o}tzsch}}{{}}}
+\bibcite{walter2025grasp}{{24}{2025}{{Walter and Bast}}{{}}}
+\bibcite{wikidata_sparql_examples}{{25}{2025}{{Wikidata Contributors}}{{}}}
+\bibcite{wikisp2023}{{26}{2023}{{Xu et~al.}}{{Xu, Liu, Culhane, Pertseva, Wu, Semnani, and Lam}}}
+\bibcite{neural2022machine}{{27}{2021}{{Yin et~al.}}{{Yin, Gromann, and Rudolph}}}
+\bibcite{zahera2024generating}{{28}{2024}{{Zahera et~al.}}{{Zahera, Manzoor, Sherif, Moussallem, and Ngomo}}}
+\bibcite{zhang2025kgqagen}{{29}{2025}{{Zhang et~al.}}{{Zhang, Jiang, Chi, Chen, Elkoumy, Wang, Wu, Zhou, Pan, Wang, and Ma}}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Prompts}{12}{appendix.A}\protected@file@percent }
+\newlabel{sec:appendix_prompt}{{A}{12}{Prompts}{appendix.A}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}QueryBloom Generation Prompt}{12}{subsection.A.1}\protected@file@percent }
+\newlabel{sec:appendix_prompt_generate}{{A.1}{12}{QueryBloom Generation Prompt}{subsection.A.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}QueryBloom Verification Prompt}{13}{subsection.A.2}\protected@file@percent }
+\newlabel{sec:appendix_prompt_verify}{{A.2}{13}{QueryBloom Verification Prompt}{subsection.A.2}{}}
 \ttl@finishall
-\gdef \@abspage@last{8}
+\gdef \@abspage@last{13}

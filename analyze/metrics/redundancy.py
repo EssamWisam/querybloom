@@ -5,6 +5,7 @@ import re
 import sys
 import json
 import hashlib
+import logging
 import numpy as np
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -15,7 +16,9 @@ try:
 except Exception:
     _execute_sparql_query = None
 
-from .parsing import analyze_sparql_features
+from .parsing import analyze_sparql_features, normalize_sparql
+
+logger = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------------------------
@@ -167,12 +170,14 @@ def _cache_key(query: str) -> str:
     return hashlib.sha256(query.encode()).hexdigest()[:16]
 
 
-def _execute_cached(query: str, endpoint: str) -> dict:
+def _execute_cached(
+    query: str, endpoint: str, rewrite_cache: bool = False, query_source=None
+) -> dict:
     """Execute with a disk cache to avoid re-running identical queries."""
     os.makedirs(_CACHE_DIR, exist_ok=True)
     key = _cache_key(query)
     path = os.path.join(_CACHE_DIR, f"{key}.json")
-    if os.path.exists(path):
+    if not rewrite_cache and os.path.exists(path):
         try:
             with open(path) as f:
                 return json.load(f)
@@ -180,7 +185,27 @@ def _execute_cached(query: str, endpoint: str) -> dict:
             pass
     if _execute_sparql_query is None:
         return {"success": False}
-    resp = _execute_sparql_query(query, endpoint=endpoint)
+    try:
+        resp = _execute_sparql_query(query, endpoint=endpoint)
+    except Exception as exc:
+        logger.warning(
+            "[metrics.redundancy] --- query execution failed ---\n"
+            "source=%s endpoint=%s\n"
+            "outcome=exception propagates\nreason=%s query=%s",
+            query_source or "<unspecified>", endpoint, exc, query[:500]
+        )
+        raise
+    if not resp.get("success"):
+        logger.warning(
+            "[metrics.redundancy] --- query execution failed ---\n"
+            "source=%s endpoint=%s\n"
+            "outcome=comparison treats unavailable rows as non-redundant\n"
+            "reason=%s query=%s",
+            query_source or "<unspecified>",
+            endpoint,
+            resp.get("error_message") or resp.get("error") or resp.get("status", "unknown error"),
+            query[:500],
+        )
     try:
         with open(path, "w") as f:
             json.dump(resp, f)
@@ -199,6 +224,8 @@ def measure_redundancy(
     endpoint: str = "dblp",
     max_workers: int = 2,
     features: list[str] | None = None,
+    rewrite_cache: bool = False,
+    query_source=None,
 ) -> dict:
     """Measure per-feature redundancy rate across a benchmark.
 
@@ -216,6 +243,8 @@ def measure_redundancy(
         Concurrent query threads.
     features : list[str] | None
         Subset of REDUNDANCY_FEATURES to test.  ``None`` → all.
+    rewrite_cache : bool
+        Re-execute and replace each matching cached endpoint response.
 
     Returns
     -------
@@ -225,6 +254,8 @@ def measure_redundancy(
     """
     if features is None:
         features = REDUNDANCY_FEATURES
+
+    queries = [normalize_sparql(query, query_source) for query in queries]
 
     # Pre-detect which queries use which features
     feature_flags = [analyze_sparql_features(q) for q in queries]
@@ -253,7 +284,9 @@ def measure_redundancy(
         all_queries[mod] = None
 
     def _run(query):
-        return query, _execute_cached(query, endpoint)
+        return query, _execute_cached(
+            query, endpoint, rewrite_cache=rewrite_cache, query_source=query_source
+        )
 
     print(f"  Redundancy: executing {len(all_queries)} unique queries …")
     with ThreadPoolExecutor(max_workers=max_workers) as pool:

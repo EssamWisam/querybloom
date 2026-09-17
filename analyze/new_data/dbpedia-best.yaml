@@ -1,0 +1,2661 @@
+- id: 1
+  src_id: 1
+  text: "Which five government agencies affiliated with at least one school and at least one organization have the highest numbers of distinct affiliated schools, and how many distinct schools and organizations are affiliated with each?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+
+    SELECT ?agency
+           (COUNT(DISTINCT ?school) AS ?schoolCount)
+           (COUNT(DISTINCT ?organisation) AS ?organisationCount)
+    WHERE {
+      ?agency a dbo:GovernmentAgency .
+      ?school a dbo:School ;
+              dbo:affiliation ?agency .
+      ?organisation a dbo:Organisation ;
+                    dbo:affiliation ?agency .
+    }
+    GROUP BY ?agency
+    ORDER BY DESC(?schoolCount)
+    LIMIT 5
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    agency: http://dbpedia.org/resource/Ministry_of_Education_(Malaysia) | schoolCount: 26 | organisationCount: 27
+    agency: http://dbpedia.org/resource/Department_of_Education_(Philippines) | schoolCount: 23 | organisationCount: 23
+    agency: http://dbpedia.org/resource/Department_of_Science_and_Technology_(Philippines) | schoolCount: 12 | organisationCount: 12
+- id: 2
+  src_id: 2
+  text: "What literary genre is the novel ’48 classified under, and which country is it associated with?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+
+    SELECT DISTINCT ?genre ?country
+    WHERE {
+      <http://dbpedia.org/resource/'48_(novel)> dbo:literaryGenre ?genre ;
+                                                    dbo:country ?country .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    genre: http://dbpedia.org/resource/Alternative_history | country: http://dbpedia.org/resource/United_Kingdom
+- id: 3
+  src_id: 3
+  text: "Among the singles credited to Al Hirt, which has the longest runtime, what is its runtime in minutes, and where was it recorded, if known?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX work: <http://dbpedia.org/ontology/Work/>
+
+    SELECT ?single ?runtimeMinutes ?recordedIn
+    WHERE {
+      ?single a dbo:Single ;
+              dbp:artist dbr:Al_Hirt ;
+              work:runtime ?runtimeMinutes .
+      OPTIONAL {
+        ?single dbo:recordedIn ?recordedIn .
+      }
+    }
+    ORDER BY DESC(?runtimeMinutes)
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    single: http://dbpedia.org/resource/Al's_Place | runtimeMinutes: 2.283333333333333
+- id: 4
+  src_id: 4
+  text: "Which people other than Alex Bogusky share at least one nationality with him or are known for at least one of the same things, and, for each person, what nationalities do they have and what are they known for?"
+  query: |
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?person ?nationality ?knownFor
+    WHERE {
+      dbr:Alex_Bogusky dbo:nationality ?alexNationality ;
+                         dbo:knownFor ?alexSubject .
+      ?person rdf:type dbo:Person ;
+              dbo:nationality ?nationality ;
+              dbo:knownFor ?knownFor .
+      {
+        ?person dbo:knownFor ?alexSubject .
+      }
+      UNION
+      {
+        ?person dbo:nationality ?alexNationality .
+      }
+      FILTER (?person != dbr:Alex_Bogusky)
+    }
+  llm_best: true
+  result_count: 3456
+  result_snippet: |
+    person: http://dbpedia.org/resource/A._Arthur_Giddon | nationality: http://dbpedia.org/resource/United_States | knownFor: http://dbpedia.org/resource/Lawyer
+    person: http://dbpedia.org/resource/A._E._Douglass | nationality: http://dbpedia.org/resource/United_States | knownFor: http://dbpedia.org/resource/Dendrochronology
+    person: http://dbpedia.org/resource/A._E._Douglass | nationality: http://dbpedia.org/resource/United_States | knownFor: http://dbpedia.org/resource/Sunspot_cycle
+- id: 5
+  src_id: 5
+  text: "Is Central Energy Trust Arena located in New Zealand, and are both Manawatu Rugby Union and the Super Rugby team Hurricanes tenants of the arena?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    ASK WHERE {
+      VALUES ?venue { dbr:Central_Energy_Trust_Arena }
+      ?venue dbo:location dbr:New_Zealand ;
+             dbp:tenants dbr:Manawatu_Rugby_Union .
+      FILTER EXISTS {
+        ?venue dbo:tenant dbr:Hurricanes_\(Super_Rugby\) .
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    true
+- id: 6
+  src_id: 6
+  text: "Which musical artist is credited for lyrics on the largest number of films whose music is credited to Jaidev Kumar, and how many such films are there?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?lyricist (COUNT(DISTINCT ?film) AS ?filmCount)
+    WHERE {
+      ?film a dbo:Film ;
+            dbp:music dbr:Jaidev_Kumar ;
+            dbp:lyrics ?lyricist .
+      ?lyricist a dbo:MusicalArtist .
+    }
+    GROUP BY ?lyricist
+    ORDER BY DESC(?filmCount)
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    lyricist: http://dbpedia.org/resource/Happy_Raikoti | filmCount: 2
+- id: 7
+  src_id: 7
+  text: "Among cities where at least two distinct political parties are headquartered, which 10 have the largest numbers of distinct baseball players born there, and, for each city, how many distinct baseball players were born there and how many distinct political parties are headquartered there?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+    SELECT ?city
+           (SAMPLE(?cityName) AS ?cityLabel)
+           ?baseballPlayerCount
+           ?politicalPartyCount
+    WHERE {
+      {
+        SELECT ?city
+               (COUNT(DISTINCT ?player) AS ?baseballPlayerCount)
+               (COUNT(DISTINCT ?party) AS ?politicalPartyCount)
+        WHERE {
+          ?city a dbo:City .
+          ?player a dbo:BaseballPlayer ;
+                  dbo:birthPlace ?city .
+          ?party a dbo:PoliticalParty ;
+                 dbo:headquarter ?city .
+        }
+        GROUP BY ?city
+      }
+
+      FILTER(?politicalPartyCount >= 2)
+
+      OPTIONAL {
+        ?city rdfs:label ?cityName .
+        FILTER(LANG(?cityName) = "en")
+      }
+    }
+    GROUP BY ?city ?baseballPlayerCount ?politicalPartyCount
+    ORDER BY DESC(?baseballPlayerCount) ?city
+    LIMIT 10
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    city: http://dbpedia.org/resource/Brooklyn,_New_York | cityLabel: Brooklyn, New York | baseballPlayerCount: 221 | politicalPartyCount: 3
+    city: http://dbpedia.org/resource/Chicago | cityLabel: Chicago | baseballPlayerCount: 197 | politicalPartyCount: 6
+    city: http://dbpedia.org/resource/Philadelphia | cityLabel: Philadelphia | baseballPlayerCount: 197 | politicalPartyCount: 4
+- id: 8
+  src_id: 8
+  text: "Which wrestling events took place in San Jose, California—the city that operates Alum Rock Park—and what caption is recorded for each event, if available?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?event ?caption
+    WHERE {
+      dbr:Alum_Rock_Park
+          dbp:operator <http://dbpedia.org/resource/San_Jose,_California> .
+
+      ?event a dbo:WrestlingEvent ;
+             dbo:location <http://dbpedia.org/resource/San_Jose,_California> .
+
+      OPTIONAL {
+        ?event dbp:caption ?caption .
+      }
+    }
+  llm_best: true
+  result_count: 13
+  result_snippet: |
+    http://dbpedia.org/resource/Battle_in_the_Valley
+    http://dbpedia.org/resource/ChickFight__Shimmer_Women_Athletes_Volume_71__1
+    http://dbpedia.org/resource/List_of_Evolve_Wrestling_events__Evolve_39__1
+- id: 9
+  src_id: 9
+  text: "Which 10 musical artists born before 1950 and credited with music for television episodes wrote the most singles, and how many distinct singles and television episodes is each credited with?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?artist ?singleCount ?episodeCount
+    WHERE {
+      ?artist a dbo:MusicalArtist ;
+              dbp:birthDate ?birthDate .
+      FILTER(?birthDate < "1950-01-01"^^xsd:date)
+
+      {
+        SELECT ?artist (COUNT(DISTINCT ?single) AS ?singleCount)
+        WHERE {
+          ?single a dbo:Single ;
+                  dbo:writer ?artist .
+        }
+        GROUP BY ?artist
+      }
+
+      {
+        SELECT ?artist (COUNT(DISTINCT ?episode) AS ?episodeCount)
+        WHERE {
+          ?episode a dbo:TelevisionEpisode ;
+                   dbp:music ?artist .
+        }
+        GROUP BY ?artist
+      }
+    }
+    ORDER BY DESC(?singleCount) ?artist
+    LIMIT 10
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    artist: http://dbpedia.org/resource/Bob_Dylan | singleCount: 46 | episodeCount: 1
+    artist: http://dbpedia.org/resource/Gerry_Rafferty | singleCount: 3 | episodeCount: 1
+    artist: http://dbpedia.org/resource/John_Williams | singleCount: 3 | episodeCount: 3
+- id: 10
+  src_id: 10
+  text: "Which organization publishes the academic journal Acta Histriae, which academic discipline does it cover, and what former name, if any, is documented for it?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?publisher ?discipline ?formerName
+    WHERE {
+      dbr:Acta_Histriae a dbo:AcademicJournal ;
+          dbo:publisher ?publisher ;
+          dbo:academicDiscipline ?discipline .
+      OPTIONAL {
+        dbr:Acta_Histriae dbo:formerName ?formerName .
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    publisher: http://dbpedia.org/resource/The_Historical_Society_of_Southern_Primorska_of_Koper | discipline: http://dbpedia.org/resource/History
+- id: 11
+  src_id: 11
+  text: "When and in which city was the artist 88-Keys born, and how many writers are recorded as having died in that city?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?birthDate ?city ?writerDeathCount
+    WHERE {
+      dbr:88-Keys a dbo:Artist ;
+                  dbp:birthDate ?birthDate ;
+                  dbp:birthPlace ?city .
+      ?city a dbo:City .
+      {
+        SELECT ?city (COUNT(DISTINCT ?writer) AS ?writerDeathCount)
+        WHERE {
+          ?writer a dbo:Writer ;
+                  dbp:deathPlace ?city .
+        }
+        GROUP BY ?city
+      }
+    }
+  llm_best: ""
+  result_count: 1
+  result_snippet: |
+    birthDate: 1976-03-05 | city: http://dbpedia.org/resource/New_York_City | writerDeathCount: 89
+- id: 12
+  src_id: 12
+  text: "Which 10 countries have the most distinct associated foods, considering only countries with at least one such food and at least one athlete for whom the country is the state of origin, and what are the distinct food and athlete counts for each, ordered by food count and then athlete count, both descending?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT ?country
+           (COUNT(DISTINCT ?food) AS ?foodCount)
+           (COUNT(DISTINCT ?athlete) AS ?athleteCount)
+    WHERE {
+      ?country a dbo:Country .
+      ?food a dbo:Food ;
+          dbp:country ?country .
+      ?athlete a dbo:Athlete ;
+          dbo:stateOfOrigin ?country .
+    }
+    GROUP BY ?country
+    ORDER BY DESC(?foodCount) DESC(?athleteCount)
+    LIMIT 10
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    country: http://dbpedia.org/resource/United_States | foodCount: 285 | athleteCount: 586
+    country: http://dbpedia.org/resource/Italy | foodCount: 267 | athleteCount: 344
+    country: http://dbpedia.org/resource/India | foodCount: 258 | athleteCount: 267
+- id: 13
+  src_id: 13
+  text: "Among places covered by at least two distinct nonfiction books, which five have the greatest number of distinct musical artists who died there? For each place, how many distinct nonfiction books cover it, and how many distinct musical artists died there, with ties broken by location in ascending order?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT ?location ?bookCount (COUNT(DISTINCT ?artist) AS ?artistCount)
+    WHERE {
+      {
+        SELECT ?location (COUNT(DISTINCT ?book) AS ?bookCount)
+        WHERE {
+          ?book a dbo:Book ;
+                dbo:nonFictionSubject ?location .
+        }
+        GROUP BY ?location
+        HAVING (COUNT(DISTINCT ?book) >= 2)
+      }
+      ?artist a dbo:MusicalArtist ;
+              dbp:deathPlace ?location .
+    }
+    GROUP BY ?location ?bookCount
+    ORDER BY DESC(?artistCount) ?location
+    LIMIT 5
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    location: http://dbpedia.org/resource/United_States | bookCount: 2 | artistCount: 147
+    location: http://dbpedia.org/resource/India | bookCount: 3 | artistCount: 103
+    location: http://dbpedia.org/resource/New_York_City | bookCount: 3 | artistCount: 66
+- id: 14
+  src_id: 14
+  text: "Which 10 places have the most cricketers who were both born and died there, and how many such cricketers are there for each place?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT ?place (COUNT(DISTINCT ?cricketer) AS ?numberOfCricketers)
+    WHERE {
+      ?cricketer a dbo:Cricketer ;
+                 dbp:birthPlace ?place ;
+                 dbo:deathPlace ?place .
+    }
+    GROUP BY ?place
+    ORDER BY DESC(?numberOfCricketers)
+    LIMIT 10
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    place: http://dbpedia.org/resource/England | numberOfCricketers: 1255
+    place: http://dbpedia.org/resource/Sussex | numberOfCricketers: 63
+    place: http://dbpedia.org/resource/Hampshire | numberOfCricketers: 57
+- id: 15
+  src_id: 15
+  text: "Which five subject categories are assigned to the greatest number of distinct books written by writers who influenced Richard Dawkins, and how many such books fall under each category?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX dct: <http://purl.org/dc/terms/>
+
+    SELECT ?subjectCategory (COUNT(DISTINCT ?book) AS ?bookCount)
+    WHERE {
+      dbr:Richard_Dawkins dbo:influencedBy ?writer .
+      ?writer a dbo:Writer .
+      ?book a dbo:Book ;
+          dbp:author ?writer ;
+          dct:subject ?subjectCategory .
+    }
+    GROUP BY ?subjectCategory
+    ORDER BY DESC(?bookCount)
+    LIMIT 5
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    subjectCategory: http://dbpedia.org/resource/Category:Books_by_Christopher_Hitchens | bookCount: 16
+    subjectCategory: http://dbpedia.org/resource/Category:English-language_books | bookCount: 7
+    subjectCategory: http://dbpedia.org/resource/Category:Verso_Books_books | bookCount: 4
+- id: 16
+  src_id: 16
+  text: "Which officeholders have more than one distinct administrative region named after them that contains at least one park, and for each officeholder, how many such regions and distinct parks are there, ordered by park count from highest to lowest?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT ?officeHolder ?regionCount ?parkCount
+    WHERE {
+      {
+        SELECT ?officeHolder
+               (COUNT(DISTINCT ?region) AS ?regionCount)
+               (COUNT(DISTINCT ?park) AS ?parkCount)
+        WHERE {
+          ?park rdf:type dbo:Park ;
+                dbo:location ?region .
+          ?region rdf:type dbo:AdministrativeRegion ;
+                  dbp:namedFor ?officeHolder .
+          ?officeHolder rdf:type dbo:OfficeHolder .
+        }
+        GROUP BY ?officeHolder
+      }
+      FILTER(?regionCount > 1)
+    }
+    ORDER BY DESC(?parkCount)
+  llm_best: true
+  result_count: 12
+  result_snippet: |
+    officeHolder: http://dbpedia.org/resource/Abraham_Lincoln | regionCount: 2 | parkCount: 30
+    officeHolder: http://dbpedia.org/resource/George_Washington | regionCount: 2 | parkCount: 10
+    officeHolder: http://dbpedia.org/resource/Andrew_Jackson | regionCount: 5 | parkCount: 9
+- id: 17
+  src_id: 17
+  text: "Which 10 soccer players were listed as league top scorer in the greatest number of distinct soccer club seasons, considering only players listed for more than one season, and for how many seasons was each listed?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT ?player (COUNT(DISTINCT ?season) AS ?seasonCount)
+    WHERE {
+      ?season a dbo:SoccerClubSeason ;
+              dbp:leagueTopscorer ?player .
+      ?player a dbo:SoccerPlayer .
+    }
+    GROUP BY ?player
+    HAVING (COUNT(DISTINCT ?season) > 1)
+    ORDER BY DESC(?seasonCount) ?player
+    LIMIT 10
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    player: http://dbpedia.org/resource/Zlatan_Ibrahimović | seasonCount: 16
+    player: http://dbpedia.org/resource/Cristiano_Ronaldo | seasonCount: 15
+    player: http://dbpedia.org/resource/Willie_Thornton | seasonCount: 15
+- id: 18
+  src_id: 18
+  text: "Is Abzhywa a subdivision of Abkhazia, and is Georgian listed as a language of Abkhazia?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    ASK {
+      dbr:Abzhywa dbo:subdivision dbr:Abkhazia .
+      dbr:Abkhazia dbo:language dbr:Georgian_language .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    true
+- id: 19
+  src_id: 19
+  text: "Among settlements with at least one road and at least one station they own, which has the largest total area, what is that area in square kilometres, and how many roads and owned stations does it have?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX populatedPlace: <http://dbpedia.org/ontology/PopulatedPlace/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT ?settlement ?areaKm2
+           (COUNT(DISTINCT ?road) AS ?roadCount)
+           (COUNT(DISTINCT ?station) AS ?stationCount)
+    WHERE {
+      {
+        SELECT DISTINCT ?settlement ?areaKm2
+        WHERE {
+          ?settlement a dbo:Settlement ;
+                      populatedPlace:areaTotal ?areaValue .
+          ?qualifyingRoad a dbo:Road ;
+                          dbo:city ?settlement .
+          ?qualifyingStation a dbo:Station ;
+                             dbo:owningOrganisation ?settlement .
+          BIND(xsd:double(STR(?areaValue)) AS ?areaKm2)
+        }
+        ORDER BY DESC(?areaKm2)
+        LIMIT 1
+      }
+      ?road a dbo:Road ;
+            dbo:city ?settlement .
+      ?station a dbo:Station ;
+               dbo:owningOrganisation ?settlement .
+    }
+    GROUP BY ?settlement ?areaKm2
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    settlement: http://dbpedia.org/resource/Toronto | areaKm2: 630.2 | roadCount: 19 | stationCount: 1
+- id: 20
+  src_id: 20
+  text: "For Cool Reception, a horse raced by jockey Avelino Gomez, what was its country, who owned it, what awards did it receive, and which races are associated with its career?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?country ?owner ?award ?race
+    WHERE {
+      dbr:Avelino_Gomez a dbo:Jockey ;
+                         dbo:raceHorse dbr:Cool_Reception .
+      dbr:Cool_Reception a dbo:Horse ;
+                         dbp:country ?country ;
+                         dbo:owner ?owner ;
+                         dbo:award ?award ;
+                         dbo:race ?race .
+    }
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    country: http://dbpedia.org/resource/Canada | owner: http://dbpedia.org/resource/Larkin_Maloney | award: http://dbpedia.org/resource/Sovereign_Award_for_Champion_2-Year-Old_Male_Horse | race: http://dbpedia.org/resource/Coronation_Futurity_Stakes
+    country: http://dbpedia.org/resource/Canada | owner: http://dbpedia.org/resource/Larkin_Maloney | award: http://dbpedia.org/resource/Sovereign_Award_for_Champion_2-Year-Old_Male_Horse | race: http://dbpedia.org/resource/Cup_and_Saucer_Stakes
+    country: http://dbpedia.org/resource/Canada | owner: http://dbpedia.org/resource/Larkin_Maloney | award: http://dbpedia.org/resource/Sovereign_Award_for_Champion_2-Year-Old_Male_Horse | race: http://dbpedia.org/resource/Fort_Lauderdale_Stakes
+- id: 21
+  src_id: 21
+  text: "Of the Football League seasons corresponding to Stoke’s 1893–94, 1896–97, 1897–98, and 1907–08 campaigns, which two had the highest maximum-attendance figures, and what were the maximum and minimum attendances in each?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?leagueSeason ?highestAttendance ?lowestAttendance
+    WHERE {
+      {
+        SELECT DISTINCT ?leagueSeason ?highestAttendance
+        WHERE {
+          VALUES ?campaign {
+            <http://dbpedia.org/resource/1893–94_Stoke_F.C._season>
+            <http://dbpedia.org/resource/1896–97_Stoke_F.C._season>
+            <http://dbpedia.org/resource/1897–98_Stoke_F.C._season>
+            <http://dbpedia.org/resource/1907–08_Stoke_F.C._season>
+          }
+          ?campaign dbo:league ?leagueSeason .
+          ?leagueSeason dbp:highestAttendance ?highestAttendance .
+          FILTER(isNumeric(?highestAttendance))
+        }
+      }
+      ?leagueSeason dbp:lowestAttendance ?lowestAttendance .
+      FILTER(isNumeric(?lowestAttendance))
+    }
+    ORDER BY DESC(xsd:integer(?highestAttendance))
+    LIMIT 2
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    leagueSeason: http://dbpedia.org/resource/1897–98_Football_League | highestAttendance: 50000 | lowestAttendance: 1000
+    leagueSeason: http://dbpedia.org/resource/1896–97_Football_League | highestAttendance: 40000 | lowestAttendance: 1000
+- id: 22
+  src_id: 22
+  text: "Which television shows authored by Juliana Rojas are associated with either Minas Gerais or Brumadinho, and which of those locations is associated with each show?"
+  query: |
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?show ?location
+    WHERE {
+      ?show rdf:type dbo:TelevisionShow ;
+          dbo:author dbr:Juliana_Rojas .
+
+      {
+        ?show dbo:location dbr:Minas_Gerais .
+        BIND(dbr:Minas_Gerais AS ?location)
+      }
+      UNION
+      {
+        ?show dbo:location dbr:Brumadinho .
+        BIND(dbr:Brumadinho AS ?location)
+      }
+    }
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    show: http://dbpedia.org/resource/3%25 | location: http://dbpedia.org/resource/Brumadinho
+    show: http://dbpedia.org/resource/3%25 | location: http://dbpedia.org/resource/Minas_Gerais
+- id: 23
+  src_id: 23
+  text: "How many distinct television shows were preceded by a film from the United Kingdom, and, among those with a recorded release date, which was released most recently and when?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?showCount ?latestShow ?latestReleaseDate
+    WHERE {
+      {
+        SELECT (COUNT(DISTINCT ?show) AS ?showCount)
+        WHERE {
+          ?show a dbo:TelevisionShow ;
+                dbo:previousWork ?film .
+          ?film a dbo:Film ;
+                dbo:country dbr:United_Kingdom .
+        }
+      }
+      {
+        SELECT DISTINCT ?latestShow ?latestReleaseDate
+        WHERE {
+          ?latestShow a dbo:TelevisionShow ;
+                      dbo:releaseDate ?latestReleaseDate ;
+                      dbo:previousWork ?latestFilm .
+          ?latestFilm a dbo:Film ;
+                      dbo:country dbr:United_Kingdom .
+        }
+        ORDER BY DESC(?latestReleaseDate)
+        LIMIT 1
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    showCount: 5 | latestShow: http://dbpedia.org/resource/Knowing_Me_Knowing_You_with_Alan_Partridge_(TV_series) | latestReleaseDate: 1994-09-16
+- id: 24
+  src_id: 24
+  text: "Which musical artist from Mount Vernon, New York, ranks first by number of distinct singles with a recorded previous work, and how many such singles did the artist write?"
+  query: |
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT ?writer (COUNT(DISTINCT ?single) AS ?singleCount)
+    WHERE {
+      ?single rdf:type dbo:Single ;
+              dbp:writer ?writer ;
+              dbo:previousWork ?previousWork .
+      ?writer rdf:type dbo:MusicalArtist ;
+              dbo:hometown <http://dbpedia.org/resource/Mount_Vernon,_New_York> .
+    }
+    GROUP BY ?writer
+    ORDER BY DESC(?singleCount)
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    writer: http://dbpedia.org/resource/Al_B._Sure! | singleCount: 6
+- id: 25
+  src_id: 25
+  text: "Which cyclists were born in Auckland, and what are their death dates where available?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?cyclist ?deathDate
+    WHERE {
+      ?cyclist a dbo:Cyclist ;
+               dbo:birthPlace dbr:Auckland .
+      OPTIONAL {
+        ?cyclist dbp:deathDate ?deathDate .
+      }
+    }
+  llm_best: true
+  result_count: 25
+  result_snippet: |
+    http://dbpedia.org/resource/Aaron_Gate
+    http://dbpedia.org/resource/Ally_Wollaston
+    http://dbpedia.org/resource/Anthony_Mortimore
+- id: 26
+  src_id: 26
+  text: "Which officeholder succeeded the politician Rice W. Means, either directly or through a chain of succession, and was buried in the town of Pueblo, Colorado? When did that officeholder die?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?officeHolder ?deathDate
+    WHERE {
+      ?officeHolder a dbo:OfficeHolder ;
+          dbp:after+ dbr:Rice_W._Means ;
+          dbo:restingPlace <http://dbpedia.org/resource/Pueblo,_Colorado> ;
+          dbp:deathDate ?deathDate .
+      dbr:Rice_W._Means a dbo:Politician .
+      <http://dbpedia.org/resource/Pueblo,_Colorado> a dbo:Town .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    officeHolder: http://dbpedia.org/resource/Alva_B._Adams | deathDate: 1941-12-01
+- id: 27
+  src_id: 27
+  text: "How many scientists had Noam Chomsky as their doctoral advisor, how many distinct books did Chomsky author, and which three of those scientists authored the most distinct books, including each scientist's book count?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?scientist ?studentBookCount ?scientistCount ?chomskyBookCount
+    WHERE {
+      {
+        SELECT (COUNT(DISTINCT ?allScientist) AS ?scientistCount)
+        WHERE {
+          ?allScientist a dbo:Scientist ;
+                        dbo:doctoralAdvisor dbr:Noam_Chomsky .
+        }
+      }
+      {
+        SELECT (COUNT(DISTINCT ?chomskyBook) AS ?chomskyBookCount)
+        WHERE {
+          ?chomskyBook a dbo:Book ;
+                       dbo:author dbr:Noam_Chomsky .
+        }
+      }
+      {
+        SELECT ?scientist (COUNT(DISTINCT ?studentBook) AS ?studentBookCount)
+        WHERE {
+          ?scientist a dbo:Scientist ;
+                     dbo:doctoralAdvisor dbr:Noam_Chomsky .
+          OPTIONAL {
+            ?studentBook a dbo:Book ;
+                         dbo:author ?scientist .
+          }
+        }
+        GROUP BY ?scientist
+        ORDER BY DESC(?studentBookCount)
+        LIMIT 3
+      }
+    }
+    ORDER BY DESC(?studentBookCount)
+  llm_best: true
+  result_count: 3
+  result_snippet: |
+    scientist: http://dbpedia.org/resource/Edwin_S._Williams | studentBookCount: 1 | scientistCount: 8 | chomskyBookCount: 25
+    scientist: http://dbpedia.org/resource/David_Pesetsky | studentBookCount: 0 | scientistCount: 8 | chomskyBookCount: 25
+    scientist: http://dbpedia.org/resource/Howard_Lasnik | studentBookCount: 0 | scientistCount: 8 | chomskyBookCount: 25
+- id: 28
+  src_id: 28
+  text: "Among universities that are alma maters of clerics and have at least one affiliated hospital in Canada, which five have the greatest numbers of affiliated hospitals in Canada, and how many does each have?"
+  query: |
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT ?university (COUNT(DISTINCT ?hospital) AS ?hospitalCount)
+    WHERE {
+      ?cleric rdf:type dbo:Cleric ;
+              dbp:almaMater ?university .
+      ?university rdf:type dbo:University .
+      ?hospital rdf:type dbo:Hospital ;
+                dbp:affiliation ?university ;
+                dbp:country ?country .
+      FILTER(LCASE(STR(?country)) = "canada")
+    }
+    GROUP BY ?university
+    ORDER BY DESC(?hospitalCount) ?university
+    LIMIT 5
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    university: http://dbpedia.org/resource/University_of_Toronto | hospitalCount: 10
+    university: http://dbpedia.org/resource/University_of_Manitoba | hospitalCount: 5
+    university: http://dbpedia.org/resource/McMaster_University | hospitalCount: 4
+- id: 29
+  src_id: 29
+  text: "Which organizations were founded by politicians educated at either the University of Bucharest or the University of Texas at Austin, who were those politicians, and which of the two universities did each attend?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?organisation ?politician ?university
+    WHERE {
+      ?organisation a dbo:Organisation ;
+                    dbp:founder ?politician .
+      ?politician a dbo:Politician .
+      {
+        ?politician dbo:education dbr:University_of_Bucharest .
+        BIND(dbr:University_of_Bucharest AS ?university)
+      }
+      UNION
+      {
+        ?politician dbo:education dbr:University_of_Texas_at_Austin .
+        BIND(dbr:University_of_Texas_at_Austin AS ?university)
+      }
+    }
+  llm_best: true
+  result_count: 3
+  result_snippet: |
+    organisation: http://dbpedia.org/resource/A_Just_Costa_Rica | politician: http://dbpedia.org/resource/Dragos_Dolanescu_Valenciano | university: http://dbpedia.org/resource/University_of_Bucharest
+    organisation: http://dbpedia.org/resource/Academy_of_Medicine,_Engineering_and_Science_of_Texas | politician: http://dbpedia.org/resource/Kay_Bailey_Hutchison | university: http://dbpedia.org/resource/University_of_Texas_at_Austin
+    organisation: http://dbpedia.org/resource/Congressional_Hispanic_Caucus | politician: http://dbpedia.org/resource/Henry_B._González | university: http://dbpedia.org/resource/University_of_Texas_at_Austin
+- id: 30
+  src_id: 30
+  text: "Was Alexander Karl, Duke of Anhalt-Bernburg married to Princess Friederike of Schleswig-Holstein-Sonderburg-Glücksburg, did he die in Hoym, and was the princess born on 9 October 1811?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    ASK {
+      ?duke dbo:spouse ?princess ;
+            dbp:deathPlace ?deathPlace .
+      ?princess dbp:birthDate ?birthDate .
+
+      FILTER(
+        ?duke = <http://dbpedia.org/resource/Alexander_Karl,_Duke_of_Anhalt-Bernburg> &&
+        ?princess = <http://dbpedia.org/resource/Princess_Friederike_of_Schleswig-Holstein-Sonderburg-Glücksburg> &&
+        ?deathPlace = <http://dbpedia.org/resource/Hoym> &&
+        ?birthDate = "1811-10-09"^^xsd:date
+      )
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    true
+- id: 31
+  src_id: 31
+  text: "Which rugby clubs other than the ACT Brumbies compete in the same league as the ACT Brumbies, and what nickname and home ground are recorded for each club, where available?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?club ?nickname ?ground
+    WHERE {
+      dbr:ACT_Brumbies dbp:league ?league .
+      ?club a dbo:RugbyClub ;
+            dbp:league ?league .
+      FILTER (?club != dbr:ACT_Brumbies)
+
+      OPTIONAL { ?club dbp:nickname ?nickname . }
+      OPTIONAL { ?club dbp:ground ?ground . }
+    }
+  llm_best: true
+  result_count: 29
+  result_snippet: |
+    club: http://dbpedia.org/resource/Blues_(Super_Rugby) | nickname: The Blues | ground: —
+    club: http://dbpedia.org/resource/Blues_(Super_Rugby) | nickname: The Blues | ground: http://dbpedia.org/resource/Eden_Park
+    club: http://dbpedia.org/resource/Chiefs_(rugby_union) | nickname: — | ground: —
+- id: 32
+  src_id: 32
+  text: "Which schools are located in India, and what are their addresses where available?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?school ?address
+    WHERE {
+      ?school a dbo:School ;
+              dbo:region dbr:India .
+      OPTIONAL {
+        ?school dbo:address ?address .
+      }
+    }
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    school: http://dbpedia.org/resource/Ramakrishna_Sarada_Mission_Sister_Nivedita_Girls'_School | address: 5, Nivedita Lane
+    school: http://dbpedia.org/resource/Vidya_Bharati | address: —
+- id: 33
+  src_id: 33
+  text: "Among Mumbai, Kolkata, and London, which city has the largest population, what is its population, and what was it named after, if that information is available?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT ?city ?population ?namesake
+    WHERE {
+      VALUES ?city { dbr:Mumbai dbr:Kolkata dbr:London }
+      ?city rdf:type dbo:City ;
+            dbo:populationTotal ?population .
+      OPTIONAL {
+        ?city dbp:namedFor ?namesake .
+      }
+    }
+    ORDER BY DESC(?population)
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    city: http://dbpedia.org/resource/Mumbai | population: 12478447 | namesake: http://dbpedia.org/resource/Mumbadevi
+- id: 34
+  src_id: 34
+  text: "Among politicians with recorded birth dates who were born in the country where the Rockingham Whigs are headquartered, who was born earliest, and what was their birth date?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?politician ?birthDate
+    WHERE {
+      dbr:Rockingham_Whigs a dbo:PoliticalParty ;
+                            dbo:headquarter ?region .
+      ?politician a dbo:Politician ;
+                  dbp:birthPlace ?birthPlace ;
+                  dbp:birthDate ?birthDate .
+      ?birthPlace dbo:country ?region .
+    }
+    ORDER BY ASC(?birthDate)
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    politician: http://dbpedia.org/resource/Sidney_Montagu | birthDate: 1572
+- id: 35
+  src_id: 35
+  text: "Which five cities have the highest recorded number of sunshine hours in April, and how many hours does each receive?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT DISTINCT ?city ?aprilSunshineHours
+    WHERE {
+      ?city a dbo:City ;
+            dbp:aprSun ?aprilSunshineHours .
+    }
+    ORDER BY DESC(?aprilSunshineHours)
+    LIMIT 5
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    city: http://dbpedia.org/resource/Lake_Havasu_City,_Arizona | aprilSunshineHours: 360
+    city: http://dbpedia.org/resource/Kasur | aprilSunshineHours: 360
+    city: http://dbpedia.org/resource/Needles,_California | aprilSunshineHours: 360
+- id: 36
+  src_id: 36
+  text: "Which automobile manufactured by Porsche AG and assembled in Zuffenhausen has the lowest recorded weight in kilograms, and what is that weight?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX transport: <http://dbpedia.org/ontology/MeanOfTransportation/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?automobile ?weightKg
+    WHERE {
+      ?automobile a dbo:Automobile ;
+                  dbp:manufacturer dbr:Porsche_AG ;
+                  dbp:assembly ?assembly ;
+                  transport:weight ?weightKg .
+      FILTER(CONTAINS(LCASE(STR(?assembly)), "zuffenhausen"))
+    }
+    ORDER BY ASC(xsd:decimal(STR(?weightKg)))
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    automobile: http://dbpedia.org/resource/Porsche_935 | weightKg: 970.0
+- id: 37
+  src_id: 37
+  text: "Did Loukas Barlos chair AEK Athens during its 1974–75 Alpha Ethniki season, and were both Aigaleo and Kalamata associated with that season as locations?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    ASK {
+      VALUES ?season {
+        <http://dbpedia.org/resource/1974–75_AEK_Athens_F.C._season>
+      }
+      ?season dbo:chairman dbr:Loukas_Barlos ;
+              dbp:league <http://dbpedia.org/resource/1974–75_Alpha_Ethniki> ;
+              dbp:location dbr:Aigaleo .
+      ?season dbp:location dbr:Kalamata .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    true
+- id: 38
+  src_id: 38
+  text: "Which companies either designed or built Bofills båge, and who founded each one?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?company ?founder
+    WHERE {
+      dbr:Bofills_båge a dbo:Building .
+      {
+        dbr:Bofills_båge dbo:architect ?company .
+      }
+      UNION
+      {
+        dbr:Bofills_båge dbp:builder ?company .
+      }
+      ?company a dbo:Company ;
+          dbp:founder ?founder .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    company: http://dbpedia.org/resource/Ricardo_Bofill_Taller_de_Arquitectura | founder: http://dbpedia.org/resource/Ricardo_Bofill
+- id: 39
+  src_id: 39
+  text: "In which of the 1997 and 2000 U.S. Open Cups did the Colorado Rapids compete in the first round?"
+  query: |
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?tournament
+    WHERE {
+      {
+        BIND(dbr:1997_U.S._Open_Cup AS ?tournament)
+        ?tournament dbp:rd1Team dbr:Colorado_Rapids .
+      }
+      UNION
+      {
+        BIND(dbr:2000_U.S._Open_Cup AS ?tournament)
+        ?tournament dbp:rd1Team dbr:Colorado_Rapids .
+      }
+    }
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    http://dbpedia.org/resource/1997_U.S._Open_Cup
+    http://dbpedia.org/resource/2000_U.S._Open_Cup
+- id: 40
+  src_id: 40
+  text: "Which are the top 10 public companies by the number of distinct anime series broadcast by the television stations they own, and what is the count for each company?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?company (COUNT(DISTINCT ?anime) AS ?animeCount)
+    WHERE {
+      ?anime a dbo:Anime ;
+          dbo:network ?station .
+      ?station a dbo:TelevisionStation ;
+          dbo:owningCompany ?company .
+      ?company a dbo:Company ;
+          dbo:type ?companyType .
+      FILTER (?companyType IN (dbr:Public_Company, dbr:Public_company))
+    }
+    GROUP BY ?company
+    ORDER BY DESC(?animeCount)
+    LIMIT 10
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    company: http://dbpedia.org/resource/Bic_Camera | animeCount: 582
+    company: http://dbpedia.org/resource/Dentsu | animeCount: 478
+    company: http://dbpedia.org/resource/Asahi_Broadcasting_Corporation | animeCount: 252
+- id: 41
+  src_id: 41
+  text: "Which handball players of Polish nationality have either Gdynia or Poland listed as their birthplace?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT DISTINCT ?player
+    WHERE {
+      ?player rdf:type dbo:HandballPlayer ;
+              dbo:nationality dbr:Poland .
+      {
+        ?player dbp:birthPlace dbr:Gdynia .
+      }
+      UNION
+      {
+        ?player dbp:birthPlace dbr:Poland .
+      }
+    }
+  llm_best: true
+  result_count: 3
+  result_snippet: |
+    http://dbpedia.org/resource/Adam_Weiner
+    http://dbpedia.org/resource/Damian_Wleklak
+    http://dbpedia.org/resource/Grzegorz_Tkaczyk
+- id: 42
+  src_id: 42
+  text: "How many distinct soccer clubs associated with football matches in Orlando, Florida, are also associated with at least one other football match located in a different city?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT (COUNT(DISTINCT ?club) AS ?clubCount)
+    WHERE {
+      ?match a dbo:FootballMatch ;
+          dbp:location <http://dbpedia.org/resource/Orlando,_Florida> ;
+          dbp:club ?club .
+      ?club a dbo:SoccerClub .
+
+      FILTER EXISTS {
+        ?otherMatch a dbo:FootballMatch ;
+            dbp:club ?club ;
+            dbp:location ?otherCity .
+        ?otherCity a dbo:City .
+        FILTER (
+          ?otherMatch != ?match &&
+          ?otherCity != <http://dbpedia.org/resource/Orlando,_Florida>
+        )
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    0
+- id: 43
+  src_id: 43
+  text: "What is the Latin name of the adrenal gland, and what are its nerve and arterial supplies?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?latinName ?nerve ?artery
+    WHERE {
+      dbr:Adrenal_gland dbo:latinName ?latinName ;
+                         dbo:nerve ?nerve ;
+                         dbo:artery ?artery .
+    }
+  llm_best: true
+  result_count: 6
+  result_snippet: |
+    latinName: Glandula suprarenalis | nerve: http://dbpedia.org/resource/Celiac_plexus | artery: http://dbpedia.org/resource/Inferior_suprarenal_artery
+    latinName: Glandula suprarenalis | nerve: http://dbpedia.org/resource/Celiac_plexus | artery: http://dbpedia.org/resource/Middle_suprarenal_artery
+    latinName: Glandula suprarenalis | nerve: http://dbpedia.org/resource/Celiac_plexus | artery: http://dbpedia.org/resource/Superior_suprarenal_artery
+- id: 44
+  src_id: 44
+  text: "Which historic places located in the Republic of Ireland were designed by Richard Cassels, and what architectural style is recorded for each, if any?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?historicPlace ?architecture
+    WHERE {
+      ?historicPlace a dbo:HistoricPlace ;
+                     dbo:location dbr:Republic_of_Ireland ;
+                     dbp:architect dbr:Richard_Cassels .
+      OPTIONAL {
+        ?historicPlace dbp:architecture ?architecture .
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    historicPlace: http://dbpedia.org/resource/Belvedere_House_and_Gardens | architecture: http://dbpedia.org/resource/Palladian
+- id: 45
+  src_id: 45
+  text: "Among the locomotives listed as rolling stock for railway lines operated by Indian Railways, which have the greatest recorded length, on which of those lines are they listed, and, where available, what are their power type, builder’s model, and build date?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?locomotive ?line ?length ?powerType ?buildModel ?buildDate
+    WHERE {
+      ?line a dbo:RailwayLine ;
+          dbp:operator dbr:Indian_Railways ;
+          dbo:railwayRollingStock ?locomotive .
+      ?locomotive a dbo:Locomotive ;
+          dbo:length ?length .
+
+      {
+        SELECT (MAX(xsd:double(?candidateLength)) AS ?maximumLength)
+        WHERE {
+          ?candidateLine a dbo:RailwayLine ;
+              dbp:operator dbr:Indian_Railways ;
+              dbo:railwayRollingStock ?candidateLocomotive .
+          ?candidateLocomotive a dbo:Locomotive ;
+              dbo:length ?candidateLength .
+        }
+      }
+
+      FILTER(xsd:double(?length) = ?maximumLength)
+
+      OPTIONAL { ?locomotive dbp:powertype ?powerType . }
+      OPTIONAL { ?locomotive dbp:buildmodel ?buildModel . }
+      OPTIONAL { ?locomotive dbp:builddate ?buildDate . }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    locomotive: http://dbpedia.org/resource/Indian_locomotive_class_WAG-12 | line: http://dbpedia.org/resource/Western_Dedicated_Freight_Corridor | length: 38.4 | powerType: Electric | buildModel: http://dbpedia.org/resource/Prima_(locomotive) | buildDate: - present
+- id: 46
+  src_id: 46
+  text: "Among Berlin, Liverpool, and Stockton-on-Tees, which settlement has the most roads starting there, and how many such roads are there?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?settlement (COUNT(DISTINCT ?road) AS ?roadCount)
+    WHERE {
+      VALUES ?settlement {
+        dbr:Berlin
+        dbr:Liverpool
+        <http://dbpedia.org/resource/Stockton-on-Tees>
+      }
+      ?road a dbo:Road ;
+            dbo:routeStart ?settlement .
+    }
+    GROUP BY ?settlement
+    ORDER BY DESC(COUNT(DISTINCT ?road))
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    settlement: http://dbpedia.org/resource/Berlin | roadCount: 12
+- id: 47
+  src_id: 47
+  text: "How many distinct team members does each of the Sweden national beach soccer team and the England women's national beach soccer team have?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?team (COUNT(DISTINCT ?member) AS ?memberCount)
+    WHERE {
+      ?member a dbo:SportsTeamMember .
+      {
+        ?member dbo:team dbr:Sweden_national_beach_soccer_team .
+        BIND(dbr:Sweden_national_beach_soccer_team AS ?team)
+      }
+      UNION
+      {
+        ?member dbo:team <http://dbpedia.org/resource/England_women's_national_beach_soccer_team> .
+        BIND(<http://dbpedia.org/resource/England_women's_national_beach_soccer_team> AS ?team)
+      }
+    }
+    GROUP BY ?team
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    team: http://dbpedia.org/resource/England_women's_national_beach_soccer_team | memberCount: 10
+    team: http://dbpedia.org/resource/Sweden_national_beach_soccer_team | memberCount: 13
+- id: 48
+  src_id: 48
+  text: "Among Afghanistan, Albania, and Algeria, which countries have more universities than the average for the three, and what are each qualifying country’s university count and capital, along with that average, with the countries ordered from highest to lowest university count?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?country ?capital ?universityCount ?averageUniversityCount
+    WHERE {
+      {
+        SELECT ?country (COUNT(DISTINCT ?university) AS ?universityCount)
+        WHERE {
+          VALUES ?country {
+            dbr:Afghanistan
+            dbr:Albania
+            dbr:Algeria
+          }
+          ?university a dbo:University ;
+                      dbo:country ?country .
+        }
+        GROUP BY ?country
+      }
+      {
+        SELECT (AVG(?countryCount) AS ?averageUniversityCount)
+        WHERE {
+          {
+            SELECT ?countCountry (COUNT(DISTINCT ?countUniversity) AS ?countryCount)
+            WHERE {
+              VALUES ?countCountry {
+                dbr:Afghanistan
+                dbr:Albania
+                dbr:Algeria
+              }
+              ?countUniversity a dbo:University ;
+                               dbo:country ?countCountry .
+            }
+            GROUP BY ?countCountry
+          }
+        }
+      }
+      ?country dbo:capital ?capital .
+      FILTER(?universityCount > ?averageUniversityCount)
+    }
+    ORDER BY DESC(?universityCount)
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    country: http://dbpedia.org/resource/Afghanistan | capital: http://dbpedia.org/resource/Kabul | universityCount: 51 | averageUniversityCount: 39.0
+- id: 49
+  src_id: 49
+  text: "When did the 4083d Strategic Wing, a military unit garrisoned in Greenland, begin active service, and which external reference links are available for it, if any?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?startYear ?externalLink
+    WHERE {
+      dbr:4083d_Strategic_Wing a dbo:MilitaryUnit ;
+          dbo:garrison dbr:Greenland ;
+          dbo:activeYearsStartYear ?startYear .
+      OPTIONAL {
+        dbr:4083d_Strategic_Wing dbo:wikiPageExternalLink ?externalLink .
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    1957
+- id: 50
+  src_id: 50
+  text: "Is Kevon Edmonds currently a member of After 7, and is Babyface associated with that band as a musical artist?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    ASK
+    WHERE {
+      dbr:After_7 a dbo:Band .
+      dbr:Kevon_Edmonds dbp:currentMemberOf dbr:After_7 .
+      dbr:After_7 dbo:associatedMusicalArtist <http://dbpedia.org/resource/Babyface_(musician)> .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    true
+- id: 51
+  src_id: 51
+  text: "Which people attended English-language schools in either Kolkata or Cairo, and which school did each person attend?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?person ?school
+    WHERE {
+      ?person a dbo:Person ;
+              dbp:almaMater ?school .
+      ?school a dbo:School ;
+              dbo:language dbr:English_language .
+      {
+        ?school dbp:city dbr:Kolkata .
+      }
+      UNION
+      {
+        ?school dbp:city dbr:Cairo .
+      }
+    }
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    person: http://dbpedia.org/resource/Alaa_Mubarak | school: http://dbpedia.org/resource/St._George's_College,_Cairo
+    person: http://dbpedia.org/resource/Ashrafuddin_Ahmad_Chowdhury | school: http://dbpedia.org/resource/St._Xavier's_Collegiate_School
+    person: http://dbpedia.org/resource/Gamal_Mubarak | school: http://dbpedia.org/resource/St._George's_College,_Cairo
+- id: 52
+  src_id: 52
+  text: "Which of the presidents under whom Abdón Saavedra served was educated at the Higher University of San Andrés and died before Hernando Siles Reyes?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?president
+    WHERE {
+      dbr:Abdón_Saavedra dbo:president ?president .
+      ?president dbo:education dbr:Higher_University_of_San_Andrés ;
+                 dbo:deathDate ?deathDate .
+      dbr:Hernando_Siles_Reyes dbo:deathDate ?hernandoDeathDate .
+      FILTER (?deathDate < ?hernandoDeathDate)
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    http://dbpedia.org/resource/Bautista_Saavedra
+- id: 53
+  src_id: 53
+  text: "Which five administrative regions under the jurisdiction of at least two government agencies have the highest numbers of military structures, and how many government agencies and military structures are associated with each?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+
+    SELECT ?region ?governmentAgencyCount
+           (COUNT(DISTINCT ?militaryStructure) AS ?militaryStructureCount)
+    WHERE {
+      {
+        SELECT ?region
+               (COUNT(DISTINCT ?governmentAgency) AS ?governmentAgencyCount)
+        WHERE {
+          ?region a dbo:AdministrativeRegion .
+          ?governmentAgency a dbo:GovernmentAgency ;
+                            dbo:jurisdiction ?region .
+        }
+        GROUP BY ?region
+      }
+      FILTER (?governmentAgencyCount >= 2)
+      ?militaryStructure a dbo:MilitaryStructure ;
+                         dbo:location ?region .
+    }
+    GROUP BY ?region ?governmentAgencyCount
+    ORDER BY DESC(?militaryStructureCount) ?region
+    LIMIT 5
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    region: http://dbpedia.org/resource/Virginia | governmentAgencyCount: 9 | militaryStructureCount: 26
+    region: http://dbpedia.org/resource/California | governmentAgencyCount: 50 | militaryStructureCount: 23
+    region: http://dbpedia.org/resource/Massachusetts | governmentAgencyCount: 7 | militaryStructureCount: 17
+- id: 54
+  src_id: 54
+  text: "Which 10 video games in both the action-adventure and platform genres have the greatest number of distinct listed platforms, and how many platforms are listed for each?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?game ?platformCount
+    WHERE {
+      {
+        SELECT ?game (COUNT(DISTINCT ?platform) AS ?platformCount)
+        WHERE {
+          ?game a dbo:VideoGame ;
+              dbp:genre dbr:Action-adventure_game ;
+              dbp:genre dbr:Platform_game ;
+              dbp:platform ?platform .
+        }
+        GROUP BY ?game
+      }
+    }
+    ORDER BY DESC(?platformCount)
+    LIMIT 10
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    game: http://dbpedia.org/resource/Rugrats:_Royal_Ransom | platformCount: 2
+    game: http://dbpedia.org/resource/Sonic_P-06 | platformCount: 1
+- id: 55
+  src_id: 55
+  text: "Which architect who attended the Royal Danish Academy of Fine Arts is credited with designing the most buildings, and how many buildings did they design?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?architect (COUNT(DISTINCT ?building) AS ?buildingCount)
+    WHERE {
+      ?building a dbo:Building ;
+          dbp:architect ?architect .
+      ?architect a dbo:Architect ;
+          dbp:almaMater dbr:Royal_Danish_Academy_of_Fine_Arts .
+      dbr:Royal_Danish_Academy_of_Fine_Arts a dbo:University .
+    }
+    GROUP BY ?architect
+    ORDER BY DESC(?buildingCount)
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    architect: http://dbpedia.org/resource/Andreas_Kirkerup | buildingCount: 9
+- id: 56
+  src_id: 56
+  text: "Which Grand Slam tennis tournaments were held in Australia, in which cities were they held, and how many such tournaments did each city host?"
+  query: |
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?tournament ?city ?tournamentCount
+    WHERE {
+      ?tournament rdf:type dbo:TennisTournament ;
+          dbp:category <http://dbpedia.org/resource/Grand_Slam_(tennis)> ;
+          dbp:location dbr:Australia ;
+          dbp:location ?city .
+      ?city rdf:type dbo:City .
+
+      {
+        SELECT ?city (COUNT(DISTINCT ?countedTournament) AS ?tournamentCount)
+        WHERE {
+          ?countedTournament rdf:type dbo:TennisTournament ;
+              dbp:category <http://dbpedia.org/resource/Grand_Slam_(tennis)> ;
+              dbp:location dbr:Australia ;
+              dbp:location ?city .
+          ?city rdf:type dbo:City .
+        }
+        GROUP BY ?city
+      }
+    }
+    ORDER BY ?tournament ?city
+  llm_best: true
+  result_count: 11
+  result_snippet: |
+    tournament: http://dbpedia.org/resource/1948_Australian_Championships | city: http://dbpedia.org/resource/Melbourne | tournamentCount: 6
+    tournament: http://dbpedia.org/resource/1950_Australian_Championships | city: http://dbpedia.org/resource/Melbourne | tournamentCount: 6
+    tournament: http://dbpedia.org/resource/1951_Australian_Championships | city: http://dbpedia.org/resource/Sydney | tournamentCount: 3
+- id: 57
+  src_id: 57
+  text: "Among settlements containing at least one building with a recorded architectural style, which five have the most soccer players born there, and how many players were born in each?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+
+    SELECT ?settlement (COUNT(DISTINCT ?soccerPlayer) AS ?numberOfSoccerPlayers)
+    WHERE {
+      ?settlement a dbo:Settlement .
+      ?soccerPlayer a dbo:SoccerPlayer ;
+                    dbo:birthPlace ?settlement .
+      ?building a dbo:Building ;
+                dbo:location ?settlement ;
+                dbo:architecturalStyle ?architecturalStyle .
+    }
+    GROUP BY ?settlement
+    ORDER BY DESC(?numberOfSoccerPlayers)
+    LIMIT 5
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    settlement: http://dbpedia.org/resource/Glasgow | numberOfSoccerPlayers: 1142
+    settlement: http://dbpedia.org/resource/Buenos_Aires | numberOfSoccerPlayers: 862
+    settlement: http://dbpedia.org/resource/Montevideo | numberOfSoccerPlayers: 853
+- id: 58
+  src_id: 58
+  text: "Which historic places were designed by Edinburgh-born architect Richard Norman Shaw, and what identifier is recorded for each place, if available?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?historicPlace ?historicPlaceId
+    WHERE {
+      ?historicPlace a dbo:HistoricPlace ;
+                     dbp:architect dbr:Richard_Norman_Shaw .
+      dbr:Richard_Norman_Shaw dbo:birthPlace dbr:Edinburgh .
+      OPTIONAL {
+        ?historicPlace dbp:id ?historicPlaceId .
+      }
+    }
+  llm_best: true
+  result_count: 6
+  result_snippet: |
+    http://dbpedia.org/resource/6_Ellerdale_Road
+    http://dbpedia.org/resource/8_Melbury_Road
+    http://dbpedia.org/resource/Cragside
+- id: 59
+  src_id: 59
+  text: "Which April climate measurements—rain days, precipitation days, or sunshine—are recorded for Winter Haven, Florida, and what are their values?"
+  query: |
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT DISTINCT ?measurement ?value
+    WHERE {
+      {
+        <http://dbpedia.org/resource/Winter_Haven,_Florida> dbp:aprRainDays ?value .
+        BIND("rain days" AS ?measurement)
+      }
+      UNION
+      {
+        <http://dbpedia.org/resource/Winter_Haven,_Florida> dbp:aprPrecipitationDays ?value .
+        BIND("precipitation days" AS ?measurement)
+      }
+      UNION
+      {
+        <http://dbpedia.org/resource/Winter_Haven,_Florida> dbp:aprSun ?value .
+        BIND("sunshine" AS ?measurement)
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    measurement: precipitation days | value: 6
+- id: 60
+  src_id: 60
+  text: "Among venues that list a university in Beijing, China, as a tenant, which venue has the earliest recorded opening date, what is that date, and which such university tenants does it list?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?venue ?openingDate ?university
+    WHERE {
+      {
+        SELECT ?venue ?openingDate
+        WHERE {
+          ?venue a dbo:Venue ;
+                 dbp:opened ?openingDate ;
+                 dbp:tenants ?candidateUniversity .
+          ?candidateUniversity a dbo:University ;
+                               dbp:city dbr:Beijing ;
+                               dbp:country dbr:China .
+        }
+        ORDER BY ASC(STR(?openingDate))
+        LIMIT 1
+      }
+      ?venue dbp:tenants ?university .
+      ?university a dbo:University ;
+                  dbp:city dbr:Beijing ;
+                  dbp:country dbr:China .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    venue: http://dbpedia.org/resource/Dom_Sportova | openingDate: 1972-06-17 | university: http://dbpedia.org/resource/Beijing_Sport_University
+- id: 61
+  src_id: 61
+  text: "Which Belo Horizonte-born musical artist has lyric credits on the greatest number of distinct albums, which albums credit that artist with lyrics, and how many distinct albums are there?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?artist ?album ?albumCount
+    WHERE {
+      {
+        SELECT ?artist (COUNT(DISTINCT ?countedAlbum) AS ?albumCount)
+        WHERE {
+          ?countedAlbum a dbo:Album ;
+              dbp:lyrics ?artist .
+          ?artist a dbo:MusicalArtist ;
+              dbo:birthPlace dbr:Belo_Horizonte .
+        }
+        GROUP BY ?artist
+        ORDER BY DESC(?albumCount)
+        LIMIT 1
+      }
+      ?album a dbo:Album ;
+          dbp:lyrics ?artist .
+    }
+  llm_best: true
+  result_count: 4
+  result_snippet: |
+    artist: http://dbpedia.org/resource/Max_Cavalera | album: http://dbpedia.org/resource/Arise_(Sepultura_album) | albumCount: 4
+    artist: http://dbpedia.org/resource/Max_Cavalera | album: http://dbpedia.org/resource/Chaos_A.D. | albumCount: 4
+    artist: http://dbpedia.org/resource/Max_Cavalera | album: http://dbpedia.org/resource/Quadra_(album) | albumCount: 4
+- id: 62
+  src_id: 62
+  text: "Which musical artists are credited with the lyrics for Finian's Rainbow, and what are their dates of birth, hometowns, and instruments, if any?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT DISTINCT ?artist ?birthDate ?hometown ?instrument
+    WHERE {
+      <http://dbpedia.org/resource/Finian's_Rainbow> dbp:lyrics ?artist .
+      ?artist a dbo:MusicalArtist ;
+              dbo:birthDate ?birthDate ;
+              dbo:hometown ?hometown .
+      OPTIONAL {
+        ?artist dbp:instrument ?instrument .
+      }
+    }
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    artist: http://dbpedia.org/resource/Yip_Harburg | birthDate: 1896-04-08 | hometown: http://dbpedia.org/resource/New_York_(state)
+    artist: http://dbpedia.org/resource/Yip_Harburg | birthDate: 1896-04-08 | hometown: http://dbpedia.org/resource/New_York_City
+- id: 63
+  src_id: 63
+  text: "In which country and administrative region was the military figure Arun Singh Jasrotia born?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?country ?administrativeRegion
+    WHERE {
+      dbr:Arun_Singh_Jasrotia a dbo:MilitaryPerson ;
+          dbp:birthPlace ?country ;
+          dbp:birthPlace ?administrativeRegion .
+      ?country a dbo:Country .
+      ?administrativeRegion a dbo:AdministrativeRegion .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    country: http://dbpedia.org/resource/India | administrativeRegion: http://dbpedia.org/resource/Pathankot_district
+- id: 64
+  src_id: 64
+  text: "Which television stations are headquartered in Brussels, which broadcast network owns each one, and what is each station’s air date, if available?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?station ?network ?airdate
+    WHERE {
+      ?station a dbo:TelevisionStation ;
+          dbo:headquarter dbr:Brussels ;
+          dbo:owningCompany ?network .
+      ?network a dbo:BroadcastNetwork .
+      OPTIONAL {
+        ?station dbp:airdate ?airdate .
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    station: http://dbpedia.org/resource/ABXplore | network: http://dbpedia.org/resource/Mediawan_Thematics
+- id: 65
+  src_id: 65
+  text: "Among countries that are the birthplace of at least one politician, which 10 have the highest numbers of distinct scientists holding their citizenship, and how many distinct politicians were born in and distinct scientists hold citizenship in each country?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT ?country
+           (COUNT(DISTINCT ?politician) AS ?politicianCount)
+           (COUNT(DISTINCT ?scientist) AS ?scientistCount)
+    WHERE {
+      ?country a dbo:Country .
+      ?politician a dbo:Politician ;
+                  dbp:birthPlace ?country .
+      ?scientist a dbo:Scientist ;
+                 dbo:citizenship ?country .
+    }
+    GROUP BY ?country
+    ORDER BY DESC(?scientistCount)
+    LIMIT 10
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    country: http://dbpedia.org/resource/United_States | politicianCount: 3092 | scientistCount: 748
+    country: http://dbpedia.org/resource/United_Kingdom | politicianCount: 349 | scientistCount: 142
+    country: http://dbpedia.org/resource/Germany | politicianCount: 296 | scientistCount: 118
+- id: 66
+  src_id: 66
+  text: "Was Alfred Tucker recorded as a cleric with British nationality whose only recorded religion is Anglicanism?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    ASK WHERE {
+      VALUES ?cleric { dbr:Alfred_Tucker }
+
+      ?cleric a dbo:Cleric ;
+          dbo:nationality dbr:United_Kingdom ;
+          dbo:religion dbr:Anglicanism .
+
+      FILTER NOT EXISTS {
+        ?cleric dbo:religion ?otherReligion .
+        FILTER(?otherReligion != dbr:Anglicanism)
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    true
+- id: 67
+  src_id: 67
+  text: "Which universities with a campus in California have a recorded closure year, what year is listed for each, and what external links, if any, are provided?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?university ?closedYear ?externalLink
+    WHERE {
+      ?university a dbo:University ;
+                  dbo:campus dbr:California ;
+                  dbp:closed ?closedYear .
+      OPTIONAL {
+        ?university dbo:wikiPageExternalLink ?externalLink .
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    university: http://dbpedia.org/resource/California_Pacific_University | closedYear: 2016 | externalLink: https://calpacbusiness-law.education/LinkType=C
+- id: 68
+  src_id: 68
+  text: "Which five music genres are associated with the largest numbers of distinct musical artists credited as writers on albums, and how many such artists and distinct albums are represented for each genre?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT ?genre ?artistCount ?albumCount
+    WHERE {
+      {
+        SELECT ?genre
+               (COUNT(DISTINCT ?artist) AS ?artistCount)
+               (COUNT(DISTINCT ?album) AS ?albumCount)
+        WHERE {
+          ?album a dbo:Album ;
+              dbp:writer ?artist .
+          ?artist a dbo:MusicalArtist ;
+              dbo:genre ?genre .
+          ?genre a dbo:MusicGenre .
+        }
+        GROUP BY ?genre
+      }
+    }
+    ORDER BY DESC(?artistCount) ASC(STR(?genre))
+    LIMIT 5
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    genre: http://dbpedia.org/resource/Hip_hop_music | artistCount: 1939 | albumCount: 4422
+    genre: http://dbpedia.org/resource/Pop_music | artistCount: 1877 | albumCount: 9039
+    genre: http://dbpedia.org/resource/Rock_music | artistCount: 1353 | albumCount: 7289
+- id: 69
+  src_id: 69
+  text: "Is it true that the 14-X aircraft originated in Brazil and that the Department of Aerospace Science and Technology is its only recorded manufacturer?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    ASK {
+      VALUES ?aircraft { dbr:14-X }
+
+      ?aircraft a dbo:Aircraft ;
+                dbo:origin dbr:Brazil ;
+                dbo:manufacturer dbr:Department_of_Aerospace_Science_and_Technology .
+
+      FILTER NOT EXISTS {
+        ?aircraft dbo:manufacturer ?otherManufacturer .
+        FILTER(?otherManufacturer != dbr:Department_of_Aerospace_Science_and_Technology)
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    true
+- id: 70
+  src_id: 70
+  text: "Among the rugby clubs Peter Betham has played for, which has the greatest seating capacity, what is that capacity, and which rugby league does it compete in?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?club ?capacity ?league
+    WHERE {
+      dbr:Peter_Betham a dbo:RugbyPlayer ;
+                       dbp:clubs ?club .
+      ?club a dbo:RugbyClub ;
+            dbp:capacity ?capacity ;
+            dbo:league ?league .
+      ?league a dbo:RugbyLeague .
+    }
+    ORDER BY DESC(?capacity)
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    club: http://dbpedia.org/resource/Melbourne_Rebels | capacity: 30000 | league: http://dbpedia.org/resource/Super_Rugby
+- id: 71
+  src_id: 71
+  text: "Which band from Bakersfield, California performed “Act Naturally,” has Buck Owens listed as an associated act, and what genres are listed for the band?"
+  query: |
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?band ?genre
+    WHERE {
+      dbr:Act_Naturally rdf:type dbo:Single ;
+                        dbo:artist ?band .
+      ?band rdf:type dbo:Band ;
+            dbo:hometown <http://dbpedia.org/resource/Bakersfield,_California> ;
+            dbp:genre ?genre ;
+            dbp:associatedActs ?associatedAct .
+      FILTER(?associatedAct = dbr:Buck_Owens)
+    }
+  llm_best: true
+  result_count: 3
+  result_snippet: |
+    band: http://dbpedia.org/resource/The_Buckaroos | genre: http://dbpedia.org/resource/Bakersfield_sound
+    band: http://dbpedia.org/resource/The_Buckaroos | genre: http://dbpedia.org/resource/Country_music
+    band: http://dbpedia.org/resource/The_Buckaroos | genre: http://dbpedia.org/resource/Rockabilly
+- id: 72
+  src_id: 72
+  text: "Among universities that are alma maters of academics and have athletes who competed for them in college, which have at least as many distinct such athletes as distinct such academics, and what are the two counts for each when the results are ordered first by athlete count and then by academic count, both from highest to lowest?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT ?university ?academicCount ?athleteCount
+    WHERE {
+      {
+        SELECT ?university
+               (COUNT(DISTINCT ?academic) AS ?academicCount)
+               (COUNT(DISTINCT ?athlete) AS ?athleteCount)
+        WHERE {
+          ?university a dbo:University .
+          ?academic a dbo:Academic ;
+                    dbp:almaMater ?university .
+          ?athlete a dbo:Athlete ;
+                   dbp:collegeteam ?university .
+        }
+        GROUP BY ?university
+      }
+      FILTER(?athleteCount >= ?academicCount)
+    }
+    ORDER BY DESC(?athleteCount) DESC(?academicCount)
+  llm_best: true
+  result_count: 64
+  result_snippet: |
+    university: http://dbpedia.org/resource/Loughborough_University | academicCount: 3 | athleteCount: 16
+    university: http://dbpedia.org/resource/University_of_Alabama | academicCount: 4 | athleteCount: 15
+    university: http://dbpedia.org/resource/Arizona_State_University | academicCount: 5 | athleteCount: 7
+- id: 73
+  src_id: 73
+  text: "Does the National University of Singapore employ Ajith Madurapperuma and have Halimah Yacob as its chancellor?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    ASK {
+      dbr:Ajith_Madurapperuma dbo:employer dbr:National_University_of_Singapore .
+      dbr:National_University_of_Singapore dbo:chancellor dbr:Halimah_Yacob .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    true
+- id: 74
+  src_id: 74
+  text: "Between Edinburgh and Auckland, which city has the lower April record-low temperature, and by how many degrees Celsius is it lower than the other city’s April record low?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?colderCity ?differenceCelsius
+    WHERE {
+      dbr:Edinburgh rdf:type dbo:City ;
+                    dbp:aprRecordLowC ?edinburghLow .
+      dbr:Auckland rdf:type dbo:City ;
+                   dbp:aprRecordLowC ?aucklandLow .
+
+      BIND(xsd:decimal(STR(?edinburghLow)) AS ?edinburghValue)
+      BIND(xsd:decimal(STR(?aucklandLow)) AS ?aucklandValue)
+      FILTER(?edinburghValue != ?aucklandValue)
+
+      BIND(
+        IF(?edinburghValue < ?aucklandValue, dbr:Edinburgh, dbr:Auckland)
+        AS ?colderCity
+      )
+      BIND(
+        IF(
+          ?edinburghValue < ?aucklandValue,
+          ?aucklandValue - ?edinburghValue,
+          ?edinburghValue - ?aucklandValue
+        ) AS ?differenceCelsius
+      )
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    colderCity: http://dbpedia.org/resource/Edinburgh | differenceCelsius: 10.0
+- id: 75
+  src_id: 75
+  text: "Among officeholders who were born in a city and have more than one distinct university as an alma mater, which 10 have the most such universities, how many does each have, and in which city or cities were they born?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT ?officeHolder ?birthCity ?universityCount
+    WHERE {
+      {
+        SELECT ?officeHolder
+               (COUNT(DISTINCT ?university) AS ?universityCount)
+        WHERE {
+          ?officeHolder a dbo:OfficeHolder ;
+                        dbp:almaMater ?university .
+          ?university a dbo:University .
+          FILTER EXISTS {
+            ?officeHolder dbo:birthPlace ?city .
+            ?city a dbo:City .
+          }
+        }
+        GROUP BY ?officeHolder
+        HAVING (COUNT(DISTINCT ?university) > 1)
+        ORDER BY DESC(?universityCount) ?officeHolder
+        LIMIT 10
+      }
+      ?officeHolder dbo:birthPlace ?birthCity .
+      ?birthCity a dbo:City .
+    }
+    ORDER BY DESC(?universityCount) ?officeHolder ?birthCity
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    officeHolder: http://dbpedia.org/resource/Carl_Lygo | birthCity: http://dbpedia.org/resource/London,_England | universityCount: 6
+    officeHolder: http://dbpedia.org/resource/David_Bly | birthCity: http://dbpedia.org/resource/Dubuque,_Iowa | universityCount: 5
+    officeHolder: http://dbpedia.org/resource/Edmund_Burke_Fairfield | birthCity: http://dbpedia.org/resource/Parkersburg,_West_Virginia | universityCount: 5
+- id: 76
+  src_id: 76
+  text: "Which stadium designed by Charles Wellford Leavitt served as the location for the greatest number of distinct NCAA team seasons, and how many such seasons were associated with it?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?stadium ?seasonCount
+    WHERE {
+      {
+        SELECT ?stadium (COUNT(DISTINCT ?season) AS ?seasonCount)
+        WHERE {
+          dbr:Charles_Wellford_Leavitt a dbo:Architect .
+          ?stadium a dbo:Stadium ;
+              dbo:architect dbr:Charles_Wellford_Leavitt .
+          ?season a dbo:NCAATeamSeason ;
+              dbp:location ?stadium .
+        }
+        GROUP BY ?stadium
+      }
+    }
+    ORDER BY DESC(?seasonCount)
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    stadium: http://dbpedia.org/resource/Forbes_Field | seasonCount: 18
+- id: 77
+  src_id: 77
+  text: "Which roads start at protected areas located anywhere within Los Angeles County, California?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+
+    SELECT DISTINCT ?road
+    WHERE {
+      ?road a dbo:Road ;
+          dbo:routeStart ?protectedArea .
+      ?protectedArea a dbo:ProtectedArea ;
+          dbo:location+ <http://dbpedia.org/resource/Los_Angeles_County,_California> .
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    http://dbpedia.org/resource/Angeles_Forest_Highway
+- id: 78
+  src_id: 78
+  text: "Which athletes belong to sports teams based in Rome, and for each athlete, what is the club and how many athletes belong to that club?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?athlete ?club ?athleteCount
+    WHERE {
+      {
+        SELECT ?club (COUNT(DISTINCT ?member) AS ?athleteCount)
+        WHERE {
+          ?member a dbo:Athlete ;
+                  dbo:club ?club .
+          ?club a dbo:SportsTeam ;
+                dbo:city dbr:Rome .
+        }
+        GROUP BY ?club
+      }
+      ?athlete a dbo:Athlete ;
+               dbo:club ?club .
+    }
+  llm_best: true
+  result_count: 8
+  result_snippet: |
+    athlete: http://dbpedia.org/resource/Benedetta_Pilato | club: http://dbpedia.org/resource/Circolo_Canottieri_Aniene | athleteCount: 8
+    athlete: http://dbpedia.org/resource/Edoardo_Giorgetti | club: http://dbpedia.org/resource/Circolo_Canottieri_Aniene | athleteCount: 8
+    athlete: http://dbpedia.org/resource/Elena_Di_Liddo | club: http://dbpedia.org/resource/Circolo_Canottieri_Aniene | athleteCount: 8
+- id: 79
+  src_id: 79
+  text: "Among Affectionately, Al Bahathri, and Alanesian, which horse raced at the greatest number of distinct locations, and how many locations were there?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?horse (COUNT(DISTINCT ?location) AS ?locationCount)
+    WHERE {
+      VALUES ?horse {
+        dbr:Affectionately
+        dbr:Al_Bahathri
+        dbr:Alanesian
+      }
+      ?horse dbo:race ?race .
+      ?race dbo:location ?location .
+    }
+    GROUP BY ?horse
+    ORDER BY DESC(?locationCount)
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    horse: http://dbpedia.org/resource/Affectionately | locationCount: 8
+- id: 80
+  src_id: 80
+  text: "Which architects have Union Chapel, Brighton among their significant buildings, and which of their other significant buildings are locations or historic places?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT DISTINCT ?architect ?otherSignificantBuilding
+    WHERE {
+      ?architect rdf:type dbo:Architect ;
+                 dbo:significantBuilding <http://dbpedia.org/resource/Union_Chapel,_Brighton> ;
+                 dbo:significantBuilding ?otherSignificantBuilding .
+
+      {
+        ?otherSignificantBuilding rdf:type dbo:Location .
+      }
+      UNION
+      {
+        ?otherSignificantBuilding rdf:type dbo:HistoricPlace .
+      }
+
+      FILTER (?otherSignificantBuilding != <http://dbpedia.org/resource/Union_Chapel,_Brighton>)
+    }
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    architect: http://dbpedia.org/resource/Amon_Wilds | otherSignificantBuilding: http://dbpedia.org/resource/Brighton
+    architect: http://dbpedia.org/resource/Amon_Wilds | otherSignificantBuilding: http://dbpedia.org/resource/Lewes
+- id: 81
+  src_id: 81
+  text: "How many distinct devices does Buick manufacture, and how many distinct key people are listed for Buick?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?deviceCount ?keyPersonCount
+    WHERE {
+      {
+        SELECT (COUNT(DISTINCT ?device) AS ?deviceCount)
+        WHERE {
+          ?device a dbo:Device ;
+                  dbo:manufacturer dbr:Buick .
+        }
+      }
+      {
+        SELECT (COUNT(DISTINCT ?keyPerson) AS ?keyPersonCount)
+        WHERE {
+          dbr:Buick dbo:keyPerson ?keyPerson .
+        }
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    deviceCount: 6 | keyPersonCount: 8
+- id: 82
+  src_id: 82
+  text: "After whom was Auckland named, which hotels are located there, and how many Australian rules football players were born there?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?namesake ?hotel ?playerCount
+    WHERE {
+      dbr:Auckland dbo:namedAfter ?namesake .
+      ?hotel a dbo:Hotel ;
+             dbo:location dbr:Auckland .
+
+      {
+        SELECT (COUNT(DISTINCT ?player) AS ?playerCount)
+        WHERE {
+          ?player a dbo:AustralianRulesFootballPlayer ;
+                  dbo:birthPlace dbr:Auckland .
+        }
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    namesake: http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland | hotel: http://dbpedia.org/resource/Metropolis_(Auckland_building) | playerCount: 6
+- id: 83
+  src_id: 83
+  text: "What are the three music genres associated with the most distinct songs by David Bisbal, and how many songs are associated with each?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?genre (COUNT(DISTINCT ?song) AS ?songCount)
+    WHERE {
+      ?song a dbo:Song ;
+          dbp:artist dbr:David_Bisbal ;
+          dbp:genre ?genre .
+      dbr:David_Bisbal a dbo:MusicalArtist .
+      ?genre a dbo:MusicGenre .
+    }
+    GROUP BY ?genre
+    ORDER BY DESC(?songCount)
+    LIMIT 3
+  llm_best: true
+  result_count: 3
+  result_snippet: |
+    genre: http://dbpedia.org/resource/Pop_music | songCount: 2
+    genre: http://dbpedia.org/resource/Rock_music | songCount: 2
+    genre: http://dbpedia.org/resource/Latin_music_(genre) | songCount: 1
+- id: 84
+  src_id: 84
+  text: "Which films produced by either Televisión Española or Televisió de Catalunya star Carlos Hipólito, and who edited each one?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT DISTINCT ?film ?editor
+    WHERE {
+      ?film a dbo:Film ;
+          dbo:starring <http://dbpedia.org/resource/Carlos_Hipólito> ;
+          dbp:editing ?editor .
+      {
+        ?film dbo:productionCompany <http://dbpedia.org/resource/Televisión_Española> .
+      }
+      UNION
+      {
+        ?film dbo:productionCompany <http://dbpedia.org/resource/Televisió_de_Catalunya> .
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    film: http://dbpedia.org/resource/1898,_Our_Last_Men_in_the_Philippines | editor: Jaime Colis
+- id: 85
+  src_id: 85
+  text: "Who are the top five American football players by number of distinct NFL seasons for which they served as television announcers, considering only seasons that list at least one city as a location? For each player, how many qualifying seasons are there, and which seasons are they?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT DISTINCT ?player ?seasonCount ?season
+    WHERE {
+      {
+        SELECT ?player (COUNT(DISTINCT ?rankedSeason) AS ?seasonCount)
+        WHERE {
+          ?rankedSeason a dbo:NationalFootballLeagueSeason ;
+              dbp:tvannouncers ?player ;
+              dbp:location ?rankedCity .
+          ?player a dbo:AmericanFootballPlayer .
+          ?rankedCity a dbo:City .
+        }
+        GROUP BY ?player
+        ORDER BY DESC(?seasonCount) ?player
+        LIMIT 5
+      }
+      ?season a dbo:NationalFootballLeagueSeason ;
+          dbp:tvannouncers ?player ;
+          dbp:location ?city .
+      ?city a dbo:City .
+    }
+    ORDER BY DESC(?seasonCount) ?player ?season
+  llm_best: true
+  result_count: 52
+  result_snippet: |
+    player: http://dbpedia.org/resource/Frank_Gifford | seasonCount: 13 | season: http://dbpedia.org/resource/1977_Buffalo_Bills_season
+    player: http://dbpedia.org/resource/Frank_Gifford | seasonCount: 13 | season: http://dbpedia.org/resource/1979_Dallas_Cowboys_season
+    player: http://dbpedia.org/resource/Frank_Gifford | seasonCount: 13 | season: http://dbpedia.org/resource/1982_Dallas_Cowboys_season
+- id: 86
+  src_id: 86
+  text: "Which soccer tournaments were won by either Virginia Cavaliers men's soccer or North Carolina Tar Heels men's soccer, and which of the two teams won each tournament?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT DISTINCT ?tournament ?champion
+    WHERE {
+      ?tournament a dbo:SoccerTournament .
+      {
+        ?tournament dbp:champions <http://dbpedia.org/resource/Virginia_Cavaliers_men's_soccer> .
+        BIND(<http://dbpedia.org/resource/Virginia_Cavaliers_men's_soccer> AS ?champion)
+      }
+      UNION
+      {
+        ?tournament dbp:champions <http://dbpedia.org/resource/North_Carolina_Tar_Heels_men's_soccer> .
+        BIND(<http://dbpedia.org/resource/North_Carolina_Tar_Heels_men's_soccer> AS ?champion)
+      }
+    }
+  llm_best: true
+  result_count: 11
+  result_snippet: |
+    tournament: http://dbpedia.org/resource/1987_ACC_men's_soccer_tournament | champion: http://dbpedia.org/resource/North_Carolina_Tar_Heels_men's_soccer
+    tournament: http://dbpedia.org/resource/1989_NCAA_Division_I_men's_soccer_tournament | champion: http://dbpedia.org/resource/Virginia_Cavaliers_men's_soccer
+    tournament: http://dbpedia.org/resource/1991_NCAA_Division_I_men's_soccer_tournament | champion: http://dbpedia.org/resource/Virginia_Cavaliers_men's_soccer
+- id: 87
+  src_id: 87
+  text: "Between Catalonia and Navarre, considering only those listed as the city of at least one public university, which has the greater total area, what is that area in square kilometres, and how many distinct public universities list it as their city?"
+  query: |
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX dbpp: <http://dbpedia.org/ontology/PopulatedPlace/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT ?place ?area ?publicUniversityCount
+    WHERE {
+      {
+        SELECT ?place (COUNT(DISTINCT ?university) AS ?publicUniversityCount)
+        WHERE {
+          VALUES ?place { dbr:Catalonia dbr:Navarre }
+          ?university rdf:type dbo:University ;
+                      dbo:type dbr:Public_university ;
+                      dbo:city ?place .
+        }
+        GROUP BY ?place
+      }
+      ?place dbpp:areaTotal ?area .
+    }
+    ORDER BY DESC(xsd:double(?area))
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    place: http://dbpedia.org/resource/Catalonia | area: 32113.86 | publicUniversityCount: 3
+- id: 88
+  src_id: 88
+  text: "Among trains whose operators are public transit systems located in at least one settlement, which have the greatest stated capacity when only whole-number capacities are considered, and what are each train’s operator, capacity, and any available braking details?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?train ?operator ?capacity ?brakes
+    WHERE {
+      ?train a dbo:Train ;
+          dbp:operator ?operator ;
+          dbp:capacity ?capacity .
+      ?operator a dbo:PublicTransitSystem ;
+          dbo:location ?location .
+      ?location a dbo:Settlement .
+      FILTER(REGEX(STR(?capacity), "^[0-9]+$"))
+      BIND(xsd:integer(STR(?capacity)) AS ?numericCapacity)
+
+      {
+        SELECT (MAX(?candidateCapacity) AS ?maxCapacity)
+        WHERE {
+          ?candidateTrain a dbo:Train ;
+              dbp:operator ?candidateOperator ;
+              dbp:capacity ?candidateRawCapacity .
+          ?candidateOperator a dbo:PublicTransitSystem ;
+              dbo:location ?candidateLocation .
+          ?candidateLocation a dbo:Settlement .
+          FILTER(REGEX(STR(?candidateRawCapacity), "^[0-9]+$"))
+          BIND(xsd:integer(STR(?candidateRawCapacity)) AS ?candidateCapacity)
+        }
+      }
+
+      FILTER(?numericCapacity = ?maxCapacity)
+      OPTIONAL {
+        ?train dbp:brakes ?brakes .
+      }
+    }
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    train: http://dbpedia.org/resource/MPL_75 | operator: http://dbpedia.org/resource/Lyon_Metro | capacity: 144114
+- id: 89
+  src_id: 89
+  text: "Among VicTrack-owned stations in Australia whose opening dates are recorded as calendar dates without times, which five opened earliest, and what are their opening dates?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?station ?opened
+    WHERE {
+      ?station a dbo:Station ;
+               dbp:owned dbr:VicTrack ;
+               dbp:country dbr:Australia ;
+               dbp:opened ?opened .
+
+      FILTER(DATATYPE(?opened) = xsd:date)
+    }
+    ORDER BY ASC(?opened)
+    LIMIT 5
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    station: http://dbpedia.org/resource/Flinders_Street_railway_station | opened: 1854-09-12
+    station: http://dbpedia.org/resource/Geelong_railway_station | opened: 1856-11-01
+    station: http://dbpedia.org/resource/Lara_railway_station | opened: 1856-11-01
+- id: 90
+  src_id: 90
+  text: "Which office holders both resided in and died in London, and which relatives are listed for them, if any?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?officeHolder ?relative
+    WHERE {
+      ?officeHolder a dbo:OfficeHolder ;
+                    dbo:deathPlace dbr:London .
+      FILTER EXISTS {
+        ?officeHolder dbo:residence dbr:London .
+      }
+      OPTIONAL {
+        ?officeHolder dbp:relatives ?relative .
+      }
+    }
+  llm_best: true
+  result_count: 4
+  result_snippet: |
+    http://dbpedia.org/resource/Donald_Smith,_1st_Baron_Strathcona_and_Mount_Royal
+    http://dbpedia.org/resource/Nathan_Rothschild,_1st_Baron_Rothschild
+    http://dbpedia.org/resource/Nathan_Rothschild,_1st_Baron_Rothschild
+- id: 91
+  src_id: 91
+  text: "Which SK Rapid Wien seasons list Vienna as the home-stadium location and include a highest-attendance figure?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?season
+    WHERE {
+      ?season a dbo:SoccerClubSeason ;
+              dbp:club dbr:SK_Rapid_Wien ;
+              dbo:homeStadium dbr:Vienna .
+
+      FILTER EXISTS {
+        ?season dbp:highestAttendance ?highestAttendance .
+      }
+    }
+  llm_best: true
+  result_count: 44
+  result_snippet: |
+    http://dbpedia.org/resource/1920–21_SK_Rapid_Wien_season
+    http://dbpedia.org/resource/1921–22_SK_Rapid_Wien_season
+    http://dbpedia.org/resource/1922–23_SK_Rapid_Wien_season
+- id: 92
+  src_id: 92
+  text: "Who are the recorded owners of the All-Russia State Television and Radio Broadcasting Company, what services does it provide, and where is it headquartered if that information is available?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT DISTINCT ?owner ?service ?headquarter
+    WHERE {
+      VALUES ?ownerProperty { dbo:owner dbp:owner }
+      dbr:All-Russia_State_Television_and_Radio_Broadcasting_Company
+          ?ownerProperty ?owner ;
+          dbo:service ?service .
+      OPTIONAL {
+        dbr:All-Russia_State_Television_and_Radio_Broadcasting_Company
+            dbo:headquarter ?headquarter .
+      }
+    }
+  llm_best: true
+  result_count: 6
+  result_snippet: |
+    owner: Federal Government of Russia | service: http://dbpedia.org/resource/Online
+    owner: Federal Government of Russia | service: http://dbpedia.org/resource/Radio
+    owner: Federal Government of Russia | service: http://dbpedia.org/resource/Television
+- id: 93
+  src_id: 93
+  text: "For VfL Bochum's 1975–76 season, what was the lowest attendance, which settlement was identified as the ground, and which cities were given as locations?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT DISTINCT ?lowestAttendance ?ground ?city
+    WHERE {
+      <http://dbpedia.org/resource/1975–76_VfL_Bochum_season>
+          dbp:lowestAttendance ?lowestAttendance ;
+          dbo:ground ?ground ;
+          dbp:location ?city .
+      ?ground a dbo:Settlement .
+      ?city a dbo:City .
+    }
+  llm_best: true
+  result_count: 38
+  result_snippet: |
+    lowestAttendance: 10000 | ground: http://dbpedia.org/resource/Dortmund | city: http://dbpedia.org/resource/Bochum
+    lowestAttendance: 10000 | ground: http://dbpedia.org/resource/Dortmund | city: http://dbpedia.org/resource/Braunschweig
+    lowestAttendance: 10000 | ground: http://dbpedia.org/resource/Dortmund | city: http://dbpedia.org/resource/Bremen
+- id: 94
+  src_id: 94
+  text: "Which country or countries do the greatest number of darts players have as their hometown, and how many darts players have each one as their hometown?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+
+    SELECT ?country ?dartsPlayerCount
+    WHERE {
+      {
+        SELECT ?country (COUNT(DISTINCT ?dartsPlayer) AS ?dartsPlayerCount)
+        WHERE {
+          ?dartsPlayer a dbo:DartsPlayer ;
+              dbo:hometown ?country .
+          ?country a dbo:Country .
+        }
+        GROUP BY ?country
+      }
+      {
+        SELECT (MAX(?candidateCount) AS ?maximumCount)
+        WHERE {
+          {
+            SELECT ?candidateCountry (COUNT(DISTINCT ?candidatePlayer) AS ?candidateCount)
+            WHERE {
+              ?candidatePlayer a dbo:DartsPlayer ;
+                  dbo:hometown ?candidateCountry .
+              ?candidateCountry a dbo:Country .
+            }
+            GROUP BY ?candidateCountry
+          }
+        }
+      }
+      FILTER (?dartsPlayerCount = ?maximumCount)
+    }
+    ORDER BY ?country
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    country: http://dbpedia.org/resource/England | dartsPlayerCount: 44
+- id: 95
+  src_id: 95
+  text: "Which organisation or organisations own the greatest number of stations in the administrative region of Norfolk, and how many such stations do they own?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?owner ?stationCount
+    WHERE {
+      {
+        SELECT ?owner (COUNT(DISTINCT ?station) AS ?stationCount)
+        WHERE {
+          dbr:Norfolk a dbo:AdministrativeRegion .
+          ?station a dbo:Station ;
+              dbp:borough dbr:Norfolk ;
+              dbp:owned ?owner .
+          ?owner a dbo:Organisation .
+        }
+        GROUP BY ?owner
+      }
+      {
+        SELECT (MAX(?candidateCount) AS ?maxStationCount)
+        WHERE {
+          {
+            SELECT ?candidateOwner (COUNT(DISTINCT ?candidateStation) AS ?candidateCount)
+            WHERE {
+              dbr:Norfolk a dbo:AdministrativeRegion .
+              ?candidateStation a dbo:Station ;
+                  dbp:borough dbr:Norfolk ;
+                  dbp:owned ?candidateOwner .
+              ?candidateOwner a dbo:Organisation .
+            }
+            GROUP BY ?candidateOwner
+          }
+        }
+      }
+      FILTER(?stationCount = ?maxStationCount)
+    }
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    owner: http://dbpedia.org/resource/Eastern_Region_of_British_Railways | stationCount: 1
+    owner: http://dbpedia.org/resource/London_and_North_Eastern_Railway | stationCount: 1
+- id: 96
+  src_id: 96
+  text: "Among soccer clubs associated with the 2012 American soccer season, which has the largest whole-number value for highest attendance, and what is that value?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?clubSeason ?highestAttendance
+    WHERE {
+      ?clubSeason rdf:type dbo:SoccerClub ;
+                  dbo:season dbr:2012_in_American_soccer ;
+                  dbp:highestAttendance ?highestAttendance .
+      FILTER(REGEX(STR(?highestAttendance), "^[0-9]+$"))
+    }
+    ORDER BY DESC(xsd:integer(STR(?highestAttendance)))
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    clubSeason: http://dbpedia.org/resource/2012_New_York_Red_Bulls_season | highestAttendance: 25219
+- id: 97
+  src_id: 97
+  text: "Which country where ArtNexus is published has hosted the most conventions, and how many conventions has it hosted?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?country (COUNT(DISTINCT ?convention) AS ?conventionCount)
+    WHERE {
+      dbr:ArtNexus dbo:country ?country .
+      ?convention a dbo:Convention ;
+                  dbo:location ?country .
+    }
+    GROUP BY ?country
+    ORDER BY DESC(?conventionCount)
+    LIMIT 1
+  llm_best: true
+  result_count: 1
+  result_snippet: |
+    country: http://dbpedia.org/resource/United_States | conventionCount: 285
+- id: 98
+  src_id: 98
+  text: "What are Kerala’s recorded April rainfall and August high temperature, and which 10 places have the highest April rainfall among those with more April rainfall than Kerala, listed in descending order and with each place’s August high temperature included when available?"
+  query: |
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?keralaAprilRainfallMm ?keralaAugustHighC
+                    ?place ?placeAprilRainfallMm ?placeAugustHighC
+    WHERE {
+      dbr:Kerala dbp:aprRainMm ?keralaAprilRainfallMm ;
+                  dbp:augHighC ?keralaAugustHighC .
+
+      ?place dbp:aprRainMm ?placeAprilRainfallMm .
+      FILTER(
+        xsd:decimal(?placeAprilRainfallMm) >
+        xsd:decimal(?keralaAprilRainfallMm)
+      )
+
+      OPTIONAL {
+        ?place dbp:augHighC ?placeAugustHighC .
+      }
+    }
+    ORDER BY DESC(xsd:decimal(?placeAprilRainfallMm))
+    LIMIT 10
+  llm_best: true
+  result_count: 10
+  result_snippet: |
+    keralaAprilRainfallMm: 109.5 | keralaAugustHighC: 29 | place: http://dbpedia.org/resource/López_de_Micay | placeAprilRainfallMm: 1399 | placeAugustHighC: 32
+    keralaAprilRainfallMm: 109.5 | keralaAugustHighC: 29 | place: http://dbpedia.org/resource/Mount_Bellenden_Ker | placeAprilRainfallMm: 1082.5 | placeAugustHighC: —
+    keralaAprilRainfallMm: 109.5 | keralaAugustHighC: 29 | place: http://dbpedia.org/resource/San_Francisco_de_Naya | placeAprilRainfallMm: 1013 | placeAugustHighC: 29.8
+- id: 99
+  src_id: 99
+  text: "Who was the chairman of Mohun Bagan AC during the 2019–20 season, what was that person's nickname, and where were they born?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+
+    SELECT ?chairman ?nickname ?birthplace
+    WHERE {
+      <http://dbpedia.org/resource/2019–20_Mohun_Bagan_AC_season> dbo:chairman ?chairman .
+      ?chairman dbp:nickname ?nickname ;
+                dbp:birthPlace ?birthplace .
+    }
+  llm_best: true
+  result_count: 2
+  result_snippet: |
+    chairman: http://dbpedia.org/resource/Srinjoy_Bose | nickname: Tumpai | birthplace: http://dbpedia.org/resource/Kolkata
+    chairman: http://dbpedia.org/resource/Srinjoy_Bose | nickname: Tumpai | birthplace: http://dbpedia.org/resource/West_Bengal
+- id: 100
+  src_id: 100
+  text: "Which five settlements that are route junctions on European route E1 have the highest recorded April precipitation, using the highest available April value for each settlement, and what are their total areas in square metres when available?"
+  query: |
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT DISTINCT ?settlement ?aprilPrecipitationMm ?totalAreaSquareMetres
+    WHERE {
+      {
+        SELECT ?settlement
+               (MAX(xsd:decimal(?recordedAprilPrecipitationMm)) AS ?aprilPrecipitationMm)
+        WHERE {
+          dbr:European_route_E1 dbo:routeJunction ?settlement .
+          ?settlement a dbo:Settlement ;
+                      dbp:aprPrecipitationMm ?recordedAprilPrecipitationMm .
+        }
+        GROUP BY ?settlement
+        ORDER BY DESC(?aprilPrecipitationMm)
+        LIMIT 5
+      }
+      OPTIONAL {
+        ?settlement dbo:areaTotal ?totalAreaSquareMetres .
+      }
+    }
+    ORDER BY DESC(?aprilPrecipitationMm)
+  llm_best: true
+  result_count: 5
+  result_snippet: |
+    settlement: http://dbpedia.org/resource/Porto | aprilPrecipitationMm: 117.6 | totalAreaSquareMetres: 41420000.0
+    settlement: http://dbpedia.org/resource/Aveiro,_Portugal | aprilPrecipitationMm: 91.2 | totalAreaSquareMetres: —
+    settlement: http://dbpedia.org/resource/Coimbra | aprilPrecipitationMm: 91.0 | totalAreaSquareMetres: —

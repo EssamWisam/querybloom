@@ -3,18 +3,59 @@
 import re
 import os
 import sys
+import logging
+import json
 
 import rdflib
 from rdflib.plugins.sparql.parser import parseQuery
 from rdflib.plugins.sparql.algebra import translateQuery
 from rdflib.term import URIRef, Variable, Literal
 
+from ._cache import _CACHE_ROOT, _make_key
+
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "src"))
+)
 try:
     from querybloom.executor.sparql_executor import execute_sparql_query
 except Exception:
     execute_sparql_query = None
 
-_ENTITY_TYPE_CACHE = {}
+logger = logging.getLogger(__name__)
+
+_META_TYPES = {
+    "http://www.w3.org/2002/07/owl#Class",
+    "http://www.w3.org/2000/01/rdf-schema#Class",
+    "http://www.w3.org/2000/01/rdf-schema#Datatype",
+}
+_ENTITY_TYPE_CACHE_DIR = os.path.join(_CACHE_ROOT, "entity_types")
+_CLASS_INSTANCE_CACHE_DIR = os.path.join(_CACHE_ROOT, "class_instances")
+
+_QALD9_PREFIXES = {
+    "dbc": "http://dbpedia.org/resource/Category:",
+    "dct": "http://purl.org/dc/terms/",
+    "yago": "http://dbpedia.org/class/yago/",
+}
+
+_LITERAL_PATTERN = re.compile(
+    r"""
+    (?:
+        "(?:\\.|[^"\\])*"          # Double-quoted string
+        | '(?:\\.|[^'\\])*'         # Single-quoted string
+    )
+    (?:
+        @[a-zA-Z]+(?:-[a-zA-Z0-9]+)*  # Optional language tag
+        | \^\^<URI>                   # Optional datatype, after URI replacement
+    )?
+    |
+    (?<![a-zA-Z0-9_.])                # Do not match digits inside names or decimals
+    [+-]?
+    (?:\d+\.\d*|\.\d+|\d+)         # Integer or decimal
+    (?:[eE][+-]?\d+)?                 # Optional exponent
+    (?![a-zA-Z0-9_.])
+    """,
+    re.VERBOSE,
+)
 
 FEATURE_KEYS = [
     "SELECT",
@@ -32,8 +73,8 @@ FEATURE_KEYS = [
     "Property Paths",
 ]
 
-# Features to hide from bar chart (redundant with others or broken into subtypes)
-BAR_CHART_EXCLUDE = {"COUNT", "FILTER", "EXISTS"}
+# Features to hide from feature distribution bar chart
+BAR_CHART_EXCLUDE = {"COUNT", "DISTINCT", "EXISTS"}
 
 
 # ---------------------------------------------------------------------------
@@ -155,38 +196,197 @@ def extract_filter_subtypes(sparql):
     return subtypes
 
 
-def get_entity_classes(entity_uri, endpoint="dblp"):
+def _lookup_cache_path(cache_dir, endpoint, entity_uri):
+    os.makedirs(cache_dir, exist_ok=True)
+    return os.path.join(cache_dir, f"{_make_key(endpoint, entity_uri)}.json")
+
+
+def _load_successful_lookup(cache_dir, endpoint, entity_uri, field):
+    if os.environ.get("METRICS_NO_CACHE") == "1":
+        return None
+    try:
+        with open(_lookup_cache_path(cache_dir, endpoint, entity_uri)) as cache_file:
+            cached = json.load(cache_file)
+        if cached.get("success") is True:
+            return cached[field]
+    except Exception:
+        pass
+    return None
+
+
+def _store_successful_lookup(cache_dir, endpoint, entity_uri, **result):
+    if os.environ.get("METRICS_NO_CACHE") == "1":
+        return
+    try:
+        with open(_lookup_cache_path(cache_dir, endpoint, entity_uri), "w") as cache_file:
+            json.dump({"success": True, **result}, cache_file)
+    except Exception:
+        pass
+
+
+def _log_lookup_failure(kind, entity_uri, endpoint, query_source, query_index, reason):
+    logger.warning(
+        "[metrics.parsing] --- %s lookup failed ---\n"
+        "source=%s query_index=%s endpoint=%s\n"
+        "fallback=continue classification without this lookup\n"
+        "entity=%s reason=%s",
+        kind,
+        query_source or "<unspecified>",
+        query_index if query_index is not None else "<unspecified>",
+        endpoint,
+        entity_uri,
+        reason,
+    )
+
+
+def get_entity_classes(entity_uri, endpoint="dblp", query_source=None, query_index=None):
+    """Return endpoint types, or ``None`` when the lookup fails."""
     if not execute_sparql_query:
-        return set()
+        _log_lookup_failure(
+            "entity type", entity_uri, endpoint, query_source, query_index, "executor unavailable"
+        )
+        return None
     entity_uri = _normalize_uri_escapes(f"<{entity_uri}>")[1:-1]
-    if entity_uri in _ENTITY_TYPE_CACHE:
-        return _ENTITY_TYPE_CACHE[entity_uri]
-    # Fetch only the most specific (leaf) types: exclude any class that
-    # has a more specific subclass also asserted for this entity.
+    cached = _load_successful_lookup(
+        _ENTITY_TYPE_CACHE_DIR, endpoint, entity_uri, "types"
+    )
+    if cached is not None:
+        return set(cached)
     query = (
-        f"SELECT DISTINCT ?t WHERE {{ "
-        f"<{entity_uri}> a ?t . "
-        f"FILTER NOT EXISTS {{ "
-        f"  <{entity_uri}> a ?sub . "
-        f"  ?sub <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?t . "
-        f"  FILTER(?sub != ?t) "
-        f"}} }} LIMIT 1"
+        f"SELECT DISTINCT ?t WHERE {{ <{entity_uri}> a ?t }}"
     )
     try:
         res = execute_sparql_query(query, endpoint=endpoint)
-        if res.get("success") and res.get("results"):
-            classes = set(r["t"]["value"] for r in res["results"] if "t" in r)
-            _ENTITY_TYPE_CACHE[entity_uri] = classes
+        results = res.get("results")
+        if res.get("success") and isinstance(results, list):
+            classes = set(
+                r["t"]["value"] for r in results if "t" in r
+            )
+            _store_successful_lookup(
+                _ENTITY_TYPE_CACHE_DIR, endpoint, entity_uri, types=sorted(classes)
+            )
             return classes
-    except Exception:
-        pass
-    _ENTITY_TYPE_CACHE[entity_uri] = set()
-    return set()
+        reason = (
+            "successful response did not contain a result list"
+            if res.get("success")
+            else res.get("error_message")
+            or res.get("error")
+            or res.get("status", "unknown error")
+        )
+        _log_lookup_failure(
+            "entity type", entity_uri, endpoint, query_source, query_index,
+            reason,
+        )
+    except Exception as exc:
+        _log_lookup_failure(
+            "entity type", entity_uri, endpoint, query_source, query_index, exc
+        )
+    return None
+
+
+def _get_ask_result(response):
+    for key in ("boolean", "result", "ask"):
+        value = response.get(key)
+        if isinstance(value, bool):
+            return value
+        if isinstance(value, str):
+            return value.lower() == "true"
+    results = response.get("results")
+    return results if isinstance(results, bool) else None
+
+
+def uri_has_instances(entity_uri, endpoint="dblp", query_source=None, query_index=None):
+    """Return whether any resource has ``entity_uri`` as its type, or ``None`` on failure."""
+    if not execute_sparql_query:
+        _log_lookup_failure(
+            "class instance", entity_uri, endpoint, query_source, query_index, "executor unavailable"
+        )
+        return None
+    cached = _load_successful_lookup(
+        _CLASS_INSTANCE_CACHE_DIR, endpoint, entity_uri, "has_instances"
+    )
+    if cached is not None:
+        return bool(cached)
+    query = f"ASK {{ ?x a <{entity_uri}> }}"
+    try:
+        res = execute_sparql_query(query, endpoint=endpoint)
+        if res.get("success"):
+            has_instances = _get_ask_result(res)
+            if has_instances is not None:
+                _store_successful_lookup(
+                    _CLASS_INSTANCE_CACHE_DIR,
+                    endpoint,
+                    entity_uri,
+                    has_instances=has_instances,
+                )
+                return has_instances
+            reason = "successful response did not contain a boolean result"
+        else:
+            reason = (
+                res.get("error_message")
+                or res.get("error")
+                or res.get("status", "unknown error")
+            )
+        _log_lookup_failure(
+            "class instance", entity_uri, endpoint, query_source, query_index,
+            reason,
+        )
+    except Exception as exc:
+        _log_lookup_failure(
+            "class instance", entity_uri, endpoint, query_source, query_index, exc
+        )
+    return None
+
+
+def resolve_terms(
+    parsed_metrics,
+    endpoint="dblp",
+    kg_name=None,
+    kgs_data_dir=None,
+    query_source=None,
+    query_index=None,
+    ontology_classes=None,
+):
+    """Resolve directly named and entity-implied classes using KG evidence."""
+    if ontology_classes is None:
+        from ontology_loader import load_ontology_classes
+
+        ontology_classes = (
+            load_ontology_classes(kg_name, kgs_data_dir) if kg_name else set()
+        )
+    classes = set(parsed_metrics["classes"])
+    raw_entities = parsed_metrics["entities"]
+    for entity_uri in dict.fromkeys(raw_entities):
+        if entity_uri in classes:
+            continue
+        entity_types = get_entity_classes(
+            entity_uri, endpoint, query_source, query_index
+        )
+        if entity_types is not None:
+            classes.update(entity_types - _META_TYPES)
+        if entity_types is not None and entity_types & _META_TYPES:
+            classes.add(entity_uri)
+        elif entity_types is not None and not (entity_types - _META_TYPES) and (
+            uri_has_instances(entity_uri, endpoint, query_source, query_index) is True
+        ):
+            classes.add(entity_uri)
+        elif not entity_types and entity_uri in ontology_classes:
+            classes.add(entity_uri)
+    parsed_metrics["classes"] = classes
+    parsed_metrics["entities"] = [
+        entity_uri for entity_uri in raw_entities if entity_uri not in classes
+    ]
+    return parsed_metrics
 
 
 def get_query_body(sparql):
     """Isolate the query body without PREFIX definitions."""
-    return re.sub(r"PREFIX.*?\n", "", sparql, flags=re.IGNORECASE).strip()
+    return re.sub(
+        r"^\s*(?:PREFIX\s+(?:[a-zA-Z][a-zA-Z0-9_-]*)?:\s*<[^>]+>\s*)+",
+        "",
+        sparql,
+        flags=re.IGNORECASE,
+    ).strip()
 
 
 def strip_lang_en_filters(sparql):
@@ -287,16 +487,50 @@ def _normalize_uri_escapes(sparql):
     )
 
 
-def parse_and_extract_rdflib_metrics(sparql, endpoint="dblp"):
+def normalize_sparql(sparql, query_source=None):
+    """Repair known benchmark formatting defects before rdflib parses a query."""
+    sparql = _normalize_uri_escapes(sparql)
+
+    # RDF literal suffixes are single lexical tokens in SPARQL, so whitespace
+    # between the quoted value and @lang/^^datatype is invalid.
+    sparql = re.sub(
+        r'''(?<!\\)(["'])\s+(@[A-Za-z]+(?:-[A-Za-z0-9]+)*\b)''',
+        r"\1\2",
+        sparql,
+    )
+    sparql = re.sub(r'''(?<!\\)(["'])\s*\^\^\s*''', r"\1^^", sparql)
+
+    if query_source and re.search(r"qald[-_]?9", os.path.basename(str(query_source)), re.I):
+        declared = set(
+            re.findall(r"(?i)\bPREFIX\s+([A-Za-z][\w-]*):", sparql)
+        )
+        used = set(
+            re.findall(r"(?<![<\w])([A-Za-z][\w-]*):[A-Za-z_]", sparql)
+        )
+        additions = [
+            f"PREFIX {prefix}: <{namespace}>"
+            for prefix, namespace in _QALD9_PREFIXES.items()
+            if prefix in used - declared
+        ]
+        if additions:
+            sparql = " ".join(additions + [sparql])
+    return sparql
+
+
+def parse_and_extract_rdflib_metrics(
+    sparql, endpoint="dblp", query_source=None, query_index=None
+):
     """Uses rdflib to parse entities, properties, variables, and triple count."""
     import warnings
 
-    sparql = _normalize_uri_escapes(sparql)
+    sparql = normalize_sparql(sparql, query_source)
 
     metrics = {
         "num_triples": 0,
         "variables": set(),
         "entities": [],
+        # literal values are kept apart so entity metrics stay URI-only
+        "literals": [],
         "classes": set(),
         "properties": set(),
     }
@@ -305,7 +539,17 @@ def parse_and_extract_rdflib_metrics(sparql, endpoint="dblp"):
             warnings.simplefilter("ignore")
             parsed = parseQuery(sparql)
             algebra = translateQuery(parsed).algebra
-    except Exception:
+    except Exception as exc:
+        logger.warning(
+            "[metrics.parsing] --- SPARQL parse failed ---\n"
+            "source=%s query_index=%s\n"
+            "fallback=empty parsed metrics\n"
+            "reason=%s query=%s",
+            query_source or "<unspecified>",
+            query_index if query_index is not None else "<unspecified>",
+            exc,
+            sparql[:500],
+        )
         return metrics
 
     def walk_algebra(node):
@@ -325,8 +569,10 @@ def parse_and_extract_rdflib_metrics(sparql, endpoint="dblp"):
                         for term, is_class_obj in [(s, False), (o, is_type_triple)]:
                             if is_class_obj:
                                 pass  # class URI — not an instance entity
-                            elif isinstance(term, (URIRef, Literal)):
+                            elif isinstance(term, URIRef):
                                 metrics["entities"].append(str(term))
+                            elif isinstance(term, Literal):
+                                metrics["literals"].append(str(term))
                             elif isinstance(term, Variable):
                                 metrics["variables"].add(str(term))
                         if isinstance(p, URIRef):
@@ -348,11 +594,6 @@ def parse_and_extract_rdflib_metrics(sparql, endpoint="dblp"):
     if pv is not None:
         metrics["variables"] = {str(v) for v in pv}
 
-    for entity in set(metrics["entities"]):
-        if entity.startswith("http"):
-            entity_classes = get_entity_classes(entity, endpoint)
-            metrics["classes"].update(entity_classes)
-
     return metrics
 
 
@@ -363,23 +604,22 @@ def anonymise_query(sparql):
     are replaced with the same ``<URI>`` token so that queries differing
     only in prefix style produce identical templates.
     """
-    body = get_query_body(sparql)
-    body = re.sub(r"\?[a-zA-Z0-9_]+", "?VAR", body)
-    body = re.sub(r"<[^>]+>", "<URI>", body)
-    body = re.sub(r'".*?"(\^\^<.*?>)?|[\'0-9]+', "<LITERAL>", body)
-    # Replace prefixed names (e.g. dbo:Thing) with <URI> — same token used
-    # for full URIs above — so prefix style doesn't affect the template.
-    body = re.sub(r"\b[a-zA-Z0-9_]+:[a-zA-Z0-9_]+\b", "<URI>", body)
-    return body.strip()
+    return _anonymise_fragment(get_query_body(sparql))
+
+
+def _anonymise_fragment(text, collapse_whitespace=False):
+    text = re.sub(r"\?[a-zA-Z0-9_]+", "?VAR", text)
+    text = re.sub(r"<[^>]+>", "<URI>", text)
+    text = _LITERAL_PATTERN.sub("<LITERAL>", text)
+    text = re.sub(r"\b[a-zA-Z0-9_]+:[a-zA-Z0-9_]+\b", "<URI>", text)
+    if collapse_whitespace:
+        text = re.sub(r"\s+", " ", text)
+    return text.strip()
 
 
 def _anonymise_text(text):
     """Anonymise a fragment of SPARQL (same rules as anonymise_query)."""
-    text = re.sub(r"\?[a-zA-Z0-9_]+", "?VAR", text)
-    text = re.sub(r"<[^>]+>", "<URI>", text)
-    text = re.sub(r'".*?"(\^\^<.*?>)?|[\'0-9]+', "<LITERAL>", text)
-    text = re.sub(r"\b[a-zA-Z0-9_]+:[a-zA-Z0-9_]+\b", "<URI>", text)
-    return re.sub(r"\s+", " ", text).strip()
+    return _anonymise_fragment(text, collapse_whitespace=True)
 
 
 def extract_filter_templates(sparql):
