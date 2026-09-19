@@ -22,6 +22,7 @@
     v5Samples,
   } from "../subgraphYaml.js";
   import { formatProgress } from "../progress.js";
+  import { downloadSubgraphs } from "../downloadSubgraphs.js";
 
   export let graph = null;
   export let subgraphs = [];
@@ -39,6 +40,8 @@
   let showGraph = false;
   let graphFrameOne = null;
   let graphFrameTwo = null;
+  let downloadPending = false;
+  let downloadError = "";
 
   onMount(() => {
     graphFrameOne = requestAnimationFrame(() => {
@@ -364,6 +367,19 @@
     showPatternModal = true;
   }
 
+  async function handleDownloadSubgraphs() {
+    if (!subgraphs.length || downloadPending) return;
+    downloadPending = true;
+    downloadError = "";
+    try {
+      await downloadSubgraphs(subgraphs);
+    } catch (error) {
+      downloadError = error?.message || "Could not create the subgraph archive.";
+    } finally {
+      downloadPending = false;
+    }
+  }
+
   $: filteredSubgraphs = (() => {
     const list = pinnedNodeId
       ? subgraphs.filter((item) => subgraphNodeIds(item).has(pinnedNodeId))
@@ -401,7 +417,21 @@
 
   <aside class="subgraph-list" aria-label="Subgraphs">
     <header>
-      <h2>Subgraphs</h2>
+      <div class="header-title">
+        <h2>Subgraphs</h2>
+        <button
+          class="download-btn"
+          type="button"
+          disabled={!subgraphs.length || downloadPending}
+          on:click={handleDownloadSubgraphs}
+        >
+          <span aria-hidden="true">↓</span>
+          {downloadPending ? "Preparing archive..." : "Download Subgraphs"}
+        </button>
+      </div>
+      {#if downloadError}
+        <p class="download-error" role="alert">{downloadError}</p>
+      {/if}
       {#if running && miningPhase && onSkipSubgraphs}
         <button
           class="skip-btn"
@@ -528,6 +558,43 @@
 
   .subgraph-list {
     border-left: 1px solid var(--border-default);
+  }
+
+  .header-title {
+    display: grid;
+    gap: 10px;
+  }
+
+  .download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid rgba(52, 74, 154, 0.28);
+    border-radius: 7px;
+    background: #f7f9ff;
+    color: var(--color-uni-blue, #273763);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .download-btn:hover:not(:disabled) {
+    background: #edf2ff;
+    border-color: rgba(52, 74, 154, 0.5);
+  }
+
+  .download-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+
+  .download-error {
+    margin-top: 8px;
+    color: #b42318;
+    font-size: 0.76rem;
   }
 
   .skip-btn {
