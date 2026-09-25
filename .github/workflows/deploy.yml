@@ -65,11 +65,12 @@ jobs:
           else
             echo "Ensuring querybloom-prod is running..."
             docker compose up -d querybloom-prod
-            echo "Compiling latest frontend webapp bundle..."
-            docker exec querybloom-prod sh -c "cd /workspace/querybloom/webapp && BASE_PATH=/querybloom npm run build"
-            echo "Restarting querybloom-prod to apply backend and frontend changes..."
-            docker compose restart querybloom-prod
           fi
+
+          echo "Installing webapp dependencies and compiling the frontend bundle..."
+          docker exec querybloom-prod sh -c "cd /workspace/querybloom/webapp && npm ci --no-audit --no-fund && BASE_PATH=/querybloom npm run build"
+          echo "Restarting querybloom-prod to apply backend and frontend changes..."
+          docker compose restart querybloom-prod
 
           echo "Refreshing frontend dependencies and starting querybloom-frontend..."
           docker compose up -d --no-deps --force-recreate querybloom-frontend
