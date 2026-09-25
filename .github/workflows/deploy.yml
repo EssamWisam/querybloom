@@ -71,32 +71,38 @@ jobs:
             docker compose restart querybloom-prod
           fi
 
+          echo "Refreshing frontend dependencies and starting querybloom-frontend..."
+          docker compose up -d --no-deps --force-recreate querybloom-frontend
+
       - name: Verify Backend & Show Logs
         run: |
           echo "Waiting for backend and frontend to be ready..."
-          MAX_RETRIES=20
+          MAX_RETRIES=90
           RETRY_COUNT=0
           HTTP_STATUS="000"
           FRONTEND_STATUS="000"
+          DEV_FRONTEND_STATUS="000"
           
           while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
             HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8002/api/v1/health || echo "000")
             FRONTEND_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8002/ || echo "000")
-            if [ "$HTTP_STATUS" = "200" ] && [ "$FRONTEND_STATUS" = "200" ]; then
+            DEV_FRONTEND_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:5174/querybloom/ || echo "000")
+            if [ "$HTTP_STATUS" = "200" ] && [ "$FRONTEND_STATUS" = "200" ] && [ "$DEV_FRONTEND_STATUS" = "200" ]; then
               echo "Application is ready! (HTTP 200 OK after ${RETRY_COUNT} retries)"
               break
             fi
-            echo "Attempt $((RETRY_COUNT + 1))/$MAX_RETRIES: API status is $HTTP_STATUS, Frontend is $FRONTEND_STATUS, waiting 2s..."
+            echo "Attempt $((RETRY_COUNT + 1))/$MAX_RETRIES: API status is $HTTP_STATUS, bundled frontend is $FRONTEND_STATUS, live frontend is $DEV_FRONTEND_STATUS, waiting 2s..."
             sleep 2
             RETRY_COUNT=$((RETRY_COUNT + 1))
           done
           
           echo "====================== CONTAINER LOGS ======================"
           docker logs --tail 40 querybloom-prod || true
+          docker compose logs --tail 40 querybloom-frontend || true
           echo "============================================================"
           
-          if [ "$HTTP_STATUS" != "200" ] || [ "$FRONTEND_STATUS" != "200" ]; then
-            echo "::error::❌ Health check failed! API: $HTTP_STATUS, Frontend: $FRONTEND_STATUS"
+          if [ "$HTTP_STATUS" != "200" ] || [ "$FRONTEND_STATUS" != "200" ] || [ "$DEV_FRONTEND_STATUS" != "200" ]; then
+            echo "::error::❌ Health check failed! API: $HTTP_STATUS, bundled frontend: $FRONTEND_STATUS, live frontend: $DEV_FRONTEND_STATUS"
             exit 1
           fi
           
