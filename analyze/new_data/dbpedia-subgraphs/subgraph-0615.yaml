@@ -1,0 +1,100 @@
+types:
+  person: doo:Person
+  writer: doo:Writer
+  Location: doo:Location
+  settlement: doo:Settlement
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._P._de_Zoysa: (deathPlace='Colombo, Sri Lanka')
+    relationships:
+      - Haritha_TV (dor:Haritha_TV) --doo:country--> Sri_Lanka (dor:Sri_Lanka)
+      - Haritha_TV (dor:Haritha_TV) --doo:headquarter--> Colombo (dor:Colombo)
+      - Kumari_Jayawardena (dor:Kumari_Jayawardena) --doo:birthPlace--> Colombo (dor:Colombo)
+      - A._P._de_Zoysa (dor:A._P._de_Zoysa) --doo:child--> Kumari_Jayawardena (dor:Kumari_Jayawardena)
+  '2':
+    attributes:
+      A._P._de_Zoysa: (deathPlace='Colombo, Sri Lanka')
+    relationships:
+      - Hiru_TV (dor:Hiru_TV) --doo:country--> Sri_Lanka (dor:Sri_Lanka)
+      - Hiru_TV (dor:Hiru_TV) --doo:headquarter--> Colombo (dor:Colombo)
+      - Kumari_Jayawardena (dor:Kumari_Jayawardena) --doo:birthPlace--> Colombo (dor:Colombo)
+      - A._P._de_Zoysa (dor:A._P._de_Zoysa) --doo:child--> Kumari_Jayawardena (dor:Kumari_Jayawardena)
+  '3':
+    attributes:
+      A._P._de_Zoysa: (deathPlace='Colombo, Sri Lanka')
+    relationships:
+      - Sirasa_TV (dor:Sirasa_TV) --doo:country--> Sri_Lanka (dor:Sri_Lanka)
+      - Sirasa_TV (dor:Sirasa_TV) --doo:headquarter--> Colombo (dor:Colombo)
+      - Kumari_Jayawardena (dor:Kumari_Jayawardena) --doo:birthPlace--> Colombo (dor:Colombo)
+      - A._P._de_Zoysa (dor:A._P._de_Zoysa) --doo:child--> Kumari_Jayawardena (dor:Kumari_Jayawardena)
+  '4':
+    attributes:
+      Kampala: (Apr rain mm^='169.3')
+    relationships:
+      - Pearl_Magic__Prime__1 (dor:Pearl_Magic__Prime__1) --doo:country--> Uganda (dor:Uganda)
+      - Pearl_Magic__Prime__1 (dor:Pearl_Magic__Prime__1) --doo:headquarter--> Kampala (dor:Kampala)
+      - Simon_Kuper (dor:Simon_Kuper) --doo:birthPlace--> Kampala (dor:Kampala)
+      - Adam_Kuper (dor:Adam_Kuper) --doo:child--> Simon_Kuper (dor:Simon_Kuper)
+  '5':
+    attributes:
+      Kampala: (Apr rain mm^='169.3')
+    relationships:
+      - Salam_TV_Uganda (dor:Salam_TV_Uganda) --doo:country--> Uganda (dor:Uganda)
+      - Salam_TV_Uganda (dor:Salam_TV_Uganda) --doo:headquarter--> Kampala (dor:Kampala)
+      - Simon_Kuper (dor:Simon_Kuper) --doo:birthPlace--> Kampala (dor:Kampala)
+      - Adam_Kuper (dor:Adam_Kuper) --doo:child--> Simon_Kuper (dor:Simon_Kuper)
+  '6':
+    attributes:
+      Kampala: (Apr rain mm^='169.3')
+    relationships:
+      - SEE_TV (dor:SEE_TV) --doo:country--> Uganda (dor:Uganda)
+      - SEE_TV (dor:SEE_TV) --doo:headquarter--> Kampala (dor:Kampala)
+      - Simon_Kuper (dor:Simon_Kuper) --doo:birthPlace--> Kampala (dor:Kampala)
+      - Adam_Kuper (dor:Adam_Kuper) --doo:child--> Simon_Kuper (dor:Simon_Kuper)
+  '7':
+    attributes:
+      Nashville,_Tennessee: (named for^='http://dbpedia.org/resource/Francis_Nash')
+    relationships:
+      - Fox_Sports_Tennessee (dor:Fox_Sports_Tennessee) --doo:country--> United_States (dor:United_States)
+      - Fox_Sports_Tennessee (dor:Fox_Sports_Tennessee) --doo:headquarter--> Nashville,_Tennessee (<http://dbpedia.org/resource/Nashville,_Tennessee>)
+      - Karenna_Gore (dor:Karenna_Gore) --doo:birthPlace--> Nashville,_Tennessee (<http://dbpedia.org/resource/Nashville,_Tennessee>)
+      - Al_Gore (dor:Al_Gore) --doo:child--> Karenna_Gore (dor:Karenna_Gore)
+  '8':
+    attributes: {}
+    relationships:
+      - NRB_TV (dor:NRB_TV) --doo:country--> United_States (dor:United_States)
+      - NRB_TV (dor:NRB_TV) --doo:headquarter--> Nashville,_Tennessee (<http://dbpedia.org/resource/Nashville,_Tennessee>)
+      - Karenna_Gore (dor:Karenna_Gore) --doo:birthPlace--> Nashville,_Tennessee (<http://dbpedia.org/resource/Nashville,_Tennessee>)
+      - Al_Gore (dor:Al_Gore) --doo:child--> Karenna_Gore (dor:Karenna_Gore)
+  '9':
+    attributes: {}
+    relationships:
+      - Argent_(TV_channel) (<http://dbpedia.org/resource/Argent_(TV_channel)>) --doo:country--> Canada (dor:Canada)
+      - Argent_(TV_channel) (<http://dbpedia.org/resource/Argent_(TV_channel)>) --doo:headquarter--> Montreal (dor:Montreal)
+      - Nora_Gold (dor:Nora_Gold) --doo:birthPlace--> Montreal (dor:Montreal)
+      - Alan_B._Gold (dor:Alan_B._Gold) --doo:child--> Nora_Gold (dor:Nora_Gold)
+  '10':
+    attributes: {}
+    relationships:
+      - Argent_(TV_channel) (<http://dbpedia.org/resource/Argent_(TV_channel)>) --doo:country--> Canada (dor:Canada)
+      - Argent_(TV_channel) (<http://dbpedia.org/resource/Argent_(TV_channel)>) --doo:headquarter--> Quebec (dor:Quebec)
+      - Nora_Gold (dor:Nora_Gold) --doo:birthPlace--> Quebec (dor:Quebec)
+      - Alan_B._Gold (dor:Alan_B._Gold) --doo:child--> Nora_Gold (dor:Nora_Gold)
+attributes:
+  person: --id^ (dop:id)--> int | --relation^ (doo:relation)--> Resource | --deathPlace (dop:deathPlace)--> langString
+  writer: --bgcolor^ (dop:bgcolor)--> langString | --1a^ (dop:1a)--> langString | --c^ (dop:c)--> langString
+  Location: --Apr low F^ (dop:aprLowF)--> int | --area^ (dop:area)--> hectare | --leader^ (dop:leader)--> Resource | --builder^ (dop:builder)--> langString | --1p^ (dop:1p)--> int
+  settlement: --named for^ (dop:namedFor)--> langString | --Apr rain mm^ (dop:aprRainMm)--> int
+subgraph_id: 615
+relationships:
+  - television station --doo:country--> Location
+  - television station --doo:headquarter--> settlement
+  - writer --doo:birthPlace--> settlement
+  - person --doo:child--> writer

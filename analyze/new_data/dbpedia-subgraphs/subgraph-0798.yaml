@@ -1,0 +1,134 @@
+types:
+  soccer club: doo:SoccerClub
+  soccer league: doo:SoccerLeague
+  soccer manager: doo:SoccerManager
+  soccer tournoment: doo:SoccerTournament
+  soccer club season: doo:SoccerClubSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwors: http://www.w3.org/2000/01/rdf-schema#
+instances:
+  '1':
+    attributes:
+      George_Ramsay: (birth date^='1855-03-01')
+      1896–97_FA_Cup: (Link from a Wikipage to an external page^='http://www.rsssf.com/tablese/engcup1898.html')
+      Aston_Villa_F.C.: '(has abstract^=''«А́стон Ви́лла» (полное название — Футбольный клуб «Астон Вилла», англ. Aston Villa Football Club, английское произношение: [''''æstən ˈvɪlə ''''futbɔ:l klʌb]) — английский профессиональный футбольный клуб ...'', Wikipage page ID^=''42173'')'
+      1896–97_Aston_Villa_F.C._season: (league^='http://dbpedia.org/resource/Football_League_First_Division')
+    relationships:
+      - 1896–97_Aston_Villa_F.C._season (<http://dbpedia.org/resource/1896–97_Aston_Villa_F.C._season>) --dop:club--> Aston_Villa_F.C. (<http://dbpedia.org/resource/Aston_Villa_F.C.>)
+      - 1896–97_Aston_Villa_F.C._season (<http://dbpedia.org/resource/1896–97_Aston_Villa_F.C._season>) --wwors:seeAlso--> 1896–97_FA_Cup (<http://dbpedia.org/resource/1896–97_FA_Cup>)
+      - 1896–97_Aston_Villa_F.C._season (<http://dbpedia.org/resource/1896–97_Aston_Villa_F.C._season>) --doo:league--> Football_League_First_Division (dor:Football_League_First_Division)
+      - 1896–97_Aston_Villa_F.C._season (<http://dbpedia.org/resource/1896–97_Aston_Villa_F.C._season>) --doo:manager--> George_Ramsay (dor:George_Ramsay)
+  '2':
+    attributes:
+      Jimmy_McIntyre: (birth date^='1881-10-31', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-soccer_player-noun-1')
+      1920–21_FA_Cup: (Link from a Wikipage to an external page^='http://www.rsssf.com/tablese/engcup1921.html')
+      Southampton_F.C.: '(has abstract^=''«Саутге́мптон» (полное название — Футбольный клуб «Саутгемптон», англ. Southampton Football Club; английское произношение: [saʊθˈhæmptən ''''futbɔ:l klʌb]) — английский профессиональный футбольный клуб и...'', Wikipage page ID^=''81576'')'
+      1920–21_Southampton_F.C._season: (location^='http://dbpedia.org/resource/Aberdare', league^='http://dbpedia.org/resource/Football_League_Third_Division')
+    relationships:
+      - 1920–21_Southampton_F.C._season (<http://dbpedia.org/resource/1920–21_Southampton_F.C._season>) --dop:club--> Southampton_F.C. (<http://dbpedia.org/resource/Southampton_F.C.>)
+      - 1920–21_Southampton_F.C._season (<http://dbpedia.org/resource/1920–21_Southampton_F.C._season>) --wwors:seeAlso--> 1920–21_FA_Cup (<http://dbpedia.org/resource/1920–21_FA_Cup>)
+      - 1920–21_Southampton_F.C._season (<http://dbpedia.org/resource/1920–21_Southampton_F.C._season>) --doo:league--> Football_League_Third_Division (dor:Football_League_Third_Division)
+      - 1920–21_Southampton_F.C._season (<http://dbpedia.org/resource/1920–21_Southampton_F.C._season>) --doo:manager--> Jimmy_McIntyre (dor:Jimmy_McIntyre)
+  '3':
+    attributes:
+      Jimmy_McIntyre: (birth date^='1881-10-31', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-soccer_player-noun-1')
+      1921–22_FA_Cup: (Link from a Wikipage to an external page^='http://www.rsssf.com/tablese/engcup1922.html')
+      Southampton_F.C.: '(has abstract^=''«Саутге́мптон» (полное название — Футбольный клуб «Саутгемптон», англ. Southampton Football Club; английское произношение: [saʊθˈhæmptən ''''futbɔ:l klʌb]) — английский профессиональный футбольный клуб и...'', Wikipage page ID^=''81576'')'
+      1921–22_Southampton_F.C._season: (location^='http://dbpedia.org/resource/Aberdare', league^='http://dbpedia.org/resource/Football_League_Third_Division_South')
+    relationships:
+      - 1921–22_Southampton_F.C._season (<http://dbpedia.org/resource/1921–22_Southampton_F.C._season>) --dop:club--> Southampton_F.C. (<http://dbpedia.org/resource/Southampton_F.C.>)
+      - 1921–22_Southampton_F.C._season (<http://dbpedia.org/resource/1921–22_Southampton_F.C._season>) --wwors:seeAlso--> 1921–22_FA_Cup (<http://dbpedia.org/resource/1921–22_FA_Cup>)
+      - 1921–22_Southampton_F.C._season (<http://dbpedia.org/resource/1921–22_Southampton_F.C._season>) --doo:league--> Football_League_Third_Division_South (dor:Football_League_Third_Division_South)
+      - 1921–22_Southampton_F.C._season (<http://dbpedia.org/resource/1921–22_Southampton_F.C._season>) --doo:manager--> Jimmy_McIntyre (dor:Jimmy_McIntyre)
+  '4':
+    attributes:
+      Nelson_F.C.: (has abstract^='«Нельсон» (англ. Nelson F.C.) — англійський футбольний клуб з Нельсона, графство Ланкашир. Заснований 23 жовтня 1882.', Wikipage page ID^='2205875')
+      1922–23_FA_Cup: (Link from a Wikipage to an external page^='http://www.rsssf.com/tablese/engcup1923.html')
+      1922–23_Nelson_F.C._season: (league^='http://dbpedia.org/resource/Football_League_Third_Division_North')
+    relationships:
+      - 1922–23_Nelson_F.C._season (<http://dbpedia.org/resource/1922–23_Nelson_F.C._season>) --dop:club--> Nelson_F.C. (<http://dbpedia.org/resource/Nelson_F.C.>)
+      - 1922–23_Nelson_F.C._season (<http://dbpedia.org/resource/1922–23_Nelson_F.C._season>) --wwors:seeAlso--> 1922–23_FA_Cup (<http://dbpedia.org/resource/1922–23_FA_Cup>)
+      - 1922–23_Nelson_F.C._season (<http://dbpedia.org/resource/1922–23_Nelson_F.C._season>) --doo:league--> Football_League_Third_Division_North (dor:Football_League_Third_Division_North)
+      - 1922–23_Nelson_F.C._season (<http://dbpedia.org/resource/1922–23_Nelson_F.C._season>) --doo:manager--> David_Wilson_(footballer_born_1884) (<http://dbpedia.org/resource/David_Wilson_(footballer_born_1884)>)
+  '5':
+    attributes:
+      Jimmy_McIntyre: (birth date^='1881-10-31', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-soccer_player-noun-1')
+      1922–23_FA_Cup: (Link from a Wikipage to an external page^='http://www.rsssf.com/tablese/engcup1923.html')
+      Southampton_F.C.: '(has abstract^=''«Саутге́мптон» (полное название — Футбольный клуб «Саутгемптон», англ. Southampton Football Club; английское произношение: [saʊθˈhæmptən ''''futbɔ:l klʌb]) — английский профессиональный футбольный клуб и...'', Wikipage page ID^=''81576'')'
+      1922–23_Southampton_F.C._season: (location^='http://dbpedia.org/resource/Barnsley', league^='http://dbpedia.org/resource/Football_League_Second_Division')
+    relationships:
+      - 1922–23_Southampton_F.C._season (<http://dbpedia.org/resource/1922–23_Southampton_F.C._season>) --dop:club--> Southampton_F.C. (<http://dbpedia.org/resource/Southampton_F.C.>)
+      - 1922–23_Southampton_F.C._season (<http://dbpedia.org/resource/1922–23_Southampton_F.C._season>) --wwors:seeAlso--> 1922–23_FA_Cup (<http://dbpedia.org/resource/1922–23_FA_Cup>)
+      - 1922–23_Southampton_F.C._season (<http://dbpedia.org/resource/1922–23_Southampton_F.C._season>) --doo:league--> Football_League_Second_Division (dor:Football_League_Second_Division)
+      - 1922–23_Southampton_F.C._season (<http://dbpedia.org/resource/1922–23_Southampton_F.C._season>) --doo:manager--> Jimmy_McIntyre (dor:Jimmy_McIntyre)
+  '6':
+    attributes:
+      Nelson_F.C.: (has abstract^='«Нельсон» (англ. Nelson F.C.) — англійський футбольний клуб з Нельсона, графство Ланкашир. Заснований 23 жовтня 1882.', Wikipage page ID^='2205875')
+      1924–25_FA_Cup: (Link from a Wikipage to an external page^='http://www.rsssf.com/tablese/engcup1925.html')
+      1924–25_Nelson_F.C._season: (league^='http://dbpedia.org/resource/Football_League_Third_Division_North')
+    relationships:
+      - 1924–25_Nelson_F.C._season (<http://dbpedia.org/resource/1924–25_Nelson_F.C._season>) --dop:club--> Nelson_F.C. (<http://dbpedia.org/resource/Nelson_F.C.>)
+      - 1924–25_Nelson_F.C._season (<http://dbpedia.org/resource/1924–25_Nelson_F.C._season>) --wwors:seeAlso--> 1924–25_FA_Cup (<http://dbpedia.org/resource/1924–25_FA_Cup>)
+      - 1924–25_Nelson_F.C._season (<http://dbpedia.org/resource/1924–25_Nelson_F.C._season>) --doo:league--> Football_League_Third_Division_North (dor:Football_League_Third_Division_North)
+      - 1924–25_Nelson_F.C._season (<http://dbpedia.org/resource/1924–25_Nelson_F.C._season>) --doo:manager--> David_Wilson_(footballer_born_1884) (<http://dbpedia.org/resource/David_Wilson_(footballer_born_1884)>)
+  '7':
+    attributes:
+      1938–39_FA_Cup: (Link from a Wikipage to an external page^='http://www.rsssf.com/tablese/engcup1939.html')
+      Frank_Buckley_(footballer): (birth date^='1882-10-03', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-soccer_player-noun-1')
+      Wolverhampton_Wanderers_F.C.: (has abstract^='«Вулверге́мптон Во́ндерерз» (англ. Wolverhampton Wanderers Football Club) — професіональний англійський футбольний клуб з міста Вулвергемптон. Клуб засновано у 1877 році учнями школи Сент-Лакс, на чес...', Wikipage page ID^='217730')
+      1938–39_Wolverhampton_Wanderers_F.C._season: (location^='http://dbpedia.org/resource/London', league^='http://dbpedia.org/resource/Football_League_First_Division')
+    relationships:
+      - 1938–39_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1938–39_Wolverhampton_Wanderers_F.C._season>) --dop:club--> Wolverhampton_Wanderers_F.C. (<http://dbpedia.org/resource/Wolverhampton_Wanderers_F.C.>)
+      - 1938–39_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1938–39_Wolverhampton_Wanderers_F.C._season>) --wwors:seeAlso--> 1938–39_FA_Cup (<http://dbpedia.org/resource/1938–39_FA_Cup>)
+      - 1938–39_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1938–39_Wolverhampton_Wanderers_F.C._season>) --doo:league--> Football_League_First_Division (dor:Football_League_First_Division)
+      - 1938–39_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1938–39_Wolverhampton_Wanderers_F.C._season>) --doo:manager--> Frank_Buckley_(footballer) (<http://dbpedia.org/resource/Frank_Buckley_(footballer)>)
+  '8':
+    attributes:
+      Stan_Cullis: (birth date^='1916-10-25', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-soccer_player-noun-1')
+      1953–54_FA_Cup: (Link from a Wikipage to an external page^='http://www.thefa.com/TheFACup/TheFACup/Archive/')
+      Wolverhampton_Wanderers_F.C.: (has abstract^='«Вулверге́мптон Во́ндерерз» (англ. Wolverhampton Wanderers Football Club) — професіональний англійський футбольний клуб з міста Вулвергемптон. Клуб засновано у 1877 році учнями школи Сент-Лакс, на чес...', Wikipage page ID^='217730')
+      1953–54_Wolverhampton_Wanderers_F.C._season: (location^='http://dbpedia.org/resource/Birmingham', league^='http://dbpedia.org/resource/Football_League_First_Division')
+    relationships:
+      - 1953–54_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1953–54_Wolverhampton_Wanderers_F.C._season>) --dop:club--> Wolverhampton_Wanderers_F.C. (<http://dbpedia.org/resource/Wolverhampton_Wanderers_F.C.>)
+      - 1953–54_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1953–54_Wolverhampton_Wanderers_F.C._season>) --wwors:seeAlso--> 1953–54_FA_Cup (<http://dbpedia.org/resource/1953–54_FA_Cup>)
+      - 1953–54_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1953–54_Wolverhampton_Wanderers_F.C._season>) --doo:league--> Football_League_First_Division (dor:Football_League_First_Division)
+      - 1953–54_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1953–54_Wolverhampton_Wanderers_F.C._season>) --doo:manager--> Stan_Cullis (dor:Stan_Cullis)
+  '9':
+    attributes:
+      Graham_Turner: (birth date^='1947-10-05', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-soccer_player-noun-1')
+      1990–91_FA_Cup: (Link from a Wikipage to an external page^='http://news.bbc.co.uk/sport1/hi/football/fa_cup/default.stm')
+      Wolverhampton_Wanderers_F.C.: (has abstract^='«Вулверге́мптон Во́ндерерз» (англ. Wolverhampton Wanderers Football Club) — професіональний англійський футбольний клуб з міста Вулвергемптон. Клуб засновано у 1877 році учнями школи Сент-Лакс, на чес...', Wikipage page ID^='217730')
+      1990–91_Wolverhampton_Wanderers_F.C._season: (location^='http://dbpedia.org/resource/Barnsley', league^='http://dbpedia.org/resource/Football_League_Second_Division')
+    relationships:
+      - 1990–91_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1990–91_Wolverhampton_Wanderers_F.C._season>) --dop:club--> Wolverhampton_Wanderers_F.C. (<http://dbpedia.org/resource/Wolverhampton_Wanderers_F.C.>)
+      - 1990–91_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1990–91_Wolverhampton_Wanderers_F.C._season>) --wwors:seeAlso--> 1990–91_FA_Cup (<http://dbpedia.org/resource/1990–91_FA_Cup>)
+      - 1990–91_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1990–91_Wolverhampton_Wanderers_F.C._season>) --doo:league--> Football_League_Second_Division (dor:Football_League_Second_Division)
+      - 1990–91_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1990–91_Wolverhampton_Wanderers_F.C._season>) --doo:manager--> Graham_Turner (dor:Graham_Turner)
+  '10':
+    attributes:
+      FC_Dynamo_Kyiv: (has abstract^='«Динамо-НПУ» (раніше просто «Динамо») — жіноча баскетбольна команда з Києва, заснована 1929 року. Чотириразовий чемпіон СРСР (1949, 1990, 1991, 1992). Фіналіст Кубка СРСР 1949 і 1978. Володар Кубка Ро...', Wikipage page ID^='889025')
+      Anatoliy_Puzach: (birth date^='1941-06-03')
+      1991–92_European_Cup: (Link from a Wikipage to an external page^='http://www.rsssf.com/ec/ecomp.html')
+      Ukrainian_Premier_League: (width^='122')
+      1992_FC_Dynamo_Kyiv_season: (c^='4', location^='http://dbpedia.org/resource/Barcelona', league^='http://dbpedia.org/resource/Ukrainian_Premier_League')
+    relationships:
+      - 1992_FC_Dynamo_Kyiv_season (dor:1992_FC_Dynamo_Kyiv_season) --dop:club--> FC_Dynamo_Kyiv (dor:FC_Dynamo_Kyiv)
+      - 1992_FC_Dynamo_Kyiv_season (dor:1992_FC_Dynamo_Kyiv_season) --wwors:seeAlso--> 1991–92_European_Cup (<http://dbpedia.org/resource/1991–92_European_Cup>)
+      - 1992_FC_Dynamo_Kyiv_season (dor:1992_FC_Dynamo_Kyiv_season) --doo:league--> Ukrainian_Premier_League (dor:Ukrainian_Premier_League)
+      - 1992_FC_Dynamo_Kyiv_season (dor:1992_FC_Dynamo_Kyiv_season) --doo:manager--> Anatoliy_Puzach (dor:Anatoliy_Puzach)
+attributes:
+  soccer club: --has abstract^ (doo:abstract)--> langString | --2ndRegional name^ (dop:2ndregionalName)--> Resource | --Wikipage page ID^ (doo:wikiPageID)--> int | --d^ (dop:d)--> int
+  soccer league: --width^ (dop:width)--> int
+  soccer manager: --birth date^ (doo:birthDate)--> date | --wordnet_type (dop:wordnet_type)--> Resource
+  soccer tournoment: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  soccer club season: --c^ (dop:c)--> Resource | --location^ (dop:location)--> Resource | --league^ (dop:league)--> int
+subgraph_id: 798
+relationships:
+  - soccer club season --dop:club--> soccer club
+  - soccer club season --wwors:seeAlso--> soccer tournoment
+  - soccer club season --doo:league--> soccer league
+  - soccer club season --doo:manager--> soccer manager

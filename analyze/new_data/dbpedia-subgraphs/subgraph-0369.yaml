@@ -1,0 +1,101 @@
+types:
+  city: doo:City
+  athlete: doo:Athlete
+  Location: doo:Location
+  american football Team: doo:AmericanFootballTeam
+  american football player: doo:AmericanFootballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      California: (caption^='An ad to sail to California,')
+    relationships:
+      - Aaron_Cox (dor:Aaron_Cox) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - Anastasia_Rybka__Anastasia_Rybka__1 (dor:Anastasia_Rybka__Anastasia_Rybka__1) --doo:residence--> Los_Angeles (dor:Los_Angeles)
+      - Aaron_Cox (dor:Aaron_Cox) --dop:birthPlace--> California (dor:California)
+      - Aaron_Cox (dor:Aaron_Cox) --doo:formerTeam--> Indianapolis_Colts (dor:Indianapolis_Colts)
+  '2':
+    attributes:
+      California: (caption^='An ad to sail to California,')
+    relationships:
+      - Aaron_Cox (dor:Aaron_Cox) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - Anastasia_Rybka__Anastasia_Rybka__1 (dor:Anastasia_Rybka__Anastasia_Rybka__1) --doo:residence--> Los_Angeles (dor:Los_Angeles)
+      - Aaron_Cox (dor:Aaron_Cox) --dop:birthPlace--> California (dor:California)
+      - Aaron_Cox (dor:Aaron_Cox) --doo:formerTeam--> Los_Angeles_Rams (dor:Los_Angeles_Rams)
+  '3':
+    attributes:
+      California: (caption^='An ad to sail to California,')
+    relationships:
+      - Aaron_Cox (dor:Aaron_Cox) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - Anne_White (dor:Anne_White) --doo:residence--> Los_Angeles (dor:Los_Angeles)
+      - Aaron_Cox (dor:Aaron_Cox) --dop:birthPlace--> California (dor:California)
+      - Aaron_Cox (dor:Aaron_Cox) --doo:formerTeam--> Indianapolis_Colts (dor:Indianapolis_Colts)
+  '4':
+    attributes: {}
+    relationships:
+      - Aaron_Kyle (dor:Aaron_Kyle) --dop:birthPlace--> Detroit (dor:Detroit)
+      - Amy_Frazier (dor:Amy_Frazier) --doo:residence--> Detroit (dor:Detroit)
+      - Aaron_Kyle (dor:Aaron_Kyle) --dop:birthPlace--> Michigan (dor:Michigan)
+      - Aaron_Kyle (dor:Aaron_Kyle) --doo:formerTeam--> Dallas_Cowboys (dor:Dallas_Cowboys)
+  '5':
+    attributes: {}
+    relationships:
+      - Aaron_Kyle (dor:Aaron_Kyle) --dop:birthPlace--> Detroit (dor:Detroit)
+      - Amy_Frazier (dor:Amy_Frazier) --doo:residence--> Detroit (dor:Detroit)
+      - Aaron_Kyle (dor:Aaron_Kyle) --dop:birthPlace--> Michigan (dor:Michigan)
+      - Aaron_Kyle (dor:Aaron_Kyle) --doo:formerTeam--> Denver_Broncos (dor:Denver_Broncos)
+  '6':
+    attributes: {}
+    relationships:
+      - Aaron_Kyle (dor:Aaron_Kyle) --dop:birthPlace--> Detroit (dor:Detroit)
+      - Jeremy_Abbott (dor:Jeremy_Abbott) --doo:residence--> Detroit (dor:Detroit)
+      - Aaron_Kyle (dor:Aaron_Kyle) --dop:birthPlace--> Michigan (dor:Michigan)
+      - Aaron_Kyle (dor:Aaron_Kyle) --doo:formerTeam--> Dallas_Cowboys (dor:Dallas_Cowboys)
+  '7':
+    attributes:
+      Australia: (caption^='Anthony Albanese, Prime Minister of Australia')
+      Melbourne: (Aug low C^='6')
+    relationships:
+      - Adam_Gotsis (dor:Adam_Gotsis) --dop:birthPlace--> Melbourne (dor:Melbourne)
+      - Alana_Parnaby (dor:Alana_Parnaby) --doo:residence--> Melbourne (dor:Melbourne)
+      - Adam_Gotsis (dor:Adam_Gotsis) --dop:birthPlace--> Australia (dor:Australia)
+      - Adam_Gotsis (dor:Adam_Gotsis) --doo:formerTeam--> Denver_Broncos (dor:Denver_Broncos)
+  '8':
+    attributes:
+      Australia: (caption^='Anthony Albanese, Prime Minister of Australia')
+      Melbourne: (Aug low C^='6')
+    relationships:
+      - Adam_Gotsis (dor:Adam_Gotsis) --dop:birthPlace--> Melbourne (dor:Melbourne)
+      - Alana_Parnaby (dor:Alana_Parnaby) --doo:residence--> Melbourne (dor:Melbourne)
+      - Adam_Gotsis (dor:Adam_Gotsis) --dop:birthPlace--> Australia (dor:Australia)
+      - Adam_Gotsis (dor:Adam_Gotsis) --doo:formerTeam--> Jacksonville_Jaguars (dor:Jacksonville_Jaguars)
+  '9':
+    attributes:
+      Australia: (caption^='Anthony Albanese, Prime Minister of Australia')
+      Melbourne: (Aug low C^='6')
+    relationships:
+      - Adam_Gotsis (dor:Adam_Gotsis) --dop:birthPlace--> Melbourne (dor:Melbourne)
+      - Alicia_Molik (dor:Alicia_Molik) --doo:residence--> Melbourne (dor:Melbourne)
+      - Adam_Gotsis (dor:Adam_Gotsis) --dop:birthPlace--> Australia (dor:Australia)
+      - Adam_Gotsis (dor:Adam_Gotsis) --doo:formerTeam--> Denver_Broncos (dor:Denver_Broncos)
+  '10':
+    attributes:
+      New_Orleans: (Apr record high F^='92')
+    relationships:
+      - Adrian_Hardy (dor:Adrian_Hardy) --dop:birthPlace--> New_Orleans (dor:New_Orleans)
+      - Takayuki_Mikami (dor:Takayuki_Mikami) --doo:residence--> New_Orleans (dor:New_Orleans)
+      - Adrian_Hardy (dor:Adrian_Hardy) --dop:birthPlace--> Louisiana (dor:Louisiana)
+      - Adrian_Hardy (dor:Adrian_Hardy) --doo:formerTeam--> Cincinnati_Bengals (dor:Cincinnati_Bengals)
+attributes:
+  city: --Aug low C^ (dop:augLowC)--> double | --Apr record high F^ (dop:aprRecordHighF)--> int
+  Location: --caption^ (dop:caption)--> langString | --Apr rain mm^ (dop:aprRainMm)--> double | --subdivision^ (doo:subdivision)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource | --age^ (dop:age)--> Resource | --length m^ (dop:lengthM)--> int | --type^ (doo:type)--> Resource | --id (dop:id)--> int
+subgraph_id: 369
+relationships:
+  - american football player --dop:birthPlace--> city
+  - athlete --doo:residence--> city
+  - american football player --dop:birthPlace--> Location
+  - american football player --doo:formerTeam--> american football Team

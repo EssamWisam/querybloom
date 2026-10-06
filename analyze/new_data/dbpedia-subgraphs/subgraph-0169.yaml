@@ -1,0 +1,93 @@
+types:
+  horse: doo:Horse
+  horse race: doo:HorseRace
+  racecourse: doo:Racecourse
+  horse trainer: doo:HorseTrainer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A_Bit_O'Gold: (owner^='http://dbpedia.org/resource/Catherine_Day_Phillips', country^='http://dbpedia.org/resource/Canada', award^='http://dbpedia.org/resource/Canadian_Horse_of_the_Year', awards^='http://dbpedia.org/resource/Canadian_Horse_of_the_Year', owner^='http://dbpedia.org/resource/Catherine_Day_Phillips')
+    relationships:
+      - Breeders'_Stakes (<http://dbpedia.org/resource/Breeders'_Stakes>) --doo:location--> Woodbine_Racetrack (dor:Woodbine_Racetrack)
+      - Barry_Littlefield (dor:Barry_Littlefield) --doo:race--> Breeders'_Stakes (<http://dbpedia.org/resource/Breeders'_Stakes>)
+      - A_Bit_O'Gold (<http://dbpedia.org/resource/A_Bit_O'Gold>) --doo:race--> Breeders'_Stakes (<http://dbpedia.org/resource/Breeders'_Stakes>)
+  '2':
+    attributes:
+      A_Bit_O'Gold: (owner^='http://dbpedia.org/resource/Catherine_Day_Phillips', country^='http://dbpedia.org/resource/Canada', award^='http://dbpedia.org/resource/Canadian_Horse_of_the_Year', awards^='http://dbpedia.org/resource/Canadian_Horse_of_the_Year', owner^='http://dbpedia.org/resource/Catherine_Day_Phillips')
+    relationships:
+      - Breeders'_Stakes (<http://dbpedia.org/resource/Breeders'_Stakes>) --doo:location--> Woodbine_Racetrack (dor:Woodbine_Racetrack)
+      - Gil_Rowntree (dor:Gil_Rowntree) --doo:race--> Breeders'_Stakes (<http://dbpedia.org/resource/Breeders'_Stakes>)
+      - A_Bit_O'Gold (<http://dbpedia.org/resource/A_Bit_O'Gold>) --doo:race--> Breeders'_Stakes (<http://dbpedia.org/resource/Breeders'_Stakes>)
+  '3':
+    attributes:
+      A_Bit_O'Gold: (owner^='http://dbpedia.org/resource/Catherine_Day_Phillips', country^='http://dbpedia.org/resource/Canada', award^='http://dbpedia.org/resource/Canadian_Horse_of_the_Year', awards^='http://dbpedia.org/resource/Canadian_Horse_of_the_Year', owner^='http://dbpedia.org/resource/Catherine_Day_Phillips')
+    relationships:
+      - Breeders'_Stakes (<http://dbpedia.org/resource/Breeders'_Stakes>) --doo:location--> Woodbine_Racetrack (dor:Woodbine_Racetrack)
+      - H._Guy_Bedwell (dor:H._Guy_Bedwell) --doo:race--> Breeders'_Stakes (<http://dbpedia.org/resource/Breeders'_Stakes>)
+      - A_Bit_O'Gold (<http://dbpedia.org/resource/A_Bit_O'Gold>) --doo:race--> Breeders'_Stakes (<http://dbpedia.org/resource/Breeders'_Stakes>)
+  '4':
+    attributes:
+      Canadian_Derby: (distance^='miles', class^='Grade III', track^='left-handed')
+      A_Fleet's_Dancer: (owner^='Cam Allard', country^='http://dbpedia.org/resource/Canada', award^='http://dbpedia.org/resource/Sovereign_Award_for_Champion_Older_Male_Horse', awards^='http://dbpedia.org/resource/Sovereign_Award_for_Champion_Older_Male_Horse')
+    relationships:
+      - Canadian_Derby (dor:Canadian_Derby) --doo:location--> Century_Mile_Racetrack_and_Casino (dor:Century_Mile_Racetrack_and_Casino)
+      - David_Cotey (dor:David_Cotey) --doo:race--> Canadian_Derby (dor:Canadian_Derby)
+      - A_Fleet's_Dancer (<http://dbpedia.org/resource/A_Fleet's_Dancer>) --doo:race--> Canadian_Derby (dor:Canadian_Derby)
+  '5':
+    attributes:
+      Canadian_Derby: (distance^='miles', class^='Grade III', track^='left-handed')
+      A_Fleet's_Dancer: (owner^='Cam Allard', country^='http://dbpedia.org/resource/Canada', award^='http://dbpedia.org/resource/Sovereign_Award_for_Champion_Older_Male_Horse', awards^='http://dbpedia.org/resource/Sovereign_Award_for_Champion_Older_Male_Horse')
+    relationships:
+      - Canadian_Derby (dor:Canadian_Derby) --doo:location--> Northlands_Park (dor:Northlands_Park)
+      - David_Cotey (dor:David_Cotey) --doo:race--> Canadian_Derby (dor:Canadian_Derby)
+      - A_Fleet's_Dancer (<http://dbpedia.org/resource/A_Fleet's_Dancer>) --doo:race--> Canadian_Derby (dor:Canadian_Derby)
+  '6':
+    attributes:
+      Canadian_Derby: (distance^='miles', class^='Grade III', track^='left-handed')
+      A_Fleet's_Dancer: (owner^='Cam Allard', country^='http://dbpedia.org/resource/Canada', award^='http://dbpedia.org/resource/Sovereign_Award_for_Champion_Older_Male_Horse', awards^='http://dbpedia.org/resource/Sovereign_Award_for_Champion_Older_Male_Horse')
+    relationships:
+      - Canadian_Derby (dor:Canadian_Derby) --doo:location--> Polo_Park_Racetrack (dor:Polo_Park_Racetrack)
+      - David_Cotey (dor:David_Cotey) --doo:race--> Canadian_Derby (dor:Canadian_Derby)
+      - A_Fleet's_Dancer (<http://dbpedia.org/resource/A_Fleet's_Dancer>) --doo:race--> Canadian_Derby (dor:Canadian_Derby)
+  '7':
+    attributes:
+      Cinema_Handicap: (distance^='miles', class^='Ungraded', track^='Left-handed')
+    relationships:
+      - Cinema_Handicap (dor:Cinema_Handicap) --doo:location--> Santa_Anita_Park (dor:Santa_Anita_Park)
+      - Laura_de_Seroux (dor:Laura_de_Seroux) --doo:race--> Cinema_Handicap (dor:Cinema_Handicap)
+      - A_Gleam (dor:A_Gleam) --doo:race--> Cinema_Handicap (dor:Cinema_Handicap)
+  '8':
+    attributes:
+      Cinema_Handicap: (distance^='miles', class^='Ungraded', track^='Left-handed')
+    relationships:
+      - Cinema_Handicap (dor:Cinema_Handicap) --doo:location--> Santa_Anita_Park (dor:Santa_Anita_Park)
+      - Warren_Stute (dor:Warren_Stute) --doo:race--> Cinema_Handicap (dor:Cinema_Handicap)
+      - A_Gleam (dor:A_Gleam) --doo:race--> Cinema_Handicap (dor:Cinema_Handicap)
+  '9':
+    attributes:
+      Hollywood_Derby: (distance^='miles', class^='Grade I', track^='left-handed')
+    relationships:
+      - Hollywood_Derby (dor:Hollywood_Derby) --doo:location--> Hollywood_Park_Racetrack (dor:Hollywood_Park_Racetrack)
+      - Angel_Penna_Sr. (<http://dbpedia.org/resource/Angel_Penna_Sr.>) --doo:race--> Hollywood_Derby (dor:Hollywood_Derby)
+      - A_Gleam (dor:A_Gleam) --doo:race--> Hollywood_Derby (dor:Hollywood_Derby)
+  '10':
+    attributes:
+      A_P_Valentine: (owner^='http://dbpedia.org/resource/Rick_Pitino', country^='http://dbpedia.org/resource/United_States', owner^='http://dbpedia.org/resource/Rick_Pitino')
+      Preakness_Stakes: (distance^='miles', class^='Grade I', track^='Left-handed')
+    relationships:
+      - Preakness_Stakes (dor:Preakness_Stakes) --doo:location--> Pimlico_Race_Course (dor:Pimlico_Race_Course)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:race--> Preakness_Stakes (dor:Preakness_Stakes)
+      - A_P_Valentine (dor:A_P_Valentine) --doo:race--> Preakness_Stakes (dor:Preakness_Stakes)
+attributes:
+  horse: --breeder^ (doo:breeder)--> Resource | --owner^ (dop:owner)--> int | --honours^ (doo:honours)--> Resource | --country^ (dop:country)--> langString | --award^ (doo:award)--> Resource | --awards^ (dop:awards)--> Resource | --owner^ (doo:owner)--> Resource
+  horse race: --distance^ (dop:distance)--> metre | --distance^ (dop:distance)--> second | --class^ (dop:class)--> langString | --track^ (dop:track)--> langString | --distance^ (dop:distance)--> mile
+subgraph_id: 169
+relationships:
+  - horse race --doo:location--> racecourse
+  - horse trainer --doo:race--> horse race
+  - horse --doo:race--> horse race

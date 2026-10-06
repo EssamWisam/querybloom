@@ -1,0 +1,121 @@
+types:
+  venue: doo:Venue
+  person: doo:Person
+  company: doo:Company
+  Location: doo:Location
+  body of water: doo:BodyOfWater
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Germany: (width^='132')
+      Barclays_Arena_(Hamburg): (former name^='Barclaycard arena (2015–2021)', cost ($)^='8.3E7')
+      Anschutz_Entertainment_Group: (has abstract^='A AEG é uma empresa americana, fundada em 2002, de esporte e entretenimento, subsidiária da criada por . É o maior proprietário mundial de equipes e eventos esportivos. Sob a AEG Presents marca, é a s...')
+    relationships:
+      - Barclays_Arena_(Hamburg) (<http://dbpedia.org/resource/Barclays_Arena_(Hamburg)>) --doo:location--> Germany (dor:Germany)
+      - Aalkistensee (dor:Aalkistensee) --doo:country--> Germany (dor:Germany)
+      - Barclays_Arena_(Hamburg) (<http://dbpedia.org/resource/Barclays_Arena_(Hamburg)>) --doo:owner--> Anschutz_Entertainment_Group (dor:Anschutz_Entertainment_Group)
+      - Anschutz_Entertainment_Group (dor:Anschutz_Entertainment_Group) --dop:founder--> Philip_Anschutz (dor:Philip_Anschutz)
+  '2':
+    attributes:
+      Bayer: (has abstract^='Bayer AG – niemieckie przedsiębiorstwo chemiczne i farmaceutyczne założone w 1863 roku przez Friedricha Bayera i . Początkowo siedzibą przedsiębiorstwa było Barmen (obecnie Wuppertal), a od 1912 jest ...', products^='')
+      Germany: (width^='132')
+    relationships:
+      - BayArena (dor:BayArena) --doo:location--> Germany (dor:Germany)
+      - Aalkistensee (dor:Aalkistensee) --doo:country--> Germany (dor:Germany)
+      - BayArena (dor:BayArena) --doo:owner--> Bayer (dor:Bayer)
+      - Bayer (dor:Bayer) --dop:founder--> Friedrich_Bayer (dor:Friedrich_Bayer)
+  '3':
+    attributes:
+      Germany: (width^='132')
+      Barclays_Arena_(Hamburg): (former name^='Barclaycard arena (2015–2021)', cost ($)^='8.3E7')
+      Anschutz_Entertainment_Group: (has abstract^='A AEG é uma empresa americana, fundada em 2002, de esporte e entretenimento, subsidiária da criada por . É o maior proprietário mundial de equipes e eventos esportivos. Sob a AEG Presents marca, é a s...')
+    relationships:
+      - Barclays_Arena_(Hamburg) (<http://dbpedia.org/resource/Barclays_Arena_(Hamburg)>) --doo:location--> Germany (dor:Germany)
+      - Abtsdorfer_See (dor:Abtsdorfer_See) --doo:country--> Germany (dor:Germany)
+      - Barclays_Arena_(Hamburg) (<http://dbpedia.org/resource/Barclays_Arena_(Hamburg)>) --doo:owner--> Anschutz_Entertainment_Group (dor:Anschutz_Entertainment_Group)
+      - Anschutz_Entertainment_Group (dor:Anschutz_Entertainment_Group) --dop:founder--> Philip_Anschutz (dor:Philip_Anschutz)
+  '4':
+    attributes:
+      Edward_Gaylord: (death place^='Oklahoma City, Oklahoma, United States')
+      Ryman_Auditorium: (former name^='Grand Ole Opry House (1943–1974)', cost ($)^='100000.0')
+      Ryman_Hospitality_Properties: '(has abstract^=''Ryman Hospitality Properties, Inc. (NYSE: RHP) is a hotel, resort, entertainment, and media company named after National Historic Landmark the Ryman Auditorium, built as a tabernacle by Captain Thomas...'')'
+    relationships:
+      - Ryman_Auditorium (dor:Ryman_Auditorium) --doo:location--> United_States (dor:United_States)
+      - Acascosa_Lake (dor:Acascosa_Lake) --doo:country--> United_States (dor:United_States)
+      - Ryman_Auditorium (dor:Ryman_Auditorium) --doo:owner--> Ryman_Hospitality_Properties (dor:Ryman_Hospitality_Properties)
+      - Ryman_Hospitality_Properties (dor:Ryman_Hospitality_Properties) --dop:founder--> Edward_Gaylord (dor:Edward_Gaylord)
+  '5':
+    attributes:
+      Edward_Gaylord: (death place^='Oklahoma City, Oklahoma, United States')
+      Ryman_Auditorium: (former name^='Grand Ole Opry House (1943–1974)', cost ($)^='100000.0')
+      Ryman_Hospitality_Properties: '(has abstract^=''Ryman Hospitality Properties, Inc. (NYSE: RHP) is a hotel, resort, entertainment, and media company named after National Historic Landmark the Ryman Auditorium, built as a tabernacle by Captain Thomas...'')'
+    relationships:
+      - Ryman_Auditorium (dor:Ryman_Auditorium) --doo:location--> United_States (dor:United_States)
+      - Accabonac_Harbor (dor:Accabonac_Harbor) --doo:country--> United_States (dor:United_States)
+      - Ryman_Auditorium (dor:Ryman_Auditorium) --doo:owner--> Ryman_Hospitality_Properties (dor:Ryman_Hospitality_Properties)
+      - Ryman_Hospitality_Properties (dor:Ryman_Hospitality_Properties) --dop:founder--> Edward_Gaylord (dor:Edward_Gaylord)
+  '6':
+    attributes:
+      Edward_Gaylord: (death place^='Oklahoma City, Oklahoma, United States')
+      Ryman_Auditorium: (former name^='Grand Ole Opry House (1943–1974)', cost ($)^='100000.0')
+      Ryman_Hospitality_Properties: '(has abstract^=''Ryman Hospitality Properties, Inc. (NYSE: RHP) is a hotel, resort, entertainment, and media company named after National Historic Landmark the Ryman Auditorium, built as a tabernacle by Captain Thomas...'')'
+    relationships:
+      - Ryman_Auditorium (dor:Ryman_Auditorium) --doo:location--> United_States (dor:United_States)
+      - Adirondack_Lake (dor:Adirondack_Lake) --doo:country--> United_States (dor:United_States)
+      - Ryman_Auditorium (dor:Ryman_Auditorium) --doo:owner--> Ryman_Hospitality_Properties (dor:Ryman_Hospitality_Properties)
+      - Ryman_Hospitality_Properties (dor:Ryman_Hospitality_Properties) --dop:founder--> Edward_Gaylord (dor:Edward_Gaylord)
+  '7':
+    attributes:
+      Toho: (has abstract^='( 동방 프로젝트에 대해서는 동방 프로젝트 문서를 참고하십시오.) 도호 주식회사, 또는 토호주식회사(東宝株式会社 (とうほうかぶしきがいしゃ) 도호카부시키가이샤[*], (도호/토호), 동보주식회사, Toho Co., Ltd.)는 영화·연극 제작 배급·흥행과 부동산업을 영위하는 일본의 미디어 기업으로, 한큐 한신 홀딩스 (한큐 전철, 한신 전기 철도), 과 함께...', products^='Video games')
+      Ichizō_Kobayashi: (death place^='Ikeda, Osaka, Japan')
+    relationships:
+      - Imperial_Theatre_(Japan) (<http://dbpedia.org/resource/Imperial_Theatre_(Japan)>) --doo:location--> Japan (dor:Japan)
+      - Akashi_Strait (dor:Akashi_Strait) --doo:country--> Japan (dor:Japan)
+      - Imperial_Theatre_(Japan) (<http://dbpedia.org/resource/Imperial_Theatre_(Japan)>) --doo:owner--> Toho (dor:Toho)
+      - Toho (dor:Toho) --dop:founder--> Ichizō_Kobayashi (<http://dbpedia.org/resource/Ichizō_Kobayashi>)
+  '8':
+    attributes:
+      Iran: (width^='220')
+      Ismail_I: (death place^='Near Tabriz, Safavid Iran', reason^='Persistent disruptive editing; requested at WP:RfPP')
+      Astan_Quds_Razavi: '(has abstract^=''Astan Quds Razavi (Persian: آستان قدس رضوی‎, romanized: Āstān-e Qods-e Razavi) is a bonyad based at Mashhad, Iran. It is the administrative organization which manages the Imam Reza shrine and various ...'')'
+      Imam_Reza_Stadium: (cost ($)^='8.0E7')
+    relationships:
+      - Imam_Reza_Stadium (dor:Imam_Reza_Stadium) --doo:location--> Iran (dor:Iran)
+      - Alma_Gol_Lake (dor:Alma_Gol_Lake) --doo:country--> Iran (dor:Iran)
+      - Imam_Reza_Stadium (dor:Imam_Reza_Stadium) --doo:owner--> Astan_Quds_Razavi (dor:Astan_Quds_Razavi)
+      - Astan_Quds_Razavi (dor:Astan_Quds_Razavi) --dop:founder--> Ismail_I (dor:Ismail_I)
+  '9':
+    attributes:
+      TV_Azteca: (has abstract^='«TV Azteca» (произношение — «ТВ Астека» — от испанского «ацтекское телевидение») — вторая по величине после телевизионной компании «Televisa» испаноязычная телекоммуникационная компания Мексики — круп...', products^='Television broadcasting, radio and multimedia')
+    relationships:
+      - Arena_Monterrey (dor:Arena_Monterrey) --doo:location--> Mexico (dor:Mexico)
+      - American_Mediterranean_Sea (dor:American_Mediterranean_Sea) --doo:country--> Mexico (dor:Mexico)
+      - Arena_Monterrey (dor:Arena_Monterrey) --doo:owner--> TV_Azteca (dor:TV_Azteca)
+      - TV_Azteca (dor:TV_Azteca) --dop:founder--> Ricardo_Salinas_Pliego (dor:Ricardo_Salinas_Pliego)
+  '10':
+    attributes:
+      China: (width^='115')
+      Las_Vegas_Sands: (has abstract^='Die Las Vegas Sands Corporation gehört zu den international führenden Entwicklern von multifunktionalen Resorts mit Sitz in Paradise, Nevada. Der Gesellschaft gehören unter anderem das Venetian Resort...', products^='Gambling, hotels, entertainment, casinos, resorts')
+      Sheldon_Adelson: (death place^='Malibu, California, U.S.')
+    relationships:
+      - Cotai_Arena (dor:Cotai_Arena) --doo:location--> China (dor:China)
+      - Ang_Laren_Lake (dor:Ang_Laren_Lake) --doo:country--> China (dor:China)
+      - Cotai_Arena (dor:Cotai_Arena) --doo:owner--> Las_Vegas_Sands (dor:Las_Vegas_Sands)
+      - Las_Vegas_Sands (dor:Las_Vegas_Sands) --dop:founder--> Sheldon_Adelson (dor:Sheldon_Adelson)
+attributes:
+  venue: --former name^ (doo:formerName)--> langString | --cost ($)^ (doo:cost)--> poundSterling
+  person: --employer^ (doo:employer)--> Resource | --b^ (dop:b)--> langString | --death place^ (dop:deathPlace)--> langString | --reason^ (dop:reason)--> langString
+  company: --has abstract^ (doo:abstract)--> langString | --products^ (dop:products)--> Resource | --differentFrom (wwoo:differentFrom)--> Resource
+  Location: --builder^ (dop:builder)--> langString | --building start date^ (doo:buildingStartDate)--> string | --mouth mountain^ (doo:mouthMountain)--> Resource | --width^ (dop:width)--> int
+subgraph_id: 623
+relationships:
+  - venue --doo:location--> Location
+  - body of water --doo:country--> Location
+  - venue --doo:owner--> company
+  - company --dop:founder--> person

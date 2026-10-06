@@ -1,0 +1,50 @@
+types:
+  park: doo:Park
+  athlete: doo:Athlete
+  musical: doo:Musical
+  musical artist: doo:MusicalArtist
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Yip_Harburg: (birth date^='1896-04-08')
+      New_York_(state): (subject='http://dbpedia.org/resource/Category:1788_establishments_in_the_United_States')
+    relationships:
+      - Yip_Harburg (dor:Yip_Harburg) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - '%22Yes_We_Can%22_Community_Center (<http://dbpedia.org/resource/%22Yes_We_Can%22_Community_Center>) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)'
+      - Finian's_Rainbow (<http://dbpedia.org/resource/Finian's_Rainbow>) --dop:lyrics--> Yip_Harburg (dor:Yip_Harburg)
+      - Anna_Földényi (<http://dbpedia.org/resource/Anna_Földényi>) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '2':
+    attributes:
+      Yip_Harburg: (birth date^='1896-04-08')
+      New_York_(state): (subject='http://dbpedia.org/resource/Category:1788_establishments_in_the_United_States')
+    relationships:
+      - Yip_Harburg (dor:Yip_Harburg) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Akron_Falls_Park (dor:Akron_Falls_Park) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Finian's_Rainbow (<http://dbpedia.org/resource/Finian's_Rainbow>) --dop:lyrics--> Yip_Harburg (dor:Yip_Harburg)
+      - Anna_Földényi (<http://dbpedia.org/resource/Anna_Földényi>) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '3':
+    attributes:
+      Yip_Harburg: (birth date^='1896-04-08')
+      New_York_(state): (subject='http://dbpedia.org/resource/Category:1788_establishments_in_the_United_States')
+    relationships:
+      - Yip_Harburg (dor:Yip_Harburg) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Allan_H._Treman_State_Marine_Park (dor:Allan_H._Treman_State_Marine_Park) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Finian's_Rainbow (<http://dbpedia.org/resource/Finian's_Rainbow>) --dop:lyrics--> Yip_Harburg (dor:Yip_Harburg)
+      - Anna_Földényi (<http://dbpedia.org/resource/Anna_Földényi>) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+attributes:
+  athlete: --caption^ (dop:caption)--> langString | --club^ (dop:club)--> langString
+  musical artist: --instrument^ (dop:instrument)--> Resource | --birth date^ (doo:birthDate)--> date | --image upright^ (dop:imageUpright)--> double
+  administrative region: --subject (podt:subject)--> Resource | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --Apr low C^ (dop:aprLowC)--> double | --data^ (dop:data)--> double
+subgraph_id: 62
+relationships:
+  - musical artist --doo:hometown--> administrative region
+  - park --doo:location--> administrative region
+  - musical --dop:lyrics--> musical artist
+  - athlete --doo:residence--> administrative region

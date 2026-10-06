@@ -1,0 +1,53 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  language: doo:Language
+  software: doo:Software
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      African_Union: (Wikipage page ID^='10634933')
+      Ana_Pardo_de_Vera: (alma mater^='http://dbpedia.org/resource/National_University_of_Distance_Education')
+      Cops_(TV_program): (format (object)^='http://dbpedia.org/resource/HDTV')
+    relationships:
+      - Ana_Pardo_de_Vera (dor:Ana_Pardo_de_Vera) --doo:nationality--> Spanish_language (dor:Spanish_language)
+      - African_Union (dor:African_Union) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Cops_(TV_program) (<http://dbpedia.org/resource/Cops_(TV_program)>) --doo:format--> Spanish_language (dor:Spanish_language)
+      - 3D_Movie_Maker (dor:3D_Movie_Maker) --doo:language--> Spanish_language (dor:Spanish_language)
+  '2':
+    attributes:
+      African_Union: (Wikipage page ID^='10634933')
+      Ana_Pardo_de_Vera: (alma mater^='http://dbpedia.org/resource/National_University_of_Distance_Education')
+      Cops_(TV_program): (format (object)^='http://dbpedia.org/resource/HDTV')
+    relationships:
+      - Ana_Pardo_de_Vera (dor:Ana_Pardo_de_Vera) --doo:nationality--> Spanish_language (dor:Spanish_language)
+      - African_Union (dor:African_Union) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Cops_(TV_program) (<http://dbpedia.org/resource/Cops_(TV_program)>) --doo:format--> Spanish_language (dor:Spanish_language)
+      - Active_Worlds (dor:Active_Worlds) --doo:language--> Spanish_language (dor:Spanish_language)
+  '3':
+    attributes:
+      African_Union: (Wikipage page ID^='10634933')
+      Ana_Pardo_de_Vera: (alma mater^='http://dbpedia.org/resource/National_University_of_Distance_Education')
+      Cops_(TV_program): (format (object)^='http://dbpedia.org/resource/HDTV')
+    relationships:
+      - Ana_Pardo_de_Vera (dor:Ana_Pardo_de_Vera) --doo:nationality--> Spanish_language (dor:Spanish_language)
+      - African_Union (dor:African_Union) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Cops_(TV_program) (<http://dbpedia.org/resource/Cops_(TV_program)>) --doo:format--> Spanish_language (dor:Spanish_language)
+      - Adobe_Audition (dor:Adobe_Audition) --doo:language--> Spanish_language (dor:Spanish_language)
+attributes:
+  person: --alma mater^ (doo:almaMater)--> Resource | --by^ (dop:by)--> langString
+  Location: --country^ (dop:country)--> langString | --caption (dop:caption)--> langString | --2p^ (dop:2p)--> int | --leader (dop:leader)--> Resource | --eponym^ (dop:eponym)--> langString | --mouth mountain^ (doo:mouthMountain)--> Resource | --Wikipage page ID^ (doo:wikiPageID)--> int | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double
+  language: --family^ (dop:family)--> Resource
+  television show: --format (object)^ (doo:format)--> Resource | --aux^ (dop:aux)--> double
+subgraph_id: 920
+relationships:
+  - person --doo:nationality--> language
+  - Location --doo:language--> language
+  - television show --doo:format--> language
+  - software --doo:language--> language

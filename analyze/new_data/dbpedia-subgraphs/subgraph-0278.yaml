@@ -1,0 +1,117 @@
+types:
+  writer: doo:Writer
+  country: doo:Country
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A.B.C._Whipple: (birth name^='Addison Beecher Colvin Whipple')
+    relationships:
+      - A.B.C._Whipple (dor:A.B.C._Whipple) --dop:birthPlace--> United_States (dor:United_States)
+      - .NET_Foundation (<http://dbpedia.org/resource/.NET_Foundation>) --doo:headquarter--> United_States (dor:United_States)
+  '2':
+    attributes:
+      .NET_Foundation: (Wikipage revision ID^='1122638540')
+    relationships:
+      - Abigail_Garner (dor:Abigail_Garner) --dop:birthPlace--> United_States (dor:United_States)
+      - .NET_Foundation (<http://dbpedia.org/resource/.NET_Foundation>) --doo:headquarter--> United_States (dor:United_States)
+  '3':
+    attributes:
+      .NET_Foundation: (Wikipage revision ID^='1122638540')
+    relationships:
+      - Adam_Robitel (dor:Adam_Robitel) --dop:birthPlace--> United_States (dor:United_States)
+      - .NET_Foundation (<http://dbpedia.org/resource/.NET_Foundation>) --doo:headquarter--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Abel_Montagut: (birth name^='Jesús Abel Montagut i Masip')
+      0_por_Movistar_Plus+: (Wikipage revision ID^='1116553544')
+    relationships:
+      - Abel_Montagut (dor:Abel_Montagut) --dop:birthPlace--> Spain (dor:Spain)
+      - 0_por_Movistar_Plus+ (<http://dbpedia.org/resource/0_por_Movistar_Plus+>) --doo:headquarter--> Spain (dor:Spain)
+  '5':
+    attributes:
+      0_por_Movistar_Plus+: (Wikipage revision ID^='1116553544')
+    relationships:
+      - Ana_Pardo_de_Vera (dor:Ana_Pardo_de_Vera) --dop:birthPlace--> Spain (dor:Spain)
+      - 0_por_Movistar_Plus+ (<http://dbpedia.org/resource/0_por_Movistar_Plus+>) --doo:headquarter--> Spain (dor:Spain)
+  '6':
+    attributes:
+      0_por_Movistar_Plus+: (Wikipage revision ID^='1116553544')
+    relationships:
+      - Ana_Tena (dor:Ana_Tena) --dop:birthPlace--> Spain (dor:Spain)
+      - 0_por_Movistar_Plus+ (<http://dbpedia.org/resource/0_por_Movistar_Plus+>) --doo:headquarter--> Spain (dor:Spain)
+  '7':
+    attributes:
+      1+1_(TV_channel): (Wikipage revision ID^='1122790581')
+    relationships:
+      - Alex_Shvartsman (dor:Alex_Shvartsman) --dop:birthPlace--> Ukraine (dor:Ukraine)
+      - 1+1_(TV_channel) (<http://dbpedia.org/resource/1+1_(TV_channel)>) --doo:headquarter--> Ukraine (dor:Ukraine)
+  '8':
+    attributes:
+      1+1_(TV_channel): (Wikipage revision ID^='1122790581')
+    relationships:
+      - Alexander_Mazin (dor:Alexander_Mazin) --dop:birthPlace--> Ukraine (dor:Ukraine)
+      - 1+1_(TV_channel) (<http://dbpedia.org/resource/1+1_(TV_channel)>) --doo:headquarter--> Ukraine (dor:Ukraine)
+  '9':
+    attributes:
+      1+1_(TV_channel): (Wikipage revision ID^='1122790581')
+      Alexandra_Sviridova: (awards^='Mark Aldanov award 2009')
+    relationships:
+      - Alexandra_Sviridova (dor:Alexandra_Sviridova) --dop:birthPlace--> Ukraine (dor:Ukraine)
+      - 1+1_(TV_channel) (<http://dbpedia.org/resource/1+1_(TV_channel)>) --doo:headquarter--> Ukraine (dor:Ukraine)
+  '10':
+    attributes:
+      13th_Street_(German_TV_channel): (Wikipage revision ID^='1111012888')
+    relationships:
+      - Achmed_Khammas (dor:Achmed_Khammas) --dop:birthPlace--> Germany (dor:Germany)
+      - 13th_Street_(German_TV_channel) (<http://dbpedia.org/resource/13th_Street_(German_TV_channel)>) --doo:headquarter--> Germany (dor:Germany)
+qa_result:
+  status: completed
+  cost_usd: 0.422712
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.03972740000000001
+        total_tokens: 3938
+        prompt_tokens: 2157
+        completion_tokens: 1781
+      generate:
+        cost_usd: 0.12411260000000002
+        total_tokens: 9108
+        prompt_tokens: 3390
+        completion_tokens: 5718
+      verify_1:
+        cost_usd: 0.109377
+        total_tokens: 8163
+        prompt_tokens: 3592
+        completion_tokens: 4571
+      verify_2:
+        cost_usd: 0.025882000000000006
+        total_tokens: 3968
+        prompt_tokens: 3565
+        completion_tokens: 403
+      complexity:
+        cost_usd: 0.12361300000000001
+        total_tokens: 9990
+        prompt_tokens: 4507
+        completion_tokens: 5483
+    total_tokens: 35167
+    prompt_tokens: 17211
+    total_cost_usd: 0.4227120000000001
+    completion_tokens: 17956
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  writer: --birth name^ (dop:birthName)--> langString | --awards^ (dop:awards)--> int | --resting place^ (doo:restingPlace)--> Resource
+  country: --age^ (dop:age)--> date
+  organisation: --main organ^ (doo:mainOrgan)--> Resource | --caption^ (dop:caption)--> langString | --motto^ (doo:motto)--> string | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --named after^ (dop:namedAfter)--> langString
+subgraph_id: 278
+relationships:
+  - writer --dop:birthPlace--> country
+  - organisation --doo:headquarter--> country

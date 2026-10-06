@@ -1,0 +1,88 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  settlement: doo:Settlement
+  university: doo:University
+  historic building: doo:HistoricBuilding
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Port-au-Prince (dor:Port-au-Prince) --dop:city--> Louisiana (dor:Louisiana)
+      - Louisiana (dor:Louisiana) --doo:country--> United_States (dor:United_States)
+      - All_Saints_Catholic_Church_(Cincinnati,_Ohio) (<http://dbpedia.org/resource/All_Saints_Catholic_Church_(Cincinnati,_Ohio)>) --doo:location--> United_States (dor:United_States)
+      - Quisqueya_University (dor:Quisqueya_University) --dop:city--> Port-au-Prince (dor:Port-au-Prince)
+  '2':
+    attributes: {}
+    relationships:
+      - Port-au-Prince (dor:Port-au-Prince) --dop:city--> Louisiana (dor:Louisiana)
+      - Louisiana (dor:Louisiana) --doo:country--> United_States (dor:United_States)
+      - All_Saints_Catholic_Church_(Cincinnati,_Ohio) (<http://dbpedia.org/resource/All_Saints_Catholic_Church_(Cincinnati,_Ohio)>) --doo:location--> United_States (dor:United_States)
+      - Université_Caraïbe (<http://dbpedia.org/resource/Université_Caraïbe>) --dop:city--> Port-au-Prince (dor:Port-au-Prince)
+  '3':
+    attributes: {}
+    relationships:
+      - Port-au-Prince (dor:Port-au-Prince) --dop:city--> Louisiana (dor:Louisiana)
+      - Louisiana (dor:Louisiana) --doo:country--> United_States (dor:United_States)
+      - All_Saints_Catholic_Church_(Cincinnati,_Ohio) (<http://dbpedia.org/resource/All_Saints_Catholic_Church_(Cincinnati,_Ohio)>) --doo:location--> United_States (dor:United_States)
+      - Université_Notre_Dame_d'Haïti (<http://dbpedia.org/resource/Université_Notre_Dame_d'Haïti>) --dop:city--> Port-au-Prince (dor:Port-au-Prince)
+  '4':
+    attributes: {}
+    relationships:
+      - Riverside,_California (<http://dbpedia.org/resource/Riverside,_California>) --dop:city--> Hyderabad (dor:Hyderabad)
+      - Hyderabad (dor:Hyderabad) --doo:country--> India (dor:India)
+      - Bethel_Assembly_of_God_Church (dor:Bethel_Assembly_of_God_Church) --doo:location--> India (dor:India)
+      - A._Gary_Anderson_Graduate_School_of_Management (dor:A._Gary_Anderson_Graduate_School_of_Management) --dop:city--> Riverside,_California (<http://dbpedia.org/resource/Riverside,_California>)
+  '5':
+    attributes: {}
+    relationships:
+      - Riverside,_California (<http://dbpedia.org/resource/Riverside,_California>) --dop:city--> Hyderabad (dor:Hyderabad)
+      - Hyderabad (dor:Hyderabad) --doo:country--> India (dor:India)
+      - Bethel_Assembly_of_God_Church (dor:Bethel_Assembly_of_God_Church) --doo:location--> India (dor:India)
+      - California_Baptist_University (dor:California_Baptist_University) --dop:city--> Riverside,_California (<http://dbpedia.org/resource/Riverside,_California>)
+  '6':
+    attributes: {}
+    relationships:
+      - Riverside,_California (<http://dbpedia.org/resource/Riverside,_California>) --dop:city--> Hyderabad (dor:Hyderabad)
+      - Hyderabad (dor:Hyderabad) --doo:country--> India (dor:India)
+      - Bethel_Assembly_of_God_Church (dor:Bethel_Assembly_of_God_Church) --doo:location--> India (dor:India)
+      - La_Sierra_University (dor:La_Sierra_University) --dop:city--> Riverside,_California (<http://dbpedia.org/resource/Riverside,_California>)
+  '7':
+    attributes:
+      Central_Coast_(New_South_Wales): (area^='566.4')
+    relationships:
+      - Ourimbah,_New_South_Wales (<http://dbpedia.org/resource/Ourimbah,_New_South_Wales>) --dop:city--> Central_Coast_(New_South_Wales) (<http://dbpedia.org/resource/Central_Coast_(New_South_Wales)>)
+      - Central_Coast_(New_South_Wales) (<http://dbpedia.org/resource/Central_Coast_(New_South_Wales)>) --doo:country--> Australia (dor:Australia)
+      - Crossway_Baptist_Church (dor:Crossway_Baptist_Church) --doo:location--> Australia (dor:Australia)
+      - Ourimbah_Campus (dor:Ourimbah_Campus) --dop:city--> Ourimbah,_New_South_Wales (<http://dbpedia.org/resource/Ourimbah,_New_South_Wales>)
+  '8':
+    attributes:
+      Gold_Coast,_Queensland: (Apr low C^='18.3', area^='414.3')
+    relationships:
+      - Southport,_Queensland (<http://dbpedia.org/resource/Southport,_Queensland>) --dop:city--> Gold_Coast,_Queensland (<http://dbpedia.org/resource/Gold_Coast,_Queensland>)
+      - Gold_Coast,_Queensland (<http://dbpedia.org/resource/Gold_Coast,_Queensland>) --doo:country--> Australia (dor:Australia)
+      - Crossway_Baptist_Church (dor:Crossway_Baptist_Church) --doo:location--> Australia (dor:Australia)
+      - Endeavour_College_of_Natural_Health (dor:Endeavour_College_of_Natural_Health) --dop:city--> Southport,_Queensland (<http://dbpedia.org/resource/Southport,_Queensland>)
+  '9':
+    attributes:
+      Central_Coast_(New_South_Wales): (area^='566.4')
+    relationships:
+      - Ourimbah,_New_South_Wales (<http://dbpedia.org/resource/Ourimbah,_New_South_Wales>) --dop:city--> Central_Coast_(New_South_Wales) (<http://dbpedia.org/resource/Central_Coast_(New_South_Wales)>)
+      - Central_Coast_(New_South_Wales) (<http://dbpedia.org/resource/Central_Coast_(New_South_Wales)>) --doo:country--> Australia (dor:Australia)
+      - St_Patrick's_Cathedral,_Melbourne (<http://dbpedia.org/resource/St_Patrick's_Cathedral,_Melbourne>) --doo:location--> Australia (dor:Australia)
+      - Ourimbah_Campus (dor:Ourimbah_Campus) --dop:city--> Ourimbah,_New_South_Wales (<http://dbpedia.org/resource/Ourimbah,_New_South_Wales>)
+attributes:
+  country: --2p^ (dop:2p)--> int
+  Location: --Apr low C^ (dop:aprLowC)--> double | --building end date^ (doo:buildingEndDate)--> string | --arc-gapA^ (dop:arcGapa)--> double | --arc-angleB^ (dop:arcAngleb)--> int | --area^ (dop:area)--> int | --image size^ (dop:imageSize)--> int | --Center^ (dop:center)--> langString | --image width^ (dop:imageWidth)--> int
+  university: --affiliation^ (dop:affiliation)--> langString
+subgraph_id: 561
+relationships:
+  - settlement --dop:city--> Location
+  - Location --doo:country--> country
+  - historic building --doo:location--> country
+  - university --dop:city--> settlement

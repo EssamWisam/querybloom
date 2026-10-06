@@ -1,0 +1,133 @@
+types:
+  road: doo:Road
+  weapon: doo:Weapon
+  company: doo:Company
+  country: doo:Country
+  scientist: doo:Scientist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      China: (Link from a Wikipage to an external page^='http://english.gov.cn/')
+      Norinco: (industry^='http://dbpedia.org/resource/Aerospace_industry', subject='http://dbpedia.org/resource/Category:Chinese_brands', Wikipage revision ID^='1117135379')
+      Wang_Zherong: (alma mater^='http://dbpedia.org/resource/National_University_of_Defense_Technology')
+      Type_87_mortar: (manufacturer^='http://dbpedia.org/resource/Norinco')
+    relationships:
+      - AH31 (dor:AH31) --doo:routeEnd--> China (dor:China)
+      - Type_87_mortar (dor:Type_87_mortar) --doo:origin--> China (dor:China)
+      - Type_87_mortar (dor:Type_87_mortar) --dop:designer--> Norinco (dor:Norinco)
+      - Wang_Zherong (dor:Wang_Zherong) --doo:institution--> Norinco (dor:Norinco)
+  '2':
+    attributes:
+      China: (Link from a Wikipage to an external page^='http://english.gov.cn/')
+      Norinco: (industry^='http://dbpedia.org/resource/Aerospace_industry', subject='http://dbpedia.org/resource/Category:Chinese_brands', Wikipage revision ID^='1117135379')
+      Wang_Zherong: (alma mater^='http://dbpedia.org/resource/National_University_of_Defense_Technology')
+      Type_87_mortar: (manufacturer^='http://dbpedia.org/resource/Norinco')
+    relationships:
+      - AH34 (dor:AH34) --doo:routeEnd--> China (dor:China)
+      - Type_87_mortar (dor:Type_87_mortar) --doo:origin--> China (dor:China)
+      - Type_87_mortar (dor:Type_87_mortar) --dop:designer--> Norinco (dor:Norinco)
+      - Wang_Zherong (dor:Wang_Zherong) --doo:institution--> Norinco (dor:Norinco)
+  '3':
+    attributes:
+      Pakistan: (alt^='Muhammad Ali Jinnah  served as Pakistan''s first Governor-General and the leader of the Pakistan Movement', Link from a Wikipage to an external page^='http://www.ifs.du.edu/ifs/frm_CountryProfile.aspx%3FCountry=PK')
+      Azb_DMR_MK1: (manufacturer^='http://dbpedia.org/resource/Pakistan_Ordnance_Factories')
+      Abdul_Hafeez_(chemist): (alma mater^='http://dbpedia.org/resource/Aligarh_Muslim_University')
+      Pakistan_Ordnance_Factories: (industry^='http://dbpedia.org/resource/Arms_industry', key person^='http://dbpedia.org/resource/Major_General', subject='http://dbpedia.org/resource/Category:Defence_agencies_of_Pakistan', Wikipage revision ID^='1123874240')
+    relationships:
+      - AH4 (dor:AH4) --doo:routeEnd--> Pakistan (dor:Pakistan)
+      - Azb_DMR_MK1 (dor:Azb_DMR_MK1) --doo:origin--> Pakistan (dor:Pakistan)
+      - Azb_DMR_MK1 (dor:Azb_DMR_MK1) --dop:designer--> Pakistan_Ordnance_Factories (dor:Pakistan_Ordnance_Factories)
+      - Abdul_Hafeez_(chemist) (<http://dbpedia.org/resource/Abdul_Hafeez_(chemist)>) --doo:institution--> Pakistan_Ordnance_Factories (dor:Pakistan_Ordnance_Factories)
+  '4':
+    attributes:
+      Pakistan: (alt^='Muhammad Ali Jinnah  served as Pakistan''s first Governor-General and the leader of the Pakistan Movement', Link from a Wikipage to an external page^='http://www.ifs.du.edu/ifs/frm_CountryProfile.aspx%3FCountry=PK')
+      HMG_PK-16: (manufacturer^='http://dbpedia.org/resource/Pakistan_Ordnance_Factories')
+      Abdul_Hafeez_(chemist): (alma mater^='http://dbpedia.org/resource/Aligarh_Muslim_University')
+      Pakistan_Ordnance_Factories: (industry^='http://dbpedia.org/resource/Arms_industry', key person^='http://dbpedia.org/resource/Major_General', subject='http://dbpedia.org/resource/Category:Defence_agencies_of_Pakistan', Wikipage revision ID^='1123874240')
+    relationships:
+      - AH4 (dor:AH4) --doo:routeEnd--> Pakistan (dor:Pakistan)
+      - HMG_PK-16 (dor:HMG_PK-16) --doo:origin--> Pakistan (dor:Pakistan)
+      - HMG_PK-16 (dor:HMG_PK-16) --dop:designer--> Pakistan_Ordnance_Factories (dor:Pakistan_Ordnance_Factories)
+      - Abdul_Hafeez_(chemist) (<http://dbpedia.org/resource/Abdul_Hafeez_(chemist)>) --doo:institution--> Pakistan_Ordnance_Factories (dor:Pakistan_Ordnance_Factories)
+  '5':
+    attributes:
+      Pakistan: (alt^='Muhammad Ali Jinnah  served as Pakistan''s first Governor-General and the leader of the Pakistan Movement', Link from a Wikipage to an external page^='http://www.ifs.du.edu/ifs/frm_CountryProfile.aspx%3FCountry=PK')
+      LSR_(sniper_rifle): (manufacturer^='http://dbpedia.org/resource/Pakistan_Ordnance_Factories')
+      Abdul_Hafeez_(chemist): (alma mater^='http://dbpedia.org/resource/Aligarh_Muslim_University')
+      Pakistan_Ordnance_Factories: (industry^='http://dbpedia.org/resource/Arms_industry', key person^='http://dbpedia.org/resource/Major_General', subject='http://dbpedia.org/resource/Category:Defence_agencies_of_Pakistan', Wikipage revision ID^='1123874240')
+    relationships:
+      - AH4 (dor:AH4) --doo:routeEnd--> Pakistan (dor:Pakistan)
+      - LSR_(sniper_rifle) (<http://dbpedia.org/resource/LSR_(sniper_rifle)>) --doo:origin--> Pakistan (dor:Pakistan)
+      - LSR_(sniper_rifle) (<http://dbpedia.org/resource/LSR_(sniper_rifle)>) --dop:designer--> Pakistan_Ordnance_Factories (dor:Pakistan_Ordnance_Factories)
+      - Abdul_Hafeez_(chemist) (<http://dbpedia.org/resource/Abdul_Hafeez_(chemist)>) --doo:institution--> Pakistan_Ordnance_Factories (dor:Pakistan_Ordnance_Factories)
+  '6':
+    attributes:
+      India: (Link from a Wikipage to an external page^='https://archive.org/details/encyclopaediaofi0000raja')
+      Agni-I: (manufacturer^='http://dbpedia.org/resource/Bharat_Dynamics_Limited')
+      A._Sivathanu_Pillai: (alma mater^='http://dbpedia.org/resource/Thiagarajar_College_of_Engineering')
+      Defence_Research_and_Development_Organisation: (subject='http://dbpedia.org/resource/Category:1958_establishments_in_Delhi', Wikipage revision ID^='1118693115')
+    relationships:
+      - AH42 (dor:AH42) --doo:routeEnd--> India (dor:India)
+      - Agni-I (dor:Agni-I) --doo:origin--> India (dor:India)
+      - Agni-I (dor:Agni-I) --dop:designer--> Defence_Research_and_Development_Organisation (dor:Defence_Research_and_Development_Organisation)
+      - A._Sivathanu_Pillai (dor:A._Sivathanu_Pillai) --doo:institution--> Defence_Research_and_Development_Organisation (dor:Defence_Research_and_Development_Organisation)
+  '7':
+    attributes:
+      India: (Link from a Wikipage to an external page^='https://archive.org/details/encyclopaediaofi0000raja')
+      Agni-P: (manufacturer^='http://dbpedia.org/resource/Bharat_Dynamics_Limited')
+      A._Sivathanu_Pillai: (alma mater^='http://dbpedia.org/resource/Thiagarajar_College_of_Engineering')
+      Defence_Research_and_Development_Organisation: (subject='http://dbpedia.org/resource/Category:1958_establishments_in_Delhi', Wikipage revision ID^='1118693115')
+    relationships:
+      - AH42 (dor:AH42) --doo:routeEnd--> India (dor:India)
+      - Agni-P (dor:Agni-P) --doo:origin--> India (dor:India)
+      - Agni-P (dor:Agni-P) --dop:designer--> Defence_Research_and_Development_Organisation (dor:Defence_Research_and_Development_Organisation)
+      - A._Sivathanu_Pillai (dor:A._Sivathanu_Pillai) --doo:institution--> Defence_Research_and_Development_Organisation (dor:Defence_Research_and_Development_Organisation)
+  '8':
+    attributes:
+      India: (Link from a Wikipage to an external page^='https://archive.org/details/encyclopaediaofi0000raja')
+      Agni-V: (manufacturer^='http://dbpedia.org/resource/Bharat_Dynamics_Limited')
+      A._Sivathanu_Pillai: (alma mater^='http://dbpedia.org/resource/Thiagarajar_College_of_Engineering')
+      Defence_Research_and_Development_Organisation: (subject='http://dbpedia.org/resource/Category:1958_establishments_in_Delhi', Wikipage revision ID^='1118693115')
+    relationships:
+      - AH42 (dor:AH42) --doo:routeEnd--> India (dor:India)
+      - Agni-V (dor:Agni-V) --doo:origin--> India (dor:India)
+      - Agni-V (dor:Agni-V) --dop:designer--> Defence_Research_and_Development_Organisation (dor:Defence_Research_and_Development_Organisation)
+      - A._Sivathanu_Pillai (dor:A._Sivathanu_Pillai) --doo:institution--> Defence_Research_and_Development_Organisation (dor:Defence_Research_and_Development_Organisation)
+  '9':
+    attributes:
+      DARPA: (subject='http://dbpedia.org/resource/Category:1958_establishments_in_Virginia', Wikipage revision ID^='1123432578')
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric')
+      Adam_H._Russell: (alma mater^='http://dbpedia.org/resource/Duke_University')
+    relationships:
+      - British_Columbia_Highway_37A (dor:British_Columbia_Highway_37A) --doo:routeEnd--> United_States (dor:United_States)
+      - Hypersonic_Air-breathing_Weapon_Concept (dor:Hypersonic_Air-breathing_Weapon_Concept) --doo:origin--> United_States (dor:United_States)
+      - Hypersonic_Air-breathing_Weapon_Concept (dor:Hypersonic_Air-breathing_Weapon_Concept) --dop:designer--> DARPA (dor:DARPA)
+      - Adam_H._Russell (dor:Adam_H._Russell) --doo:institution--> DARPA (dor:DARPA)
+  '10':
+    attributes:
+      DARPA: (subject='http://dbpedia.org/resource/Category:1958_establishments_in_Virginia', Wikipage revision ID^='1123432578')
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric')
+      Adam_H._Russell: (alma mater^='http://dbpedia.org/resource/Duke_University')
+    relationships:
+      - British_Columbia_Highway_37A (dor:British_Columbia_Highway_37A) --doo:routeEnd--> United_States (dor:United_States)
+      - OpFires (dor:OpFires) --doo:origin--> United_States (dor:United_States)
+      - OpFires (dor:OpFires) --dop:designer--> DARPA (dor:DARPA)
+      - Adam_H._Russell (dor:Adam_H._Russell) --doo:institution--> DARPA (dor:DARPA)
+attributes:
+  road: --direction^ (dop:direction)--> langString
+  weapon: --manufacturer^ (dop:manufacturer)--> Resource
+  company: --industry^ (dop:industry)--> langString | --logo width^ (dop:logoWidth)--> int | --key person^ (doo:keyPerson)--> Resource | --subject (podt:subject)--> Resource | --direction^ (dop:direction)--> langString | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --founder^ (dop:founder)--> langString
+  country: --alt^ (dop:alt)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  scientist: --awards^ (dop:awards)--> int | --alma mater^ (dop:almaMater)--> langString
+subgraph_id: 978
+relationships:
+  - road --doo:routeEnd--> country
+  - weapon --doo:origin--> country
+  - weapon --dop:designer--> company
+  - scientist --doo:institution--> company

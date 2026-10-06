@@ -1,0 +1,142 @@
+types:
+  company: doo:Company
+  station: doo:Station
+  organisation: doo:Organisation
+  railway line: doo:RailwayLine
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A_(S-train): (operator^='http://dbpedia.org/resource/DSB_(railway_company)')
+      Banedanmark: (founding year^='1997')
+      Solrød_Strand_station: (platform^='http://dbpedia.org/resource/Island_platform')
+    relationships:
+      - A_(S-train) (<http://dbpedia.org/resource/A_(S-train)>) --dop:owner--> Banedanmark (dor:Banedanmark)
+      - A_(S-train) (<http://dbpedia.org/resource/A_(S-train)>) --doo:routeStart--> Solrød_Strand_station (<http://dbpedia.org/resource/Solrød_Strand_station>)
+      - Solrød_Strand_station (<http://dbpedia.org/resource/Solrød_Strand_station>) --doo:owner--> DSB_(railway_company) (<http://dbpedia.org/resource/DSB_(railway_company)>)
+  '2':
+    attributes:
+      Indian_Railways: (founding year^='1845')
+      Ahmedabad–Mumbai_main_line: (operator^='http://dbpedia.org/resource/Western_Railway_zone')
+      Ahmedabad_Junction_railway_station: (platform^='12')
+    relationships:
+      - Ahmedabad–Mumbai_main_line (<http://dbpedia.org/resource/Ahmedabad–Mumbai_main_line>) --dop:owner--> Indian_Railways (dor:Indian_Railways)
+      - Ahmedabad–Mumbai_main_line (<http://dbpedia.org/resource/Ahmedabad–Mumbai_main_line>) --doo:routeStart--> Ahmedabad_Junction_railway_station (dor:Ahmedabad_Junction_railway_station)
+      - Ahmedabad_Junction_railway_station (dor:Ahmedabad_Junction_railway_station) --doo:owner--> Indian_Railways (dor:Indian_Railways)
+  '3':
+    attributes:
+      Mets–Willets_Point_station_(LIRR): (distance^='from', opened^='1939', platform^='3')
+    relationships:
+      - AirTrain_LaGuardia (dor:AirTrain_LaGuardia) --dop:owner--> Port_Authority_of_New_York_and_New_Jersey (dor:Port_Authority_of_New_York_and_New_Jersey)
+      - AirTrain_LaGuardia (dor:AirTrain_LaGuardia) --doo:routeStart--> Mets–Willets_Point_station_(LIRR) (<http://dbpedia.org/resource/Mets–Willets_Point_station_(LIRR)>)
+      - Mets–Willets_Point_station_(LIRR) (<http://dbpedia.org/resource/Mets–Willets_Point_station_(LIRR)>) --doo:owner--> Long_Island_Rail_Road (dor:Long_Island_Rail_Road)
+  '4':
+    attributes:
+      Ganddal_Station: (opened^='1880', platform^='2')
+      Norwegian_National_Rail_Administration: (founding year^='1996', key person^='http://dbpedia.org/resource/Elisabeth_Enger')
+    relationships:
+      - Ålgård_Line (<http://dbpedia.org/resource/Ålgård_Line>) --dop:owner--> Norwegian_National_Rail_Administration (dor:Norwegian_National_Rail_Administration)
+      - Ålgård_Line (<http://dbpedia.org/resource/Ålgård_Line>) --doo:routeStart--> Ganddal_Station (dor:Ganddal_Station)
+      - Ganddal_Station (dor:Ganddal_Station) --doo:owner--> Bane_NOR (dor:Bane_NOR)
+  '5':
+    attributes:
+      Aliağa_branch: (operator^='http://dbpedia.org/resource/İZBAN')
+      Menemen_railway_station: (opened^='1865-10-10')
+    relationships:
+      - Aliağa_branch (<http://dbpedia.org/resource/Aliağa_branch>) --dop:owner--> Turkish_State_Railways (dor:Turkish_State_Railways)
+      - Aliağa_branch (<http://dbpedia.org/resource/Aliağa_branch>) --doo:routeStart--> Menemen_railway_station (dor:Menemen_railway_station)
+      - Menemen_railway_station (dor:Menemen_railway_station) --doo:owner--> Turkish_State_Railways (dor:Turkish_State_Railways)
+  '6':
+    attributes:
+      Murnau_station: (opened^='1879-05-15')
+      Ammergau_Railway: (operator^='http://dbpedia.org/resource/DB_Regio')
+    relationships:
+      - Ammergau_Railway (dor:Ammergau_Railway) --dop:owner--> Deutsche_Bahn (dor:Deutsche_Bahn)
+      - Ammergau_Railway (dor:Ammergau_Railway) --doo:routeStart--> Murnau_station (dor:Murnau_station)
+      - Murnau_station (dor:Murnau_station) --doo:owner--> DB_Netz (dor:DB_Netz)
+  '7':
+    attributes:
+      Prasarana_Malaysia: (founding year^='1998', key person^='http://dbpedia.org/resource/Rapid_Bus')
+      Sri_Petaling_LRT_station: (opened^='1998-07-11', platform^='2')
+      Ampang_and_Sri_Petaling_lines_extension: (operator^='http://dbpedia.org/resource/RapidKL')
+    relationships:
+      - Ampang_and_Sri_Petaling_lines_extension (dor:Ampang_and_Sri_Petaling_lines_extension) --dop:owner--> Prasarana_Malaysia (dor:Prasarana_Malaysia)
+      - Ampang_and_Sri_Petaling_lines_extension (dor:Ampang_and_Sri_Petaling_lines_extension) --doo:routeStart--> Sri_Petaling_LRT_station (dor:Sri_Petaling_LRT_station)
+      - Sri_Petaling_LRT_station (dor:Sri_Petaling_LRT_station) --doo:owner--> Prasarana_Malaysia (dor:Prasarana_Malaysia)
+  '8':
+    attributes:
+      Indian_Railways: (founding year^='1845')
+      Anand–Godhra_section: (box width^='28', operator^='http://dbpedia.org/resource/Western_Railway_zone')
+      Anand_Junction_railway_station: (platform^='6')
+    relationships:
+      - Anand–Godhra_section (<http://dbpedia.org/resource/Anand–Godhra_section>) --dop:owner--> Indian_Railways (dor:Indian_Railways)
+      - Anand–Godhra_section (<http://dbpedia.org/resource/Anand–Godhra_section>) --doo:routeStart--> Anand_Junction_railway_station (dor:Anand_Junction_railway_station)
+      - Anand_Junction_railway_station (dor:Anand_Junction_railway_station) --doo:owner--> Indian_Railways (dor:Indian_Railways)
+  '9':
+    attributes:
+      Indian_Railways: (founding year^='1845')
+      Anand–Godhra_section: (box width^='28', operator^='http://dbpedia.org/resource/Western_Railway_zone')
+      Anand_Junction_railway_station: (platform^='6')
+    relationships:
+      - Anand–Godhra_section (<http://dbpedia.org/resource/Anand–Godhra_section>) --dop:owner--> Indian_Railways (dor:Indian_Railways)
+      - Anand–Godhra_section (<http://dbpedia.org/resource/Anand–Godhra_section>) --doo:routeStart--> Anand_Junction_railway_station (dor:Anand_Junction_railway_station)
+      - Anand_Junction_railway_station (dor:Anand_Junction_railway_station) --doo:owner--> Ministry_of_Railways_(India) (<http://dbpedia.org/resource/Ministry_of_Railways_(India)>)
+  '10':
+    attributes:
+      Ankara_railway_station: (opened^='1892-12-31', platform^='6')
+      Ankara–Istanbul_high-speed_railway: (operator^='http://dbpedia.org/resource/TCDD_Taşımacılık')
+    relationships:
+      - Ankara–Istanbul_high-speed_railway (<http://dbpedia.org/resource/Ankara–Istanbul_high-speed_railway>) --dop:owner--> Turkish_State_Railways (dor:Turkish_State_Railways)
+      - Ankara–Istanbul_high-speed_railway (<http://dbpedia.org/resource/Ankara–Istanbul_high-speed_railway>) --doo:routeStart--> Ankara_railway_station (dor:Ankara_railway_station)
+      - Ankara_railway_station (dor:Ankara_railway_station) --doo:owner--> Turkish_State_Railways (dor:Turkish_State_Railways)
+qa_result:
+  status: completed
+  cost_usd: 0.411412
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.05734740000000001
+        total_tokens: 4906
+        prompt_tokens: 2273
+        completion_tokens: 2633
+      generate:
+        cost_usd: 0.07659760000000002
+        total_tokens: 7540
+        prompt_tokens: 4467
+        completion_tokens: 3073
+      verify_1:
+        cost_usd: 0.08372700000000001
+        total_tokens: 8154
+        prompt_tokens: 5290
+        completion_tokens: 2864
+      verify_2:
+        cost_usd: 0.055892000000000004
+        total_tokens: 6544
+        prompt_tokens: 4999
+        completion_tokens: 1545
+      complexity:
+        cost_usd: 0.13784800000000003
+        total_tokens: 11883
+        prompt_tokens: 6082
+        completion_tokens: 5801
+    total_tokens: 39027
+    prompt_tokens: 23111
+    total_cost_usd: 0.41141200000000006
+    completion_tokens: 15916
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  company: --brands^ (dop:brands)--> Resource | --founding year^ (doo:foundingYear)--> gYear | --key person^ (doo:keyPerson)--> Resource | --product^ (doo:product)--> Resource | --width^ (dop:width)--> int
+  station: --closing date^ (doo:closingDate)--> date | --distance^ (dop:distance)--> int | --opened^ (dop:opened)--> date | --platform^ (dop:platform)--> langString
+  organisation: --main organ^ (doo:mainOrgan)--> Resource | --affiliations^ (dop:affiliations)--> Resource
+  railway line: --box width^ (dop:boxWidth)--> int | --operator^ (doo:operator)--> Resource
+subgraph_id: 207
+relationships:
+  - railway line --dop:owner--> company
+  - railway line --doo:routeStart--> station
+  - station --doo:owner--> organisation

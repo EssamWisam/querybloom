@@ -1,0 +1,102 @@
+types:
+  city: doo:City
+  artist: doo:Artist
+  country: doo:Country
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Territory_of_Hawaii: (Link from a Wikipage to an external page^='http://hortsci.ashspublications.org/content/47/10/1390.full')
+      '%22King%22_Bennie_Nawahi': (death place^='Long Beach, California')
+      Archibald_Scott_Cleghorn: (parents^='Janet Nisbet')
+    relationships:
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --doo:birthPlace--> Honolulu (dor:Honolulu)'
+      - Archibald_Scott_Cleghorn (dor:Archibald_Scott_Cleghorn) --doo:deathPlace--> Honolulu (dor:Honolulu)
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --dop:birthPlace--> Territory_of_Hawaii (dor:Territory_of_Hawaii)'
+  '2':
+    attributes:
+      Territory_of_Hawaii: (Link from a Wikipage to an external page^='http://hortsci.ashspublications.org/content/47/10/1390.full')
+      '%22King%22_Bennie_Nawahi': (death place^='Long Beach, California')
+    relationships:
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --doo:birthPlace--> Honolulu (dor:Honolulu)'
+      - Charles_T._Gulick (dor:Charles_T._Gulick) --doo:deathPlace--> Honolulu (dor:Honolulu)
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --dop:birthPlace--> Territory_of_Hawaii (dor:Territory_of_Hawaii)'
+  '3':
+    attributes:
+      Territory_of_Hawaii: (Link from a Wikipage to an external page^='http://hortsci.ashspublications.org/content/47/10/1390.full')
+      '%22King%22_Bennie_Nawahi': (death place^='Long Beach, California')
+    relationships:
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --doo:birthPlace--> Honolulu (dor:Honolulu)'
+      - Daniel_Akaka (dor:Daniel_Akaka) --doo:deathPlace--> Honolulu (dor:Honolulu)
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --dop:birthPlace--> Territory_of_Hawaii (dor:Territory_of_Hawaii)'
+  '4':
+    attributes:
+      Los_Angeles: (named for^='http://dbpedia.org/resource/Queen_of_Heaven')
+    relationships:
+      - 03_Greedo (dor:03_Greedo) --doo:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - Albert_C._Baker (dor:Albert_C._Baker) --doo:deathPlace--> Los_Angeles (dor:Los_Angeles)
+      - 03_Greedo (dor:03_Greedo) --dop:birthPlace--> U.S. (<http://dbpedia.org/resource/U.S.>)
+  '5':
+    attributes:
+      Los_Angeles: (named for^='http://dbpedia.org/resource/Queen_of_Heaven')
+    relationships:
+      - 03_Greedo (dor:03_Greedo) --doo:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - Antonio_F._Coronel (dor:Antonio_F._Coronel) --doo:deathPlace--> Los_Angeles (dor:Los_Angeles)
+      - 03_Greedo (dor:03_Greedo) --dop:birthPlace--> U.S. (<http://dbpedia.org/resource/U.S.>)
+  '6':
+    attributes:
+      Los_Angeles: (named for^='http://dbpedia.org/resource/Queen_of_Heaven')
+    relationships:
+      - 03_Greedo (dor:03_Greedo) --doo:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - Culbert_Olson (dor:Culbert_Olson) --doo:deathPlace--> Los_Angeles (dor:Los_Angeles)
+      - 03_Greedo (dor:03_Greedo) --dop:birthPlace--> U.S. (<http://dbpedia.org/resource/U.S.>)
+  '7':
+    attributes:
+      Rotterdam: (commons^='Rotterdam', Apr low C^='4.8')
+      Netherlands: (Link from a Wikipage to an external page^='http://news.bbc.co.uk/1/hi/world/europe/country_profiles/1043423.stm%7Ctitle=Netherlands', url^='https://web.archive.org/web/20131117065936/http:/nbtc.nl/en/homepage.htm')
+      3_Steps_Ahead: (death place^='Netherlands')
+    relationships:
+      - 3_Steps_Ahead (dor:3_Steps_Ahead) --doo:birthPlace--> Rotterdam (dor:Rotterdam)
+      - Hans_van_Baalen (dor:Hans_van_Baalen) --doo:deathPlace--> Rotterdam (dor:Rotterdam)
+      - 3_Steps_Ahead (dor:3_Steps_Ahead) --dop:birthPlace--> Netherlands (dor:Netherlands)
+  '8':
+    attributes:
+      Rotterdam: (commons^='Rotterdam', Apr low C^='4.8')
+      Netherlands: (Link from a Wikipage to an external page^='http://news.bbc.co.uk/1/hi/world/europe/country_profiles/1043423.stm%7Ctitle=Netherlands', url^='https://web.archive.org/web/20131117065936/http:/nbtc.nl/en/homepage.htm')
+      3_Steps_Ahead: (death place^='Netherlands')
+    relationships:
+      - 3_Steps_Ahead (dor:3_Steps_Ahead) --doo:birthPlace--> Rotterdam (dor:Rotterdam)
+      - Haya_van_Someren (dor:Haya_van_Someren) --doo:deathPlace--> Rotterdam (dor:Rotterdam)
+      - 3_Steps_Ahead (dor:3_Steps_Ahead) --dop:birthPlace--> Netherlands (dor:Netherlands)
+  '9':
+    attributes:
+      Rotterdam: (commons^='Rotterdam', Apr low C^='4.8')
+      Netherlands: (Link from a Wikipage to an external page^='http://news.bbc.co.uk/1/hi/world/europe/country_profiles/1043423.stm%7Ctitle=Netherlands', url^='https://web.archive.org/web/20131117065936/http:/nbtc.nl/en/homepage.htm')
+      3_Steps_Ahead: (death place^='Netherlands')
+    relationships:
+      - 3_Steps_Ahead (dor:3_Steps_Ahead) --doo:birthPlace--> Rotterdam (dor:Rotterdam)
+      - Kees_van_Dijk (dor:Kees_van_Dijk) --doo:deathPlace--> Rotterdam (dor:Rotterdam)
+      - 3_Steps_Ahead (dor:3_Steps_Ahead) --dop:birthPlace--> Netherlands (dor:Netherlands)
+  '10':
+    attributes:
+      Suriname: (Link from a Wikipage to an external page^='http://news.bbc.co.uk/2/hi/americas/country_profiles/1211306.stm', url^='https://web.archive.org/web/20210227035012/http:/www.president.gov.sr/')
+      Paramaribo: (Apr low C^='22')
+    relationships:
+      - A_Mili (dor:A_Mili) --doo:birthPlace--> Paramaribo (dor:Paramaribo)
+      - Johan_Adolf_Pengel (dor:Johan_Adolf_Pengel) --doo:deathPlace--> Paramaribo (dor:Paramaribo)
+      - A_Mili (dor:A_Mili) --dop:birthPlace--> Suriname (dor:Suriname)
+attributes:
+  city: --named for^ (dop:namedFor)--> Resource | --footer^ (dop:footer)--> langString | --commons^ (dop:commons)--> langString | --Apr low C^ (dop:aprLowC)--> double
+  artist: --alma mater^ (dop:almaMater)--> langString | --death place^ (dop:deathPlace)--> langString
+  country: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --original name^ (doo:originalName)--> langString | --url^ (dop:url)--> Resource
+  office holder: --parents^ (dop:parents)--> langString | --commons^ (dop:commons)--> langString
+subgraph_id: 592
+relationships:
+  - artist --doo:birthPlace--> city
+  - office holder --doo:deathPlace--> city
+  - artist --dop:birthPlace--> country

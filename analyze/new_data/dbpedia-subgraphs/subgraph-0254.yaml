@@ -1,0 +1,131 @@
+types:
+  country: doo:Country
+  hospital: doo:Hospital
+  medician: doo:Medician
+  military structure: doo:MilitaryStructure
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      John_W._Todd: (honorific suffix^='MD, FRCP')
+    relationships:
+      - Frimley_Park_Hospital (dor:Frimley_Park_Hospital) --doo:region--> Surrey (dor:Surrey)
+      - Bletchingley_Castle (dor:Bletchingley_Castle) --doo:location--> Surrey (dor:Surrey)
+      - John_W._Todd (dor:John_W._Todd) --doo:institution--> Frimley_Park_Hospital (dor:Frimley_Park_Hospital)
+  '2':
+    attributes:
+      John_W._Todd: (honorific suffix^='MD, FRCP')
+      Guildford_Castle: (caption^='The keep of Guildford Castle')
+    relationships:
+      - Frimley_Park_Hospital (dor:Frimley_Park_Hospital) --doo:region--> Surrey (dor:Surrey)
+      - Guildford_Castle (dor:Guildford_Castle) --doo:location--> Surrey (dor:Surrey)
+      - John_W._Todd (dor:John_W._Todd) --doo:institution--> Frimley_Park_Hospital (dor:Frimley_Park_Hospital)
+  '3':
+    attributes:
+      John_W._Todd: (honorific suffix^='MD, FRCP')
+      Inkerman_Barracks: (caption^='Military accommodation on Raglan Road, all that remains of Inkerman Barracks')
+    relationships:
+      - Frimley_Park_Hospital (dor:Frimley_Park_Hospital) --doo:region--> Surrey (dor:Surrey)
+      - Inkerman_Barracks (dor:Inkerman_Barracks) --doo:location--> Surrey (dor:Surrey)
+      - John_W._Todd (dor:John_W._Todd) --doo:institution--> Frimley_Park_Hospital (dor:Frimley_Park_Hospital)
+  '4':
+    attributes:
+      Geoffrey_Gillam: (honorific suffix^='MD FRCP')
+      Baconsthorpe_Castle: (caption^='The inner gatehouse of the castle, seen from the south-east')
+    relationships:
+      - Norfolk_and_Norwich_Hospital (dor:Norfolk_and_Norwich_Hospital) --doo:region--> Norfolk (dor:Norfolk)
+      - Baconsthorpe_Castle (dor:Baconsthorpe_Castle) --doo:location--> Norfolk (dor:Norfolk)
+      - Geoffrey_Gillam (dor:Geoffrey_Gillam) --doo:institution--> Norfolk_and_Norwich_Hospital (dor:Norfolk_and_Norwich_Hospital)
+  '5':
+    attributes:
+      Geoffrey_Gillam: (honorific suffix^='MD FRCP')
+      Bethel_Street_drill_hall,_Norwich: (caption^='The frontage of the Bethel Street drill hall office ; the former skating rink, yellow building next door would have been suitably large enough to be used as a drill hall.')
+    relationships:
+      - Norfolk_and_Norwich_Hospital (dor:Norfolk_and_Norwich_Hospital) --doo:region--> Norfolk (dor:Norfolk)
+      - Bethel_Street_drill_hall,_Norwich (<http://dbpedia.org/resource/Bethel_Street_drill_hall,_Norwich>) --doo:location--> Norfolk (dor:Norfolk)
+      - Geoffrey_Gillam (dor:Geoffrey_Gillam) --doo:institution--> Norfolk_and_Norwich_Hospital (dor:Norfolk_and_Norwich_Hospital)
+  '6':
+    attributes:
+      Branodunum: (caption^='Aerial view of Branodunum')
+      Geoffrey_Gillam: (honorific suffix^='MD FRCP')
+    relationships:
+      - Norfolk_and_Norwich_Hospital (dor:Norfolk_and_Norwich_Hospital) --doo:region--> Norfolk (dor:Norfolk)
+      - Branodunum (dor:Branodunum) --doo:location--> Norfolk (dor:Norfolk)
+      - Geoffrey_Gillam (dor:Geoffrey_Gillam) --doo:institution--> Norfolk_and_Norwich_Hospital (dor:Norfolk_and_Norwich_Hospital)
+  '7':
+    attributes:
+      Oxfordshire: (motto^='(''Dare to be Wise'')')
+    relationships:
+      - Nuffield_Orthopaedic_Centre (dor:Nuffield_Orthopaedic_Centre) --doo:region--> Oxfordshire (dor:Oxfordshire)
+      - Ardley_Castle (dor:Ardley_Castle) --doo:location--> Oxfordshire (dor:Oxfordshire)
+      - Andrew_J._Carr (dor:Andrew_J._Carr) --doo:institution--> Nuffield_Orthopaedic_Centre (dor:Nuffield_Orthopaedic_Centre)
+  '8':
+    attributes:
+      Oxfordshire: (motto^='(''Dare to be Wise'')')
+      Ascot_d'Oilly_Castle: (caption^='Earthworks of the castle')
+    relationships:
+      - Nuffield_Orthopaedic_Centre (dor:Nuffield_Orthopaedic_Centre) --doo:region--> Oxfordshire (dor:Oxfordshire)
+      - Ascot_d'Oilly_Castle (<http://dbpedia.org/resource/Ascot_d'Oilly_Castle>) --doo:location--> Oxfordshire (dor:Oxfordshire)
+      - Andrew_J._Carr (dor:Andrew_J._Carr) --doo:institution--> Nuffield_Orthopaedic_Centre (dor:Nuffield_Orthopaedic_Centre)
+  '9':
+    attributes:
+      Oxfordshire: (motto^='(''Dare to be Wise'')')
+      Ascott_Earl_Castle: (caption^='Motte and bailey remains of the castle in the background')
+    relationships:
+      - Nuffield_Orthopaedic_Centre (dor:Nuffield_Orthopaedic_Centre) --doo:region--> Oxfordshire (dor:Oxfordshire)
+      - Ascott_Earl_Castle (dor:Ascott_Earl_Castle) --doo:location--> Oxfordshire (dor:Oxfordshire)
+      - Andrew_J._Carr (dor:Andrew_J._Carr) --doo:institution--> Nuffield_Orthopaedic_Centre (dor:Nuffield_Orthopaedic_Centre)
+  '10':
+    attributes:
+      AAC_Middle_Wallop: (caption^='An Army Air Corps AgustaWestland Apache AH1 at Middle Wallop.')
+      Norman_Lester_Rowe: (honorific suffix^='CBE')
+    relationships:
+      - Park_Prewett_Hospital (dor:Park_Prewett_Hospital) --doo:region--> Hampshire (dor:Hampshire)
+      - AAC_Middle_Wallop (dor:AAC_Middle_Wallop) --doo:location--> Hampshire (dor:Hampshire)
+      - Norman_Lester_Rowe (dor:Norman_Lester_Rowe) --doo:institution--> Park_Prewett_Hospital (dor:Park_Prewett_Hospital)
+qa_result:
+  status: completed
+  cost_usd: 0.330195
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.06658240000000001
+        total_tokens: 5205
+        prompt_tokens: 2056
+        completion_tokens: 3149
+      generate:
+        cost_usd: 0.0688676
+        total_tokens: 6861
+        prompt_tokens: 4077
+        completion_tokens: 2784
+      verify_1:
+        cost_usd: 0.027932000000000002
+        total_tokens: 4576
+        prompt_tokens: 4239
+        completion_tokens: 337
+      complexity:
+        cost_usd: 0.166813
+        total_tokens: 12582
+        prompt_tokens: 5083
+        completion_tokens: 7499
+    total_tokens: 29224
+    prompt_tokens: 15455
+    total_cost_usd: 0.330195
+    completion_tokens: 13769
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  country: --footer^ (dop:footer)--> langString | --quote^ (dop:quote)--> langString | --original name^ (doo:originalName)--> langString | --government type^ (doo:governmentType)--> Resource | --motto^ (doo:motto)--> string | --direction^ (dop:direction)--> langString
+  hospital: --affiliation^ (dop:affiliation)--> Resource
+  medician: --honorific suffix^ (dop:honorificSuffix)--> Resource
+  military structure: --partof^ (dop:partof)--> langString | --caption^ (dop:caption)--> langString
+subgraph_id: 254
+relationships:
+  - hospital --doo:region--> country
+  - military structure --doo:location--> country
+  - medician --doo:institution--> hospital

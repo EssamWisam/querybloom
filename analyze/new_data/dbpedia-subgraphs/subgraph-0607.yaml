@@ -1,0 +1,99 @@
+types:
+  city: doo:City
+  person: doo:Person
+  building: doo:Building
+  historic place: doo:HistoricPlace
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Abraham_Cohn (dor:Abraham_Cohn) --doo:restingPlace--> Cypress_Hills_Cemetery (dor:Cypress_Hills_Cemetery)
+      - Abraham_Cohn (dor:Abraham_Cohn) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - (Le)_Poisson_Rouge (<http://dbpedia.org/resource/(Le)_Poisson_Rouge>) --doo:location--> New_York_City (dor:New_York_City)
+  '2':
+    attributes:
+      Attilio_Piccirilli: (birth date^='1866-05-16')
+    relationships:
+      - Attilio_Piccirilli (dor:Attilio_Piccirilli) --doo:restingPlace--> Woodlawn_Cemetery_(Bronx,_New_York) (<http://dbpedia.org/resource/Woodlawn_Cemetery_(Bronx,_New_York)>)
+      - Attilio_Piccirilli (dor:Attilio_Piccirilli) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - (Le)_Poisson_Rouge (<http://dbpedia.org/resource/(Le)_Poisson_Rouge>) --doo:location--> New_York_City (dor:New_York_City)
+  '3':
+    attributes:
+      Cemetery_of_the_Evergreens: (architect^='Vaux, Calvert; etc')
+    relationships:
+      - Charles_A._Read (dor:Charles_A._Read) --doo:restingPlace--> Cemetery_of_the_Evergreens (dor:Cemetery_of_the_Evergreens)
+      - Charles_A._Read (dor:Charles_A._Read) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - (Le)_Poisson_Rouge (<http://dbpedia.org/resource/(Le)_Poisson_Rouge>) --doo:location--> New_York_City (dor:New_York_City)
+  '4':
+    attributes:
+      Quebec_City: (motto^='("I shall put God''s gift to good use"; the Don de Dieu was Champlain''s ship)')
+      Mount_Hermon_Cemetery: (architect^='')
+    relationships:
+      - Edward_Bowen_(politician) (<http://dbpedia.org/resource/Edward_Bowen_(politician)>) --doo:restingPlace--> Mount_Hermon_Cemetery (dor:Mount_Hermon_Cemetery)
+      - Edward_Bowen_(politician) (<http://dbpedia.org/resource/Edward_Bowen_(politician)>) --dop:deathPlace--> Quebec_City (dor:Quebec_City)
+      - 1_Avenue_Sainte-Geneviève (<http://dbpedia.org/resource/1_Avenue_Sainte-Geneviève>) --doo:location--> Quebec_City (dor:Quebec_City)
+  '5':
+    attributes:
+      Quebec_City: (motto^='("I shall put God''s gift to good use"; the Don de Dieu was Champlain''s ship)')
+      Mount_Hermon_Cemetery: (architect^='')
+      William_Charles_Henry_Wood: (birth date^='1864-06-07')
+    relationships:
+      - William_Charles_Henry_Wood (dor:William_Charles_Henry_Wood) --doo:restingPlace--> Mount_Hermon_Cemetery (dor:Mount_Hermon_Cemetery)
+      - William_Charles_Henry_Wood (dor:William_Charles_Henry_Wood) --dop:deathPlace--> Quebec_City (dor:Quebec_City)
+      - 1_Avenue_Sainte-Geneviève (<http://dbpedia.org/resource/1_Avenue_Sainte-Geneviève>) --doo:location--> Quebec_City (dor:Quebec_City)
+  '6':
+    attributes:
+      Quebec_City: (motto^='("I shall put God''s gift to good use"; the Don de Dieu was Champlain''s ship)')
+      Mount_Hermon_Cemetery: (architect^='')
+      William_Smith_(judge,_born_1728): (birth date^='1728-06-18')
+    relationships:
+      - William_Smith_(judge,_born_1728) (<http://dbpedia.org/resource/William_Smith_(judge,_born_1728)>) --doo:restingPlace--> Mount_Hermon_Cemetery (dor:Mount_Hermon_Cemetery)
+      - William_Smith_(judge,_born_1728) (<http://dbpedia.org/resource/William_Smith_(judge,_born_1728)>) --dop:deathPlace--> Quebec_City (dor:Quebec_City)
+      - 1_Avenue_Sainte-Geneviève (<http://dbpedia.org/resource/1_Avenue_Sainte-Geneviève>) --doo:location--> Quebec_City (dor:Quebec_City)
+  '7':
+    attributes:
+      1_Bligh_Street: (status^='Completed')
+      Arthur_Rutledge: (birth date^='1843-08-29')
+    relationships:
+      - Arthur_Rutledge (dor:Arthur_Rutledge) --doo:restingPlace--> Toowong_Cemetery (dor:Toowong_Cemetery)
+      - Arthur_Rutledge (dor:Arthur_Rutledge) --dop:deathPlace--> Sydney (dor:Sydney)
+      - 1_Bligh_Street (dor:1_Bligh_Street) --doo:location--> Sydney (dor:Sydney)
+  '8':
+    attributes:
+      Frank_Packer: (birth date^='1906-12-03')
+      1_Bligh_Street: (status^='Completed')
+    relationships:
+      - Frank_Packer (dor:Frank_Packer) --doo:restingPlace--> South_Head_General_Cemetery (dor:South_Head_General_Cemetery)
+      - Frank_Packer (dor:Frank_Packer) --dop:deathPlace--> Sydney (dor:Sydney)
+      - 1_Bligh_Street (dor:1_Bligh_Street) --doo:location--> Sydney (dor:Sydney)
+  '9':
+    attributes:
+      Harry_Diddams: (birth date^='1864-04-26')
+      1_Bligh_Street: (status^='Completed')
+    relationships:
+      - Harry_Diddams (dor:Harry_Diddams) --doo:restingPlace--> Toowong_Cemetery (dor:Toowong_Cemetery)
+      - Harry_Diddams (dor:Harry_Diddams) --dop:deathPlace--> Sydney (dor:Sydney)
+      - 1_Bligh_Street (dor:1_Bligh_Street) --doo:location--> Sydney (dor:Sydney)
+  '10':
+    attributes:
+      A._G._Stephen: (birth date^='1862-09-14')
+      1_Cabot_Square: (status^='Operational')
+    relationships:
+      - A._G._Stephen (dor:A._G._Stephen) --doo:restingPlace--> Kensal_Green_Cemetery (dor:Kensal_Green_Cemetery)
+      - A._G._Stephen (dor:A._G._Stephen) --dop:deathPlace--> London (dor:London)
+      - 1_Cabot_Square (dor:1_Cabot_Square) --doo:location--> London (dor:London)
+attributes:
+  city: --Apr sun^ (dop:aprSun)--> int | --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --motto^ (doo:motto)--> string
+  person: --partner^ (doo:partner)--> Resource | --relations^ (dop:relations)--> langString | --birth date^ (doo:birthDate)--> date | --date^ (dop:date)--> langString | --state of origin^ (doo:stateOfOrigin)--> Resource
+  building: --status^ (doo:status)--> string
+  historic place: --architect^ (dop:architect)--> langString
+subgraph_id: 607
+relationships:
+  - person --doo:restingPlace--> historic place
+  - person --dop:deathPlace--> city
+  - building --doo:location--> city

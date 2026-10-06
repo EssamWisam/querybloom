@@ -1,0 +1,100 @@
+types:
+  person: doo:Person
+  country: doo:Country
+  office holder: doo:OfficeHolder
+  television show: doo:TelevisionShow
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Akshay_Yadav (dor:Akshay_Yadav) --doo:nationality--> India (dor:India)
+      - Zee_Punjabi (dor:Zee_Punjabi) --dop:area--> India (dor:India)
+      - Punjabiyan_Di_Dadagiri_With_Bhajji (dor:Punjabiyan_Di_Dadagiri_With_Bhajji) --doo:creator--> Zee_Punjabi (dor:Zee_Punjabi)
+      - Akshay_Yadav (dor:Akshay_Yadav) --dop:relations--> Mulayam_Singh_Yadav (dor:Mulayam_Singh_Yadav)
+  '2':
+    attributes:
+      Ann_Keen: (date^='2007-09-15')
+      Sylvia_Heal: (caption^='Official portrait, 2008')
+    relationships:
+      - Ann_Keen (dor:Ann_Keen) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - BT_Sport (dor:BT_Sport) --dop:area--> United_Kingdom (dor:United_Kingdom)
+      - European_Football_Show (dor:European_Football_Show) --doo:creator--> BT_Sport (dor:BT_Sport)
+      - Ann_Keen (dor:Ann_Keen) --dop:relations--> Sylvia_Heal (dor:Sylvia_Heal)
+  '3':
+    attributes: {}
+    relationships:
+      - Basuri_Tjahaja_Purnama (dor:Basuri_Tjahaja_Purnama) --doo:nationality--> Indonesia (dor:Indonesia)
+      - Genta_Buana_Paramita (dor:Genta_Buana_Paramita) --dop:area--> Indonesia (dor:Indonesia)
+      - Kisah_9_Wali (dor:Kisah_9_Wali) --doo:creator--> Genta_Buana_Paramita (dor:Genta_Buana_Paramita)
+      - Basuri_Tjahaja_Purnama (dor:Basuri_Tjahaja_Purnama) --dop:relations--> Basuki_Tjahaja_Purnama (dor:Basuki_Tjahaja_Purnama)
+  '4':
+    attributes:
+      Misteri_Gunung_Merapi_(TV_series): (producer^='http://dbpedia.org/resource/Budhi_Sutrisno')
+    relationships:
+      - Basuri_Tjahaja_Purnama (dor:Basuri_Tjahaja_Purnama) --doo:nationality--> Indonesia (dor:Indonesia)
+      - Genta_Buana_Paramita (dor:Genta_Buana_Paramita) --dop:area--> Indonesia (dor:Indonesia)
+      - Misteri_Gunung_Merapi_(TV_series) (<http://dbpedia.org/resource/Misteri_Gunung_Merapi_(TV_series)>) --doo:creator--> Genta_Buana_Paramita (dor:Genta_Buana_Paramita)
+      - Basuri_Tjahaja_Purnama (dor:Basuri_Tjahaja_Purnama) --dop:relations--> Basuki_Tjahaja_Purnama (dor:Basuki_Tjahaja_Purnama)
+  '5':
+    attributes:
+      Tutur_Tinular_(TV_series): (producer^='http://dbpedia.org/resource/Budhi_Sutrisno')
+    relationships:
+      - Basuri_Tjahaja_Purnama (dor:Basuri_Tjahaja_Purnama) --doo:nationality--> Indonesia (dor:Indonesia)
+      - Genta_Buana_Paramita (dor:Genta_Buana_Paramita) --dop:area--> Indonesia (dor:Indonesia)
+      - Tutur_Tinular_(TV_series) (<http://dbpedia.org/resource/Tutur_Tinular_(TV_series)>) --doo:creator--> Genta_Buana_Paramita (dor:Genta_Buana_Paramita)
+      - Basuri_Tjahaja_Purnama (dor:Basuri_Tjahaja_Purnama) --dop:relations--> Basuki_Tjahaja_Purnama (dor:Basuki_Tjahaja_Purnama)
+  '6':
+    attributes: {}
+    relationships:
+      - Charles_Ceccaldi-Raynaud (dor:Charles_Ceccaldi-Raynaud) --doo:nationality--> France (dor:France)
+      - France_3 (dor:France_3) --dop:area--> France (dor:France)
+      - Global_Village_(TV_series) (<http://dbpedia.org/resource/Global_Village_(TV_series)>) --doo:creator--> France_3 (dor:France_3)
+      - Charles_Ceccaldi-Raynaud (dor:Charles_Ceccaldi-Raynaud) --dop:relations--> Joëlle_Ceccaldi-Raynaud (<http://dbpedia.org/resource/Joëlle_Ceccaldi-Raynaud>)
+  '7':
+    attributes:
+      John_Stuart,_3rd_Earl_of_Bute: (caption^='Portrait by Joshua Reynolds, 1773')
+    relationships:
+      - Charles_Stuart,_1st_Baron_Stuart_de_Rothesay (<http://dbpedia.org/resource/Charles_Stuart,_1st_Baron_Stuart_de_Rothesay>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - BT_Sport (dor:BT_Sport) --dop:area--> United_Kingdom (dor:United_Kingdom)
+      - European_Football_Show (dor:European_Football_Show) --doo:creator--> BT_Sport (dor:BT_Sport)
+      - Charles_Stuart,_1st_Baron_Stuart_de_Rothesay (<http://dbpedia.org/resource/Charles_Stuart,_1st_Baron_Stuart_de_Rothesay>) --dop:relations--> John_Stuart,_3rd_Earl_of_Bute (<http://dbpedia.org/resource/John_Stuart,_3rd_Earl_of_Bute>)
+  '8':
+    attributes:
+      Joseph_Estrada: (caption^='Estrada in 2016')
+    relationships:
+      - E._R._Ejercito (dor:E._R._Ejercito) --doo:nationality--> Philippines (dor:Philippines)
+      - Radio_Philippines_Network (dor:Radio_Philippines_Network) --dop:area--> Philippines (dor:Philippines)
+      - Balitaan_(2016_TV_program) (<http://dbpedia.org/resource/Balitaan_(2016_TV_program)>) --doo:creator--> Radio_Philippines_Network (dor:Radio_Philippines_Network)
+      - E._R._Ejercito (dor:E._R._Ejercito) --dop:relations--> Joseph_Estrada (dor:Joseph_Estrada)
+  '9':
+    attributes:
+      Joseph_Estrada: (caption^='Estrada in 2016')
+    relationships:
+      - E._R._Ejercito (dor:E._R._Ejercito) --doo:nationality--> Philippines (dor:Philippines)
+      - Radio_Philippines_Network (dor:Radio_Philippines_Network) --dop:area--> Philippines (dor:Philippines)
+      - Cebuano_News (dor:Cebuano_News) --doo:creator--> Radio_Philippines_Network (dor:Radio_Philippines_Network)
+      - E._R._Ejercito (dor:E._R._Ejercito) --dop:relations--> Joseph_Estrada (dor:Joseph_Estrada)
+  '10':
+    attributes:
+      Joseph_Estrada: (caption^='Estrada in 2016')
+    relationships:
+      - E._R._Ejercito (dor:E._R._Ejercito) --doo:nationality--> Philippines (dor:Philippines)
+      - Radio_Philippines_Network (dor:Radio_Philippines_Network) --dop:area--> Philippines (dor:Philippines)
+      - CNN_Philippines_Network_News (dor:CNN_Philippines_Network_News) --doo:creator--> Radio_Philippines_Network (dor:Radio_Philippines_Network)
+      - E._R._Ejercito (dor:E._R._Ejercito) --dop:relations--> Joseph_Estrada (dor:Joseph_Estrada)
+attributes:
+  person: --date^ (dop:date)--> langString | --cname^ (dop:cname)--> langString
+  office holder: --title^ (doo:title)--> langString | --caption^ (dop:caption)--> langString | --agf^ (dop:agf)--> int | --winner^ (dop:winner)--> langString
+  television show: --producer^ (doo:producer)--> Resource | --executive producer^ (doo:executiveProducer)--> Resource
+subgraph_id: 752
+relationships:
+  - person --doo:nationality--> country
+  - television station --dop:area--> country
+  - television show --doo:creator--> television station
+  - person --dop:relations--> office holder

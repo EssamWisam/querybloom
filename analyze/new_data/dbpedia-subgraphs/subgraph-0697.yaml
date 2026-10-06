@@ -1,0 +1,115 @@
+types:
+  athlete: doo:Athlete
+  sports team: doo:SportsTeam
+  olympic event: doo:OlympicEvent
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      USC_Trojans: (logo width^='125')
+      Jim_Millinder: (clubs^='http://dbpedia.org/resource/Fort_Lauderdale_Strikers_(1977–83)')
+      Aaron_Brown_(sprinter): (url^='https://web.archive.org/web/20150826114918/http:/www.usctrojans.com/sports/c-track/mtt/brown_aaron00.html')
+      Athletics_at_the_2016_Summer_Olympics_–_Men's_4_×_100_metres_relay: (bronze^='(* Indicates the sprinter only competed in the preliminary heats.)')
+    relationships:
+      - Athletics_at_the_2016_Summer_Olympics_–_Men's_4_×_100_metres_relay (<http://dbpedia.org/resource/Athletics_at_the_2016_Summer_Olympics_–_Men's_4_×_100_metres_relay>) --dop:bronze--> Aaron_Brown_(sprinter) (<http://dbpedia.org/resource/Aaron_Brown_(sprinter)>)
+      - Aaron_Brown_(sprinter) (<http://dbpedia.org/resource/Aaron_Brown_(sprinter)>) --dop:collegeteam--> USC_Trojans (dor:USC_Trojans)
+      - Jim_Millinder (dor:Jim_Millinder) --doo:managerClub--> USC_Trojans (dor:USC_Trojans)
+  '2':
+    attributes:
+      USC_Trojans: (logo width^='125')
+      Rosie_Tantillo: (clubs^='http://dbpedia.org/resource/Buffalo_Flash')
+      Aaron_Brown_(sprinter): (url^='https://web.archive.org/web/20150826114918/http:/www.usctrojans.com/sports/c-track/mtt/brown_aaron00.html')
+      Athletics_at_the_2016_Summer_Olympics_–_Men's_4_×_100_metres_relay: (bronze^='(* Indicates the sprinter only competed in the preliminary heats.)')
+    relationships:
+      - Athletics_at_the_2016_Summer_Olympics_–_Men's_4_×_100_metres_relay (<http://dbpedia.org/resource/Athletics_at_the_2016_Summer_Olympics_–_Men's_4_×_100_metres_relay>) --dop:bronze--> Aaron_Brown_(sprinter) (<http://dbpedia.org/resource/Aaron_Brown_(sprinter)>)
+      - Aaron_Brown_(sprinter) (<http://dbpedia.org/resource/Aaron_Brown_(sprinter)>) --dop:collegeteam--> USC_Trojans (dor:USC_Trojans)
+      - Rosie_Tantillo (dor:Rosie_Tantillo) --doo:managerClub--> USC_Trojans (dor:USC_Trojans)
+  '3':
+    attributes:
+      Janine_Szpara: (clubs^='Foothill FC')
+      Abbey_Weitzeil: (club^='http://dbpedia.org/resource/Canyons_Aquatic_Club')
+      California_Golden_Bears: (logo width^='150')
+      Swimming_at_the_2020_Summer_Olympics_–_Women's_4_×_100_metre_freestyle_relay: (bronze^='( *Indicates the swimmer only competed in the preliminary heats.)')
+    relationships:
+      - Swimming_at_the_2020_Summer_Olympics_–_Women's_4_×_100_metre_freestyle_relay (<http://dbpedia.org/resource/Swimming_at_the_2020_Summer_Olympics_–_Women's_4_×_100_metre_freestyle_relay>) --dop:bronze--> Abbey_Weitzeil (dor:Abbey_Weitzeil)
+      - Abbey_Weitzeil (dor:Abbey_Weitzeil) --dop:collegeteam--> California_Golden_Bears (dor:California_Golden_Bears)
+      - Janine_Szpara (dor:Janine_Szpara) --doo:managerClub--> California_Golden_Bears (dor:California_Golden_Bears)
+  '4':
+    attributes:
+      Lyle_Yorks: (clubs^='http://dbpedia.org/resource/D.C._United')
+      Abbey_Weitzeil: (club^='http://dbpedia.org/resource/Canyons_Aquatic_Club')
+      California_Golden_Bears: (logo width^='150')
+      Swimming_at_the_2020_Summer_Olympics_–_Women's_4_×_100_metre_freestyle_relay: (bronze^='( *Indicates the swimmer only competed in the preliminary heats.)')
+    relationships:
+      - Swimming_at_the_2020_Summer_Olympics_–_Women's_4_×_100_metre_freestyle_relay (<http://dbpedia.org/resource/Swimming_at_the_2020_Summer_Olympics_–_Women's_4_×_100_metre_freestyle_relay>) --dop:bronze--> Abbey_Weitzeil (dor:Abbey_Weitzeil)
+      - Abbey_Weitzeil (dor:Abbey_Weitzeil) --dop:collegeteam--> California_Golden_Bears (dor:California_Golden_Bears)
+      - Lyle_Yorks (dor:Lyle_Yorks) --doo:managerClub--> California_Golden_Bears (dor:California_Golden_Bears)
+  '5':
+    attributes:
+      Abbey_Weitzeil: (club^='http://dbpedia.org/resource/Canyons_Aquatic_Club')
+      California_Golden_Bears: (logo width^='150')
+      Swimming_at_the_2020_Summer_Olympics_–_Women's_4_×_100_metre_freestyle_relay: (bronze^='( *Indicates the swimmer only competed in the preliminary heats.)')
+    relationships:
+      - Swimming_at_the_2020_Summer_Olympics_–_Women's_4_×_100_metre_freestyle_relay (<http://dbpedia.org/resource/Swimming_at_the_2020_Summer_Olympics_–_Women's_4_×_100_metre_freestyle_relay>) --dop:bronze--> Abbey_Weitzeil (dor:Abbey_Weitzeil)
+      - Abbey_Weitzeil (dor:Abbey_Weitzeil) --dop:collegeteam--> California_Golden_Bears (dor:California_Golden_Bears)
+      - Pieter_Lehrer (dor:Pieter_Lehrer) --doo:managerClub--> California_Golden_Bears (dor:California_Golden_Bears)
+  '6':
+    attributes:
+      Ágnes_Kovács: (club^='Budapesti Spartacus Sport Club')
+      Jaime_Pagliarulo: (clubs^='http://dbpedia.org/resource/Maryland_Pride')
+      Arizona_State_Sun_Devils: (logo width^='100')
+      Swimming_at_the_1996_Summer_Olympics_–_Women's_200_metre_breaststroke: (bronze^='http://dbpedia.org/resource/Ágnes_Kovács')
+    relationships:
+      - Swimming_at_the_1996_Summer_Olympics_–_Women's_200_metre_breaststroke (<http://dbpedia.org/resource/Swimming_at_the_1996_Summer_Olympics_–_Women's_200_metre_breaststroke>) --dop:bronze--> Ágnes_Kovács (<http://dbpedia.org/resource/Ágnes_Kovács>)
+      - Ágnes_Kovács (<http://dbpedia.org/resource/Ágnes_Kovács>) --dop:collegeteam--> Arizona_State_Sun_Devils (dor:Arizona_State_Sun_Devils)
+      - Jaime_Pagliarulo (dor:Jaime_Pagliarulo) --doo:managerClub--> Arizona_State_Sun_Devils (dor:Arizona_State_Sun_Devils)
+  '7':
+    attributes:
+      Ágnes_Kovács: (club^='Budapesti Spartacus Sport Club')
+      Arizona_State_Sun_Devils: (logo width^='100')
+      Swimming_at_the_1996_Summer_Olympics_–_Women's_200_metre_breaststroke: (bronze^='http://dbpedia.org/resource/Ágnes_Kovács')
+    relationships:
+      - Swimming_at_the_1996_Summer_Olympics_–_Women's_200_metre_breaststroke (<http://dbpedia.org/resource/Swimming_at_the_1996_Summer_Olympics_–_Women's_200_metre_breaststroke>) --dop:bronze--> Ágnes_Kovács (<http://dbpedia.org/resource/Ágnes_Kovács>)
+      - Ágnes_Kovács (<http://dbpedia.org/resource/Ágnes_Kovács>) --dop:collegeteam--> Arizona_State_Sun_Devils (dor:Arizona_State_Sun_Devils)
+      - Tracey_Leone (dor:Tracey_Leone) --doo:managerClub--> Arizona_State_Sun_Devils (dor:Arizona_State_Sun_Devils)
+  '8':
+    attributes:
+      UNLV_Rebels: (logo width^='200')
+      Chad_Brown_(soccer): (clubs^='Seattle Sounders Select')
+      Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman: (bronze^='http://dbpedia.org/resource/Aja_Evans')
+    relationships:
+      - Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman (<http://dbpedia.org/resource/Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman>) --dop:bronze--> Aja_Evans (dor:Aja_Evans)
+      - Aja_Evans (dor:Aja_Evans) --dop:collegeteam--> UNLV_Rebels (dor:UNLV_Rebels)
+      - Chad_Brown_(soccer) (<http://dbpedia.org/resource/Chad_Brown_(soccer)>) --doo:managerClub--> UNLV_Rebels (dor:UNLV_Rebels)
+  '9':
+    attributes:
+      UNLV_Rebels: (logo width^='200')
+      Jenny_Ruiz-Williams: (clubs^='http://dbpedia.org/resource/Bay_Area_Breeze')
+      Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman: (bronze^='http://dbpedia.org/resource/Aja_Evans')
+    relationships:
+      - Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman (<http://dbpedia.org/resource/Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman>) --dop:bronze--> Aja_Evans (dor:Aja_Evans)
+      - Aja_Evans (dor:Aja_Evans) --dop:collegeteam--> UNLV_Rebels (dor:UNLV_Rebels)
+      - Jenny_Ruiz-Williams (dor:Jenny_Ruiz-Williams) --doo:managerClub--> UNLV_Rebels (dor:UNLV_Rebels)
+  '10':
+    attributes:
+      Illinois_Fighting_Illini: (logo width^='125')
+      Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman: (bronze^='http://dbpedia.org/resource/Aja_Evans')
+    relationships:
+      - Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman (<http://dbpedia.org/resource/Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman>) --dop:bronze--> Aja_Evans (dor:Aja_Evans)
+      - Aja_Evans (dor:Aja_Evans) --dop:collegeteam--> Illinois_Fighting_Illini (dor:Illinois_Fighting_Illini)
+      - Marcia_McDermott (dor:Marcia_McDermott) --doo:managerClub--> Illinois_Fighting_Illini (dor:Illinois_Fighting_Illini)
+attributes:
+  athlete: --death place^ (dop:deathPlace)--> langString | --club^ (dop:club)--> Resource | --death date^ (dop:deathDate)--> date | --url^ (dop:url)--> Resource
+  sports team: --logo width^ (dop:logoWidth)--> int
+  olympic event: --bronze DEN^ (dop:bronzeDen)--> int | --bronzePol (dop:bronzePol)--> int | --bronze^ (dop:bronze)--> Resource
+  soccer manager: --clubs^ (dop:clubs)--> langString
+subgraph_id: 697
+relationships:
+  - olympic event --dop:bronze--> athlete
+  - athlete --dop:collegeteam--> sports team
+  - soccer manager --doo:managerClub--> sports team

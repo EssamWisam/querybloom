@@ -1,0 +1,105 @@
+types:
+  person: doo:Person
+  politician: doo:Politician
+  university: doo:University
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Alan_Clark: (after^='http://dbpedia.org/resource/Gary_Streeter')
+      Kenneth_Clark: (birth date^='1903-07-13')
+      Ivone_Kirkpatrick: (death place^='Celbridge, County Kildare, Ireland')
+    relationships:
+      - Kenneth_Clark (dor:Kenneth_Clark) --dop:almaMater--> Trinity_College,_Oxford (<http://dbpedia.org/resource/Trinity_College,_Oxford>)
+      - Alan_Clark (dor:Alan_Clark) --doo:parent--> Kenneth_Clark (dor:Kenneth_Clark)
+      - Kenneth_Clark (dor:Kenneth_Clark) --dop:after--> Ivone_Kirkpatrick (dor:Ivone_Kirkpatrick)
+  '2':
+    attributes:
+      Yale_University: (image upright^='0.7')
+      John_G._Townsend_Jr.: (death place^='http://dbpedia.org/resource/Philadelphia')
+      Thomas_F._Bayard_Jr.: (birth date^='1868-06-04')
+    relationships:
+      - Thomas_F._Bayard_Jr. (<http://dbpedia.org/resource/Thomas_F._Bayard_Jr.>) --dop:almaMater--> Yale_University (dor:Yale_University)
+      - Alexis_I._du_Pont_Bayard (dor:Alexis_I._du_Pont_Bayard) --doo:parent--> Thomas_F._Bayard_Jr. (<http://dbpedia.org/resource/Thomas_F._Bayard_Jr.>)
+      - Thomas_F._Bayard_Jr. (<http://dbpedia.org/resource/Thomas_F._Bayard_Jr.>) --dop:after--> John_G._Townsend_Jr. (<http://dbpedia.org/resource/John_G._Townsend_Jr.>)
+  '3':
+    attributes:
+      Alberto_Lleras_Camargo: (death place^='http://dbpedia.org/resource/Bogotá,_D.C.')
+      Alfonso_López_Pumarejo: (birth date^='1886-01-31')
+      Alfonso_López_Michelsen: (after^='http://dbpedia.org/resource/Julio_César_Turbay_Ayala')
+      London_School_of_Economics: (image upright^='0.7', affiliation^='http://dbpedia.org/resource/Association_of_Commonwealth_Universities', chancellor^='http://dbpedia.org/resource/Anne,_Princess_Royal')
+    relationships:
+      - Alfonso_López_Pumarejo (<http://dbpedia.org/resource/Alfonso_López_Pumarejo>) --dop:almaMater--> London_School_of_Economics (dor:London_School_of_Economics)
+      - Alfonso_López_Michelsen (<http://dbpedia.org/resource/Alfonso_López_Michelsen>) --doo:parent--> Alfonso_López_Pumarejo (<http://dbpedia.org/resource/Alfonso_López_Pumarejo>)
+      - Alfonso_López_Pumarejo (<http://dbpedia.org/resource/Alfonso_López_Pumarejo>) --dop:after--> Alberto_Lleras_Camargo (dor:Alberto_Lleras_Camargo)
+  '4':
+    attributes:
+      Eduardo_Santos_Montejo: (death place^='http://dbpedia.org/resource/Bogotá')
+      Alfonso_López_Pumarejo: (birth date^='1886-01-31')
+      Alfonso_López_Michelsen: (after^='http://dbpedia.org/resource/Julio_César_Turbay_Ayala')
+      London_School_of_Economics: (image upright^='0.7', affiliation^='http://dbpedia.org/resource/Association_of_Commonwealth_Universities', chancellor^='http://dbpedia.org/resource/Anne,_Princess_Royal')
+    relationships:
+      - Alfonso_López_Pumarejo (<http://dbpedia.org/resource/Alfonso_López_Pumarejo>) --dop:almaMater--> London_School_of_Economics (dor:London_School_of_Economics)
+      - Alfonso_López_Michelsen (<http://dbpedia.org/resource/Alfonso_López_Michelsen>) --doo:parent--> Alfonso_López_Pumarejo (<http://dbpedia.org/resource/Alfonso_López_Pumarejo>)
+      - Alfonso_López_Pumarejo (<http://dbpedia.org/resource/Alfonso_López_Pumarejo>) --dop:after--> Eduardo_Santos_Montejo (dor:Eduardo_Santos_Montejo)
+  '5':
+    attributes:
+      Andrew_Cavendish,_11th_Duke_of_Devonshire: (after^='http://dbpedia.org/resource/Cledwyn_Hughes', death place^='Chatsworth, Derbyshire')
+      Edward_Cavendish,_10th_Duke_of_Devonshire: (birth date^='1895-05-06')
+    relationships:
+      - Edward_Cavendish,_10th_Duke_of_Devonshire (<http://dbpedia.org/resource/Edward_Cavendish,_10th_Duke_of_Devonshire>) --dop:almaMater--> Trinity_College,_Cambridge (<http://dbpedia.org/resource/Trinity_College,_Cambridge>)
+      - Andrew_Cavendish,_11th_Duke_of_Devonshire (<http://dbpedia.org/resource/Andrew_Cavendish,_11th_Duke_of_Devonshire>) --doo:parent--> Edward_Cavendish,_10th_Duke_of_Devonshire (<http://dbpedia.org/resource/Edward_Cavendish,_10th_Duke_of_Devonshire>)
+      - Edward_Cavendish,_10th_Duke_of_Devonshire (<http://dbpedia.org/resource/Edward_Cavendish,_10th_Duke_of_Devonshire>) --dop:after--> Andrew_Cavendish,_11th_Duke_of_Devonshire (<http://dbpedia.org/resource/Andrew_Cavendish,_11th_Duke_of_Devonshire>)
+  '6':
+    attributes:
+      Andrew_Cavendish,_11th_Duke_of_Devonshire: (after^='http://dbpedia.org/resource/Cledwyn_Hughes')
+      Edward_Cavendish,_10th_Duke_of_Devonshire: (birth date^='1895-05-06')
+    relationships:
+      - Edward_Cavendish,_10th_Duke_of_Devonshire (<http://dbpedia.org/resource/Edward_Cavendish,_10th_Duke_of_Devonshire>) --dop:almaMater--> Trinity_College,_Cambridge (<http://dbpedia.org/resource/Trinity_College,_Cambridge>)
+      - Andrew_Cavendish,_11th_Duke_of_Devonshire (<http://dbpedia.org/resource/Andrew_Cavendish,_11th_Duke_of_Devonshire>) --doo:parent--> Edward_Cavendish,_10th_Duke_of_Devonshire (<http://dbpedia.org/resource/Edward_Cavendish,_10th_Duke_of_Devonshire>)
+      - Edward_Cavendish,_10th_Duke_of_Devonshire (<http://dbpedia.org/resource/Edward_Cavendish,_10th_Duke_of_Devonshire>) --dop:after--> Arthur_Creech_Jones (dor:Arthur_Creech_Jones)
+  '7':
+    attributes:
+      Andrew_Cavendish,_11th_Duke_of_Devonshire: (after^='http://dbpedia.org/resource/Cledwyn_Hughes')
+      Edward_Cavendish,_10th_Duke_of_Devonshire: (birth date^='1895-05-06')
+    relationships:
+      - Edward_Cavendish,_10th_Duke_of_Devonshire (<http://dbpedia.org/resource/Edward_Cavendish,_10th_Duke_of_Devonshire>) --dop:almaMater--> Trinity_College,_Cambridge (<http://dbpedia.org/resource/Trinity_College,_Cambridge>)
+      - Andrew_Cavendish,_11th_Duke_of_Devonshire (<http://dbpedia.org/resource/Andrew_Cavendish,_11th_Duke_of_Devonshire>) --doo:parent--> Edward_Cavendish,_10th_Duke_of_Devonshire (<http://dbpedia.org/resource/Edward_Cavendish,_10th_Duke_of_Devonshire>)
+      - Edward_Cavendish,_10th_Duke_of_Devonshire (<http://dbpedia.org/resource/Edward_Cavendish,_10th_Duke_of_Devonshire>) --dop:after--> Geoffrey_FitzClarence,_5th_Earl_of_Munster (<http://dbpedia.org/resource/Geoffrey_FitzClarence,_5th_Earl_of_Munster>)
+  '8':
+    attributes:
+      Phil_Sawford: (birth date^='1950-06-26')
+    relationships:
+      - Phil_Sawford (dor:Phil_Sawford) --dop:almaMater--> Ruskin_College,_Oxford (<http://dbpedia.org/resource/Ruskin_College,_Oxford>)
+      - Andy_Sawford (dor:Andy_Sawford) --doo:parent--> Phil_Sawford (dor:Phil_Sawford)
+      - Phil_Sawford (dor:Phil_Sawford) --dop:after--> Philip_Hollobone (dor:Philip_Hollobone)
+  '9':
+    attributes:
+      Phil_Sawford: (birth date^='1950-06-26')
+      University_of_Leicester: (image upright^='0.7', affiliation^='http://dbpedia.org/resource/Association_of_Commonwealth_Universities', chancellor^='http://dbpedia.org/resource/David_Willetts')
+    relationships:
+      - Phil_Sawford (dor:Phil_Sawford) --dop:almaMater--> University_of_Leicester (dor:University_of_Leicester)
+      - Andy_Sawford (dor:Andy_Sawford) --doo:parent--> Phil_Sawford (dor:Phil_Sawford)
+      - Phil_Sawford (dor:Phil_Sawford) --dop:after--> Philip_Hollobone (dor:Philip_Hollobone)
+  '10':
+    attributes:
+      Harekrushna_Mahatab: (birth date^='1899-11-21')
+    relationships:
+      - Harekrushna_Mahatab (dor:Harekrushna_Mahatab) --dop:almaMater--> Ravenshaw_College (dor:Ravenshaw_College)
+      - Bhartruhari_Mahtab (dor:Bhartruhari_Mahtab) --doo:parent--> Harekrushna_Mahatab (dor:Harekrushna_Mahatab)
+      - Harekrushna_Mahatab (dor:Harekrushna_Mahatab) --dop:after--> Nabakrushna_Choudhuri (dor:Nabakrushna_Choudhuri)
+attributes:
+  person: --partner^ (doo:partner)--> Resource | --birth date^ (doo:birthDate)--> date
+  politician: --b^ (dop:b)--> langString | --resting place^ (doo:restingPlace)--> Resource | --death place^ (dop:deathPlace)--> Resource | --nickname^ (dop:nickname)--> langString
+  university: --image upright^ (dop:imageUpright)--> double | --affiliation^ (doo:affiliation)--> Resource | --chancellor^ (doo:chancellor)--> Resource
+  office holder: --nickname^ (dop:nickname)--> langString | --winner^ (dop:winner)--> langString | --after^ (dop:after)--> langString | --2a^ (dop:2a)--> langString
+subgraph_id: 629
+relationships:
+  - person --dop:almaMater--> university
+  - office holder --doo:parent--> person
+  - person --dop:after--> politician

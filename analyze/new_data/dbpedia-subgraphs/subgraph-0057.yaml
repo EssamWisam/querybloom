@@ -1,0 +1,76 @@
+types:
+  building: doo:Building
+  settlement: doo:Settlement
+  record label: doo:RecordLabel
+  soccer player: doo:SoccerPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Apex_Historic_District: (caption^='Historic downtown Apex')
+    relationships:
+      - Brendan_Lambe (dor:Brendan_Lambe) --doo:birthPlace--> Apex,_North_Carolina (<http://dbpedia.org/resource/Apex,_North_Carolina>)
+      - Apex_Historic_District (dor:Apex_Historic_District) --doo:location--> Apex,_North_Carolina (<http://dbpedia.org/resource/Apex,_North_Carolina>)
+      - Apex_Historic_District (dor:Apex_Historic_District) --doo:architecturalStyle--> Bungalow (dor:Bungalow)
+  '2':
+    attributes:
+      North_Carolina: (align^='center', width^='99')
+      Apex_Historic_District: (caption^='Historic downtown Apex')
+    relationships:
+      - Brendan_Lambe (dor:Brendan_Lambe) --doo:birthPlace--> North_Carolina (dor:North_Carolina)
+      - Apex_Historic_District (dor:Apex_Historic_District) --doo:location--> North_Carolina (dor:North_Carolina)
+      - Apex_Historic_District (dor:Apex_Historic_District) --doo:architecturalStyle--> Bungalow (dor:Bungalow)
+  '3':
+    attributes:
+      North_Carolina: (align^='center', width^='99')
+      Apex_Historic_District: (caption^='Historic downtown Apex')
+    relationships:
+      - Chituru_Odunze (dor:Chituru_Odunze) --doo:birthPlace--> North_Carolina (dor:North_Carolina)
+      - Apex_Historic_District (dor:Apex_Historic_District) --doo:location--> North_Carolina (dor:North_Carolina)
+      - Apex_Historic_District (dor:Apex_Historic_District) --doo:architecturalStyle--> Bungalow (dor:Bungalow)
+  '4':
+    attributes: {}
+    relationships:
+      - Jack_Jones_(soccer,_born_1987) (<http://dbpedia.org/resource/Jack_Jones_(soccer,_born_1987)>) --doo:birthPlace--> Golden,_Colorado (<http://dbpedia.org/resource/Golden,_Colorado>)
+      - Colorado_National_Guard_Armory (dor:Colorado_National_Guard_Armory) --doo:location--> Golden,_Colorado (<http://dbpedia.org/resource/Golden,_Colorado>)
+      - Colorado_National_Guard_Armory (dor:Colorado_National_Guard_Armory) --doo:architecturalStyle--> Castle (dor:Castle)
+  '5':
+    attributes: {}
+    relationships:
+      - Lindsey_Horan (dor:Lindsey_Horan) --doo:birthPlace--> Golden,_Colorado (<http://dbpedia.org/resource/Golden,_Colorado>)
+      - Colorado_National_Guard_Armory (dor:Colorado_National_Guard_Armory) --doo:location--> Golden,_Colorado (<http://dbpedia.org/resource/Golden,_Colorado>)
+      - Colorado_National_Guard_Armory (dor:Colorado_National_Guard_Armory) --doo:architecturalStyle--> Castle (dor:Castle)
+  '6':
+    attributes:
+      Our_Lady_of_Mount_Carmel_Grotto: (caption^='Our Lady of Mount Carmel Grotto, September 2012')
+    relationships:
+      - James_Jenkins_(American_football) (<http://dbpedia.org/resource/James_Jenkins_(American_football)>) --doo:birthPlace--> Staten_Island,_New_York (<http://dbpedia.org/resource/Staten_Island,_New_York>)
+      - Our_Lady_of_Mount_Carmel_Grotto (dor:Our_Lady_of_Mount_Carmel_Grotto) --doo:location--> Staten_Island,_New_York (<http://dbpedia.org/resource/Staten_Island,_New_York>)
+      - Our_Lady_of_Mount_Carmel_Grotto (dor:Our_Lady_of_Mount_Carmel_Grotto) --doo:architecturalStyle--> Grotto (dor:Grotto)
+  '7':
+    attributes:
+      Our_Lady_of_Mount_Carmel_Grotto: (caption^='Our Lady of Mount Carmel Grotto, September 2012')
+    relationships:
+      - Sidney_Rivera (dor:Sidney_Rivera) --doo:birthPlace--> Staten_Island,_New_York (<http://dbpedia.org/resource/Staten_Island,_New_York>)
+      - Our_Lady_of_Mount_Carmel_Grotto (dor:Our_Lady_of_Mount_Carmel_Grotto) --doo:location--> Staten_Island,_New_York (<http://dbpedia.org/resource/Staten_Island,_New_York>)
+      - Our_Lady_of_Mount_Carmel_Grotto (dor:Our_Lady_of_Mount_Carmel_Grotto) --doo:architecturalStyle--> Grotto (dor:Grotto)
+  '8':
+    attributes:
+      Our_Lady_of_Mount_Carmel_Grotto: (caption^='Our Lady of Mount Carmel Grotto, September 2012')
+    relationships:
+      - Stevie_Baggs (dor:Stevie_Baggs) --doo:birthPlace--> Staten_Island,_New_York (<http://dbpedia.org/resource/Staten_Island,_New_York>)
+      - Our_Lady_of_Mount_Carmel_Grotto (dor:Our_Lady_of_Mount_Carmel_Grotto) --doo:location--> Staten_Island,_New_York (<http://dbpedia.org/resource/Staten_Island,_New_York>)
+      - Our_Lady_of_Mount_Carmel_Grotto (dor:Our_Lady_of_Mount_Carmel_Grotto) --doo:architecturalStyle--> Grotto (dor:Grotto)
+attributes:
+  building: --reason^ (dop:reason)--> langString | --caption^ (dop:caption)--> langString | --header^ (dop:header)--> langString | --designated other1 textcolor^ (dop:designatedOther1Textcolor)--> langString
+  settlement: --align^ (dop:align)--> langString | --Aug low C^ (dop:augLowC)--> int | --Apr rain days^ (dop:aprRainDays)--> int | --district^ (doo:district)--> Resource | --Apr high C^ (dop:aprHighC)--> int | --canton^ (doo:canton)--> Resource | --width^ (dop:width)--> langString
+  soccer player: --id^ (dop:id)--> int
+subgraph_id: 57
+relationships:
+  - soccer player --doo:birthPlace--> settlement
+  - building --doo:location--> settlement
+  - building --doo:architecturalStyle--> record label

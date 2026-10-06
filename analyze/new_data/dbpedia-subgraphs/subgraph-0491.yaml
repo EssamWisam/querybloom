@@ -1,0 +1,100 @@
+types:
+  Band: doo:Band
+  album: doo:Album
+  music genre: doo:MusicGenre
+  record label: doo:RecordLabel
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Jefferson_Airplane: (genre^='', associated acts^='')
+      -Fa-Tal-_Gal_a_Todo_Vapor: (producer^='Roberto Menescal', has abstract^='-Fa-Tal- Gal a Todo Vapor is the first live album by Brazilian singer Gal Costa, released in 1971. It was ranked the 20th best Brazilian album of all time by the Brazilian Rolling Stone magazine.')
+    relationships:
+      - Grunt_Records (dor:Grunt_Records) --doo:foundedBy--> Jefferson_Airplane (dor:Jefferson_Airplane)
+      - Grunt_Records (dor:Grunt_Records) --doo:genre--> Psychedelic_rock (dor:Psychedelic_rock)
+      - -Fa-Tal-_Gal_a_Todo_Vapor (<http://dbpedia.org/resource/-Fa-Tal-_Gal_a_Todo_Vapor>) --dop:genre--> Psychedelic_rock (dor:Psychedelic_rock)
+  '2':
+    attributes:
+      U2: (genre^='', width^='25')
+      -Fa-Tal-_Gal_a_Todo_Vapor: (producer^='Roberto Menescal', has abstract^='-Fa-Tal- Gal a Todo Vapor is the first live album by Brazilian singer Gal Costa, released in 1971. It was ranked the 20th best Brazilian album of all time by the Brazilian Rolling Stone magazine.')
+    relationships:
+      - Mother_Records (dor:Mother_Records) --doo:foundedBy--> U2 (dor:U2)
+      - Mother_Records (dor:Mother_Records) --doo:genre--> Psychedelic_rock (dor:Psychedelic_rock)
+      - -Fa-Tal-_Gal_a_Todo_Vapor (<http://dbpedia.org/resource/-Fa-Tal-_Gal_a_Todo_Vapor>) --dop:genre--> Psychedelic_rock (dor:Psychedelic_rock)
+  '3':
+    attributes:
+      '!Hero_(album)': (producer^='http://dbpedia.org/resource/Pete_Stewart', has abstract^='!Hero è la colonna sonora dell''omonima opera rock statunitense del 2003, che rivede in chiave moderna gli ultimi due anni della vita di Gesù.')
+      Audio_Adrenaline: (genre^='http://dbpedia.org/resource/Alternative_rock', associated acts^='http://dbpedia.org/resource/Know_Hope_Collective')
+    relationships:
+      - Flicker_Records (dor:Flicker_Records) --doo:foundedBy--> Audio_Adrenaline (dor:Audio_Adrenaline)
+      - Flicker_Records (dor:Flicker_Records) --doo:genre--> Christian_rock (dor:Christian_rock)
+      - '!Hero_(album) (<http://dbpedia.org/resource/!Hero_(album)>) --dop:genre--> Christian_rock (dor:Christian_rock)'
+  '4':
+    attributes:
+      Anti-Flag: (genre^='http://dbpedia.org/resource/Punk_rock', associated acts^='http://dbpedia.org/resource/White_Wives')
+      ¡¡Que_corra_la_voz!!: '(producer^=''Tony López'', has abstract^=''¡¡Que corra la voz!! – piąty studyjny album hiszpańskiego zespołu skapunkowego Ska-P. Przed jego wydaniem zespół powiększył się o dwóch nowych członków: oficjalnymi członkami zostali występujący dotyc...'')'
+    relationships:
+      - A-F_Records (dor:A-F_Records) --doo:foundedBy--> Anti-Flag (dor:Anti-Flag)
+      - A-F_Records (dor:A-F_Records) --doo:genre--> Punk_rock (dor:Punk_rock)
+      - ¡¡Que_corra_la_voz!! (<http://dbpedia.org/resource/¡¡Que_corra_la_voz!!>) --dop:genre--> Punk_rock (dor:Punk_rock)
+  '5':
+    attributes:
+      The_Bouncing_Souls: (genre^='http://dbpedia.org/resource/Oi!', image size^='250')
+      ¡¡Que_corra_la_voz!!: '(producer^=''Tony López'', has abstract^=''¡¡Que corra la voz!! – piąty studyjny album hiszpańskiego zespołu skapunkowego Ska-P. Przed jego wydaniem zespół powiększył się o dwóch nowych członków: oficjalnymi członkami zostali występujący dotyc...'')'
+    relationships:
+      - Chunksaah_Records (dor:Chunksaah_Records) --doo:foundedBy--> The_Bouncing_Souls (dor:The_Bouncing_Souls)
+      - Chunksaah_Records (dor:Chunksaah_Records) --doo:genre--> Punk_rock (dor:Punk_rock)
+      - ¡¡Que_corra_la_voz!! (<http://dbpedia.org/resource/¡¡Que_corra_la_voz!!>) --dop:genre--> Punk_rock (dor:Punk_rock)
+  '6':
+    attributes:
+      Crass: (genre^='', associated acts^='')
+      ¡¡Que_corra_la_voz!!: '(producer^=''Tony López'', has abstract^=''¡¡Que corra la voz!! – piąty studyjny album hiszpańskiego zespołu skapunkowego Ska-P. Przed jego wydaniem zespół powiększył się o dwóch nowych członków: oficjalnymi członkami zostali występujący dotyc...'')'
+    relationships:
+      - Crass_Records (dor:Crass_Records) --doo:foundedBy--> Crass (dor:Crass)
+      - Crass_Records (dor:Crass_Records) --doo:genre--> Punk_rock (dor:Punk_rock)
+      - ¡¡Que_corra_la_voz!! (<http://dbpedia.org/resource/¡¡Que_corra_la_voz!!>) --dop:genre--> Punk_rock (dor:Punk_rock)
+  '7':
+    attributes:
+      Thompson_Twins: (genre^='', associated acts^='')
+      ¡Alarma!_(album): (producer^='Daniel Amos, Thom Roy', has abstract^='¡Alarma! è un album del 1981 della band , prodotto dalla .')
+    relationships:
+      - T_Records (dor:T_Records) --doo:foundedBy--> Thompson_Twins (dor:Thompson_Twins)
+      - T_Records (dor:T_Records) --doo:genre--> New_wave_music (dor:New_wave_music)
+      - ¡Alarma!_(album) (<http://dbpedia.org/resource/¡Alarma!_(album)>) --dop:genre--> New_wave_music (dor:New_wave_music)
+  '8':
+    attributes:
+      Sloan_(band): (genre^='http://dbpedia.org/resource/Alternative_rock', image size^='300', associated acts^='http://dbpedia.org/resource/Anyway_Gang')
+      ¡All-Time_Quarterback!_(album): '(has abstract^=''¡All-Time Quarterback! è il terzo e ultimo album da solista di Ben Gibbard. È una raccolta di tracce da due EP ora fuori produzione: collection ¡All-Time Quarterback! e . Rispetto a questi però l''''albu...'')'
+    relationships:
+      - Murderecords (dor:Murderecords) --doo:foundedBy--> Sloan_(band) (<http://dbpedia.org/resource/Sloan_(band)>)
+      - Murderecords (dor:Murderecords) --doo:genre--> Indie_rock (dor:Indie_rock)
+      - ¡All-Time_Quarterback!_(album) (<http://dbpedia.org/resource/¡All-Time_Quarterback!_(album)>) --dop:genre--> Indie_rock (dor:Indie_rock)
+  '9':
+    attributes:
+      Brand_New_(band): (genre^='', associated acts^='http://dbpedia.org/resource/Taking_Back_Sunday', width^='25.0')
+      ¡All-Time_Quarterback!_(album): '(has abstract^=''¡All-Time Quarterback! è il terzo e ultimo album da solista di Ben Gibbard. È una raccolta di tracce da due EP ora fuori produzione: collection ¡All-Time Quarterback! e . Rispetto a questi però l''''albu...'')'
+    relationships:
+      - Procrastinate!_Music_Traitors (<http://dbpedia.org/resource/Procrastinate!_Music_Traitors>) --doo:foundedBy--> Brand_New_(band) (<http://dbpedia.org/resource/Brand_New_(band)>)
+      - Procrastinate!_Music_Traitors (<http://dbpedia.org/resource/Procrastinate!_Music_Traitors>) --doo:genre--> Indie_rock (dor:Indie_rock)
+      - ¡All-Time_Quarterback!_(album) (<http://dbpedia.org/resource/¡All-Time_Quarterback!_(album)>) --dop:genre--> Indie_rock (dor:Indie_rock)
+  '10':
+    attributes:
+      The_Paradise_Motel: (genre^='http://dbpedia.org/resource/Acoustic_music')
+      ¡All-Time_Quarterback!_(album): '(has abstract^=''¡All-Time Quarterback! è il terzo e ultimo album da solista di Ben Gibbard. È una raccolta di tracce da due EP ora fuori produzione: collection ¡All-Time Quarterback! e . Rispetto a questi però l''''albu...'')'
+    relationships:
+      - Stolen_Recordings (dor:Stolen_Recordings) --doo:foundedBy--> The_Paradise_Motel (dor:The_Paradise_Motel)
+      - Stolen_Recordings (dor:Stolen_Recordings) --doo:genre--> Indie_rock (dor:Indie_rock)
+      - ¡All-Time_Quarterback!_(album) (<http://dbpedia.org/resource/¡All-Time_Quarterback!_(album)>) --dop:genre--> Indie_rock (dor:Indie_rock)
+attributes:
+  Band: --genre^ (dop:genre)--> langString | --image size^ (dop:imageSize)--> int | --associated acts^ (dop:associatedActs)--> Resource | --width^ (dop:width)--> int
+  album: --producer^ (dop:producer)--> langString | --all lyrics^ (dop:allLyrics)--> langString | --has abstract^ (doo:abstract)--> langString | --quote^ (dop:quote)--> langString
+  music genre: --reason^ (dop:reason)--> langString | --2y^ (dop:2y)--> int | --2a^ (dop:2a)--> langString | --1p^ (dop:1p)--> int
+subgraph_id: 491
+relationships:
+  - record label --doo:foundedBy--> Band
+  - record label --doo:genre--> music genre
+  - album --dop:genre--> music genre

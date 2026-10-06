@@ -1,0 +1,126 @@
+types:
+  language: doo:Language
+  politician: doo:Politician
+  settlement: doo:Settlement
+  ethnic group: doo:EthnicGroup
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Asturias: (Apr low C^='6.8', Aug high C^='22.2')
+    relationships:
+      - Aurelio_Fernández_Sánchez (<http://dbpedia.org/resource/Aurelio_Fernández_Sánchez>) --doo:nationality--> Asturians (dor:Asturians)
+      - Aurelio_Fernández_Sánchez (<http://dbpedia.org/resource/Aurelio_Fernández_Sánchez>) --dop:birthPlace--> Asturias (dor:Asturias)
+      - Asturians (dor:Asturians) --doo:related--> Mirandese (dor:Mirandese)
+  '2':
+    attributes:
+      Oviedo: (Apr low C^='6.8', Aug high C^='23.3')
+    relationships:
+      - Aurelio_Fernández_Sánchez (<http://dbpedia.org/resource/Aurelio_Fernández_Sánchez>) --doo:nationality--> Asturians (dor:Asturians)
+      - Aurelio_Fernández_Sánchez (<http://dbpedia.org/resource/Aurelio_Fernández_Sánchez>) --dop:birthPlace--> Oviedo (dor:Oviedo)
+      - Asturians (dor:Asturians) --doo:related--> Mirandese (dor:Mirandese)
+  '3':
+    attributes:
+      Gijón: (Apr low C^='8.1', Aug high C^='23.2')
+      Avelino_González_Mallada: (before^='Unknown')
+    relationships:
+      - Avelino_González_Mallada (<http://dbpedia.org/resource/Avelino_González_Mallada>) --doo:nationality--> Asturians (dor:Asturians)
+      - Avelino_González_Mallada (<http://dbpedia.org/resource/Avelino_González_Mallada>) --dop:birthPlace--> Gijón (<http://dbpedia.org/resource/Gijón>)
+      - Asturians (dor:Asturians) --doo:related--> Mirandese (dor:Mirandese)
+  '4':
+    attributes:
+      Khartoum: (Apr low C^='24.1', Aug high C^='37.6')
+    relationships:
+      - Abdel_Moneim_Hussein (dor:Abdel_Moneim_Hussein) --doo:nationality--> Egyptians (dor:Egyptians)
+      - Abdel_Moneim_Hussein (dor:Abdel_Moneim_Hussein) --dop:birthPlace--> Khartoum (dor:Khartoum)
+      - Egyptians (dor:Egyptians) --doo:related--> Afroasiatic_languages (dor:Afroasiatic_languages)
+  '5':
+    attributes: {}
+    relationships:
+      - Ahmad_Maher_(diplomat) (<http://dbpedia.org/resource/Ahmad_Maher_(diplomat)>) --doo:nationality--> Egyptians (dor:Egyptians)
+      - Ahmad_Maher_(diplomat) (<http://dbpedia.org/resource/Ahmad_Maher_(diplomat)>) --dop:birthPlace--> Cairo (dor:Cairo)
+      - Egyptians (dor:Egyptians) --doo:related--> Afroasiatic_languages (dor:Afroasiatic_languages)
+  '6':
+    attributes:
+      Alexandria: (Apr low C^='13.4', Aug high C^='30.4')
+    relationships:
+      - Ahmad_Zaki_Pasha (dor:Ahmad_Zaki_Pasha) --doo:nationality--> Egyptians (dor:Egyptians)
+      - Ahmad_Zaki_Pasha (dor:Ahmad_Zaki_Pasha) --dop:birthPlace--> Alexandria (dor:Alexandria)
+      - Egyptians (dor:Egyptians) --doo:related--> Afroasiatic_languages (dor:Afroasiatic_languages)
+  '7':
+    attributes:
+      Rome: (Apr low C^='6.8', Aug high C^='31.7')
+    relationships:
+      - Achille_Corona (dor:Achille_Corona) --doo:nationality--> Italians (dor:Italians)
+      - Achille_Corona (dor:Achille_Corona) --dop:birthPlace--> Rome (dor:Rome)
+      - Italians (dor:Italians) --doo:related--> Languages_of_Italy (dor:Languages_of_Italy)
+  '8':
+    attributes: {}
+    relationships:
+      - Achille_Starace (dor:Achille_Starace) --doo:nationality--> Italians (dor:Italians)
+      - Achille_Starace (dor:Achille_Starace) --dop:birthPlace--> Sannicola (dor:Sannicola)
+      - Italians (dor:Italians) --doo:related--> Languages_of_Italy (dor:Languages_of_Italy)
+  '9':
+    attributes:
+      L'Aquila: (Apr low C^='5', Aug high C^='29.1')
+    relationships:
+      - Adelchi_Serena (dor:Adelchi_Serena) --doo:nationality--> Italians (dor:Italians)
+      - Adelchi_Serena (dor:Adelchi_Serena) --dop:birthPlace--> L'Aquila (<http://dbpedia.org/resource/L'Aquila>)
+      - Italians (dor:Italians) --doo:related--> Languages_of_Italy (dor:Languages_of_Italy)
+  '10':
+    attributes:
+      Antsiranana: (Apr low C^='22.6', Aug high C^='28.7')
+    relationships:
+      - Christian_Ntsay (dor:Christian_Ntsay) --doo:nationality--> Malagasy_people (dor:Malagasy_people)
+      - Christian_Ntsay (dor:Christian_Ntsay) --dop:birthPlace--> Antsiranana (dor:Antsiranana)
+      - Malagasy_people (dor:Malagasy_people) --doo:related--> Dusun_Witu_language (dor:Dusun_Witu_language)
+qa_result:
+  status: completed
+  cost_usd: 0.370067
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0377674
+        total_tokens: 3759
+        prompt_tokens: 2049
+        completion_tokens: 1710
+      generate:
+        cost_usd: 0.1170076
+        total_tokens: 9118
+        prompt_tokens: 3877
+        completion_tokens: 5241
+      verify_1:
+        cost_usd: 0.042307000000000004
+        total_tokens: 5051
+        prompt_tokens: 3914
+        completion_tokens: 1137
+      verify_2:
+        cost_usd: 0.027972000000000004
+        total_tokens: 4338
+        prompt_tokens: 3919
+        completion_tokens: 419
+      complexity:
+        cost_usd: 0.145013
+        total_tokens: 11372
+        prompt_tokens: 4923
+        completion_tokens: 6449
+    total_tokens: 33638
+    prompt_tokens: 18682
+    total_cost_usd: 0.370067
+    completion_tokens: 14956
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  politician: --before^ (dop:before)--> langString | --relations^ (dop:relations)--> langString | --1namedata^ (dop:1namedata)--> langString | --image size^ (dop:imageSize)--> int | --url^ (dop:url)--> Resource
+  settlement: --Apr low C^ (dop:aprLowC)--> int | --Aug high C^ (dop:augHighC)--> double
+  ethnic group: --float^ (dop:float)--> langString
+subgraph_id: 222
+relationships:
+  - politician --doo:nationality--> ethnic group
+  - politician --dop:birthPlace--> settlement
+  - ethnic group --doo:related--> language

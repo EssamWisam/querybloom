@@ -1,0 +1,105 @@
+types:
+  country: doo:Country
+  station: doo:Station
+  railway line: doo:RailwayLine
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Italy: (align^='left')
+      Rhaetian_Railway: (caption^='RhB train approaching the Bernina Pass.')
+      Tirano_railway_station_(RhB): (address^='Piazzale Stazione')
+    relationships:
+      - Tirano_railway_station_(RhB) (<http://dbpedia.org/resource/Tirano_railway_station_(RhB)>) --dop:country--> Italy (dor:Italy)
+      - Alessandro_Casagrande (dor:Alessandro_Casagrande) --doo:stateOfOrigin--> Italy (dor:Italy)
+      - Tirano_railway_station_(RhB) (<http://dbpedia.org/resource/Tirano_railway_station_(RhB)>) --doo:owningOrganisation--> Rhaetian_Railway (dor:Rhaetian_Railway)
+  '2':
+    attributes:
+      Italy: (align^='left')
+      Rhaetian_Railway: (caption^='RhB train approaching the Bernina Pass.')
+      Tirano_railway_station_(RhB): (address^='Piazzale Stazione')
+    relationships:
+      - Tirano_railway_station_(RhB) (<http://dbpedia.org/resource/Tirano_railway_station_(RhB)>) --dop:country--> Italy (dor:Italy)
+      - Alessandro_Longo (dor:Alessandro_Longo) --doo:stateOfOrigin--> Italy (dor:Italy)
+      - Tirano_railway_station_(RhB) (<http://dbpedia.org/resource/Tirano_railway_station_(RhB)>) --doo:owningOrganisation--> Rhaetian_Railway (dor:Rhaetian_Railway)
+  '3':
+    attributes:
+      Alaska_Railroad: (caption^='An Alaska Railroad passenger excursion train at Spencer Glacier.')
+      Anchorage_Depot: (architect^='http://dbpedia.org/resource/Joseph_L._Skoog', address^='411 West 1st Avenue', platform^='1')
+    relationships:
+      - Anchorage_Depot (dor:Anchorage_Depot) --dop:country--> United_States (dor:United_States)
+      - Allison_Abbate (dor:Allison_Abbate) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - Anchorage_Depot (dor:Anchorage_Depot) --doo:owningOrganisation--> Alaska_Railroad (dor:Alaska_Railroad)
+  '4':
+    attributes:
+      Mount_Timpanogos_Transit_Center: (address^='1145 South 750 East')
+    relationships:
+      - Mount_Timpanogos_Transit_Center (dor:Mount_Timpanogos_Transit_Center) --dop:country--> United_States (dor:United_States)
+      - Allison_Abbate (dor:Allison_Abbate) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - Mount_Timpanogos_Transit_Center (dor:Mount_Timpanogos_Transit_Center) --doo:owningOrganisation--> Utah_Transit_Authority (dor:Utah_Transit_Authority)
+  '5':
+    attributes:
+      Alaska_Railroad: (caption^='An Alaska Railroad passenger excursion train at Spencer Glacier.')
+      Whittier_Terminal_Depot: (address^='Whittier,Alaska', platform^='1')
+    relationships:
+      - Whittier_Terminal_Depot (dor:Whittier_Terminal_Depot) --dop:country--> United_States (dor:United_States)
+      - Allison_Abbate (dor:Allison_Abbate) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - Whittier_Terminal_Depot (dor:Whittier_Terminal_Depot) --doo:owningOrganisation--> Alaska_Railroad (dor:Alaska_Railroad)
+  '6':
+    attributes:
+      Italy: (align^='left')
+      Rhaetian_Railway: (caption^='RhB train approaching the Bernina Pass.')
+      Tirano_railway_station_(RhB): (address^='Piazzale Stazione')
+    relationships:
+      - Tirano_railway_station_(RhB) (<http://dbpedia.org/resource/Tirano_railway_station_(RhB)>) --dop:country--> Italy (dor:Italy)
+      - Ambrogio_Minoja (dor:Ambrogio_Minoja) --doo:stateOfOrigin--> Italy (dor:Italy)
+      - Tirano_railway_station_(RhB) (<http://dbpedia.org/resource/Tirano_railway_station_(RhB)>) --doo:owningOrganisation--> Rhaetian_Railway (dor:Rhaetian_Railway)
+  '7':
+    attributes:
+      Canada: (align^='right')
+      Glacier_station: (address^='')
+    relationships:
+      - Glacier_station (dor:Glacier_station) --dop:country--> Canada (dor:Canada)
+      - Bob_Hallett (dor:Bob_Hallett) --doo:stateOfOrigin--> Canada (dor:Canada)
+      - Glacier_station (dor:Glacier_station) --doo:owningOrganisation--> Canadian_Pacific_Railway (dor:Canadian_Pacific_Railway)
+  '8':
+    attributes:
+      Canada: (align^='right')
+      Glacier_station: (address^='')
+    relationships:
+      - Glacier_station (dor:Glacier_station) --dop:country--> Canada (dor:Canada)
+      - Ellen_Joyce_Loo (dor:Ellen_Joyce_Loo) --doo:stateOfOrigin--> Canada (dor:Canada)
+      - Glacier_station (dor:Glacier_station) --doo:owningOrganisation--> Canadian_Pacific_Railway (dor:Canadian_Pacific_Railway)
+  '9':
+    attributes:
+      Argentina: (last^='Arbena')
+      Central_Station_(Buenos_Aires): (address^='Av. Paseo de Julio and Piedad,')
+      Buenos_Aires_and_Ensenada_Port_Railway: (caption^='Central Station, terminus of the line.')
+    relationships:
+      - Central_Station_(Buenos_Aires) (<http://dbpedia.org/resource/Central_Station_(Buenos_Aires)>) --dop:country--> Argentina (dor:Argentina)
+      - Felipe_Colombo (dor:Felipe_Colombo) --doo:stateOfOrigin--> Argentina (dor:Argentina)
+      - Central_Station_(Buenos_Aires) (<http://dbpedia.org/resource/Central_Station_(Buenos_Aires)>) --doo:owningOrganisation--> Buenos_Aires_and_Ensenada_Port_Railway (dor:Buenos_Aires_and_Ensenada_Port_Railway)
+  '10':
+    attributes:
+      Argentina: (last^='Arbena')
+      Recoleta_railway_station: (address^='Figueroa AlcortaandPueyrredón', Closed^='Beginning of 20th Century')
+      Buenos_Aires_Northern_Railway: (caption^='The first Retiro station, built in the 19th century')
+    relationships:
+      - Recoleta_railway_station (dor:Recoleta_railway_station) --dop:country--> Argentina (dor:Argentina)
+      - Felipe_Colombo (dor:Felipe_Colombo) --doo:stateOfOrigin--> Argentina (dor:Argentina)
+      - Recoleta_railway_station (dor:Recoleta_railway_station) --doo:owningOrganisation--> Buenos_Aires_Northern_Railway (dor:Buenos_Aires_Northern_Railway)
+attributes:
+  country: --align^ (dop:align)--> langString | --last^ (dop:last)--> langString | --age^ (dop:age)--> date
+  station: --architect^ (dop:architect)--> langString | --architectural style^ (dop:architecturalStyle)--> Resource | --address^ (doo:address)--> langString | --Closed^ (dop:closed)--> gMonthDay | --platform^ (dop:platform)--> int
+  railway line: --caption^ (dop:caption)--> langString
+  musical artist: --source^ (dop:source)--> langString | --current members^ (dop:currentMembers)--> langString | --group^ (dop:group)--> langString
+subgraph_id: 131
+relationships:
+  - station --dop:country--> country
+  - musical artist --doo:stateOfOrigin--> country
+  - station --doo:owningOrganisation--> railway line

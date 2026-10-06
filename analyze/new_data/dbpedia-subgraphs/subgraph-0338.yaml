@@ -1,0 +1,86 @@
+types:
+  city: doo:City
+  road: doo:Road
+  Location: doo:Location
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Aaron_Burr: (children^='8', d^='Q179090')
+    relationships:
+      - County_Route_508_(New_Jersey) (<http://dbpedia.org/resource/County_Route_508_(New_Jersey)>) --doo:routeJunction--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - Aaron_Burr (dor:Aaron_Burr) --dop:birthPlace--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - Aaron_Burr (dor:Aaron_Burr) --doo:restingPlace--> Princeton_Cemetery (dor:Princeton_Cemetery)
+  '2':
+    attributes:
+      Aaron_Burr: (children^='8', d^='Q179090')
+    relationships:
+      - County_Route_510_(New_Jersey) (<http://dbpedia.org/resource/County_Route_510_(New_Jersey)>) --doo:routeJunction--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - Aaron_Burr (dor:Aaron_Burr) --dop:birthPlace--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - Aaron_Burr (dor:Aaron_Burr) --doo:restingPlace--> Princeton_Cemetery (dor:Princeton_Cemetery)
+  '3':
+    attributes:
+      Aaron_Burr: (children^='8', d^='Q179090')
+    relationships:
+      - Interstate_280_(New_Jersey) (<http://dbpedia.org/resource/Interstate_280_(New_Jersey)>) --doo:routeJunction--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - Aaron_Burr (dor:Aaron_Burr) --dop:birthPlace--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - Aaron_Burr (dor:Aaron_Burr) --doo:restingPlace--> Princeton_Cemetery (dor:Princeton_Cemetery)
+  '4':
+    attributes: {}
+    relationships:
+      - Western_Harbour_Tunnel_&_Beaches_Link (<http://dbpedia.org/resource/Western_Harbour_Tunnel_&_Beaches_Link>) --doo:routeJunction--> Sydney (dor:Sydney)
+      - Albert_Norton (dor:Albert_Norton) --dop:birthPlace--> Sydney (dor:Sydney)
+      - Albert_Norton (dor:Albert_Norton) --doo:restingPlace--> Toowong_Cemetery (dor:Toowong_Cemetery)
+  '5':
+    attributes:
+      Augusta,_Georgia: (Apr record high F^='96')
+    relationships:
+      - Georgia_State_Route_10 (dor:Georgia_State_Route_10) --doo:routeJunction--> Augusta,_Georgia (<http://dbpedia.org/resource/Augusta,_Georgia>)
+      - Alexander_McKinstry (dor:Alexander_McKinstry) --dop:birthPlace--> Augusta,_Georgia (<http://dbpedia.org/resource/Augusta,_Georgia>)
+      - Alexander_McKinstry (dor:Alexander_McKinstry) --doo:restingPlace--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+  '6':
+    attributes:
+      Augusta,_Georgia: (Apr record high F^='96')
+    relationships:
+      - Georgia_State_Route_104 (dor:Georgia_State_Route_104) --doo:routeJunction--> Augusta,_Georgia (<http://dbpedia.org/resource/Augusta,_Georgia>)
+      - Alexander_McKinstry (dor:Alexander_McKinstry) --dop:birthPlace--> Augusta,_Georgia (<http://dbpedia.org/resource/Augusta,_Georgia>)
+      - Alexander_McKinstry (dor:Alexander_McKinstry) --doo:restingPlace--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+  '7':
+    attributes:
+      Augusta,_Georgia: (Apr record high F^='96')
+    relationships:
+      - Georgia_State_Route_121 (dor:Georgia_State_Route_121) --doo:routeJunction--> Augusta,_Georgia (<http://dbpedia.org/resource/Augusta,_Georgia>)
+      - Alexander_McKinstry (dor:Alexander_McKinstry) --dop:birthPlace--> Augusta,_Georgia (<http://dbpedia.org/resource/Augusta,_Georgia>)
+      - Alexander_McKinstry (dor:Alexander_McKinstry) --doo:restingPlace--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+  '8':
+    attributes: {}
+    relationships:
+      - South_Carolina_Highway_161 (dor:South_Carolina_Highway_161) --doo:routeJunction--> York,_South_Carolina (<http://dbpedia.org/resource/York,_South_Carolina>)
+      - Alexander_S._Wallace (dor:Alexander_S._Wallace) --dop:birthPlace--> York,_South_Carolina (<http://dbpedia.org/resource/York,_South_Carolina>)
+      - Alexander_S._Wallace (dor:Alexander_S._Wallace) --doo:restingPlace--> South_Carolina (dor:South_Carolina)
+  '9':
+    attributes: {}
+    relationships:
+      - South_Carolina_Highway_49 (dor:South_Carolina_Highway_49) --doo:routeJunction--> York,_South_Carolina (<http://dbpedia.org/resource/York,_South_Carolina>)
+      - Alexander_S._Wallace (dor:Alexander_S._Wallace) --dop:birthPlace--> York,_South_Carolina (<http://dbpedia.org/resource/York,_South_Carolina>)
+      - Alexander_S._Wallace (dor:Alexander_S._Wallace) --doo:restingPlace--> South_Carolina (dor:South_Carolina)
+  '10':
+    attributes: {}
+    relationships:
+      - South_Carolina_Highway_5 (dor:South_Carolina_Highway_5) --doo:routeJunction--> York,_South_Carolina (<http://dbpedia.org/resource/York,_South_Carolina>)
+      - Alexander_S._Wallace (dor:Alexander_S._Wallace) --dop:birthPlace--> York,_South_Carolina (<http://dbpedia.org/resource/York,_South_Carolina>)
+      - Alexander_S._Wallace (dor:Alexander_S._Wallace) --doo:restingPlace--> South_Carolina (dor:South_Carolina)
+attributes:
+  city: --Apr record high F^ (dop:aprRecordHighF)--> int | --Apr low C^ (dop:aprLowC)--> int
+  Location: --footer align^ (dop:footerAlign)--> langString | --Apr record high C^ (dop:aprRecordHighC)--> double | --winner^ (dop:winner)--> langString | --architect^ (dop:architect)--> Resource
+  office holder: --relations^ (dop:relations)--> langString | --children^ (dop:children)--> langString | --winner^ (dop:winner)--> langString | --d^ (dop:d)--> gMonthDay | --reason^ (dop:reason)--> langString | --highest attendance^ (dop:highestAttendance)--> int
+subgraph_id: 338
+relationships:
+  - road --doo:routeJunction--> city
+  - office holder --dop:birthPlace--> city
+  - office holder --doo:restingPlace--> Location

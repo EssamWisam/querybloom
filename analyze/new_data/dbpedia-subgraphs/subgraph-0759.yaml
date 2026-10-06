@@ -1,0 +1,85 @@
+types:
+  actor: doo:Actor
+  athlete: doo:Athlete
+  cyclist: doo:Cyclist
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Adam_Bergendahl (dor:Adam_Bergendahl) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Abraham_de_Broen (dor:Abraham_de_Broen) --doo:nationality--> Sweden (dor:Sweden)
+      - Arne_Berg_(cyclist) (<http://dbpedia.org/resource/Arne_Berg_(cyclist)>) --doo:deathPlace--> Sweden (dor:Sweden)
+  '2':
+    attributes: {}
+    relationships:
+      - Adam_Bergendahl (dor:Adam_Bergendahl) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Abraham_de_Broen (dor:Abraham_de_Broen) --doo:nationality--> Sweden (dor:Sweden)
+      - Carl_Lundquist (dor:Carl_Lundquist) --doo:deathPlace--> Sweden (dor:Sweden)
+  '3':
+    attributes: {}
+    relationships:
+      - Adam_Bergendahl (dor:Adam_Bergendahl) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Abraham_de_Broen (dor:Abraham_de_Broen) --doo:nationality--> Sweden (dor:Sweden)
+      - Erik_Jansson_(cyclist) (<http://dbpedia.org/resource/Erik_Jansson_(cyclist)>) --doo:deathPlace--> Sweden (dor:Sweden)
+  '4':
+    attributes:
+      France: (image^='EMIA Bastille Day 2007.jpg')
+    relationships:
+      - Abassi_Boinaheri (dor:Abassi_Boinaheri) --dop:birthPlace--> France (dor:France)
+      - Alice_Tissot (dor:Alice_Tissot) --doo:nationality--> France (dor:France)
+      - Adolphe_Deledda (dor:Adolphe_Deledda) --doo:deathPlace--> France (dor:France)
+  '5':
+    attributes:
+      France: (image^='EMIA Bastille Day 2007.jpg')
+    relationships:
+      - Abassi_Boinaheri (dor:Abassi_Boinaheri) --dop:birthPlace--> France (dor:France)
+      - Alice_Tissot (dor:Alice_Tissot) --doo:nationality--> France (dor:France)
+      - Aimé_Trantoul (<http://dbpedia.org/resource/Aimé_Trantoul>) --doo:deathPlace--> France (dor:France)
+  '6':
+    attributes:
+      France: (image^='EMIA Bastille Day 2007.jpg')
+    relationships:
+      - Abassi_Boinaheri (dor:Abassi_Boinaheri) --dop:birthPlace--> France (dor:France)
+      - Alice_Tissot (dor:Alice_Tissot) --doo:nationality--> France (dor:France)
+      - Alain_Moineau (dor:Alain_Moineau) --doo:deathPlace--> France (dor:France)
+  '7':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg')
+    relationships:
+      - A._J._Petrucci (dor:A._J._Petrucci) --dop:birthPlace--> United_States (dor:United_States)
+      - Barry_Lubin (dor:Barry_Lubin) --doo:nationality--> United_States (dor:United_States)
+      - Deirdre_Murphy_(cyclist) (<http://dbpedia.org/resource/Deirdre_Murphy_(cyclist)>) --doo:deathPlace--> United_States (dor:United_States)
+  '8':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg')
+    relationships:
+      - A._J._Petrucci (dor:A._J._Petrucci) --dop:birthPlace--> United_States (dor:United_States)
+      - Barry_Lubin (dor:Barry_Lubin) --doo:nationality--> United_States (dor:United_States)
+      - Frank_Bizzoni (dor:Frank_Bizzoni) --doo:deathPlace--> United_States (dor:United_States)
+  '9':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg')
+    relationships:
+      - A._J._Petrucci (dor:A._J._Petrucci) --dop:birthPlace--> United_States (dor:United_States)
+      - Barry_Lubin (dor:Barry_Lubin) --doo:nationality--> United_States (dor:United_States)
+      - Rynner_Van_Heste (dor:Rynner_Van_Heste) --doo:deathPlace--> United_States (dor:United_States)
+  '10':
+    attributes:
+      Spain: (image^='1')
+    relationships:
+      - Aarón_Torlà (<http://dbpedia.org/resource/Aarón_Torlà>) --dop:birthPlace--> Spain (dor:Spain)
+      - Carlos_Cuevas (dor:Carlos_Cuevas) --doo:nationality--> Spain (dor:Spain)
+      - Alessio_Galletti (dor:Alessio_Galletti) --doo:deathPlace--> Spain (dor:Spain)
+attributes:
+  Location: --arc-gapA^ (dop:arcGapa)--> double | --named after^ (dop:namedAfter)--> langString | --arc-radiusA^ (dop:arcRadiusa)--> double | --Aug high F^ (dop:augHighF)--> double | --Apr record high C^ (dop:aprRecordHighC)--> int | --designated other1 abbr^ (dop:designatedOther1Abbr)--> langString | --group^ (dop:group)--> Resource | --image^ (dop:image)--> langString | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --Apr record low C^ (dop:aprRecordLowC)--> int
+subgraph_id: 759
+relationships:
+  - athlete --dop:birthPlace--> Location
+  - actor --doo:nationality--> Location
+  - cyclist --doo:deathPlace--> Location

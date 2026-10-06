@@ -1,0 +1,125 @@
+types:
+  song: doo:Song
+  town: doo:Town
+  person: doo:Person
+  athlete: doo:Athlete
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Stockholm: (elevation (μ)^='28.0')
+      Per_Gessle: (subject='http://dbpedia.org/resource/Category:1959_births')
+      Anyone_(Roxette_song): (artist^='http://dbpedia.org/resource/Roxette')
+    relationships:
+      - Anyone_(Roxette_song) (<http://dbpedia.org/resource/Anyone_(Roxette_song)>) --doo:recordedIn--> Stockholm (dor:Stockholm)
+      - Fabian_Tamm (dor:Fabian_Tamm) --doo:restingPlace--> Stockholm (dor:Stockholm)
+      - Alexander_Gustafsson (dor:Alexander_Gustafsson) --doo:residence--> Stockholm (dor:Stockholm)
+      - Anyone_(Roxette_song) (<http://dbpedia.org/resource/Anyone_(Roxette_song)>) --dop:writer--> Per_Gessle (dor:Per_Gessle)
+  '2':
+    attributes:
+      Stockholm: (elevation (μ)^='28.0')
+      Julia_Karlsson: (subject='http://dbpedia.org/resource/Category:1996_births')
+      Bad_Time_(Sabrina_Carpenter_song): (artist^='http://dbpedia.org/resource/Sabrina_Carpenter')
+    relationships:
+      - Bad_Time_(Sabrina_Carpenter_song) (<http://dbpedia.org/resource/Bad_Time_(Sabrina_Carpenter_song)>) --doo:recordedIn--> Stockholm (dor:Stockholm)
+      - Fabian_Tamm (dor:Fabian_Tamm) --doo:restingPlace--> Stockholm (dor:Stockholm)
+      - Alexander_Gustafsson (dor:Alexander_Gustafsson) --doo:residence--> Stockholm (dor:Stockholm)
+      - Bad_Time_(Sabrina_Carpenter_song) (<http://dbpedia.org/resource/Bad_Time_(Sabrina_Carpenter_song)>) --dop:writer--> Julia_Karlsson (dor:Julia_Karlsson)
+  '3':
+    attributes:
+      Stockholm: (elevation (μ)^='28.0')
+      Oscar_Görres: (subject='http://dbpedia.org/resource/Category:1986_births')
+      Bad_Time_(Sabrina_Carpenter_song): (artist^='http://dbpedia.org/resource/Sabrina_Carpenter')
+    relationships:
+      - Bad_Time_(Sabrina_Carpenter_song) (<http://dbpedia.org/resource/Bad_Time_(Sabrina_Carpenter_song)>) --doo:recordedIn--> Stockholm (dor:Stockholm)
+      - Fabian_Tamm (dor:Fabian_Tamm) --doo:restingPlace--> Stockholm (dor:Stockholm)
+      - Alexander_Gustafsson (dor:Alexander_Gustafsson) --doo:residence--> Stockholm (dor:Stockholm)
+      - Bad_Time_(Sabrina_Carpenter_song) (<http://dbpedia.org/resource/Bad_Time_(Sabrina_Carpenter_song)>) --dop:writer--> Oscar_Görres (<http://dbpedia.org/resource/Oscar_Görres>)
+  '4':
+    attributes:
+      Camilo_Sesto: (subject='http://dbpedia.org/resource/Category:1946_births')
+      Rio_de_Janeiro: (elevation (μ)^='2.0', align^='left')
+      Amor_Mío,_¿Qué_Me_Has_Hecho%3F: (artist^='http://dbpedia.org/resource/Camilo_Sesto')
+    relationships:
+      - Amor_Mío,_¿Qué_Me_Has_Hecho%3F (<http://dbpedia.org/resource/Amor_Mío,_¿Qué_Me_Has_Hecho%3F>) --doo:recordedIn--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Cândido_Rondon (<http://dbpedia.org/resource/Cândido_Rondon>) --doo:restingPlace--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Alexandre_Paiva (dor:Alexandre_Paiva) --doo:residence--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Amor_Mío,_¿Qué_Me_Has_Hecho%3F (<http://dbpedia.org/resource/Amor_Mío,_¿Qué_Me_Has_Hecho%3F>) --dop:writer--> Camilo_Sesto (dor:Camilo_Sesto)
+  '5':
+    attributes:
+      Per_Gessle: (subject='http://dbpedia.org/resource/Category:1959_births')
+      Fingertips_'93: (artist^='http://dbpedia.org/resource/Roxette')
+      Rio_de_Janeiro: (elevation (μ)^='2.0', align^='left')
+    relationships:
+      - Fingertips_'93 (<http://dbpedia.org/resource/Fingertips_'93>) --doo:recordedIn--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Cândido_Rondon (<http://dbpedia.org/resource/Cândido_Rondon>) --doo:restingPlace--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Alexandre_Paiva (dor:Alexandre_Paiva) --doo:residence--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Fingertips_'93 (<http://dbpedia.org/resource/Fingertips_'93>) --dop:writer--> Per_Gessle (dor:Per_Gessle)
+  '6':
+    attributes:
+      Camilo_Sesto: (subject='http://dbpedia.org/resource/Category:1946_births')
+      Rio_de_Janeiro: (elevation (μ)^='2.0', align^='left')
+      Emílio_Garrastazu_Médici: (honorific suffix^='http://dbpedia.org/resource/Military_Order_of_Saint_James_of_the_Sword')
+      Amor_Mío,_¿Qué_Me_Has_Hecho%3F: (artist^='http://dbpedia.org/resource/Camilo_Sesto')
+    relationships:
+      - Amor_Mío,_¿Qué_Me_Has_Hecho%3F (<http://dbpedia.org/resource/Amor_Mío,_¿Qué_Me_Has_Hecho%3F>) --doo:recordedIn--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Emílio_Garrastazu_Médici (<http://dbpedia.org/resource/Emílio_Garrastazu_Médici>) --doo:restingPlace--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Alexandre_Paiva (dor:Alexandre_Paiva) --doo:residence--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Amor_Mío,_¿Qué_Me_Has_Hecho%3F (<http://dbpedia.org/resource/Amor_Mío,_¿Qué_Me_Has_Hecho%3F>) --dop:writer--> Camilo_Sesto (dor:Camilo_Sesto)
+  '7':
+    attributes:
+      Málaga: (elevation (μ)^='11.0', align^='right')
+      Amerika_(song): (artist^='Rammstein')
+      Christian_Lorenz: (subject='http://dbpedia.org/resource/Category:1966_births')
+    relationships:
+      - Amerika_(song) (<http://dbpedia.org/resource/Amerika_(song)>) --doo:recordedIn--> Málaga (<http://dbpedia.org/resource/Málaga>)
+      - Joaquín_García_Morato (<http://dbpedia.org/resource/Joaquín_García_Morato>) --doo:restingPlace--> Málaga (<http://dbpedia.org/resource/Málaga>)
+      - Alexis_Klégou (<http://dbpedia.org/resource/Alexis_Klégou>) --doo:residence--> Málaga (<http://dbpedia.org/resource/Málaga>)
+      - Amerika_(song) (<http://dbpedia.org/resource/Amerika_(song)>) --dop:writer--> Christian_Lorenz (dor:Christian_Lorenz)
+  '8':
+    attributes:
+      Málaga: (elevation (μ)^='11.0', align^='right')
+      Amerika_(song): (artist^='Rammstein')
+      Christoph_Schneider: (subject='http://dbpedia.org/resource/Category:1966_births')
+    relationships:
+      - Amerika_(song) (<http://dbpedia.org/resource/Amerika_(song)>) --doo:recordedIn--> Málaga (<http://dbpedia.org/resource/Málaga>)
+      - Joaquín_García_Morato (<http://dbpedia.org/resource/Joaquín_García_Morato>) --doo:restingPlace--> Málaga (<http://dbpedia.org/resource/Málaga>)
+      - Alexis_Klégou (<http://dbpedia.org/resource/Alexis_Klégou>) --doo:residence--> Málaga (<http://dbpedia.org/resource/Málaga>)
+      - Amerika_(song) (<http://dbpedia.org/resource/Amerika_(song)>) --dop:writer--> Christoph_Schneider (dor:Christoph_Schneider)
+  '9':
+    attributes:
+      Málaga: (elevation (μ)^='11.0', align^='right')
+      Oliver_Riedel: (subject='http://dbpedia.org/resource/Category:1971_births')
+      Amerika_(song): (artist^='Rammstein')
+    relationships:
+      - Amerika_(song) (<http://dbpedia.org/resource/Amerika_(song)>) --doo:recordedIn--> Málaga (<http://dbpedia.org/resource/Málaga>)
+      - Joaquín_García_Morato (<http://dbpedia.org/resource/Joaquín_García_Morato>) --doo:restingPlace--> Málaga (<http://dbpedia.org/resource/Málaga>)
+      - Alexis_Klégou (<http://dbpedia.org/resource/Alexis_Klégou>) --doo:residence--> Málaga (<http://dbpedia.org/resource/Málaga>)
+      - Amerika_(song) (<http://dbpedia.org/resource/Amerika_(song)>) --dop:writer--> Oliver_Riedel (dor:Oliver_Riedel)
+  '10':
+    attributes:
+      John_Spinks_(musician): (subject='http://dbpedia.org/resource/Category:1953_births')
+      For_You_(The_Outfield_song): (artist^='http://dbpedia.org/resource/The_Outfield')
+    relationships:
+      - For_You_(The_Outfield_song) (<http://dbpedia.org/resource/For_You_(The_Outfield_song)>) --doo:recordedIn--> Ipswich (dor:Ipswich)
+      - Leslie_Barefoot (dor:Leslie_Barefoot) --doo:restingPlace--> Ipswich (dor:Ipswich)
+      - Lucy_Turmel (dor:Lucy_Turmel) --doo:residence--> Ipswich (dor:Ipswich)
+      - For_You_(The_Outfield_song) (<http://dbpedia.org/resource/For_You_(The_Outfield_song)>) --dop:writer--> John_Spinks_(musician) (<http://dbpedia.org/resource/John_Spinks_(musician)>)
+attributes:
+  song: --artist^ (dop:artist)--> langString
+  town: --elevation (μ)^ (doo:elevation)--> double | --align^ (dop:align)--> langString | --reason^ (dop:reason)--> langString | --Apr low F^ (dop:aprLowF)--> double
+  person: --honorific suffix^ (dop:honorificSuffix)--> langString | --subject (podt:subject)--> Resource | --award^ (doo:award)--> Resource | --relations^ (dop:relations)--> langString | --authorlink (dop:authorlink)--> langString
+  athlete: --club^ (dop:club)--> langString
+  military person: --honorific suffix^ (dop:honorificSuffix)--> Resource
+subgraph_id: 518
+relationships:
+  - song --doo:recordedIn--> town
+  - military person --doo:restingPlace--> town
+  - athlete --doo:residence--> town
+  - song --dop:writer--> person

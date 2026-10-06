@@ -1,0 +1,48 @@
+types:
+  Location: doo:Location
+  golf player: doo:GolfPlayer
+  body of water: doo:BodyOfWater
+  golf tournament: doo:GolfTournament
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Canada: (Wikipage revision ID^='1124866234')
+      108_Mile_Lake: (subject='http://dbpedia.org/resource/Category:Glacial_lakes_of_Canada')
+      1953_Canada_Cup: (champion^='http://dbpedia.org/resource/Antonio_Cerdá')
+    relationships:
+      - 1953_Canada_Cup (dor:1953_Canada_Cup) --doo:champion--> Antonio_Cerdá (<http://dbpedia.org/resource/Antonio_Cerdá>)
+      - 1953_Canada_Cup (dor:1953_Canada_Cup) --doo:location--> Canada (dor:Canada)
+      - 108_Mile_Lake (dor:108_Mile_Lake) --doo:country--> Canada (dor:Canada)
+  '2':
+    attributes:
+      Canada: (Wikipage revision ID^='1124866234')
+      108_Mile_Lake: (subject='http://dbpedia.org/resource/Category:Glacial_lakes_of_Canada')
+      1954_Canada_Cup: (champion^='http://dbpedia.org/resource/Australia')
+    relationships:
+      - 1954_Canada_Cup (dor:1954_Canada_Cup) --doo:champion--> Kel_Nagle (dor:Kel_Nagle)
+      - 1954_Canada_Cup (dor:1954_Canada_Cup) --doo:location--> Canada (dor:Canada)
+      - 108_Mile_Lake (dor:108_Mile_Lake) --doo:country--> Canada (dor:Canada)
+  '3':
+    attributes:
+      Canada: (Wikipage revision ID^='1124866234')
+      108_Mile_Lake: (subject='http://dbpedia.org/resource/Category:Glacial_lakes_of_Canada')
+      1992_Eisenhower_Trophy: (champion^='http://dbpedia.org/resource/Grant_Moorhead')
+    relationships:
+      - 1992_Eisenhower_Trophy (dor:1992_Eisenhower_Trophy) --doo:champion--> Michael_Campbell (dor:Michael_Campbell)
+      - 1992_Eisenhower_Trophy (dor:1992_Eisenhower_Trophy) --doo:location--> Canada (dor:Canada)
+      - 108_Mile_Lake (dor:108_Mile_Lake) --doo:country--> Canada (dor:Canada)
+attributes:
+  Location: --eponym^ (dop:eponym)--> Resource | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --builder^ (dop:builder)--> Resource | --named after^ (dop:namedAfter)--> Resource | --territory^ (doo:territory)--> Resource | --subdivision^ (doo:subdivision)--> Resource | --data^ (dop:data)--> int | --district^ (doo:district)--> Resource | --footer^ (dop:footer)--> langString
+  body of water: --subject (podt:subject)--> Resource
+  golf tournament: --champion^ (doo:champion)--> Resource
+subgraph_id: 337
+relationships:
+  - golf tournament --doo:champion--> golf player
+  - golf tournament --doo:location--> Location
+  - body of water --doo:country--> Location

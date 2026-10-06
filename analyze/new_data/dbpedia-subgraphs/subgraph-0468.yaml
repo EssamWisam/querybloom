@@ -1,0 +1,109 @@
+types:
+  city: doo:City
+  company: doo:Company
+  politician: doo:Politician
+  radio station: doo:RadioStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      KCYE: (logo^='107.9')
+      Naples,_Florida: (government type^='http://dbpedia.org/resource/Council–manager_government', Aug high F^='90.9', Aug precipitation days^='18.7')
+      Beasley_Broadcast_Group: (Wikipage revision ID^='1122092132')
+    relationships:
+      - Beasley_Broadcast_Group (dor:Beasley_Broadcast_Group) --doo:location--> Naples,_Florida (<http://dbpedia.org/resource/Naples,_Florida>)
+      - Beasley_Broadcast_Group (dor:Beasley_Broadcast_Group) --doo:keyPerson--> Mark_S._Fowler (dor:Mark_S._Fowler)
+      - KCYE (dor:KCYE) --doo:owner--> Beasley_Broadcast_Group (dor:Beasley_Broadcast_Group)
+  '2':
+    attributes:
+      KKLZ: (logo^='96.3')
+      Naples,_Florida: (government type^='http://dbpedia.org/resource/Council–manager_government', Aug high F^='90.9', Aug precipitation days^='18.7')
+      Beasley_Broadcast_Group: (Wikipage revision ID^='1122092132')
+    relationships:
+      - Beasley_Broadcast_Group (dor:Beasley_Broadcast_Group) --doo:location--> Naples,_Florida (<http://dbpedia.org/resource/Naples,_Florida>)
+      - Beasley_Broadcast_Group (dor:Beasley_Broadcast_Group) --doo:keyPerson--> Mark_S._Fowler (dor:Mark_S._Fowler)
+      - KKLZ (dor:KKLZ) --doo:owner--> Beasley_Broadcast_Group (dor:Beasley_Broadcast_Group)
+  '3':
+    attributes:
+      Naples,_Florida: (government type^='http://dbpedia.org/resource/Council–manager_government', Aug high F^='90.9', Aug precipitation days^='18.7')
+      Beasley_Broadcast_Group: (Wikipage revision ID^='1122092132')
+    relationships:
+      - Beasley_Broadcast_Group (dor:Beasley_Broadcast_Group) --doo:location--> Naples,_Florida (<http://dbpedia.org/resource/Naples,_Florida>)
+      - Beasley_Broadcast_Group (dor:Beasley_Broadcast_Group) --doo:keyPerson--> Mark_S._Fowler (dor:Mark_S._Fowler)
+      - KOAS (dor:KOAS) --doo:owner--> Beasley_Broadcast_Group (dor:Beasley_Broadcast_Group)
+  '4':
+    attributes:
+      Ottawa: (government type^='http://dbpedia.org/resource/List_of_municipalities_in_Ontario', Apr record low C^='-16.7', d^='no', Aug precipitation days^='11', Apr low C^='1')
+      Bande_à_part_(radio_station): (logo^='Bandeapart.png')
+      Canadian_Broadcasting_Corporation: (Wikipage revision ID^='1123755757')
+    relationships:
+      - Canadian_Broadcasting_Corporation (dor:Canadian_Broadcasting_Corporation) --doo:location--> Ottawa (dor:Ottawa)
+      - Canadian_Broadcasting_Corporation (dor:Canadian_Broadcasting_Corporation) --doo:keyPerson--> Michael_Goldbloom (dor:Michael_Goldbloom)
+      - Bande_à_part_(radio_station) (<http://dbpedia.org/resource/Bande_à_part_(radio_station)>) --doo:owner--> Canadian_Broadcasting_Corporation (dor:Canadian_Broadcasting_Corporation)
+  '5':
+    attributes:
+      Ottawa: (government type^='http://dbpedia.org/resource/List_of_municipalities_in_Ontario', Apr record low C^='-16.7', d^='no', Aug precipitation days^='11', Apr low C^='1')
+      CBAF-FM-15: (logo^='ICI Radio-Canada Première.svg')
+      Canadian_Broadcasting_Corporation: (Wikipage revision ID^='1123755757')
+    relationships:
+      - Canadian_Broadcasting_Corporation (dor:Canadian_Broadcasting_Corporation) --doo:location--> Ottawa (dor:Ottawa)
+      - Canadian_Broadcasting_Corporation (dor:Canadian_Broadcasting_Corporation) --doo:keyPerson--> Michael_Goldbloom (dor:Michael_Goldbloom)
+      - CBAF-FM-15 (dor:CBAF-FM-15) --doo:owner--> Canadian_Broadcasting_Corporation (dor:Canadian_Broadcasting_Corporation)
+  '6':
+    attributes:
+      Ottawa: (government type^='http://dbpedia.org/resource/List_of_municipalities_in_Ontario', Apr record low C^='-16.7', d^='no', Aug precipitation days^='11', Apr low C^='1')
+      CBAF-FM-5: (logo^='ICI Radio-Canada Première.svg')
+      Canadian_Broadcasting_Corporation: (Wikipage revision ID^='1123755757')
+    relationships:
+      - Canadian_Broadcasting_Corporation (dor:Canadian_Broadcasting_Corporation) --doo:location--> Ottawa (dor:Ottawa)
+      - Canadian_Broadcasting_Corporation (dor:Canadian_Broadcasting_Corporation) --doo:keyPerson--> Michael_Goldbloom (dor:Michael_Goldbloom)
+      - CBAF-FM-5 (dor:CBAF-FM-5) --doo:owner--> Canadian_Broadcasting_Corporation (dor:Canadian_Broadcasting_Corporation)
+  '7':
+    attributes:
+      Moscow: (Apr low C^='1.7')
+      NRJ_Russia: (broadcast network^='http://dbpedia.org/resource/NRJ_International')
+      Gazprom-Media: (Wikipage revision ID^='1123206729')
+    relationships:
+      - Gazprom-Media (dor:Gazprom-Media) --doo:location--> Moscow (dor:Moscow)
+      - Gazprom-Media (dor:Gazprom-Media) --doo:keyPerson--> Aleksandr_Zharov (dor:Aleksandr_Zharov)
+      - NRJ_Russia (dor:NRJ_Russia) --doo:owner--> Gazprom-Media (dor:Gazprom-Media)
+  '8':
+    attributes:
+      2BR: (logo^='File:2BR logo as of May 2016.png')
+      London: (government type^='http://dbpedia.org/resource/Deliberative_assembly', d^='yes')
+      Global_Media_&_Entertainment: (Wikipage revision ID^='1121577418')
+    relationships:
+      - Global_Media_&_Entertainment (<http://dbpedia.org/resource/Global_Media_&_Entertainment>) --doo:location--> London (dor:London)
+      - Global_Media_&_Entertainment (<http://dbpedia.org/resource/Global_Media_&_Entertainment>) --doo:keyPerson--> Charles_Allen,_Baron_Allen_of_Kensington (<http://dbpedia.org/resource/Charles_Allen,_Baron_Allen_of_Kensington>)
+      - 2BR (dor:2BR) --doo:owner--> Global_Media_&_Entertainment (<http://dbpedia.org/resource/Global_Media_&_Entertainment>)
+  '9':
+    attributes:
+      London: (government type^='http://dbpedia.org/resource/Deliberative_assembly', d^='yes')
+      Global_Media_&_Entertainment: (Wikipage revision ID^='1121577418')
+    relationships:
+      - Global_Media_&_Entertainment (<http://dbpedia.org/resource/Global_Media_&_Entertainment>) --doo:location--> London (dor:London)
+      - Global_Media_&_Entertainment (<http://dbpedia.org/resource/Global_Media_&_Entertainment>) --doo:keyPerson--> Charles_Allen,_Baron_Allen_of_Kensington (<http://dbpedia.org/resource/Charles_Allen,_Baron_Allen_of_Kensington>)
+      - Capital_Brighton (dor:Capital_Brighton) --doo:owner--> Global_Media_&_Entertainment (<http://dbpedia.org/resource/Global_Media_&_Entertainment>)
+  '10':
+    attributes:
+      London: (government type^='http://dbpedia.org/resource/Deliberative_assembly', d^='yes')
+      Capital_Dance: (logo^='Capital Dance 2022.svg')
+      Global_Media_&_Entertainment: (Wikipage revision ID^='1121577418')
+    relationships:
+      - Global_Media_&_Entertainment (<http://dbpedia.org/resource/Global_Media_&_Entertainment>) --doo:location--> London (dor:London)
+      - Global_Media_&_Entertainment (<http://dbpedia.org/resource/Global_Media_&_Entertainment>) --doo:keyPerson--> Charles_Allen,_Baron_Allen_of_Kensington (<http://dbpedia.org/resource/Charles_Allen,_Baron_Allen_of_Kensington>)
+      - Capital_Dance (dor:Capital_Dance) --doo:owner--> Global_Media_&_Entertainment (<http://dbpedia.org/resource/Global_Media_&_Entertainment>)
+attributes:
+  city: --government type^ (doo:governmentType)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> double | --Aug high F^ (dop:augHighF)--> int | --d^ (dop:d)--> langString | --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --Aug high F^ (dop:augHighF)--> double | --Apr low C^ (dop:aprLowC)--> int
+  company: --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int
+  politician: --commons (dop:commons)--> langString | --award^ (doo:award)--> Resource | --relation^ (doo:relation)--> Resource
+  radio station: --logo^ (dop:logo)--> int | --broadcast network^ (doo:broadcastNetwork)--> Resource
+subgraph_id: 468
+relationships:
+  - company --doo:location--> city
+  - company --doo:keyPerson--> politician
+  - radio station --doo:owner--> company

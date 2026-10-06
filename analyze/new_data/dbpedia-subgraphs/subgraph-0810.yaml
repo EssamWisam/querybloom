@@ -1,0 +1,90 @@
+types:
+  grape: doo:Grape
+  plant: doo:Plant
+  Location: doo:Location
+  university: doo:University
+  wine region: doo:WineRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Texas_High_Plains_AVA (dor:Texas_High_Plains_AVA) --doo:growingGrape--> Aglianico (dor:Aglianico)
+      - Aglianico (dor:Aglianico) --doo:species--> Vitis_vinifera (dor:Vitis_vinifera)
+      - Aglianico (dor:Aglianico) --doo:origin--> Italy (dor:Italy)
+      - Accademia_Albertina (dor:Accademia_Albertina) --dop:city--> Italy (dor:Italy)
+  '2':
+    attributes: {}
+    relationships:
+      - Texas_Hill_Country_AVA (dor:Texas_Hill_Country_AVA) --doo:growingGrape--> Aglianico (dor:Aglianico)
+      - Aglianico (dor:Aglianico) --doo:species--> Vitis_vinifera (dor:Vitis_vinifera)
+      - Aglianico (dor:Aglianico) --doo:origin--> Italy (dor:Italy)
+      - Accademia_Albertina (dor:Accademia_Albertina) --dop:city--> Italy (dor:Italy)
+  '3':
+    attributes:
+      Texas_wine: (number of wineries^='400')
+    relationships:
+      - Texas_wine (dor:Texas_wine) --doo:growingGrape--> Aglianico (dor:Aglianico)
+      - Aglianico (dor:Aglianico) --doo:species--> Vitis_vinifera (dor:Vitis_vinifera)
+      - Aglianico (dor:Aglianico) --doo:origin--> Italy (dor:Italy)
+      - Accademia_Albertina (dor:Accademia_Albertina) --dop:city--> Italy (dor:Italy)
+  '4':
+    attributes:
+      Arkansas_wine: (number of wineries^='6')
+    relationships:
+      - Arkansas_wine (dor:Arkansas_wine) --doo:growingGrape--> Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>)
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:species--> Vitis_labrusca (dor:Vitis_labrusca)
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:origin--> United_States (dor:United_States)
+      - California_Northstate_University_College_of_Medicine (dor:California_Northstate_University_College_of_Medicine) --dop:city--> United_States (dor:United_States)
+  '5':
+    attributes:
+      Finger_Lakes_AVA: (number of wineries^='103')
+    relationships:
+      - Finger_Lakes_AVA (dor:Finger_Lakes_AVA) --doo:growingGrape--> Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>)
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:species--> Vitis_labrusca (dor:Vitis_labrusca)
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:origin--> United_States (dor:United_States)
+      - California_Northstate_University_College_of_Medicine (dor:California_Northstate_University_College_of_Medicine) --dop:city--> United_States (dor:United_States)
+  '6':
+    attributes: {}
+    relationships:
+      - Georgia_(U.S._state)_wine__Georgia__1 (<http://dbpedia.org/resource/Georgia_(U.S._state)_wine__Georgia__1>) --doo:growingGrape--> Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>)
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:species--> Vitis_labrusca (dor:Vitis_labrusca)
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:origin--> United_States (dor:United_States)
+      - California_Northstate_University_College_of_Medicine (dor:California_Northstate_University_College_of_Medicine) --dop:city--> United_States (dor:United_States)
+  '7':
+    attributes: {}
+    relationships:
+      - Lake_Wisconsin_AVA (dor:Lake_Wisconsin_AVA) --doo:growingGrape--> Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>)
+      - Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>) --doo:species--> Vitis_riparia (dor:Vitis_riparia)
+      - Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>) --doo:origin--> France (dor:France)
+      - Cours_Florent (dor:Cours_Florent) --dop:city--> France (dor:France)
+  '8':
+    attributes:
+      Warren_Hills_AVA: (number of wineries^='5')
+    relationships:
+      - Warren_Hills_AVA (dor:Warren_Hills_AVA) --doo:growingGrape--> Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>)
+      - Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>) --doo:species--> Vitis_riparia (dor:Vitis_riparia)
+      - Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>) --doo:origin--> France (dor:France)
+      - Cours_Florent (dor:Cours_Florent) --dop:city--> France (dor:France)
+  '9':
+    attributes: {}
+    relationships:
+      - Washington_wine (dor:Washington_wine) --doo:growingGrape--> Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>)
+      - Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>) --doo:species--> Vitis_riparia (dor:Vitis_riparia)
+      - Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>) --doo:origin--> France (dor:France)
+      - Cours_Florent (dor:Cours_Florent) --dop:city--> France (dor:France)
+attributes:
+  plant: --binomial authority^ (doo:binomialAuthority)--> Resource
+  Location: --source^ (dop:source)--> langString | --frazioni^ (doo:frazioni)--> Resource | --building end date^ (doo:buildingEndDate)--> string | --date^ (dop:date)--> date | --Aug low C^ (dop:augLowC)--> int | --data^ (dop:data)--> double | --architect^ (dop:architect)--> Resource
+  university: --wordnet_type (dop:wordnet_type)--> Resource
+  wine region: --number of wineries^ (doo:numberOfWineries)--> int
+subgraph_id: 810
+relationships:
+  - wine region --doo:growingGrape--> grape
+  - grape --doo:species--> plant
+  - grape --doo:origin--> Location
+  - university --dop:city--> Location

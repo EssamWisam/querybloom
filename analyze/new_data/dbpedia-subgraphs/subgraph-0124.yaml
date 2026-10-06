@@ -1,0 +1,79 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  sports team: doo:SportsTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Rome: (Apr record low C^='-2.5')
+    relationships:
+      - Alban_Hills__Alban_Hills__1 (dor:Alban_Hills__Alban_Hills__1) --doo:locatedInArea--> Rome (dor:Rome)
+      - Aqua_Centurions (dor:Aqua_Centurions) --dop:city--> Rome (dor:Rome)
+  '2':
+    attributes:
+      Rome: (Apr record low C^='-2.5')
+    relationships:
+      - Alban_Hills__Alban_Hills__1 (dor:Alban_Hills__Alban_Hills__1) --doo:locatedInArea--> Rome (dor:Rome)
+      - Circolo_Canottieri_Aniene (dor:Circolo_Canottieri_Aniene) --dop:city--> Rome (dor:Rome)
+  '3':
+    attributes:
+      Auckland: (Apr record low C^='3.9', Aug rain days^='14.9')
+      Albert_Park_Volcano: (has abstract^='Der Albert Park Volcano ist einer der Vulkane des Auckland Volcanic Field in Auckland auf der Nordinsel Neuseelands. Er befindet sich im Gebiet der im Stadtzentrum Aucklands. Von dem Vulkan sind durch...')
+    relationships:
+      - Albert_Park_Volcano (dor:Albert_Park_Volcano) --doo:locatedInArea--> Auckland (dor:Auckland)
+      - Auckland_Mako (dor:Auckland_Mako) --dop:city--> Auckland (dor:Auckland)
+  '4':
+    attributes:
+      Auckland: (Apr record low C^='3.9', Aug rain days^='14.9')
+      Albert_Park_Volcano: (has abstract^='Der Albert Park Volcano ist einer der Vulkane des Auckland Volcanic Field in Auckland auf der Nordinsel Neuseelands. Er befindet sich im Gebiet der im Stadtzentrum Aucklands. Von dem Vulkan sind durch...')
+    relationships:
+      - Albert_Park_Volcano (dor:Albert_Park_Volcano) --doo:locatedInArea--> Auckland (dor:Auckland)
+      - West_Auckland_Admirals (dor:West_Auckland_Admirals) --dop:city--> Auckland (dor:Auckland)
+  '5':
+    attributes: {}
+    relationships:
+      - Ansan_(Seoul)__Ansan__1 (<http://dbpedia.org/resource/Ansan_(Seoul)__Ansan__1>) --doo:locatedInArea--> Seoul (dor:Seoul)
+      - Hanwha_Life_Esports (dor:Hanwha_Life_Esports) --dop:city--> Seoul (dor:Seoul)
+  '6':
+    attributes: {}
+    relationships:
+      - Ansan_(Seoul)__Ansan__1 (<http://dbpedia.org/resource/Ansan_(Seoul)__Ansan__1>) --doo:locatedInArea--> Seoul (dor:Seoul)
+      - OGN_Entus (dor:OGN_Entus) --dop:city--> Seoul (dor:Seoul)
+  '7':
+    attributes: {}
+    relationships:
+      - Ansan_(Seoul)__Ansan__1 (<http://dbpedia.org/resource/Ansan_(Seoul)__Ansan__1>) --doo:locatedInArea--> Seoul (dor:Seoul)
+      - Seoul_Samsung_Thunders (dor:Seoul_Samsung_Thunders) --dop:city--> Seoul (dor:Seoul)
+  '8':
+    attributes:
+      Berlin: (Apr record low C^='-6.7')
+      Arkenberge: (has abstract^='Der Name Arkenberge bezeichnet ursprünglich einen natürlichen Höhenzug im Berliner Ortsteil Blankenfelde des Bezirks Pankow. Vom Namen der Hügelkette leitet sich der Name der nahegelegenen Siedlung Be...')
+    relationships:
+      - Arkenberge (dor:Arkenberge) --doo:locatedInArea--> Berlin (dor:Berlin)
+      - Berlin_Adler (dor:Berlin_Adler) --dop:city--> Berlin (dor:Berlin)
+  '9':
+    attributes:
+      Berlin: (Apr record low C^='-6.7')
+      Arkenberge: (has abstract^='Der Name Arkenberge bezeichnet ursprünglich einen natürlichen Höhenzug im Berliner Ortsteil Blankenfelde des Bezirks Pankow. Vom Namen der Hügelkette leitet sich der Name der nahegelegenen Siedlung Be...')
+    relationships:
+      - Arkenberge (dor:Arkenberge) --doo:locatedInArea--> Berlin (dor:Berlin)
+      - Berlin_Rebels (dor:Berlin_Rebels) --dop:city--> Berlin (dor:Berlin)
+  '10':
+    attributes:
+      Berlin: (Apr record low C^='-6.7')
+      Arkenberge: (has abstract^='Der Name Arkenberge bezeichnet ursprünglich einen natürlichen Höhenzug im Berliner Ortsteil Blankenfelde des Bezirks Pankow. Vom Namen der Hügelkette leitet sich der Name der nahegelegenen Siedlung Be...')
+    relationships:
+      - Arkenberge (dor:Arkenberge) --doo:locatedInArea--> Berlin (dor:Berlin)
+      - Berliner_Schlittschuhclub (dor:Berliner_Schlittschuhclub) --dop:city--> Berlin (dor:Berlin)
+attributes:
+  city: --Aug low F^ (dop:augLowF)--> double | --Apr record low C^ (dop:aprRecordLowC)--> double | --aprPrecipitationInch (dop:aprPrecipitationInch)--> double | --Center^ (dop:center)--> langString | --Aug rain days^ (dop:augRainDays)--> double
+  Location: --length m^ (dop:lengthM)--> int | --has abstract^ (doo:abstract)--> langString | --commons^ (dop:commons)--> langString | --administrator^ (dop:administrator)--> Resource | --country^ (dop:country)--> langString | --Aug low C^ (dop:augLowC)--> double | --leader^ (dop:leader)--> langString | --Apr low F^ (dop:aprLowF)--> int
+subgraph_id: 124
+relationships:
+  - Location --doo:locatedInArea--> city
+  - sports team --dop:city--> city

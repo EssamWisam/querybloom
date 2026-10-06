@@ -1,0 +1,106 @@
+types:
+  bank: doo:Bank
+  venue: doo:Venue
+  school: doo:School
+  Location: doo:Location
+  basketball team: doo:BasketballTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Gezira_(basketball_club) (<http://dbpedia.org/resource/Gezira_(basketball_club)>) --doo:location--> Egypt (dor:Egypt)
+      - African_Export–Import_Bank (<http://dbpedia.org/resource/African_Export–Import_Bank>) --doo:location--> Egypt (dor:Egypt)
+      - Cairo_Stadium_Indoor_Halls_Complex (dor:Cairo_Stadium_Indoor_Halls_Complex) --doo:tenant--> Gezira_(basketball_club) (<http://dbpedia.org/resource/Gezira_(basketball_club)>)
+      - Aldiwan_Arabic_Language_Center (dor:Aldiwan_Arabic_Language_Center) --dop:country--> Egypt (dor:Egypt)
+  '2':
+    attributes:
+      Egypt: (religion^='http://dbpedia.org/resource/Religion_in_Egypt')
+    relationships:
+      - Gezira_(basketball_club) (<http://dbpedia.org/resource/Gezira_(basketball_club)>) --doo:location--> Egypt (dor:Egypt)
+      - African_Export–Import_Bank (<http://dbpedia.org/resource/African_Export–Import_Bank>) --doo:location--> Egypt (dor:Egypt)
+      - Cairo_Stadium_Indoor_Halls_Complex (dor:Cairo_Stadium_Indoor_Halls_Complex) --doo:tenant--> Gezira_(basketball_club) (<http://dbpedia.org/resource/Gezira_(basketball_club)>)
+      - As-Salam_College (dor:As-Salam_College) --dop:country--> Egypt (dor:Egypt)
+  '3':
+    attributes:
+      Egypt: (religion^='http://dbpedia.org/resource/Religion_in_Egypt')
+    relationships:
+      - Gezira_(basketball_club) (<http://dbpedia.org/resource/Gezira_(basketball_club)>) --doo:location--> Egypt (dor:Egypt)
+      - African_Export–Import_Bank (<http://dbpedia.org/resource/African_Export–Import_Bank>) --doo:location--> Egypt (dor:Egypt)
+      - Cairo_Stadium_Indoor_Halls_Complex (dor:Cairo_Stadium_Indoor_Halls_Complex) --doo:tenant--> Gezira_(basketball_club) (<http://dbpedia.org/resource/Gezira_(basketball_club)>)
+      - British_International_College_of_Cairo (dor:British_International_College_of_Cairo) --dop:country--> Egypt (dor:Egypt)
+  '4':
+    attributes:
+      Ageas: (product^='http://dbpedia.org/resource/Insurance')
+      Belgium: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Belgium')
+    relationships:
+      - Antwerp_Giants (dor:Antwerp_Giants) --doo:location--> Belgium (dor:Belgium)
+      - Ageas (dor:Ageas) --doo:location--> Belgium (dor:Belgium)
+      - Lotto_Arena (dor:Lotto_Arena) --doo:tenant--> Antwerp_Giants (dor:Antwerp_Giants)
+      - Bogaerts_International_School (dor:Bogaerts_International_School) --dop:country--> Belgium (dor:Belgium)
+  '5':
+    attributes:
+      Ageas: (product^='http://dbpedia.org/resource/Insurance')
+      Belgium: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Belgium')
+    relationships:
+      - Antwerp_Giants (dor:Antwerp_Giants) --doo:location--> Belgium (dor:Belgium)
+      - Ageas (dor:Ageas) --doo:location--> Belgium (dor:Belgium)
+      - Lotto_Arena (dor:Lotto_Arena) --doo:tenant--> Antwerp_Giants (dor:Antwerp_Giants)
+      - European_School_of_Bruxelles-Argenteuil (dor:European_School_of_Bruxelles-Argenteuil) --dop:country--> Belgium (dor:Belgium)
+  '6':
+    attributes:
+      Ageas: (product^='http://dbpedia.org/resource/Insurance')
+      Belgium: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Belgium')
+    relationships:
+      - Antwerp_Giants (dor:Antwerp_Giants) --doo:location--> Belgium (dor:Belgium)
+      - Ageas (dor:Ageas) --doo:location--> Belgium (dor:Belgium)
+      - Lotto_Arena (dor:Lotto_Arena) --doo:tenant--> Antwerp_Giants (dor:Antwerp_Giants)
+      - European_School,_Brussels_I (<http://dbpedia.org/resource/European_School,_Brussels_I>) --dop:country--> Belgium (dor:Belgium)
+  '7':
+    attributes:
+      Agricultural_Bank_of_China: (product^='http://dbpedia.org/resource/Commercial_bank')
+    relationships:
+      - Beijing_Ducks (dor:Beijing_Ducks) --doo:location--> China (dor:China)
+      - Agricultural_Bank_of_China (dor:Agricultural_Bank_of_China) --doo:location--> China (dor:China)
+      - Shougang_Gymnasium (dor:Shougang_Gymnasium) --doo:tenant--> Beijing_Ducks (dor:Beijing_Ducks)
+      - Affiliated_High_School_of_Peking_University (dor:Affiliated_High_School_of_Peking_University) --dop:country--> China (dor:China)
+  '8':
+    attributes:
+      Wukesong_Arena: (operator^='http://dbpedia.org/resource/Anschutz_Entertainment_Group')
+      Agricultural_Bank_of_China: (product^='http://dbpedia.org/resource/Commercial_bank')
+    relationships:
+      - Beijing_Ducks (dor:Beijing_Ducks) --doo:location--> China (dor:China)
+      - Agricultural_Bank_of_China (dor:Agricultural_Bank_of_China) --doo:location--> China (dor:China)
+      - Wukesong_Arena (dor:Wukesong_Arena) --doo:tenant--> Beijing_Ducks (dor:Beijing_Ducks)
+      - Affiliated_High_School_of_Peking_University (dor:Affiliated_High_School_of_Peking_University) --dop:country--> China (dor:China)
+  '9':
+    attributes:
+      Agricultural_Bank_of_China: (product^='http://dbpedia.org/resource/Commercial_bank')
+    relationships:
+      - Beijing_Ducks (dor:Beijing_Ducks) --doo:location--> China (dor:China)
+      - Agricultural_Bank_of_China (dor:Agricultural_Bank_of_China) --doo:location--> China (dor:China)
+      - Shougang_Gymnasium (dor:Shougang_Gymnasium) --doo:tenant--> Beijing_Ducks (dor:Beijing_Ducks)
+      - Bashu_Secondary_School (dor:Bashu_Secondary_School) --dop:country--> China (dor:China)
+  '10':
+    attributes:
+      Íþróttarhúsið_á_Torfnesi: (operator^='http://dbpedia.org/resource/Ísafjarðarbær')
+    relationships:
+      - Fúsíjama_BCI (<http://dbpedia.org/resource/Fúsíjama_BCI>) --doo:location--> Iceland (dor:Iceland)
+      - Agricultural_Bank_of_Iceland (dor:Agricultural_Bank_of_Iceland) --doo:location--> Iceland (dor:Iceland)
+      - Íþróttarhúsið_á_Torfnesi (<http://dbpedia.org/resource/Íþróttarhúsið_á_Torfnesi>) --doo:tenant--> Fúsíjama_BCI (<http://dbpedia.org/resource/Fúsíjama_BCI>)
+      - Flateyri_Folk_High_School (dor:Flateyri_Folk_High_School) --dop:country--> Iceland (dor:Iceland)
+attributes:
+  bank: --product^ (doo:product)--> Resource | --service^ (doo:service)--> Resource
+  venue: --operator^ (dop:operator)--> Resource
+  school: --denomination^ (doo:denomination)--> Resource
+  Location: --d^ (dop:d)--> langString | --designated other1 link^ (dop:designatedOther1Link)--> langString | --religion^ (doo:religion)--> Resource | --arc-gapA^ (dop:arcGapa)--> int | --built^ (dop:built)--> langString
+subgraph_id: 865
+relationships:
+  - basketball team --doo:location--> Location
+  - bank --doo:location--> Location
+  - venue --doo:tenant--> basketball team
+  - school --dop:country--> Location

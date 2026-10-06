@@ -1,0 +1,85 @@
+types:
+  town: doo:Town
+  curler: doo:Curler
+  country: doo:Country
+  Location: doo:Location
+  politician: doo:Politician
+  railway line: doo:RailwayLine
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Berlin: (subdivision^='http://dbpedia.org/resource/Boroughs_and_neighborhoods_of_Berlin', Apr sun^='157.7')
+      Alexander_Riesenkampff: (death date^='1940-12-28')
+    relationships:
+      - Alexander_Riesenkampff (dor:Alexander_Riesenkampff) --dop:deathPlace--> Germany (dor:Germany)
+      - Analena_Jentsch (dor:Analena_Jentsch) --doo:club--> Germany (dor:Germany)
+      - Analena_Jentsch (dor:Analena_Jentsch) --doo:club--> Füssen (<http://dbpedia.org/resource/Füssen>)
+      - Alexander_Riesenkampff (dor:Alexander_Riesenkampff) --dop:deathPlace--> Berlin (dor:Berlin)
+      - Anhalt_Suburban_Line (dor:Anhalt_Suburban_Line) --doo:routeStart--> Berlin (dor:Berlin)
+  '2':
+    attributes:
+      Berlin: (subdivision^='http://dbpedia.org/resource/Boroughs_and_neighborhoods_of_Berlin', Apr sun^='157.7')
+      Alexander_Riesenkampff: (death date^='1940-12-28')
+    relationships:
+      - Alexander_Riesenkampff (dor:Alexander_Riesenkampff) --dop:deathPlace--> Germany (dor:Germany)
+      - Analena_Jentsch (dor:Analena_Jentsch) --doo:club--> Germany (dor:Germany)
+      - Analena_Jentsch (dor:Analena_Jentsch) --doo:club--> Füssen (<http://dbpedia.org/resource/Füssen>)
+      - Alexander_Riesenkampff (dor:Alexander_Riesenkampff) --dop:deathPlace--> Berlin (dor:Berlin)
+      - Prussian_Eastern_Railway (dor:Prussian_Eastern_Railway) --doo:routeStart--> Berlin (dor:Berlin)
+  '3':
+    attributes:
+      Berlin: (subdivision^='http://dbpedia.org/resource/Boroughs_and_neighborhoods_of_Berlin', Apr sun^='157.7')
+      Alexander_Riesenkampff: (death date^='1940-12-28')
+    relationships:
+      - Alexander_Riesenkampff (dor:Alexander_Riesenkampff) --dop:deathPlace--> Germany (dor:Germany)
+      - Analena_Jentsch (dor:Analena_Jentsch) --doo:club--> Germany (dor:Germany)
+      - Analena_Jentsch (dor:Analena_Jentsch) --doo:club--> Füssen (<http://dbpedia.org/resource/Füssen>)
+      - Alexander_Riesenkampff (dor:Alexander_Riesenkampff) --dop:deathPlace--> Berlin (dor:Berlin)
+      - Royal_Prussian_Military_Railway (dor:Royal_Prussian_Military_Railway) --doo:routeStart--> Berlin (dor:Berlin)
+  '4':
+    attributes:
+      Helsinki: (subdivision^='http://dbpedia.org/resource/Greater_Helsinki', Apr sun^='194')
+      Alli_Nissinen: (death date^='1926-04-11')
+    relationships:
+      - Alli_Nissinen (dor:Alli_Nissinen) --dop:deathPlace--> Finland (dor:Finland)
+      - Jani_Sullanmaa (dor:Jani_Sullanmaa) --doo:club--> Finland (dor:Finland)
+      - Jani_Sullanmaa (dor:Jani_Sullanmaa) --doo:club--> Hyvinkää (<http://dbpedia.org/resource/Hyvinkää>)
+      - Alli_Nissinen (dor:Alli_Nissinen) --dop:deathPlace--> Helsinki (dor:Helsinki)
+      - Finnish_Main_Line (dor:Finnish_Main_Line) --doo:routeStart--> Helsinki (dor:Helsinki)
+  '5':
+    attributes:
+      Helsinki: (subdivision^='http://dbpedia.org/resource/Greater_Helsinki', Apr sun^='194')
+      Arno_Anthoni: (death date^='1961-08-09')
+    relationships:
+      - Arno_Anthoni (dor:Arno_Anthoni) --dop:deathPlace--> Finland (dor:Finland)
+      - Jani_Sullanmaa (dor:Jani_Sullanmaa) --doo:club--> Finland (dor:Finland)
+      - Jani_Sullanmaa (dor:Jani_Sullanmaa) --doo:club--> Hyvinkää (<http://dbpedia.org/resource/Hyvinkää>)
+      - Arno_Anthoni (dor:Arno_Anthoni) --dop:deathPlace--> Helsinki (dor:Helsinki)
+      - Finnish_Main_Line (dor:Finnish_Main_Line) --doo:routeStart--> Helsinki (dor:Helsinki)
+  '6':
+    attributes:
+      Helsinki: (subdivision^='http://dbpedia.org/resource/Greater_Helsinki', Apr sun^='194')
+      Dagmar_Neovius: (death date^='1939-07-27')
+    relationships:
+      - Dagmar_Neovius (dor:Dagmar_Neovius) --dop:deathPlace--> Finland (dor:Finland)
+      - Jani_Sullanmaa (dor:Jani_Sullanmaa) --doo:club--> Finland (dor:Finland)
+      - Jani_Sullanmaa (dor:Jani_Sullanmaa) --doo:club--> Hyvinkää (<http://dbpedia.org/resource/Hyvinkää>)
+      - Dagmar_Neovius (dor:Dagmar_Neovius) --dop:deathPlace--> Helsinki (dor:Helsinki)
+      - Finnish_Main_Line (dor:Finnish_Main_Line) --doo:routeStart--> Helsinki (dor:Helsinki)
+attributes:
+  town: --Aug precipitation inch^ (dop:augPrecipitationInch)--> double
+  Location: --builder^ (dop:builder)--> langString | --subdivision^ (doo:subdivision)--> Resource | --Apr sun^ (dop:aprSun)--> int | --age^ (dop:age)--> second
+  politician: --death date^ (doo:deathDate)--> date | --father^ (dop:father)--> Resource | --1namedata^ (dop:1namedata)--> langString | --quote^ (dop:quote)--> langString | --parent^ (doo:parent)--> Resource
+  railway line: --is part of^ (doo:isPartOf)--> Resource
+subgraph_id: 740
+relationships:
+  - politician --dop:deathPlace--> country
+  - curler --doo:club--> country
+  - curler --doo:club--> town
+  - politician --dop:deathPlace--> Location
+  - railway line --doo:routeStart--> Location

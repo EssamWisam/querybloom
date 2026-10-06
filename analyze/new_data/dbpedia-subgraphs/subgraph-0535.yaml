@@ -1,0 +1,85 @@
+types:
+  Band: doo:Band
+  city: doo:City
+  venue: doo:Venue
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      '!!!': (genre^='', home town^='http://dbpedia.org/resource/California')
+      Sacramento,_California: (c^='二埠', area code^='916 and 279', Center^='Sacramento')
+    relationships:
+      - Golden_1_Center (dor:Golden_1_Center) --doo:owner--> Sacramento,_California (<http://dbpedia.org/resource/Sacramento,_California>)
+      - '!!! (<http://dbpedia.org/resource/!!!>) --doo:hometown--> Sacramento,_California (<http://dbpedia.org/resource/Sacramento,_California>)'
+  '2':
+    attributes:
+      ¡Mayday!: (genre^='http://dbpedia.org/resource/Hip_hop_music', home town^='http://dbpedia.org/resource/Miami,_Florida')
+    relationships:
+      - Miami_Orange_Bowl (dor:Miami_Orange_Bowl) --doo:owner--> Miami,_Florida (<http://dbpedia.org/resource/Miami,_Florida>)
+      - ¡Mayday! (<http://dbpedia.org/resource/¡Mayday!>) --doo:hometown--> Miami,_Florida (<http://dbpedia.org/resource/Miami,_Florida>)
+  '3':
+    attributes:
+      Seattle: (area code^='206', Center^='Seattle')
+      ¡Tchkung!: (genre^='http://dbpedia.org/resource/Anarcho-punk', home town^='http://dbpedia.org/resource/Seattle')
+    relationships:
+      - Sick's_Stadium (<http://dbpedia.org/resource/Sick's_Stadium>) --doo:owner--> Seattle (dor:Seattle)
+      - ¡Tchkung! (<http://dbpedia.org/resource/¡Tchkung!>) --doo:hometown--> Seattle (dor:Seattle)
+  '4':
+    attributes:
+      ...Whatever_That_Means: (genre^='http://dbpedia.org/resource/Punk_rock', home town^='http://dbpedia.org/resource/Seoul')
+    relationships:
+      - Jamsil_Baseball_Stadium (dor:Jamsil_Baseball_Stadium) --doo:owner--> Seoul (dor:Seoul)
+      - ...Whatever_That_Means (<http://dbpedia.org/resource/...Whatever_That_Means>) --doo:hometown--> Seoul (dor:Seoul)
+  '5':
+    attributes:
+      .Feast: (genre^='', home town^='http://dbpedia.org/resource/Jakarta')
+      Jakarta: (area code^='+62 21', commons^='yes')
+    relationships:
+      - GOR_Ciracas_Stadium (dor:GOR_Ciracas_Stadium) --doo:owner--> Jakarta (dor:Jakarta)
+      - .Feast (<http://dbpedia.org/resource/.Feast>) --doo:hometown--> Jakarta (dor:Jakarta)
+  '6':
+    attributes:
+      .Feast: (genre^='', home town^='http://dbpedia.org/resource/Jakarta')
+      Jakarta: (area code^='+62 21', commons^='yes')
+    relationships:
+      - Jakarta_International_Stadium (dor:Jakarta_International_Stadium) --doo:owner--> Jakarta (dor:Jakarta)
+      - .Feast (<http://dbpedia.org/resource/.Feast>) --doo:hometown--> Jakarta (dor:Jakarta)
+  '7':
+    attributes:
+      .Feast: (genre^='', home town^='http://dbpedia.org/resource/Jakarta')
+      Jakarta: (area code^='+62 21', commons^='yes')
+    relationships:
+      - Lebak_Bulus_Stadium (dor:Lebak_Bulus_Stadium) --doo:owner--> Jakarta (dor:Jakarta)
+      - .Feast (<http://dbpedia.org/resource/.Feast>) --doo:hometown--> Jakarta (dor:Jakarta)
+  '8':
+    attributes:
+      '''68_Comeback': (genre^='http://dbpedia.org/resource/Garage_rock', home town^='http://dbpedia.org/resource/Memphis,_Tennessee')
+      Memphis,_Tennessee: (area code^='901')
+    relationships:
+      - AutoZone_Park (dor:AutoZone_Park) --doo:owner--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)
+      - '''68_Comeback (<http://dbpedia.org/resource/''68_Comeback>) --doo:hometown--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)'
+  '9':
+    attributes:
+      '''68_Comeback': (genre^='http://dbpedia.org/resource/Garage_rock', home town^='http://dbpedia.org/resource/Memphis,_Tennessee')
+      Memphis,_Tennessee: (area code^='901')
+    relationships:
+      - FedExForum (dor:FedExForum) --doo:owner--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)
+      - '''68_Comeback (<http://dbpedia.org/resource/''68_Comeback>) --doo:hometown--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)'
+  '10':
+    attributes:
+      '''68_Comeback': (genre^='http://dbpedia.org/resource/Garage_rock', home town^='http://dbpedia.org/resource/Memphis,_Tennessee')
+      Memphis,_Tennessee: (area code^='901')
+    relationships:
+      - Memphis_Pyramid (dor:Memphis_Pyramid) --doo:owner--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)
+      - '''68_Comeback (<http://dbpedia.org/resource/''68_Comeback>) --doo:hometown--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)'
+attributes:
+  Band: --genre^ (dop:genre)--> langString | --home town^ (doo:hometown)--> Resource | --id^ (dop:id)--> langString | --align^ (dop:align)--> langString
+  city: --Apr record low F^ (dop:aprRecordLowF)--> langString | --c^ (dop:c)--> langString | --area code^ (doo:areaCode)--> string | --Center^ (dop:center)--> langString | --commons^ (dop:commons)--> langString
+subgraph_id: 535
+relationships:
+  - venue --doo:owner--> city
+  - Band --doo:hometown--> city

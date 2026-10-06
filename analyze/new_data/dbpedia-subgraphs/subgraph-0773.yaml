@@ -1,0 +1,103 @@
+types:
+  island: doo:Island
+  Location: doo:Location
+  settlement: doo:Settlement
+  hockey team: doo:HockeyTeam
+  ice hockey player: doo:IceHockeyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Halsön_(Korsnäs): (country^='http://dbpedia.org/resource/Finland')
+    relationships:
+      - Halsön_(Korsnäs) (<http://dbpedia.org/resource/Halsön_(Korsnäs)>) --dop:country--> Finland (dor:Finland)
+      - Espoo_United_(ice_hockey) (<http://dbpedia.org/resource/Espoo_United_(ice_hockey)>) --dop:city--> Finland (dor:Finland)
+      - Espoo_United_(ice_hockey) (<http://dbpedia.org/resource/Espoo_United_(ice_hockey)>) --doo:coach--> Timo_Hirvonen (dor:Timo_Hirvonen)
+      - Timo_Hirvonen (dor:Timo_Hirvonen) --dop:birthPlace--> Varkaus (dor:Varkaus)
+  '2':
+    attributes:
+      Isosaari: (country^='http://dbpedia.org/resource/Finland')
+    relationships:
+      - Isosaari (dor:Isosaari) --dop:country--> Finland (dor:Finland)
+      - Espoo_United_(ice_hockey) (<http://dbpedia.org/resource/Espoo_United_(ice_hockey)>) --dop:city--> Finland (dor:Finland)
+      - Espoo_United_(ice_hockey) (<http://dbpedia.org/resource/Espoo_United_(ice_hockey)>) --doo:coach--> Timo_Hirvonen (dor:Timo_Hirvonen)
+      - Timo_Hirvonen (dor:Timo_Hirvonen) --dop:birthPlace--> Varkaus (dor:Varkaus)
+  '3':
+    attributes:
+      Kataja: (population total^='0', country^='http://dbpedia.org/resource/Finland')
+    relationships:
+      - Kataja (dor:Kataja) --dop:country--> Finland (dor:Finland)
+      - Espoo_United_(ice_hockey) (<http://dbpedia.org/resource/Espoo_United_(ice_hockey)>) --dop:city--> Finland (dor:Finland)
+      - Espoo_United_(ice_hockey) (<http://dbpedia.org/resource/Espoo_United_(ice_hockey)>) --doo:coach--> Timo_Hirvonen (dor:Timo_Hirvonen)
+      - Timo_Hirvonen (dor:Timo_Hirvonen) --dop:birthPlace--> Varkaus (dor:Varkaus)
+  '4':
+    attributes:
+      Dominicans_Island: (population total^='21', country^='http://dbpedia.org/resource/Germany')
+    relationships:
+      - Dominicans_Island (dor:Dominicans_Island) --dop:country--> Germany (dor:Germany)
+      - EV_Landshut (dor:EV_Landshut) --dop:city--> Germany (dor:Germany)
+      - EV_Landshut (dor:EV_Landshut) --doo:coach--> Leif_Carlsson (dor:Leif_Carlsson)
+      - Leif_Carlsson (dor:Leif_Carlsson) --dop:birthPlace--> Ludvika (dor:Ludvika)
+  '5':
+    attributes:
+      Düne: (country^='http://dbpedia.org/resource/Germany')
+    relationships:
+      - Düne (<http://dbpedia.org/resource/Düne>) --dop:country--> Germany (dor:Germany)
+      - EV_Landshut (dor:EV_Landshut) --dop:city--> Germany (dor:Germany)
+      - EV_Landshut (dor:EV_Landshut) --doo:coach--> Leif_Carlsson (dor:Leif_Carlsson)
+      - Leif_Carlsson (dor:Leif_Carlsson) --dop:birthPlace--> Ludvika (dor:Ludvika)
+  '6':
+    attributes:
+      Frisian_Islands: (population total^='81341', country^='http://dbpedia.org/resource/Denmark')
+    relationships:
+      - Frisian_Islands (dor:Frisian_Islands) --dop:country--> Germany (dor:Germany)
+      - EV_Landshut (dor:EV_Landshut) --dop:city--> Germany (dor:Germany)
+      - EV_Landshut (dor:EV_Landshut) --doo:coach--> Leif_Carlsson (dor:Leif_Carlsson)
+      - Leif_Carlsson (dor:Leif_Carlsson) --dop:birthPlace--> Ludvika (dor:Ludvika)
+  '7':
+    attributes:
+      Adelaide_Island_(Russia): (population total^='0', country^='http://dbpedia.org/resource/Russia')
+    relationships:
+      - Adelaide_Island_(Russia) (<http://dbpedia.org/resource/Adelaide_Island_(Russia)>) --dop:country--> Russia (dor:Russia)
+      - HC_Zvezda_Moscow (dor:HC_Zvezda_Moscow) --dop:city--> Russia (dor:Russia)
+      - HC_Zvezda_Moscow (dor:HC_Zvezda_Moscow) --doo:coach--> Vladimir_Chebaturkin (dor:Vladimir_Chebaturkin)
+      - Vladimir_Chebaturkin (dor:Vladimir_Chebaturkin) --dop:birthPlace--> Tyumen (dor:Tyumen)
+  '8':
+    attributes:
+      Agrakhan_Peninsula: (country^='http://dbpedia.org/resource/Russia')
+    relationships:
+      - Agrakhan_Peninsula (dor:Agrakhan_Peninsula) --dop:country--> Russia (dor:Russia)
+      - HC_Zvezda_Moscow (dor:HC_Zvezda_Moscow) --dop:city--> Russia (dor:Russia)
+      - HC_Zvezda_Moscow (dor:HC_Zvezda_Moscow) --doo:coach--> Vladimir_Chebaturkin (dor:Vladimir_Chebaturkin)
+      - Vladimir_Chebaturkin (dor:Vladimir_Chebaturkin) --dop:birthPlace--> Tyumen (dor:Tyumen)
+  '9':
+    attributes:
+      Alexandra_Land: (population total^='5', country^='http://dbpedia.org/resource/Russia')
+    relationships:
+      - Alexandra_Land (dor:Alexandra_Land) --dop:country--> Russia (dor:Russia)
+      - HC_Zvezda_Moscow (dor:HC_Zvezda_Moscow) --dop:city--> Russia (dor:Russia)
+      - HC_Zvezda_Moscow (dor:HC_Zvezda_Moscow) --doo:coach--> Vladimir_Chebaturkin (dor:Vladimir_Chebaturkin)
+      - Vladimir_Chebaturkin (dor:Vladimir_Chebaturkin) --dop:birthPlace--> Tyumen (dor:Tyumen)
+  '10':
+    attributes:
+      British_Islands: (country^='http://dbpedia.org/resource/Bailiwick_of_Guernsey')
+    relationships:
+      - British_Islands (dor:British_Islands) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - Whitley_Warriors (dor:Whitley_Warriors) --dop:city--> United_Kingdom (dor:United_Kingdom)
+      - Whitley_Warriors (dor:Whitley_Warriors) --doo:coach--> David_Longstaff (dor:David_Longstaff)
+      - David_Longstaff (dor:David_Longstaff) --dop:birthPlace--> Whitley_Bay (dor:Whitley_Bay)
+attributes:
+  island: --population total^ (doo:populationTotal)--> int | --country^ (dop:country)--> langString
+  Location: --named after^ (dop:namedAfter)--> Resource | --id^ (dop:id)--> int | --architect^ (dop:architect)--> Resource | --Apr high F^ (dop:aprHighF)--> double | --2a^ (dop:2a)--> langString
+  settlement: --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --nickname^ (dop:nickname)--> langString | --Apr high F^ (dop:aprHighF)--> double
+  ice hockey player: --death date^ (dop:deathDate)--> date
+subgraph_id: 773
+relationships:
+  - island --dop:country--> Location
+  - hockey team --dop:city--> Location
+  - hockey team --doo:coach--> ice hockey player
+  - ice hockey player --dop:birthPlace--> settlement

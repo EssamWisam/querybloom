@@ -1,0 +1,52 @@
+types:
+  Location: doo:Location
+  hospital: doo:Hospital
+  architect: doo:Architect
+  university: doo:University
+  college coach: doo:CollegeCoach
+  protected area: doo:ProtectedArea
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Abraham_Lincoln_National_Heritage_Area (dor:Abraham_Lincoln_National_Heritage_Area) --doo:location--> Illinois (dor:Illinois)
+      - Swedish_Hospital (dor:Swedish_Hospital) --doo:location--> Illinois (dor:Illinois)
+      - Swedish_Hospital (dor:Swedish_Hospital) --doo:affiliation--> North_Park_University (dor:North_Park_University)
+      - Mike_Liljegren (dor:Mike_Liljegren) --dop:almaMater--> North_Park_University (dor:North_Park_University)
+      - Swedish_Hospital (dor:Swedish_Hospital) --dop:affiliation--> North_Park_University (dor:North_Park_University)
+      - Franklin_Pierce_Burnham (dor:Franklin_Pierce_Burnham) --doo:significantProject--> Illinois (dor:Illinois)
+  '2':
+    attributes: {}
+    relationships:
+      - Anderson_Lake_State_Fish_and_Wildlife_Area (dor:Anderson_Lake_State_Fish_and_Wildlife_Area) --doo:location--> Illinois (dor:Illinois)
+      - Swedish_Hospital (dor:Swedish_Hospital) --doo:location--> Illinois (dor:Illinois)
+      - Swedish_Hospital (dor:Swedish_Hospital) --doo:affiliation--> North_Park_University (dor:North_Park_University)
+      - Mike_Liljegren (dor:Mike_Liljegren) --dop:almaMater--> North_Park_University (dor:North_Park_University)
+      - Swedish_Hospital (dor:Swedish_Hospital) --dop:affiliation--> North_Park_University (dor:North_Park_University)
+      - Franklin_Pierce_Burnham (dor:Franklin_Pierce_Burnham) --doo:significantProject--> Illinois (dor:Illinois)
+  '3':
+    attributes: {}
+    relationships:
+      - Apple_River_Canyon_State_Park (dor:Apple_River_Canyon_State_Park) --doo:location--> Illinois (dor:Illinois)
+      - Swedish_Hospital (dor:Swedish_Hospital) --doo:location--> Illinois (dor:Illinois)
+      - Swedish_Hospital (dor:Swedish_Hospital) --doo:affiliation--> North_Park_University (dor:North_Park_University)
+      - Mike_Liljegren (dor:Mike_Liljegren) --dop:almaMater--> North_Park_University (dor:North_Park_University)
+      - Swedish_Hospital (dor:Swedish_Hospital) --dop:affiliation--> North_Park_University (dor:North_Park_University)
+      - Franklin_Pierce_Burnham (dor:Franklin_Pierce_Burnham) --doo:significantProject--> Illinois (dor:Illinois)
+attributes:
+  Location: --display^ (dop:display)--> langString | --designated other1 link^ (dop:designatedOther1Link)--> langString | --image^ (dop:image)--> langString | --architect^ (doo:architect)--> Resource | --url^ (dop:url)--> Resource | --float^ (dop:float)--> langString | --abolished^ (dop:abolished)--> int
+  university: --Closed^ (dop:closed)--> int
+  protected area: --operator^ (dop:operator)--> langString
+subgraph_id: 893
+relationships:
+  - protected area --doo:location--> Location
+  - hospital --doo:location--> Location
+  - hospital --doo:affiliation--> university
+  - college coach --dop:almaMater--> university
+  - hospital --dop:affiliation--> university
+  - architect --doo:significantProject--> Location

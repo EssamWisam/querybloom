@@ -1,0 +1,109 @@
+types:
+  city: doo:City
+  soccer club: doo:SoccerClub
+  football match: doo:FootballMatch
+  baseball player: doo:BaseballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Caracas: (Link from a Wikipage to an external page^='http://www.caracas.gob.ve/', type^='http://dbpedia.org/resource/List_of_cities_and_towns_in_Venezuela')
+      Hanshin_Tigers: (Link from a Wikipage to an external page^='http://hanshintigers.jp')
+      1975_Copa_Interamericana: (Link from a Wikipage to an external page^='http://www.rsssf.com/tablesi/intam75.html')
+    relationships:
+      - Aarom_Baldiris (dor:Aarom_Baldiris) --dop:birthPlace--> Caracas (dor:Caracas)
+      - 1975_Copa_Interamericana (dor:1975_Copa_Interamericana) --dop:location--> Caracas (dor:Caracas)
+      - Aarom_Baldiris (dor:Aarom_Baldiris) --doo:debutTeam--> Hanshin_Tigers (dor:Hanshin_Tigers)
+  '2':
+    attributes:
+      Yokohama: (Link from a Wikipage to an external page^='http://www.city.yokohama.lg.jp/', width^='auto', type^='http://dbpedia.org/resource/Cities_designated_by_government_ordinance_of_Japan', source^='Japan Meteorological Agency', Apr low C^='10.7')
+      Hanshin_Tigers: (Link from a Wikipage to an external page^='http://hanshintigers.jp')
+      2022_Emperor's_Cup_Final: (Link from a Wikipage to an external page^='http://jfa.jp/eng/match/emperorscup_2022/')
+    relationships:
+      - Atsushi_Mochizuki (dor:Atsushi_Mochizuki) --dop:birthPlace--> Yokohama (dor:Yokohama)
+      - 2022_Emperor's_Cup_Final (<http://dbpedia.org/resource/2022_Emperor's_Cup_Final>) --dop:location--> Yokohama (dor:Yokohama)
+      - Atsushi_Mochizuki (dor:Atsushi_Mochizuki) --doo:debutTeam--> Hanshin_Tigers (dor:Hanshin_Tigers)
+  '3':
+    attributes:
+      Brisbane: (Link from a Wikipage to an external page^='http://www.australia.com/en-us/places/brisbane.html', width^='120', Aug rain days^='3.5', source^='http://dbpedia.org/resource/Bureau_of_Meteorology', Apr low C^='17.4')
+      Brisbane_Bandits: (Link from a Wikipage to an external page^='http://www.brisbanebandits.com.au')
+      1998_OFC_Nations_Cup_Final: (Link from a Wikipage to an external page^='http://www.rsssf.com/tables/98oc.html')
+    relationships:
+      - Brad_Dutton (dor:Brad_Dutton) --dop:birthPlace--> Brisbane (dor:Brisbane)
+      - 1998_OFC_Nations_Cup_Final (dor:1998_OFC_Nations_Cup_Final) --dop:location--> Brisbane (dor:Brisbane)
+      - Brad_Dutton (dor:Brad_Dutton) --doo:debutTeam--> Brisbane_Bandits (dor:Brisbane_Bandits)
+  '4':
+    attributes:
+      Los_Angeles: (Link from a Wikipage to an external page^='https://archive.org/details/bohemianlosangel0000hure', width^='210', type^='http://dbpedia.org/resource/List_of_municipalities_in_California')
+      Washington_Nationals: (Link from a Wikipage to an external page^='http://msn.foxsports.com/mlb/team%3FstatsId=20')
+      1996_CONCACAF_Gold_Cup_Final: (Link from a Wikipage to an external page^='https://int.soccerway.com/matches/1996/01/21/nc-america/concacaf-gold-cup/brazil/mexico/251107/%3FICID=PL_MS_01')
+    relationships:
+      - Brandon_Watson (dor:Brandon_Watson) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - 1996_CONCACAF_Gold_Cup_Final (dor:1996_CONCACAF_Gold_Cup_Final) --dop:location--> Los_Angeles (dor:Los_Angeles)
+      - Brandon_Watson (dor:Brandon_Watson) --doo:debutTeam--> Washington_Nationals (dor:Washington_Nationals)
+  '5':
+    attributes:
+      Los_Angeles: (Link from a Wikipage to an external page^='https://archive.org/details/bohemianlosangel0000hure', width^='210', type^='http://dbpedia.org/resource/List_of_municipalities_in_California')
+      Washington_Nationals: (Link from a Wikipage to an external page^='http://msn.foxsports.com/mlb/team%3FstatsId=20')
+      2003_Recopa_Sudamericana: (Link from a Wikipage to an external page^='https://fichadojogo.wordpress.com/2012/08/15/ficha-tecnica-da-final-da-recopa-sul-americana-de-2003-entre-olimpia-do-paraguai-e-san-lorenzo-de-almagro-da-argentina/')
+    relationships:
+      - Brandon_Watson (dor:Brandon_Watson) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - 2003_Recopa_Sudamericana (dor:2003_Recopa_Sudamericana) --dop:location--> Los_Angeles (dor:Los_Angeles)
+      - Brandon_Watson (dor:Brandon_Watson) --doo:debutTeam--> Washington_Nationals (dor:Washington_Nationals)
+  '6':
+    attributes:
+      Los_Angeles: (Link from a Wikipage to an external page^='https://archive.org/details/bohemianlosangel0000hure', width^='210', type^='http://dbpedia.org/resource/List_of_municipalities_in_California')
+      USA_Final_1967: (Link from a Wikipage to an external page^='https://www.newspapers.com/image/458643772/%3Fterms=Wolves%2BWhips')
+      Washington_Nationals: (Link from a Wikipage to an external page^='http://msn.foxsports.com/mlb/team%3FstatsId=20')
+    relationships:
+      - Brandon_Watson (dor:Brandon_Watson) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - USA_Final_1967 (dor:USA_Final_1967) --dop:location--> Los_Angeles (dor:Los_Angeles)
+      - Brandon_Watson (dor:Brandon_Watson) --doo:debutTeam--> Washington_Nationals (dor:Washington_Nationals)
+  '7':
+    attributes:
+      Tampa_Bay_Rays: (Link from a Wikipage to an external page^='http://rays.tampabay.com/')
+      Soccer_Bowl_2013: (Link from a Wikipage to an external page^='http://www.nasl.com/index.php%3Fid=3&newsid=3540')
+    relationships:
+      - Brent_Abernathy (dor:Brent_Abernathy) --dop:birthPlace--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+      - Soccer_Bowl_2013 (dor:Soccer_Bowl_2013) --dop:location--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+      - Brent_Abernathy (dor:Brent_Abernathy) --doo:debutTeam--> Tampa_Bay_Rays (dor:Tampa_Bay_Rays)
+  '8':
+    attributes:
+      Atlanta: (Link from a Wikipage to an external page^='http://album.atlantahistorycenter.com/cdm/landingpage/collection/athpc', width^='25.0', type^='http://dbpedia.org/resource/List_of_capitals_in_the_United_States', source^='—National Geographic magazine, in naming Atlanta a "Place of a Lifetime"')
+      Miami_Marlins: (Link from a Wikipage to an external page^='https://www.baseball-reference.com/teams/FLA/')
+      NASL_Final_1971: (Link from a Wikipage to an external page^='http://soccerstats.us/games/31530/')
+    relationships:
+      - Burke_Badenhop (dor:Burke_Badenhop) --dop:birthPlace--> Atlanta (dor:Atlanta)
+      - NASL_Final_1971 (dor:NASL_Final_1971) --dop:location--> Atlanta (dor:Atlanta)
+      - Burke_Badenhop (dor:Burke_Badenhop) --doo:debutTeam--> Miami_Marlins (dor:Miami_Marlins)
+  '9':
+    attributes:
+      Dallas: (Link from a Wikipage to an external page^='http://trinityrivertexas.org/video_full.php', width^='400')
+      NASL_Final_1971: (Link from a Wikipage to an external page^='http://soccerstats.us/games/31530/')
+      Colorado_Rockies: (Link from a Wikipage to an external page^='http://mlb.mlb.com/mlb/minorleagues/affiliates/index.jsp%3Fc_id=col')
+    relationships:
+      - Charlie_Blackmon (dor:Charlie_Blackmon) --dop:birthPlace--> Dallas (dor:Dallas)
+      - NASL_Final_1971 (dor:NASL_Final_1971) --dop:location--> Dallas (dor:Dallas)
+      - Charlie_Blackmon (dor:Charlie_Blackmon) --doo:debutTeam--> Colorado_Rockies (dor:Colorado_Rockies)
+  '10':
+    attributes:
+      London: (Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1', width^='215', type^='http://dbpedia.org/resource/Capital_city')
+      Miami_Marlins: (Link from a Wikipage to an external page^='https://www.baseball-reference.com/teams/FLA/')
+      1913_FA_Cup_Final: (Link from a Wikipage to an external page^='http://ryehillfootball.co.uk/stories/1913-fa-cup-final/')
+    relationships:
+      - Chris_Reed_(baseball) (<http://dbpedia.org/resource/Chris_Reed_(baseball)>) --dop:birthPlace--> London (dor:London)
+      - 1913_FA_Cup_Final (dor:1913_FA_Cup_Final) --dop:location--> London (dor:London)
+      - Chris_Reed_(baseball) (<http://dbpedia.org/resource/Chris_Reed_(baseball)>) --doo:debutTeam--> Miami_Marlins (dor:Miami_Marlins)
+attributes:
+  city: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --width^ (dop:width)--> int | --Aug rain days^ (dop:augRainDays)--> double | --type^ (doo:type)--> Resource | --source^ (dop:source)--> langString | --aprHighF (dop:aprHighF)--> int | --Apr low C^ (dop:aprLowC)--> int
+  soccer club: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --Association^ (dop:association)--> langString | --date^ (dop:date)--> date | --last^ (dop:last)--> langString | --lowest attendance^ (dop:lowestAttendance)--> date
+  football match: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+subgraph_id: 688
+relationships:
+  - baseball player --dop:birthPlace--> city
+  - football match --dop:location--> city
+  - baseball player --doo:debutTeam--> soccer club

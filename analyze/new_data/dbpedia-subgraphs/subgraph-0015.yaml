@@ -1,0 +1,96 @@
+types:
+  book: doo:Book
+  writer: doo:Writer
+  scientist: doo:Scientist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Steven_Novella: (birth place^='Danbury, Connecticut, U.S.')
+      ._._._That_Thou_Art_Mindful_of_Him: (subject='http://dbpedia.org/resource/Category:1974_short_stories')
+    relationships:
+      - ._._._That_Thou_Art_Mindful_of_Him (<http://dbpedia.org/resource/._._._That_Thou_Art_Mindful_of_Him>) --dop:author--> Isaac_Asimov (dor:Isaac_Asimov)
+      - Steven_Novella (dor:Steven_Novella) --doo:influencedBy--> Isaac_Asimov (dor:Isaac_Asimov)
+  '2':
+    attributes:
+      Leo_Tolstoy: (caption^='--05-23')
+      A_Confession: (subject='http://dbpedia.org/resource/Category:1882_non-fiction_books')
+      Camil_Mureșanu: (death date^='2015-02-21', birth place^='Turda')
+    relationships:
+      - A_Confession (dor:A_Confession) --dop:author--> Leo_Tolstoy (dor:Leo_Tolstoy)
+      - Camil_Mureșanu (<http://dbpedia.org/resource/Camil_Mureșanu>) --doo:influencedBy--> Leo_Tolstoy (dor:Leo_Tolstoy)
+  '3':
+    attributes:
+      A_Cool_Million: (subject='http://dbpedia.org/resource/Category:1934_American_novels')
+      Nathanael_West: (alma mater^='http://dbpedia.org/resource/Brown_University')
+      Brigitte_Secard: (birth place^='West Covina, USA')
+    relationships:
+      - A_Cool_Million (dor:A_Cool_Million) --dop:author--> Nathanael_West (dor:Nathanael_West)
+      - Brigitte_Secard (dor:Brigitte_Secard) --doo:influencedBy--> Nathanael_West (dor:Nathanael_West)
+  '4':
+    attributes:
+      Arif_Dirlik: (death date^='2017-12-01', birth place^='http://dbpedia.org/resource/Mersin,_Turkey')
+      A_Gentle_Creature: (subject='http://dbpedia.org/resource/Category:1876_short_stories')
+    relationships:
+      - A_Gentle_Creature (dor:A_Gentle_Creature) --dop:author--> Fyodor_Dostoyevsky (dor:Fyodor_Dostoyevsky)
+      - Arif_Dirlik (dor:Arif_Dirlik) --doo:influencedBy--> Fyodor_Dostoyevsky (dor:Fyodor_Dostoyevsky)
+  '5':
+    attributes:
+      Brigitte_Secard: (birth place^='West Covina, USA')
+      A_Gentle_Creature: (subject='http://dbpedia.org/resource/Category:1876_short_stories')
+    relationships:
+      - A_Gentle_Creature (dor:A_Gentle_Creature) --dop:author--> Fyodor_Dostoyevsky (dor:Fyodor_Dostoyevsky)
+      - Brigitte_Secard (dor:Brigitte_Secard) --doo:influencedBy--> Fyodor_Dostoyevsky (dor:Fyodor_Dostoyevsky)
+  '6':
+    attributes:
+      Philip_K._Dick: (source^='—Steven Owen Godersky', caption^='1960.0')
+      Alan_N._Shapiro: (url^='https://web.archive.org/web/20170101232336/http:/www.expo2015.org/magazine/it/cultura/alan-n--shapiro--nella-nuova-fantascienza-gli-androidi-hanno-un-cuore.html', birth place^='http://dbpedia.org/resource/Brooklyn')
+      A_Handful_of_Darkness: (subject='http://dbpedia.org/resource/Category:1955_short_story_collections')
+    relationships:
+      - A_Handful_of_Darkness (dor:A_Handful_of_Darkness) --dop:author--> Philip_K._Dick (dor:Philip_K._Dick)
+      - Alan_N._Shapiro (dor:Alan_N._Shapiro) --doo:influencedBy--> Philip_K._Dick (dor:Philip_K._Dick)
+  '7':
+    attributes:
+      Richard_Dawkins: (birth place^='http://dbpedia.org/resource/British_Kenya', children^='1')
+      A_Long_Short_War: (subject='http://dbpedia.org/resource/Category:2003_non-fiction_books')
+      Christopher_Hitchens: (birth year^='1949', source^='—Christopher Hitchens', caption^='Hitchens in 2005')
+    relationships:
+      - A_Long_Short_War (dor:A_Long_Short_War) --dop:author--> Christopher_Hitchens (dor:Christopher_Hitchens)
+      - Richard_Dawkins (dor:Richard_Dawkins) --doo:influencedBy--> Christopher_Hitchens (dor:Christopher_Hitchens)
+  '8':
+    attributes:
+      Philip_K._Dick: (source^='—Steven Owen Godersky', caption^='1960.0')
+      A_Maze_of_Death: (subject='http://dbpedia.org/resource/Category:1970_American_novels')
+      Alan_N._Shapiro: (url^='https://web.archive.org/web/20170101232336/http:/www.expo2015.org/magazine/it/cultura/alan-n--shapiro--nella-nuova-fantascienza-gli-androidi-hanno-un-cuore.html', birth place^='http://dbpedia.org/resource/Brooklyn')
+    relationships:
+      - A_Maze_of_Death (dor:A_Maze_of_Death) --dop:author--> Philip_K._Dick (dor:Philip_K._Dick)
+      - Alan_N._Shapiro (dor:Alan_N._Shapiro) --doo:influencedBy--> Philip_K._Dick (dor:Philip_K._Dick)
+  '9':
+    attributes:
+      A_Mercy: (subject='http://dbpedia.org/resource/Category:2008_American_novels')
+      Toni_Morrison: (caption^='Morrison in 1998')
+      Maurice_Berger: (death date^='2020-03-23', birth place^='New York City, U.S.')
+    relationships:
+      - A_Mercy (dor:A_Mercy) --dop:author--> Toni_Morrison (dor:Toni_Morrison)
+      - Maurice_Berger (dor:Maurice_Berger) --doo:influencedBy--> Toni_Morrison (dor:Toni_Morrison)
+  '10':
+    attributes:
+      Abraham_Wald: (death date^='1950-12-13', birth place^='http://dbpedia.org/resource/Austria-Hungary', children^='http://dbpedia.org/resource/Robert_Wald')
+      Milton_Friedman: (caption^='Friedman in 2004', alma mater^='')
+      A_Monetary_History_of_the_United_States: (subject='http://dbpedia.org/resource/Category:1963_in_economics')
+    relationships:
+      - A_Monetary_History_of_the_United_States (dor:A_Monetary_History_of_the_United_States) --dop:author--> Milton_Friedman (dor:Milton_Friedman)
+      - Abraham_Wald (dor:Abraham_Wald) --doo:influencedBy--> Milton_Friedman (dor:Milton_Friedman)
+attributes:
+  book: --bot^ (dop:bot)--> langString | --subject (podt:subject)--> Resource | --2y^ (dop:2y)--> int
+  writer: --birth year^ (doo:birthYear)--> gYear | --source^ (dop:source)--> langString | --caption^ (dop:caption)--> langString | --alma mater^ (dop:almaMater)--> langString
+  scientist: --url^ (dop:url)--> Resource | --death date^ (doo:deathDate)--> date | --birth place^ (dop:birthPlace)--> langString | --by^ (dop:by)--> langString | --bot^ (dop:bot)--> langString | --children^ (dop:children)--> langString
+subgraph_id: 15
+relationships:
+  - book --dop:author--> writer
+  - scientist --doo:influencedBy--> writer

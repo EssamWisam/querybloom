@@ -1,0 +1,126 @@
+types:
+  book: doo:Book
+  manga: doo:Manga
+  person: doo:Person
+  publisher: doo:Publisher
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      12_Days: (page length (characters) of wiki page^='20293')
+    relationships:
+      - Daphne_in_the_Brilliant_Blue (dor:Daphne_in_the_Brilliant_Blue) --doo:publisher--> Tokyopop (dor:Tokyopop)
+      - 12_Days (dor:12_Days) --doo:publisher--> Tokyopop (dor:Tokyopop)
+      - Daphne_in_the_Brilliant_Blue (dor:Daphne_in_the_Brilliant_Blue) --dop:author--> Satoshi_Shiki (dor:Satoshi_Shiki)
+  '2':
+    attributes:
+      12_Days: (page length (characters) of wiki page^='20293')
+    relationships:
+      - Girl_Got_Game (dor:Girl_Got_Game) --doo:publisher--> Tokyopop (dor:Tokyopop)
+      - 12_Days (dor:12_Days) --doo:publisher--> Tokyopop (dor:Tokyopop)
+      - Girl_Got_Game (dor:Girl_Got_Game) --dop:author--> Shizuru_Seino (dor:Shizuru_Seino)
+  '3':
+    attributes:
+      12_Days: (page length (characters) of wiki page^='20293')
+    relationships:
+      - Mars_(manga) (<http://dbpedia.org/resource/Mars_(manga)>) --doo:publisher--> Tokyopop (dor:Tokyopop)
+      - 12_Days (dor:12_Days) --doo:publisher--> Tokyopop (dor:Tokyopop)
+      - Mars_(manga) (<http://dbpedia.org/resource/Mars_(manga)>) --dop:author--> Fuyumi_Soryo (dor:Fuyumi_Soryo)
+  '4':
+    attributes:
+      13_Bankers: (page length (characters) of wiki page^='2145')
+    relationships:
+      - Our_Colors (dor:Our_Colors) --doo:publisher--> Pantheon_Books (dor:Pantheon_Books)
+      - 13_Bankers (dor:13_Bankers) --doo:publisher--> Pantheon_Books (dor:Pantheon_Books)
+      - Our_Colors (dor:Our_Colors) --dop:author--> Gengoroh_Tagame (dor:Gengoroh_Tagame)
+  '5':
+    attributes:
+      13_Little_Blue_Envelopes: (page length (characters) of wiki page^='5051')
+    relationships:
+      - The_Tatami_Galaxy (dor:The_Tatami_Galaxy) --doo:publisher--> HarperCollins (dor:HarperCollins)
+      - 13_Little_Blue_Envelopes (dor:13_Little_Blue_Envelopes) --doo:publisher--> HarperCollins (dor:HarperCollins)
+      - The_Tatami_Galaxy (dor:The_Tatami_Galaxy) --dop:author--> Tomihiko_Morimi (dor:Tomihiko_Morimi)
+  '6':
+    attributes:
+      13_Stories_and_13_Epitaphs: (page length (characters) of wiki page^='1892')
+    relationships:
+      - Our_Colors (dor:Our_Colors) --doo:publisher--> Pantheon_Books (dor:Pantheon_Books)
+      - 13_Stories_and_13_Epitaphs (dor:13_Stories_and_13_Epitaphs) --doo:publisher--> Pantheon_Books (dor:Pantheon_Books)
+      - Our_Colors (dor:Our_Colors) --dop:author--> Gengoroh_Tagame (dor:Gengoroh_Tagame)
+  '7':
+    attributes:
+      1356_(novel): (page length (characters) of wiki page^='10145')
+    relationships:
+      - The_Tatami_Galaxy (dor:The_Tatami_Galaxy) --doo:publisher--> HarperCollins (dor:HarperCollins)
+      - 1356_(novel) (<http://dbpedia.org/resource/1356_(novel)>) --doo:publisher--> HarperCollins (dor:HarperCollins)
+      - The_Tatami_Galaxy (dor:The_Tatami_Galaxy) --dop:author--> Tomihiko_Morimi (dor:Tomihiko_Morimi)
+  '8':
+    attributes:
+      1Q84: (page length (characters) of wiki page^='31400')
+    relationships:
+      - 51_Ways_to_Save_Her (dor:51_Ways_to_Save_Her) --doo:publisher--> Shinchosha (dor:Shinchosha)
+      - 1Q84 (dor:1Q84) --doo:publisher--> Shinchosha (dor:Shinchosha)
+      - 51_Ways_to_Save_Her (dor:51_Ways_to_Save_Her) --dop:author--> Usamaru_Furuya (dor:Usamaru_Furuya)
+  '9':
+    attributes:
+      1Q84: (page length (characters) of wiki page^='31400')
+    relationships:
+      - Akihabara@Deep (<http://dbpedia.org/resource/Akihabara@Deep>) --doo:publisher--> Shinchosha (dor:Shinchosha)
+      - 1Q84 (dor:1Q84) --doo:publisher--> Shinchosha (dor:Shinchosha)
+      - Akihabara@Deep (<http://dbpedia.org/resource/Akihabara@Deep>) --dop:author--> Ira_Ishida (dor:Ira_Ishida)
+  '10':
+    attributes:
+      1Q84: (page length (characters) of wiki page^='31400')
+    relationships:
+      - Angel_Heart_(manga) (<http://dbpedia.org/resource/Angel_Heart_(manga)>) --doo:publisher--> Shinchosha (dor:Shinchosha)
+      - 1Q84 (dor:1Q84) --doo:publisher--> Shinchosha (dor:Shinchosha)
+      - Angel_Heart_(manga) (<http://dbpedia.org/resource/Angel_Heart_(manga)>) --dop:author--> Tsukasa_Hojo (dor:Tsukasa_Hojo)
+qa_result:
+  status: completed
+  cost_usd: 0.341657
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0232024
+        total_tokens: 3027
+        prompt_tokens: 2044
+        completion_tokens: 983
+      generate:
+        cost_usd: 0.0439976
+        total_tokens: 5514
+        prompt_tokens: 3939
+        completion_tokens: 1575
+      verify_1:
+        cost_usd: 0.05827700000000001
+        total_tokens: 6370
+        prompt_tokens: 4608
+        completion_tokens: 1762
+      verify_2:
+        cost_usd: 0.10932700000000001
+        total_tokens: 8708
+        prompt_tokens: 4322
+        completion_tokens: 4386
+      complexity:
+        cost_usd: 0.106853
+        total_tokens: 9686
+        prompt_tokens: 5219
+        completion_tokens: 4467
+    total_tokens: 33305
+    prompt_tokens: 20132
+    total_cost_usd: 0.34165700000000004
+    completion_tokens: 13173
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  book: --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --1y^ (dop:1y)--> int | --2y^ (dop:2y)--> int
+  person: --width^ (dop:width)--> int | --alias^ (dop:alias)--> langString | --death date^ (dop:deathDate)--> date | --first appearance^ (doo:firstAppearance)--> string | --parents^ (dop:parents)--> Resource | --1y^ (dop:1y)--> int | --alt^ (dop:alt)--> langString
+subgraph_id: 256
+relationships:
+  - manga --doo:publisher--> publisher
+  - book --doo:publisher--> publisher
+  - manga --dop:author--> person

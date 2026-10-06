@@ -1,0 +1,49 @@
+types:
+  island: doo:Island
+  person: doo:Person
+  volcano: doo:Volcano
+  Location: doo:Location
+  mountain: doo:Mountain
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Sukarno: (title^='http://dbpedia.org/resource/President_of_Indonesia')
+    relationships:
+      - 30_September_Movement (dor:30_September_Movement) --doo:place--> Java (dor:Java)
+      - Mount_Merbabu (dor:Mount_Merbabu) --doo:locatedInArea--> Java (dor:Java)
+      - Mount_Merbabu (dor:Mount_Merbabu) --doo:mountainRange--> Sunda_Arc (dor:Sunda_Arc)
+      - Dieng_Volcanic_Complex (dor:Dieng_Volcanic_Complex) --doo:locatedInArea--> Java (dor:Java)
+      - 30_September_Movement (dor:30_September_Movement) --dop:commander--> Sukarno (dor:Sukarno)
+  '2':
+    attributes: {}
+    relationships:
+      - 30_September_Movement (dor:30_September_Movement) --doo:place--> Java (dor:Java)
+      - Mount_Sindoro (dor:Mount_Sindoro) --doo:locatedInArea--> Java (dor:Java)
+      - Mount_Sindoro (dor:Mount_Sindoro) --doo:mountainRange--> Sunda_Arc (dor:Sunda_Arc)
+      - Dieng_Volcanic_Complex (dor:Dieng_Volcanic_Complex) --doo:locatedInArea--> Java (dor:Java)
+      - 30_September_Movement (dor:30_September_Movement) --dop:commander--> Sukarno (dor:Sukarno)
+  '3':
+    attributes:
+      Sukarno: (title^='http://dbpedia.org/resource/President_of_Indonesia')
+    relationships:
+      - 30_September_Movement (dor:30_September_Movement) --doo:place--> Java (dor:Java)
+      - Mount_Sumbing (dor:Mount_Sumbing) --doo:locatedInArea--> Java (dor:Java)
+      - Mount_Sumbing (dor:Mount_Sumbing) --doo:mountainRange--> Sunda_Arc (dor:Sunda_Arc)
+      - Dieng_Volcanic_Complex (dor:Dieng_Volcanic_Complex) --doo:locatedInArea--> Java (dor:Java)
+      - 30_September_Movement (dor:30_September_Movement) --dop:commander--> Sukarno (dor:Sukarno)
+attributes:
+  person: --after^ (dop:after)--> langString | --issue^ (dop:issue)--> langString | --title^ (dop:title)--> langString
+  Location: --architectural style^ (doo:architecturalStyle)--> Resource | --mouth place^ (doo:mouthPlace)--> Resource | --Apr high C^ (dop:aprHighC)--> int | --founder^ (doo:founder)--> Resource | --built^ (dop:built)--> int | --located in area^ (doo:locatedInArea)--> Resource
+subgraph_id: 429
+relationships:
+  - military conflict --doo:place--> island
+  - volcano --doo:locatedInArea--> island
+  - volcano --doo:mountainRange--> Location
+  - mountain --doo:locatedInArea--> island
+  - military conflict --dop:commander--> person

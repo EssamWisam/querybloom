@@ -1,0 +1,110 @@
+types:
+  Food: doo:Food
+  island: doo:Island
+  country: doo:Country
+  rugby club: doo:RugbyClub
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Spain: (image^='1', capital^='http://dbpedia.org/resource/Madrid')
+      La_Gomera: (population total^='22426')
+      Alcobendas_Rugby: (league^='http://dbpedia.org/resource/División_de_Honor_de_Rugby')
+    relationships:
+      - La_Gomera (dor:La_Gomera) --doo:country--> Spain (dor:Spain)
+      - Almogrote (dor:Almogrote) --doo:region--> La_Gomera (dor:La_Gomera)
+      - Alcobendas_Rugby (dor:Alcobendas_Rugby) --doo:location--> Spain (dor:Spain)
+  '2':
+    attributes:
+      Spain: (image^='1', capital^='http://dbpedia.org/resource/Madrid')
+      La_Gomera: (population total^='22426')
+      Aparejadores_Rugby: (league^='http://dbpedia.org/resource/División_de_Honor_de_Rugby')
+    relationships:
+      - La_Gomera (dor:La_Gomera) --doo:country--> Spain (dor:Spain)
+      - Almogrote (dor:Almogrote) --doo:region--> La_Gomera (dor:La_Gomera)
+      - Aparejadores_Rugby (dor:Aparejadores_Rugby) --doo:location--> Spain (dor:Spain)
+  '3':
+    attributes:
+      Spain: (image^='1', capital^='http://dbpedia.org/resource/Madrid')
+      La_Gomera: (population total^='22426')
+      Barcelona_Enginyers_Rugby: (league^='http://dbpedia.org/resource/División_de_Honor_B_de_Rugby')
+    relationships:
+      - La_Gomera (dor:La_Gomera) --doo:country--> Spain (dor:Spain)
+      - Almogrote (dor:Almogrote) --doo:region--> La_Gomera (dor:La_Gomera)
+      - Barcelona_Enginyers_Rugby (dor:Barcelona_Enginyers_Rugby) --doo:location--> Spain (dor:Spain)
+  '4':
+    attributes:
+      Corfu: (Aug high C^='31.3', population total^='102071', Apr high C^='19', Apr record low C^='0')
+      Greece: (image^='AH-64A Apache Greek Army Stefanovikion 2.jpg', capital^='http://dbpedia.org/resource/Athens')
+    relationships:
+      - Corfu (dor:Corfu) --doo:country--> Greece (dor:Greece)
+      - Bourdeto (dor:Bourdeto) --doo:region--> Corfu (dor:Corfu)
+      - Aeolos_Rugby (dor:Aeolos_Rugby) --doo:location--> Greece (dor:Greece)
+  '5':
+    attributes:
+      Corfu: (Aug high C^='31.3', population total^='102071', Apr high C^='19', Apr record low C^='0')
+      Greece: (image^='AH-64A Apache Greek Army Stefanovikion 2.jpg', capital^='http://dbpedia.org/resource/Athens')
+      Athens_RFC: (league^='http://dbpedia.org/resource/Greek_Championship_Rugby_Union')
+    relationships:
+      - Corfu (dor:Corfu) --doo:country--> Greece (dor:Greece)
+      - Bourdeto (dor:Bourdeto) --doo:region--> Corfu (dor:Corfu)
+      - Athens_RFC (dor:Athens_RFC) --doo:location--> Greece (dor:Greece)
+  '6':
+    attributes:
+      Corfu: (Aug high C^='31.3', population total^='102071', Apr high C^='19', Apr record low C^='0')
+      Greece: (image^='AH-64A Apache Greek Army Stefanovikion 2.jpg', capital^='http://dbpedia.org/resource/Athens')
+      Athens_Spartans_RFC: (nickname^='Spartans Rugby')
+    relationships:
+      - Corfu (dor:Corfu) --doo:country--> Greece (dor:Greece)
+      - Bourdeto (dor:Bourdeto) --doo:region--> Corfu (dor:Corfu)
+      - Athens_Spartans_RFC (dor:Athens_Spartans_RFC) --doo:location--> Greece (dor:Greece)
+  '7':
+    attributes:
+      Japan: (image^='150504', capital^='http://dbpedia.org/resource/Tokyo')
+      Kyushu: (population total^='12650847')
+      Black_Rams_Tokyo: (league^='http://dbpedia.org/resource/Japan_Rugby_League_One', nickname^='Black Rams')
+    relationships:
+      - Kyushu (dor:Kyushu) --doo:country--> Japan (dor:Japan)
+      - Chikuzenni (dor:Chikuzenni) --doo:region--> Kyushu (dor:Kyushu)
+      - Black_Rams_Tokyo (dor:Black_Rams_Tokyo) --doo:location--> Japan (dor:Japan)
+  '8':
+    attributes:
+      Japan: (image^='150504', capital^='http://dbpedia.org/resource/Tokyo')
+      Kyushu: (population total^='12650847')
+      Coca-Cola_Red_Sparks: (league^='http://dbpedia.org/resource/Top_Challenge_League', nickname^='Red Sparks')
+    relationships:
+      - Kyushu (dor:Kyushu) --doo:country--> Japan (dor:Japan)
+      - Chikuzenni (dor:Chikuzenni) --doo:region--> Kyushu (dor:Kyushu)
+      - Coca-Cola_Red_Sparks (dor:Coca-Cola_Red_Sparks) --doo:location--> Japan (dor:Japan)
+  '9':
+    attributes:
+      Japan: (image^='150504', capital^='http://dbpedia.org/resource/Tokyo')
+      Kyushu: (population total^='12650847')
+      Green_Rockets_Tokatsu: (league^='http://dbpedia.org/resource/Japan_Rugby_League_One', nickname^='Green Rockets')
+    relationships:
+      - Kyushu (dor:Kyushu) --doo:country--> Japan (dor:Japan)
+      - Chikuzenni (dor:Chikuzenni) --doo:region--> Kyushu (dor:Kyushu)
+      - Green_Rockets_Tokatsu (dor:Green_Rockets_Tokatsu) --doo:location--> Japan (dor:Japan)
+  '10':
+    attributes:
+      Orkney: (Aug high C^='16', Apr high C^='9.5', Apr record low C^='−4.9')
+      Clapshot: (course^='Side dish')
+      Scotland: (image^='2019', alt^='Conan Doyle')
+    relationships:
+      - Orkney (dor:Orkney) --doo:country--> Scotland (dor:Scotland)
+      - Clapshot (dor:Clapshot) --doo:region--> Orkney (dor:Orkney)
+      - Aberdeen_GSFP_RFC (dor:Aberdeen_GSFP_RFC) --doo:location--> Scotland (dor:Scotland)
+attributes:
+  Food: --course^ (dop:course)--> langString | --course^ (dop:course)--> Resource
+  island: --Aug high C^ (dop:augHighC)--> double | --population total^ (doo:populationTotal)--> int | --Apr high C^ (dop:aprHighC)--> double | --Apr record low C^ (dop:aprRecordLowC)--> double | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double
+  country: --image^ (dop:image)--> langString | --capital^ (doo:capital)--> Resource | --1p^ (dop:1p)--> int | --alt^ (dop:alt)--> langString
+  rugby club: --league^ (doo:league)--> Resource | --nickname^ (dop:nickname)--> langString
+subgraph_id: 116
+relationships:
+  - island --doo:country--> country
+  - Food --doo:region--> island
+  - rugby club --doo:location--> country

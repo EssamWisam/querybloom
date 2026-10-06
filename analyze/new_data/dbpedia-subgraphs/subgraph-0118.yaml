@@ -1,0 +1,74 @@
+types:
+  country: doo:Country
+  soccer club: doo:SoccerClub
+  office holder: doo:OfficeHolder
+  snooker player: doo:SnookerPlayer
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Chong_Chieng_Jen: (birth name^='Chong Chieng Jen')
+      2015_Kedah_FA_season: (aggregatescore^='2', d^='0')
+    relationships:
+      - Chong_Chieng_Jen (dor:Chong_Chieng_Jen) --doo:nationality--> Malaysia (dor:Malaysia)
+      - Moh_Keen_Hoo (dor:Moh_Keen_Hoo) --doo:sportCountry--> Malaysia (dor:Malaysia)
+      - 2015_Kedah_FA_season (dor:2015_Kedah_FA_season) --doo:ground--> Malaysia (dor:Malaysia)
+      - Malaysia (dor:Malaysia) --doo:capital--> Putrajaya (dor:Putrajaya)
+  '2':
+    attributes:
+      Chong_Chieng_Jen: (birth name^='Chong Chieng Jen')
+      2016_Kedah_FA_season: (aggregatescore^='1', d^='1')
+    relationships:
+      - Chong_Chieng_Jen (dor:Chong_Chieng_Jen) --doo:nationality--> Malaysia (dor:Malaysia)
+      - Moh_Keen_Hoo (dor:Moh_Keen_Hoo) --doo:sportCountry--> Malaysia (dor:Malaysia)
+      - 2016_Kedah_FA_season (dor:2016_Kedah_FA_season) --doo:ground--> Malaysia (dor:Malaysia)
+      - Malaysia (dor:Malaysia) --doo:capital--> Putrajaya (dor:Putrajaya)
+  '3':
+    attributes:
+      Chong_Chieng_Jen: (birth name^='Chong Chieng Jen')
+    relationships:
+      - Chong_Chieng_Jen (dor:Chong_Chieng_Jen) --doo:nationality--> Malaysia (dor:Malaysia)
+      - Moh_Keen_Hoo (dor:Moh_Keen_Hoo) --doo:sportCountry--> Malaysia (dor:Malaysia)
+      - Melodi_Jaya_S.C. (<http://dbpedia.org/resource/Melodi_Jaya_S.C.>) --doo:ground--> Malaysia (dor:Malaysia)
+      - Malaysia (dor:Malaysia) --doo:capital--> Putrajaya (dor:Putrajaya)
+  '4':
+    attributes:
+      Bangkok: (Apr record low C^='20')
+    relationships:
+      - Anand_Panyarachun (dor:Anand_Panyarachun) --doo:nationality--> Thailand (dor:Thailand)
+      - Atthasit_Mahitthi (dor:Atthasit_Mahitthi) --doo:sportCountry--> Thailand (dor:Thailand)
+      - 2016_Bangkok_Glass_F.C._season (dor:2016_Bangkok_Glass_F.C._season) --doo:ground--> Thailand (dor:Thailand)
+      - Thailand (dor:Thailand) --doo:capital--> Bangkok (dor:Bangkok)
+  '5':
+    attributes:
+      Bangkok: (Apr record low C^='20')
+    relationships:
+      - Anand_Panyarachun (dor:Anand_Panyarachun) --doo:nationality--> Thailand (dor:Thailand)
+      - Atthasit_Mahitthi (dor:Atthasit_Mahitthi) --doo:sportCountry--> Thailand (dor:Thailand)
+      - 2016_Bangkok_United_F.C._season (dor:2016_Bangkok_United_F.C._season) --doo:ground--> Thailand (dor:Thailand)
+      - Thailand (dor:Thailand) --doo:capital--> Bangkok (dor:Bangkok)
+  '6':
+    attributes:
+      Bangkok: (Apr record low C^='20')
+    relationships:
+      - Anand_Panyarachun (dor:Anand_Panyarachun) --doo:nationality--> Thailand (dor:Thailand)
+      - Atthasit_Mahitthi (dor:Atthasit_Mahitthi) --doo:sportCountry--> Thailand (dor:Thailand)
+      - 2016_Chiangrai_United_F.C._season (dor:2016_Chiangrai_United_F.C._season) --doo:ground--> Thailand (dor:Thailand)
+      - Thailand (dor:Thailand) --doo:capital--> Bangkok (dor:Bangkok)
+attributes:
+  country: --reason^ (dop:reason)--> langString | --original name^ (doo:originalName)--> langString
+  soccer club: --aggregatescore^ (dop:aggregatescore)--> int | --logo width^ (dop:logoWidth)--> int | --d^ (dop:d)--> gMonthDay
+  office holder: --active years start year^ (doo:activeYearsStartYear)--> gYear | --reason^ (dop:reason)--> langString | --data^ (dop:data)--> langString | --birth name^ (dop:birthName)--> langString
+  administrative region: --differentFrom (wwoo:differentFrom)--> Resource | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --altname^ (dop:altname)--> langString | --Apr record low C^ (dop:aprRecordLowC)--> int
+subgraph_id: 118
+relationships:
+  - office holder --doo:nationality--> country
+  - snooker player --doo:sportCountry--> country
+  - soccer club --doo:ground--> country
+  - country --doo:capital--> administrative region

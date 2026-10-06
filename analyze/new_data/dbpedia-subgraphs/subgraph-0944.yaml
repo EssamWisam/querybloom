@@ -1,0 +1,50 @@
+types:
+  country: doo:Country
+  cardinal: doo:Cardinal
+  mountain: doo:Mountain
+  settlement: doo:Settlement
+  tennis player: doo:TennisPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Canada: (capital^='http://dbpedia.org/resource/Ottawa')
+      Elzéar-Alexandre_Taschereau: (diocese^='http://dbpedia.org/resource/Québec')
+    relationships:
+      - Adil_Shamasdin (dor:Adil_Shamasdin) --doo:residence--> Canada (dor:Canada)
+      - Elzéar-Alexandre_Taschereau (<http://dbpedia.org/resource/Elzéar-Alexandre_Taschereau>) --doo:deathPlace--> Canada (dor:Canada)
+      - Elzéar-Alexandre_Taschereau (<http://dbpedia.org/resource/Elzéar-Alexandre_Taschereau>) --doo:diocese--> Québec (<http://dbpedia.org/resource/Québec>)
+      - Mont_Mégantic (<http://dbpedia.org/resource/Mont_Mégantic>) --doo:locatedInArea--> Québec (<http://dbpedia.org/resource/Québec>)
+  '2':
+    attributes:
+      Canada: (capital^='http://dbpedia.org/resource/Ottawa')
+      Elzéar-Alexandre_Taschereau: (diocese^='http://dbpedia.org/resource/Québec')
+    relationships:
+      - Andrew_Nisker (dor:Andrew_Nisker) --doo:residence--> Canada (dor:Canada)
+      - Elzéar-Alexandre_Taschereau (<http://dbpedia.org/resource/Elzéar-Alexandre_Taschereau>) --doo:deathPlace--> Canada (dor:Canada)
+      - Elzéar-Alexandre_Taschereau (<http://dbpedia.org/resource/Elzéar-Alexandre_Taschereau>) --doo:diocese--> Québec (<http://dbpedia.org/resource/Québec>)
+      - Mont_Mégantic (<http://dbpedia.org/resource/Mont_Mégantic>) --doo:locatedInArea--> Québec (<http://dbpedia.org/resource/Québec>)
+  '3':
+    attributes:
+      Canada: (capital^='http://dbpedia.org/resource/Ottawa')
+      Elzéar-Alexandre_Taschereau: (diocese^='http://dbpedia.org/resource/Québec')
+    relationships:
+      - Andrew_Sznajder (dor:Andrew_Sznajder) --doo:residence--> Canada (dor:Canada)
+      - Elzéar-Alexandre_Taschereau (<http://dbpedia.org/resource/Elzéar-Alexandre_Taschereau>) --doo:deathPlace--> Canada (dor:Canada)
+      - Elzéar-Alexandre_Taschereau (<http://dbpedia.org/resource/Elzéar-Alexandre_Taschereau>) --doo:diocese--> Québec (<http://dbpedia.org/resource/Québec>)
+      - Mont_Mégantic (<http://dbpedia.org/resource/Mont_Mégantic>) --doo:locatedInArea--> Québec (<http://dbpedia.org/resource/Québec>)
+attributes:
+  country: --age^ (dop:age)--> date | --capital^ (doo:capital)--> Resource | --religion^ (doo:religion)--> Resource | --direction^ (dop:direction)--> langString
+  cardinal: --diocese^ (doo:diocese)--> Resource
+  mountain: --Aug low C^ (dop:augLowC)--> double
+  settlement: --Apr low F^ (dop:aprLowF)--> int | --type^ (doo:type)--> Resource | --Apr high F^ (dop:aprHighF)--> double | --original name^ (doo:originalName)--> langString | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --population total^ (doo:populationTotal)--> int | --area total km^ (dop:areaTotalKm)--> double
+subgraph_id: 944
+relationships:
+  - tennis player --doo:residence--> country
+  - cardinal --doo:deathPlace--> country
+  - cardinal --doo:diocese--> settlement
+  - mountain --doo:locatedInArea--> settlement

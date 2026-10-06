@@ -1,0 +1,67 @@
+types:
+  Location: doo:Location
+  military structure: doo:MilitaryStructure
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Aalo (dor:Aalo) --doo:country--> India (dor:India)
+      - Kalinjar_Fort (dor:Kalinjar_Fort) --dop:partof--> India (dor:India)
+  '2':
+    attributes: {}
+    relationships:
+      - Abontjeman (dor:Abontjeman) --doo:country--> Suriname (dor:Suriname)
+      - Fort_Nieuw-Amsterdam (dor:Fort_Nieuw-Amsterdam) --dop:partof--> Suriname (dor:Suriname)
+  '3':
+    attributes: {}
+    relationships:
+      - Abontjeman (dor:Abontjeman) --doo:country--> Suriname (dor:Suriname)
+      - Fort_Sommelsdijk (dor:Fort_Sommelsdijk) --dop:partof--> Suriname (dor:Suriname)
+  '4':
+    attributes: {}
+    relationships:
+      - Abontjeman (dor:Abontjeman) --doo:country--> Suriname (dor:Suriname)
+      - Fort_Zeelandia_(Paramaribo) (<http://dbpedia.org/resource/Fort_Zeelandia_(Paramaribo)>) --dop:partof--> Suriname (dor:Suriname)
+  '5':
+    attributes: {}
+    relationships:
+      - Adilabad_district (dor:Adilabad_district) --doo:country--> India (dor:India)
+      - Kalinjar_Fort (dor:Kalinjar_Fort) --dop:partof--> India (dor:India)
+  '6':
+    attributes: {}
+    relationships:
+      - Adoni_revenue_division (dor:Adoni_revenue_division) --doo:country--> India (dor:India)
+      - Kalinjar_Fort (dor:Kalinjar_Fort) --dop:partof--> India (dor:India)
+  '7':
+    attributes: {}
+    relationships:
+      - Bakel_Department (dor:Bakel_Department) --doo:country--> Senegal (dor:Senegal)
+      - Fort_Saint_Louis_(Senegal) (<http://dbpedia.org/resource/Fort_Saint_Louis_(Senegal)>) --dop:partof--> Senegal (dor:Senegal)
+  '8':
+    attributes: {}
+    relationships:
+      - Bambey_Department (dor:Bambey_Department) --doo:country--> Senegal (dor:Senegal)
+      - Fort_Saint_Louis_(Senegal) (<http://dbpedia.org/resource/Fort_Saint_Louis_(Senegal)>) --dop:partof--> Senegal (dor:Senegal)
+  '9':
+    attributes: {}
+    relationships:
+      - Bignona_Department (dor:Bignona_Department) --doo:country--> Senegal (dor:Senegal)
+      - Fort_Saint_Louis_(Senegal) (<http://dbpedia.org/resource/Fort_Saint_Louis_(Senegal)>) --dop:partof--> Senegal (dor:Senegal)
+  '10':
+    attributes: {}
+    relationships:
+      - Pole_of_Inaccessibility_research_station (dor:Pole_of_Inaccessibility_research_station) --doo:country--> Soviet_Union (dor:Soviet_Union)
+      - Maxim_Gorky_Fortresses (dor:Maxim_Gorky_Fortresses) --dop:partof--> Soviet_Union (dor:Soviet_Union)
+attributes:
+  Location: --borough^ (dop:borough)--> langString | --Aug high F^ (dop:augHighF)--> double | --footer^ (dop:footer)--> langString | --architect^ (dop:architect)--> Resource | --architect^ (doo:architect)--> Resource | --location^ (doo:location)--> Resource | --access-date^ (dop:accessDate)--> date | --founder^ (dop:founder)--> Resource | --image width^ (dop:imageWidth)--> int
+  administrative region: --Aug low C^ (dop:augLowC)--> double | --Apr record high C^ (dop:aprRecordHighC)--> int
+subgraph_id: 547
+relationships:
+  - administrative region --doo:country--> Location
+  - military structure --dop:partof--> Location

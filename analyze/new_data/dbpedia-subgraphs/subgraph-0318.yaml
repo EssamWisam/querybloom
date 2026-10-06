@@ -1,0 +1,89 @@
+types:
+  country: doo:Country
+  soccer club: doo:SoccerClub
+  soccer player: doo:SoccerPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Aad_Bak: (death date^='2009-01-16')
+      Feyenoord: (capacity^='51177', align^='left', has abstract^='«Фе́йеноорд» (нидерл. Feyenoord [ˈfɛi̯əˌnoːrt]) — профессиональный футбольный клуб из города Роттердам в Нидерландах. Вместе с «Аяксом» и ПСВ считается ведущим клубом страны. Изначально назывался «Вил...')
+      Netherlands: (align^='left', width^='150', direction^='horizontal')
+    relationships:
+      - Aad_Bak (dor:Aad_Bak) --dop:clubs--> Feyenoord (dor:Feyenoord)
+      - Aad_Bak (dor:Aad_Bak) --doo:deathPlace--> Netherlands (dor:Netherlands)
+  '2':
+    attributes:
+      Aad_Bak: (death date^='2009-01-16')
+      Netherlands: (align^='left', width^='150', direction^='horizontal')
+      SVV_Scheveningen: (capacity^='3500', has abstract^='El SVV Scheveningen es un equipo de fútbol de los Países Bajos que juega en la Tweede Divisie, tercera división nacional.')
+    relationships:
+      - Aad_Bak (dor:Aad_Bak) --dop:clubs--> SVV_Scheveningen (dor:SVV_Scheveningen)
+      - Aad_Bak (dor:Aad_Bak) --doo:deathPlace--> Netherlands (dor:Netherlands)
+  '3':
+    attributes:
+      Aage_Brix: (death date^='1963-03-16')
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+      Los_Angeles_Athletic_Club: (has abstract^='Los Angeles Athletic Club (LAAC) is a privately owned athletic club and social club in Los Angeles, California, US. Established in 1880, the club is today best known for its John R. Wooden Award prese...')
+    relationships:
+      - Aage_Brix (dor:Aage_Brix) --dop:clubs--> Los_Angeles_Athletic_Club (dor:Los_Angeles_Athletic_Club)
+      - Aage_Brix (dor:Aage_Brix) --doo:deathPlace--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Barnsley_F.C.: '(capacity^=''23287'', has abstract^=''«Ба́рнсли» (полное название — Футбольный клуб «Ба́рнсли», англ. Barnsley Football Club; английское произношение: [ˈbaːnzli ''''futbɔ:l klʌb]) — английский профессиональный футбольный клуб из одноимённого...'')'
+    relationships:
+      - Aaron_Jones_(footballer,_born_1881) (<http://dbpedia.org/resource/Aaron_Jones_(footballer,_born_1881)>) --dop:clubs--> Barnsley_F.C. (<http://dbpedia.org/resource/Barnsley_F.C.>)
+      - Aaron_Jones_(footballer,_born_1881) (<http://dbpedia.org/resource/Aaron_Jones_(footballer,_born_1881)>) --doo:deathPlace--> Yorkshire (dor:Yorkshire)
+  '5':
+    attributes:
+      Birmingham_City_F.C.: '(capacity^=''29409'', align^=''right'', has abstract^=''«Би́рмингем Си́ти» (полное название — Футбольный клуб «Би́рмингем Си́ти», англ. Birmingham City Football Club; английское произношение: [ˈbɜrmɪŋəm ˈsɪti ''''futbɔ:l klʌb]) — английский профессиональный ф...'')'
+    relationships:
+      - Aaron_Jones_(footballer,_born_1881) (<http://dbpedia.org/resource/Aaron_Jones_(footballer,_born_1881)>) --dop:clubs--> Birmingham_City_F.C. (<http://dbpedia.org/resource/Birmingham_City_F.C.>)
+      - Aaron_Jones_(footballer,_born_1881) (<http://dbpedia.org/resource/Aaron_Jones_(footballer,_born_1881)>) --doo:deathPlace--> Yorkshire (dor:Yorkshire)
+  '6':
+    attributes:
+      Notts_County_F.C.: (capacity^='19841', has abstract^='«Ноттс Ка́унти» (Полное название — Футбольный клуб «Ноттс Ка́унти»; англ. Notts County Football Club) — английский профессиональный футбольный клуб из города Ноттингем, графство Ноттингемшир. Это стар...')
+    relationships:
+      - Aaron_Jones_(footballer,_born_1881) (<http://dbpedia.org/resource/Aaron_Jones_(footballer,_born_1881)>) --dop:clubs--> Notts_County_F.C. (<http://dbpedia.org/resource/Notts_County_F.C.>)
+      - Aaron_Jones_(footballer,_born_1881) (<http://dbpedia.org/resource/Aaron_Jones_(footballer,_born_1881)>) --doo:deathPlace--> Yorkshire (dor:Yorkshire)
+  '7':
+    attributes:
+      Aaron_Lockett: (death date^='1965-02-10')
+      Port_Vale_F.C.: (capacity^='15036', has abstract^='«Порт Вейл» (англ. «Port Vale Football Club») — англійський футбольний клуб з , Сток-он-Трент, графство Стаффордшир. Заснований 1876 року на околицях Сток-он-Тренту. Ніколи не грали в вищому англійськ...')
+    relationships:
+      - Aaron_Lockett (dor:Aaron_Lockett) --dop:clubs--> Port_Vale_F.C. (<http://dbpedia.org/resource/Port_Vale_F.C.>)
+      - Aaron_Lockett (dor:Aaron_Lockett) --doo:deathPlace--> Staffordshire (dor:Staffordshire)
+  '8':
+    attributes:
+      Aaron_Lockett: (death date^='1965-02-10')
+      Stafford_Rangers_F.C.: (capacity^='4000', has abstract^='«Стаффорд Рейнджерс» — английский футбольный клуб из города Стаффорд, Стаффордшир, Западный Мидленд. Образован в 1876 году. Домашние матчи проводит на стадионе «». В настоящий момент выступает в Север...')
+    relationships:
+      - Aaron_Lockett (dor:Aaron_Lockett) --dop:clubs--> Stafford_Rangers_F.C. (<http://dbpedia.org/resource/Stafford_Rangers_F.C.>)
+      - Aaron_Lockett (dor:Aaron_Lockett) --doo:deathPlace--> Staffordshire (dor:Staffordshire)
+  '9':
+    attributes:
+      Aaron_Lockett: (death date^='1965-02-10')
+      Stoke_City_F.C.: '(capacity^=''30089'', has abstract^=''«Сток Си́ти» (полное название — Футбольный клуб «Сток Си́ти»; англ. Stoke City Football Club, английское произношение: [stəuk ''''sɪtɪ ''''futbɔ:l klʌb]) — профессиональный английский футбольный клуб, распо...'')'
+    relationships:
+      - Aaron_Lockett (dor:Aaron_Lockett) --dop:clubs--> Stoke_City_F.C. (<http://dbpedia.org/resource/Stoke_City_F.C.>)
+      - Aaron_Lockett (dor:Aaron_Lockett) --doo:deathPlace--> Staffordshire (dor:Staffordshire)
+  '10':
+    attributes:
+      Argentina: (1p^='6')
+      Aarón_Wergifker: (death date^='1994-06-29')
+      Club_Atlético_Platense: (capacity^='31000', has abstract^='«Клуб Атлетіко Платенсе» або просто «Платенсе» (ісп. Club Atlético Colón) — професіональний аргентинський футбольний клуб з міста Флорида, у північній частини провінції Великий Буенос-Айрес. Журналіст...')
+    relationships:
+      - Aarón_Wergifker (<http://dbpedia.org/resource/Aarón_Wergifker>) --dop:clubs--> Club_Atlético_Platense (<http://dbpedia.org/resource/Club_Atlético_Platense>)
+      - Aarón_Wergifker (<http://dbpedia.org/resource/Aarón_Wergifker>) --doo:deathPlace--> Argentina (dor:Argentina)
+attributes:
+  country: --align^ (dop:align)--> langString | --width^ (dop:width)--> int | --1p^ (dop:1p)--> int | --direction^ (dop:direction)--> langString | --anthem^ (doo:anthem)--> Resource
+  soccer club: --capacity^ (dop:capacity)--> langString | --align^ (dop:align)--> langString | --has abstract^ (doo:abstract)--> langString | --2ndRegional name^ (dop:2ndregionalName)--> Resource | --agf^ (dop:agf)--> int
+  soccer player: --death date^ (dop:deathDate)--> date | --manager club^ (doo:managerClub)--> Resource | --reason^ (dop:reason)--> langString
+subgraph_id: 318
+relationships:
+  - soccer player --dop:clubs--> soccer club
+  - soccer player --doo:deathPlace--> country

@@ -1,0 +1,84 @@
+types:
+  town: doo:Town
+  person: doo:Person
+  school: doo:School
+  politician: doo:Politician
+  military person: doo:MilitaryPerson
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Galatasaray_High_School (dor:Galatasaray_High_School) --doo:city--> Istanbul (dor:Istanbul)
+      - Committee_of_Union_and_Progress (dor:Committee_of_Union_and_Progress) --doo:headquarter--> Istanbul (dor:Istanbul)
+      - Ahmed_Izzet_Pasha (dor:Ahmed_Izzet_Pasha) --doo:party--> Committee_of_Union_and_Progress (dor:Committee_of_Union_and_Progress)
+      - Ahmed_Izzet_Pasha (dor:Ahmed_Izzet_Pasha) --doo:party--> Committee_of_Union_and_Progress (dor:Committee_of_Union_and_Progress)
+      - Galatasaray_High_School (dor:Galatasaray_High_School) --doo:foundedBy--> Bayezid_II (dor:Bayezid_II)
+  '2':
+    attributes:
+      Abdul_Hamid_II: (birth place^='http://dbpedia.org/resource/Constantinople')
+    relationships:
+      - Kabataş_Boys_High_School (<http://dbpedia.org/resource/Kabataş_Boys_High_School>) --doo:city--> Istanbul (dor:Istanbul)
+      - Committee_of_Union_and_Progress (dor:Committee_of_Union_and_Progress) --doo:headquarter--> Istanbul (dor:Istanbul)
+      - Ahmed_Izzet_Pasha (dor:Ahmed_Izzet_Pasha) --doo:party--> Committee_of_Union_and_Progress (dor:Committee_of_Union_and_Progress)
+      - Ahmed_Izzet_Pasha (dor:Ahmed_Izzet_Pasha) --doo:party--> Committee_of_Union_and_Progress (dor:Committee_of_Union_and_Progress)
+      - Kabataş_Boys_High_School (<http://dbpedia.org/resource/Kabataş_Boys_High_School>) --doo:foundedBy--> Abdul_Hamid_II (dor:Abdul_Hamid_II)
+  '3':
+    attributes:
+      Vehbi_Koç: (birth place^='http://dbpedia.org/resource/Ankara_Province')
+    relationships:
+      - Koç_School (<http://dbpedia.org/resource/Koç_School>) --doo:city--> Istanbul (dor:Istanbul)
+      - Committee_of_Union_and_Progress (dor:Committee_of_Union_and_Progress) --doo:headquarter--> Istanbul (dor:Istanbul)
+      - Ahmed_Izzet_Pasha (dor:Ahmed_Izzet_Pasha) --doo:party--> Committee_of_Union_and_Progress (dor:Committee_of_Union_and_Progress)
+      - Ahmed_Izzet_Pasha (dor:Ahmed_Izzet_Pasha) --doo:party--> Committee_of_Union_and_Progress (dor:Committee_of_Union_and_Progress)
+      - Koç_School (<http://dbpedia.org/resource/Koç_School>) --doo:foundedBy--> Vehbi_Koç (<http://dbpedia.org/resource/Vehbi_Koç>)
+qa_result:
+  status: completed
+  cost_usd: 0.283195
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0669174
+        total_tokens: 5227
+        prompt_tokens: 2063
+        completion_tokens: 3164
+      generate:
+        cost_usd: 0.0840676
+        total_tokens: 7474
+        prompt_tokens: 3881
+        completion_tokens: 3593
+      verify_1:
+        cost_usd: 0.03403200000000001
+        total_tokens: 4722
+        prompt_tokens: 4027
+        completion_tokens: 695
+      complexity:
+        cost_usd: 0.098178
+        total_tokens: 9238
+        prompt_tokens: 5200
+        completion_tokens: 4038
+    total_tokens: 26661
+    prompt_tokens: 15171
+    total_cost_usd: 0.28319500000000003
+    completion_tokens: 11490
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  town: --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --reason^ (dop:reason)--> langString
+  person: --alma mater^ (doo:almaMater)--> Resource | --birth place^ (dop:birthPlace)--> Resource | --by^ (dop:by)--> langString
+  school: --image size^ (dop:imageSize)--> int
+  politician: --original name^ (doo:originalName)--> langString | --commons^ (dop:commons)--> langString
+  military person: --active years end date^ (doo:activeYearsEndDate)--> date
+subgraph_id: 308
+relationships:
+  - school --doo:city--> town
+  - political party --doo:headquarter--> town
+  - politician --doo:party--> political party
+  - military person --doo:party--> political party
+  - school --doo:foundedBy--> person

@@ -1,0 +1,82 @@
+types:
+  city: doo:City
+  road: doo:Road
+  country: doo:Country
+  gymnast: doo:Gymnast
+  settlement: doo:Settlement
+  radio station: doo:RadioStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Mobile,_Alabama: (area total km^='466.39')
+    relationships:
+      - Brian_Ginsberg (dor:Brian_Ginsberg) --doo:hometown--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - Alabama_State_Route_163 (dor:Alabama_State_Route_163) --doo:routeJunction--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - WABD (dor:WABD) --dop:area--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - Brian_Ginsberg (dor:Brian_Ginsberg) --doo:hometown--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>) --doo:country--> United_States (dor:United_States)
+  '2':
+    attributes:
+      Mobile,_Alabama: (area total km^='466.39')
+    relationships:
+      - Brian_Ginsberg (dor:Brian_Ginsberg) --doo:hometown--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - Interstate_10_in_Alabama (dor:Interstate_10_in_Alabama) --doo:routeJunction--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - WABD (dor:WABD) --dop:area--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - Brian_Ginsberg (dor:Brian_Ginsberg) --doo:hometown--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>) --doo:country--> United_States (dor:United_States)
+  '3':
+    attributes:
+      Mobile,_Alabama: (area total km^='466.39')
+    relationships:
+      - Brian_Ginsberg (dor:Brian_Ginsberg) --doo:hometown--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - Interstate_10 (dor:Interstate_10) --doo:routeJunction--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - WABD (dor:WABD) --dop:area--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - Brian_Ginsberg (dor:Brian_Ginsberg) --doo:hometown--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>) --doo:country--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Guangdong: (area total km^='179800', width^='150')
+      Liu_Tingting_(gymnast): (birth date^='2000-09-06')
+    relationships:
+      - Liu_Tingting_(gymnast) (<http://dbpedia.org/resource/Liu_Tingting_(gymnast)>) --doo:hometown--> Guangdong (dor:Guangdong)
+      - G15_Shenyang–Haikou_Expressway (<http://dbpedia.org/resource/G15_Shenyang–Haikou_Expressway>) --doo:routeJunction--> Guangdong (dor:Guangdong)
+      - Music_FM_Radio_Guangdong (dor:Music_FM_Radio_Guangdong) --dop:area--> Guangdong (dor:Guangdong)
+      - Liu_Tingting_(gymnast) (<http://dbpedia.org/resource/Liu_Tingting_(gymnast)>) --doo:hometown--> Zhanjiang (dor:Zhanjiang)
+      - Guangdong (dor:Guangdong) --doo:country--> China (dor:China)
+  '5':
+    attributes:
+      Guangdong: (area total km^='179800', width^='150')
+      Liu_Tingting_(gymnast): (birth date^='2000-09-06')
+    relationships:
+      - Liu_Tingting_(gymnast) (<http://dbpedia.org/resource/Liu_Tingting_(gymnast)>) --doo:hometown--> Guangdong (dor:Guangdong)
+      - G35_Jinan–Guangzhou_Expressway (<http://dbpedia.org/resource/G35_Jinan–Guangzhou_Expressway>) --doo:routeJunction--> Guangdong (dor:Guangdong)
+      - Music_FM_Radio_Guangdong (dor:Music_FM_Radio_Guangdong) --dop:area--> Guangdong (dor:Guangdong)
+      - Liu_Tingting_(gymnast) (<http://dbpedia.org/resource/Liu_Tingting_(gymnast)>) --doo:hometown--> Zhanjiang (dor:Zhanjiang)
+      - Guangdong (dor:Guangdong) --doo:country--> China (dor:China)
+  '6':
+    attributes:
+      Guangdong: (area total km^='179800', width^='150')
+      Liu_Tingting_(gymnast): (birth date^='2000-09-06')
+    relationships:
+      - Liu_Tingting_(gymnast) (<http://dbpedia.org/resource/Liu_Tingting_(gymnast)>) --doo:hometown--> Guangdong (dor:Guangdong)
+      - G4_Beijing–Hong_Kong_and_Macau_Expressway (<http://dbpedia.org/resource/G4_Beijing–Hong_Kong_and_Macau_Expressway>) --doo:routeJunction--> Guangdong (dor:Guangdong)
+      - Music_FM_Radio_Guangdong (dor:Music_FM_Radio_Guangdong) --dop:area--> Guangdong (dor:Guangdong)
+      - Liu_Tingting_(gymnast) (<http://dbpedia.org/resource/Liu_Tingting_(gymnast)>) --doo:hometown--> Zhanjiang (dor:Zhanjiang)
+      - Guangdong (dor:Guangdong) --doo:country--> China (dor:China)
+attributes:
+  city: --named after^ (doo:namedAfter)--> Resource | --Aug high F^ (dop:augHighF)--> int | --bot^ (dop:bot)--> langString
+  country: --Apr high C^ (dop:aprHighC)--> double
+  gymnast: --birth date^ (dop:birthDate)--> date
+  settlement: --area total km^ (dop:areaTotalKm)--> double | --width^ (dop:width)--> int | --quote^ (dop:quote)--> int
+subgraph_id: 986
+relationships:
+  - gymnast --doo:hometown--> settlement
+  - road --doo:routeJunction--> settlement
+  - radio station --dop:area--> settlement
+  - gymnast --doo:hometown--> city
+  - settlement --doo:country--> country

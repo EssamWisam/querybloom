@@ -1,0 +1,114 @@
+types:
+  country: doo:Country
+  language: doo:Language
+  ethnic group: doo:EthnicGroup
+  person function: doo:PersonFunction
+  Christian Bishop: doo:ChristianBishop
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Brazilians: (Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=6KZbAAAAMAAJ&q=portuguese+orphan+maldives')
+    relationships:
+      - ABC_islands_(Leeward_Antilles) (<http://dbpedia.org/resource/ABC_islands_(Leeward_Antilles)>) --doo:language--> Dutch_language (dor:Dutch_language)
+      - Brazilians (dor:Brazilians) --doo:language--> Dutch_language (dor:Dutch_language)
+      - Francisco_de_Paula_Victor_(bishop) (<http://dbpedia.org/resource/Francisco_de_Paula_Victor_(bishop)>) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Brazilians (dor:Brazilians) --doo:religion--> Nichiren_Buddhism (dor:Nichiren_Buddhism)
+  '2':
+    attributes:
+      Brazilians: (Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=6KZbAAAAMAAJ&q=portuguese+orphan+maldives')
+      ABC_islands_(Leeward_Antilles): (original name^='')
+    relationships:
+      - ABC_islands_(Leeward_Antilles) (<http://dbpedia.org/resource/ABC_islands_(Leeward_Antilles)>) --doo:language--> Dutch_language (dor:Dutch_language)
+      - Brazilians (dor:Brazilians) --doo:language--> Dutch_language (dor:Dutch_language)
+      - Francisco_de_Paula_Victor_(bishop) (<http://dbpedia.org/resource/Francisco_de_Paula_Victor_(bishop)>) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Brazilians (dor:Brazilians) --doo:religion--> Reform_Judaism (dor:Reform_Judaism)
+  '3':
+    attributes:
+      Brazilians: (Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=6KZbAAAAMAAJ&q=portuguese+orphan+maldives')
+      ABC_islands_(Leeward_Antilles): (original name^='')
+    relationships:
+      - ABC_islands_(Leeward_Antilles) (<http://dbpedia.org/resource/ABC_islands_(Leeward_Antilles)>) --doo:language--> Dutch_language (dor:Dutch_language)
+      - Brazilians (dor:Brazilians) --doo:language--> Dutch_language (dor:Dutch_language)
+      - Francisco_de_Paula_Victor_(bishop) (<http://dbpedia.org/resource/Francisco_de_Paula_Victor_(bishop)>) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Brazilians (dor:Brazilians) --doo:religion--> Serbian_Orthodox_Church (dor:Serbian_Orthodox_Church)
+  '4':
+    attributes:
+      Albania: (direction^='vertical')
+      Gennadios_(Zervos): (predecessor^='http://dbpedia.org/resource/Archbishop_Spyridon_of_America')
+    relationships:
+      - Albania (dor:Albania) --doo:language--> Greek_language (dor:Greek_language)
+      - Greeks (dor:Greeks) --doo:language--> Greek_language (dor:Greek_language)
+      - Gennadios_(Zervos) (<http://dbpedia.org/resource/Gennadios_(Zervos)>) --doo:nationality--> Greeks (dor:Greeks)
+      - Greeks (dor:Greeks) --doo:religion--> Greek_Orthodox_Church (dor:Greek_Orthodox_Church)
+  '5':
+    attributes:
+      Greeks: (Link from a Wikipage to an external page^='http://ahepacanada.org/')
+      Czech_Republic: (direction^='horizontal')
+      Gennadios_(Zervos): (predecessor^='http://dbpedia.org/resource/Archbishop_Spyridon_of_America')
+    relationships:
+      - Czech_Republic (dor:Czech_Republic) --doo:language--> Greek_language (dor:Greek_language)
+      - Greeks (dor:Greeks) --doo:language--> Greek_language (dor:Greek_language)
+      - Gennadios_(Zervos) (<http://dbpedia.org/resource/Gennadios_(Zervos)>) --doo:nationality--> Greeks (dor:Greeks)
+      - Greeks (dor:Greeks) --doo:religion--> Greek_Orthodox_Church (dor:Greek_Orthodox_Church)
+  '6':
+    attributes:
+      Greece: (direction^='horizontal')
+      Greeks: (Link from a Wikipage to an external page^='http://ahepacanada.org/')
+      Gennadios_(Zervos): (predecessor^='http://dbpedia.org/resource/Archbishop_Spyridon_of_America')
+    relationships:
+      - Greece (dor:Greece) --doo:language--> Greek_language (dor:Greek_language)
+      - Greeks (dor:Greeks) --doo:language--> Greek_language (dor:Greek_language)
+      - Gennadios_(Zervos) (<http://dbpedia.org/resource/Gennadios_(Zervos)>) --doo:nationality--> Greeks (dor:Greeks)
+      - Greeks (dor:Greeks) --doo:religion--> Greek_Orthodox_Church (dor:Greek_Orthodox_Church)
+  '7':
+    attributes:
+      Haitians: (related='http://dbpedia.org/resource/African_diaspora_in_the_Americas')
+      Jean-Zaché_Duracin: (predecessor^='http://dbpedia.org/resource/Luc_Garnier')
+    relationships:
+      - Cuba (dor:Cuba) --doo:language--> Haitian_Creole (dor:Haitian_Creole)
+      - Haitians (dor:Haitians) --doo:language--> Haitian_Creole (dor:Haitian_Creole)
+      - Jean-Zaché_Duracin (<http://dbpedia.org/resource/Jean-Zaché_Duracin>) --doo:nationality--> Haitians (dor:Haitians)
+      - Haitians (dor:Haitians) --doo:religion--> Baptist (dor:Baptist)
+  '8':
+    attributes:
+      Haitians: (related='http://dbpedia.org/resource/African_diaspora_in_the_Americas')
+      Jean-Zaché_Duracin: (predecessor^='http://dbpedia.org/resource/Luc_Garnier')
+    relationships:
+      - Cuba (dor:Cuba) --doo:language--> Haitian_Creole (dor:Haitian_Creole)
+      - Haitians (dor:Haitians) --doo:language--> Haitian_Creole (dor:Haitian_Creole)
+      - Jean-Zaché_Duracin (<http://dbpedia.org/resource/Jean-Zaché_Duracin>) --doo:nationality--> Haitians (dor:Haitians)
+      - Haitians (dor:Haitians) --doo:religion--> Methodist (dor:Methodist)
+  '9':
+    attributes:
+      Haitians: (related='http://dbpedia.org/resource/African_diaspora_in_the_Americas')
+      Latin_America: (direction^='vertical')
+      Jean-Zaché_Duracin: (predecessor^='http://dbpedia.org/resource/Luc_Garnier')
+    relationships:
+      - Latin_America (dor:Latin_America) --doo:language--> Haitian_Creole (dor:Haitian_Creole)
+      - Haitians (dor:Haitians) --doo:language--> Haitian_Creole (dor:Haitian_Creole)
+      - Jean-Zaché_Duracin (<http://dbpedia.org/resource/Jean-Zaché_Duracin>) --doo:nationality--> Haitians (dor:Haitians)
+      - Haitians (dor:Haitians) --doo:religion--> Baptist (dor:Baptist)
+  '10':
+    attributes:
+      Leo_Frade: (predecessor^='http://dbpedia.org/resource/Calvin_O._Schofield,_Jr.')
+    relationships:
+      - Comecon (dor:Comecon) --doo:language--> Cuban_Spanish (dor:Cuban_Spanish)
+      - Cubans (dor:Cubans) --doo:language--> Cuban_Spanish (dor:Cuban_Spanish)
+      - Leo_Frade (dor:Leo_Frade) --doo:nationality--> Cubans (dor:Cubans)
+      - Cubans (dor:Cubans) --doo:religion--> Ifá (<http://dbpedia.org/resource/Ifá>)
+attributes:
+  country: --direction^ (dop:direction)--> langString | --group^ (dop:group)--> langString | --1a^ (dop:1a)--> langString | --original name^ (doo:originalName)--> langString
+  ethnic group: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --related (doo:related)--> Resource
+  person function: --reason^ (dop:reason)--> langString | --issue (dop:issue)--> langString
+  Christian Bishop: --honorific suffix^ (dop:honorificSuffix)--> langString | --predecessor^ (dop:predecessor)--> Resource
+subgraph_id: 332
+relationships:
+  - country --doo:language--> language
+  - ethnic group --doo:language--> language
+  - Christian Bishop --doo:nationality--> ethnic group
+  - ethnic group --doo:religion--> person function

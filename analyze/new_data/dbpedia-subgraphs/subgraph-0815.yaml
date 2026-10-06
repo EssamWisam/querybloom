@@ -1,0 +1,91 @@
+types:
+  athlete: doo:Athlete
+  Location: doo:Location
+  settlement: doo:Settlement
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Stockholm: (area total km^='188', population total^='978770', Apr precipitation mm^='23.9')
+    relationships:
+      - Agnes_Knochenhauer (dor:Agnes_Knochenhauer) --doo:club--> Sweden (dor:Sweden)
+      - Flygbussarna (dor:Flygbussarna) --doo:location--> Sweden (dor:Sweden)
+      - Flygbussarna (dor:Flygbussarna) --doo:headquarter--> Stockholm (dor:Stockholm)
+  '2':
+    attributes:
+      Saint_Paul,_Minnesota: (area total km^='145.31', Aug low F^='61.7', population total^='311527', Apr low F^='37.2', named after^='http://dbpedia.org/resource/St._Paul_the_Apostle')
+    relationships:
+      - Aija_Edwards (dor:Aija_Edwards) --doo:club--> Seattle (dor:Seattle)
+      - Northern_Pacific_Railway (dor:Northern_Pacific_Railway) --doo:location--> Seattle (dor:Seattle)
+      - Northern_Pacific_Railway (dor:Northern_Pacific_Railway) --doo:headquarter--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+  '3':
+    attributes:
+      Seattle: (area total km^='367.97', population total^='737015', named after^='http://dbpedia.org/resource/Chief_Seattle')
+    relationships:
+      - Aija_Edwards (dor:Aija_Edwards) --doo:club--> Seattle (dor:Seattle)
+      - Sound_Transit (dor:Sound_Transit) --doo:location--> Seattle (dor:Seattle)
+      - Sound_Transit (dor:Sound_Transit) --doo:headquarter--> Seattle (dor:Seattle)
+  '4':
+    attributes:
+      Washington_(state): (area total km^='184827', Aug low F^='50', Apr low F^='34.2')
+    relationships:
+      - Aija_Edwards (dor:Aija_Edwards) --doo:club--> Seattle (dor:Seattle)
+      - Sound_Transit (dor:Sound_Transit) --doo:location--> Seattle (dor:Seattle)
+      - Sound_Transit (dor:Sound_Transit) --doo:headquarter--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+  '5':
+    attributes:
+      London: (country^='http://dbpedia.org/resource/United_Kingdom')
+      Bow,_London: (population total^='27720')
+    relationships:
+      - Albert_Hill_(athlete) (<http://dbpedia.org/resource/Albert_Hill_(athlete)>) --doo:club--> London (dor:London)
+      - North_London_Railway (dor:North_London_Railway) --doo:location--> London (dor:London)
+      - North_London_Railway (dor:North_London_Railway) --doo:headquarter--> Bow,_London (<http://dbpedia.org/resource/Bow,_London>)
+  '6':
+    attributes:
+      London: (country^='http://dbpedia.org/resource/United_Kingdom', area total km^='1572.03', population total^='8799800')
+    relationships:
+      - Albert_Hill_(athlete) (<http://dbpedia.org/resource/Albert_Hill_(athlete)>) --doo:club--> London (dor:London)
+      - North_London_Railway (dor:North_London_Railway) --doo:location--> London (dor:London)
+      - North_London_Railway (dor:North_London_Railway) --doo:headquarter--> London (dor:London)
+  '7':
+    attributes:
+      Moscow: (country^='http://dbpedia.org/resource/Russia', Apr sun^='213', area total km^='2561.5', differentFrom='http://dbpedia.org/resource/Moscow_Oblast', population total^='13010112')
+    relationships:
+      - Aleksandr_Aliyev__Aleksandr_Aliyev__1 (dor:Aleksandr_Aliyev__Aleksandr_Aliyev__1) --doo:club--> Moscow (dor:Moscow)
+      - Transportation_in_Moscow (dor:Transportation_in_Moscow) --doo:location--> Moscow (dor:Moscow)
+      - Transportation_in_Moscow (dor:Transportation_in_Moscow) --doo:headquarter--> Moscow (dor:Moscow)
+  '8':
+    attributes:
+      Moscow: (country^='http://dbpedia.org/resource/Russia', Apr sun^='213', area total km^='2561.5', differentFrom='http://dbpedia.org/resource/Moscow_Oblast', population total^='13010112')
+    relationships:
+      - Aleksey_Gushchin (dor:Aleksey_Gushchin) --doo:club--> Moscow (dor:Moscow)
+      - Transportation_in_Moscow (dor:Transportation_in_Moscow) --doo:location--> Moscow (dor:Moscow)
+      - Transportation_in_Moscow (dor:Transportation_in_Moscow) --doo:headquarter--> Moscow (dor:Moscow)
+  '9':
+    attributes:
+      Moscow: (country^='http://dbpedia.org/resource/Russia', Apr sun^='213', area total km^='2561.5', differentFrom='http://dbpedia.org/resource/Moscow_Oblast', population total^='13010112')
+    relationships:
+      - Alexander_Kirikov (dor:Alexander_Kirikov) --doo:club--> Moscow (dor:Moscow)
+      - Transportation_in_Moscow (dor:Transportation_in_Moscow) --doo:location--> Moscow (dor:Moscow)
+      - Transportation_in_Moscow (dor:Transportation_in_Moscow) --doo:headquarter--> Moscow (dor:Moscow)
+  '10':
+    attributes:
+      Khabarovsk: (Apr precipitation mm^='37')
+    relationships:
+      - Alexandra_Raeva (dor:Alexandra_Raeva) --doo:club--> Russia (dor:Russia)
+      - Far_Eastern_Railway (dor:Far_Eastern_Railway) --doo:location--> Russia (dor:Russia)
+      - Far_Eastern_Railway (dor:Far_Eastern_Railway) --doo:headquarter--> Khabarovsk (dor:Khabarovsk)
+attributes:
+  Location: --country^ (doo:country)--> Resource | --Aug high F^ (dop:augHighF)--> int | --Apr sun^ (dop:aprSun)--> double | --logo^ (dop:logo)--> langString
+  settlement: --area total km^ (dop:areaTotalKm)--> int | --differentFrom (wwoo:differentFrom)--> Resource | --Aug low F^ (dop:augLowF)--> double | --population total^ (doo:populationTotal)--> int | --Apr low F^ (dop:aprLowF)--> double | --named after^ (doo:namedAfter)--> Resource | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double
+subgraph_id: 815
+relationships:
+  - athlete --doo:club--> Location
+  - public transit system --doo:location--> Location
+  - public transit system --doo:headquarter--> settlement

@@ -1,0 +1,128 @@
+types:
+  city: doo:City
+  venue: doo:Venue
+  school: doo:School
+  mountain: doo:Mountain
+  soccer player: doo:SoccerPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Auckland: (Apr rain mm^='99.4')
+      Bert_Ormond: (death date^='2017-11-15', birth place^='Falkirk, Scotland')
+      Auckland_Metropolitan_College: (Closed^='2001')
+    relationships:
+      - St._James_Theatre,_Auckland (<http://dbpedia.org/resource/St._James_Theatre,_Auckland>) --dop:city--> Auckland (dor:Auckland)
+      - St._James_Theatre,_Auckland (<http://dbpedia.org/resource/St._James_Theatre,_Auckland>) --doo:city--> Auckland (dor:Auckland)
+      - Albert_Park_Volcano (dor:Albert_Park_Volcano) --doo:locatedInArea--> Auckland (dor:Auckland)
+      - Auckland_Metropolitan_College (dor:Auckland_Metropolitan_College) --doo:location--> Auckland (dor:Auckland)
+      - Bert_Ormond (dor:Bert_Ormond) --doo:deathPlace--> Auckland (dor:Auckland)
+  '2':
+    attributes:
+      Auckland: (Apr rain mm^='99.4')
+      Duncan_Cole: (death date^='2014-05-21', birth place^='http://dbpedia.org/resource/England')
+      Auckland_Metropolitan_College: (Closed^='2001')
+    relationships:
+      - St._James_Theatre,_Auckland (<http://dbpedia.org/resource/St._James_Theatre,_Auckland>) --dop:city--> Auckland (dor:Auckland)
+      - St._James_Theatre,_Auckland (<http://dbpedia.org/resource/St._James_Theatre,_Auckland>) --doo:city--> Auckland (dor:Auckland)
+      - Albert_Park_Volcano (dor:Albert_Park_Volcano) --doo:locatedInArea--> Auckland (dor:Auckland)
+      - Auckland_Metropolitan_College (dor:Auckland_Metropolitan_College) --doo:location--> Auckland (dor:Auckland)
+      - Duncan_Cole (dor:Duncan_Cole) --doo:deathPlace--> Auckland (dor:Auckland)
+  '3':
+    attributes:
+      Auckland: (Apr rain mm^='99.4')
+      Ian_Ormond: (death date^='2021-10-08', birth place^='Harthill, Scotland')
+      Auckland_Metropolitan_College: (Closed^='2001')
+    relationships:
+      - St._James_Theatre,_Auckland (<http://dbpedia.org/resource/St._James_Theatre,_Auckland>) --dop:city--> Auckland (dor:Auckland)
+      - St._James_Theatre,_Auckland (<http://dbpedia.org/resource/St._James_Theatre,_Auckland>) --doo:city--> Auckland (dor:Auckland)
+      - Albert_Park_Volcano (dor:Albert_Park_Volcano) --doo:locatedInArea--> Auckland (dor:Auckland)
+      - Auckland_Metropolitan_College (dor:Auckland_Metropolitan_College) --doo:location--> Auckland (dor:Auckland)
+      - Ian_Ormond (dor:Ian_Ormond) --doo:deathPlace--> Auckland (dor:Auckland)
+  '4':
+    attributes:
+      Choi_Yung-keun: (death date^='1994-07-20', birth place^='http://dbpedia.org/resource/Korea_under_Japanese_rule')
+      Chungdam_High_School: (district^='http://dbpedia.org/resource/Seoul_Metropolitan_Office_of_Education', country^='http://dbpedia.org/resource/South_Korea')
+    relationships:
+      - National_Theater_of_Korea (dor:National_Theater_of_Korea) --dop:city--> Seoul (dor:Seoul)
+      - National_Theater_of_Korea (dor:National_Theater_of_Korea) --doo:city--> Seoul (dor:Seoul)
+      - Ansan_(Seoul)__Ansan__1 (<http://dbpedia.org/resource/Ansan_(Seoul)__Ansan__1>) --doo:locatedInArea--> Seoul (dor:Seoul)
+      - Chungdam_High_School (dor:Chungdam_High_School) --doo:location--> Seoul (dor:Seoul)
+      - Choi_Yung-keun (dor:Choi_Yung-keun) --doo:deathPlace--> Seoul (dor:Seoul)
+  '5':
+    attributes:
+      Choi_Yung-keun: (death date^='1994-07-20', birth place^='http://dbpedia.org/resource/Korea_under_Japanese_rule')
+      Chungdam_High_School: (district^='http://dbpedia.org/resource/Seoul_Metropolitan_Office_of_Education', country^='http://dbpedia.org/resource/South_Korea')
+    relationships:
+      - Seoul_City_Improv (dor:Seoul_City_Improv) --dop:city--> Seoul (dor:Seoul)
+      - Seoul_City_Improv (dor:Seoul_City_Improv) --doo:city--> Seoul (dor:Seoul)
+      - Ansan_(Seoul)__Ansan__1 (<http://dbpedia.org/resource/Ansan_(Seoul)__Ansan__1>) --doo:locatedInArea--> Seoul (dor:Seoul)
+      - Chungdam_High_School (dor:Chungdam_High_School) --doo:location--> Seoul (dor:Seoul)
+      - Choi_Yung-keun (dor:Choi_Yung-keun) --doo:deathPlace--> Seoul (dor:Seoul)
+  '6':
+    attributes:
+      Chu_Yung-kwang: (death date^='1982-09-28', birth place^='http://dbpedia.org/resource/Korea_under_Japanese_rule')
+      Chungdam_High_School: (district^='http://dbpedia.org/resource/Seoul_Metropolitan_Office_of_Education', country^='http://dbpedia.org/resource/South_Korea')
+    relationships:
+      - National_Theater_of_Korea (dor:National_Theater_of_Korea) --dop:city--> Seoul (dor:Seoul)
+      - National_Theater_of_Korea (dor:National_Theater_of_Korea) --doo:city--> Seoul (dor:Seoul)
+      - Ansan_(Seoul)__Ansan__1 (<http://dbpedia.org/resource/Ansan_(Seoul)__Ansan__1>) --doo:locatedInArea--> Seoul (dor:Seoul)
+      - Chungdam_High_School (dor:Chungdam_High_School) --doo:location--> Seoul (dor:Seoul)
+      - Chu_Yung-kwang (dor:Chu_Yung-kwang) --doo:deathPlace--> Seoul (dor:Seoul)
+  '7':
+    attributes:
+      Günter_Hoge: (death date^='2017-11-06', birth place^='Berlin, Germany')
+      Berlin_Metropolitan_School: (country^='Germany')
+    relationships:
+      - Deutsches_Theater_(Berlin) (<http://dbpedia.org/resource/Deutsches_Theater_(Berlin)>) --dop:city--> Berlin (dor:Berlin)
+      - Deutsches_Theater_(Berlin) (<http://dbpedia.org/resource/Deutsches_Theater_(Berlin)>) --doo:city--> Berlin (dor:Berlin)
+      - Arkenberge (dor:Arkenberge) --doo:locatedInArea--> Berlin (dor:Berlin)
+      - Berlin_Metropolitan_School (dor:Berlin_Metropolitan_School) --doo:location--> Berlin (dor:Berlin)
+      - Günter_Hoge (<http://dbpedia.org/resource/Günter_Hoge>) --doo:deathPlace--> Berlin (dor:Berlin)
+  '8':
+    attributes:
+      Günter_Hoge: (death date^='2017-11-06', birth place^='Berlin, Germany')
+      Berlin_Metropolitan_School: (country^='Germany')
+    relationships:
+      - Eldorado_(Berlin) (<http://dbpedia.org/resource/Eldorado_(Berlin)>) --dop:city--> Berlin (dor:Berlin)
+      - Eldorado_(Berlin) (<http://dbpedia.org/resource/Eldorado_(Berlin)>) --doo:city--> Berlin (dor:Berlin)
+      - Arkenberge (dor:Arkenberge) --doo:locatedInArea--> Berlin (dor:Berlin)
+      - Berlin_Metropolitan_School (dor:Berlin_Metropolitan_School) --doo:location--> Berlin (dor:Berlin)
+      - Günter_Hoge (<http://dbpedia.org/resource/Günter_Hoge>) --doo:deathPlace--> Berlin (dor:Berlin)
+  '9':
+    attributes:
+      Günter_Hoge: (death date^='2017-11-06', birth place^='Berlin, Germany')
+      Friedrichstadt-Palast: (seating capacity^='1895')
+      Berlin_Metropolitan_School: (country^='Germany')
+    relationships:
+      - Friedrichstadt-Palast (dor:Friedrichstadt-Palast) --dop:city--> Berlin (dor:Berlin)
+      - Friedrichstadt-Palast (dor:Friedrichstadt-Palast) --doo:city--> Berlin (dor:Berlin)
+      - Arkenberge (dor:Arkenberge) --doo:locatedInArea--> Berlin (dor:Berlin)
+      - Berlin_Metropolitan_School (dor:Berlin_Metropolitan_School) --doo:location--> Berlin (dor:Berlin)
+      - Günter_Hoge (<http://dbpedia.org/resource/Günter_Hoge>) --doo:deathPlace--> Berlin (dor:Berlin)
+  '10':
+    attributes:
+      Church_Hill_Theatre: (seating capacity^='353')
+      Alex_Young_(footballer,_born_1880): (death date^='1959-09-17', birth place^='Slamannan, Scotland')
+    relationships:
+      - Church_Hill_Theatre (dor:Church_Hill_Theatre) --dop:city--> Edinburgh (dor:Edinburgh)
+      - Church_Hill_Theatre (dor:Church_Hill_Theatre) --doo:city--> Edinburgh (dor:Edinburgh)
+      - Arthur's_Seat (<http://dbpedia.org/resource/Arthur's_Seat>) --doo:locatedInArea--> Edinburgh (dor:Edinburgh)
+      - Ainslie_Park_High_School (dor:Ainslie_Park_High_School) --doo:location--> Edinburgh (dor:Edinburgh)
+      - Alex_Young_(footballer,_born_1880) (<http://dbpedia.org/resource/Alex_Young_(footballer,_born_1880)>) --doo:deathPlace--> Edinburgh (dor:Edinburgh)
+attributes:
+  city: --Apr rain mm^ (dop:aprRainMm)--> double
+  venue: --seating capacity^ (doo:seatingCapacity)--> int
+  school: --district^ (doo:district)--> Resource | --country^ (dop:country)--> langString | --Closed^ (dop:closed)--> langString | --religion^ (doo:religion)--> Resource | --reason^ (dop:reason)--> langString | --Closed^ (dop:closed)--> date | --affiliations^ (dop:affiliations)--> Resource
+  soccer player: --death date^ (dop:deathDate)--> date | --width^ (dop:width)--> perCent | --id^ (dop:id)--> int | --birth place^ (dop:birthPlace)--> Resource
+subgraph_id: 819
+relationships:
+  - venue --dop:city--> city
+  - venue --doo:city--> city
+  - mountain --doo:locatedInArea--> city
+  - school --doo:location--> city
+  - soccer player --doo:deathPlace--> city

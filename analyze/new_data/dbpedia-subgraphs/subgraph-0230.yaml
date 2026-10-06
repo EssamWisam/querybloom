@@ -1,0 +1,143 @@
+types:
+  lake: doo:Lake
+  Location: doo:Location
+  military person: doo:MilitaryPerson
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      North_Sea: (area total (m2)^='570000000000.0')
+      Aa_(France): (page length (characters) of wiki page^='5972')
+      Reinhard_Scheer: (death date^='1928-11-26')
+      Action_of_11–12_December_1917: (date^='--12-12')
+    relationships:
+      - Action_of_11–12_December_1917 (<http://dbpedia.org/resource/Action_of_11–12_December_1917>) --doo:place--> North_Sea (dor:North_Sea)
+      - Action_of_11–12_December_1917 (<http://dbpedia.org/resource/Action_of_11–12_December_1917>) --dop:commander--> Reinhard_Scheer (dor:Reinhard_Scheer)
+      - Aa_(France) (<http://dbpedia.org/resource/Aa_(France)>) --doo:mouthMountain--> North_Sea (dor:North_Sea)
+  '2':
+    attributes:
+      North_Sea: (area total (m2)^='570000000000.0')
+      Aa_(France): (page length (characters) of wiki page^='5972')
+      Vincent_Barkly_Molteno: (death date^='1952-11-12')
+      Action_of_11–12_December_1917: (date^='--12-12')
+    relationships:
+      - Action_of_11–12_December_1917 (<http://dbpedia.org/resource/Action_of_11–12_December_1917>) --doo:place--> North_Sea (dor:North_Sea)
+      - Action_of_11–12_December_1917 (<http://dbpedia.org/resource/Action_of_11–12_December_1917>) --dop:commander--> Vincent_Barkly_Molteno (dor:Vincent_Barkly_Molteno)
+      - Aa_(France) (<http://dbpedia.org/resource/Aa_(France)>) --doo:mouthMountain--> North_Sea (dor:North_Sea)
+  '3':
+    attributes:
+      North_Sea: (area total (m2)^='570000000000.0')
+      Aa_(France): (page length (characters) of wiki page^='5972')
+      Convoy_FS_271: (date^='--09-05')
+    relationships:
+      - Convoy_FS_271 (dor:Convoy_FS_271) --doo:place--> North_Sea (dor:North_Sea)
+      - Convoy_FS_271 (dor:Convoy_FS_271) --dop:commander--> Admiral (dor:Admiral)
+      - Aa_(France) (<http://dbpedia.org/resource/Aa_(France)>) --doo:mouthMountain--> North_Sea (dor:North_Sea)
+  '4':
+    attributes:
+      Baltic_Sea: (area total (m2)^='377000000000.0')
+      Action_of_17_August_1712: (date^='1712-08-17')
+      Aalbek_(Hemmelsdorfer_See): (page length (characters) of wiki page^='1470')
+    relationships:
+      - Action_of_17_August_1712 (dor:Action_of_17_August_1712) --doo:place--> Baltic_Sea (dor:Baltic_Sea)
+      - Action_of_17_August_1712 (dor:Action_of_17_August_1712) --dop:commander--> Hannibal_Sehested_(governor) (<http://dbpedia.org/resource/Hannibal_Sehested_(governor)>)
+      - Aalbek_(Hemmelsdorfer_See) (<http://dbpedia.org/resource/Aalbek_(Hemmelsdorfer_See)>) --doo:mouthMountain--> Baltic_Sea (dor:Baltic_Sea)
+  '5':
+    attributes:
+      Baltic_Sea: (area total (m2)^='377000000000.0')
+      Battle_of_Öland_(1789): (date^='--07-26')
+      Aalbek_(Hemmelsdorfer_See): (page length (characters) of wiki page^='1470')
+    relationships:
+      - Battle_of_Öland_(1789) (<http://dbpedia.org/resource/Battle_of_Öland_(1789)>) --doo:place--> Baltic_Sea (dor:Baltic_Sea)
+      - Battle_of_Öland_(1789) (<http://dbpedia.org/resource/Battle_of_Öland_(1789)>) --dop:commander--> Vasili_Chichagov (dor:Vasili_Chichagov)
+      - Aalbek_(Hemmelsdorfer_See) (<http://dbpedia.org/resource/Aalbek_(Hemmelsdorfer_See)>) --doo:mouthMountain--> Baltic_Sea (dor:Baltic_Sea)
+  '6':
+    attributes:
+      Baltic_Sea: (area total (m2)^='377000000000.0')
+      Battle_of_the_Sound: (date^='1658-10-29')
+      Carl_Gustaf_Wrangel: (death date^='1676-07-05')
+      Aalbek_(Hemmelsdorfer_See): (page length (characters) of wiki page^='1470')
+    relationships:
+      - Battle_of_the_Sound (dor:Battle_of_the_Sound) --doo:place--> Baltic_Sea (dor:Baltic_Sea)
+      - Battle_of_the_Sound (dor:Battle_of_the_Sound) --dop:commander--> Carl_Gustaf_Wrangel (dor:Carl_Gustaf_Wrangel)
+      - Aalbek_(Hemmelsdorfer_See) (<http://dbpedia.org/resource/Aalbek_(Hemmelsdorfer_See)>) --doo:mouthMountain--> Baltic_Sea (dor:Baltic_Sea)
+  '7':
+    attributes:
+      Achelous_River: (page length (characters) of wiki page^='10943')
+      Battle_of_Actium: (date^='-0031-09-02')
+    relationships:
+      - Battle_of_Actium (dor:Battle_of_Actium) --doo:place--> Ionian_Sea (dor:Ionian_Sea)
+      - Battle_of_Actium (dor:Battle_of_Actium) --dop:commander--> Gaius_Sosius (dor:Gaius_Sosius)
+      - Achelous_River (dor:Achelous_River) --doo:mouthMountain--> Ionian_Sea (dor:Ionian_Sea)
+  '8':
+    attributes:
+      Sicilian_Wars: (date^='580')
+      Achelous_River: (page length (characters) of wiki page^='10943')
+    relationships:
+      - Sicilian_Wars (dor:Sicilian_Wars) --doo:place--> Ionian_Sea (dor:Ionian_Sea)
+      - Sicilian_Wars (dor:Sicilian_Wars) --dop:commander--> Dionysius_I_of_Syracuse (dor:Dionysius_I_of_Syracuse)
+      - Achelous_River (dor:Achelous_River) --doo:mouthMountain--> Ionian_Sea (dor:Ionian_Sea)
+  '9':
+    attributes:
+      Sicilian_Wars: (date^='580')
+      Achelous_River: (page length (characters) of wiki page^='10943')
+    relationships:
+      - Sicilian_Wars (dor:Sicilian_Wars) --doo:place--> Ionian_Sea (dor:Ionian_Sea)
+      - Sicilian_Wars (dor:Sicilian_Wars) --dop:commander--> Gelo (dor:Gelo)
+      - Achelous_River (dor:Achelous_River) --doo:mouthMountain--> Ionian_Sea (dor:Ionian_Sea)
+  '10':
+    attributes:
+      Agly: (page length (characters) of wiki page^='1473')
+      Mediterranean_Sea: (area total (m2)^='2500000000000.0')
+      African_Slave_Trade_Patrol: (date^='1819')
+    relationships:
+      - African_Slave_Trade_Patrol (dor:African_Slave_Trade_Patrol) --doo:place--> Mediterranean_Sea (dor:Mediterranean_Sea)
+      - African_Slave_Trade_Patrol (dor:African_Slave_Trade_Patrol) --dop:commander--> Francis_Bowen_(slave_trader) (<http://dbpedia.org/resource/Francis_Bowen_(slave_trader)>)
+      - Agly (dor:Agly) --doo:mouthMountain--> Mediterranean_Sea (dor:Mediterranean_Sea)
+qa_result:
+  status: completed
+  cost_usd: 0.36042
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.04674740000000001
+        total_tokens: 4370
+        prompt_tokens: 2265
+        completion_tokens: 2105
+      generate:
+        cost_usd: 0.12157260000000002
+        total_tokens: 9746
+        prompt_tokens: 4410
+        completion_tokens: 5336
+      verify_1:
+        cost_usd: 0.055937
+        total_tokens: 6493
+        prompt_tokens: 4928
+        completion_tokens: 1565
+      complexity:
+        cost_usd: 0.136163
+        total_tokens: 11900
+        prompt_tokens: 6217
+        completion_tokens: 5683
+    total_tokens: 32509
+    prompt_tokens: 17820
+    total_cost_usd: 0.36042
+    completion_tokens: 14689
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  lake: --area total (m2)^ (doo:areaTotal)--> double
+  Location: --Center^ (dop:center)--> langString | --2p^ (dop:2p)--> int | --borough (dop:borough)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --discoverer^ (doo:discoverer)--> Resource | --header^ (dop:header)--> langString | --url^ (dop:url)--> langString | --administrator^ (dop:administrator)--> langString | --Apr record high F^ (dop:aprRecordHighF)--> double
+  military person: --death date^ (dop:deathDate)--> gMonthDay | --honorific suffix^ (dop:honorificSuffix)--> langString
+  military conflict: --date^ (dop:date)--> langString
+subgraph_id: 230
+relationships:
+  - military conflict --doo:place--> lake
+  - military conflict --dop:commander--> military person
+  - Location --doo:mouthMountain--> lake

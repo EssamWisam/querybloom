@@ -1,0 +1,123 @@
+types:
+  person: doo:Person
+  country: doo:Country
+  settlement: doo:Settlement
+  hockey team: doo:HockeyTeam
+  ice hockey player: doo:IceHockeyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Montreal: (subject='http://dbpedia.org/resource/Category:1832_establishments_in_Canada')
+      Arthur_Currie: (subject='http://dbpedia.org/resource/Category:1875_births')
+      Bruce_Richardson: (height ft^='5')
+    relationships:
+      - Bruce_Richardson (dor:Bruce_Richardson) --doo:birthPlace--> Montreal (dor:Montreal)
+      - Aerican_Empire (dor:Aerican_Empire) --doo:capital--> Montreal (dor:Montreal)
+      - Arthur_Currie (dor:Arthur_Currie) --doo:restingPlace--> Montreal (dor:Montreal)
+      - Blainville-Boisbriand_Armada (dor:Blainville-Boisbriand_Armada) --doo:coach--> Bruce_Richardson (dor:Bruce_Richardson)
+  '2':
+    attributes:
+      Montreal: (subject='http://dbpedia.org/resource/Category:1832_establishments_in_Canada')
+      Beatrice_Redpath: (subject='http://dbpedia.org/resource/Category:1886_births', children^='J. P. Redpath')
+      Bruce_Richardson: (height ft^='5')
+    relationships:
+      - Bruce_Richardson (dor:Bruce_Richardson) --doo:birthPlace--> Montreal (dor:Montreal)
+      - Aerican_Empire (dor:Aerican_Empire) --doo:capital--> Montreal (dor:Montreal)
+      - Beatrice_Redpath (dor:Beatrice_Redpath) --doo:restingPlace--> Montreal (dor:Montreal)
+      - Blainville-Boisbriand_Armada (dor:Blainville-Boisbriand_Armada) --doo:coach--> Bruce_Richardson (dor:Bruce_Richardson)
+  '3':
+    attributes:
+      Bruce_Richardson: (height ft^='5')
+      Calixa_Lavallée: (subject='http://dbpedia.org/resource/Category:1842_births')
+    relationships:
+      - Bruce_Richardson (dor:Bruce_Richardson) --doo:birthPlace--> Montreal (dor:Montreal)
+      - Aerican_Empire (dor:Aerican_Empire) --doo:capital--> Montreal (dor:Montreal)
+      - Calixa_Lavallée (<http://dbpedia.org/resource/Calixa_Lavallée>) --doo:restingPlace--> Montreal (dor:Montreal)
+      - Blainville-Boisbriand_Armada (dor:Blainville-Boisbriand_Armada) --doo:coach--> Bruce_Richardson (dor:Bruce_Richardson)
+  '4':
+    attributes:
+      Riga: (subject='http://dbpedia.org/resource/Category:Capitals_in_Europe')
+      Normunds_Sējējs: (height ft^='6')
+      Dāvids_Sīmansons: (subject='http://dbpedia.org/resource/Category:1859_births')
+    relationships:
+      - Normunds_Sējējs (<http://dbpedia.org/resource/Normunds_Sējējs>) --doo:birthPlace--> Riga (dor:Riga)
+      - Archbishopric_of_Riga (dor:Archbishopric_of_Riga) --doo:capital--> Riga (dor:Riga)
+      - Dāvids_Sīmansons (<http://dbpedia.org/resource/Dāvids_Sīmansons>) --doo:restingPlace--> Riga (dor:Riga)
+      - HK_Liepāja (<http://dbpedia.org/resource/HK_Liepāja>) --doo:coach--> Normunds_Sējējs (<http://dbpedia.org/resource/Normunds_Sējējs>)
+  '5':
+    attributes:
+      Riga: (subject='http://dbpedia.org/resource/Category:Capitals_in_Europe')
+      Jānis_Balodis: (subject='http://dbpedia.org/resource/Category:1881_births')
+    relationships:
+      - Normunds_Sējējs (<http://dbpedia.org/resource/Normunds_Sējējs>) --doo:birthPlace--> Riga (dor:Riga)
+      - Archbishopric_of_Riga (dor:Archbishopric_of_Riga) --doo:capital--> Riga (dor:Riga)
+      - Jānis_Balodis (<http://dbpedia.org/resource/Jānis_Balodis>) --doo:restingPlace--> Riga (dor:Riga)
+      - HK_Liepāja (<http://dbpedia.org/resource/HK_Liepāja>) --doo:coach--> Normunds_Sējējs (<http://dbpedia.org/resource/Normunds_Sējējs>)
+  '6':
+    attributes:
+      Riga: (subject='http://dbpedia.org/resource/Category:Capitals_in_Europe')
+      Jānis_Buivids: (subject='http://dbpedia.org/resource/Category:1864_births')
+      Normunds_Sējējs: (height ft^='6')
+    relationships:
+      - Normunds_Sējējs (<http://dbpedia.org/resource/Normunds_Sējējs>) --doo:birthPlace--> Riga (dor:Riga)
+      - Archbishopric_of_Riga (dor:Archbishopric_of_Riga) --doo:capital--> Riga (dor:Riga)
+      - Jānis_Buivids (<http://dbpedia.org/resource/Jānis_Buivids>) --doo:restingPlace--> Riga (dor:Riga)
+      - HK_Liepāja (<http://dbpedia.org/resource/HK_Liepāja>) --doo:coach--> Normunds_Sējējs (<http://dbpedia.org/resource/Normunds_Sējējs>)
+  '7':
+    attributes:
+      Patrick_Roy: (height ft^='6')
+      Quebec_City: (subject='http://dbpedia.org/resource/Category:1608_establishments_in_New_France')
+      Louis-Joseph_de_Montcalm: (subject='http://dbpedia.org/resource/Category:1712_births')
+    relationships:
+      - Patrick_Roy (dor:Patrick_Roy) --doo:birthPlace--> Quebec_City (dor:Quebec_City)
+      - Canada_(New_France) (<http://dbpedia.org/resource/Canada_(New_France)>) --doo:capital--> Quebec_City (dor:Quebec_City)
+      - Louis-Joseph_de_Montcalm (dor:Louis-Joseph_de_Montcalm) --doo:restingPlace--> Quebec_City (dor:Quebec_City)
+      - Quebec_Remparts (dor:Quebec_Remparts) --doo:coach--> Patrick_Roy (dor:Patrick_Roy)
+  '8':
+    attributes:
+      Patrick_Roy: (height ft^='6')
+      Quebec_City: (subject='http://dbpedia.org/resource/Category:1608_establishments_in_New_France')
+      Nicolas_Viel: (subject='http://dbpedia.org/resource/Category:1625_deaths')
+    relationships:
+      - Patrick_Roy (dor:Patrick_Roy) --doo:birthPlace--> Quebec_City (dor:Quebec_City)
+      - Canada_(New_France) (<http://dbpedia.org/resource/Canada_(New_France)>) --doo:capital--> Quebec_City (dor:Quebec_City)
+      - Nicolas_Viel (dor:Nicolas_Viel) --doo:restingPlace--> Quebec_City (dor:Quebec_City)
+      - Quebec_Remparts (dor:Quebec_Remparts) --doo:coach--> Patrick_Roy (dor:Patrick_Roy)
+  '9':
+    attributes:
+      Patrick_Roy: (height ft^='6')
+      Quebec_City: (subject='http://dbpedia.org/resource/Category:1608_establishments_in_New_France')
+      Pauline_Vanier: (subject='http://dbpedia.org/resource/Category:1898_births', children^='5')
+    relationships:
+      - Patrick_Roy (dor:Patrick_Roy) --doo:birthPlace--> Quebec_City (dor:Quebec_City)
+      - Canada_(New_France) (<http://dbpedia.org/resource/Canada_(New_France)>) --doo:capital--> Quebec_City (dor:Quebec_City)
+      - Pauline_Vanier (dor:Pauline_Vanier) --doo:restingPlace--> Quebec_City (dor:Quebec_City)
+      - Quebec_Remparts (dor:Quebec_Remparts) --doo:coach--> Patrick_Roy (dor:Patrick_Roy)
+  '10':
+    attributes:
+      Canada: (align^='right')
+      Ottawa: (subject='http://dbpedia.org/resource/Category:1826_establishments_in_Canada')
+      Anna_T._Sadlier: (subject='http://dbpedia.org/resource/Category:1854_births')
+      Alf_Smith_(ice_hockey): (height ft^='5')
+    relationships:
+      - Alf_Smith_(ice_hockey) (<http://dbpedia.org/resource/Alf_Smith_(ice_hockey)>) --doo:birthPlace--> Ottawa (dor:Ottawa)
+      - Canada (dor:Canada) --doo:capital--> Ottawa (dor:Ottawa)
+      - Anna_T._Sadlier (dor:Anna_T._Sadlier) --doo:restingPlace--> Ottawa (dor:Ottawa)
+      - Ottawa_Senators_(FHL) (<http://dbpedia.org/resource/Ottawa_Senators_(FHL)>) --doo:coach--> Alf_Smith_(ice_hockey) (<http://dbpedia.org/resource/Alf_Smith_(ice_hockey)>)
+attributes:
+  person: --subject (podt:subject)--> Resource | --children^ (dop:children)--> langString | --notable works^ (dop:notableWorks)--> langString | --1a^ (dop:1a)--> langString
+  country: --align^ (dop:align)--> langString | --city^ (dop:city)--> langString
+  settlement: --subject (podt:subject)--> Resource
+  ice hockey player: --league^ (dop:league)--> Resource | --height ft^ (dop:heightFt)--> int
+subgraph_id: 449
+relationships:
+  - ice hockey player --doo:birthPlace--> settlement
+  - country --doo:capital--> settlement
+  - person --doo:restingPlace--> settlement
+  - hockey team --doo:coach--> ice hockey player

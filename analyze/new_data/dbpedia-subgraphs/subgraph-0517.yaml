@@ -1,0 +1,74 @@
+types:
+  country: doo:Country
+  royalty: doo:Royalty
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Ahmed_Yusuf_Mahamud (dor:Ahmed_Yusuf_Mahamud) --dop:birthPlace--> Afgooye (dor:Afgooye)
+      - Afgooye (dor:Afgooye) --doo:subdivision--> South_West_State_of_Somalia (dor:South_West_State_of_Somalia)
+  '2':
+    attributes: {}
+    relationships:
+      - Yusuf_Mahamud_Ibrahim (dor:Yusuf_Mahamud_Ibrahim) --dop:birthPlace--> Afgooye (dor:Afgooye)
+      - Afgooye (dor:Afgooye) --doo:subdivision--> South_West_State_of_Somalia (dor:South_West_State_of_Somalia)
+  '3':
+    attributes: {}
+    relationships:
+      - Frederick_Michael,_Count_Palatine_of_Zweibrücken (<http://dbpedia.org/resource/Frederick_Michael,_Count_Palatine_of_Zweibrücken>) --dop:birthPlace--> Alsace (dor:Alsace)
+      - Alsace (dor:Alsace) --doo:subdivision--> European_Collectivity_of_Alsace (dor:European_Collectivity_of_Alsace)
+  '4':
+    attributes: {}
+    relationships:
+      - Vikram_Deo_Verma (dor:Vikram_Deo_Verma) --dop:birthPlace--> Andhra_Pradesh (dor:Andhra_Pradesh)
+      - Andhra_Pradesh (dor:Andhra_Pradesh) --doo:subdivision--> South_India (dor:South_India)
+  '5':
+    attributes:
+      Bagan: (Apr low C^='24')
+    relationships:
+      - Alaungsithu (dor:Alaungsithu) --dop:birthPlace--> Bagan (dor:Bagan)
+      - Bagan (dor:Bagan) --doo:subdivision--> Mandalay_Region (dor:Mandalay_Region)
+  '6':
+    attributes:
+      Bagan: (Apr low C^='24')
+    relationships:
+      - Ale_Pyinthe_(Saw_Rahan_II) (<http://dbpedia.org/resource/Ale_Pyinthe_(Saw_Rahan_II)>) --dop:birthPlace--> Bagan (dor:Bagan)
+      - Bagan (dor:Bagan) --doo:subdivision--> Mandalay_Region (dor:Mandalay_Region)
+  '7':
+    attributes:
+      Bagan: (Apr low C^='24')
+    relationships:
+      - Anawrahta (dor:Anawrahta) --dop:birthPlace--> Bagan (dor:Bagan)
+      - Bagan (dor:Bagan) --doo:subdivision--> Mandalay_Region (dor:Mandalay_Region)
+  '8':
+    attributes:
+      Bangkok: (founder^='King Rama I', Apr low C^='26.9', government type^='http://dbpedia.org/resource/Special_administrative_area_(Thailand)')
+    relationships:
+      - Abbhantripaja (dor:Abbhantripaja) --dop:birthPlace--> Bangkok (dor:Bangkok)
+      - Bangkok (dor:Bangkok) --doo:subdivision--> Central_Thailand (dor:Central_Thailand)
+  '9':
+    attributes:
+      Bangkok: (founder^='King Rama I', Apr low C^='26.9', government type^='http://dbpedia.org/resource/Special_administrative_area_(Thailand)')
+    relationships:
+      - Abha_Barni (dor:Abha_Barni) --dop:birthPlace--> Bangkok (dor:Bangkok)
+      - Bangkok (dor:Bangkok) --doo:subdivision--> Central_Thailand (dor:Central_Thailand)
+  '10':
+    attributes:
+      Bangkok: (founder^='King Rama I', Apr low C^='26.9', government type^='http://dbpedia.org/resource/Special_administrative_area_(Thailand)')
+    relationships:
+      - Abhakara_Kiartivongse (dor:Abhakara_Kiartivongse) --dop:birthPlace--> Bangkok (dor:Bangkok)
+      - Bangkok (dor:Bangkok) --doo:subdivision--> Central_Thailand (dor:Central_Thailand)
+attributes:
+  country: --quote^ (dop:quote)--> langString | --age^ (dop:age)--> date
+  royalty: --alt^ (dop:alt)--> langString | --2p^ (dop:2p)--> int | --1p^ (dop:1p)--> int
+  Location: --founder^ (dop:founder)--> Resource | --Apr low C^ (dop:aprLowC)--> langString | --named for^ (dop:namedFor)--> Resource | --government type^ (doo:governmentType)--> Resource | --id^ (dop:id)--> langString
+subgraph_id: 517
+relationships:
+  - royalty --dop:birthPlace--> Location
+  - Location --doo:subdivision--> country

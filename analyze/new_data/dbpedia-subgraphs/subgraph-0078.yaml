@@ -1,0 +1,99 @@
+types:
+  city: doo:City
+  saint: doo:Saint
+  athlete: doo:Athlete
+  sports team: doo:SportsTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Moscow: '(footer^=''Clockwise from left: The Cathedral of Christ the Saviour, demolished during the Soviet period and reconstructed from 1990–2000; Cathedral of the Immaculate Conception; Moscow Cathedral Mosque; and Mos...'', date^=''January 2011'', caption^=''Population of Moscow by year'', Apr low C^=''1.7'', Aug high C^=''21.5'')'
+      Adelina_Ibatullina: (club^='http://dbpedia.org/resource/CSKA_Moscow')
+    relationships:
+      - Basil_Fool_for_Christ (dor:Basil_Fool_for_Christ) --doo:canonizedPlace--> Moscow (dor:Moscow)
+      - CSKA_Moscow (dor:CSKA_Moscow) --doo:city--> Moscow (dor:Moscow)
+      - Adelina_Ibatullina (dor:Adelina_Ibatullina) --doo:club--> CSKA_Moscow (dor:CSKA_Moscow)
+  '2':
+    attributes:
+      Moscow: '(footer^=''Clockwise from left: The Cathedral of Christ the Saviour, demolished during the Soviet period and reconstructed from 1990–2000; Cathedral of the Immaculate Conception; Moscow Cathedral Mosque; and Mos...'', date^=''January 2011'', caption^=''Population of Moscow by year'', Apr low C^=''1.7'', Aug high C^=''21.5'')'
+      Adelina_Ibatullina: (club^='http://dbpedia.org/resource/CSKA_Moscow')
+    relationships:
+      - Benjamin_of_Petrograd (dor:Benjamin_of_Petrograd) --doo:canonizedPlace--> Moscow (dor:Moscow)
+      - CSKA_Moscow (dor:CSKA_Moscow) --doo:city--> Moscow (dor:Moscow)
+      - Adelina_Ibatullina (dor:Adelina_Ibatullina) --doo:club--> CSKA_Moscow (dor:CSKA_Moscow)
+  '3':
+    attributes:
+      Moscow: '(footer^=''Clockwise from left: The Cathedral of Christ the Saviour, demolished during the Soviet period and reconstructed from 1990–2000; Cathedral of the Immaculate Conception; Moscow Cathedral Mosque; and Mos...'', date^=''January 2011'', caption^=''Population of Moscow by year'', Apr low C^=''1.7'', Aug high C^=''21.5'')'
+      Adelina_Ibatullina: (club^='http://dbpedia.org/resource/CSKA_Moscow')
+    relationships:
+      - Innocent_of_Alaska (dor:Innocent_of_Alaska) --doo:canonizedPlace--> Moscow (dor:Moscow)
+      - CSKA_Moscow (dor:CSKA_Moscow) --doo:city--> Moscow (dor:Moscow)
+      - Adelina_Ibatullina (dor:Adelina_Ibatullina) --doo:club--> CSKA_Moscow (dor:CSKA_Moscow)
+  '4':
+    attributes:
+      Bucharest: (footer^='Examples of Belle Époque and interwar city-houses with gardens', date^='August 2010', Apr low C^='4.9', Aug high C^='29.8')
+      Alin_Moldoveanu: (club^='http://dbpedia.org/resource/CS_Dinamo_București')
+    relationships:
+      - Constantin_Brâncoveanu__Saints_Constantin,_Constantin,_Ștefan,_Radu_and_Ma__1 (<http://dbpedia.org/resource/Constantin_Brâncoveanu__Saints_Constantin,_Constantin,_Ștefan,_Radu_and_Ma__1>) --doo:canonizedPlace--> Bucharest (dor:Bucharest)
+      - CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>) --doo:city--> Bucharest (dor:Bucharest)
+      - Alin_Moldoveanu (dor:Alin_Moldoveanu) --doo:club--> CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>)
+  '5':
+    attributes:
+      Bucharest: (footer^='Examples of Belle Époque and interwar city-houses with gardens', date^='August 2010', Apr low C^='4.9', Aug high C^='29.8')
+      Alin_Moldoveanu: (club^='http://dbpedia.org/resource/CS_Dinamo_București')
+    relationships:
+      - Dionysius_Exiguus (dor:Dionysius_Exiguus) --doo:canonizedPlace--> Bucharest (dor:Bucharest)
+      - CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>) --doo:city--> Bucharest (dor:Bucharest)
+      - Alin_Moldoveanu (dor:Alin_Moldoveanu) --doo:club--> CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>)
+  '6':
+    attributes:
+      Bucharest: (footer^='Examples of Belle Époque and interwar city-houses with gardens', date^='August 2010', Apr low C^='4.9', Aug high C^='29.8')
+      Alin_Moldoveanu: (club^='http://dbpedia.org/resource/CS_Dinamo_București')
+    relationships:
+      - Neagoe_Basarab__Neagoe_Basarab__1 (dor:Neagoe_Basarab__Neagoe_Basarab__1) --doo:canonizedPlace--> Bucharest (dor:Bucharest)
+      - CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>) --doo:city--> Bucharest (dor:Bucharest)
+      - Alin_Moldoveanu (dor:Alin_Moldoveanu) --doo:club--> CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>)
+  '7':
+    attributes:
+      San_Francisco: (date^='March 2022', quote^='1848')
+      Ariarne_Titmus: (club^='St Peters Western')
+    relationships:
+      - John_Coltrane__Saint_John_Coltrane__1 (dor:John_Coltrane__Saint_John_Coltrane__1) --doo:canonizedPlace--> San_Francisco (dor:San_Francisco)
+      - Cali_Condors (dor:Cali_Condors) --doo:city--> San_Francisco (dor:San_Francisco)
+      - Ariarne_Titmus (dor:Ariarne_Titmus) --doo:club--> Cali_Condors (dor:Cali_Condors)
+  '8':
+    attributes:
+      Beata_Nelson: (club^='http://dbpedia.org/resource/Cali_Condors')
+      San_Francisco: (date^='March 2022', quote^='1848')
+    relationships:
+      - John_Coltrane__Saint_John_Coltrane__1 (dor:John_Coltrane__Saint_John_Coltrane__1) --doo:canonizedPlace--> San_Francisco (dor:San_Francisco)
+      - Cali_Condors (dor:Cali_Condors) --doo:city--> San_Francisco (dor:San_Francisco)
+      - Beata_Nelson (dor:Beata_Nelson) --doo:club--> Cali_Condors (dor:Cali_Condors)
+  '9':
+    attributes:
+      Rome: (date^='December 2014', caption^='Entrance to the Cinecittà studios', Apr low C^='6.8', Aug high C^='31.7')
+      Benedetta_Pilato: (club^='http://dbpedia.org/resource/Circolo_Canottieri_Aniene')
+    relationships:
+      - Adalbert_of_Prague (dor:Adalbert_of_Prague) --doo:canonizedPlace--> Rome (dor:Rome)
+      - Circolo_Canottieri_Aniene (dor:Circolo_Canottieri_Aniene) --doo:city--> Rome (dor:Rome)
+      - Benedetta_Pilato (dor:Benedetta_Pilato) --doo:club--> Circolo_Canottieri_Aniene (dor:Circolo_Canottieri_Aniene)
+  '10':
+    attributes:
+      Rome: (date^='December 2014', caption^='Entrance to the Cinecittà studios', Apr low C^='6.8', Aug high C^='31.7')
+      Benedetta_Pilato: (club^='http://dbpedia.org/resource/Circolo_Canottieri_Aniene')
+    relationships:
+      - Alban_Roe (dor:Alban_Roe) --doo:canonizedPlace--> Rome (dor:Rome)
+      - Circolo_Canottieri_Aniene (dor:Circolo_Canottieri_Aniene) --doo:city--> Rome (dor:Rome)
+      - Benedetta_Pilato (dor:Benedetta_Pilato) --doo:club--> Circolo_Canottieri_Aniene (dor:Circolo_Canottieri_Aniene)
+attributes:
+  city: --Apr high F^ (dop:aprHighF)--> double | --footer^ (dop:footer)--> langString | --date^ (dop:date)--> langString | --caption^ (dop:caption)--> langString | --quote^ (dop:quote)--> langString | --Apr low C^ (dop:aprLowC)--> double | --Aug high C^ (dop:augHighC)--> int
+  athlete: --club^ (dop:club)--> langString | --death place^ (dop:deathPlace)--> langString
+subgraph_id: 78
+relationships:
+  - saint --doo:canonizedPlace--> city
+  - sports team --doo:city--> city
+  - athlete --doo:club--> sports team

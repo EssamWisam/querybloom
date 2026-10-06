@@ -1,0 +1,97 @@
+types:
+  city: doo:City
+  company: doo:Company
+  building: doo:Building
+  historic building: doo:HistoricBuilding
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      London: (align^='right')
+      AF_Holding: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Azerbaijan_topics', industry='http://dbpedia.org/resource/Conglomerate_(company)')
+    relationships:
+      - AF_Holding (dor:AF_Holding) --dop:areaServed--> London (dor:London)
+      - All_Hallows_Lombard_Street (dor:All_Hallows_Lombard_Street) --doo:location--> London (dor:London)
+      - '@sohoplace (<http://dbpedia.org/resource/@sohoplace>) --doo:city--> London (dor:London)'
+  '2':
+    attributes:
+      London: (align^='right')
+      AF_Holding: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Azerbaijan_topics', industry='http://dbpedia.org/resource/Conglomerate_(company)')
+    relationships:
+      - AF_Holding (dor:AF_Holding) --dop:areaServed--> London (dor:London)
+      - All_Hallows-by-the-Tower (dor:All_Hallows-by-the-Tower) --doo:location--> London (dor:London)
+      - '@sohoplace (<http://dbpedia.org/resource/@sohoplace>) --doo:city--> London (dor:London)'
+  '3':
+    attributes:
+      London: (align^='right')
+      AF_Holding: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Azerbaijan_topics', industry='http://dbpedia.org/resource/Conglomerate_(company)')
+    relationships:
+      - AF_Holding (dor:AF_Holding) --dop:areaServed--> London (dor:London)
+      - All_Hallows,_Bow (<http://dbpedia.org/resource/All_Hallows,_Bow>) --doo:location--> London (dor:London)
+      - '@sohoplace (<http://dbpedia.org/resource/@sohoplace>) --doo:city--> London (dor:London)'
+  '4':
+    attributes:
+      Amen_Clinics: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Infobox_company')
+      New_York_City: (align^='left')
+    relationships:
+      - Amen_Clinics (dor:Amen_Clinics) --dop:areaServed--> New_York_City (dor:New_York_City)
+      - Abyssinian_Baptist_Church (dor:Abyssinian_Baptist_Church) --doo:location--> New_York_City (dor:New_York_City)
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> New_York_City (dor:New_York_City)
+  '5':
+    attributes:
+      Amen_Clinics: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Infobox_company')
+      New_York_City: (align^='left')
+    relationships:
+      - Amen_Clinics (dor:Amen_Clinics) --dop:areaServed--> New_York_City (dor:New_York_City)
+      - Blue_Chapel_(Fordham_University) (<http://dbpedia.org/resource/Blue_Chapel_(Fordham_University)>) --doo:location--> New_York_City (dor:New_York_City)
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> New_York_City (dor:New_York_City)
+  '6':
+    attributes:
+      Amen_Clinics: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Infobox_company')
+      New_York_City: (align^='left')
+    relationships:
+      - Amen_Clinics (dor:Amen_Clinics) --dop:areaServed--> New_York_City (dor:New_York_City)
+      - Brick_Presbyterian_Church_(New_York_City) (<http://dbpedia.org/resource/Brick_Presbyterian_Church_(New_York_City)>) --doo:location--> New_York_City (dor:New_York_City)
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> New_York_City (dor:New_York_City)
+  '7':
+    attributes:
+      Nottingham_Express_Transit: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:0')
+    relationships:
+      - Nottingham_Express_Transit (dor:Nottingham_Express_Transit) --dop:areaServed--> Nottingham (dor:Nottingham)
+      - Addison_Street_Congregational_Church (dor:Addison_Street_Congregational_Church) --doo:location--> Nottingham (dor:Nottingham)
+      - 10,_Low_Pavement (<http://dbpedia.org/resource/10,_Low_Pavement>) --doo:city--> Nottingham (dor:Nottingham)
+  '8':
+    attributes:
+      Nottingham_Express_Transit: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:0')
+    relationships:
+      - Nottingham_Express_Transit (dor:Nottingham_Express_Transit) --dop:areaServed--> Nottingham (dor:Nottingham)
+      - Albion_United_Reformed_Church (dor:Albion_United_Reformed_Church) --doo:location--> Nottingham (dor:Nottingham)
+      - 10,_Low_Pavement (<http://dbpedia.org/resource/10,_Low_Pavement>) --doo:city--> Nottingham (dor:Nottingham)
+  '9':
+    attributes:
+      Nottingham_Express_Transit: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:0')
+    relationships:
+      - Nottingham_Express_Transit (dor:Nottingham_Express_Transit) --dop:areaServed--> Nottingham (dor:Nottingham)
+      - Boulevard_United_Reformed_Church,_Nottingham (<http://dbpedia.org/resource/Boulevard_United_Reformed_Church,_Nottingham>) --doo:location--> Nottingham (dor:Nottingham)
+      - 10,_Low_Pavement (<http://dbpedia.org/resource/10,_Low_Pavement>) --doo:city--> Nottingham (dor:Nottingham)
+  '10':
+    attributes:
+      Gristedes: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Citation_needed', industry='http://dbpedia.org/resource/Retail')
+      Manhattan: (align^='right')
+    relationships:
+      - Gristedes (dor:Gristedes) --dop:areaServed--> Manhattan (dor:Manhattan)
+      - Church_of_Our_Lady_of_Guadalupe_(Manhattan) (<http://dbpedia.org/resource/Church_of_Our_Lady_of_Guadalupe_(Manhattan)>) --doo:location--> Manhattan (dor:Manhattan)
+      - 100_Eleventh_Avenue (dor:100_Eleventh_Avenue) --doo:city--> Manhattan (dor:Manhattan)
+attributes:
+  city: --Apr low F^ (dop:aprLowF)--> double | --quote^ (dop:quote)--> langString | --founder^ (dop:founder)--> langString | --align^ (dop:align)--> langString
+  company: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --1a^ (dop:1a)--> langString | --industry (doo:industry)--> Resource | --align^ (dop:align)--> langString
+  building: --id^ (dop:id)--> langString | --current tenants^ (dop:currentTenants)--> langString
+subgraph_id: 499
+relationships:
+  - company --dop:areaServed--> city
+  - historic building --doo:location--> city
+  - building --doo:city--> city

@@ -1,0 +1,45 @@
+types:
+  city: doo:City
+  tenure: doo:Tenure
+  time period: doo:TimePeriod
+  radio station: doo:RadioStation
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Margaret_MacDiarmid: (assembly^='British Columbia Legislative')
+    relationships:
+      - A_Series_of_Unfortunate_Events_(TV_series) (<http://dbpedia.org/resource/A_Series_of_Unfortunate_Events_(TV_series)>) --doo:format--> 4K_resolution (dor:4K_resolution)
+      - A_Series_of_Unfortunate_Events_(TV_series) (<http://dbpedia.org/resource/A_Series_of_Unfortunate_Events_(TV_series)>) --doo:location--> Vancouver (dor:Vancouver)
+      - Margaret_MacDiarmid (dor:Margaret_MacDiarmid) --doo:residence--> Vancouver (dor:Vancouver)
+      - Ben_Stewart__Tenure__6 (dor:Ben_Stewart__Tenure__6) --doo:predecessor--> Margaret_MacDiarmid (dor:Margaret_MacDiarmid)
+  '2':
+    attributes: {}
+    relationships:
+      - A_Series_of_Unfortunate_Events_(TV_series) (<http://dbpedia.org/resource/A_Series_of_Unfortunate_Events_(TV_series)>) --doo:format--> 4K_resolution (dor:4K_resolution)
+      - A_Series_of_Unfortunate_Events_(TV_series) (<http://dbpedia.org/resource/A_Series_of_Unfortunate_Events_(TV_series)>) --doo:location--> Vancouver (dor:Vancouver)
+      - Joyce_Murray (dor:Joyce_Murray) --doo:residence--> Vancouver (dor:Vancouver)
+      - Bill_Barisoff__Tenure__4 (dor:Bill_Barisoff__Tenure__4) --doo:predecessor--> Joyce_Murray (dor:Joyce_Murray)
+  '3':
+    attributes:
+      Joy_MacPhail: (assembly^='British Columbia Legislative')
+    relationships:
+      - A_Series_of_Unfortunate_Events_(TV_series) (<http://dbpedia.org/resource/A_Series_of_Unfortunate_Events_(TV_series)>) --doo:format--> 4K_resolution (dor:4K_resolution)
+      - A_Series_of_Unfortunate_Events_(TV_series) (<http://dbpedia.org/resource/A_Series_of_Unfortunate_Events_(TV_series)>) --doo:location--> Vancouver (dor:Vancouver)
+      - Joy_MacPhail (dor:Joy_MacPhail) --doo:residence--> Vancouver (dor:Vancouver)
+      - Carole_James__Tenure__4 (dor:Carole_James__Tenure__4) --doo:predecessor--> Joy_MacPhail (dor:Joy_MacPhail)
+attributes:
+  city: --area total km^ (dop:areaTotalKm)--> int | --Apr record low C^ (dop:aprRecordLowC)--> langString | --Apr record high C^ (dop:aprRecordHighC)--> int | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --Apr high C^ (dop:aprHighC)--> int | --Aug precipitation days^ (dop:augPrecipitationDays)--> int
+  time period: --assembly^ (dop:assembly)--> langString
+  television show: --artist^ (dop:artist)--> langString | --release date^ (doo:releaseDate)--> date | --followed by^ (dop:followedBy)--> Resource | --narrator^ (doo:narrator)--> Resource | --extra^ (dop:extra)--> langString
+subgraph_id: 883
+relationships:
+  - television show --doo:format--> radio station
+  - television show --doo:location--> city
+  - time period --doo:residence--> city
+  - tenure --doo:predecessor--> time period

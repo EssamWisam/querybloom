@@ -1,0 +1,120 @@
+types:
+  royalty: doo:Royalty
+  office holder: doo:OfficeHolder
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Emperor_Suzong_of_Tang: (spouse^='')
+      Emperor_Daizong_of_Tang: (before^='http://dbpedia.org/resource/Emperor_Suzong_of_Tang')
+    relationships:
+      - Emperor_Daizong_of_Tang (dor:Emperor_Daizong_of_Tang) --dop:father--> Emperor_Suzong_of_Tang (dor:Emperor_Suzong_of_Tang)
+      - An_Lushan_Rebellion (dor:An_Lushan_Rebellion) --dop:commander--> Emperor_Daizong_of_Tang (dor:Emperor_Daizong_of_Tang)
+  '2':
+    attributes:
+      Artavasdes_II_of_Armenia: (last^='Bivar')
+    relationships:
+      - Artavasdes_II_of_Armenia (dor:Artavasdes_II_of_Armenia) --dop:father--> Tigranes_the_Great (dor:Tigranes_the_Great)
+      - Antony's_Atropatene_campaign (<http://dbpedia.org/resource/Antony's_Atropatene_campaign>) --dop:commander--> Artavasdes_II_of_Armenia (dor:Artavasdes_II_of_Armenia)
+  '3':
+    attributes:
+      Basil_II: (last^='Shephard')
+      Romanos_II: (url^='https://archive.org/details/odb_20210521/page/1806/mode/1up%7Cpages=1806-1087', spouse^='Bertha-Eudokia of Arles')
+    relationships:
+      - Basil_II (dor:Basil_II) --dop:father--> Romanos_II (dor:Romanos_II)
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --dop:commander--> Basil_II (dor:Basil_II)
+  '4':
+    attributes:
+      Constans_II: (spouse^='http://dbpedia.org/resource/Fausta_(wife_of_Constans_II)')
+    relationships:
+      - Constantine_IV (dor:Constantine_IV) --dop:father--> Constans_II (dor:Constans_II)
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --dop:commander--> Constantine_IV (dor:Constantine_IV)
+  '5':
+    attributes:
+      Constantine_V: (before^='http://dbpedia.org/resource/Leo_III_the_Isaurian')
+      Leo_III_the_Isaurian: (spouse^='http://dbpedia.org/resource/Maria_(wife_of_Leo_III)')
+    relationships:
+      - Constantine_V (dor:Constantine_V) --dop:father--> Leo_III_the_Isaurian (dor:Leo_III_the_Isaurian)
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --dop:commander--> Constantine_V (dor:Constantine_V)
+  '6':
+    attributes:
+      Ahaz: (spouse^='http://dbpedia.org/resource/Abijah_(queen)')
+    relationships:
+      - Hezekiah (dor:Hezekiah) --dop:father--> Ahaz (dor:Ahaz)
+      - Assyrian_siege_of_Jerusalem (dor:Assyrian_siege_of_Jerusalem) --dop:commander--> Hezekiah (dor:Hezekiah)
+  '7':
+    attributes:
+      Ajatashatru: |-
+        (spouse^='* Vajira
+        * Padmavati
+        * Dharini
+        * Subadhra')
+    relationships:
+      - Udayin (dor:Udayin) --dop:father--> Ajatashatru (dor:Ajatashatru)
+      - Avanti-Magadhan_Wars (dor:Avanti-Magadhan_Wars) --dop:commander--> Udayin (dor:Udayin)
+  '8':
+    attributes:
+      Antigonus_I_Monophthalmus: (url^='https://web.archive.org/web/20180929105550/http:/www.livius.org/cg-cm/chronicles/bchp-diadochi/diadochi_01.html')
+    relationships:
+      - Demetrius_I_of_Macedon (dor:Demetrius_I_of_Macedon) --dop:father--> Antigonus_I_Monophthalmus (dor:Antigonus_I_Monophthalmus)
+      - Babylonian_War (dor:Babylonian_War) --dop:commander--> Demetrius_I_of_Macedon (dor:Demetrius_I_of_Macedon)
+  '9':
+    attributes: {}
+    relationships:
+      - As-Salih_Ayyub (dor:As-Salih_Ayyub) --dop:father--> Al-Kamil (dor:Al-Kamil)
+      - Barons'_Crusade (<http://dbpedia.org/resource/Barons'_Crusade>) --dop:commander--> As-Salih_Ayyub (dor:As-Salih_Ayyub)
+  '10':
+    attributes: {}
+    relationships:
+      - As-Salih_Ayyub (dor:As-Salih_Ayyub) --dop:father--> Al-Kamil (dor:Al-Kamil)
+      - Battle_at_Gaza_(1239) (<http://dbpedia.org/resource/Battle_at_Gaza_(1239)>) --dop:commander--> As-Salih_Ayyub (dor:As-Salih_Ayyub)
+qa_result:
+  status: completed
+  cost_usd: 0.325447
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0491424
+        total_tokens: 4444
+        prompt_tokens: 2204
+        completion_tokens: 2240
+      generate:
+        cost_usd: 0.06299760000000001
+        total_tokens: 6197
+        prompt_tokens: 3583
+        completion_tokens: 2614
+      verify_1:
+        cost_usd: 0.059642
+        total_tokens: 6160
+        prompt_tokens: 4237
+        completion_tokens: 1923
+      verify_2:
+        cost_usd: 0.037207000000000004
+        total_tokens: 4877
+        prompt_tokens: 4022
+        completion_tokens: 855
+      complexity:
+        cost_usd: 0.116458
+        total_tokens: 9759
+        prompt_tokens: 4676
+        completion_tokens: 5083
+    total_tokens: 31437
+    prompt_tokens: 18722
+    total_cost_usd: 0.32544700000000004
+    completion_tokens: 12715
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  royalty: --2p^ (dop:2p)--> int | --before^ (dop:before)--> Resource | --2pp^ (dop:2pp)--> int | --1a^ (dop:1a)--> langString | --last^ (dop:last)--> langString | --birth name^ (dop:birthName)--> langString
+  office holder: --parents^ (dop:parents)--> Resource | --url^ (dop:url)--> Resource | --alma mater^ (dop:almaMater)--> langString | --spouse^ (dop:spouse)--> int
+  military conflict: --c^ (dop:c)--> langString
+subgraph_id: 289
+relationships:
+  - royalty --dop:father--> office holder
+  - military conflict --dop:commander--> royalty

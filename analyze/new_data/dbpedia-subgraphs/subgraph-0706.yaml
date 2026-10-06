@@ -1,0 +1,109 @@
+types:
+  city: doo:City
+  airport: doo:Airport
+  language: doo:Language
+  university: doo:University
+  college coach: doo:CollegeCoach
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Buffalo_Airfield: (owner^='L. J. Pezzanite', city^='http://dbpedia.org/resource/Buffalo,_New_York')
+    relationships:
+      - Albert_Sharpe_(American_football) (<http://dbpedia.org/resource/Albert_Sharpe_(American_football)>) --doo:deathPlace--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+      - Albert_Sharpe_(American_football) (<http://dbpedia.org/resource/Albert_Sharpe_(American_football)>) --dop:coachTeam--> Cornell_Big_Red_men's_basketball (<http://dbpedia.org/resource/Cornell_Big_Red_men's_basketball>)
+      - Buffalo_Airfield (dor:Buffalo_Airfield) --doo:city--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+      - Neutral_Huron_language (dor:Neutral_Huron_language) --doo:spokenIn--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+  '2':
+    attributes:
+      Buffalo_Airfield: (owner^='L. J. Pezzanite', city^='http://dbpedia.org/resource/Buffalo,_New_York')
+    relationships:
+      - Albert_Sharpe_(American_football) (<http://dbpedia.org/resource/Albert_Sharpe_(American_football)>) --doo:deathPlace--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+      - Albert_Sharpe_(American_football) (<http://dbpedia.org/resource/Albert_Sharpe_(American_football)>) --dop:coachTeam--> Yale_Bulldogs_men's_basketball (<http://dbpedia.org/resource/Yale_Bulldogs_men's_basketball>)
+      - Buffalo_Airfield (dor:Buffalo_Airfield) --doo:city--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+      - Neutral_Huron_language (dor:Neutral_Huron_language) --doo:spokenIn--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+  '3':
+    attributes:
+      Huichol_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+      Conroe-North_Houston_Regional_Airport: (owner^='Montgomery County', city^='http://dbpedia.org/resource/Houston,_Texas')
+    relationships:
+      - Don_Suman (dor:Don_Suman) --doo:deathPlace--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+      - Don_Suman (dor:Don_Suman) --dop:coachTeam--> Rice_Owls_men's_basketball (<http://dbpedia.org/resource/Rice_Owls_men's_basketball>)
+      - Conroe-North_Houston_Regional_Airport (dor:Conroe-North_Houston_Regional_Airport) --doo:city--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+      - Huichol_language (dor:Huichol_language) --doo:spokenIn--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+  '4':
+    attributes:
+      Huichol_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+      Conroe-North_Houston_Regional_Airport: (owner^='Montgomery County', city^='http://dbpedia.org/resource/Houston,_Texas')
+    relationships:
+      - Edward_H._Adams (dor:Edward_H._Adams) --doo:deathPlace--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+      - Edward_H._Adams (dor:Edward_H._Adams) --dop:coachTeam--> North_Carolina_Central_Eagles_men's_basketball (<http://dbpedia.org/resource/North_Carolina_Central_Eagles_men's_basketball>)
+      - Conroe-North_Houston_Regional_Airport (dor:Conroe-North_Houston_Regional_Airport) --doo:city--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+      - Huichol_language (dor:Huichol_language) --doo:spokenIn--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+  '5':
+    attributes:
+      Huichol_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+      Conroe-North_Houston_Regional_Airport: (owner^='Montgomery County', city^='http://dbpedia.org/resource/Houston,_Texas')
+    relationships:
+      - Edward_H._Adams (dor:Edward_H._Adams) --doo:deathPlace--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+      - Edward_H._Adams (dor:Edward_H._Adams) --dop:coachTeam--> Texas_Southern_Tigers_men's_basketball (<http://dbpedia.org/resource/Texas_Southern_Tigers_men's_basketball>)
+      - Conroe-North_Houston_Regional_Airport (dor:Conroe-North_Houston_Regional_Airport) --doo:city--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+      - Huichol_language (dor:Huichol_language) --doo:spokenIn--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+  '6':
+    attributes:
+      Downtown_Manhattan_Heliport: (owner^='http://dbpedia.org/resource/New_York_City_Economic_Development_Corporation', city^='http://dbpedia.org/resource/New_York_City', image width^='300')
+    relationships:
+      - Elmer_Ripley (dor:Elmer_Ripley) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Elmer_Ripley (dor:Elmer_Ripley) --dop:coachTeam--> Army_Black_Knights_men's_basketball (<http://dbpedia.org/resource/Army_Black_Knights_men's_basketball>)
+      - Downtown_Manhattan_Heliport (dor:Downtown_Manhattan_Heliport) --doo:city--> New_York_City (dor:New_York_City)
+      - Changzhou_dialect (dor:Changzhou_dialect) --doo:spokenIn--> New_York_City (dor:New_York_City)
+  '7':
+    attributes:
+      Downtown_Manhattan_Heliport: (owner^='http://dbpedia.org/resource/New_York_City_Economic_Development_Corporation', city^='http://dbpedia.org/resource/New_York_City', image width^='300')
+    relationships:
+      - Elmer_Ripley (dor:Elmer_Ripley) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Elmer_Ripley (dor:Elmer_Ripley) --dop:coachTeam--> Columbia_Lions_men's_basketball (<http://dbpedia.org/resource/Columbia_Lions_men's_basketball>)
+      - Downtown_Manhattan_Heliport (dor:Downtown_Manhattan_Heliport) --doo:city--> New_York_City (dor:New_York_City)
+      - Changzhou_dialect (dor:Changzhou_dialect) --doo:spokenIn--> New_York_City (dor:New_York_City)
+  '8':
+    attributes:
+      Downtown_Manhattan_Heliport: (owner^='http://dbpedia.org/resource/New_York_City_Economic_Development_Corporation', city^='http://dbpedia.org/resource/New_York_City', image width^='300')
+    relationships:
+      - Elmer_Ripley (dor:Elmer_Ripley) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Elmer_Ripley (dor:Elmer_Ripley) --dop:coachTeam--> Georgetown_Hoyas_men's_basketball (<http://dbpedia.org/resource/Georgetown_Hoyas_men's_basketball>)
+      - Downtown_Manhattan_Heliport (dor:Downtown_Manhattan_Heliport) --doo:city--> New_York_City (dor:New_York_City)
+      - Changzhou_dialect (dor:Changzhou_dialect) --doo:spokenIn--> New_York_City (dor:New_York_City)
+  '9':
+    attributes:
+      Oneida_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+      Green_Bay–Austin_Straubel_International_Airport: (owner^='http://dbpedia.org/resource/Brown_County,_Wisconsin', city^='http://dbpedia.org/resource/Green_Bay,_Wisconsin')
+    relationships:
+      - Al_Negratti (dor:Al_Negratti) --doo:deathPlace--> Green_Bay,_Wisconsin (<http://dbpedia.org/resource/Green_Bay,_Wisconsin>)
+      - Al_Negratti (dor:Al_Negratti) --dop:coachTeam--> Portland_Pilots_men's_basketball (<http://dbpedia.org/resource/Portland_Pilots_men's_basketball>)
+      - Green_Bay–Austin_Straubel_International_Airport (<http://dbpedia.org/resource/Green_Bay–Austin_Straubel_International_Airport>) --doo:city--> Green_Bay,_Wisconsin (<http://dbpedia.org/resource/Green_Bay,_Wisconsin>)
+      - Oneida_language (dor:Oneida_language) --doo:spokenIn--> Green_Bay,_Wisconsin (<http://dbpedia.org/resource/Green_Bay,_Wisconsin>)
+  '10':
+    attributes:
+      Oneida_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+      Green_Bay–Austin_Straubel_International_Airport: (owner^='http://dbpedia.org/resource/Brown_County,_Wisconsin', city^='http://dbpedia.org/resource/Green_Bay,_Wisconsin')
+    relationships:
+      - Mike_Heideman (dor:Mike_Heideman) --doo:deathPlace--> Green_Bay,_Wisconsin (<http://dbpedia.org/resource/Green_Bay,_Wisconsin>)
+      - Mike_Heideman (dor:Mike_Heideman) --dop:coachTeam--> Green_Bay_Phoenix_men's_basketball (<http://dbpedia.org/resource/Green_Bay_Phoenix_men's_basketball>)
+      - Green_Bay–Austin_Straubel_International_Airport (<http://dbpedia.org/resource/Green_Bay–Austin_Straubel_International_Airport>) --doo:city--> Green_Bay,_Wisconsin (<http://dbpedia.org/resource/Green_Bay,_Wisconsin>)
+      - Oneida_language (dor:Oneida_language) --doo:spokenIn--> Green_Bay,_Wisconsin (<http://dbpedia.org/resource/Green_Bay,_Wisconsin>)
+attributes:
+  city: --differentFrom (wwoo:differentFrom)--> Resource
+  airport: --owner^ (dop:owner)--> langString | --data^ (dop:data)--> int | --city^ (doo:city)--> Resource | --image width^ (dop:imageWidth)--> int
+  language: --wordnet_type (dop:wordnet_type)--> Resource
+  university: --float^ (dop:float)--> langString | --image size^ (dop:imageSize)--> int | --country^ (dop:country)--> langString
+subgraph_id: 706
+relationships:
+  - college coach --doo:deathPlace--> city
+  - college coach --dop:coachTeam--> university
+  - airport --doo:city--> city
+  - language --doo:spokenIn--> city

@@ -1,0 +1,81 @@
+types:
+  country: doo:Country
+  cyclist: doo:Cyclist
+  Location: doo:Location
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Aad_van_den_Hoek (dor:Aad_van_den_Hoek) --dop:birthPlace--> Dirksland (dor:Dirksland)
+      - Aad_van_den_Hoek (dor:Aad_van_den_Hoek) --doo:birthPlace--> Netherlands (dor:Netherlands)
+      - Adriaan_Koonings (dor:Adriaan_Koonings) --doo:deathPlace--> Netherlands (dor:Netherlands)
+  '2':
+    attributes: {}
+    relationships:
+      - Aad_van_den_Hoek (dor:Aad_van_den_Hoek) --dop:birthPlace--> Dirksland (dor:Dirksland)
+      - Aad_van_den_Hoek (dor:Aad_van_den_Hoek) --doo:birthPlace--> Netherlands (dor:Netherlands)
+      - Arie_de_Vroet (dor:Arie_de_Vroet) --doo:deathPlace--> Netherlands (dor:Netherlands)
+  '3':
+    attributes: {}
+    relationships:
+      - Aad_van_den_Hoek (dor:Aad_van_den_Hoek) --dop:birthPlace--> Dirksland (dor:Dirksland)
+      - Aad_van_den_Hoek (dor:Aad_van_den_Hoek) --doo:birthPlace--> Netherlands (dor:Netherlands)
+      - Cor_Kools (dor:Cor_Kools) --doo:deathPlace--> Netherlands (dor:Netherlands)
+  '4':
+    attributes: {}
+    relationships:
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --dop:birthPlace--> Norway (dor:Norway)
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --doo:birthPlace--> Norway (dor:Norway)
+      - Alf_Martinsen (dor:Alf_Martinsen) --doo:deathPlace--> Norway (dor:Norway)
+  '5':
+    attributes: {}
+    relationships:
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --dop:birthPlace--> Oslo (dor:Oslo)
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --doo:birthPlace--> Norway (dor:Norway)
+      - Alf_Martinsen (dor:Alf_Martinsen) --doo:deathPlace--> Norway (dor:Norway)
+  '6':
+    attributes: {}
+    relationships:
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --dop:birthPlace--> Norway (dor:Norway)
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --doo:birthPlace--> Norway (dor:Norway)
+      - Erik_Holmberg_(footballer) (<http://dbpedia.org/resource/Erik_Holmberg_(footballer)>) --doo:deathPlace--> Norway (dor:Norway)
+  '7':
+    attributes:
+      Auckland: (Aug rain days^='14.9')
+    relationships:
+      - Aaron_Gate (dor:Aaron_Gate) --dop:birthPlace--> Auckland (dor:Auckland)
+      - Aaron_Gate (dor:Aaron_Gate) --doo:birthPlace--> New_Zealand (dor:New_Zealand)
+      - George_Paterson_(footballer,_born_1914) (<http://dbpedia.org/resource/George_Paterson_(footballer,_born_1914)>) --doo:deathPlace--> New_Zealand (dor:New_Zealand)
+  '8':
+    attributes: {}
+    relationships:
+      - Aaron_Gate (dor:Aaron_Gate) --dop:birthPlace--> New_Zealand (dor:New_Zealand)
+      - Aaron_Gate (dor:Aaron_Gate) --doo:birthPlace--> New_Zealand (dor:New_Zealand)
+      - George_Paterson_(footballer,_born_1914) (<http://dbpedia.org/resource/George_Paterson_(footballer,_born_1914)>) --doo:deathPlace--> New_Zealand (dor:New_Zealand)
+  '9':
+    attributes:
+      Auckland: (Aug rain days^='14.9')
+    relationships:
+      - Aaron_Gate (dor:Aaron_Gate) --dop:birthPlace--> Auckland (dor:Auckland)
+      - Aaron_Gate (dor:Aaron_Gate) --doo:birthPlace--> New_Zealand (dor:New_Zealand)
+      - Juan_Schwanner (dor:Juan_Schwanner) --doo:deathPlace--> New_Zealand (dor:New_Zealand)
+  '10':
+    attributes: {}
+    relationships:
+      - Aaron_Kemps (dor:Aaron_Kemps) --dop:birthPlace--> Australia (dor:Australia)
+      - Aaron_Kemps (dor:Aaron_Kemps) --doo:birthPlace--> Australia (dor:Australia)
+      - Jerzy_Czubała (<http://dbpedia.org/resource/Jerzy_Czubała>) --doo:deathPlace--> Australia (dor:Australia)
+attributes:
+  country: --original name^ (doo:originalName)--> langString | --motto^ (doo:motto)--> string
+  Location: --c^ (dop:c)--> langString | --arc-angleB^ (dop:arcAngleb)--> int | --age^ (dop:age)--> second | --number of wineries^ (doo:numberOfWineries)--> int | --data^ (dop:data)--> double | --building end date^ (doo:buildingEndDate)--> string | --Aug rain days^ (dop:augRainDays)--> int | --partof^ (dop:partof)--> Resource | --age^ (dop:age)--> Resource | --mouth place^ (doo:mouthPlace)--> Resource
+subgraph_id: 379
+relationships:
+  - cyclist --dop:birthPlace--> Location
+  - cyclist --doo:birthPlace--> country
+  - soccer manager --doo:deathPlace--> country

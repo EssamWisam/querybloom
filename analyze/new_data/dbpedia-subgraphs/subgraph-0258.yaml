@@ -1,0 +1,121 @@
+types:
+  company: doo:Company
+  station: doo:Station
+  railway line: doo:RailwayLine
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Alstom: (industry^='Rail transport', product^='http://dbpedia.org/resource/Railway_signal', Wikipage page ID^='141976')
+      Al_Boraq: (box width^='300')
+      Tanger-Ville_Railway_Terminal: (address^='Tangier')
+    relationships:
+      - Al_Boraq (dor:Al_Boraq) --doo:railwayRollingStock--> Alstom (dor:Alstom)
+      - Al_Boraq (dor:Al_Boraq) --doo:routeStart--> Tanger-Ville_Railway_Terminal (dor:Tanger-Ville_Railway_Terminal)
+  '2':
+    attributes:
+      Amsteltram: (box width^='auto')
+      Construcciones_y_Auxiliar_de_Ferrocarriles: (industry^='http://dbpedia.org/resource/Manufacturing', Wikipage page ID^='3601532')
+    relationships:
+      - Amsteltram (dor:Amsteltram) --doo:railwayRollingStock--> Construcciones_y_Auxiliar_de_Ferrocarriles (dor:Construcciones_y_Auxiliar_de_Ferrocarriles)
+      - Amsteltram (dor:Amsteltram) --doo:routeStart--> Amsterdam_Zuid_station (dor:Amsterdam_Zuid_station)
+  '3':
+    attributes:
+      CRRC_Corporation: (Wikipage page ID^='54146422')
+      Noida_Sector_51_metro_station: (address^='Noida, Uttar Pradesh')
+    relationships:
+      - Aqua_Line_(Noida_Metro) (<http://dbpedia.org/resource/Aqua_Line_(Noida_Metro)>) --doo:railwayRollingStock--> CRRC_Corporation (dor:CRRC_Corporation)
+      - Aqua_Line_(Noida_Metro) (<http://dbpedia.org/resource/Aqua_Line_(Noida_Metro)>) --doo:routeStart--> Noida_Sector_51_metro_station (dor:Noida_Sector_51_metro_station)
+  '4':
+    attributes:
+      Alstom: (industry^='Rail transport', product^='http://dbpedia.org/resource/Railway_signal', Wikipage page ID^='141976')
+      Bari_Centrale_railway_station: (address^='70122Bari')
+    relationships:
+      - Bari–Barletta_railway (<http://dbpedia.org/resource/Bari–Barletta_railway>) --doo:railwayRollingStock--> Alstom (dor:Alstom)
+      - Bari–Barletta_railway (<http://dbpedia.org/resource/Bari–Barletta_railway>) --doo:routeStart--> Bari_Centrale_railway_station (dor:Bari_Centrale_railway_station)
+  '5':
+    attributes:
+      Hyundai_Rotem: (industry^='Defense', product^='http://dbpedia.org/resource/Defense_industry', Wikipage page ID^='1148492')
+      Raidurg_metro_station: (address^='Raheja MindspaceJunction, opposite Lemon Tree Hotel,Raidurg')
+    relationships:
+      - Blue_Line_(Hyderabad_Metro) (<http://dbpedia.org/resource/Blue_Line_(Hyderabad_Metro)>) --doo:railwayRollingStock--> Hyundai_Rotem (dor:Hyundai_Rotem)
+      - Blue_Line_(Hyderabad_Metro) (<http://dbpedia.org/resource/Blue_Line_(Hyderabad_Metro)>) --doo:routeStart--> Raidurg_metro_station (dor:Raidurg_metro_station)
+  '6':
+    attributes:
+      Bombardier_Transportation: (founder^='Bombardier Inc.', industry^='Rail transportation', product^='http://dbpedia.org/resource/High-speed_rail', Wikipage page ID^='1961816')
+    relationships:
+      - Blue_Line_(Montreal_Metro) (<http://dbpedia.org/resource/Blue_Line_(Montreal_Metro)>) --doo:railwayRollingStock--> Bombardier_Transportation (dor:Bombardier_Transportation)
+      - Blue_Line_(Montreal_Metro) (<http://dbpedia.org/resource/Blue_Line_(Montreal_Metro)>) --doo:routeStart--> Snowdon_(Montreal_Metro) (<http://dbpedia.org/resource/Snowdon_(Montreal_Metro)>)
+  '7':
+    attributes:
+      Kinki_Sharyo: (industry^='Rolling stock manufacturing', product^='http://dbpedia.org/resource/Light_rail', Wikipage page ID^='3785460')
+      Blue_Line_(VTA): (box width^='290')
+      Baypointe_station: (borough^='http://dbpedia.org/resource/San_Jose,_California', address^='Tasman Drive and Baypointe Parkway')
+    relationships:
+      - Blue_Line_(VTA) (<http://dbpedia.org/resource/Blue_Line_(VTA)>) --doo:railwayRollingStock--> Kinki_Sharyo (dor:Kinki_Sharyo)
+      - Blue_Line_(VTA) (<http://dbpedia.org/resource/Blue_Line_(VTA)>) --doo:routeStart--> Baypointe_station (dor:Baypointe_station)
+  '8':
+    attributes:
+      Hyundai_Rotem: (industry^='Defense', product^='http://dbpedia.org/resource/Defense_industry', Wikipage page ID^='1148492')
+      Busan_Metro_Line_2: (box width^='22')
+    relationships:
+      - Busan_Metro_Line_2 (dor:Busan_Metro_Line_2) --doo:railwayRollingStock--> Hyundai_Rotem (dor:Hyundai_Rotem)
+      - Busan_Metro_Line_2 (dor:Busan_Metro_Line_2) --doo:routeStart--> Jangsan_Station (dor:Jangsan_Station)
+  '9':
+    attributes:
+      Hyundai_Rotem: (industry^='Defense', product^='http://dbpedia.org/resource/Defense_industry', Wikipage page ID^='1148492')
+      Daegu_Metro_Line_2: (box width^='22')
+    relationships:
+      - Daegu_Metro_Line_2 (dor:Daegu_Metro_Line_2) --doo:railwayRollingStock--> Hyundai_Rotem (dor:Hyundai_Rotem)
+      - Daegu_Metro_Line_2 (dor:Daegu_Metro_Line_2) --doo:routeStart--> Munyang_Station (dor:Munyang_Station)
+  '10':
+    attributes:
+      Dammam_railway_station: (borough^='http://dbpedia.org/resource/Eastern_Province,_Saudi_Arabia', address^='Abdullah Fouad Dist.')
+      Construcciones_y_Auxiliar_de_Ferrocarriles: (industry^='http://dbpedia.org/resource/Manufacturing', Wikipage page ID^='3601532')
+    relationships:
+      - Dammam–Riyadh_line (<http://dbpedia.org/resource/Dammam–Riyadh_line>) --doo:railwayRollingStock--> Construcciones_y_Auxiliar_de_Ferrocarriles (dor:Construcciones_y_Auxiliar_de_Ferrocarriles)
+      - Dammam–Riyadh_line (<http://dbpedia.org/resource/Dammam–Riyadh_line>) --doo:routeStart--> Dammam_railway_station (dor:Dammam_railway_station)
+qa_result:
+  status: completed
+  cost_usd: 0.20011
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0168824
+        total_tokens: 2747
+        prompt_tokens: 2092
+        completion_tokens: 655
+      generate:
+        cost_usd: 0.06339260000000001
+        total_tokens: 6459
+        prompt_tokens: 3906
+        completion_tokens: 2553
+      verify_1:
+        cost_usd: 0.028937000000000004
+        total_tokens: 4666
+        prompt_tokens: 4292
+        completion_tokens: 374
+      complexity:
+        cost_usd: 0.090898
+        total_tokens: 8958
+        prompt_tokens: 5312
+        completion_tokens: 3646
+    total_tokens: 22830
+    prompt_tokens: 15602
+    total_cost_usd: 0.20010999999999998
+    completion_tokens: 7228
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  company: --founder^ (dop:founder)--> langString | --industry^ (dop:industry)--> Resource | --product^ (doo:product)--> Resource | --Wikipage page ID^ (doo:wikiPageID)--> int
+  station: --borough^ (dop:borough)--> langString | --distance^ (dop:distance)--> langString | --address^ (doo:address)--> langString | --operator^ (doo:operator)--> Resource
+  railway line: --box width^ (dop:boxWidth)--> langString
+subgraph_id: 258
+relationships:
+  - railway line --doo:railwayRollingStock--> company
+  - railway line --doo:routeStart--> station

@@ -1,0 +1,118 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  settlement: doo:Settlement
+  radio station: doo:RadioStation
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      WKZL: (owner^='Dick Broadcasting')
+      High_Point,_North_Carolina: (page length (characters) of wiki page^='63550')
+      Winston-Salem,_North_Carolina: (Apr high F^='70.6')
+    relationships:
+      - WKZL (dor:WKZL) --dop:area--> High_Point,_North_Carolina (<http://dbpedia.org/resource/High_Point,_North_Carolina>)
+      - WKZL (dor:WKZL) --dop:area--> Greensboro,_North_Carolina (<http://dbpedia.org/resource/Greensboro,_North_Carolina>)
+      - 21_Air (dor:21_Air) --doo:headquarter--> Greensboro,_North_Carolina (<http://dbpedia.org/resource/Greensboro,_North_Carolina>)
+      - WKZL (dor:WKZL) --dop:city--> Winston-Salem,_North_Carolina (<http://dbpedia.org/resource/Winston-Salem,_North_Carolina>)
+  '2':
+    attributes:
+      WKZL: (owner^='Dick Broadcasting')
+      Winston-Salem,_North_Carolina: (page length (characters) of wiki page^='91423', Apr high F^='70.6')
+    relationships:
+      - WKZL (dor:WKZL) --dop:area--> Winston-Salem,_North_Carolina (<http://dbpedia.org/resource/Winston-Salem,_North_Carolina>)
+      - WKZL (dor:WKZL) --dop:area--> Greensboro,_North_Carolina (<http://dbpedia.org/resource/Greensboro,_North_Carolina>)
+      - 21_Air (dor:21_Air) --doo:headquarter--> Greensboro,_North_Carolina (<http://dbpedia.org/resource/Greensboro,_North_Carolina>)
+      - WKZL (dor:WKZL) --dop:city--> Winston-Salem,_North_Carolina (<http://dbpedia.org/resource/Winston-Salem,_North_Carolina>)
+  '3':
+    attributes:
+      WMAG: (owner^='http://dbpedia.org/resource/IHeartMedia,_Inc.')
+      High_Point,_North_Carolina: (page length (characters) of wiki page^='63550', Apr high F^='73.7')
+    relationships:
+      - WMAG (dor:WMAG) --dop:area--> High_Point,_North_Carolina (<http://dbpedia.org/resource/High_Point,_North_Carolina>)
+      - WMAG (dor:WMAG) --dop:area--> Greensboro,_North_Carolina (<http://dbpedia.org/resource/Greensboro,_North_Carolina>)
+      - 21_Air (dor:21_Air) --doo:headquarter--> Greensboro,_North_Carolina (<http://dbpedia.org/resource/Greensboro,_North_Carolina>)
+      - WMAG (dor:WMAG) --dop:city--> High_Point,_North_Carolina (<http://dbpedia.org/resource/High_Point,_North_Carolina>)
+  '4':
+    attributes:
+      WTID_(FM): (owner^='GFR, Inc.')
+      Dothan,_Alabama: (page length (characters) of wiki page^='46878')
+    relationships:
+      - WTID_(FM) (<http://dbpedia.org/resource/WTID_(FM)>) --dop:area--> Dothan,_Alabama (<http://dbpedia.org/resource/Dothan,_Alabama>)
+      - WTID_(FM) (<http://dbpedia.org/resource/WTID_(FM)>) --dop:area--> Panama_City,_Florida (<http://dbpedia.org/resource/Panama_City,_Florida>)
+      - Abbeville–Grimes_Railway_Company (<http://dbpedia.org/resource/Abbeville–Grimes_Railway_Company>) --doo:headquarter--> Panama_City,_Florida (<http://dbpedia.org/resource/Panama_City,_Florida>)
+      - WTID_(FM) (<http://dbpedia.org/resource/WTID_(FM)>) --dop:city--> Graceville,_Florida (<http://dbpedia.org/resource/Graceville,_Florida>)
+  '5':
+    attributes:
+      WCCX: (owner^='http://dbpedia.org/resource/Carroll_University')
+      Milwaukee: (named after^='http://dbpedia.org/resource/Potawatomi_language')
+      Waukesha,_Wisconsin: (page length (characters) of wiki page^='41581', Apr high F^='55.3')
+    relationships:
+      - WCCX (dor:WCCX) --dop:area--> Waukesha,_Wisconsin (<http://dbpedia.org/resource/Waukesha,_Wisconsin>)
+      - WCCX (dor:WCCX) --dop:area--> Milwaukee (dor:Milwaukee)
+      - Abbotsford_and_Northeastern_Railroad (dor:Abbotsford_and_Northeastern_Railroad) --doo:headquarter--> Milwaukee (dor:Milwaukee)
+      - WCCX (dor:WCCX) --dop:city--> Waukesha,_Wisconsin (<http://dbpedia.org/resource/Waukesha,_Wisconsin>)
+  '6':
+    attributes:
+      WKKV-FM: (owner^='http://dbpedia.org/resource/IHeartMedia,_Inc.')
+      Milwaukee: (named after^='http://dbpedia.org/resource/Potawatomi_language')
+      Racine,_Wisconsin: (page length (characters) of wiki page^='67021', width^='auto', Apr high F^='50.7')
+    relationships:
+      - WKKV-FM (dor:WKKV-FM) --dop:area--> Racine,_Wisconsin (<http://dbpedia.org/resource/Racine,_Wisconsin>)
+      - WKKV-FM (dor:WKKV-FM) --dop:area--> Milwaukee (dor:Milwaukee)
+      - Abbotsford_and_Northeastern_Railroad (dor:Abbotsford_and_Northeastern_Railroad) --doo:headquarter--> Milwaukee (dor:Milwaukee)
+      - WKKV-FM (dor:WKKV-FM) --dop:city--> Racine,_Wisconsin (<http://dbpedia.org/resource/Racine,_Wisconsin>)
+  '7':
+    attributes:
+      WSJP-FM: (owner^='http://dbpedia.org/resource/Relevant_Radio')
+      Milwaukee: (named after^='http://dbpedia.org/resource/Potawatomi_language')
+      Port_Washington,_Wisconsin: (page length (characters) of wiki page^='68441', Apr high F^='51')
+    relationships:
+      - WSJP-FM (dor:WSJP-FM) --dop:area--> Port_Washington,_Wisconsin (<http://dbpedia.org/resource/Port_Washington,_Wisconsin>)
+      - WSJP-FM (dor:WSJP-FM) --dop:area--> Milwaukee (dor:Milwaukee)
+      - Abbotsford_and_Northeastern_Railroad (dor:Abbotsford_and_Northeastern_Railroad) --doo:headquarter--> Milwaukee (dor:Milwaukee)
+      - WSJP-FM (dor:WSJP-FM) --dop:city--> Port_Washington,_Wisconsin (<http://dbpedia.org/resource/Port_Washington,_Wisconsin>)
+  '8':
+    attributes:
+      KABG: (owner^='http://dbpedia.org/resource/American_General_Media')
+      Santa_Fe,_New_Mexico: (page length (characters) of wiki page^='92561', quote^='1610', width^='22')
+    relationships:
+      - KABG (dor:KABG) --dop:area--> Santa_Fe,_New_Mexico (<http://dbpedia.org/resource/Santa_Fe,_New_Mexico>)
+      - KABG (dor:KABG) --dop:area--> Albuquerque (dor:Albuquerque)
+      - ABQ_RIDE__ABQ_RIDE__1 (dor:ABQ_RIDE__ABQ_RIDE__1) --doo:headquarter--> Albuquerque (dor:Albuquerque)
+      - KABG (dor:KABG) --dop:city--> Los_Alamos,_New_Mexico (<http://dbpedia.org/resource/Los_Alamos,_New_Mexico>)
+  '9':
+    attributes:
+      KEZR: (owner^='http://dbpedia.org/resource/Alpha_Media')
+      California: (page length (characters) of wiki page^='254689', width^='150')
+    relationships:
+      - KEZR (dor:KEZR) --dop:area--> California (dor:California)
+      - KEZR (dor:KEZR) --dop:area--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - AC_Transit (dor:AC_Transit) --doo:headquarter--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - KEZR (dor:KEZR) --dop:city--> California (dor:California)
+  '10':
+    attributes:
+      KEZR: (owner^='http://dbpedia.org/resource/Alpha_Media')
+      California: (page length (characters) of wiki page^='254689', width^='150')
+      San_Jose,_California: (Apr high F^='70')
+    relationships:
+      - KEZR (dor:KEZR) --dop:area--> California (dor:California)
+      - KEZR (dor:KEZR) --dop:area--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - AC_Transit (dor:AC_Transit) --doo:headquarter--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - KEZR (dor:KEZR) --dop:city--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+attributes:
+  city: --named after^ (doo:namedAfter)--> Resource
+  Location: --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --religion^ (doo:religion)--> Resource | --certain^ (dop:certain)--> langString | --quote^ (dop:quote)--> int | --width^ (dop:width)--> perCent | --designated nrhp type^ (dop:designatedNrhpType)--> date | --jurisdiction^ (doo:jurisdiction)--> Resource
+  settlement: --Apr high F^ (dop:aprHighF)--> int
+  radio station: --owner^ (dop:owner)--> Resource
+subgraph_id: 669
+relationships:
+  - radio station --dop:area--> Location
+  - radio station --dop:area--> city
+  - public transit system --doo:headquarter--> city
+  - radio station --dop:city--> settlement

@@ -1,0 +1,82 @@
+types:
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  office holder: doo:OfficeHolder
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - A._F._Maciejewski (dor:A._F._Maciejewski) --dop:deathPlace--> Chicago (dor:Chicago)
+      - Jim_Crawford_(footballer) (<http://dbpedia.org/resource/Jim_Crawford_(footballer)>) --doo:birthPlace--> Chicago (dor:Chicago)
+      - Republic_of_Ireland_national_under-21_football_team (dor:Republic_of_Ireland_national_under-21_football_team) --doo:coach--> Jim_Crawford_(footballer) (<http://dbpedia.org/resource/Jim_Crawford_(footballer)>)
+  '2':
+    attributes: {}
+    relationships:
+      - A._F._Maciejewski (dor:A._F._Maciejewski) --dop:deathPlace--> Chicago (dor:Chicago)
+      - Jim_Crawford_(footballer) (<http://dbpedia.org/resource/Jim_Crawford_(footballer)>) --doo:birthPlace--> Chicago (dor:Chicago)
+      - Republic_of_Ireland_national_under-23_football_team (dor:Republic_of_Ireland_national_under-23_football_team) --doo:coach--> Jim_Crawford_(footballer) (<http://dbpedia.org/resource/Jim_Crawford_(footballer)>)
+  '3':
+    attributes: {}
+    relationships:
+      - Abaza_Siyavuş_Pasha_I (<http://dbpedia.org/resource/Abaza_Siyavuş_Pasha_I>) --dop:deathPlace--> Istanbul (dor:Istanbul)
+      - Feyyaz_Uçar (<http://dbpedia.org/resource/Feyyaz_Uçar>) --doo:birthPlace--> Istanbul (dor:Istanbul)
+      - Turkey_national_under-20_football_team (dor:Turkey_national_under-20_football_team) --doo:coach--> Feyyaz_Uçar (<http://dbpedia.org/resource/Feyyaz_Uçar>)
+  '4':
+    attributes: {}
+    relationships:
+      - Abaza_Siyavuş_Pasha (<http://dbpedia.org/resource/Abaza_Siyavuş_Pasha>) --dop:deathPlace--> Istanbul (dor:Istanbul)
+      - Feyyaz_Uçar (<http://dbpedia.org/resource/Feyyaz_Uçar>) --doo:birthPlace--> Istanbul (dor:Istanbul)
+      - Turkey_national_under-20_football_team (dor:Turkey_national_under-20_football_team) --doo:coach--> Feyyaz_Uçar (<http://dbpedia.org/resource/Feyyaz_Uçar>)
+  '5':
+    attributes:
+      Abbas_Duzduzani: (birth name^='Abbas Douzdouzani')
+    relationships:
+      - Abbas_Duzduzani (dor:Abbas_Duzduzani) --dop:deathPlace--> Tehran (dor:Tehran)
+      - Hossein_Abdi (dor:Hossein_Abdi) --doo:birthPlace--> Tehran (dor:Tehran)
+      - Iran_national_under-17_football_team (dor:Iran_national_under-17_football_team) --doo:coach--> Hossein_Abdi (dor:Hossein_Abdi)
+  '6':
+    attributes: {}
+    relationships:
+      - Abdelkader_Hachani (dor:Abdelkader_Hachani) --dop:deathPlace--> Algiers (dor:Algiers)
+      - Adel_Amrouche (dor:Adel_Amrouche) --doo:birthPlace--> Algiers (dor:Algiers)
+      - Yemen_national_football_team (dor:Yemen_national_football_team) --doo:coach--> Adel_Amrouche (dor:Adel_Amrouche)
+  '7':
+    attributes: {}
+    relationships:
+      - Abdelouahed_Belkeziz (dor:Abdelouahed_Belkeziz) --dop:deathPlace--> Rabat (dor:Rabat)
+      - Saïd_Chiba (<http://dbpedia.org/resource/Saïd_Chiba>) --doo:birthPlace--> Rabat (dor:Rabat)
+      - Morocco_national_under-17_football_team (dor:Morocco_national_under-17_football_team) --doo:coach--> Saïd_Chiba (<http://dbpedia.org/resource/Saïd_Chiba>)
+  '8':
+    attributes: {}
+    relationships:
+      - Abderrahmane_Sbai (dor:Abderrahmane_Sbai) --dop:deathPlace--> Rabat (dor:Rabat)
+      - Saïd_Chiba (<http://dbpedia.org/resource/Saïd_Chiba>) --doo:birthPlace--> Rabat (dor:Rabat)
+      - Morocco_national_under-17_football_team (dor:Morocco_national_under-17_football_team) --doo:coach--> Saïd_Chiba (<http://dbpedia.org/resource/Saïd_Chiba>)
+  '9':
+    attributes: {}
+    relationships:
+      - Abdessadek_Rabiaa (dor:Abdessadek_Rabiaa) --dop:deathPlace--> Rabat (dor:Rabat)
+      - Saïd_Chiba (<http://dbpedia.org/resource/Saïd_Chiba>) --doo:birthPlace--> Rabat (dor:Rabat)
+      - Morocco_national_under-17_football_team (dor:Morocco_national_under-17_football_team) --doo:coach--> Saïd_Chiba (<http://dbpedia.org/resource/Saïd_Chiba>)
+  '10':
+    attributes: {}
+    relationships:
+      - Abdolhossein_Hazhir (dor:Abdolhossein_Hazhir) --dop:deathPlace--> Tehran (dor:Tehran)
+      - Hossein_Abdi (dor:Hossein_Abdi) --doo:birthPlace--> Tehran (dor:Tehran)
+      - Iran_national_under-17_football_team (dor:Iran_national_under-17_football_team) --doo:coach--> Hossein_Abdi (dor:Hossein_Abdi)
+attributes:
+  settlement: --named for^ (dop:namedFor)--> Resource | --line^ (dop:line)--> int
+  soccer club: --league^ (doo:league)--> Resource | --accessdate^ (dop:accessdate)--> date
+  office holder: --relation^ (doo:relation)--> Resource | --winner^ (dop:winner)--> langString | --relatives^ (dop:relatives)--> langString | --birth name^ (doo:birthName)--> langString | --direction^ (dop:direction)--> langString
+  soccer manager: --align^ (dop:align)--> langString
+subgraph_id: 387
+relationships:
+  - office holder --dop:deathPlace--> settlement
+  - soccer manager --doo:birthPlace--> settlement
+  - soccer club --doo:coach--> soccer manager

@@ -1,0 +1,79 @@
+types:
+  country: doo:Country
+  village: doo:Village
+  racing driver: doo:RacingDriver
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      New_Zealand: (Link from a Wikipage to an external page^='http://www.ifs.du.edu/ifs/frm_CountryProfile.aspx%3FCountry=NZ', capital^='http://dbpedia.org/resource/Wellington', caption^='Aoraki / Mount Cook is the highest point in New Zealand, at 3,724 metres.')
+      McMurdo_Station: (Apr low C^='−23.4', Apr record low C^='−41.9')
+    relationships:
+      - McMurdo_Station (dor:McMurdo_Station) --doo:subdivision--> New_Zealand (dor:New_Zealand)
+      - '%22Mad%22_Mike_Whiddett (<http://dbpedia.org/resource/%22Mad%22_Mike_Whiddett>) --doo:nationality--> New_Zealand (dor:New_Zealand)'
+  '2':
+    attributes:
+      Malaysia: (Link from a Wikipage to an external page^='https://web.archive.org/web/20090123034942/http:/ucblibraries.colorado.edu/govpubs/for/malaysia.htm', capital^='http://dbpedia.org/resource/Kuala_Lumpur', caption^='Nasi lemak')
+    relationships:
+      - Sri_Gading (dor:Sri_Gading) --doo:subdivision--> Malaysia (dor:Malaysia)
+      - Aaron_Lim (dor:Aaron_Lim) --doo:nationality--> Malaysia (dor:Malaysia)
+  '3':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric', capital^='http://dbpedia.org/resource/Washington,_D.C.', caption^='Racial and ethnic groups in the United States')
+    relationships:
+      - Celo_Community (dor:Celo_Community) --doo:subdivision--> United_States (dor:United_States)
+      - Adam_Andretti (dor:Adam_Andretti) --doo:nationality--> United_States (dor:United_States)
+  '4':
+    attributes:
+      New_Zealand: (Link from a Wikipage to an external page^='http://www.ifs.du.edu/ifs/frm_CountryProfile.aspx%3FCountry=NZ', capital^='http://dbpedia.org/resource/Wellington', caption^='Aoraki / Mount Cook is the highest point in New Zealand, at 3,724 metres.')
+      McMurdo_Station: (Apr low C^='−23.4', Apr record low C^='−41.9')
+    relationships:
+      - McMurdo_Station (dor:McMurdo_Station) --doo:subdivision--> New_Zealand (dor:New_Zealand)
+      - Adam_Richards (dor:Adam_Richards) --doo:nationality--> New_Zealand (dor:New_Zealand)
+  '5':
+    attributes:
+      Malaysia: (Link from a Wikipage to an external page^='https://web.archive.org/web/20090123034942/http:/ucblibraries.colorado.edu/govpubs/for/malaysia.htm', capital^='http://dbpedia.org/resource/Kuala_Lumpur', caption^='Nasi lemak')
+    relationships:
+      - Sri_Gading (dor:Sri_Gading) --doo:subdivision--> Malaysia (dor:Malaysia)
+      - Akash_Nandy (dor:Akash_Nandy) --doo:nationality--> Malaysia (dor:Malaysia)
+  '6':
+    attributes:
+      India: (Link from a Wikipage to an external page^='https://archive.org/details/encyclopaediaofi0000raja', capital^='http://dbpedia.org/resource/New_Delhi', caption^='1909')
+    relationships:
+      - Ambadwet (dor:Ambadwet) --doo:subdivision--> India (dor:India)
+      - Akhil_Rabindra (dor:Akhil_Rabindra) --doo:nationality--> India (dor:India)
+  '7':
+    attributes:
+      India: (Link from a Wikipage to an external page^='https://archive.org/details/encyclopaediaofi0000raja', capital^='http://dbpedia.org/resource/New_Delhi', caption^='1909')
+    relationships:
+      - Bardu_Chaina (dor:Bardu_Chaina) --doo:subdivision--> India (dor:India)
+      - Akhil_Rabindra (dor:Akhil_Rabindra) --doo:nationality--> India (dor:India)
+  '8':
+    attributes:
+      India: (Link from a Wikipage to an external page^='https://archive.org/details/encyclopaediaofi0000raja', capital^='http://dbpedia.org/resource/New_Delhi', caption^='1909')
+    relationships:
+      - Barwas (dor:Barwas) --doo:subdivision--> India (dor:India)
+      - Akhil_Rabindra (dor:Akhil_Rabindra) --doo:nationality--> India (dor:India)
+  '9':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric', capital^='http://dbpedia.org/resource/Washington,_D.C.', caption^='Racial and ethnic groups in the United States')
+    relationships:
+      - Celo_Community (dor:Celo_Community) --doo:subdivision--> United_States (dor:United_States)
+      - Al_Keller (dor:Al_Keller) --doo:nationality--> United_States (dor:United_States)
+  '10':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric', capital^='http://dbpedia.org/resource/Washington,_D.C.', caption^='Racial and ethnic groups in the United States')
+    relationships:
+      - Celo_Community (dor:Celo_Community) --doo:subdivision--> United_States (dor:United_States)
+      - Al_Unser_Jr. (<http://dbpedia.org/resource/Al_Unser_Jr.>) --doo:nationality--> United_States (dor:United_States)
+attributes:
+  country: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --leader^ (dop:leader)--> Resource | --capital^ (doo:capital)--> Resource | --caption^ (dop:caption)--> langString | --original name^ (doo:originalName)--> langString
+  village: --Center^ (dop:center)--> langString | --arc-gapA^ (dop:arcGapa)--> double | --Apr low C^ (dop:aprLowC)--> int | --Apr record low C^ (dop:aprRecordLowC)--> int
+subgraph_id: 437
+relationships:
+  - village --doo:subdivision--> country
+  - racing driver --doo:nationality--> country

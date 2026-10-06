@@ -1,0 +1,112 @@
+types:
+  city: doo:City
+  village: doo:Village
+  politician: doo:Politician
+  settlement: doo:Settlement
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Lucknow: (date^='August 2012')
+      Uttar_Pradesh: (data^='Ajmer, Merwara & Kekri made separate commissioner-ship', width^='220')
+      Mulayam_Singh_Yadav: (death date^='2022-10-10')
+    relationships:
+      - Mulayam_Singh_Yadav (dor:Mulayam_Singh_Yadav) --doo:child--> Akhilesh_Yadav (dor:Akhilesh_Yadav)
+      - Akhilesh_Yadav (dor:Akhilesh_Yadav) --doo:residence--> Lucknow (dor:Lucknow)
+      - Adampur_Indwara (dor:Adampur_Indwara) --doo:subdivision--> Lucknow (dor:Lucknow)
+      - Adampur_Indwara (dor:Adampur_Indwara) --doo:subdivision--> Uttar_Pradesh (dor:Uttar_Pradesh)
+  '2':
+    attributes:
+      Lucknow: (date^='August 2012')
+      Uttar_Pradesh: (data^='Ajmer, Merwara & Kekri made separate commissioner-ship', width^='220')
+      Mulayam_Singh_Yadav: (death date^='2022-10-10')
+    relationships:
+      - Mulayam_Singh_Yadav (dor:Mulayam_Singh_Yadav) --doo:child--> Akhilesh_Yadav (dor:Akhilesh_Yadav)
+      - Akhilesh_Yadav (dor:Akhilesh_Yadav) --doo:residence--> Lucknow (dor:Lucknow)
+      - Ahmamau (dor:Ahmamau) --doo:subdivision--> Lucknow (dor:Lucknow)
+      - Ahmamau (dor:Ahmamau) --doo:subdivision--> Uttar_Pradesh (dor:Uttar_Pradesh)
+  '3':
+    attributes:
+      Lucknow: (date^='August 2012')
+      Uttar_Pradesh: (data^='Ajmer, Merwara & Kekri made separate commissioner-ship', width^='220')
+      Mulayam_Singh_Yadav: (death date^='2022-10-10')
+    relationships:
+      - Mulayam_Singh_Yadav (dor:Mulayam_Singh_Yadav) --doo:child--> Akhilesh_Yadav (dor:Akhilesh_Yadav)
+      - Akhilesh_Yadav (dor:Akhilesh_Yadav) --doo:residence--> Lucknow (dor:Lucknow)
+      - Bhaliya (dor:Bhaliya) --doo:subdivision--> Lucknow (dor:Lucknow)
+      - Bhaliya (dor:Bhaliya) --doo:subdivision--> Uttar_Pradesh (dor:Uttar_Pradesh)
+  '4':
+    attributes:
+      Vilasrao_Deshmukh: (death date^='2012-08-14')
+    relationships:
+      - Vilasrao_Deshmukh (dor:Vilasrao_Deshmukh) --doo:child--> Amit_Deshmukh (dor:Amit_Deshmukh)
+      - Amit_Deshmukh (dor:Amit_Deshmukh) --doo:residence--> Latur (dor:Latur)
+      - Dhanora_Budruk (dor:Dhanora_Budruk) --doo:subdivision--> Latur (dor:Latur)
+      - Dhanora_Budruk (dor:Dhanora_Budruk) --doo:subdivision--> Ahmedpur,_Latur (<http://dbpedia.org/resource/Ahmedpur,_Latur>)
+  '5':
+    attributes:
+      Maharashtra: (width^='220')
+      Vilasrao_Deshmukh: (death date^='2012-08-14')
+    relationships:
+      - Vilasrao_Deshmukh (dor:Vilasrao_Deshmukh) --doo:child--> Amit_Deshmukh (dor:Amit_Deshmukh)
+      - Amit_Deshmukh (dor:Amit_Deshmukh) --doo:residence--> Latur (dor:Latur)
+      - Dhanora_Budruk (dor:Dhanora_Budruk) --doo:subdivision--> Latur (dor:Latur)
+      - Dhanora_Budruk (dor:Dhanora_Budruk) --doo:subdivision--> Maharashtra (dor:Maharashtra)
+  '6':
+    attributes:
+      Chennai: (date^='2012-12-02')
+      Tamil_Nadu: (width^='(175 * 374 / 599) round 0')
+    relationships:
+      - S._Ramadoss (dor:S._Ramadoss) --doo:child--> Anbumani_Ramadoss (dor:Anbumani_Ramadoss)
+      - Anbumani_Ramadoss (dor:Anbumani_Ramadoss) --doo:residence--> Chennai (dor:Chennai)
+      - Alwarthirunagar (dor:Alwarthirunagar) --doo:subdivision--> Chennai (dor:Chennai)
+      - Alwarthirunagar (dor:Alwarthirunagar) --doo:subdivision--> Tamil_Nadu (dor:Tamil_Nadu)
+  '7':
+    attributes:
+      Chennai: (date^='2012-12-02')
+    relationships:
+      - S._Ramadoss (dor:S._Ramadoss) --doo:child--> Anbumani_Ramadoss (dor:Anbumani_Ramadoss)
+      - Anbumani_Ramadoss (dor:Anbumani_Ramadoss) --doo:residence--> Chennai (dor:Chennai)
+      - Aminjikarai (dor:Aminjikarai) --doo:subdivision--> Chennai (dor:Chennai)
+      - Aminjikarai (dor:Aminjikarai) --doo:subdivision--> Chennai_District (dor:Chennai_District)
+  '8':
+    attributes:
+      Chennai: (date^='2012-12-02')
+      Tamil_Nadu: (width^='(175 * 374 / 599) round 0')
+    relationships:
+      - S._Ramadoss (dor:S._Ramadoss) --doo:child--> Anbumani_Ramadoss (dor:Anbumani_Ramadoss)
+      - Anbumani_Ramadoss (dor:Anbumani_Ramadoss) --doo:residence--> Chennai (dor:Chennai)
+      - Aminjikarai (dor:Aminjikarai) --doo:subdivision--> Chennai (dor:Chennai)
+      - Aminjikarai (dor:Aminjikarai) --doo:subdivision--> Tamil_Nadu (dor:Tamil_Nadu)
+  '9':
+    attributes:
+      Arthur_LeRoy_Smith: (death date^='1951-12-17')
+    relationships:
+      - Arthur_LeRoy_Smith (dor:Arthur_LeRoy_Smith) --doo:child--> Arthur_Ryan_Smith (dor:Arthur_Ryan_Smith)
+      - Arthur_Ryan_Smith (dor:Arthur_Ryan_Smith) --doo:residence--> Calgary (dor:Calgary)
+      - Albert_Park,_Alberta (<http://dbpedia.org/resource/Albert_Park,_Alberta>) --doo:subdivision--> Calgary (dor:Calgary)
+      - Albert_Park,_Alberta (<http://dbpedia.org/resource/Albert_Park,_Alberta>) --doo:subdivision--> Alberta (dor:Alberta)
+  '10':
+    attributes:
+      Arthur_LeRoy_Smith: (death date^='1951-12-17')
+    relationships:
+      - Arthur_LeRoy_Smith (dor:Arthur_LeRoy_Smith) --doo:child--> Arthur_Ryan_Smith (dor:Arthur_Ryan_Smith)
+      - Arthur_Ryan_Smith (dor:Arthur_Ryan_Smith) --doo:residence--> Calgary (dor:Calgary)
+      - Albert_Park,_Alberta (<http://dbpedia.org/resource/Albert_Park,_Alberta>) --doo:subdivision--> Calgary (dor:Calgary)
+      - Albert_Park,_Alberta (<http://dbpedia.org/resource/Albert_Park,_Alberta>) --doo:subdivision--> Division_No._6,_Alberta (<http://dbpedia.org/resource/Division_No._6,_Alberta>)
+attributes:
+  city: --date^ (dop:date)--> langString
+  village: --founder^ (dop:founder)--> langString | --width^ (dop:width)--> langString
+  politician: --relatives (dop:relatives)--> Resource | --death date^ (doo:deathDate)--> date | --1a^ (dop:1a)--> langString
+  settlement: --data^ (dop:data)--> double | --named for^ (dop:namedFor)--> langString | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --width^ (dop:width)--> int
+subgraph_id: 842
+relationships:
+  - politician --doo:child--> office holder
+  - office holder --doo:residence--> city
+  - village --doo:subdivision--> city
+  - village --doo:subdivision--> settlement

@@ -1,0 +1,139 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  newspaper: doo:Newspaper
+  scientist: doo:Scientist
+  television show: doo:TelevisionShow
+  wrestling event: doo:WrestlingEvent
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ohio: (Wikipage revision ID^='1123857886')
+      Leo_Paquette: (academic discipline^='http://dbpedia.org/resource/Chemistry')
+      1870_(magazine): (format (object)^='http://dbpedia.org/resource/Compact_(newspaper)')
+    relationships:
+      - Leo_Paquette (dor:Leo_Paquette) --doo:residence--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - Fastlane_(2018) (<http://dbpedia.org/resource/Fastlane_(2018)>) --doo:location--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - Fastlane_(2018) (<http://dbpedia.org/resource/Fastlane_(2018)>) --doo:location--> Ohio (dor:Ohio)
+      - Leo_Paquette (dor:Leo_Paquette) --doo:award--> Sloan_Fellowship (dor:Sloan_Fellowship)
+      - Fastlane_(2018) (<http://dbpedia.org/resource/Fastlane_(2018)>) --dop:city--> Ohio (dor:Ohio)
+      - 1870_(magazine) (<http://dbpedia.org/resource/1870_(magazine)>) --doo:headquarter--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+  '2':
+    attributes:
+      Charles_L._Kane: (academic discipline^='http://dbpedia.org/resource/Theoretical_physics')
+      Lowell,_Massachusetts: (Wikipage revision ID^='1118983276')
+    relationships:
+      - Charles_L._Kane (dor:Charles_L._Kane) --doo:residence--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+      - Fighting_Spirit_Unleashed_(2019) (<http://dbpedia.org/resource/Fighting_Spirit_Unleashed_(2019)>) --doo:location--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+      - Fighting_Spirit_Unleashed_(2019) (<http://dbpedia.org/resource/Fighting_Spirit_Unleashed_(2019)>) --doo:location--> Lowell,_Massachusetts (<http://dbpedia.org/resource/Lowell,_Massachusetts>)
+      - Charles_L._Kane (dor:Charles_L._Kane) --doo:award--> John_Scott_Medal (dor:John_Scott_Medal)
+      - Fighting_Spirit_Unleashed_(2019) (<http://dbpedia.org/resource/Fighting_Spirit_Unleashed_(2019)>) --dop:city--> Lowell,_Massachusetts (<http://dbpedia.org/resource/Lowell,_Massachusetts>)
+      - African_Observer (dor:African_Observer) --doo:headquarter--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+  '3':
+    attributes:
+      Joseph_Francisco: (academic discipline^='http://dbpedia.org/resource/Physical_chemistry')
+      Lowell,_Massachusetts: (Wikipage revision ID^='1118983276')
+    relationships:
+      - Joseph_Francisco (dor:Joseph_Francisco) --doo:residence--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+      - Fighting_Spirit_Unleashed_(2019) (<http://dbpedia.org/resource/Fighting_Spirit_Unleashed_(2019)>) --doo:location--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+      - Fighting_Spirit_Unleashed_(2019) (<http://dbpedia.org/resource/Fighting_Spirit_Unleashed_(2019)>) --doo:location--> Lowell,_Massachusetts (<http://dbpedia.org/resource/Lowell,_Massachusetts>)
+      - Joseph_Francisco (dor:Joseph_Francisco) --doo:award--> Sloan_Fellowship (dor:Sloan_Fellowship)
+      - Fighting_Spirit_Unleashed_(2019) (<http://dbpedia.org/resource/Fighting_Spirit_Unleashed_(2019)>) --dop:city--> Lowell,_Massachusetts (<http://dbpedia.org/resource/Lowell,_Massachusetts>)
+      - African_Observer (dor:African_Observer) --doo:headquarter--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+  '4':
+    attributes:
+      Kensington: (Wikipage revision ID^='1121397218')
+      Marc_Feldmann: (academic discipline^='http://dbpedia.org/resource/Immunology')
+    relationships:
+      - Marc_Feldmann (dor:Marc_Feldmann) --doo:residence--> London (dor:London)
+      - United_Kingdom_Championship_Tournament_(2018) (<http://dbpedia.org/resource/United_Kingdom_Championship_Tournament_(2018)>) --doo:location--> London (dor:London)
+      - United_Kingdom_Championship_Tournament_(2018) (<http://dbpedia.org/resource/United_Kingdom_Championship_Tournament_(2018)>) --doo:location--> Kensington (dor:Kensington)
+      - Marc_Feldmann (dor:Marc_Feldmann) --doo:award--> Crafoord_Prize (dor:Crafoord_Prize)
+      - United_Kingdom_Championship_Tournament_(2018) (<http://dbpedia.org/resource/United_Kingdom_Championship_Tournament_(2018)>) --dop:city--> Kensington (dor:Kensington)
+      - Al-Arab (dor:Al-Arab) --doo:headquarter--> London (dor:London)
+  '5':
+    attributes:
+      Kensington: (Wikipage revision ID^='1121397218')
+      Marc_Feldmann: (academic discipline^='http://dbpedia.org/resource/Immunology')
+    relationships:
+      - Marc_Feldmann (dor:Marc_Feldmann) --doo:residence--> London (dor:London)
+      - United_Kingdom_Championship_Tournament_(2018) (<http://dbpedia.org/resource/United_Kingdom_Championship_Tournament_(2018)>) --doo:location--> London (dor:London)
+      - United_Kingdom_Championship_Tournament_(2018) (<http://dbpedia.org/resource/United_Kingdom_Championship_Tournament_(2018)>) --doo:location--> Kensington (dor:Kensington)
+      - Marc_Feldmann (dor:Marc_Feldmann) --doo:award--> Gairdner_Foundation_International_Award (dor:Gairdner_Foundation_International_Award)
+      - United_Kingdom_Championship_Tournament_(2018) (<http://dbpedia.org/resource/United_Kingdom_Championship_Tournament_(2018)>) --dop:city--> Kensington (dor:Kensington)
+      - Al-Arab (dor:Al-Arab) --doo:headquarter--> London (dor:London)
+  '6':
+    attributes:
+      Ravinder_N._Maini: (academic discipline^='http://dbpedia.org/resource/Immunology')
+    relationships:
+      - Ravinder_N._Maini (dor:Ravinder_N._Maini) --doo:residence--> London (dor:London)
+      - United_Kingdom_Championship_Tournament_(2018) (<http://dbpedia.org/resource/United_Kingdom_Championship_Tournament_(2018)>) --doo:location--> London (dor:London)
+      - United_Kingdom_Championship_Tournament_(2018) (<http://dbpedia.org/resource/United_Kingdom_Championship_Tournament_(2018)>) --doo:location--> Kensington (dor:Kensington)
+      - Ravinder_N._Maini (dor:Ravinder_N._Maini) --doo:award--> Crafoord_Prize (dor:Crafoord_Prize)
+      - United_Kingdom_Championship_Tournament_(2018) (<http://dbpedia.org/resource/United_Kingdom_Championship_Tournament_(2018)>) --dop:city--> Kensington (dor:Kensington)
+      - Al-Arab (dor:Al-Arab) --doo:headquarter--> London (dor:London)
+  '7':
+    attributes:
+      Thomas_Jessell: (academic discipline^='http://dbpedia.org/resource/Neuroscience')
+      New_York_(state): (Wikipage revision ID^='1124381996')
+      Algemeiner_Journal: (format (object)^='http://dbpedia.org/resource/Tabloid_(newspaper_format)')
+    relationships:
+      - Thomas_Jessell (dor:Thomas_Jessell) --doo:residence--> New_York_City (dor:New_York_City)
+      - Best_in_the_World_2006 (dor:Best_in_the_World_2006) --doo:location--> New_York_City (dor:New_York_City)
+      - Best_in_the_World_2006 (dor:Best_in_the_World_2006) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Thomas_Jessell (dor:Thomas_Jessell) --doo:award--> Gairdner_Foundation_International_Award (dor:Gairdner_Foundation_International_Award)
+      - Best_in_the_World_2006 (dor:Best_in_the_World_2006) --dop:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Algemeiner_Journal (dor:Algemeiner_Journal) --doo:headquarter--> New_York_City (dor:New_York_City)
+  '8':
+    attributes:
+      Thomas_Jessell: (academic discipline^='http://dbpedia.org/resource/Neuroscience')
+      New_York_(state): (Wikipage revision ID^='1124381996')
+      Algemeiner_Journal: (format (object)^='http://dbpedia.org/resource/Tabloid_(newspaper_format)')
+    relationships:
+      - Thomas_Jessell (dor:Thomas_Jessell) --doo:residence--> New_York_City (dor:New_York_City)
+      - Best_in_the_World_2006 (dor:Best_in_the_World_2006) --doo:location--> New_York_City (dor:New_York_City)
+      - Best_in_the_World_2006 (dor:Best_in_the_World_2006) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Thomas_Jessell (dor:Thomas_Jessell) --doo:award--> Gruber_Prize_in_Neuroscience (dor:Gruber_Prize_in_Neuroscience)
+      - Best_in_the_World_2006 (dor:Best_in_the_World_2006) --dop:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Algemeiner_Journal (dor:Algemeiner_Journal) --doo:headquarter--> New_York_City (dor:New_York_City)
+  '9':
+    attributes:
+      Thomas_Jessell: (academic discipline^='http://dbpedia.org/resource/Neuroscience')
+      New_York_(state): (Wikipage revision ID^='1124381996')
+      Algemeiner_Journal: (format (object)^='http://dbpedia.org/resource/Tabloid_(newspaper_format)')
+    relationships:
+      - Thomas_Jessell (dor:Thomas_Jessell) --doo:residence--> New_York_City (dor:New_York_City)
+      - Best_in_the_World_2006 (dor:Best_in_the_World_2006) --doo:location--> New_York_City (dor:New_York_City)
+      - Best_in_the_World_2006 (dor:Best_in_the_World_2006) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Thomas_Jessell (dor:Thomas_Jessell) --doo:award--> Kavli_Prize (dor:Kavli_Prize)
+      - Best_in_the_World_2006 (dor:Best_in_the_World_2006) --dop:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Algemeiner_Journal (dor:Algemeiner_Journal) --doo:headquarter--> New_York_City (dor:New_York_City)
+  '10':
+    attributes:
+      Pennsylvania: (Wikipage revision ID^='1124382473')
+    relationships:
+      - Chris_Harrison_(computer_scientist) (<http://dbpedia.org/resource/Chris_Harrison_(computer_scientist)>) --doo:residence--> Pittsburgh (dor:Pittsburgh)
+      - Armageddon_(2007) (<http://dbpedia.org/resource/Armageddon_(2007)>) --doo:location--> Pittsburgh (dor:Pittsburgh)
+      - Armageddon_(2007) (<http://dbpedia.org/resource/Armageddon_(2007)>) --doo:location--> Pennsylvania (dor:Pennsylvania)
+      - Chris_Harrison_(computer_scientist) (<http://dbpedia.org/resource/Chris_Harrison_(computer_scientist)>) --doo:award--> TR35 (dor:TR35)
+      - Armageddon_(2007) (<http://dbpedia.org/resource/Armageddon_(2007)>) --dop:city--> Pennsylvania (dor:Pennsylvania)
+      - American_Srbobran (dor:American_Srbobran) --doo:headquarter--> Pittsburgh (dor:Pittsburgh)
+attributes:
+  city: --Apr low C^ (dop:aprLowC)--> double | --Apr low F^ (dop:aprLowF)--> int
+  Location: --altname^ (dop:altname)--> langString | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --discoverer^ (doo:discoverer)--> Resource | --frazioni^ (doo:frazioni)--> Resource | --Apr rain mm^ (dop:aprRainMm)--> int | --image width^ (dop:imageWidth)--> int
+  newspaper: --format (object)^ (doo:format)--> Resource
+  scientist: --academic discipline^ (doo:academicDiscipline)--> Resource | --influenced^ (doo:influenced)--> Resource
+  television show: --following^ (dop:following)--> langString
+subgraph_id: 982
+relationships:
+  - scientist --doo:residence--> city
+  - wrestling event --doo:location--> city
+  - wrestling event --doo:location--> Location
+  - scientist --doo:award--> television show
+  - wrestling event --dop:city--> Location
+  - newspaper --doo:headquarter--> city

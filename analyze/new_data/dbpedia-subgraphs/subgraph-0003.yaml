@@ -1,0 +1,82 @@
+types:
+  single: doo:Single
+  settlement: doo:Settlement
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doow: http://dbpedia.org/ontology/Work/
+instances:
+  '1':
+    attributes:
+      Aaron_Carter: (death year^='2022')
+      Aaron's_Party_(Come_Get_It)_(song): (artist^='Aaron Carter', runtime (m)^='3.4166666666666665')
+    relationships:
+      - Aaron's_Party_(Come_Get_It)_(song) (<http://dbpedia.org/resource/Aaron's_Party_(Come_Get_It)_(song)>) --dop:artist--> Aaron_Carter (dor:Aaron_Carter)
+      - Aaron_Carter (dor:Aaron_Carter) --doo:deathPlace--> Lancaster,_California (<http://dbpedia.org/resource/Lancaster,_California>)
+  '2':
+    attributes:
+      Aaron_Carter: (death year^='2022')
+      Crush_on_You_(The_Jets_song): (artist^='Aaron Carter', runtime (m)^='4.5')
+    relationships:
+      - Crush_on_You_(The_Jets_song) (<http://dbpedia.org/resource/Crush_on_You_(The_Jets_song)>) --dop:artist--> Aaron_Carter (dor:Aaron_Carter)
+      - Aaron_Carter (dor:Aaron_Carter) --doo:deathPlace--> Lancaster,_California (<http://dbpedia.org/resource/Lancaster,_California>)
+  '3':
+    attributes:
+      Aaron_Carter: (death year^='2022')
+      I_Want_Candy: (artist^='Candy Girls featuring Valerie Malcolm', runtime (m)^='2.9833333333333334', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-phonograph_record-noun-1')
+    relationships:
+      - I_Want_Candy (dor:I_Want_Candy) --dop:artist--> Aaron_Carter (dor:Aaron_Carter)
+      - Aaron_Carter (dor:Aaron_Carter) --doo:deathPlace--> Lancaster,_California (<http://dbpedia.org/resource/Lancaster,_California>)
+  '4':
+    attributes:
+      Godzilla_(Main_Theme): (artist^='http://dbpedia.org/resource/Akira_Ifukube', runtime (m)^='1.5333333333333334')
+    relationships:
+      - Godzilla_(Main_Theme) (<http://dbpedia.org/resource/Godzilla_(Main_Theme)>) --dop:artist--> Akira_Ifukube (dor:Akira_Ifukube)
+      - Akira_Ifukube (dor:Akira_Ifukube) --doo:deathPlace--> Tokyo (dor:Tokyo)
+  '5':
+    attributes:
+      Al's_Place: (artist^='http://dbpedia.org/resource/Al_Hirt', runtime (m)^='2.283333333333333')
+    relationships:
+      - Al's_Place (<http://dbpedia.org/resource/Al's_Place>) --dop:artist--> Al_Hirt (dor:Al_Hirt)
+      - Al_Hirt (dor:Al_Hirt) --doo:deathPlace--> New_Orleans (dor:New_Orleans)
+  '6':
+    attributes:
+      Fancy_Pants_(Al_Hirt_song): (artist^='http://dbpedia.org/resource/Al_Hirt', runtime (m)^='1.8666666666666667')
+    relationships:
+      - Fancy_Pants_(Al_Hirt_song) (<http://dbpedia.org/resource/Fancy_Pants_(Al_Hirt_song)>) --dop:artist--> Al_Hirt (dor:Al_Hirt)
+      - Al_Hirt (dor:Al_Hirt) --doo:deathPlace--> New_Orleans (dor:New_Orleans)
+  '7':
+    attributes:
+      Sugar_Lips: (artist^='http://dbpedia.org/resource/Al_Hirt', runtime (m)^='2.0')
+    relationships:
+      - Sugar_Lips (dor:Sugar_Lips) --dop:artist--> Al_Hirt (dor:Al_Hirt)
+      - Al_Hirt (dor:Al_Hirt) --doo:deathPlace--> New_Orleans (dor:New_Orleans)
+  '8':
+    attributes:
+      I_Love_You_Because_(song): (artist^='http://dbpedia.org/resource/Al_Martino')
+    relationships:
+      - I_Love_You_Because_(song) (<http://dbpedia.org/resource/I_Love_You_Because_(song)>) --dop:artist--> Al_Martino (dor:Al_Martino)
+      - Al_Martino (dor:Al_Martino) --doo:deathPlace--> Pennsylvania (dor:Pennsylvania)
+  '9':
+    attributes:
+      I_Love_You_Because_(song): (artist^='http://dbpedia.org/resource/Al_Martino')
+    relationships:
+      - I_Love_You_Because_(song) (<http://dbpedia.org/resource/I_Love_You_Because_(song)>) --dop:artist--> Al_Martino (dor:Al_Martino)
+      - Al_Martino (dor:Al_Martino) --doo:deathPlace--> Springfield_Township,_Delaware_County,_Pennsylvania (<http://dbpedia.org/resource/Springfield_Township,_Delaware_County,_Pennsylvania>)
+  '10':
+    attributes:
+      Allen_Toussaint: (instruments^='')
+      Southern_Nights_(song): (artist^='Glen Campbell', runtime (m)^='3.5833333333333335', id^='18449', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-phonograph_record-noun-1')
+    relationships:
+      - Southern_Nights_(song) (<http://dbpedia.org/resource/Southern_Nights_(song)>) --dop:artist--> Allen_Toussaint (dor:Allen_Toussaint)
+      - Allen_Toussaint (dor:Allen_Toussaint) --doo:deathPlace--> Madrid (dor:Madrid)
+attributes:
+  single: --artist^ (dop:artist)--> langString | --runtime (m)^ (doow:runtime)--> minute | --recorded in^ (doo:recordedIn)--> Resource | --id^ (dop:id)--> langString | --wordnet_type (dop:wordnet_type)--> Resource
+  musical artist: --url^ (dop:url)--> Resource | --reason^ (dop:reason)--> langString | --death year^ (doo:deathYear)--> gYear | --instruments^ (dop:instruments)--> Resource | --aliases^ (dop:aliases)--> langString | --d^ (dop:d)--> langString
+subgraph_id: 3
+relationships:
+  - single --dop:artist--> musical artist
+  - musical artist --doo:deathPlace--> settlement

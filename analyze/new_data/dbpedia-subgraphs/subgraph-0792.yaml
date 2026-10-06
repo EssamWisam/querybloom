@@ -1,0 +1,111 @@
+types:
+  Band: doo:Band
+  movie: doo:Film
+  single: doo:Single
+  music genre: doo:MusicGenre
+  record label: doo:RecordLabel
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doow: http://dbpedia.org/ontology/Work/
+instances:
+  '1':
+    attributes:
+      112_(band): (active years end year^='1993')
+      Def_Jam's_How_to_Be_a_Player: (runtime (m)^='93.0')
+    relationships:
+      - Hey_Luv_(Anything) (<http://dbpedia.org/resource/Hey_Luv_(Anything)>) --doo:writer--> 112_(band) (<http://dbpedia.org/resource/112_(band)>)
+      - 112_(band) (<http://dbpedia.org/resource/112_(band)>) --doo:recordLabel--> Def_Jam_Recordings (dor:Def_Jam_Recordings)
+      - Hey_Luv_(Anything) (<http://dbpedia.org/resource/Hey_Luv_(Anything)>) --doo:genre--> Hip_hop_music (dor:Hip_hop_music)
+      - Def_Jam's_How_to_Be_a_Player (<http://dbpedia.org/resource/Def_Jam's_How_to_Be_a_Player>) --doo:productionCompany--> Def_Jam_Recordings (dor:Def_Jam_Recordings)
+  '2':
+    attributes:
+      112_(band): (active years end year^='1993')
+      Def_Jam's_How_to_Be_a_Player: (runtime (m)^='93.0')
+    relationships:
+      - Hey_Luv_(Anything) (<http://dbpedia.org/resource/Hey_Luv_(Anything)>) --doo:writer--> 112_(band) (<http://dbpedia.org/resource/112_(band)>)
+      - 112_(band) (<http://dbpedia.org/resource/112_(band)>) --doo:recordLabel--> Def_Jam_Recordings (dor:Def_Jam_Recordings)
+      - Hey_Luv_(Anything) (<http://dbpedia.org/resource/Hey_Luv_(Anything)>) --doo:genre--> R&B (<http://dbpedia.org/resource/R&B>)
+      - Def_Jam's_How_to_Be_a_Player (<http://dbpedia.org/resource/Def_Jam's_How_to_Be_a_Player>) --doo:productionCompany--> Def_Jam_Recordings (dor:Def_Jam_Recordings)
+  '3':
+    attributes:
+      112_(band): (active years end year^='1993')
+      Def_Jam's_How_to_Be_a_Player: (runtime (m)^='93.0')
+    relationships:
+      - Right_Here_for_U (dor:Right_Here_for_U) --doo:writer--> 112_(band) (<http://dbpedia.org/resource/112_(band)>)
+      - 112_(band) (<http://dbpedia.org/resource/112_(band)>) --doo:recordLabel--> Def_Jam_Recordings (dor:Def_Jam_Recordings)
+      - Right_Here_for_U (dor:Right_Here_for_U) --doo:genre--> Contemporary_R&B (<http://dbpedia.org/resource/Contemporary_R&B>)
+      - Def_Jam's_How_to_Be_a_Player (<http://dbpedia.org/resource/Def_Jam's_How_to_Be_a_Player>) --doo:productionCompany--> Def_Jam_Recordings (dor:Def_Jam_Recordings)
+  '4':
+    attributes:
+      3LW: (active years end year^='2006')
+    relationships:
+      - I_Do_(Wanna_Get_Close_to_You) (<http://dbpedia.org/resource/I_Do_(Wanna_Get_Close_to_You)>) --doo:writer--> 3LW (dor:3LW)
+      - 3LW (dor:3LW) --doo:recordLabel--> Sony_Music_Entertainment (dor:Sony_Music_Entertainment)
+      - I_Do_(Wanna_Get_Close_to_You) (<http://dbpedia.org/resource/I_Do_(Wanna_Get_Close_to_You)>) --doo:genre--> Dance_music (dor:Dance_music)
+      - Densen_Uta (dor:Densen_Uta) --doo:productionCompany--> Sony_Music_Entertainment (dor:Sony_Music_Entertainment)
+  '5':
+    attributes:
+      3LW: (active years end year^='2006')
+      Janis:_Little_Girl_Blue: (runtime (m)^='103.0')
+    relationships:
+      - I_Do_(Wanna_Get_Close_to_You) (<http://dbpedia.org/resource/I_Do_(Wanna_Get_Close_to_You)>) --doo:writer--> 3LW (dor:3LW)
+      - 3LW (dor:3LW) --doo:recordLabel--> Sony_Music_Entertainment (dor:Sony_Music_Entertainment)
+      - I_Do_(Wanna_Get_Close_to_You) (<http://dbpedia.org/resource/I_Do_(Wanna_Get_Close_to_You)>) --doo:genre--> Dance_music (dor:Dance_music)
+      - Janis:_Little_Girl_Blue (<http://dbpedia.org/resource/Janis:_Little_Girl_Blue>) --doo:productionCompany--> Sony_Music_Entertainment (dor:Sony_Music_Entertainment)
+  '6':
+    attributes:
+      3LW: (active years end year^='2006')
+      One_Direction:_Where_We_Are_–_The_Concert_Film: (runtime (m)^='106.0')
+    relationships:
+      - I_Do_(Wanna_Get_Close_to_You) (<http://dbpedia.org/resource/I_Do_(Wanna_Get_Close_to_You)>) --doo:writer--> 3LW (dor:3LW)
+      - 3LW (dor:3LW) --doo:recordLabel--> Sony_Music_Entertainment (dor:Sony_Music_Entertainment)
+      - I_Do_(Wanna_Get_Close_to_You) (<http://dbpedia.org/resource/I_Do_(Wanna_Get_Close_to_You)>) --doo:genre--> Dance_music (dor:Dance_music)
+      - One_Direction:_Where_We_Are_–_The_Concert_Film (<http://dbpedia.org/resource/One_Direction:_Where_We_Are_–_The_Concert_Film>) --doo:productionCompany--> Sony_Music_Entertainment (dor:Sony_Music_Entertainment)
+  '7':
+    attributes:
+      9012Live_(video): (runtime (m)^='67.0')
+    relationships:
+      - Hey_(Lil_Jon_song) (<http://dbpedia.org/resource/Hey_(Lil_Jon_song)>) --doo:writer--> 3OH!3 (<http://dbpedia.org/resource/3OH!3>)
+      - 3OH!3 (<http://dbpedia.org/resource/3OH!3>) --doo:recordLabel--> Atlantic_Records (dor:Atlantic_Records)
+      - Hey_(Lil_Jon_song) (<http://dbpedia.org/resource/Hey_(Lil_Jon_song)>) --doo:genre--> Crunkcore (dor:Crunkcore)
+      - 9012Live_(video) (<http://dbpedia.org/resource/9012Live_(video)>) --doo:productionCompany--> Atlantic_Records (dor:Atlantic_Records)
+  '8':
+    attributes:
+      9012Live_(video): (runtime (m)^='67.0')
+    relationships:
+      - Hey_(Lil_Jon_song) (<http://dbpedia.org/resource/Hey_(Lil_Jon_song)>) --doo:writer--> 3OH!3 (<http://dbpedia.org/resource/3OH!3>)
+      - 3OH!3 (<http://dbpedia.org/resource/3OH!3>) --doo:recordLabel--> Atlantic_Records (dor:Atlantic_Records)
+      - Hey_(Lil_Jon_song) (<http://dbpedia.org/resource/Hey_(Lil_Jon_song)>) --doo:genre--> Dance-pop (dor:Dance-pop)
+      - 9012Live_(video) (<http://dbpedia.org/resource/9012Live_(video)>) --doo:productionCompany--> Atlantic_Records (dor:Atlantic_Records)
+  '9':
+    attributes:
+      9012Live_(video): (runtime (m)^='67.0')
+    relationships:
+      - Hey_(Lil_Jon_song) (<http://dbpedia.org/resource/Hey_(Lil_Jon_song)>) --doo:writer--> 3OH!3 (<http://dbpedia.org/resource/3OH!3>)
+      - 3OH!3 (<http://dbpedia.org/resource/3OH!3>) --doo:recordLabel--> Atlantic_Records (dor:Atlantic_Records)
+      - Hey_(Lil_Jon_song) (<http://dbpedia.org/resource/Hey_(Lil_Jon_song)>) --doo:genre--> Pop_rap (dor:Pop_rap)
+      - 9012Live_(video) (<http://dbpedia.org/resource/9012Live_(video)>) --doo:productionCompany--> Atlantic_Records (dor:Atlantic_Records)
+  '10':
+    attributes:
+      3rd_Party: (active years end year^='1997')
+      A_Midnight_Clear: (runtime (m)^='108.0')
+      Waiting_for_Tonight: (id='1183')
+    relationships:
+      - Waiting_for_Tonight (dor:Waiting_for_Tonight) --doo:writer--> 3rd_Party (dor:3rd_Party)
+      - 3rd_Party (dor:3rd_Party) --doo:recordLabel--> A&M_Records (<http://dbpedia.org/resource/A&M_Records>)
+      - Waiting_for_Tonight (dor:Waiting_for_Tonight) --doo:genre--> Dance-pop (dor:Dance-pop)
+      - A_Midnight_Clear (dor:A_Midnight_Clear) --doo:productionCompany--> A&M_Records (<http://dbpedia.org/resource/A&M_Records>)
+attributes:
+  Band: --active years end year^ (doo:activeYearsEndYear)--> gYear | --instrument^ (doo:instrument)--> Resource | --direction^ (dop:direction)--> langString
+  movie: --1a^ (dop:1a)--> langString | --runtime (m)^ (doow:runtime)--> minute | --2p^ (dop:2p)--> int
+  single: --all writing^ (dop:allWriting)--> langString | --id (dop:id)--> langString
+  music genre: --1a^ (dop:1a)--> langString
+subgraph_id: 792
+relationships:
+  - single --doo:writer--> Band
+  - Band --doo:recordLabel--> record label
+  - single --doo:genre--> music genre
+  - movie --doo:productionCompany--> record label

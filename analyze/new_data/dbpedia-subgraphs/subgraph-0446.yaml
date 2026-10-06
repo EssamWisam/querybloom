@@ -1,0 +1,72 @@
+types:
+  Food: doo:Food
+  place: doo:Place
+  company: doo:Company
+  language: doo:Language
+  continent: doo:Continent
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Buñuelo: (course^='http://dbpedia.org/resource/Bread')
+      Aalto_University_Executive_Education: (Wikipage page ID^='31607938', industry^='Executive education and development', type^='http://dbpedia.org/resource/Osakeyhtiö')
+    relationships:
+      - Aalto_University_Executive_Education (dor:Aalto_University_Executive_Education) --dop:areaServed--> Asia (dor:Asia)
+      - Buñuelo (<http://dbpedia.org/resource/Buñuelo>) --doo:region--> Asia (dor:Asia)
+      - Awadh (dor:Awadh) --doo:country--> Asia (dor:Asia)
+      - Asia (dor:Asia) --doo:language--> Languages_of_Asia (dor:Languages_of_Asia)
+  '2':
+    attributes:
+      Buñuelo: (course^='http://dbpedia.org/resource/Bread')
+      Aalto_University_Executive_Education: (Wikipage page ID^='31607938', industry^='Executive education and development', type^='http://dbpedia.org/resource/Osakeyhtiö')
+    relationships:
+      - Aalto_University_Executive_Education (dor:Aalto_University_Executive_Education) --dop:areaServed--> Asia (dor:Asia)
+      - Buñuelo (<http://dbpedia.org/resource/Buñuelo>) --doo:region--> Asia (dor:Asia)
+      - Bengal (dor:Bengal) --doo:country--> Asia (dor:Asia)
+      - Asia (dor:Asia) --doo:language--> Languages_of_Asia (dor:Languages_of_Asia)
+  '3':
+    attributes:
+      Buñuelo: (course^='http://dbpedia.org/resource/Bread')
+      Aalto_University_Executive_Education: (Wikipage page ID^='31607938', industry^='Executive education and development', type^='http://dbpedia.org/resource/Osakeyhtiö')
+    relationships:
+      - Aalto_University_Executive_Education (dor:Aalto_University_Executive_Education) --dop:areaServed--> Asia (dor:Asia)
+      - Buñuelo (<http://dbpedia.org/resource/Buñuelo>) --doo:region--> Asia (dor:Asia)
+      - Bhojpuri_region (dor:Bhojpuri_region) --doo:country--> Asia (dor:Asia)
+      - Asia (dor:Asia) --doo:language--> Languages_of_Asia (dor:Languages_of_Asia)
+  '4':
+    attributes:
+      Aga_Khan_Health_Services: (Wikipage page ID^='7946105', industry^='http://dbpedia.org/resource/Healthcare', logo^='Akhs-title logo.png', type^='http://dbpedia.org/resource/Non-profit', products^='health centres, dispensaries, hospitals, diagnostic centres, and community health outlets')
+    relationships:
+      - Aga_Khan_Health_Services (dor:Aga_Khan_Health_Services) --dop:areaServed--> South_Asia (dor:South_Asia)
+      - Aloo_gosht (dor:Aloo_gosht) --doo:region--> South_Asia (dor:South_Asia)
+      - Doab (dor:Doab) --doo:country--> South_Asia (dor:South_Asia)
+      - South_Asia (dor:South_Asia) --doo:language--> Afro-Asiatic_languages (dor:Afro-Asiatic_languages)
+  '5':
+    attributes:
+      Aga_Khan_Health_Services: (Wikipage page ID^='7946105', industry^='http://dbpedia.org/resource/Healthcare', logo^='Akhs-title logo.png', type^='http://dbpedia.org/resource/Non-profit', products^='health centres, dispensaries, hospitals, diagnostic centres, and community health outlets')
+    relationships:
+      - Aga_Khan_Health_Services (dor:Aga_Khan_Health_Services) --dop:areaServed--> South_Asia (dor:South_Asia)
+      - Aloo_gosht (dor:Aloo_gosht) --doo:region--> South_Asia (dor:South_Asia)
+      - Doab (dor:Doab) --doo:country--> South_Asia (dor:South_Asia)
+      - South_Asia (dor:South_Asia) --doo:language--> Arabic (dor:Arabic)
+  '6':
+    attributes:
+      Aga_Khan_Health_Services: (Wikipage page ID^='7946105', industry^='http://dbpedia.org/resource/Healthcare', logo^='Akhs-title logo.png', type^='http://dbpedia.org/resource/Non-profit', products^='health centres, dispensaries, hospitals, diagnostic centres, and community health outlets')
+    relationships:
+      - Aga_Khan_Health_Services (dor:Aga_Khan_Health_Services) --dop:areaServed--> South_Asia (dor:South_Asia)
+      - Aloo_gosht (dor:Aloo_gosht) --doo:region--> South_Asia (dor:South_Asia)
+      - Doab (dor:Doab) --doo:country--> South_Asia (dor:South_Asia)
+      - South_Asia (dor:South_Asia) --doo:language--> Assamese_language (dor:Assamese_language)
+attributes:
+  Food: --course^ (dop:course)--> langString
+  company: --Wikipage page ID^ (doo:wikiPageID)--> int | --original name^ (doo:originalName)--> langString | --industry^ (dop:industry)--> Resource | --1a^ (dop:1a)--> langString | --logo^ (dop:logo)--> langString | --align^ (dop:align)--> langString | --type^ (doo:type)--> Resource | --product^ (doo:product)--> Resource | --products^ (dop:products)--> Resource
+subgraph_id: 446
+relationships:
+  - company --dop:areaServed--> continent
+  - Food --doo:region--> continent
+  - place --doo:country--> continent
+  - continent --doo:language--> language

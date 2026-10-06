@@ -1,0 +1,92 @@
+types:
+  city: doo:City
+  venue: doo:Venue
+  Location: doo:Location
+  soccer club: doo:SoccerClub
+  football match: doo:FootballMatch
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Berlin_Adler (dor:Berlin_Adler) --dop:city--> Berlin (dor:Berlin)
+      - 1905_German_football_championship (dor:1905_German_football_championship) --dop:location--> Berlin (dor:Berlin)
+      - 1905_German_football_championship (dor:1905_German_football_championship) --dop:location--> Dresden (dor:Dresden)
+      - Heinz-Steyer-Stadion (dor:Heinz-Steyer-Stadion) --doo:owner--> Dresden (dor:Dresden)
+  '2':
+    attributes: {}
+    relationships:
+      - Berlin_Adler (dor:Berlin_Adler) --dop:city--> Berlin (dor:Berlin)
+      - 1905_German_football_championship (dor:1905_German_football_championship) --dop:location--> Berlin (dor:Berlin)
+      - 1905_German_football_championship (dor:1905_German_football_championship) --dop:location--> Magdeburg (dor:Magdeburg)
+      - MDCC-Arena (dor:MDCC-Arena) --doo:owner--> Magdeburg (dor:Magdeburg)
+  '3':
+    attributes: {}
+    relationships:
+      - Berlin_Adler (dor:Berlin_Adler) --dop:city--> Berlin (dor:Berlin)
+      - 1905_German_football_championship (dor:1905_German_football_championship) --dop:location--> Berlin (dor:Berlin)
+      - 1905_German_football_championship (dor:1905_German_football_championship) --dop:location--> Dresden (dor:Dresden)
+      - Rudolf-Harbig-Stadion (dor:Rudolf-Harbig-Stadion) --doo:owner--> Dresden (dor:Dresden)
+  '4':
+    attributes: {}
+    relationships:
+      - Adler_Mannheim (dor:Adler_Mannheim) --dop:city--> Mannheim (dor:Mannheim)
+      - 1906_German_football_championship (dor:1906_German_football_championship) --dop:location--> Mannheim (dor:Mannheim)
+      - 1906_German_football_championship (dor:1906_German_football_championship) --dop:location--> Hamburg (dor:Hamburg)
+      - Deutsches_Schauspielhaus (dor:Deutsches_Schauspielhaus) --doo:owner--> Hamburg (dor:Hamburg)
+  '5':
+    attributes: {}
+    relationships:
+      - Adler_Mannheim (dor:Adler_Mannheim) --dop:city--> Mannheim (dor:Mannheim)
+      - 1906_German_football_championship (dor:1906_German_football_championship) --dop:location--> Mannheim (dor:Mannheim)
+      - 1906_German_football_championship (dor:1906_German_football_championship) --dop:location--> Berlin (dor:Berlin)
+      - Friedrich-Ludwig-Jahn-Sportpark (dor:Friedrich-Ludwig-Jahn-Sportpark) --doo:owner--> Berlin (dor:Berlin)
+  '6':
+    attributes: {}
+    relationships:
+      - Adler_Mannheim (dor:Adler_Mannheim) --dop:city--> Mannheim (dor:Mannheim)
+      - 1906_German_football_championship (dor:1906_German_football_championship) --dop:location--> Mannheim (dor:Mannheim)
+      - 1906_German_football_championship (dor:1906_German_football_championship) --dop:location--> Berlin (dor:Berlin)
+      - Friedrichstadt-Palast (dor:Friedrichstadt-Palast) --doo:owner--> Berlin (dor:Berlin)
+  '7':
+    attributes: {}
+    relationships:
+      - Kiel_Baltic_Hurricanes (dor:Kiel_Baltic_Hurricanes) --dop:city--> Kiel (dor:Kiel)
+      - 1950_German_football_championship (dor:1950_German_football_championship) --dop:location--> Kiel (dor:Kiel)
+      - 1950_German_football_championship (dor:1950_German_football_championship) --dop:location--> Munich (dor:Munich)
+      - Olympiastadion_(Munich) (<http://dbpedia.org/resource/Olympiastadion_(Munich)>) --doo:owner--> Munich (dor:Munich)
+  '8':
+    attributes: {}
+    relationships:
+      - Kiel_Baltic_Hurricanes (dor:Kiel_Baltic_Hurricanes) --dop:city--> Kiel (dor:Kiel)
+      - 1950_German_football_championship (dor:1950_German_football_championship) --dop:location--> Kiel (dor:Kiel)
+      - 1950_German_football_championship (dor:1950_German_football_championship) --dop:location--> Cologne (dor:Cologne)
+      - Sportpark_Höhenberg (<http://dbpedia.org/resource/Sportpark_Höhenberg>) --doo:owner--> Cologne (dor:Cologne)
+  '9':
+    attributes: {}
+    relationships:
+      - Kiel_Baltic_Hurricanes (dor:Kiel_Baltic_Hurricanes) --dop:city--> Kiel (dor:Kiel)
+      - 1950_German_football_championship (dor:1950_German_football_championship) --dop:location--> Kiel (dor:Kiel)
+      - 1950_German_football_championship (dor:1950_German_football_championship) --dop:location--> Karlsruhe (dor:Karlsruhe)
+      - Wildparkstadion (dor:Wildparkstadion) --doo:owner--> Karlsruhe (dor:Karlsruhe)
+  '10':
+    attributes: {}
+    relationships:
+      - Diablos_Rojos_del_México (<http://dbpedia.org/resource/Diablos_Rojos_del_México>) --dop:city--> Mexico_City (dor:Mexico_City)
+      - 1989_Copa_Interamericana (dor:1989_Copa_Interamericana) --dop:location--> Mexico_City (dor:Mexico_City)
+      - 1989_Copa_Interamericana (dor:1989_Copa_Interamericana) --dop:location--> Medellín (<http://dbpedia.org/resource/Medellín>)
+      - Medellín_Sports_Coliseum (<http://dbpedia.org/resource/Medellín_Sports_Coliseum>) --doo:owner--> Medellín (<http://dbpedia.org/resource/Medellín>)
+attributes:
+  city: --b^ (dop:b)--> langString
+  Location: --named for^ (dop:namedFor)--> langString | --auto^ (dop:auto)--> langString | --arc-gapA^ (dop:arcGapa)--> double | --alt^ (dop:alt)--> langString | --last^ (dop:last)--> langString | --location^ (doo:location)--> Resource
+  soccer club: --colwidth^ (dop:colwidth)--> int | --Association^ (dop:association)--> langString
+subgraph_id: 781
+relationships:
+  - soccer club --dop:city--> Location
+  - football match --dop:location--> Location
+  - football match --dop:location--> city
+  - venue --doo:owner--> city

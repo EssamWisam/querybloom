@@ -1,0 +1,111 @@
+types:
+  noble: doo:Noble
+  person: doo:Person
+  cyclist: doo:Cyclist
+  Location: doo:Location
+  olympic event: doo:OlympicEvent
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Henry_Beaufort,_2nd_Earl_of_Somerset: (father^='http://dbpedia.org/resource/John_Beaufort,_1st_Earl_of_Somerset')
+      Margaret_Holland,_Duchess_of_Clarence: (parent^='http://dbpedia.org/resource/Alice_FitzAlan_(1350-1416)')
+    relationships:
+      - Alain_Moineau (dor:Alain_Moineau) --doo:deathPlace--> France (dor:France)
+      - Cycling_at_the_1948_Summer_Olympics_–_Men's_team_road_race (<http://dbpedia.org/resource/Cycling_at_the_1948_Summer_Olympics_–_Men's_team_road_race>) --doo:bronzeMedalist--> Alain_Moineau (dor:Alain_Moineau)
+      - Henry_Beaufort,_2nd_Earl_of_Somerset (<http://dbpedia.org/resource/Henry_Beaufort,_2nd_Earl_of_Somerset>) --dop:deathPlace--> France (dor:France)
+      - Henry_Beaufort,_2nd_Earl_of_Somerset (<http://dbpedia.org/resource/Henry_Beaufort,_2nd_Earl_of_Somerset>) --dop:mother--> Margaret_Holland,_Duchess_of_Clarence (<http://dbpedia.org/resource/Margaret_Holland,_Duchess_of_Clarence>)
+  '2':
+    attributes:
+      Anna_Zofia_Sapieha: (parent^='http://dbpedia.org/resource/Aleksander_Antoni_Sapieha')
+      Izabella_Elżbieta_Czartoryska: (father^='http://dbpedia.org/resource/Adam_Jerzy_Czartoryski')
+    relationships:
+      - Alain_Moineau (dor:Alain_Moineau) --doo:deathPlace--> France (dor:France)
+      - Cycling_at_the_1948_Summer_Olympics_–_Men's_team_road_race (<http://dbpedia.org/resource/Cycling_at_the_1948_Summer_Olympics_–_Men's_team_road_race>) --doo:bronzeMedalist--> Alain_Moineau (dor:Alain_Moineau)
+      - Izabella_Elżbieta_Czartoryska (<http://dbpedia.org/resource/Izabella_Elżbieta_Czartoryska>) --dop:deathPlace--> France (dor:France)
+      - Izabella_Elżbieta_Czartoryska (<http://dbpedia.org/resource/Izabella_Elżbieta_Czartoryska>) --dop:mother--> Anna_Zofia_Sapieha (dor:Anna_Zofia_Sapieha)
+  '3':
+    attributes:
+      Philip,_Count_of_Vertus: (father^='http://dbpedia.org/resource/Louis_I,_Duke_of_Orléans')
+    relationships:
+      - Alain_Moineau (dor:Alain_Moineau) --doo:deathPlace--> France (dor:France)
+      - Cycling_at_the_1948_Summer_Olympics_–_Men's_team_road_race (<http://dbpedia.org/resource/Cycling_at_the_1948_Summer_Olympics_–_Men's_team_road_race>) --doo:bronzeMedalist--> Alain_Moineau (dor:Alain_Moineau)
+      - Philip,_Count_of_Vertus (<http://dbpedia.org/resource/Philip,_Count_of_Vertus>) --dop:deathPlace--> France (dor:France)
+      - Philip,_Count_of_Vertus (<http://dbpedia.org/resource/Philip,_Count_of_Vertus>) --dop:mother--> Valentina_Visconti,_Duchess_of_Orléans (<http://dbpedia.org/resource/Valentina_Visconti,_Duchess_of_Orléans>)
+  '4':
+    attributes:
+      Milan: (area total (m2)^='181760000.0')
+      Beatrice_d'Este: (father^='http://dbpedia.org/resource/Ercole_I_d''Este,_Duke_of_Ferrara')
+      Eleanor_of_Naples,_Duchess_of_Ferrara: (parent^='http://dbpedia.org/resource/Ferdinand_I_of_Naples')
+    relationships:
+      - Antonio_Maspes (dor:Antonio_Maspes) --doo:deathPlace--> Milan (dor:Milan)
+      - Cycling_at_the_1952_Summer_Olympics_–_Men's_tandem (<http://dbpedia.org/resource/Cycling_at_the_1952_Summer_Olympics_–_Men's_tandem>) --doo:bronzeMedalist--> Antonio_Maspes (dor:Antonio_Maspes)
+      - Beatrice_d'Este (<http://dbpedia.org/resource/Beatrice_d'Este>) --dop:deathPlace--> Milan (dor:Milan)
+      - Beatrice_d'Este (<http://dbpedia.org/resource/Beatrice_d'Este>) --dop:mother--> Eleanor_of_Naples,_Duchess_of_Ferrara (<http://dbpedia.org/resource/Eleanor_of_Naples,_Duchess_of_Ferrara>)
+  '5':
+    attributes:
+      Carl_Gustaf_Tessin: (father^='http://dbpedia.org/resource/Nicodemus_Tessin_the_Younger')
+    relationships:
+      - Arne_Berg_(cyclist) (<http://dbpedia.org/resource/Arne_Berg_(cyclist)>) --doo:deathPlace--> Sweden (dor:Sweden)
+      - Cycling_at_the_1932_Summer_Olympics_–_Men's_team_time_trial (<http://dbpedia.org/resource/Cycling_at_the_1932_Summer_Olympics_–_Men's_team_time_trial>) --doo:bronzeMedalist--> Arne_Berg_(cyclist) (<http://dbpedia.org/resource/Arne_Berg_(cyclist)>)
+      - Carl_Gustaf_Tessin (dor:Carl_Gustaf_Tessin) --dop:deathPlace--> Sweden (dor:Sweden)
+      - Carl_Gustaf_Tessin (dor:Carl_Gustaf_Tessin) --dop:mother--> Hedvig_Eleonora_Stenbock (dor:Hedvig_Eleonora_Stenbock)
+  '6':
+    attributes:
+      Stockholm: (area total (m2)^='188000000.0', Apr record high C^='27')
+      Cecilia_Månsdotter: (father^='http://dbpedia.org/resource/Magnus_Karlsson_Eka')
+    relationships:
+      - Arne_Berg_(cyclist) (<http://dbpedia.org/resource/Arne_Berg_(cyclist)>) --doo:deathPlace--> Stockholm (dor:Stockholm)
+      - Cycling_at_the_1932_Summer_Olympics_–_Men's_team_time_trial (<http://dbpedia.org/resource/Cycling_at_the_1932_Summer_Olympics_–_Men's_team_time_trial>) --doo:bronzeMedalist--> Arne_Berg_(cyclist) (<http://dbpedia.org/resource/Arne_Berg_(cyclist)>)
+      - Cecilia_Månsdotter (<http://dbpedia.org/resource/Cecilia_Månsdotter>) --dop:deathPlace--> Stockholm (dor:Stockholm)
+      - Cecilia_Månsdotter (<http://dbpedia.org/resource/Cecilia_Månsdotter>) --dop:mother--> Sigrid_Eskilsdotter_(Banér) (<http://dbpedia.org/resource/Sigrid_Eskilsdotter_(Banér)>)
+  '7':
+    attributes:
+      Lord_Frederick_Cambridge: (father^='http://dbpedia.org/resource/Adolphus_Cambridge,_1st_Marquess_of_Cambridge')
+      Margaret_Cambridge,_Marchioness_of_Cambridge: (parent^='http://dbpedia.org/resource/Constance_Grosvenor,_Duchess_of_Westminster')
+    relationships:
+      - Auguste_Garrebeek (dor:Auguste_Garrebeek) --doo:deathPlace--> Belgium (dor:Belgium)
+      - Cycling_at_the_1936_Summer_Olympics_–_Men's_team_road_race (<http://dbpedia.org/resource/Cycling_at_the_1936_Summer_Olympics_–_Men's_team_road_race>) --doo:bronzeMedalist--> Auguste_Garrebeek (dor:Auguste_Garrebeek)
+      - Lord_Frederick_Cambridge (dor:Lord_Frederick_Cambridge) --dop:deathPlace--> Belgium (dor:Belgium)
+      - Lord_Frederick_Cambridge (dor:Lord_Frederick_Cambridge) --dop:mother--> Margaret_Cambridge,_Marchioness_of_Cambridge (<http://dbpedia.org/resource/Margaret_Cambridge,_Marchioness_of_Cambridge>)
+  '8':
+    attributes:
+      Milan: (area total (m2)^='181760000.0')
+      Beatrice_d'Este: (father^='http://dbpedia.org/resource/Ercole_I_d''Este,_Duke_of_Ferrara')
+      Eleanor_of_Naples,_Duchess_of_Ferrara: (parent^='http://dbpedia.org/resource/Ferdinand_I_of_Naples')
+    relationships:
+      - Bruno_Pellizzari (dor:Bruno_Pellizzari) --doo:deathPlace--> Milan (dor:Milan)
+      - Cycling_at_the_1932_Summer_Olympics_–_Men's_sprint (<http://dbpedia.org/resource/Cycling_at_the_1932_Summer_Olympics_–_Men's_sprint>) --doo:bronzeMedalist--> Bruno_Pellizzari (dor:Bruno_Pellizzari)
+      - Beatrice_d'Este (<http://dbpedia.org/resource/Beatrice_d'Este>) --dop:deathPlace--> Milan (dor:Milan)
+      - Beatrice_d'Este (<http://dbpedia.org/resource/Beatrice_d'Este>) --dop:mother--> Eleanor_of_Naples,_Duchess_of_Ferrara (<http://dbpedia.org/resource/Eleanor_of_Naples,_Duchess_of_Ferrara>)
+  '9':
+    attributes:
+      Marina_Torlonia_di_Civitella-Cesi: (father^='http://dbpedia.org/resource/Marino_Torlonia,_4th_Prince_of_Civitella-Cesi')
+    relationships:
+      - Bruno_Pellizzari (dor:Bruno_Pellizzari) --doo:deathPlace--> Italy (dor:Italy)
+      - Cycling_at_the_1932_Summer_Olympics_–_Men's_sprint (<http://dbpedia.org/resource/Cycling_at_the_1932_Summer_Olympics_–_Men's_sprint>) --doo:bronzeMedalist--> Bruno_Pellizzari (dor:Bruno_Pellizzari)
+      - Marina_Torlonia_di_Civitella-Cesi (dor:Marina_Torlonia_di_Civitella-Cesi) --dop:deathPlace--> Italy (dor:Italy)
+      - Marina_Torlonia_di_Civitella-Cesi (dor:Marina_Torlonia_di_Civitella-Cesi) --dop:mother--> Mary_Elsie_Moore (dor:Mary_Elsie_Moore)
+  '10':
+    attributes:
+      Irene_of_Montferrat: (parent^='http://dbpedia.org/resource/Beatrice_of_Castile,_Marchioness_of_Montferrat')
+      Theodore_I,_Marquis_of_Montferrat: (father^='http://dbpedia.org/resource/Andronikos_II_Palaiologos')
+    relationships:
+      - Bruno_Pellizzari (dor:Bruno_Pellizzari) --doo:deathPlace--> Italy (dor:Italy)
+      - Cycling_at_the_1932_Summer_Olympics_–_Men's_sprint (<http://dbpedia.org/resource/Cycling_at_the_1932_Summer_Olympics_–_Men's_sprint>) --doo:bronzeMedalist--> Bruno_Pellizzari (dor:Bruno_Pellizzari)
+      - Theodore_I,_Marquis_of_Montferrat (<http://dbpedia.org/resource/Theodore_I,_Marquis_of_Montferrat>) --dop:deathPlace--> Italy (dor:Italy)
+      - Theodore_I,_Marquis_of_Montferrat (<http://dbpedia.org/resource/Theodore_I,_Marquis_of_Montferrat>) --dop:mother--> Irene_of_Montferrat (dor:Irene_of_Montferrat)
+attributes:
+  noble: --father^ (dop:father)--> langString
+  person: --parent^ (doo:parent)--> Resource | --direction^ (dop:direction)--> langString | --width^ (dop:width)--> perCent
+  Location: --area total (m2)^ (doo:areaTotal)--> double | --architect^ (dop:architect)--> langString | --arc-text-colorB^ (dop:arcTextColorb)--> langString | --named after^ (dop:namedAfter)--> Resource | --operator^ (dop:operator)--> langString | --Apr record high C^ (dop:aprRecordHighC)--> int
+subgraph_id: 654
+relationships:
+  - cyclist --doo:deathPlace--> Location
+  - olympic event --doo:bronzeMedalist--> cyclist
+  - noble --dop:deathPlace--> Location
+  - noble --dop:mother--> person

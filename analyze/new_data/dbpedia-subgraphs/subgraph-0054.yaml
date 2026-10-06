@@ -1,0 +1,77 @@
+types:
+  video game: doo:VideoGame
+  music genre: doo:MusicGenre
+  information appliance: doo:InformationAppliance
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      3D_Construction_Kit: (title^='3')
+    relationships:
+      - 3D_Construction_Kit (dor:3D_Construction_Kit) --doo:developer--> ZX_Spectrum (dor:ZX_Spectrum)
+      - 3D_Construction_Kit (dor:3D_Construction_Kit) --dop:genre--> Game_creation_system (dor:Game_creation_system)
+  '2':
+    attributes:
+      Alone_in_the_Dark_(2008_video_game): (title^='Alone in the Dark')
+    relationships:
+      - Alone_in_the_Dark_(2008_video_game) (<http://dbpedia.org/resource/Alone_in_the_Dark_(2008_video_game)>) --doo:developer--> Xbox_360 (dor:Xbox_360)
+      - Alone_in_the_Dark_(2008_video_game) (<http://dbpedia.org/resource/Alone_in_the_Dark_(2008_video_game)>) --dop:genre--> Survival_horror (dor:Survival_horror)
+  '3':
+    attributes:
+      Ashes_Cricket_2009: (title^='Ashes Cricket 2009')
+    relationships:
+      - Ashes_Cricket_2009 (dor:Ashes_Cricket_2009) --doo:developer--> Wii (dor:Wii)
+      - Ashes_Cricket_2009 (dor:Ashes_Cricket_2009) --dop:genre--> Sports_game (dor:Sports_game)
+  '4':
+    attributes:
+      Ashes_Cricket_2009: (title^='Ashes Cricket 2009')
+    relationships:
+      - Ashes_Cricket_2009 (dor:Ashes_Cricket_2009) --doo:developer--> Xbox_360 (dor:Xbox_360)
+      - Ashes_Cricket_2009 (dor:Ashes_Cricket_2009) --dop:genre--> Sports_game (dor:Sports_game)
+  '5':
+    attributes:
+      Barnyard_(video_game): (title^='Barnyard')
+    relationships:
+      - Barnyard_(video_game) (<http://dbpedia.org/resource/Barnyard_(video_game)>) --doo:developer--> Wii (dor:Wii)
+      - Barnyard_(video_game) (<http://dbpedia.org/resource/Barnyard_(video_game)>) --dop:genre--> Adventure_game (dor:Adventure_game)
+  '6':
+    attributes:
+      Barnyard_(video_game): (title^='Barnyard')
+    relationships:
+      - Barnyard_(video_game) (<http://dbpedia.org/resource/Barnyard_(video_game)>) --doo:developer--> Wii (dor:Wii)
+      - Barnyard_(video_game) (<http://dbpedia.org/resource/Barnyard_(video_game)>) --dop:genre--> Party_game (dor:Party_game)
+  '7':
+    attributes:
+      Ben_10:_Alien_Force_(video_game): '(title^=''Ben 10: Alien Force'')'
+    relationships:
+      - Ben_10:_Alien_Force_(video_game) (<http://dbpedia.org/resource/Ben_10:_Alien_Force_(video_game)>) --doo:developer--> PlayStation_Portable (dor:PlayStation_Portable)
+      - Ben_10:_Alien_Force_(video_game) (<http://dbpedia.org/resource/Ben_10:_Alien_Force_(video_game)>) --dop:genre--> Action-adventure_game (dor:Action-adventure_game)
+  '8':
+    attributes:
+      Ben_10:_Alien_Force_(video_game): '(title^=''Ben 10: Alien Force'')'
+    relationships:
+      - Ben_10:_Alien_Force_(video_game) (<http://dbpedia.org/resource/Ben_10:_Alien_Force_(video_game)>) --doo:developer--> PlayStation_Portable (dor:PlayStation_Portable)
+      - Ben_10:_Alien_Force_(video_game) (<http://dbpedia.org/resource/Ben_10:_Alien_Force_(video_game)>) --dop:genre--> Platform_game (dor:Platform_game)
+  '9':
+    attributes:
+      Brunswick_Pro_Bowling: (title^='Brunswick Pro Bowling')
+    relationships:
+      - Brunswick_Pro_Bowling (dor:Brunswick_Pro_Bowling) --doo:developer--> PlayStation_2 (dor:PlayStation_2)
+      - Brunswick_Pro_Bowling (dor:Brunswick_Pro_Bowling) --dop:genre--> Sports (dor:Sports)
+  '10':
+    attributes:
+      Brunswick_Pro_Bowling: (title^='Brunswick Pro Bowling')
+    relationships:
+      - Brunswick_Pro_Bowling (dor:Brunswick_Pro_Bowling) --doo:developer--> Xbox_One (dor:Xbox_One)
+      - Brunswick_Pro_Bowling (dor:Brunswick_Pro_Bowling) --dop:genre--> Sports (dor:Sports)
+attributes:
+  video game: --platform^ (dop:platform)--> Resource | --title^ (dop:title)--> langString | --alt^ (dop:alt)--> langString
+  music genre: --quote^ (dop:quote)--> langString | --instruments^ (dop:instruments)--> langString | --width^ (dop:width)--> int | --1y^ (dop:1y)--> int | --1p^ (dop:1p)--> int | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --2y^ (dop:2y)--> int | --instrument^ (doo:instrument)--> Resource | --2p^ (dop:2p)--> int
+subgraph_id: 54
+relationships:
+  - video game --doo:developer--> information appliance
+  - video game --dop:genre--> music genre

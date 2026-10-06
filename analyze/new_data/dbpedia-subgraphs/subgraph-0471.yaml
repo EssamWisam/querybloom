@@ -1,0 +1,117 @@
+types:
+  Band: doo:Band
+  song: doo:Song
+  single: doo:Single
+  musical artist: doo:MusicalArtist
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      CD:UK: (runtime (s)^='3600.0', extra^='Architechs feat Nana')
+      Craig_David: (birth date^='1981-05-05')
+    relationships:
+      - 7_Days_(Craig_David_song) (<http://dbpedia.org/resource/7_Days_(Craig_David_song)>) --doo:artist--> Craig_David (dor:Craig_David)
+      - 7_Days_(Craig_David_song) (<http://dbpedia.org/resource/7_Days_(Craig_David_song)>) --doo:previousWork--> Fill_Me_In (dor:Fill_Me_In)
+      - CD:UK (<http://dbpedia.org/resource/CD:UK>) --dop:extra--> Craig_David (dor:Craig_David)
+      - 7_Days_(Craig_David_song) (<http://dbpedia.org/resource/7_Days_(Craig_David_song)>) --doo:writer--> Mark_Hill_(musician) (<http://dbpedia.org/resource/Mark_Hill_(musician)>)
+  '2':
+    attributes:
+      Marvin_Gaye: (birth date^='1939-04-02')
+      The_Vietnam_War_(TV_series): (runtime (s)^='62100.0', composer^='Atticus Ross', extra^='Bob Dylan')
+      Ain't_Nothing_Like_the_Real_Thing: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-phonograph_record-noun-1', alt^='side-A label by Polydor Records and Kolob Records')
+    relationships:
+      - Ain't_Nothing_Like_the_Real_Thing (<http://dbpedia.org/resource/Ain't_Nothing_Like_the_Real_Thing>) --doo:artist--> Marvin_Gaye (dor:Marvin_Gaye)
+      - Ain't_Nothing_Like_the_Real_Thing (<http://dbpedia.org/resource/Ain't_Nothing_Like_the_Real_Thing>) --doo:previousWork--> If_I_Could_Build_My_Whole_World_Around_You (dor:If_I_Could_Build_My_Whole_World_Around_You)
+      - The_Vietnam_War_(TV_series) (<http://dbpedia.org/resource/The_Vietnam_War_(TV_series)>) --dop:extra--> Marvin_Gaye (dor:Marvin_Gaye)
+      - Ain't_Nothing_Like_the_Real_Thing (<http://dbpedia.org/resource/Ain't_Nothing_Like_the_Real_Thing>) --doo:writer--> Ashford_&_Simpson (<http://dbpedia.org/resource/Ashford_&_Simpson>)
+  '3':
+    attributes:
+      CD:UK: (runtime (s)^='3600.0', extra^='Architechs feat Nana')
+      Craig_David: (birth date^='1981-05-05')
+    relationships:
+      - All_the_Way_(Craig_David_song) (<http://dbpedia.org/resource/All_the_Way_(Craig_David_song)>) --doo:artist--> Craig_David (dor:Craig_David)
+      - All_the_Way_(Craig_David_song) (<http://dbpedia.org/resource/All_the_Way_(Craig_David_song)>) --doo:previousWork--> You_Don't_Miss_Your_Water_('Til_the_Well_Runs_Dry) (<http://dbpedia.org/resource/You_Don't_Miss_Your_Water_('Til_the_Well_Runs_Dry)>)
+      - CD:UK (<http://dbpedia.org/resource/CD:UK>) --dop:extra--> Craig_David (dor:Craig_David)
+      - All_the_Way_(Craig_David_song) (<http://dbpedia.org/resource/All_the_Way_(Craig_David_song)>) --doo:writer--> Mark_Hill_(musician) (<http://dbpedia.org/resource/Mark_Hill_(musician)>)
+  '4':
+    attributes:
+      Kim_Wilde: (birth date^='1960-11-18')
+      Yellowjackets_(TV_series): (runtime (s)^='-3480.0', extra^='Andrew Lloyd Webber, "Cats" 1983 Broadway Cast, Timothy Scott, Terrence Mann')
+      Another_Step_(Closer_to_You): (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-phonograph_record-noun-1')
+    relationships:
+      - Another_Step_(Closer_to_You) (<http://dbpedia.org/resource/Another_Step_(Closer_to_You)>) --doo:artist--> Kim_Wilde (dor:Kim_Wilde)
+      - Another_Step_(Closer_to_You) (<http://dbpedia.org/resource/Another_Step_(Closer_to_You)>) --doo:previousWork--> You_Keep_Me_Hangin'_On (<http://dbpedia.org/resource/You_Keep_Me_Hangin'_On>)
+      - Yellowjackets_(TV_series) (<http://dbpedia.org/resource/Yellowjackets_(TV_series)>) --dop:extra--> Kim_Wilde (dor:Kim_Wilde)
+      - Another_Step_(Closer_to_You) (<http://dbpedia.org/resource/Another_Step_(Closer_to_You)>) --doo:writer--> Kim_Wilde (dor:Kim_Wilde)
+  '5':
+    attributes:
+      Marvin_Gaye: (birth date^='1939-04-02')
+      The_Vietnam_War_(TV_series): (runtime (s)^='62100.0', composer^='Atticus Ross', extra^='Bob Dylan')
+    relationships:
+      - Baby_Don't_You_Do_It (<http://dbpedia.org/resource/Baby_Don't_You_Do_It>) --doo:artist--> Marvin_Gaye (dor:Marvin_Gaye)
+      - Baby_Don't_You_Do_It (<http://dbpedia.org/resource/Baby_Don't_You_Do_It>) --doo:previousWork--> Try_It_Baby (dor:Try_It_Baby)
+      - The_Vietnam_War_(TV_series) (<http://dbpedia.org/resource/The_Vietnam_War_(TV_series)>) --dop:extra--> Marvin_Gaye (dor:Marvin_Gaye)
+      - Baby_Don't_You_Do_It (<http://dbpedia.org/resource/Baby_Don't_You_Do_It>) --doo:writer--> Holland–Dozier–Holland (<http://dbpedia.org/resource/Holland–Dozier–Holland>)
+  '6':
+    attributes:
+      Prince_Royce: (birth date^='1989-05-11')
+      Pitbull_(rapper): (title^='Pitbull in 2019')
+      Hasta_el_fin_del_mundo: (extra^='http://dbpedia.org/resource/Alejandro_Fernández')
+    relationships:
+      - Back_It_Up_(Prince_Royce_song) (<http://dbpedia.org/resource/Back_It_Up_(Prince_Royce_song)>) --doo:artist--> Prince_Royce (dor:Prince_Royce)
+      - Back_It_Up_(Prince_Royce_song) (<http://dbpedia.org/resource/Back_It_Up_(Prince_Royce_song)>) --doo:previousWork--> Que_Cosas_Tiene_el_Amor (dor:Que_Cosas_Tiene_el_Amor)
+      - Hasta_el_fin_del_mundo (dor:Hasta_el_fin_del_mundo) --dop:extra--> Prince_Royce (dor:Prince_Royce)
+      - Back_It_Up_(Prince_Royce_song) (<http://dbpedia.org/resource/Back_It_Up_(Prince_Royce_song)>) --doo:writer--> Pitbull_(rapper) (<http://dbpedia.org/resource/Pitbull_(rapper)>)
+  '7':
+    attributes:
+      Madcon: (title^='Final interval act', before^='http://dbpedia.org/resource/Fuerzabruta')
+      Take_Me_Out_(British_game_show): (runtime (s)^='-5400.0', extra^='David Guetta featuring Kelly Rowland')
+    relationships:
+      - Back_on_the_Road_(Madcon_song) (<http://dbpedia.org/resource/Back_on_the_Road_(Madcon_song)>) --doo:artist--> Madcon (dor:Madcon)
+      - Back_on_the_Road_(Madcon_song) (<http://dbpedia.org/resource/Back_on_the_Road_(Madcon_song)>) --doo:previousWork--> Beggin' (<http://dbpedia.org/resource/Beggin'>)
+      - Take_Me_Out_(British_game_show) (<http://dbpedia.org/resource/Take_Me_Out_(British_game_show)>) --dop:extra--> Madcon (dor:Madcon)
+      - Back_on_the_Road_(Madcon_song) (<http://dbpedia.org/resource/Back_on_the_Road_(Madcon_song)>) --doo:writer--> Madcon (dor:Madcon)
+  '8':
+    attributes:
+      Terrace_House:_Boys_×_Girls_Next_Door: (runtime (s)^='1800.0', extra^='G Love & Special Sauce')
+    relationships:
+      - Bad_(David_Guetta_and_Showtek_song) (<http://dbpedia.org/resource/Bad_(David_Guetta_and_Showtek_song)>) --doo:artist--> David_Guetta (dor:David_Guetta)
+      - Bad_(David_Guetta_and_Showtek_song) (<http://dbpedia.org/resource/Bad_(David_Guetta_and_Showtek_song)>) --doo:previousWork--> Shot_Me_Down (dor:Shot_Me_Down)
+      - Terrace_House:_Boys_×_Girls_Next_Door (<http://dbpedia.org/resource/Terrace_House:_Boys_×_Girls_Next_Door>) --dop:extra--> David_Guetta (dor:David_Guetta)
+      - Bad_(David_Guetta_and_Showtek_song) (<http://dbpedia.org/resource/Bad_(David_Guetta_and_Showtek_song)>) --doo:writer--> Showtek (dor:Showtek)
+  '9':
+    attributes:
+      A_Lei_do_Amor: (runtime (s)^='-3420.0', composer^='Ricardo Leão', extra^='4')
+      Enrique_Iglesias: (birth date^='1975-05-08')
+    relationships:
+      - Bailando_(Enrique_Iglesias_song) (<http://dbpedia.org/resource/Bailando_(Enrique_Iglesias_song)>) --doo:artist--> Enrique_Iglesias (dor:Enrique_Iglesias)
+      - Bailando_(Enrique_Iglesias_song) (<http://dbpedia.org/resource/Bailando_(Enrique_Iglesias_song)>) --doo:previousWork--> I'm_a_Freak (<http://dbpedia.org/resource/I'm_a_Freak>)
+      - A_Lei_do_Amor (dor:A_Lei_do_Amor) --dop:extra--> Enrique_Iglesias (dor:Enrique_Iglesias)
+      - Bailando_(Enrique_Iglesias_song) (<http://dbpedia.org/resource/Bailando_(Enrique_Iglesias_song)>) --doo:writer--> Sean_Paul (dor:Sean_Paul)
+  '10':
+    attributes:
+      Jessie_J: (before^='http://dbpedia.org/resource/Sandy_Lam')
+      Ariana_Grande: (width^='155', title^='"Thank U, Next"')
+      Take_Me_Out_(British_game_show): (runtime (s)^='-5400.0', extra^='David Guetta featuring Kelly Rowland')
+    relationships:
+      - Bang_Bang_(Jessie_J,_Ariana_Grande_and_Nicki_Minaj_song) (<http://dbpedia.org/resource/Bang_Bang_(Jessie_J,_Ariana_Grande_and_Nicki_Minaj_song)>) --doo:artist--> Jessie_J (dor:Jessie_J)
+      - Bang_Bang_(Jessie_J,_Ariana_Grande_and_Nicki_Minaj_song) (<http://dbpedia.org/resource/Bang_Bang_(Jessie_J,_Ariana_Grande_and_Nicki_Minaj_song)>) --doo:previousWork--> Calling_All_Hearts_(song) (<http://dbpedia.org/resource/Calling_All_Hearts_(song)>)
+      - Take_Me_Out_(British_game_show) (<http://dbpedia.org/resource/Take_Me_Out_(British_game_show)>) --dop:extra--> Jessie_J (dor:Jessie_J)
+      - Bang_Bang_(Jessie_J,_Ariana_Grande_and_Nicki_Minaj_song) (<http://dbpedia.org/resource/Bang_Bang_(Jessie_J,_Ariana_Grande_and_Nicki_Minaj_song)>) --doo:writer--> Ariana_Grande (dor:Ariana_Grande)
+attributes:
+  Band: --group^ (dop:group)--> langString | --width^ (dop:width)--> int | --title^ (dop:title)--> langString
+  song: --composer^ (doo:composer)--> Resource | --all writing^ (dop:allWriting)--> langString
+  single: --wordnet_type (dop:wordnet_type)--> Resource | --alt^ (dop:alt)--> langString
+  musical artist: --birth date^ (doo:birthDate)--> date | --before^ (dop:before)--> langString
+  television show: --runtime (s)^ (doo:runtime)--> double | --composer^ (dop:composer)--> langString | --extra^ (dop:extra)--> langString | --reason^ (dop:reason)--> langString
+subgraph_id: 471
+relationships:
+  - single --doo:artist--> musical artist
+  - single --doo:previousWork--> song
+  - television show --dop:extra--> musical artist
+  - single --doo:writer--> Band

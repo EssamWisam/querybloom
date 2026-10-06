@@ -1,0 +1,135 @@
+types:
+  company: doo:Company
+  building: doo:Building
+  settlement: doo:Settlement
+  university: doo:University
+  government agency: doo:GovernmentAgency
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Kyiv: (area code^='+380 44')
+    relationships:
+      - 101_Tower_(Kyiv) (<http://dbpedia.org/resource/101_Tower_(Kyiv)>) --doo:city--> Kyiv (dor:Kyiv)
+      - Ministry_of_Education_and_Science_of_Ukraine (dor:Ministry_of_Education_and_Science_of_Ukraine) --doo:headquarter--> Kyiv (dor:Kyiv)
+      - Kyiv_National_University_of_Trade_and_Economics (dor:Kyiv_National_University_of_Trade_and_Economics) --dop:affiliation--> Ministry_of_Education_and_Science_of_Ukraine (dor:Ministry_of_Education_and_Science_of_Ukraine)
+      - Aerostar_Airlines (dor:Aerostar_Airlines) --doo:headquarter--> Kyiv (dor:Kyiv)
+  '2':
+    attributes:
+      Kyiv: (area code^='+380 44')
+    relationships:
+      - 101_Tower_(Kyiv) (<http://dbpedia.org/resource/101_Tower_(Kyiv)>) --doo:city--> Kyiv (dor:Kyiv)
+      - Ministry_of_Education_and_Science_of_Ukraine (dor:Ministry_of_Education_and_Science_of_Ukraine) --doo:headquarter--> Kyiv (dor:Kyiv)
+      - Kyiv_National_University_of_Trade_and_Economics (dor:Kyiv_National_University_of_Trade_and_Economics) --dop:affiliation--> Ministry_of_Education_and_Science_of_Ukraine (dor:Ministry_of_Education_and_Science_of_Ukraine)
+      - Aerosvit_Ukrainian_Airlines (dor:Aerosvit_Ukrainian_Airlines) --doo:headquarter--> Kyiv (dor:Kyiv)
+  '3':
+    attributes:
+      Kyiv: (area code^='+380 44')
+    relationships:
+      - 101_Tower_(Kyiv) (<http://dbpedia.org/resource/101_Tower_(Kyiv)>) --doo:city--> Kyiv (dor:Kyiv)
+      - Ministry_of_Education_and_Science_of_Ukraine (dor:Ministry_of_Education_and_Science_of_Ukraine) --doo:headquarter--> Kyiv (dor:Kyiv)
+      - Kyiv_National_University_of_Trade_and_Economics (dor:Kyiv_National_University_of_Trade_and_Economics) --dop:affiliation--> Ministry_of_Education_and_Science_of_Ukraine (dor:Ministry_of_Education_and_Science_of_Ukraine)
+      - Aerovis_Airlines (dor:Aerovis_Airlines) --doo:headquarter--> Kyiv (dor:Kyiv)
+  '4':
+    attributes: {}
+    relationships:
+      - Aiiro_Cafe (dor:Aiiro_Cafe) --doo:city--> Tokyo (dor:Tokyo)
+      - Ministry_of_Defense_(Japan) (<http://dbpedia.org/resource/Ministry_of_Defense_(Japan)>) --doo:headquarter--> Tokyo (dor:Tokyo)
+      - National_Defense_Academy_of_Japan (dor:National_Defense_Academy_of_Japan) --dop:affiliation--> Ministry_of_Defense_(Japan) (<http://dbpedia.org/resource/Ministry_of_Defense_(Japan)>)
+      - ANA_&_JP_Express (<http://dbpedia.org/resource/ANA_&_JP_Express>) --doo:headquarter--> Tokyo (dor:Tokyo)
+  '5':
+    attributes: {}
+    relationships:
+      - Aiiro_Cafe (dor:Aiiro_Cafe) --doo:city--> Tokyo (dor:Tokyo)
+      - Ministry_of_Defense_(Japan) (<http://dbpedia.org/resource/Ministry_of_Defense_(Japan)>) --doo:headquarter--> Tokyo (dor:Tokyo)
+      - National_Defense_Academy_of_Japan (dor:National_Defense_Academy_of_Japan) --dop:affiliation--> Ministry_of_Defense_(Japan) (<http://dbpedia.org/resource/Ministry_of_Defense_(Japan)>)
+      - ANA_Wings (dor:ANA_Wings) --doo:headquarter--> Tokyo (dor:Tokyo)
+  '6':
+    attributes: {}
+    relationships:
+      - Aiiro_Cafe (dor:Aiiro_Cafe) --doo:city--> Tokyo (dor:Tokyo)
+      - Ministry_of_Defense_(Japan) (<http://dbpedia.org/resource/Ministry_of_Defense_(Japan)>) --doo:headquarter--> Tokyo (dor:Tokyo)
+      - National_Defense_Academy_of_Japan (dor:National_Defense_Academy_of_Japan) --dop:affiliation--> Ministry_of_Defense_(Japan) (<http://dbpedia.org/resource/Ministry_of_Defense_(Japan)>)
+      - Asahi_Motor__TOHOKU_KYUKO_BUS_CO.,_LTD.__1 (<http://dbpedia.org/resource/Asahi_Motor__TOHOKU_KYUKO_BUS_CO.,_LTD.__1>) --doo:headquarter--> Tokyo (dor:Tokyo)
+  '7':
+    attributes: {}
+    relationships:
+      - Aliw_Theater (dor:Aliw_Theater) --doo:city--> Pasay (dor:Pasay)
+      - Civil_Aviation_Authority_of_the_Philippines (dor:Civil_Aviation_Authority_of_the_Philippines) --doo:headquarter--> Pasay (dor:Pasay)
+      - Air_Link_International_Aviation_College (dor:Air_Link_International_Aviation_College) --dop:affiliation--> Civil_Aviation_Authority_of_the_Philippines (dor:Civil_Aviation_Authority_of_the_Philippines)
+      - Air_Link_International_Airways (dor:Air_Link_International_Airways) --doo:headquarter--> Pasay (dor:Pasay)
+  '8':
+    attributes: {}
+    relationships:
+      - Aliw_Theater (dor:Aliw_Theater) --doo:city--> Pasay (dor:Pasay)
+      - Civil_Aviation_Authority_of_the_Philippines (dor:Civil_Aviation_Authority_of_the_Philippines) --doo:headquarter--> Pasay (dor:Pasay)
+      - Air_Link_International_Aviation_College (dor:Air_Link_International_Aviation_College) --dop:affiliation--> Civil_Aviation_Authority_of_the_Philippines (dor:Civil_Aviation_Authority_of_the_Philippines)
+      - AirAsia_Zest (dor:AirAsia_Zest) --doo:headquarter--> Pasay (dor:Pasay)
+  '9':
+    attributes: {}
+    relationships:
+      - Aliw_Theater (dor:Aliw_Theater) --doo:city--> Pasay (dor:Pasay)
+      - Civil_Aviation_Authority_of_the_Philippines (dor:Civil_Aviation_Authority_of_the_Philippines) --doo:headquarter--> Pasay (dor:Pasay)
+      - Air_Link_International_Aviation_College (dor:Air_Link_International_Aviation_College) --dop:affiliation--> Civil_Aviation_Authority_of_the_Philippines (dor:Civil_Aviation_Authority_of_the_Philippines)
+      - AirSWIFT (dor:AirSWIFT) --doo:headquarter--> Pasay (dor:Pasay)
+  '10':
+    attributes:
+      Ankara: (area code^='1')
+    relationships:
+      - Ankara_Aktepe_Stadium (dor:Ankara_Aktepe_Stadium) --doo:city--> Ankara (dor:Ankara)
+      - Council_of_Higher_Education_(Turkey) (<http://dbpedia.org/resource/Council_of_Higher_Education_(Turkey)>) --doo:headquarter--> Ankara (dor:Ankara)
+      - Toros_University (dor:Toros_University) --dop:affiliation--> Council_of_Higher_Education_(Turkey) (<http://dbpedia.org/resource/Council_of_Higher_Education_(Turkey)>)
+      - Anatolian_Baghdad_Railways (dor:Anatolian_Baghdad_Railways) --doo:headquarter--> Ankara (dor:Ankara)
+qa_result:
+  status: completed
+  cost_usd: 0.347482
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.03665740000000001
+        total_tokens: 3858
+        prompt_tokens: 2255
+        completion_tokens: 1603
+      generate:
+        cost_usd: 0.08991760000000001
+        total_tokens: 8317
+        prompt_tokens: 4615
+        completion_tokens: 3702
+      verify_1:
+        cost_usd: 0.07286200000000001
+        total_tokens: 7430
+        prompt_tokens: 5049
+        completion_tokens: 2381
+      verify_2:
+        cost_usd: 0.03397700000000001
+        total_tokens: 5485
+        prompt_tokens: 5048
+        completion_tokens: 437
+      complexity:
+        cost_usd: 0.114068
+        total_tokens: 10496
+        prompt_tokens: 5818
+        completion_tokens: 4678
+    total_tokens: 35586
+    prompt_tokens: 22785
+    total_cost_usd: 0.347482
+    completion_tokens: 12801
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  company: --owner^ (dop:owner)--> Resource | --brands^ (dop:brands)--> langString
+  building: --id^ (dop:id)--> langString | --direction^ (dop:direction)--> langString
+  settlement: --differentFrom (wwoo:differentFrom)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --city^ (dop:city)--> langString | --area code^ (doo:areaCode)--> string
+  university: --reason^ (dop:reason)--> langString
+subgraph_id: 310
+relationships:
+  - building --doo:city--> settlement
+  - government agency --doo:headquarter--> settlement
+  - university --dop:affiliation--> government agency
+  - company --doo:headquarter--> settlement

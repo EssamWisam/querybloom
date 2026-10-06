@@ -1,0 +1,105 @@
+types:
+  company: doo:Company
+  station: doo:Station
+  Location: doo:Location
+  government agency: doo:GovernmentAgency
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Philippines: (caption align^='center')
+      5th_Avenue_station_(LRT): (page length (characters) of wiki page^='2655', opened^='1985-05-12')
+      Department_of_Transportation_(Philippines): (logo width^='200')
+    relationships:
+      - 5th_Avenue_station_(LRT) (<http://dbpedia.org/resource/5th_Avenue_station_(LRT)>) --dop:owned--> Light_Rail_Manila_Corporation (dor:Light_Rail_Manila_Corporation)
+      - 5th_Avenue_station_(LRT) (<http://dbpedia.org/resource/5th_Avenue_station_(LRT)>) --doo:owner--> Department_of_Transportation_(Philippines) (<http://dbpedia.org/resource/Department_of_Transportation_(Philippines)>)
+      - 5th_Avenue_station_(LRT) (<http://dbpedia.org/resource/5th_Avenue_station_(LRT)>) --dop:country--> Philippines (dor:Philippines)
+  '2':
+    attributes:
+      Philippines: (caption align^='center')
+      Abad_Santos_station: (page length (characters) of wiki page^='2449', opened^='1985-05-12')
+      Department_of_Transportation_(Philippines): (logo width^='200')
+    relationships:
+      - Abad_Santos_station (dor:Abad_Santos_station) --dop:owned--> Light_Rail_Manila_Corporation (dor:Light_Rail_Manila_Corporation)
+      - Abad_Santos_station (dor:Abad_Santos_station) --doo:owner--> Department_of_Transportation_(Philippines) (<http://dbpedia.org/resource/Department_of_Transportation_(Philippines)>)
+      - Abad_Santos_station (dor:Abad_Santos_station) --dop:country--> Philippines (dor:Philippines)
+  '3':
+    attributes:
+      Australia: (caption align^='center')
+      Aircraft_railway_station: (page length (characters) of wiki page^='8207', opened^='1925-03-07', distance^='22.23')
+    relationships:
+      - Aircraft_railway_station (dor:Aircraft_railway_station) --dop:owned--> VicTrack (dor:VicTrack)
+      - Aircraft_railway_station (dor:Aircraft_railway_station) --doo:owner--> VicTrack (dor:VicTrack)
+      - Aircraft_railway_station (dor:Aircraft_railway_station) --dop:country--> Australia (dor:Australia)
+  '4':
+    attributes:
+      Australia: (caption align^='center')
+      Alamein_railway_station: (page length (characters) of wiki page^='5101', opened^='1948-06-28', distance^='from Southern Cross')
+    relationships:
+      - Alamein_railway_station (dor:Alamein_railway_station) --dop:owned--> VicTrack (dor:VicTrack)
+      - Alamein_railway_station (dor:Alamein_railway_station) --doo:owner--> VicTrack (dor:VicTrack)
+      - Alamein_railway_station (dor:Alamein_railway_station) --dop:country--> Australia (dor:Australia)
+  '5':
+    attributes:
+      Australia: (caption align^='center')
+      Albion_railway_station,_Melbourne: (page length (characters) of wiki page^='8527', opened^='1860-01-05', distance^='13.65')
+    relationships:
+      - Albion_railway_station,_Melbourne (<http://dbpedia.org/resource/Albion_railway_station,_Melbourne>) --dop:owned--> VicTrack (dor:VicTrack)
+      - Albion_railway_station,_Melbourne (<http://dbpedia.org/resource/Albion_railway_station,_Melbourne>) --doo:owner--> VicTrack (dor:VicTrack)
+      - Albion_railway_station,_Melbourne (<http://dbpedia.org/resource/Albion_railway_station,_Melbourne>) --dop:country--> Australia (dor:Australia)
+  '6':
+    attributes:
+      Indian_Railways: (industry^='http://dbpedia.org/resource/Rail_transport')
+      Aliyavada_railway_station: (page length (characters) of wiki page^='2848')
+    relationships:
+      - Aliyavada_railway_station (dor:Aliyavada_railway_station) --dop:owned--> Indian_Railways (dor:Indian_Railways)
+      - Aliyavada_railway_station (dor:Aliyavada_railway_station) --doo:owner--> Ministry_of_Railways_(India) (<http://dbpedia.org/resource/Ministry_of_Railways_(India)>)
+      - Aliyavada_railway_station (dor:Aliyavada_railway_station) --dop:country--> India (dor:India)
+  '7':
+    attributes:
+      Aliyavada_railway_station: (page length (characters) of wiki page^='2848')
+    relationships:
+      - Aliyavada_railway_station (dor:Aliyavada_railway_station) --dop:owned--> Ministry_of_Railways_(India) (<http://dbpedia.org/resource/Ministry_of_Railways_(India)>)
+      - Aliyavada_railway_station (dor:Aliyavada_railway_station) --doo:owner--> Ministry_of_Railways_(India) (<http://dbpedia.org/resource/Ministry_of_Railways_(India)>)
+      - Aliyavada_railway_station (dor:Aliyavada_railway_station) --dop:country--> India (dor:India)
+  '8':
+    attributes:
+      Indian_Railways: (industry^='http://dbpedia.org/resource/Rail_transport')
+      Ambliyasan_Junction_railway_station: (page length (characters) of wiki page^='3115')
+    relationships:
+      - Ambliyasan_Junction_railway_station (dor:Ambliyasan_Junction_railway_station) --dop:owned--> Indian_Railways (dor:Indian_Railways)
+      - Ambliyasan_Junction_railway_station (dor:Ambliyasan_Junction_railway_station) --doo:owner--> Ministry_of_Railways_(India) (<http://dbpedia.org/resource/Ministry_of_Railways_(India)>)
+      - Ambliyasan_Junction_railway_station (dor:Ambliyasan_Junction_railway_station) --dop:country--> India (dor:India)
+  '9':
+    attributes:
+      Philippines: (caption align^='center')
+      Antipolo_station: (page length (characters) of wiki page^='5767', opened^='2021-07-05')
+      Light_Rail_Transit_Authority: (industry^='http://dbpedia.org/resource/Public_transport')
+      Department_of_Transportation_(Philippines): (logo width^='200')
+    relationships:
+      - Antipolo_station (dor:Antipolo_station) --dop:owned--> Light_Rail_Transit_Authority (dor:Light_Rail_Transit_Authority)
+      - Antipolo_station (dor:Antipolo_station) --doo:owner--> Department_of_Transportation_(Philippines) (<http://dbpedia.org/resource/Department_of_Transportation_(Philippines)>)
+      - Antipolo_station (dor:Antipolo_station) --dop:country--> Philippines (dor:Philippines)
+  '10':
+    attributes:
+      Canada: (caption align^='center')
+      Coquitlam_Central_station: (page length (characters) of wiki page^='9706', opened^='')
+      TransLink_(British_Columbia): (logo width^='220')
+    relationships:
+      - Coquitlam_Central_station (dor:Coquitlam_Central_station) --dop:owned--> TransLink_(British_Columbia) (<http://dbpedia.org/resource/TransLink_(British_Columbia)>)
+      - Coquitlam_Central_station (dor:Coquitlam_Central_station) --doo:owner--> TransLink_(British_Columbia) (<http://dbpedia.org/resource/TransLink_(British_Columbia)>)
+      - Coquitlam_Central_station (dor:Coquitlam_Central_station) --dop:country--> Canada (dor:Canada)
+attributes:
+  company: --industry^ (dop:industry)--> langString | --brands^ (dop:brands)--> langString
+  station: --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --opened^ (dop:opened)--> date | --distance^ (dop:distance)--> kilometre
+  Location: --Apr low F^ (dop:aprLowF)--> int | --founder^ (dop:founder)--> Resource | --display^ (dop:display)--> langString | --nickname^ (dop:nickname)--> langString | --caption align^ (dop:captionAlign)--> langString
+  government agency: --logo width^ (dop:logoWidth)--> int
+subgraph_id: 89
+relationships:
+  - station --dop:owned--> company
+  - station --doo:owner--> government agency
+  - station --dop:country--> Location

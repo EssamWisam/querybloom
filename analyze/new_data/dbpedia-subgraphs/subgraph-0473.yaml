@@ -1,0 +1,98 @@
+types:
+  award: doo:Award
+  Location: doo:Location
+  politician: doo:Politician
+  city district: doo:CityDistrict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ireland: (country^='Ireland')
+    relationships:
+      - Lisa_Chambers (dor:Lisa_Chambers) --doo:honours--> 1916_Centenary_Commemorative_Medal (dor:1916_Centenary_Commemorative_Medal)
+      - 1916_Centenary_Commemorative_Medal (dor:1916_Centenary_Commemorative_Medal) --doo:presenter--> Ireland (dor:Ireland)
+      - Killester (dor:Killester) --doo:country--> Ireland (dor:Ireland)
+  '2':
+    attributes:
+      Ireland: (country^='Ireland')
+    relationships:
+      - Lisa_Chambers (dor:Lisa_Chambers) --doo:honours--> 1916_Centenary_Commemorative_Medal (dor:1916_Centenary_Commemorative_Medal)
+      - 1916_Centenary_Commemorative_Medal (dor:1916_Centenary_Commemorative_Medal) --doo:presenter--> Ireland (dor:Ireland)
+      - Knockboy,_County_Waterford (<http://dbpedia.org/resource/Knockboy,_County_Waterford>) --doo:country--> Ireland (dor:Ireland)
+  '3':
+    attributes:
+      Ireland: (country^='Ireland')
+    relationships:
+      - Lisa_Chambers (dor:Lisa_Chambers) --doo:honours--> 1916_Centenary_Commemorative_Medal (dor:1916_Centenary_Commemorative_Medal)
+      - 1916_Centenary_Commemorative_Medal (dor:1916_Centenary_Commemorative_Medal) --doo:presenter--> Ireland (dor:Ireland)
+      - Marino,_Dublin (<http://dbpedia.org/resource/Marino,_Dublin>) --doo:country--> Ireland (dor:Ireland)
+  '4':
+    attributes:
+      Milton_Fowler_Gregg: (death place^='http://dbpedia.org/resource/Fredericton')
+      Canadian_Efficiency_Decoration: (image size^='300')
+    relationships:
+      - Milton_Fowler_Gregg (dor:Milton_Fowler_Gregg) --doo:honours--> Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration)
+      - Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration) --doo:presenter--> Canada (dor:Canada)
+      - Abbeydale,_Calgary (<http://dbpedia.org/resource/Abbeydale,_Calgary>) --doo:country--> Canada (dor:Canada)
+  '5':
+    attributes:
+      Milton_Fowler_Gregg: (death place^='http://dbpedia.org/resource/Fredericton')
+      Canadian_Efficiency_Decoration: (image size^='300')
+    relationships:
+      - Milton_Fowler_Gregg (dor:Milton_Fowler_Gregg) --doo:honours--> Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration)
+      - Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration) --doo:presenter--> Canada (dor:Canada)
+      - Abbottsfield,_Edmonton (<http://dbpedia.org/resource/Abbottsfield,_Edmonton>) --doo:country--> Canada (dor:Canada)
+  '6':
+    attributes:
+      Milton_Fowler_Gregg: (death place^='http://dbpedia.org/resource/Fredericton')
+      Canadian_Efficiency_Decoration: (image size^='300')
+    relationships:
+      - Milton_Fowler_Gregg (dor:Milton_Fowler_Gregg) --doo:honours--> Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration)
+      - Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration) --doo:presenter--> Canada (dor:Canada)
+      - Acadia,_Calgary (<http://dbpedia.org/resource/Acadia,_Calgary>) --doo:country--> Canada (dor:Canada)
+  '7':
+    attributes:
+      France: (country^='France')
+      Colonial_Medal: (image size^='150')
+    relationships:
+      - Jean-Marie_Le_Pen (dor:Jean-Marie_Le_Pen) --doo:honours--> Colonial_Medal (dor:Colonial_Medal)
+      - Colonial_Medal (dor:Colonial_Medal) --doo:presenter--> France (dor:France)
+      - Blois-Vienne (dor:Blois-Vienne) --doo:country--> France (dor:France)
+  '8':
+    attributes:
+      France: (country^='France')
+      Colonial_Medal: (image size^='150')
+    relationships:
+      - Jean-Marie_Le_Pen (dor:Jean-Marie_Le_Pen) --doo:honours--> Colonial_Medal (dor:Colonial_Medal)
+      - Colonial_Medal (dor:Colonial_Medal) --doo:presenter--> France (dor:France)
+      - La_Charbonnière (<http://dbpedia.org/resource/La_Charbonnière>) --doo:country--> France (dor:France)
+  '9':
+    attributes:
+      France: (country^='France')
+      Colonial_Medal: (image size^='150')
+    relationships:
+      - Jean-Marie_Le_Pen (dor:Jean-Marie_Le_Pen) --doo:honours--> Colonial_Medal (dor:Colonial_Medal)
+      - Colonial_Medal (dor:Colonial_Medal) --doo:presenter--> France (dor:France)
+      - Saint-Germain-des-Prés (<http://dbpedia.org/resource/Saint-Germain-des-Prés>) --doo:country--> France (dor:France)
+  '10':
+    attributes:
+      Spain: (country^='Spain')
+      Luigi_Russo: (death place^='http://dbpedia.org/resource/Italy', awards^='http://dbpedia.org/resource/Colonial_Order_of_the_Star_of_Italy')
+      Cross_of_Military_Merit: (image size^='180')
+    relationships:
+      - Luigi_Russo (dor:Luigi_Russo) --doo:honours--> Cross_of_Military_Merit (dor:Cross_of_Military_Merit)
+      - Cross_of_Military_Merit (dor:Cross_of_Military_Merit) --doo:presenter--> Spain (dor:Spain)
+      - Almenara_(Madrid) (<http://dbpedia.org/resource/Almenara_(Madrid)>) --doo:country--> Spain (dor:Spain)
+attributes:
+  award: --image size^ (dop:imageSize)--> int
+  Location: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --number of vineyards^ (doo:numberOfVineyards)--> int | --country^ (dop:country)--> langString | --owner^ (dop:owner)--> langString | --d^ (dop:d)--> langString | --area total km^ (dop:areaTotalKm)--> int
+  politician: --death place^ (dop:deathPlace)--> langString | --width^ (dop:width)--> int | --father^ (doo:father)--> Resource | --awards^ (dop:awards)--> langString
+subgraph_id: 473
+relationships:
+  - politician --doo:honours--> award
+  - award --doo:presenter--> Location
+  - city district --doo:country--> Location

@@ -1,0 +1,69 @@
+types:
+  airport: doo:Airport
+  Location: doo:Location
+  magazine: doo:Magazine
+  settlement: doo:Settlement
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Boonville_Airport_(California) (<http://dbpedia.org/resource/Boonville_Airport_(California)>) --doo:operator--> California (dor:California)
+      - Mandalay_Gazette (dor:Mandalay_Gazette) --doo:country--> California (dor:California)
+      - 100_Thieves (dor:100_Thieves) --doo:headquarter--> California (dor:California)
+      - Boonville_Airport_(California) (<http://dbpedia.org/resource/Boonville_Airport_(California)>) --doo:operator--> Boonville,_California (<http://dbpedia.org/resource/Boonville,_California>)
+  '2':
+    attributes: {}
+    relationships:
+      - Boonville_Airport_(California) (<http://dbpedia.org/resource/Boonville_Airport_(California)>) --doo:operator--> California (dor:California)
+      - Mandalay_Gazette (dor:Mandalay_Gazette) --doo:country--> California (dor:California)
+      - 2008_California_Statewide_Truck_and_Bus_Rule (dor:2008_California_Statewide_Truck_and_Bus_Rule) --doo:headquarter--> California (dor:California)
+      - Boonville_Airport_(California) (<http://dbpedia.org/resource/Boonville_Airport_(California)>) --doo:operator--> Boonville,_California (<http://dbpedia.org/resource/Boonville,_California>)
+  '3':
+    attributes: {}
+    relationships:
+      - Boonville_Airport_(California) (<http://dbpedia.org/resource/Boonville_Airport_(California)>) --doo:operator--> California (dor:California)
+      - Mandalay_Gazette (dor:Mandalay_Gazette) --doo:country--> California (dor:California)
+      - AC_Transit (dor:AC_Transit) --doo:headquarter--> California (dor:California)
+      - Boonville_Airport_(California) (<http://dbpedia.org/resource/Boonville_Airport_(California)>) --doo:operator--> Boonville,_California (<http://dbpedia.org/resource/Boonville,_California>)
+  '4':
+    attributes:
+      Japan: (UTC offset^='+09:00')
+      Ishigaki,_Okinawa: (Apr precipitation mm^='146.9')
+    relationships:
+      - New_Ishigaki_Airport (dor:New_Ishigaki_Airport) --doo:operator--> Japan (dor:Japan)
+      - Akai_tori (dor:Akai_tori) --doo:country--> Japan (dor:Japan)
+      - Acquisition,_Technology_&_Logistics_Agency (<http://dbpedia.org/resource/Acquisition,_Technology_&_Logistics_Agency>) --doo:headquarter--> Japan (dor:Japan)
+      - New_Ishigaki_Airport (dor:New_Ishigaki_Airport) --doo:operator--> Ishigaki,_Okinawa (<http://dbpedia.org/resource/Ishigaki,_Okinawa>)
+  '5':
+    attributes:
+      Japan: (UTC offset^='+09:00')
+    relationships:
+      - New_Ishigaki_Airport (dor:New_Ishigaki_Airport) --doo:operator--> Japan (dor:Japan)
+      - Akai_tori (dor:Akai_tori) --doo:country--> Japan (dor:Japan)
+      - Acquisition,_Technology_&_Logistics_Agency (<http://dbpedia.org/resource/Acquisition,_Technology_&_Logistics_Agency>) --doo:headquarter--> Japan (dor:Japan)
+      - New_Ishigaki_Airport (dor:New_Ishigaki_Airport) --doo:operator--> Okinawa_Prefecture (dor:Okinawa_Prefecture)
+  '6':
+    attributes:
+      Japan: (UTC offset^='+09:00')
+      Ishigaki,_Okinawa: (Apr precipitation mm^='146.9')
+    relationships:
+      - New_Ishigaki_Airport (dor:New_Ishigaki_Airport) --doo:operator--> Japan (dor:Japan)
+      - Akai_tori (dor:Akai_tori) --doo:country--> Japan (dor:Japan)
+      - Agency_for_Cultural_Affairs (dor:Agency_for_Cultural_Affairs) --doo:headquarter--> Japan (dor:Japan)
+      - New_Ishigaki_Airport (dor:New_Ishigaki_Airport) --doo:operator--> Ishigaki,_Okinawa (<http://dbpedia.org/resource/Ishigaki,_Okinawa>)
+attributes:
+  Location: --Apr low F^ (dop:aprLowF)--> int | --frazioni^ (doo:frazioni)--> Resource | --designated other1 date^ (dop:designatedOther1Date)--> date | --bot^ (dop:bot)--> langString | --UTC offset^ (doo:utcOffset)--> string | --quote^ (dop:quote)--> langString | --image width^ (dop:imageWidth)--> int
+  settlement: --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --winner^ (dop:winner)--> langString
+  organisation: --main organ^ (doo:mainOrgan)--> Resource | --status^ (doo:status)--> string
+subgraph_id: 954
+relationships:
+  - airport --doo:operator--> Location
+  - magazine --doo:country--> Location
+  - organisation --doo:headquarter--> Location
+  - airport --doo:operator--> settlement

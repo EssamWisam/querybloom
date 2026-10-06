@@ -1,0 +1,112 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  settlement: doo:Settlement
+  office holder: doo:OfficeHolder
+  radio station: doo:RadioStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Henry_Clay_Sloan: (father^='http://dbpedia.org/resource/A._Scott_Sloan', birth place^='http://dbpedia.org/resource/DeRuyter_(village),_New_York', birth date^='1846-08-12', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - NY1_Noticias (dor:NY1_Noticias) --doo:headquarter--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - A._Scott_Sloan (dor:A._Scott_Sloan) --doo:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - A._Scott_Sloan (dor:A._Scott_Sloan) --doo:child--> Henry_Clay_Sloan (dor:Henry_Clay_Sloan)
+      - NY1_Noticias (dor:NY1_Noticias) --dop:area--> New_York_metropolitan_area (dor:New_York_metropolitan_area)
+  '2':
+    attributes:
+      India: (width^='220')
+      Isha_Khan_Choudhury: (birth place^='http://dbpedia.org/resource/Malda_district', birth date^='1971-05-22', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age')
+    relationships:
+      - Reporter_TV (dor:Reporter_TV) --doo:headquarter--> India (dor:India)
+      - Abu_Hasem_Khan_Choudhury (dor:Abu_Hasem_Khan_Choudhury) --doo:birthPlace--> India (dor:India)
+      - Abu_Hasem_Khan_Choudhury (dor:Abu_Hasem_Khan_Choudhury) --doo:child--> Isha_Khan_Choudhury (dor:Isha_Khan_Choudhury)
+      - Reporter_TV (dor:Reporter_TV) --dop:area--> Kerala (dor:Kerala)
+  '3':
+    attributes:
+      India: (width^='220')
+      Isha_Khan_Choudhury: (birth place^='http://dbpedia.org/resource/Malda_district', birth date^='1971-05-22', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age')
+    relationships:
+      - Sun_Music (dor:Sun_Music) --doo:headquarter--> India (dor:India)
+      - Abu_Hasem_Khan_Choudhury (dor:Abu_Hasem_Khan_Choudhury) --doo:birthPlace--> India (dor:India)
+      - Abu_Hasem_Khan_Choudhury (dor:Abu_Hasem_Khan_Choudhury) --doo:child--> Isha_Khan_Choudhury (dor:Isha_Khan_Choudhury)
+      - Sun_Music (dor:Sun_Music) --dop:area--> Dubai (dor:Dubai)
+  '4':
+    attributes:
+      India: (width^='220')
+      Shaurya_Doval: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Infobox_officeholder')
+    relationships:
+      - Reporter_TV (dor:Reporter_TV) --doo:headquarter--> India (dor:India)
+      - Ajit_Doval (dor:Ajit_Doval) --doo:birthPlace--> India (dor:India)
+      - Ajit_Doval (dor:Ajit_Doval) --doo:child--> Shaurya_Doval (dor:Shaurya_Doval)
+      - Reporter_TV (dor:Reporter_TV) --dop:area--> Kerala (dor:Kerala)
+  '5':
+    attributes:
+      Abigail_Doyle: (birth place^='http://dbpedia.org/resource/Princeton,_NJ', Link from a Wikipage to an external page^='https://doyle.chem.ucla.edu/', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      New_York_City: (width^='225')
+    relationships:
+      - MSG_Western_New_York (dor:MSG_Western_New_York) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - Amy_Gutmann (dor:Amy_Gutmann) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - Amy_Gutmann (dor:Amy_Gutmann) --doo:child--> Abigail_Doyle (dor:Abigail_Doyle)
+      - MSG_Western_New_York (dor:MSG_Western_New_York) --dop:area--> Western_New_York (dor:Western_New_York)
+  '6':
+    attributes:
+      Abigail_Doyle: (birth place^='http://dbpedia.org/resource/Princeton,_NJ', Link from a Wikipage to an external page^='https://doyle.chem.ucla.edu/', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      New_York_City: (width^='225')
+    relationships:
+      - NY1_Noticias (dor:NY1_Noticias) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - Amy_Gutmann (dor:Amy_Gutmann) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - Amy_Gutmann (dor:Amy_Gutmann) --doo:child--> Abigail_Doyle (dor:Abigail_Doyle)
+      - NY1_Noticias (dor:NY1_Noticias) --dop:area--> New_York_metropolitan_area (dor:New_York_metropolitan_area)
+  '7':
+    attributes:
+      Abigail_Doyle: (birth place^='http://dbpedia.org/resource/Princeton,_NJ', Link from a Wikipage to an external page^='https://doyle.chem.ucla.edu/', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      New_York_City: (width^='225')
+    relationships:
+      - NY1 (dor:NY1) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - Amy_Gutmann (dor:Amy_Gutmann) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - Amy_Gutmann (dor:Amy_Gutmann) --doo:child--> Abigail_Doyle (dor:Abigail_Doyle)
+      - NY1 (dor:NY1) --dop:area--> New_York_metropolitan_area (dor:New_York_metropolitan_area)
+  '8':
+    attributes:
+      Florida: (width^='210')
+      Ajay_Pittman: (birth date^='1993-09-10', Link from a Wikipage to an external page^='http://archive.today/oZSBN%7CAjay', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - InfoMás (<http://dbpedia.org/resource/InfoMás>) --doo:headquarter--> Florida (dor:Florida)
+      - Anastasia_Pittman (dor:Anastasia_Pittman) --doo:birthPlace--> Florida (dor:Florida)
+      - Anastasia_Pittman (dor:Anastasia_Pittman) --doo:child--> Ajay_Pittman (dor:Ajay_Pittman)
+      - InfoMás (<http://dbpedia.org/resource/InfoMás>) --dop:area--> Florida (dor:Florida)
+  '9':
+    attributes:
+      Florida: (width^='210')
+      Ajay_Pittman: (birth date^='1993-09-10', Link from a Wikipage to an external page^='http://archive.today/oZSBN%7CAjay', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - InfoMás (<http://dbpedia.org/resource/InfoMás>) --doo:headquarter--> Florida (dor:Florida)
+      - Anastasia_Pittman (dor:Anastasia_Pittman) --doo:birthPlace--> Florida (dor:Florida)
+      - Anastasia_Pittman (dor:Anastasia_Pittman) --doo:child--> Ajay_Pittman (dor:Ajay_Pittman)
+      - InfoMás (<http://dbpedia.org/resource/InfoMás>) --dop:area--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+  '10':
+    attributes:
+      Florida: (width^='210')
+      Ajay_Pittman: (birth date^='1993-09-10', Link from a Wikipage to an external page^='http://archive.today/oZSBN%7CAjay', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - InfoMás (<http://dbpedia.org/resource/InfoMás>) --doo:headquarter--> Florida (dor:Florida)
+      - Anastasia_Pittman (dor:Anastasia_Pittman) --doo:birthPlace--> Florida (dor:Florida)
+      - Anastasia_Pittman (dor:Anastasia_Pittman) --doo:child--> Ajay_Pittman (dor:Ajay_Pittman)
+      - InfoMás (<http://dbpedia.org/resource/InfoMás>) --dop:area--> St._Petersburg,_Florida (<http://dbpedia.org/resource/St._Petersburg,_Florida>)
+attributes:
+  person: --father^ (dop:father)--> langString | --birth place^ (doo:birthPlace)--> Resource | --birth date^ (dop:birthDate)--> int | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --active years start year^ (doo:activeYearsStartYear)--> gYear
+  Location: --number of members^ (doo:numberOfMembers)--> int | --width^ (dop:width)--> langString | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double
+  settlement: --wordnet_type (dop:wordnet_type)--> Resource | --c^ (dop:c)--> langString
+  office holder: --d^ (dop:d)--> langString | --data^ (dop:data)--> langString
+subgraph_id: 834
+relationships:
+  - radio station --doo:headquarter--> Location
+  - office holder --doo:birthPlace--> Location
+  - office holder --doo:child--> person
+  - radio station --dop:area--> settlement

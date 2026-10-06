@@ -1,0 +1,80 @@
+types:
+  person: doo:Person
+  tenure: doo:Tenure
+  ethnic group: doo:EthnicGroup
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abdul_Ghani_Baradar: (birth date^='1963-09-29')
+    relationships:
+      - Abdul_Ghani_Baradar (dor:Abdul_Ghani_Baradar) --doo:nationality--> Afghans (dor:Afghans)
+      - Abdul_Kabir__Tenure__1 (dor:Abdul_Kabir__Tenure__1) --doo:alongside--> Abdul_Ghani_Baradar (dor:Abdul_Ghani_Baradar)
+  '2':
+    attributes:
+      Abdul_Ghani_Baradar: (birth date^='1963-09-29')
+      Abdul_Salam_Hanafi__Abdul_Salam_Hanafi__1__Tenure__1: (predecessor^='http://dbpedia.org/resource/Hasan_Akhund')
+    relationships:
+      - Abdul_Ghani_Baradar (dor:Abdul_Ghani_Baradar) --doo:nationality--> Afghans (dor:Afghans)
+      - Abdul_Salam_Hanafi__Abdul_Salam_Hanafi__1__Tenure__1 (dor:Abdul_Salam_Hanafi__Abdul_Salam_Hanafi__1__Tenure__1) --doo:alongside--> Abdul_Ghani_Baradar (dor:Abdul_Ghani_Baradar)
+  '3':
+    attributes:
+      Abdul_Ghani_Baradar: (birth date^='1963-09-29')
+      Mullah_Yaqoob__Tenure__2: (predecessor^='http://dbpedia.org/resource/Sarwar_Danish')
+    relationships:
+      - Abdul_Ghani_Baradar (dor:Abdul_Ghani_Baradar) --doo:nationality--> Afghans (dor:Afghans)
+      - Mullah_Yaqoob__Tenure__2 (dor:Mullah_Yaqoob__Tenure__2) --doo:alongside--> Abdul_Ghani_Baradar (dor:Abdul_Ghani_Baradar)
+  '4':
+    attributes:
+      Ahmad_Amirabadi: (birth name^='Ahmad Amirabadi Farahani')
+    relationships:
+      - Ahmad_Amirabadi (dor:Ahmad_Amirabadi) --doo:nationality--> Iranian_peoples (dor:Iranian_peoples)
+      - Alireza_Zakani__Tenure__3 (dor:Alireza_Zakani__Tenure__3) --doo:alongside--> Ahmad_Amirabadi (dor:Ahmad_Amirabadi)
+  '5':
+    attributes: {}
+    relationships:
+      - Ahmad_Amirabadi (dor:Ahmad_Amirabadi) --doo:nationality--> Iranian_peoples (dor:Iranian_peoples)
+      - Mojtaba_Zonnour__Tenure__1 (dor:Mojtaba_Zonnour__Tenure__1) --doo:alongside--> Ahmad_Amirabadi (dor:Ahmad_Amirabadi)
+  '6':
+    attributes:
+      Matthias_Attwood__Tenure__3: (predecessor^='http://dbpedia.org/resource/Christopher_Robinson_(English_judge)')
+      Alexander_Baring,_1st_Baron_Ashburton: (death date^='--05-12', parent='http://dbpedia.org/resource/Sir_Francis_Baring,_1st_Baronet', birth date^='1774-10-27')
+    relationships:
+      - Alexander_Baring,_1st_Baron_Ashburton (<http://dbpedia.org/resource/Alexander_Baring,_1st_Baron_Ashburton>) --doo:nationality--> British_people (dor:British_people)
+      - Matthias_Attwood__Tenure__3 (dor:Matthias_Attwood__Tenure__3) --doo:alongside--> Alexander_Baring,_1st_Baron_Ashburton (<http://dbpedia.org/resource/Alexander_Baring,_1st_Baron_Ashburton>)
+  '7':
+    attributes:
+      Matthias_Attwood__Tenure__3: (predecessor^='http://dbpedia.org/resource/Christopher_Robinson_(English_judge)')
+      Alexander_Baring,_1st_Baron_Ashburton: (death date^='--05-12', parent='http://dbpedia.org/resource/Sir_Francis_Baring,_1st_Baronet', birth date^='1774-10-27')
+    relationships:
+      - Alexander_Baring,_1st_Baron_Ashburton (<http://dbpedia.org/resource/Alexander_Baring,_1st_Baron_Ashburton>) --doo:nationality--> English_people (dor:English_people)
+      - Matthias_Attwood__Tenure__3 (dor:Matthias_Attwood__Tenure__3) --doo:alongside--> Alexander_Baring,_1st_Baron_Ashburton (<http://dbpedia.org/resource/Alexander_Baring,_1st_Baron_Ashburton>)
+  '8':
+    attributes:
+      Alexander_White_(Virginia_politician): (death date^='1804-10-09', birth date^='1738-06-17')
+    relationships:
+      - Alexander_White_(Virginia_politician) (<http://dbpedia.org/resource/Alexander_White_(Virginia_politician)>) --doo:nationality--> Americans (dor:Americans)
+      - Charles_Mynn_Thruston_(colonel)__Tenure__1 (<http://dbpedia.org/resource/Charles_Mynn_Thruston_(colonel)__Tenure__1>) --doo:alongside--> Alexander_White_(Virginia_politician) (<http://dbpedia.org/resource/Alexander_White_(Virginia_politician)>)
+  '9':
+    attributes:
+      Alexander_White_(Virginia_politician): (death date^='1804-10-09', birth date^='1738-06-17')
+    relationships:
+      - Alexander_White_(Virginia_politician) (<http://dbpedia.org/resource/Alexander_White_(Virginia_politician)>) --doo:nationality--> Americans (dor:Americans)
+      - Charles_Mynn_Thruston_(colonel)__Tenure__2 (<http://dbpedia.org/resource/Charles_Mynn_Thruston_(colonel)__Tenure__2>) --doo:alongside--> Alexander_White_(Virginia_politician) (<http://dbpedia.org/resource/Alexander_White_(Virginia_politician)>)
+  '10':
+    attributes:
+      Alexander_White_(Virginia_politician): (death date^='1804-10-09', birth date^='1738-06-17')
+    relationships:
+      - Alexander_White_(Virginia_politician) (<http://dbpedia.org/resource/Alexander_White_(Virginia_politician)>) --doo:nationality--> Americans (dor:Americans)
+      - James_Mercer_(judge)__Tenure__3 (<http://dbpedia.org/resource/James_Mercer_(judge)__Tenure__3>) --doo:alongside--> Alexander_White_(Virginia_politician) (<http://dbpedia.org/resource/Alexander_White_(Virginia_politician)>)
+attributes:
+  person: --1pp^ (dop:1pp)--> int | --employer^ (dop:employer)--> Resource | --known for^ (dop:knownFor)--> langString | --death date^ (dop:deathDate)--> date | --title^ (doo:title)--> langString | --birth name^ (doo:birthName)--> langString | --parent (doo:parent)--> Resource | --birth date^ (dop:birthDate)--> langString
+  tenure: --predecessor^ (doo:predecessor)--> Resource
+subgraph_id: 342
+relationships:
+  - person --doo:nationality--> ethnic group
+  - tenure --doo:alongside--> person

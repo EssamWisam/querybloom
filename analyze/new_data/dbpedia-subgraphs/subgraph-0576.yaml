@@ -1,0 +1,95 @@
+types:
+  museum: doo:Museum
+  writer: doo:Writer
+  artwork: doo:Artwork
+  country: doo:Country
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      1618_in_art: (subject='http://dbpedia.org/resource/Category:1610s_in_art')
+    relationships:
+      - 1618_in_art (dor:1618_in_art) --doo:museum--> Uffizi (dor:Uffizi)
+      - Uffizi (dor:Uffizi) --doo:location--> Florence (dor:Florence)
+      - 1618_in_art (dor:1618_in_art) --doo:author--> Diego_Velázquez (<http://dbpedia.org/resource/Diego_Velázquez>)
+  '2':
+    attributes:
+      1618_in_art: (subject='http://dbpedia.org/resource/Category:1610s_in_art')
+    relationships:
+      - 1618_in_art (dor:1618_in_art) --doo:museum--> Uffizi (dor:Uffizi)
+      - Uffizi (dor:Uffizi) --doo:location--> Italy (dor:Italy)
+      - 1618_in_art (dor:1618_in_art) --doo:author--> Diego_Velázquez (<http://dbpedia.org/resource/Diego_Velázquez>)
+  '3':
+    attributes:
+      16th_September_(painting): (image size^='250', subject='http://dbpedia.org/resource/Category:1956_paintings')
+    relationships:
+      - 16th_September_(painting) (<http://dbpedia.org/resource/16th_September_(painting)>) --doo:museum--> Royal_Museum_of_Fine_Arts_Antwerp (dor:Royal_Museum_of_Fine_Arts_Antwerp)
+      - Royal_Museum_of_Fine_Arts_Antwerp (dor:Royal_Museum_of_Fine_Arts_Antwerp) --doo:location--> Belgium (dor:Belgium)
+      - 16th_September_(painting) (<http://dbpedia.org/resource/16th_September_(painting)>) --doo:author--> René_Magritte (<http://dbpedia.org/resource/René_Magritte>)
+  '4':
+    attributes:
+      26_October_1993: (image size^='230', subject='http://dbpedia.org/resource/Category:1990s_photographs')
+    relationships:
+      - 26_October_1993 (dor:26_October_1993) --doo:museum--> Tate_Modern (dor:Tate_Modern)
+      - Tate_Modern (dor:Tate_Modern) --doo:location--> SE_postcode_area (dor:SE_postcode_area)
+      - 26_October_1993 (dor:26_October_1993) --doo:author--> Sam_Taylor-Wood (dor:Sam_Taylor-Wood)
+  '5':
+    attributes:
+      A_Burial_At_Ornans: (image size^='450', subject='http://dbpedia.org/resource/Category:1850_paintings')
+    relationships:
+      - A_Burial_At_Ornans (dor:A_Burial_At_Ornans) --doo:museum--> Musée_d'Orsay (<http://dbpedia.org/resource/Musée_d'Orsay>)
+      - Musée_d'Orsay (<http://dbpedia.org/resource/Musée_d'Orsay>) --doo:location--> France (dor:France)
+      - A_Burial_At_Ornans (dor:A_Burial_At_Ornans) --doo:author--> Gustave_Courbet (dor:Gustave_Courbet)
+  '6':
+    attributes:
+      A_Cart_on_the_Snowy_Road_at_Honfleur: (subject='http://dbpedia.org/resource/Category:1865_paintings')
+    relationships:
+      - A_Cart_on_the_Snowy_Road_at_Honfleur (dor:A_Cart_on_the_Snowy_Road_at_Honfleur) --doo:museum--> Musée_d'Orsay (<http://dbpedia.org/resource/Musée_d'Orsay>)
+      - Musée_d'Orsay (<http://dbpedia.org/resource/Musée_d'Orsay>) --doo:location--> France (dor:France)
+      - A_Cart_on_the_Snowy_Road_at_Honfleur (dor:A_Cart_on_the_Snowy_Road_at_Honfleur) --doo:author--> Claude_Monet (dor:Claude_Monet)
+  '7':
+    attributes:
+      Mauritshuis: (image upright^='1.15')
+      A_Dutch_Courtyard: (image size^='300', subject='http://dbpedia.org/resource/Category:1650s_paintings')
+    relationships:
+      - A_Dutch_Courtyard (dor:A_Dutch_Courtyard) --doo:museum--> Mauritshuis (dor:Mauritshuis)
+      - Mauritshuis (dor:Mauritshuis) --doo:location--> Netherlands (dor:Netherlands)
+      - A_Dutch_Courtyard (dor:A_Dutch_Courtyard) --doo:author--> Pieter_de_Hooch (dor:Pieter_de_Hooch)
+  '8':
+    attributes:
+      A_Lane_in_the_Public_Garden_at_Arles: (image size^='300', subject='http://dbpedia.org/resource/Category:1888_paintings')
+    relationships:
+      - A_Lane_in_the_Public_Garden_at_Arles (dor:A_Lane_in_the_Public_Garden_at_Arles) --doo:museum--> Kröller-Müller_Museum (<http://dbpedia.org/resource/Kröller-Müller_Museum>)
+      - Kröller-Müller_Museum (<http://dbpedia.org/resource/Kröller-Müller_Museum>) --doo:location--> Netherlands (dor:Netherlands)
+      - A_Lane_in_the_Public_Garden_at_Arles (dor:A_Lane_in_the_Public_Garden_at_Arles) --doo:author--> Vincent_van_Gogh (dor:Vincent_van_Gogh)
+  '9':
+    attributes:
+      A_Library_Burning: (subject='http://dbpedia.org/resource/Category:1974_paintings')
+      Maria_Helena_Vieira_da_Silva: (spouse^='http://dbpedia.org/resource/Árpád_Szenes')
+    relationships:
+      - A_Library_Burning (dor:A_Library_Burning) --doo:museum--> Centro_de_Arte_Moderna_Gulbenkian (dor:Centro_de_Arte_Moderna_Gulbenkian)
+      - Centro_de_Arte_Moderna_Gulbenkian (dor:Centro_de_Arte_Moderna_Gulbenkian) --doo:location--> Portugal (dor:Portugal)
+      - A_Library_Burning (dor:A_Library_Burning) --doo:author--> Maria_Helena_Vieira_da_Silva (dor:Maria_Helena_Vieira_da_Silva)
+  '10':
+    attributes:
+      Mauritshuis: (image upright^='1.15')
+      A_Man_Smoking_and_a_Woman_Drinking_in_a_Courtyard: (image size^='300', subject='http://dbpedia.org/resource/Category:1650s_paintings')
+    relationships:
+      - A_Man_Smoking_and_a_Woman_Drinking_in_a_Courtyard (dor:A_Man_Smoking_and_a_Woman_Drinking_in_a_Courtyard) --doo:museum--> Mauritshuis (dor:Mauritshuis)
+      - Mauritshuis (dor:Mauritshuis) --doo:location--> Netherlands (dor:Netherlands)
+      - A_Man_Smoking_and_a_Woman_Drinking_in_a_Courtyard (dor:A_Man_Smoking_and_a_Woman_Drinking_in_a_Courtyard) --doo:author--> Pieter_de_Hooch (dor:Pieter_de_Hooch)
+attributes:
+  museum: --image upright^ (dop:imageUpright)--> double
+  writer: --resting place^ (doo:restingPlace)--> Resource | --relatives^ (dop:relatives)--> Resource | --notable works^ (dop:notableWorks)--> langString | --id^ (dop:id)--> langString | --alma mater^ (dop:almaMater)--> langString | --spouse^ (dop:spouse)--> int
+  artwork: --image size^ (dop:imageSize)--> int | --subject (podt:subject)--> Resource
+  country: --c^ (dop:c)--> langString | --1p^ (dop:1p)--> int | --Apr high C^ (dop:aprHighC)--> double
+subgraph_id: 576
+relationships:
+  - artwork --doo:museum--> museum
+  - museum --doo:location--> country
+  - artwork --doo:author--> writer

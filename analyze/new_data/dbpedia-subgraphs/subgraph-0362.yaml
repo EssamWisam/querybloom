@@ -1,0 +1,98 @@
+types:
+  city: doo:City
+  artist: doo:Artist
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Paris: (page length (characters) of wiki page^='277859')
+      Paris,_Tennessee: (has abstract^='Paris – miasto w Stanach Zjednoczonych, w stanie Tennessee, w hrabstwie Crittenden.')
+      A-One_(graffiti_artist): (death date^='2001-11-11')
+    relationships:
+      - Paris,_Tennessee (<http://dbpedia.org/resource/Paris,_Tennessee>) --doo:namedAfter--> Paris (dor:Paris)
+      - A-One_(graffiti_artist) (<http://dbpedia.org/resource/A-One_(graffiti_artist)>) --doo:deathPlace--> Paris (dor:Paris)
+  '2':
+    attributes:
+      Surrey: (page length (characters) of wiki page^='109090', location^='http://dbpedia.org/resource/England')
+      A._B._Imeson: (death date^='1944-02-28')
+      Surrey,_British_Columbia: (has abstract^='Is cathair sa Cholóim Bhriotanach é Surrey. Sa bhliain 2011 bhí 468,251 duine ag maireachtaint sa chathair. Is é an dara cathair is mó sa Cholóim Bhriotanach agus an dóú cathair dhéag is mó i gCeanada...')
+    relationships:
+      - Surrey,_British_Columbia (<http://dbpedia.org/resource/Surrey,_British_Columbia>) --doo:namedAfter--> Surrey (dor:Surrey)
+      - A._B._Imeson (dor:A._B._Imeson) --doo:deathPlace--> Surrey (dor:Surrey)
+  '3':
+    attributes:
+      London: (page length (characters) of wiki page^='302707')
+      A._E._Coleby: (death date^='1930-07-15')
+      London,_Kentucky: (has abstract^='La ville de London est le siège du comté de Laurel, dans l’État du Kentucky, aux États-Unis. Selon le recensement de 2010, sa population est de 7 993 habitants.')
+    relationships:
+      - London,_Kentucky (<http://dbpedia.org/resource/London,_Kentucky>) --doo:namedAfter--> London (dor:London)
+      - A._E._Coleby (dor:A._E._Coleby) --doo:deathPlace--> London (dor:London)
+  '4':
+    attributes:
+      London: (page length (characters) of wiki page^='302707')
+      A._E._Coleby: (death date^='1930-07-15')
+      London,_Ontario: (has abstract^='Is cathair in Ontario Ceanada í Londain. Sa bhliain 2011 bhí 366,151 duine ag maireachtáil sa chathair. Is í an cúigiú cathair déag is mó i gCeanada.')
+    relationships:
+      - London,_Ontario (<http://dbpedia.org/resource/London,_Ontario>) --doo:namedAfter--> London (dor:London)
+      - A._E._Coleby (dor:A._E._Coleby) --doo:deathPlace--> London (dor:London)
+  '5':
+    attributes:
+      Toronto: (page length (characters) of wiki page^='224665')
+      A._J._Casson: (death date^='1992-02-20')
+      Toronto,_Iowa: (has abstract^='La ville américaine de Toronto est située dans le comté de Clinton, dans l’État de l’Iowa. Lors du recensement de 2010, sa population s’élevait à 124 habitants.')
+    relationships:
+      - Toronto,_Iowa (<http://dbpedia.org/resource/Toronto,_Iowa>) --doo:namedAfter--> Toronto (dor:Toronto)
+      - A._J._Casson (dor:A._J._Casson) --doo:deathPlace--> Toronto (dor:Toronto)
+  '6':
+    attributes:
+      Toronto: (page length (characters) of wiki page^='224665')
+      A._J._Casson: (death date^='1992-02-20')
+      Toronto,_Kansas: (has abstract^='Toronto – miejscowość w Stanach Zjednoczonych, w stanie Kansas, w hrabstwie Woodson.')
+    relationships:
+      - Toronto,_Kansas (<http://dbpedia.org/resource/Toronto,_Kansas>) --doo:namedAfter--> Toronto (dor:Toronto)
+      - A._J._Casson (dor:A._J._Casson) --doo:deathPlace--> Toronto (dor:Toronto)
+  '7':
+    attributes:
+      Toronto: (page length (characters) of wiki page^='224665')
+      A._J._Casson: (death date^='1992-02-20')
+      Toronto,_Ohio: (has abstract^='Toronto – miasto w Stanach Zjednoczonych, we wschodniej części stanu Ohio, nad rzeką Ohio. Liczba mieszkańców w 2000 roku wynosiła 5666.')
+    relationships:
+      - Toronto,_Ohio (<http://dbpedia.org/resource/Toronto,_Ohio>) --doo:namedAfter--> Toronto (dor:Toronto)
+      - A._J._Casson (dor:A._J._Casson) --doo:deathPlace--> Toronto (dor:Toronto)
+  '8':
+    attributes:
+      A._J._Masters: (death date^='2015-01-12')
+      Nashville,_Illinois: (has abstract^='Nashville – miasto w Stanach Zjednoczonych, w stanie Illinois, w hrabstwie Washington.')
+      Nashville,_Tennessee: (page length (characters) of wiki page^='195466')
+    relationships:
+      - Nashville,_Illinois (<http://dbpedia.org/resource/Nashville,_Illinois>) --doo:namedAfter--> Nashville,_Tennessee (<http://dbpedia.org/resource/Nashville,_Tennessee>)
+      - A._J._Masters (dor:A._J._Masters) --doo:deathPlace--> Nashville,_Tennessee (<http://dbpedia.org/resource/Nashville,_Tennessee>)
+  '9':
+    attributes:
+      A._J._Masters: (death date^='2015-01-12')
+      Nashville,_Kansas: (has abstract^='Nashville – miasto w Stanach Zjednoczonych, w stanie Kansas, w hrabstwie Kingman.')
+      Nashville,_Tennessee: (page length (characters) of wiki page^='195466')
+    relationships:
+      - Nashville,_Kansas (<http://dbpedia.org/resource/Nashville,_Kansas>) --doo:namedAfter--> Nashville,_Tennessee (<http://dbpedia.org/resource/Nashville,_Tennessee>)
+      - A._J._Masters (dor:A._J._Masters) --doo:deathPlace--> Nashville,_Tennessee (<http://dbpedia.org/resource/Nashville,_Tennessee>)
+  '10':
+    attributes:
+      London: (page length (characters) of wiki page^='302707')
+      A._L._Lloyd: (death date^='1982-09-29')
+      London,_Kentucky: (has abstract^='La ville de London est le siège du comté de Laurel, dans l’État du Kentucky, aux États-Unis. Selon le recensement de 2010, sa population est de 7 993 habitants.')
+    relationships:
+      - London,_Kentucky (<http://dbpedia.org/resource/London,_Kentucky>) --doo:namedAfter--> London (dor:London)
+      - A._L._Lloyd (dor:A._L._Lloyd) --doo:deathPlace--> London (dor:London)
+attributes:
+  city: --b^ (dop:b)--> langString | --has abstract^ (doo:abstract)--> langString | --width^ (dop:width)--> langString
+  artist: --death date^ (dop:deathDate)--> int | --align^ (dop:align)--> langString
+  Location: --area^ (dop:area)--> double | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --designated other1 link^ (dop:designatedOther1Link)--> langString | --1p^ (dop:1p)--> int | --location^ (doo:location)--> Resource | --arc-angleA^ (dop:arcAnglea)--> int
+subgraph_id: 362
+relationships:
+  - city --doo:namedAfter--> Location
+  - artist --doo:deathPlace--> Location

@@ -1,0 +1,111 @@
+types:
+  person: doo:Person
+  country: doo:Country
+  magazine: doo:Magazine
+  Christian Bishop: doo:ChristianBishop
+  ice hockey player: doo:IceHockeyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adam_Harding: (height ft^='6')
+      Meic_Stephens: (notable works^='The Oxford Companion to the Literature of Wales')
+    relationships:
+      - Adam_Houghton (dor:Adam_Houghton) --doo:nationality--> Wales (dor:Wales)
+      - Poetry_Wales (dor:Poetry_Wales) --dop:country--> Wales (dor:Wales)
+      - Adam_Harding (dor:Adam_Harding) --doo:birthPlace--> Wales (dor:Wales)
+      - Poetry_Wales (dor:Poetry_Wales) --doo:founder--> Meic_Stephens (dor:Meic_Stephens)
+  '2':
+    attributes:
+      Meic_Stephens: (notable works^='The Oxford Companion to the Literature of Wales')
+    relationships:
+      - Adam_Houghton (dor:Adam_Houghton) --doo:nationality--> Wales (dor:Wales)
+      - Poetry_Wales (dor:Poetry_Wales) --dop:country--> Wales (dor:Wales)
+      - Ben_Davies_(ice_hockey) (<http://dbpedia.org/resource/Ben_Davies_(ice_hockey)>) --doo:birthPlace--> Wales (dor:Wales)
+      - Poetry_Wales (dor:Poetry_Wales) --doo:founder--> Meic_Stephens (dor:Meic_Stephens)
+  '3':
+    attributes:
+      Cy_Thomas: (active years end year^='1952', height ft^='5', death date^='2009-01-02')
+      Meic_Stephens: (notable works^='The Oxford Companion to the Literature of Wales')
+    relationships:
+      - Adam_Houghton (dor:Adam_Houghton) --doo:nationality--> Wales (dor:Wales)
+      - Poetry_Wales (dor:Poetry_Wales) --dop:country--> Wales (dor:Wales)
+      - Cy_Thomas (dor:Cy_Thomas) --doo:birthPlace--> Wales (dor:Wales)
+      - Poetry_Wales (dor:Poetry_Wales) --doo:founder--> Meic_Stephens (dor:Meic_Stephens)
+  '4':
+    attributes:
+      Italy: (anthem^='http://dbpedia.org/resource/Il_Canto_degli_Italiani', footer^='Giuseppe Mazzini '', highly influential leader of the Italian revolutionary movement; and Giuseppe Garibaldi '', celebrated as one of the greatest generals of modern times and as the "Hero of the Two Wo...')
+      Alex_Lambacher: (height ft^='6')
+    relationships:
+      - Agostino_da_Siena_(bishop) (<http://dbpedia.org/resource/Agostino_da_Siena_(bishop)>) --doo:nationality--> Italy (dor:Italy)
+      - 30_Days_(magazine) (<http://dbpedia.org/resource/30_Days_(magazine)>) --dop:country--> Italy (dor:Italy)
+      - Alex_Lambacher (dor:Alex_Lambacher) --doo:birthPlace--> Italy (dor:Italy)
+      - 30_Days_(magazine) (<http://dbpedia.org/resource/30_Days_(magazine)>) --doo:founder--> Joseph_Fessio (dor:Joseph_Fessio)
+  '5':
+    attributes:
+      Italy: (anthem^='http://dbpedia.org/resource/Il_Canto_degli_Italiani', footer^='Giuseppe Mazzini '', highly influential leader of the Italian revolutionary movement; and Giuseppe Garibaldi '', celebrated as one of the greatest generals of modern times and as the "Hero of the Two Wo...')
+      Alex_Lambacher: (height ft^='6')
+    relationships:
+      - Agostino_da_Siena_(bishop) (<http://dbpedia.org/resource/Agostino_da_Siena_(bishop)>) --doo:nationality--> Italy (dor:Italy)
+      - Alfabeta (dor:Alfabeta) --dop:country--> Italy (dor:Italy)
+      - Alex_Lambacher (dor:Alex_Lambacher) --doo:birthPlace--> Italy (dor:Italy)
+      - Alfabeta (dor:Alfabeta) --doo:founder--> Nanni_Balestrini (dor:Nanni_Balestrini)
+  '6':
+    attributes:
+      Italy: (anthem^='http://dbpedia.org/resource/Il_Canto_degli_Italiani', footer^='Giuseppe Mazzini '', highly influential leader of the Italian revolutionary movement; and Giuseppe Garibaldi '', celebrated as one of the greatest generals of modern times and as the "Hero of the Two Wo...')
+      Alex_Lambacher: (height ft^='6')
+    relationships:
+      - Agostino_da_Siena_(bishop) (<http://dbpedia.org/resource/Agostino_da_Siena_(bishop)>) --doo:nationality--> Italy (dor:Italy)
+      - Annabella_(magazine) (<http://dbpedia.org/resource/Annabella_(magazine)>) --dop:country--> Italy (dor:Italy)
+      - Alex_Lambacher (dor:Alex_Lambacher) --doo:birthPlace--> Italy (dor:Italy)
+      - Annabella_(magazine) (<http://dbpedia.org/resource/Annabella_(magazine)>) --doo:founder--> Angelo_Rizzoli (dor:Angelo_Rizzoli)
+  '7':
+    attributes:
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Adam_Summerfield: (height ft^='5')
+    relationships:
+      - Alan_Clark_(bishop) (<http://dbpedia.org/resource/Alan_Clark_(bishop)>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Aircraft_Illustrated (dor:Aircraft_Illustrated) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - Adam_Summerfield (dor:Adam_Summerfield) --doo:birthPlace--> United_Kingdom (dor:United_Kingdom)
+      - Aircraft_Illustrated (dor:Aircraft_Illustrated) --doo:founder--> Ian_Allan_(publisher) (<http://dbpedia.org/resource/Ian_Allan_(publisher)>)
+  '8':
+    attributes:
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Adam_Summerfield: (height ft^='5')
+    relationships:
+      - Alan_Clark_(bishop) (<http://dbpedia.org/resource/Alan_Clark_(bishop)>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Another_Magazine (dor:Another_Magazine) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - Adam_Summerfield (dor:Adam_Summerfield) --doo:birthPlace--> United_Kingdom (dor:United_Kingdom)
+      - Another_Magazine (dor:Another_Magazine) --doo:founder--> Jefferson_Hack (dor:Jefferson_Hack)
+  '9':
+    attributes:
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Adam_Summerfield: (height ft^='5')
+    relationships:
+      - Alan_Clark_(bishop) (<http://dbpedia.org/resource/Alan_Clark_(bishop)>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Another_Man (dor:Another_Man) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - Adam_Summerfield (dor:Adam_Summerfield) --doo:birthPlace--> United_Kingdom (dor:United_Kingdom)
+      - Another_Man (dor:Another_Man) --doo:founder--> Jefferson_Hack (dor:Jefferson_Hack)
+  '10':
+    attributes:
+      Adam_Naglich: (active years end year^='2015', height ft^='6')
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner', footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - Alfred_Jolson (dor:Alfred_Jolson) --doo:nationality--> United_States (dor:United_States)
+      - American_Short_Fiction (dor:American_Short_Fiction) --dop:country--> United_States (dor:United_States)
+      - Adam_Naglich (dor:Adam_Naglich) --doo:birthPlace--> United_States (dor:United_States)
+      - American_Short_Fiction (dor:American_Short_Fiction) --doo:founder--> Laura_Furman (dor:Laura_Furman)
+attributes:
+  person: --header^ (dop:header)--> langString | --by^ (dop:by)--> langString | --notable works^ (dop:notableWorks)--> Resource
+  country: --quote^ (dop:quote)--> langString | --anthem^ (doo:anthem)--> Resource | --age^ (dop:age)--> date | --last^ (dop:last)--> langString | --footer^ (dop:footer)--> langString | --Apr low C^ (dop:aprLowC)--> double
+  ice hockey player: --active years end year^ (doo:activeYearsEndYear)--> gYear | --height ft^ (dop:heightFt)--> int | --death date^ (doo:deathDate)--> date
+subgraph_id: 863
+relationships:
+  - Christian Bishop --doo:nationality--> country
+  - magazine --dop:country--> country
+  - ice hockey player --doo:birthPlace--> country
+  - magazine --doo:founder--> person

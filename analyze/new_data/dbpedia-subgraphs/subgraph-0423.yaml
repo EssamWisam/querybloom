@@ -1,0 +1,104 @@
+types:
+  country: doo:Country
+  soccer club: doo:SoccerClub
+  military unit: doo:MilitaryUnit
+  military service: doo:MilitaryService
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Jakarta: (type^='http://dbpedia.org/resource/Capital_districts_and_territories', caption^='Ethnic Groups in Jakarta', Apr rain days^='15', Apr record high C^='33.3', government type^='http://dbpedia.org/resource/Subdivisions_of_Indonesia')
+    relationships:
+      - Indonesian_Army (dor:Indonesian_Army) --dop:garrison--> Jakarta (dor:Jakarta)
+      - ABC_Wirayudha_F.C. (<http://dbpedia.org/resource/ABC_Wirayudha_F.C.>) --dop:ground--> Jakarta (dor:Jakarta)
+      - A._J._Witono__MilitaryService__1 (dor:A._J._Witono__MilitaryService__1) --doo:militaryBranch--> Indonesian_Army (dor:Indonesian_Army)
+      - A._J._Witono__MilitaryService__1 (dor:A._J._Witono__MilitaryService__1) --doo:country--> Indonesia (dor:Indonesia)
+  '2':
+    attributes:
+      Jakarta: (type^='http://dbpedia.org/resource/Capital_districts_and_territories', caption^='Ethnic Groups in Jakarta', Apr rain days^='15', Apr record high C^='33.3', government type^='http://dbpedia.org/resource/Subdivisions_of_Indonesia')
+    relationships:
+      - Indonesian_Army (dor:Indonesian_Army) --dop:garrison--> Jakarta (dor:Jakarta)
+      - Jakarta_Matador_F.C. (<http://dbpedia.org/resource/Jakarta_Matador_F.C.>) --dop:ground--> Jakarta (dor:Jakarta)
+      - A._J._Witono__MilitaryService__1 (dor:A._J._Witono__MilitaryService__1) --doo:militaryBranch--> Indonesian_Army (dor:Indonesian_Army)
+      - A._J._Witono__MilitaryService__1 (dor:A._J._Witono__MilitaryService__1) --doo:country--> Indonesia (dor:Indonesia)
+  '3':
+    attributes:
+      Jakarta: (type^='http://dbpedia.org/resource/Capital_districts_and_territories', caption^='Ethnic Groups in Jakarta', Apr rain days^='15', Apr record high C^='33.3', government type^='http://dbpedia.org/resource/Subdivisions_of_Indonesia')
+    relationships:
+      - Indonesian_Army (dor:Indonesian_Army) --dop:garrison--> Jakarta (dor:Jakarta)
+      - Persija_Barat (dor:Persija_Barat) --dop:ground--> Jakarta (dor:Jakarta)
+      - A._J._Witono__MilitaryService__1 (dor:A._J._Witono__MilitaryService__1) --doo:militaryBranch--> Indonesian_Army (dor:Indonesian_Army)
+      - A._J._Witono__MilitaryService__1 (dor:A._J._Witono__MilitaryService__1) --doo:country--> Indonesia (dor:Indonesia)
+  '4':
+    attributes:
+      Federal_District_(Brazil): (type^='http://dbpedia.org/resource/Federal_district')
+      Associação_Botafogo_Futebol_Clube: (date^='October 2016')
+    relationships:
+      - Brazilian_Navy (dor:Brazilian_Navy) --dop:garrison--> Federal_District_(Brazil) (<http://dbpedia.org/resource/Federal_District_(Brazil)>)
+      - Associação_Botafogo_Futebol_Clube (<http://dbpedia.org/resource/Associação_Botafogo_Futebol_Clube>) --dop:ground--> Federal_District_(Brazil) (<http://dbpedia.org/resource/Federal_District_(Brazil)>)
+      - Ademir_Sobrinho__MilitaryService__1 (dor:Ademir_Sobrinho__MilitaryService__1) --doo:militaryBranch--> Brazilian_Navy (dor:Brazilian_Navy)
+      - Ademir_Sobrinho__MilitaryService__1 (dor:Ademir_Sobrinho__MilitaryService__1) --doo:country--> Brazil (dor:Brazil)
+  '5':
+    attributes:
+      Federal_District_(Brazil): (type^='http://dbpedia.org/resource/Federal_district')
+    relationships:
+      - Brazilian_Navy (dor:Brazilian_Navy) --dop:garrison--> Federal_District_(Brazil) (<http://dbpedia.org/resource/Federal_District_(Brazil)>)
+      - Capital_CF (dor:Capital_CF) --dop:ground--> Federal_District_(Brazil) (<http://dbpedia.org/resource/Federal_District_(Brazil)>)
+      - Ademir_Sobrinho__MilitaryService__1 (dor:Ademir_Sobrinho__MilitaryService__1) --doo:militaryBranch--> Brazilian_Navy (dor:Brazilian_Navy)
+      - Ademir_Sobrinho__MilitaryService__1 (dor:Ademir_Sobrinho__MilitaryService__1) --doo:country--> Brazil (dor:Brazil)
+  '6':
+    attributes:
+      Federal_District_(Brazil): (type^='http://dbpedia.org/resource/Federal_district')
+    relationships:
+      - Brazilian_Navy (dor:Brazilian_Navy) --dop:garrison--> Federal_District_(Brazil) (<http://dbpedia.org/resource/Federal_District_(Brazil)>)
+      - Clube_Atlético_Taguatinga (<http://dbpedia.org/resource/Clube_Atlético_Taguatinga>) --dop:ground--> Federal_District_(Brazil) (<http://dbpedia.org/resource/Federal_District_(Brazil)>)
+      - Ademir_Sobrinho__MilitaryService__1 (dor:Ademir_Sobrinho__MilitaryService__1) --doo:militaryBranch--> Brazilian_Navy (dor:Brazilian_Navy)
+      - Ademir_Sobrinho__MilitaryService__1 (dor:Ademir_Sobrinho__MilitaryService__1) --doo:country--> Brazil (dor:Brazil)
+  '7':
+    attributes:
+      Kent: (Apr rain days^='9')
+    relationships:
+      - Royal_Engineers (dor:Royal_Engineers) --dop:garrison--> Kent (dor:Kent)
+      - Dartford_F.C. (<http://dbpedia.org/resource/Dartford_F.C.>) --dop:ground--> Kent (dor:Kent)
+      - Charles_Felix_Smith__MilitaryService__1 (dor:Charles_Felix_Smith__MilitaryService__1) --doo:militaryBranch--> Royal_Engineers (dor:Royal_Engineers)
+      - Charles_Felix_Smith__MilitaryService__1 (dor:Charles_Felix_Smith__MilitaryService__1) --doo:country--> United_Kingdom (dor:United_Kingdom)
+  '8':
+    attributes:
+      Kent: (Apr rain days^='9')
+    relationships:
+      - Royal_Engineers (dor:Royal_Engineers) --dop:garrison--> Kent (dor:Kent)
+      - Maidstone_Roller_Hockey_Club (dor:Maidstone_Roller_Hockey_Club) --dop:ground--> Kent (dor:Kent)
+      - Charles_Felix_Smith__MilitaryService__1 (dor:Charles_Felix_Smith__MilitaryService__1) --doo:militaryBranch--> Royal_Engineers (dor:Royal_Engineers)
+      - Charles_Felix_Smith__MilitaryService__1 (dor:Charles_Felix_Smith__MilitaryService__1) --doo:country--> United_Kingdom (dor:United_Kingdom)
+  '9':
+    attributes:
+      Kent: (Apr rain days^='9')
+    relationships:
+      - Royal_Engineers (dor:Royal_Engineers) --dop:garrison--> Kent (dor:Kent)
+      - Sevenoaks_Town_F.C. (<http://dbpedia.org/resource/Sevenoaks_Town_F.C.>) --dop:ground--> Kent (dor:Kent)
+      - Charles_Felix_Smith__MilitaryService__1 (dor:Charles_Felix_Smith__MilitaryService__1) --doo:militaryBranch--> Royal_Engineers (dor:Royal_Engineers)
+      - Charles_Felix_Smith__MilitaryService__1 (dor:Charles_Felix_Smith__MilitaryService__1) --doo:country--> United_Kingdom (dor:United_Kingdom)
+  '10':
+    attributes:
+      Bangkok: (type^='http://dbpedia.org/resource/List_of_municipalities_in_Thailand', caption^='Religion in Bangkok', Apr rain days^='6.6', Apr record high C^='40.2', government type^='http://dbpedia.org/resource/Special_administrative_area_(Thailand)')
+    relationships:
+      - Royal_Thai_Air_Force (dor:Royal_Thai_Air_Force) --dop:garrison--> Bangkok (dor:Bangkok)
+      - Army_United_F.C. (<http://dbpedia.org/resource/Army_United_F.C.>) --dop:ground--> Bangkok (dor:Bangkok)
+      - Mitr_Chaibancha__Flight_Sergeant_2nd_Class_Pichet_Chaibancha__1__MilitaryService__1 (dor:Mitr_Chaibancha__Flight_Sergeant_2nd_Class_Pichet_Chaibancha__1__MilitaryService__1) --doo:militaryBranch--> Royal_Thai_Air_Force (dor:Royal_Thai_Air_Force)
+      - Mitr_Chaibancha__Flight_Sergeant_2nd_Class_Pichet_Chaibancha__1__MilitaryService__1 (dor:Mitr_Chaibancha__Flight_Sergeant_2nd_Class_Pichet_Chaibancha__1__MilitaryService__1) --doo:country--> Thailand (dor:Thailand)
+attributes:
+  country: --age^ (dop:age)--> date
+  soccer club: --date^ (dop:date)--> gMonthDay
+  administrative region: --c^ (dop:c)--> langString | --type^ (doo:type)--> Resource | --caption^ (dop:caption)--> langString | --winner^ (dop:winner)--> langString | --Apr rain days^ (dop:aprRainDays)--> double | --differentFrom (wwoo:differentFrom)--> Resource | --Apr record high C^ (dop:aprRecordHighC)--> int | --government type^ (doo:governmentType)--> Resource | --named for^ (dop:namedFor)--> Resource
+subgraph_id: 423
+relationships:
+  - military unit --dop:garrison--> administrative region
+  - soccer club --dop:ground--> administrative region
+  - military service --doo:militaryBranch--> military unit
+  - military service --doo:country--> country

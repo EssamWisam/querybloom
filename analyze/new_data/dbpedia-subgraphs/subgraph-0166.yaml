@@ -1,0 +1,120 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  settlement: doo:Settlement
+  train station: doo:RailwayStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Aarberg_District: (area total (m2)^='153000000.0')
+    relationships:
+      - Bern_Europaplatz_railway_station (dor:Bern_Europaplatz_railway_station) --dop:borough--> Bern (dor:Bern)
+      - Aarberg_District (dor:Aarberg_District) --doo:subdivision--> Bern (dor:Bern)
+      - Marc_Hodler (dor:Marc_Hodler) --doo:restingPlace--> Bern (dor:Bern)
+  '2':
+    attributes:
+      Aarberg_District: (area total (m2)^='153000000.0')
+    relationships:
+      - Bern_Weissenbühl_railway_station (<http://dbpedia.org/resource/Bern_Weissenbühl_railway_station>) --dop:borough--> Bern (dor:Bern)
+      - Aarberg_District (dor:Aarberg_District) --doo:subdivision--> Bern (dor:Bern)
+      - Marc_Hodler (dor:Marc_Hodler) --doo:restingPlace--> Bern (dor:Bern)
+  '3':
+    attributes:
+      Aarwangen_District: (area total (m2)^='154000000.0')
+    relationships:
+      - Bern_Europaplatz_railway_station (dor:Bern_Europaplatz_railway_station) --dop:borough--> Bern (dor:Bern)
+      - Aarwangen_District (dor:Aarwangen_District) --doo:subdivision--> Bern (dor:Bern)
+      - Marc_Hodler (dor:Marc_Hodler) --doo:restingPlace--> Bern (dor:Bern)
+  '4':
+    attributes: {}
+    relationships:
+      - Abbeydorney_railway_station (dor:Abbeydorney_railway_station) --dop:borough--> County_Kerry (dor:County_Kerry)
+      - Abbeydorney (dor:Abbeydorney) --doo:subdivision--> County_Kerry (dor:County_Kerry)
+      - Cearbhall_Ó_Dálaigh (<http://dbpedia.org/resource/Cearbhall_Ó_Dálaigh>) --doo:restingPlace--> County_Kerry (dor:County_Kerry)
+  '5':
+    attributes: {}
+    relationships:
+      - Ardfert_railway_station (dor:Ardfert_railway_station) --dop:borough--> County_Kerry (dor:County_Kerry)
+      - Abbeydorney (dor:Abbeydorney) --doo:subdivision--> County_Kerry (dor:County_Kerry)
+      - Cearbhall_Ó_Dálaigh (<http://dbpedia.org/resource/Cearbhall_Ó_Dálaigh>) --doo:restingPlace--> County_Kerry (dor:County_Kerry)
+  '6':
+    attributes: {}
+    relationships:
+      - Castlemaine_railway_station_(Ireland) (<http://dbpedia.org/resource/Castlemaine_railway_station_(Ireland)>) --dop:borough--> County_Kerry (dor:County_Kerry)
+      - Abbeydorney (dor:Abbeydorney) --doo:subdivision--> County_Kerry (dor:County_Kerry)
+      - Cearbhall_Ó_Dálaigh (<http://dbpedia.org/resource/Cearbhall_Ó_Dálaigh>) --doo:restingPlace--> County_Kerry (dor:County_Kerry)
+  '7':
+    attributes: {}
+    relationships:
+      - Abbeyfeale_railway_station (dor:Abbeyfeale_railway_station) --dop:borough--> County_Limerick (dor:County_Limerick)
+      - Abbeyfeale (dor:Abbeyfeale) --doo:subdivision--> County_Limerick (dor:County_Limerick)
+      - Stephen_de_Vere (dor:Stephen_de_Vere) --doo:restingPlace--> County_Limerick (dor:County_Limerick)
+  '8':
+    attributes: {}
+    relationships:
+      - Adare_railway_station (dor:Adare_railway_station) --dop:borough--> County_Limerick (dor:County_Limerick)
+      - Abbeyfeale (dor:Abbeyfeale) --doo:subdivision--> County_Limerick (dor:County_Limerick)
+      - Stephen_de_Vere (dor:Stephen_de_Vere) --doo:restingPlace--> County_Limerick (dor:County_Limerick)
+  '9':
+    attributes: {}
+    relationships:
+      - Annacotty_railway_station (dor:Annacotty_railway_station) --dop:borough--> County_Limerick (dor:County_Limerick)
+      - Abbeyfeale (dor:Abbeyfeale) --doo:subdivision--> County_Limerick (dor:County_Limerick)
+      - Stephen_de_Vere (dor:Stephen_de_Vere) --doo:restingPlace--> County_Limerick (dor:County_Limerick)
+  '10':
+    attributes: {}
+    relationships:
+      - Ballynahinch_railway_station,_County_Galway (<http://dbpedia.org/resource/Ballynahinch_railway_station,_County_Galway>) --dop:borough--> County_Galway (dor:County_Galway)
+      - Abbeyknockmoy (dor:Abbeyknockmoy) --doo:subdivision--> County_Galway (dor:County_Galway)
+      - Lady_Gregory (dor:Lady_Gregory) --doo:restingPlace--> County_Galway (dor:County_Galway)
+qa_result:
+  status: completed
+  cost_usd: 0.399772
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0680974
+        total_tokens: 5172
+        prompt_tokens: 1911
+        completion_tokens: 3261
+      generate:
+        cost_usd: 0.07500760000000001
+        total_tokens: 6859
+        prompt_tokens: 3665
+        completion_tokens: 3194
+      verify_1:
+        cost_usd: 0.09418700000000002
+        total_tokens: 7711
+        prompt_tokens: 4002
+        completion_tokens: 3709
+      verify_2:
+        cost_usd: 0.079712
+        total_tokens: 6886
+        prompt_tokens: 3867
+        completion_tokens: 3019
+      complexity:
+        cost_usd: 0.08276800000000001
+        total_tokens: 8181
+        prompt_tokens: 4818
+        completion_tokens: 3363
+    total_tokens: 34809
+    prompt_tokens: 18263
+    total_cost_usd: 0.399772
+    completion_tokens: 16546
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --border^ (dop:border)--> int | --education^ (doo:education)--> Resource
+  Location: --area total (m2)^ (doo:areaTotal)--> double | --logo^ (dop:logo)--> langString | --1y^ (dop:1y)--> int | --named for^ (dop:namedFor)--> langString
+  settlement: --b^ (dop:b)--> langString | --date^ (dop:date)--> langString
+subgraph_id: 166
+relationships:
+  - train station --dop:borough--> settlement
+  - Location --doo:subdivision--> settlement
+  - person --doo:restingPlace--> settlement

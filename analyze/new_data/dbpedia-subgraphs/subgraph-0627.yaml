@@ -1,0 +1,106 @@
+types:
+  person: doo:Person
+  writer: doo:Writer
+  person function: doo:PersonFunction
+  television station: doo:TelevisionStation
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Altitude_Sports_and_Entertainment: (logo^='Altitude Sports logo.svg')
+    relationships:
+      - Susan_Page (dor:Susan_Page) --doo:birthPlace--> Kansas (dor:Kansas)
+      - Susan_Page (dor:Susan_Page) --doo:occupation--> Journalist (dor:Journalist)
+      - -minu (<http://dbpedia.org/resource/-minu>) --doo:occupation--> Journalist (dor:Journalist)
+      - Altitude_Sports_and_Entertainment (dor:Altitude_Sports_and_Entertainment) --dop:area--> Kansas (dor:Kansas)
+  '2':
+    attributes:
+      Elliott_Chaze: (death place^='Hattiesburg, Mississippi, U.S.')
+      AT&T_SportsNet_Southwest: (logo^='Logo for AT&T SportsNet.svg')
+    relationships:
+      - Elliott_Chaze (dor:Elliott_Chaze) --doo:birthPlace--> Louisiana (dor:Louisiana)
+      - Elliott_Chaze (dor:Elliott_Chaze) --doo:occupation--> Journalist (dor:Journalist)
+      - -minu (<http://dbpedia.org/resource/-minu>) --doo:occupation--> Journalist (dor:Journalist)
+      - AT&T_SportsNet_Southwest (<http://dbpedia.org/resource/AT&T_SportsNet_Southwest>) --dop:area--> Louisiana (dor:Louisiana)
+  '3':
+    attributes:
+      Bally_Sports_Detroit: (logo^='Bally Sports Detroit.png')
+    relationships:
+      - Frank_Girardot (dor:Frank_Girardot) --doo:birthPlace--> Michigan (dor:Michigan)
+      - Frank_Girardot (dor:Frank_Girardot) --doo:occupation--> Journalist (dor:Journalist)
+      - -minu (<http://dbpedia.org/resource/-minu>) --doo:occupation--> Journalist (dor:Journalist)
+      - Bally_Sports_Detroit (dor:Bally_Sports_Detroit) --dop:area--> Michigan (dor:Michigan)
+  '4':
+    attributes:
+      MASN: (logo^='MASN-Logo.png')
+    relationships:
+      - Teresa_Cohen (dor:Teresa_Cohen) --doo:birthPlace--> Maryland (dor:Maryland)
+      - Teresa_Cohen (dor:Teresa_Cohen) --doo:occupation--> Mathematician (dor:Mathematician)
+      - '''Mamphono_Khaketla (<http://dbpedia.org/resource/''Mamphono_Khaketla>) --doo:occupation--> Mathematician (dor:Mathematician)'
+      - MASN (dor:MASN) --dop:area--> Maryland (dor:Maryland)
+  '5':
+    attributes:
+      NBC_Sports_Washington: (logo^='NBC Sports Washington.png')
+    relationships:
+      - Teresa_Cohen (dor:Teresa_Cohen) --doo:birthPlace--> Maryland (dor:Maryland)
+      - Teresa_Cohen (dor:Teresa_Cohen) --doo:occupation--> Mathematician (dor:Mathematician)
+      - '''Mamphono_Khaketla (<http://dbpedia.org/resource/''Mamphono_Khaketla>) --doo:occupation--> Mathematician (dor:Mathematician)'
+      - NBC_Sports_Washington (dor:NBC_Sports_Washington) --dop:area--> Maryland (dor:Maryland)
+  '6':
+    attributes:
+      AT&T_SportsNet_Southwest: (logo^='Logo for AT&T SportsNet.svg')
+    relationships:
+      - Skip_Woods (dor:Skip_Woods) --doo:birthPlace--> Texas (dor:Texas)
+      - Skip_Woods (dor:Skip_Woods) --doo:occupation--> Film_director (dor:Film_director)
+      - (Jo)Style (<http://dbpedia.org/resource/(Jo)Style>) --doo:occupation--> Film_director (dor:Film_director)
+      - AT&T_SportsNet_Southwest (<http://dbpedia.org/resource/AT&T_SportsNet_Southwest>) --dop:area--> Texas (dor:Texas)
+  '7':
+    attributes:
+      Harry_O._Hoyt: (death place^='http://dbpedia.org/resource/California')
+      Bally_Sports_North: (logo^='Bally Sports North.png')
+    relationships:
+      - Harry_O._Hoyt (dor:Harry_O._Hoyt) --doo:birthPlace--> Minnesota (dor:Minnesota)
+      - Harry_O._Hoyt (dor:Harry_O._Hoyt) --doo:occupation--> Film_director (dor:Film_director)
+      - (Jo)Style (<http://dbpedia.org/resource/(Jo)Style>) --doo:occupation--> Film_director (dor:Film_director)
+      - Bally_Sports_North (dor:Bally_Sports_North) --dop:area--> Minnesota (dor:Minnesota)
+  '8':
+    attributes:
+      Bally_Sports_North: (logo^='Bally Sports North.png')
+    relationships:
+      - Melisa_Wallack (dor:Melisa_Wallack) --doo:birthPlace--> Minnesota (dor:Minnesota)
+      - Melisa_Wallack (dor:Melisa_Wallack) --doo:occupation--> Film_director (dor:Film_director)
+      - (Jo)Style (<http://dbpedia.org/resource/(Jo)Style>) --doo:occupation--> Film_director (dor:Film_director)
+      - Bally_Sports_North (dor:Bally_Sports_North) --dop:area--> Minnesota (dor:Minnesota)
+  '9':
+    attributes:
+      Altitude_Sports_and_Entertainment: (logo^='Altitude Sports logo.svg')
+    relationships:
+      - Dan_Wells_(author) (<http://dbpedia.org/resource/Dan_Wells_(author)>) --doo:birthPlace--> Utah (dor:Utah)
+      - Dan_Wells_(author) (<http://dbpedia.org/resource/Dan_Wells_(author)>) --doo:occupation--> Author (dor:Author)
+      - '%22Wildman%22_Steve_Brill (<http://dbpedia.org/resource/%22Wildman%22_Steve_Brill>) --doo:occupation--> Author (dor:Author)'
+      - Altitude_Sports_and_Entertainment (dor:Altitude_Sports_and_Entertainment) --dop:area--> Utah (dor:Utah)
+  '10':
+    attributes:
+      Altitude_Sports_and_Entertainment: (logo^='Altitude Sports logo.svg')
+    relationships:
+      - David_A._Carter (dor:David_A._Carter) --doo:birthPlace--> Utah (dor:Utah)
+      - David_A._Carter (dor:David_A._Carter) --doo:occupation--> Author (dor:Author)
+      - '%22Wildman%22_Steve_Brill (<http://dbpedia.org/resource/%22Wildman%22_Steve_Brill>) --doo:occupation--> Author (dor:Author)'
+      - Altitude_Sports_and_Entertainment (dor:Altitude_Sports_and_Entertainment) --dop:area--> Utah (dor:Utah)
+attributes:
+  person: --date^ (dop:date)--> langString | --awards^ (dop:awards)--> int | --IMDB id^ (doo:imdbId)--> string | --last^ (dop:last)--> langString | --class^ (dop:class)--> langString | --death date^ (dop:deathDate)--> int
+  writer: --death place^ (dop:deathPlace)--> langString
+  person function: --last^ (dop:last)--> langString
+  television station: --logo^ (dop:logo)--> int
+  administrative region: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+subgraph_id: 627
+relationships:
+  - writer --doo:birthPlace--> administrative region
+  - writer --doo:occupation--> person function
+  - person --doo:occupation--> person function
+  - television station --dop:area--> administrative region

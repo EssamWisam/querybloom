@@ -1,0 +1,47 @@
+types:
+  horse: doo:Horse
+  museum: doo:Museum
+  writer: doo:Writer
+  Location: doo:Location
+  golf tournament: doo:GolfTournament
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      New_Zealand: (image^='Ardern Cropped.png', group^='n')
+    relationships:
+      - New_Zealand_Trotting_Hall_of_Fame (dor:New_Zealand_Trotting_Hall_of_Fame) --doo:location--> New_Zealand (dor:New_Zealand)
+      - Adam_Christopher (dor:Adam_Christopher) --doo:birthPlace--> New_Zealand (dor:New_Zealand)
+      - 1992_Eisenhower_Trophy (dor:1992_Eisenhower_Trophy) --doo:champion--> New_Zealand (dor:New_Zealand)
+      - Cardigan_Bay_(horse) (<http://dbpedia.org/resource/Cardigan_Bay_(horse)>) --doo:honours--> New_Zealand_Trotting_Hall_of_Fame (dor:New_Zealand_Trotting_Hall_of_Fame)
+  '2':
+    attributes:
+      New_Zealand: (image^='Ardern Cropped.png', group^='n')
+    relationships:
+      - New_Zealand_Trotting_Hall_of_Fame (dor:New_Zealand_Trotting_Hall_of_Fame) --doo:location--> New_Zealand (dor:New_Zealand)
+      - Alexander_Wyclif_Reed (dor:Alexander_Wyclif_Reed) --doo:birthPlace--> New_Zealand (dor:New_Zealand)
+      - 1992_Eisenhower_Trophy (dor:1992_Eisenhower_Trophy) --doo:champion--> New_Zealand (dor:New_Zealand)
+      - Cardigan_Bay_(horse) (<http://dbpedia.org/resource/Cardigan_Bay_(horse)>) --doo:honours--> New_Zealand_Trotting_Hall_of_Fame (dor:New_Zealand_Trotting_Hall_of_Fame)
+  '3':
+    attributes:
+      New_Zealand: (image^='Ardern Cropped.png', group^='n')
+      Alfred_Augustus_Grace: (id^='Grace,+Alfred+A.+')
+    relationships:
+      - New_Zealand_Trotting_Hall_of_Fame (dor:New_Zealand_Trotting_Hall_of_Fame) --doo:location--> New_Zealand (dor:New_Zealand)
+      - Alfred_Augustus_Grace (dor:Alfred_Augustus_Grace) --doo:birthPlace--> New_Zealand (dor:New_Zealand)
+      - 1992_Eisenhower_Trophy (dor:1992_Eisenhower_Trophy) --doo:champion--> New_Zealand (dor:New_Zealand)
+      - Cardigan_Bay_(horse) (<http://dbpedia.org/resource/Cardigan_Bay_(horse)>) --doo:honours--> New_Zealand_Trotting_Hall_of_Fame (dor:New_Zealand_Trotting_Hall_of_Fame)
+attributes:
+  museum: --founder^ (dop:founder)--> langString
+  writer: --2a^ (dop:2a)--> langString | --id^ (dop:id)--> langString
+  Location: --partof^ (dop:partof)--> Resource | --border^ (dop:border)--> langString | --discoverer^ (doo:discoverer)--> Resource | --Apr record low F^ (dop:aprRecordLowF)--> int | --image^ (dop:image)--> langString | --group^ (dop:group)--> langString | --reason^ (dop:reason)--> langString | --Apr record low F^ (dop:aprRecordLowF)--> double
+subgraph_id: 896
+relationships:
+  - museum --doo:location--> Location
+  - writer --doo:birthPlace--> Location
+  - golf tournament --doo:champion--> Location
+  - horse --doo:honours--> museum

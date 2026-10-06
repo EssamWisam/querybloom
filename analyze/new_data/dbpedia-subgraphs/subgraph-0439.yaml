@@ -1,0 +1,89 @@
+types:
+  person: doo:Person
+  comedian: doo:Comedian
+  music genre: doo:MusicGenre
+  "Ø±Û\x8CÚ\x88Û\x8CÙ\x88 Ù¾Ø±Ù\x88Ú¯Ø±Ø§Ù\N": doo:RadioProgram
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Dan_Patterson: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Abby_McEnany (dor:Abby_McEnany) --dop:genre--> Improvisational_theatre (dor:Improvisational_theatre)
+      - Whose_Line_Is_It_Anyway%3F_(radio_series) (<http://dbpedia.org/resource/Whose_Line_Is_It_Anyway%3F_(radio_series)>) --doo:format--> Improvisational_theatre (dor:Improvisational_theatre)
+      - Whose_Line_Is_It_Anyway%3F_(radio_series) (<http://dbpedia.org/resource/Whose_Line_Is_It_Anyway%3F_(radio_series)>) --doo:creator--> Dan_Patterson (dor:Dan_Patterson)
+  '2':
+    attributes:
+      Bill_Dare: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Abelard_Giza (dor:Abelard_Giza) --dop:genre--> Satire (dor:Satire)
+      - Brian_Gulliver's_Travels (<http://dbpedia.org/resource/Brian_Gulliver's_Travels>) --doo:format--> Satire (dor:Satire)
+      - Brian_Gulliver's_Travels (<http://dbpedia.org/resource/Brian_Gulliver's_Travels>) --doo:creator--> Bill_Dare (dor:Bill_Dare)
+  '3':
+    attributes:
+      Mike_Nichols: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:AcademyAwardBestDirector_1961–1980', relatives^='http://dbpedia.org/resource/Rachel_Nichols_(journalist)', birth date^='1931-11-06')
+    relationships:
+      - Abelard_Giza (dor:Abelard_Giza) --dop:genre--> Satire (dor:Satire)
+      - The_Midnight_Special_(radio) (<http://dbpedia.org/resource/The_Midnight_Special_(radio)>) --doo:format--> Satire (dor:Satire)
+      - The_Midnight_Special_(radio) (<http://dbpedia.org/resource/The_Midnight_Special_(radio)>) --doo:creator--> Mike_Nichols (dor:Mike_Nichols)
+  '4':
+    attributes:
+      Dermot_Morgan: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', birth date^='1952-03-31')
+    relationships:
+      - Adam_Friedland (dor:Adam_Friedland) --dop:genre--> Political_satire (dor:Political_satire)
+      - Scrap_Saturday (dor:Scrap_Saturday) --doo:format--> Political_satire (dor:Political_satire)
+      - Scrap_Saturday (dor:Scrap_Saturday) --doo:creator--> Dermot_Morgan (dor:Dermot_Morgan)
+  '5':
+    attributes:
+      Gerard_Stembridge: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Adam_Friedland (dor:Adam_Friedland) --dop:genre--> Political_satire (dor:Political_satire)
+      - Scrap_Saturday (dor:Scrap_Saturday) --doo:format--> Political_satire (dor:Political_satire)
+      - Scrap_Saturday (dor:Scrap_Saturday) --doo:creator--> Gerard_Stembridge (dor:Gerard_Stembridge)
+  '6':
+    attributes:
+      Stephanie_Miller: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', birth date^='1961-09-29', father^='http://dbpedia.org/resource/William_E._Miller')
+    relationships:
+      - Adam_Friedland (dor:Adam_Friedland) --dop:genre--> Political_satire (dor:Political_satire)
+      - The_Stephanie_Miller_Show (dor:The_Stephanie_Miller_Show) --doo:format--> Political_satire (dor:Political_satire)
+      - The_Stephanie_Miller_Show (dor:The_Stephanie_Miller_Show) --doo:creator--> Stephanie_Miller (dor:Stephanie_Miller)
+  '7':
+    attributes:
+      Bill_Dare: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Adam_Pally (dor:Adam_Pally) --dop:genre--> Satire (dor:Satire)
+      - Brian_Gulliver's_Travels (<http://dbpedia.org/resource/Brian_Gulliver's_Travels>) --doo:format--> Satire (dor:Satire)
+      - Brian_Gulliver's_Travels (<http://dbpedia.org/resource/Brian_Gulliver's_Travels>) --doo:creator--> Bill_Dare (dor:Bill_Dare)
+  '8':
+    attributes:
+      Laura_Solon: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Adam_Pally (dor:Adam_Pally) --dop:genre--> Sketch_comedy (dor:Sketch_comedy)
+      - Laura_Solon:_Talking_and_Not_Talking (<http://dbpedia.org/resource/Laura_Solon:_Talking_and_Not_Talking>) --doo:format--> Sketch_comedy (dor:Sketch_comedy)
+      - Laura_Solon:_Talking_and_Not_Talking (<http://dbpedia.org/resource/Laura_Solon:_Talking_and_Not_Talking>) --doo:creator--> Laura_Solon (dor:Laura_Solon)
+  '9':
+    attributes:
+      Howard_Stern: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''', birth date^='1954-01-12')
+    relationships:
+      - Adam_Pally (dor:Adam_Pally) --dop:genre--> Black_comedy (dor:Black_comedy)
+      - The_Howard_Stern_Show (dor:The_Howard_Stern_Show) --doo:format--> Black_comedy (dor:Black_comedy)
+      - The_Howard_Stern_Show (dor:The_Howard_Stern_Show) --doo:creator--> Howard_Stern (dor:Howard_Stern)
+  '10':
+    attributes:
+      Howard_Stern: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''', birth date^='1954-01-12')
+    relationships:
+      - Akau_Jambo (dor:Akau_Jambo) --dop:genre--> Black_comedy (dor:Black_comedy)
+      - The_Howard_Stern_Show (dor:The_Howard_Stern_Show) --doo:format--> Black_comedy (dor:Black_comedy)
+      - The_Howard_Stern_Show (dor:The_Howard_Stern_Show) --doo:creator--> Howard_Stern (dor:Howard_Stern)
+attributes:
+  person: --reason^ (dop:reason)--> langString | --audio^ (dop:audio)--> langString | --first appearance^ (doo:firstAppearance)--> string | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --relatives^ (dop:relatives)--> langString | --birth date^ (dop:birthDate)--> date | --father^ (dop:father)--> langString | --state of origin^ (doo:stateOfOrigin)--> Resource
+  music genre: --1a^ (dop:1a)--> langString
+subgraph_id: 439
+relationships:
+  - comedian --dop:genre--> music genre
+  - "Ø±Û\x8CÚ\x88Û\x8CÙ\x88 Ù¾Ø±Ù\x88Ú¯Ø±Ø§Ù\N --doo:format--> music genre"
+  - "Ø±Û\x8CÚ\x88Û\x8CÙ\x88 Ù¾Ø±Ù\x88Ú¯Ø±Ø§Ù\N --doo:creator--> person"

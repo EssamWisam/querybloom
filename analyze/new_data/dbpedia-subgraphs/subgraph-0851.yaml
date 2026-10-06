@@ -1,0 +1,105 @@
+types:
+  island: doo:Island
+  country: doo:Country
+  volcano: doo:Volcano
+  Location: doo:Location
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Alaska: (area total (km2)^='1717856.0', subject='http://dbpedia.org/resource/Category:1959_establishments_in_the_United_States')
+      Adak_Island: (length (μ)^='52577.26848')
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - Mount_Adagdak (dor:Mount_Adagdak) --doo:locatedInArea--> Adak_Island (dor:Adak_Island)
+      - Mount_Adagdak (dor:Mount_Adagdak) --doo:locatedInArea--> Adak_Island (dor:Adak_Island)
+      - Mount_Adagdak (dor:Mount_Adagdak) --doo:locatedInArea--> Alaska (dor:Alaska)
+      - Adak_Island (dor:Adak_Island) --doo:country--> United_States (dor:United_States)
+  '2':
+    attributes:
+      Alaska: (area total (km2)^='1717856.0', subject='http://dbpedia.org/resource/Category:1959_establishments_in_the_United_States')
+      Adak_Island: (length (μ)^='52577.26848')
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - Mount_Moffett (dor:Mount_Moffett) --doo:locatedInArea--> Adak_Island (dor:Adak_Island)
+      - Mount_Adagdak (dor:Mount_Adagdak) --doo:locatedInArea--> Adak_Island (dor:Adak_Island)
+      - Mount_Moffett (dor:Mount_Moffett) --doo:locatedInArea--> Alaska (dor:Alaska)
+      - Adak_Island (dor:Adak_Island) --doo:country--> United_States (dor:United_States)
+  '3':
+    attributes:
+      Alaska: (area total (km2)^='1717856.0', subject='http://dbpedia.org/resource/Category:1959_establishments_in_the_United_States')
+      Adak_Island: (length (μ)^='52577.26848')
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - Mount_Adagdak (dor:Mount_Adagdak) --doo:locatedInArea--> Adak_Island (dor:Adak_Island)
+      - Mount_Moffett (dor:Mount_Moffett) --doo:locatedInArea--> Adak_Island (dor:Adak_Island)
+      - Mount_Adagdak (dor:Mount_Adagdak) --doo:locatedInArea--> Alaska (dor:Alaska)
+      - Adak_Island (dor:Adak_Island) --doo:country--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Indonesia: '(footer^=''Indonesian Armed Forces. Clockwise from top: Indonesian Army during training session, Sukhoi Su-30, Pindad Anoa, and Indonesian naval vessel .'')'
+      Magelang_Regency: (area total (km2)^='1085.73', subject='http://dbpedia.org/resource/Category:Magelang_Regency')
+    relationships:
+      - Mount_Andong (dor:Mount_Andong) --doo:locatedInArea--> Java (dor:Java)
+      - Arjuno-Welirang (dor:Arjuno-Welirang) --doo:locatedInArea--> Java (dor:Java)
+      - Mount_Andong (dor:Mount_Andong) --doo:locatedInArea--> Magelang_Regency (dor:Magelang_Regency)
+      - Java (dor:Java) --doo:country--> Indonesia (dor:Indonesia)
+  '5':
+    attributes:
+      Indonesia: '(footer^=''Indonesian Armed Forces. Clockwise from top: Indonesian Army during training session, Sukhoi Su-30, Pindad Anoa, and Indonesian naval vessel .'')'
+      Magelang_Regency: (area total (km2)^='1085.73', subject='http://dbpedia.org/resource/Category:Magelang_Regency')
+    relationships:
+      - Mount_Andong (dor:Mount_Andong) --doo:locatedInArea--> Java (dor:Java)
+      - Dieng_Volcanic_Complex (dor:Dieng_Volcanic_Complex) --doo:locatedInArea--> Java (dor:Java)
+      - Mount_Andong (dor:Mount_Andong) --doo:locatedInArea--> Magelang_Regency (dor:Magelang_Regency)
+      - Java (dor:Java) --doo:country--> Indonesia (dor:Indonesia)
+  '6':
+    attributes:
+      Indonesia: '(footer^=''Indonesian Armed Forces. Clockwise from top: Indonesian Army during training session, Sukhoi Su-30, Pindad Anoa, and Indonesian naval vessel .'')'
+      Magelang_Regency: (area total (km2)^='1085.73', subject='http://dbpedia.org/resource/Category:Magelang_Regency')
+    relationships:
+      - Mount_Andong (dor:Mount_Andong) --doo:locatedInArea--> Java (dor:Java)
+      - Iyang-Argapura (dor:Iyang-Argapura) --doo:locatedInArea--> Java (dor:Java)
+      - Mount_Andong (dor:Mount_Andong) --doo:locatedInArea--> Magelang_Regency (dor:Magelang_Regency)
+      - Java (dor:Java) --doo:country--> Indonesia (dor:Indonesia)
+  '7':
+    attributes:
+      Canary_Islands: (area total (km2)^='7493.0', subject='http://dbpedia.org/resource/Category:Archipelagoes_of_Africa')
+    relationships:
+      - Cumbre_Vieja (dor:Cumbre_Vieja) --doo:locatedInArea--> La_Palma (dor:La_Palma)
+      - Cumbre_Vieja (dor:Cumbre_Vieja) --doo:locatedInArea--> La_Palma (dor:La_Palma)
+      - Cumbre_Vieja (dor:Cumbre_Vieja) --doo:locatedInArea--> Canary_Islands (dor:Canary_Islands)
+      - La_Palma (dor:La_Palma) --doo:country--> Spain (dor:Spain)
+  '8':
+    attributes:
+      Canary_Islands: (area total (km2)^='7493.0', subject='http://dbpedia.org/resource/Category:Archipelagoes_of_Africa')
+    relationships:
+      - Cumbre_Vieja (dor:Cumbre_Vieja) --doo:locatedInArea--> La_Palma (dor:La_Palma)
+      - Roque_de_los_Muchachos (dor:Roque_de_los_Muchachos) --doo:locatedInArea--> La_Palma (dor:La_Palma)
+      - Cumbre_Vieja (dor:Cumbre_Vieja) --doo:locatedInArea--> Canary_Islands (dor:Canary_Islands)
+      - La_Palma (dor:La_Palma) --doo:country--> Spain (dor:Spain)
+  '9':
+    attributes: {}
+    relationships:
+      - Cumbre_Vieja (dor:Cumbre_Vieja) --doo:locatedInArea--> La_Palma (dor:La_Palma)
+      - Tajogaite (dor:Tajogaite) --doo:locatedInArea--> La_Palma (dor:La_Palma)
+      - Cumbre_Vieja (dor:Cumbre_Vieja) --doo:locatedInArea--> Canary_Islands (dor:Canary_Islands)
+      - La_Palma (dor:La_Palma) --doo:country--> Spain (dor:Spain)
+attributes:
+  island: --length (μ)^ (doo:length)--> double
+  country: --footer^ (dop:footer)--> langString
+  Location: --Apr rain days^ (dop:aprRainDays)--> int | --Apr high C^ (dop:aprHighC)--> double | --mouth mountain^ (doo:mouthMountain)--> Resource | --Aug high F^ (dop:augHighF)--> int | --population total^ (doo:populationTotal)--> int
+  settlement: --area total (km2)^ (doop:areaTotal)--> squareKilometre | --subject (podt:subject)--> Resource | --region^ (doo:region)--> Resource
+subgraph_id: 851
+relationships:
+  - volcano --doo:locatedInArea--> island
+  - Location --doo:locatedInArea--> island
+  - volcano --doo:locatedInArea--> settlement
+  - island --doo:country--> country

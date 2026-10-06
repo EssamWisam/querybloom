@@ -1,0 +1,118 @@
+types:
+  horse: doo:Horse
+  country: doo:Country
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  basketball league: doo:BasketballLeague
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      France: (caption^='http://dbpedia.org/resource/École_militaire_interarmes')
+      Ajax_(horse): (breeder^='http://dbpedia.org/resource/Edmond_Blanc', owner^='Edmond Blanc')
+      BCM_Gravelines-Dunkerque: (date^='1')
+    relationships:
+      - Ajax_(horse) (<http://dbpedia.org/resource/Ajax_(horse)>) --dop:country--> France (dor:France)
+      - BCM_Gravelines-Dunkerque (dor:BCM_Gravelines-Dunkerque) --dop:location--> France (dor:France)
+      - BCM_Gravelines-Dunkerque (dor:BCM_Gravelines-Dunkerque) --doo:league--> LNB_Pro_A (dor:LNB_Pro_A)
+      - Aast,_Pyrénées-Atlantiques (<http://dbpedia.org/resource/Aast,_Pyrénées-Atlantiques>) --doo:country--> France (dor:France)
+  '2':
+    attributes:
+      France: (caption^='http://dbpedia.org/resource/École_militaire_interarmes')
+      Ajax_(horse): (breeder^='http://dbpedia.org/resource/Edmond_Blanc', owner^='Edmond Blanc')
+      Cholet_Basket: (date^='4')
+    relationships:
+      - Ajax_(horse) (<http://dbpedia.org/resource/Ajax_(horse)>) --dop:country--> France (dor:France)
+      - Cholet_Basket (dor:Cholet_Basket) --dop:location--> France (dor:France)
+      - Cholet_Basket (dor:Cholet_Basket) --doo:league--> LNB_Pro_A (dor:LNB_Pro_A)
+      - Aast,_Pyrénées-Atlantiques (<http://dbpedia.org/resource/Aast,_Pyrénées-Atlantiques>) --doo:country--> France (dor:France)
+  '3':
+    attributes:
+      France: (caption^='http://dbpedia.org/resource/École_militaire_interarmes')
+      Ajax_(horse): (breeder^='http://dbpedia.org/resource/Edmond_Blanc', owner^='Edmond Blanc')
+      ESSM_Le_Portel: (date^='1')
+    relationships:
+      - Ajax_(horse) (<http://dbpedia.org/resource/Ajax_(horse)>) --dop:country--> France (dor:France)
+      - ESSM_Le_Portel (dor:ESSM_Le_Portel) --dop:location--> France (dor:France)
+      - ESSM_Le_Portel (dor:ESSM_Le_Portel) --doo:league--> LNB_Pro_A (dor:LNB_Pro_A)
+      - Aast,_Pyrénées-Atlantiques (<http://dbpedia.org/resource/Aast,_Pyrénées-Atlantiques>) --doo:country--> France (dor:France)
+  '4':
+    attributes:
+      Arkle: (owner^='http://dbpedia.org/resource/Anne_Grosvenor,_Duchess_of_Westminster')
+      Republic_of_Ireland: (caption^='(President)')
+    relationships:
+      - Arkle (dor:Arkle) --dop:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - UCD_Marian (dor:UCD_Marian) --dop:location--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - UCD_Marian (dor:UCD_Marian) --doo:league--> Super_League_(Ireland) (<http://dbpedia.org/resource/Super_League_(Ireland)>)
+      - Abbeville,_County_Tipperary (<http://dbpedia.org/resource/Abbeville,_County_Tipperary>) --doo:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+  '5':
+    attributes:
+      Arkle: (owner^='http://dbpedia.org/resource/Anne_Grosvenor,_Duchess_of_Westminster')
+      Republic_of_Ireland: (caption^='(President)')
+    relationships:
+      - Arkle (dor:Arkle) --dop:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - UCD_Marian (dor:UCD_Marian) --dop:location--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - UCD_Marian (dor:UCD_Marian) --doo:league--> Super_League_(Ireland) (<http://dbpedia.org/resource/Super_League_(Ireland)>)
+      - Abbeydorney (dor:Abbeydorney) --doo:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+  '6':
+    attributes:
+      Arkle: (owner^='http://dbpedia.org/resource/Anne_Grosvenor,_Duchess_of_Westminster')
+      Republic_of_Ireland: (caption^='(President)')
+    relationships:
+      - Arkle (dor:Arkle) --dop:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - UCD_Marian (dor:UCD_Marian) --dop:location--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - UCD_Marian (dor:UCD_Marian) --doo:league--> Super_League_(Ireland) (<http://dbpedia.org/resource/Super_League_(Ireland)>)
+      - Abbeyknockmoy (dor:Abbeyknockmoy) --doo:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+  '7':
+    attributes:
+      Turkey: (caption^='(President)')
+      Bold_Pilot: (breeder^='http://dbpedia.org/resource/Özdemir_Atman', owner^='http://dbpedia.org/resource/Özdemir_Atman')
+    relationships:
+      - Bold_Pilot (dor:Bold_Pilot) --dop:country--> Turkey (dor:Turkey)
+      - Adana_ASKİ_SK (<http://dbpedia.org/resource/Adana_ASKİ_SK>) --dop:location--> Turkey (dor:Turkey)
+      - Adana_ASKİ_SK (<http://dbpedia.org/resource/Adana_ASKİ_SK>) --doo:league--> EuroCup_Women (dor:EuroCup_Women)
+      - 1200_Evler,_Merkezefendi (<http://dbpedia.org/resource/1200_Evler,_Merkezefendi>) --doo:country--> Turkey (dor:Turkey)
+  '8':
+    attributes:
+      Turkey: (caption^='(President)')
+      Bold_Pilot: (breeder^='http://dbpedia.org/resource/Özdemir_Atman', owner^='http://dbpedia.org/resource/Özdemir_Atman')
+    relationships:
+      - Bold_Pilot (dor:Bold_Pilot) --dop:country--> Turkey (dor:Turkey)
+      - Antalya_Büyükşehir_Belediyesi (<http://dbpedia.org/resource/Antalya_Büyükşehir_Belediyesi>) --dop:location--> Turkey (dor:Turkey)
+      - Antalya_Büyükşehir_Belediyesi (<http://dbpedia.org/resource/Antalya_Büyükşehir_Belediyesi>) --doo:league--> Turkish_Basketball_Second_League (dor:Turkish_Basketball_Second_League)
+      - 1200_Evler,_Merkezefendi (<http://dbpedia.org/resource/1200_Evler,_Merkezefendi>) --doo:country--> Turkey (dor:Turkey)
+  '9':
+    attributes:
+      Turkey: (caption^='(President)')
+      Bold_Pilot: (breeder^='http://dbpedia.org/resource/Özdemir_Atman', owner^='http://dbpedia.org/resource/Özdemir_Atman')
+      Galatasaray_S.K._(women's_basketball): (date^='1')
+    relationships:
+      - Bold_Pilot (dor:Bold_Pilot) --dop:country--> Turkey (dor:Turkey)
+      - Galatasaray_S.K._(women's_basketball) (<http://dbpedia.org/resource/Galatasaray_S.K._(women's_basketball)>) --dop:location--> Turkey (dor:Turkey)
+      - Galatasaray_S.K._(women's_basketball) (<http://dbpedia.org/resource/Galatasaray_S.K._(women's_basketball)>) --doo:league--> EuroCup_Women (dor:EuroCup_Women)
+      - 1200_Evler,_Merkezefendi (<http://dbpedia.org/resource/1200_Evler,_Merkezefendi>) --doo:country--> Turkey (dor:Turkey)
+  '10':
+    attributes:
+      England: (caption^='The Beatles are the most commercially successful and critically acclaimed band in popular music.')
+      Challenger_(horse): (breeder^='http://dbpedia.org/resource/The_National_Stud', owner^='1')
+      Aaron's_Hill,_Surrey: (population total^='338')
+    relationships:
+      - Challenger_(horse) (<http://dbpedia.org/resource/Challenger_(horse)>) --dop:country--> England (dor:England)
+      - City_of_Sheffield_Hatters (dor:City_of_Sheffield_Hatters) --dop:location--> England (dor:England)
+      - City_of_Sheffield_Hatters (dor:City_of_Sheffield_Hatters) --doo:league--> Women's_British_Basketball_League (<http://dbpedia.org/resource/Women's_British_Basketball_League>)
+      - Aaron's_Hill,_Surrey (<http://dbpedia.org/resource/Aaron's_Hill,_Surrey>) --doo:country--> England (dor:England)
+attributes:
+  horse: --breeder^ (doo:breeder)--> Resource | --owner^ (dop:owner)--> int
+  country: --caption^ (dop:caption)--> langString
+  settlement: --population total^ (doo:populationTotal)--> int | --Apr record high C^ (dop:aprRecordHighC)--> int | --borough^ (dop:borough)--> langString
+  soccer club: --date^ (dop:date)--> date | --alt (dop:alt)--> langString | --d^ (dop:d)--> gMonthDay | --2ndRegional cup best^ (dop:2ndregionalCupBest)--> langString
+subgraph_id: 427
+relationships:
+  - horse --dop:country--> country
+  - soccer club --dop:location--> country
+  - soccer club --doo:league--> basketball league
+  - settlement --doo:country--> country

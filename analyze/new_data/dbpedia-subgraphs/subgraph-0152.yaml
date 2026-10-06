@@ -1,0 +1,89 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  law firm: doo:LawFirm
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_Kingdom: (Wikipage page ID^='31717')
+    relationships:
+      - 39_Essex_Chambers (dor:39_Essex_Chambers) --doo:headquarter--> United_Kingdom (dor:United_Kingdom)
+      - 39_Essex_Chambers (dor:39_Essex_Chambers) --doo:headquarter--> London (dor:London)
+      - 92_News__UK__1 (dor:92_News__UK__1) --doo:headquarter--> London (dor:London)
+  '2':
+    attributes:
+      United_Kingdom: (Wikipage page ID^='31717')
+    relationships:
+      - 39_Essex_Chambers (dor:39_Essex_Chambers) --doo:headquarter--> United_Kingdom (dor:United_Kingdom)
+      - 39_Essex_Chambers (dor:39_Essex_Chambers) --doo:headquarter--> London (dor:London)
+      - Afghanistan_International (dor:Afghanistan_International) --doo:headquarter--> London (dor:London)
+  '3':
+    attributes:
+      United_Kingdom: (Wikipage page ID^='31717')
+    relationships:
+      - 39_Essex_Chambers (dor:39_Essex_Chambers) --doo:headquarter--> United_Kingdom (dor:United_Kingdom)
+      - 39_Essex_Chambers (dor:39_Essex_Chambers) --doo:headquarter--> London (dor:London)
+      - Ahlulbayt_TV__Ahlulbayt_TV__1 (dor:Ahlulbayt_TV__Ahlulbayt_TV__1) --doo:headquarter--> London (dor:London)
+  '4':
+    attributes:
+      China: (Wikipage page ID^='5405')
+    relationships:
+      - AllBright_Law_Offices (dor:AllBright_Law_Offices) --doo:headquarter--> China (dor:China)
+      - AllBright_Law_Offices (dor:AllBright_Law_Offices) --doo:headquarter--> Shanghai (dor:Shanghai)
+      - Dragon_Television (dor:Dragon_Television) --doo:headquarter--> Shanghai (dor:Shanghai)
+  '5':
+    attributes:
+      California: (area total km^='423970', Wikipage page ID^='5407', motto^='"Eureka"')
+    relationships:
+      - Allen_Matkins (dor:Allen_Matkins) --doo:headquarter--> California (dor:California)
+      - Allen_Matkins (dor:Allen_Matkins) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - AXN (dor:AXN) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+  '6':
+    attributes:
+      California: (area total km^='423970', Wikipage page ID^='5407', motto^='"Eureka"')
+    relationships:
+      - Allen_Matkins (dor:Allen_Matkins) --doo:headquarter--> California (dor:California)
+      - Allen_Matkins (dor:Allen_Matkins) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - AXS_TV (dor:AXS_TV) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+  '7':
+    attributes:
+      California: (area total km^='423970', Wikipage page ID^='5407', motto^='"Eureka"')
+    relationships:
+      - Allen_Matkins (dor:Allen_Matkins) --doo:headquarter--> California (dor:California)
+      - Allen_Matkins (dor:Allen_Matkins) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - Bally_Sports_SoCal (dor:Bally_Sports_SoCal) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+  '8':
+    attributes:
+      United_States: (Wikipage page ID^='3434750', motto^='"In God We Trust"')
+    relationships:
+      - Alston_&_Bird (<http://dbpedia.org/resource/Alston_&_Bird>) --doo:headquarter--> United_States (dor:United_States)
+      - Alston_&_Bird (<http://dbpedia.org/resource/Alston_&_Bird>) --doo:headquarter--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+      - CNN_Airport (dor:CNN_Airport) --doo:headquarter--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+  '9':
+    attributes:
+      United_States: (Wikipage page ID^='3434750', motto^='"In God We Trust"')
+    relationships:
+      - Alston_&_Bird (<http://dbpedia.org/resource/Alston_&_Bird>) --doo:headquarter--> United_States (dor:United_States)
+      - Alston_&_Bird (<http://dbpedia.org/resource/Alston_&_Bird>) --doo:headquarter--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+      - CNN_Checkout_Channel (dor:CNN_Checkout_Channel) --doo:headquarter--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+  '10':
+    attributes:
+      United_States: (Wikipage page ID^='3434750', motto^='"In God We Trust"')
+    relationships:
+      - Alston_&_Bird (<http://dbpedia.org/resource/Alston_&_Bird>) --doo:headquarter--> United_States (dor:United_States)
+      - Alston_&_Bird (<http://dbpedia.org/resource/Alston_&_Bird>) --doo:headquarter--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+      - CNN_en_Español (<http://dbpedia.org/resource/CNN_en_Español>) --doo:headquarter--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+attributes:
+  city: --area^ (dop:area)--> double | --Apr high F^ (dop:aprHighF)--> double
+  Location: --area total km^ (dop:areaTotalKm)--> int | --Apr high C^ (dop:aprHighC)--> int | --Apr rain mm^ (dop:aprRainMm)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --Wikipage page ID^ (doo:wikiPageID)--> int | --motto^ (doo:motto)--> string | --Apr record low C^ (dop:aprRecordLowC)--> int | --designatedOther1Color (dop:designatedOther1Color)--> langString
+subgraph_id: 152
+relationships:
+  - law firm --doo:headquarter--> Location
+  - law firm --doo:headquarter--> city
+  - television station --doo:headquarter--> city

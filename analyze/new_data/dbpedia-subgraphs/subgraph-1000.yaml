@@ -1,0 +1,134 @@
+types:
+  place: doo:Place
+  company: doo:Company
+  country: doo:Country
+  golf player: doo:GolfPlayer
+  organisation: doo:Organisation
+  golf tournament: doo:GolfTournament
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ireland: (Link from a Wikipage to an external page^='http://www.gov.ie/')
+      Cavan_Institute: (affiliations^='http://dbpedia.org/resource/Accounting_Technicians_Ireland', Link from a Wikipage to an external page^='http://www.cavaninstitute.ie')
+      Hennessy_Tournament: (aggregate^='268')
+    relationships:
+      - Accounting_Technicians_Ireland (dor:Accounting_Technicians_Ireland) --doo:location--> Ireland (dor:Ireland)
+      - Hennessy_Tournament (dor:Hennessy_Tournament) --dop:location--> Ireland (dor:Ireland)
+      - Aghanashanamore (dor:Aghanashanamore) --doo:country--> Ireland (dor:Ireland)
+      - Hennessy_Tournament (dor:Hennessy_Tournament) --dop:finalChampion--> Christy_Greene (dor:Christy_Greene)
+      - Cavan_Institute (dor:Cavan_Institute) --dop:affiliations--> Accounting_Technicians_Ireland (dor:Accounting_Technicians_Ireland)
+  '2':
+    attributes:
+      Ireland: (Link from a Wikipage to an external page^='http://www.gov.ie/')
+      Cavan_Institute: (affiliations^='http://dbpedia.org/resource/Accounting_Technicians_Ireland', Link from a Wikipage to an external page^='http://www.cavaninstitute.ie')
+      Hennessy_Tournament: (aggregate^='268')
+    relationships:
+      - Accounting_Technicians_Ireland (dor:Accounting_Technicians_Ireland) --doo:location--> Ireland (dor:Ireland)
+      - Hennessy_Tournament (dor:Hennessy_Tournament) --dop:location--> Ireland (dor:Ireland)
+      - Ard_na_Caithne (dor:Ard_na_Caithne) --doo:country--> Ireland (dor:Ireland)
+      - Hennessy_Tournament (dor:Hennessy_Tournament) --dop:finalChampion--> Christy_Greene (dor:Christy_Greene)
+      - Cavan_Institute (dor:Cavan_Institute) --dop:affiliations--> Accounting_Technicians_Ireland (dor:Accounting_Technicians_Ireland)
+  '3':
+    attributes:
+      Ireland: (Link from a Wikipage to an external page^='http://www.gov.ie/')
+      Cavan_Institute: (affiliations^='http://dbpedia.org/resource/Accounting_Technicians_Ireland', Link from a Wikipage to an external page^='http://www.cavaninstitute.ie')
+      Hennessy_Tournament: (aggregate^='268')
+    relationships:
+      - Accounting_Technicians_Ireland (dor:Accounting_Technicians_Ireland) --doo:location--> Ireland (dor:Ireland)
+      - Hennessy_Tournament (dor:Hennessy_Tournament) --dop:location--> Ireland (dor:Ireland)
+      - Ardnaglug (dor:Ardnaglug) --doo:country--> Ireland (dor:Ireland)
+      - Hennessy_Tournament (dor:Hennessy_Tournament) --dop:finalChampion--> Christy_Greene (dor:Christy_Greene)
+      - Cavan_Institute (dor:Cavan_Institute) --dop:affiliations--> Accounting_Technicians_Ireland (dor:Accounting_Technicians_Ireland)
+  '4':
+    attributes:
+      United_Kingdom: (Link from a Wikipage to an external page^='http://www.churchofscotland.org.uk/about_us/how_we_are_organised', anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Space_Innovation_and_Growth_Team: (affiliations^='http://dbpedia.org/resource/Astrium', Link from a Wikipage to an external page^='http://www.adsgroup.org.uk/pages/81937807.asp')
+    relationships:
+      - Avanti_Communications (dor:Avanti_Communications) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - Carling_Tournament (dor:Carling_Tournament) --dop:location--> United_Kingdom (dor:United_Kingdom)
+      - A'_Chill (<http://dbpedia.org/resource/A'_Chill>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Carling_Tournament (dor:Carling_Tournament) --dop:finalChampion--> Kel_Nagle (dor:Kel_Nagle)
+      - Space_Innovation_and_Growth_Team (dor:Space_Innovation_and_Growth_Team) --dop:affiliations--> Avanti_Communications (dor:Avanti_Communications)
+  '5':
+    attributes:
+      United_Kingdom: (Link from a Wikipage to an external page^='http://www.churchofscotland.org.uk/about_us/how_we_are_organised', anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Space_Innovation_and_Growth_Team: (affiliations^='http://dbpedia.org/resource/Astrium', Link from a Wikipage to an external page^='http://www.adsgroup.org.uk/pages/81937807.asp')
+    relationships:
+      - Avanti_Communications (dor:Avanti_Communications) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - Carling_Tournament (dor:Carling_Tournament) --dop:location--> United_Kingdom (dor:United_Kingdom)
+      - Aaron's_Hill,_Surrey (<http://dbpedia.org/resource/Aaron's_Hill,_Surrey>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Carling_Tournament (dor:Carling_Tournament) --dop:finalChampion--> Kel_Nagle (dor:Kel_Nagle)
+      - Space_Innovation_and_Growth_Team (dor:Space_Innovation_and_Growth_Team) --dop:affiliations--> Avanti_Communications (dor:Avanti_Communications)
+  '6':
+    attributes:
+      United_Kingdom: (Link from a Wikipage to an external page^='http://www.churchofscotland.org.uk/about_us/how_we_are_organised', anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Space_Innovation_and_Growth_Team: (affiliations^='http://dbpedia.org/resource/Astrium', Link from a Wikipage to an external page^='http://www.adsgroup.org.uk/pages/81937807.asp')
+    relationships:
+      - Avanti_Communications (dor:Avanti_Communications) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - Carling_Tournament (dor:Carling_Tournament) --dop:location--> United_Kingdom (dor:United_Kingdom)
+      - Ab_Kettleby (dor:Ab_Kettleby) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Carling_Tournament (dor:Carling_Tournament) --dop:finalChampion--> Kel_Nagle (dor:Kel_Nagle)
+      - Space_Innovation_and_Growth_Team (dor:Space_Innovation_and_Growth_Team) --dop:affiliations--> Avanti_Communications (dor:Avanti_Communications)
+  '7':
+    attributes:
+      Australia: (Link from a Wikipage to an external page^='http://www.abs.gov.au/', anthem^='http://dbpedia.org/resource/Advance_Australia_Fair')
+      Boeing_Australia: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-company-noun-1')
+      Dunlop_International: (aggregate^='274')
+      Swinburne_University_of_Technology: (type^='http://dbpedia.org/resource/Public_university', affiliations^='', Link from a Wikipage to an external page^='http://swinburne.edu.au')
+    relationships:
+      - Boeing_Australia (dor:Boeing_Australia) --doo:location--> Australia (dor:Australia)
+      - Dunlop_International (dor:Dunlop_International) --dop:location--> Australia (dor:Australia)
+      - A1_Mine_Settlement (dor:A1_Mine_Settlement) --doo:country--> Australia (dor:Australia)
+      - Dunlop_International (dor:Dunlop_International) --dop:finalChampion--> Tony_Jacklin (dor:Tony_Jacklin)
+      - Swinburne_University_of_Technology (dor:Swinburne_University_of_Technology) --dop:affiliations--> Boeing_Australia (dor:Boeing_Australia)
+  '8':
+    attributes:
+      Australia: (Link from a Wikipage to an external page^='http://www.abs.gov.au/', anthem^='http://dbpedia.org/resource/Advance_Australia_Fair')
+      Boeing_Australia: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-company-noun-1')
+      Dunlop_International: (aggregate^='274')
+      Swinburne_University_of_Technology: (type^='http://dbpedia.org/resource/Public_university', affiliations^='', Link from a Wikipage to an external page^='http://swinburne.edu.au')
+    relationships:
+      - Boeing_Australia (dor:Boeing_Australia) --doo:location--> Australia (dor:Australia)
+      - Dunlop_International (dor:Dunlop_International) --dop:location--> Australia (dor:Australia)
+      - Abba_River,_Western_Australia (<http://dbpedia.org/resource/Abba_River,_Western_Australia>) --doo:country--> Australia (dor:Australia)
+      - Dunlop_International (dor:Dunlop_International) --dop:finalChampion--> Tony_Jacklin (dor:Tony_Jacklin)
+      - Swinburne_University_of_Technology (dor:Swinburne_University_of_Technology) --dop:affiliations--> Boeing_Australia (dor:Boeing_Australia)
+  '9':
+    attributes:
+      Australia: (Link from a Wikipage to an external page^='http://www.abs.gov.au/', anthem^='http://dbpedia.org/resource/Advance_Australia_Fair')
+      Boeing_Australia: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-company-noun-1')
+      Dunlop_International: (aggregate^='274')
+      Swinburne_University_of_Technology: (type^='http://dbpedia.org/resource/Public_university', affiliations^='', Link from a Wikipage to an external page^='http://swinburne.edu.au')
+    relationships:
+      - Boeing_Australia (dor:Boeing_Australia) --doo:location--> Australia (dor:Australia)
+      - Dunlop_International (dor:Dunlop_International) --dop:location--> Australia (dor:Australia)
+      - Abbey,_Western_Australia (<http://dbpedia.org/resource/Abbey,_Western_Australia>) --doo:country--> Australia (dor:Australia)
+      - Dunlop_International (dor:Dunlop_International) --dop:finalChampion--> Tony_Jacklin (dor:Tony_Jacklin)
+      - Swinburne_University_of_Technology (dor:Swinburne_University_of_Technology) --dop:affiliations--> Boeing_Australia (dor:Boeing_Australia)
+  '10':
+    attributes:
+      Respond!: (affiliations^='http://dbpedia.org/resource/Health_Service_Executive', Link from a Wikipage to an external page^='http://www.respond.ie')
+      Republic_of_Ireland: (Link from a Wikipage to an external page^='http://www.gov.ie/')
+    relationships:
+      - Health_Service_Executive (dor:Health_Service_Executive) --doo:location--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - Carroll's_Irish_Match_Play_Championship (<http://dbpedia.org/resource/Carroll's_Irish_Match_Play_Championship>) --dop:location--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - Abbeville,_County_Tipperary (<http://dbpedia.org/resource/Abbeville,_County_Tipperary>) --doo:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - Carroll's_Irish_Match_Play_Championship (<http://dbpedia.org/resource/Carroll's_Irish_Match_Play_Championship>) --dop:finalChampion--> Paddy_McGuirk (dor:Paddy_McGuirk)
+      - Respond! (<http://dbpedia.org/resource/Respond!>) --dop:affiliations--> Health_Service_Executive (dor:Health_Service_Executive)
+attributes:
+  company: --wordnet_type (dop:wordnet_type)--> Resource
+  country: --1a^ (dop:1a)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --anthem^ (doo:anthem)--> Resource
+  organisation: --type^ (doo:type)--> Resource | --affiliations^ (dop:affiliations)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  golf tournament: --tour^ (dop:tour)--> langString | --aggregate^ (dop:aggregate)--> int
+subgraph_id: 1000
+relationships:
+  - company --doo:location--> country
+  - golf tournament --dop:location--> country
+  - place --doo:country--> country
+  - golf tournament --dop:finalChampion--> golf player
+  - organisation --dop:affiliations--> company

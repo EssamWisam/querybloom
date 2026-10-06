@@ -1,0 +1,96 @@
+types:
+  song: doo:Song
+  movie: doo:Film
+  record label: doo:RecordLabel
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Funkin'_for_Jamaica_(N.Y.): (performer^='http://dbpedia.org/resource/Tom_Browne_(trumpeter)', Wikipage page ID^='22882373')
+    relationships:
+      - ...And_Justice_for_All_(film) (<http://dbpedia.org/resource/...And_Justice_for_All_(film)>) --dop:music--> Dave_Grusin (dor:Dave_Grusin)
+      - GRP_Records (dor:GRP_Records) --doo:foundedBy--> Dave_Grusin (dor:Dave_Grusin)
+      - Funkin'_for_Jamaica_(N.Y.) (<http://dbpedia.org/resource/Funkin'_for_Jamaica_(N.Y.)>) --doo:recordLabel--> GRP_Records (dor:GRP_Records)
+  '2':
+    attributes:
+      This_Time_I'll_Be_Sweeter: (performer^='http://dbpedia.org/resource/Angela_Bofill', Wikipage page ID^='22127221', release date^='1978-11-21')
+    relationships:
+      - ...And_Justice_for_All_(film) (<http://dbpedia.org/resource/...And_Justice_for_All_(film)>) --dop:music--> Dave_Grusin (dor:Dave_Grusin)
+      - GRP_Records (dor:GRP_Records) --doo:foundedBy--> Dave_Grusin (dor:Dave_Grusin)
+      - This_Time_I'll_Be_Sweeter (<http://dbpedia.org/resource/This_Time_I'll_Be_Sweeter>) --doo:recordLabel--> GRP_Records (dor:GRP_Records)
+  '3':
+    attributes:
+      Vaka_(song): (performer^='http://dbpedia.org/resource/Sigur_Rós', Wikipage page ID^='6326066', previous work^='http://dbpedia.org/resource/Ný_batterí')
+      Bad_Taste_(record_label): (url^='http://www.smekkleysa.net/')
+    relationships:
+      - 101_Reykjavík (<http://dbpedia.org/resource/101_Reykjavík>) --dop:music--> Einar_Örn_Benediktsson (<http://dbpedia.org/resource/Einar_Örn_Benediktsson>)
+      - Bad_Taste_(record_label) (<http://dbpedia.org/resource/Bad_Taste_(record_label)>) --doo:foundedBy--> Einar_Örn_Benediktsson (<http://dbpedia.org/resource/Einar_Örn_Benediktsson>)
+      - Vaka_(song) (<http://dbpedia.org/resource/Vaka_(song)>) --doo:recordLabel--> Bad_Taste_(record_label) (<http://dbpedia.org/resource/Bad_Taste_(record_label)>)
+  '4':
+    attributes:
+      Dance_of_the_Manatee: (performer^='http://dbpedia.org/resource/Fair_to_Midland', Wikipage page ID^='23094306', release date^='2007-03-13')
+      Serjical_Strike_Records: (url^='http://www.serjicalstrike.com/')
+    relationships:
+      - 1915_(film) (<http://dbpedia.org/resource/1915_(film)>) --dop:music--> Serj_Tankian (dor:Serj_Tankian)
+      - Serjical_Strike_Records (dor:Serjical_Strike_Records) --doo:foundedBy--> Serj_Tankian (dor:Serj_Tankian)
+      - Dance_of_the_Manatee (dor:Dance_of_the_Manatee) --doo:recordLabel--> Serjical_Strike_Records (dor:Serjical_Strike_Records)
+  '5':
+    attributes:
+      Empty_Walls: (performer^='http://dbpedia.org/resource/Serj_Tankian', Wikipage page ID^='13101996', release date^='2007-09-10')
+      Serjical_Strike_Records: (url^='http://www.serjicalstrike.com/')
+    relationships:
+      - 1915_(film) (<http://dbpedia.org/resource/1915_(film)>) --dop:music--> Serj_Tankian (dor:Serj_Tankian)
+      - Serjical_Strike_Records (dor:Serjical_Strike_Records) --doo:foundedBy--> Serj_Tankian (dor:Serj_Tankian)
+      - Empty_Walls (dor:Empty_Walls) --doo:recordLabel--> Serjical_Strike_Records (dor:Serjical_Strike_Records)
+  '6':
+    attributes:
+      Serjical_Strike_Records: (url^='http://www.serjicalstrike.com/')
+      Enter_the_Chicken__Botnus__1: (performer^='http://dbpedia.org/resource/Buckethead', release date^='2005-10-25')
+    relationships:
+      - 1915_(film) (<http://dbpedia.org/resource/1915_(film)>) --dop:music--> Serj_Tankian (dor:Serj_Tankian)
+      - Serjical_Strike_Records (dor:Serjical_Strike_Records) --doo:foundedBy--> Serj_Tankian (dor:Serj_Tankian)
+      - Enter_the_Chicken__Botnus__1 (dor:Enter_the_Chicken__Botnus__1) --doo:recordLabel--> Serjical_Strike_Records (dor:Serjical_Strike_Records)
+  '7':
+    attributes:
+      In_My_Head_(Queens_of_the_Stone_Age_song)__In_My_Head...Or_Something__1: (performer^='http://dbpedia.org/resource/The_Desert_Sessions', release date^='2003-09-23')
+    relationships:
+      - 1922_(2017_film) (<http://dbpedia.org/resource/1922_(2017_film)>) --dop:music--> Mike_Patton (dor:Mike_Patton)
+      - Ipecac_Recordings (dor:Ipecac_Recordings) --doo:foundedBy--> Mike_Patton (dor:Mike_Patton)
+      - In_My_Head_(Queens_of_the_Stone_Age_song)__In_My_Head...Or_Something__1 (<http://dbpedia.org/resource/In_My_Head_(Queens_of_the_Stone_Age_song)__In_My_Head...Or_Something__1>) --doo:recordLabel--> Ipecac_Recordings (dor:Ipecac_Recordings)
+  '8':
+    attributes:
+      M.E.A.T.: (performer^='http://dbpedia.org/resource/Tomahawk_(band)', Wikipage page ID^='42953007', release date^='2014-05-23', previous work^='http://dbpedia.org/resource/Stone_Letter')
+    relationships:
+      - 1922_(2017_film) (<http://dbpedia.org/resource/1922_(2017_film)>) --dop:music--> Mike_Patton (dor:Mike_Patton)
+      - Ipecac_Recordings (dor:Ipecac_Recordings) --doo:foundedBy--> Mike_Patton (dor:Mike_Patton)
+      - M.E.A.T. (<http://dbpedia.org/resource/M.E.A.T.>) --doo:recordLabel--> Ipecac_Recordings (dor:Ipecac_Recordings)
+  '9':
+    attributes:
+      Make_It_wit_Chu__I_Wanna_Make_It_wit_Chu__1: (performer^='http://dbpedia.org/resource/The_Desert_Sessions', release date^='2003-09-23')
+    relationships:
+      - 1922_(2017_film) (<http://dbpedia.org/resource/1922_(2017_film)>) --dop:music--> Mike_Patton (dor:Mike_Patton)
+      - Ipecac_Recordings (dor:Ipecac_Recordings) --doo:foundedBy--> Mike_Patton (dor:Mike_Patton)
+      - Make_It_wit_Chu__I_Wanna_Make_It_wit_Chu__1 (dor:Make_It_wit_Chu__I_Wanna_Make_It_wit_Chu__1) --doo:recordLabel--> Ipecac_Recordings (dor:Ipecac_Recordings)
+  '10':
+    attributes:
+      Frank_Zappa: (death date^='1993-12-04')
+      I'm_Eighteen: (performer^='http://dbpedia.org/resource/Alice_Cooper_(band)', Wikipage page ID^='8219335', release date^='1970-11-11')
+    relationships:
+      - 200_Motels (dor:200_Motels) --dop:music--> Frank_Zappa (dor:Frank_Zappa)
+      - Straight_Records (dor:Straight_Records) --doo:foundedBy--> Frank_Zappa (dor:Frank_Zappa)
+      - I'm_Eighteen (<http://dbpedia.org/resource/I'm_Eighteen>) --doo:recordLabel--> Straight_Records (dor:Straight_Records)
+attributes:
+  song: --performer^ (doo:artist)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --alt^ (dop:alt)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int | --release date^ (doo:releaseDate)--> date | --previous work^ (doo:previousWork)--> Resource
+  movie: --footer^ (dop:footer)--> langString | --border^ (dop:border)--> langString | --caption align^ (dop:captionAlign)--> langString
+  record label: --url^ (dop:url)--> Resource
+  musical artist: --2p^ (dop:2p)--> int | --death date^ (dop:deathDate)--> date
+subgraph_id: 582
+relationships:
+  - movie --dop:music--> musical artist
+  - record label --doo:foundedBy--> musical artist
+  - song --doo:recordLabel--> record label

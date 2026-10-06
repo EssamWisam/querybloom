@@ -1,0 +1,85 @@
+types:
+  country: doo:Country
+  scientist: doo:Scientist
+  ethnic group: doo:EthnicGroup
+  soccer tournoment: doo:SoccerTournament
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Americans: (language^='http://dbpedia.org/resource/American_English')
+      West_Germany: (float^='right')
+    relationships:
+      - 1954_FIFA_World_Cup_qualification (dor:1954_FIFA_World_Cup_qualification) --dop:location--> West_Germany (dor:West_Germany)
+      - Alexander_Wendt (dor:Alexander_Wendt) --doo:birthPlace--> West_Germany (dor:West_Germany)
+      - Alexander_Wendt (dor:Alexander_Wendt) --doo:citizenship--> Americans (dor:Americans)
+  '2':
+    attributes:
+      Russians: (language^='http://dbpedia.org/resource/Russian_language')
+      1991–92_Soviet_Cup: (aggregate^='y', champions^='http://dbpedia.org/resource/FC_Spartak_Moscow')
+    relationships:
+      - 1991–92_Soviet_Cup (<http://dbpedia.org/resource/1991–92_Soviet_Cup>) --dop:location--> Soviet_Union (dor:Soviet_Union)
+      - Alexei_Smirnov_(physicist) (<http://dbpedia.org/resource/Alexei_Smirnov_(physicist)>) --doo:birthPlace--> Soviet_Union (dor:Soviet_Union)
+      - Alexei_Smirnov_(physicist) (<http://dbpedia.org/resource/Alexei_Smirnov_(physicist)>) --doo:citizenship--> Russians (dor:Russians)
+  '3':
+    attributes:
+      Americans: (language^='http://dbpedia.org/resource/American_English')
+      Ali_Khademhosseini: (caption^='Khademhosseini in 2008')
+    relationships:
+      - 1978_FIFA_World_Cup_qualification_(AFC_and_OFC) (<http://dbpedia.org/resource/1978_FIFA_World_Cup_qualification_(AFC_and_OFC)>) --dop:location--> Iran (dor:Iran)
+      - Ali_Khademhosseini (dor:Ali_Khademhosseini) --doo:birthPlace--> Iran (dor:Iran)
+      - Ali_Khademhosseini (dor:Ali_Khademhosseini) --doo:citizenship--> Americans (dor:Americans)
+  '4':
+    attributes:
+      Canadians: (language^='http://dbpedia.org/resource/Languages_of_Canada')
+      Ali_Khademhosseini: (caption^='Khademhosseini in 2008')
+    relationships:
+      - 1978_FIFA_World_Cup_qualification_(AFC_and_OFC) (<http://dbpedia.org/resource/1978_FIFA_World_Cup_qualification_(AFC_and_OFC)>) --dop:location--> Iran (dor:Iran)
+      - Ali_Khademhosseini (dor:Ali_Khademhosseini) --doo:birthPlace--> Iran (dor:Iran)
+      - Ali_Khademhosseini (dor:Ali_Khademhosseini) --doo:citizenship--> Canadians (dor:Canadians)
+  '5':
+    attributes:
+      Iranian_peoples: (language^='http://dbpedia.org/resource/Iranian_languages')
+      Ali_Khademhosseini: (caption^='Khademhosseini in 2008')
+    relationships:
+      - 1978_FIFA_World_Cup_qualification_(AFC_and_OFC) (<http://dbpedia.org/resource/1978_FIFA_World_Cup_qualification_(AFC_and_OFC)>) --dop:location--> Iran (dor:Iran)
+      - Ali_Khademhosseini (dor:Ali_Khademhosseini) --doo:birthPlace--> Iran (dor:Iran)
+      - Ali_Khademhosseini (dor:Ali_Khademhosseini) --doo:citizenship--> Iranian_peoples (dor:Iranian_peoples)
+  '6':
+    attributes:
+      Canadians: (language^='http://dbpedia.org/resource/Languages_of_Canada')
+      Amitai_Ziv: (influenced^='http://dbpedia.org/resource/Medical_Simulation', caption^='Prof. Amitai Ziv at MSR - The Israel Center for Medical Simulation')
+    relationships:
+      - 1950_FIFA_World_Cup_qualification (dor:1950_FIFA_World_Cup_qualification) --dop:location--> Israel (dor:Israel)
+      - Amitai_Ziv (dor:Amitai_Ziv) --doo:birthPlace--> Israel (dor:Israel)
+      - Amitai_Ziv (dor:Amitai_Ziv) --doo:citizenship--> Canadians (dor:Canadians)
+  '7':
+    attributes:
+      Israelis: (language^='http://dbpedia.org/resource/Amharic')
+      Amitai_Ziv: (influenced^='http://dbpedia.org/resource/Medical_Simulation', caption^='Prof. Amitai Ziv at MSR - The Israel Center for Medical Simulation')
+    relationships:
+      - 1950_FIFA_World_Cup_qualification (dor:1950_FIFA_World_Cup_qualification) --dop:location--> Israel (dor:Israel)
+      - Amitai_Ziv (dor:Amitai_Ziv) --doo:birthPlace--> Israel (dor:Israel)
+      - Amitai_Ziv (dor:Amitai_Ziv) --doo:citizenship--> Israelis (dor:Israelis)
+  '8':
+    attributes:
+      Canadians: (language^='http://dbpedia.org/resource/Languages_of_Canada')
+      Amitai_Ziv: (influenced^='http://dbpedia.org/resource/Medical_Simulation', caption^='Prof. Amitai Ziv at MSR - The Israel Center for Medical Simulation')
+    relationships:
+      - 1954_FIFA_World_Cup_qualification (dor:1954_FIFA_World_Cup_qualification) --dop:location--> Israel (dor:Israel)
+      - Amitai_Ziv (dor:Amitai_Ziv) --doo:birthPlace--> Israel (dor:Israel)
+      - Amitai_Ziv (dor:Amitai_Ziv) --doo:citizenship--> Canadians (dor:Canadians)
+attributes:
+  country: --group (dop:group)--> langString | --float^ (dop:float)--> langString
+  scientist: --birth name^ (doo:birthName)--> langString | --spouse^ (dop:spouse)--> langString | --influenced^ (doo:influenced)--> Resource | --by^ (dop:by)--> langString | --child^ (doo:child)--> Resource | --alt^ (dop:alt)--> langString | --caption^ (dop:caption)--> langString | --children^ (dop:children)--> int
+  ethnic group: --language^ (doo:language)--> Resource
+  soccer tournoment: --aggregate^ (dop:aggregate)--> langString | --champions^ (dop:champions)--> int
+subgraph_id: 398
+relationships:
+  - soccer tournoment --dop:location--> country
+  - scientist --doo:birthPlace--> country
+  - scientist --doo:citizenship--> ethnic group

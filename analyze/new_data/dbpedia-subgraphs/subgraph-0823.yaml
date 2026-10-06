@@ -1,0 +1,108 @@
+types:
+  Food: doo:Food
+  plant: doo:Plant
+  artwork: doo:Artwork
+  Location: doo:Location
+  cultivar (cultivated variety): doo:CultivatedVariety
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Italy: (align^='left')
+      Amarena_cherry: (species='http://dbpedia.org/resource/Prunus_cerasus')
+    relationships:
+      - Amarena_cherry (dor:Amarena_cherry) --doo:origin--> Italy (dor:Italy)
+      - Amarena_cherry (dor:Amarena_cherry) --doo:species--> Prunus_cerasus (dor:Prunus_cerasus)
+      - Kirschenmichel (dor:Kirschenmichel) --doo:ingredient--> Prunus_cerasus (dor:Prunus_cerasus)
+      - Annunciation_(Fra_Angelico,_San_Marco) (<http://dbpedia.org/resource/Annunciation_(Fra_Angelico,_San_Marco)>) --doo:museum--> Italy (dor:Italy)
+  '2':
+    attributes:
+      Italy: (align^='left')
+      Amarena_cherry: (species='http://dbpedia.org/resource/Prunus_cerasus')
+    relationships:
+      - Amarena_cherry (dor:Amarena_cherry) --doo:origin--> Italy (dor:Italy)
+      - Amarena_cherry (dor:Amarena_cherry) --doo:species--> Prunus_cerasus (dor:Prunus_cerasus)
+      - Sour_cherry_soup (dor:Sour_cherry_soup) --doo:ingredient--> Prunus_cerasus (dor:Prunus_cerasus)
+      - Annunciation_(Fra_Angelico,_San_Marco) (<http://dbpedia.org/resource/Annunciation_(Fra_Angelico,_San_Marco)>) --doo:museum--> Italy (dor:Italy)
+  '3':
+    attributes:
+      Italy: (align^='left')
+      Broccoli: (species='http://dbpedia.org/resource/Brassica_oleracea')
+    relationships:
+      - Broccoli (dor:Broccoli) --doo:origin--> Italy (dor:Italy)
+      - Broccoli (dor:Broccoli) --doo:species--> Brassica_oleracea (dor:Brassica_oleracea)
+      - Soupe_au_fromage (dor:Soupe_au_fromage) --doo:ingredient--> Brassica_oleracea (dor:Brassica_oleracea)
+      - Annunciation_(Fra_Angelico,_San_Marco) (<http://dbpedia.org/resource/Annunciation_(Fra_Angelico,_San_Marco)>) --doo:museum--> Italy (dor:Italy)
+  '4':
+    attributes:
+      Almond_potato: (species='http://dbpedia.org/resource/Potato')
+    relationships:
+      - Almond_potato (dor:Almond_potato) --doo:origin--> Sweden (dor:Sweden)
+      - Almond_potato (dor:Almond_potato) --doo:species--> Potato (dor:Potato)
+      - Abgoosht (dor:Abgoosht) --doo:ingredient--> Potato (dor:Potato)
+      - Death_playing_chess (dor:Death_playing_chess) --doo:museum--> Sweden (dor:Sweden)
+  '5':
+    attributes:
+      Almond_potato: (species='http://dbpedia.org/resource/Potato')
+    relationships:
+      - Almond_potato (dor:Almond_potato) --doo:origin--> Sweden (dor:Sweden)
+      - Almond_potato (dor:Almond_potato) --doo:species--> Potato (dor:Potato)
+      - Ajapsandali (dor:Ajapsandali) --doo:ingredient--> Potato (dor:Potato)
+      - Death_playing_chess (dor:Death_playing_chess) --doo:museum--> Sweden (dor:Sweden)
+  '6':
+    attributes:
+      Almond_potato: (species='http://dbpedia.org/resource/Potato')
+    relationships:
+      - Almond_potato (dor:Almond_potato) --doo:origin--> Sweden (dor:Sweden)
+      - Almond_potato (dor:Almond_potato) --doo:species--> Potato (dor:Potato)
+      - Ajdov_Kruh (dor:Ajdov_Kruh) --doo:ingredient--> Potato (dor:Potato)
+      - Death_playing_chess (dor:Death_playing_chess) --doo:museum--> Sweden (dor:Sweden)
+  '7':
+    attributes:
+      France: (city^='Bordeaux')
+      Montmorency_cherry: (species='http://dbpedia.org/resource/Prunus_cerasus')
+    relationships:
+      - Montmorency_cherry (dor:Montmorency_cherry) --doo:origin--> France (dor:France)
+      - Montmorency_cherry (dor:Montmorency_cherry) --doo:species--> Prunus_cerasus (dor:Prunus_cerasus)
+      - Kirschenmichel (dor:Kirschenmichel) --doo:ingredient--> Prunus_cerasus (dor:Prunus_cerasus)
+      - Ecce_homo_(Mantegna) (<http://dbpedia.org/resource/Ecce_homo_(Mantegna)>) --doo:museum--> France (dor:France)
+  '8':
+    attributes:
+      Japan: (align^='right')
+      Akane_(apple): (species='http://dbpedia.org/resource/Apple')
+    relationships:
+      - Akane_(apple) (<http://dbpedia.org/resource/Akane_(apple)>) --doo:origin--> Japan (dor:Japan)
+      - Akane_(apple) (<http://dbpedia.org/resource/Akane_(apple)>) --doo:species--> Apple (dor:Apple)
+      - Apfelküchle (<http://dbpedia.org/resource/Apfelküchle>) --doo:ingredient--> Apple (dor:Apple)
+      - Manichaean_Diagram_of_the_Universe (dor:Manichaean_Diagram_of_the_Universe) --doo:museum--> Japan (dor:Japan)
+  '9':
+    attributes:
+      Japan: (align^='right')
+      Akane_(apple): (species='http://dbpedia.org/resource/Apple')
+    relationships:
+      - Akane_(apple) (<http://dbpedia.org/resource/Akane_(apple)>) --doo:origin--> Japan (dor:Japan)
+      - Akane_(apple) (<http://dbpedia.org/resource/Akane_(apple)>) --doo:species--> Apple (dor:Apple)
+      - Aplets_&_Cotlets__Aplets_&_Cotlets__1 (<http://dbpedia.org/resource/Aplets_&_Cotlets__Aplets_&_Cotlets__1>) --doo:ingredient--> Apple (dor:Apple)
+      - Manichaean_Diagram_of_the_Universe (dor:Manichaean_Diagram_of_the_Universe) --doo:museum--> Japan (dor:Japan)
+  '10':
+    attributes:
+      Japan: (align^='right')
+      Akane_(apple): (species='http://dbpedia.org/resource/Apple')
+    relationships:
+      - Akane_(apple) (<http://dbpedia.org/resource/Akane_(apple)>) --doo:origin--> Japan (dor:Japan)
+      - Akane_(apple) (<http://dbpedia.org/resource/Akane_(apple)>) --doo:species--> Apple (dor:Apple)
+      - Apple_butter (dor:Apple_butter) --doo:ingredient--> Apple (dor:Apple)
+      - Manichaean_Diagram_of_the_Universe (dor:Manichaean_Diagram_of_the_Universe) --doo:museum--> Japan (dor:Japan)
+attributes:
+  Location: --partof^ (dop:partof)--> Resource | --Apr record high F^ (dop:aprRecordHighF)--> double | --area total km^ (dop:areaTotalKm)--> double | --logo^ (dop:logo)--> langString | --2p^ (dop:2p)--> int | --subdivision^ (doo:subdivision)--> Resource | --certain^ (dop:certain)--> langString | --align^ (dop:align)--> langString | --coordinates^ (dop:coordinates)--> int | --number of wineries^ (doo:numberOfWineries)--> int | --city^ (dop:city)--> langString | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double
+  cultivar (cultivated variety): --species (doo:species)--> Resource
+subgraph_id: 823
+relationships:
+  - cultivar (cultivated variety) --doo:origin--> Location
+  - cultivar (cultivated variety) --doo:species--> plant
+  - Food --doo:ingredient--> plant
+  - artwork --doo:museum--> Location

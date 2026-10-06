@@ -1,0 +1,47 @@
+types:
+  city: doo:City
+  country: doo:Country
+  Location: doo:Location
+  historian: doo:Historian
+  figure skater: doo:FigureSkater
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Anthony_Ponomarenko: (birth date^='2001-01-05')
+    relationships:
+      - A._Walton_Litz (dor:A._Walton_Litz) --doo:nationality--> United_States (dor:United_States)
+      - Anthony_Ponomarenko (dor:Anthony_Ponomarenko) --doo:residence--> United_States (dor:United_States)
+      - Anthony_Ponomarenko (dor:Anthony_Ponomarenko) --doo:country--> United_States (dor:United_States)
+      - Anthony_Ponomarenko (dor:Anthony_Ponomarenko) --doo:residence--> Novi,_Michigan (<http://dbpedia.org/resource/Novi,_Michigan>)
+  '2':
+    attributes:
+      Anthony_Ponomarenko: (birth date^='2001-01-05')
+    relationships:
+      - Aaron_Sachs_(historian) (<http://dbpedia.org/resource/Aaron_Sachs_(historian)>) --doo:nationality--> United_States (dor:United_States)
+      - Anthony_Ponomarenko (dor:Anthony_Ponomarenko) --doo:residence--> United_States (dor:United_States)
+      - Anthony_Ponomarenko (dor:Anthony_Ponomarenko) --doo:country--> United_States (dor:United_States)
+      - Anthony_Ponomarenko (dor:Anthony_Ponomarenko) --doo:residence--> Novi,_Michigan (<http://dbpedia.org/resource/Novi,_Michigan>)
+  '3':
+    attributes:
+      Anthony_Ponomarenko: (birth date^='2001-01-05')
+    relationships:
+      - Abbott_Gleason (dor:Abbott_Gleason) --doo:nationality--> United_States (dor:United_States)
+      - Anthony_Ponomarenko (dor:Anthony_Ponomarenko) --doo:residence--> United_States (dor:United_States)
+      - Anthony_Ponomarenko (dor:Anthony_Ponomarenko) --doo:country--> United_States (dor:United_States)
+      - Anthony_Ponomarenko (dor:Anthony_Ponomarenko) --doo:residence--> Novi,_Michigan (<http://dbpedia.org/resource/Novi,_Michigan>)
+attributes:
+  city: --Apr low C^ (dop:aprLowC)--> double
+  country: --url^ (dop:url)--> Resource
+  Location: --Apr sun^ (dop:aprSun)--> double | --id^ (dop:id)--> langString | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --opened^ (dop:opened)--> int | --number of wineries^ (doo:numberOfWineries)--> int | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --date^ (dop:date)--> langString | --founder^ (dop:founder)--> Resource
+  figure skater: --birth date^ (dop:birthDate)--> date
+subgraph_id: 476
+relationships:
+  - historian --doo:nationality--> Location
+  - figure skater --doo:residence--> Location
+  - figure skater --doo:country--> country
+  - figure skater --doo:residence--> city

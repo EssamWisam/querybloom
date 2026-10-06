@@ -1,0 +1,79 @@
+types:
+  city: doo:City
+  bridge: doo:Bridge
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Gladys_Carrion: (birth place^='The Bronx, New York', Wikipage page ID^='19906720')
+    relationships:
+      - David_Paterson (dor:David_Paterson) --dop:children--> Gladys_Carrion (dor:Gladys_Carrion)
+      - David_Paterson (dor:David_Paterson) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - 145th_Street_Bridge (dor:145th_Street_Bridge) --doo:locatedInArea--> New_York_City (dor:New_York_City)
+  '2':
+    attributes:
+      Schuyler_Colfax_III: (birth place^='Washington, D.C., U.S.', Wikipage page ID^='60648832', death date^='1925-03-29')
+    relationships:
+      - Schuyler_Colfax (dor:Schuyler_Colfax) --dop:children--> Schuyler_Colfax_III (dor:Schuyler_Colfax_III)
+      - Schuyler_Colfax (dor:Schuyler_Colfax) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - 145th_Street_Bridge (dor:145th_Street_Bridge) --doo:locatedInArea--> New_York_City (dor:New_York_City)
+  '3':
+    attributes:
+      David_Astor: (birth place^='London, England', Wikipage page ID^='544369', death date^='2001-12-07')
+    relationships:
+      - Waldorf_Astor,_2nd_Viscount_Astor (<http://dbpedia.org/resource/Waldorf_Astor,_2nd_Viscount_Astor>) --dop:children--> David_Astor (dor:David_Astor)
+      - Waldorf_Astor,_2nd_Viscount_Astor (<http://dbpedia.org/resource/Waldorf_Astor,_2nd_Viscount_Astor>) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - 145th_Street_Bridge (dor:145th_Street_Bridge) --doo:locatedInArea--> New_York_City (dor:New_York_City)
+  '4':
+    attributes:
+      Eugene_Scanlon_Jr.: (Wikipage page ID^='25530278')
+    relationships:
+      - Eugene_Scanlon (dor:Eugene_Scanlon) --dop:children--> Eugene_Scanlon_Jr. (<http://dbpedia.org/resource/Eugene_Scanlon_Jr.>)
+      - Eugene_Scanlon (dor:Eugene_Scanlon) --doo:birthPlace--> Pittsburgh,_Pennsylvania (<http://dbpedia.org/resource/Pittsburgh,_Pennsylvania>)
+      - 33rd_Street_Railroad_Bridge (dor:33rd_Street_Railroad_Bridge) --doo:locatedInArea--> Pittsburgh,_Pennsylvania (<http://dbpedia.org/resource/Pittsburgh,_Pennsylvania>)
+  '5':
+    attributes:
+      Omar_Abdullah: (birth place^='http://dbpedia.org/resource/England', Wikipage page ID^='1304166')
+    relationships:
+      - Farooq_Abdullah (dor:Farooq_Abdullah) --dop:children--> Omar_Abdullah (dor:Omar_Abdullah)
+      - Farooq_Abdullah (dor:Farooq_Abdullah) --doo:birthPlace--> Srinagar (dor:Srinagar)
+      - Abdullah_Bridge (dor:Abdullah_Bridge) --doo:locatedInArea--> Srinagar (dor:Srinagar)
+  '6':
+    attributes:
+      Elias_W._Rector: (birth place^='Little Rock, Arkansas, U.S.', Wikipage page ID^='46707126', death date^='1917-01-29')
+    relationships:
+      - Henry_Massey_Rector (dor:Henry_Massey_Rector) --dop:children--> Elias_W._Rector (dor:Elias_W._Rector)
+      - Henry_Massey_Rector (dor:Henry_Massey_Rector) --doo:birthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - Abraham_Lincoln_Bridge (dor:Abraham_Lincoln_Bridge) --doo:locatedInArea--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+  '7':
+    attributes:
+      Joseph_C._Hare: (birth place^='http://dbpedia.org/resource/Hillsboro,_Oregon', Wikipage page ID^='20037326', death date^='1937-05-11')
+      Wheeling,_West_Virginia: (Apr precipitation inch^='3.52', Apr high F^='64.5', Apr low F^='39.6')
+    relationships:
+      - William_D._Hare (dor:William_D._Hare) --dop:children--> Joseph_C._Hare (dor:Joseph_C._Hare)
+      - William_D._Hare (dor:William_D._Hare) --doo:birthPlace--> Wheeling,_West_Virginia (<http://dbpedia.org/resource/Wheeling,_West_Virginia>)
+      - Aetnaville_Bridge (dor:Aetnaville_Bridge) --doo:locatedInArea--> Wheeling,_West_Virginia (<http://dbpedia.org/resource/Wheeling,_West_Virginia>)
+  '8':
+    attributes:
+      William_G._Hare: (birth place^='http://dbpedia.org/resource/Farmington,_Oregon', Wikipage page ID^='21744297', death date^='1971-11-25')
+      Wheeling,_West_Virginia: (Apr precipitation inch^='3.52', Apr high F^='64.5', Apr low F^='39.6')
+    relationships:
+      - William_D._Hare (dor:William_D._Hare) --dop:children--> William_G._Hare (dor:William_G._Hare)
+      - William_D._Hare (dor:William_D._Hare) --doo:birthPlace--> Wheeling,_West_Virginia (<http://dbpedia.org/resource/Wheeling,_West_Virginia>)
+      - Aetnaville_Bridge (dor:Aetnaville_Bridge) --doo:locatedInArea--> Wheeling,_West_Virginia (<http://dbpedia.org/resource/Wheeling,_West_Virginia>)
+attributes:
+  city: --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --Apr high F^ (dop:aprHighF)--> double | --Apr low F^ (dop:aprLowF)--> double
+  politician: --direction^ (dop:direction)--> langString | --assembly^ (dop:assembly)--> langString | --birth place^ (dop:birthPlace)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int | --death date^ (dop:deathDate)--> int
+  office holder: --differentFrom (wwoo:differentFrom)--> Resource | --height ft^ (dop:heightFt)--> int | --mother^ (dop:mother)--> Resource | --al^ (dop:al)--> int
+subgraph_id: 595
+relationships:
+  - office holder --dop:children--> politician
+  - office holder --doo:birthPlace--> city
+  - bridge --doo:locatedInArea--> city

@@ -1,0 +1,143 @@
+types:
+  Band: doo:Band
+  city: doo:City
+  single: doo:Single
+  writer: doo:Writer
+  country: doo:Country
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doow: http://dbpedia.org/ontology/Work/
+instances:
+  '1':
+    attributes:
+      Love_(band): (active years start year^='1965')
+      ¡Que_Vida!: (runtime (m)^='3.6166666666666667')
+      United_States: (caption^='Racial and ethnic groups in the United States')
+      Hollywood,_Los_Angeles: (type^='http://dbpedia.org/resource/List_of_districts_and_neighborhoods_of_Los_Angeles')
+    relationships:
+      - Edward_J._Montagne (dor:Edward_J._Montagne) --dop:deathPlace--> United_States (dor:United_States)
+      - Edward_J._Montagne (dor:Edward_J._Montagne) --doo:deathPlace--> California (dor:California)
+      - Edward_J._Montagne (dor:Edward_J._Montagne) --doo:deathPlace--> Hollywood,_Los_Angeles (<http://dbpedia.org/resource/Hollywood,_Los_Angeles>)
+      - ¡Que_Vida! (<http://dbpedia.org/resource/¡Que_Vida!>) --doo:recordedIn--> Hollywood,_Los_Angeles (<http://dbpedia.org/resource/Hollywood,_Los_Angeles>)
+      - ¡Que_Vida! (<http://dbpedia.org/resource/¡Que_Vida!>) --doo:artist--> Love_(band) (<http://dbpedia.org/resource/Love_(band)>)
+  '2':
+    attributes:
+      New_York_City: (type^='http://dbpedia.org/resource/City_(New_York)', area total km^='1223.59')
+      They_Might_Be_Giants: (active years start year^='1982')
+      (She_Was_A)_Hotel_Detective: (runtime (m)^='11.016666666666667')
+    relationships:
+      - Anatoly_Rybakov (dor:Anatoly_Rybakov) --dop:deathPlace--> U.S. (<http://dbpedia.org/resource/U.S.>)
+      - Anatoly_Rybakov (dor:Anatoly_Rybakov) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Anatoly_Rybakov (dor:Anatoly_Rybakov) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:artist--> They_Might_Be_Giants (dor:They_Might_Be_Giants)
+  '3':
+    attributes:
+      Hazel_Rowley: (awards^='1994')
+      New_York_City: (type^='http://dbpedia.org/resource/City_(New_York)', area total km^='1223.59')
+      United_States: (caption^='Racial and ethnic groups in the United States')
+      They_Might_Be_Giants: (active years start year^='1982')
+      (She_Was_A)_Hotel_Detective: (runtime (m)^='11.016666666666667')
+    relationships:
+      - Hazel_Rowley (dor:Hazel_Rowley) --dop:deathPlace--> United_States (dor:United_States)
+      - Hazel_Rowley (dor:Hazel_Rowley) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Hazel_Rowley (dor:Hazel_Rowley) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:artist--> They_Might_Be_Giants (dor:They_Might_Be_Giants)
+  '4':
+    attributes:
+      New_York_City: (type^='http://dbpedia.org/resource/City_(New_York)', area total km^='1223.59')
+      United_States: (caption^='Racial and ethnic groups in the United States')
+      They_Might_Be_Giants: (active years start year^='1982')
+      (She_Was_A)_Hotel_Detective: (runtime (m)^='11.016666666666667')
+    relationships:
+      - Joseph_Hart_(entertainer) (<http://dbpedia.org/resource/Joseph_Hart_(entertainer)>) --dop:deathPlace--> United_States (dor:United_States)
+      - Joseph_Hart_(entertainer) (<http://dbpedia.org/resource/Joseph_Hart_(entertainer)>) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Joseph_Hart_(entertainer) (<http://dbpedia.org/resource/Joseph_Hart_(entertainer)>) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:artist--> They_Might_Be_Giants (dor:They_Might_Be_Giants)
+  '5':
+    attributes:
+      Jay-Z: (active years start year^='1986')
+      99_Problems: (runtime (m)^='3.9')
+      Los_Angeles: (type^='http://dbpedia.org/resource/List_of_municipalities_in_California', area total km^='1299.01')
+    relationships:
+      - Gilson_Willets (dor:Gilson_Willets) --dop:deathPlace--> U.S. (<http://dbpedia.org/resource/U.S.>)
+      - Gilson_Willets (dor:Gilson_Willets) --doo:deathPlace--> California (dor:California)
+      - Gilson_Willets (dor:Gilson_Willets) --doo:deathPlace--> Los_Angeles (dor:Los_Angeles)
+      - 99_Problems (dor:99_Problems) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+      - 99_Problems (dor:99_Problems) --doo:artist--> Jay-Z (dor:Jay-Z)
+  '6':
+    attributes:
+      Jay-Z: (active years start year^='1986')
+      99_Problems: (runtime (m)^='3.9')
+      Los_Angeles: (type^='http://dbpedia.org/resource/List_of_municipalities_in_California', area total km^='1299.01')
+    relationships:
+      - Hamastegh (dor:Hamastegh) --dop:deathPlace--> USA (dor:USA)
+      - Hamastegh (dor:Hamastegh) --doo:deathPlace--> California (dor:California)
+      - Hamastegh (dor:Hamastegh) --doo:deathPlace--> Los_Angeles (dor:Los_Angeles)
+      - 99_Problems (dor:99_Problems) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+      - 99_Problems (dor:99_Problems) --doo:artist--> Jay-Z (dor:Jay-Z)
+  '7':
+    attributes:
+      Frente!: (active years start year^='1989')
+      Australia: (caption^='Anthony Albanese, Prime Minister of Australia')
+      Melbourne: (Apr precipitation days^='9.9')
+      Accidently_Kelly_Street: (runtime (m)^='3.35')
+    relationships:
+      - Ed_Nimmervoll (dor:Ed_Nimmervoll) --dop:deathPlace--> Australia (dor:Australia)
+      - Ed_Nimmervoll (dor:Ed_Nimmervoll) --doo:deathPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Ed_Nimmervoll (dor:Ed_Nimmervoll) --doo:deathPlace--> Melbourne (dor:Melbourne)
+      - Accidently_Kelly_Street (dor:Accidently_Kelly_Street) --doo:recordedIn--> Melbourne (dor:Melbourne)
+      - Accidently_Kelly_Street (dor:Accidently_Kelly_Street) --doo:artist--> Frente! (<http://dbpedia.org/resource/Frente!>)
+  '8':
+    attributes:
+      Frente!: (active years start year^='1989')
+      Australia: (caption^='Anthony Albanese, Prime Minister of Australia')
+      Melbourne: (Apr precipitation days^='9.9')
+      Accidently_Kelly_Street: (runtime (m)^='3.35')
+    relationships:
+      - Edward_Dyson (dor:Edward_Dyson) --dop:deathPlace--> Australia (dor:Australia)
+      - Edward_Dyson (dor:Edward_Dyson) --doo:deathPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Edward_Dyson (dor:Edward_Dyson) --doo:deathPlace--> Melbourne (dor:Melbourne)
+      - Accidently_Kelly_Street (dor:Accidently_Kelly_Street) --doo:recordedIn--> Melbourne (dor:Melbourne)
+      - Accidently_Kelly_Street (dor:Accidently_Kelly_Street) --doo:artist--> Frente! (<http://dbpedia.org/resource/Frente!>)
+  '9':
+    attributes:
+      Amsterdam: (type^='http://dbpedia.org/resource/Capital_of_the_Netherlands', Apr precipitation days^='8.6', area total km^='219.32')
+      Netherlands: (caption^='--06-04')
+      Alejandro_(song): (runtime (m)^='4.566666666666666')
+    relationships:
+      - Han_G._Hoekstra (dor:Han_G._Hoekstra) --dop:deathPlace--> Netherlands (dor:Netherlands)
+      - Han_G._Hoekstra (dor:Han_G._Hoekstra) --doo:deathPlace--> North_Holland (dor:North_Holland)
+      - Han_G._Hoekstra (dor:Han_G._Hoekstra) --doo:deathPlace--> Amsterdam (dor:Amsterdam)
+      - Alejandro_(song) (<http://dbpedia.org/resource/Alejandro_(song)>) --doo:recordedIn--> Amsterdam (dor:Amsterdam)
+      - Alejandro_(song) (<http://dbpedia.org/resource/Alejandro_(song)>) --doo:artist--> Lady_Gaga (dor:Lady_Gaga)
+  '10':
+    attributes:
+      West_Germany: (founding year^='1949')
+      Accept_(band): (active years start year^='1976')
+      Balls_to_the_Wall_(song): (runtime (m)^='4.466666666666667')
+    relationships:
+      - Irmgard_Keun (dor:Irmgard_Keun) --dop:deathPlace--> West_Germany (dor:West_Germany)
+      - Irmgard_Keun (dor:Irmgard_Keun) --doo:deathPlace--> North_Rhine-Westphalia (dor:North_Rhine-Westphalia)
+      - Irmgard_Keun (dor:Irmgard_Keun) --doo:deathPlace--> Cologne (dor:Cologne)
+      - Balls_to_the_Wall_(song) (<http://dbpedia.org/resource/Balls_to_the_Wall_(song)>) --doo:recordedIn--> Cologne (dor:Cologne)
+      - Balls_to_the_Wall_(song) (<http://dbpedia.org/resource/Balls_to_the_Wall_(song)>) --doo:artist--> Accept_(band) (<http://dbpedia.org/resource/Accept_(band)>)
+attributes:
+  Band: --active years start year^ (doo:activeYearsStartYear)--> gYear | --instrument^ (doo:instrument)--> Resource | --source^ (dop:source)--> langString
+  city: --type^ (doo:type)--> Resource | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --area total km^ (dop:areaTotalKm)--> double
+  single: --runtime (m)^ (doow:runtime)--> minute | --border^ (dop:border)--> langString
+  writer: --awards^ (dop:awards)--> Resource | --honorific suffix^ (dop:honorificSuffix)--> langString
+  country: --founding year^ (doo:foundingYear)--> gYear | --caption^ (dop:caption)--> langString
+subgraph_id: 997
+relationships:
+  - writer --dop:deathPlace--> country
+  - writer --doo:deathPlace--> administrative region
+  - writer --doo:deathPlace--> city
+  - single --doo:recordedIn--> city
+  - single --doo:artist--> Band

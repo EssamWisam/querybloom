@@ -1,0 +1,80 @@
+types:
+  person: doo:Person
+  country: doo:Country
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bishopsbourne: (Wikipage revision ID^='1007867011')
+    relationships:
+      - A._E._Waite (dor:A._E._Waite) --doo:restingPlace--> Bishopsbourne (dor:Bishopsbourne)
+      - A._E._Waite (dor:A._E._Waite) --doo:restingPlace--> Kent (dor:Kent)
+  '2':
+    attributes:
+      Richmond,_Virginia: (title^='Ancestry in Richmond, VA', Wikipage revision ID^='1124709879')
+    relationships:
+      - A._P._Hill (dor:A._P._Hill) --doo:restingPlace--> Richmond,_Virginia (<http://dbpedia.org/resource/Richmond,_Virginia>)
+      - A._P._Hill (dor:A._P._Hill) --doo:restingPlace--> United_States_of_America (dor:United_States_of_America)
+  '3':
+    attributes:
+      Virginia: (title^='Old Dominion', Wikipage revision ID^='1124518468')
+    relationships:
+      - A._P._Hill (dor:A._P._Hill) --doo:restingPlace--> Virginia (dor:Virginia)
+      - A._P._Hill (dor:A._P._Hill) --doo:restingPlace--> United_States_of_America (dor:United_States_of_America)
+  '4':
+    attributes:
+      India: (c^='The Middle East and South Asia')
+      Rameswaram: (title^='Religious census', Wikipage revision ID^='1116199143')
+    relationships:
+      - A._P._J._Abdul_Kalam (dor:A._P._J._Abdul_Kalam) --doo:restingPlace--> Rameswaram (dor:Rameswaram)
+      - A._P._J._Abdul_Kalam (dor:A._P._J._Abdul_Kalam) --doo:restingPlace--> India (dor:India)
+  '5':
+    attributes:
+      India: (c^='The Middle East and South Asia')
+      Tamil_Nadu: (Wikipage revision ID^='1124649071')
+    relationships:
+      - A._P._J._Abdul_Kalam (dor:A._P._J._Abdul_Kalam) --doo:restingPlace--> Tamil_Nadu (dor:Tamil_Nadu)
+      - A._P._J._Abdul_Kalam (dor:A._P._J._Abdul_Kalam) --doo:restingPlace--> India (dor:India)
+  '6':
+    attributes:
+      Nawabganj_Upazila,_Dhaka: (Wikipage revision ID^='1103826675')
+    relationships:
+      - A.K._Golam_Jilani (dor:A.K._Golam_Jilani) --doo:restingPlace--> Nawabganj_Upazila,_Dhaka (<http://dbpedia.org/resource/Nawabganj_Upazila,_Dhaka>)
+      - A.K._Golam_Jilani (dor:A.K._Golam_Jilani) --doo:restingPlace--> Bangladesh (dor:Bangladesh)
+  '7':
+    attributes:
+      Oulu: (title^='The population growth of Oulu  1980–2015', Wikipage revision ID^='1124747650')
+    relationships:
+      - Aarne_Heikinheimo (dor:Aarne_Heikinheimo) --doo:restingPlace--> Oulu (dor:Oulu)
+      - Aarne_Heikinheimo (dor:Aarne_Heikinheimo) --doo:restingPlace--> Finland (dor:Finland)
+  '8':
+    attributes:
+      Newport,_Rhode_Island: (Wikipage revision ID^='1121536081')
+    relationships:
+      - Aaron_Lopez (dor:Aaron_Lopez) --doo:restingPlace--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+      - Aaron_Lopez (dor:Aaron_Lopez) --doo:restingPlace--> Colony_of_Rhode_Island_and_Providence_Plantations (dor:Colony_of_Rhode_Island_and_Providence_Plantations)
+  '9':
+    attributes:
+      Karbala: (Wikipage revision ID^='1119246875')
+    relationships:
+      - Abbas_ibn_Ali (dor:Abbas_ibn_Ali) --doo:restingPlace--> Karbala (dor:Karbala)
+      - Abbas_ibn_Ali (dor:Abbas_ibn_Ali) --doo:restingPlace--> Iraq (dor:Iraq)
+  '10':
+    attributes:
+      Ajdir: (Wikipage revision ID^='1040183076')
+    relationships:
+      - Abbas_Messaadi (dor:Abbas_Messaadi) --doo:restingPlace--> Ajdir (dor:Ajdir)
+      - Abbas_Messaadi (dor:Abbas_Messaadi) --doo:restingPlace--> Morocco (dor:Morocco)
+attributes:
+  person: --before^ (dop:before)--> langString | --commons^ (dop:commons)--> langString
+  country: --c^ (dop:c)--> langString
+  Location: --located in area^ (doo:locatedInArea)--> Resource | --architectural style^ (doo:architecturalStyle)--> Resource | --title^ (dop:title)--> langString | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --logo^ (dop:logo)--> langString | --display^ (dop:display)--> langString
+subgraph_id: 497
+relationships:
+  - person --doo:restingPlace--> Location
+  - person --doo:restingPlace--> country

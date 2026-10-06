@@ -1,0 +1,110 @@
+types:
+  ship: doo:Ship
+  writer: doo:Writer
+  country: doo:Country
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Aniplus: (area^='Nationwide', logo^='Aniplus Asia Logo.png')
+      South_Korea: (direction^='vertical', capital^='http://dbpedia.org/resource/Seoul')
+      Chung_So-sung: (birth place^='http://dbpedia.org/resource/Bonghwa_County', death date^='2020-10-24', alma mater^='http://dbpedia.org/resource/Seoul_National_University')
+    relationships:
+      - Chung_So-sung (dor:Chung_So-sung) --doo:deathPlace--> South_Korea (dor:South_Korea)
+      - Aniplus (dor:Aniplus) --doo:headquarter--> South_Korea (dor:South_Korea)
+      - A_Whale (dor:A_Whale) --doo:builder--> South_Korea (dor:South_Korea)
+  '2':
+    attributes:
+      Aniplus: (area^='Nationwide', logo^='Aniplus Asia Logo.png')
+      South_Korea: (direction^='vertical', capital^='http://dbpedia.org/resource/Seoul')
+      Jung_Mikyung: (birth place^='http://dbpedia.org/resource/Masan', death date^='2017-01-18')
+    relationships:
+      - Jung_Mikyung (dor:Jung_Mikyung) --doo:deathPlace--> South_Korea (dor:South_Korea)
+      - Aniplus (dor:Aniplus) --doo:headquarter--> South_Korea (dor:South_Korea)
+      - A_Whale (dor:A_Whale) --doo:builder--> South_Korea (dor:South_Korea)
+  '3':
+    attributes:
+      Aniplus: (area^='Nationwide', logo^='Aniplus Asia Logo.png')
+      Kim_Iryeop: (birth place^='http://dbpedia.org/resource/Korean_Empire', death date^='1971-02-01')
+      South_Korea: (direction^='vertical', capital^='http://dbpedia.org/resource/Seoul')
+    relationships:
+      - Kim_Iryeop (dor:Kim_Iryeop) --doo:deathPlace--> South_Korea (dor:South_Korea)
+      - Aniplus (dor:Aniplus) --doo:headquarter--> South_Korea (dor:South_Korea)
+      - A_Whale (dor:A_Whale) --doo:builder--> South_Korea (dor:South_Korea)
+  '4':
+    attributes:
+      Germany: (capital^='http://dbpedia.org/resource/Berlin')
+      A._M._W._Stirling: (birth place^='London, England', death date^='1965-08-11')
+      13th_Street_(German_TV_channel): (area^='http://dbpedia.org/resource/Austria', logo^='13')
+    relationships:
+      - A._M._W._Stirling (dor:A._M._W._Stirling) --doo:deathPlace--> Germany (dor:Germany)
+      - 13th_Street_(German_TV_channel) (<http://dbpedia.org/resource/13th_Street_(German_TV_channel)>) --doo:headquarter--> Germany (dor:Germany)
+      - A-Rosa_Aqua (dor:A-Rosa_Aqua) --doo:builder--> Germany (dor:Germany)
+  '5':
+    attributes:
+      Germany: (capital^='http://dbpedia.org/resource/Berlin')
+      Abdulla_Aliş: (birth place^='Kayuki, Spassky Uyezd, Kazan Governorate, Russian Empire', death date^='1944-08-25')
+      13th_Street_(German_TV_channel): (area^='http://dbpedia.org/resource/Austria', logo^='13')
+    relationships:
+      - Abdulla_Aliş (<http://dbpedia.org/resource/Abdulla_Aliş>) --doo:deathPlace--> Germany (dor:Germany)
+      - 13th_Street_(German_TV_channel) (<http://dbpedia.org/resource/13th_Street_(German_TV_channel)>) --doo:headquarter--> Germany (dor:Germany)
+      - A-Rosa_Aqua (dor:A-Rosa_Aqua) --doo:builder--> Germany (dor:Germany)
+  '6':
+    attributes:
+      Germany: (capital^='http://dbpedia.org/resource/Berlin')
+      Abdurakhman_Avtorkhanov: (birth place^='Lakha Nevri, Chechnya, Russian Empire', death date^='1997-04-24')
+      13th_Street_(German_TV_channel): (area^='http://dbpedia.org/resource/Austria', logo^='13')
+    relationships:
+      - Abdurakhman_Avtorkhanov (dor:Abdurakhman_Avtorkhanov) --doo:deathPlace--> Germany (dor:Germany)
+      - 13th_Street_(German_TV_channel) (<http://dbpedia.org/resource/13th_Street_(German_TV_channel)>) --doo:headquarter--> Germany (dor:Germany)
+      - A-Rosa_Aqua (dor:A-Rosa_Aqua) --doo:builder--> Germany (dor:Germany)
+  '7':
+    attributes:
+      Canada: (anthem^='http://dbpedia.org/resource/God_Save_the_King', capital^='http://dbpedia.org/resource/Ottawa')
+      Citytv: (area^='Canada', logo^='Citytv logo.svg')
+      Andrew_Weiner_(writer): (birth place^='London, England, UK', death date^='2019-12-03')
+    relationships:
+      - Andrew_Weiner_(writer) (<http://dbpedia.org/resource/Andrew_Weiner_(writer)>) --doo:deathPlace--> Canada (dor:Canada)
+      - Citytv (dor:Citytv) --doo:headquarter--> Canada (dor:Canada)
+      - Abana_(barque) (<http://dbpedia.org/resource/Abana_(barque)>) --doo:builder--> Canada (dor:Canada)
+  '8':
+    attributes:
+      Canada: (anthem^='http://dbpedia.org/resource/God_Save_the_King', capital^='http://dbpedia.org/resource/Ottawa')
+      Citytv: (area^='Canada', logo^='Citytv logo.svg')
+      Angus_McGill_Mowat: (birth place^='Trenton, Ontario, Canada', death date^='1977-09-21', alma mater^='http://dbpedia.org/resource/Queen''s_University_at_Kingston')
+    relationships:
+      - Angus_McGill_Mowat (dor:Angus_McGill_Mowat) --doo:deathPlace--> Canada (dor:Canada)
+      - Citytv (dor:Citytv) --doo:headquarter--> Canada (dor:Canada)
+      - Abana_(barque) (<http://dbpedia.org/resource/Abana_(barque)>) --doo:builder--> Canada (dor:Canada)
+  '9':
+    attributes:
+      Canada: (anthem^='http://dbpedia.org/resource/God_Save_the_King', capital^='http://dbpedia.org/resource/Ottawa')
+      Citytv: (area^='Canada', logo^='Citytv logo.svg')
+      Antoine_Gérin-Lajoie: (birth place^='http://dbpedia.org/resource/Lower_Canada', death date^='1882-08-07')
+    relationships:
+      - Antoine_Gérin-Lajoie (<http://dbpedia.org/resource/Antoine_Gérin-Lajoie>) --doo:deathPlace--> Canada (dor:Canada)
+      - Citytv (dor:Citytv) --doo:headquarter--> Canada (dor:Canada)
+      - Abana_(barque) (<http://dbpedia.org/resource/Abana_(barque)>) --doo:builder--> Canada (dor:Canada)
+  '10':
+    attributes:
+      Norway: (anthem^='http://dbpedia.org/resource/Ja,_vi_elsker_dette_landet', direction^='diagonal', capital^='http://dbpedia.org/resource/Oslo')
+      Aasmund_Olavsson_Vinje: (birth place^='http://dbpedia.org/resource/Norway', death date^='1870-07-30')
+      Fox_(Norwegian_TV_channel): (area^='http://dbpedia.org/resource/Norway', logo^='FOX wordmark-orange.svg')
+    relationships:
+      - Aasmund_Olavsson_Vinje (dor:Aasmund_Olavsson_Vinje) --doo:deathPlace--> Norway (dor:Norway)
+      - Fox_(Norwegian_TV_channel) (<http://dbpedia.org/resource/Fox_(Norwegian_TV_channel)>) --doo:headquarter--> Norway (dor:Norway)
+      - Abeille_Liberté (<http://dbpedia.org/resource/Abeille_Liberté>) --doo:builder--> Norway (dor:Norway)
+attributes:
+  writer: --birth place^ (dop:birthPlace)--> langString | --death date^ (doo:deathDate)--> date | --alma mater^ (dop:almaMater)--> langString | --award^ (doo:award)--> Resource
+  country: --anthem^ (doo:anthem)--> Resource | --direction^ (dop:direction)--> langString | --capital^ (doo:capital)--> Resource | --Aug high C^ (dop:augHighC)--> double | --c^ (dop:c)--> langString
+  television station: --area^ (dop:area)--> langString | --logo^ (dop:logo)--> langString | --affiliations^ (dop:affiliations)--> double
+subgraph_id: 448
+relationships:
+  - writer --doo:deathPlace--> country
+  - television station --doo:headquarter--> country
+  - ship --doo:builder--> country

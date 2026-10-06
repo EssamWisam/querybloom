@@ -1,0 +1,112 @@
+types:
+  horse: doo:Horse
+  RaceHorse: doo:RaceHorse
+  horse race: doo:HorseRace
+  racecourse: doo:Racecourse
+  jockey (horse racer): doo:Jockey
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Acorn_Stakes: (distance^='1.0')
+      Forty_Niner_(horse): (breeder^='http://dbpedia.org/resource/Claiborne_Farm', race^='http://dbpedia.org/resource/American_Classic_Races', awards^='http://dbpedia.org/resource/Eclipse_Award_for_Outstanding_2-Year-Old_Male_Horse', foal date^='1985-05-11', honours^='http://dbpedia.org/resource/Aiken_Thoroughbred_Racing_Hall_of_Fame_and_Museum')
+    relationships:
+      - A_Bit_O'Gold (<http://dbpedia.org/resource/A_Bit_O'Gold>) --doo:grandsire--> Forty_Niner_(horse) (<http://dbpedia.org/resource/Forty_Niner_(horse)>)
+      - Craig_Perret (dor:Craig_Perret) --doo:raceHorse--> Forty_Niner_(horse) (<http://dbpedia.org/resource/Forty_Niner_(horse)>)
+      - Craig_Perret (dor:Craig_Perret) --doo:race--> Acorn_Stakes (dor:Acorn_Stakes)
+      - Acorn_Stakes (dor:Acorn_Stakes) --doo:location--> Belmont_Park (dor:Belmont_Park)
+  '2':
+    attributes:
+      Acorn_Stakes: (distance^='1.0')
+      Forty_Niner_(horse): (breeder^='http://dbpedia.org/resource/Claiborne_Farm', race^='http://dbpedia.org/resource/American_Classic_Races', awards^='http://dbpedia.org/resource/Eclipse_Award_for_Outstanding_2-Year-Old_Male_Horse', foal date^='1985-05-11', honours^='http://dbpedia.org/resource/Aiken_Thoroughbred_Racing_Hall_of_Fame_and_Museum')
+    relationships:
+      - A_Bit_O'Gold (<http://dbpedia.org/resource/A_Bit_O'Gold>) --doo:grandsire--> Forty_Niner_(horse) (<http://dbpedia.org/resource/Forty_Niner_(horse)>)
+      - Eddie_Maple (dor:Eddie_Maple) --doo:raceHorse--> Forty_Niner_(horse) (<http://dbpedia.org/resource/Forty_Niner_(horse)>)
+      - Eddie_Maple (dor:Eddie_Maple) --doo:race--> Acorn_Stakes (dor:Acorn_Stakes)
+      - Acorn_Stakes (dor:Acorn_Stakes) --doo:location--> Belmont_Park (dor:Belmont_Park)
+  '3':
+    attributes:
+      Alabama_Stakes: (distance^='1.0')
+      Forty_Niner_(horse): (breeder^='http://dbpedia.org/resource/Claiborne_Farm', race^='http://dbpedia.org/resource/American_Classic_Races', awards^='http://dbpedia.org/resource/Eclipse_Award_for_Outstanding_2-Year-Old_Male_Horse', foal date^='1985-05-11', honours^='http://dbpedia.org/resource/Aiken_Thoroughbred_Racing_Hall_of_Fame_and_Museum')
+    relationships:
+      - A_Bit_O'Gold (<http://dbpedia.org/resource/A_Bit_O'Gold>) --doo:grandsire--> Forty_Niner_(horse) (<http://dbpedia.org/resource/Forty_Niner_(horse)>)
+      - Eddie_Maple (dor:Eddie_Maple) --doo:raceHorse--> Forty_Niner_(horse) (<http://dbpedia.org/resource/Forty_Niner_(horse)>)
+      - Eddie_Maple (dor:Eddie_Maple) --doo:race--> Alabama_Stakes (dor:Alabama_Stakes)
+      - Alabama_Stakes (dor:Alabama_Stakes) --doo:location--> Saratoga_Race_Course (dor:Saratoga_Race_Course)
+  '4':
+    attributes:
+      Mr._Prospector: (breeder^='http://dbpedia.org/resource/Leslie_Combs_II', race^='http://dbpedia.org/resource/Gravesend_Handicap', awards^='', foal date^='1970-01-28', honours^='http://dbpedia.org/resource/Graded_stakes_race')
+      Arlington-Washington_Futurity_Stakes: (distance^='One Mile')
+    relationships:
+      - A_Fleet's_Dancer (<http://dbpedia.org/resource/A_Fleet's_Dancer>) --doo:grandsire--> Mr._Prospector (dor:Mr._Prospector)
+      - Jimmy_Croll (dor:Jimmy_Croll) --doo:raceHorse--> Mr._Prospector (dor:Mr._Prospector)
+      - Jimmy_Croll (dor:Jimmy_Croll) --doo:race--> Arlington-Washington_Futurity_Stakes (dor:Arlington-Washington_Futurity_Stakes)
+      - Arlington-Washington_Futurity_Stakes (dor:Arlington-Washington_Futurity_Stakes) --doo:location--> Arlington_Park (dor:Arlington_Park)
+  '5':
+    attributes:
+      Mr._Prospector: (breeder^='http://dbpedia.org/resource/Leslie_Combs_II', race^='http://dbpedia.org/resource/Gravesend_Handicap', awards^='', foal date^='1970-01-28', honours^='http://dbpedia.org/resource/Graded_stakes_race')
+      Arlington-Washington_Lassie_Stakes: (distance^='7')
+    relationships:
+      - A_Fleet's_Dancer (<http://dbpedia.org/resource/A_Fleet's_Dancer>) --doo:grandsire--> Mr._Prospector (dor:Mr._Prospector)
+      - Jimmy_Croll (dor:Jimmy_Croll) --doo:raceHorse--> Mr._Prospector (dor:Mr._Prospector)
+      - Jimmy_Croll (dor:Jimmy_Croll) --doo:race--> Arlington-Washington_Lassie_Stakes (dor:Arlington-Washington_Lassie_Stakes)
+      - Arlington-Washington_Lassie_Stakes (dor:Arlington-Washington_Lassie_Stakes) --doo:location--> Arlington_Park (dor:Arlington_Park)
+  '6':
+    attributes:
+      Bahamas_Stakes: (distance^='7')
+      Mr._Prospector: (breeder^='http://dbpedia.org/resource/Leslie_Combs_II', race^='http://dbpedia.org/resource/Gravesend_Handicap', awards^='', foal date^='1970-01-28', honours^='http://dbpedia.org/resource/Graded_stakes_race')
+    relationships:
+      - A_Fleet's_Dancer (<http://dbpedia.org/resource/A_Fleet's_Dancer>) --doo:grandsire--> Mr._Prospector (dor:Mr._Prospector)
+      - Walter_Blum__Walter_Blum__1 (dor:Walter_Blum__Walter_Blum__1) --doo:raceHorse--> Mr._Prospector (dor:Mr._Prospector)
+      - Walter_Blum__Walter_Blum__1 (dor:Walter_Blum__Walter_Blum__1) --doo:race--> Bahamas_Stakes (dor:Bahamas_Stakes)
+      - Bahamas_Stakes (dor:Bahamas_Stakes) --doo:location--> Hialeah_Park_Race_Track (dor:Hialeah_Park_Race_Track)
+  '7':
+    attributes:
+      Seattle_Slew: (race^='http://dbpedia.org/resource/Belmont_Stakes', awards^='10', foal date^='1974-02-15', honours^='http://dbpedia.org/resource/National_Museum_of_Racing_and_Hall_of_Fame')
+      Alabama_Stakes: (distance^='1.0')
+    relationships:
+      - A_P_Valentine (dor:A_P_Valentine) --doo:grandsire--> Seattle_Slew (dor:Seattle_Slew)
+      - Jean_Cruguet (dor:Jean_Cruguet) --doo:raceHorse--> Seattle_Slew (dor:Seattle_Slew)
+      - Jean_Cruguet (dor:Jean_Cruguet) --doo:race--> Alabama_Stakes (dor:Alabama_Stakes)
+      - Alabama_Stakes (dor:Alabama_Stakes) --doo:location--> Saratoga_Race_Course (dor:Saratoga_Race_Course)
+  '8':
+    attributes:
+      Seattle_Slew: (race^='http://dbpedia.org/resource/Belmont_Stakes', awards^='10', foal date^='1974-02-15', honours^='http://dbpedia.org/resource/National_Museum_of_Racing_and_Hall_of_Fame')
+      Arlington_Million: (distance^='miles')
+    relationships:
+      - A_P_Valentine (dor:A_P_Valentine) --doo:grandsire--> Seattle_Slew (dor:Seattle_Slew)
+      - Ángel_Cordero_Jr. (<http://dbpedia.org/resource/Ángel_Cordero_Jr.>) --doo:raceHorse--> Seattle_Slew (dor:Seattle_Slew)
+      - Ángel_Cordero_Jr. (<http://dbpedia.org/resource/Ángel_Cordero_Jr.>) --doo:race--> Arlington_Million (dor:Arlington_Million)
+      - Arlington_Million (dor:Arlington_Million) --doo:location--> Churchill_Downs (dor:Churchill_Downs)
+  '9':
+    attributes:
+      Seattle_Slew: (race^='http://dbpedia.org/resource/Belmont_Stakes', awards^='10', foal date^='1974-02-15', honours^='http://dbpedia.org/resource/National_Museum_of_Racing_and_Hall_of_Fame')
+      Astoria_Stakes: (distance^='furlongs')
+    relationships:
+      - A_P_Valentine (dor:A_P_Valentine) --doo:grandsire--> Seattle_Slew (dor:Seattle_Slew)
+      - Jean_Cruguet (dor:Jean_Cruguet) --doo:raceHorse--> Seattle_Slew (dor:Seattle_Slew)
+      - Jean_Cruguet (dor:Jean_Cruguet) --doo:race--> Astoria_Stakes (dor:Astoria_Stakes)
+      - Astoria_Stakes (dor:Astoria_Stakes) --doo:location--> Belmont_Park (dor:Belmont_Park)
+  '10':
+    attributes:
+      American_Derby: (distance^='miles')
+      Sunday_Silence: (race^='http://dbpedia.org/resource/American_Classic_Races', awards^='', foal date^='1986-03-25')
+    relationships:
+      - A_Shin_Hikari (dor:A_Shin_Hikari) --doo:grandsire--> Sunday_Silence (dor:Sunday_Silence)
+      - Pat_Valenzuela (dor:Pat_Valenzuela) --doo:raceHorse--> Sunday_Silence (dor:Sunday_Silence)
+      - Pat_Valenzuela (dor:Pat_Valenzuela) --doo:race--> American_Derby (dor:American_Derby)
+      - American_Derby (dor:American_Derby) --doo:location--> Arlington_Park (dor:Arlington_Park)
+attributes:
+  RaceHorse: --breeder^ (doo:breeder)--> Resource | --race^ (doo:race)--> Resource | --awards^ (dop:awards)--> Resource | --foal date^ (doo:foalDate)--> date | --honours^ (doo:honours)--> Resource
+  horse race: --image^ (dop:image)--> langString | --caption^ (dop:caption)--> langString | --distance^ (dop:distance)--> langString | --distance^ (dop:distance)--> second
+  jockey (horse racer): --alt^ (dop:alt)--> langString
+subgraph_id: 640
+relationships:
+  - horse --doo:grandsire--> RaceHorse
+  - jockey (horse racer) --doo:raceHorse--> RaceHorse
+  - jockey (horse racer) --doo:race--> horse race
+  - horse race --doo:location--> racecourse

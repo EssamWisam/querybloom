@@ -1,0 +1,91 @@
+types:
+  city: doo:City
+  person: doo:Person
+  soccer club: doo:SoccerClub
+  historic place: doo:HistoricPlace
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      George_McRae: (death date^='1923-06-16')
+      181-187_Hay_Street,_Sydney: (id^='693')
+      2014–15_Celtic_F.C._season: (aggregatescore^='1')
+    relationships:
+      - George_McRae (dor:George_McRae) --doo:birthPlace--> Edinburgh (dor:Edinburgh)
+      - 2014–15_Celtic_F.C._season (<http://dbpedia.org/resource/2014–15_Celtic_F.C._season>) --doo:homeStadium--> Edinburgh (dor:Edinburgh)
+      - 181-187_Hay_Street,_Sydney (<http://dbpedia.org/resource/181-187_Hay_Street,_Sydney>) --dop:architect--> George_McRae (dor:George_McRae)
+  '2':
+    attributes:
+      Richard_Norman_Shaw: (death date^='1912-11-17')
+      2014–15_Celtic_F.C._season: (aggregatescore^='1')
+    relationships:
+      - Richard_Norman_Shaw (dor:Richard_Norman_Shaw) --doo:birthPlace--> Edinburgh (dor:Edinburgh)
+      - 2014–15_Celtic_F.C._season (<http://dbpedia.org/resource/2014–15_Celtic_F.C._season>) --doo:homeStadium--> Edinburgh (dor:Edinburgh)
+      - 6_Ellerdale_Road (dor:6_Ellerdale_Road) --dop:architect--> Richard_Norman_Shaw (dor:Richard_Norman_Shaw)
+  '3':
+    attributes:
+      Richard_Norman_Shaw: (death date^='1912-11-17')
+      2014–15_Celtic_F.C._season: (aggregatescore^='1')
+    relationships:
+      - Richard_Norman_Shaw (dor:Richard_Norman_Shaw) --doo:birthPlace--> Edinburgh (dor:Edinburgh)
+      - 2014–15_Celtic_F.C._season (<http://dbpedia.org/resource/2014–15_Celtic_F.C._season>) --doo:homeStadium--> Edinburgh (dor:Edinburgh)
+      - 8_Melbury_Road (dor:8_Melbury_Road) --dop:architect--> Richard_Norman_Shaw (dor:Richard_Norman_Shaw)
+  '4':
+    attributes: {}
+    relationships:
+      - Zurab_Tsereteli (dor:Zurab_Tsereteli) --doo:birthPlace--> Tbilisi (dor:Tbilisi)
+      - 1990_FC_Dinamo_Tbilisi_season (dor:1990_FC_Dinamo_Tbilisi_season) --doo:homeStadium--> Tbilisi (dor:Tbilisi)
+      - Alley_of_the_rulers_of_Russia (dor:Alley_of_the_rulers_of_Russia) --dop:architect--> Zurab_Tsereteli (dor:Zurab_Tsereteli)
+  '5':
+    attributes: {}
+    relationships:
+      - Zurab_Tsereteli (dor:Zurab_Tsereteli) --doo:birthPlace--> Tbilisi (dor:Tbilisi)
+      - 1991_FC_Dinamo_Tbilisi_season (dor:1991_FC_Dinamo_Tbilisi_season) --doo:homeStadium--> Tbilisi (dor:Tbilisi)
+      - Alley_of_the_rulers_of_Russia (dor:Alley_of_the_rulers_of_Russia) --dop:architect--> Zurab_Tsereteli (dor:Zurab_Tsereteli)
+  '6':
+    attributes: {}
+    relationships:
+      - Zurab_Tsereteli (dor:Zurab_Tsereteli) --doo:birthPlace--> Tbilisi (dor:Tbilisi)
+      - 1991–92_FC_Dinamo_Tbilisi_season (<http://dbpedia.org/resource/1991–92_FC_Dinamo_Tbilisi_season>) --doo:homeStadium--> Tbilisi (dor:Tbilisi)
+      - Alley_of_the_rulers_of_Russia (dor:Alley_of_the_rulers_of_Russia) --dop:architect--> Zurab_Tsereteli (dor:Zurab_Tsereteli)
+  '7':
+    attributes:
+      Andrew_Lang_Petrie: (death date^='1928-04-01')
+    relationships:
+      - Andrew_Lang_Petrie (dor:Andrew_Lang_Petrie) --doo:birthPlace--> Brisbane (dor:Brisbane)
+      - 2014–15_Brisbane_Roar_FC_season (<http://dbpedia.org/resource/2014–15_Brisbane_Roar_FC_season>) --doo:homeStadium--> Brisbane (dor:Brisbane)
+      - Apple_Tree_Creek_War_Memorial (dor:Apple_Tree_Creek_War_Memorial) --dop:architect--> Andrew_Lang_Petrie (dor:Andrew_Lang_Petrie)
+  '8':
+    attributes:
+      Andrew_Lang_Petrie: (death date^='1928-04-01')
+    relationships:
+      - Andrew_Lang_Petrie (dor:Andrew_Lang_Petrie) --doo:birthPlace--> Brisbane (dor:Brisbane)
+      - 2015–16_Brisbane_Roar_FC_season (<http://dbpedia.org/resource/2015–16_Brisbane_Roar_FC_season>) --doo:homeStadium--> Brisbane (dor:Brisbane)
+      - Apple_Tree_Creek_War_Memorial (dor:Apple_Tree_Creek_War_Memorial) --dop:architect--> Andrew_Lang_Petrie (dor:Andrew_Lang_Petrie)
+  '9':
+    attributes:
+      Andrew_Lang_Petrie: (death date^='1928-04-01')
+    relationships:
+      - Andrew_Lang_Petrie (dor:Andrew_Lang_Petrie) --doo:birthPlace--> Brisbane (dor:Brisbane)
+      - 2016–17_Brisbane_Roar_FC_season (<http://dbpedia.org/resource/2016–17_Brisbane_Roar_FC_season>) --doo:homeStadium--> Brisbane (dor:Brisbane)
+      - Apple_Tree_Creek_War_Memorial (dor:Apple_Tree_Creek_War_Memorial) --dop:architect--> Andrew_Lang_Petrie (dor:Andrew_Lang_Petrie)
+  '10':
+    attributes:
+      Eliot_Noyes: (death date^='1977-07-18', active years start year^='1939')
+    relationships:
+      - Eliot_Noyes (dor:Eliot_Noyes) --doo:birthPlace--> Boston (dor:Boston)
+      - 2014_Boston_Breakers_season (dor:2014_Boston_Breakers_season) --doo:homeStadium--> Boston (dor:Boston)
+      - Arthur_and_Lyn_Chivvis_House (dor:Arthur_and_Lyn_Chivvis_House) --dop:architect--> Eliot_Noyes (dor:Eliot_Noyes)
+attributes:
+  person: --issue^ (dop:issue)--> langString | --domesticpartner^ (dop:domesticpartner)--> langString | --father^ (dop:father)--> langString | --1a^ (dop:1a)--> langString | --death date^ (dop:deathDate)--> langString | --active years start year^ (doo:activeYearsStartYear)--> gYear
+  soccer club: --Association^ (dop:association)--> Resource | --aggregatescore^ (dop:aggregatescore)--> int
+  historic place: --id^ (dop:id)--> langString
+subgraph_id: 58
+relationships:
+  - person --doo:birthPlace--> city
+  - soccer club --doo:homeStadium--> city
+  - historic place --dop:architect--> person

@@ -1,0 +1,99 @@
+types:
+  city: doo:City
+  architect: doo:Architect
+  politician: doo:Politician
+  settlement: doo:Settlement
+  historic place: doo:HistoricPlace
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Leopoldo_O'Donnell: (title^='Acting')
+    relationships:
+      - Leopoldo_O'Donnell (<http://dbpedia.org/resource/Leopoldo_O'Donnell>) --doo:restingPlace--> Convent_of_the_Salesas_Reales (dor:Convent_of_the_Salesas_Reales)
+      - Convent_of_the_Salesas_Reales (dor:Convent_of_the_Salesas_Reales) --doo:location--> Madrid (dor:Madrid)
+      - Dominique_Perrault (dor:Dominique_Perrault) --doo:significantBuilding--> Madrid (dor:Madrid)
+      - Dominique_Perrault (dor:Dominique_Perrault) --doo:significantBuilding--> Berlin (dor:Berlin)
+  '2':
+    attributes:
+      Leopoldo_O'Donnell: (title^='Acting')
+    relationships:
+      - Leopoldo_O'Donnell (<http://dbpedia.org/resource/Leopoldo_O'Donnell>) --doo:restingPlace--> Convent_of_the_Salesas_Reales (dor:Convent_of_the_Salesas_Reales)
+      - Convent_of_the_Salesas_Reales (dor:Convent_of_the_Salesas_Reales) --doo:location--> Madrid (dor:Madrid)
+      - Dominique_Perrault (dor:Dominique_Perrault) --doo:significantBuilding--> Madrid (dor:Madrid)
+      - Dominique_Perrault (dor:Dominique_Perrault) --doo:significantBuilding--> Osaka (dor:Osaka)
+  '3':
+    attributes:
+      Leopoldo_O'Donnell: (title^='Acting')
+    relationships:
+      - Leopoldo_O'Donnell (<http://dbpedia.org/resource/Leopoldo_O'Donnell>) --doo:restingPlace--> Convent_of_the_Salesas_Reales (dor:Convent_of_the_Salesas_Reales)
+      - Convent_of_the_Salesas_Reales (dor:Convent_of_the_Salesas_Reales) --doo:location--> Madrid (dor:Madrid)
+      - Dominique_Perrault (dor:Dominique_Perrault) --doo:significantBuilding--> Madrid (dor:Madrid)
+      - Dominique_Perrault (dor:Dominique_Perrault) --doo:significantBuilding--> Seoul (dor:Seoul)
+  '4':
+    attributes: {}
+    relationships:
+      - Abner_Taylor (dor:Abner_Taylor) --doo:restingPlace--> Rock_Creek_Cemetery (dor:Rock_Creek_Cemetery)
+      - Rock_Creek_Cemetery (dor:Rock_Creek_Cemetery) --doo:location--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Gert_Wingårdh (<http://dbpedia.org/resource/Gert_Wingårdh>) --doo:significantBuilding--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Gert_Wingårdh (<http://dbpedia.org/resource/Gert_Wingårdh>) --doo:significantBuilding--> Berlin (dor:Berlin)
+  '5':
+    attributes: {}
+    relationships:
+      - Abner_Taylor (dor:Abner_Taylor) --doo:restingPlace--> Rock_Creek_Cemetery (dor:Rock_Creek_Cemetery)
+      - Rock_Creek_Cemetery (dor:Rock_Creek_Cemetery) --doo:location--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Gert_Wingårdh (<http://dbpedia.org/resource/Gert_Wingårdh>) --doo:significantBuilding--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Gert_Wingårdh (<http://dbpedia.org/resource/Gert_Wingårdh>) --doo:significantBuilding--> Gothenburg (dor:Gothenburg)
+  '6':
+    attributes: {}
+    relationships:
+      - Abner_Taylor (dor:Abner_Taylor) --doo:restingPlace--> Rock_Creek_Cemetery (dor:Rock_Creek_Cemetery)
+      - Rock_Creek_Cemetery (dor:Rock_Creek_Cemetery) --doo:location--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Gert_Wingårdh (<http://dbpedia.org/resource/Gert_Wingårdh>) --doo:significantBuilding--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Gert_Wingårdh (<http://dbpedia.org/resource/Gert_Wingårdh>) --doo:significantBuilding--> Kista (dor:Kista)
+  '7':
+    attributes:
+      Bennett_Strong: (children^='Ella, Willie')
+    relationships:
+      - Bennett_Strong (dor:Bennett_Strong) --doo:restingPlace--> Hollywood_Forever_Cemetery (dor:Hollywood_Forever_Cemetery)
+      - Hollywood_Forever_Cemetery (dor:Hollywood_Forever_Cemetery) --doo:location--> Los_Angeles (dor:Los_Angeles)
+      - Paul_R._Williams (dor:Paul_R._Williams) --doo:significantBuilding--> Los_Angeles (dor:Los_Angeles)
+      - Paul_R._Williams (dor:Paul_R._Williams) --doo:significantBuilding--> Beverly_Hills (dor:Beverly_Hills)
+  '8':
+    attributes:
+      David_C._Coates: (title^='http://dbpedia.org/resource/Lieutenant_Governor_of_Colorado')
+    relationships:
+      - David_C._Coates (dor:David_C._Coates) --doo:restingPlace--> Hollywood_Forever_Cemetery (dor:Hollywood_Forever_Cemetery)
+      - Hollywood_Forever_Cemetery (dor:Hollywood_Forever_Cemetery) --doo:location--> Los_Angeles (dor:Los_Angeles)
+      - Paul_R._Williams (dor:Paul_R._Williams) --doo:significantBuilding--> Los_Angeles (dor:Los_Angeles)
+      - Paul_R._Williams (dor:Paul_R._Williams) --doo:significantBuilding--> Beverly_Hills (dor:Beverly_Hills)
+  '9':
+    attributes:
+      James_H._Beatty: (title^='Judge of the United States District Court for the District of Idaho')
+    relationships:
+      - James_H._Beatty (dor:James_H._Beatty) --doo:restingPlace--> Hollywood_Forever_Cemetery (dor:Hollywood_Forever_Cemetery)
+      - Hollywood_Forever_Cemetery (dor:Hollywood_Forever_Cemetery) --doo:location--> Los_Angeles (dor:Los_Angeles)
+      - Paul_R._Williams (dor:Paul_R._Williams) --doo:significantBuilding--> Los_Angeles (dor:Los_Angeles)
+      - Paul_R._Williams (dor:Paul_R._Williams) --doo:significantBuilding--> Beverly_Hills (dor:Beverly_Hills)
+  '10':
+    attributes:
+      Benjamin_Franklin: (title^='Articles related to Benjamin Franklin', children^='', child^='http://dbpedia.org/resource/Francis_Folger_Franklin')
+    relationships:
+      - Benjamin_Franklin (dor:Benjamin_Franklin) --doo:restingPlace--> Christ_Church_Burial_Ground (dor:Christ_Church_Burial_Ground)
+      - Christ_Church_Burial_Ground (dor:Christ_Church_Burial_Ground) --doo:location--> Pennsylvania (dor:Pennsylvania)
+      - Shirley_Jane_Vernon (dor:Shirley_Jane_Vernon) --doo:significantBuilding--> Pennsylvania (dor:Pennsylvania)
+      - Shirley_Jane_Vernon (dor:Shirley_Jane_Vernon) --doo:significantBuilding--> Philadelphia (dor:Philadelphia)
+attributes:
+  city: --named after^ (doo:namedAfter)--> Resource
+  politician: --2a^ (dop:2a)--> langString | --title^ (dop:title)--> Resource | --children^ (dop:children)--> int | --awards^ (dop:awards)--> langString | --child^ (doo:child)--> Resource
+  settlement: --Aug low F^ (dop:augLowF)--> int | --data^ (dop:data)--> double | --Apr high F^ (dop:aprHighF)--> int | --Apr rain days^ (dop:aprRainDays)--> double
+subgraph_id: 558
+relationships:
+  - politician --doo:restingPlace--> historic place
+  - historic place --doo:location--> settlement
+  - architect --doo:significantBuilding--> settlement
+  - architect --doo:significantBuilding--> city

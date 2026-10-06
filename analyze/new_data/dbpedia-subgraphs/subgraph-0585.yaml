@@ -1,0 +1,99 @@
+types:
+  saint: doo:Saint
+  country: doo:Country
+  settlement: doo:Settlement
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric', caption^='Racial and ethnic groups in the United States')
+      Yekaterinburg: (source^='NOAA', date^='January 2019')
+    relationships:
+      - Canonization_of_the_Romanovs (dor:Canonization_of_the_Romanovs) --doo:canonizedPlace--> United_States (dor:United_States)
+      - 21c_Museum_Hotels (dor:21c_Museum_Hotels) --dop:areaServed--> United_States (dor:United_States)
+      - Canonization_of_the_Romanovs (dor:Canonization_of_the_Romanovs) --doo:deathPlace--> Yekaterinburg (dor:Yekaterinburg)
+  '2':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric', caption^='Racial and ethnic groups in the United States')
+      Yekaterinburg: (source^='NOAA', date^='January 2019')
+    relationships:
+      - Canonization_of_the_Romanovs (dor:Canonization_of_the_Romanovs) --doo:canonizedPlace--> United_States (dor:United_States)
+      - 4INFO (dor:4INFO) --dop:areaServed--> United_States (dor:United_States)
+      - Canonization_of_the_Romanovs (dor:Canonization_of_the_Romanovs) --doo:deathPlace--> Yekaterinburg (dor:Yekaterinburg)
+  '3':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric', caption^='Racial and ethnic groups in the United States')
+      Yekaterinburg: (source^='NOAA', date^='January 2019')
+    relationships:
+      - Canonization_of_the_Romanovs (dor:Canonization_of_the_Romanovs) --doo:canonizedPlace--> United_States (dor:United_States)
+      - A_Place_for_Mom (dor:A_Place_for_Mom) --dop:areaServed--> United_States (dor:United_States)
+      - Canonization_of_the_Romanovs (dor:Canonization_of_the_Romanovs) --doo:deathPlace--> Yekaterinburg (dor:Yekaterinburg)
+  '4':
+    attributes:
+      Canada: (Link from a Wikipage to an external page^='http://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada_19990081', caption^='French version of the poster roughly translates as "They serve France–Everyone can serve; Buy Victory Bonds".')
+      Midland,_Ontario: (source^='http://dbpedia.org/resource/Environment_Canada')
+    relationships:
+      - Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>) --doo:canonizedPlace--> Canada (dor:Canada)
+      - A_Place_for_Mom (dor:A_Place_for_Mom) --dop:areaServed--> Canada (dor:Canada)
+      - Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>) --doo:deathPlace--> Midland,_Ontario (<http://dbpedia.org/resource/Midland,_Ontario>)
+  '5':
+    attributes:
+      Munich: (source^='SKlima.de', date^='2017-07-02', region^='http://dbpedia.org/resource/Upper_Bavaria')
+      Germany: (Link from a Wikipage to an external page^='http://www.bundesregierung.de/Webs/Breg/EN/Homepage/_node.html', caption^='Franz Marc, Roe Deer in the Forest')
+    relationships:
+      - Alexander_Schmorell (dor:Alexander_Schmorell) --doo:canonizedPlace--> Germany (dor:Germany)
+      - A'Rosa_Cruises (<http://dbpedia.org/resource/A'Rosa_Cruises>) --dop:areaServed--> Germany (dor:Germany)
+      - Alexander_Schmorell (dor:Alexander_Schmorell) --doo:deathPlace--> Munich (dor:Munich)
+  '6':
+    attributes:
+      Serbia: (Link from a Wikipage to an external page^='http://digitalna.ff.uns.ac.rs/sadrzaj/2017/978-86-6065-375-0', caption^='Emir Kusturica won the Palme d''Or at the Cannes twice')
+      Ann_Arbor,_Michigan: (source^='http://dbpedia.org/resource/NOAA', Aug high F^='81.7', date^='September 2022', Apr record low F^='7', bot^='medic')
+    relationships:
+      - Mardarije_Uskoković (<http://dbpedia.org/resource/Mardarije_Uskoković>) --doo:canonizedPlace--> Serbia (dor:Serbia)
+      - A1_Srbija (dor:A1_Srbija) --dop:areaServed--> Serbia (dor:Serbia)
+      - Mardarije_Uskoković (<http://dbpedia.org/resource/Mardarije_Uskoković>) --doo:deathPlace--> Ann_Arbor,_Michigan (<http://dbpedia.org/resource/Ann_Arbor,_Michigan>)
+  '7':
+    attributes:
+      Italy: (Link from a Wikipage to an external page^='http://eudocs.lib.byu.edu/index.php/History_of_Italy:_Primary_Documents', caption^='Apennine landscape in Marche')
+      Marburg: (source^='--07-26')
+    relationships:
+      - Elizabeth_of_Hungary (dor:Elizabeth_of_Hungary) --doo:canonizedPlace--> Italy (dor:Italy)
+      - ACNA_(company) (<http://dbpedia.org/resource/ACNA_(company)>) --dop:areaServed--> Italy (dor:Italy)
+      - Elizabeth_of_Hungary (dor:Elizabeth_of_Hungary) --doo:deathPlace--> Marburg (dor:Marburg)
+  '8':
+    attributes:
+      Italy: (Link from a Wikipage to an external page^='http://eudocs.lib.byu.edu/index.php/History_of_Italy:_Primary_Documents', caption^='Apennine landscape in Marche')
+    relationships:
+      - Jean_de_Lalande (dor:Jean_de_Lalande) --doo:canonizedPlace--> Italy (dor:Italy)
+      - ACNA_(company) (<http://dbpedia.org/resource/ACNA_(company)>) --dop:areaServed--> Italy (dor:Italy)
+      - Jean_de_Lalande (dor:Jean_de_Lalande) --doo:deathPlace--> Auriesville,_New_York (<http://dbpedia.org/resource/Auriesville,_New_York>)
+  '9':
+    attributes:
+      Italy: (Link from a Wikipage to an external page^='http://eudocs.lib.byu.edu/index.php/History_of_Italy:_Primary_Documents', caption^='Apennine landscape in Marche')
+      Milan: (date^='November 2022')
+    relationships:
+      - Peter_of_Verona (dor:Peter_of_Verona) --doo:canonizedPlace--> Italy (dor:Italy)
+      - ACNA_(company) (<http://dbpedia.org/resource/ACNA_(company)>) --dop:areaServed--> Italy (dor:Italy)
+      - Peter_of_Verona (dor:Peter_of_Verona) --doo:deathPlace--> Milan (dor:Milan)
+  '10':
+    attributes:
+      Canada: (Link from a Wikipage to an external page^='http://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada_19990081', caption^='French version of the poster roughly translates as "They serve France–Everyone can serve; Buy Victory Bonds".')
+      Midland,_Ontario: (source^='http://dbpedia.org/resource/Environment_Canada')
+    relationships:
+      - Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>) --doo:canonizedPlace--> Canada (dor:Canada)
+      - Advance_Auto_Parts (dor:Advance_Auto_Parts) --dop:areaServed--> Canada (dor:Canada)
+      - Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>) --doo:deathPlace--> Midland,_Ontario (<http://dbpedia.org/resource/Midland,_Ontario>)
+attributes:
+  country: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --header^ (dop:header)--> langString | --caption^ (dop:caption)--> langString
+  settlement: --source^ (dop:source)--> langString | --Aug high F^ (dop:augHighF)--> double | --bgcolor^ (dop:bgcolor)--> langString | --date^ (dop:date)--> langString | --region^ (doo:region)--> Resource | --Apr record low F^ (dop:aprRecordLowF)--> int | --bot^ (dop:bot)--> langString
+  organisation: --merged with^ (doo:mergedWith)--> Resource | --budget ($)^ (doo:budget)--> usDollar
+subgraph_id: 585
+relationships:
+  - saint --doo:canonizedPlace--> country
+  - organisation --dop:areaServed--> country
+  - saint --doo:deathPlace--> settlement

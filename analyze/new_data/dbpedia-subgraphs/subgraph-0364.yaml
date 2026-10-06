@@ -1,0 +1,104 @@
+types:
+  Band: doo:Band
+  song: doo:Song
+  album: doo:Album
+  single: doo:Single
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doow: http://dbpedia.org/ontology/Work/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Bowling_Balls: (artist^='http://dbpedia.org/resource/Insane_Clown_Posse', album^='http://dbpedia.org/resource/Hell''s_Pit', runtime (m)^='3.5')
+      Insane_Clown_Posse: (title^='"Ghetto Freak Show"', subject='http://dbpedia.org/resource/Category:1989_establishments_in_Michigan', alias^='')
+    relationships:
+      - Another_Love_Song_(Insane_Clown_Posse_song) (<http://dbpedia.org/resource/Another_Love_Song_(Insane_Clown_Posse_song)>) --doo:artist--> Insane_Clown_Posse (dor:Insane_Clown_Posse)
+      - 1_Less_G_n_da_Hood (dor:1_Less_G_n_da_Hood) --dop:lyrics--> Insane_Clown_Posse (dor:Insane_Clown_Posse)
+      - Bowling_Balls (dor:Bowling_Balls) --doo:producer--> Insane_Clown_Posse (dor:Insane_Clown_Posse)
+  '2':
+    attributes:
+      Halls_of_Illusions: (artist^='Insane Clown Posse featuring Slash', album^='http://dbpedia.org/resource/The_Great_Milenko', runtime (m)^='4.35')
+      Insane_Clown_Posse: (title^='"Ghetto Freak Show"', subject='http://dbpedia.org/resource/Category:1989_establishments_in_Michigan', alias^='')
+    relationships:
+      - Another_Love_Song_(Insane_Clown_Posse_song) (<http://dbpedia.org/resource/Another_Love_Song_(Insane_Clown_Posse_song)>) --doo:artist--> Insane_Clown_Posse (dor:Insane_Clown_Posse)
+      - 1_Less_G_n_da_Hood (dor:1_Less_G_n_da_Hood) --dop:lyrics--> Insane_Clown_Posse (dor:Insane_Clown_Posse)
+      - Halls_of_Illusions (dor:Halls_of_Illusions) --doo:producer--> Insane_Clown_Posse (dor:Insane_Clown_Posse)
+  '3':
+    attributes:
+      Bowling_Balls: (artist^='http://dbpedia.org/resource/Insane_Clown_Posse', album^='http://dbpedia.org/resource/Hell''s_Pit', runtime (m)^='3.5')
+      Insane_Clown_Posse: (title^='"Ghetto Freak Show"', subject='http://dbpedia.org/resource/Category:1989_establishments_in_Michigan', alias^='')
+    relationships:
+      - Fuck_the_World_(Insane_Clown_Posse_song) (<http://dbpedia.org/resource/Fuck_the_World_(Insane_Clown_Posse_song)>) --doo:artist--> Insane_Clown_Posse (dor:Insane_Clown_Posse)
+      - 1_Less_G_n_da_Hood (dor:1_Less_G_n_da_Hood) --dop:lyrics--> Insane_Clown_Posse (dor:Insane_Clown_Posse)
+      - Bowling_Balls (dor:Bowling_Balls) --doo:producer--> Insane_Clown_Posse (dor:Insane_Clown_Posse)
+  '4':
+    attributes:
+      BoA: (title^='4', subject='http://dbpedia.org/resource/Category:1986_births')
+      Disturbance_(BoA_song): (artist^='http://dbpedia.org/resource/BoA', border^='yes', runtime (m)^='3.5833333333333335')
+    relationships:
+      - Amazing_Kiss (dor:Amazing_Kiss) --doo:artist--> BoA (dor:BoA)
+      - 2021_Winter_SM_Town:_SMCU_Express (<http://dbpedia.org/resource/2021_Winter_SM_Town:_SMCU_Express>) --dop:lyrics--> BoA (dor:BoA)
+      - Disturbance_(BoA_song) (<http://dbpedia.org/resource/Disturbance_(BoA_song)>) --doo:producer--> BoA (dor:BoA)
+  '5':
+    attributes:
+      BoA: (title^='4', subject='http://dbpedia.org/resource/Category:1986_births')
+      Only_One_(BoA_song): (artist^='http://dbpedia.org/resource/BoA', album^='http://dbpedia.org/resource/Only_One_(BoA_album)', runtime (m)^='3.65')
+    relationships:
+      - Amazing_Kiss (dor:Amazing_Kiss) --doo:artist--> BoA (dor:BoA)
+      - 2021_Winter_SM_Town:_SMCU_Express (<http://dbpedia.org/resource/2021_Winter_SM_Town:_SMCU_Express>) --dop:lyrics--> BoA (dor:BoA)
+      - Only_One_(BoA_song) (<http://dbpedia.org/resource/Only_One_(BoA_song)>) --doo:producer--> BoA (dor:BoA)
+  '6':
+    attributes:
+      BoA: (title^='4', subject='http://dbpedia.org/resource/Category:1986_births')
+      Disturbance_(BoA_song): (artist^='http://dbpedia.org/resource/BoA', border^='yes', runtime (m)^='3.5833333333333335')
+    relationships:
+      - Be_the_One_(BoA_song) (<http://dbpedia.org/resource/Be_the_One_(BoA_song)>) --doo:artist--> BoA (dor:BoA)
+      - 2021_Winter_SM_Town:_SMCU_Express (<http://dbpedia.org/resource/2021_Winter_SM_Town:_SMCU_Express>) --dop:lyrics--> BoA (dor:BoA)
+      - Disturbance_(BoA_song) (<http://dbpedia.org/resource/Disturbance_(BoA_song)>) --doo:producer--> BoA (dor:BoA)
+  '7':
+    attributes:
+      Cherry_Ghost: (subject='http://dbpedia.org/resource/Category:English_indie_rock_groups')
+      4_AM_(Cherry_Ghost_song): (artist^='http://dbpedia.org/resource/Cherry_Ghost', album^='http://dbpedia.org/resource/Thirst_for_Romance', runtime (m)^='3.1')
+    relationships:
+      - 4_AM_(Cherry_Ghost_song) (<http://dbpedia.org/resource/4_AM_(Cherry_Ghost_song)>) --doo:artist--> Cherry_Ghost (dor:Cherry_Ghost)
+      - Black_Cat_(Zucchero_album) (<http://dbpedia.org/resource/Black_Cat_(Zucchero_album)>) --dop:lyrics--> Cherry_Ghost (dor:Cherry_Ghost)
+      - 4_AM_(Cherry_Ghost_song) (<http://dbpedia.org/resource/4_AM_(Cherry_Ghost_song)>) --doo:producer--> Cherry_Ghost (dor:Cherry_Ghost)
+  '8':
+    attributes:
+      Cherry_Ghost: (subject='http://dbpedia.org/resource/Category:English_indie_rock_groups')
+      Mathematics_(Cherry_Ghost_song): (artist^='http://dbpedia.org/resource/Cherry_Ghost', album^='http://dbpedia.org/resource/Thirst_for_Romance', runtime (m)^='3.966666666666667')
+    relationships:
+      - 4_AM_(Cherry_Ghost_song) (<http://dbpedia.org/resource/4_AM_(Cherry_Ghost_song)>) --doo:artist--> Cherry_Ghost (dor:Cherry_Ghost)
+      - Black_Cat_(Zucchero_album) (<http://dbpedia.org/resource/Black_Cat_(Zucchero_album)>) --dop:lyrics--> Cherry_Ghost (dor:Cherry_Ghost)
+      - Mathematics_(Cherry_Ghost_song) (<http://dbpedia.org/resource/Mathematics_(Cherry_Ghost_song)>) --doo:producer--> Cherry_Ghost (dor:Cherry_Ghost)
+  '9':
+    attributes:
+      Cherry_Ghost: (subject='http://dbpedia.org/resource/Category:English_indie_rock_groups')
+      4_AM_(Cherry_Ghost_song): (artist^='http://dbpedia.org/resource/Cherry_Ghost', album^='http://dbpedia.org/resource/Thirst_for_Romance', runtime (m)^='3.1')
+    relationships:
+      - Mathematics_(Cherry_Ghost_song) (<http://dbpedia.org/resource/Mathematics_(Cherry_Ghost_song)>) --doo:artist--> Cherry_Ghost (dor:Cherry_Ghost)
+      - Black_Cat_(Zucchero_album) (<http://dbpedia.org/resource/Black_Cat_(Zucchero_album)>) --dop:lyrics--> Cherry_Ghost (dor:Cherry_Ghost)
+      - 4_AM_(Cherry_Ghost_song) (<http://dbpedia.org/resource/4_AM_(Cherry_Ghost_song)>) --doo:producer--> Cherry_Ghost (dor:Cherry_Ghost)
+  '10':
+    attributes:
+      Avril_Lavigne: (title^='http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Avril_Lavigne', subject='http://dbpedia.org/resource/Category:1984_births')
+      Fly_(Avril_Lavigne_song): (artist^='http://dbpedia.org/resource/Avril_Lavigne', runtime (m)^='3.1')
+      Alice_(Avril_Lavigne_song): (border^='yes')
+    relationships:
+      - Alice_(Avril_Lavigne_song) (<http://dbpedia.org/resource/Alice_(Avril_Lavigne_song)>) --doo:artist--> Avril_Lavigne (dor:Avril_Lavigne)
+      - Cover_Album_(album) (<http://dbpedia.org/resource/Cover_Album_(album)>) --dop:lyrics--> Avril_Lavigne (dor:Avril_Lavigne)
+      - Fly_(Avril_Lavigne_song) (<http://dbpedia.org/resource/Fly_(Avril_Lavigne_song)>) --doo:producer--> Avril_Lavigne (dor:Avril_Lavigne)
+attributes:
+  Band: --title^ (dop:title)--> langString | --background^ (dop:background)--> langString | --subject (podt:subject)--> Resource | --alias^ (dop:alias)--> langString
+  song: --artist^ (dop:artist)--> langString | --width^ (dop:width)--> int | --border^ (dop:border)--> langString | --composer^ (doo:composer)--> Resource | --album^ (doo:album)--> Resource | --runtime (m)^ (doow:runtime)--> minute
+  album: --runtime (m)^ (doow:runtime)--> minute
+  single: --border^ (dop:border)--> langString
+subgraph_id: 364
+relationships:
+  - single --doo:artist--> Band
+  - album --dop:lyrics--> Band
+  - song --doo:producer--> Band

@@ -1,0 +1,111 @@
+types:
+  priest: doo:Priest
+  country: doo:Country
+  Location: doo:Location
+  historic building: doo:HistoricBuilding
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Anglican_Diocese_of_Liverpool: (date^='2007-02-03')
+    relationships:
+      - Jennifer_McKenzie_(priest) (<http://dbpedia.org/resource/Jennifer_McKenzie_(priest)>) --doo:religion--> Anglicanism (dor:Anglicanism)
+      - Jennifer_McKenzie_(priest) (<http://dbpedia.org/resource/Jennifer_McKenzie_(priest)>) --doo:diocese--> Anglican_Diocese_of_Liverpool (dor:Anglican_Diocese_of_Liverpool)
+      - All_Saints'_Church,_Childwall (<http://dbpedia.org/resource/All_Saints'_Church,_Childwall>) --doo:location--> Anglican_Diocese_of_Liverpool (dor:Anglican_Diocese_of_Liverpool)
+  '2':
+    attributes: {}
+    relationships:
+      - Peter_Howell-Jones (dor:Peter_Howell-Jones) --doo:religion--> Anglicanism (dor:Anglicanism)
+      - Peter_Howell-Jones (dor:Peter_Howell-Jones) --doo:diocese--> Diocese_of_Blackburn (dor:Diocese_of_Blackburn)
+      - Blackburn_Cathedral (dor:Blackburn_Cathedral) --doo:location--> Diocese_of_Blackburn (dor:Diocese_of_Blackburn)
+  '3':
+    attributes: {}
+    relationships:
+      - Caroline_Baston (dor:Caroline_Baston) --doo:religion--> Anglicanism (dor:Anglicanism)
+      - Caroline_Baston (dor:Caroline_Baston) --doo:diocese--> Diocese_of_Bristol (dor:Diocese_of_Bristol)
+      - Bristol_Cathedral (dor:Bristol_Cathedral) --doo:location--> Diocese_of_Bristol (dor:Diocese_of_Bristol)
+  '4':
+    attributes: {}
+    relationships:
+      - Martin_Dudley (dor:Martin_Dudley) --doo:religion--> Eastern_Orthodox_Church (dor:Eastern_Orthodox_Church)
+      - Martin_Dudley (dor:Martin_Dudley) --doo:diocese--> Diocese_of_London (dor:Diocese_of_London)
+      - Church_of_the_Annunciation,_Marble_Arch (<http://dbpedia.org/resource/Church_of_the_Annunciation,_Marble_Arch>) --doo:location--> Diocese_of_London (dor:Diocese_of_London)
+  '5':
+    attributes: {}
+    relationships:
+      - Fabián_Pedacchio (<http://dbpedia.org/resource/Fabián_Pedacchio>) --doo:religion--> Catholic_Church (dor:Catholic_Church)
+      - Fabián_Pedacchio (<http://dbpedia.org/resource/Fabián_Pedacchio>) --doo:diocese--> Diocese_of_Rome (dor:Diocese_of_Rome)
+      - College_of_Sant'Anselmo (<http://dbpedia.org/resource/College_of_Sant'Anselmo>) --doo:location--> Diocese_of_Rome (dor:Diocese_of_Rome)
+  '6':
+    attributes: {}
+    relationships:
+      - Gonzalo_Aemilius (dor:Gonzalo_Aemilius) --doo:religion--> Catholic_Church (dor:Catholic_Church)
+      - Gonzalo_Aemilius (dor:Gonzalo_Aemilius) --doo:diocese--> Diocese_of_Rome (dor:Diocese_of_Rome)
+      - College_of_Sant'Anselmo (<http://dbpedia.org/resource/College_of_Sant'Anselmo>) --doo:location--> Diocese_of_Rome (dor:Diocese_of_Rome)
+  '7':
+    attributes: {}
+    relationships:
+      - Yoannis_Lahzi_Gaid (dor:Yoannis_Lahzi_Gaid) --doo:religion--> Catholic_Church (dor:Catholic_Church)
+      - Yoannis_Lahzi_Gaid (dor:Yoannis_Lahzi_Gaid) --doo:diocese--> Diocese_of_Rome (dor:Diocese_of_Rome)
+      - College_of_Sant'Anselmo (<http://dbpedia.org/resource/College_of_Sant'Anselmo>) --doo:location--> Diocese_of_Rome (dor:Diocese_of_Rome)
+  '8':
+    attributes: {}
+    relationships:
+      - Martin_Dudley (dor:Martin_Dudley) --doo:religion--> Eastern_Orthodox_Church (dor:Eastern_Orthodox_Church)
+      - Martin_Dudley (dor:Martin_Dudley) --doo:diocese--> Diocese_of_London (dor:Diocese_of_London)
+      - St_Alban's_Church,_Holborn (<http://dbpedia.org/resource/St_Alban's_Church,_Holborn>) --doo:location--> Diocese_of_London (dor:Diocese_of_London)
+  '9':
+    attributes: {}
+    relationships:
+      - Martin_Dudley (dor:Martin_Dudley) --doo:religion--> Eastern_Orthodox_Church (dor:Eastern_Orthodox_Church)
+      - Martin_Dudley (dor:Martin_Dudley) --doo:diocese--> Diocese_of_London (dor:Diocese_of_London)
+      - St_Andrew_Undershaft (dor:St_Andrew_Undershaft) --doo:location--> Diocese_of_London (dor:Diocese_of_London)
+  '10':
+    attributes: {}
+    relationships:
+      - Thomas_Ambrose_Butler (dor:Thomas_Ambrose_Butler) --doo:religion--> Roman_Catholic_Church (dor:Roman_Catholic_Church)
+      - Thomas_Ambrose_Butler (dor:Thomas_Ambrose_Butler) --doo:diocese--> Roman_Catholic_Archdiocese_of_Dublin (dor:Roman_Catholic_Archdiocese_of_Dublin)
+      - St_Finian's_Esker_church_and_graveyard (<http://dbpedia.org/resource/St_Finian's_Esker_church_and_graveyard>) --doo:location--> Roman_Catholic_Archdiocese_of_Dublin (dor:Roman_Catholic_Archdiocese_of_Dublin)
+qa_result:
+  status: completed
+  cost_usd: 0.26538
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0202424
+        total_tokens: 3038
+        prompt_tokens: 2256
+        completion_tokens: 782
+      generate:
+        cost_usd: 0.05739760000000001
+        total_tokens: 6247
+        prompt_tokens: 4023
+        completion_tokens: 2224
+      verify_1:
+        cost_usd: 0.045807
+        total_tokens: 5700
+        prompt_tokens: 4546
+        completion_tokens: 1154
+      complexity:
+        cost_usd: 0.141933
+        total_tokens: 11404
+        prompt_tokens: 5171
+        completion_tokens: 6233
+    total_tokens: 26389
+    prompt_tokens: 15996
+    total_cost_usd: 0.26538
+    completion_tokens: 10393
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Location: --area^ (dop:area)--> squareKilometre | --arc-angleA^ (dop:arcAnglea)--> int | --leader^ (dop:leader)--> Resource | --arc-text-colorA^ (dop:arcTextColora)--> langString | --mouth mountain^ (doo:mouthMountain)--> Resource | --c^ (dop:c)--> langString | --area^ (dop:area)--> langString | --Apr record low F^ (dop:aprRecordLowF)--> double | --designated other1 color^ (dop:designatedOther1Color)--> langString | --Aug high F^ (dop:augHighF)--> double | --date^ (dop:date)--> langString | --footer^ (dop:footer)--> langString | --arc-gapB^ (dop:arcGapb)--> double
+subgraph_id: 202
+relationships:
+  - priest --doo:religion--> country
+  - priest --doo:diocese--> Location
+  - historic building --doo:location--> Location

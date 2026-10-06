@@ -1,0 +1,72 @@
+types:
+  island: doo:Island
+  school: doo:School
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ramakrishna_Sarada_Mission_Sister_Nivedita_Girls'_School: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Coord', address^='5, Nivedita Lane')
+    relationships:
+      - Abdul_Kalam_Island (dor:Abdul_Kalam_Island) --doo:country--> India (dor:India)
+      - Ramakrishna_Sarada_Mission_Sister_Nivedita_Girls'_School (<http://dbpedia.org/resource/Ramakrishna_Sarada_Mission_Sister_Nivedita_Girls'_School>) --doo:region--> India (dor:India)
+  '2':
+    attributes:
+      Vidya_Bharati: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Bulleted_list')
+    relationships:
+      - Abdul_Kalam_Island (dor:Abdul_Kalam_Island) --doo:country--> India (dor:India)
+      - Vidya_Bharati (dor:Vidya_Bharati) --doo:region--> India (dor:India)
+  '3':
+    attributes:
+      Ramakrishna_Sarada_Mission_Sister_Nivedita_Girls'_School: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Coord', address^='5, Nivedita Lane')
+    relationships:
+      - Aerial_Bay_Islands (dor:Aerial_Bay_Islands) --doo:country--> India (dor:India)
+      - Ramakrishna_Sarada_Mission_Sister_Nivedita_Girls'_School (<http://dbpedia.org/resource/Ramakrishna_Sarada_Mission_Sister_Nivedita_Girls'_School>) --doo:region--> India (dor:India)
+  '4':
+    attributes:
+      International_School_of_Berne: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Citation_needed', address^='')
+    relationships:
+      - Brissago_Islands (dor:Brissago_Islands) --doo:country--> Switzerland (dor:Switzerland)
+      - International_School_of_Berne (dor:International_School_of_Berne) --doo:region--> Switzerland (dor:Switzerland)
+  '5':
+    attributes:
+      International_School_of_Berne: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Citation_needed', address^='')
+    relationships:
+      - Chaviolas (dor:Chaviolas) --doo:country--> Switzerland (dor:Switzerland)
+      - International_School_of_Berne (dor:International_School_of_Berne) --doo:region--> Switzerland (dor:Switzerland)
+  '6':
+    attributes:
+      Anderson_Secondary_School: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', address^='')
+    relationships:
+      - Coney_Island,_Singapore (<http://dbpedia.org/resource/Coney_Island,_Singapore>) --doo:country--> Singapore (dor:Singapore)
+      - Anderson_Secondary_School (dor:Anderson_Secondary_School) --doo:region--> Singapore (dor:Singapore)
+  '7':
+    attributes:
+      Bukit_Panjang_Government_High_School: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', address^='')
+    relationships:
+      - Coney_Island,_Singapore (<http://dbpedia.org/resource/Coney_Island,_Singapore>) --doo:country--> Singapore (dor:Singapore)
+      - Bukit_Panjang_Government_High_School (dor:Bukit_Panjang_Government_High_School) --doo:region--> Singapore (dor:Singapore)
+  '8':
+    attributes:
+      Eunoia_Junior_College: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Color_box')
+    relationships:
+      - Coney_Island,_Singapore (<http://dbpedia.org/resource/Coney_Island,_Singapore>) --doo:country--> Singapore (dor:Singapore)
+      - Eunoia_Junior_College (dor:Eunoia_Junior_College) --doo:region--> Singapore (dor:Singapore)
+  '9':
+    attributes:
+      International_School_of_Berne: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Citation_needed', address^='')
+    relationships:
+      - Entlibühl (<http://dbpedia.org/resource/Entlibühl>) --doo:country--> Switzerland (dor:Switzerland)
+      - International_School_of_Berne (dor:International_School_of_Berne) --doo:region--> Switzerland (dor:Switzerland)
+attributes:
+  island: --Apr record high C^ (dop:aprRecordHighC)--> double | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double
+  school: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --address^ (doo:address)--> langString
+  Location: --founding year^ (doo:foundingYear)--> gYear | --number of wineries^ (doo:numberOfWineries)--> int | --built^ (dop:built)--> langString | --subdivision^ (doo:subdivision)--> Resource | --original name^ (doo:originalName)--> langString | --line^ (dop:line)--> int
+subgraph_id: 32
+relationships:
+  - island --doo:country--> Location
+  - school --doo:region--> Location

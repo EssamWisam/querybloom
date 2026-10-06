@@ -1,0 +1,91 @@
+types:
+  city: doo:City
+  ship: doo:Ship
+  city district: doo:CityDistrict
+  musical artist: doo:MusicalArtist
+  wrestling event: doo:WrestlingEvent
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      California: (url^='https://web.archive.org/web/20201013171441/https:/waterandpower.org/museum/Early_City_Views%20%281800s%29_Page_1.html', Link from a Wikipage to an external page^='http://data.ca.gov/')
+      San_Pedro,_Los_Angeles: (area code^='310/424')
+    relationships:
+      - Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>) --doo:subdivision--> California (dor:California)
+      - San_Pedro,_Los_Angeles (<http://dbpedia.org/resource/San_Pedro,_Los_Angeles>) --doo:subdivision--> California (dor:California)
+      - Royal_Rumble_(1999) (<http://dbpedia.org/resource/Royal_Rumble_(1999)>) --doo:location--> Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>)
+      - Brenton_Wood (dor:Brenton_Wood) --doo:hometown--> San_Pedro,_Los_Angeles (<http://dbpedia.org/resource/San_Pedro,_Los_Angeles>)
+      - SS_Irish_Oak_(1919) (<http://dbpedia.org/resource/SS_Irish_Oak_(1919)>) --doo:builder--> San_Pedro,_Los_Angeles (<http://dbpedia.org/resource/San_Pedro,_Los_Angeles>)
+  '2':
+    attributes:
+      California: (url^='https://web.archive.org/web/20201013171441/https:/waterandpower.org/museum/Early_City_Views%20%281800s%29_Page_1.html', Link from a Wikipage to an external page^='http://data.ca.gov/')
+      San_Pedro,_Los_Angeles: (area code^='310/424')
+    relationships:
+      - Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>) --doo:subdivision--> California (dor:California)
+      - San_Pedro,_Los_Angeles (<http://dbpedia.org/resource/San_Pedro,_Los_Angeles>) --doo:subdivision--> California (dor:California)
+      - WrestleMania_2000 (dor:WrestleMania_2000) --doo:location--> Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>)
+      - Brenton_Wood (dor:Brenton_Wood) --doo:hometown--> San_Pedro,_Los_Angeles (<http://dbpedia.org/resource/San_Pedro,_Los_Angeles>)
+      - SS_Irish_Oak_(1919) (<http://dbpedia.org/resource/SS_Irish_Oak_(1919)>) --doo:builder--> San_Pedro,_Los_Angeles (<http://dbpedia.org/resource/San_Pedro,_Los_Angeles>)
+  '3':
+    attributes:
+      California: (url^='https://web.archive.org/web/20201013171441/https:/waterandpower.org/museum/Early_City_Views%20%281800s%29_Page_1.html', Link from a Wikipage to an external page^='http://data.ca.gov/')
+      San_Pedro,_Los_Angeles: (area code^='310/424')
+    relationships:
+      - Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>) --doo:subdivision--> California (dor:California)
+      - San_Pedro,_Los_Angeles (<http://dbpedia.org/resource/San_Pedro,_Los_Angeles>) --doo:subdivision--> California (dor:California)
+      - WrestleMania_XII (dor:WrestleMania_XII) --doo:location--> Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>)
+      - Brenton_Wood (dor:Brenton_Wood) --doo:hometown--> San_Pedro,_Los_Angeles (<http://dbpedia.org/resource/San_Pedro,_Los_Angeles>)
+      - SS_Irish_Oak_(1919) (<http://dbpedia.org/resource/SS_Irish_Oak_(1919)>) --doo:builder--> San_Pedro,_Los_Angeles (<http://dbpedia.org/resource/San_Pedro,_Los_Angeles>)
+  '4':
+    attributes:
+      4th_Disciple: (associated acts^='Wu-Elements')
+      Staten_Island: (area code^='718/347/929,917')
+      New_York_(state): (Link from a Wikipage to an external page^='https://archive.org/details/bub_gb_R_zHwh4xByQC')
+      Binghamton,_New_York: (Apr precipitation inch^='3.63')
+    relationships:
+      - Binghamton,_New_York (<http://dbpedia.org/resource/Binghamton,_New_York>) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Staten_Island (dor:Staten_Island) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Impact_One_Night_Only_(2018)__Night_of_the_Dummies__1 (<http://dbpedia.org/resource/Impact_One_Night_Only_(2018)__Night_of_the_Dummies__1>) --doo:location--> Binghamton,_New_York (<http://dbpedia.org/resource/Binghamton,_New_York>)
+      - 4th_Disciple (dor:4th_Disciple) --doo:hometown--> Staten_Island (dor:Staten_Island)
+      - Bouker_No._2 (dor:Bouker_No._2) --doo:builder--> Staten_Island (dor:Staten_Island)
+  '5':
+    attributes:
+      4th_Disciple: (associated acts^='Wu-Elements')
+      Staten_Island: (area code^='718/347/929,917')
+      New_York_(state): (Link from a Wikipage to an external page^='https://archive.org/details/bub_gb_R_zHwh4xByQC')
+      Binghamton,_New_York: (Apr precipitation inch^='3.63')
+    relationships:
+      - Binghamton,_New_York (<http://dbpedia.org/resource/Binghamton,_New_York>) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Staten_Island (dor:Staten_Island) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Impact_One_Night_Only_(2018)__Night_of_the_Dummies__1 (<http://dbpedia.org/resource/Impact_One_Night_Only_(2018)__Night_of_the_Dummies__1>) --doo:location--> Binghamton,_New_York (<http://dbpedia.org/resource/Binghamton,_New_York>)
+      - 4th_Disciple (dor:4th_Disciple) --doo:hometown--> Staten_Island (dor:Staten_Island)
+      - USAV_Vulcan_(FMS-789) (<http://dbpedia.org/resource/USAV_Vulcan_(FMS-789)>) --doo:builder--> Staten_Island (dor:Staten_Island)
+  '6':
+    attributes:
+      4th_Disciple: (associated acts^='Wu-Elements')
+      Staten_Island: (area code^='718/347/929,917')
+      New_York_(state): (Link from a Wikipage to an external page^='https://archive.org/details/bub_gb_R_zHwh4xByQC')
+      Binghamton,_New_York: (Apr precipitation inch^='3.63')
+    relationships:
+      - Binghamton,_New_York (<http://dbpedia.org/resource/Binghamton,_New_York>) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Staten_Island (dor:Staten_Island) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Impact_One_Night_Only_(2018)__Night_of_the_Dummies__1 (<http://dbpedia.org/resource/Impact_One_Night_Only_(2018)__Night_of_the_Dummies__1>) --doo:location--> Binghamton,_New_York (<http://dbpedia.org/resource/Binghamton,_New_York>)
+      - 4th_Disciple (dor:4th_Disciple) --doo:hometown--> Staten_Island (dor:Staten_Island)
+      - USS_Benham_(DD-796) (<http://dbpedia.org/resource/USS_Benham_(DD-796)>) --doo:builder--> Staten_Island (dor:Staten_Island)
+attributes:
+  city: --wordnet_type (dop:wordnet_type)--> Resource | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --Aug high C^ (dop:augHighC)--> int
+  city district: --area code^ (doo:areaCode)--> string
+  musical artist: --group^ (dop:group)--> langString | --after^ (dop:after)--> langString | --current member of^ (dop:currentMemberOf)--> langString | --associated acts^ (dop:associatedActs)--> langString
+  administrative region: --url^ (dop:url)--> Resource | --original name^ (doo:originalName)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> int
+subgraph_id: 724
+relationships:
+  - city --doo:subdivision--> administrative region
+  - city district --doo:subdivision--> administrative region
+  - wrestling event --doo:location--> city
+  - musical artist --doo:hometown--> city district
+  - ship --doo:builder--> city district

@@ -1,0 +1,48 @@
+types:
+  river: doo:River
+  Location: doo:Location
+  building: doo:Building
+  settlement: doo:Settlement
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Bohdan_Nedilsky: (subject='http://dbpedia.org/resource/Category:1967_births')
+    relationships:
+      - Bubbly_Creek (dor:Bubbly_Creek) --doo:mouthMountain--> Chicago (dor:Chicago)
+      - Bubbly_Creek (dor:Bubbly_Creek) --doo:mouthPlace--> Chicago (dor:Chicago)
+      - Chapin_and_Gore_Building (dor:Chapin_and_Gore_Building) --doo:architecturalStyle--> Chicago (dor:Chicago)
+      - Bohdan_Nedilsky (dor:Bohdan_Nedilsky) --doo:birthPlace--> Chicago (dor:Chicago)
+  '2':
+    attributes:
+      Janine_Szpara: (subject='http://dbpedia.org/resource/Category:1967_births')
+    relationships:
+      - Bubbly_Creek (dor:Bubbly_Creek) --doo:mouthMountain--> Chicago (dor:Chicago)
+      - Bubbly_Creek (dor:Bubbly_Creek) --doo:mouthPlace--> Chicago (dor:Chicago)
+      - Chapin_and_Gore_Building (dor:Chapin_and_Gore_Building) --doo:architecturalStyle--> Chicago (dor:Chicago)
+      - Janine_Szpara (dor:Janine_Szpara) --doo:birthPlace--> Chicago (dor:Chicago)
+  '3':
+    attributes:
+      Jim_Crawford_(footballer): (subject='http://dbpedia.org/resource/Category:1973_births')
+    relationships:
+      - Bubbly_Creek (dor:Bubbly_Creek) --doo:mouthMountain--> Chicago (dor:Chicago)
+      - Bubbly_Creek (dor:Bubbly_Creek) --doo:mouthPlace--> Chicago (dor:Chicago)
+      - Chapin_and_Gore_Building (dor:Chapin_and_Gore_Building) --doo:architecturalStyle--> Chicago (dor:Chicago)
+      - Jim_Crawford_(footballer) (<http://dbpedia.org/resource/Jim_Crawford_(footballer)>) --doo:birthPlace--> Chicago (dor:Chicago)
+attributes:
+  river: --accessdate^ (dop:accessdate)--> date
+  Location: --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --class^ (dop:class)--> langString | --arcAnglea (dop:arcAnglea)--> int | --area^ (dop:area)--> hectare | --architectural style^ (doo:architecturalStyle)--> Resource | --Apr low C^ (dop:aprLowC)--> double | --group^ (dop:group)--> Resource | --nickname^ (dop:nickname)--> langString | --eponym^ (dop:eponym)--> langString
+  settlement: --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double
+  soccer manager: --currentclub^ (dop:currentclub)--> langString | --subject (podt:subject)--> Resource
+subgraph_id: 870
+relationships:
+  - Location --doo:mouthMountain--> settlement
+  - river --doo:mouthPlace--> settlement
+  - building --doo:architecturalStyle--> settlement
+  - soccer manager --doo:birthPlace--> settlement

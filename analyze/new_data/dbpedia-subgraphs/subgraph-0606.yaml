@@ -1,0 +1,107 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  mountain: doo:Mountain
+  Grand Prix: doo:GrandPrix
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Surrey: (page length (characters) of wiki page^='109090')
+      England: (Link from a Wikipage to an external page^='http://www.english-heritage.org.uk/')
+      Botley_Hill: (located in area^='http://dbpedia.org/resource/England')
+    relationships:
+      - 1926_British_Grand_Prix (dor:1926_British_Grand_Prix) --dop:location--> Surrey (dor:Surrey)
+      - Botley_Hill (dor:Botley_Hill) --doo:locatedInArea--> Surrey (dor:Surrey)
+      - 1926_British_Grand_Prix (dor:1926_British_Grand_Prix) --dop:location--> England (dor:England)
+  '2':
+    attributes:
+      Surrey: (page length (characters) of wiki page^='109090')
+      England: (Link from a Wikipage to an external page^='http://www.english-heritage.org.uk/')
+      Leith_Hill: (located in area^='http://dbpedia.org/resource/Surrey')
+    relationships:
+      - 1926_British_Grand_Prix (dor:1926_British_Grand_Prix) --dop:location--> Surrey (dor:Surrey)
+      - Leith_Hill (dor:Leith_Hill) --doo:locatedInArea--> Surrey (dor:Surrey)
+      - 1926_British_Grand_Prix (dor:1926_British_Grand_Prix) --dop:location--> England (dor:England)
+  '3':
+    attributes:
+      Surrey: (page length (characters) of wiki page^='109090')
+      England: (Link from a Wikipage to an external page^='http://www.english-heritage.org.uk/')
+      Botley_Hill: (located in area^='http://dbpedia.org/resource/England')
+    relationships:
+      - 1927_British_Grand_Prix (dor:1927_British_Grand_Prix) --dop:location--> Surrey (dor:Surrey)
+      - Botley_Hill (dor:Botley_Hill) --doo:locatedInArea--> Surrey (dor:Surrey)
+      - 1927_British_Grand_Prix (dor:1927_British_Grand_Prix) --dop:location--> England (dor:England)
+  '4':
+    attributes:
+      Rome: (Link from a Wikipage to an external page^='http://en.museicapitolini.org/')
+      Italy: (page length (characters) of wiki page^='375798')
+      Agglsspitze: (located in area^='http://dbpedia.org/resource/Italy')
+    relationships:
+      - 1927_Rome_Grand_Prix (dor:1927_Rome_Grand_Prix) --dop:location--> Italy (dor:Italy)
+      - Agglsspitze (dor:Agglsspitze) --doo:locatedInArea--> Italy (dor:Italy)
+      - 1927_Rome_Grand_Prix (dor:1927_Rome_Grand_Prix) --dop:location--> Rome (dor:Rome)
+  '5':
+    attributes:
+      Rome: (Link from a Wikipage to an external page^='http://en.museicapitolini.org/')
+      Italy: (page length (characters) of wiki page^='375798')
+      Aiguille_Blanche_de_Peuterey: (located in area^='http://dbpedia.org/resource/Aosta_Valley')
+    relationships:
+      - 1927_Rome_Grand_Prix (dor:1927_Rome_Grand_Prix) --dop:location--> Italy (dor:Italy)
+      - Aiguille_Blanche_de_Peuterey (dor:Aiguille_Blanche_de_Peuterey) --doo:locatedInArea--> Italy (dor:Italy)
+      - 1927_Rome_Grand_Prix (dor:1927_Rome_Grand_Prix) --dop:location--> Rome (dor:Rome)
+  '6':
+    attributes:
+      Rome: (Link from a Wikipage to an external page^='http://en.museicapitolini.org/')
+      Italy: (page length (characters) of wiki page^='375798')
+      Aiguille_de_Bionnassay: (located in area^='http://dbpedia.org/resource/Aosta_Valley')
+    relationships:
+      - 1927_Rome_Grand_Prix (dor:1927_Rome_Grand_Prix) --dop:location--> Italy (dor:Italy)
+      - Aiguille_de_Bionnassay (dor:Aiguille_de_Bionnassay) --doo:locatedInArea--> Italy (dor:Italy)
+      - 1927_Rome_Grand_Prix (dor:1927_Rome_Grand_Prix) --dop:location--> Rome (dor:Rome)
+  '7':
+    attributes:
+      Victoria_(Australia): (page length (characters) of wiki page^='120422')
+      Brown_Mountain_forest: (located in area^='http://dbpedia.org/resource/Australia')
+    relationships:
+      - 1928_Australian_Grand_Prix (dor:1928_Australian_Grand_Prix) --dop:location--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Brown_Mountain_forest (dor:Brown_Mountain_forest) --doo:locatedInArea--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - 1928_Australian_Grand_Prix (dor:1928_Australian_Grand_Prix) --dop:location--> Phillip_Island_(Victoria) (<http://dbpedia.org/resource/Phillip_Island_(Victoria)>)
+  '8':
+    attributes:
+      Budj_Bim: (located in area^='http://dbpedia.org/resource/Australia')
+      Victoria_(Australia): (page length (characters) of wiki page^='120422')
+    relationships:
+      - 1928_Australian_Grand_Prix (dor:1928_Australian_Grand_Prix) --dop:location--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Budj_Bim (dor:Budj_Bim) --doo:locatedInArea--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - 1928_Australian_Grand_Prix (dor:1928_Australian_Grand_Prix) --dop:location--> Phillip_Island_(Victoria) (<http://dbpedia.org/resource/Phillip_Island_(Victoria)>)
+  '9':
+    attributes:
+      Doncaster_Hill: (located in area^='http://dbpedia.org/resource/Australia')
+      Victoria_(Australia): (page length (characters) of wiki page^='120422')
+    relationships:
+      - 1928_Australian_Grand_Prix (dor:1928_Australian_Grand_Prix) --dop:location--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Doncaster_Hill (dor:Doncaster_Hill) --doo:locatedInArea--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - 1928_Australian_Grand_Prix (dor:1928_Australian_Grand_Prix) --dop:location--> Phillip_Island_(Victoria) (<http://dbpedia.org/resource/Phillip_Island_(Victoria)>)
+  '10':
+    attributes:
+      Rome: (page length (characters) of wiki page^='198718')
+      Italy: (Link from a Wikipage to an external page^='http://eudocs.lib.byu.edu/index.php/History_of_Italy:_Primary_Documents')
+      Monte_Cavo: (located in area^='http://dbpedia.org/resource/Italy')
+    relationships:
+      - 1930_Rome_Grand_Prix (dor:1930_Rome_Grand_Prix) --dop:location--> Rome (dor:Rome)
+      - Monte_Cavo (dor:Monte_Cavo) --doo:locatedInArea--> Rome (dor:Rome)
+      - 1930_Rome_Grand_Prix (dor:1930_Rome_Grand_Prix) --dop:location--> Italy (dor:Italy)
+attributes:
+  country: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  Location: --Apr record low F^ (dop:aprRecordLowF)--> int | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --opened^ (dop:opened)--> int | --designated other1 color^ (dop:designatedOther1Color)--> langString | --country^ (dop:country)--> langString | --motto^ (doo:motto)--> string | --architect^ (doo:architect)--> Resource | --accessdate^ (dop:accessdate)--> date
+  mountain: --located in area^ (doo:locatedInArea)--> Resource | --Apr low C^ (dop:aprLowC)--> double
+subgraph_id: 606
+relationships:
+  - Grand Prix --dop:location--> Location
+  - mountain --doo:locatedInArea--> Location
+  - Grand Prix --dop:location--> country

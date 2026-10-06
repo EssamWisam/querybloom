@@ -1,0 +1,103 @@
+types:
+  town: doo:Town
+  village: doo:Village
+  musical artist: doo:MusicalArtist
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Adam_Michna_z_Otradovic: (has abstract^='Adam Michna (Jindřichův Hradec, c. 1600 - Jindřichův Hradec, 2 de novembre de 1676) va ser un organista txec i compositor de música d''església.')
+      Březina_(Jindřichův_Hradec_District): (area total (km2)^='9.52')
+    relationships:
+      - Jindřichův_Hradec (<http://dbpedia.org/resource/Jindřichův_Hradec>) --doo:subdivision--> Jindřichův_Hradec_District (<http://dbpedia.org/resource/Jindřichův_Hradec_District>)
+      - Adam_Michna_z_Otradovic (dor:Adam_Michna_z_Otradovic) --doo:hometown--> Jindřichův_Hradec (<http://dbpedia.org/resource/Jindřichův_Hradec>)
+      - Březina_(Jindřichův_Hradec_District) (<http://dbpedia.org/resource/Březina_(Jindřichův_Hradec_District)>) --doo:subdivision--> Jindřichův_Hradec (<http://dbpedia.org/resource/Jindřichův_Hradec>)
+  '2':
+    attributes:
+      Adam_Michna_z_Otradovic: (has abstract^='Adam Michna (Jindřichův Hradec, c. 1600 - Jindřichův Hradec, 2 de novembre de 1676) va ser un organista txec i compositor de música d''església.')
+      Březina_(Jindřichův_Hradec_District): (area total (km2)^='9.52')
+    relationships:
+      - Jindřichův_Hradec (<http://dbpedia.org/resource/Jindřichův_Hradec>) --doo:subdivision--> South_Bohemian_Region (dor:South_Bohemian_Region)
+      - Adam_Michna_z_Otradovic (dor:Adam_Michna_z_Otradovic) --doo:hometown--> Jindřichův_Hradec (<http://dbpedia.org/resource/Jindřichův_Hradec>)
+      - Březina_(Jindřichův_Hradec_District) (<http://dbpedia.org/resource/Březina_(Jindřichův_Hradec_District)>) --doo:subdivision--> Jindřichův_Hradec (<http://dbpedia.org/resource/Jindřichův_Hradec>)
+  '3':
+    attributes:
+      Bentveld: (area total (km2)^='0.78')
+      Alan_Michael_(musician): (has abstract^='Alen J. Matkoviç (Rijeka, Joegoslavië), 20 juli 1970, bekend als Alan Michael, is een voormalig Nederlands-Pools zanger, songwriter en producer. In 1987 kreeg hij in Polen en Nederland bekendheid door...')
+    relationships:
+      - Zandvoort (dor:Zandvoort) --doo:subdivision--> North_Holland (dor:North_Holland)
+      - Alan_Michael_(musician) (<http://dbpedia.org/resource/Alan_Michael_(musician)>) --doo:hometown--> Zandvoort (dor:Zandvoort)
+      - Bentveld (dor:Bentveld) --doo:subdivision--> Zandvoort (dor:Zandvoort)
+  '4':
+    attributes:
+      Allan_Eshuijs: (has abstract^='Allan Eshuijs (born 31 May 1976, Zaanstad) is a Dutch songwriter, producer and vocalist. He started his songwriting career writing mainly for Dutch and German artists, including Cascada, Yvonne Catter...')
+      Koog_aan_de_Zaan: (area total (km2)^='3.18')
+    relationships:
+      - Zaanstad (dor:Zaanstad) --doo:subdivision--> North_Holland (dor:North_Holland)
+      - Allan_Eshuijs (dor:Allan_Eshuijs) --doo:hometown--> Zaanstad (dor:Zaanstad)
+      - Koog_aan_de_Zaan (dor:Koog_aan_de_Zaan) --doo:subdivision--> Zaanstad (dor:Zaanstad)
+  '5':
+    attributes:
+      Allan_Eshuijs: (has abstract^='Allan Eshuijs (born 31 May 1976, Zaanstad) is a Dutch songwriter, producer and vocalist. He started his songwriting career writing mainly for Dutch and German artists, including Cascada, Yvonne Catter...')
+      Westknollendam: (area total (km2)^='0.35')
+    relationships:
+      - Zaanstad (dor:Zaanstad) --doo:subdivision--> North_Holland (dor:North_Holland)
+      - Allan_Eshuijs (dor:Allan_Eshuijs) --doo:hometown--> Zaanstad (dor:Zaanstad)
+      - Westknollendam (dor:Westknollendam) --doo:subdivision--> Zaanstad (dor:Zaanstad)
+  '6':
+    attributes:
+      Colorado: (url^='https://web.archive.org/web/20160407210955/http:/www.wrcc.dri.edu/narratives/COLORADO.htm')
+      Colorado_Springs,_Colorado: (Apr precipitation days^='8.2')
+      Altars_(American_metal_band): (current members^='Ben Reno', has abstract^='Altars are an American Christian metalcore band from Colorado Springs, Colorado. The band started making music in 2010, with members, lead vocalist, Canaan Smith, guitarists, Seth Munson and Brock Wil...')
+    relationships:
+      - Colorado_Springs,_Colorado (<http://dbpedia.org/resource/Colorado_Springs,_Colorado>) --doo:subdivision--> Colorado (dor:Colorado)
+      - Altars_(American_metal_band) (<http://dbpedia.org/resource/Altars_(American_metal_band)>) --doo:hometown--> Colorado_Springs,_Colorado (<http://dbpedia.org/resource/Colorado_Springs,_Colorado>)
+      - Old_Colorado_City (dor:Old_Colorado_City) --doo:subdivision--> Colorado_Springs,_Colorado (<http://dbpedia.org/resource/Colorado_Springs,_Colorado>)
+  '7':
+    attributes:
+      Colorado_Springs,_Colorado: (Apr precipitation days^='8.2')
+      Altars_(American_metal_band): (current members^='Ben Reno', has abstract^='Altars are an American Christian metalcore band from Colorado Springs, Colorado. The band started making music in 2010, with members, lead vocalist, Canaan Smith, guitarists, Seth Munson and Brock Wil...')
+    relationships:
+      - Colorado_Springs,_Colorado (<http://dbpedia.org/resource/Colorado_Springs,_Colorado>) --doo:subdivision--> El_Paso_County,_Colorado (<http://dbpedia.org/resource/El_Paso_County,_Colorado>)
+      - Altars_(American_metal_band) (<http://dbpedia.org/resource/Altars_(American_metal_band)>) --doo:hometown--> Colorado_Springs,_Colorado (<http://dbpedia.org/resource/Colorado_Springs,_Colorado>)
+      - Old_Colorado_City (dor:Old_Colorado_City) --doo:subdivision--> Colorado_Springs,_Colorado (<http://dbpedia.org/resource/Colorado_Springs,_Colorado>)
+  '8':
+    attributes:
+      Amen_(musician): (has abstract^='Amen, né Jussi Sydänmaa le 26 juin 1972 à Mäntsälä en Finlande. Il est le guitariste de Lordi depuis la fondation du groupe.')
+      Mäntsälä_(village): (area total (km2)^='17.69')
+    relationships:
+      - Mäntsälä (<http://dbpedia.org/resource/Mäntsälä>) --doo:subdivision--> Uusimaa (dor:Uusimaa)
+      - Amen_(musician) (<http://dbpedia.org/resource/Amen_(musician)>) --doo:hometown--> Mäntsälä (<http://dbpedia.org/resource/Mäntsälä>)
+      - Mäntsälä_(village) (<http://dbpedia.org/resource/Mäntsälä_(village)>) --doo:subdivision--> Mäntsälä (<http://dbpedia.org/resource/Mäntsälä>)
+  '9':
+    attributes:
+      Amen_(musician): (has abstract^='Amen, né Jussi Sydänmaa le 26 juin 1972 à Mäntsälä en Finlande. Il est le guitariste de Lordi depuis la fondation du groupe.')
+      Numminen,_Mäntsälä: (area total (km2)^='4.02')
+    relationships:
+      - Mäntsälä (<http://dbpedia.org/resource/Mäntsälä>) --doo:subdivision--> Uusimaa (dor:Uusimaa)
+      - Amen_(musician) (<http://dbpedia.org/resource/Amen_(musician)>) --doo:hometown--> Mäntsälä (<http://dbpedia.org/resource/Mäntsälä>)
+      - Numminen,_Mäntsälä (<http://dbpedia.org/resource/Numminen,_Mäntsälä>) --doo:subdivision--> Mäntsälä (<http://dbpedia.org/resource/Mäntsälä>)
+  '10':
+    attributes:
+      Sälinkää: (area total (km2)^='1.62')
+      Amen_(musician): (has abstract^='Amen, né Jussi Sydänmaa le 26 juin 1972 à Mäntsälä en Finlande. Il est le guitariste de Lordi depuis la fondation du groupe.')
+    relationships:
+      - Mäntsälä (<http://dbpedia.org/resource/Mäntsälä>) --doo:subdivision--> Uusimaa (dor:Uusimaa)
+      - Amen_(musician) (<http://dbpedia.org/resource/Amen_(musician)>) --doo:hometown--> Mäntsälä (<http://dbpedia.org/resource/Mäntsälä>)
+      - Sälinkää (<http://dbpedia.org/resource/Sälinkää>) --doo:subdivision--> Mäntsälä (<http://dbpedia.org/resource/Mäntsälä>)
+attributes:
+  town: --Apr precipitation days^ (dop:aprPrecipitationDays)--> double
+  village: --source^ (dop:source)--> Resource | --area total (km2)^ (doop:areaTotal)--> squareKilometre
+  musical artist: --current member of^ (dop:currentMemberOf)--> langString | --current members^ (dop:currentMembers)--> langString | --has abstract^ (doo:abstract)--> langString
+  administrative region: --url^ (dop:url)--> Resource | --abolished^ (dop:abolished)--> date | --Aug precipitation days^ (dop:augPrecipitationDays)--> double
+subgraph_id: 814
+relationships:
+  - town --doo:subdivision--> administrative region
+  - musical artist --doo:hometown--> town
+  - village --doo:subdivision--> town

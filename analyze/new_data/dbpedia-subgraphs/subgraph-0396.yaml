@@ -1,0 +1,94 @@
+types:
+  tenure: doo:Tenure
+  office holder: doo:OfficeHolder
+  political party: doo:PoliticalParty
+  political function: doo:PoliticalFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Renan_Calheiros: (title^='http://dbpedia.org/resource/Ministry_of_Justice_(Brazil)')
+    relationships:
+      - Alagoas__PoliticalFunction__3 (dor:Alagoas__PoliticalFunction__3) --doo:politician--> Renan_Calheiros (dor:Renan_Calheiros)
+      - Alagoas__PoliticalFunction__3 (dor:Alagoas__PoliticalFunction__3) --doo:politician--> Brazil_Union (dor:Brazil_Union)
+      - José_de_Jesus_Filho__Tenure__1 (<http://dbpedia.org/resource/José_de_Jesus_Filho__Tenure__1>) --doo:successor--> Renan_Calheiros (dor:Renan_Calheiros)
+  '2':
+    attributes:
+      Renan_Calheiros: (title^='http://dbpedia.org/resource/Ministry_of_Justice_(Brazil)')
+    relationships:
+      - Alagoas__PoliticalFunction__3 (dor:Alagoas__PoliticalFunction__3) --doo:politician--> Renan_Calheiros (dor:Renan_Calheiros)
+      - Alagoas__PoliticalFunction__3 (dor:Alagoas__PoliticalFunction__3) --doo:politician--> Brazil_Union (dor:Brazil_Union)
+      - José_Sarney__Tenure__3 (<http://dbpedia.org/resource/José_Sarney__Tenure__3>) --doo:successor--> Renan_Calheiros (dor:Renan_Calheiros)
+  '3':
+    attributes:
+      Renan_Calheiros: (title^='http://dbpedia.org/resource/Ministry_of_Justice_(Brazil)')
+    relationships:
+      - Alagoas__PoliticalFunction__3 (dor:Alagoas__PoliticalFunction__3) --doo:politician--> Renan_Calheiros (dor:Renan_Calheiros)
+      - Alagoas__PoliticalFunction__3 (dor:Alagoas__PoliticalFunction__3) --doo:politician--> Brazil_Union (dor:Brazil_Union)
+      - José_Sarney__Tenure__4 (<http://dbpedia.org/resource/José_Sarney__Tenure__4>) --doo:successor--> Renan_Calheiros (dor:Renan_Calheiros)
+  '4':
+    attributes:
+      Omar_Aziz: (title^='http://dbpedia.org/resource/List_of_Governors_of_Amazonas')
+    relationships:
+      - Amazonas_(Brazilian_state)__PoliticalFunction__3 (<http://dbpedia.org/resource/Amazonas_(Brazilian_state)__PoliticalFunction__3>) --doo:politician--> Omar_Aziz (dor:Omar_Aziz)
+      - Amazonas_(Brazilian_state)__PoliticalFunction__3 (<http://dbpedia.org/resource/Amazonas_(Brazilian_state)__PoliticalFunction__3>) --doo:politician--> Brazilian_Social_Democracy_Party (dor:Brazilian_Social_Democracy_Party)
+      - Eduardo_Braga__Tenure__4 (dor:Eduardo_Braga__Tenure__4) --doo:successor--> Omar_Aziz (dor:Omar_Aziz)
+  '5':
+    attributes:
+      Plaid_Cymru: (headquarter^='http://dbpedia.org/resource/Cardiff')
+      Rhun_ap_Iorwerth: (title^='Member of the Senedd for Ynys Môn', honorific suffix^='http://dbpedia.org/resource/Member_of_the_Senedd')
+    relationships:
+      - Anglesey__PoliticalFunction__3 (dor:Anglesey__PoliticalFunction__3) --doo:politician--> Rhun_ap_Iorwerth (dor:Rhun_ap_Iorwerth)
+      - Anglesey__PoliticalFunction__3 (dor:Anglesey__PoliticalFunction__3) --doo:politician--> Plaid_Cymru (dor:Plaid_Cymru)
+      - Ieuan_Wyn_Jones__Tenure__3 (dor:Ieuan_Wyn_Jones__Tenure__3) --doo:successor--> Rhun_ap_Iorwerth (dor:Rhun_ap_Iorwerth)
+  '6':
+    attributes:
+      Stewart_Hosie: (title^='Depute Leader of the Scottish National Party', honorific suffix^='http://dbpedia.org/resource/Member_of_Parliament_(United_Kingdom)')
+      Scottish_National_Party: (headquarter^='http://dbpedia.org/resource/Edinburgh')
+    relationships:
+      - Angus,_Scotland__PoliticalFunction__2 (<http://dbpedia.org/resource/Angus,_Scotland__PoliticalFunction__2>) --doo:politician--> Stewart_Hosie (dor:Stewart_Hosie)
+      - Angus,_Scotland__PoliticalFunction__2 (<http://dbpedia.org/resource/Angus,_Scotland__PoliticalFunction__2>) --doo:politician--> Scottish_National_Party (dor:Scottish_National_Party)
+      - Iain_Luke__Tenure__1 (dor:Iain_Luke__Tenure__1) --doo:successor--> Stewart_Hosie (dor:Stewart_Hosie)
+  '7':
+    attributes:
+      Stewart_Hosie: (title^='Depute Leader of the Scottish National Party', honorific suffix^='http://dbpedia.org/resource/Member_of_Parliament_(United_Kingdom)')
+      Scottish_National_Party: (headquarter^='http://dbpedia.org/resource/Edinburgh')
+    relationships:
+      - Angus,_Scotland__PoliticalFunction__2 (<http://dbpedia.org/resource/Angus,_Scotland__PoliticalFunction__2>) --doo:politician--> Stewart_Hosie (dor:Stewart_Hosie)
+      - Angus,_Scotland__PoliticalFunction__2 (<http://dbpedia.org/resource/Angus,_Scotland__PoliticalFunction__2>) --doo:politician--> Scottish_National_Party (dor:Scottish_National_Party)
+      - Nicola_Sturgeon__Tenure__4 (dor:Nicola_Sturgeon__Tenure__4) --doo:successor--> Stewart_Hosie (dor:Stewart_Hosie)
+  '8':
+    attributes:
+      Scottish_National_Party: (headquarter^='http://dbpedia.org/resource/Edinburgh')
+    relationships:
+      - Angus,_Scotland__PoliticalFunction__3 (<http://dbpedia.org/resource/Angus,_Scotland__PoliticalFunction__3>) --doo:politician--> Mairi_Evans (dor:Mairi_Evans)
+      - Angus,_Scotland__PoliticalFunction__3 (<http://dbpedia.org/resource/Angus,_Scotland__PoliticalFunction__3>) --doo:politician--> Scottish_National_Party (dor:Scottish_National_Party)
+      - Nigel_Don__Tenure__2 (dor:Nigel_Don__Tenure__2) --doo:successor--> Mairi_Evans (dor:Mairi_Evans)
+  '9':
+    attributes:
+      Roberto_Puno: (title^='from Antipolo''s 1st district', birthName='Roberto Villanueva Puno')
+      National_Unity_Party_(Philippines): (headquarter^='http://dbpedia.org/resource/Ayala_Avenue')
+    relationships:
+      - Antipolo__PoliticalFunction__3 (dor:Antipolo__PoliticalFunction__3) --doo:politician--> Roberto_Puno (dor:Roberto_Puno)
+      - Antipolo__PoliticalFunction__3 (dor:Antipolo__PoliticalFunction__3) --doo:politician--> National_Unity_Party_(Philippines) (<http://dbpedia.org/resource/National_Unity_Party_(Philippines)>)
+      - Erin_Tañada__Tenure__1 (<http://dbpedia.org/resource/Erin_Tañada__Tenure__1>) --doo:successor--> Roberto_Puno (dor:Roberto_Puno)
+  '10':
+    attributes:
+      Roberto_Puno: (title^='from Antipolo''s 1st district', birthName='Roberto Villanueva Puno')
+      National_Unity_Party_(Philippines): (headquarter^='http://dbpedia.org/resource/Ayala_Avenue')
+    relationships:
+      - Antipolo__PoliticalFunction__3 (dor:Antipolo__PoliticalFunction__3) --doo:politician--> Roberto_Puno (dor:Roberto_Puno)
+      - Antipolo__PoliticalFunction__3 (dor:Antipolo__PoliticalFunction__3) --doo:politician--> National_Unity_Party_(Philippines) (<http://dbpedia.org/resource/National_Unity_Party_(Philippines)>)
+      - Ronaldo_Puno__Tenure__3 (dor:Ronaldo_Puno__Tenure__3) --doo:successor--> Roberto_Puno (dor:Roberto_Puno)
+attributes:
+  office holder: --height ft^ (dop:heightFt)--> int | --title^ (dop:title)--> langString | --honorific suffix^ (dop:honorificSuffix)--> langString | --birthName (doo:birthName)--> langString | --resting place^ (doo:restingPlace)--> Resource | --lowest attendance^ (dop:lowestAttendance)--> int | --issue^ (dop:issue)--> langString | --death place^ (dop:deathPlace)--> langString
+  political party: --headquarter^ (doo:headquarter)--> Resource
+subgraph_id: 396
+relationships:
+  - political function --doo:politician--> office holder
+  - political function --doo:politician--> political party
+  - tenure --doo:successor--> office holder

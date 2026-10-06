@@ -1,0 +1,84 @@
+types:
+  soccer club: doo:SoccerClub
+  soccer club season: doo:SoccerClubSeason
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  wwors: http://www.w3.org/2000/01/rdf-schema#
+instances:
+  '1':
+    attributes:
+      1888–89_Stoke_F.C._season: (lowest attendance^='1500', highest attendance^='5000', league^='http://dbpedia.org/resource/1888–89_Football_League', ground^='http://dbpedia.org/resource/Victoria_Ground')
+      1888–89_Wolverhampton_Wanderers_F.C._season: (manager title^='', highestAttendance='10000')
+    relationships:
+      - 1888–89_Stoke_F.C._season (<http://dbpedia.org/resource/1888–89_Stoke_F.C._season>) --dop:league--> 1888–89_Football_League (<http://dbpedia.org/resource/1888–89_Football_League>)
+      - 1888–89_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1888–89_Wolverhampton_Wanderers_F.C._season>) --wwors:seeAlso--> 1888–89_Football_League (<http://dbpedia.org/resource/1888–89_Football_League>)
+  '2':
+    attributes:
+      1888–89_West_Bromwich_Albion_F.C._season: (league^='http://dbpedia.org/resource/1888–89_Football_League', ground^='http://dbpedia.org/resource/Stoney_Lane')
+      1888–89_Wolverhampton_Wanderers_F.C._season: (manager title^='', highestAttendance='10000')
+    relationships:
+      - 1888–89_West_Bromwich_Albion_F.C._season (<http://dbpedia.org/resource/1888–89_West_Bromwich_Albion_F.C._season>) --dop:league--> 1888–89_Football_League (<http://dbpedia.org/resource/1888–89_Football_League>)
+      - 1888–89_Wolverhampton_Wanderers_F.C._season (<http://dbpedia.org/resource/1888–89_Wolverhampton_Wanderers_F.C._season>) --wwors:seeAlso--> 1888–89_Football_League (<http://dbpedia.org/resource/1888–89_Football_League>)
+  '3':
+    attributes:
+      1896–97_Newcastle_United_F.C._season: (lowest attendance^='4000', highest attendance^='17000', league^='http://dbpedia.org/resource/1896–97_Football_League', ground^='http://dbpedia.org/resource/St_James''_Park')
+    relationships:
+      - 1896–97_Newcastle_United_F.C._season (<http://dbpedia.org/resource/1896–97_Newcastle_United_F.C._season>) --dop:league--> 1896–97_Football_League (<http://dbpedia.org/resource/1896–97_Football_League>)
+      - 1896–97_Aston_Villa_F.C._season (<http://dbpedia.org/resource/1896–97_Aston_Villa_F.C._season>) --wwors:seeAlso--> 1896–97_Football_League (<http://dbpedia.org/resource/1896–97_Football_League>)
+  '4':
+    attributes:
+      1896–97_Newton_Heath_F.C._season: (lowest attendance^='3000', highest attendance^='18000', league^='http://dbpedia.org/resource/1896–97_Football_League', ground^='http://dbpedia.org/resource/Bank_Street_(football_ground)')
+    relationships:
+      - 1896–97_Newton_Heath_F.C._season (<http://dbpedia.org/resource/1896–97_Newton_Heath_F.C._season>) --dop:league--> 1896–97_Football_League (<http://dbpedia.org/resource/1896–97_Football_League>)
+      - 1896–97_Aston_Villa_F.C._season (<http://dbpedia.org/resource/1896–97_Aston_Villa_F.C._season>) --wwors:seeAlso--> 1896–97_Football_League (<http://dbpedia.org/resource/1896–97_Football_League>)
+  '5':
+    attributes:
+      1896–97_Stoke_F.C._season: (lowest attendance^='2500', highest attendance^='8000', league^='http://dbpedia.org/resource/1896–97_Football_League', ground^='http://dbpedia.org/resource/Victoria_Ground')
+    relationships:
+      - 1896–97_Stoke_F.C._season (<http://dbpedia.org/resource/1896–97_Stoke_F.C._season>) --dop:league--> 1896–97_Football_League (<http://dbpedia.org/resource/1896–97_Football_League>)
+      - 1896–97_Aston_Villa_F.C._season (<http://dbpedia.org/resource/1896–97_Aston_Villa_F.C._season>) --wwors:seeAlso--> 1896–97_Football_League (<http://dbpedia.org/resource/1896–97_Football_League>)
+  '6':
+    attributes:
+      1920–21_Burnley_F.C._season: (highestAttendance='42653')
+      1920–21_Port_Vale_F.C._season: (lowest attendance^='--04-16', highest attendance^='--09-11', league^='http://dbpedia.org/resource/1920–21_Football_League', ground^='http://dbpedia.org/resource/The_Old_Recreation_Ground')
+    relationships:
+      - 1920–21_Port_Vale_F.C._season (<http://dbpedia.org/resource/1920–21_Port_Vale_F.C._season>) --dop:league--> 1920–21_Football_League (<http://dbpedia.org/resource/1920–21_Football_League>)
+      - 1920–21_Burnley_F.C._season (<http://dbpedia.org/resource/1920–21_Burnley_F.C._season>) --wwors:seeAlso--> 1920–21_Football_League (<http://dbpedia.org/resource/1920–21_Football_League>)
+  '7':
+    attributes:
+      1920–21_Port_Vale_F.C._season: (lowest attendance^='--04-16', highest attendance^='--09-11', league^='http://dbpedia.org/resource/1920–21_Football_League', ground^='http://dbpedia.org/resource/The_Old_Recreation_Ground')
+      1920–21_Southampton_F.C._season: (highestAttendance='20000')
+    relationships:
+      - 1920–21_Port_Vale_F.C._season (<http://dbpedia.org/resource/1920–21_Port_Vale_F.C._season>) --dop:league--> 1920–21_Football_League (<http://dbpedia.org/resource/1920–21_Football_League>)
+      - 1920–21_Southampton_F.C._season (<http://dbpedia.org/resource/1920–21_Southampton_F.C._season>) --wwors:seeAlso--> 1920–21_Football_League (<http://dbpedia.org/resource/1920–21_Football_League>)
+  '8':
+    attributes:
+      1920–21_Stoke_F.C._season: (lowest attendance^='5000', highest attendance^='27455', league^='http://dbpedia.org/resource/1920–21_Football_League', ground^='http://dbpedia.org/resource/Victoria_Ground')
+      1920–21_Burnley_F.C._season: (highestAttendance='42653')
+    relationships:
+      - 1920–21_Stoke_F.C._season (<http://dbpedia.org/resource/1920–21_Stoke_F.C._season>) --dop:league--> 1920–21_Football_League (<http://dbpedia.org/resource/1920–21_Football_League>)
+      - 1920–21_Burnley_F.C._season (<http://dbpedia.org/resource/1920–21_Burnley_F.C._season>) --wwors:seeAlso--> 1920–21_Football_League (<http://dbpedia.org/resource/1920–21_Football_League>)
+  '9':
+    attributes:
+      1921–22_Arsenal_F.C._season: (lowest attendance^='12000', highest attendance^='42000', league^='http://dbpedia.org/resource/1921–22_Football_League', ground^='http://dbpedia.org/resource/Arsenal_Stadium')
+      1921–22_Southampton_F.C._season: (highestAttendance='--12-27')
+    relationships:
+      - 1921–22_Arsenal_F.C._season (<http://dbpedia.org/resource/1921–22_Arsenal_F.C._season>) --dop:league--> 1921–22_Football_League (<http://dbpedia.org/resource/1921–22_Football_League>)
+      - 1921–22_Southampton_F.C._season (<http://dbpedia.org/resource/1921–22_Southampton_F.C._season>) --wwors:seeAlso--> 1921–22_Football_League (<http://dbpedia.org/resource/1921–22_Football_League>)
+  '10':
+    attributes:
+      1921–22_Port_Vale_F.C._season: (lowest attendance^='--01-21', highest attendance^='--10-01', league^='http://dbpedia.org/resource/1921–22_Football_League', ground^='http://dbpedia.org/resource/The_Old_Recreation_Ground')
+      1921–22_Southampton_F.C._season: (highestAttendance='--12-27')
+    relationships:
+      - 1921–22_Port_Vale_F.C._season (<http://dbpedia.org/resource/1921–22_Port_Vale_F.C._season>) --dop:league--> 1921–22_Football_League (<http://dbpedia.org/resource/1921–22_Football_League>)
+      - 1921–22_Southampton_F.C._season (<http://dbpedia.org/resource/1921–22_Southampton_F.C._season>) --wwors:seeAlso--> 1921–22_Football_League (<http://dbpedia.org/resource/1921–22_Football_League>)
+attributes:
+  soccer club: --lowest attendance^ (dop:lowestAttendance)--> gMonthDay | --highest attendance^ (dop:highestAttendance)--> int | --ad^ (dop:ad)--> int | --align^ (dop:align)--> langString | --league^ (dop:league)--> Resource | --ground^ (doo:ground)--> Resource
+  soccer club season: --manager title^ (doo:managerTitle)--> string | --first^ (dop:first)--> langString | --highestAttendance (dop:highestAttendance)--> int
+subgraph_id: 412
+relationships:
+  - soccer club --dop:league--> football league season
+  - soccer club season --wwors:seeAlso--> football league season

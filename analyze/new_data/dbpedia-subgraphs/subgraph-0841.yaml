@@ -1,0 +1,102 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  politician: doo:Politician
+  time period: doo:TimePeriod
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A_C_Wharton: (alma mater^='University of Mississippi')
+    relationships:
+      - José_Antonio_Páez (<http://dbpedia.org/resource/José_Antonio_Páez>) --doo:deathPlace--> United_States (dor:United_States)
+      - Andrés_Narvarte (<http://dbpedia.org/resource/Andrés_Narvarte>) --dop:predecessor--> José_Antonio_Páez (<http://dbpedia.org/resource/José_Antonio_Páez>)
+      - A_C_Wharton (dor:A_C_Wharton) --doo:birthPlace--> United_States (dor:United_States)
+      - Dominga_Ortiz_Orzúa (<http://dbpedia.org/resource/Dominga_Ortiz_Orzúa>) --doo:spouse--> José_Antonio_Páez (<http://dbpedia.org/resource/José_Antonio_Páez>)
+  '2':
+    attributes:
+      A_C_Wharton: (alma mater^='University of Mississippi')
+    relationships:
+      - Shirley_Neil_Pettis (dor:Shirley_Neil_Pettis) --doo:deathPlace--> United_States (dor:United_States)
+      - Jerry_Lewis_(California_politician) (<http://dbpedia.org/resource/Jerry_Lewis_(California_politician)>) --dop:predecessor--> Shirley_Neil_Pettis (dor:Shirley_Neil_Pettis)
+      - A_C_Wharton (dor:A_C_Wharton) --doo:birthPlace--> United_States (dor:United_States)
+      - Jerry_Pettis (dor:Jerry_Pettis) --doo:spouse--> Shirley_Neil_Pettis (dor:Shirley_Neil_Pettis)
+  '3':
+    attributes:
+      A_C_Wharton: (alma mater^='University of Mississippi')
+    relationships:
+      - Stanton_Griffis (dor:Stanton_Griffis) --doo:deathPlace--> United_States (dor:United_States)
+      - Ellsworth_Bunker (dor:Ellsworth_Bunker) --dop:predecessor--> Stanton_Griffis (dor:Stanton_Griffis)
+      - A_C_Wharton (dor:A_C_Wharton) --doo:birthPlace--> United_States (dor:United_States)
+      - Whitney_Bourne (dor:Whitney_Bourne) --doo:spouse--> Stanton_Griffis (dor:Stanton_Griffis)
+  '4':
+    attributes:
+      A._H._M._Azwer: (alma mater^='http://dbpedia.org/resource/Zahira_College,_Colombo')
+    relationships:
+      - J._R._Jayewardene (dor:J._R._Jayewardene) --doo:deathPlace--> Sri_Lanka (dor:Sri_Lanka)
+      - Philip_Gunawardena (dor:Philip_Gunawardena) --dop:predecessor--> J._R._Jayewardene (dor:J._R._Jayewardene)
+      - A._H._M._Azwer (dor:A._H._M._Azwer) --doo:birthPlace--> Sri_Lanka (dor:Sri_Lanka)
+      - Elina_Jayewardene (dor:Elina_Jayewardene) --doo:spouse--> J._R._Jayewardene (dor:J._R._Jayewardene)
+  '5':
+    attributes:
+      A._Homer_Byington: (alma mater^='Amos Smith Collegiate School')
+    relationships:
+      - José_Antonio_Páez (<http://dbpedia.org/resource/José_Antonio_Páez>) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Andrés_Narvarte (<http://dbpedia.org/resource/Andrés_Narvarte>) --dop:predecessor--> José_Antonio_Páez (<http://dbpedia.org/resource/José_Antonio_Páez>)
+      - A._Homer_Byington (dor:A._Homer_Byington) --doo:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Dominga_Ortiz_Orzúa (<http://dbpedia.org/resource/Dominga_Ortiz_Orzúa>) --doo:spouse--> José_Antonio_Páez (<http://dbpedia.org/resource/José_Antonio_Páez>)
+  '6':
+    attributes:
+      A._P._Jayasuriya: (alma mater^='')
+    relationships:
+      - J._R._Jayewardene (dor:J._R._Jayewardene) --doo:deathPlace--> Sri_Lanka (dor:Sri_Lanka)
+      - Philip_Gunawardena (dor:Philip_Gunawardena) --dop:predecessor--> J._R._Jayewardene (dor:J._R._Jayewardene)
+      - A._P._Jayasuriya (dor:A._P._Jayasuriya) --doo:birthPlace--> Sri_Lanka (dor:Sri_Lanka)
+      - Elina_Jayewardene (dor:Elina_Jayewardene) --doo:spouse--> J._R._Jayewardene (dor:J._R._Jayewardene)
+  '7':
+    attributes: {}
+    relationships:
+      - José_Antonio_Páez (<http://dbpedia.org/resource/José_Antonio_Páez>) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Andrés_Narvarte (<http://dbpedia.org/resource/Andrés_Narvarte>) --dop:predecessor--> José_Antonio_Páez (<http://dbpedia.org/resource/José_Antonio_Páez>)
+      - A._Richard_Caputo (dor:A._Richard_Caputo) --doo:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Dominga_Ortiz_Orzúa (<http://dbpedia.org/resource/Dominga_Ortiz_Orzúa>) --doo:spouse--> José_Antonio_Páez (<http://dbpedia.org/resource/José_Antonio_Páez>)
+  '8':
+    attributes:
+      Soviet_Union: (2y^='1969')
+    relationships:
+      - Yumjaagiin_Tsedenbal (dor:Yumjaagiin_Tsedenbal) --doo:deathPlace--> Soviet_Union (dor:Soviet_Union)
+      - Dashiin_Damba (dor:Dashiin_Damba) --dop:predecessor--> Yumjaagiin_Tsedenbal (dor:Yumjaagiin_Tsedenbal)
+      - Aaly_Karashev (dor:Aaly_Karashev) --doo:birthPlace--> Soviet_Union (dor:Soviet_Union)
+      - Anastasia_Filatova (dor:Anastasia_Filatova) --doo:spouse--> Yumjaagiin_Tsedenbal (dor:Yumjaagiin_Tsedenbal)
+  '9':
+    attributes:
+      Soviet_Union: (2y^='1969')
+    relationships:
+      - Yumjaagiin_Tsedenbal (dor:Yumjaagiin_Tsedenbal) --doo:deathPlace--> Soviet_Union (dor:Soviet_Union)
+      - Jambyn_Batmönkh (<http://dbpedia.org/resource/Jambyn_Batmönkh>) --dop:predecessor--> Yumjaagiin_Tsedenbal (dor:Yumjaagiin_Tsedenbal)
+      - Aaly_Karashev (dor:Aaly_Karashev) --doo:birthPlace--> Soviet_Union (dor:Soviet_Union)
+      - Anastasia_Filatova (dor:Anastasia_Filatova) --doo:spouse--> Yumjaagiin_Tsedenbal (dor:Yumjaagiin_Tsedenbal)
+  '10':
+    attributes:
+      Soviet_Union: (2y^='1969')
+    relationships:
+      - Georgi_Dimitrov (dor:Georgi_Dimitrov) --doo:deathPlace--> Soviet_Union (dor:Soviet_Union)
+      - Valko_Chervenkov (dor:Valko_Chervenkov) --dop:predecessor--> Georgi_Dimitrov (dor:Georgi_Dimitrov)
+      - Aaly_Karashev (dor:Aaly_Karashev) --doo:birthPlace--> Soviet_Union (dor:Soviet_Union)
+      - Ljubica_Ivošević_Dimitrov (<http://dbpedia.org/resource/Ljubica_Ivošević_Dimitrov>) --doo:spouse--> Georgi_Dimitrov (dor:Georgi_Dimitrov)
+attributes:
+  person: --quoted^ (dop:quoted)--> langString | --relations^ (dop:relations)--> Resource | --relation^ (doo:relation)--> Resource
+  Location: --territory^ (doo:territory)--> Resource | --architect^ (dop:architect)--> langString | --2y^ (dop:2y)--> int | --Apr record high C^ (dop:aprRecordHighC)--> double
+  politician: --image upright^ (dop:imageUpright)--> double
+  office holder: --alma mater^ (dop:almaMater)--> langString
+subgraph_id: 841
+relationships:
+  - politician --doo:deathPlace--> Location
+  - time period --dop:predecessor--> politician
+  - office holder --doo:birthPlace--> Location
+  - person --doo:spouse--> politician

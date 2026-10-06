@@ -1,0 +1,116 @@
+types:
+  musical artist: doo:MusicalArtist
+  person function: doo:PersonFunction
+  government agency: doo:GovernmentAgency
+  military conflict: doo:MilitaryConflict
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      03_Greedo: (birth place^='http://dbpedia.org/resource/California')
+      Bald_Hills_War: (date^='1858', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Campaignbox_Bald_Hills_War')
+    relationships:
+      - 03_Greedo (dor:03_Greedo) --doo:birthPlace--> California (dor:California)
+      - Bald_Hills_War (dor:Bald_Hills_War) --doo:place--> California (dor:California)
+      - 03_Greedo (dor:03_Greedo) --doo:occupation--> Rapping (dor:Rapping)
+      - 2008_California_Statewide_Truck_and_Bus_Rule (dor:2008_California_Statewide_Truck_and_Bus_Rule) --doo:headquarter--> California (dor:California)
+  '2':
+    attributes:
+      Adam_Crystal: (birth place^='California, United States', id^='1904918')
+      Bald_Hills_War: (date^='1858', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Campaignbox_Bald_Hills_War')
+    relationships:
+      - Adam_Crystal (dor:Adam_Crystal) --doo:birthPlace--> California (dor:California)
+      - Bald_Hills_War (dor:Bald_Hills_War) --doo:place--> California (dor:California)
+      - Adam_Crystal (dor:Adam_Crystal) --doo:occupation--> Composer (dor:Composer)
+      - 2008_California_Statewide_Truck_and_Bus_Rule (dor:2008_California_Statewide_Truck_and_Bus_Rule) --doo:headquarter--> California (dor:California)
+  '3':
+    attributes:
+      Ahmad_(rapper): (birth place^='Los Angeles, California, U.S.')
+      Bald_Hills_War: (date^='1858', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Campaignbox_Bald_Hills_War')
+    relationships:
+      - Ahmad_(rapper) (<http://dbpedia.org/resource/Ahmad_(rapper)>) --doo:birthPlace--> California (dor:California)
+      - Bald_Hills_War (dor:Bald_Hills_War) --doo:place--> California (dor:California)
+      - Ahmad_(rapper) (<http://dbpedia.org/resource/Ahmad_(rapper)>) --doo:occupation--> Rapper (dor:Rapper)
+      - 2008_California_Statewide_Truck_and_Bus_Rule (dor:2008_California_Statewide_Truck_and_Bus_Rule) --doo:headquarter--> California (dor:California)
+  '4':
+    attributes:
+      Bassilyo: (birth place^='Marikina, Metro Manila, Philippines')
+      Metro_Manila: (Apr sun^='258')
+      Manila_Peninsula_siege: (date^='2007-11-29', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Citation_needed')
+    relationships:
+      - Bassilyo (dor:Bassilyo) --doo:birthPlace--> Metro_Manila (dor:Metro_Manila)
+      - Manila_Peninsula_siege (dor:Manila_Peninsula_siege) --doo:place--> Metro_Manila (dor:Metro_Manila)
+      - Bassilyo (dor:Bassilyo) --doo:occupation--> Actor (dor:Actor)
+      - Advanced_Science_and_Technology_Institute_(Philippines) (<http://dbpedia.org/resource/Advanced_Science_and_Technology_Institute_(Philippines)>) --doo:headquarter--> Metro_Manila (dor:Metro_Manila)
+  '5':
+    attributes:
+      Bassilyo: (birth place^='Marikina, Metro Manila, Philippines')
+      Metro_Manila: (Apr sun^='258')
+      Manila_Peninsula_siege: (date^='2007-11-29', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Citation_needed')
+    relationships:
+      - Bassilyo (dor:Bassilyo) --doo:birthPlace--> Metro_Manila (dor:Metro_Manila)
+      - Manila_Peninsula_siege (dor:Manila_Peninsula_siege) --doo:place--> Metro_Manila (dor:Metro_Manila)
+      - Bassilyo (dor:Bassilyo) --doo:occupation--> Rapper (dor:Rapper)
+      - Advanced_Science_and_Technology_Institute_(Philippines) (<http://dbpedia.org/resource/Advanced_Science_and_Technology_Institute_(Philippines)>) --doo:headquarter--> Metro_Manila (dor:Metro_Manila)
+  '6':
+    attributes:
+      Metro_Manila: (Apr sun^='258')
+      Julie_Anne_San_Jose: (birth place^='Quezon City, Metro Manila, Philippines')
+      Manila_Peninsula_siege: (date^='2007-11-29', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Citation_needed')
+    relationships:
+      - Julie_Anne_San_Jose (dor:Julie_Anne_San_Jose) --doo:birthPlace--> Metro_Manila (dor:Metro_Manila)
+      - Manila_Peninsula_siege (dor:Manila_Peninsula_siege) --doo:place--> Metro_Manila (dor:Metro_Manila)
+      - Julie_Anne_San_Jose (dor:Julie_Anne_San_Jose) --doo:occupation--> Julie_Anne_San_Jose__PersonFunction__1 (dor:Julie_Anne_San_Jose__PersonFunction__1)
+      - Advanced_Science_and_Technology_Institute_(Philippines) (<http://dbpedia.org/resource/Advanced_Science_and_Technology_Institute_(Philippines)>) --doo:headquarter--> Metro_Manila (dor:Metro_Manila)
+  '7':
+    attributes:
+      Aaron_Jay_Kernis: (birth place^='Bensalem Township, Pennsylvania, United States')
+      Battle_of_Barren_Hill: (date^='1778-05-20', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Aaron_Jay_Kernis (dor:Aaron_Jay_Kernis) --doo:birthPlace--> Pennsylvania (dor:Pennsylvania)
+      - Battle_of_Barren_Hill (dor:Battle_of_Barren_Hill) --doo:place--> Pennsylvania (dor:Pennsylvania)
+      - Aaron_Jay_Kernis (dor:Aaron_Jay_Kernis) --doo:occupation--> Composer (dor:Composer)
+      - AIDS_Activities_Coordinating_Office (dor:AIDS_Activities_Coordinating_Office) --doo:headquarter--> Pennsylvania (dor:Pennsylvania)
+  '8':
+    attributes:
+      Aaron_Levinson: (birth place^='Philadelphia, Pennsylvania, United States')
+      Battle_of_Barren_Hill: (date^='1778-05-20', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Aaron_Levinson (dor:Aaron_Levinson) --doo:birthPlace--> Pennsylvania (dor:Pennsylvania)
+      - Battle_of_Barren_Hill (dor:Battle_of_Barren_Hill) --doo:place--> Pennsylvania (dor:Pennsylvania)
+      - Aaron_Levinson (dor:Aaron_Levinson) --doo:occupation--> Record_producer (dor:Record_producer)
+      - AIDS_Activities_Coordinating_Office (dor:AIDS_Activities_Coordinating_Office) --doo:headquarter--> Pennsylvania (dor:Pennsylvania)
+  '9':
+    attributes:
+      Alan_Dawson: (birth place^='Marietta, Pennsylvania, United States')
+      Battle_of_Barren_Hill: (date^='1778-05-20', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Alan_Dawson (dor:Alan_Dawson) --doo:birthPlace--> Pennsylvania (dor:Pennsylvania)
+      - Battle_of_Barren_Hill (dor:Battle_of_Barren_Hill) --doo:place--> Pennsylvania (dor:Pennsylvania)
+      - Alan_Dawson (dor:Alan_Dawson) --doo:occupation--> Musician (dor:Musician)
+      - AIDS_Activities_Coordinating_Office (dor:AIDS_Activities_Coordinating_Office) --doo:headquarter--> Pennsylvania (dor:Pennsylvania)
+  '10':
+    attributes:
+      Bangkok: (Apr sun^='256.7')
+      Chaleeda_Gilbert: (birth place^='Bangkok, Thailand')
+      1686_Makassar_revolt: (date^='--08-15', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Flagcountry')
+    relationships:
+      - Chaleeda_Gilbert (dor:Chaleeda_Gilbert) --doo:birthPlace--> Bangkok (dor:Bangkok)
+      - 1686_Makassar_revolt (dor:1686_Makassar_revolt) --doo:place--> Bangkok (dor:Bangkok)
+      - Chaleeda_Gilbert (dor:Chaleeda_Gilbert) --doo:occupation--> Master_of_ceremonies (dor:Master_of_ceremonies)
+      - Anti-Money_Laundering_Office_(Thailand) (<http://dbpedia.org/resource/Anti-Money_Laundering_Office_(Thailand)>) --doo:headquarter--> Bangkok (dor:Bangkok)
+attributes:
+  musical artist: --birth place^ (dop:birthPlace)--> langString | --align^ (dop:align)--> langString | --1p^ (dop:1p)--> int | --id^ (dop:id)--> int
+  military conflict: --1pp^ (dop:1pp)--> int | --date^ (dop:date)--> langString | --2y^ (dop:2y)--> int | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+  administrative region: --wordnet_type (dop:wordnet_type)--> Resource | --Apr sun^ (dop:aprSun)--> int
+subgraph_id: 485
+relationships:
+  - musical artist --doo:birthPlace--> administrative region
+  - military conflict --doo:place--> administrative region
+  - musical artist --doo:occupation--> person function
+  - government agency --doo:headquarter--> administrative region

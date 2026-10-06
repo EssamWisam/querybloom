@@ -1,0 +1,103 @@
+types:
+  insect: doo:Insect
+  country: doo:Country
+  Location: doo:Location
+  given name: doo:GivenName
+  cultivar (cultivated variety): doo:CultivatedVariety
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      India: (align^='left')
+    relationships:
+      - Amer_(name) (<http://dbpedia.org/resource/Amer_(name)>) --doo:region--> Turkey (dor:Turkey)
+      - Amer_(name) (<http://dbpedia.org/resource/Amer_(name)>) --doo:region--> India (dor:India)
+      - Byadagi_chilli (dor:Byadagi_chilli) --doo:origin--> India (dor:India)
+      - Byadagi_chilli (dor:Byadagi_chilli) --doo:species--> Capsicum_annuum (dor:Capsicum_annuum)
+  '2':
+    attributes:
+      India: (align^='left')
+    relationships:
+      - Aryan_(name) (<http://dbpedia.org/resource/Aryan_(name)>) --doo:region--> Iran (dor:Iran)
+      - Aryan_(name) (<http://dbpedia.org/resource/Aryan_(name)>) --doo:region--> India (dor:India)
+      - Byadagi_chilli (dor:Byadagi_chilli) --doo:origin--> India (dor:India)
+      - Byadagi_chilli (dor:Byadagi_chilli) --doo:species--> Capsicum_annuum (dor:Capsicum_annuum)
+  '3':
+    attributes:
+      India: (align^='left')
+      Nepal: (auto^='1')
+    relationships:
+      - Binita (dor:Binita) --doo:region--> Nepal (dor:Nepal)
+      - Binita (dor:Binita) --doo:region--> India (dor:India)
+      - Byadagi_chilli (dor:Byadagi_chilli) --doo:origin--> India (dor:India)
+      - Byadagi_chilli (dor:Byadagi_chilli) --doo:species--> Capsicum_annuum (dor:Capsicum_annuum)
+  '4':
+    attributes:
+      Italy: (align^='left')
+    relationships:
+      - Bianca_Maria (dor:Bianca_Maria) --doo:region--> Romania (dor:Romania)
+      - Bianca_Maria (dor:Bianca_Maria) --doo:region--> Italy (dor:Italy)
+      - Flat_bean (dor:Flat_bean) --doo:origin--> Italy (dor:Italy)
+      - Flat_bean (dor:Flat_bean) --doo:species--> Phaseolus_vulgaris (dor:Phaseolus_vulgaris)
+  '5':
+    attributes:
+      Italy: (align^='left')
+      Malta: (Apr low C^='12.8', differentFrom='http://dbpedia.org/resource/Sovereign_Military_Order_of_Malta')
+    relationships:
+      - Carmelo (dor:Carmelo) --doo:region--> Malta (dor:Malta)
+      - Carmelo (dor:Carmelo) --doo:region--> Italy (dor:Italy)
+      - Flat_bean (dor:Flat_bean) --doo:origin--> Italy (dor:Italy)
+      - Flat_bean (dor:Flat_bean) --doo:species--> Phaseolus_vulgaris (dor:Phaseolus_vulgaris)
+  '6':
+    attributes:
+      Italy: (align^='left')
+    relationships:
+      - Filippa (dor:Filippa) --doo:region--> Russia (dor:Russia)
+      - Filippa (dor:Filippa) --doo:region--> Italy (dor:Italy)
+      - Flat_bean (dor:Flat_bean) --doo:origin--> Italy (dor:Italy)
+      - Flat_bean (dor:Flat_bean) --doo:species--> Phaseolus_vulgaris (dor:Phaseolus_vulgaris)
+  '7':
+    attributes:
+      Ireland: (Apr record low C^='−7.7')
+    relationships:
+      - Kylie_(name) (<http://dbpedia.org/resource/Kylie_(name)>) --doo:region--> Ireland (dor:Ireland)
+      - Kylie_(name) (<http://dbpedia.org/resource/Kylie_(name)>) --doo:region--> Australia (dor:Australia)
+      - Stylidium_graminifolium_'ST111' (<http://dbpedia.org/resource/Stylidium_graminifolium_'ST111'>) --doo:origin--> Australia (dor:Australia)
+      - Stylidium_graminifolium_'ST111' (<http://dbpedia.org/resource/Stylidium_graminifolium_'ST111'>) --doo:species--> Stylidium_graminifolium (dor:Stylidium_graminifolium)
+  '8':
+    attributes:
+      Ireland: (Apr record low C^='−7.7')
+    relationships:
+      - Kylie_(name) (<http://dbpedia.org/resource/Kylie_(name)>) --doo:region--> Ireland (dor:Ireland)
+      - Kylie_(name) (<http://dbpedia.org/resource/Kylie_(name)>) --doo:region--> Australia (dor:Australia)
+      - Stylidium_graminifolium_'ST116' (<http://dbpedia.org/resource/Stylidium_graminifolium_'ST116'>) --doo:origin--> Australia (dor:Australia)
+      - Stylidium_graminifolium_'ST116' (<http://dbpedia.org/resource/Stylidium_graminifolium_'ST116'>) --doo:species--> Stylidium_graminifolium (dor:Stylidium_graminifolium)
+  '9':
+    attributes:
+      Canada: "(quote^=':2.  Everyone has the following fundamental freedoms:\n::\tfreedom of conscience and religion;\n::\tfreedom of thought, belief, opinion and expression, including freedom of the press and other media of co...')"
+    relationships:
+      - Michel_(name) (<http://dbpedia.org/resource/Michel_(name)>) --doo:region--> Canada (dor:Canada)
+      - Michel_(name) (<http://dbpedia.org/resource/Michel_(name)>) --doo:region--> South_Africa (dor:South_Africa)
+      - Sweet_piquanté_pepper (<http://dbpedia.org/resource/Sweet_piquanté_pepper>) --doo:origin--> South_Africa (dor:South_Africa)
+      - Sweet_piquanté_pepper (<http://dbpedia.org/resource/Sweet_piquanté_pepper>) --doo:species--> Capsicum_baccatum (dor:Capsicum_baccatum)
+  '10':
+    attributes: {}
+    relationships:
+      - Michel_(name) (<http://dbpedia.org/resource/Michel_(name)>) --doo:region--> France (dor:France)
+      - Michel_(name) (<http://dbpedia.org/resource/Michel_(name)>) --doo:region--> South_Africa (dor:South_Africa)
+      - Sweet_piquanté_pepper (<http://dbpedia.org/resource/Sweet_piquanté_pepper>) --doo:origin--> South_Africa (dor:South_Africa)
+      - Sweet_piquanté_pepper (<http://dbpedia.org/resource/Sweet_piquanté_pepper>) --doo:species--> Capsicum_baccatum (dor:Capsicum_baccatum)
+attributes:
+  country: --align^ (dop:align)--> langString
+  Location: --founder^ (doo:founder)--> Resource | --auto^ (dop:auto)--> langString | --alt name^ (dop:altName)--> langString | --1a^ (dop:1a)--> langString | --founding year^ (doo:foundingYear)--> gYear | --Apr low C^ (dop:aprLowC)--> double | --differentFrom (wwoo:differentFrom)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> int | --quote^ (dop:quote)--> int
+subgraph_id: 943
+relationships:
+  - given name --doo:region--> Location
+  - given name --doo:region--> country
+  - cultivar (cultivated variety) --doo:origin--> country
+  - cultivar (cultivated variety) --doo:species--> insect

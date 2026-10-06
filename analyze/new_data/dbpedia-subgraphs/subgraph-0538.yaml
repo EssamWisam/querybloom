@@ -1,0 +1,119 @@
+types:
+  village: doo:Village
+  settlement: doo:Settlement
+  office holder: doo:OfficeHolder
+  radio station: doo:RadioStation
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Kentucky: (Link from a Wikipage to an external page^='http://kentucky.gov/about/Pages/unbridledspirit.aspx')
+      WMTC_(AM): (broadcast network^='http://dbpedia.org/resource/Salem_Communications')
+      Alney_McLean: (death date^='1841-12-30')
+    relationships:
+      - WMTC_(AM) (<http://dbpedia.org/resource/WMTC_(AM)>) --doo:city--> Vancleve,_Kentucky (<http://dbpedia.org/resource/Vancleve,_Kentucky>)
+      - WMTC_(AM) (<http://dbpedia.org/resource/WMTC_(AM)>) --doo:city--> Kentucky (dor:Kentucky)
+      - Alney_McLean (dor:Alney_McLean) --dop:deathPlace--> Kentucky (dor:Kentucky)
+      - Alney_McLean (dor:Alney_McLean) --dop:before--> Anthony_New (dor:Anthony_New)
+  '2':
+    attributes:
+      WMTC-FM: (broadcast network^='http://dbpedia.org/resource/Moody_Radio', logo^='Mountain Gospel Radio.jpg')
+      Kentucky: (Link from a Wikipage to an external page^='http://kentucky.gov/about/Pages/unbridledspirit.aspx')
+      Alney_McLean: (death date^='1841-12-30')
+    relationships:
+      - WMTC-FM (dor:WMTC-FM) --doo:city--> Vancleve,_Kentucky (<http://dbpedia.org/resource/Vancleve,_Kentucky>)
+      - WMTC-FM (dor:WMTC-FM) --doo:city--> Kentucky (dor:Kentucky)
+      - Alney_McLean (dor:Alney_McLean) --dop:deathPlace--> Kentucky (dor:Kentucky)
+      - Alney_McLean (dor:Alney_McLean) --dop:before--> Anthony_New (dor:Anthony_New)
+  '3':
+    attributes:
+      Kentucky: (Link from a Wikipage to an external page^='http://kentucky.gov/about/Pages/unbridledspirit.aspx')
+      Alney_McLean: (death date^='1841-12-30')
+    relationships:
+      - WOKT (dor:WOKT) --doo:city--> Cannonsburg,_Kentucky (<http://dbpedia.org/resource/Cannonsburg,_Kentucky>)
+      - WOKT (dor:WOKT) --doo:city--> Kentucky (dor:Kentucky)
+      - Alney_McLean (dor:Alney_McLean) --dop:deathPlace--> Kentucky (dor:Kentucky)
+      - Alney_McLean (dor:Alney_McLean) --dop:before--> Anthony_New (dor:Anthony_New)
+  '4':
+    attributes:
+      Amasa_Cobb: (death date^='1905-07-05')
+      California: (Link from a Wikipage to an external page^='http://data.ca.gov/')
+    relationships:
+      - KCFH (dor:KCFH) --doo:city--> Two_Harbors,_California (<http://dbpedia.org/resource/Two_Harbors,_California>)
+      - KCFH (dor:KCFH) --doo:city--> California (dor:California)
+      - Amasa_Cobb (dor:Amasa_Cobb) --dop:deathPlace--> California (dor:California)
+      - Amasa_Cobb (dor:Amasa_Cobb) --dop:before--> A._Scott_Sloan (dor:A._Scott_Sloan)
+  '5':
+    attributes:
+      KFRJ: (broadcast network^='http://dbpedia.org/resource/Family_Radio')
+      Amasa_Cobb: (death date^='1905-07-05')
+      California: (Link from a Wikipage to an external page^='http://data.ca.gov/')
+    relationships:
+      - KFRJ (dor:KFRJ) --doo:city--> China_Lake,_Kern_County,_California (<http://dbpedia.org/resource/China_Lake,_Kern_County,_California>)
+      - KFRJ (dor:KFRJ) --doo:city--> California (dor:California)
+      - Amasa_Cobb (dor:Amasa_Cobb) --dop:deathPlace--> California (dor:California)
+      - Amasa_Cobb (dor:Amasa_Cobb) --dop:before--> A._Scott_Sloan (dor:A._Scott_Sloan)
+  '6':
+    attributes:
+      KGUA: (logo^='File:KGUA_Radio_Logo.png')
+      Amasa_Cobb: (death date^='1905-07-05')
+      California: (Link from a Wikipage to an external page^='http://data.ca.gov/')
+    relationships:
+      - KGUA (dor:KGUA) --doo:city--> Gualala,_California (<http://dbpedia.org/resource/Gualala,_California>)
+      - KGUA (dor:KGUA) --doo:city--> California (dor:California)
+      - Amasa_Cobb (dor:Amasa_Cobb) --dop:deathPlace--> California (dor:California)
+      - Amasa_Cobb (dor:Amasa_Cobb) --dop:before--> A._Scott_Sloan (dor:A._Scott_Sloan)
+  '7':
+    attributes:
+      Virginia: (Link from a Wikipage to an external page^='http://climate.virginia.edu/')
+      Charles_Triplett_O'Ferrall: (death date^='1905-09-22')
+    relationships:
+      - WPRZ-FM (dor:WPRZ-FM) --doo:city--> Brandy_Station,_Virginia (<http://dbpedia.org/resource/Brandy_Station,_Virginia>)
+      - WPRZ-FM (dor:WPRZ-FM) --doo:city--> Virginia (dor:Virginia)
+      - Charles_Triplett_O'Ferrall (<http://dbpedia.org/resource/Charles_Triplett_O'Ferrall>) --dop:deathPlace--> Virginia (dor:Virginia)
+      - Charles_Triplett_O'Ferrall (<http://dbpedia.org/resource/Charles_Triplett_O'Ferrall>) --dop:before--> Philip_W._McKinney (dor:Philip_W._McKinney)
+  '8':
+    attributes:
+      Ohio: (Link from a Wikipage to an external page^='http://www.ers.usda.gov/data-products/state-fact-sheets/state-data.aspx%3FStateFIPS=39&StateName=Ohio%23.U85uE_ldVu0')
+      Edward_Follansbee_Noyes: (death date^='1890-09-04')
+    relationships:
+      - WAIS_(AM) (<http://dbpedia.org/resource/WAIS_(AM)>) --doo:city--> Buchtel,_Ohio (<http://dbpedia.org/resource/Buchtel,_Ohio>)
+      - WAIS_(AM) (<http://dbpedia.org/resource/WAIS_(AM)>) --doo:city--> Ohio (dor:Ohio)
+      - Edward_Follansbee_Noyes (dor:Edward_Follansbee_Noyes) --dop:deathPlace--> Ohio (dor:Ohio)
+      - Edward_Follansbee_Noyes (dor:Edward_Follansbee_Noyes) --dop:before--> Elihu_B._Washburne (dor:Elihu_B._Washburne)
+  '9':
+    attributes:
+      Ohio: (Link from a Wikipage to an external page^='http://www.ers.usda.gov/data-products/state-fact-sheets/state-data.aspx%3FStateFIPS=39&StateName=Ohio%23.U85uE_ldVu0')
+      Edward_Follansbee_Noyes: (death date^='1890-09-04')
+    relationships:
+      - WAIS_(AM) (<http://dbpedia.org/resource/WAIS_(AM)>) --doo:city--> Buchtel,_Ohio (<http://dbpedia.org/resource/Buchtel,_Ohio>)
+      - WAIS_(AM) (<http://dbpedia.org/resource/WAIS_(AM)>) --doo:city--> Ohio (dor:Ohio)
+      - Edward_Follansbee_Noyes (dor:Edward_Follansbee_Noyes) --dop:deathPlace--> Ohio (dor:Ohio)
+      - Edward_Follansbee_Noyes (dor:Edward_Follansbee_Noyes) --dop:before--> Rutherford_B._Hayes (dor:Rutherford_B._Hayes)
+  '10':
+    attributes:
+      Ohio: (Link from a Wikipage to an external page^='http://www.ers.usda.gov/data-products/state-fact-sheets/state-data.aspx%3FStateFIPS=39&StateName=Ohio%23.U85uE_ldVu0')
+      WBIK: (logo^='WBIK logo.png')
+      Edward_Follansbee_Noyes: (death date^='1890-09-04')
+    relationships:
+      - WBIK (dor:WBIK) --doo:city--> Pleasant_City,_Ohio (<http://dbpedia.org/resource/Pleasant_City,_Ohio>)
+      - WBIK (dor:WBIK) --doo:city--> Ohio (dor:Ohio)
+      - Edward_Follansbee_Noyes (dor:Edward_Follansbee_Noyes) --dop:deathPlace--> Ohio (dor:Ohio)
+      - Edward_Follansbee_Noyes (dor:Edward_Follansbee_Noyes) --dop:before--> Elihu_B._Washburne (dor:Elihu_B._Washburne)
+attributes:
+  village: --named for^ (dop:namedFor)--> langString
+  settlement: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --subdivision^ (doo:subdivision)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource
+  office holder: --active years end date^ (doo:activeYearsEndDate)--> date | --title^ (doo:title)--> langString | --agf^ (dop:agf)--> int
+  radio station: --broadcast network^ (doo:broadcastNetwork)--> Resource | --logo^ (dop:logo)--> langString
+  military person: --active years end date^ (doo:activeYearsEndDate)--> date | --death date^ (dop:deathDate)--> gMonthDay
+subgraph_id: 538
+relationships:
+  - radio station --doo:city--> village
+  - radio station --doo:city--> settlement
+  - military person --dop:deathPlace--> settlement
+  - military person --dop:before--> office holder

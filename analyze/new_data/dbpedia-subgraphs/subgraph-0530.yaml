@@ -1,0 +1,115 @@
+types:
+  city: doo:City
+  country: doo:Country
+  volcano: doo:Volcano
+  Location: doo:Location
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Chile: (reason='Which consonants and what kind of soft pronunciation?')
+      Argentina: (c^='In Search of the Latin American Female Athlete')
+      Neuquén_Province: (subject='http://dbpedia.org/resource/Category:1955_establishments_in_Argentina')
+    relationships:
+      - Copahue (dor:Copahue) --doo:locatedInArea--> Argentina (dor:Argentina)
+      - Copahue (dor:Copahue) --doo:locatedInArea--> Chile (dor:Chile)
+      - Argentina (dor:Argentina) --doo:capital--> Buenos_Aires (dor:Buenos_Aires)
+      - Copahue (dor:Copahue) --doo:locatedInArea--> Neuquén_Province (<http://dbpedia.org/resource/Neuquén_Province>)
+  '2':
+    attributes:
+      Argentina: (c^='In Search of the Latin American Female Athlete')
+      Catamarca_Province: (subject='http://dbpedia.org/resource/Category:Catamarca_Province')
+    relationships:
+      - Incahuasi (dor:Incahuasi) --doo:locatedInArea--> Argentina (dor:Argentina)
+      - Incahuasi (dor:Incahuasi) --doo:locatedInArea--> Atacama_Region (dor:Atacama_Region)
+      - Argentina (dor:Argentina) --doo:capital--> Buenos_Aires (dor:Buenos_Aires)
+      - Incahuasi (dor:Incahuasi) --doo:locatedInArea--> Catamarca_Province (dor:Catamarca_Province)
+  '3':
+    attributes:
+      Argentina: (c^='In Search of the Latin American Female Athlete')
+      Atacama_Region: (subject='http://dbpedia.org/resource/Category:Atacama_Region')
+    relationships:
+      - Incahuasi (dor:Incahuasi) --doo:locatedInArea--> Argentina (dor:Argentina)
+      - Incahuasi (dor:Incahuasi) --doo:locatedInArea--> Catamarca_Province (dor:Catamarca_Province)
+      - Argentina (dor:Argentina) --doo:capital--> Buenos_Aires (dor:Buenos_Aires)
+      - Incahuasi (dor:Incahuasi) --doo:locatedInArea--> Atacama_Region (dor:Atacama_Region)
+  '4':
+    attributes:
+      Chile: (reason='Which consonants and what kind of soft pronunciation?')
+      Nor_Lípez_Province: (subject='http://dbpedia.org/resource/Category:Provinces_of_Potosí_Department')
+    relationships:
+      - Irruputuncu (dor:Irruputuncu) --doo:locatedInArea--> Bolivia (dor:Bolivia)
+      - Irruputuncu (dor:Irruputuncu) --doo:locatedInArea--> Chile (dor:Chile)
+      - Bolivia (dor:Bolivia) --doo:capital--> Sucre (dor:Sucre)
+      - Irruputuncu (dor:Irruputuncu) --doo:locatedInArea--> Nor_Lípez_Province (<http://dbpedia.org/resource/Nor_Lípez_Province>)
+  '5':
+    attributes:
+      Chile: (reason='Which consonants and what kind of soft pronunciation?')
+      Tarapacá_Region: (subject='http://dbpedia.org/resource/Category:1883_establishments_in_Chile')
+    relationships:
+      - Irruputuncu (dor:Irruputuncu) --doo:locatedInArea--> Bolivia (dor:Bolivia)
+      - Irruputuncu (dor:Irruputuncu) --doo:locatedInArea--> Chile (dor:Chile)
+      - Bolivia (dor:Bolivia) --doo:capital--> Sucre (dor:Sucre)
+      - Irruputuncu (dor:Irruputuncu) --doo:locatedInArea--> Tarapacá_Region (<http://dbpedia.org/resource/Tarapacá_Region>)
+  '6':
+    attributes:
+      Tarapacá_Region: (subject='http://dbpedia.org/resource/Category:1883_establishments_in_Chile')
+    relationships:
+      - Irruputuncu (dor:Irruputuncu) --doo:locatedInArea--> Bolivia (dor:Bolivia)
+      - Irruputuncu (dor:Irruputuncu) --doo:locatedInArea--> Nor_Lípez_Province (<http://dbpedia.org/resource/Nor_Lípez_Province>)
+      - Bolivia (dor:Bolivia) --doo:capital--> Sucre (dor:Sucre)
+      - Irruputuncu (dor:Irruputuncu) --doo:locatedInArea--> Tarapacá_Region (<http://dbpedia.org/resource/Tarapacá_Region>)
+  '7':
+    attributes:
+      Santiago: (named for^='http://dbpedia.org/resource/James_the_Great')
+      Neuquén_Province: (subject='http://dbpedia.org/resource/Category:1955_establishments_in_Argentina')
+    relationships:
+      - Copahue (dor:Copahue) --doo:locatedInArea--> Chile (dor:Chile)
+      - Copahue (dor:Copahue) --doo:locatedInArea--> Argentina (dor:Argentina)
+      - Chile (dor:Chile) --doo:capital--> Santiago (dor:Santiago)
+      - Copahue (dor:Copahue) --doo:locatedInArea--> Neuquén_Province (<http://dbpedia.org/resource/Neuquén_Province>)
+  '8':
+    attributes:
+      Santiago: (named for^='http://dbpedia.org/resource/James_the_Great')
+      Atacama_Region: (subject='http://dbpedia.org/resource/Category:Atacama_Region')
+    relationships:
+      - Incahuasi (dor:Incahuasi) --doo:locatedInArea--> Chile (dor:Chile)
+      - Incahuasi (dor:Incahuasi) --doo:locatedInArea--> Argentina (dor:Argentina)
+      - Chile (dor:Chile) --doo:capital--> Santiago (dor:Santiago)
+      - Incahuasi (dor:Incahuasi) --doo:locatedInArea--> Atacama_Region (dor:Atacama_Region)
+  '9':
+    attributes:
+      Putre: (source^='Atlas Agroclimatico de Chile')
+      Santiago: (named for^='http://dbpedia.org/resource/James_the_Great')
+      Arica_y_Parinacota_Region: (subject='http://dbpedia.org/resource/Category:2007_establishments_in_Chile', url^='https://web.archive.org/web/20100921092350/http:/www.municipalidaddearica.cl/')
+    relationships:
+      - Lauca_(volcano) (<http://dbpedia.org/resource/Lauca_(volcano)>) --doo:locatedInArea--> Chile (dor:Chile)
+      - Lauca_(volcano) (<http://dbpedia.org/resource/Lauca_(volcano)>) --doo:locatedInArea--> Putre (dor:Putre)
+      - Chile (dor:Chile) --doo:capital--> Santiago (dor:Santiago)
+      - Lauca_(volcano) (<http://dbpedia.org/resource/Lauca_(volcano)>) --doo:locatedInArea--> Arica_y_Parinacota_Region (dor:Arica_y_Parinacota_Region)
+  '10':
+    attributes:
+      Bogotá: (Apr rain days^='18')
+      Carchi_Province: (subject='http://dbpedia.org/resource/Category:Carchi_Province', url^='https://web.archive.org/web/20121120042557/http:/portland.indymedia.org/en/2012/04/414858.shtml')
+    relationships:
+      - Chiles_(volcano) (<http://dbpedia.org/resource/Chiles_(volcano)>) --doo:locatedInArea--> Colombia (dor:Colombia)
+      - Chiles_(volcano) (<http://dbpedia.org/resource/Chiles_(volcano)>) --doo:locatedInArea--> Ecuador (dor:Ecuador)
+      - Colombia (dor:Colombia) --doo:capital--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+      - Chiles_(volcano) (<http://dbpedia.org/resource/Chiles_(volcano)>) --doo:locatedInArea--> Carchi_Province (dor:Carchi_Province)
+attributes:
+  city: --Apr rain days^ (dop:aprRainDays)--> int | --named for^ (dop:namedFor)--> langString
+  country: --c^ (dop:c)--> langString
+  Location: --canton^ (doo:canton)--> Resource | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> int | --Apr rain mm^ (dop:aprRainMm)--> int | --reason (dop:reason)--> langString | --source^ (dop:source)--> langString
+  administrative region: --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --named for^ (dop:namedFor)--> langString | --subject (podt:subject)--> Resource | --url^ (dop:url)--> Resource
+subgraph_id: 530
+relationships:
+  - volcano --doo:locatedInArea--> country
+  - volcano --doo:locatedInArea--> Location
+  - country --doo:capital--> city
+  - volcano --doo:locatedInArea--> administrative region

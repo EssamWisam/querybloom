@@ -1,0 +1,77 @@
+types:
+  movie: doo:Film
+  language: doo:Language
+  television show: doo:TelevisionShow
+  broadcast network: doo:BroadcastNetwork
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Anno_1790: (subject='http://dbpedia.org/resource/Category:2010s_Swedish_television_series')
+      Balthus_Through_the_Looking_Glass: (writer^='Damian Pettigrew', Link from a Wikipage to an external page^='http://home.scarlet.be/~tpm77885/cahiers%202003/cahier10%202003.html''''Balthus')
+    relationships:
+      - Anno_1790 (dor:Anno_1790) --doo:company--> ARD_(broadcaster) (<http://dbpedia.org/resource/ARD_(broadcaster)>)
+      - Arte (dor:Arte) --doo:owningCompany--> ARD_(broadcaster) (<http://dbpedia.org/resource/ARD_(broadcaster)>)
+      - Balthus_Through_the_Looking_Glass (dor:Balthus_Through_the_Looking_Glass) --doo:distributor--> Arte (dor:Arte)
+      - Arte (dor:Arte) --doo:language--> French_language (dor:French_language)
+  '2':
+    attributes:
+      Anno_1790: (subject='http://dbpedia.org/resource/Category:2010s_Swedish_television_series')
+      Balthus_Through_the_Looking_Glass: (writer^='Damian Pettigrew', Link from a Wikipage to an external page^='http://home.scarlet.be/~tpm77885/cahiers%202003/cahier10%202003.html''''Balthus')
+    relationships:
+      - Anno_1790 (dor:Anno_1790) --doo:company--> ARD_(broadcaster) (<http://dbpedia.org/resource/ARD_(broadcaster)>)
+      - Arte (dor:Arte) --doo:owningCompany--> ARD_(broadcaster) (<http://dbpedia.org/resource/ARD_(broadcaster)>)
+      - Balthus_Through_the_Looking_Glass (dor:Balthus_Through_the_Looking_Glass) --doo:distributor--> Arte (dor:Arte)
+      - Arte (dor:Arte) --doo:language--> German_language (dor:German_language)
+  '3':
+    attributes:
+      Anno_1790: (subject='http://dbpedia.org/resource/Category:2010s_Swedish_television_series')
+      Balthus_Through_the_Looking_Glass: (writer^='Damian Pettigrew', Link from a Wikipage to an external page^='http://home.scarlet.be/~tpm77885/cahiers%202003/cahier10%202003.html''''Balthus')
+    relationships:
+      - Anno_1790 (dor:Anno_1790) --doo:company--> ARD_(broadcaster) (<http://dbpedia.org/resource/ARD_(broadcaster)>)
+      - Arte (dor:Arte) --doo:owningCompany--> ARD_(broadcaster) (<http://dbpedia.org/resource/ARD_(broadcaster)>)
+      - Balthus_Through_the_Looking_Glass (dor:Balthus_Through_the_Looking_Glass) --doo:distributor--> Arte (dor:Arte)
+      - Arte (dor:Arte) --doo:language--> Polish_language (dor:Polish_language)
+  '4':
+    attributes:
+      30_Degrees_in_February: (subject='http://dbpedia.org/resource/Category:2010s_Swedish_television_series')
+      The_Magic_Flute_(1975_film): (writer^='Ingmar Bergman', Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=5xYa6Q9VPfoC', cinematography^='http://dbpedia.org/resource/Sven_Nykvist')
+    relationships:
+      - 30_Degrees_in_February (dor:30_Degrees_in_February) --doo:company--> Sveriges_Television (dor:Sveriges_Television)
+      - SVT2 (dor:SVT2) --doo:owningCompany--> Sveriges_Television (dor:Sveriges_Television)
+      - The_Magic_Flute_(1975_film) (<http://dbpedia.org/resource/The_Magic_Flute_(1975_film)>) --doo:distributor--> SVT2 (dor:SVT2)
+      - SVT2 (dor:SVT2) --doo:language--> Finnish_language (dor:Finnish_language)
+  '5':
+    attributes:
+      30_Degrees_in_February: (subject='http://dbpedia.org/resource/Category:2010s_Swedish_television_series')
+      The_Magic_Flute_(1975_film): (writer^='Ingmar Bergman', Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=5xYa6Q9VPfoC', cinematography^='http://dbpedia.org/resource/Sven_Nykvist')
+    relationships:
+      - 30_Degrees_in_February (dor:30_Degrees_in_February) --doo:company--> Sveriges_Television (dor:Sveriges_Television)
+      - SVT2 (dor:SVT2) --doo:owningCompany--> Sveriges_Television (dor:Sveriges_Television)
+      - The_Magic_Flute_(1975_film) (<http://dbpedia.org/resource/The_Magic_Flute_(1975_film)>) --doo:distributor--> SVT2 (dor:SVT2)
+      - SVT2 (dor:SVT2) --doo:language--> Northern_Sami (dor:Northern_Sami)
+  '6':
+    attributes:
+      30_Degrees_in_February: (subject='http://dbpedia.org/resource/Category:2010s_Swedish_television_series')
+      The_Magic_Flute_(1975_film): (writer^='Ingmar Bergman', Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=5xYa6Q9VPfoC', cinematography^='http://dbpedia.org/resource/Sven_Nykvist')
+    relationships:
+      - 30_Degrees_in_February (dor:30_Degrees_in_February) --doo:company--> Sveriges_Television (dor:Sveriges_Television)
+      - SVT2 (dor:SVT2) --doo:owningCompany--> Sveriges_Television (dor:Sveriges_Television)
+      - The_Magic_Flute_(1975_film) (<http://dbpedia.org/resource/The_Magic_Flute_(1975_film)>) --doo:distributor--> SVT2 (dor:SVT2)
+      - SVT2 (dor:SVT2) --doo:language--> Swedish_language (dor:Swedish_language)
+attributes:
+  movie: --bot (dop:bot)--> langString | --id^ (dop:id)--> int | --writer^ (dop:writer)--> Resource | --id^ (dop:id)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --cinematography^ (doo:cinematography)--> Resource | --d^ (dop:d)--> langString
+  television show: --image upright^ (dop:imageUpright)--> int | --subject (podt:subject)--> Resource | --lyrics^ (dop:lyrics)--> langString | --composer^ (dop:composer)--> Resource
+  television station: --broadcast network^ (doo:broadcastNetwork)--> Resource
+subgraph_id: 909
+relationships:
+  - television show --doo:company--> broadcast network
+  - television station --doo:owningCompany--> broadcast network
+  - movie --doo:distributor--> television station
+  - television station --doo:language--> language

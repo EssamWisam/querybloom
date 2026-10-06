@@ -1,0 +1,84 @@
+types:
+  person: doo:Person
+  airport: doo:Airport
+  company: doo:Company
+  Location: doo:Location
+  magazine: doo:Magazine
+  historic place: doo:HistoricPlace
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Altice_(company): (industry^='Telecommunications')
+      Françoise_Giroud: (birth date^='1916-09-21')
+    relationships:
+      - L'Express (<http://dbpedia.org/resource/L'Express>) --doo:founder--> Françoise_Giroud (<http://dbpedia.org/resource/Françoise_Giroud>)
+      - L'Express (<http://dbpedia.org/resource/L'Express>) --dop:country--> France (dor:France)
+      - Archiepiscopal_Palace,_Rouen (<http://dbpedia.org/resource/Archiepiscopal_Palace,_Rouen>) --doo:location--> France (dor:France)
+      - EuroAirport_Basel_Mulhouse_Freiburg (dor:EuroAirport_Basel_Mulhouse_Freiburg) --doo:owner--> France (dor:France)
+      - L'Express (<http://dbpedia.org/resource/L'Express>) --doo:publisher--> Altice_(company) (<http://dbpedia.org/resource/Altice_(company)>)
+  '2':
+    attributes:
+      Altice_(company): (industry^='Telecommunications')
+      Jean-Jacques_Servan-Schreiber: (birth date^='1924-02-13')
+    relationships:
+      - L'Express (<http://dbpedia.org/resource/L'Express>) --doo:founder--> Jean-Jacques_Servan-Schreiber (dor:Jean-Jacques_Servan-Schreiber)
+      - L'Express (<http://dbpedia.org/resource/L'Express>) --dop:country--> France (dor:France)
+      - Archiepiscopal_Palace,_Rouen (<http://dbpedia.org/resource/Archiepiscopal_Palace,_Rouen>) --doo:location--> France (dor:France)
+      - EuroAirport_Basel_Mulhouse_Freiburg (dor:EuroAirport_Basel_Mulhouse_Freiburg) --doo:owner--> France (dor:France)
+      - L'Express (<http://dbpedia.org/resource/L'Express>) --doo:publisher--> Altice_(company) (<http://dbpedia.org/resource/Altice_(company)>)
+  '3':
+    attributes:
+      Raymond_Bourgine: (birth date^='1925-03-09')
+    relationships:
+      - Le_Spectacle_du_Monde (dor:Le_Spectacle_du_Monde) --doo:founder--> Raymond_Bourgine (dor:Raymond_Bourgine)
+      - Le_Spectacle_du_Monde (dor:Le_Spectacle_du_Monde) --dop:country--> France (dor:France)
+      - Archiepiscopal_Palace,_Rouen (<http://dbpedia.org/resource/Archiepiscopal_Palace,_Rouen>) --doo:location--> France (dor:France)
+      - EuroAirport_Basel_Mulhouse_Freiburg (dor:EuroAirport_Basel_Mulhouse_Freiburg) --doo:owner--> France (dor:France)
+      - Le_Spectacle_du_Monde (dor:Le_Spectacle_du_Monde) --doo:publisher--> Valmonde (dor:Valmonde)
+  '4':
+    attributes:
+      Grigory_Pasko: (birth date^='1962-05-19')
+      Bellona_–_St._Petersburg: (industry^='Environmentalism and environmental rights')
+    relationships:
+      - Ecology_and_Law (dor:Ecology_and_Law) --doo:founder--> Grigory_Pasko (dor:Grigory_Pasko)
+      - Ecology_and_Law (dor:Ecology_and_Law) --dop:country--> Russia (dor:Russia)
+      - Aksay_Bridge (dor:Aksay_Bridge) --doo:location--> Russia (dor:Russia)
+      - Galenki_(air_base) (<http://dbpedia.org/resource/Galenki_(air_base)>) --doo:owner--> Russia (dor:Russia)
+      - Ecology_and_Law (dor:Ecology_and_Law) --doo:publisher--> Bellona_–_St._Petersburg (<http://dbpedia.org/resource/Bellona_–_St._Petersburg>)
+  '5':
+    attributes:
+      Grigory_Pasko: (birth date^='1962-05-19')
+      Bellona_–_St._Petersburg: (industry^='Environmentalism and environmental rights')
+    relationships:
+      - Ecology_and_Law (dor:Ecology_and_Law) --doo:founder--> Grigory_Pasko (dor:Grigory_Pasko)
+      - Ecology_and_Law (dor:Ecology_and_Law) --dop:country--> Russia (dor:Russia)
+      - Alley_of_the_rulers_of_Russia (dor:Alley_of_the_rulers_of_Russia) --doo:location--> Russia (dor:Russia)
+      - Galenki_(air_base) (<http://dbpedia.org/resource/Galenki_(air_base)>) --doo:owner--> Russia (dor:Russia)
+      - Ecology_and_Law (dor:Ecology_and_Law) --doo:publisher--> Bellona_–_St._Petersburg (<http://dbpedia.org/resource/Bellona_–_St._Petersburg>)
+  '6':
+    attributes:
+      Grigory_Pasko: (birth date^='1962-05-19')
+      Bellona_–_St._Petersburg: (industry^='Environmentalism and environmental rights')
+    relationships:
+      - Ecology_and_Law (dor:Ecology_and_Law) --doo:founder--> Grigory_Pasko (dor:Grigory_Pasko)
+      - Ecology_and_Law (dor:Ecology_and_Law) --dop:country--> Russia (dor:Russia)
+      - Chamber_of_Facets (dor:Chamber_of_Facets) --doo:location--> Russia (dor:Russia)
+      - Galenki_(air_base) (<http://dbpedia.org/resource/Galenki_(air_base)>) --doo:owner--> Russia (dor:Russia)
+      - Ecology_and_Law (dor:Ecology_and_Law) --doo:publisher--> Bellona_–_St._Petersburg (<http://dbpedia.org/resource/Bellona_–_St._Petersburg>)
+attributes:
+  person: --employer^ (doo:employer)--> Resource | --birth date^ (dop:birthDate)--> int | --date^ (dop:date)--> langString
+  company: --industry^ (dop:industry)--> Resource | --caption^ (dop:caption)--> langString
+  Location: --image width^ (dop:imageWidth)--> int | --architectural style^ (doo:architecturalStyle)--> Resource | --Aug high F^ (dop:augHighF)--> double | --Center^ (dop:center)--> langString | --located in area^ (doo:locatedInArea)--> Resource
+  historic place: --data^ (dop:data)--> int | --id^ (dop:id)--> langString
+subgraph_id: 898
+relationships:
+  - magazine --doo:founder--> person
+  - magazine --dop:country--> Location
+  - historic place --doo:location--> Location
+  - airport --doo:owner--> Location
+  - magazine --doo:publisher--> company

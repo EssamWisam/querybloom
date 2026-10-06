@@ -1,0 +1,105 @@
+types:
+  school: doo:School
+  writer: doo:Writer
+  Location: doo:Location
+  university: doo:University
+  soccer club: doo:SoccerClub
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Temple_University: (Link from a Wikipage to an external page^='http://www.owlsports.com/')
+      Langhorne,_Pennsylvania: (width^='auto')
+    relationships:
+      - Temple_University (dor:Temple_University) --dop:nickname--> Temple_Owls (dor:Temple_Owls)
+      - Claire_Smith_(journalist) (<http://dbpedia.org/resource/Claire_Smith_(journalist)>) --dop:almaMater--> Temple_University (dor:Temple_University)
+      - Claire_Smith_(journalist) (<http://dbpedia.org/resource/Claire_Smith_(journalist)>) --doo:birthPlace--> Langhorne,_Pennsylvania (<http://dbpedia.org/resource/Langhorne,_Pennsylvania>)
+      - Capital_Area_School_for_the_Arts (dor:Capital_Area_School_for_the_Arts) --doo:affiliation--> Temple_University (dor:Temple_University)
+  '2':
+    attributes:
+      Temple_University: (Link from a Wikipage to an external page^='http://www.owlsports.com/')
+    relationships:
+      - Temple_University (dor:Temple_University) --dop:nickname--> Temple_Owls (dor:Temple_Owls)
+      - Emily_Skaja (dor:Emily_Skaja) --dop:almaMater--> Temple_University (dor:Temple_University)
+      - Emily_Skaja (dor:Emily_Skaja) --doo:birthPlace--> Illinois (dor:Illinois)
+      - Capital_Area_School_for_the_Arts (dor:Capital_Area_School_for_the_Arts) --doo:affiliation--> Temple_University (dor:Temple_University)
+  '3':
+    attributes:
+      Pennsylvania: (width^='129')
+      Temple_University: (Link from a Wikipage to an external page^='http://www.owlsports.com/')
+    relationships:
+      - Temple_University (dor:Temple_University) --dop:nickname--> Temple_Owls (dor:Temple_Owls)
+      - Fran_Ross (dor:Fran_Ross) --dop:almaMater--> Temple_University (dor:Temple_University)
+      - Fran_Ross (dor:Fran_Ross) --doo:birthPlace--> Pennsylvania (dor:Pennsylvania)
+      - Capital_Area_School_for_the_Arts (dor:Capital_Area_School_for_the_Arts) --doo:affiliation--> Temple_University (dor:Temple_University)
+  '4':
+    attributes:
+      Jack_Fritscher: (birth name^='John Joseph Fritscher', spouse^='Mark Hemry')
+    relationships:
+      - Loyola_University_Chicago (dor:Loyola_University_Chicago) --dop:nickname--> Loyola_Ramblers (dor:Loyola_Ramblers)
+      - Jack_Fritscher (dor:Jack_Fritscher) --dop:almaMater--> Loyola_University_Chicago (dor:Loyola_University_Chicago)
+      - Jack_Fritscher (dor:Jack_Fritscher) --doo:birthPlace--> Jacksonville,_Illinois (<http://dbpedia.org/resource/Jacksonville,_Illinois>)
+      - John_Felice_Rome_Center (dor:John_Felice_Rome_Center) --doo:affiliation--> Loyola_University_Chicago (dor:Loyola_University_Chicago)
+  '5':
+    attributes:
+      Chicago: (width^='225')
+    relationships:
+      - Loyola_University_Chicago (dor:Loyola_University_Chicago) --dop:nickname--> Loyola_Ramblers (dor:Loyola_Ramblers)
+      - Sandra_Cisneros (dor:Sandra_Cisneros) --dop:almaMater--> Loyola_University_Chicago (dor:Loyola_University_Chicago)
+      - Sandra_Cisneros (dor:Sandra_Cisneros) --doo:birthPlace--> Chicago (dor:Chicago)
+      - John_Felice_Rome_Center (dor:John_Felice_Rome_Center) --doo:affiliation--> Loyola_University_Chicago (dor:Loyola_University_Chicago)
+  '6':
+    attributes: {}
+    relationships:
+      - Loyola_University_Chicago (dor:Loyola_University_Chicago) --dop:nickname--> Loyola_Ramblers (dor:Loyola_Ramblers)
+      - Sandra_Cisneros (dor:Sandra_Cisneros) --dop:almaMater--> Loyola_University_Chicago (dor:Loyola_University_Chicago)
+      - Sandra_Cisneros (dor:Sandra_Cisneros) --doo:birthPlace--> Illinois (dor:Illinois)
+      - John_Felice_Rome_Center (dor:John_Felice_Rome_Center) --doo:affiliation--> Loyola_University_Chicago (dor:Loyola_University_Chicago)
+  '7':
+    attributes:
+      Iran: (width^='220')
+      Stony_Brook_University: (Link from a Wikipage to an external page^='https://labs.cs.sunysb.edu/labs/vislab/reality-deck-home/')
+    relationships:
+      - Stony_Brook_University (dor:Stony_Brook_University) --dop:nickname--> Stony_Brook_Seawolves (dor:Stony_Brook_Seawolves)
+      - Majid_Mohammadi (dor:Majid_Mohammadi) --dop:almaMater--> Stony_Brook_University (dor:Stony_Brook_University)
+      - Majid_Mohammadi (dor:Majid_Mohammadi) --doo:birthPlace--> Iran (dor:Iran)
+      - Stony_Brook_Southampton (dor:Stony_Brook_Southampton) --doo:affiliation--> Stony_Brook_University (dor:Stony_Brook_University)
+  '8':
+    attributes:
+      Stony_Brook_University: (Link from a Wikipage to an external page^='https://labs.cs.sunysb.edu/labs/vislab/reality-deck-home/')
+    relationships:
+      - Stony_Brook_University (dor:Stony_Brook_University) --dop:nickname--> Stony_Brook_Seawolves (dor:Stony_Brook_Seawolves)
+      - Majid_Mohammadi (dor:Majid_Mohammadi) --dop:almaMater--> Stony_Brook_University (dor:Stony_Brook_University)
+      - Majid_Mohammadi (dor:Majid_Mohammadi) --doo:birthPlace--> Tehran (dor:Tehran)
+      - Stony_Brook_Southampton (dor:Stony_Brook_Southampton) --doo:affiliation--> Stony_Brook_University (dor:Stony_Brook_University)
+  '9':
+    attributes:
+      University_of_Tennessee: (Link from a Wikipage to an external page^='http://www.utsports.com/')
+    relationships:
+      - University_of_Tennessee (dor:University_of_Tennessee) --dop:nickname--> Tennessee_Volunteers (dor:Tennessee_Volunteers)
+      - Alan_Gratz (dor:Alan_Gratz) --dop:almaMater--> University_of_Tennessee (dor:University_of_Tennessee)
+      - Alan_Gratz (dor:Alan_Gratz) --doo:birthPlace--> Knoxville,_Tennessee (<http://dbpedia.org/resource/Knoxville,_Tennessee>)
+      - Tennessee_Governor's_Academy_for_Math_and_Science (<http://dbpedia.org/resource/Tennessee_Governor's_Academy_for_Math_and_Science>) --doo:affiliation--> University_of_Tennessee (dor:University_of_Tennessee)
+  '10':
+    attributes:
+      Tennessee: (width^='225')
+      University_of_Tennessee: (Link from a Wikipage to an external page^='http://www.utsports.com/')
+    relationships:
+      - University_of_Tennessee (dor:University_of_Tennessee) --dop:nickname--> Tennessee_Volunteers (dor:Tennessee_Volunteers)
+      - Alex_Bledsoe (dor:Alex_Bledsoe) --dop:almaMater--> University_of_Tennessee (dor:University_of_Tennessee)
+      - Alex_Bledsoe (dor:Alex_Bledsoe) --doo:birthPlace--> Tennessee (dor:Tennessee)
+      - Tennessee_Governor's_Academy_for_Math_and_Science (<http://dbpedia.org/resource/Tennessee_Governor's_Academy_for_Math_and_Science>) --doo:affiliation--> University_of_Tennessee (dor:University_of_Tennessee)
+attributes:
+  writer: --birth name^ (doo:birthName)--> langString | --spouse^ (dop:spouse)--> int | --death year^ (doo:deathYear)--> gYear
+  Location: --width^ (dop:width)--> int | --c^ (dop:c)--> langString | --founding year^ (doo:foundingYear)--> gYear
+  university: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+subgraph_id: 134
+relationships:
+  - university --dop:nickname--> soccer club
+  - writer --dop:almaMater--> university
+  - writer --doo:birthPlace--> Location
+  - school --doo:affiliation--> university

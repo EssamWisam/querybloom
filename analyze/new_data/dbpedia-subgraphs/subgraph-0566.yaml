@@ -1,0 +1,113 @@
+types:
+  book: doo:Book
+  city: doo:City
+  person: doo:Person
+  writer: doo:Writer
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abarat: (Wikipage page ID^='797326')
+      David_Railton: (birth place^='http://dbpedia.org/resource/England', death year^='1955')
+    relationships:
+      - David_Railton (dor:David_Railton) --doo:education--> Liverpool (dor:Liverpool)
+      - Liverpool (dor:Liverpool) --doo:subdivision--> Liverpool_City_Region (dor:Liverpool_City_Region)
+      - Clive_Barker (dor:Clive_Barker) --doo:birthPlace--> Liverpool (dor:Liverpool)
+      - Abarat (dor:Abarat) --doo:coverArtist--> Clive_Barker (dor:Clive_Barker)
+  '2':
+    attributes:
+      Abarat: (Wikipage page ID^='797326')
+      David_Railton: (birth place^='http://dbpedia.org/resource/England', death year^='1955')
+    relationships:
+      - David_Railton (dor:David_Railton) --doo:education--> Liverpool (dor:Liverpool)
+      - Liverpool (dor:Liverpool) --doo:subdivision--> North_West_England (dor:North_West_England)
+      - Clive_Barker (dor:Clive_Barker) --doo:birthPlace--> Liverpool (dor:Liverpool)
+      - Abarat (dor:Abarat) --doo:coverArtist--> Clive_Barker (dor:Clive_Barker)
+  '3':
+    attributes:
+      Abarat: (Wikipage page ID^='797326')
+    relationships:
+      - Francis_Ormond (dor:Francis_Ormond) --doo:education--> Liverpool (dor:Liverpool)
+      - Liverpool (dor:Liverpool) --doo:subdivision--> Liverpool_City_Region (dor:Liverpool_City_Region)
+      - Clive_Barker (dor:Clive_Barker) --doo:birthPlace--> Liverpool (dor:Liverpool)
+      - Abarat (dor:Abarat) --doo:coverArtist--> Clive_Barker (dor:Clive_Barker)
+  '4':
+    attributes:
+      Mel_Hunter: (birth place^='Oak Park, Illinois, United States', death year^='2004')
+      Ahead_of_Time: (Wikipage page ID^='31843699')
+      Cook_County,_Illinois: (area code^='224/847,312/872,773/872,708')
+    relationships:
+      - Mel_Hunter (dor:Mel_Hunter) --doo:education--> Evanston,_Illinois (<http://dbpedia.org/resource/Evanston,_Illinois>)
+      - Evanston,_Illinois (<http://dbpedia.org/resource/Evanston,_Illinois>) --doo:subdivision--> Cook_County,_Illinois (<http://dbpedia.org/resource/Cook_County,_Illinois>)
+      - Richard_Powers (dor:Richard_Powers) --doo:birthPlace--> Evanston,_Illinois (<http://dbpedia.org/resource/Evanston,_Illinois>)
+      - Ahead_of_Time (dor:Ahead_of_Time) --doo:coverArtist--> Richard_Powers (dor:Richard_Powers)
+  '5':
+    attributes:
+      Apeman,_Spaceman: (Wikipage page ID^='59196417')
+      Barry_Stevens_(technology_developer): (birth place^='New York, New York, United States')
+    relationships:
+      - Barry_Stevens_(technology_developer) (<http://dbpedia.org/resource/Barry_Stevens_(technology_developer)>) --doo:education--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>) --doo:subdivision--> Essex_County,_New_Jersey (<http://dbpedia.org/resource/Essex_County,_New_Jersey>)
+      - Donald_Crews (dor:Donald_Crews) --doo:birthPlace--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - Apeman,_Spaceman (<http://dbpedia.org/resource/Apeman,_Spaceman>) --doo:coverArtist--> Donald_Crews (dor:Donald_Crews)
+  '6':
+    attributes:
+      Apeman,_Spaceman: (Wikipage page ID^='59196417')
+      Barry_Stevens_(technology_developer): (birth place^='New York, New York, United States')
+    relationships:
+      - Barry_Stevens_(technology_developer) (<http://dbpedia.org/resource/Barry_Stevens_(technology_developer)>) --doo:education--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>) --doo:subdivision--> New_Jersey (dor:New_Jersey)
+      - Donald_Crews (dor:Donald_Crews) --doo:birthPlace--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - Apeman,_Spaceman (<http://dbpedia.org/resource/Apeman,_Spaceman>) --doo:coverArtist--> Donald_Crews (dor:Donald_Crews)
+  '7':
+    attributes:
+      Assassin's_Fate: (Wikipage page ID^='53957106')
+    relationships:
+      - Adel_Hassan_Al_A'ali (<http://dbpedia.org/resource/Adel_Hassan_Al_A'ali>) --doo:education--> Birmingham (dor:Birmingham)
+      - Birmingham (dor:Birmingham) --doo:subdivision--> West_Midlands_(region) (<http://dbpedia.org/resource/West_Midlands_(region)>)
+      - Jackie_Morris (dor:Jackie_Morris) --doo:birthPlace--> Birmingham (dor:Birmingham)
+      - Assassin's_Fate (<http://dbpedia.org/resource/Assassin's_Fate>) --doo:coverArtist--> Jackie_Morris (dor:Jackie_Morris)
+  '8':
+    attributes:
+      William_Bragge: (birth place^='Birmingham, England, UK', death year^='1884')
+      Assassin's_Fate: (Wikipage page ID^='53957106')
+    relationships:
+      - William_Bragge (dor:William_Bragge) --doo:education--> Birmingham (dor:Birmingham)
+      - Birmingham (dor:Birmingham) --doo:subdivision--> West_Midlands_(region) (<http://dbpedia.org/resource/West_Midlands_(region)>)
+      - Jackie_Morris (dor:Jackie_Morris) --doo:birthPlace--> Birmingham (dor:Birmingham)
+      - Assassin's_Fate (<http://dbpedia.org/resource/Assassin's_Fate>) --doo:coverArtist--> Jackie_Morris (dor:Jackie_Morris)
+  '9':
+    attributes:
+      Laurens_van_der_Post: (birth place^='http://dbpedia.org/resource/Orange_River_Colony', death year^='1996')
+      Beowulf:_A_Translation_and_Commentary: (Wikipage page ID^='43000256')
+    relationships:
+      - Laurens_van_der_Post (dor:Laurens_van_der_Post) --doo:education--> Bloemfontein (dor:Bloemfontein)
+      - Bloemfontein (dor:Bloemfontein) --doo:subdivision--> Free_State_(province) (<http://dbpedia.org/resource/Free_State_(province)>)
+      - J._R._R._Tolkien (dor:J._R._R._Tolkien) --doo:birthPlace--> Bloemfontein (dor:Bloemfontein)
+      - Beowulf:_A_Translation_and_Commentary (<http://dbpedia.org/resource/Beowulf:_A_Translation_and_Commentary>) --doo:coverArtist--> J._R._R._Tolkien (dor:J._R._R._Tolkien)
+  '10':
+    attributes:
+      Laurens_van_der_Post: (birth place^='http://dbpedia.org/resource/Orange_River_Colony', death year^='1996')
+      Beowulf:_A_Translation_and_Commentary: (Wikipage page ID^='43000256')
+    relationships:
+      - Laurens_van_der_Post (dor:Laurens_van_der_Post) --doo:education--> Bloemfontein (dor:Bloemfontein)
+      - Bloemfontein (dor:Bloemfontein) --doo:subdivision--> Mangaung_Metropolitan_Municipality (dor:Mangaung_Metropolitan_Municipality)
+      - J._R._R._Tolkien (dor:J._R._R._Tolkien) --doo:birthPlace--> Bloemfontein (dor:Bloemfontein)
+      - Beowulf:_A_Translation_and_Commentary (<http://dbpedia.org/resource/Beowulf:_A_Translation_and_Commentary>) --doo:coverArtist--> J._R._R._Tolkien (dor:J._R._R._Tolkien)
+attributes:
+  book: --Wikipage page ID^ (doo:wikiPageID)--> int
+  city: --Apr record high F^ (dop:aprRecordHighF)--> int
+  person: --birth place^ (dop:birthPlace)--> Resource | --after^ (dop:after)--> langString | --2y^ (dop:2y)--> int | --notable works^ (dop:notableWorks)--> int | --alias^ (doo:alias)--> langString | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --death year^ (doo:deathYear)--> gYear
+  writer: --1a^ (dop:1a)--> langString
+  settlement: --area code^ (doo:areaCode)--> string | --Apr record high C^ (dop:aprRecordHighC)--> int | --Apr rain days^ (dop:aprRainDays)--> int
+subgraph_id: 566
+relationships:
+  - person --doo:education--> city
+  - city --doo:subdivision--> settlement
+  - writer --doo:birthPlace--> city
+  - book --doo:coverArtist--> writer

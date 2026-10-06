@@ -1,0 +1,124 @@
+types:
+  city: doo:City
+  wrestler: doo:Wrestler
+  hockey team: doo:HockeyTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Candice_LeRae: (weight (g)^='49896.0')
+      Anaheim,_California: (named after^='http://dbpedia.org/resource/Heim_(disambiguation)', Center^='Anaheim', elevation (μ)^='47.8536', Aug rain days^='0.1')
+    relationships:
+      - Anaheim_Bullfrogs (dor:Anaheim_Bullfrogs) --doo:city--> Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>)
+      - Candice_LeRae (dor:Candice_LeRae) --doo:billed--> Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>)
+  '2':
+    attributes:
+      Frankie_Kazarian: (weight (g)^='95256.0')
+      Anaheim,_California: (named after^='http://dbpedia.org/resource/Heim_(disambiguation)', Center^='Anaheim', elevation (μ)^='47.8536', Aug rain days^='0.1')
+    relationships:
+      - Anaheim_Bullfrogs (dor:Anaheim_Bullfrogs) --doo:city--> Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>)
+      - Frankie_Kazarian (dor:Frankie_Kazarian) --doo:billed--> Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>)
+  '3':
+    attributes:
+      Auckland: (named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland', Aug rain days^='14.9', Apr high C^='20.1')
+      Bushwhacker_Butch: (active years end year^='2001', weight (g)^='113000.0')
+    relationships:
+      - Auckland_Mako (dor:Auckland_Mako) --doo:city--> Auckland (dor:Auckland)
+      - Bushwhacker_Butch (dor:Bushwhacker_Butch) --doo:billed--> Auckland (dor:Auckland)
+  '4':
+    attributes:
+      Auckland: (named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland', Aug rain days^='14.9', Apr high C^='20.1')
+      Dakota_Kai: (weight (g)^='55000.0')
+    relationships:
+      - Auckland_Mako (dor:Auckland_Mako) --doo:city--> Auckland (dor:Auckland)
+      - Dakota_Kai (dor:Dakota_Kai) --doo:billed--> Auckland (dor:Auckland)
+  '5':
+    attributes:
+      Auckland: (named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland', Aug rain days^='14.9', Apr high C^='20.1')
+      Jay_White: (weight (g)^='100000.0')
+    relationships:
+      - Auckland_Mako (dor:Auckland_Mako) --doo:city--> Auckland (dor:Auckland)
+      - Jay_White (dor:Jay_White) --doo:billed--> Auckland (dor:Auckland)
+  '6':
+    attributes:
+      Aero_Star: (weight (g)^='68000.0')
+      Mexico_City: (elevation (μ)^='2240.0', Apr precipitation mm^='24.3', Apr high C^='26.9', Aug precipitation mm^='174.8')
+    relationships:
+      - Aztec_Eagle_Warriors (dor:Aztec_Eagle_Warriors) --doo:city--> Mexico_City (dor:Mexico_City)
+      - Aero_Star (dor:Aero_Star) --doo:billed--> Mexico_City (dor:Mexico_City)
+  '7':
+    attributes:
+      Anarquia: (weight (g)^='104328.0')
+      Mexico_City: (elevation (μ)^='2240.0', Apr precipitation mm^='24.3', Apr high C^='26.9', Aug precipitation mm^='174.8')
+    relationships:
+      - Aztec_Eagle_Warriors (dor:Aztec_Eagle_Warriors) --doo:city--> Mexico_City (dor:Mexico_City)
+      - Anarquia (dor:Anarquia) --doo:billed--> Mexico_City (dor:Mexico_City)
+  '8':
+    attributes:
+      Mexico_City: (elevation (μ)^='2240.0', Apr precipitation mm^='24.3', Apr high C^='26.9', Aug precipitation mm^='174.8')
+      Ángel_Azteca: (weight (g)^='98000.0')
+    relationships:
+      - Aztec_Eagle_Warriors (dor:Aztec_Eagle_Warriors) --doo:city--> Mexico_City (dor:Mexico_City)
+      - Ángel_Azteca (<http://dbpedia.org/resource/Ángel_Azteca>) --doo:billed--> Mexico_City (dor:Mexico_City)
+  '9':
+    attributes:
+      Berlin: (elevation (μ)^='34.0', Apr precipitation mm^='42', Apr high C^='15', Aug precipitation mm^='53')
+      Alex_Wright: (active years end year^='2001', weight (g)^='102060.0')
+    relationships:
+      - Berliner_Schlittschuhclub (dor:Berliner_Schlittschuhclub) --doo:city--> Berlin (dor:Berlin)
+      - Alex_Wright (dor:Alex_Wright) --doo:billed--> Berlin (dor:Berlin)
+  '10':
+    attributes:
+      Berlin: (elevation (μ)^='34.0', Apr precipitation mm^='42', Apr high C^='15', Aug precipitation mm^='53')
+      Fritz_Von_Goering: (active years end year^='1973', weight (g)^='115668.0')
+    relationships:
+      - Berliner_Schlittschuhclub (dor:Berliner_Schlittschuhclub) --doo:city--> Berlin (dor:Berlin)
+      - Fritz_Von_Goering (dor:Fritz_Von_Goering) --doo:billed--> Berlin (dor:Berlin)
+qa_result:
+  status: completed
+  cost_usd: 0.429862
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.04133740000000001
+        total_tokens: 4188
+        prompt_tokens: 2383
+        completion_tokens: 1805
+      generate:
+        cost_usd: 0.0981476
+        total_tokens: 8007
+        prompt_tokens: 3653
+        completion_tokens: 4354
+      verify_1:
+        cost_usd: 0.11685200000000001
+        total_tokens: 9346
+        prompt_tokens: 4671
+        completion_tokens: 4675
+      verify_2:
+        cost_usd: 0.033762
+        total_tokens: 5193
+        prompt_tokens: 4673
+        completion_tokens: 520
+      complexity:
+        cost_usd: 0.139763
+        total_tokens: 11501
+        prompt_tokens: 5445
+        completion_tokens: 6056
+    total_tokens: 38235
+    prompt_tokens: 20825
+    total_cost_usd: 0.4298620000000001
+    completion_tokens: 17410
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --named after^ (doo:namedAfter)--> Resource | --Center^ (dop:center)--> langString | --elevation (μ)^ (doo:elevation)--> double | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --Aug rain days^ (dop:augRainDays)--> double | --Apr high C^ (dop:aprHighC)--> double | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int
+  wrestler: --active years end year^ (doo:activeYearsEndYear)--> gYear | --weight (g)^ (doo:weight)--> double
+subgraph_id: 199
+relationships:
+  - hockey team --doo:city--> city
+  - wrestler --doo:billed--> city

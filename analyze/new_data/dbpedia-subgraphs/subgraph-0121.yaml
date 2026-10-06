@@ -1,0 +1,88 @@
+types:
+  Location: doo:Location
+  cricketer: doo:Cricketer
+  basketball team: doo:BasketballTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Athens: (Apr precipitation mm^='28.5', page length (characters) of wiki page^='176042')
+      2013–14_Panionios_B.C._season: (league^='http://dbpedia.org/resource/2013–14_Greek_Basket_League')
+    relationships:
+      - Tash_Farrant (dor:Tash_Farrant) --doo:birthPlace--> Athens (dor:Athens)
+      - 2013–14_Panionios_B.C._season (<http://dbpedia.org/resource/2013–14_Panionios_B.C._season>) --doo:location--> Athens (dor:Athens)
+  '2':
+    attributes:
+      Athens: (Apr precipitation mm^='28.5', page length (characters) of wiki page^='176042')
+      2013–14_Panionios_B.C._season: (league^='http://dbpedia.org/resource/2013–14_Greek_Basket_League')
+    relationships:
+      - Wayne_Osman (dor:Wayne_Osman) --doo:birthPlace--> Athens (dor:Athens)
+      - 2013–14_Panionios_B.C._season (<http://dbpedia.org/resource/2013–14_Panionios_B.C._season>) --doo:location--> Athens (dor:Athens)
+  '3':
+    attributes:
+      Greece: (page length (characters) of wiki page^='309509')
+      2013–14_Panionios_B.C._season: (league^='http://dbpedia.org/resource/2013–14_Greek_Basket_League')
+    relationships:
+      - Wayne_Osman (dor:Wayne_Osman) --doo:birthPlace--> Greece (dor:Greece)
+      - 2013–14_Panionios_B.C._season (<http://dbpedia.org/resource/2013–14_Panionios_B.C._season>) --doo:location--> Greece (dor:Greece)
+  '4':
+    attributes:
+      United_States: (page length (characters) of wiki page^='315547')
+      3_Headed_Monsters: (league^='http://dbpedia.org/resource/BIG3')
+    relationships:
+      - Anton_Roux (dor:Anton_Roux) --doo:birthPlace--> United_States (dor:United_States)
+      - 3_Headed_Monsters (dor:3_Headed_Monsters) --doo:location--> United_States (dor:United_States)
+  '5':
+    attributes:
+      United_States: (page length (characters) of wiki page^='315547')
+      3_Headed_Monsters: (league^='http://dbpedia.org/resource/BIG3')
+    relationships:
+      - George_Harper_(cricketer,_born_1988) (<http://dbpedia.org/resource/George_Harper_(cricketer,_born_1988)>) --doo:birthPlace--> United_States (dor:United_States)
+      - 3_Headed_Monsters (dor:3_Headed_Monsters) --doo:location--> United_States (dor:United_States)
+  '6':
+    attributes:
+      United_States: (page length (characters) of wiki page^='315547')
+      3_Headed_Monsters: (league^='http://dbpedia.org/resource/BIG3')
+    relationships:
+      - Gordon_Burnham (dor:Gordon_Burnham) --doo:birthPlace--> United_States (dor:United_States)
+      - 3_Headed_Monsters (dor:3_Headed_Monsters) --doo:location--> United_States (dor:United_States)
+  '7':
+    attributes:
+      Athens: (Apr precipitation mm^='28.5', page length (characters) of wiki page^='176042')
+      A.C._Doukas_Basketball: (league^='http://dbpedia.org/resource/Greek_A2_Basket_League')
+    relationships:
+      - Tash_Farrant (dor:Tash_Farrant) --doo:birthPlace--> Athens (dor:Athens)
+      - A.C._Doukas_Basketball (dor:A.C._Doukas_Basketball) --doo:location--> Athens (dor:Athens)
+  '8':
+    attributes:
+      Greece: (page length (characters) of wiki page^='309509')
+      A.C._Doukas_Basketball: (league^='http://dbpedia.org/resource/Greek_A2_Basket_League')
+    relationships:
+      - Wayne_Osman (dor:Wayne_Osman) --doo:birthPlace--> Greece (dor:Greece)
+      - A.C._Doukas_Basketball (dor:A.C._Doukas_Basketball) --doo:location--> Greece (dor:Greece)
+  '9':
+    attributes:
+      Sweden: (page length (characters) of wiki page^='281194')
+      A3_Basket: (league^='http://dbpedia.org/resource/Basketligan_dam')
+    relationships:
+      - Richard_Mercer (dor:Richard_Mercer) --doo:birthPlace--> Sweden (dor:Sweden)
+      - A3_Basket (dor:A3_Basket) --doo:location--> Sweden (dor:Sweden)
+  '10':
+    attributes:
+      Aalborg: (Apr precipitation mm^='30.8', page length (characters) of wiki page^='123746')
+      Aalborg_Vikings: (league^='http://dbpedia.org/resource/Danish_Basketball_League')
+    relationships:
+      - Niels_Kopperholdt (dor:Niels_Kopperholdt) --doo:birthPlace--> Aalborg (dor:Aalborg)
+      - Aalborg_Vikings (dor:Aalborg_Vikings) --doo:location--> Aalborg (dor:Aalborg)
+attributes:
+  Location: --aprLowF (dop:aprLowF)--> int | --accessdate^ (dop:accessdate)--> date | --partof^ (dop:partof)--> Resource | --eponym^ (dop:eponym)--> langString | --certain^ (dop:certain)--> langString | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --float^ (dop:float)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --built^ (dop:built)--> int | --designated other1 abbr^ (dop:designatedOther1Abbr)--> langString | --arc-text-colorA^ (dop:arcTextColora)--> langString
+  cricketer: --family^ (dop:family)--> langString
+  basketball team: --league^ (doo:league)--> Resource
+subgraph_id: 121
+relationships:
+  - cricketer --doo:birthPlace--> Location
+  - basketball team --doo:location--> Location

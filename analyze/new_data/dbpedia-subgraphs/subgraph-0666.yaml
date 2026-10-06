@@ -1,0 +1,65 @@
+types:
+  writer: doo:Writer
+  Location: doo:Location
+  language: doo:Language
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Cappy_McGarr: (relatives^='http://dbpedia.org/resource/Annette_Strauss')
+      ABC_islands_(Leeward_Antilles): (original name^='')
+    relationships:
+      - Cappy_McGarr (dor:Cappy_McGarr) --doo:language--> English_language (dor:English_language)
+      - ABC_islands_(Leeward_Antilles) (<http://dbpedia.org/resource/ABC_islands_(Leeward_Antilles)>) --doo:language--> English_language (dor:English_language)
+      - Cappy_McGarr (dor:Cappy_McGarr) --doo:relative--> Annette_Strauss (dor:Annette_Strauss)
+  '2':
+    attributes:
+      Marsha_Canham: (relatives^='http://dbpedia.org/resource/Carolyn_Parrish')
+      ABC_islands_(Leeward_Antilles): (original name^='')
+    relationships:
+      - Marsha_Canham (dor:Marsha_Canham) --doo:language--> English_language (dor:English_language)
+      - ABC_islands_(Leeward_Antilles) (<http://dbpedia.org/resource/ABC_islands_(Leeward_Antilles)>) --doo:language--> English_language (dor:English_language)
+      - Marsha_Canham (dor:Marsha_Canham) --doo:relative--> Carolyn_Parrish (dor:Carolyn_Parrish)
+  '3':
+    attributes:
+      Cappy_McGarr: (relatives^='http://dbpedia.org/resource/Annette_Strauss')
+    relationships:
+      - Cappy_McGarr (dor:Cappy_McGarr) --doo:language--> English_language (dor:English_language)
+      - Achmore,_Lewis (<http://dbpedia.org/resource/Achmore,_Lewis>) --doo:language--> English_language (dor:English_language)
+      - Cappy_McGarr (dor:Cappy_McGarr) --doo:relative--> Annette_Strauss (dor:Annette_Strauss)
+  '4':
+    attributes:
+      Anbara_Salam_Khalidi: (relatives^='http://dbpedia.org/resource/Saeb_Salam')
+    relationships:
+      - Anbara_Salam_Khalidi (dor:Anbara_Salam_Khalidi) --doo:language--> Arabic_language (dor:Arabic_language)
+      - African_Union (dor:African_Union) --doo:language--> Arabic_language (dor:Arabic_language)
+      - Anbara_Salam_Khalidi (dor:Anbara_Salam_Khalidi) --doo:relative--> Saeb_Salam (dor:Saeb_Salam)
+  '5':
+    attributes:
+      Anbara_Salam_Khalidi: (relatives^='http://dbpedia.org/resource/Saeb_Salam')
+    relationships:
+      - Anbara_Salam_Khalidi (dor:Anbara_Salam_Khalidi) --doo:language--> Arabic_language (dor:Arabic_language)
+      - Arab_Maghreb_Union (dor:Arab_Maghreb_Union) --doo:language--> Arabic_language (dor:Arabic_language)
+      - Anbara_Salam_Khalidi (dor:Anbara_Salam_Khalidi) --doo:relative--> Saeb_Salam (dor:Saeb_Salam)
+  '6':
+    attributes:
+      Benin: (caption^='Ethnic Groups of Benin')
+      Anbara_Salam_Khalidi: (relatives^='http://dbpedia.org/resource/Saeb_Salam')
+    relationships:
+      - Anbara_Salam_Khalidi (dor:Anbara_Salam_Khalidi) --doo:language--> Arabic_language (dor:Arabic_language)
+      - Benin (dor:Benin) --doo:language--> Arabic_language (dor:Arabic_language)
+      - Anbara_Salam_Khalidi (dor:Anbara_Salam_Khalidi) --doo:relative--> Saeb_Salam (dor:Saeb_Salam)
+attributes:
+  writer: --relatives^ (dop:relatives)--> Resource | --parents^ (dop:parents)--> langString
+  Location: --original name^ (doo:originalName)--> langString | --affiliation^ (dop:affiliation)--> Resource | --length (μ)^ (doo:length)--> double | --1y^ (dop:1y)--> int | --auto^ (dop:auto)--> langString | --Apr record low F^ (dop:aprRecordLowF)--> double | --caption^ (dop:caption)--> langString
+  office holder: --url^ (dop:url)--> Resource
+subgraph_id: 666
+relationships:
+  - writer --doo:language--> language
+  - Location --doo:language--> language
+  - writer --doo:relative--> office holder

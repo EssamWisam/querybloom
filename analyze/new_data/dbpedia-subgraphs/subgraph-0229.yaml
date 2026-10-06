@@ -1,0 +1,81 @@
+types:
+  cleric: doo:Cleric
+  island: doo:Island
+  Location: doo:Location
+  language: doo:Language
+  ethnic group: doo:EthnicGroup
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Orkney: (Apr low C^='3.4')
+      Norwegian_language: (date='2020')
+    relationships:
+      - Alf_Wiig (dor:Alf_Wiig) --doo:nationality--> Norwegians (dor:Norwegians)
+      - Norwegians (dor:Norwegians) --doo:language--> Norwegian_language (dor:Norwegian_language)
+      - Dependencies_of_Norway (dor:Dependencies_of_Norway) --doo:language--> Norwegian_language (dor:Norwegian_language)
+      - Norwegians (dor:Norwegians) --doo:populationPlace--> Orkney (dor:Orkney)
+  '2':
+    attributes:
+      Orkney: (Apr low C^='3.4')
+      Norwegian_language: (date='2020')
+    relationships:
+      - Alf_Wiig (dor:Alf_Wiig) --doo:nationality--> Norwegians (dor:Norwegians)
+      - Norwegians (dor:Norwegians) --doo:language--> Norwegian_language (dor:Norwegian_language)
+      - European_Free_Trade_Association (dor:European_Free_Trade_Association) --doo:language--> Norwegian_language (dor:Norwegian_language)
+      - Norwegians (dor:Norwegians) --doo:populationPlace--> Orkney (dor:Orkney)
+  '3':
+    attributes:
+      Orkney: (Apr low C^='3.4')
+      Norwegian_language: (date='2020')
+    relationships:
+      - Alf_Wiig (dor:Alf_Wiig) --doo:nationality--> Norwegians (dor:Norwegians)
+      - Norwegians (dor:Norwegians) --doo:language--> Norwegian_language (dor:Norwegian_language)
+      - Nordic_Council_of_Ministers (dor:Nordic_Council_of_Ministers) --doo:language--> Norwegian_language (dor:Norwegian_language)
+      - Norwegians (dor:Norwegians) --doo:populationPlace--> Orkney (dor:Orkney)
+qa_result:
+  status: completed
+  cost_usd: 0.25739
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0291274
+        total_tokens: 3321
+        prompt_tokens: 2041
+        completion_tokens: 1280
+      generate:
+        cost_usd: 0.0605076
+        total_tokens: 5981
+        prompt_tokens: 3461
+        completion_tokens: 2520
+      verify_1:
+        cost_usd: 0.035372
+        total_tokens: 4618
+        prompt_tokens: 3799
+        completion_tokens: 819
+      complexity:
+        cost_usd: 0.132383
+        total_tokens: 10445
+        prompt_tokens: 4529
+        completion_tokens: 5916
+    total_tokens: 24365
+    prompt_tokens: 13830
+    total_cost_usd: 0.25739
+    completion_tokens: 10535
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  island: --Apr low C^ (dop:aprLowC)--> double
+  Location: --coordinates^ (dop:coordinates)--> int | --d^ (dop:d)--> langString | --designated nrhp type^ (dop:designatedNrhpType)--> date | --Apr record high F^ (dop:aprRecordHighF)--> double | --area^ (dop:area)--> double | --discoverer^ (doo:discoverer)--> Resource | --width^ (dop:width)--> perCent
+  language: --date (dop:date)--> int
+subgraph_id: 229
+relationships:
+  - cleric --doo:nationality--> ethnic group
+  - ethnic group --doo:language--> language
+  - Location --doo:language--> language
+  - ethnic group --doo:populationPlace--> island

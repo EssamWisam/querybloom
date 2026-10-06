@@ -1,0 +1,149 @@
+types:
+  Location: doo:Location
+  aircraft: doo:Aircraft
+  politician: doo:Politician
+  person function: doo:PersonFunction
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dorc: http://dbpedia.org/resource/CASA/
+instances:
+  '1':
+    attributes:
+      Vietnam: (image^='Hanoi Temple of Litterature.jpeg', government type^='http://dbpedia.org/resource/Unitary_state')
+      Ho_Chi_Minh: (birth place^='http://dbpedia.org/resource/French_Indochina')
+    relationships:
+      - A41_Factory_VNS-41 (dor:A41_Factory_VNS-41) --doo:origin--> Vietnam (dor:Vietnam)
+      - Ho_Chi_Minh_Communist_Youth_Union (dor:Ho_Chi_Minh_Communist_Youth_Union) --doo:headquarter--> Vietnam (dor:Vietnam)
+      - Ho_Chi_Minh_Communist_Youth_Union (dor:Ho_Chi_Minh_Communist_Youth_Union) --dop:founder--> Ho_Chi_Minh (dor:Ho_Chi_Minh)
+      - Viet_Minh__PersonFunction__1 (dor:Viet_Minh__PersonFunction__1) --doo:person--> Ho_Chi_Minh (dor:Ho_Chi_Minh)
+  '2':
+    attributes:
+      Russia: (image^='Caucasus-ethnic en.svg', government type^='http://dbpedia.org/resource/Federalism')
+      Mikhail_Gorbachev: (align^='left', birth place^='http://dbpedia.org/resource/Privolnoye,_Stavropol_Krai')
+    relationships:
+      - Abramovich_Flyer (dor:Abramovich_Flyer) --doo:origin--> Russia (dor:Russia)
+      - Union_of_Social_Democrats (dor:Union_of_Social_Democrats) --doo:headquarter--> Russia (dor:Russia)
+      - Union_of_Social_Democrats (dor:Union_of_Social_Democrats) --dop:founder--> Mikhail_Gorbachev (dor:Mikhail_Gorbachev)
+      - The_Gorbachev_Foundation__PersonFunction__1 (dor:The_Gorbachev_Foundation__PersonFunction__1) --doo:person--> Mikhail_Gorbachev (dor:Mikhail_Gorbachev)
+  '3':
+    attributes:
+      India: (image^='--07-14', government type^='http://dbpedia.org/resource/Federalism')
+      Mohammad_Abbas_Ansari: (birth place^='http://dbpedia.org/resource/British_Raj')
+    relationships:
+      - Ace_Magic (dor:Ace_Magic) --doo:origin--> India (dor:India)
+      - Jammu_&_Kashmir_Ittihadul_Muslimeen (<http://dbpedia.org/resource/Jammu_&_Kashmir_Ittihadul_Muslimeen>) --doo:headquarter--> India (dor:India)
+      - Jammu_&_Kashmir_Ittihadul_Muslimeen (<http://dbpedia.org/resource/Jammu_&_Kashmir_Ittihadul_Muslimeen>) --dop:founder--> Mohammad_Abbas_Ansari (dor:Mohammad_Abbas_Ansari)
+      - Jammu_&_Kashmir_Ittihadul_Muslimeen__PersonFunction__1 (<http://dbpedia.org/resource/Jammu_&_Kashmir_Ittihadul_Muslimeen__PersonFunction__1>) --doo:person--> Mohammad_Abbas_Ansari (dor:Mohammad_Abbas_Ansari)
+  '4':
+    attributes:
+      Russia: (image^='Caucasus-ethnic en.svg', government type^='http://dbpedia.org/resource/Federalism')
+      Mikhail_Gorbachev: (align^='left', birth place^='http://dbpedia.org/resource/Privolnoye,_Stavropol_Krai')
+    relationships:
+      - Aero-Astra_Okhotnik (dor:Aero-Astra_Okhotnik) --doo:origin--> Russia (dor:Russia)
+      - Union_of_Social_Democrats (dor:Union_of_Social_Democrats) --doo:headquarter--> Russia (dor:Russia)
+      - Union_of_Social_Democrats (dor:Union_of_Social_Democrats) --dop:founder--> Mikhail_Gorbachev (dor:Mikhail_Gorbachev)
+      - The_Gorbachev_Foundation__PersonFunction__1 (dor:The_Gorbachev_Foundation__PersonFunction__1) --doo:person--> Mikhail_Gorbachev (dor:Mikhail_Gorbachev)
+  '5':
+    attributes:
+      Russia: (image^='Caucasus-ethnic en.svg', government type^='http://dbpedia.org/resource/Federalism')
+      Mikhail_Gorbachev: (align^='left', birth place^='http://dbpedia.org/resource/Privolnoye,_Stavropol_Krai')
+    relationships:
+      - AeroVolga_LA-8 (dor:AeroVolga_LA-8) --doo:origin--> Russia (dor:Russia)
+      - Union_of_Social_Democrats (dor:Union_of_Social_Democrats) --doo:headquarter--> Russia (dor:Russia)
+      - Union_of_Social_Democrats (dor:Union_of_Social_Democrats) --dop:founder--> Mikhail_Gorbachev (dor:Mikhail_Gorbachev)
+      - The_Gorbachev_Foundation__PersonFunction__1 (dor:The_Gorbachev_Foundation__PersonFunction__1) --doo:person--> Mikhail_Gorbachev (dor:Mikhail_Gorbachev)
+  '6':
+    attributes:
+      Indonesia: (image^='Angklung-arumba.jpg', government type^='http://dbpedia.org/resource/Unitary_state')
+      Prabowo_Subianto: (birth place^='http://dbpedia.org/resource/Jakarta')
+    relationships:
+      - IPTN_CN-235 (dorc:IPTN_CN-235) --doo:origin--> Indonesia (dor:Indonesia)
+      - Great_Indonesia_Awakening_Coalition (dor:Great_Indonesia_Awakening_Coalition) --doo:headquarter--> Indonesia (dor:Indonesia)
+      - Great_Indonesia_Awakening_Coalition (dor:Great_Indonesia_Awakening_Coalition) --dop:founder--> Prabowo_Subianto (dor:Prabowo_Subianto)
+      - International_Pencak_Silat_Federation__PersonFunction__1 (dor:International_Pencak_Silat_Federation__PersonFunction__1) --doo:person--> Prabowo_Subianto (dor:Prabowo_Subianto)
+  '7':
+    attributes:
+      India: (image^='--07-14', government type^='http://dbpedia.org/resource/Federalism')
+      Mohammad_Abbas_Ansari: (birth place^='http://dbpedia.org/resource/British_Raj')
+    relationships:
+      - Civil_Aviation_Department_Ashvini (dor:Civil_Aviation_Department_Ashvini) --doo:origin--> India (dor:India)
+      - Jammu_&_Kashmir_Ittihadul_Muslimeen (<http://dbpedia.org/resource/Jammu_&_Kashmir_Ittihadul_Muslimeen>) --doo:headquarter--> India (dor:India)
+      - Jammu_&_Kashmir_Ittihadul_Muslimeen (<http://dbpedia.org/resource/Jammu_&_Kashmir_Ittihadul_Muslimeen>) --dop:founder--> Mohammad_Abbas_Ansari (dor:Mohammad_Abbas_Ansari)
+      - Jammu_&_Kashmir_Ittihadul_Muslimeen__PersonFunction__1 (<http://dbpedia.org/resource/Jammu_&_Kashmir_Ittihadul_Muslimeen__PersonFunction__1>) --doo:person--> Mohammad_Abbas_Ansari (dor:Mohammad_Abbas_Ansari)
+  '8':
+    attributes:
+      India: (image^='--07-14', government type^='http://dbpedia.org/resource/Federalism')
+    relationships:
+      - Civil_Aviation_Department_BS-1_Bharani (dor:Civil_Aviation_Department_BS-1_Bharani) --doo:origin--> India (dor:India)
+      - Jammu_&_Kashmir_Ittihadul_Muslimeen (<http://dbpedia.org/resource/Jammu_&_Kashmir_Ittihadul_Muslimeen>) --doo:headquarter--> India (dor:India)
+      - Jammu_&_Kashmir_Ittihadul_Muslimeen (<http://dbpedia.org/resource/Jammu_&_Kashmir_Ittihadul_Muslimeen>) --dop:founder--> Mohammad_Abbas_Ansari (dor:Mohammad_Abbas_Ansari)
+      - Jammu_&_Kashmir_Ittihadul_Muslimeen__PersonFunction__1 (<http://dbpedia.org/resource/Jammu_&_Kashmir_Ittihadul_Muslimeen__PersonFunction__1>) --doo:person--> Mohammad_Abbas_Ansari (dor:Mohammad_Abbas_Ansari)
+  '9':
+    attributes:
+      Malaysia: (image^='--06-21', government type^='http://dbpedia.org/resource/Federal_monarchy')
+      Mahathir_Mohamad: (align^='right', birth place^='http://dbpedia.org/resource/Alor_Setar')
+    relationships:
+      - CTRM_Aludra (dor:CTRM_Aludra) --doo:origin--> Malaysia (dor:Malaysia)
+      - Homeland_Fighters'_Party (<http://dbpedia.org/resource/Homeland_Fighters'_Party>) --doo:headquarter--> Malaysia (dor:Malaysia)
+      - Homeland_Fighters'_Party (<http://dbpedia.org/resource/Homeland_Fighters'_Party>) --dop:founder--> Mahathir_Mohamad (dor:Mahathir_Mohamad)
+      - Perdana_Leadership_Foundation__PersonFunction__1 (dor:Perdana_Leadership_Foundation__PersonFunction__1) --doo:person--> Mahathir_Mohamad (dor:Mahathir_Mohamad)
+  '10':
+    attributes:
+      Indonesia: (image^='Angklung-arumba.jpg', government type^='http://dbpedia.org/resource/Unitary_state')
+      Prabowo_Subianto: (birth place^='http://dbpedia.org/resource/Jakarta')
+    relationships:
+      - Indonesian_Aerospace_Elang_Hitam (dor:Indonesian_Aerospace_Elang_Hitam) --doo:origin--> Indonesia (dor:Indonesia)
+      - Great_Indonesia_Awakening_Coalition (dor:Great_Indonesia_Awakening_Coalition) --doo:headquarter--> Indonesia (dor:Indonesia)
+      - Great_Indonesia_Awakening_Coalition (dor:Great_Indonesia_Awakening_Coalition) --dop:founder--> Prabowo_Subianto (dor:Prabowo_Subianto)
+      - International_Pencak_Silat_Federation__PersonFunction__1 (dor:International_Pencak_Silat_Federation__PersonFunction__1) --doo:person--> Prabowo_Subianto (dor:Prabowo_Subianto)
+qa_result:
+  status: completed
+  cost_usd: 0.414617
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0573124
+        total_tokens: 4806
+        prompt_tokens: 2142
+        completion_tokens: 2664
+      generate:
+        cost_usd: 0.06097260000000001
+        total_tokens: 7253
+        prompt_tokens: 5126
+        completion_tokens: 2127
+      verify_1:
+        cost_usd: 0.087912
+        total_tokens: 8451
+        prompt_tokens: 5407
+        completion_tokens: 3044
+      verify_2:
+        cost_usd: 0.039772
+        total_tokens: 6095
+        prompt_tokens: 5475
+        completion_tokens: 620
+      complexity:
+        cost_usd: 0.16864800000000002
+        total_tokens: 13672
+        prompt_tokens: 6414
+        completion_tokens: 7258
+    total_tokens: 40277
+    prompt_tokens: 24564
+    total_cost_usd: 0.41461700000000007
+    completion_tokens: 15713
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Location: --arc-gapA^ (dop:arcGapa)--> int | --Aug low F^ (dop:augLowF)--> double | --group^ (dop:group)--> Resource | --built^ (dop:built)--> langString | --image^ (dop:image)--> langString | --government type^ (doo:governmentType)--> Resource
+  politician: --align^ (dop:align)--> langString | --birth place^ (doo:birthPlace)--> Resource
+  person function: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+subgraph_id: 212
+relationships:
+  - aircraft --doo:origin--> Location
+  - political party --doo:headquarter--> Location
+  - political party --dop:founder--> politician
+  - person function --doo:person--> politician

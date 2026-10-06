@@ -1,0 +1,114 @@
+types:
+  train: doo:Train
+  company: doo:Company
+  locomotive: doo:Locomotive
+  railway line: doo:RailwayLine
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doom: http://dbpedia.org/ontology/MeanOfTransportation/
+instances:
+  '1':
+    attributes:
+      ScotRail: (predecessor^='http://dbpedia.org/resource/Abellio_ScotRail')
+      Aberdeen–Inverness_line: (route end^='http://dbpedia.org/resource/Aberdeen', logo width^='145')
+      British_Rail_Class_43_(HST): (powertype^='http://dbpedia.org/resource/Diesel_locomotive', builddate^='1975', length (μ)^='17.79')
+    relationships:
+      - Bombardier_Turbostar (dor:Bombardier_Turbostar) --doo:operator--> ScotRail (dor:ScotRail)
+      - Aberdeen–Inverness_line (<http://dbpedia.org/resource/Aberdeen–Inverness_line>) --dop:operator--> ScotRail (dor:ScotRail)
+      - Aberdeen–Inverness_line (<http://dbpedia.org/resource/Aberdeen–Inverness_line>) --doo:railwayRollingStock--> British_Rail_Class_43_(HST) (<http://dbpedia.org/resource/British_Rail_Class_43_(HST)>)
+  '2':
+    attributes:
+      ScotRail: (predecessor^='http://dbpedia.org/resource/Abellio_ScotRail')
+      British_Rail_Class_318: (family^='BR Second Generation')
+      Aberdeen–Inverness_line: (route end^='http://dbpedia.org/resource/Aberdeen', logo width^='145')
+      British_Rail_Class_43_(HST): (powertype^='http://dbpedia.org/resource/Diesel_locomotive', builddate^='1975', length (μ)^='17.79')
+    relationships:
+      - British_Rail_Class_318 (dor:British_Rail_Class_318) --doo:operator--> ScotRail (dor:ScotRail)
+      - Aberdeen–Inverness_line (<http://dbpedia.org/resource/Aberdeen–Inverness_line>) --dop:operator--> ScotRail (dor:ScotRail)
+      - Aberdeen–Inverness_line (<http://dbpedia.org/resource/Aberdeen–Inverness_line>) --doo:railwayRollingStock--> British_Rail_Class_43_(HST) (<http://dbpedia.org/resource/British_Rail_Class_43_(HST)>)
+  '3':
+    attributes:
+      ScotRail: (predecessor^='http://dbpedia.org/resource/Abellio_ScotRail')
+      British_Rail_Class_320: (weight (kg)^='114500.0', family^='BR Second Generation')
+      Aberdeen–Inverness_line: (route end^='http://dbpedia.org/resource/Aberdeen', logo width^='145')
+      British_Rail_Class_43_(HST): (powertype^='http://dbpedia.org/resource/Diesel_locomotive', builddate^='1975', length (μ)^='17.79')
+    relationships:
+      - British_Rail_Class_320 (dor:British_Rail_Class_320) --doo:operator--> ScotRail (dor:ScotRail)
+      - Aberdeen–Inverness_line (<http://dbpedia.org/resource/Aberdeen–Inverness_line>) --dop:operator--> ScotRail (dor:ScotRail)
+      - Aberdeen–Inverness_line (<http://dbpedia.org/resource/Aberdeen–Inverness_line>) --doo:railwayRollingStock--> British_Rail_Class_43_(HST) (<http://dbpedia.org/resource/British_Rail_Class_43_(HST)>)
+  '4':
+    attributes:
+      DB_Cargo_UK: (predecessor^='')
+      Askern_branch_line: (route end^='http://dbpedia.org/resource/Knottingley')
+      British_Rail_Class_66: (powertype^='Diesel-electric', buildmodel^='http://dbpedia.org/resource/EMD_JT42CWR', builddate^='1998', length (μ)^='21.4')
+      British_Rail_Class_325: (capacity^='235', family^='BR Second Generation')
+    relationships:
+      - British_Rail_Class_325 (dor:British_Rail_Class_325) --doo:operator--> DB_Cargo_UK (dor:DB_Cargo_UK)
+      - Askern_branch_line (dor:Askern_branch_line) --dop:operator--> DB_Cargo_UK (dor:DB_Cargo_UK)
+      - Askern_branch_line (dor:Askern_branch_line) --doo:railwayRollingStock--> British_Rail_Class_66 (dor:British_Rail_Class_66)
+  '5':
+    attributes:
+      Askern_branch_line: (route end^='http://dbpedia.org/resource/Knottingley')
+      British_Rail_Class_66: (powertype^='Diesel-electric', buildmodel^='http://dbpedia.org/resource/EMD_JT42CWR', builddate^='1998', length (μ)^='21.4')
+      British_Rail_Class_801: (family^='http://dbpedia.org/resource/Hitachi_A-train')
+      London_North_Eastern_Railway: (predecessor^='http://dbpedia.org/resource/Virgin_Trains_East_Coast')
+    relationships:
+      - British_Rail_Class_801 (dor:British_Rail_Class_801) --doo:operator--> London_North_Eastern_Railway (dor:London_North_Eastern_Railway)
+      - Askern_branch_line (dor:Askern_branch_line) --dop:operator--> London_North_Eastern_Railway (dor:London_North_Eastern_Railway)
+      - Askern_branch_line (dor:Askern_branch_line) --doo:railwayRollingStock--> British_Rail_Class_66 (dor:British_Rail_Class_66)
+  '6':
+    attributes:
+      Askern_branch_line: (route end^='http://dbpedia.org/resource/Knottingley')
+      British_Rail_Class_66: (powertype^='Diesel-electric', buildmodel^='http://dbpedia.org/resource/EMD_JT42CWR', builddate^='1998', length (μ)^='21.4')
+      London_North_Eastern_Railway: (predecessor^='http://dbpedia.org/resource/Virgin_Trains_East_Coast')
+    relationships:
+      - British_Rail_Mark_4 (dor:British_Rail_Mark_4) --doo:operator--> London_North_Eastern_Railway (dor:London_North_Eastern_Railway)
+      - Askern_branch_line (dor:Askern_branch_line) --dop:operator--> London_North_Eastern_Railway (dor:London_North_Eastern_Railway)
+      - Askern_branch_line (dor:Askern_branch_line) --doo:railwayRollingStock--> British_Rail_Class_66 (dor:British_Rail_Class_66)
+  '7':
+    attributes:
+      IE_201_Class: (powertype^='Diesel-electric', buildmodel^='JT42HCW', builddate^='1994')
+      Iarnród_Éireann: (predecessor^='http://dbpedia.org/resource/CIÉ')
+    relationships:
+      - CxK (dor:CxK) --doo:operator--> Iarnród_Éireann (<http://dbpedia.org/resource/Iarnród_Éireann>)
+      - Ballina_branch_line (dor:Ballina_branch_line) --dop:operator--> Iarnród_Éireann (<http://dbpedia.org/resource/Iarnród_Éireann>)
+      - Ballina_branch_line (dor:Ballina_branch_line) --doo:railwayRollingStock--> IE_201_Class (dor:IE_201_Class)
+  '8':
+    attributes:
+      Deccan_Odyssey: (capacity^='88')
+      Barauni–Samastipur_section: (route end^='http://dbpedia.org/resource/Samastipur_Junction_railway_station', logo width^='100')
+      Indian_locomotive_class_WDM-2: (powertype^='Diesel', buildmodel^='http://dbpedia.org/resource/ALCO_DL560C', builddate^='1962', length (μ)^='17.12')
+    relationships:
+      - Deccan_Odyssey (dor:Deccan_Odyssey) --doo:operator--> Indian_Railways (dor:Indian_Railways)
+      - Barauni–Samastipur_section (<http://dbpedia.org/resource/Barauni–Samastipur_section>) --dop:operator--> Indian_Railways (dor:Indian_Railways)
+      - Barauni–Samastipur_section (<http://dbpedia.org/resource/Barauni–Samastipur_section>) --doo:railwayRollingStock--> Indian_locomotive_class_WDM-2 (dor:Indian_locomotive_class_WDM-2)
+  '9':
+    attributes:
+      Deccan_Odyssey: (capacity^='88')
+      Barauni–Samastipur_section: (route end^='http://dbpedia.org/resource/Samastipur_Junction_railway_station', logo width^='100')
+      Indian_locomotive_class_WDM-3A: (powertype^='Diesel', buildmodel^='ALCO DL560C variant', builddate^='1994', length (μ)^='17.12')
+    relationships:
+      - Deccan_Odyssey (dor:Deccan_Odyssey) --doo:operator--> Indian_Railways (dor:Indian_Railways)
+      - Barauni–Samastipur_section (<http://dbpedia.org/resource/Barauni–Samastipur_section>) --dop:operator--> Indian_Railways (dor:Indian_Railways)
+      - Barauni–Samastipur_section (<http://dbpedia.org/resource/Barauni–Samastipur_section>) --doo:railwayRollingStock--> Indian_locomotive_class_WDM-3A (dor:Indian_locomotive_class_WDM-3A)
+  '10':
+    attributes:
+      Barauni–Samastipur_section: (route end^='http://dbpedia.org/resource/Samastipur_Junction_railway_station', logo width^='100')
+      Indian_locomotive_class_WDM-2: (powertype^='Diesel', buildmodel^='http://dbpedia.org/resource/ALCO_DL560C', builddate^='1962', length (μ)^='17.12')
+    relationships:
+      - ICF_coaches (dor:ICF_coaches) --doo:operator--> Indian_Railways (dor:Indian_Railways)
+      - Barauni–Samastipur_section (<http://dbpedia.org/resource/Barauni–Samastipur_section>) --dop:operator--> Indian_Railways (dor:Indian_Railways)
+      - Barauni–Samastipur_section (<http://dbpedia.org/resource/Barauni–Samastipur_section>) --doo:railwayRollingStock--> Indian_locomotive_class_WDM-2 (dor:Indian_locomotive_class_WDM-2)
+attributes:
+  train: --capacity^ (doo:capacity)--> int | --weight (kg)^ (doom:weight)--> kilogram | --family^ (dop:family)--> langString
+  company: --budget ($)^ (doo:budget)--> usDollar | --predecessor^ (dop:predecessor)--> langString | --former name^ (doo:formerName)--> langString
+  locomotive: --powertype^ (dop:powertype)--> langString | --buildmodel^ (dop:buildmodel)--> langString | --builddate^ (dop:builddate)--> langString | --length (μ)^ (doo:length)--> double
+  railway line: --route end^ (doo:routeEnd)--> Resource | --logo width^ (dop:logoWidth)--> int
+subgraph_id: 45
+relationships:
+  - train --doo:operator--> company
+  - railway line --dop:operator--> company
+  - railway line --doo:railwayRollingStock--> locomotive

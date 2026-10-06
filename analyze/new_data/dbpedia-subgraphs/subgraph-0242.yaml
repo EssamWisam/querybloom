@@ -1,0 +1,73 @@
+types:
+  building: doo:Building
+  music genre: doo:MusicGenre
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Architecture: (url^='https://web.archive.org/web/20210828183015/https:/architecturaltrust.org/outreach/education/glossary-of-architectural-terms/')
+      Dolní_Počernice_(château): (has abstract^='Dolní Počernice is an architectural monument located at 1 Národních hrdinů street in Dolní Počernice, near the dike Počernický fishpond and a local English park. It is protected as a cultural monument...')
+    relationships:
+      - Dolní_Počernice_(château) (<http://dbpedia.org/resource/Dolní_Počernice_(château)>) --dop:architecturalStyle--> Architecture (dor:Architecture)
+      - Aedas (dor:Aedas) --doo:service--> Architecture (dor:Architecture)
+  '2':
+    attributes:
+      Architecture: (url^='https://web.archive.org/web/20210828183015/https:/architecturaltrust.org/outreach/education/glossary-of-architectural-terms/')
+      Alta_Architects: (Link from a Wikipage to an external page^='http://texasarchitect.org/ta200709-roma.php')
+      Dolní_Počernice_(château): (has abstract^='Dolní Počernice is an architectural monument located at 1 Národních hrdinů street in Dolní Počernice, near the dike Počernický fishpond and a local English park. It is protected as a cultural monument...')
+    relationships:
+      - Dolní_Počernice_(château) (<http://dbpedia.org/resource/Dolní_Počernice_(château)>) --dop:architecturalStyle--> Architecture (dor:Architecture)
+      - Alta_Architects (dor:Alta_Architects) --doo:service--> Architecture (dor:Architecture)
+  '3':
+    attributes:
+      Architecture: (url^='https://web.archive.org/web/20210828183015/https:/architecturaltrust.org/outreach/education/glossary-of-architectural-terms/')
+      Architects_Assist: (Link from a Wikipage to an external page^='http://architectsassist.com.au/')
+      Dolní_Počernice_(château): (has abstract^='Dolní Počernice is an architectural monument located at 1 Národních hrdinů street in Dolní Počernice, near the dike Počernický fishpond and a local English park. It is protected as a cultural monument...')
+    relationships:
+      - Dolní_Počernice_(château) (<http://dbpedia.org/resource/Dolní_Počernice_(château)>) --dop:architecturalStyle--> Architecture (dor:Architecture)
+      - Architects_Assist (dor:Architects_Assist) --doo:service--> Architecture (dor:Architecture)
+qa_result:
+  status: completed
+  cost_usd: 0.27346
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.023807400000000003
+        total_tokens: 2974
+        prompt_tokens: 1933
+        completion_tokens: 1041
+      generate:
+        cost_usd: 0.06008260000000001
+        total_tokens: 5605
+        prompt_tokens: 2988
+        completion_tokens: 2617
+      verify_1:
+        cost_usd: 0.031567
+        total_tokens: 3812
+        prompt_tokens: 2978
+        completion_tokens: 834
+      complexity:
+        cost_usd: 0.15800300000000003
+        total_tokens: 11228
+        prompt_tokens: 3865
+        completion_tokens: 7363
+    total_tokens: 23619
+    prompt_tokens: 11764
+    total_cost_usd: 0.27346000000000004
+    completion_tokens: 11855
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  building: --owner^ (doo:owner)--> Resource | --architecture^ (dop:architecture)--> Resource | --has abstract^ (doo:abstract)--> langString | --opening date^ (doo:openingDate)--> date
+  music genre: --footer^ (dop:footer)--> langString | --url^ (dop:url)--> Resource
+  organisation: --motto^ (doo:motto)--> string | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --align^ (dop:align)--> langString | --bot^ (dop:bot)--> langString
+subgraph_id: 242
+relationships:
+  - building --dop:architecturalStyle--> music genre
+  - organisation --doo:service--> music genre

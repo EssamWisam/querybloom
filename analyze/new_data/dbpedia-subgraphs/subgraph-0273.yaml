@@ -1,0 +1,143 @@
+types:
+  city: doo:City
+  school: doo:School
+  military unit: doo:MilitaryUnit
+  person function: doo:PersonFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      103rd_Regiment_(Calgary_Rifles): (garrison^='http://dbpedia.org/resource/Calgary')
+    relationships:
+      - Chinook_Winds_Adventist_Academy (dor:Chinook_Winds_Adventist_Academy) --doo:religion--> Seventh-day_Adventist_Church (dor:Seventh-day_Adventist_Church)
+      - Chinook_Winds_Adventist_Academy (dor:Chinook_Winds_Adventist_Academy) --doo:city--> Calgary (dor:Calgary)
+      - 103rd_Regiment_(Calgary_Rifles) (<http://dbpedia.org/resource/103rd_Regiment_(Calgary_Rifles)>) --doo:garrison--> Calgary (dor:Calgary)
+  '2':
+    attributes:
+      Edinburgh: (Apr precipitation days^='8.6', area total (m2)^='264000000.0')
+      Royal_High_School,_Edinburgh: (founder^='http://dbpedia.org/resource/Abbot_of_Holyrood')
+      105th_Regiment_Royal_Artillery: (garrison^='http://dbpedia.org/resource/Edinburgh')
+    relationships:
+      - Royal_High_School,_Edinburgh (<http://dbpedia.org/resource/Royal_High_School,_Edinburgh>) --doo:religion--> Nondenominational_Christianity (dor:Nondenominational_Christianity)
+      - Royal_High_School,_Edinburgh (<http://dbpedia.org/resource/Royal_High_School,_Edinburgh>) --doo:city--> Edinburgh (dor:Edinburgh)
+      - 105th_Regiment_Royal_Artillery (dor:105th_Regiment_Royal_Artillery) --doo:garrison--> Edinburgh (dor:Edinburgh)
+  '3':
+    attributes:
+      London: (width^='215', area total (m2)^='1572030000.0')
+      Alleyn's_School: (affiliation^='http://dbpedia.org/resource/College_of_God''s_Gift', founder^='http://dbpedia.org/resource/Edward_Alleyn')
+      106th_(Yeomanry)_Regiment_Royal_Artillery: (garrison^='http://dbpedia.org/resource/Grove_Park,_Lewisham')
+    relationships:
+      - Alleyn's_School (<http://dbpedia.org/resource/Alleyn's_School>) --doo:religion--> Church_of_England (dor:Church_of_England)
+      - Alleyn's_School (<http://dbpedia.org/resource/Alleyn's_School>) --doo:city--> London (dor:London)
+      - 106th_(Yeomanry)_Regiment_Royal_Artillery (<http://dbpedia.org/resource/106th_(Yeomanry)_Regiment_Royal_Artillery>) --doo:garrison--> London (dor:London)
+  '4':
+    attributes:
+      London: (width^='215', area total (m2)^='1572030000.0')
+      106th_(Yeomanry)_Regiment_Royal_Artillery: (garrison^='http://dbpedia.org/resource/Grove_Park,_Lewisham')
+    relationships:
+      - Archbishop_Tenison's_School (<http://dbpedia.org/resource/Archbishop_Tenison's_School>) --doo:religion--> Church_of_England (dor:Church_of_England)
+      - Archbishop_Tenison's_School (<http://dbpedia.org/resource/Archbishop_Tenison's_School>) --doo:city--> London (dor:London)
+      - 106th_(Yeomanry)_Regiment_Royal_Artillery (<http://dbpedia.org/resource/106th_(Yeomanry)_Regiment_Royal_Artillery>) --doo:garrison--> London (dor:London)
+  '5':
+    attributes:
+      London: (width^='215', area total (m2)^='1572030000.0')
+      106th_(Yeomanry)_Regiment_Royal_Artillery: (garrison^='http://dbpedia.org/resource/Grove_Park,_Lewisham')
+    relationships:
+      - Arnold_House_School (dor:Arnold_House_School) --doo:religion--> Church_of_England (dor:Church_of_England)
+      - Arnold_House_School (dor:Arnold_House_School) --doo:city--> London (dor:London)
+      - 106th_(Yeomanry)_Regiment_Royal_Artillery (<http://dbpedia.org/resource/106th_(Yeomanry)_Regiment_Royal_Artillery>) --doo:garrison--> London (dor:London)
+  '6':
+    attributes:
+      San_Antonio: (width^='22', nickname^='San Antone Alamo City, Military City USA, River City, The 210, S.A., Countdown City, Something to Remember', area total (m2)^='1307000000.0')
+      106th_Signal_Brigade_(United_States): (garrison^='http://dbpedia.org/resource/Fort_Sam_Houston')
+    relationships:
+      - Saint_Mary's_Hall_(San_Antonio) (<http://dbpedia.org/resource/Saint_Mary's_Hall_(San_Antonio)>) --doo:religion--> Nondenominational_Christianity (dor:Nondenominational_Christianity)
+      - Saint_Mary's_Hall_(San_Antonio) (<http://dbpedia.org/resource/Saint_Mary's_Hall_(San_Antonio)>) --doo:city--> San_Antonio (dor:San_Antonio)
+      - 106th_Signal_Brigade_(United_States) (<http://dbpedia.org/resource/106th_Signal_Brigade_(United_States)>) --doo:garrison--> San_Antonio (dor:San_Antonio)
+  '7':
+    attributes:
+      San_Antonio: (width^='22', nickname^='San Antone Alamo City, Military City USA, River City, The 210, S.A., Countdown City, Something to Remember', area total (m2)^='1307000000.0')
+      TMI_Episcopal: (founder^='http://dbpedia.org/resource/James_Steptoe_Johnston')
+      106th_Signal_Brigade_(United_States): (garrison^='http://dbpedia.org/resource/Fort_Sam_Houston')
+    relationships:
+      - TMI_Episcopal (dor:TMI_Episcopal) --doo:religion--> Episcopal_Church_in_the_United_States_of_America (dor:Episcopal_Church_in_the_United_States_of_America)
+      - TMI_Episcopal (dor:TMI_Episcopal) --doo:city--> San_Antonio (dor:San_Antonio)
+      - 106th_Signal_Brigade_(United_States) (<http://dbpedia.org/resource/106th_Signal_Brigade_(United_States)>) --doo:garrison--> San_Antonio (dor:San_Antonio)
+  '8':
+    attributes:
+      Chicago: (width^='225', nickname^='http://dbpedia.org/resource/Nicknames_of_Chicago', area total (m2)^='607429911.5171')
+      Academy_of_Our_Lady_(Chicago): (Closed^='1999')
+      108th_Sustainment_Brigade_(United_States): (garrison^='http://dbpedia.org/resource/Chicago')
+    relationships:
+      - Academy_of_Our_Lady_(Chicago) (<http://dbpedia.org/resource/Academy_of_Our_Lady_(Chicago)>) --doo:religion--> Catholic (dor:Catholic)
+      - Academy_of_Our_Lady_(Chicago) (<http://dbpedia.org/resource/Academy_of_Our_Lady_(Chicago)>) --doo:city--> Chicago (dor:Chicago)
+      - 108th_Sustainment_Brigade_(United_States) (<http://dbpedia.org/resource/108th_Sustainment_Brigade_(United_States)>) --doo:garrison--> Chicago (dor:Chicago)
+  '9':
+    attributes:
+      Karachi: (Apr precipitation days^='0.2', width^='auto', nickname^='City of the Quaid, Paris of the East, City of Lights, Bride of the Cities', area total (m2)^='3780000000.0')
+      10th_Baluch_Regiment: (garrison^='http://dbpedia.org/resource/Karachi')
+      Karachi_Grammar_School: (founder^='The Reverend Henry Brereton')
+    relationships:
+      - Karachi_Grammar_School (dor:Karachi_Grammar_School) --doo:religion--> Anglican (dor:Anglican)
+      - Karachi_Grammar_School (dor:Karachi_Grammar_School) --doo:city--> Karachi (dor:Karachi)
+      - 10th_Baluch_Regiment (dor:10th_Baluch_Regiment) --doo:garrison--> Karachi (dor:Karachi)
+  '10':
+    attributes:
+      Townsville: (Apr precipitation days^='4.3')
+      St_Margaret_Mary's_College: (founder^='The Sisters of the Good Samaritan')
+      10th_Force_Support_Battalion_(Australia): (garrison^='http://dbpedia.org/resource/Townsville')
+    relationships:
+      - St_Margaret_Mary's_College (<http://dbpedia.org/resource/St_Margaret_Mary's_College>) --doo:religion--> Catholic (dor:Catholic)
+      - St_Margaret_Mary's_College (<http://dbpedia.org/resource/St_Margaret_Mary's_College>) --doo:city--> Townsville (dor:Townsville)
+      - 10th_Force_Support_Battalion_(Australia) (<http://dbpedia.org/resource/10th_Force_Support_Battalion_(Australia)>) --doo:garrison--> Townsville (dor:Townsville)
+qa_result:
+  status: completed
+  cost_usd: 0.370537
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0379674
+        total_tokens: 3718
+        prompt_tokens: 1981
+        completion_tokens: 1737
+      generate:
+        cost_usd: 0.09134260000000002
+        total_tokens: 8449
+        prompt_tokens: 4696
+        completion_tokens: 3753
+      verify_1:
+        cost_usd: 0.044077000000000005
+        total_tokens: 6251
+        prompt_tokens: 5396
+        completion_tokens: 855
+      verify_2:
+        cost_usd: 0.04308200000000001
+        total_tokens: 5980
+        prompt_tokens: 5101
+        completion_tokens: 879
+      complexity:
+        cost_usd: 0.154068
+        total_tokens: 12781
+        prompt_tokens: 6198
+        completion_tokens: 6583
+    total_tokens: 37179
+    prompt_tokens: 23372
+    total_cost_usd: 0.37053700000000006
+    completion_tokens: 13807
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --Apr rain mm^ (dop:aprRainMm)--> double | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --width^ (dop:width)--> langString | --nickname^ (dop:nickname)--> langString | --Aug low F^ (dop:augLowF)--> double | --area total (m2)^ (doo:areaTotal)--> double
+  school: --Closed^ (dop:closed)--> date | --affiliation^ (dop:affiliation)--> Resource | --founder^ (dop:founder)--> Resource
+  military unit: --garrison^ (doo:garrison)--> Resource
+  person function: --mother^ (dop:mother)--> langString
+subgraph_id: 273
+relationships:
+  - school --doo:religion--> person function
+  - school --doo:city--> city
+  - military unit --doo:garrison--> city

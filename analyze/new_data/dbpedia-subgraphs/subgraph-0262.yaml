@@ -1,0 +1,118 @@
+types:
+  politician: doo:Politician
+  settlement: doo:Settlement
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abbott,_Texas: (area total km^='1.54')
+    relationships:
+      - Abbott,_Texas (<http://dbpedia.org/resource/Abbott,_Texas>) --doo:subdivision--> Texas (dor:Texas)
+      - 2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1 (<http://dbpedia.org/resource/2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1>) --doo:birthPlace--> Texas (dor:Texas)
+  '2':
+    attributes: {}
+    relationships:
+      - Aberfoyle,_Texas (<http://dbpedia.org/resource/Aberfoyle,_Texas>) --doo:subdivision--> Texas (dor:Texas)
+      - 2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1 (<http://dbpedia.org/resource/2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1>) --doo:birthPlace--> Texas (dor:Texas)
+  '3':
+    attributes:
+      Abernathy,_Texas: (Apr low F^='41.4', area total km^='8.31')
+    relationships:
+      - Abernathy,_Texas (<http://dbpedia.org/resource/Abernathy,_Texas>) --doo:subdivision--> Texas (dor:Texas)
+      - 2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1 (<http://dbpedia.org/resource/2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1>) --doo:birthPlace--> Texas (dor:Texas)
+  '4':
+    attributes:
+      8th_Arjia_Rinpoche: (caption^='8')
+      Haiyan_County,_Qinghai: (width^='auto', Apr high C^='10.7')
+      Jintan_Township,_Qinghai: (area total km^='122')
+    relationships:
+      - Jintan_Township,_Qinghai (<http://dbpedia.org/resource/Jintan_Township,_Qinghai>) --doo:subdivision--> Haiyan_County,_Qinghai (<http://dbpedia.org/resource/Haiyan_County,_Qinghai>)
+      - 8th_Arjia_Rinpoche (dor:8th_Arjia_Rinpoche) --doo:birthPlace--> Haiyan_County,_Qinghai (<http://dbpedia.org/resource/Haiyan_County,_Qinghai>)
+  '5':
+    attributes:
+      Johor: (width^='250')
+      Ayer_Baloi: (area total km^='142')
+    relationships:
+      - Ayer_Baloi (dor:Ayer_Baloi) --doo:subdivision--> Johor (dor:Johor)
+      - A_Rahman_A_Jamal (dor:A_Rahman_A_Jamal) --doo:birthPlace--> Johor (dor:Johor)
+  '6':
+    attributes:
+      Johor: (width^='250')
+    relationships:
+      - Ayer_Bemban (dor:Ayer_Bemban) --doo:subdivision--> Johor (dor:Johor)
+      - A_Rahman_A_Jamal (dor:A_Rahman_A_Jamal) --doo:birthPlace--> Johor (dor:Johor)
+  '7':
+    attributes:
+      Johor: (width^='250')
+    relationships:
+      - Ayer_Hitam__Ayer_Hitam__1 (dor:Ayer_Hitam__Ayer_Hitam__1) --doo:subdivision--> Johor (dor:Johor)
+      - A_Rahman_A_Jamal (dor:A_Rahman_A_Jamal) --doo:birthPlace--> Johor (dor:Johor)
+  '8':
+    attributes:
+      A._A._Ames: (children^='7', death date^='1911-11-16')
+    relationships:
+      - 11th_ward,_Chicago (<http://dbpedia.org/resource/11th_ward,_Chicago>) --doo:subdivision--> Illinois (dor:Illinois)
+      - A._A._Ames (dor:A._A._Ames) --doo:birthPlace--> Illinois (dor:Illinois)
+  '9':
+    attributes:
+      A._A._Ames: (children^='7', death date^='1911-11-16')
+      Abingdon,_Illinois: (area total km^='3.69')
+    relationships:
+      - Abingdon,_Illinois (<http://dbpedia.org/resource/Abingdon,_Illinois>) --doo:subdivision--> Illinois (dor:Illinois)
+      - A._A._Ames (dor:A._A._Ames) --doo:birthPlace--> Illinois (dor:Illinois)
+  '10':
+    attributes:
+      A._A._Ames: (children^='7', death date^='1911-11-16')
+    relationships:
+      - Abington_Township,_Mercer_County,_Illinois (<http://dbpedia.org/resource/Abington_Township,_Mercer_County,_Illinois>) --doo:subdivision--> Illinois (dor:Illinois)
+      - A._A._Ames (dor:A._A._Ames) --doo:birthPlace--> Illinois (dor:Illinois)
+qa_result:
+  status: completed
+  cost_usd: 0.363872
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.042947400000000004
+        total_tokens: 4252
+        prompt_tokens: 2361
+        completion_tokens: 1891
+      generate:
+        cost_usd: 0.06780760000000001
+        total_tokens: 6484
+        prompt_tokens: 3645
+        completion_tokens: 2839
+      verify_1:
+        cost_usd: 0.100722
+        total_tokens: 8217
+        prompt_tokens: 4241
+        completion_tokens: 3976
+      verify_2:
+        cost_usd: 0.036332
+        total_tokens: 4996
+        prompt_tokens: 4239
+        completion_tokens: 757
+      complexity:
+        cost_usd: 0.116063
+        total_tokens: 10154
+        prompt_tokens: 5229
+        completion_tokens: 4925
+    total_tokens: 34103
+    prompt_tokens: 19715
+    total_cost_usd: 0.36387200000000003
+    completion_tokens: 14388
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  politician: --before^ (dop:before)--> langString | --children^ (dop:children)--> langString | --url^ (dop:url)--> Resource | --awards^ (dop:awards)--> int | --bot^ (dop:bot)--> langString | --death date^ (doo:deathDate)--> date | --caption^ (dop:caption)--> langString
+  settlement: --Apr low F^ (dop:aprLowF)--> int | --area total km^ (dop:areaTotalKm)--> double
+  administrative region: --width^ (dop:width)--> langString | --Apr high C^ (dop:aprHighC)--> double | --Apr sun^ (dop:aprSun)--> double
+subgraph_id: 262
+relationships:
+  - settlement --doo:subdivision--> administrative region
+  - politician --doo:birthPlace--> administrative region

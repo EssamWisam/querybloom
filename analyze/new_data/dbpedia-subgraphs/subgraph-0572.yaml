@@ -1,0 +1,86 @@
+types:
+  venue: doo:Venue
+  soccer club: doo:SoccerClub
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A.C._Milan: (manager title^='Head coach')
+    relationships:
+      - Milanello (dor:Milanello) --doo:owner--> A.C._Milan (dor:A.C._Milan)
+      - A.C._Milan (dor:A.C._Milan) --doo:manager--> Stefano_Pioli (dor:Stefano_Pioli)
+  '2':
+    attributes:
+      San_Siro: (opened^='1926-09-19')
+      A.C._Milan: (manager title^='Head coach')
+    relationships:
+      - San_Siro (dor:San_Siro) --doo:owner--> A.C._Milan (dor:A.C._Milan)
+      - A.C._Milan (dor:A.C._Milan) --doo:manager--> Stefano_Pioli (dor:Stefano_Pioli)
+  '3':
+    attributes:
+      A.S._Roma: (manager title^='Head coach')
+      José_Mourinho: (id^='1908')
+      Campo_Testaccio: (opened^='1929-11-03')
+    relationships:
+      - Campo_Testaccio (dor:Campo_Testaccio) --doo:owner--> A.S._Roma (dor:A.S._Roma)
+      - A.S._Roma (dor:A.S._Roma) --doo:manager--> José_Mourinho (<http://dbpedia.org/resource/José_Mourinho>)
+  '4':
+    attributes:
+      A.S._Roma: (manager title^='Head coach')
+      José_Mourinho: (id^='1908')
+      Stadio_della_Roma: (cost ($)^='3.0E8')
+    relationships:
+      - Stadio_della_Roma (dor:Stadio_della_Roma) --doo:owner--> A.S._Roma (dor:A.S._Roma)
+      - A.S._Roma (dor:A.S._Roma) --doo:manager--> José_Mourinho (<http://dbpedia.org/resource/José_Mourinho>)
+  '5':
+    attributes:
+      Color_Line_Stadion: (opened^='2005-04-16', cost ($)^='1.6E8')
+    relationships:
+      - Color_Line_Stadion (dor:Color_Line_Stadion) --doo:owner--> Aalesunds_FK (dor:Aalesunds_FK)
+      - Aalesunds_FK (dor:Aalesunds_FK) --doo:manager--> Lars_Arne_Nilsen (dor:Lars_Arne_Nilsen)
+  '6':
+    attributes:
+      Aarhus_Stadium: (opened^='1920-06-05')
+    relationships:
+      - Aarhus_Stadium (dor:Aarhus_Stadium) --doo:owner--> Aarhus_Gymnastikforening (dor:Aarhus_Gymnastikforening)
+      - Aarhus_Gymnastikforening (dor:Aarhus_Gymnastikforening) --doo:manager--> Uwe_Rösler (<http://dbpedia.org/resource/Uwe_Rösler>)
+  '7':
+    attributes:
+      Ceres_Arena: (opened^='2001')
+      Aarhus_Gymnastikforening: (manager title^='Head coach')
+    relationships:
+      - Ceres_Arena (dor:Ceres_Arena) --doo:owner--> Aarhus_Gymnastikforening (dor:Aarhus_Gymnastikforening)
+      - Aarhus_Gymnastikforening (dor:Aarhus_Gymnastikforening) --doo:manager--> Uwe_Rösler (<http://dbpedia.org/resource/Uwe_Rösler>)
+  '8':
+    attributes:
+      Frasqueirão: (opened^='2006')
+      ABC_Futebol_Clube: (manager title^='Head coach')
+    relationships:
+      - Frasqueirão (<http://dbpedia.org/resource/Frasqueirão>) --doo:owner--> ABC_Futebol_Clube (dor:ABC_Futebol_Clube)
+      - ABC_Futebol_Clube (dor:ABC_Futebol_Clube) --doo:manager--> Fernando_Marchiori (dor:Fernando_Marchiori)
+  '9':
+    attributes:
+      Pittodrie_Stadium: (opened^='1899-09-02')
+    relationships:
+      - Pittodrie_Stadium (dor:Pittodrie_Stadium) --doo:owner--> Aberdeen_F.C. (<http://dbpedia.org/resource/Aberdeen_F.C.>)
+      - Aberdeen_F.C. (<http://dbpedia.org/resource/Aberdeen_F.C.>) --doo:manager--> Jim_Goodwin (dor:Jim_Goodwin)
+  '10':
+    attributes:
+      AC_Ajaccio: (manager title^='Head coach')
+      Stade_François_Coty: (opened^='1968-12-01', capacity^='10446')
+    relationships:
+      - Stade_François_Coty (<http://dbpedia.org/resource/Stade_François_Coty>) --doo:owner--> AC_Ajaccio (dor:AC_Ajaccio)
+      - AC_Ajaccio (dor:AC_Ajaccio) --doo:manager--> Olivier_Pantaloni (dor:Olivier_Pantaloni)
+attributes:
+  venue: --opened^ (dop:opened)--> date | --capacity^ (dop:capacity)--> int | --cost ($)^ (doo:cost)--> poundSterling | --cost^ (dop:cost)--> langString
+  soccer club: --bot^ (dop:bot)--> langString | --aggregatescore^ (dop:aggregatescore)--> int | --manager title^ (doo:managerTitle)--> string | --founding year^ (doo:foundingYear)--> gYear | --motto^ (doo:motto)--> string
+  soccer manager: --id^ (dop:id)--> int
+subgraph_id: 572
+relationships:
+  - venue --doo:owner--> soccer club
+  - soccer club --doo:manager--> soccer manager

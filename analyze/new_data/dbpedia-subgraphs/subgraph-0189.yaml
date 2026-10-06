@@ -1,0 +1,119 @@
+types:
+  software: doo:Software
+  video game: doo:VideoGame
+  information appliance: doo:InformationAppliance
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Nintendo_Switch: (display^='1280')
+    relationships:
+      - A_Memoir_Blue (dor:A_Memoir_Blue) --dop:platform--> Microsoft_Windows (dor:Microsoft_Windows)
+      - A_Memoir_Blue (dor:A_Memoir_Blue) --dop:platform--> Nintendo_Switch (dor:Nintendo_Switch)
+  '2':
+    attributes:
+      PlayStation_4: (display^='')
+      Microsoft_Windows: (logo^='Windows logo and wordmark - 2021.svg', Link from a Wikipage to an external page^='https://blogs.windows.com/')
+    relationships:
+      - A_Memoir_Blue (dor:A_Memoir_Blue) --dop:platform--> Microsoft_Windows (dor:Microsoft_Windows)
+      - A_Memoir_Blue (dor:A_Memoir_Blue) --dop:platform--> PlayStation_4 (dor:PlayStation_4)
+  '3':
+    attributes:
+      Microsoft_Windows: (logo^='Windows logo and wordmark - 2021.svg', Link from a Wikipage to an external page^='https://blogs.windows.com/')
+    relationships:
+      - A_Memoir_Blue (dor:A_Memoir_Blue) --dop:platform--> Microsoft_Windows (dor:Microsoft_Windows)
+      - A_Memoir_Blue (dor:A_Memoir_Blue) --dop:platform--> PlayStation_5 (dor:PlayStation_5)
+  '4':
+    attributes:
+      MS-DOS: (logo^='Msdos-icon.svg', url^='https://web.archive.org/web/20160415091114/http:/www.patersontech.com/Dos/Articles.aspx', Link from a Wikipage to an external page^='http://dosbox.sourceforge.net/news.php%3Fshow_news=1')
+      Abandoned_Places:_A_Time_for_Heroes: (composer^='George Dragon', designer^='Francis Staengler', id^='/abandoned-places-2')
+    relationships:
+      - Abandoned_Places:_A_Time_for_Heroes (<http://dbpedia.org/resource/Abandoned_Places:_A_Time_for_Heroes>) --dop:platform--> MS-DOS (dor:MS-DOS)
+      - Abandoned_Places:_A_Time_for_Heroes (<http://dbpedia.org/resource/Abandoned_Places:_A_Time_for_Heroes>) --dop:platform--> Amiga (dor:Amiga)
+  '5':
+    attributes: {}
+    relationships:
+      - Adidas_Power_Soccer (dor:Adidas_Power_Soccer) --dop:platform--> Windows (dor:Windows)
+      - Adidas_Power_Soccer (dor:Adidas_Power_Soccer) --dop:platform--> PlayStation_(console) (<http://dbpedia.org/resource/PlayStation_(console)>)
+  '6':
+    attributes:
+      MS-DOS: (logo^='Msdos-icon.svg', url^='https://web.archive.org/web/20160415091114/http:/www.patersontech.com/Dos/Articles.aspx', Link from a Wikipage to an external page^='http://dosbox.sourceforge.net/news.php%3Fshow_news=1')
+    relationships:
+      - Advanced_Destroyer_Simulator (dor:Advanced_Destroyer_Simulator) --dop:platform--> MS-DOS (dor:MS-DOS)
+      - Advanced_Destroyer_Simulator (dor:Advanced_Destroyer_Simulator) --dop:platform--> Amiga (dor:Amiga)
+  '7':
+    attributes:
+      MS-DOS: (logo^='Msdos-icon.svg', url^='https://web.archive.org/web/20160415091114/http:/www.patersontech.com/Dos/Articles.aspx', Link from a Wikipage to an external page^='http://dosbox.sourceforge.net/news.php%3Fshow_news=1')
+      Amstrad_CPC: (display^='160')
+    relationships:
+      - Advanced_Destroyer_Simulator (dor:Advanced_Destroyer_Simulator) --dop:platform--> MS-DOS (dor:MS-DOS)
+      - Advanced_Destroyer_Simulator (dor:Advanced_Destroyer_Simulator) --dop:platform--> Amstrad_CPC (dor:Amstrad_CPC)
+  '8':
+    attributes:
+      Amazon_Fire_TV: (logo^='http://dbpedia.org/resource/File:Amazon_Fire_TV_Logo.png', Link from a Wikipage to an external page^='https://www.amazon.com/b/%3Fnode=8521791011')
+    relationships:
+      - All_4 (dor:All_4) --dop:platform--> Amazon_Fire_TV (dor:Amazon_Fire_TV)
+      - All_4 (dor:All_4) --dop:platform--> Apple_TV (dor:Apple_TV)
+  '9':
+    attributes:
+      Chromecast: (display^='4')
+      Amazon_Fire_TV: (logo^='http://dbpedia.org/resource/File:Amazon_Fire_TV_Logo.png', Link from a Wikipage to an external page^='https://www.amazon.com/b/%3Fnode=8521791011')
+    relationships:
+      - All_4 (dor:All_4) --dop:platform--> Amazon_Fire_TV (dor:Amazon_Fire_TV)
+      - All_4 (dor:All_4) --dop:platform--> Chromecast (dor:Chromecast)
+  '10':
+    attributes:
+      PlayStation_3: (display^='Component')
+      Amazon_Fire_TV: (logo^='http://dbpedia.org/resource/File:Amazon_Fire_TV_Logo.png', Link from a Wikipage to an external page^='https://www.amazon.com/b/%3Fnode=8521791011')
+    relationships:
+      - All_4 (dor:All_4) --dop:platform--> Amazon_Fire_TV (dor:Amazon_Fire_TV)
+      - All_4 (dor:All_4) --dop:platform--> PlayStation_3 (dor:PlayStation_3)
+qa_result:
+  status: completed
+  cost_usd: 0.393267
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.047832400000000004
+        total_tokens: 4413
+        prompt_tokens: 2250
+        completion_tokens: 2163
+      generate:
+        cost_usd: 0.05830260000000001
+        total_tokens: 5993
+        prompt_tokens: 3624
+        completion_tokens: 2369
+      verify_1:
+        cost_usd: 0.115317
+        total_tokens: 8979
+        prompt_tokens: 4284
+        completion_tokens: 4695
+      verify_2:
+        cost_usd: 0.032472
+        total_tokens: 4650
+        prompt_tokens: 4035
+        completion_tokens: 615
+      complexity:
+        cost_usd: 0.13934300000000002
+        total_tokens: 11006
+        prompt_tokens: 4813
+        completion_tokens: 6193
+    total_tokens: 35041
+    prompt_tokens: 19006
+    total_cost_usd: 0.39326700000000003
+    completion_tokens: 16035
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  software: --logo^ (dop:logo)--> langString | --author^ (doo:author)--> Resource | --platform^ (dop:platform)--> langString | --url^ (dop:url)--> Resource | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --logo^ (dop:logo)--> int
+  video game: --composer^ (dop:composer)--> langString | --designer^ (dop:designer)--> Resource | --id^ (dop:id)--> langString | --direction^ (dop:direction)--> langString | --footer^ (dop:footer)--> langString
+  information appliance: --display^ (dop:display)--> double
+subgraph_id: 189
+relationships:
+  - video game --dop:platform--> software
+  - video game --dop:platform--> information appliance

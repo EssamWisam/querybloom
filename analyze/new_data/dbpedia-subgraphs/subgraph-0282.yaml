@@ -1,0 +1,117 @@
+types:
+  movie: doo:Film
+  software: doo:Software
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dorh: http://dbpedia.org/resource/.hack//
+instances:
+  '1':
+    attributes:
+      Roots: (Wikipage revision ID^='1068246049')
+      A_Tale_of_Two_Kingdoms: (Link from a Wikipage to an external page^='http://www.crystalshard.net/atotk.php')
+    relationships:
+      - A_Tale_of_Two_Kingdoms (dor:A_Tale_of_Two_Kingdoms) --dop:genre--> Fantasy (dor:Fantasy)
+      - Roots (dorh:Roots) --dop:genre--> Fantasy (dor:Fantasy)
+  '2':
+    attributes:
+      Roots: (Wikipage revision ID^='1068246049')
+      Achaea,_Dreams_of_Divine_Lands: (Link from a Wikipage to an external page^='http://wiki.achaea.com/Main_Page')
+    relationships:
+      - Achaea,_Dreams_of_Divine_Lands (<http://dbpedia.org/resource/Achaea,_Dreams_of_Divine_Lands>) --dop:genre--> Fantasy (dor:Fantasy)
+      - Roots (dorh:Roots) --dop:genre--> Fantasy (dor:Fantasy)
+  '3':
+    attributes:
+      Roots: (Wikipage revision ID^='1068246049')
+      Air_(video_game): (Link from a Wikipage to an external page^='http://key.visualarts.gr.jp/product/air/')
+    relationships:
+      - Air_(video_game) (<http://dbpedia.org/resource/Air_(video_game)>) --dop:genre--> Fantasy (dor:Fantasy)
+      - Roots (dorh:Roots) --dop:genre--> Fantasy (dor:Fantasy)
+  '4':
+    attributes:
+      Sign: (Wikipage revision ID^='1117617248')
+      Biosys: (Link from a Wikipage to an external page^='https://www.kultboy.com/index.php%3Fsite=t&id=17531')
+    relationships:
+      - Biosys (dor:Biosys) --dop:genre--> Adventure (dor:Adventure)
+      - Sign (dorh:Sign) --dop:genre--> Adventure (dor:Adventure)
+  '5':
+    attributes:
+      Sign: (Wikipage revision ID^='1117617248')
+    relationships:
+      - Black_Book_(video_game) (<http://dbpedia.org/resource/Black_Book_(video_game)>) --dop:genre--> Adventure (dor:Adventure)
+      - Sign (dorh:Sign) --dop:genre--> Adventure (dor:Adventure)
+  '6':
+    attributes:
+      Sign: (Wikipage revision ID^='1117617248')
+      Fire_Emblem:_Mystery_of_the_Emblem: (Link from a Wikipage to an external page^='https://web.archive.org/web/20131015140336/https:/www.nintendo.co.jp/n02/shvc/em/index.html')
+    relationships:
+      - Fire_Emblem:_Mystery_of_the_Emblem (<http://dbpedia.org/resource/Fire_Emblem:_Mystery_of_the_Emblem>) --dop:genre--> Adventure (dor:Adventure)
+      - Sign (dorh:Sign) --dop:genre--> Adventure (dor:Adventure)
+  '7':
+    attributes:
+      10th_Class: (Wikipage revision ID^='1110015181', cinematography^='http://dbpedia.org/resource/T._Surendra_Reddy', production company^='http://dbpedia.org/resource/SP_Entertainments')
+    relationships:
+      - Darkstar:_The_Interactive_Movie (<http://dbpedia.org/resource/Darkstar:_The_Interactive_Movie>) --dop:genre--> Soundtrack (dor:Soundtrack)
+      - 10th_Class (dor:10th_Class) --dop:genre--> Soundtrack (dor:Soundtrack)
+  '8':
+    attributes:
+      10th_Class: (Wikipage revision ID^='1110015181', cinematography^='http://dbpedia.org/resource/T._Surendra_Reddy', production company^='http://dbpedia.org/resource/SP_Entertainments')
+      Dead_Rising_3: (Link from a Wikipage to an external page^='https://web.archive.org/web/20130907211316/http:/www.xbox.com/en-US/xbox-one/games/dead-rising-3/')
+    relationships:
+      - Dead_Rising_3 (dor:Dead_Rising_3) --dop:genre--> Soundtrack (dor:Soundtrack)
+      - 10th_Class (dor:10th_Class) --dop:genre--> Soundtrack (dor:Soundtrack)
+  '9':
+    attributes:
+      10th_Class: (Wikipage revision ID^='1110015181', cinematography^='http://dbpedia.org/resource/T._Surendra_Reddy', production company^='http://dbpedia.org/resource/SP_Entertainments')
+    relationships:
+      - Enemy_Zero (dor:Enemy_Zero) --dop:genre--> Soundtrack (dor:Soundtrack)
+      - 10th_Class (dor:10th_Class) --dop:genre--> Soundtrack (dor:Soundtrack)
+  '10':
+    attributes:
+      13_Going_on_30: (Wikipage revision ID^='1123006607', cinematography^='http://dbpedia.org/resource/Don_Burgess_(cinematographer)')
+      Stubbs_the_Zombie_in_Rebel_Without_a_Pulse: (Link from a Wikipage to an external page^='http://www.livejournal.com/users/gamepolitics/146842.html')
+    relationships:
+      - Stubbs_the_Zombie_in_Rebel_Without_a_Pulse (dor:Stubbs_the_Zombie_in_Rebel_Without_a_Pulse) --dop:genre--> Pop_music (dor:Pop_music)
+      - 13_Going_on_30 (dor:13_Going_on_30) --dop:genre--> Pop_music (dor:Pop_music)
+qa_result:
+  status: completed
+  cost_usd: 0.237745
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.047847400000000005
+        total_tokens: 4254
+        prompt_tokens: 2037
+        completion_tokens: 2217
+      generate:
+        cost_usd: 0.0556976
+        total_tokens: 5820
+        prompt_tokens: 3567
+        completion_tokens: 2253
+      verify_1:
+        cost_usd: 0.055787
+        total_tokens: 5551
+        prompt_tokens: 3682
+        completion_tokens: 1869
+      complexity:
+        cost_usd: 0.07841300000000001
+        total_tokens: 7727
+        prompt_tokens: 4503
+        completion_tokens: 3224
+    total_tokens: 23352
+    prompt_tokens: 13789
+    total_cost_usd: 0.23774500000000004
+    completion_tokens: 9563
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  movie: --2p^ (dop:2p)--> int | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --cinematography^ (doo:cinematography)--> Resource | --production company^ (doo:productionCompany)--> Resource | --c^ (dop:c)--> langString
+  software: --platform^ (dop:platform)--> langString | --status^ (doo:status)--> string | --logo^ (dop:logo)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+subgraph_id: 282
+relationships:
+  - software --dop:genre--> music genre
+  - movie --dop:genre--> music genre

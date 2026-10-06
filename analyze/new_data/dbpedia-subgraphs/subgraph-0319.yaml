@@ -1,0 +1,75 @@
+types:
+  city: doo:City
+  restaurant: doo:Restaurant
+  radio station: doo:RadioStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Sydney: (area^='12367.7')
+    relationships:
+      - Claude's_(restaurant) (<http://dbpedia.org/resource/Claude's_(restaurant)>) --dop:city--> Sydney (dor:Sydney)
+      - 101.7_WSFM (dor:101.7_WSFM) --dop:area--> Sydney (dor:Sydney)
+  '2':
+    attributes:
+      Sydney: (area^='12367.7')
+    relationships:
+      - Schnitz (dor:Schnitz) --dop:city--> Sydney (dor:Sydney)
+      - 101.7_WSFM (dor:101.7_WSFM) --dop:area--> Sydney (dor:Sydney)
+  '3':
+    attributes:
+      Sydney: (area^='12367.7')
+    relationships:
+      - Claude's_(restaurant) (<http://dbpedia.org/resource/Claude's_(restaurant)>) --dop:city--> Sydney (dor:Sydney)
+      - 1116_SEN (dor:1116_SEN) --dop:area--> Sydney (dor:Sydney)
+  '4':
+    attributes:
+      Melbourne: (area^='9993')
+    relationships:
+      - Attica_(restaurant) (<http://dbpedia.org/resource/Attica_(restaurant)>) --dop:city--> Melbourne (dor:Melbourne)
+      - 3ZZZ (dor:3ZZZ) --dop:area--> Melbourne (dor:Melbourne)
+  '5':
+    attributes:
+      Melbourne: (area^='9993')
+    relationships:
+      - Colonial_Tramcar_Restaurant (dor:Colonial_Tramcar_Restaurant) --dop:city--> Melbourne (dor:Melbourne)
+      - 3ZZZ (dor:3ZZZ) --dop:area--> Melbourne (dor:Melbourne)
+  '6':
+    attributes:
+      Melbourne: (area^='9993')
+    relationships:
+      - Flower_Drum (dor:Flower_Drum) --dop:city--> Melbourne (dor:Melbourne)
+      - 3ZZZ (dor:3ZZZ) --dop:area--> Melbourne (dor:Melbourne)
+  '7':
+    attributes:
+      Perth: (area^='6417.9')
+    relationships:
+      - C_Restaurant (dor:C_Restaurant) --dop:city--> Perth (dor:Perth)
+      - 6PR (dor:6PR) --dop:area--> Perth (dor:Perth)
+  '8':
+    attributes:
+      Perth: (area^='6417.9')
+    relationships:
+      - Greenhouse_(restaurant) (<http://dbpedia.org/resource/Greenhouse_(restaurant)>) --dop:city--> Perth (dor:Perth)
+      - 6PR (dor:6PR) --dop:area--> Perth (dor:Perth)
+  '9':
+    attributes:
+      Perth: (area^='6417.9')
+    relationships:
+      - Print_Hall (dor:Print_Hall) --dop:city--> Perth (dor:Perth)
+      - 6PR (dor:6PR) --dop:area--> Perth (dor:Perth)
+  '10':
+    attributes: {}
+    relationships:
+      - Carnivore_(restaurant) (<http://dbpedia.org/resource/Carnivore_(restaurant)>) --dop:city--> Nairobi (dor:Nairobi)
+      - 98.4_Capital_FM (dor:98.4_Capital_FM) --dop:area--> Nairobi (dor:Nairobi)
+attributes:
+  city: --c (dop:c)--> langString | --Apr high F^ (dop:aprHighF)--> double | --named for^ (dop:namedFor)--> langString | --named after^ (doo:namedAfter)--> Resource | --area^ (dop:area)--> double | --quote^ (dop:quote)--> langString | --Aug low F^ (dop:augLowF)--> int | --named for^ (dop:namedFor)--> Resource | --Aug rain days^ (dop:augRainDays)--> double
+subgraph_id: 319
+relationships:
+  - restaurant --dop:city--> city
+  - radio station --dop:area--> city

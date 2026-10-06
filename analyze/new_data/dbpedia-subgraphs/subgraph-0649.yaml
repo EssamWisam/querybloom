@@ -1,0 +1,114 @@
+types:
+  Band: doo:Band
+  country: doo:Country
+  settlement: doo:Settlement
+  darts player: doo:DartsPlayer
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      London: (elevation (μ)^='11.0', caption^='A bombed-out London street during the Blitz, World War II')
+      England: (Link from a Wikipage to an external page^='http://www.english-heritage.org.uk/')
+      Giggs_(rapper): (birth date^='1983-05-11')
+    relationships:
+      - 67_(rap_group) (<http://dbpedia.org/resource/67_(rap_group)>) --doo:associatedMusicalArtist--> Giggs_(rapper) (<http://dbpedia.org/resource/Giggs_(rapper)>)
+      - 67_(rap_group) (<http://dbpedia.org/resource/67_(rap_group)>) --doo:hometown--> London (dor:London)
+      - Jason_Clark_(darts_player) (<http://dbpedia.org/resource/Jason_Clark_(darts_player)>) --doo:hometown--> London (dor:London)
+      - Jason_Clark_(darts_player) (<http://dbpedia.org/resource/Jason_Clark_(darts_player)>) --doo:hometown--> England (dor:England)
+  '2':
+    attributes:
+      K-Trap: (birth date^='1995-10-21')
+      London: (elevation (μ)^='11.0', caption^='A bombed-out London street during the Blitz, World War II')
+      England: (Link from a Wikipage to an external page^='http://www.english-heritage.org.uk/')
+    relationships:
+      - 67_(rap_group) (<http://dbpedia.org/resource/67_(rap_group)>) --doo:associatedMusicalArtist--> K-Trap (dor:K-Trap)
+      - 67_(rap_group) (<http://dbpedia.org/resource/67_(rap_group)>) --doo:hometown--> London (dor:London)
+      - Jason_Clark_(darts_player) (<http://dbpedia.org/resource/Jason_Clark_(darts_player)>) --doo:hometown--> London (dor:London)
+      - Jason_Clark_(darts_player) (<http://dbpedia.org/resource/Jason_Clark_(darts_player)>) --doo:hometown--> England (dor:England)
+  '3':
+    attributes:
+      London: (elevation (μ)^='11.0', caption^='A bombed-out London street during the Blitz, World War II')
+      England: (Link from a Wikipage to an external page^='http://www.english-heritage.org.uk/')
+      Giggs_(rapper): (birth date^='1983-05-11')
+    relationships:
+      - 67_(rap_group) (<http://dbpedia.org/resource/67_(rap_group)>) --doo:associatedMusicalArtist--> Giggs_(rapper) (<http://dbpedia.org/resource/Giggs_(rapper)>)
+      - 67_(rap_group) (<http://dbpedia.org/resource/67_(rap_group)>) --doo:hometown--> London (dor:London)
+      - Richie_Howson (dor:Richie_Howson) --doo:hometown--> London (dor:London)
+      - Richie_Howson (dor:Richie_Howson) --doo:hometown--> England (dor:England)
+  '4':
+    attributes:
+      Canada: (Link from a Wikipage to an external page^='http://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada_19990081', government type^='http://dbpedia.org/resource/Constitutional_monarchy')
+      Gunna_(rapper): (birth date^='1993-06-14')
+    relationships:
+      - 88Glam (dor:88Glam) --doo:associatedMusicalArtist--> Gunna_(rapper) (<http://dbpedia.org/resource/Gunna_(rapper)>)
+      - 88Glam (dor:88Glam) --doo:hometown--> Ontario (dor:Ontario)
+      - Jim_Long_(darts_player) (<http://dbpedia.org/resource/Jim_Long_(darts_player)>) --doo:hometown--> Ontario (dor:Ontario)
+      - Jim_Long_(darts_player) (<http://dbpedia.org/resource/Jim_Long_(darts_player)>) --doo:hometown--> Canada (dor:Canada)
+  '5':
+    attributes:
+      Canada: (Link from a Wikipage to an external page^='http://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada_19990081', government type^='http://dbpedia.org/resource/Constitutional_monarchy')
+      Lil_Keed: (birth date^='1998-03-16')
+    relationships:
+      - 88Glam (dor:88Glam) --doo:associatedMusicalArtist--> Lil_Keed (dor:Lil_Keed)
+      - 88Glam (dor:88Glam) --doo:hometown--> Ontario (dor:Ontario)
+      - Jim_Long_(darts_player) (<http://dbpedia.org/resource/Jim_Long_(darts_player)>) --doo:hometown--> Ontario (dor:Ontario)
+      - Jim_Long_(darts_player) (<http://dbpedia.org/resource/Jim_Long_(darts_player)>) --doo:hometown--> Canada (dor:Canada)
+  '6':
+    attributes:
+      Canada: (Link from a Wikipage to an external page^='http://www.oecd-ilibrary.org/economics/oecd-economic-surveys-canada_19990081', government type^='http://dbpedia.org/resource/Constitutional_monarchy')
+      Lil_Yachty: (birth date^='1997-08-23')
+    relationships:
+      - 88Glam (dor:88Glam) --doo:associatedMusicalArtist--> Lil_Yachty (dor:Lil_Yachty)
+      - 88Glam (dor:88Glam) --doo:hometown--> Ontario (dor:Ontario)
+      - Jim_Long_(darts_player) (<http://dbpedia.org/resource/Jim_Long_(darts_player)>) --doo:hometown--> Ontario (dor:Ontario)
+      - Jim_Long_(darts_player) (<http://dbpedia.org/resource/Jim_Long_(darts_player)>) --doo:hometown--> Canada (dor:Canada)
+  '7':
+    attributes:
+      Japan: (Link from a Wikipage to an external page^='https://japan.kantei.go.jp/index.html', government type^='http://dbpedia.org/resource/Unitary_state')
+    relationships:
+      - 9mm_Parabellum_Bullet (dor:9mm_Parabellum_Bullet) --doo:associatedMusicalArtist--> Envy_(band) (<http://dbpedia.org/resource/Envy_(band)>)
+      - 9mm_Parabellum_Bullet (dor:9mm_Parabellum_Bullet) --doo:hometown--> Yokohama (dor:Yokohama)
+      - Toru_Sano_(darts_player) (<http://dbpedia.org/resource/Toru_Sano_(darts_player)>) --doo:hometown--> Yokohama (dor:Yokohama)
+      - Toru_Sano_(darts_player) (<http://dbpedia.org/resource/Toru_Sano_(darts_player)>) --doo:hometown--> Japan (dor:Japan)
+  '8':
+    attributes:
+      Australia: (Link from a Wikipage to an external page^='http://www.abs.gov.au/', government type^='http://dbpedia.org/resource/Federalism')
+      Melbourne: '(caption^=''From top; left to right: Melbourne skyline, Flinders Street Station, Shrine of Remembrance, Melbourne Cricket Ground, Royal Exhibition Building, Princes Bridge with Federation Square, St Paul''''s Cathed...'', wordnet_type=''http://www.w3.org/2006/03/wn/wn20/instances/synset-location-noun-1'')'
+    relationships:
+      - A_Dead_Forest_Index (dor:A_Dead_Forest_Index) --doo:associatedMusicalArtist--> Savages_(band) (<http://dbpedia.org/resource/Savages_(band)>)
+      - A_Dead_Forest_Index (dor:A_Dead_Forest_Index) --doo:hometown--> Melbourne (dor:Melbourne)
+      - Eddy_Sims (dor:Eddy_Sims) --doo:hometown--> Melbourne (dor:Melbourne)
+      - Eddy_Sims (dor:Eddy_Sims) --doo:hometown--> Australia (dor:Australia)
+  '9':
+    attributes:
+      Australia: (Link from a Wikipage to an external page^='http://www.abs.gov.au/', government type^='http://dbpedia.org/resource/Federalism')
+      Melbourne: '(caption^=''From top; left to right: Melbourne skyline, Flinders Street Station, Shrine of Remembrance, Melbourne Cricket Ground, Royal Exhibition Building, Princes Bridge with Federation Square, St Paul''''s Cathed...'', wordnet_type=''http://www.w3.org/2006/03/wn/wn20/instances/synset-location-noun-1'')'
+    relationships:
+      - A_Dead_Forest_Index (dor:A_Dead_Forest_Index) --doo:associatedMusicalArtist--> Savages_(band) (<http://dbpedia.org/resource/Savages_(band)>)
+      - A_Dead_Forest_Index (dor:A_Dead_Forest_Index) --doo:hometown--> Melbourne (dor:Melbourne)
+      - John_Weber_(darts_player) (<http://dbpedia.org/resource/John_Weber_(darts_player)>) --doo:hometown--> Melbourne (dor:Melbourne)
+      - John_Weber_(darts_player) (<http://dbpedia.org/resource/John_Weber_(darts_player)>) --doo:hometown--> Australia (dor:Australia)
+  '10':
+    attributes:
+      United_Kingdom: (Link from a Wikipage to an external page^='http://www.churchofscotland.org.uk/about_us/how_we_are_organised', government type^='http://dbpedia.org/resource/Constitutional_monarchy')
+      Reading,_Berkshire: (elevation (μ)^='61.0', caption^='Location of suburbs of Reading', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-location-noun-1')
+    relationships:
+      - A_Genuine_Freakshow (dor:A_Genuine_Freakshow) --doo:associatedMusicalArtist--> Dry_the_River (dor:Dry_the_River)
+      - A_Genuine_Freakshow (dor:A_Genuine_Freakshow) --doo:hometown--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Peter_Martin_(darts_player) (<http://dbpedia.org/resource/Peter_Martin_(darts_player)>) --doo:hometown--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Peter_Martin_(darts_player) (<http://dbpedia.org/resource/Peter_Martin_(darts_player)>) --doo:hometown--> United_Kingdom (dor:United_Kingdom)
+attributes:
+  country: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --government type^ (doo:governmentType)--> Resource
+  settlement: --elevation (μ)^ (doo:elevation)--> double | --caption^ (dop:caption)--> langString | --country^ (dop:country)--> langString | --wordnet_type (dop:wordnet_type)--> Resource
+  musical artist: --bgcolor^ (dop:bgcolor)--> langString | --spouse^ (dop:spouse)--> langString | --birth date^ (doo:birthDate)--> date | --instrument^ (doo:instrument)--> Resource | --instruments^ (dop:instruments)--> Resource
+subgraph_id: 649
+relationships:
+  - Band --doo:associatedMusicalArtist--> musical artist
+  - Band --doo:hometown--> settlement
+  - darts player --doo:hometown--> settlement
+  - darts player --doo:hometown--> country

@@ -1,0 +1,125 @@
+types:
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Mahmud_Al-Nashaf: (death date^='1979-11-10')
+      Agriculture_and_Development: (affiliation^='http://dbpedia.org/resource/Mapai')
+    relationships:
+      - Agriculture_and_Development (dor:Agriculture_and_Development) --doo:leader--> Faras_Hamdan (dor:Faras_Hamdan)
+      - Agriculture_and_Development (dor:Agriculture_and_Development) --doo:leader--> Mahmud_Al-Nashaf (dor:Mahmud_Al-Nashaf)
+  '2':
+    attributes:
+      Faras_Hamdan: (death date^='1966-11-29')
+      Agriculture_and_Development: (affiliation^='http://dbpedia.org/resource/Mapai')
+    relationships:
+      - Agriculture_and_Development (dor:Agriculture_and_Development) --doo:leader--> Mahmud_Al-Nashaf (dor:Mahmud_Al-Nashaf)
+      - Agriculture_and_Development (dor:Agriculture_and_Development) --doo:leader--> Faras_Hamdan (dor:Faras_Hamdan)
+  '3':
+    attributes:
+      Agudat_Yisrael: (affiliation^='http://dbpedia.org/resource/Religious_Torah_Front')
+      Menachem_Porush: (death date^='2010-02-22')
+    relationships:
+      - Agudat_Yisrael (dor:Agudat_Yisrael) --doo:leader--> Avraham_Yosef_Shapira (dor:Avraham_Yosef_Shapira)
+      - Agudat_Yisrael (dor:Agudat_Yisrael) --doo:leader--> Menachem_Porush (dor:Menachem_Porush)
+  '4':
+    attributes:
+      Agudat_Yisrael: (affiliation^='http://dbpedia.org/resource/Religious_Torah_Front')
+      Yehuda_Meir_Abramowicz: (death date^='2007-04-20')
+    relationships:
+      - Agudat_Yisrael (dor:Agudat_Yisrael) --doo:leader--> Avraham_Yosef_Shapira (dor:Avraham_Yosef_Shapira)
+      - Agudat_Yisrael (dor:Agudat_Yisrael) --doo:leader--> Yehuda_Meir_Abramowicz (dor:Yehuda_Meir_Abramowicz)
+  '5':
+    attributes:
+      Agudat_Yisrael: (affiliation^='http://dbpedia.org/resource/Religious_Torah_Front')
+    relationships:
+      - Agudat_Yisrael (dor:Agudat_Yisrael) --doo:leader--> Avraham_Yosef_Shapira (dor:Avraham_Yosef_Shapira)
+      - Agudat_Yisrael (dor:Agudat_Yisrael) --doo:leader--> Yitzhak_Goldknopf (dor:Yitzhak_Goldknopf)
+  '6':
+    attributes:
+      Yigal_Allon: (predecessor^='http://dbpedia.org/resource/Levi_Eshkol')
+      Ahdut_HaAvoda: (affiliation^='http://dbpedia.org/resource/Alignment_(political_party)')
+      Yitzhak_Tabenkin: (death date^='1971-06-06')
+    relationships:
+      - Ahdut_HaAvoda (dor:Ahdut_HaAvoda) --doo:leader--> Yigal_Allon (dor:Yigal_Allon)
+      - Ahdut_HaAvoda (dor:Ahdut_HaAvoda) --doo:leader--> Yitzhak_Tabenkin (dor:Yitzhak_Tabenkin)
+  '7':
+    attributes:
+      Yigal_Allon: (death date^='1980-02-29', predecessor^='http://dbpedia.org/resource/Levi_Eshkol')
+      Ahdut_HaAvoda: (affiliation^='http://dbpedia.org/resource/Alignment_(political_party)')
+    relationships:
+      - Ahdut_HaAvoda (dor:Ahdut_HaAvoda) --doo:leader--> Yitzhak_Tabenkin (dor:Yitzhak_Tabenkin)
+      - Ahdut_HaAvoda (dor:Ahdut_HaAvoda) --doo:leader--> Yigal_Allon (dor:Yigal_Allon)
+  '8':
+    attributes:
+      Aitaira: (headquarter^='http://dbpedia.org/resource/Republic_of_Abkhazia')
+      Leonid_Lakerbaia: (predecessor^='http://dbpedia.org/resource/Sergei_Shamba')
+    relationships:
+      - Aitaira (dor:Aitaira) --doo:leader--> Akhra_Kvekveskiri (dor:Akhra_Kvekveskiri)
+      - Aitaira (dor:Aitaira) --doo:leader--> Leonid_Lakerbaia (dor:Leonid_Lakerbaia)
+  '9':
+    attributes:
+      Al-Ahrar_Bloc: (headquarter^='http://dbpedia.org/resource/Baghdad')
+      Muqtada_al-Sadr: (predecessor^='http://dbpedia.org/resource/Mohammad_al-Sadr')
+    relationships:
+      - Al-Ahrar_Bloc (dor:Al-Ahrar_Bloc) --doo:leader--> Dia_al-Asadi (dor:Dia_al-Asadi)
+      - Al-Ahrar_Bloc (dor:Al-Ahrar_Bloc) --doo:leader--> Muqtada_al-Sadr (dor:Muqtada_al-Sadr)
+  '10':
+    attributes:
+      Nik_Gjeloshaj: (predecessor^='Office established')
+      Albanian_List_(Montenegro): (headquarter^='http://dbpedia.org/resource/Tuzi')
+    relationships:
+      - Albanian_List_(Montenegro) (<http://dbpedia.org/resource/Albanian_List_(Montenegro)>) --doo:leader--> Nazif_Cungu (dor:Nazif_Cungu)
+      - Albanian_List_(Montenegro) (<http://dbpedia.org/resource/Albanian_List_(Montenegro)>) --doo:leader--> Nik_Gjeloshaj (dor:Nik_Gjeloshaj)
+qa_result:
+  status: completed
+  cost_usd: 0.365547
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.03867740000000001
+        total_tokens: 3935
+        prompt_tokens: 2223
+        completion_tokens: 1712
+      generate:
+        cost_usd: 0.10530760000000002
+        total_tokens: 8416
+        prompt_tokens: 3721
+        completion_tokens: 4695
+      verify_1:
+        cost_usd: 0.04652200000000001
+        total_tokens: 5615
+        prompt_tokens: 4385
+        completion_tokens: 1230
+      verify_2:
+        cost_usd: 0.03292200000000001
+        total_tokens: 4731
+        prompt_tokens: 4113
+        completion_tokens: 618
+      complexity:
+        cost_usd: 0.142118
+        total_tokens: 11360
+        prompt_tokens: 5100
+        completion_tokens: 6260
+    total_tokens: 34057
+    prompt_tokens: 19542
+    total_cost_usd: 0.36554700000000007
+    completion_tokens: 14515
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  politician: --death date^ (dop:deathDate)--> gMonthDay | --predecessor^ (dop:predecessor)--> Resource | --bgcolor^ (dop:bgcolor)--> langString
+  office holder: --dynasty^ (dop:dynasty)--> Resource | --active years end year^ (doo:activeYearsEndYear)--> gYear | --parents^ (dop:parents)--> langString | --title^ (dop:title)--> Resource | --birth name^ (doo:birthName)--> langString | --predecessor^ (dop:predecessor)--> Resource
+  political party: --affiliation^ (dop:affiliation)--> Resource | --headquarter^ (doo:headquarter)--> Resource
+subgraph_id: 178
+relationships:
+  - political party --doo:leader--> office holder
+  - political party --doo:leader--> politician

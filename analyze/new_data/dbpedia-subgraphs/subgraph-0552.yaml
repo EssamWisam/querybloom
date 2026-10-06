@@ -1,0 +1,112 @@
+types:
+  country: doo:Country
+  cyclist: doo:Cyclist
+  university: doo:University
+  cycling team: doo:CyclingTeam
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Stefano_Zanini: (birth place^='http://dbpedia.org/resource/Italy')
+      Academy_of_Fine_Arts,_Verona: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Academies_of_fine_art_in_Italy')
+    relationships:
+      - Stefano_Zanini (dor:Stefano_Zanini) --doo:birthPlace--> Italy (dor:Italy)
+      - Academy_of_Fine_Arts,_Verona (<http://dbpedia.org/resource/Academy_of_Fine_Arts,_Verona>) --doo:country--> Italy (dor:Italy)
+      - Astana_Qazaqstan_Team (dor:Astana_Qazaqstan_Team) --doo:manager--> Stefano_Zanini (dor:Stefano_Zanini)
+      - Astana_Qazaqstan_Team (dor:Astana_Qazaqstan_Team) --doo:manager--> Alexandre_Shefer (dor:Alexandre_Shefer)
+  '2':
+    attributes:
+      Stefano_Zanini: (birth place^='http://dbpedia.org/resource/Italy')
+      Academy_of_Fine_Arts,_Verona: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Academies_of_fine_art_in_Italy')
+    relationships:
+      - Stefano_Zanini (dor:Stefano_Zanini) --doo:birthPlace--> Italy (dor:Italy)
+      - Academy_of_Fine_Arts,_Verona (<http://dbpedia.org/resource/Academy_of_Fine_Arts,_Verona>) --doo:country--> Italy (dor:Italy)
+      - Astana_Qazaqstan_Team (dor:Astana_Qazaqstan_Team) --doo:manager--> Stefano_Zanini (dor:Stefano_Zanini)
+      - Astana_Qazaqstan_Team (dor:Astana_Qazaqstan_Team) --doo:manager--> Dmitriy_Fofonov (dor:Dmitriy_Fofonov)
+  '3':
+    attributes:
+      Stefano_Zanini: (birth place^='http://dbpedia.org/resource/Italy')
+      Academy_of_Fine_Arts,_Verona: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Academies_of_fine_art_in_Italy')
+    relationships:
+      - Stefano_Zanini (dor:Stefano_Zanini) --doo:birthPlace--> Italy (dor:Italy)
+      - Academy_of_Fine_Arts,_Verona (<http://dbpedia.org/resource/Academy_of_Fine_Arts,_Verona>) --doo:country--> Italy (dor:Italy)
+      - Astana_Qazaqstan_Team (dor:Astana_Qazaqstan_Team) --doo:manager--> Stefano_Zanini (dor:Stefano_Zanini)
+      - Astana_Qazaqstan_Team (dor:Astana_Qazaqstan_Team) --doo:manager--> Gorazd_Štangelj (<http://dbpedia.org/resource/Gorazd_Štangelj>)
+  '4':
+    attributes:
+      Bo_Hamburger: (birth place^='http://dbpedia.org/resource/Denmark')
+      Aalborg_Business_College: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Aalborg')
+    relationships:
+      - Bo_Hamburger (dor:Bo_Hamburger) --doo:birthPlace--> Denmark (dor:Denmark)
+      - Aalborg_Business_College (dor:Aalborg_Business_College) --doo:country--> Denmark (dor:Denmark)
+      - Christina_Watches–Dana__Christina_Watches–Dana__1 (<http://dbpedia.org/resource/Christina_Watches–Dana__Christina_Watches–Dana__1>) --doo:manager--> Bo_Hamburger (dor:Bo_Hamburger)
+      - Christina_Watches–Dana__Christina_Watches–Dana__1 (<http://dbpedia.org/resource/Christina_Watches–Dana__Christina_Watches–Dana__1>) --doo:manager--> Claus_Hembo (dor:Claus_Hembo)
+  '5':
+    attributes:
+      Bo_Hamburger: (birth place^='http://dbpedia.org/resource/Denmark')
+      Aarhus_Academy: (reason^='which area?', type^='http://dbpedia.org/resource/Secondary_education', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Coord')
+    relationships:
+      - Bo_Hamburger (dor:Bo_Hamburger) --doo:birthPlace--> Denmark (dor:Denmark)
+      - Aarhus_Academy (dor:Aarhus_Academy) --doo:country--> Denmark (dor:Denmark)
+      - Christina_Watches–Dana__Christina_Watches–Dana__1 (<http://dbpedia.org/resource/Christina_Watches–Dana__Christina_Watches–Dana__1>) --doo:manager--> Bo_Hamburger (dor:Bo_Hamburger)
+      - Christina_Watches–Dana__Christina_Watches–Dana__1 (<http://dbpedia.org/resource/Christina_Watches–Dana__Christina_Watches–Dana__1>) --doo:manager--> Claus_Hembo (dor:Claus_Hembo)
+  '6':
+    attributes:
+      Bo_Hamburger: (birth place^='http://dbpedia.org/resource/Denmark')
+      Aarhus_Art_Academy: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Bo_Hamburger (dor:Bo_Hamburger) --doo:birthPlace--> Denmark (dor:Denmark)
+      - Aarhus_Art_Academy (dor:Aarhus_Art_Academy) --doo:country--> Denmark (dor:Denmark)
+      - Christina_Watches–Dana__Christina_Watches–Dana__1 (<http://dbpedia.org/resource/Christina_Watches–Dana__Christina_Watches–Dana__1>) --doo:manager--> Bo_Hamburger (dor:Bo_Hamburger)
+      - Christina_Watches–Dana__Christina_Watches–Dana__1 (<http://dbpedia.org/resource/Christina_Watches–Dana__Christina_Watches–Dana__1>) --doo:manager--> Claus_Hembo (dor:Claus_Hembo)
+  '7':
+    attributes:
+      Phil_Griffiths_(cyclist): (birth place^='http://dbpedia.org/resource/UK')
+      Birmingham_School_of_Jewellery: (type^='http://dbpedia.org/resource/Public_university', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Phil_Griffiths_(cyclist) (<http://dbpedia.org/resource/Phil_Griffiths_(cyclist)>) --doo:birthPlace--> UK (dor:UK)
+      - Birmingham_School_of_Jewellery (dor:Birmingham_School_of_Jewellery) --doo:country--> UK (dor:UK)
+      - Giordana_Racing_Team (dor:Giordana_Racing_Team) --doo:manager--> Phil_Griffiths_(cyclist) (<http://dbpedia.org/resource/Phil_Griffiths_(cyclist)>)
+      - Giordana_Racing_Team (dor:Giordana_Racing_Team) --doo:manager--> Malcolm_Elliott (dor:Malcolm_Elliott)
+  '8':
+    attributes:
+      Phil_Griffiths_(cyclist): (birth place^='http://dbpedia.org/resource/UK')
+      Department_of_Digital_Humanities,_King's_College_London: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Phil_Griffiths_(cyclist) (<http://dbpedia.org/resource/Phil_Griffiths_(cyclist)>) --doo:birthPlace--> UK (dor:UK)
+      - Department_of_Digital_Humanities,_King's_College_London (<http://dbpedia.org/resource/Department_of_Digital_Humanities,_King's_College_London>) --doo:country--> UK (dor:UK)
+      - Giordana_Racing_Team (dor:Giordana_Racing_Team) --doo:manager--> Phil_Griffiths_(cyclist) (<http://dbpedia.org/resource/Phil_Griffiths_(cyclist)>)
+      - Giordana_Racing_Team (dor:Giordana_Racing_Team) --doo:manager--> Malcolm_Elliott (dor:Malcolm_Elliott)
+  '9':
+    attributes:
+      Durham_Law_School: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Phil_Griffiths_(cyclist): (birth place^='http://dbpedia.org/resource/UK')
+    relationships:
+      - Phil_Griffiths_(cyclist) (<http://dbpedia.org/resource/Phil_Griffiths_(cyclist)>) --doo:birthPlace--> UK (dor:UK)
+      - Durham_Law_School (dor:Durham_Law_School) --doo:country--> UK (dor:UK)
+      - Giordana_Racing_Team (dor:Giordana_Racing_Team) --doo:manager--> Phil_Griffiths_(cyclist) (<http://dbpedia.org/resource/Phil_Griffiths_(cyclist)>)
+      - Giordana_Racing_Team (dor:Giordana_Racing_Team) --doo:manager--> Malcolm_Elliott (dor:Malcolm_Elliott)
+  '10':
+    attributes:
+      Hendrik_Redant: (birth place^='http://dbpedia.org/resource/Belgium')
+      Artesis_Plantijn_University_College_of_Antwerp: (type^='http://dbpedia.org/resource/Public_school_(government_funded)', affiliation^='Antwerp University Association', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Hendrik_Redant (dor:Hendrik_Redant) --doo:birthPlace--> Belgium (dor:Belgium)
+      - Artesis_Plantijn_University_College_of_Antwerp (dor:Artesis_Plantijn_University_College_of_Antwerp) --doo:country--> Belgium (dor:Belgium)
+      - Human_Powered_Health_(men's_team) (<http://dbpedia.org/resource/Human_Powered_Health_(men's_team)>) --doo:manager--> Hendrik_Redant (dor:Hendrik_Redant)
+      - Human_Powered_Health_(men's_team) (<http://dbpedia.org/resource/Human_Powered_Health_(men's_team)>) --doo:manager--> Eric_Wohlberg (dor:Eric_Wohlberg)
+attributes:
+  cyclist: --birth place^ (dop:birthPlace)--> langString
+  university: --reason^ (dop:reason)--> langString | --type^ (doo:type)--> Resource | --affiliation^ (dop:affiliation)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource | --image upright^ (dop:imageUpright)--> double | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --float^ (dop:float)--> langString | --align^ (dop:align)--> langString
+  soccer manager: --d^ (dop:d)--> date | --quote^ (dop:quote)--> langString
+subgraph_id: 552
+relationships:
+  - cyclist --doo:birthPlace--> country
+  - university --doo:country--> country
+  - cycling team --doo:manager--> cyclist
+  - cycling team --doo:manager--> soccer manager

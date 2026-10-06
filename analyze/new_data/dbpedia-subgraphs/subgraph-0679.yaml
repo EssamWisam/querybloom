@@ -1,0 +1,103 @@
+types:
+  city: doo:City
+  ship: doo:Ship
+  athlete: doo:Athlete
+  university: doo:University
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Anniesland_College (dor:Anniesland_College) --doo:campus--> Glasgow (dor:Glasgow)
+      - Glasgow_and_South_Western_Railway (dor:Glasgow_and_South_Western_Railway) --doo:headquarter--> Glasgow (dor:Glasgow)
+      - Aidan_McHugh (dor:Aidan_McHugh) --doo:residence--> Glasgow (dor:Glasgow)
+      - PS_Glen_Rosa (dor:PS_Glen_Rosa) --doo:owner--> Glasgow_and_South_Western_Railway (dor:Glasgow_and_South_Western_Railway)
+  '2':
+    attributes:
+      Glasgow_Metropolitan_College: (affiliations^='Glasgow City Centre Colleges')
+    relationships:
+      - Glasgow_Metropolitan_College (dor:Glasgow_Metropolitan_College) --doo:campus--> Glasgow (dor:Glasgow)
+      - Glasgow_and_South_Western_Railway (dor:Glasgow_and_South_Western_Railway) --doo:headquarter--> Glasgow (dor:Glasgow)
+      - Aidan_McHugh (dor:Aidan_McHugh) --doo:residence--> Glasgow (dor:Glasgow)
+      - PS_Glen_Rosa (dor:PS_Glen_Rosa) --doo:owner--> Glasgow_and_South_Western_Railway (dor:Glasgow_and_South_Western_Railway)
+  '3':
+    attributes: {}
+    relationships:
+      - John_Wheatley_College (dor:John_Wheatley_College) --doo:campus--> Glasgow (dor:Glasgow)
+      - Glasgow_and_South_Western_Railway (dor:Glasgow_and_South_Western_Railway) --doo:headquarter--> Glasgow (dor:Glasgow)
+      - Aidan_McHugh (dor:Aidan_McHugh) --doo:residence--> Glasgow (dor:Glasgow)
+      - PS_Glen_Rosa (dor:PS_Glen_Rosa) --doo:owner--> Glasgow_and_South_Western_Railway (dor:Glasgow_and_South_Western_Railway)
+  '4':
+    attributes:
+      Bahçeşehir_University: (type^='http://dbpedia.org/resource/Private_university')
+    relationships:
+      - Bahçeşehir_University (<http://dbpedia.org/resource/Bahçeşehir_University>) --doo:campus--> Toronto (dor:Toronto)
+      - Canadian_Northern_Railway (dor:Canadian_Northern_Railway) --doo:headquarter--> Toronto (dor:Toronto)
+      - Alexandria_Town (dor:Alexandria_Town) --doo:residence--> Toronto (dor:Toronto)
+      - SS_Volturno_(1906) (<http://dbpedia.org/resource/SS_Volturno_(1906)>) --doo:owner--> Canadian_Northern_Railway (dor:Canadian_Northern_Railway)
+  '5':
+    attributes:
+      St._Lawrence_College,_Ontario: (type^='http://dbpedia.org/resource/Community_College', affiliations^='CCAA, ACCC, AUCC, CBIE')
+    relationships:
+      - St._Lawrence_College,_Ontario (<http://dbpedia.org/resource/St._Lawrence_College,_Ontario>) --doo:campus--> Toronto (dor:Toronto)
+      - Canadian_Northern_Railway (dor:Canadian_Northern_Railway) --doo:headquarter--> Toronto (dor:Toronto)
+      - Alexandria_Town (dor:Alexandria_Town) --doo:residence--> Toronto (dor:Toronto)
+      - SS_Volturno_(1906) (<http://dbpedia.org/resource/SS_Volturno_(1906)>) --doo:owner--> Canadian_Northern_Railway (dor:Canadian_Northern_Railway)
+  '6':
+    attributes:
+      Trebas_Institute: (type^='http://dbpedia.org/resource/For-profit_education')
+    relationships:
+      - Trebas_Institute (dor:Trebas_Institute) --doo:campus--> Toronto (dor:Toronto)
+      - Canadian_Northern_Railway (dor:Canadian_Northern_Railway) --doo:headquarter--> Toronto (dor:Toronto)
+      - Alexandria_Town (dor:Alexandria_Town) --doo:residence--> Toronto (dor:Toronto)
+      - SS_Volturno_(1906) (<http://dbpedia.org/resource/SS_Volturno_(1906)>) --doo:owner--> Canadian_Northern_Railway (dor:Canadian_Northern_Railway)
+  '7':
+    attributes:
+      New_York_City: (named for^='http://dbpedia.org/resource/James_II_of_England')
+      Hult_International_Business_School: (type^='http://dbpedia.org/resource/Private_university', affiliations^='AACSB,')
+    relationships:
+      - Hult_International_Business_School (dor:Hult_International_Business_School) --doo:campus--> New_York_City (dor:New_York_City)
+      - New_York_Central_Railroad (dor:New_York_Central_Railroad) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - Alister_Walker (dor:Alister_Walker) --doo:residence--> New_York_City (dor:New_York_City)
+      - New_York_Central_Tugboat_13 (dor:New_York_Central_Tugboat_13) --doo:owner--> New_York_Central_Railroad (dor:New_York_Central_Railroad)
+  '8':
+    attributes:
+      New_York_City: (named for^='http://dbpedia.org/resource/James_II_of_England')
+      Touro_University_System: (type^='http://dbpedia.org/resource/Private_university')
+    relationships:
+      - Touro_University_System (dor:Touro_University_System) --doo:campus--> New_York_City (dor:New_York_City)
+      - New_York_Central_Railroad (dor:New_York_Central_Railroad) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - Alister_Walker (dor:Alister_Walker) --doo:residence--> New_York_City (dor:New_York_City)
+      - New_York_Central_Tugboat_13 (dor:New_York_Central_Tugboat_13) --doo:owner--> New_York_Central_Railroad (dor:New_York_Central_Railroad)
+  '9':
+    attributes:
+      New_York_City: (named for^='http://dbpedia.org/resource/James_II_of_England')
+      Hult_International_Business_School: (type^='http://dbpedia.org/resource/Private_university', affiliations^='AACSB,')
+    relationships:
+      - Hult_International_Business_School (dor:Hult_International_Business_School) --doo:campus--> New_York_City (dor:New_York_City)
+      - New_York_Central_Railroad (dor:New_York_Central_Railroad) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - Alister_Walker (dor:Alister_Walker) --doo:residence--> New_York_City (dor:New_York_City)
+      - New_York_Central_Tugboat_16 (dor:New_York_Central_Tugboat_16) --doo:owner--> New_York_Central_Railroad (dor:New_York_Central_Railroad)
+  '10':
+    attributes:
+      British_and_Irish_Modern_Music_Institute: (type^='http://dbpedia.org/resource/Further_education')
+    relationships:
+      - British_and_Irish_Modern_Music_Institute (dor:British_and_Irish_Modern_Music_Institute) --doo:campus--> Manchester (dor:Manchester)
+      - Lancashire_and_Yorkshire_Railway (dor:Lancashire_and_Yorkshire_Railway) --doo:headquarter--> Manchester (dor:Manchester)
+      - Andrew_Deer (dor:Andrew_Deer) --doo:residence--> Manchester (dor:Manchester)
+      - PS_Alfred_(1863) (<http://dbpedia.org/resource/PS_Alfred_(1863)>) --doo:owner--> Lancashire_and_Yorkshire_Railway (dor:Lancashire_and_Yorkshire_Railway)
+attributes:
+  city: --Aug high F^ (dop:augHighF)--> double | --source^ (dop:source)--> langString | --Apr sun^ (dop:aprSun)--> double | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --named for^ (dop:namedFor)--> langString | --Aug precipitation days^ (dop:augPrecipitationDays)--> int
+  ship: --designated nrhp type^ (dop:designatedNrhpType)--> date | --class^ (doo:class)--> Resource
+  university: --type^ (doo:type)--> Resource | --affiliation^ (dop:affiliation)--> langString | --affiliations^ (dop:affiliations)--> Resource | --header^ (dop:header)--> langString
+subgraph_id: 679
+relationships:
+  - university --doo:campus--> city
+  - public transit system --doo:headquarter--> city
+  - athlete --doo:residence--> city
+  - ship --doo:owner--> public transit system

@@ -1,0 +1,123 @@
+types:
+  book: doo:Book
+  person: doo:Person
+  country: doo:Country
+  historic building: doo:HistoricBuilding
+  fictional character: doo:FictionalCharacter
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      John_McCain: (class^='3', birth place^='http://dbpedia.org/resource/Coco_Solo', width^='210', nickname^='John Wayne')
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+      72_Things_Younger_Than_John_McCain: (Wikipage page ID^='24597800')
+    relationships:
+      - 72_Things_Younger_Than_John_McCain (dor:72_Things_Younger_Than_John_McCain) --doo:country--> United_States (dor:United_States)
+      - All_Saints_Catholic_Church_(Cincinnati,_Ohio) (<http://dbpedia.org/resource/All_Saints_Catholic_Church_(Cincinnati,_Ohio)>) --doo:location--> United_States (dor:United_States)
+      - 72_Things_Younger_Than_John_McCain (dor:72_Things_Younger_Than_John_McCain) --doo:nonFictionSubject--> John_McCain (dor:John_McCain)
+      - Agent_J (dor:Agent_J) --doo:nationality--> United_States (dor:United_States)
+  '2':
+    attributes:
+      John_McCain: (class^='3', birth place^='http://dbpedia.org/resource/Coco_Solo', width^='210', nickname^='John Wayne')
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+      72_Things_Younger_Than_John_McCain: (Wikipage page ID^='24597800')
+    relationships:
+      - 72_Things_Younger_Than_John_McCain (dor:72_Things_Younger_Than_John_McCain) --doo:country--> United_States (dor:United_States)
+      - Cathedral_of_the_Holy_Family_(Tafuna,_American_Samoa) (<http://dbpedia.org/resource/Cathedral_of_the_Holy_Family_(Tafuna,_American_Samoa)>) --doo:location--> United_States (dor:United_States)
+      - 72_Things_Younger_Than_John_McCain (dor:72_Things_Younger_Than_John_McCain) --doo:nonFictionSubject--> John_McCain (dor:John_McCain)
+      - Agent_J (dor:Agent_J) --doo:nationality--> United_States (dor:United_States)
+  '3':
+    attributes:
+      John_McCain: (class^='3', birth place^='http://dbpedia.org/resource/Coco_Solo', width^='210', nickname^='John Wayne')
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+      72_Things_Younger_Than_John_McCain: (Wikipage page ID^='24597800')
+    relationships:
+      - 72_Things_Younger_Than_John_McCain (dor:72_Things_Younger_Than_John_McCain) --doo:country--> United_States (dor:United_States)
+      - Christ_Church_Cathedral_(Mobile,_Alabama) (<http://dbpedia.org/resource/Christ_Church_Cathedral_(Mobile,_Alabama)>) --doo:location--> United_States (dor:United_States)
+      - 72_Things_Younger_Than_John_McCain (dor:72_Things_Younger_Than_John_McCain) --doo:nonFictionSubject--> John_McCain (dor:John_McCain)
+      - Agent_J (dor:Agent_J) --doo:nationality--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Thabo_Mbeki: (birth place^='http://dbpedia.org/resource/Eastern_Cape', width^='19.0')
+      South_Africa: (anthem^='http://dbpedia.org/resource/National_anthem_of_South_Africa')
+      After_the_Party_(book): (Wikipage page ID^='52516194')
+    relationships:
+      - After_the_Party_(book) (<http://dbpedia.org/resource/After_the_Party_(book)>) --doo:country--> South_Africa (dor:South_Africa)
+      - St._James_Church,_Cape_Town (<http://dbpedia.org/resource/St._James_Church,_Cape_Town>) --doo:location--> South_Africa (dor:South_Africa)
+      - After_the_Party_(book) (<http://dbpedia.org/resource/After_the_Party_(book)>) --doo:nonFictionSubject--> Thabo_Mbeki (dor:Thabo_Mbeki)
+      - Flintheart_Glomgold (dor:Flintheart_Glomgold) --doo:nationality--> South_Africa (dor:South_Africa)
+  '5':
+    attributes:
+      Alan_Turing: (birth place^='http://dbpedia.org/resource/Maida_Vale')
+      Albert_Campion: (children^='Rupert')
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Alan_Turing:_The_Enigma: (Wikipage page ID^='54756168')
+    relationships:
+      - Alan_Turing:_The_Enigma (<http://dbpedia.org/resource/Alan_Turing:_The_Enigma>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Greek_Orthodox_Church_of_the_Holy_Trinity_and_St_Luke (dor:Greek_Orthodox_Church_of_the_Holy_Trinity_and_St_Luke) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - Alan_Turing:_The_Enigma (<http://dbpedia.org/resource/Alan_Turing:_The_Enigma>) --doo:nonFictionSubject--> Alan_Turing (dor:Alan_Turing)
+      - Albert_Campion (dor:Albert_Campion) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+  '6':
+    attributes:
+      Alan_Turing: (birth place^='http://dbpedia.org/resource/Maida_Vale')
+      Albert_Campion: (children^='Rupert')
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Alan_Turing:_The_Enigma: (Wikipage page ID^='54756168')
+    relationships:
+      - Alan_Turing:_The_Enigma (<http://dbpedia.org/resource/Alan_Turing:_The_Enigma>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - St_George's_Church,_Trotton (<http://dbpedia.org/resource/St_George's_Church,_Trotton>) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - Alan_Turing:_The_Enigma (<http://dbpedia.org/resource/Alan_Turing:_The_Enigma>) --doo:nonFictionSubject--> Alan_Turing (dor:Alan_Turing)
+      - Albert_Campion (dor:Albert_Campion) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+  '7':
+    attributes:
+      Alan_Turing: (birth place^='http://dbpedia.org/resource/Maida_Vale')
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Alan_Turing:_The_Enigma: (Wikipage page ID^='54756168')
+    relationships:
+      - Alan_Turing:_The_Enigma (<http://dbpedia.org/resource/Alan_Turing:_The_Enigma>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Greek_Orthodox_Church_of_the_Holy_Trinity_and_St_Luke (dor:Greek_Orthodox_Church_of_the_Holy_Trinity_and_St_Luke) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - Alan_Turing:_The_Enigma (<http://dbpedia.org/resource/Alan_Turing:_The_Enigma>) --doo:nonFictionSubject--> Alan_Turing (dor:Alan_Turing)
+      - Alf_Garnett__Alf_Garnett__1 (dor:Alf_Garnett__Alf_Garnett__1) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+  '8':
+    attributes:
+      Bapu_(book): (Wikipage page ID^='51909866')
+      Mahatma_Gandhi: (birth place^='http://dbpedia.org/resource/British_Raj')
+    relationships:
+      - Bapu_(book) (<http://dbpedia.org/resource/Bapu_(book)>) --doo:country--> India (dor:India)
+      - Bethel_Assembly_of_God_Church (dor:Bethel_Assembly_of_God_Church) --doo:location--> India (dor:India)
+      - Bapu_(book) (<http://dbpedia.org/resource/Bapu_(book)>) --doo:nonFictionSubject--> Mahatma_Gandhi (dor:Mahatma_Gandhi)
+      - Abolakara (dor:Abolakara) --doo:nationality--> India (dor:India)
+  '9':
+    attributes:
+      Bapu_(book): (Wikipage page ID^='51909866')
+      Mahatma_Gandhi: (birth place^='http://dbpedia.org/resource/British_Raj')
+    relationships:
+      - Bapu_(book) (<http://dbpedia.org/resource/Bapu_(book)>) --doo:country--> India (dor:India)
+      - Kudassanad__St_Stephens_orthodox_Cathedral_Kudassanad__1 (dor:Kudassanad__St_Stephens_orthodox_Cathedral_Kudassanad__1) --doo:location--> India (dor:India)
+      - Bapu_(book) (<http://dbpedia.org/resource/Bapu_(book)>) --doo:nonFictionSubject--> Mahatma_Gandhi (dor:Mahatma_Gandhi)
+      - Abolakara (dor:Abolakara) --doo:nationality--> India (dor:India)
+  '10':
+    attributes:
+      Bapu_(book): (Wikipage page ID^='51909866')
+      Mahatma_Gandhi: (birth place^='http://dbpedia.org/resource/British_Raj')
+    relationships:
+      - Bapu_(book) (<http://dbpedia.org/resource/Bapu_(book)>) --doo:country--> India (dor:India)
+      - Marthoman_Cheriyapally,_Kothamangalam (<http://dbpedia.org/resource/Marthoman_Cheriyapally,_Kothamangalam>) --doo:location--> India (dor:India)
+      - Bapu_(book) (<http://dbpedia.org/resource/Bapu_(book)>) --doo:nonFictionSubject--> Mahatma_Gandhi (dor:Mahatma_Gandhi)
+      - Abolakara (dor:Abolakara) --doo:nationality--> India (dor:India)
+attributes:
+  book: --cname^ (dop:cname)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int | --2p^ (dop:2p)--> int
+  person: --class^ (dop:class)--> langString | --IMDB id^ (doo:imdbId)--> string | --birth place^ (doo:birthPlace)--> Resource | --width^ (dop:width)--> perCent | --nickname^ (dop:nickname)--> langString
+  country: --anthem^ (doo:anthem)--> Resource | --Apr low C^ (dop:aprLowC)--> double
+  historic building: --architect^ (dop:architect)--> Resource | --width^ (dop:width)--> int
+  fictional character: --children^ (dop:children)--> langString
+subgraph_id: 406
+relationships:
+  - book --doo:country--> country
+  - historic building --doo:location--> country
+  - book --doo:nonFictionSubject--> person
+  - fictional character --doo:nationality--> country

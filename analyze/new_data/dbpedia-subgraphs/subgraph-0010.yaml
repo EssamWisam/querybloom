@@ -1,0 +1,104 @@
+types:
+  song: doo:Song
+  language: doo:Language
+  music genre: doo:MusicGenre
+  academic journal: doo:AcademicJournal
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Acta_Histriae: (publisher^='http://dbpedia.org/resource/The_Historical_Society_of_Southern_Primorska_of_Koper')
+      Slovene_language: (Link from a Wikipage to an external page^='http://bos.zrc-sazu.si/a_beseda.html')
+      Pridi,_dala_ti_bom_cvet: (artist^='http://dbpedia.org/resource/Eva_Sršen')
+    relationships:
+      - Acta_Histriae (dor:Acta_Histriae) --doo:language--> Slovene_language (dor:Slovene_language)
+      - Acta_Histriae (dor:Acta_Histriae) --doo:academicDiscipline--> History (dor:History)
+      - Pridi,_dala_ti_bom_cvet (<http://dbpedia.org/resource/Pridi,_dala_ti_bom_cvet>) --doo:language--> Slovene_language (dor:Slovene_language)
+  '2':
+    attributes:
+      Acta_Histriae: (publisher^='http://dbpedia.org/resource/The_Historical_Society_of_Southern_Primorska_of_Koper')
+      Slovene_language: (Link from a Wikipage to an external page^='http://bos.zrc-sazu.si/a_beseda.html')
+      Slovenia_in_the_Junior_Eurovision_Song_Contest_2015: (artist^='http://dbpedia.org/resource/Lina_Kuduzović')
+    relationships:
+      - Acta_Histriae (dor:Acta_Histriae) --doo:language--> Slovene_language (dor:Slovene_language)
+      - Acta_Histriae (dor:Acta_Histriae) --doo:academicDiscipline--> History (dor:History)
+      - Slovenia_in_the_Junior_Eurovision_Song_Contest_2015 (dor:Slovenia_in_the_Junior_Eurovision_Song_Contest_2015) --doo:language--> Slovene_language (dor:Slovene_language)
+  '3':
+    attributes:
+      Chinese_language: (Link from a Wikipage to an external page^='http://chinalinks.osu.edu/')
+      Little_Apple_(song): (artist^='http://dbpedia.org/resource/Chopstick_Brothers', runtime (s)^='211.0', performer^='http://dbpedia.org/resource/Chopstick_Brothers')
+    relationships:
+      - Acta_Psychologica_Sinica (dor:Acta_Psychologica_Sinica) --doo:language--> Chinese_language (dor:Chinese_language)
+      - Acta_Psychologica_Sinica (dor:Acta_Psychologica_Sinica) --doo:academicDiscipline--> Psychology (dor:Psychology)
+      - Little_Apple_(song) (<http://dbpedia.org/resource/Little_Apple_(song)>) --doo:language--> Chinese_language (dor:Chinese_language)
+  '4':
+    attributes:
+      Chinese_language: (Link from a Wikipage to an external page^='http://chinalinks.osu.edu/')
+    relationships:
+      - Acta_Psychologica_Sinica (dor:Acta_Psychologica_Sinica) --doo:language--> Chinese_language (dor:Chinese_language)
+      - Acta_Psychologica_Sinica (dor:Acta_Psychologica_Sinica) --doo:academicDiscipline--> Psychology (dor:Psychology)
+      - Searching_for_Plum_Blossoms_in_Snow (dor:Searching_for_Plum_Blossoms_in_Snow) --doo:language--> Chinese_language (dor:Chinese_language)
+  '5':
+    attributes:
+      Chinese_language: (Link from a Wikipage to an external page^='http://chinalinks.osu.edu/')
+    relationships:
+      - Acta_Psychologica_Sinica (dor:Acta_Psychologica_Sinica) --doo:language--> Chinese_language (dor:Chinese_language)
+      - Acta_Psychologica_Sinica (dor:Acta_Psychologica_Sinica) --doo:academicDiscipline--> Psychology (dor:Psychology)
+      - Zai_Na_Yaoyuan_De_Difang (dor:Zai_Na_Yaoyuan_De_Difang) --doo:language--> Chinese_language (dor:Chinese_language)
+  '6':
+    attributes:
+      English_language: (Link from a Wikipage to an external page^='http://aeon.co/magazine/science/how-did-science-come-to-speak-only-english/')
+      Africa_Development: (publisher^='http://dbpedia.org/resource/CODESRIA')
+      (I'm_Watching)_Every_Little_Move_You_Make: (artist^='http://dbpedia.org/resource/Little_Peggy_March', performer^='http://dbpedia.org/resource/Little_Peggy_March')
+    relationships:
+      - Africa_Development (dor:Africa_Development) --doo:language--> English_language (dor:English_language)
+      - Africa_Development (dor:Africa_Development) --doo:academicDiscipline--> African_studies (dor:African_studies)
+      - (I'm_Watching)_Every_Little_Move_You_Make (<http://dbpedia.org/resource/(I'm_Watching)_Every_Little_Move_You_Make>) --doo:language--> English_language (dor:English_language)
+  '7':
+    attributes:
+      6.3_(song): (artist^='Naps feat. Ninho', runtime (s)^='217.0', performer^='http://dbpedia.org/resource/Naps_(rapper)')
+      French_language: (Link from a Wikipage to an external page^='http://www.cnrtl.fr/')
+      Africa_Development: (publisher^='http://dbpedia.org/resource/CODESRIA')
+    relationships:
+      - Africa_Development (dor:Africa_Development) --doo:language--> French_language (dor:French_language)
+      - Africa_Development (dor:Africa_Development) --doo:academicDiscipline--> African_studies (dor:African_studies)
+      - 6.3_(song) (<http://dbpedia.org/resource/6.3_(song)>) --doo:language--> French_language (dor:French_language)
+  '8':
+    attributes:
+      French_language: (Link from a Wikipage to an external page^='http://www.cnrtl.fr/')
+      Africa_Development: (publisher^='http://dbpedia.org/resource/CODESRIA')
+    relationships:
+      - Africa_Development (dor:Africa_Development) --doo:language--> French_language (dor:French_language)
+      - Africa_Development (dor:Africa_Development) --doo:academicDiscipline--> African_studies (dor:African_studies)
+      - À_la_claire_fontaine (<http://dbpedia.org/resource/À_la_claire_fontaine>) --doo:language--> French_language (dor:French_language)
+  '9':
+    attributes:
+      6.3_(song): (artist^='Naps feat. Ninho', runtime (s)^='217.0', performer^='http://dbpedia.org/resource/Naps_(rapper)')
+      French_language: (Link from a Wikipage to an external page^='http://www.cnrtl.fr/')
+      Afrique_&_Histoire: (publisher^='http://dbpedia.org/resource/Editions_Verdier')
+    relationships:
+      - Afrique_&_Histoire (<http://dbpedia.org/resource/Afrique_&_Histoire>) --doo:language--> French_language (dor:French_language)
+      - Afrique_&_Histoire (<http://dbpedia.org/resource/Afrique_&_Histoire>) --doo:academicDiscipline--> History (dor:History)
+      - 6.3_(song) (<http://dbpedia.org/resource/6.3_(song)>) --doo:language--> French_language (dor:French_language)
+  '10':
+    attributes:
+      Italian_language: (Link from a Wikipage to an external page^='http://upload.wikimedia.org/wikipedia/commons/0/02/It-per_favore.ogg')
+      ...E_dimmi_che_non_vuoi_morire: (artist^='http://dbpedia.org/resource/Patty_Pravo', runtime (s)^='251.0', performer^='http://dbpedia.org/resource/Patty_Pravo')
+    relationships:
+      - Agalma_(journal) (<http://dbpedia.org/resource/Agalma_(journal)>) --doo:language--> Italian_language (dor:Italian_language)
+      - Agalma_(journal) (<http://dbpedia.org/resource/Agalma_(journal)>) --doo:academicDiscipline--> Aesthetics (dor:Aesthetics)
+      - ...E_dimmi_che_non_vuoi_morire (<http://dbpedia.org/resource/...E_dimmi_che_non_vuoi_morire>) --doo:language--> Italian_language (dor:Italian_language)
+attributes:
+  song: --artist^ (dop:artist)--> langString | --runtime (s)^ (doo:runtime)--> double | --alt^ (dop:alt)--> langString | --performer^ (doo:artist)--> Resource | --subsequent work^ (doo:subsequentWork)--> Resource | --footer^ (dop:footer)--> langString | --extra^ (dop:extra)--> langString
+  language: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  music genre: --quote^ (dop:quote)--> langString | --align^ (dop:align)--> langString
+  academic journal: --publisher^ (doo:publisher)--> Resource | --former name^ (doo:formerName)--> langString
+subgraph_id: 10
+relationships:
+  - academic journal --doo:language--> language
+  - academic journal --doo:academicDiscipline--> music genre
+  - song --doo:language--> language

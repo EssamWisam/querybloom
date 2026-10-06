@@ -1,0 +1,88 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  hockey team: doo:HockeyTeam
+  soccer league: doo:SoccerLeague
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dora: http://dbpedia.org/resource/ASK/
+instances:
+  '1':
+    attributes:
+      Abbotsford,_British_Columbia: (source^='http://dbpedia.org/resource/Environment_Canada')
+    relationships:
+      - Abbotsford_Flyers (dor:Abbotsford_Flyers) --doo:city--> Abbotsford,_British_Columbia (<http://dbpedia.org/resource/Abbotsford,_British_Columbia>)
+      - Abbotsford_Flyers (dor:Abbotsford_Flyers) --dop:league--> British_Columbia_Junior_Hockey_League (dor:British_Columbia_Junior_Hockey_League)
+      - Abbotsford_Flyers (dor:Abbotsford_Flyers) --doo:city--> Canada (dor:Canada)
+  '2':
+    attributes:
+      Port_Alberni: (area total km^='19.76', source^='http://dbpedia.org/resource/Environment_Canada')
+    relationships:
+      - Alberni_Valley_Bulldogs (dor:Alberni_Valley_Bulldogs) --doo:city--> Port_Alberni (dor:Port_Alberni)
+      - Alberni_Valley_Bulldogs (dor:Alberni_Valley_Bulldogs) --dop:league--> British_Columbia_Hockey_League (dor:British_Columbia_Hockey_League)
+      - Alberni_Valley_Bulldogs (dor:Alberni_Valley_Bulldogs) --doo:city--> British_Columbia (dor:British_Columbia)
+  '3':
+    attributes:
+      Ogre,_Latvia: (area total km^='wd|properties|raw|qualifiers|best|raw||P2046|P518=Q16868672')
+    relationships:
+      - Ogre (dora:Ogre) --doo:city--> Ogre,_Latvia (<http://dbpedia.org/resource/Ogre,_Latvia>)
+      - Ogre (dora:Ogre) --dop:league--> Belarusian_Extraliga (dor:Belarusian_Extraliga)
+      - Ogre (dora:Ogre) --doo:city--> Latvia (dor:Latvia)
+  '4':
+    attributes:
+      Haparanda: (area total km^='4.43', source^='SMHI Monthly Data')
+    relationships:
+      - Asplöven_HC (<http://dbpedia.org/resource/Asplöven_HC>) --doo:city--> Haparanda (dor:Haparanda)
+      - Asplöven_HC (<http://dbpedia.org/resource/Asplöven_HC>) --dop:league--> Hockeyettan (dor:Hockeyettan)
+      - Asplöven_HC (<http://dbpedia.org/resource/Asplöven_HC>) --doo:city--> Sweden (dor:Sweden)
+  '5':
+    attributes: {}
+    relationships:
+      - Athletic_Club_de_Boulogne-Billancourt_(ice_hockey) (<http://dbpedia.org/resource/Athletic_Club_de_Boulogne-Billancourt_(ice_hockey)>) --doo:city--> Boulogne-Billancourt (dor:Boulogne-Billancourt)
+      - Athletic_Club_de_Boulogne-Billancourt_(ice_hockey) (<http://dbpedia.org/resource/Athletic_Club_de_Boulogne-Billancourt_(ice_hockey)>) --dop:league--> FFHG_Division_3 (dor:FFHG_Division_3)
+      - Athletic_Club_de_Boulogne-Billancourt_(ice_hockey) (<http://dbpedia.org/resource/Athletic_Club_de_Boulogne-Billancourt_(ice_hockey)>) --doo:city--> France (dor:France)
+  '6':
+    attributes:
+      Katowice: (area total km^='164.64', source^='Institute of Meteorology and Water Management')
+    relationships:
+      - Baildon_Katowice (dor:Baildon_Katowice) --doo:city--> Katowice (dor:Katowice)
+      - Baildon_Katowice (dor:Baildon_Katowice) --dop:league--> Polska_Hokej_Liga (dor:Polska_Hokej_Liga)
+      - Baildon_Katowice (dor:Baildon_Katowice) --doo:city--> Poland (dor:Poland)
+  '7':
+    attributes:
+      Banff,_Alberta: (source^='http://dbpedia.org/resource/Environment_Canada')
+    relationships:
+      - Banff_Academy_Bears (dor:Banff_Academy_Bears) --doo:city--> Banff,_Alberta (<http://dbpedia.org/resource/Banff,_Alberta>)
+      - Banff_Academy_Bears (dor:Banff_Academy_Bears) --dop:league--> Heritage_Junior_B_Hockey_League (dor:Heritage_Junior_B_Hockey_League)
+      - Banff_Academy_Bears (dor:Banff_Academy_Bears) --doo:city--> Canada (dor:Canada)
+  '8':
+    attributes:
+      Fruitvale,_British_Columbia: (area total km^='6.01')
+    relationships:
+      - Beaver_Valley_Nitehawks (dor:Beaver_Valley_Nitehawks) --doo:city--> Fruitvale,_British_Columbia (<http://dbpedia.org/resource/Fruitvale,_British_Columbia>)
+      - Beaver_Valley_Nitehawks (dor:Beaver_Valley_Nitehawks) --dop:league--> Kootenay_International_Junior_Hockey_League (dor:Kootenay_International_Junior_Hockey_League)
+      - Beaver_Valley_Nitehawks (dor:Beaver_Valley_Nitehawks) --doo:city--> British_Columbia (dor:British_Columbia)
+  '9':
+    attributes:
+      Belfast,_Prince_Edward_Island: (area total km^='229.27')
+    relationships:
+      - Belfast_Sabres (dor:Belfast_Sabres) --doo:city--> Belfast,_Prince_Edward_Island (<http://dbpedia.org/resource/Belfast,_Prince_Edward_Island>)
+      - Belfast_Sabres (dor:Belfast_Sabres) --dop:league--> Prince_Edward_Island_Junior_C_Hockey_League (dor:Prince_Edward_Island_Junior_C_Hockey_League)
+      - Belfast_Sabres (dor:Belfast_Sabres) --doo:city--> Prince_Edward_Island (dor:Prince_Edward_Island)
+  '10':
+    attributes:
+      Havlíčkův_Brod: (area total km^='64.93')
+    relationships:
+      - BK_Havlíčkův_Brod (<http://dbpedia.org/resource/BK_Havlíčkův_Brod>) --doo:city--> Havlíčkův_Brod (<http://dbpedia.org/resource/Havlíčkův_Brod>)
+      - BK_Havlíčkův_Brod (<http://dbpedia.org/resource/BK_Havlíčkův_Brod>) --dop:league--> 2._národní_hokejová_liga (<http://dbpedia.org/resource/2._národní_hokejová_liga>)
+      - BK_Havlíčkův_Brod (<http://dbpedia.org/resource/BK_Havlíčkův_Brod>) --doo:city--> Czech_Republic (dor:Czech_Republic)
+attributes:
+  Location: --coordinates^ (dop:coordinates)--> langString | --partof^ (dop:partof)--> langString | --built^ (dop:built)--> second | --arc-gapB^ (dop:arcGapb)--> double | --arc-textA^ (dop:arcTexta)--> langString | --area total km^ (dop:areaTotalKm)--> int | --religion^ (doo:religion)--> Resource | --Aug high F^ (dop:augHighF)--> double | --source^ (dop:source)--> Resource
+subgraph_id: 340
+relationships:
+  - hockey team --doo:city--> Location
+  - hockey team --dop:league--> soccer league
+  - hockey team --doo:city--> country

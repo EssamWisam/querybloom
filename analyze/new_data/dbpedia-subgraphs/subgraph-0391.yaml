@@ -1,0 +1,93 @@
+types:
+  Location: doo:Location
+  rugby club: doo:RugbyClub
+  organisation: doo:Organisation
+  soccer league: doo:SoccerLeague
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      PRO_Rugby: (float^='left')
+      '@Home_Network': (type^='http://dbpedia.org/resource/Subsidiary')
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - PRO_Rugby (dor:PRO_Rugby) --doo:country--> United_States (dor:United_States)
+      - 2016_Denver_Stampede_season (dor:2016_Denver_Stampede_season) --doo:league--> PRO_Rugby (dor:PRO_Rugby)
+      - '@Home_Network (<http://dbpedia.org/resource/@Home_Network>) --doo:location--> United_States (dor:United_States)'
+  '2':
+    attributes:
+      PRO_Rugby: (float^='left')
+      '@Home_Network': (type^='http://dbpedia.org/resource/Subsidiary')
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - PRO_Rugby (dor:PRO_Rugby) --doo:country--> United_States (dor:United_States)
+      - 2016_Ohio_Aviators_season (dor:2016_Ohio_Aviators_season) --doo:league--> PRO_Rugby (dor:PRO_Rugby)
+      - '@Home_Network (<http://dbpedia.org/resource/@Home_Network>) --doo:location--> United_States (dor:United_States)'
+  '3':
+    attributes:
+      PRO_Rugby: (float^='left')
+      '@Home_Network': (type^='http://dbpedia.org/resource/Subsidiary')
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - PRO_Rugby (dor:PRO_Rugby) --doo:country--> United_States (dor:United_States)
+      - 2016_Sacramento_Express_season (dor:2016_Sacramento_Express_season) --doo:league--> PRO_Rugby (dor:PRO_Rugby)
+      - '@Home_Network (<http://dbpedia.org/resource/@Home_Network>) --doo:location--> United_States (dor:United_States)'
+  '4':
+    attributes: {}
+    relationships:
+      - Super_Rugby (dor:Super_Rugby) --doo:country--> Japan (dor:Japan)
+      - ACT_Brumbies (dor:ACT_Brumbies) --doo:league--> Super_Rugby (dor:Super_Rugby)
+      - 07th_Expansion (dor:07th_Expansion) --doo:location--> Japan (dor:Japan)
+  '5':
+    attributes: {}
+    relationships:
+      - Super_Rugby (dor:Super_Rugby) --doo:country--> Japan (dor:Japan)
+      - Blues_(Super_Rugby) (<http://dbpedia.org/resource/Blues_(Super_Rugby)>) --doo:league--> Super_Rugby (dor:Super_Rugby)
+      - 07th_Expansion (dor:07th_Expansion) --doo:location--> Japan (dor:Japan)
+  '6':
+    attributes: {}
+    relationships:
+      - Super_Rugby (dor:Super_Rugby) --doo:country--> Japan (dor:Japan)
+      - Chiefs_(rugby_union) (<http://dbpedia.org/resource/Chiefs_(rugby_union)>) --doo:league--> Super_Rugby (dor:Super_Rugby)
+      - 07th_Expansion (dor:07th_Expansion) --doo:location--> Japan (dor:Japan)
+  '7':
+    attributes:
+      1-800-GOT-JUNK%3F: (type^='http://dbpedia.org/resource/Private_company')
+    relationships:
+      - Canadian_Rugby_Championship (dor:Canadian_Rugby_Championship) --doo:country--> Canada (dor:Canada)
+      - Atlantic_Rock (dor:Atlantic_Rock) --doo:league--> Canadian_Rugby_Championship (dor:Canadian_Rugby_Championship)
+      - 1-800-GOT-JUNK%3F (<http://dbpedia.org/resource/1-800-GOT-JUNK%3F>) --doo:location--> Canada (dor:Canada)
+  '8':
+    attributes:
+      1-800-GOT-JUNK%3F: (type^='http://dbpedia.org/resource/Private_company')
+    relationships:
+      - Rugby_Canada_National_Junior_Championship (dor:Rugby_Canada_National_Junior_Championship) --doo:country--> Canada (dor:Canada)
+      - Calgary_Mavericks (dor:Calgary_Mavericks) --doo:league--> Rugby_Canada_National_Junior_Championship (dor:Rugby_Canada_National_Junior_Championship)
+      - 1-800-GOT-JUNK%3F (<http://dbpedia.org/resource/1-800-GOT-JUNK%3F>) --doo:location--> Canada (dor:Canada)
+  '9':
+    attributes:
+      1-800-GOT-JUNK%3F: (type^='http://dbpedia.org/resource/Private_company')
+    relationships:
+      - Rugby_Canada_National_Junior_Championship (dor:Rugby_Canada_National_Junior_Championship) --doo:country--> Canada (dor:Canada)
+      - Newfoundland_Rock (dor:Newfoundland_Rock) --doo:league--> Rugby_Canada_National_Junior_Championship (dor:Rugby_Canada_National_Junior_Championship)
+      - 1-800-GOT-JUNK%3F (<http://dbpedia.org/resource/1-800-GOT-JUNK%3F>) --doo:location--> Canada (dor:Canada)
+  '10':
+    attributes:
+      Rugby-Bundesliga: (float^='right')
+    relationships:
+      - Rugby-Bundesliga (dor:Rugby-Bundesliga) --doo:country--> Germany (dor:Germany)
+      - Berliner_RC (dor:Berliner_RC) --doo:league--> Rugby-Bundesliga (dor:Rugby-Bundesliga)
+      - 100_Beste_Plakate (dor:100_Beste_Plakate) --doo:location--> Germany (dor:Germany)
+attributes:
+  Location: --discoverer^ (doo:discoverer)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> double | --image upright^ (dop:imageUpright)--> double | --coordinates^ (dop:coordinates)--> langString | --Apr record low F^ (dop:aprRecordLowF)--> langString | --footer^ (dop:footer)--> langString | --Apr high F^ (dop:aprHighF)--> int | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --colwidth^ (dop:colwidth)--> int
+  organisation: --type^ (doo:type)--> Resource | --named after^ (doo:namedAfter)--> Resource | --merged with^ (doo:mergedWith)--> Resource
+  soccer league: --float^ (dop:float)--> langString
+subgraph_id: 391
+relationships:
+  - soccer league --doo:country--> Location
+  - rugby club --doo:league--> soccer league
+  - organisation --doo:location--> Location

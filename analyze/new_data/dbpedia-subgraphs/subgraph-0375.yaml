@@ -1,0 +1,106 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+  ice hockey player: doo:IceHockeyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Friedrich_Ebert: (url^='https://web.archive.org/web/20070214090657/http:/zeus.zeit.de/text/2007/06/P-Ebert')
+      Aleksander_Tupalski: (former team^='http://dbpedia.org/resource/AZS_Warszawa')
+    relationships:
+      - Aleksander_Tupalski (dor:Aleksander_Tupalski) --dop:birthPlace--> German_Empire (dor:German_Empire)
+      - Friedrich_Ebert (dor:Friedrich_Ebert) --doo:birthPlace--> German_Empire (dor:German_Empire)
+      - Aleksander_Tupalski (dor:Aleksander_Tupalski) --doo:deathPlace--> Canberra (dor:Canberra)
+      - Gustav_Stresemann (dor:Gustav_Stresemann) --doo:president--> Friedrich_Ebert (dor:Friedrich_Ebert)
+  '2':
+    attributes:
+      Friedrich_Ebert: (url^='https://web.archive.org/web/20070214090657/http:/zeus.zeit.de/text/2007/06/P-Ebert')
+      Aleksander_Tupalski: (former team^='http://dbpedia.org/resource/AZS_Warszawa')
+    relationships:
+      - Aleksander_Tupalski (dor:Aleksander_Tupalski) --dop:birthPlace--> German_Empire (dor:German_Empire)
+      - Friedrich_Ebert (dor:Friedrich_Ebert) --doo:birthPlace--> German_Empire (dor:German_Empire)
+      - Aleksander_Tupalski (dor:Aleksander_Tupalski) --doo:deathPlace--> Canberra (dor:Canberra)
+      - Hans_Luther (dor:Hans_Luther) --doo:president--> Friedrich_Ebert (dor:Friedrich_Ebert)
+  '3':
+    attributes:
+      Aleksander_Tupalski: (former team^='http://dbpedia.org/resource/AZS_Warszawa')
+    relationships:
+      - Aleksander_Tupalski (dor:Aleksander_Tupalski) --dop:birthPlace--> German_Empire (dor:German_Empire)
+      - Gustav_Heinemann (dor:Gustav_Heinemann) --doo:birthPlace--> German_Empire (dor:German_Empire)
+      - Aleksander_Tupalski (dor:Aleksander_Tupalski) --doo:deathPlace--> Canberra (dor:Canberra)
+      - Alfons_Goppel (dor:Alfons_Goppel) --doo:president--> Gustav_Heinemann (dor:Gustav_Heinemann)
+  '4':
+    attributes:
+      Alex_Andjelic: (former team^='http://dbpedia.org/resource/''s-Hertogenbosch_Red_Eagles')
+    relationships:
+      - Alex_Andjelic (dor:Alex_Andjelic) --dop:birthPlace--> Kingdom_of_Yugoslavia (dor:Kingdom_of_Yugoslavia)
+      - Milanko_Renovica (dor:Milanko_Renovica) --doo:birthPlace--> Kingdom_of_Yugoslavia (dor:Kingdom_of_Yugoslavia)
+      - Alex_Andjelic (dor:Alex_Andjelic) --doo:deathPlace--> Belgrade (dor:Belgrade)
+      - Stipe_Šuvar (<http://dbpedia.org/resource/Stipe_Šuvar>) --doo:president--> Milanko_Renovica (dor:Milanko_Renovica)
+  '5':
+    attributes:
+      Alex_Andjelic: (former team^='http://dbpedia.org/resource/''s-Hertogenbosch_Red_Eagles')
+    relationships:
+      - Alex_Andjelic (dor:Alex_Andjelic) --dop:birthPlace--> Kingdom_of_Yugoslavia (dor:Kingdom_of_Yugoslavia)
+      - Raif_Dizdarević (<http://dbpedia.org/resource/Raif_Dizdarević>) --doo:birthPlace--> Kingdom_of_Yugoslavia (dor:Kingdom_of_Yugoslavia)
+      - Alex_Andjelic (dor:Alex_Andjelic) --doo:deathPlace--> Belgrade (dor:Belgrade)
+      - Stipe_Šuvar (<http://dbpedia.org/resource/Stipe_Šuvar>) --doo:president--> Raif_Dizdarević (<http://dbpedia.org/resource/Raif_Dizdarević>)
+  '6':
+    attributes:
+      Alexander_Galimov: (former team^='http://dbpedia.org/resource/Lokomotiv_Yaroslavl')
+    relationships:
+      - Alexander_Galimov (dor:Alexander_Galimov) --dop:birthPlace--> Soviet_Union (dor:Soviet_Union)
+      - Askar_Akayev (dor:Askar_Akayev) --doo:birthPlace--> Soviet_Union (dor:Soviet_Union)
+      - Alexander_Galimov (dor:Alexander_Galimov) --doo:deathPlace--> Moscow (dor:Moscow)
+      - Andrei_Iordan (dor:Andrei_Iordan) --doo:president--> Askar_Akayev (dor:Askar_Akayev)
+  '7':
+    attributes:
+      Alexander_Galimov: (former team^='http://dbpedia.org/resource/Lokomotiv_Yaroslavl')
+    relationships:
+      - Alexander_Galimov (dor:Alexander_Galimov) --dop:birthPlace--> Soviet_Union (dor:Soviet_Union)
+      - Askar_Akayev (dor:Askar_Akayev) --doo:birthPlace--> Soviet_Union (dor:Soviet_Union)
+      - Alexander_Galimov (dor:Alexander_Galimov) --doo:deathPlace--> Moscow (dor:Moscow)
+      - Apas_Jumagulov (dor:Apas_Jumagulov) --doo:president--> Askar_Akayev (dor:Askar_Akayev)
+  '8':
+    attributes:
+      Alexander_Galimov: (former team^='http://dbpedia.org/resource/Lokomotiv_Yaroslavl')
+    relationships:
+      - Alexander_Galimov (dor:Alexander_Galimov) --dop:birthPlace--> Soviet_Union (dor:Soviet_Union)
+      - Askar_Akayev (dor:Askar_Akayev) --doo:birthPlace--> Soviet_Union (dor:Soviet_Union)
+      - Alexander_Galimov (dor:Alexander_Galimov) --doo:deathPlace--> Moscow (dor:Moscow)
+      - Boris_Silayev (dor:Boris_Silayev) --doo:president--> Askar_Akayev (dor:Askar_Akayev)
+  '9':
+    attributes:
+      Andy_Clovechok: (former team^='http://dbpedia.org/resource/Vancouver_Canucks_(WHL)')
+    relationships:
+      - Andy_Clovechok (dor:Andy_Clovechok) --dop:birthPlace--> Slovakia (dor:Slovakia)
+      - Zoltán_Tildy (<http://dbpedia.org/resource/Zoltán_Tildy>) --doo:birthPlace--> Slovakia (dor:Slovakia)
+      - Andy_Clovechok (dor:Andy_Clovechok) --doo:deathPlace--> Kamloops,_British_Columbia (<http://dbpedia.org/resource/Kamloops,_British_Columbia>)
+      - Lajos_Dinnyés (<http://dbpedia.org/resource/Lajos_Dinnyés>) --doo:president--> Zoltán_Tildy (<http://dbpedia.org/resource/Zoltán_Tildy>)
+  '10':
+    attributes:
+      Václav_Havel: (url^='https://web.archive.org/web/20080622212542/http://www.czech.cz/en/zpravy/news_detail.aspx?id=19993-Vaclav-Havel:-%u201eJsme-na-pocatku-vaznych-zmen')
+      Augustin_Bubník: (former team^='http://dbpedia.org/resource/Finland_men''s_national_ice_hockey_team')
+    relationships:
+      - Augustin_Bubník (<http://dbpedia.org/resource/Augustin_Bubník>) --dop:birthPlace--> Prague (dor:Prague)
+      - Václav_Havel (<http://dbpedia.org/resource/Václav_Havel>) --doo:birthPlace--> Prague (dor:Prague)
+      - Augustin_Bubník (<http://dbpedia.org/resource/Augustin_Bubník>) --doo:deathPlace--> Prague (dor:Prague)
+      - Jaroslav_Bašta (<http://dbpedia.org/resource/Jaroslav_Bašta>) --doo:president--> Václav_Havel (<http://dbpedia.org/resource/Václav_Havel>)
+attributes:
+  Location: --alt name^ (dop:altName)--> langString | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --operator^ (dop:operator)--> Resource | --architect^ (dop:architect)--> langString | --line^ (dop:line)--> int
+  politician: --region^ (doo:region)--> Resource
+  office holder: --url^ (dop:url)--> Resource | --agf^ (dop:agf)--> int | --father^ (dop:father)--> langString | --1pp^ (dop:1pp)--> int | --width^ (dop:width)--> int
+  ice hockey player: --former team^ (doo:formerTeam)--> Resource
+subgraph_id: 375
+relationships:
+  - ice hockey player --dop:birthPlace--> Location
+  - office holder --doo:birthPlace--> Location
+  - ice hockey player --doo:deathPlace--> city
+  - politician --doo:president--> office holder

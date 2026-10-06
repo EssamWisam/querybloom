@@ -1,0 +1,135 @@
+types:
+  city: doo:City
+  soccer club: doo:SoccerClub
+  military unit: doo:MilitaryUnit
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bloemfontein: (nickname^='City of Roses', Aug low C^='0.5')
+      1_Parachute_Battalion: (garrison^='Tempe, Bloemfontein', caption^='1', nickname^='Parabats')
+      Bloemfontein_Celtic_F.C.: (ground^='http://dbpedia.org/resource/Bloemfontein', ground^='http://dbpedia.org/resource/Bloemfontein')
+    relationships:
+      - Bloemfontein_Celtic_F.C. (<http://dbpedia.org/resource/Bloemfontein_Celtic_F.C.>) --doo:ground--> Bloemfontein (dor:Bloemfontein)
+      - 1_Parachute_Battalion (dor:1_Parachute_Battalion) --doo:garrison--> Bloemfontein (dor:Bloemfontein)
+  '2':
+    attributes:
+      Bloemfontein: (nickname^='City of Roses', Aug low C^='0.5')
+      1_Parachute_Battalion: (garrison^='Tempe, Bloemfontein', caption^='1', nickname^='Parabats')
+      Bloemfontein_Young_Tigers: (ground^='http://dbpedia.org/resource/Bloemfontein', ground^='http://dbpedia.org/resource/Bloemfontein')
+    relationships:
+      - Bloemfontein_Young_Tigers (dor:Bloemfontein_Young_Tigers) --doo:ground--> Bloemfontein (dor:Bloemfontein)
+      - 1_Parachute_Battalion (dor:1_Parachute_Battalion) --doo:garrison--> Bloemfontein (dor:Bloemfontein)
+  '3':
+    attributes:
+      Bloemfontein: (nickname^='City of Roses', Aug low C^='0.5')
+      Roses_United_F.C.: (ground^='http://dbpedia.org/resource/Bloemfontein', ground^='http://dbpedia.org/resource/Bloemfontein')
+      1_Parachute_Battalion: (garrison^='Tempe, Bloemfontein', caption^='1', nickname^='Parabats')
+    relationships:
+      - Roses_United_F.C. (<http://dbpedia.org/resource/Roses_United_F.C.>) --doo:ground--> Bloemfontein (dor:Bloemfontein)
+      - 1_Parachute_Battalion (dor:1_Parachute_Battalion) --doo:garrison--> Bloemfontein (dor:Bloemfontein)
+  '4':
+    attributes:
+      Durban: (Apr rain days^='9.2', Aug low C^='12.5')
+      Addington_F.C.: (ground^='http://dbpedia.org/resource/Durban', ground^='http://dbpedia.org/resource/Durban')
+      1_Reconnaissance_Commando_(South_Africa): (garrison^='http://dbpedia.org/resource/Durban', caption^='1')
+    relationships:
+      - Addington_F.C. (<http://dbpedia.org/resource/Addington_F.C.>) --doo:ground--> Durban (dor:Durban)
+      - 1_Reconnaissance_Commando_(South_Africa) (<http://dbpedia.org/resource/1_Reconnaissance_Commando_(South_Africa)>) --doo:garrison--> Durban (dor:Durban)
+  '5':
+    attributes:
+      Durban: (Apr rain days^='9.2', Aug low C^='12.5')
+      African_Wanderers_F.C.: (ground^='http://dbpedia.org/resource/Chatsworth,_Durban', ground^='Chatsworth, Durban,')
+      1_Reconnaissance_Commando_(South_Africa): (garrison^='http://dbpedia.org/resource/Durban', caption^='1')
+    relationships:
+      - African_Wanderers_F.C. (<http://dbpedia.org/resource/African_Wanderers_F.C.>) --doo:ground--> Durban (dor:Durban)
+      - 1_Reconnaissance_Commando_(South_Africa) (<http://dbpedia.org/resource/1_Reconnaissance_Commando_(South_Africa)>) --doo:garrison--> Durban (dor:Durban)
+  '6':
+    attributes:
+      Durban: (Apr rain days^='9.2', Aug low C^='12.5')
+      AmaZulu_F.C.: (ground^='http://dbpedia.org/resource/Durban', ground^='http://dbpedia.org/resource/Durban')
+      1_Reconnaissance_Commando_(South_Africa): (garrison^='http://dbpedia.org/resource/Durban', caption^='1')
+    relationships:
+      - AmaZulu_F.C. (<http://dbpedia.org/resource/AmaZulu_F.C.>) --doo:ground--> Durban (dor:Durban)
+      - 1_Reconnaissance_Commando_(South_Africa) (<http://dbpedia.org/resource/1_Reconnaissance_Commando_(South_Africa)>) --doo:garrison--> Durban (dor:Durban)
+  '7':
+    attributes:
+      Donetsk: (Apr rain days^='13', Aug low C^='15')
+      FC_Olimpik_Donetsk: (ground^='http://dbpedia.org/resource/Bannikov_Stadium', ground^='Bannikov Stadium, Kyiv', date^='2019-04-14')
+      100th_Separate_Motorized_Rifle_Brigade_(Donetsk_People's_Republic): (garrison^='http://dbpedia.org/resource/Donetsk', battle^='http://dbpedia.org/resource/Battle_of_Marinka_(2015)', nickname^='“Sotka”')
+    relationships:
+      - FC_Olimpik_Donetsk (dor:FC_Olimpik_Donetsk) --doo:ground--> Donetsk (dor:Donetsk)
+      - 100th_Separate_Motorized_Rifle_Brigade_(Donetsk_People's_Republic) (<http://dbpedia.org/resource/100th_Separate_Motorized_Rifle_Brigade_(Donetsk_People's_Republic)>) --doo:garrison--> Donetsk (dor:Donetsk)
+  '8':
+    attributes:
+      Donetsk: (Apr rain days^='13', Aug low C^='15')
+      FC_Shakhtar_Donetsk: (ground^='http://dbpedia.org/resource/Donbass_Arena', ground^='http://dbpedia.org/resource/Donbass_Arena')
+      100th_Separate_Motorized_Rifle_Brigade_(Donetsk_People's_Republic): (garrison^='http://dbpedia.org/resource/Donetsk', battle^='http://dbpedia.org/resource/Battle_of_Marinka_(2015)', nickname^='“Sotka”')
+    relationships:
+      - FC_Shakhtar_Donetsk (dor:FC_Shakhtar_Donetsk) --doo:ground--> Donetsk (dor:Donetsk)
+      - 100th_Separate_Motorized_Rifle_Brigade_(Donetsk_People's_Republic) (<http://dbpedia.org/resource/100th_Separate_Motorized_Rifle_Brigade_(Donetsk_People's_Republic)>) --doo:garrison--> Donetsk (dor:Donetsk)
+  '9':
+    attributes:
+      Donetsk: (Apr rain days^='13', Aug low C^='15')
+      FC_Tytan_Donetsk: (ground^='http://dbpedia.org/resource/Donetsk', ground^='Stadion Smolianka, Donetsk', date^='2019-05-05')
+      100th_Separate_Motorized_Rifle_Brigade_(Donetsk_People's_Republic): (garrison^='http://dbpedia.org/resource/Donetsk', battle^='http://dbpedia.org/resource/Battle_of_Marinka_(2015)', nickname^='“Sotka”')
+    relationships:
+      - FC_Tytan_Donetsk (dor:FC_Tytan_Donetsk) --doo:ground--> Donetsk (dor:Donetsk)
+      - 100th_Separate_Motorized_Rifle_Brigade_(Donetsk_People's_Republic) (<http://dbpedia.org/resource/100th_Separate_Motorized_Rifle_Brigade_(Donetsk_People's_Republic)>) --doo:garrison--> Donetsk (dor:Donetsk)
+  '10':
+    attributes:
+      Kyiv: (Apr rain days^='13', nickname^='Mother of Rus'' Cities', Aug low C^='15.7')
+      AFSC_Kyiv: (ground^='http://dbpedia.org/resource/Kyiv', ground^='Urban Sport Сity Arsenal, Kyiv')
+      101st_Brigade_for_the_Protection_of_the_General_Staff: (garrison^='http://dbpedia.org/resource/Kyiv', battle^='http://dbpedia.org/resource/2022_Russian_invasion_of_Ukraine')
+    relationships:
+      - AFSC_Kyiv (dor:AFSC_Kyiv) --doo:ground--> Kyiv (dor:Kyiv)
+      - 101st_Brigade_for_the_Protection_of_the_General_Staff (dor:101st_Brigade_for_the_Protection_of_the_General_Staff) --doo:garrison--> Kyiv (dor:Kyiv)
+qa_result:
+  status: completed
+  cost_usd: 0.276372
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0233274
+        total_tokens: 3322
+        prompt_tokens: 2429
+        completion_tokens: 893
+      generate:
+        cost_usd: 0.08432260000000001
+        total_tokens: 7735
+        prompt_tokens: 4212
+        completion_tokens: 3523
+      verify_1:
+        cost_usd: 0.042632
+        total_tokens: 5770
+        prompt_tokens: 4851
+        completion_tokens: 919
+      verify_2:
+        cost_usd: 0.03554700000000001
+        total_tokens: 5418
+        prompt_tokens: 4854
+        completion_tokens: 564
+      complexity:
+        cost_usd: 0.09054300000000001
+        total_tokens: 9376
+        prompt_tokens: 5893
+        completion_tokens: 3483
+    total_tokens: 31621
+    prompt_tokens: 22239
+    total_cost_usd: 0.276372
+    completion_tokens: 9382
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --Aug high F^ (dop:augHighF)--> int | --Apr rain days^ (dop:aprRainDays)--> int | --nickname^ (dop:nickname)--> langString | --Aug low C^ (dop:augLowC)--> int
+  soccer club: --ground^ (doo:ground)--> Resource | --age^ (dop:age)--> langString | --ground^ (dop:ground)--> langString | --aga^ (dop:aga)--> int | --date^ (dop:date)--> date
+  military unit: --garrison^ (dop:garrison)--> Resource | --caption^ (dop:caption)--> Resource | --battle^ (doo:battle)--> Resource | --nickname^ (dop:nickname)--> langString
+subgraph_id: 249
+relationships:
+  - soccer club --doo:ground--> city
+  - military unit --doo:garrison--> city

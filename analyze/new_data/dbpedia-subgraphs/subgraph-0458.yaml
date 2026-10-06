@@ -1,0 +1,75 @@
+types:
+  city: doo:City
+  river: doo:River
+  diocese: doo:Diocese
+  radio station: doo:RadioStation
+  musical artist: doo:MusicalArtist
+  baseball player: doo:BaseballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adam_Wade_(drummer): (associated acts^='http://dbpedia.org/resource/Film_School')
+    relationships:
+      - Nat_Geo_Wild (dor:Nat_Geo_Wild) --doo:headquarter--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Algie_McBride (dor:Algie_McBride) --doo:birthPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Adam_Wade_(drummer) (<http://dbpedia.org/resource/Adam_Wade_(drummer)>) --doo:birthPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Southeastern_District_of_the_Lutheran_Church–Missouri_Synod (<http://dbpedia.org/resource/Southeastern_District_of_the_Lutheran_Church–Missouri_Synod>) --doo:territory--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Anacostia_River (dor:Anacostia_River) --doo:mouthMountain--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '2':
+    attributes:
+      Al_Nevins: (associated acts^='http://dbpedia.org/resource/The_Three_Suns', birth name^='Albert Tepper')
+    relationships:
+      - Nat_Geo_Wild (dor:Nat_Geo_Wild) --doo:headquarter--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Algie_McBride (dor:Algie_McBride) --doo:birthPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Al_Nevins (dor:Al_Nevins) --doo:birthPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Southeastern_District_of_the_Lutheran_Church–Missouri_Synod (<http://dbpedia.org/resource/Southeastern_District_of_the_Lutheran_Church–Missouri_Synod>) --doo:territory--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Anacostia_River (dor:Anacostia_River) --doo:mouthMountain--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '3':
+    attributes:
+      Andrew_Bayer: (associated acts^='', birth name^='Andrew Michael Bayer')
+    relationships:
+      - Nat_Geo_Wild (dor:Nat_Geo_Wild) --doo:headquarter--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Algie_McBride (dor:Algie_McBride) --doo:birthPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Andrew_Bayer (dor:Andrew_Bayer) --doo:birthPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Southeastern_District_of_the_Lutheran_Church–Missouri_Synod (<http://dbpedia.org/resource/Southeastern_District_of_the_Lutheran_Church–Missouri_Synod>) --doo:territory--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Anacostia_River (dor:Anacostia_River) --doo:mouthMountain--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '4':
+    attributes: {}
+    relationships:
+      - Tooniverse (dor:Tooniverse) --doo:headquarter--> Seoul (dor:Seoul)
+      - An_Chi-hong (dor:An_Chi-hong) --doo:birthPlace--> Seoul (dor:Seoul)
+      - Ahn_Ye-eun (dor:Ahn_Ye-eun) --doo:birthPlace--> Seoul (dor:Seoul)
+      - Roman_Catholic_Archdiocese_of_Seoul (dor:Roman_Catholic_Archdiocese_of_Seoul) --doo:territory--> Seoul (dor:Seoul)
+      - Cheonggyecheon (dor:Cheonggyecheon) --doo:mouthMountain--> Seoul (dor:Seoul)
+  '5':
+    attributes: {}
+    relationships:
+      - Tooniverse (dor:Tooniverse) --doo:headquarter--> Seoul (dor:Seoul)
+      - An_Chi-hong (dor:An_Chi-hong) --doo:birthPlace--> Seoul (dor:Seoul)
+      - Ahn_Ye-eun (dor:Ahn_Ye-eun) --doo:birthPlace--> Seoul (dor:Seoul)
+      - Roman_Catholic_Archdiocese_of_Seoul (dor:Roman_Catholic_Archdiocese_of_Seoul) --doo:territory--> Seoul (dor:Seoul)
+      - Jungnangcheon (dor:Jungnangcheon) --doo:mouthMountain--> Seoul (dor:Seoul)
+  '6':
+    attributes:
+      Ali_(South_Korean_singer): (associated acts^='http://dbpedia.org/resource/Leessang', birth name^='Cho Yong-jin')
+    relationships:
+      - Tooniverse (dor:Tooniverse) --doo:headquarter--> Seoul (dor:Seoul)
+      - An_Chi-hong (dor:An_Chi-hong) --doo:birthPlace--> Seoul (dor:Seoul)
+      - Ali_(South_Korean_singer) (<http://dbpedia.org/resource/Ali_(South_Korean_singer)>) --doo:birthPlace--> Seoul (dor:Seoul)
+      - Roman_Catholic_Archdiocese_of_Seoul (dor:Roman_Catholic_Archdiocese_of_Seoul) --doo:territory--> Seoul (dor:Seoul)
+      - Cheonggyecheon (dor:Cheonggyecheon) --doo:mouthMountain--> Seoul (dor:Seoul)
+attributes:
+  city: --Aug low C^ (dop:augLowC)--> int | --Aug high C^ (dop:augHighC)--> double | --width^ (dop:width)--> int | --Aug low F^ (dop:augLowF)--> int | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int
+  musical artist: --associated acts^ (dop:associatedActs)--> langString | --after^ (dop:after)--> langString | --bgcolor^ (dop:bgcolor)--> langString | --past members^ (dop:pastMembers)--> langString | --birth name^ (dop:birthName)--> langString
+subgraph_id: 458
+relationships:
+  - radio station --doo:headquarter--> city
+  - baseball player --doo:birthPlace--> city
+  - musical artist --doo:birthPlace--> city
+  - diocese --doo:territory--> city
+  - river --doo:mouthMountain--> city

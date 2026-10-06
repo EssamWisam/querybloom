@@ -1,0 +1,84 @@
+types:
+  horse: doo:Horse
+  museum: doo:Museum
+  jockey (horse racer): doo:Jockey
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Mate_(horse): (country^='United States', owner^='Albert C. Bostwick, Jr.', race^='http://dbpedia.org/resource/American_Derby')
+      National_Museum_of_Racing_and_Hall_of_Fame: (type^='http://dbpedia.org/resource/Professional_sports', caption^='National Museum of Racing and Hall of Fame')
+    relationships:
+      - Alfred_M._Robertson (dor:Alfred_M._Robertson) --doo:raceHorse--> Mate_(horse) (<http://dbpedia.org/resource/Mate_(horse)>)
+      - Alfred_M._Robertson (dor:Alfred_M._Robertson) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+  '2':
+    attributes:
+      Menow: (country^='United States', owner^='http://dbpedia.org/resource/Hal_Price_Headley', owner^='Hal Price Headley', award^='http://dbpedia.org/resource/American_Champion_Two-Year-Old_Male_Horse', race^='http://dbpedia.org/resource/Belmont_Futurity_Stakes', awards^='http://dbpedia.org/resource/American_Champion_Two-Year-Old_Male_Horse')
+      National_Museum_of_Racing_and_Hall_of_Fame: (type^='http://dbpedia.org/resource/Professional_sports', caption^='National Museum of Racing and Hall of Fame')
+    relationships:
+      - Alfred_M._Robertson (dor:Alfred_M._Robertson) --doo:raceHorse--> Menow (dor:Menow)
+      - Alfred_M._Robertson (dor:Alfred_M._Robertson) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+  '3':
+    attributes:
+      Top_Flight: (country^='http://dbpedia.org/resource/United_States', owner^='http://dbpedia.org/resource/Cornelius_Vanderbilt_Whitney', owner^='http://dbpedia.org/resource/Cornelius_Vanderbilt_Whitney', award^='http://dbpedia.org/resource/American_Champion_Three-Year-Old_Filly', race^='http://dbpedia.org/resource/Acorn_Stakes', awards^='http://dbpedia.org/resource/American_Champion_Three-Year-Old_Filly')
+      National_Museum_of_Racing_and_Hall_of_Fame: (type^='http://dbpedia.org/resource/Professional_sports', caption^='National Museum of Racing and Hall of Fame')
+    relationships:
+      - Alfred_M._Robertson (dor:Alfred_M._Robertson) --doo:raceHorse--> Top_Flight (dor:Top_Flight)
+      - Alfred_M._Robertson (dor:Alfred_M._Robertson) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+  '4':
+    attributes:
+      Affectionately: (country^='United States', owner^='http://dbpedia.org/resource/Ethel_D._Jacobs', owner^='http://dbpedia.org/resource/Ethel_D._Jacobs', award^='http://dbpedia.org/resource/American_Champion_Sprint_Horse', race^='http://dbpedia.org/resource/Astoria_Stakes', awards^='http://dbpedia.org/resource/American_Champion_Sprint_Horse')
+      Canada's_Sports_Hall_of_Fame: (type^='http://dbpedia.org/resource/Hall_of_fame', caption^='Exterior facade of Canada''s Sports Hall of Fame')
+    relationships:
+      - Avelino_Gomez (dor:Avelino_Gomez) --doo:raceHorse--> Affectionately (dor:Affectionately)
+      - Avelino_Gomez (dor:Avelino_Gomez) --doo:honours--> Canada's_Sports_Hall_of_Fame (<http://dbpedia.org/resource/Canada's_Sports_Hall_of_Fame>)
+  '5':
+    attributes:
+      Cool_Reception: (country^='http://dbpedia.org/resource/Canada', owner^='http://dbpedia.org/resource/Larkin_Maloney', owner^='http://dbpedia.org/resource/Larkin_Maloney', award^='http://dbpedia.org/resource/Sovereign_Award_for_Champion_2-Year-Old_Male_Horse', race^='http://dbpedia.org/resource/Coronation_Futurity_Stakes', awards^='http://dbpedia.org/resource/Sovereign_Award_for_Champion_2-Year-Old_Male_Horse')
+      Canada's_Sports_Hall_of_Fame: (type^='http://dbpedia.org/resource/Hall_of_fame', caption^='Exterior facade of Canada''s Sports Hall of Fame')
+    relationships:
+      - Avelino_Gomez (dor:Avelino_Gomez) --doo:raceHorse--> Cool_Reception (dor:Cool_Reception)
+      - Avelino_Gomez (dor:Avelino_Gomez) --doo:honours--> Canada's_Sports_Hall_of_Fame (<http://dbpedia.org/resource/Canada's_Sports_Hall_of_Fame>)
+  '6':
+    attributes:
+      Dancer's_Image: (country^='http://dbpedia.org/resource/United_States', owner^='http://dbpedia.org/resource/Peter_D._Fuller', owner^='Peter D. Fuller', race^='http://dbpedia.org/resource/Clarendon_Stakes')
+      Canada's_Sports_Hall_of_Fame: (type^='http://dbpedia.org/resource/Hall_of_fame', caption^='Exterior facade of Canada''s Sports Hall of Fame')
+    relationships:
+      - Avelino_Gomez (dor:Avelino_Gomez) --doo:raceHorse--> Dancer's_Image (<http://dbpedia.org/resource/Dancer's_Image>)
+      - Avelino_Gomez (dor:Avelino_Gomez) --doo:honours--> Canada's_Sports_Hall_of_Fame (<http://dbpedia.org/resource/Canada's_Sports_Hall_of_Fame>)
+  '7':
+    attributes:
+      Nihilator: (country^='http://dbpedia.org/resource/United_States', owner^='Wall Street Stable', award^='http://dbpedia.org/resource/United_States_Harness_Horse_of_the_Year', race^='http://dbpedia.org/resource/Breeders_Crown_3-Year-Old_Colt/Gelding_Pace', awards^='2')
+    relationships:
+      - Bill_O'Donnell_(harness_race_driver) (<http://dbpedia.org/resource/Bill_O'Donnell_(harness_race_driver)>) --doo:raceHorse--> Nihilator (dor:Nihilator)
+      - Bill_O'Donnell_(harness_race_driver) (<http://dbpedia.org/resource/Bill_O'Donnell_(harness_race_driver)>) --doo:honours--> Harness_Racing_Museum_&_Hall_of_Fame (<http://dbpedia.org/resource/Harness_Racing_Museum_&_Hall_of_Fame>)
+  '8':
+    attributes:
+      Nihilator: (country^='http://dbpedia.org/resource/United_States', owner^='Wall Street Stable', award^='http://dbpedia.org/resource/United_States_Harness_Horse_of_the_Year', race^='http://dbpedia.org/resource/Breeders_Crown_3-Year-Old_Colt/Gelding_Pace', awards^='2')
+      Nova_Scotia_Sport_Hall_of_Fame: (type^='http://dbpedia.org/resource/Hall_of_fame')
+    relationships:
+      - Bill_O'Donnell_(harness_race_driver) (<http://dbpedia.org/resource/Bill_O'Donnell_(harness_race_driver)>) --doo:raceHorse--> Nihilator (dor:Nihilator)
+      - Bill_O'Donnell_(harness_race_driver) (<http://dbpedia.org/resource/Bill_O'Donnell_(harness_race_driver)>) --doo:honours--> Nova_Scotia_Sport_Hall_of_Fame (dor:Nova_Scotia_Sport_Hall_of_Fame)
+  '9':
+    attributes:
+      Laverne_Hanover: (country^='United States', owner^='Thomas W. Murphy, Jr.', awards^='1968')
+    relationships:
+      - Billy_Haughton (dor:Billy_Haughton) --doo:raceHorse--> Laverne_Hanover (dor:Laverne_Hanover)
+      - Billy_Haughton (dor:Billy_Haughton) --doo:honours--> Harness_Racing_Museum_&_Hall_of_Fame (<http://dbpedia.org/resource/Harness_Racing_Museum_&_Hall_of_Fame>)
+  '10':
+    attributes:
+      Nihilator: (country^='http://dbpedia.org/resource/United_States', owner^='Wall Street Stable', award^='http://dbpedia.org/resource/United_States_Harness_Horse_of_the_Year', race^='http://dbpedia.org/resource/Breeders_Crown_3-Year-Old_Colt/Gelding_Pace', awards^='2')
+    relationships:
+      - Billy_Haughton (dor:Billy_Haughton) --doo:raceHorse--> Nihilator (dor:Nihilator)
+      - Billy_Haughton (dor:Billy_Haughton) --doo:honours--> Harness_Racing_Museum_&_Hall_of_Fame (<http://dbpedia.org/resource/Harness_Racing_Museum_&_Hall_of_Fame>)
+attributes:
+  horse: --country^ (dop:country)--> langString | --owner^ (doo:owner)--> Resource | --owner^ (dop:owner)--> langString | --award^ (doo:award)--> Resource | --race^ (doo:race)--> Resource | --awards^ (dop:awards)--> Resource
+  museum: --type^ (doo:type)--> Resource | --caption^ (dop:caption)--> langString | --1a^ (dop:1a)--> langString | --logo^ (dop:logo)--> langString
+subgraph_id: 20
+relationships:
+  - jockey (horse racer) --doo:raceHorse--> horse
+  - jockey (horse racer) --doo:honours--> museum

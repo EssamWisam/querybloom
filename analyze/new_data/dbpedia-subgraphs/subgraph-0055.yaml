@@ -1,0 +1,73 @@
+types:
+  building: doo:Building
+  architect: doo:Architect
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Sunnylands (dor:Sunnylands) --dop:architect--> A._Quincy_Jones (dor:A._Quincy_Jones)
+      - A._Quincy_Jones (dor:A._Quincy_Jones) --dop:almaMater--> University_of_Washington (dor:University_of_Washington)
+  '2':
+    attributes:
+      The_Barn_(Los_Angeles): (architectural style^='http://dbpedia.org/resource/Mid-century_modern', architectural style^='http://dbpedia.org/resource/Mid-century_modern')
+    relationships:
+      - The_Barn_(Los_Angeles) (<http://dbpedia.org/resource/The_Barn_(Los_Angeles)>) --dop:architect--> A._Quincy_Jones (dor:A._Quincy_Jones)
+      - A._Quincy_Jones (dor:A._Quincy_Jones) --dop:almaMater--> University_of_Washington (dor:University_of_Washington)
+  '3':
+    attributes: {}
+    relationships:
+      - Glacisgården (<http://dbpedia.org/resource/Glacisgården>) --dop:architect--> Aage_Langeland-Mathiesen (dor:Aage_Langeland-Mathiesen)
+      - Aage_Langeland-Mathiesen (dor:Aage_Langeland-Mathiesen) --dop:almaMater--> Royal_Danish_Academy_of_Fine_Arts (dor:Royal_Danish_Academy_of_Fine_Arts)
+  '4':
+    attributes: {}
+    relationships:
+      - Store_Strandstræde_19–21 (<http://dbpedia.org/resource/Store_Strandstræde_19–21>) --dop:architect--> Aage_Langeland-Mathiesen (dor:Aage_Langeland-Mathiesen)
+      - Aage_Langeland-Mathiesen (dor:Aage_Langeland-Mathiesen) --dop:almaMater--> Royal_Danish_Academy_of_Fine_Arts (dor:Royal_Danish_Academy_of_Fine_Arts)
+  '5':
+    attributes:
+      Dudhsagar_Dairy_plant: (architectural style^='http://dbpedia.org/resource/Brutalist_architecture', architectural style^='http://dbpedia.org/resource/Brutalist_architecture')
+    relationships:
+      - Dudhsagar_Dairy_plant (dor:Dudhsagar_Dairy_plant) --dop:architect--> Achyut_Kanvinde (dor:Achyut_Kanvinde)
+      - Achyut_Kanvinde (dor:Achyut_Kanvinde) --dop:almaMater--> Sir_J._J._College_of_Architecture (dor:Sir_J._J._College_of_Architecture)
+  '6':
+    attributes:
+      Palacio_de_Correos_de_México: (architectural style^='http://dbpedia.org/resource/Plateresque', architectural style^='http://dbpedia.org/resource/Plateresque')
+    relationships:
+      - Palacio_de_Correos_de_México (<http://dbpedia.org/resource/Palacio_de_Correos_de_México>) --dop:architect--> Adamo_Boari (dor:Adamo_Boari)
+      - Adamo_Boari (dor:Adamo_Boari) --dop:almaMater--> University_of_Bologna (dor:University_of_Bologna)
+  '7':
+    attributes:
+      Palacio_de_Correos_de_México: (architectural style^='http://dbpedia.org/resource/Plateresque', architectural style^='http://dbpedia.org/resource/Plateresque')
+    relationships:
+      - Palacio_de_Correos_de_México (<http://dbpedia.org/resource/Palacio_de_Correos_de_México>) --dop:architect--> Adamo_Boari (dor:Adamo_Boari)
+      - Adamo_Boari (dor:Adamo_Boari) --dop:almaMater--> University_of_Ferrara (dor:University_of_Ferrara)
+  '8':
+    attributes:
+      Harvard_University: (founder^='http://dbpedia.org/resource/Massachusetts_General_Court')
+    relationships:
+      - Institute_of_Contemporary_Art,_Philadelphia (<http://dbpedia.org/resource/Institute_of_Contemporary_Art,_Philadelphia>) --dop:architect--> Adèle_Naudé_Santos (<http://dbpedia.org/resource/Adèle_Naudé_Santos>)
+      - Adèle_Naudé_Santos (<http://dbpedia.org/resource/Adèle_Naudé_Santos>) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+  '9':
+    attributes:
+      University_of_Pennsylvania: (founder^='http://dbpedia.org/resource/Benjamin_Franklin')
+    relationships:
+      - Institute_of_Contemporary_Art,_Philadelphia (<http://dbpedia.org/resource/Institute_of_Contemporary_Art,_Philadelphia>) --dop:architect--> Adèle_Naudé_Santos (<http://dbpedia.org/resource/Adèle_Naudé_Santos>)
+      - Adèle_Naudé_Santos (<http://dbpedia.org/resource/Adèle_Naudé_Santos>) --dop:almaMater--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+  '10':
+    attributes: {}
+    relationships:
+      - 7_South_Dearborn (dor:7_South_Dearborn) --dop:architect--> Adrian_Smith_(architect) (<http://dbpedia.org/resource/Adrian_Smith_(architect)>)
+      - Adrian_Smith_(architect) (<http://dbpedia.org/resource/Adrian_Smith_(architect)>) --dop:almaMater--> University_of_Illinois,_Chicago (<http://dbpedia.org/resource/University_of_Illinois,_Chicago>)
+attributes:
+  building: --header^ (dop:header)--> langString | --architectural style^ (doo:architecturalStyle)--> Resource | --architectural style^ (dop:architecturalStyle)--> Resource | --architecture^ (dop:architecture)--> Resource | --designated other1 link^ (dop:designatedOther1Link)--> langString | --id^ (dop:id)--> int | --width^ (dop:width)--> int
+  university: --capacity^ (dop:capacity)--> int | --founder^ (dop:founder)--> langString
+subgraph_id: 55
+relationships:
+  - building --dop:architect--> architect
+  - architect --dop:almaMater--> university

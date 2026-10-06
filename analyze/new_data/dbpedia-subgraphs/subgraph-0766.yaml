@@ -1,0 +1,96 @@
+types:
+  album: doo:Album
+  movie: doo:Film
+  single: doo:Single
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - It's_No_Crime (<http://dbpedia.org/resource/It's_No_Crime>) --doo:previousWork--> Love_Saw_It (dor:Love_Saw_It)
+      - It's_No_Crime (<http://dbpedia.org/resource/It's_No_Crime>) --doo:artist--> Babyface_(musician) (<http://dbpedia.org/resource/Babyface_(musician)>)
+      - Above_and_Beyoncé:_Video_Collection_&_Dance_Mixes (<http://dbpedia.org/resource/Above_and_Beyoncé:_Video_Collection_&_Dance_Mixes>) --dop:writer--> Babyface_(musician) (<http://dbpedia.org/resource/Babyface_(musician)>)
+  '2':
+    attributes:
+      Absolute_Beginners_(film): (editing^='http://dbpedia.org/resource/Gerry_Hambling')
+    relationships:
+      - Beauty_and_the_Beast_(David_Bowie_song) (<http://dbpedia.org/resource/Beauty_and_the_Beast_(David_Bowie_song)>) --doo:previousWork--> Heroes_(David_Bowie_song) (<http://dbpedia.org/resource/Heroes_(David_Bowie_song)>)
+      - Beauty_and_the_Beast_(David_Bowie_song) (<http://dbpedia.org/resource/Beauty_and_the_Beast_(David_Bowie_song)>) --doo:artist--> David_Bowie (dor:David_Bowie)
+      - Absolute_Beginners_(film) (<http://dbpedia.org/resource/Absolute_Beginners_(film)>) --dop:writer--> David_Bowie (dor:David_Bowie)
+  '3':
+    attributes:
+      Baal_(EP): (lyrics^='traditional, adapt. Brecht, trans. Willett', name^='Baal')
+      Absolute_Beginners_(film): (editing^='http://dbpedia.org/resource/Gerry_Hambling')
+    relationships:
+      - Cat_People_(Putting_Out_Fire) (<http://dbpedia.org/resource/Cat_People_(Putting_Out_Fire)>) --doo:previousWork--> Baal_(EP) (<http://dbpedia.org/resource/Baal_(EP)>)
+      - Cat_People_(Putting_Out_Fire) (<http://dbpedia.org/resource/Cat_People_(Putting_Out_Fire)>) --doo:artist--> David_Bowie (dor:David_Bowie)
+      - Absolute_Beginners_(film) (<http://dbpedia.org/resource/Absolute_Beginners_(film)>) --dop:writer--> David_Bowie (dor:David_Bowie)
+  '4':
+    attributes:
+      Absolute_Beginners_(film): (editing^='http://dbpedia.org/resource/Gerry_Hambling')
+      Seven_Years_in_Tibet_(song): (name^='Seven Years in Tibet')
+    relationships:
+      - I'm_Afraid_of_Americans (<http://dbpedia.org/resource/I'm_Afraid_of_Americans>) --doo:previousWork--> Seven_Years_in_Tibet_(song) (<http://dbpedia.org/resource/Seven_Years_in_Tibet_(song)>)
+      - I'm_Afraid_of_Americans (<http://dbpedia.org/resource/I'm_Afraid_of_Americans>) --doo:artist--> David_Bowie (dor:David_Bowie)
+      - Absolute_Beginners_(film) (<http://dbpedia.org/resource/Absolute_Beginners_(film)>) --dop:writer--> David_Bowie (dor:David_Bowie)
+  '5':
+    attributes:
+      Air_America_(film): (editing^='Lois Freeman-Fox')
+    relationships:
+      - I_Second_That_Emotion (dor:I_Second_That_Emotion) --doo:previousWork--> More_Love_(Smokey_Robinson_&_the_Miracles_song) (<http://dbpedia.org/resource/More_Love_(Smokey_Robinson_&_the_Miracles_song)>)
+      - I_Second_That_Emotion (dor:I_Second_That_Emotion) --doo:artist--> Smokey_Robinson (dor:Smokey_Robinson)
+      - Air_America_(film) (<http://dbpedia.org/resource/Air_America_(film)>) --dop:writer--> Smokey_Robinson (dor:Smokey_Robinson)
+  '6':
+    attributes:
+      Airheads: (editing^='http://dbpedia.org/resource/Stephen_Semel')
+      Morrissey: (associated musical artist^='http://dbpedia.org/resource/Slaughter_&_the_Dogs')
+      Redondo_Beach_(song): (name^='Redondo Beach')
+    relationships:
+      - You_Have_Killed_Me (dor:You_Have_Killed_Me) --doo:previousWork--> Redondo_Beach_(song) (<http://dbpedia.org/resource/Redondo_Beach_(song)>)
+      - You_Have_Killed_Me (dor:You_Have_Killed_Me) --doo:artist--> Morrissey (dor:Morrissey)
+      - Airheads (dor:Airheads) --dop:writer--> Morrissey (dor:Morrissey)
+  '7':
+    attributes:
+      Alvin_and_the_Chipmunks_(film): (editing^='http://dbpedia.org/resource/Peter_E._Berger')
+    relationships:
+      - Jimmy_Gets_High (dor:Jimmy_Gets_High) --doo:previousWork--> Free_Loop (dor:Free_Loop)
+      - Jimmy_Gets_High (dor:Jimmy_Gets_High) --doo:artist--> Daniel_Powter (dor:Daniel_Powter)
+      - Alvin_and_the_Chipmunks_(film) (<http://dbpedia.org/resource/Alvin_and_the_Chipmunks_(film)>) --dop:writer--> Daniel_Powter (dor:Daniel_Powter)
+  '8':
+    attributes:
+      Alvin_and_the_Chipmunks_(film): (editing^='http://dbpedia.org/resource/Peter_E._Berger')
+    relationships:
+      - Love_You_Lately (dor:Love_You_Lately) --doo:previousWork--> Lie_to_Me_(Daniel_Powter_Song) (<http://dbpedia.org/resource/Lie_to_Me_(Daniel_Powter_Song)>)
+      - Love_You_Lately (dor:Love_You_Lately) --doo:artist--> Daniel_Powter (dor:Daniel_Powter)
+      - Alvin_and_the_Chipmunks_(film) (<http://dbpedia.org/resource/Alvin_and_the_Chipmunks_(film)>) --dop:writer--> Daniel_Powter (dor:Daniel_Powter)
+  '9':
+    attributes:
+      Love_(John_Lennon_song): (name^='Love')
+      Alvin_and_the_Chipmunks:_Chipwrecked: (editing^='Peter Amundson')
+    relationships:
+      - Nobody_Told_Me (dor:Nobody_Told_Me) --doo:previousWork--> Love_(John_Lennon_song) (<http://dbpedia.org/resource/Love_(John_Lennon_song)>)
+      - Nobody_Told_Me (dor:Nobody_Told_Me) --doo:artist--> John_Lennon (dor:John_Lennon)
+      - Alvin_and_the_Chipmunks:_Chipwrecked (<http://dbpedia.org/resource/Alvin_and_the_Chipmunks:_Chipwrecked>) --dop:writer--> John_Lennon (dor:John_Lennon)
+  '10':
+    attributes:
+      Paul_McCartney: (alias^='Apollo C. Vermouth')
+      Really_Love_You: (name^='Really Love You')
+      Alvin_and_the_Chipmunks:_Chipwrecked: (editing^='Peter Amundson')
+    relationships:
+      - This_Never_Happened_Before (dor:This_Never_Happened_Before) --doo:previousWork--> Really_Love_You (dor:Really_Love_You)
+      - This_Never_Happened_Before (dor:This_Never_Happened_Before) --doo:artist--> Paul_McCartney (dor:Paul_McCartney)
+      - Alvin_and_the_Chipmunks:_Chipwrecked (<http://dbpedia.org/resource/Alvin_and_the_Chipmunks:_Chipwrecked>) --dop:writer--> Paul_McCartney (dor:Paul_McCartney)
+attributes:
+  album: --lyrics^ (dop:lyrics)--> langString | --quoted^ (dop:quoted)--> langString | --bot^ (dop:bot)--> langString | --name^ (dop:name)--> langString | --border^ (dop:border)--> langString
+  movie: --editing^ (dop:editing)--> langString | --footer^ (dop:footer)--> langString
+  musical artist: --associated musical artist^ (doo:associatedMusicalArtist)--> Resource | --current member of^ (dop:currentMemberOf)--> langString | --alias^ (doo:alias)--> langString
+subgraph_id: 766
+relationships:
+  - single --doo:previousWork--> album
+  - single --doo:artist--> musical artist
+  - movie --dop:writer--> musical artist

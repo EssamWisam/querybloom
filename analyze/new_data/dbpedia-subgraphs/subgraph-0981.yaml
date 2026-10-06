@@ -1,0 +1,83 @@
+types:
+  town: doo:Town
+  person: doo:Person
+  country: doo:Country
+  organisation: doo:Organisation
+  military conflict: doo:MilitaryConflict
+  cultivar (cultivated variety): doo:CultivatedVariety
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Istanbul: (Apr low C^='6.4')
+      24_(Turkish_TV_channel): (Link from a Wikipage to an external page^='http://www.yirmidort.tv/')
+    relationships:
+      - 24_(Turkish_TV_channel) (<http://dbpedia.org/resource/24_(Turkish_TV_channel)>) --doo:headquarter--> Istanbul (dor:Istanbul)
+      - Paul_Lange_(musician) (<http://dbpedia.org/resource/Paul_Lange_(musician)>) --doo:restingPlace--> Istanbul (dor:Istanbul)
+      - Paul_Lange_(musician) (<http://dbpedia.org/resource/Paul_Lange_(musician)>) --doo:citizenship--> Germany (dor:Germany)
+      - Alkmene_(apple) (<http://dbpedia.org/resource/Alkmene_(apple)>) --doo:origin--> Germany (dor:Germany)
+      - Battle_of_Constantinople_(1147) (<http://dbpedia.org/resource/Battle_of_Constantinople_(1147)>) --doo:place--> Istanbul (dor:Istanbul)
+  '2':
+    attributes:
+      Istanbul: (Apr low C^='6.4')
+      360_(TV_channel): (Link from a Wikipage to an external page^='http://www.tv360.com.tr')
+    relationships:
+      - 360_(TV_channel) (<http://dbpedia.org/resource/360_(TV_channel)>) --doo:headquarter--> Istanbul (dor:Istanbul)
+      - Paul_Lange_(musician) (<http://dbpedia.org/resource/Paul_Lange_(musician)>) --doo:restingPlace--> Istanbul (dor:Istanbul)
+      - Paul_Lange_(musician) (<http://dbpedia.org/resource/Paul_Lange_(musician)>) --doo:citizenship--> Germany (dor:Germany)
+      - Alkmene_(apple) (<http://dbpedia.org/resource/Alkmene_(apple)>) --doo:origin--> Germany (dor:Germany)
+      - Battle_of_Constantinople_(1147) (<http://dbpedia.org/resource/Battle_of_Constantinople_(1147)>) --doo:place--> Istanbul (dor:Istanbul)
+  '3':
+    attributes:
+      Istanbul: (Apr low C^='6.4')
+    relationships:
+      - Agean_Cymbals (dor:Agean_Cymbals) --doo:headquarter--> Istanbul (dor:Istanbul)
+      - Paul_Lange_(musician) (<http://dbpedia.org/resource/Paul_Lange_(musician)>) --doo:restingPlace--> Istanbul (dor:Istanbul)
+      - Paul_Lange_(musician) (<http://dbpedia.org/resource/Paul_Lange_(musician)>) --doo:citizenship--> Germany (dor:Germany)
+      - Alkmene_(apple) (<http://dbpedia.org/resource/Alkmene_(apple)>) --doo:origin--> Germany (dor:Germany)
+      - Battle_of_Constantinople_(1147) (<http://dbpedia.org/resource/Battle_of_Constantinople_(1147)>) --doo:place--> Istanbul (dor:Istanbul)
+  '4':
+    attributes:
+      Kabul: (Apr low C^='6')
+      Afghan_Jet_International: (Link from a Wikipage to an external page^='http://www.flyaji.com')
+    relationships:
+      - Afghan_Jet_International (dor:Afghan_Jet_International) --doo:headquarter--> Kabul (dor:Kabul)
+      - Faiz_Muhammad_Kateb (dor:Faiz_Muhammad_Kateb) --doo:restingPlace--> Kabul (dor:Kabul)
+      - Faiz_Muhammad_Kateb (dor:Faiz_Muhammad_Kateb) --doo:citizenship--> Afghanistan (dor:Afghanistan)
+      - Kush_(cannabis) (<http://dbpedia.org/resource/Kush_(cannabis)>) --doo:origin--> Afghanistan (dor:Afghanistan)
+      - 1973_Afghan_coup_d'état (<http://dbpedia.org/resource/1973_Afghan_coup_d'état>) --doo:place--> Kabul (dor:Kabul)
+  '5':
+    attributes:
+      Kabul: (Apr low C^='6')
+      Afghan_Post: (Link from a Wikipage to an external page^='http://afghanpost.gov.af')
+    relationships:
+      - Afghan_Post (dor:Afghan_Post) --doo:headquarter--> Kabul (dor:Kabul)
+      - Faiz_Muhammad_Kateb (dor:Faiz_Muhammad_Kateb) --doo:restingPlace--> Kabul (dor:Kabul)
+      - Faiz_Muhammad_Kateb (dor:Faiz_Muhammad_Kateb) --doo:citizenship--> Afghanistan (dor:Afghanistan)
+      - Kush_(cannabis) (<http://dbpedia.org/resource/Kush_(cannabis)>) --doo:origin--> Afghanistan (dor:Afghanistan)
+      - 1973_Afghan_coup_d'état (<http://dbpedia.org/resource/1973_Afghan_coup_d'état>) --doo:place--> Kabul (dor:Kabul)
+  '6':
+    attributes:
+      Kabul: (Apr low C^='6')
+      Afghan_Red_Crescent_Society: (Link from a Wikipage to an external page^='http://redcrescent.af/')
+    relationships:
+      - Afghan_Red_Crescent_Society (dor:Afghan_Red_Crescent_Society) --doo:headquarter--> Kabul (dor:Kabul)
+      - Faiz_Muhammad_Kateb (dor:Faiz_Muhammad_Kateb) --doo:restingPlace--> Kabul (dor:Kabul)
+      - Faiz_Muhammad_Kateb (dor:Faiz_Muhammad_Kateb) --doo:citizenship--> Afghanistan (dor:Afghanistan)
+      - Kush_(cannabis) (<http://dbpedia.org/resource/Kush_(cannabis)>) --doo:origin--> Afghanistan (dor:Afghanistan)
+      - 1973_Afghan_coup_d'état (<http://dbpedia.org/resource/1973_Afghan_coup_d'état>) --doo:place--> Kabul (dor:Kabul)
+attributes:
+  town: --Apr low C^ (dop:aprLowC)--> double | --arc-gapB^ (dop:arcGapb)--> double | --Aug low F^ (dop:augLowF)--> int | --arc-radiusA^ (dop:arcRadiusa)--> double
+  person: --width^ (dop:width)--> int | --board^ (doo:board)--> Resource | --quote^ (dop:quote)--> langString
+  organisation: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --founded by^ (doo:foundedBy)--> Resource
+subgraph_id: 981
+relationships:
+  - organisation --doo:headquarter--> town
+  - person --doo:restingPlace--> town
+  - person --doo:citizenship--> country
+  - cultivar (cultivated variety) --doo:origin--> country
+  - military conflict --doo:place--> town

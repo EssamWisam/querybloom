@@ -1,0 +1,50 @@
+types:
+  politician: doo:Politician
+  settlement: doo:Settlement
+  office holder: doo:OfficeHolder
+  soccer player: doo:SoccerPlayer
+  soccer club season: doo:SoccerClubSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Srinjoy_Bose: (nickname^='Tumpai')
+    relationships:
+      - 2019–20_Mohun_Bagan_AC_season (<http://dbpedia.org/resource/2019–20_Mohun_Bagan_AC_season>) --doo:chairman--> Srinjoy_Bose (dor:Srinjoy_Bose)
+      - Srinjoy_Bose (dor:Srinjoy_Bose) --dop:birthPlace--> Kolkata (dor:Kolkata)
+      - Abhijit_Mukherjee (dor:Abhijit_Mukherjee) --doo:residence--> Kolkata (dor:Kolkata)
+      - Abhishek_Das_(footballer) (<http://dbpedia.org/resource/Abhishek_Das_(footballer)>) --dop:birthPlace--> Kolkata (dor:Kolkata)
+  '2':
+    attributes:
+      Abhra_Mondal: (Link from a Wikipage to an external page^='http://punefc.com/%3Fplayer=abhra-mondal')
+      Srinjoy_Bose: (nickname^='Tumpai')
+    relationships:
+      - 2019–20_Mohun_Bagan_AC_season (<http://dbpedia.org/resource/2019–20_Mohun_Bagan_AC_season>) --doo:chairman--> Srinjoy_Bose (dor:Srinjoy_Bose)
+      - Srinjoy_Bose (dor:Srinjoy_Bose) --dop:birthPlace--> Kolkata (dor:Kolkata)
+      - Abhijit_Mukherjee (dor:Abhijit_Mukherjee) --doo:residence--> Kolkata (dor:Kolkata)
+      - Abhra_Mondal (dor:Abhra_Mondal) --dop:birthPlace--> Kolkata (dor:Kolkata)
+  '3':
+    attributes:
+      Srinjoy_Bose: (nickname^='Tumpai')
+      Biswajit_Bhattacharya: (Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=71JHZiiP3hoC%7Carchive-date=25')
+    relationships:
+      - 2019–20_Mohun_Bagan_AC_season (<http://dbpedia.org/resource/2019–20_Mohun_Bagan_AC_season>) --doo:chairman--> Srinjoy_Bose (dor:Srinjoy_Bose)
+      - Srinjoy_Bose (dor:Srinjoy_Bose) --dop:birthPlace--> Kolkata (dor:Kolkata)
+      - Abhijit_Mukherjee (dor:Abhijit_Mukherjee) --doo:residence--> Kolkata (dor:Kolkata)
+      - Biswajit_Bhattacharya (dor:Biswajit_Bhattacharya) --dop:birthPlace--> Kolkata (dor:Kolkata)
+attributes:
+  politician: --nickname^ (dop:nickname)--> langString | --children^ (dop:children)--> langString | --children^ (dop:children)--> Resource | --image upright^ (dop:imageUpright)--> double
+  settlement: --Aug high C^ (dop:augHighC)--> double
+  office holder: --aga^ (dop:aga)--> int | --active years end date^ (doo:activeYearsEndDate)--> date
+  soccer player: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource | --caption^ (dop:caption)--> langString | --d^ (dop:d)--> int
+  soccer club season: --d^ (dop:d)--> int
+subgraph_id: 99
+relationships:
+  - soccer club season --doo:chairman--> politician
+  - politician --dop:birthPlace--> settlement
+  - office holder --doo:residence--> settlement
+  - soccer player --dop:birthPlace--> settlement

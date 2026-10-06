@@ -1,0 +1,89 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  magazine: doo:Magazine
+  convention: doo:Convention
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Stuff_(magazine) (<http://dbpedia.org/resource/Stuff_(magazine)>) --doo:country--> China (dor:China)
+      - 10th_anniversary_of_the_People's_Republic_of_China (<http://dbpedia.org/resource/10th_anniversary_of_the_People's_Republic_of_China>) --doo:location--> China (dor:China)
+      - Stuff_(magazine) (<http://dbpedia.org/resource/Stuff_(magazine)>) --doo:country--> Czech_Republic (dor:Czech_Republic)
+  '2':
+    attributes: {}
+    relationships:
+      - Stuff_(magazine) (<http://dbpedia.org/resource/Stuff_(magazine)>) --doo:country--> China (dor:China)
+      - 10th_anniversary_of_the_People's_Republic_of_China (<http://dbpedia.org/resource/10th_anniversary_of_the_People's_Republic_of_China>) --doo:location--> China (dor:China)
+      - Stuff_(magazine) (<http://dbpedia.org/resource/Stuff_(magazine)>) --doo:country--> France (dor:France)
+  '3':
+    attributes: {}
+    relationships:
+      - Stuff_(magazine) (<http://dbpedia.org/resource/Stuff_(magazine)>) --doo:country--> China (dor:China)
+      - 10th_anniversary_of_the_People's_Republic_of_China (<http://dbpedia.org/resource/10th_anniversary_of_the_People's_Republic_of_China>) --doo:location--> China (dor:China)
+      - Stuff_(magazine) (<http://dbpedia.org/resource/Stuff_(magazine)>) --doo:country--> Germany (dor:Germany)
+  '4':
+    attributes:
+      Canada: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - .info_(magazine) (<http://dbpedia.org/resource/.info_(magazine)>) --doo:country--> United_States (dor:United_States)
+      - 10th_World_Science_Fiction_Convention (dor:10th_World_Science_Fiction_Convention) --doo:location--> United_States (dor:United_States)
+      - .info_(magazine) (<http://dbpedia.org/resource/.info_(magazine)>) --doo:country--> Canada (dor:Canada)
+  '5':
+    attributes:
+      Colombia: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Colombia')
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - ArtNexus (dor:ArtNexus) --doo:country--> United_States (dor:United_States)
+      - 10th_World_Science_Fiction_Convention (dor:10th_World_Science_Fiction_Convention) --doo:location--> United_States (dor:United_States)
+      - ArtNexus (dor:ArtNexus) --doo:country--> Colombia (dor:Colombia)
+  '6':
+    attributes:
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+    relationships:
+      - Decanter_(magazine) (<http://dbpedia.org/resource/Decanter_(magazine)>) --doo:country--> United_States (dor:United_States)
+      - 10th_World_Science_Fiction_Convention (dor:10th_World_Science_Fiction_Convention) --doo:location--> United_States (dor:United_States)
+      - Decanter_(magazine) (<http://dbpedia.org/resource/Decanter_(magazine)>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+  '7':
+    attributes:
+      Republic_of_Ireland: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Ireland', url^='https://web.archive.org/web/20100729063507/http:/www.loc.gov/rr/international/portals.html')
+    relationships:
+      - ABC_Insight (dor:ABC_Insight) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - 15th_World_Science_Fiction_Convention (dor:15th_World_Science_Fiction_Convention) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - ABC_Insight (dor:ABC_Insight) --doo:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+  '8':
+    attributes:
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+    relationships:
+      - Decanter_(magazine) (<http://dbpedia.org/resource/Decanter_(magazine)>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - 15th_World_Science_Fiction_Convention (dor:15th_World_Science_Fiction_Convention) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - Decanter_(magazine) (<http://dbpedia.org/resource/Decanter_(magazine)>) --doo:country--> United_States (dor:United_States)
+  '9':
+    attributes: {}
+    relationships:
+      - Gamereactor (dor:Gamereactor) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - 15th_World_Science_Fiction_Convention (dor:15th_World_Science_Fiction_Convention) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - Gamereactor (dor:Gamereactor) --doo:country--> Finland (dor:Finland)
+  '10':
+    attributes:
+      Italy: (footer^='Giuseppe Mazzini '', highly influential leader of the Italian revolutionary movement; and Giuseppe Garibaldi '', celebrated as one of the greatest generals of modern times and as the "Hero of the Two Wo...')
+      Argentina: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Argentina')
+    relationships:
+      - Skorpio_(magazine) (<http://dbpedia.org/resource/Skorpio_(magazine)>) --doo:country--> Italy (dor:Italy)
+      - 1600th_Anniversary_of_the_Foundation_of_Venice (dor:1600th_Anniversary_of_the_Foundation_of_Venice) --doo:location--> Italy (dor:Italy)
+      - Skorpio_(magazine) (<http://dbpedia.org/resource/Skorpio_(magazine)>) --doo:country--> Argentina (dor:Argentina)
+attributes:
+  country: --footer^ (dop:footer)--> langString
+  Location: --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --religion^ (doo:religion)--> Resource | --anthem^ (doo:anthem)--> Resource | --Apr sun^ (dop:aprSun)--> int | --named for^ (dop:namedFor)--> langString | --age^ (dop:age)--> Resource | --founder^ (dop:founder)--> Resource | --url^ (dop:url)--> langString | --jurisdiction^ (doo:jurisdiction)--> Resource | --arc-radiusB^ (dop:arcRadiusb)--> double
+subgraph_id: 97
+relationships:
+  - magazine --doo:country--> country
+  - convention --doo:location--> country
+  - magazine --doo:country--> Location

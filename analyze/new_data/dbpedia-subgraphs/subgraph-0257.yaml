@@ -1,0 +1,121 @@
+types:
+  person: doo:Person
+  company: doo:Company
+  aircraft: doo:Aircraft
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abbott-Baynes_Scud_1: (manufacturer^='http://dbpedia.org/resource/Abbott-Baynes_Sailplanes_Ltd')
+      Abbott-Baynes_Sailplanes_Ltd: (Wikipage revision ID^='549191041')
+    relationships:
+      - Abbott-Baynes_Scud_1 (dor:Abbott-Baynes_Scud_1) --doo:designer--> L._E._Baynes (dor:L._E._Baynes)
+      - Abbott-Baynes_Scud_1 (dor:Abbott-Baynes_Scud_1) --dop:manufacturer--> Abbott-Baynes_Sailplanes_Ltd (dor:Abbott-Baynes_Sailplanes_Ltd)
+  '2':
+    attributes:
+      Abbott-Baynes_Scud_2: (manufacturer^='http://dbpedia.org/resource/Abbott-Baynes_Sailplanes_Ltd')
+      Abbott-Baynes_Sailplanes_Ltd: (Wikipage revision ID^='549191041')
+    relationships:
+      - Abbott-Baynes_Scud_2 (dor:Abbott-Baynes_Scud_2) --doo:designer--> L._E._Baynes (dor:L._E._Baynes)
+      - Abbott-Baynes_Scud_2 (dor:Abbott-Baynes_Scud_2) --dop:manufacturer--> Abbott-Baynes_Sailplanes_Ltd (dor:Abbott-Baynes_Sailplanes_Ltd)
+  '3':
+    attributes:
+      Abrams_Air_Craft: (Wikipage revision ID^='1104240573')
+      Abrams_P-1_Explorer: (manufacturer^='http://dbpedia.org/resource/Abrams_Air_Craft')
+    relationships:
+      - Abrams_P-1_Explorer (dor:Abrams_P-1_Explorer) --doo:designer--> Talbert_Abrams (dor:Talbert_Abrams)
+      - Abrams_P-1_Explorer (dor:Abrams_P-1_Explorer) --dop:manufacturer--> Abrams_Air_Craft (dor:Abrams_Air_Craft)
+  '4':
+    attributes:
+      Abrial_A-2_Vautour: (manufacturer^='http://dbpedia.org/resource/Louis_Peyret')
+    relationships:
+      - Abrial_A-2_Vautour (dor:Abrial_A-2_Vautour) --doo:designer--> Georges_Abrial (dor:Georges_Abrial)
+      - Abrial_A-2_Vautour (dor:Abrial_A-2_Vautour) --dop:manufacturer--> Louis_Peyret (dor:Louis_Peyret)
+  '5':
+    attributes:
+      ACAZ_T.2: (manufacturer^='http://dbpedia.org/resource/Ateliers_de_Construction_Aéronautique_de_Zeebruges')
+      Ateliers_de_Construction_Aéronautique_de_Zeebruges: (Wikipage revision ID^='1120540573')
+    relationships:
+      - ACAZ_T.2 (dor:ACAZ_T.2) --doo:designer--> Alfred_Renard (dor:Alfred_Renard)
+      - ACAZ_T.2 (dor:ACAZ_T.2) --dop:manufacturer--> Ateliers_de_Construction_Aéronautique_de_Zeebruges (<http://dbpedia.org/resource/Ateliers_de_Construction_Aéronautique_de_Zeebruges>)
+  '6':
+    attributes:
+      Acro_Sport: (founding year^='1977', Wikipage revision ID^='988569029')
+      Ace_Baby_Ace: (manufacturer^='http://dbpedia.org/resource/Acro_Sport')
+    relationships:
+      - Ace_Baby_Ace (dor:Ace_Baby_Ace) --doo:designer--> Orland_Corben (dor:Orland_Corben)
+      - Ace_Baby_Ace (dor:Ace_Baby_Ace) --dop:manufacturer--> Acro_Sport (dor:Acro_Sport)
+  '7':
+    attributes:
+      Ace_Junior_Ace: (manufacturer^='http://dbpedia.org/resource/Ace_Aircraft_Manufacturing_Company')
+      Ace_Aircraft_Manufacturing_Company: (Wikipage revision ID^='1120090821')
+    relationships:
+      - Ace_Junior_Ace (dor:Ace_Junior_Ace) --doo:designer--> Orland_Corben (dor:Orland_Corben)
+      - Ace_Junior_Ace (dor:Ace_Junior_Ace) --dop:manufacturer--> Ace_Aircraft_Manufacturing_Company (dor:Ace_Aircraft_Manufacturing_Company)
+  '8':
+    attributes:
+      Acro_Sport: (founding year^='1977', Wikipage revision ID^='988569029')
+      Acro_Sport_I: (manufacturer^='http://dbpedia.org/resource/Acro_Sport')
+      Paul_Poberezny: (children^='Bonnie Poberezny')
+    relationships:
+      - Acro_Sport_I (dor:Acro_Sport_I) --doo:designer--> Paul_Poberezny (dor:Paul_Poberezny)
+      - Acro_Sport_I (dor:Acro_Sport_I) --dop:manufacturer--> Acro_Sport (dor:Acro_Sport)
+  '9':
+    attributes:
+      Acro_Sport: (founding year^='1977', Wikipage revision ID^='988569029')
+      Acro_Sport_II: (manufacturer^='http://dbpedia.org/resource/Acro_Sport')
+      Paul_Poberezny: (children^='Bonnie Poberezny')
+    relationships:
+      - Acro_Sport_II (dor:Acro_Sport_II) --doo:designer--> Paul_Poberezny (dor:Paul_Poberezny)
+      - Acro_Sport_II (dor:Acro_Sport_II) --dop:manufacturer--> Acro_Sport (dor:Acro_Sport)
+  '10':
+    attributes:
+      AD_Navyplane: (manufacturer^='http://dbpedia.org/resource/Air_Department')
+      Air_Department: (Wikipage revision ID^='1000219788')
+    relationships:
+      - AD_Navyplane (dor:AD_Navyplane) --doo:designer--> Harold_Bolas (dor:Harold_Bolas)
+      - AD_Navyplane (dor:AD_Navyplane) --dop:manufacturer--> Air_Department (dor:Air_Department)
+qa_result:
+  status: completed
+  cost_usd: 0.214475
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0167074
+        total_tokens: 2811
+        prompt_tokens: 2189
+        completion_tokens: 622
+      generate:
+        cost_usd: 0.0637576
+        total_tokens: 6334
+        prompt_tokens: 3715
+        completion_tokens: 2619
+      verify_1:
+        cost_usd: 0.035482
+        total_tokens: 4943
+        prompt_tokens: 4225
+        completion_tokens: 718
+      complexity:
+        cost_usd: 0.098528
+        total_tokens: 9230
+        prompt_tokens: 5166
+        completion_tokens: 4064
+    total_tokens: 23318
+    prompt_tokens: 15295
+    total_cost_usd: 0.214475
+    completion_tokens: 8023
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --children^ (dop:children)--> Resource | --first appearance^ (doo:firstAppearance)--> string | --domesticpartner^ (dop:domesticpartner)--> langString | --image^ (dop:image)--> langString
+  company: --founding year^ (doo:foundingYear)--> gYear | --founded by^ (doo:foundedBy)--> Resource | --logo^ (dop:logo)--> langString | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --bot^ (dop:bot)--> langString
+  aircraft: --manufacturer^ (dop:manufacturer)--> Resource
+subgraph_id: 257
+relationships:
+  - aircraft --doo:designer--> person
+  - aircraft --dop:manufacturer--> company

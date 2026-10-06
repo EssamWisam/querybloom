@@ -1,0 +1,139 @@
+types:
+  person: doo:Person
+  university: doo:University
+  soccer club: doo:SoccerClub
+  television show: doo:TelevisionShow
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Amber_Stocks (dor:Amber_Stocks) --dop:cteam--> University_of_Tennessee (dor:University_of_Tennessee)
+      - Amber_Stocks (dor:Amber_Stocks) --dop:cteam--> Chicago_Sky (dor:Chicago_Sky)
+      - Huell_Howser (dor:Huell_Howser) --doo:almaMater--> University_of_Tennessee (dor:University_of_Tennessee)
+      - California's_Gold (<http://dbpedia.org/resource/California's_Gold>) --doo:creator--> Huell_Howser (dor:Huell_Howser)
+  '2':
+    attributes: {}
+    relationships:
+      - Amber_Stocks (dor:Amber_Stocks) --dop:cteam--> University_of_Tennessee (dor:University_of_Tennessee)
+      - Amber_Stocks (dor:Amber_Stocks) --dop:cteam--> Los_Angeles_Sparks (dor:Los_Angeles_Sparks)
+      - Huell_Howser (dor:Huell_Howser) --doo:almaMater--> University_of_Tennessee (dor:University_of_Tennessee)
+      - California's_Gold (<http://dbpedia.org/resource/California's_Gold>) --doo:creator--> Huell_Howser (dor:Huell_Howser)
+  '3':
+    attributes:
+      Super_Dave_(TV_series): (starring^='Art Irizawa', followed by^='"Super Dave All-Stars"', starring^='http://dbpedia.org/resource/Bob_Einstein')
+    relationships:
+      - Bob_Thornton (dor:Bob_Thornton) --dop:cteam--> Chapman_University (dor:Chapman_University)
+      - Bob_Thornton (dor:Bob_Thornton) --dop:cteam--> Chicago_Bulls (dor:Chicago_Bulls)
+      - Bob_Einstein (dor:Bob_Einstein) --doo:almaMater--> Chapman_University (dor:Chapman_University)
+      - Super_Dave_(TV_series) (<http://dbpedia.org/resource/Super_Dave_(TV_series)>) --doo:creator--> Bob_Einstein (dor:Bob_Einstein)
+  '4':
+    attributes:
+      Super_Dave_(TV_series): (starring^='Art Irizawa', followed by^='"Super Dave All-Stars"', starring^='http://dbpedia.org/resource/Bob_Einstein')
+    relationships:
+      - Bob_Thornton (dor:Bob_Thornton) --dop:cteam--> Chapman_University (dor:Chapman_University)
+      - Bob_Thornton (dor:Bob_Thornton) --dop:cteam--> Huntsville_Flight (dor:Huntsville_Flight)
+      - Bob_Einstein (dor:Bob_Einstein) --doo:almaMater--> Chapman_University (dor:Chapman_University)
+      - Super_Dave_(TV_series) (<http://dbpedia.org/resource/Super_Dave_(TV_series)>) --doo:creator--> Bob_Einstein (dor:Bob_Einstein)
+  '5':
+    attributes:
+      Super_Dave_(TV_series): (starring^='Art Irizawa', followed by^='"Super Dave All-Stars"', starring^='http://dbpedia.org/resource/Bob_Einstein')
+    relationships:
+      - Bob_Thornton (dor:Bob_Thornton) --dop:cteam--> Chapman_University (dor:Chapman_University)
+      - Bob_Thornton (dor:Bob_Thornton) --dop:cteam--> Memphis_Grizzlies (dor:Memphis_Grizzlies)
+      - Bob_Einstein (dor:Bob_Einstein) --doo:almaMater--> Chapman_University (dor:Chapman_University)
+      - Super_Dave_(TV_series) (<http://dbpedia.org/resource/Super_Dave_(TV_series)>) --doo:creator--> Bob_Einstein (dor:Bob_Einstein)
+  '6':
+    attributes:
+      Dream_On_(TV_series): (starring^='', starring^='http://dbpedia.org/resource/Brian_Benben')
+    relationships:
+      - Chris_Ford (dor:Chris_Ford) --dop:cteam--> Brandeis_University (dor:Brandeis_University)
+      - Chris_Ford (dor:Chris_Ford) --dop:cteam--> Los_Angeles_Clippers (dor:Los_Angeles_Clippers)
+      - David_Crane_(producer) (<http://dbpedia.org/resource/David_Crane_(producer)>) --doo:almaMater--> Brandeis_University (dor:Brandeis_University)
+      - Dream_On_(TV_series) (<http://dbpedia.org/resource/Dream_On_(TV_series)>) --doo:creator--> David_Crane_(producer) (<http://dbpedia.org/resource/David_Crane_(producer)>)
+  '7':
+    attributes:
+      Dream_On_(TV_series): (starring^='', starring^='http://dbpedia.org/resource/Brian_Benben')
+    relationships:
+      - Chris_Ford (dor:Chris_Ford) --dop:cteam--> Brandeis_University (dor:Brandeis_University)
+      - Chris_Ford (dor:Chris_Ford) --dop:cteam--> Milwaukee_Bucks (dor:Milwaukee_Bucks)
+      - David_Crane_(producer) (<http://dbpedia.org/resource/David_Crane_(producer)>) --doo:almaMater--> Brandeis_University (dor:Brandeis_University)
+      - Dream_On_(TV_series) (<http://dbpedia.org/resource/Dream_On_(TV_series)>) --doo:creator--> David_Crane_(producer) (<http://dbpedia.org/resource/David_Crane_(producer)>)
+  '8':
+    attributes:
+      Dream_On_(TV_series): (starring^='', starring^='http://dbpedia.org/resource/Brian_Benben')
+    relationships:
+      - Chris_Ford (dor:Chris_Ford) --dop:cteam--> Brandeis_University (dor:Brandeis_University)
+      - Chris_Ford (dor:Chris_Ford) --dop:cteam--> Philadelphia_76ers (dor:Philadelphia_76ers)
+      - David_Crane_(producer) (<http://dbpedia.org/resource/David_Crane_(producer)>) --doo:almaMater--> Brandeis_University (dor:Brandeis_University)
+      - Dream_On_(TV_series) (<http://dbpedia.org/resource/Dream_On_(TV_series)>) --doo:creator--> David_Crane_(producer) (<http://dbpedia.org/resource/David_Crane_(producer)>)
+  '9':
+    attributes:
+      Black-ish: (starring^='', starring^='http://dbpedia.org/resource/Anthony_Anderson')
+      Saitama_Broncos: (age^='n')
+    relationships:
+      - Collier_St._Clair (dor:Collier_St._Clair) --dop:cteam--> Clark_Atlanta_University (dor:Clark_Atlanta_University)
+      - Collier_St._Clair (dor:Collier_St._Clair) --dop:cteam--> Saitama_Broncos (dor:Saitama_Broncos)
+      - Kenya_Barris (dor:Kenya_Barris) --doo:almaMater--> Clark_Atlanta_University (dor:Clark_Atlanta_University)
+      - Black-ish (dor:Black-ish) --doo:creator--> Kenya_Barris (dor:Kenya_Barris)
+  '10':
+    attributes:
+      BlackAF: (starring^='', starring^='http://dbpedia.org/resource/Genneya_Walton')
+      Saitama_Broncos: (age^='n')
+    relationships:
+      - Collier_St._Clair (dor:Collier_St._Clair) --dop:cteam--> Clark_Atlanta_University (dor:Clark_Atlanta_University)
+      - Collier_St._Clair (dor:Collier_St._Clair) --dop:cteam--> Saitama_Broncos (dor:Saitama_Broncos)
+      - Kenya_Barris (dor:Kenya_Barris) --doo:almaMater--> Clark_Atlanta_University (dor:Clark_Atlanta_University)
+      - BlackAF (dor:BlackAF) --doo:creator--> Kenya_Barris (dor:Kenya_Barris)
+qa_result:
+  status: completed
+  cost_usd: 0.311432
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0262124
+        total_tokens: 3179
+        prompt_tokens: 2046
+        completion_tokens: 1133
+      generate:
+        cost_usd: 0.07344260000000001
+        total_tokens: 7548
+        prompt_tokens: 4688
+        completion_tokens: 2860
+      verify_1:
+        cost_usd: 0.063607
+        total_tokens: 6800
+        prompt_tokens: 4826
+        completion_tokens: 1974
+      verify_2:
+        cost_usd: 0.031352000000000005
+        total_tokens: 5077
+        prompt_tokens: 4679
+        completion_tokens: 398
+      complexity:
+        cost_usd: 0.116818
+        total_tokens: 10566
+        prompt_tokens: 5728
+        completion_tokens: 4838
+    total_tokens: 33170
+    prompt_tokens: 21967
+    total_cost_usd: 0.311432
+    completion_tokens: 11203
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --id^ (dop:id)--> langString | --commons^ (dop:commons)--> langString
+  soccer club: --age^ (dop:age)--> date | --accessdate^ (dop:accessdate)--> date
+  television show: --relatives^ (dop:relatives)--> langString | --group^ (dop:group)--> langString | --starring^ (dop:starring)--> langString | --artist^ (dop:artist)--> langString | --followed by^ (dop:followedBy)--> Resource | --aux^ (dop:aux)--> double | --starring^ (doo:starring)--> Resource
+subgraph_id: 226
+relationships:
+  - basketball player --dop:cteam--> university
+  - basketball player --dop:cteam--> soccer club
+  - person --doo:almaMater--> university
+  - television show --doo:creator--> person

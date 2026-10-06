@@ -1,0 +1,82 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  soccer club: doo:SoccerClub
+  soap character: doo:SoapCharacter
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Betty_Applewhite (dor:Betty_Applewhite) --doo:residence--> Chicago (dor:Chicago)
+      - Chicago_Bears (dor:Chicago_Bears) --doo:city--> Chicago (dor:Chicago)
+      - 11th_ward,_Chicago (<http://dbpedia.org/resource/11th_ward,_Chicago>) --doo:subdivision--> Chicago (dor:Chicago)
+  '2':
+    attributes: {}
+    relationships:
+      - Betty_Applewhite (dor:Betty_Applewhite) --doo:residence--> Chicago (dor:Chicago)
+      - Chicago_Blaze_(basketball) (<http://dbpedia.org/resource/Chicago_Blaze_(basketball)>) --doo:city--> Chicago (dor:Chicago)
+      - 11th_ward,_Chicago (<http://dbpedia.org/resource/11th_ward,_Chicago>) --doo:subdivision--> Chicago (dor:Chicago)
+  '3':
+    attributes: {}
+    relationships:
+      - Betty_Applewhite (dor:Betty_Applewhite) --doo:residence--> Chicago (dor:Chicago)
+      - Chicago_Cardinals (dor:Chicago_Cardinals) --doo:city--> Chicago (dor:Chicago)
+      - 11th_ward,_Chicago (<http://dbpedia.org/resource/11th_ward,_Chicago>) --doo:subdivision--> Chicago (dor:Chicago)
+  '4':
+    attributes: {}
+    relationships:
+      - List_of_General_Hospital_characters_(1990s)__Keesha_Ward__1 (<http://dbpedia.org/resource/List_of_General_Hospital_characters_(1990s)__Keesha_Ward__1>) --doo:residence--> Philadelphia (dor:Philadelphia)
+      - Philadelphia_Eagles (dor:Philadelphia_Eagles) --doo:city--> Philadelphia (dor:Philadelphia)
+      - Academy_Gardens,_Philadelphia (<http://dbpedia.org/resource/Academy_Gardens,_Philadelphia>) --doo:subdivision--> Philadelphia (dor:Philadelphia)
+  '5':
+    attributes: {}
+    relationships:
+      - Adam_Carrington__Adam_Carrington__1 (dor:Adam_Carrington__Adam_Carrington__1) --doo:residence--> Atlanta (dor:Atlanta)
+      - Atlanta_Falcons (dor:Atlanta_Falcons) --doo:city--> Atlanta (dor:Atlanta)
+      - Adamsville,_Atlanta (<http://dbpedia.org/resource/Adamsville,_Atlanta>) --doo:subdivision--> Atlanta (dor:Atlanta)
+  '6':
+    attributes: {}
+    relationships:
+      - Angie_Bolen (dor:Angie_Bolen) --doo:residence--> Atlanta (dor:Atlanta)
+      - Atlanta_Falcons (dor:Atlanta_Falcons) --doo:city--> Atlanta (dor:Atlanta)
+      - Adamsville,_Atlanta (<http://dbpedia.org/resource/Adamsville,_Atlanta>) --doo:subdivision--> Atlanta (dor:Atlanta)
+  '7':
+    attributes: {}
+    relationships:
+      - Blake_Carrington (dor:Blake_Carrington) --doo:residence--> Atlanta (dor:Atlanta)
+      - Atlanta_Falcons (dor:Atlanta_Falcons) --doo:city--> Atlanta (dor:Atlanta)
+      - Adamsville,_Atlanta (<http://dbpedia.org/resource/Adamsville,_Atlanta>) --doo:subdivision--> Atlanta (dor:Atlanta)
+  '8':
+    attributes:
+      Barcelona: (Aug low C^='20.2')
+    relationships:
+      - Cristian_Vega_(One_Life_to_Live) (<http://dbpedia.org/resource/Cristian_Vega_(One_Life_to_Live)>) --doo:residence--> Barcelona (dor:Barcelona)
+      - La_Masia (dor:La_Masia) --doo:city--> Barcelona (dor:Barcelona)
+      - Aiguafreda,_Vallès_Oriental (<http://dbpedia.org/resource/Aiguafreda,_Vallès_Oriental>) --doo:subdivision--> Barcelona (dor:Barcelona)
+  '9':
+    attributes:
+      Concordia_University_(Oregon): (date^='2020-04-30')
+    relationships:
+      - Damian_Spinelli (dor:Damian_Spinelli) --doo:residence--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - Concordia_University_(Oregon) (<http://dbpedia.org/resource/Concordia_University_(Oregon)>) --doo:city--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - Alameda,_Portland,_Oregon (<http://dbpedia.org/resource/Alameda,_Portland,_Oregon>) --doo:subdivision--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+  '10':
+    attributes: {}
+    relationships:
+      - Damian_Spinelli (dor:Damian_Spinelli) --doo:residence--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - Portland_Chinooks (dor:Portland_Chinooks) --doo:city--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - Alameda,_Portland,_Oregon (<http://dbpedia.org/resource/Alameda,_Portland,_Oregon>) --doo:subdivision--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+attributes:
+  city: --Aug low C^ (dop:augLowC)--> int | --Apr rain mm^ (dop:aprRainMm)--> int
+  Location: --length m^ (dop:lengthM)--> int | --Apr rain mm^ (dop:aprRainMm)--> int | --operator^ (dop:operator)--> Resource | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> int | --reason^ (dop:reason)--> langString | --founder^ (dop:founder)--> Resource | --former name^ (doo:formerName)--> langString | --named after^ (doo:namedAfter)--> Resource
+  soccer club: --date^ (dop:date)--> date | --chairman title^ (doo:chairmanTitle)--> langString
+subgraph_id: 156
+relationships:
+  - soap character --doo:residence--> city
+  - soccer club --doo:city--> city
+  - Location --doo:subdivision--> city

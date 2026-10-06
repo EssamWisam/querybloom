@@ -1,0 +1,158 @@
+types:
+  song: doo:Song
+  album: doo:Album
+  language: doo:Language
+  video game: doo:VideoGame
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bye_Bye_Patty: (page length (characters) of wiki page^='4464')
+      ...E_dimmi_che_non_vuoi_morire: (artist^='http://dbpedia.org/resource/Patty_Pravo')
+      Stubbs_the_Zombie_in_Rebel_Without_a_Pulse: (designer^='http://dbpedia.org/resource/Alex_Seropian')
+    relationships:
+      - ...E_dimmi_che_non_vuoi_morire (<http://dbpedia.org/resource/...E_dimmi_che_non_vuoi_morire>) --doo:genre--> Pop_music (dor:Pop_music)
+      - Stubbs_the_Zombie_in_Rebel_Without_a_Pulse (dor:Stubbs_the_Zombie_in_Rebel_Without_a_Pulse) --dop:genre--> Pop_music (dor:Pop_music)
+      - ...E_dimmi_che_non_vuoi_morire (<http://dbpedia.org/resource/...E_dimmi_che_non_vuoi_morire>) --doo:album--> Bye_Bye_Patty (dor:Bye_Bye_Patty)
+      - ...E_dimmi_che_non_vuoi_morire (<http://dbpedia.org/resource/...E_dimmi_che_non_vuoi_morire>) --doo:language--> Italian_language (dor:Italian_language)
+  '2':
+    attributes:
+      2_Baddies: (extra^='', page length (characters) of wiki page^='23236', access-date^='2022-11-10')
+      2_Baddies_(song): (caption^='Digital cover', artist^='http://dbpedia.org/resource/NCT_127')
+      Twisted_Metal_(2012_video_game): (designer^='David Jaffe')
+    relationships:
+      - 2_Baddies_(song) (<http://dbpedia.org/resource/2_Baddies_(song)>) --doo:genre--> Hip_hop_music (dor:Hip_hop_music)
+      - Twisted_Metal_(2012_video_game) (<http://dbpedia.org/resource/Twisted_Metal_(2012_video_game)>) --dop:genre--> Hip_hop_music (dor:Hip_hop_music)
+      - 2_Baddies_(song) (<http://dbpedia.org/resource/2_Baddies_(song)>) --doo:album--> 2_Baddies (dor:2_Baddies)
+      - 2_Baddies_(song) (<http://dbpedia.org/resource/2_Baddies_(song)>) --doo:language--> Korean_language (dor:Korean_language)
+  '3':
+    attributes:
+      The_Monsanto_Years: (page length (characters) of wiki page^='16381')
+      A_Rock_Star_Bucks_a_Coffee_Shop: (artist^='http://dbpedia.org/resource/Neil_Young')
+    relationships:
+      - A_Rock_Star_Bucks_a_Coffee_Shop (dor:A_Rock_Star_Bucks_a_Coffee_Shop) --doo:genre--> Rock_music (dor:Rock_music)
+      - Shinobi_(2002_video_game) (<http://dbpedia.org/resource/Shinobi_(2002_video_game)>) --dop:genre--> Rock_music (dor:Rock_music)
+      - A_Rock_Star_Bucks_a_Coffee_Shop (dor:A_Rock_Star_Bucks_a_Coffee_Shop) --doo:album--> The_Monsanto_Years (dor:The_Monsanto_Years)
+      - A_Rock_Star_Bucks_a_Coffee_Shop (dor:A_Rock_Star_Bucks_a_Coffee_Shop) --doo:language--> English_language (dor:English_language)
+  '4':
+    attributes:
+      Urdu: (reason^='1960.0')
+      Aadat_(album): (page length (characters) of wiki page^='3818')
+      Stubbs_the_Zombie_in_Rebel_Without_a_Pulse: (designer^='http://dbpedia.org/resource/Alex_Seropian')
+    relationships:
+      - Aadat_(song)__Aadat_Bikhra_Hoon_Main__1 (<http://dbpedia.org/resource/Aadat_(song)__Aadat_Bikhra_Hoon_Main__1>) --doo:genre--> Pop_music (dor:Pop_music)
+      - Stubbs_the_Zombie_in_Rebel_Without_a_Pulse (dor:Stubbs_the_Zombie_in_Rebel_Without_a_Pulse) --dop:genre--> Pop_music (dor:Pop_music)
+      - Aadat_(song)__Aadat_Bikhra_Hoon_Main__1 (<http://dbpedia.org/resource/Aadat_(song)__Aadat_Bikhra_Hoon_Main__1>) --doo:album--> Aadat_(album) (<http://dbpedia.org/resource/Aadat_(album)>)
+      - Aadat_(song)__Aadat_Bikhra_Hoon_Main__1 (<http://dbpedia.org/resource/Aadat_(song)__Aadat_Bikhra_Hoon_Main__1>) --doo:language--> Urdu (dor:Urdu)
+  '5':
+    attributes:
+      Urdu: (reason^='1960.0')
+      Aadat_(song): (artist^='Atif Aslam')
+      Jal_Pari_(album): (page length (characters) of wiki page^='4084')
+    relationships:
+      - Aadat_(song) (<http://dbpedia.org/resource/Aadat_(song)>) --doo:genre--> Rock_music (dor:Rock_music)
+      - Shinobi_(2002_video_game) (<http://dbpedia.org/resource/Shinobi_(2002_video_game)>) --dop:genre--> Rock_music (dor:Rock_music)
+      - Aadat_(song) (<http://dbpedia.org/resource/Aadat_(song)>) --doo:album--> Jal_Pari_(album) (<http://dbpedia.org/resource/Jal_Pari_(album)>)
+      - Aadat_(song) (<http://dbpedia.org/resource/Aadat_(song)>) --doo:language--> Urdu (dor:Urdu)
+  '6':
+    attributes:
+      Urdu: (reason^='1960.0')
+      Aadat_(song): (artist^='Atif Aslam')
+      Jal_Pari_(album): (page length (characters) of wiki page^='4084')
+      Stubbs_the_Zombie_in_Rebel_Without_a_Pulse: (designer^='http://dbpedia.org/resource/Alex_Seropian')
+    relationships:
+      - Aadat_(song) (<http://dbpedia.org/resource/Aadat_(song)>) --doo:genre--> Pop_music (dor:Pop_music)
+      - Stubbs_the_Zombie_in_Rebel_Without_a_Pulse (dor:Stubbs_the_Zombie_in_Rebel_Without_a_Pulse) --dop:genre--> Pop_music (dor:Pop_music)
+      - Aadat_(song) (<http://dbpedia.org/resource/Aadat_(song)>) --doo:album--> Jal_Pari_(album) (<http://dbpedia.org/resource/Jal_Pari_(album)>)
+      - Aadat_(song) (<http://dbpedia.org/resource/Aadat_(song)>) --doo:language--> Urdu (dor:Urdu)
+  '7':
+    attributes:
+      Legendaddy_(album): (extra^='', page length (characters) of wiki page^='139100', access-date^='2022-05-26')
+      Agua_(Daddy_Yankee_song): (artist^='Daddy Yankee featuring Rauw Alejandro and Nile Rodgers')
+    relationships:
+      - Agua_(Daddy_Yankee_song) (<http://dbpedia.org/resource/Agua_(Daddy_Yankee_song)>) --doo:genre--> Dance_music (dor:Dance_music)
+      - VVVVVV (dor:VVVVVV) --dop:genre--> Dance_music (dor:Dance_music)
+      - Agua_(Daddy_Yankee_song) (<http://dbpedia.org/resource/Agua_(Daddy_Yankee_song)>) --doo:album--> Legendaddy_(album) (<http://dbpedia.org/resource/Legendaddy_(album)>)
+      - Agua_(Daddy_Yankee_song) (<http://dbpedia.org/resource/Agua_(Daddy_Yankee_song)>) --doo:language--> Spanish_language (dor:Spanish_language)
+  '8':
+    attributes:
+      Al_otro_lado_del_río: (id^='kXXBBrEn1PE', artist^='http://dbpedia.org/resource/Jorge_Drexler')
+      The_Motorcycle_Diaries_(soundtrack): (page length (characters) of wiki page^='2377')
+    relationships:
+      - Al_otro_lado_del_río (<http://dbpedia.org/resource/Al_otro_lado_del_río>) --doo:genre--> Soundtrack (dor:Soundtrack)
+      - Darkstar:_The_Interactive_Movie (<http://dbpedia.org/resource/Darkstar:_The_Interactive_Movie>) --dop:genre--> Soundtrack (dor:Soundtrack)
+      - Al_otro_lado_del_río (<http://dbpedia.org/resource/Al_otro_lado_del_río>) --doo:album--> The_Motorcycle_Diaries_(soundtrack) (<http://dbpedia.org/resource/The_Motorcycle_Diaries_(soundtrack)>)
+      - Al_otro_lado_del_río (<http://dbpedia.org/resource/Al_otro_lado_del_río>) --doo:language--> Spanish_language (dor:Spanish_language)
+  '9':
+    attributes:
+      Dead_Rising_3: (designer^='Brent Arnst')
+      Al_otro_lado_del_río: (id^='kXXBBrEn1PE', artist^='http://dbpedia.org/resource/Jorge_Drexler')
+      The_Motorcycle_Diaries_(soundtrack): (page length (characters) of wiki page^='2377')
+    relationships:
+      - Al_otro_lado_del_río (<http://dbpedia.org/resource/Al_otro_lado_del_río>) --doo:genre--> Soundtrack (dor:Soundtrack)
+      - Dead_Rising_3 (dor:Dead_Rising_3) --dop:genre--> Soundtrack (dor:Soundtrack)
+      - Al_otro_lado_del_río (<http://dbpedia.org/resource/Al_otro_lado_del_río>) --doo:album--> The_Motorcycle_Diaries_(soundtrack) (<http://dbpedia.org/resource/The_Motorcycle_Diaries_(soundtrack)>)
+      - Al_otro_lado_del_río (<http://dbpedia.org/resource/Al_otro_lado_del_río>) --doo:language--> Spanish_language (dor:Spanish_language)
+  '10':
+    attributes:
+      Aoi_(song): (artist^='http://dbpedia.org/resource/Sakanaction')
+      Japanese_language: (reason^='above it says 12.6%; which is it?')
+      Sakanaction_(album): (extra^='Ami Kusakari', page length (characters) of wiki page^='62991')
+    relationships:
+      - Aoi_(song) (<http://dbpedia.org/resource/Aoi_(song)>) --doo:genre--> Rock_music (dor:Rock_music)
+      - Shinobi_(2002_video_game) (<http://dbpedia.org/resource/Shinobi_(2002_video_game)>) --dop:genre--> Rock_music (dor:Rock_music)
+      - Aoi_(song) (<http://dbpedia.org/resource/Aoi_(song)>) --doo:album--> Sakanaction_(album) (<http://dbpedia.org/resource/Sakanaction_(album)>)
+      - Aoi_(song) (<http://dbpedia.org/resource/Aoi_(song)>) --doo:language--> Japanese_language (dor:Japanese_language)
+qa_result:
+  status: completed
+  cost_usd: 0.350327
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0400174
+        total_tokens: 4002
+        prompt_tokens: 2223
+        completion_tokens: 1779
+      generate:
+        cost_usd: 0.0813326
+        total_tokens: 8277
+        prompt_tokens: 5134
+        completion_tokens: 3143
+      verify_1:
+        cost_usd: 0.06065200000000001
+        total_tokens: 7064
+        prompt_tokens: 5375
+        completion_tokens: 1689
+      verify_2:
+        cost_usd: 0.037407
+        total_tokens: 5913
+        prompt_tokens: 5390
+        completion_tokens: 523
+      complexity:
+        cost_usd: 0.130918
+        total_tokens: 11802
+        prompt_tokens: 6436
+        completion_tokens: 5366
+    total_tokens: 37058
+    prompt_tokens: 24558
+    total_cost_usd: 0.350327
+    completion_tokens: 12500
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  song: --width^ (dop:width)--> int | --caption^ (dop:caption)--> langString | --award^ (dop:award)--> langString | --id^ (dop:id)--> langString | --artist^ (dop:artist)--> langString
+  album: --extra^ (dop:extra)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --access-date^ (dop:accessDate)--> date | --aux^ (dop:aux)--> int
+  language: --reason^ (dop:reason)--> langString
+  video game: --designer^ (dop:designer)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+subgraph_id: 237
+relationships:
+  - song --doo:genre--> music genre
+  - video game --dop:genre--> music genre
+  - song --doo:album--> album
+  - song --doo:language--> language

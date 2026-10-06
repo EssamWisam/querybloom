@@ -1,0 +1,63 @@
+types:
+  software: doo:Software
+  politician: doo:Politician
+  university: doo:University
+  political function: doo:PoliticalFunction
+  information appliance: doo:InformationAppliance
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Neal_Foster (dor:Neal_Foster) --doo:education--> Stanford_University (dor:Stanford_University)
+      - Alakanuk,_Alaska__PoliticalFunction__3 (<http://dbpedia.org/resource/Alakanuk,_Alaska__PoliticalFunction__3>) --doo:politician--> Neal_Foster (dor:Neal_Foster)
+      - Storage@home (<http://dbpedia.org/resource/Storage@home>) --doo:developer--> Stanford_University (dor:Stanford_University)
+      - Storage@home (<http://dbpedia.org/resource/Storage@home>) --doo:computingPlatform--> X86 (dor:X86)
+  '2':
+    attributes:
+      PHYLIP: (Link from a Wikipage to an external page^='http://bioweb.pasteur.fr/docs/phylip/doc/main.html')
+    relationships:
+      - Natasha_von_Imhof (dor:Natasha_von_Imhof) --doo:education--> University_of_Washington (dor:University_of_Washington)
+      - Anchorage,_Alaska__PoliticalFunction__2 (<http://dbpedia.org/resource/Anchorage,_Alaska__PoliticalFunction__2>) --doo:politician--> Natasha_von_Imhof (dor:Natasha_von_Imhof)
+      - PHYLIP (dor:PHYLIP) --doo:developer--> University_of_Washington (dor:University_of_Washington)
+      - PHYLIP (dor:PHYLIP) --doo:computingPlatform--> X86 (dor:X86)
+  '3':
+    attributes: {}
+    relationships:
+      - Xavier_Becerra (dor:Xavier_Becerra) --doo:education--> Stanford_University (dor:Stanford_University)
+      - Arts_District,_Los_Angeles__PoliticalFunction__4 (<http://dbpedia.org/resource/Arts_District,_Los_Angeles__PoliticalFunction__4>) --doo:politician--> Xavier_Becerra (dor:Xavier_Becerra)
+      - Storage@home (<http://dbpedia.org/resource/Storage@home>) --doo:developer--> Stanford_University (dor:Stanford_University)
+      - Storage@home (<http://dbpedia.org/resource/Storage@home>) --doo:computingPlatform--> X86 (dor:X86)
+  '4':
+    attributes:
+      CDC_6000_series: (display^='DD60')
+      PLATO_(computer_system): (Link from a Wikipage to an external page^='http://bitsavers.org/pdf/univOfIllinoisUrbana/plato/')
+    relationships:
+      - Anna_M._Valencia (dor:Anna_M._Valencia) --doo:education--> University_of_Illinois_at_Urbana–Champaign (<http://dbpedia.org/resource/University_of_Illinois_at_Urbana–Champaign>)
+      - Chicago__PoliticalFunction__2 (dor:Chicago__PoliticalFunction__2) --doo:politician--> Anna_M._Valencia (dor:Anna_M._Valencia)
+      - PLATO_(computer_system) (<http://dbpedia.org/resource/PLATO_(computer_system)>) --doo:developer--> University_of_Illinois_at_Urbana–Champaign (<http://dbpedia.org/resource/University_of_Illinois_at_Urbana–Champaign>)
+      - PLATO_(computer_system) (<http://dbpedia.org/resource/PLATO_(computer_system)>) --doo:computingPlatform--> CDC_6000_series (dor:CDC_6000_series)
+  '5':
+    attributes:
+      CDC_6000_series: (display^='DD60')
+      PLATO_(computer_system): (Link from a Wikipage to an external page^='http://bitsavers.org/pdf/univOfIllinoisUrbana/plato/')
+    relationships:
+      - Bridget_Gainer (dor:Bridget_Gainer) --doo:education--> University_of_Illinois_at_Urbana–Champaign (<http://dbpedia.org/resource/University_of_Illinois_at_Urbana–Champaign>)
+      - Cook_County_Board_of_Commissioners_10th_district__PoliticalFunction__1 (dor:Cook_County_Board_of_Commissioners_10th_district__PoliticalFunction__1) --doo:politician--> Bridget_Gainer (dor:Bridget_Gainer)
+      - PLATO_(computer_system) (<http://dbpedia.org/resource/PLATO_(computer_system)>) --doo:developer--> University_of_Illinois_at_Urbana–Champaign (<http://dbpedia.org/resource/University_of_Illinois_at_Urbana–Champaign>)
+      - PLATO_(computer_system) (<http://dbpedia.org/resource/PLATO_(computer_system)>) --doo:computingPlatform--> CDC_6000_series (dor:CDC_6000_series)
+attributes:
+  software: --family^ (dop:family)--> Resource | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --logo^ (dop:logo)--> int
+  politician: --award^ (doo:award)--> Resource | --relatives^ (dop:relatives)--> Resource | --last^ (dop:last)--> langString | --father^ (doo:father)--> Resource | --image upright^ (dop:imageUpright)--> double | --1namedata^ (dop:1namedata)--> langString
+  university: --affiliation^ (dop:affiliation)--> langString
+  information appliance: --display^ (dop:display)--> second
+subgraph_id: 922
+relationships:
+  - politician --doo:education--> university
+  - political function --doo:politician--> politician
+  - software --doo:developer--> university
+  - software --doo:computingPlatform--> information appliance

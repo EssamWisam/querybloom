@@ -1,0 +1,98 @@
+types:
+  artist: doo:Artist
+  person: doo:Person
+  musical artist: doo:MusicalArtist
+  person function: doo:PersonFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Tetsuya_Komuro: (Wikipage page ID^='620393')
+      Alfredo_Wiechers_Pieretti: (known for^='http://dbpedia.org/resource/Architect')
+    relationships:
+      - Mike_Dierickx (dor:Mike_Dierickx) --dop:associatedActs--> Tetsuya_Komuro (dor:Tetsuya_Komuro)
+      - Mike_Dierickx (dor:Mike_Dierickx) --doo:instrument--> Engineering (dor:Engineering)
+      - Alfredo_Wiechers_Pieretti (dor:Alfredo_Wiechers_Pieretti) --dop:knownFor--> Engineering (dor:Engineering)
+  '2':
+    attributes:
+      Tetsuya_Komuro: (Wikipage page ID^='620393')
+      Blas_C._Silva_Boucher: (known for^='http://dbpedia.org/resource/Engineering')
+    relationships:
+      - Mike_Dierickx (dor:Mike_Dierickx) --dop:associatedActs--> Tetsuya_Komuro (dor:Tetsuya_Komuro)
+      - Mike_Dierickx (dor:Mike_Dierickx) --doo:instrument--> Engineering (dor:Engineering)
+      - Blas_C._Silva_Boucher (dor:Blas_C._Silva_Boucher) --dop:knownFor--> Engineering (dor:Engineering)
+  '3':
+    attributes:
+      Ceca_(singer): (Wikipage page ID^='4336688')
+      Hans_Bischoff_(pianist): (known for^='http://dbpedia.org/resource/Piano')
+    relationships:
+      - Aca_Lukas (dor:Aca_Lukas) --dop:associatedActs--> Ceca_(singer) (<http://dbpedia.org/resource/Ceca_(singer)>)
+      - Aca_Lukas (dor:Aca_Lukas) --doo:instrument--> Piano (dor:Piano)
+      - Hans_Bischoff_(pianist) (<http://dbpedia.org/resource/Hans_Bischoff_(pianist)>) --dop:knownFor--> Piano (dor:Piano)
+  '4':
+    attributes:
+      Ivana_Selakov: (Wikipage page ID^='17420721')
+      Hans_Bischoff_(pianist): (known for^='http://dbpedia.org/resource/Piano')
+    relationships:
+      - Aca_Lukas (dor:Aca_Lukas) --dop:associatedActs--> Ivana_Selakov (dor:Ivana_Selakov)
+      - Aca_Lukas (dor:Aca_Lukas) --doo:instrument--> Piano (dor:Piano)
+      - Hans_Bischoff_(pianist) (<http://dbpedia.org/resource/Hans_Bischoff_(pianist)>) --dop:knownFor--> Piano (dor:Piano)
+  '5':
+    attributes: {}
+    relationships:
+      - Aca_Lukas (dor:Aca_Lukas) --dop:associatedActs--> Jelena_Karleuša (<http://dbpedia.org/resource/Jelena_Karleuša>)
+      - Aca_Lukas (dor:Aca_Lukas) --doo:instrument--> Piano (dor:Piano)
+      - Hans_Bischoff_(pianist) (<http://dbpedia.org/resource/Hans_Bischoff_(pianist)>) --dop:knownFor--> Piano (dor:Piano)
+  '6':
+    attributes:
+      Hemu_Gadhavi: (known for^='')
+      Hariprasad_Chaurasia: (Wikipage page ID^='541467')
+    relationships:
+      - Bapu_Padmanabha (dor:Bapu_Padmanabha) --dop:associatedActs--> Hariprasad_Chaurasia (dor:Hariprasad_Chaurasia)
+      - Bapu_Padmanabha (dor:Bapu_Padmanabha) --doo:instrument--> Singer (dor:Singer)
+      - Hemu_Gadhavi (dor:Hemu_Gadhavi) --dop:knownFor--> Singer (dor:Singer)
+  '7':
+    attributes:
+      Hemu_Gadhavi: (known for^='')
+      Kedar_Pandit: (Wikipage page ID^='25190386')
+    relationships:
+      - Bapu_Padmanabha (dor:Bapu_Padmanabha) --dop:associatedActs--> Kedar_Pandit (dor:Kedar_Pandit)
+      - Bapu_Padmanabha (dor:Bapu_Padmanabha) --doo:instrument--> Singer (dor:Singer)
+      - Hemu_Gadhavi (dor:Hemu_Gadhavi) --dop:knownFor--> Singer (dor:Singer)
+  '8':
+    attributes:
+      Hemu_Gadhavi: (known for^='')
+      T.S._Nagabharana: (Wikipage page ID^='24652789')
+    relationships:
+      - Bapu_Padmanabha (dor:Bapu_Padmanabha) --dop:associatedActs--> T.S._Nagabharana (dor:T.S._Nagabharana)
+      - Bapu_Padmanabha (dor:Bapu_Padmanabha) --doo:instrument--> Singer (dor:Singer)
+      - Hemu_Gadhavi (dor:Hemu_Gadhavi) --dop:knownFor--> Singer (dor:Singer)
+  '9':
+    attributes:
+      Mark_Poltoratsky: (known for^='http://dbpedia.org/resource/Singing')
+      The_New_Pornographers: (Wikipage page ID^='610883')
+    relationships:
+      - A._C._Newman (dor:A._C._Newman) --dop:associatedActs--> The_New_Pornographers (dor:The_New_Pornographers)
+      - A._C._Newman (dor:A._C._Newman) --doo:instrument--> Singing (dor:Singing)
+      - Mark_Poltoratsky (dor:Mark_Poltoratsky) --dop:knownFor--> Singing (dor:Singing)
+  '10':
+    attributes:
+      Béla_Fleck: (Wikipage page ID^='174871')
+      Mark_Poltoratsky: (known for^='http://dbpedia.org/resource/Singing')
+    relationships:
+      - Abigail_Washburn (dor:Abigail_Washburn) --dop:associatedActs--> Béla_Fleck (<http://dbpedia.org/resource/Béla_Fleck>)
+      - Abigail_Washburn (dor:Abigail_Washburn) --doo:instrument--> Singing (dor:Singing)
+      - Mark_Poltoratsky (dor:Mark_Poltoratsky) --dop:knownFor--> Singing (dor:Singing)
+attributes:
+  artist: --known for^ (dop:knownFor)--> langString
+  person: --parent^ (doo:parent)--> Resource | --colwidth^ (dop:colwidth)--> int | --Wikipage page ID^ (doo:wikiPageID)--> int | --2pp^ (dop:2pp)--> int | --certain^ (dop:certain)--> langString | --1y^ (dop:1y)--> int | --quoted^ (dop:quoted)--> langString
+  musical artist: --past members^ (dop:pastMembers)--> langString
+subgraph_id: 135
+relationships:
+  - musical artist --dop:associatedActs--> person
+  - musical artist --doo:instrument--> person function
+  - artist --dop:knownFor--> person function

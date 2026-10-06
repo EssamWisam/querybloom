@@ -1,0 +1,77 @@
+types:
+  person: doo:Person
+  disease: doo:Disease
+  scientist: doo:Scientist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Aaron_Beck: (spouse^='Phyllis W. Beck', url^='https://web.archive.org/web/20190313031601/http:/www.academyofct.org/')
+    relationships:
+      - Abram_Svyadoshch (dor:Abram_Svyadoshch) --doo:academicDiscipline--> Psychotherapy (dor:Psychotherapy)
+      - Aaron_Beck (dor:Aaron_Beck) --doo:knownFor--> Psychotherapy (dor:Psychotherapy)
+  '2':
+    attributes:
+      Aaron_Beck: (spouse^='Phyllis W. Beck', url^='https://web.archive.org/web/20190313031601/http:/www.academyofct.org/')
+    relationships:
+      - Albert_Ellis (dor:Albert_Ellis) --doo:academicDiscipline--> Psychotherapy (dor:Psychotherapy)
+      - Aaron_Beck (dor:Aaron_Beck) --doo:knownFor--> Psychotherapy (dor:Psychotherapy)
+  '3':
+    attributes:
+      Aaron_Beck: (spouse^='Phyllis W. Beck', url^='https://web.archive.org/web/20190313031601/http:/www.academyofct.org/')
+    relationships:
+      - Alfred_Adler (dor:Alfred_Adler) --doo:academicDiscipline--> Psychotherapy (dor:Psychotherapy)
+      - Aaron_Beck (dor:Aaron_Beck) --doo:knownFor--> Psychotherapy (dor:Psychotherapy)
+  '4':
+    attributes: {}
+    relationships:
+      - Ralf_Altmeyer (dor:Ralf_Altmeyer) --doo:academicDiscipline--> SARS (dor:SARS)
+      - Ab_Osterhaus (dor:Ab_Osterhaus) --doo:knownFor--> SARS (dor:SARS)
+  '5':
+    attributes:
+      Abbé_Faria: (occupation^='http://dbpedia.org/resource/Abbé_Faria__PersonFunction__1', notable works^='"Da Causa do Sono Lúcido no Estudo da Natureza do Homem"')
+      Alexander_Cannon_(psychiatrist): (birth name^='James Alexander Cannon')
+    relationships:
+      - Alexander_Cannon_(psychiatrist) (<http://dbpedia.org/resource/Alexander_Cannon_(psychiatrist)>) --doo:academicDiscipline--> Hypnosis (dor:Hypnosis)
+      - Abbé_Faria (<http://dbpedia.org/resource/Abbé_Faria>) --doo:knownFor--> Hypnosis (dor:Hypnosis)
+  '6':
+    attributes:
+      Abbé_Faria: (occupation^='http://dbpedia.org/resource/Abbé_Faria__PersonFunction__1', notable works^='"Da Causa do Sono Lúcido no Estudo da Natureza do Homem"')
+    relationships:
+      - André_Muller_Weitzenhoffer (<http://dbpedia.org/resource/André_Muller_Weitzenhoffer>) --doo:academicDiscipline--> Hypnosis (dor:Hypnosis)
+      - Abbé_Faria (<http://dbpedia.org/resource/Abbé_Faria>) --doo:knownFor--> Hypnosis (dor:Hypnosis)
+  '7':
+    attributes:
+      Abbé_Faria: (occupation^='http://dbpedia.org/resource/Abbé_Faria__PersonFunction__1', notable works^='"Da Causa do Sono Lúcido no Estudo da Natureza do Homem"')
+    relationships:
+      - Eric_Benjamin_Strauss (dor:Eric_Benjamin_Strauss) --doo:academicDiscipline--> Hypnosis (dor:Hypnosis)
+      - Abbé_Faria (<http://dbpedia.org/resource/Abbé_Faria>) --doo:knownFor--> Hypnosis (dor:Hypnosis)
+  '8':
+    attributes:
+      Alan_Cowman: (birth name^='Alan Frederick Cowman')
+    relationships:
+      - Alan_Cowman (dor:Alan_Cowman) --doo:academicDiscipline--> Malaria (dor:Malaria)
+      - Abu_ul-Ala_Shirazi (dor:Abu_ul-Ala_Shirazi) --doo:knownFor--> Malaria (dor:Malaria)
+  '9':
+    attributes: {}
+    relationships:
+      - Anavaj_Sakuntabhai (dor:Anavaj_Sakuntabhai) --doo:academicDiscipline--> Malaria (dor:Malaria)
+      - Abu_ul-Ala_Shirazi (dor:Abu_ul-Ala_Shirazi) --doo:knownFor--> Malaria (dor:Malaria)
+  '10':
+    attributes:
+      Dominic_Kwiatkowski: (birth name^='Dominic P. Kwiatkowski')
+    relationships:
+      - Dominic_Kwiatkowski (dor:Dominic_Kwiatkowski) --doo:academicDiscipline--> Malaria (dor:Malaria)
+      - Abu_ul-Ala_Shirazi (dor:Abu_ul-Ala_Shirazi) --doo:knownFor--> Malaria (dor:Malaria)
+attributes:
+  person: --alias^ (dop:alias)--> langString | --occupation^ (doo:occupation)--> Resource | --notable works^ (dop:notableWorks)--> langString | --spouse^ (dop:spouse)--> date | --footer^ (dop:footer)--> langString | --url^ (dop:url)--> Resource
+  disease: --reason^ (dop:reason)--> langString
+  scientist: --reason^ (dop:reason)--> langString | --birth name^ (doo:birthName)--> langString | --awards^ (dop:awards)--> langString
+subgraph_id: 495
+relationships:
+  - scientist --doo:academicDiscipline--> disease
+  - person --doo:knownFor--> disease

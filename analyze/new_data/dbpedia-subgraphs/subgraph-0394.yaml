@@ -1,0 +1,105 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  soccer club: doo:SoccerClub
+  organisation: doo:Organisation
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Weston's_Cider: (founder^='Henry Weston')
+      Wellington_F.C._(Herefords): (Link from a Wikipage to an external page^='http://www.wellingtonfc.co.uk')
+    relationships:
+      - Weston's_Cider (<http://dbpedia.org/resource/Weston's_Cider>) --doo:headquarter--> Herefordshire (dor:Herefordshire)
+      - Wellington_F.C._(Herefords) (<http://dbpedia.org/resource/Wellington_F.C._(Herefords)>) --dop:ground--> Herefordshire (dor:Herefordshire)
+      - Albert_Lee__Albert_Lee__1 (dor:Albert_Lee__Albert_Lee__1) --doo:birthPlace--> Herefordshire (dor:Herefordshire)
+      - Herefordshire (dor:Herefordshire) --wwoo:differentFrom--> Hertfordshire (dor:Hertfordshire)
+  '2':
+    attributes:
+      Ann_Cleeves: (award^='http://dbpedia.org/resource/Duncan_Lawrie_Dagger')
+      Weston's_Cider: (founder^='Henry Weston')
+      Wellington_F.C._(Herefords): (Link from a Wikipage to an external page^='http://www.wellingtonfc.co.uk')
+    relationships:
+      - Weston's_Cider (<http://dbpedia.org/resource/Weston's_Cider>) --doo:headquarter--> Herefordshire (dor:Herefordshire)
+      - Wellington_F.C._(Herefords) (<http://dbpedia.org/resource/Wellington_F.C._(Herefords)>) --dop:ground--> Herefordshire (dor:Herefordshire)
+      - Ann_Cleeves (dor:Ann_Cleeves) --doo:birthPlace--> Herefordshire (dor:Herefordshire)
+      - Herefordshire (dor:Herefordshire) --wwoo:differentFrom--> Hertfordshire (dor:Hertfordshire)
+  '3':
+    attributes:
+      Annasley_Park: (caption^='Park in 2017')
+      Weston's_Cider: (founder^='Henry Weston')
+      Wellington_F.C._(Herefords): (Link from a Wikipage to an external page^='http://www.wellingtonfc.co.uk')
+    relationships:
+      - Weston's_Cider (<http://dbpedia.org/resource/Weston's_Cider>) --doo:headquarter--> Herefordshire (dor:Herefordshire)
+      - Wellington_F.C._(Herefords) (<http://dbpedia.org/resource/Wellington_F.C._(Herefords)>) --dop:ground--> Herefordshire (dor:Herefordshire)
+      - Annasley_Park (dor:Annasley_Park) --doo:birthPlace--> Herefordshire (dor:Herefordshire)
+      - Herefordshire (dor:Herefordshire) --wwoo:differentFrom--> Hertfordshire (dor:Hertfordshire)
+  '4':
+    attributes:
+      Abbeyfield: (founder^='Richard Carr-Gomm')
+      Tring_Athletic_F.C.: (Link from a Wikipage to an external page^='http://www.tafc.co.uk/')
+    relationships:
+      - Abbeyfield (dor:Abbeyfield) --doo:headquarter--> Hertfordshire (dor:Hertfordshire)
+      - Tring_Athletic_F.C. (<http://dbpedia.org/resource/Tring_Athletic_F.C.>) --dop:ground--> Hertfordshire (dor:Hertfordshire)
+      - Abubakar_Salim (dor:Abubakar_Salim) --doo:birthPlace--> Hertfordshire (dor:Hertfordshire)
+      - Hertfordshire (dor:Hertfordshire) --wwoo:differentFrom--> Herefordshire (dor:Herefordshire)
+  '5':
+    attributes:
+      Abbeyfield: (founder^='Richard Carr-Gomm')
+      Welwyn_Garden_City_F.C.: (Link from a Wikipage to an external page^='http://www.welwyngardencityfc.org.uk')
+    relationships:
+      - Abbeyfield (dor:Abbeyfield) --doo:headquarter--> Hertfordshire (dor:Hertfordshire)
+      - Welwyn_Garden_City_F.C. (<http://dbpedia.org/resource/Welwyn_Garden_City_F.C.>) --dop:ground--> Hertfordshire (dor:Hertfordshire)
+      - Abubakar_Salim (dor:Abubakar_Salim) --doo:birthPlace--> Hertfordshire (dor:Hertfordshire)
+      - Hertfordshire (dor:Hertfordshire) --wwoo:differentFrom--> Herefordshire (dor:Herefordshire)
+  '6':
+    attributes:
+      Abbeyfield: (founder^='Richard Carr-Gomm')
+      Tring_Athletic_F.C.: (Link from a Wikipage to an external page^='http://www.tafc.co.uk/')
+    relationships:
+      - Abbeyfield (dor:Abbeyfield) --doo:headquarter--> Hertfordshire (dor:Hertfordshire)
+      - Tring_Athletic_F.C. (<http://dbpedia.org/resource/Tring_Athletic_F.C.>) --dop:ground--> Hertfordshire (dor:Hertfordshire)
+      - Adam_Freeland (dor:Adam_Freeland) --doo:birthPlace--> Hertfordshire (dor:Hertfordshire)
+      - Hertfordshire (dor:Hertfordshire) --wwoo:differentFrom--> Herefordshire (dor:Herefordshire)
+  '7':
+    attributes:
+      Tasmania: (Apr sun^='177')
+    relationships:
+      - Aboriginal_Provisional_Government (dor:Aboriginal_Provisional_Government) --doo:headquarter--> Tasmania (dor:Tasmania)
+      - North_Launceston_Eagles_FC (dor:North_Launceston_Eagles_FC) --dop:ground--> Tasmania (dor:Tasmania)
+      - Aaron_Frankcomb (dor:Aaron_Frankcomb) --doo:birthPlace--> Tasmania (dor:Tasmania)
+      - Tasmania (dor:Tasmania) --wwoo:differentFrom--> Tanzania (dor:Tanzania)
+  '8':
+    attributes:
+      Tasmania: (Apr sun^='177')
+    relationships:
+      - Aboriginal_Provisional_Government (dor:Aboriginal_Provisional_Government) --doo:headquarter--> Tasmania (dor:Tasmania)
+      - North_Launceston_Eagles_FC (dor:North_Launceston_Eagles_FC) --dop:ground--> Tasmania (dor:Tasmania)
+      - Adam_Beechey (dor:Adam_Beechey) --doo:birthPlace--> Tasmania (dor:Tasmania)
+      - Tasmania (dor:Tasmania) --wwoo:differentFrom--> Tanzania (dor:Tanzania)
+  '9':
+    attributes:
+      Tasmania: (Apr sun^='177')
+    relationships:
+      - Aboriginal_Provisional_Government (dor:Aboriginal_Provisional_Government) --doo:headquarter--> Tasmania (dor:Tasmania)
+      - North_Launceston_Eagles_FC (dor:North_Launceston_Eagles_FC) --dop:ground--> Tasmania (dor:Tasmania)
+      - Adam_Coleman (dor:Adam_Coleman) --doo:birthPlace--> Tasmania (dor:Tasmania)
+      - Tasmania (dor:Tasmania) --wwoo:differentFrom--> Tanzania (dor:Tanzania)
+attributes:
+  person: --award^ (doo:award)--> Resource | --display^ (dop:display)--> langString | --caption^ (dop:caption)--> langString | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+  Location: --building start date^ (doo:buildingStartDate)--> string | --display (dop:display)--> langString | --arc-textA^ (dop:arcTexta)--> langString | --Apr record low F^ (dop:aprRecordLowF)--> double | --Apr record high C^ (dop:aprRecordHighC)--> int | --last^ (dop:last)--> langString
+  soccer club: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  organisation: --founder^ (dop:founder)--> Resource
+  administrative region: --Apr sun^ (dop:aprSun)--> double
+subgraph_id: 394
+relationships:
+  - organisation --doo:headquarter--> administrative region
+  - soccer club --dop:ground--> administrative region
+  - person --doo:birthPlace--> administrative region
+  - administrative region --wwoo:differentFrom--> Location

@@ -1,0 +1,104 @@
+types:
+  diocese: doo:Diocese
+  Location: doo:Location
+  automobile: doo:Automobile
+  handball player: doo:HandballPlayer
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_States: (caption^='Racial and ethnic groups in the United States')
+      Carbon_County,_Pennsylvania: (named for^='http://dbpedia.org/resource/Coal')
+    relationships:
+      - Acura_CL-X (dor:Acura_CL-X) --dop:assembly--> United_States (dor:United_States)
+      - Roman_Catholic_Diocese_of_Allentown (dor:Roman_Catholic_Diocese_of_Allentown) --doo:territory--> United_States (dor:United_States)
+      - Andrew_Donlin (dor:Andrew_Donlin) --dop:birthPlace--> United_States (dor:United_States)
+      - Roman_Catholic_Diocese_of_Allentown (dor:Roman_Catholic_Diocese_of_Allentown) --doo:territory--> Carbon_County,_Pennsylvania (<http://dbpedia.org/resource/Carbon_County,_Pennsylvania>)
+  '2':
+    attributes:
+      United_States: (caption^='Racial and ethnic groups in the United States')
+      Lehigh_County,_Pennsylvania: (named for^='http://dbpedia.org/resource/Lehigh_River')
+    relationships:
+      - Acura_CL-X (dor:Acura_CL-X) --dop:assembly--> United_States (dor:United_States)
+      - Roman_Catholic_Diocese_of_Allentown (dor:Roman_Catholic_Diocese_of_Allentown) --doo:territory--> United_States (dor:United_States)
+      - Andrew_Donlin (dor:Andrew_Donlin) --dop:birthPlace--> United_States (dor:United_States)
+      - Roman_Catholic_Diocese_of_Allentown (dor:Roman_Catholic_Diocese_of_Allentown) --doo:territory--> Lehigh_County,_Pennsylvania (<http://dbpedia.org/resource/Lehigh_County,_Pennsylvania>)
+  '3':
+    attributes:
+      United_States: (caption^='Racial and ethnic groups in the United States')
+      Northampton_County,_Pennsylvania: (named for^='http://dbpedia.org/resource/Northamptonshire')
+    relationships:
+      - Acura_CL-X (dor:Acura_CL-X) --dop:assembly--> United_States (dor:United_States)
+      - Roman_Catholic_Diocese_of_Allentown (dor:Roman_Catholic_Diocese_of_Allentown) --doo:territory--> United_States (dor:United_States)
+      - Andrew_Donlin (dor:Andrew_Donlin) --dop:birthPlace--> United_States (dor:United_States)
+      - Roman_Catholic_Diocese_of_Allentown (dor:Roman_Catholic_Diocese_of_Allentown) --doo:territory--> Northampton_County,_Pennsylvania (<http://dbpedia.org/resource/Northampton_County,_Pennsylvania>)
+  '4':
+    attributes:
+      California: (caption^='An ad to sail to California,', date^='2020-10-13')
+    relationships:
+      - Davis_Divan (dor:Davis_Divan) --dop:assembly--> California (dor:California)
+      - California–Nevada–Hawaii_District_of_the_Lutheran_Church–Missouri_Synod (<http://dbpedia.org/resource/California–Nevada–Hawaii_District_of_the_Lutheran_Church–Missouri_Synod>) --doo:territory--> California (dor:California)
+      - Kathy_Callaghan (dor:Kathy_Callaghan) --dop:birthPlace--> California (dor:California)
+      - California–Nevada–Hawaii_District_of_the_Lutheran_Church–Missouri_Synod (<http://dbpedia.org/resource/California–Nevada–Hawaii_District_of_the_Lutheran_Church–Missouri_Synod>) --doo:territory--> Hawaii (dor:Hawaii)
+  '5':
+    attributes:
+      California: (caption^='An ad to sail to California,', date^='2020-10-13')
+    relationships:
+      - Davis_Divan (dor:Davis_Divan) --dop:assembly--> California (dor:California)
+      - California–Nevada–Hawaii_District_of_the_Lutheran_Church–Missouri_Synod (<http://dbpedia.org/resource/California–Nevada–Hawaii_District_of_the_Lutheran_Church–Missouri_Synod>) --doo:territory--> California (dor:California)
+      - Kathy_Callaghan (dor:Kathy_Callaghan) --dop:birthPlace--> California (dor:California)
+      - California–Nevada–Hawaii_District_of_the_Lutheran_Church–Missouri_Synod (<http://dbpedia.org/resource/California–Nevada–Hawaii_District_of_the_Lutheran_Church–Missouri_Synod>) --doo:territory--> Nevada (dor:Nevada)
+  '6':
+    attributes:
+      California: (caption^='An ad to sail to California,', date^='2020-10-13')
+    relationships:
+      - Davis_Divan (dor:Davis_Divan) --dop:assembly--> California (dor:California)
+      - Greek_Orthodox_Metropolis_of_San_Francisco (dor:Greek_Orthodox_Metropolis_of_San_Francisco) --doo:territory--> California (dor:California)
+      - Kathy_Callaghan (dor:Kathy_Callaghan) --dop:birthPlace--> California (dor:California)
+      - Greek_Orthodox_Metropolis_of_San_Francisco (dor:Greek_Orthodox_Metropolis_of_San_Francisco) --doo:territory--> Alaska (dor:Alaska)
+  '7':
+    attributes:
+      Vienna: (Apr record low C^='-2.1', Apr sun^='197', caption^='Religion in Vienna', date^='February 2015')
+    relationships:
+      - Felber_Autoroller (dor:Felber_Autoroller) --dop:assembly--> Vienna (dor:Vienna)
+      - Roman_Catholic_Archdiocese_of_Vienna (dor:Roman_Catholic_Archdiocese_of_Vienna) --doo:territory--> Vienna (dor:Vienna)
+      - Barbara_Strass (dor:Barbara_Strass) --dop:birthPlace--> Vienna (dor:Vienna)
+      - Roman_Catholic_Archdiocese_of_Vienna (dor:Roman_Catholic_Archdiocese_of_Vienna) --doo:territory--> Lower_Austria (dor:Lower_Austria)
+  '8':
+    attributes:
+      Vienna: (Apr record low C^='-2.1', Apr sun^='197', caption^='Religion in Vienna', date^='February 2015')
+    relationships:
+      - Felber_Autoroller (dor:Felber_Autoroller) --dop:assembly--> Vienna (dor:Vienna)
+      - Roman_Catholic_Archdiocese_of_Vienna (dor:Roman_Catholic_Archdiocese_of_Vienna) --doo:territory--> Vienna (dor:Vienna)
+      - Christoph_Edelmüller (<http://dbpedia.org/resource/Christoph_Edelmüller>) --dop:birthPlace--> Vienna (dor:Vienna)
+      - Roman_Catholic_Archdiocese_of_Vienna (dor:Roman_Catholic_Archdiocese_of_Vienna) --doo:territory--> Lower_Austria (dor:Lower_Austria)
+  '9':
+    attributes:
+      Vienna: (Apr record low C^='-2.1', Apr sun^='197', caption^='Religion in Vienna', date^='February 2015')
+    relationships:
+      - Felber_Autoroller (dor:Felber_Autoroller) --dop:assembly--> Vienna (dor:Vienna)
+      - Roman_Catholic_Archdiocese_of_Vienna (dor:Roman_Catholic_Archdiocese_of_Vienna) --doo:territory--> Vienna (dor:Vienna)
+      - Isabel_Plach (dor:Isabel_Plach) --dop:birthPlace--> Vienna (dor:Vienna)
+      - Roman_Catholic_Archdiocese_of_Vienna (dor:Roman_Catholic_Archdiocese_of_Vienna) --doo:territory--> Lower_Austria (dor:Lower_Austria)
+  '10':
+    attributes:
+      Busan: (caption^='Religion in Busan')
+    relationships:
+      - Renault_Samsung_SM3 (dor:Renault_Samsung_SM3) --dop:assembly--> Busan (dor:Busan)
+      - Roman_Catholic_Diocese_of_Busan (dor:Roman_Catholic_Diocese_of_Busan) --doo:territory--> Busan (dor:Busan)
+      - Jung_Ji-in (dor:Jung_Ji-in) --dop:birthPlace--> Busan (dor:Busan)
+      - Roman_Catholic_Diocese_of_Busan (dor:Roman_Catholic_Diocese_of_Busan) --doo:territory--> South_Gyeongsang_Province (dor:South_Gyeongsang_Province)
+attributes:
+  Location: --1y^ (dop:1y)--> int | --designated nrhp type^ (dop:designatedNrhpType)--> date | --Apr record low C^ (dop:aprRecordLowC)--> int | --Apr sun^ (dop:aprSun)--> int | --opened^ (dop:opened)--> int | --caption^ (dop:caption)--> langString | --named after^ (dop:namedAfter)--> langString | --date^ (dop:date)--> langString | --year of construction^ (doo:yearOfConstruction)--> gYear
+  administrative region: --Apr rain days^ (dop:aprRainDays)--> double | --named for^ (dop:namedFor)--> Resource | --Apr sun^ (dop:aprSun)--> double
+subgraph_id: 656
+relationships:
+  - automobile --dop:assembly--> Location
+  - diocese --doo:territory--> Location
+  - handball player --dop:birthPlace--> Location
+  - diocese --doo:territory--> administrative region

@@ -1,0 +1,83 @@
+types:
+  movie: doo:Film
+  country: doo:Country
+  politician: doo:Politician
+  screenwriter: doo:ScreenWriter
+  musical artist: doo:MusicalArtist
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abner_M._Bradbury: (death date^='1885-09-17')
+    relationships:
+      - America's_Talking (<http://dbpedia.org/resource/America's_Talking>) --dop:area--> United_States (dor:United_States)
+      - Michael_Wandmacher (dor:Michael_Wandmacher) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - Ben_10:_Alien_Swarm (<http://dbpedia.org/resource/Ben_10:_Alien_Swarm>) --dop:music--> Michael_Wandmacher (dor:Michael_Wandmacher)
+      - Abner_M._Bradbury (dor:Abner_M._Bradbury) --doo:restingPlace--> United_States (dor:United_States)
+      - Ben_10:_Alien_Swarm (<http://dbpedia.org/resource/Ben_10:_Alien_Swarm>) --dop:writer--> John_Turman (dor:John_Turman)
+  '2':
+    attributes:
+      Abner_M._Bradbury: (death date^='1885-09-17')
+    relationships:
+      - Capital_TV_(Pakistan) (<http://dbpedia.org/resource/Capital_TV_(Pakistan)>) --dop:area--> United_States (dor:United_States)
+      - Michael_Wandmacher (dor:Michael_Wandmacher) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - Ben_10:_Alien_Swarm (<http://dbpedia.org/resource/Ben_10:_Alien_Swarm>) --dop:music--> Michael_Wandmacher (dor:Michael_Wandmacher)
+      - Abner_M._Bradbury (dor:Abner_M._Bradbury) --doo:restingPlace--> United_States (dor:United_States)
+      - Ben_10:_Alien_Swarm (<http://dbpedia.org/resource/Ben_10:_Alien_Swarm>) --dop:writer--> John_Turman (dor:John_Turman)
+  '3':
+    attributes:
+      Abner_M._Bradbury: (death date^='1885-09-17')
+    relationships:
+      - Cartoon_Network_(Latin_American_TV_channel) (<http://dbpedia.org/resource/Cartoon_Network_(Latin_American_TV_channel)>) --dop:area--> United_States (dor:United_States)
+      - Michael_Wandmacher (dor:Michael_Wandmacher) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - Ben_10:_Alien_Swarm (<http://dbpedia.org/resource/Ben_10:_Alien_Swarm>) --dop:music--> Michael_Wandmacher (dor:Michael_Wandmacher)
+      - Abner_M._Bradbury (dor:Abner_M._Bradbury) --doo:restingPlace--> United_States (dor:United_States)
+      - Ben_10:_Alien_Swarm (<http://dbpedia.org/resource/Ben_10:_Alien_Swarm>) --dop:writer--> John_Turman (dor:John_Turman)
+qa_result:
+  status: completed
+  cost_usd: 0.15968
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.020287400000000004
+        total_tokens: 2747
+        prompt_tokens: 1865
+        completion_tokens: 882
+      generate:
+        cost_usd: 0.061157600000000006
+        total_tokens: 6336
+        prompt_tokens: 3891
+        completion_tokens: 2445
+      verify_1:
+        cost_usd: 0.025542000000000002
+        total_tokens: 4113
+        prompt_tokens: 3781
+        completion_tokens: 332
+      complexity:
+        cost_usd: 0.052693000000000004
+        total_tokens: 6696
+        prompt_tokens: 4843
+        completion_tokens: 1853
+    total_tokens: 19892
+    prompt_tokens: 14380
+    total_cost_usd: 0.15968000000000002
+    completion_tokens: 5512
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  country: --2p^ (dop:2p)--> int
+  politician: --relatives^ (dop:relatives)--> Resource | --class^ (dop:class)--> int | --bgcolor^ (dop:bgcolor)--> langString | --profession^ (doo:profession)--> Resource | --footer^ (dop:footer)--> langString | --death date^ (dop:deathDate)--> gMonthDay | --award^ (doo:award)--> Resource
+  musical artist: --reason^ (dop:reason)--> langString | --1a^ (dop:1a)--> langString | --audio^ (dop:audio)--> langString
+subgraph_id: 175
+relationships:
+  - television station --dop:area--> country
+  - musical artist --doo:stateOfOrigin--> country
+  - movie --dop:music--> musical artist
+  - politician --doo:restingPlace--> country
+  - movie --dop:writer--> screenwriter

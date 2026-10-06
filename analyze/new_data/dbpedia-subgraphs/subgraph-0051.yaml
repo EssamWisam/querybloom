@@ -1,0 +1,88 @@
+types:
+  city: doo:City
+  person: doo:Person
+  school: doo:School
+  language: doo:Language
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Jaffna: (Apr record low C^='21', source^='Department of Meteorology', width^='180')
+    relationships:
+      - A._Canagaratnam (dor:A._Canagaratnam) --dop:almaMater--> Jaffna_Central_College (dor:Jaffna_Central_College)
+      - Jaffna_Central_College (dor:Jaffna_Central_College) --dop:city--> Jaffna (dor:Jaffna)
+      - Jaffna_Central_College (dor:Jaffna_Central_College) --doo:language--> Tamil_language (dor:Tamil_language)
+  '2':
+    attributes:
+      Jaffna: (Apr record low C^='21', source^='Department of Meteorology', width^='180')
+      A._Sabapathy: (death date^='1924-05-05')
+    relationships:
+      - A._Sabapathy (dor:A._Sabapathy) --dop:almaMater--> Jaffna_Central_College (dor:Jaffna_Central_College)
+      - Jaffna_Central_College (dor:Jaffna_Central_College) --dop:city--> Jaffna (dor:Jaffna)
+      - Jaffna_Central_College (dor:Jaffna_Central_College) --doo:language--> Tamil_language (dor:Tamil_language)
+  '3':
+    attributes:
+      Jaffna: (Apr record low C^='21', source^='Department of Meteorology', width^='180')
+      A._W._Mailvaganam: (death date^='1987-03-25')
+    relationships:
+      - A._W._Mailvaganam (dor:A._W._Mailvaganam) --dop:almaMater--> Jaffna_Central_College (dor:Jaffna_Central_College)
+      - Jaffna_Central_College (dor:Jaffna_Central_College) --dop:city--> Jaffna (dor:Jaffna)
+      - Jaffna_Central_College (dor:Jaffna_Central_College) --doo:language--> Tamil_language (dor:Tamil_language)
+  '4':
+    attributes: {}
+    relationships:
+      - Abdul_Hyee (dor:Abdul_Hyee) --dop:almaMater--> Government_K.C._College_Jhenaidah (dor:Government_K.C._College_Jhenaidah)
+      - Government_K.C._College_Jhenaidah (dor:Government_K.C._College_Jhenaidah) --dop:city--> Jhenaidah (dor:Jhenaidah)
+      - Government_K.C._College_Jhenaidah (dor:Government_K.C._College_Jhenaidah) --doo:language--> Bengali_language (dor:Bengali_language)
+  '5':
+    attributes:
+      Missoula,_Montana: (source^='NOAA', Apr record low F^='2')
+    relationships:
+      - Adam_Peterman (dor:Adam_Peterman) --dop:almaMater--> Hellgate_High_School (dor:Hellgate_High_School)
+      - Hellgate_High_School (dor:Hellgate_High_School) --dop:city--> Missoula,_Montana (<http://dbpedia.org/resource/Missoula,_Montana>)
+      - Hellgate_High_School (dor:Hellgate_High_School) --doo:language--> American_English (dor:American_English)
+  '6':
+    attributes:
+      Alaa_Mubarak: (father^='http://dbpedia.org/resource/Hosni_Mubarak')
+    relationships:
+      - Alaa_Mubarak (dor:Alaa_Mubarak) --dop:almaMater--> St._George's_College,_Cairo (<http://dbpedia.org/resource/St._George's_College,_Cairo>)
+      - St._George's_College,_Cairo (<http://dbpedia.org/resource/St._George's_College,_Cairo>) --dop:city--> Cairo (dor:Cairo)
+      - St._George's_College,_Cairo (<http://dbpedia.org/resource/St._George's_College,_Cairo>) --doo:language--> English_language (dor:English_language)
+  '7':
+    attributes: {}
+    relationships:
+      - Alison_Pill (dor:Alison_Pill) --dop:almaMater--> Vaughan_Road_Academy (dor:Vaughan_Road_Academy)
+      - Vaughan_Road_Academy (dor:Vaughan_Road_Academy) --dop:city--> Toronto (dor:Toronto)
+      - Vaughan_Road_Academy (dor:Vaughan_Road_Academy) --doo:language--> Canadian_English (dor:Canadian_English)
+  '8':
+    attributes: {}
+    relationships:
+      - Angela_Zhang (dor:Angela_Zhang) --dop:almaMater--> Sir_Winston_Churchill_Secondary_School_(Vancouver) (<http://dbpedia.org/resource/Sir_Winston_Churchill_Secondary_School_(Vancouver)>)
+      - Sir_Winston_Churchill_Secondary_School_(Vancouver) (<http://dbpedia.org/resource/Sir_Winston_Churchill_Secondary_School_(Vancouver)>) --dop:city--> Vancouver (dor:Vancouver)
+      - Sir_Winston_Churchill_Secondary_School_(Vancouver) (<http://dbpedia.org/resource/Sir_Winston_Churchill_Secondary_School_(Vancouver)>) --doo:language--> Canadian_English (dor:Canadian_English)
+  '9':
+    attributes: {}
+    relationships:
+      - Angela_Zhang (dor:Angela_Zhang) --dop:almaMater--> Sir_Winston_Churchill_Secondary_School_(Vancouver) (<http://dbpedia.org/resource/Sir_Winston_Churchill_Secondary_School_(Vancouver)>)
+      - Sir_Winston_Churchill_Secondary_School_(Vancouver) (<http://dbpedia.org/resource/Sir_Winston_Churchill_Secondary_School_(Vancouver)>) --dop:city--> Vancouver (dor:Vancouver)
+      - Sir_Winston_Churchill_Secondary_School_(Vancouver) (<http://dbpedia.org/resource/Sir_Winston_Churchill_Secondary_School_(Vancouver)>) --doo:language--> French_Immersion (dor:French_Immersion)
+  '10':
+    attributes:
+      Ashrafuddin_Ahmad_Chowdhury: (death date^='1976-03-25')
+    relationships:
+      - Ashrafuddin_Ahmad_Chowdhury (dor:Ashrafuddin_Ahmad_Chowdhury) --dop:almaMater--> St._Xavier's_Collegiate_School (<http://dbpedia.org/resource/St._Xavier's_Collegiate_School>)
+      - St._Xavier's_Collegiate_School (<http://dbpedia.org/resource/St._Xavier's_Collegiate_School>) --dop:city--> Kolkata (dor:Kolkata)
+      - St._Xavier's_Collegiate_School (<http://dbpedia.org/resource/St._Xavier's_Collegiate_School>) --doo:language--> English_language (dor:English_language)
+attributes:
+  city: --Apr record low C^ (dop:aprRecordLowC)--> int | --source^ (dop:source)--> langString | --width^ (dop:width)--> int | --Apr record low F^ (dop:aprRecordLowF)--> langString
+  person: --authorlink^ (dop:authorlink)--> langString | --father^ (dop:father)--> Resource | --awards^ (dop:awards)--> langString | --death date^ (dop:deathDate)--> langString | --audio^ (dop:audio)--> langString
+  school: --class^ (dop:class)--> int
+subgraph_id: 51
+relationships:
+  - person --dop:almaMater--> school
+  - school --dop:city--> city
+  - school --doo:language--> language

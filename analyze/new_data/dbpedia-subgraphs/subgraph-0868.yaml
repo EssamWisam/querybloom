@@ -1,0 +1,96 @@
+types:
+  place: doo:Place
+  plant: doo:Plant
+  athlete: doo:Athlete
+  settlement: doo:Settlement
+  cultivar (cultivated variety): doo:CultivatedVariety
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Evans_Cherry (dor:Evans_Cherry) --doo:origin--> Alberta (dor:Alberta)
+      - Carter_Rycroft (dor:Carter_Rycroft) --doo:club--> Alberta (dor:Alberta)
+      - Anû_Kathâ_Îpa (<http://dbpedia.org/resource/Anû_Kathâ_Îpa>) --doo:region--> Alberta (dor:Alberta)
+      - Evans_Cherry (dor:Evans_Cherry) --doo:species--> Prunus_cerasus (dor:Prunus_cerasus)
+  '2':
+    attributes: {}
+    relationships:
+      - Evans_Cherry (dor:Evans_Cherry) --doo:origin--> Alberta (dor:Alberta)
+      - Carter_Rycroft (dor:Carter_Rycroft) --doo:club--> Alberta (dor:Alberta)
+      - Bare_Range (dor:Bare_Range) --doo:region--> Alberta (dor:Alberta)
+      - Evans_Cherry (dor:Evans_Cherry) --doo:species--> Prunus_cerasus (dor:Prunus_cerasus)
+  '3':
+    attributes: {}
+    relationships:
+      - Evans_Cherry (dor:Evans_Cherry) --doo:origin--> Alberta (dor:Alberta)
+      - Carter_Rycroft (dor:Carter_Rycroft) --doo:club--> Alberta (dor:Alberta)
+      - Beacon_Peak (dor:Beacon_Peak) --doo:region--> Alberta (dor:Alberta)
+      - Evans_Cherry (dor:Evans_Cherry) --doo:species--> Prunus_cerasus (dor:Prunus_cerasus)
+  '4':
+    attributes:
+      Washington_(state): (country^='Washington')
+    relationships:
+      - Autumn_Glory (dor:Autumn_Glory) --doo:origin--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Darren_Lehto (dor:Darren_Lehto) --doo:club--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Picket_Range (dor:Picket_Range) --doo:region--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Autumn_Glory (dor:Autumn_Glory) --doo:species--> Malus_domestica (dor:Malus_domestica)
+  '5':
+    attributes:
+      Washington_(state): (country^='Washington')
+    relationships:
+      - Cosmic_Crisp (dor:Cosmic_Crisp) --doo:origin--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Darren_Lehto (dor:Darren_Lehto) --doo:club--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Picket_Range (dor:Picket_Range) --doo:region--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Cosmic_Crisp (dor:Cosmic_Crisp) --doo:species--> Malus_domestica (dor:Malus_domestica)
+  '6':
+    attributes:
+      Washington_(state): (country^='Washington')
+    relationships:
+      - Autumn_Glory (dor:Autumn_Glory) --doo:origin--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Doug_Jones_(curler) (<http://dbpedia.org/resource/Doug_Jones_(curler)>) --doo:club--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Picket_Range (dor:Picket_Range) --doo:region--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Autumn_Glory (dor:Autumn_Glory) --doo:species--> Malus_domestica (dor:Malus_domestica)
+  '7':
+    attributes: {}
+    relationships:
+      - Ulmus_pumila_'Manchu' (<http://dbpedia.org/resource/Ulmus_pumila_'Manchu'>) --doo:origin--> Saskatchewan (dor:Saskatchewan)
+      - Joel_Jordison (dor:Joel_Jordison) --doo:club--> Saskatchewan (dor:Saskatchewan)
+      - Alsask_Lake (dor:Alsask_Lake) --doo:region--> Saskatchewan (dor:Saskatchewan)
+      - Ulmus_pumila_'Manchu' (<http://dbpedia.org/resource/Ulmus_pumila_'Manchu'>) --doo:species--> Ulmus_pumila (dor:Ulmus_pumila)
+  '8':
+    attributes: {}
+    relationships:
+      - Ulmus_pumila_'Manchu' (<http://dbpedia.org/resource/Ulmus_pumila_'Manchu'>) --doo:origin--> Saskatchewan (dor:Saskatchewan)
+      - Joel_Jordison (dor:Joel_Jordison) --doo:club--> Saskatchewan (dor:Saskatchewan)
+      - Amisk_Lake (dor:Amisk_Lake) --doo:region--> Saskatchewan (dor:Saskatchewan)
+      - Ulmus_pumila_'Manchu' (<http://dbpedia.org/resource/Ulmus_pumila_'Manchu'>) --doo:species--> Ulmus_pumila (dor:Ulmus_pumila)
+  '9':
+    attributes: {}
+    relationships:
+      - Ulmus_pumila_'Manchu' (<http://dbpedia.org/resource/Ulmus_pumila_'Manchu'>) --doo:origin--> Saskatchewan (dor:Saskatchewan)
+      - Joel_Jordison (dor:Joel_Jordison) --doo:club--> Saskatchewan (dor:Saskatchewan)
+      - Archerwill (dor:Archerwill) --doo:region--> Saskatchewan (dor:Saskatchewan)
+      - Ulmus_pumila_'Manchu' (<http://dbpedia.org/resource/Ulmus_pumila_'Manchu'>) --doo:species--> Ulmus_pumila (dor:Ulmus_pumila)
+  '10':
+    attributes:
+      New_York_(state): (d^='yes', country^='New York')
+    relationships:
+      - Newtown_Pippin (dor:Newtown_Pippin) --doo:origin--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Lindy_Remigino (dor:Lindy_Remigino) --doo:club--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Adirondack_Mountains (dor:Adirondack_Mountains) --doo:region--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Newtown_Pippin (dor:Newtown_Pippin) --doo:species--> Apple (dor:Apple)
+attributes:
+  athlete: --after^ (dop:after)--> langString | --collegeteam^ (dop:collegeteam)--> langString
+  settlement: --d^ (dop:d)--> langString | --country^ (dop:country)--> langString | --caption align^ (dop:captionAlign)--> langString | --header^ (dop:header)--> langString | --data^ (dop:data)--> int | --differentFrom (wwoo:differentFrom)--> Resource | --Apr sun^ (dop:aprSun)--> double | --region^ (doo:region)--> Resource | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --canton^ (doo:canton)--> Resource | --UTC offset^ (doo:utcOffset)--> string
+subgraph_id: 868
+relationships:
+  - cultivar (cultivated variety) --doo:origin--> settlement
+  - athlete --doo:club--> settlement
+  - place --doo:region--> settlement
+  - cultivar (cultivated variety) --doo:species--> plant

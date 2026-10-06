@@ -1,0 +1,140 @@
+types:
+  award: doo:Award
+  artist: doo:Artist
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Art_Deco: (reason^='Will be able to find citation, but there is multiple volumes, so many pages. Which?', url^='https://web.archive.org/web/20150517020223/http:/adsla.org/info/')
+      André_Fau: |-
+        (death date^='1982-01-31', awards^='* National Order of the Legion of Honour,  
+        * Cross of War,
+        * Médaille Militaire avec citations,
+        * Ordre des Palmes Académiques')
+      Croix_de_Guerre: (presenter^='http://dbpedia.org/resource/France')
+    relationships:
+      - André_Fau (<http://dbpedia.org/resource/André_Fau>) --doo:award--> Croix_de_Guerre (dor:Croix_de_Guerre)
+      - André_Fau (<http://dbpedia.org/resource/André_Fau>) --doo:movement--> Art_Deco (dor:Art_Deco)
+  '2':
+    attributes:
+      Cubism: (footer^='These photos were published in Umělecký Mĕsíčník, 1913')
+      André_Fau: |-
+        (death date^='1982-01-31', awards^='* National Order of the Legion of Honour,  
+        * Cross of War,
+        * Médaille Militaire avec citations,
+        * Ordre des Palmes Académiques')
+      Croix_de_Guerre: (presenter^='http://dbpedia.org/resource/France')
+    relationships:
+      - André_Fau (<http://dbpedia.org/resource/André_Fau>) --doo:award--> Croix_de_Guerre (dor:Croix_de_Guerre)
+      - André_Fau (<http://dbpedia.org/resource/André_Fau>) --doo:movement--> Cubism (dor:Cubism)
+  '3':
+    attributes:
+      Futurism: (url^='https://web.archive.org/web/20160305023910/http:/www.guggenheim-venice.it/img/pdf_press/226pdf2_press-material-exhibit-metzinger.pdf')
+      André_Fau: |-
+        (death date^='1982-01-31', awards^='* National Order of the Legion of Honour,  
+        * Cross of War,
+        * Médaille Militaire avec citations,
+        * Ordre des Palmes Académiques')
+      Croix_de_Guerre: (presenter^='http://dbpedia.org/resource/France')
+    relationships:
+      - André_Fau (<http://dbpedia.org/resource/André_Fau>) --doo:award--> Croix_de_Guerre (dor:Croix_de_Guerre)
+      - André_Fau (<http://dbpedia.org/resource/André_Fau>) --doo:movement--> Futurism (dor:Futurism)
+  '4':
+    attributes:
+      Andy_Lomas: (awards^='51')
+      51st_Primetime_Emmy_Awards: (presenter^='http://dbpedia.org/resource/Academy_of_Television_Arts_and_Sciences')
+    relationships:
+      - Andy_Lomas (dor:Andy_Lomas) --doo:award--> 51st_Primetime_Emmy_Awards (dor:51st_Primetime_Emmy_Awards)
+      - Andy_Lomas (dor:Andy_Lomas) --doo:movement--> Digital_art (dor:Digital_art)
+  '5':
+    attributes:
+      Anton_Graff: (death date^='1813-06-22', awards^='1783')
+      Neoclassicism: (footer^='The Petit Trianon , 1764, by Ange-Jacques Gabriel')
+    relationships:
+      - Anton_Graff (dor:Anton_Graff) --doo:award--> Title_of_honor (dor:Title_of_honor)
+      - Anton_Graff (dor:Anton_Graff) --doo:movement--> Neoclassicism (dor:Neoclassicism)
+  '6':
+    attributes:
+      Bikash_Bhattacharjee__Bikash_Bhattacharjee__1: (death date^='2006-12-18')
+    relationships:
+      - Bikash_Bhattacharjee__Bikash_Bhattacharjee__1 (dor:Bikash_Bhattacharjee__Bikash_Bhattacharjee__1) --doo:award--> Padma_Shri (dor:Padma_Shri)
+      - Bikash_Bhattacharjee__Bikash_Bhattacharjee__1 (dor:Bikash_Bhattacharjee__Bikash_Bhattacharjee__1) --doo:movement--> Realism_(arts) (<http://dbpedia.org/resource/Realism_(arts)>)
+  '7':
+    attributes:
+      Padma_Shri: (presenter^='http://dbpedia.org/resource/Government_of_India')
+      Surrealism: (url^='https://web.archive.org/web/20100209063222/http:/www.tcf.ua.edu/Classes/Jbutler/T340/SurManifesto/ManifestoOfSurrealism.htm')
+      Bikash_Bhattacharjee__Bikash_Bhattacharjee__1: (death date^='2006-12-18')
+    relationships:
+      - Bikash_Bhattacharjee__Bikash_Bhattacharjee__1 (dor:Bikash_Bhattacharjee__Bikash_Bhattacharjee__1) --doo:award--> Padma_Shri (dor:Padma_Shri)
+      - Bikash_Bhattacharjee__Bikash_Bhattacharjee__1 (dor:Bikash_Bhattacharjee__Bikash_Bhattacharjee__1) --doo:movement--> Surrealism (dor:Surrealism)
+  '8':
+    attributes:
+      Bojan_Mikulić: (awards^='50')
+      Medal_of_Merit_to_the_People_(Republika_Srpska): (presenter^='http://dbpedia.org/resource/Republika_Srpska')
+    relationships:
+      - Bojan_Mikulić (<http://dbpedia.org/resource/Bojan_Mikulić>) --doo:award--> Medal_of_Merit_to_the_People_(Republika_Srpska) (<http://dbpedia.org/resource/Medal_of_Merit_to_the_People_(Republika_Srpska)>)
+      - Bojan_Mikulić (<http://dbpedia.org/resource/Bojan_Mikulić>) --doo:movement--> Abstract_art (dor:Abstract_art)
+  '9':
+    attributes:
+      Bojan_Mikulić: (awards^='50')
+      Medal_of_Merit_to_the_People_(Republika_Srpska): (presenter^='http://dbpedia.org/resource/Republika_Srpska')
+    relationships:
+      - Bojan_Mikulić (<http://dbpedia.org/resource/Bojan_Mikulić>) --doo:award--> Medal_of_Merit_to_the_People_(Republika_Srpska) (<http://dbpedia.org/resource/Medal_of_Merit_to_the_People_(Republika_Srpska)>)
+      - Bojan_Mikulić (<http://dbpedia.org/resource/Bojan_Mikulić>) --doo:movement--> Realism_(arts) (<http://dbpedia.org/resource/Realism_(arts)>)
+  '10':
+    attributes:
+      Boris_Fedorovich_Borzin: (awards^='-1945.0')
+      Medal_%22For_Courage%22_(Russia): (presenter^='http://dbpedia.org/resource/Russian_Federation')
+    relationships:
+      - Boris_Fedorovich_Borzin (dor:Boris_Fedorovich_Borzin) --doo:award--> Medal_%22For_Courage%22_(Russia) (<http://dbpedia.org/resource/Medal_%22For_Courage%22_(Russia)>)
+      - Boris_Fedorovich_Borzin (dor:Boris_Fedorovich_Borzin) --doo:movement--> Socialist_Realism (dor:Socialist_Realism)
+qa_result:
+  status: completed
+  cost_usd: 0.383337
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.024137400000000003
+        total_tokens: 3082
+        prompt_tokens: 2055
+        completion_tokens: 1027
+      generate:
+        cost_usd: 0.0738826
+        total_tokens: 7090
+        prompt_tokens: 4048
+        completion_tokens: 3042
+      verify_1:
+        cost_usd: 0.07921700000000001
+        total_tokens: 7018
+        prompt_tokens: 4076
+        completion_tokens: 2942
+      verify_2:
+        cost_usd: 0.027437000000000003
+        total_tokens: 4489
+        prompt_tokens: 4156
+        completion_tokens: 333
+      complexity:
+        cost_usd: 0.17866300000000004
+        total_tokens: 13215
+        prompt_tokens: 5137
+        completion_tokens: 8078
+    total_tokens: 34894
+    prompt_tokens: 19472
+    total_cost_usd: 0.38333700000000004
+    completion_tokens: 15422
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  award: --holder^ (dop:holder)--> int | --data^ (dop:data)--> int | --presenter^ (doo:presenter)--> Resource
+  artist: --spouse^ (doo:spouse)--> Resource | --death date^ (doo:deathDate)--> date | --reason^ (dop:reason)--> langString | --awards^ (dop:awards)--> langString | --resting place^ (doo:restingPlace)--> Resource
+  music genre: --reason^ (dop:reason)--> langString | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --url^ (dop:url)--> Resource | --footer^ (dop:footer)--> langString | --1pp^ (dop:1pp)--> int
+subgraph_id: 184
+relationships:
+  - artist --doo:award--> award
+  - artist --doo:movement--> music genre

@@ -1,0 +1,112 @@
+types:
+  town: doo:Town
+  soccer league: doo:SoccerLeague
+  soccer player: doo:SoccerPlayer
+  soccer club season: doo:SoccerClubSeason
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Santander,_Spain: (Aug high C^='23.3')
+      1928–29_FC_Barcelona_season: (home stadium^='http://dbpedia.org/resource/Camp_de_Les_Corts')
+    relationships:
+      - 1928–29_FC_Barcelona_season (<http://dbpedia.org/resource/1928–29_FC_Barcelona_season>) --doo:league--> La_Liga (dor:La_Liga)
+      - 1928–29_FC_Barcelona_season (<http://dbpedia.org/resource/1928–29_FC_Barcelona_season>) --dop:location--> Santander,_Spain (<http://dbpedia.org/resource/Santander,_Spain>)
+      - 1929_La_Liga (dor:1929_La_Liga) --dop:location--> Santander,_Spain (<http://dbpedia.org/resource/Santander,_Spain>)
+      - 1928–29_FC_Barcelona_season (<http://dbpedia.org/resource/1928–29_FC_Barcelona_season>) --dop:leagueTopscorer--> Manuel_Parera (dor:Manuel_Parera)
+  '2':
+    attributes:
+      Seville: (Aug high C^='35.5')
+      1928–29_FC_Barcelona_season: (home stadium^='http://dbpedia.org/resource/Camp_de_Les_Corts')
+    relationships:
+      - 1928–29_FC_Barcelona_season (<http://dbpedia.org/resource/1928–29_FC_Barcelona_season>) --doo:league--> La_Liga (dor:La_Liga)
+      - 1928–29_FC_Barcelona_season (<http://dbpedia.org/resource/1928–29_FC_Barcelona_season>) --dop:location--> Seville (dor:Seville)
+      - 1929_La_Liga (dor:1929_La_Liga) --dop:location--> Seville (dor:Seville)
+      - 1928–29_FC_Barcelona_season (<http://dbpedia.org/resource/1928–29_FC_Barcelona_season>) --dop:leagueTopscorer--> Manuel_Parera (dor:Manuel_Parera)
+  '3':
+    attributes:
+      Santander,_Spain: (Aug high C^='23.3')
+      1929–30_FC_Barcelona_season: (home stadium^='http://dbpedia.org/resource/Camp_de_Les_Corts')
+    relationships:
+      - 1929–30_FC_Barcelona_season (<http://dbpedia.org/resource/1929–30_FC_Barcelona_season>) --doo:league--> La_Liga (dor:La_Liga)
+      - 1929–30_FC_Barcelona_season (<http://dbpedia.org/resource/1929–30_FC_Barcelona_season>) --dop:location--> Santander,_Spain (<http://dbpedia.org/resource/Santander,_Spain>)
+      - 1929_La_Liga (dor:1929_La_Liga) --dop:location--> Santander,_Spain (<http://dbpedia.org/resource/Santander,_Spain>)
+      - 1929–30_FC_Barcelona_season (<http://dbpedia.org/resource/1929–30_FC_Barcelona_season>) --dop:leagueTopscorer--> Ángel_Arocha (<http://dbpedia.org/resource/Ángel_Arocha>)
+  '4':
+    attributes:
+      Santander,_Spain: (Aug high C^='23.3')
+      2001–02_Atlético_Madrid_season: (home stadium^='http://dbpedia.org/resource/Vicente_Calderón_Stadium', highest attendance^='58000')
+    relationships:
+      - 2001–02_Atlético_Madrid_season (<http://dbpedia.org/resource/2001–02_Atlético_Madrid_season>) --doo:league--> Segunda_División (<http://dbpedia.org/resource/Segunda_División>)
+      - 2001–02_Atlético_Madrid_season (<http://dbpedia.org/resource/2001–02_Atlético_Madrid_season>) --dop:location--> Santander,_Spain (<http://dbpedia.org/resource/Santander,_Spain>)
+      - 1940–41_Segunda_División (<http://dbpedia.org/resource/1940–41_Segunda_División>) --dop:location--> Santander,_Spain (<http://dbpedia.org/resource/Santander,_Spain>)
+      - 2001–02_Atlético_Madrid_season (<http://dbpedia.org/resource/2001–02_Atlético_Madrid_season>) --dop:leagueTopscorer--> Diego_Alonso (dor:Diego_Alonso)
+  '5':
+    attributes:
+      Oviedo: (Aug high C^='23.3')
+      2001–02_Atlético_Madrid_season: (home stadium^='http://dbpedia.org/resource/Vicente_Calderón_Stadium', highest attendance^='58000')
+    relationships:
+      - 2001–02_Atlético_Madrid_season (<http://dbpedia.org/resource/2001–02_Atlético_Madrid_season>) --doo:league--> Segunda_División (<http://dbpedia.org/resource/Segunda_División>)
+      - 2001–02_Atlético_Madrid_season (<http://dbpedia.org/resource/2001–02_Atlético_Madrid_season>) --dop:location--> Oviedo (dor:Oviedo)
+      - 1946–47_Segunda_División (<http://dbpedia.org/resource/1946–47_Segunda_División>) --dop:location--> Oviedo (dor:Oviedo)
+      - 2001–02_Atlético_Madrid_season (<http://dbpedia.org/resource/2001–02_Atlético_Madrid_season>) --dop:leagueTopscorer--> Diego_Alonso (dor:Diego_Alonso)
+  '6':
+    attributes:
+      Oviedo: (Aug high C^='23.3')
+      2001–02_Real_Oviedo_season: (home stadium^='http://dbpedia.org/resource/Estadio_Carlos_Tartiere', c^='2')
+    relationships:
+      - 2001–02_Real_Oviedo_season (<http://dbpedia.org/resource/2001–02_Real_Oviedo_season>) --doo:league--> Segunda_División (<http://dbpedia.org/resource/Segunda_División>)
+      - 2001–02_Real_Oviedo_season (<http://dbpedia.org/resource/2001–02_Real_Oviedo_season>) --dop:location--> Oviedo (dor:Oviedo)
+      - 1946–47_Segunda_División (<http://dbpedia.org/resource/1946–47_Segunda_División>) --dop:location--> Oviedo (dor:Oviedo)
+      - 2001–02_Real_Oviedo_season (<http://dbpedia.org/resource/2001–02_Real_Oviedo_season>) --dop:leagueTopscorer--> Geni_(footballer) (<http://dbpedia.org/resource/Geni_(footballer)>)
+  '7':
+    attributes:
+      Zaragoza: (Aug high C^='31.7')
+      1964–65_Cardiff_City_F.C._season: (highest attendance^='16911')
+    relationships:
+      - 1964–65_Cardiff_City_F.C._season (<http://dbpedia.org/resource/1964–65_Cardiff_City_F.C._season>) --doo:league--> Football_League_Second_Division (dor:Football_League_Second_Division)
+      - 1964–65_Cardiff_City_F.C._season (<http://dbpedia.org/resource/1964–65_Cardiff_City_F.C._season>) --dop:location--> Zaragoza (dor:Zaragoza)
+      - 1949–50_Segunda_División (<http://dbpedia.org/resource/1949–50_Segunda_División>) --dop:location--> Zaragoza (dor:Zaragoza)
+      - 1964–65_Cardiff_City_F.C._season (<http://dbpedia.org/resource/1964–65_Cardiff_City_F.C._season>) --dop:leagueTopscorer--> Ivor_Allchurch (dor:Ivor_Allchurch)
+  '8':
+    attributes:
+      Zaragoza: (Aug high C^='31.7')
+      2007–08_Aris_Thessaloniki_F.C._season: (home stadium^='http://dbpedia.org/resource/Kleanthis_Vikelidis_Stadium', aet^='y')
+    relationships:
+      - 2007–08_Aris_Thessaloniki_F.C._season (<http://dbpedia.org/resource/2007–08_Aris_Thessaloniki_F.C._season>) --doo:league--> Super_League_Greece (dor:Super_League_Greece)
+      - 2007–08_Aris_Thessaloniki_F.C._season (<http://dbpedia.org/resource/2007–08_Aris_Thessaloniki_F.C._season>) --dop:location--> Zaragoza (dor:Zaragoza)
+      - 1949–50_Segunda_División (<http://dbpedia.org/resource/1949–50_Segunda_División>) --dop:location--> Zaragoza (dor:Zaragoza)
+      - 2007–08_Aris_Thessaloniki_F.C._season (<http://dbpedia.org/resource/2007–08_Aris_Thessaloniki_F.C._season>) --dop:leagueTopscorer--> Koke_(footballer,_born_1983) (<http://dbpedia.org/resource/Koke_(footballer,_born_1983)>)
+  '9':
+    attributes:
+      Granada: (Aug high C^='33.5')
+      2013–14_CA_Osasuna_season: (home stadium^='http://dbpedia.org/resource/El_Sadar', highest attendance^='19398', c^='SPA')
+    relationships:
+      - 2013–14_CA_Osasuna_season (<http://dbpedia.org/resource/2013–14_CA_Osasuna_season>) --doo:league--> 2013–14_La_Liga (<http://dbpedia.org/resource/2013–14_La_Liga>)
+      - 2013–14_CA_Osasuna_season (<http://dbpedia.org/resource/2013–14_CA_Osasuna_season>) --dop:location--> Granada (dor:Granada)
+      - 1949–50_Segunda_División (<http://dbpedia.org/resource/1949–50_Segunda_División>) --dop:location--> Granada (dor:Granada)
+      - 2013–14_CA_Osasuna_season (<http://dbpedia.org/resource/2013–14_CA_Osasuna_season>) --dop:leagueTopscorer--> Oriol_Riera (dor:Oriol_Riera)
+  '10':
+    attributes:
+      Valencia: (Aug high C^='30.2')
+      1990–91_A.S._Roma_season: (home stadium^='http://dbpedia.org/resource/Stadio_Olimpico')
+    relationships:
+      - 1990–91_A.S._Roma_season (<http://dbpedia.org/resource/1990–91_A.S._Roma_season>) --doo:league--> Serie_A (dor:Serie_A)
+      - 1990–91_A.S._Roma_season (<http://dbpedia.org/resource/1990–91_A.S._Roma_season>) --dop:location--> Valencia (dor:Valencia)
+      - 1950–51_Segunda_División (<http://dbpedia.org/resource/1950–51_Segunda_División>) --dop:location--> Valencia (dor:Valencia)
+      - 1990–91_A.S._Roma_season (<http://dbpedia.org/resource/1990–91_A.S._Roma_season>) --dop:leagueTopscorer--> Rudi_Völler (<http://dbpedia.org/resource/Rudi_Völler>)
+attributes:
+  town: --Apr rain mm^ (dop:aprRainMm)--> int | --quote^ (dop:quote)--> langString | --Aug high C^ (dop:augHighC)--> int
+  soccer player: --image upright^ (dop:imageUpright)--> int | --image upright^ (dop:imageUpright)--> double | --url^ (dop:url)--> Resource
+  soccer club season: --home stadium^ (doo:homeStadium)--> Resource | --aet^ (dop:aet)--> langString | --highest attendance^ (dop:highestAttendance)--> date | --c^ (dop:c)--> int | --first^ (dop:first)--> langString
+subgraph_id: 791
+relationships:
+  - soccer club season --doo:league--> soccer league
+  - soccer club season --dop:location--> town
+  - football league season --dop:location--> town
+  - soccer club season --dop:leagueTopscorer--> soccer player

@@ -1,0 +1,76 @@
+types:
+  person: doo:Person
+  college: doo:College
+  Location: doo:Location
+  music genre: doo:MusicGenre
+  ethnic group: doo:EthnicGroup
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Argentina: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr', government type^='http://dbpedia.org/resource/Federal_republic', religion^='http://dbpedia.org/resource/Catholic_Church_in_Argentina')
+      Brazilians: (language^='http://dbpedia.org/resource/Chinese_language')
+    relationships:
+      - Brazilians (dor:Brazilians) --doo:populationPlace--> Argentina (dor:Argentina)
+      - Achim_Steiner (dor:Achim_Steiner) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Achim_Steiner (dor:Achim_Steiner) --dop:almaMater--> Worcester_College,_Oxford (<http://dbpedia.org/resource/Worcester_College,_Oxford>)
+      - Brazilians (dor:Brazilians) --doo:religion--> Candomblé (<http://dbpedia.org/resource/Candomblé>)
+  '2':
+    attributes:
+      Argentina: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr', government type^='http://dbpedia.org/resource/Federal_republic', religion^='http://dbpedia.org/resource/Catholic_Church_in_Argentina')
+      Brazilians: (language^='http://dbpedia.org/resource/Chinese_language')
+    relationships:
+      - Brazilians (dor:Brazilians) --doo:populationPlace--> Argentina (dor:Argentina)
+      - Achim_Steiner (dor:Achim_Steiner) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Achim_Steiner (dor:Achim_Steiner) --dop:almaMater--> Worcester_College,_Oxford (<http://dbpedia.org/resource/Worcester_College,_Oxford>)
+      - Brazilians (dor:Brazilians) --doo:religion--> Esotericism (dor:Esotericism)
+  '3':
+    attributes:
+      Argentina: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr', government type^='http://dbpedia.org/resource/Federal_republic', religion^='http://dbpedia.org/resource/Catholic_Church_in_Argentina')
+      Brazilians: (language^='http://dbpedia.org/resource/Chinese_language')
+    relationships:
+      - Brazilians (dor:Brazilians) --doo:populationPlace--> Argentina (dor:Argentina)
+      - Achim_Steiner (dor:Achim_Steiner) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Achim_Steiner (dor:Achim_Steiner) --dop:almaMater--> Worcester_College,_Oxford (<http://dbpedia.org/resource/Worcester_College,_Oxford>)
+      - Brazilians (dor:Brazilians) --doo:religion--> Pentecostalism (dor:Pentecostalism)
+  '4':
+    attributes:
+      France: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!', government type^='http://dbpedia.org/resource/Unitary_state')
+      Dutch_people: (language^='http://dbpedia.org/resource/Dutch_language')
+    relationships:
+      - Dutch_people (dor:Dutch_people) --doo:populationPlace--> France (dor:France)
+      - Karen_Koster (dor:Karen_Koster) --doo:nationality--> Dutch_people (dor:Dutch_people)
+      - Karen_Koster (dor:Karen_Koster) --dop:almaMater--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Dutch_people (dor:Dutch_people) --doo:religion--> Christianity (dor:Christianity)
+  '5':
+    attributes:
+      Germany: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr', government type^='http://dbpedia.org/resource/Federal_parliamentary_republic', align^='right')
+      Dutch_people: (language^='http://dbpedia.org/resource/Dutch_language')
+    relationships:
+      - Dutch_people (dor:Dutch_people) --doo:populationPlace--> Germany (dor:Germany)
+      - Karen_Koster (dor:Karen_Koster) --doo:nationality--> Dutch_people (dor:Dutch_people)
+      - Karen_Koster (dor:Karen_Koster) --dop:almaMater--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Dutch_people (dor:Dutch_people) --doo:religion--> Christianity (dor:Christianity)
+  '6':
+    attributes:
+      Dutch_people: (language^='http://dbpedia.org/resource/Dutch_language')
+      United_Kingdom: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr', government type^='http://dbpedia.org/resource/Constitutional_monarchy', align^='left')
+    relationships:
+      - Dutch_people (dor:Dutch_people) --doo:populationPlace--> United_Kingdom (dor:United_Kingdom)
+      - Karen_Koster (dor:Karen_Koster) --doo:nationality--> Dutch_people (dor:Dutch_people)
+      - Karen_Koster (dor:Karen_Koster) --dop:almaMater--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Dutch_people (dor:Dutch_people) --doo:religion--> Christianity (dor:Christianity)
+attributes:
+  person: --display (dop:display)--> langString | --awards^ (dop:awards)--> Resource | --authorlink^ (dop:authorlink)--> langString
+  Location: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --image width^ (dop:imageWidth)--> int | --government type^ (doo:governmentType)--> Resource | --altname^ (dop:altname)--> langString | --district^ (doo:district)--> Resource | --align^ (dop:align)--> langString | --coordinates^ (dop:coordinates)--> int | --religion^ (doo:religion)--> Resource | --footer align^ (dop:footerAlign)--> langString
+  ethnic group: --language^ (doo:language)--> Resource
+subgraph_id: 715
+relationships:
+  - ethnic group --doo:populationPlace--> Location
+  - person --doo:nationality--> ethnic group
+  - person --dop:almaMater--> college
+  - ethnic group --doo:religion--> music genre

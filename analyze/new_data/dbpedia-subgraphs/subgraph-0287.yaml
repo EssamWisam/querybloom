@@ -1,0 +1,111 @@
+types:
+  Location: doo:Location
+  settlement: doo:Settlement
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      London: (width^='215')
+    relationships:
+      - Addington,_Kent (<http://dbpedia.org/resource/Addington,_Kent>) --wwoo:differentFrom--> London (dor:London)
+      - Alanwar_TV (dor:Alanwar_TV) --dop:country--> London (dor:London)
+  '2':
+    attributes:
+      India: (width^='220')
+    relationships:
+      - Agra,_Punjab (<http://dbpedia.org/resource/Agra,_Punjab>) --wwoo:differentFrom--> India (dor:India)
+      - '&flix (<http://dbpedia.org/resource/&flix>) --dop:country--> India (dor:India)'
+  '3':
+    attributes:
+      India: (width^='220')
+    relationships:
+      - Agra,_Punjab (<http://dbpedia.org/resource/Agra,_Punjab>) --wwoo:differentFrom--> India (dor:India)
+      - 1Sports (dor:1Sports) --dop:country--> India (dor:India)
+  '4':
+    attributes:
+      India: (width^='220')
+    relationships:
+      - Agra,_Punjab (<http://dbpedia.org/resource/Agra,_Punjab>) --wwoo:differentFrom--> India (dor:India)
+      - 9X_(TV_channel) (<http://dbpedia.org/resource/9X_(TV_channel)>) --dop:country--> India (dor:India)
+  '5':
+    attributes:
+      Syria: (width^='350')
+    relationships:
+      - Al-Dana,_Maarrat_al-Nu'man (<http://dbpedia.org/resource/Al-Dana,_Maarrat_al-Nu'man>) --wwoo:differentFrom--> Syria (dor:Syria)
+      - Cham_TV (dor:Cham_TV) --dop:country--> Syria (dor:Syria)
+  '6':
+    attributes:
+      Syria: (width^='350')
+    relationships:
+      - Al-Dana,_Maarrat_al-Nu'man (<http://dbpedia.org/resource/Al-Dana,_Maarrat_al-Nu'man>) --wwoo:differentFrom--> Syria (dor:Syria)
+      - Massaya_TV (dor:Massaya_TV) --dop:country--> Syria (dor:Syria)
+  '7':
+    attributes:
+      Syria: (width^='350')
+    relationships:
+      - Al-Dana,_Maarrat_al-Nu'man (<http://dbpedia.org/resource/Al-Dana,_Maarrat_al-Nu'man>) --wwoo:differentFrom--> Syria (dor:Syria)
+      - Noor_Al-Sham (dor:Noor_Al-Sham) --dop:country--> Syria (dor:Syria)
+  '8':
+    attributes:
+      Turkey: (width^='160')
+    relationships:
+      - Al-Malikiyah (dor:Al-Malikiyah) --wwoo:differentFrom--> Turkey (dor:Turkey)
+      - 24_(Turkish_TV_channel) (<http://dbpedia.org/resource/24_(Turkish_TV_channel)>) --dop:country--> Turkey (dor:Turkey)
+  '9':
+    attributes:
+      Turkey: (width^='160')
+    relationships:
+      - Al-Malikiyah (dor:Al-Malikiyah) --wwoo:differentFrom--> Turkey (dor:Turkey)
+      - 360_(TV_channel) (<http://dbpedia.org/resource/360_(TV_channel)>) --dop:country--> Turkey (dor:Turkey)
+  '10':
+    attributes:
+      Turkey: (width^='160')
+    relationships:
+      - Al-Malikiyah (dor:Al-Malikiyah) --wwoo:differentFrom--> Turkey (dor:Turkey)
+      - A_Haber (dor:A_Haber) --dop:country--> Turkey (dor:Turkey)
+qa_result:
+  status: completed
+  cost_usd: 0.1941
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0322724
+        total_tokens: 3416
+        prompt_tokens: 1958
+        completion_tokens: 1458
+      generate:
+        cost_usd: 0.04836760000000001
+        total_tokens: 5257
+        prompt_tokens: 3305
+        completion_tokens: 1952
+      verify_1:
+        cost_usd: 0.030642000000000003
+        total_tokens: 3987
+        prompt_tokens: 3273
+        completion_tokens: 714
+      complexity:
+        cost_usd: 0.082818
+        total_tokens: 7789
+        prompt_tokens: 4292
+        completion_tokens: 3497
+    total_tokens: 20449
+    prompt_tokens: 12828
+    total_cost_usd: 0.19410000000000002
+    completion_tokens: 7621
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Location: --altname^ (dop:altname)--> langString | --Apr sun^ (dop:aprSun)--> int | --width^ (dop:width)--> perCent | --located in area^ (doo:locatedInArea)--> Resource
+  settlement: --Aug high F^ (dop:augHighF)--> double | --float^ (dop:float)--> langString | --Aug high C^ (dop:augHighC)--> double | --quote^ (dop:quote)--> langString
+  television station: --airdate^ (dop:airdate)--> date
+subgraph_id: 287
+relationships:
+  - settlement --wwoo:differentFrom--> Location
+  - television station --dop:country--> Location

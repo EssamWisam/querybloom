@@ -1,0 +1,144 @@
+types:
+  museum: doo:Museum
+  RaceHorse: doo:RaceHorse
+  horse trainer: doo:HorseTrainer
+  jockey (horse racer): doo:Jockey
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Julie_Krone: (race horse^='http://dbpedia.org/resource/Candy_Ride', honours^='http://dbpedia.org/resource/Michigan_Sports_Hall_of_Fame')
+      Safely_Kept: (awards^='http://dbpedia.org/resource/American_Champion_Sprint_Horse', award^='http://dbpedia.org/resource/American_Champion_Sprint_Horse', owner^='Barry Weisbord')
+      Michigan_Sports_Hall_of_Fame: (caption^='Desmond Howard at the Michigan Sports Hall of Fame induction - Feb. 11, 2008')
+    relationships:
+      - Julie_Krone (dor:Julie_Krone) --doo:raceHorse--> Safely_Kept (dor:Safely_Kept)
+      - Julie_Krone (dor:Julie_Krone) --doo:honours--> Michigan_Sports_Hall_of_Fame (dor:Michigan_Sports_Hall_of_Fame)
+      - Alan_E._Goldberg (dor:Alan_E._Goldberg) --doo:raceHorse--> Safely_Kept (dor:Safely_Kept)
+  '2':
+    attributes:
+      Julie_Krone: (race horse^='http://dbpedia.org/resource/Candy_Ride', honours^='http://dbpedia.org/resource/Michigan_Sports_Hall_of_Fame')
+      Safely_Kept: (awards^='http://dbpedia.org/resource/American_Champion_Sprint_Horse', award^='http://dbpedia.org/resource/American_Champion_Sprint_Horse', owner^='Barry Weisbord')
+      National_Cowgirl_Museum_and_Hall_of_Fame: (caption^='National Cowgirl Museum and Hall of Fame in Fort Worth, Texas')
+    relationships:
+      - Julie_Krone (dor:Julie_Krone) --doo:raceHorse--> Safely_Kept (dor:Safely_Kept)
+      - Julie_Krone (dor:Julie_Krone) --doo:honours--> National_Cowgirl_Museum_and_Hall_of_Fame (dor:National_Cowgirl_Museum_and_Hall_of_Fame)
+      - Alan_E._Goldberg (dor:Alan_E._Goldberg) --doo:raceHorse--> Safely_Kept (dor:Safely_Kept)
+  '3':
+    attributes:
+      Julie_Krone: (race horse^='http://dbpedia.org/resource/Candy_Ride', honours^='http://dbpedia.org/resource/Michigan_Sports_Hall_of_Fame')
+      National_Museum_of_Racing_and_Hall_of_Fame: (caption^='National Museum of Racing and Hall of Fame')
+    relationships:
+      - Julie_Krone (dor:Julie_Krone) --doo:raceHorse--> Safely_Kept (dor:Safely_Kept)
+      - Julie_Krone (dor:Julie_Krone) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+      - Alan_E._Goldberg (dor:Alan_E._Goldberg) --doo:raceHorse--> Safely_Kept (dor:Safely_Kept)
+  '4':
+    attributes:
+      Bayardo_(horse): (breeder^='http://dbpedia.org/resource/Alfred_W_Cox', awards^='Leading British money winner', award^='http://dbpedia.org/resource/Leading_broodmare_sire_in_Great_Britain_&_Ireland', owner^='http://dbpedia.org/resource/Alfred_W_Cox')
+      Daniel_A._Maher: (race horse^='http://dbpedia.org/resource/Ard_Patrick', honours^='http://dbpedia.org/resource/National_Museum_of_Racing_and_Hall_of_Fame')
+      National_Museum_of_Racing_and_Hall_of_Fame: (caption^='National Museum of Racing and Hall of Fame')
+    relationships:
+      - Daniel_A._Maher (dor:Daniel_A._Maher) --doo:raceHorse--> Bayardo_(horse) (<http://dbpedia.org/resource/Bayardo_(horse)>)
+      - Daniel_A._Maher (dor:Daniel_A._Maher) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+      - Alec_Taylor_Jr. (<http://dbpedia.org/resource/Alec_Taylor_Jr.>) --doo:raceHorse--> Bayardo_(horse) (<http://dbpedia.org/resource/Bayardo_(horse)>)
+  '5':
+    attributes:
+      Inferno_(horse): (breeder^='http://dbpedia.org/resource/Joseph_E._Seagram', owner^='http://dbpedia.org/resource/Joseph_E._Seagram')
+      Carroll_H._Shilling: (race horse^='http://dbpedia.org/resource/Colin_(horse)', honours^='http://dbpedia.org/resource/National_Museum_of_Racing_and_Hall_of_Fame')
+      National_Museum_of_Racing_and_Hall_of_Fame: (caption^='National Museum of Racing and Hall of Fame')
+    relationships:
+      - Carroll_H._Shilling (dor:Carroll_H._Shilling) --doo:raceHorse--> Inferno_(horse) (<http://dbpedia.org/resource/Inferno_(horse)>)
+      - Carroll_H._Shilling (dor:Carroll_H._Shilling) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+      - Barry_Littlefield (dor:Barry_Littlefield) --doo:raceHorse--> Inferno_(horse) (<http://dbpedia.org/resource/Inferno_(horse)>)
+  '6':
+    attributes:
+      Whirlaway: (breeder^='http://dbpedia.org/resource/Calumet_Farm', awards^='5', award^='http://dbpedia.org/resource/American_Champion_Two-Year-Old_Colt', owner^='http://dbpedia.org/resource/Calumet_Farm')
+      Canada's_Sports_Hall_of_Fame: (caption^='Exterior facade of Canada''s Sports Hall of Fame')
+    relationships:
+      - George_Woolf__George_Woolf__1 (dor:George_Woolf__George_Woolf__1) --doo:raceHorse--> Whirlaway (dor:Whirlaway)
+      - George_Woolf__George_Woolf__1 (dor:George_Woolf__George_Woolf__1) --doo:honours--> Canada's_Sports_Hall_of_Fame (<http://dbpedia.org/resource/Canada's_Sports_Hall_of_Fame>)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:raceHorse--> Whirlaway (dor:Whirlaway)
+  '7':
+    attributes:
+      Whirlaway: (breeder^='http://dbpedia.org/resource/Calumet_Farm', awards^='5', award^='http://dbpedia.org/resource/American_Champion_Two-Year-Old_Colt', owner^='http://dbpedia.org/resource/Calumet_Farm')
+      Johnny_Longden: (race horse^='http://dbpedia.org/resource/Busher_(horse)', honours^='http://dbpedia.org/resource/Bay_Meadows_Racetrack')
+      Canada's_Sports_Hall_of_Fame: (caption^='Exterior facade of Canada''s Sports Hall of Fame')
+    relationships:
+      - Johnny_Longden (dor:Johnny_Longden) --doo:raceHorse--> Whirlaway (dor:Whirlaway)
+      - Johnny_Longden (dor:Johnny_Longden) --doo:honours--> Canada's_Sports_Hall_of_Fame (<http://dbpedia.org/resource/Canada's_Sports_Hall_of_Fame>)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:raceHorse--> Whirlaway (dor:Whirlaway)
+  '8':
+    attributes:
+      Ack_Ack_(horse): (breeder^='http://dbpedia.org/resource/Harry_F._Guggenheim', awards^='http://dbpedia.org/resource/Eclipse_Award_for_Horse_of_the_Year', award^='http://dbpedia.org/resource/Eclipse_Award_for_Horse_of_the_Year', owner^='http://dbpedia.org/resource/Buddy_Fogelson')
+      Charles_E._Whittingham: (race horse^='http://dbpedia.org/resource/Ack_Ack_(horse)', honours^='http://dbpedia.org/resource/Bust_(sculpture)')
+      San_Diego_Hall_of_Champions: (caption^='San Diego Hall of Champions')
+    relationships:
+      - Charles_E._Whittingham (dor:Charles_E._Whittingham) --doo:raceHorse--> Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>)
+      - Charles_E._Whittingham (dor:Charles_E._Whittingham) --doo:honours--> San_Diego_Hall_of_Champions (dor:San_Diego_Hall_of_Champions)
+      - Charles_E._Whittingham (dor:Charles_E._Whittingham) --doo:raceHorse--> Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>)
+  '9':
+    attributes:
+      Charles_E._Whittingham: (race horse^='http://dbpedia.org/resource/Ack_Ack_(horse)', honours^='http://dbpedia.org/resource/Bust_(sculpture)')
+      San_Diego_Hall_of_Champions: (caption^='San Diego Hall of Champions')
+    relationships:
+      - Charles_E._Whittingham (dor:Charles_E._Whittingham) --doo:raceHorse--> Cougar_II (dor:Cougar_II)
+      - Charles_E._Whittingham (dor:Charles_E._Whittingham) --doo:honours--> San_Diego_Hall_of_Champions (dor:San_Diego_Hall_of_Champions)
+      - Charles_E._Whittingham (dor:Charles_E._Whittingham) --doo:raceHorse--> Cougar_II (dor:Cougar_II)
+  '10':
+    attributes:
+      Dahlia_(horse): (breeder^='http://dbpedia.org/resource/Nelson_Bunker_Hunt', awards^='British Horse of the Year', award^='http://dbpedia.org/resource/Eclipse_Award_for_Outstanding_Female_Turf_Horse', owner^='Nelson Bunker Hunt')
+      Charles_E._Whittingham: (race horse^='http://dbpedia.org/resource/Ack_Ack_(horse)', honours^='http://dbpedia.org/resource/Bust_(sculpture)')
+      San_Diego_Hall_of_Champions: (caption^='San Diego Hall of Champions')
+    relationships:
+      - Charles_E._Whittingham (dor:Charles_E._Whittingham) --doo:raceHorse--> Dahlia_(horse) (<http://dbpedia.org/resource/Dahlia_(horse)>)
+      - Charles_E._Whittingham (dor:Charles_E._Whittingham) --doo:honours--> San_Diego_Hall_of_Champions (dor:San_Diego_Hall_of_Champions)
+      - Charles_E._Whittingham (dor:Charles_E._Whittingham) --doo:raceHorse--> Dahlia_(horse) (<http://dbpedia.org/resource/Dahlia_(horse)>)
+qa_result:
+  status: completed
+  cost_usd: 0.508297
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.052927400000000006
+        total_tokens: 4736
+        prompt_tokens: 2341
+        completion_tokens: 2395
+      generate:
+        cost_usd: 0.1032676
+        total_tokens: 9241
+        prompt_tokens: 4957
+        completion_tokens: 4284
+      verify_1:
+        cost_usd: 0.078477
+        total_tokens: 8310
+        prompt_tokens: 5848
+        completion_tokens: 2462
+      verify_2:
+        cost_usd: 0.043942
+        total_tokens: 6359
+        prompt_tokens: 5549
+        completion_tokens: 810
+      complexity:
+        cost_usd: 0.22968300000000003
+        total_tokens: 16669
+        prompt_tokens: 6341
+        completion_tokens: 10328
+    total_tokens: 45315
+    prompt_tokens: 25036
+    total_cost_usd: 0.508297
+    completion_tokens: 20279
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  museum: --1a^ (dop:1a)--> langString | --founder^ (dop:founder)--> langString | --collections^ (dop:collections)--> Resource | --caption^ (dop:caption)--> langString | --collections^ (dop:collections)--> langString
+  RaceHorse: --breeder^ (doo:breeder)--> Resource | --awards^ (dop:awards)--> Resource | --awards^ (dop:awards)--> langString | --award^ (doo:award)--> Resource | --owner^ (dop:owner)--> Resource
+  jockey (horse racer): --race horse^ (doo:raceHorse)--> Resource | --honours^ (doo:honours)--> Resource
+subgraph_id: 172
+relationships:
+  - jockey (horse racer) --doo:raceHorse--> RaceHorse
+  - jockey (horse racer) --doo:honours--> museum
+  - horse trainer --doo:raceHorse--> RaceHorse

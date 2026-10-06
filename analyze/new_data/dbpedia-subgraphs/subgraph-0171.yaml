@@ -1,0 +1,127 @@
+types:
+  movie: doo:Film
+  writer: doo:Writer
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      102_Not_Out: (music^='George Joseph', writer^='http://dbpedia.org/resource/Saumya_Joshi')
+      Armaan_Malik: (birth year^='1995')
+      Saumya_Joshi: (birth name^='Saumya Jayantbhai Joshi')
+    relationships:
+      - Saumya_Joshi (dor:Saumya_Joshi) --doo:notableWork--> 102_Not_Out (dor:102_Not_Out)
+      - 102_Not_Out (dor:102_Not_Out) --dop:extra--> Armaan_Malik (dor:Armaan_Malik)
+  '2':
+    attributes:
+      Sonu_Nigam: (activeYearsEndYear='2017', birth year^='1973')
+      102_Not_Out: (music^='George Joseph', writer^='http://dbpedia.org/resource/Saumya_Joshi')
+      Saumya_Joshi: (birth name^='Saumya Jayantbhai Joshi')
+    relationships:
+      - Saumya_Joshi (dor:Saumya_Joshi) --doo:notableWork--> 102_Not_Out (dor:102_Not_Out)
+      - 102_Not_Out (dor:102_Not_Out) --dop:extra--> Sonu_Nigam (dor:Sonu_Nigam)
+  '3':
+    attributes:
+      Gabriel_Yared: (background^='non_performing_personnel')
+      Autumn_in_New_York_(film): (music^='http://dbpedia.org/resource/Gabriel_Yared', writer^='http://dbpedia.org/resource/Allison_Burnett')
+    relationships:
+      - Allison_Burnett (dor:Allison_Burnett) --doo:notableWork--> Autumn_in_New_York_(film) (<http://dbpedia.org/resource/Autumn_in_New_York_(film)>)
+      - Autumn_in_New_York_(film) (<http://dbpedia.org/resource/Autumn_in_New_York_(film)>) --dop:extra--> Gabriel_Yared (dor:Gabriel_Yared)
+  '4':
+    attributes:
+      Autumn_in_New_York_(film): (music^='http://dbpedia.org/resource/Gabriel_Yared', writer^='http://dbpedia.org/resource/Allison_Burnett')
+    relationships:
+      - Allison_Burnett (dor:Allison_Burnett) --doo:notableWork--> Autumn_in_New_York_(film) (<http://dbpedia.org/resource/Autumn_in_New_York_(film)>)
+      - Autumn_in_New_York_(film) (<http://dbpedia.org/resource/Autumn_in_New_York_(film)>) --dop:extra--> Jennifer_Paige (dor:Jennifer_Paige)
+  '5':
+    attributes:
+      Autumn_in_New_York_(film): (music^='http://dbpedia.org/resource/Gabriel_Yared', writer^='http://dbpedia.org/resource/Allison_Burnett')
+    relationships:
+      - Allison_Burnett (dor:Allison_Burnett) --doo:notableWork--> Autumn_in_New_York_(film) (<http://dbpedia.org/resource/Autumn_in_New_York_(film)>)
+      - Autumn_in_New_York_(film) (<http://dbpedia.org/resource/Autumn_in_New_York_(film)>) --dop:extra--> Madeleine_Peyroux (dor:Madeleine_Peyroux)
+  '6':
+    attributes:
+      G._K._Venkatesh: (activeYearsEndYear='1993')
+      Bhootayyana_Maga_Ayyu: (music^='http://dbpedia.org/resource/G._K._Venkatesh', writer^='http://dbpedia.org/resource/Gorur_Ramaswamy_Iyengar')
+      Gorur_Ramaswamy_Iyengar: (birth name^='Goruru Ramaswamy Iyengar')
+    relationships:
+      - Gorur_Ramaswamy_Iyengar (dor:Gorur_Ramaswamy_Iyengar) --doo:notableWork--> Bhootayyana_Maga_Ayyu (dor:Bhootayyana_Maga_Ayyu)
+      - Bhootayyana_Maga_Ayyu (dor:Bhootayyana_Maga_Ayyu) --dop:extra--> G._K._Venkatesh (dor:G._K._Venkatesh)
+  '7':
+    attributes:
+      P._B._Sreenivas: (background^='solo_singer', activeYearsEndYear='2013')
+      Bhootayyana_Maga_Ayyu: (music^='http://dbpedia.org/resource/G._K._Venkatesh', writer^='http://dbpedia.org/resource/Gorur_Ramaswamy_Iyengar')
+      Gorur_Ramaswamy_Iyengar: (birth name^='Goruru Ramaswamy Iyengar')
+    relationships:
+      - Gorur_Ramaswamy_Iyengar (dor:Gorur_Ramaswamy_Iyengar) --doo:notableWork--> Bhootayyana_Maga_Ayyu (dor:Bhootayyana_Maga_Ayyu)
+      - Bhootayyana_Maga_Ayyu (dor:Bhootayyana_Maga_Ayyu) --dop:extra--> P._B._Sreenivas (dor:P._B._Sreenivas)
+  '8':
+    attributes:
+      Vani_Jairam: (birth year^='1945')
+      Bhootayyana_Maga_Ayyu: (music^='http://dbpedia.org/resource/G._K._Venkatesh', writer^='http://dbpedia.org/resource/Gorur_Ramaswamy_Iyengar')
+      Gorur_Ramaswamy_Iyengar: (birth name^='Goruru Ramaswamy Iyengar')
+    relationships:
+      - Gorur_Ramaswamy_Iyengar (dor:Gorur_Ramaswamy_Iyengar) --doo:notableWork--> Bhootayyana_Maga_Ayyu (dor:Bhootayyana_Maga_Ayyu)
+      - Bhootayyana_Maga_Ayyu (dor:Bhootayyana_Maga_Ayyu) --dop:extra--> Vani_Jairam (dor:Vani_Jairam)
+  '9':
+    attributes:
+      Charlie_Bartlett: (music^='http://dbpedia.org/resource/Christophe_Beck', writer^='http://dbpedia.org/resource/Gustin_Nash')
+    relationships:
+      - Gustin_Nash (dor:Gustin_Nash) --doo:notableWork--> Charlie_Bartlett (dor:Charlie_Bartlett)
+      - Charlie_Bartlett (dor:Charlie_Bartlett) --dop:extra--> Christophe_Beck (dor:Christophe_Beck)
+  '10':
+    attributes:
+      Curtis_Mayfield: (activeYearsEndYear='1999')
+      Charlie_Bartlett: (music^='http://dbpedia.org/resource/Christophe_Beck', writer^='http://dbpedia.org/resource/Gustin_Nash')
+    relationships:
+      - Gustin_Nash (dor:Gustin_Nash) --doo:notableWork--> Charlie_Bartlett (dor:Charlie_Bartlett)
+      - Charlie_Bartlett (dor:Charlie_Bartlett) --dop:extra--> Curtis_Mayfield (dor:Curtis_Mayfield)
+qa_result:
+  status: completed
+  cost_usd: 0.330017
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0350374
+        total_tokens: 3711
+        prompt_tokens: 2167
+        completion_tokens: 1544
+      generate:
+        cost_usd: 0.0778076
+        total_tokens: 7050
+        prompt_tokens: 3733
+        completion_tokens: 3317
+      verify_1:
+        cost_usd: 0.049862000000000004
+        total_tokens: 5395
+        prompt_tokens: 3869
+        completion_tokens: 1526
+      verify_2:
+        cost_usd: 0.029027000000000004
+        total_tokens: 4390
+        prompt_tokens: 3918
+        completion_tokens: 472
+      complexity:
+        cost_usd: 0.138283
+        total_tokens: 10956
+        prompt_tokens: 4817
+        completion_tokens: 6139
+    total_tokens: 31502
+    prompt_tokens: 18504
+    total_cost_usd: 0.330017
+    completion_tokens: 12998
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  movie: --music^ (dop:music)--> Resource | --1y^ (dop:1y)--> int | --direction^ (dop:direction)--> langString | --writer^ (dop:writer)--> langString
+  writer: --death year^ (doo:deathYear)--> gYear | --birth year^ (doo:birthYear)--> gYear | --birth name^ (dop:birthName)--> langString | --bgcolor^ (dop:bgcolor)--> langString
+  musical artist: --image size^ (dop:imageSize)--> int | --background^ (doo:background)--> string | --activeYearsEndYear (doo:activeYearsEndYear)--> gYear | --birth year^ (doo:birthYear)--> gYear | --2a^ (dop:2a)--> langString
+subgraph_id: 171
+relationships:
+  - writer --doo:notableWork--> movie
+  - movie --dop:extra--> musical artist

@@ -1,0 +1,107 @@
+types:
+  country: doo:Country
+  swimmer: doo:Swimmer
+  Location: doo:Location
+  settlement: doo:Settlement
+  political function: doo:PoliticalFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Arati_Saha: (club^='Hatkhola Swimming Club')
+      Rajsamand_district: (named for^='Rajsamand lake')
+    relationships:
+      - Ajmer_district__PoliticalFunction__2 (dor:Ajmer_district__PoliticalFunction__2) --doo:politician--> Pali_district (dor:Pali_district)
+      - Pali_district (dor:Pali_district) --doo:country--> India (dor:India)
+      - Arati_Saha (dor:Arati_Saha) --doo:nationality--> India (dor:India)
+      - Ajmer_district__PoliticalFunction__2 (dor:Ajmer_district__PoliticalFunction__2) --doo:politician--> Rajsamand_district (dor:Rajsamand_district)
+  '2':
+    attributes:
+      Rajsamand_district: (named for^='Rajsamand lake')
+    relationships:
+      - Ajmer_district__PoliticalFunction__2 (dor:Ajmer_district__PoliticalFunction__2) --doo:politician--> Pali_district (dor:Pali_district)
+      - Pali_district (dor:Pali_district) --doo:country--> India (dor:India)
+      - Prasanta_Karmakar (dor:Prasanta_Karmakar) --doo:nationality--> India (dor:India)
+      - Ajmer_district__PoliticalFunction__2 (dor:Ajmer_district__PoliticalFunction__2) --doo:politician--> Rajsamand_district (dor:Rajsamand_district)
+  '3':
+    attributes:
+      Rohit_Havaldar: (club^='Dolphin swim club, Bangalore')
+      Rajsamand_district: (named for^='Rajsamand lake')
+    relationships:
+      - Ajmer_district__PoliticalFunction__2 (dor:Ajmer_district__PoliticalFunction__2) --doo:politician--> Pali_district (dor:Pali_district)
+      - Pali_district (dor:Pali_district) --doo:country--> India (dor:India)
+      - Rohit_Havaldar (dor:Rohit_Havaldar) --doo:nationality--> India (dor:India)
+      - Ajmer_district__PoliticalFunction__2 (dor:Ajmer_district__PoliticalFunction__2) --doo:politician--> Rajsamand_district (dor:Rajsamand_district)
+  '4':
+    attributes:
+      Nigeria: (anthem^='http://dbpedia.org/resource/Arise,_O_Compatriots')
+      Ngozi_Monu: (club^='New York City Hydras')
+    relationships:
+      - Anaocha__PoliticalFunction__3 (dor:Anaocha__PoliticalFunction__3) --doo:politician--> Dunukofia (dor:Dunukofia)
+      - Dunukofia (dor:Dunukofia) --doo:country--> Nigeria (dor:Nigeria)
+      - Ngozi_Monu (dor:Ngozi_Monu) --doo:nationality--> Nigeria (dor:Nigeria)
+      - Anaocha__PoliticalFunction__3 (dor:Anaocha__PoliticalFunction__3) --doo:politician--> Njikoka (dor:Njikoka)
+  '5':
+    attributes:
+      Nigeria: (anthem^='http://dbpedia.org/resource/Arise,_O_Compatriots')
+    relationships:
+      - Anaocha__PoliticalFunction__3 (dor:Anaocha__PoliticalFunction__3) --doo:politician--> Dunukofia (dor:Dunukofia)
+      - Dunukofia (dor:Dunukofia) --doo:country--> Nigeria (dor:Nigeria)
+      - Tebesa_Nemine (dor:Tebesa_Nemine) --doo:nationality--> Nigeria (dor:Nigeria)
+      - Anaocha__PoliticalFunction__3 (dor:Anaocha__PoliticalFunction__3) --doo:politician--> Njikoka (dor:Njikoka)
+  '6':
+    attributes:
+      Nigeria: (anthem^='http://dbpedia.org/resource/Arise,_O_Compatriots')
+    relationships:
+      - Anaocha__PoliticalFunction__3 (dor:Anaocha__PoliticalFunction__3) --doo:politician--> Dunukofia (dor:Dunukofia)
+      - Dunukofia (dor:Dunukofia) --doo:country--> Nigeria (dor:Nigeria)
+      - Yellow_Yeiyah (dor:Yellow_Yeiyah) --doo:nationality--> Nigeria (dor:Nigeria)
+      - Anaocha__PoliticalFunction__3 (dor:Anaocha__PoliticalFunction__3) --doo:politician--> Njikoka (dor:Njikoka)
+  '7':
+    attributes:
+      Back_Su-yeon: (club^='Kang-won-do Cheong')
+    relationships:
+      - Busan__PoliticalFunction__3 (dor:Busan__PoliticalFunction__3) --doo:politician--> Dong_District,_Busan (<http://dbpedia.org/resource/Dong_District,_Busan>)
+      - Dong_District,_Busan (<http://dbpedia.org/resource/Dong_District,_Busan>) --doo:country--> South_Korea (dor:South_Korea)
+      - Back_Su-yeon (dor:Back_Su-yeon) --doo:nationality--> South_Korea (dor:South_Korea)
+      - Busan__PoliticalFunction__3 (dor:Busan__PoliticalFunction__3) --doo:politician--> Gijang_County (dor:Gijang_County)
+  '8':
+    attributes:
+      Back_Su-yeon: (club^='Kang-won-do Cheong')
+    relationships:
+      - Busan__PoliticalFunction__3 (dor:Busan__PoliticalFunction__3) --doo:politician--> Dong_District,_Busan (<http://dbpedia.org/resource/Dong_District,_Busan>)
+      - Dong_District,_Busan (<http://dbpedia.org/resource/Dong_District,_Busan>) --doo:country--> South_Korea (dor:South_Korea)
+      - Back_Su-yeon (dor:Back_Su-yeon) --doo:nationality--> South_Korea (dor:South_Korea)
+      - Busan__PoliticalFunction__3 (dor:Busan__PoliticalFunction__3) --doo:politician--> Yeongdo_District (dor:Yeongdo_District)
+  '9':
+    attributes:
+      Baek_Il-joo: (club^='Cheollabukdo Sports Council')
+    relationships:
+      - Busan__PoliticalFunction__3 (dor:Busan__PoliticalFunction__3) --doo:politician--> Dong_District,_Busan (<http://dbpedia.org/resource/Dong_District,_Busan>)
+      - Dong_District,_Busan (<http://dbpedia.org/resource/Dong_District,_Busan>) --doo:country--> South_Korea (dor:South_Korea)
+      - Baek_Il-joo (dor:Baek_Il-joo) --doo:nationality--> South_Korea (dor:South_Korea)
+      - Busan__PoliticalFunction__3 (dor:Busan__PoliticalFunction__3) --doo:politician--> Gijang_County (dor:Gijang_County)
+  '10':
+    attributes:
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Anthony_Stephens: (club^='Swansea HPC')
+    relationships:
+      - Glasgow_City_Region__PoliticalFunction__2 (dor:Glasgow_City_Region__PoliticalFunction__2) --doo:politician--> East_Dunbartonshire (dor:East_Dunbartonshire)
+      - East_Dunbartonshire (dor:East_Dunbartonshire) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Anthony_Stephens (dor:Anthony_Stephens) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Glasgow_City_Region__PoliticalFunction__2 (dor:Glasgow_City_Region__PoliticalFunction__2) --doo:politician--> East_Renfrewshire (dor:East_Renfrewshire)
+attributes:
+  country: --anthem^ (doo:anthem)--> Resource
+  swimmer: --club^ (dop:club)--> langString
+  Location: --religion^ (doo:religion)--> Resource | --quote^ (dop:quote)--> int | --original name^ (doo:originalName)--> langString | --area^ (dop:area)--> int | --named for^ (dop:namedFor)--> langString
+  settlement: --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --id^ (dop:id)--> langString | --Apr record low C^ (dop:aprRecordLowC)--> langString
+subgraph_id: 790
+relationships:
+  - political function --doo:politician--> settlement
+  - settlement --doo:country--> country
+  - swimmer --doo:nationality--> country
+  - political function --doo:politician--> Location

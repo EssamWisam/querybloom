@@ -1,0 +1,118 @@
+types:
+  Band: doo:Band
+  person: doo:Person
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Helios_Creed: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Daniel_House_(musician): (instrument^='http://dbpedia.org/resource/Bass_guitar')
+    relationships:
+      - 10_Minute_Warning (dor:10_Minute_Warning) --dop:pastMembers--> Daniel_House_(musician) (<http://dbpedia.org/resource/Daniel_House_(musician)>)
+      - Daniel_House_(musician) (<http://dbpedia.org/resource/Daniel_House_(musician)>) --dop:associatedActs--> Helios_Creed (dor:Helios_Creed)
+  '2':
+    attributes:
+      Kate_Bush: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:AllMusic')
+      Duncan_Mackay_(musician): (instrument^='Vocals, keyboards')
+    relationships:
+      - 10cc (dor:10cc) --dop:pastMembers--> Duncan_Mackay_(musician) (<http://dbpedia.org/resource/Duncan_Mackay_(musician)>)
+      - Duncan_Mackay_(musician) (<http://dbpedia.org/resource/Duncan_Mackay_(musician)>) --dop:associatedActs--> Kate_Bush (dor:Kate_Bush)
+  '3':
+    attributes:
+      Gary_Wallis: (instrument^='Drums, percussion, electronic drums, drum programming, keyboards')
+      Helene_Fischer: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - 10cc (dor:10cc) --dop:pastMembers--> Gary_Wallis (dor:Gary_Wallis)
+      - Gary_Wallis (dor:Gary_Wallis) --dop:associatedActs--> Helene_Fischer (dor:Helene_Fischer)
+  '4':
+    attributes:
+      Gary_Wallis: (instrument^='Drums, percussion, electronic drums, drum programming, keyboards')
+      Nik_Kershaw: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:AllMusic')
+    relationships:
+      - 10cc (dor:10cc) --dop:pastMembers--> Gary_Wallis (dor:Gary_Wallis)
+      - Gary_Wallis (dor:Gary_Wallis) --dop:associatedActs--> Nik_Kershaw (dor:Nik_Kershaw)
+  '5':
+    attributes: {}
+    relationships:
+      - 16-17 (dor:16-17) --dop:pastMembers--> Kevin_Martin_(British_musician) (<http://dbpedia.org/resource/Kevin_Martin_(British_musician)>)
+      - Kevin_Martin_(British_musician) (<http://dbpedia.org/resource/Kevin_Martin_(British_musician)>) --dop:associatedActs--> Flowdan (dor:Flowdan)
+  '6':
+    attributes:
+      Justin_Broadrick: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', alias^='JK Flesh')
+    relationships:
+      - 16-17 (dor:16-17) --dop:pastMembers--> Kevin_Martin_(British_musician) (<http://dbpedia.org/resource/Kevin_Martin_(British_musician)>)
+      - Kevin_Martin_(British_musician) (<http://dbpedia.org/resource/Kevin_Martin_(British_musician)>) --dop:associatedActs--> Justin_Broadrick (dor:Justin_Broadrick)
+  '7':
+    attributes:
+      Roger_Robinson_(poet): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - 16-17 (dor:16-17) --dop:pastMembers--> Kevin_Martin_(British_musician) (<http://dbpedia.org/resource/Kevin_Martin_(British_musician)>)
+      - Kevin_Martin_(British_musician) (<http://dbpedia.org/resource/Kevin_Martin_(British_musician)>) --dop:associatedActs--> Roger_Robinson_(poet) (<http://dbpedia.org/resource/Roger_Robinson_(poet)>)
+  '8':
+    attributes:
+      DJ_Toomp: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:AllMusic', alias^='Toomp')
+    relationships:
+      - 2_Live_Crew (dor:2_Live_Crew) --dop:pastMembers--> Brother_Marquis (dor:Brother_Marquis)
+      - Brother_Marquis (dor:Brother_Marquis) --dop:associatedActs--> DJ_Toomp (dor:DJ_Toomp)
+  '9':
+    attributes:
+      Fresh_Kid_Ice: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''%22', alias^='The Chinaman')
+    relationships:
+      - 2_Live_Crew (dor:2_Live_Crew) --dop:pastMembers--> Brother_Marquis (dor:Brother_Marquis)
+      - Brother_Marquis (dor:Brother_Marquis) --dop:associatedActs--> Fresh_Kid_Ice (dor:Fresh_Kid_Ice)
+  '10':
+    attributes:
+      Ice-T: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - 2_Live_Crew (dor:2_Live_Crew) --dop:pastMembers--> Brother_Marquis (dor:Brother_Marquis)
+      - Brother_Marquis (dor:Brother_Marquis) --dop:associatedActs--> Ice-T (dor:Ice-T)
+qa_result:
+  status: completed
+  cost_usd: 0.347882
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.06405740000000001
+        total_tokens: 5030
+        prompt_tokens: 1991
+        completion_tokens: 3039
+      generate:
+        cost_usd: 0.05861260000000001
+        total_tokens: 5965
+        prompt_tokens: 3566
+        completion_tokens: 2399
+      verify_1:
+        cost_usd: 0.097207
+        total_tokens: 7832
+        prompt_tokens: 3962
+        completion_tokens: 3870
+      verify_2:
+        cost_usd: 0.04730200000000001
+        total_tokens: 5102
+        prompt_tokens: 3649
+        completion_tokens: 1453
+      complexity:
+        cost_usd: 0.08070300000000001
+        total_tokens: 8065
+        prompt_tokens: 4801
+        completion_tokens: 3264
+    total_tokens: 31994
+    prompt_tokens: 17969
+    total_cost_usd: 0.347882
+    completion_tokens: 14025
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Band: --IMDB id^ (doo:imdbId)--> string | --instrument^ (doo:instrument)--> Resource
+  person: --1a^ (dop:1a)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --alias^ (doo:alias)--> langString | --title^ (doo:title)--> langString | --mother^ (dop:mother)--> Resource | --alma mater^ (dop:almaMater)--> Resource
+  musical artist: --width^ (dop:width)--> int | --reason^ (dop:reason)--> langString | --instrument^ (dop:instrument)--> Resource
+subgraph_id: 220
+relationships:
+  - Band --dop:pastMembers--> musical artist
+  - musical artist --dop:associatedActs--> person

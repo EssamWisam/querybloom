@@ -1,0 +1,110 @@
+types:
+  town: doo:Town
+  award: doo:Award
+  country: doo:Country
+  military unit: doo:MilitaryUnit
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Alexander_Yano: (title^='AFP Southern Luzon - Commander')
+    relationships:
+      - Distinguished_Conduct_Star (dor:Distinguished_Conduct_Star) --doo:country--> Philippines (dor:Philippines)
+      - 634th_Naval_Air_Group (dor:634th_Naval_Air_Group) --doo:garrison--> Philippines (dor:Philippines)
+      - Distinguished_Conduct_Star (dor:Distinguished_Conduct_Star) --doo:presenter--> Philippines (dor:Philippines)
+      - Alexander_Yano (dor:Alexander_Yano) --dop:birthPlace--> Philippines (dor:Philippines)
+      - 634th_Naval_Air_Group (dor:634th_Naval_Air_Group) --dop:garrison--> Donggang,_Pingtung (<http://dbpedia.org/resource/Donggang,_Pingtung>)
+  '2':
+    attributes:
+      Tainan: (nickname^='The Phoenix City , The Prefecture City , Nanying', Apr high C^='29.3', Apr rain mm^='69.1', Apr low C^='21.7')
+      Alexander_Yano: (title^='AFP Southern Luzon - Commander')
+    relationships:
+      - Distinguished_Conduct_Star (dor:Distinguished_Conduct_Star) --doo:country--> Philippines (dor:Philippines)
+      - Tainan_Air_Group (dor:Tainan_Air_Group) --doo:garrison--> Philippines (dor:Philippines)
+      - Distinguished_Conduct_Star (dor:Distinguished_Conduct_Star) --doo:presenter--> Philippines (dor:Philippines)
+      - Alexander_Yano (dor:Alexander_Yano) --dop:birthPlace--> Philippines (dor:Philippines)
+      - Tainan_Air_Group (dor:Tainan_Air_Group) --dop:garrison--> Tainan (dor:Tainan)
+  '3':
+    attributes: {}
+    relationships:
+      - Distinguished_Conduct_Star (dor:Distinguished_Conduct_Star) --doo:country--> Philippines (dor:Philippines)
+      - 634th_Naval_Air_Group (dor:634th_Naval_Air_Group) --doo:garrison--> Philippines (dor:Philippines)
+      - Distinguished_Conduct_Star (dor:Distinguished_Conduct_Star) --doo:presenter--> Philippines (dor:Philippines)
+      - Allan_Ferdinand_V._Cusi (dor:Allan_Ferdinand_V._Cusi) --dop:birthPlace--> Philippines (dor:Philippines)
+      - 634th_Naval_Air_Group (dor:634th_Naval_Air_Group) --dop:garrison--> Donggang,_Pingtung (<http://dbpedia.org/resource/Donggang,_Pingtung>)
+  '4':
+    attributes:
+      Bao_Chao: (award^='http://dbpedia.org/resource/Imperial_yellow_jacket')
+    relationships:
+      - Flying_Apsaras_Awards (dor:Flying_Apsaras_Awards) --doo:country--> China (dor:China)
+      - Kisarazu_Air_Group (dor:Kisarazu_Air_Group) --doo:garrison--> China (dor:China)
+      - Flying_Apsaras_Awards (dor:Flying_Apsaras_Awards) --doo:presenter--> China (dor:China)
+      - Bao_Chao (dor:Bao_Chao) --dop:birthPlace--> China (dor:China)
+      - Kisarazu_Air_Group (dor:Kisarazu_Air_Group) --dop:garrison--> Shanghai (dor:Shanghai)
+  '5':
+    attributes:
+      Chen_Hongjun: (award^='http://dbpedia.org/resource/July_1_Medal')
+    relationships:
+      - Flying_Apsaras_Awards (dor:Flying_Apsaras_Awards) --doo:country--> China (dor:China)
+      - Kisarazu_Air_Group (dor:Kisarazu_Air_Group) --doo:garrison--> China (dor:China)
+      - Flying_Apsaras_Awards (dor:Flying_Apsaras_Awards) --doo:presenter--> China (dor:China)
+      - Chen_Hongjun (dor:Chen_Hongjun) --dop:birthPlace--> China (dor:China)
+      - Kisarazu_Air_Group (dor:Kisarazu_Air_Group) --dop:garrison--> Shanghai (dor:Shanghai)
+  '6':
+    attributes: {}
+    relationships:
+      - Flying_Apsaras_Awards (dor:Flying_Apsaras_Awards) --doo:country--> China (dor:China)
+      - Kisarazu_Air_Group (dor:Kisarazu_Air_Group) --doo:garrison--> China (dor:China)
+      - Flying_Apsaras_Awards (dor:Flying_Apsaras_Awards) --doo:presenter--> China (dor:China)
+      - Deng_Shichang (dor:Deng_Shichang) --dop:birthPlace--> China (dor:China)
+      - Kisarazu_Air_Group (dor:Kisarazu_Air_Group) --dop:garrison--> Shanghai (dor:Shanghai)
+  '7':
+    attributes: {}
+    relationships:
+      - Izumi_Kyōka_Prize_for_Literature (<http://dbpedia.org/resource/Izumi_Kyōka_Prize_for_Literature>) --doo:country--> Japan (dor:Japan)
+      - 634th_Naval_Air_Group (dor:634th_Naval_Air_Group) --doo:garrison--> Japan (dor:Japan)
+      - Izumi_Kyōka_Prize_for_Literature (<http://dbpedia.org/resource/Izumi_Kyōka_Prize_for_Literature>) --doo:presenter--> Japan (dor:Japan)
+      - Akashi_Motojiro (dor:Akashi_Motojiro) --dop:birthPlace--> Japan (dor:Japan)
+      - 634th_Naval_Air_Group (dor:634th_Naval_Air_Group) --dop:garrison--> Donggang,_Pingtung (<http://dbpedia.org/resource/Donggang,_Pingtung>)
+  '8':
+    attributes:
+      A._K._Sarwate: (award^='http://dbpedia.org/resource/Ati_Vishisht_Seva_Medal')
+    relationships:
+      - Sena_Medal (dor:Sena_Medal) --doo:country--> India (dor:India)
+      - Special_Frontier_Force (dor:Special_Frontier_Force) --doo:garrison--> India (dor:India)
+      - Sena_Medal (dor:Sena_Medal) --doo:presenter--> India (dor:India)
+      - A._K._Sarwate (dor:A._K._Sarwate) --dop:birthPlace--> India (dor:India)
+      - Special_Frontier_Force (dor:Special_Frontier_Force) --dop:garrison--> Chakrata (dor:Chakrata)
+  '9':
+    attributes: {}
+    relationships:
+      - Sena_Medal (dor:Sena_Medal) --doo:country--> India (dor:India)
+      - Special_Frontier_Force (dor:Special_Frontier_Force) --doo:garrison--> India (dor:India)
+      - Sena_Medal (dor:Sena_Medal) --doo:presenter--> India (dor:India)
+      - Abbas_Ali_(Indian_National_Army) (<http://dbpedia.org/resource/Abbas_Ali_(Indian_National_Army)>) --dop:birthPlace--> India (dor:India)
+      - Special_Frontier_Force (dor:Special_Frontier_Force) --dop:garrison--> Chakrata (dor:Chakrata)
+  '10':
+    attributes: {}
+    relationships:
+      - Sena_Medal (dor:Sena_Medal) --doo:country--> India (dor:India)
+      - Special_Frontier_Force (dor:Special_Frontier_Force) --doo:garrison--> India (dor:India)
+      - Sena_Medal (dor:Sena_Medal) --doo:presenter--> India (dor:India)
+      - Abhey_Singh (dor:Abhey_Singh) --dop:birthPlace--> India (dor:India)
+      - Special_Frontier_Force (dor:Special_Frontier_Force) --dop:garrison--> Chakrata (dor:Chakrata)
+attributes:
+  town: --arc-radiusB^ (dop:arcRadiusb)--> double | --nickname^ (dop:nickname)--> langString | --arc-textB^ (dop:arcTextb)--> langString | --Apr high C^ (dop:aprHighC)--> int | --Apr rain mm^ (dop:aprRainMm)--> double | --Apr low C^ (dop:aprLowC)--> int
+  country: --2a^ (dop:2a)--> langString
+  military unit: --1a^ (dop:1a)--> langString
+  military person: --award^ (doo:award)--> Resource | --title^ (dop:title)--> langString
+subgraph_id: 902
+relationships:
+  - award --doo:country--> country
+  - military unit --doo:garrison--> country
+  - award --doo:presenter--> country
+  - military person --dop:birthPlace--> country
+  - military unit --dop:garrison--> town

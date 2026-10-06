@@ -1,0 +1,88 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adam_Wade_(singer): (death date^='2022-07-07')
+      Montclair,_New_Jersey: (elevation (μ)^='91.1352')
+    relationships:
+      - Adam_Wade_(singer) (<http://dbpedia.org/resource/Adam_Wade_(singer)>) --doo:deathPlace--> Montclair,_New_Jersey (<http://dbpedia.org/resource/Montclair,_New_Jersey>)
+      - The_Super_Globetrotters (dor:The_Super_Globetrotters) --doo:voice--> Adam_Wade_(singer) (<http://dbpedia.org/resource/Adam_Wade_(singer)>)
+  '2':
+    attributes:
+      New_Jersey: (elevation (μ)^='76.2')
+      Adam_Wade_(singer): (death date^='2022-07-07')
+    relationships:
+      - Adam_Wade_(singer) (<http://dbpedia.org/resource/Adam_Wade_(singer)>) --doo:deathPlace--> New_Jersey (dor:New_Jersey)
+      - The_Super_Globetrotters (dor:The_Super_Globetrotters) --doo:voice--> Adam_Wade_(singer) (<http://dbpedia.org/resource/Adam_Wade_(singer)>)
+  '3':
+    attributes:
+      California: (elevation (μ)^='880.0')
+      Alan_Hale_Jr.: (death date^='1990-01-02')
+    relationships:
+      - Alan_Hale_Jr. (<http://dbpedia.org/resource/Alan_Hale_Jr.>) --doo:deathPlace--> California (dor:California)
+      - Gilligan's_Planet (<http://dbpedia.org/resource/Gilligan's_Planet>) --doo:voice--> Alan_Hale_Jr. (<http://dbpedia.org/resource/Alan_Hale_Jr.>)
+  '4':
+    attributes:
+      Los_Angeles: (elevation (μ)^='92.964')
+      Alan_Hale_Jr.: (death date^='1990-01-02')
+    relationships:
+      - Alan_Hale_Jr. (<http://dbpedia.org/resource/Alan_Hale_Jr.>) --doo:deathPlace--> Los_Angeles (dor:Los_Angeles)
+      - Gilligan's_Planet (<http://dbpedia.org/resource/Gilligan's_Planet>) --doo:voice--> Alan_Hale_Jr. (<http://dbpedia.org/resource/Alan_Hale_Jr.>)
+  '5':
+    attributes:
+      California: (elevation (μ)^='880.0')
+      Alan_Hale_Jr.: (death date^='1990-01-02')
+    relationships:
+      - Alan_Hale_Jr. (<http://dbpedia.org/resource/Alan_Hale_Jr.>) --doo:deathPlace--> California (dor:California)
+      - The_New_Adventures_of_Gilligan (dor:The_New_Adventures_of_Gilligan) --doo:voice--> Alan_Hale_Jr. (<http://dbpedia.org/resource/Alan_Hale_Jr.>)
+  '6':
+    attributes:
+      Alan_Reed: (death date^='1977-06-14')
+      California: (elevation (μ)^='880.0')
+    relationships:
+      - Alan_Reed (dor:Alan_Reed) --doo:deathPlace--> California (dor:California)
+      - Energy:_A_National_Issue (<http://dbpedia.org/resource/Energy:_A_National_Issue>) --doo:voice--> Alan_Reed (dor:Alan_Reed)
+  '7':
+    attributes:
+      Alan_Reed: (death date^='1977-06-14')
+      Los_Angeles: (elevation (μ)^='92.964')
+    relationships:
+      - Alan_Reed (dor:Alan_Reed) --doo:deathPlace--> Los_Angeles (dor:Los_Angeles)
+      - Energy:_A_National_Issue (<http://dbpedia.org/resource/Energy:_A_National_Issue>) --doo:voice--> Alan_Reed (dor:Alan_Reed)
+  '8':
+    attributes:
+      Alan_Reed: (death date^='1977-06-14')
+      Los_Angeles: (elevation (μ)^='92.964')
+    relationships:
+      - Alan_Reed (dor:Alan_Reed) --doo:deathPlace--> Los_Angeles (dor:Los_Angeles)
+      - Hoppity_Hooper (dor:Hoppity_Hooper) --doo:voice--> Alan_Reed (dor:Alan_Reed)
+  '9':
+    attributes:
+      Toronto: (image size^='250', elevation (μ)^='76.5')
+      Alfie_Scopp: (death date^='2021-07-24')
+    relationships:
+      - Alfie_Scopp (dor:Alfie_Scopp) --doo:deathPlace--> Toronto (dor:Toronto)
+      - Return_to_Oz_(TV_special) (<http://dbpedia.org/resource/Return_to_Oz_(TV_special)>) --doo:voice--> Alfie_Scopp (dor:Alfie_Scopp)
+  '10':
+    attributes:
+      Toronto: (image size^='250', elevation (μ)^='76.5')
+      Alfie_Scopp: (death date^='2021-07-24')
+    relationships:
+      - Alfie_Scopp (dor:Alfie_Scopp) --doo:deathPlace--> Toronto (dor:Toronto)
+      - Tales_of_the_Wizard_of_Oz (dor:Tales_of_the_Wizard_of_Oz) --doo:voice--> Alfie_Scopp (dor:Alfie_Scopp)
+attributes:
+  person: --death date^ (dop:deathDate)--> int | --awards^ (dop:awards)--> Resource | --alias^ (dop:alias)--> langString
+  Location: --image size^ (dop:imageSize)--> int | --elevation (μ)^ (doo:elevation)--> double | --leader^ (dop:leader)--> langString | --arc-radiusA^ (dop:arcRadiusa)--> double | --designated other1 date^ (dop:designatedOther1Date)--> date
+  television show: --aux^ (dop:aux)--> langString | --b^ (dop:b)--> langString | --presenter^ (doo:presenter)--> Resource
+subgraph_id: 103
+relationships:
+  - person --doo:deathPlace--> Location
+  - television show --doo:voice--> person

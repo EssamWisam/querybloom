@@ -1,0 +1,100 @@
+types:
+  saint: doo:Saint
+  person: doo:Person
+  Location: doo:Location
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Rome: (Apr record low C^='-2.5')
+      Alberic_of_Cîteaux: (death place^='http://dbpedia.org/resource/Abbey_of_Cîteaux')
+    relationships:
+      - Cistercians (dor:Cistercians) --doo:headquarter--> Rome (dor:Rome)
+      - Alice_of_Schaerbeek (dor:Alice_of_Schaerbeek) --dop:honorificSuffix--> Cistercians (dor:Cistercians)
+      - Cistercians (dor:Cistercians) --doo:foundedBy--> Alberic_of_Cîteaux (<http://dbpedia.org/resource/Alberic_of_Cîteaux>)
+  '2':
+    attributes:
+      Rome: (Apr record low C^='-2.5')
+      Bernard_of_Clairvaux: (death place^='http://dbpedia.org/resource/Champagne_(province)')
+    relationships:
+      - Cistercians (dor:Cistercians) --doo:headquarter--> Rome (dor:Rome)
+      - Alice_of_Schaerbeek (dor:Alice_of_Schaerbeek) --dop:honorificSuffix--> Cistercians (dor:Cistercians)
+      - Cistercians (dor:Cistercians) --doo:foundedBy--> Bernard_of_Clairvaux (dor:Bernard_of_Clairvaux)
+  '3':
+    attributes:
+      Rome: (Apr record low C^='-2.5')
+      Robert_of_Molesme: (death place^='http://dbpedia.org/resource/France')
+    relationships:
+      - Cistercians (dor:Cistercians) --doo:headquarter--> Rome (dor:Rome)
+      - Alice_of_Schaerbeek (dor:Alice_of_Schaerbeek) --dop:honorificSuffix--> Cistercians (dor:Cistercians)
+      - Cistercians (dor:Cistercians) --doo:foundedBy--> Robert_of_Molesme (dor:Robert_of_Molesme)
+  '4':
+    attributes:
+      Basil_Moreau: (death place^='http://dbpedia.org/resource/France')
+    relationships:
+      - Congregation_of_Holy_Cross (dor:Congregation_of_Holy_Cross) --doo:headquarter--> Italy (dor:Italy)
+      - André_Bessette (<http://dbpedia.org/resource/André_Bessette>) --dop:honorificSuffix--> Congregation_of_Holy_Cross (dor:Congregation_of_Holy_Cross)
+      - Congregation_of_Holy_Cross (dor:Congregation_of_Holy_Cross) --doo:foundedBy--> Basil_Moreau (dor:Basil_Moreau)
+  '5':
+    attributes:
+      Basil_Moreau: (death place^='http://dbpedia.org/resource/France')
+    relationships:
+      - Congregation_of_Holy_Cross (dor:Congregation_of_Holy_Cross) --doo:headquarter--> Italy (dor:Italy)
+      - Basil_Moreau (dor:Basil_Moreau) --dop:honorificSuffix--> Congregation_of_Holy_Cross (dor:Congregation_of_Holy_Cross)
+      - Congregation_of_Holy_Cross (dor:Congregation_of_Holy_Cross) --doo:foundedBy--> Basil_Moreau (dor:Basil_Moreau)
+  '6':
+    attributes:
+      Basil_Moreau: (death place^='http://dbpedia.org/resource/France')
+    relationships:
+      - Congregation_of_Holy_Cross (dor:Congregation_of_Holy_Cross) --doo:headquarter--> Italy (dor:Italy)
+      - Patrick_Peyton (dor:Patrick_Peyton) --dop:honorificSuffix--> Congregation_of_Holy_Cross (dor:Congregation_of_Holy_Cross)
+      - Congregation_of_Holy_Cross (dor:Congregation_of_Holy_Cross) --doo:foundedBy--> Basil_Moreau (dor:Basil_Moreau)
+  '7':
+    attributes:
+      Euphrasia_Eluvathingal: (attributes^='http://dbpedia.org/resource/Religious_habit')
+      Kuriakose_Elias_Chavara: (death place^='http://dbpedia.org/resource/British_Raj')
+    relationships:
+      - Congregation_of_Mother_of_Carmel (dor:Congregation_of_Mother_of_Carmel) --doo:headquarter--> Kerala (dor:Kerala)
+      - Euphrasia_Eluvathingal (dor:Euphrasia_Eluvathingal) --dop:honorificSuffix--> Congregation_of_Mother_of_Carmel (dor:Congregation_of_Mother_of_Carmel)
+      - Congregation_of_Mother_of_Carmel (dor:Congregation_of_Mother_of_Carmel) --doo:foundedBy--> Kuriakose_Elias_Chavara (dor:Kuriakose_Elias_Chavara)
+  '8':
+    attributes:
+      Dublin: (Apr record low C^='-2.5')
+      Frank_Duff: (death place^='http://dbpedia.org/resource/Dublin')
+      Alfie_Lambe: (attributes^='http://dbpedia.org/resource/Rosary')
+    relationships:
+      - Legion_of_Mary (dor:Legion_of_Mary) --doo:headquarter--> Dublin (dor:Dublin)
+      - Alfie_Lambe (dor:Alfie_Lambe) --dop:honorificSuffix--> Legion_of_Mary (dor:Legion_of_Mary)
+      - Legion_of_Mary (dor:Legion_of_Mary) --doo:foundedBy--> Frank_Duff (dor:Frank_Duff)
+  '9':
+    attributes:
+      Ireland: (Apr record low C^='−7.7')
+      Frank_Duff: (death place^='http://dbpedia.org/resource/Dublin')
+      Alfie_Lambe: (attributes^='http://dbpedia.org/resource/Rosary')
+    relationships:
+      - Legion_of_Mary (dor:Legion_of_Mary) --doo:headquarter--> Ireland (dor:Ireland)
+      - Alfie_Lambe (dor:Alfie_Lambe) --dop:honorificSuffix--> Legion_of_Mary (dor:Legion_of_Mary)
+      - Legion_of_Mary (dor:Legion_of_Mary) --doo:foundedBy--> Frank_Duff (dor:Frank_Duff)
+  '10':
+    attributes:
+      Dublin: (Apr record low C^='-2.5')
+      Edel_Quinn: (attributes^='http://dbpedia.org/resource/Rosary')
+      Frank_Duff: (death place^='http://dbpedia.org/resource/Dublin')
+    relationships:
+      - Legion_of_Mary (dor:Legion_of_Mary) --doo:headquarter--> Dublin (dor:Dublin)
+      - Edel_Quinn (dor:Edel_Quinn) --dop:honorificSuffix--> Legion_of_Mary (dor:Legion_of_Mary)
+      - Legion_of_Mary (dor:Legion_of_Mary) --doo:foundedBy--> Frank_Duff (dor:Frank_Duff)
+attributes:
+  saint: --attributes^ (dop:attributes)--> langString
+  person: --spouse^ (dop:spouse)--> date | --source^ (dop:source)--> langString | --death place^ (doo:deathPlace)--> Resource | --image^ (dop:image)--> langString | --image size^ (dop:imageSize)--> int
+  Location: --owner^ (dop:owner)--> langString | --Apr record low C^ (dop:aprRecordLowC)--> double | --Apr record low C^ (dop:aprRecordLowC)--> int | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --area^ (dop:area)--> double
+subgraph_id: 502
+relationships:
+  - organisation --doo:headquarter--> Location
+  - saint --dop:honorificSuffix--> organisation
+  - organisation --doo:foundedBy--> person

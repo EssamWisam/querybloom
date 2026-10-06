@@ -1,0 +1,106 @@
+types:
+  lake: doo:Lake
+  river: doo:River
+  train: doo:Train
+  Location: doo:Location
+  settlement: doo:Settlement
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Amtrak (dor:Amtrak) --doo:location--> Ontario (dor:Ontario)
+      - Acela_Express_(trainset) (<http://dbpedia.org/resource/Acela_Express_(trainset)>) --doo:operator--> Amtrak (dor:Amtrak)
+      - Again_River (dor:Again_River) --doo:mouthPlace--> Ontario (dor:Ontario)
+      - Big_Rideau_Lake (dor:Big_Rideau_Lake) --doo:location--> Ontario (dor:Ontario)
+      - Upper_Rideau_Lake (dor:Upper_Rideau_Lake) --doo:outflow--> Big_Rideau_Lake (dor:Big_Rideau_Lake)
+  '2':
+    attributes: {}
+    relationships:
+      - Amtrak (dor:Amtrak) --doo:location--> Ontario (dor:Ontario)
+      - Amfleet (dor:Amfleet) --doo:operator--> Amtrak (dor:Amtrak)
+      - Again_River (dor:Again_River) --doo:mouthPlace--> Ontario (dor:Ontario)
+      - Big_Rideau_Lake (dor:Big_Rideau_Lake) --doo:location--> Ontario (dor:Ontario)
+      - Upper_Rideau_Lake (dor:Upper_Rideau_Lake) --doo:outflow--> Big_Rideau_Lake (dor:Big_Rideau_Lake)
+  '3':
+    attributes: {}
+    relationships:
+      - Amtrak (dor:Amtrak) --doo:location--> Ontario (dor:Ontario)
+      - Avelia_Liberty (dor:Avelia_Liberty) --doo:operator--> Amtrak (dor:Amtrak)
+      - Again_River (dor:Again_River) --doo:mouthPlace--> Ontario (dor:Ontario)
+      - Big_Rideau_Lake (dor:Big_Rideau_Lake) --doo:location--> Ontario (dor:Ontario)
+      - Upper_Rideau_Lake (dor:Upper_Rideau_Lake) --doo:outflow--> Big_Rideau_Lake (dor:Big_Rideau_Lake)
+  '4':
+    attributes:
+      Hamburg: (aprPrecipitationDays='10')
+    relationships:
+      - Hamburg_S-Bahn (dor:Hamburg_S-Bahn) --doo:location--> Hamburg (dor:Hamburg)
+      - DBAG_Class_474 (dor:DBAG_Class_474) --doo:operator--> Hamburg_S-Bahn (dor:Hamburg_S-Bahn)
+      - Alster (dor:Alster) --doo:mouthPlace--> Hamburg (dor:Hamburg)
+      - Binnenalster (dor:Binnenalster) --doo:location--> Hamburg (dor:Hamburg)
+      - Außenalster (<http://dbpedia.org/resource/Außenalster>) --doo:outflow--> Binnenalster (dor:Binnenalster)
+  '5':
+    attributes:
+      Hamburg: (aprPrecipitationDays='10')
+    relationships:
+      - Hamburg_S-Bahn (dor:Hamburg_S-Bahn) --doo:location--> Hamburg (dor:Hamburg)
+      - DBAG_Class_474 (dor:DBAG_Class_474) --doo:operator--> Hamburg_S-Bahn (dor:Hamburg_S-Bahn)
+      - Osterbek (dor:Osterbek) --doo:mouthPlace--> Hamburg (dor:Hamburg)
+      - Binnenalster (dor:Binnenalster) --doo:location--> Hamburg (dor:Hamburg)
+      - Außenalster (<http://dbpedia.org/resource/Außenalster>) --doo:outflow--> Binnenalster (dor:Binnenalster)
+  '6':
+    attributes:
+      Hamburg: (aprPrecipitationDays='10')
+    relationships:
+      - Hamburg_S-Bahn (dor:Hamburg_S-Bahn) --doo:location--> Hamburg (dor:Hamburg)
+      - DBAG_Class_474 (dor:DBAG_Class_474) --doo:operator--> Hamburg_S-Bahn (dor:Hamburg_S-Bahn)
+      - Wandse (dor:Wandse) --doo:mouthPlace--> Hamburg (dor:Hamburg)
+      - Binnenalster (dor:Binnenalster) --doo:location--> Hamburg (dor:Hamburg)
+      - Außenalster (<http://dbpedia.org/resource/Außenalster>) --doo:outflow--> Binnenalster (dor:Binnenalster)
+  '7':
+    attributes: {}
+    relationships:
+      - Conrail (dor:Conrail) --doo:location--> Quebec (dor:Quebec)
+      - Arrow_(railcar) (<http://dbpedia.org/resource/Arrow_(railcar)>) --doo:operator--> Conrail (dor:Conrail)
+      - Acadia_River (dor:Acadia_River) --doo:mouthPlace--> Quebec (dor:Quebec)
+      - Blanc_Lake_(Saint-Ubalde) (<http://dbpedia.org/resource/Blanc_Lake_(Saint-Ubalde)>) --doo:location--> Quebec (dor:Quebec)
+      - Emeraude_Lake (dor:Emeraude_Lake) --doo:outflow--> Blanc_Lake_(Saint-Ubalde) (<http://dbpedia.org/resource/Blanc_Lake_(Saint-Ubalde)>)
+  '8':
+    attributes: {}
+    relationships:
+      - Conrail (dor:Conrail) --doo:location--> Quebec (dor:Quebec)
+      - Budd_Silverliner (dor:Budd_Silverliner) --doo:operator--> Conrail (dor:Conrail)
+      - Acadia_River (dor:Acadia_River) --doo:mouthPlace--> Quebec (dor:Quebec)
+      - Blanc_Lake_(Saint-Ubalde) (<http://dbpedia.org/resource/Blanc_Lake_(Saint-Ubalde)>) --doo:location--> Quebec (dor:Quebec)
+      - Emeraude_Lake (dor:Emeraude_Lake) --doo:outflow--> Blanc_Lake_(Saint-Ubalde) (<http://dbpedia.org/resource/Blanc_Lake_(Saint-Ubalde)>)
+  '9':
+    attributes: {}
+    relationships:
+      - Conrail (dor:Conrail) --doo:location--> Quebec (dor:Quebec)
+      - Erie_Lackawanna_MU_Cars (dor:Erie_Lackawanna_MU_Cars) --doo:operator--> Conrail (dor:Conrail)
+      - Acadia_River (dor:Acadia_River) --doo:mouthPlace--> Quebec (dor:Quebec)
+      - Blanc_Lake_(Saint-Ubalde) (<http://dbpedia.org/resource/Blanc_Lake_(Saint-Ubalde)>) --doo:location--> Quebec (dor:Quebec)
+      - Emeraude_Lake (dor:Emeraude_Lake) --doo:outflow--> Blanc_Lake_(Saint-Ubalde) (<http://dbpedia.org/resource/Blanc_Lake_(Saint-Ubalde)>)
+  '10':
+    attributes: {}
+    relationships:
+      - Chicago,_Burlington_and_Quincy_Railroad (<http://dbpedia.org/resource/Chicago,_Burlington_and_Quincy_Railroad>) --doo:location--> Minnesota (dor:Minnesota)
+      - Great_Dome_(railcar) (<http://dbpedia.org/resource/Great_Dome_(railcar)>) --doo:operator--> Chicago,_Burlington_and_Quincy_Railroad (<http://dbpedia.org/resource/Chicago,_Burlington_and_Quincy_Railroad>)
+      - Blue_Earth_River (dor:Blue_Earth_River) --doo:mouthPlace--> Minnesota (dor:Minnesota)
+      - Crescent_Lake_(Minnesota) (<http://dbpedia.org/resource/Crescent_Lake_(Minnesota)>) --doo:location--> Minnesota (dor:Minnesota)
+      - Bouder_Lake (dor:Bouder_Lake) --doo:outflow--> Crescent_Lake_(Minnesota) (<http://dbpedia.org/resource/Crescent_Lake_(Minnesota)>)
+attributes:
+  Location: --arc-gapA^ (dop:arcGapa)--> int | --Apr high C^ (dop:aprHighC)--> double | --class^ (dop:class)--> langString | --arc-textA^ (dop:arcTexta)--> langString | --1a^ (dop:1a)--> langString | --border^ (dop:border)--> langString | --added^ (dop:added)--> date | --commons^ (dop:commons)--> langString | --Apr low F^ (dop:aprLowF)--> int
+  settlement: --aprPrecipitationDays (dop:aprPrecipitationDays)--> int
+subgraph_id: 533
+relationships:
+  - public transit system --doo:location--> settlement
+  - train --doo:operator--> public transit system
+  - river --doo:mouthPlace--> settlement
+  - lake --doo:location--> settlement
+  - Location --doo:outflow--> lake

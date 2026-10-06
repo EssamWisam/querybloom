@@ -1,0 +1,109 @@
+types:
+  ship: doo:Ship
+  school: doo:School
+  Location: doo:Location
+  politician: doo:Politician
+  soccer club: doo:SoccerClub
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      New_York_City: (direction^='vertical')
+      Abbot_Low_Moffat: (has abstract^='Abbot Low Moffat (May 12, 1901 – April 17, 1996) was an American politician from New York.', death date^='1996-04-17')
+    relationships:
+      - Columbia_Law_School (dor:Columbia_Law_School) --dop:city--> New_York_City (dor:New_York_City)
+      - SS_Gulfamerica (dor:SS_Gulfamerica) --doo:operator--> New_York_City (dor:New_York_City)
+      - Abbot_Low_Moffat (dor:Abbot_Low_Moffat) --dop:almaMater--> Columbia_Law_School (dor:Columbia_Law_School)
+      - Brooklyn_Bolts (dor:Brooklyn_Bolts) --doo:city--> New_York_City (dor:New_York_City)
+  '2':
+    attributes:
+      New_York_City: (direction^='vertical')
+      Abbot_Low_Moffat: (has abstract^='Abbot Low Moffat (May 12, 1901 – April 17, 1996) was an American politician from New York.', death date^='1996-04-17')
+    relationships:
+      - Columbia_Law_School (dor:Columbia_Law_School) --dop:city--> New_York_City (dor:New_York_City)
+      - SS_Gulfamerica (dor:SS_Gulfamerica) --doo:operator--> New_York_City (dor:New_York_City)
+      - Abbot_Low_Moffat (dor:Abbot_Low_Moffat) --dop:almaMater--> Columbia_Law_School (dor:Columbia_Law_School)
+      - Monroe_College (dor:Monroe_College) --doo:city--> New_York_City (dor:New_York_City)
+  '3':
+    attributes:
+      New_York_City: (direction^='vertical')
+      Abbot_Low_Moffat: (has abstract^='Abbot Low Moffat (May 12, 1901 – April 17, 1996) was an American politician from New York.', death date^='1996-04-17')
+    relationships:
+      - Columbia_Law_School (dor:Columbia_Law_School) --dop:city--> New_York_City (dor:New_York_City)
+      - SS_James_B._Stephens (dor:SS_James_B._Stephens) --doo:operator--> New_York_City (dor:New_York_City)
+      - Abbot_Low_Moffat (dor:Abbot_Low_Moffat) --dop:almaMater--> Columbia_Law_School (dor:Columbia_Law_School)
+      - Brooklyn_Bolts (dor:Brooklyn_Bolts) --doo:city--> New_York_City (dor:New_York_City)
+  '4':
+    attributes:
+      Ahn_Dae-hee: (has abstract^='Ahn Dae-hee (* 31. März 1955 in Haman, Gyeongsangnam-do) ist ein südkoreanischer Jurist und Politiker. Er ist Mitglied der konservativen Saenuri-Partei.')
+    relationships:
+      - Kyunggi_High_School (dor:Kyunggi_High_School) --dop:city--> Seoul (dor:Seoul)
+      - Stellar_Daisy (dor:Stellar_Daisy) --doo:operator--> Seoul (dor:Seoul)
+      - Ahn_Dae-hee (dor:Ahn_Dae-hee) --dop:almaMater--> Kyunggi_High_School (dor:Kyunggi_High_School)
+      - Chung-Ang_University (dor:Chung-Ang_University) --doo:city--> Seoul (dor:Seoul)
+  '5':
+    attributes:
+      Ahn_Dae-hee: (has abstract^='Ahn Dae-hee (* 31. März 1955 in Haman, Gyeongsangnam-do) ist ein südkoreanischer Jurist und Politiker. Er ist Mitglied der konservativen Saenuri-Partei.')
+    relationships:
+      - Kyunggi_High_School (dor:Kyunggi_High_School) --dop:city--> Seoul (dor:Seoul)
+      - Stellar_Daisy (dor:Stellar_Daisy) --doo:operator--> Seoul (dor:Seoul)
+      - Ahn_Dae-hee (dor:Ahn_Dae-hee) --dop:almaMater--> Kyunggi_High_School (dor:Kyunggi_High_School)
+      - Dongguk_University (dor:Dongguk_University) --doo:city--> Seoul (dor:Seoul)
+  '6':
+    attributes:
+      Ahn_Dae-hee: (has abstract^='Ahn Dae-hee (* 31. März 1955 in Haman, Gyeongsangnam-do) ist ein südkoreanischer Jurist und Politiker. Er ist Mitglied der konservativen Saenuri-Partei.')
+    relationships:
+      - Kyunggi_High_School (dor:Kyunggi_High_School) --dop:city--> Seoul (dor:Seoul)
+      - Stellar_Daisy (dor:Stellar_Daisy) --doo:operator--> Seoul (dor:Seoul)
+      - Ahn_Dae-hee (dor:Ahn_Dae-hee) --dop:almaMater--> Kyunggi_High_School (dor:Kyunggi_High_School)
+      - Hanyang_University (dor:Hanyang_University) --doo:city--> Seoul (dor:Seoul)
+  '7':
+    attributes:
+      London: (direction^='vertical')
+      Alex_Hutton-Mills: (has abstract^='Alex Hutton-Mills is a Ghanaian politician and was a member of the first parliament of the second Republic of Ghana. He represented the Ga constituency under the membership of the United Nationalist P...')
+    relationships:
+      - Dulwich_College (dor:Dulwich_College) --dop:city--> London (dor:London)
+      - MV_Atheltemplar (dor:MV_Atheltemplar) --doo:operator--> London (dor:London)
+      - Alex_Hutton-Mills (dor:Alex_Hutton-Mills) --dop:almaMater--> Dulwich_College (dor:Dulwich_College)
+      - Lewisham_College (dor:Lewisham_College) --doo:city--> London (dor:London)
+  '8':
+    attributes:
+      London: (direction^='vertical')
+      Alex_Hutton-Mills: (has abstract^='Alex Hutton-Mills is a Ghanaian politician and was a member of the first parliament of the second Republic of Ghana. He represented the Ga constituency under the membership of the United Nationalist P...')
+    relationships:
+      - Dulwich_College (dor:Dulwich_College) --dop:city--> London (dor:London)
+      - MV_Empire_MacDermott (dor:MV_Empire_MacDermott) --doo:operator--> London (dor:London)
+      - Alex_Hutton-Mills (dor:Alex_Hutton-Mills) --dop:almaMater--> Dulwich_College (dor:Dulwich_College)
+      - Lewisham_College (dor:Lewisham_College) --doo:city--> London (dor:London)
+  '9':
+    attributes:
+      London: (direction^='vertical')
+      Alex_Hutton-Mills: (has abstract^='Alex Hutton-Mills is a Ghanaian politician and was a member of the first parliament of the second Republic of Ghana. He represented the Ga constituency under the membership of the United Nationalist P...')
+    relationships:
+      - Dulwich_College (dor:Dulwich_College) --dop:city--> London (dor:London)
+      - MV_Languedoc (dor:MV_Languedoc) --doo:operator--> London (dor:London)
+      - Alex_Hutton-Mills (dor:Alex_Hutton-Mills) --dop:almaMater--> Dulwich_College (dor:Dulwich_College)
+      - Lewisham_College (dor:Lewisham_College) --doo:city--> London (dor:London)
+  '10':
+    attributes:
+      Istanbul: (direction^='vertical')
+      Ali_Rana_Tarhan: (has abstract^='Ali Rana Tarhan (1883 – 25 March 1956) was a Turkish politician, and a member of the Republican People''s Party CHP.', death date^='1956-03-25')
+    relationships:
+      - Galatasaray_High_School (dor:Galatasaray_High_School) --dop:city--> Istanbul (dor:Istanbul)
+      - Seli_1 (dor:Seli_1) --doo:operator--> Istanbul (dor:Istanbul)
+      - Ali_Rana_Tarhan (dor:Ali_Rana_Tarhan) --dop:almaMater--> Galatasaray_High_School (dor:Galatasaray_High_School)
+      - Beyoğluspor (<http://dbpedia.org/resource/Beyoğluspor>) --doo:city--> Istanbul (dor:Istanbul)
+attributes:
+  ship: --partof^ (dop:partof)--> langString
+  Location: --bot^ (dop:bot)--> langString | --winner^ (dop:winner)--> langString | --direction^ (dop:direction)--> langString | --logo^ (dop:logo)--> langString | --capital^ (doo:capital)--> Resource | --arc-gapB^ (dop:arcGapb)--> double
+  politician: --bgcolor^ (dop:bgcolor)--> langString | --has abstract^ (doo:abstract)--> langString | --child^ (doo:child)--> Resource | --source^ (dop:source)--> Resource | --death date^ (dop:deathDate)--> int
+subgraph_id: 509
+relationships:
+  - school --dop:city--> Location
+  - ship --doo:operator--> Location
+  - politician --dop:almaMater--> school
+  - soccer club --doo:city--> Location

@@ -1,0 +1,84 @@
+types:
+  city district: doo:CityDistrict
+  office holder: doo:OfficeHolder
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Richard_Aluwihare: (children^='Phyllis Sita, Ena de Silva', child^='http://dbpedia.org/resource/Ena_de_Silva')
+      Central_Province,_Sri_Lanka: (area total km^='5674')
+    relationships:
+      - Richard_Aluwihare (dor:Richard_Aluwihare) --doo:residence--> Aluvihare (dor:Aluvihare)
+      - Aluvihare (dor:Aluvihare) --doo:subdivision--> Central_Province,_Sri_Lanka (<http://dbpedia.org/resource/Central_Province,_Sri_Lanka>)
+  '2':
+    attributes:
+      Rick_Taylor: (children^='2')
+      Montgomery_County,_Pennsylvania: (width^='220')
+    relationships:
+      - Rick_Taylor (dor:Rick_Taylor) --doo:residence--> Ambler,_Pennsylvania (<http://dbpedia.org/resource/Ambler,_Pennsylvania>)
+      - Ambler,_Pennsylvania (<http://dbpedia.org/resource/Ambler,_Pennsylvania>) --doo:subdivision--> Montgomery_County,_Pennsylvania (<http://dbpedia.org/resource/Montgomery_County,_Pennsylvania>)
+  '3':
+    attributes:
+      Edward_Staback: (children^='Ed Jr., Randy, Sharon')
+    relationships:
+      - Edward_Staback (dor:Edward_Staback) --doo:residence--> Archbald,_Pennsylvania (<http://dbpedia.org/resource/Archbald,_Pennsylvania>)
+      - Archbald,_Pennsylvania (<http://dbpedia.org/resource/Archbald,_Pennsylvania>) --doo:subdivision--> Lackawanna_County,_Pennsylvania (<http://dbpedia.org/resource/Lackawanna_County,_Pennsylvania>)
+  '4':
+    attributes:
+      Pennsylvania: (width^='129', area total km^='119283')
+      Edward_Staback: (children^='Ed Jr., Randy, Sharon')
+    relationships:
+      - Edward_Staback (dor:Edward_Staback) --doo:residence--> Archbald,_Pennsylvania (<http://dbpedia.org/resource/Archbald,_Pennsylvania>)
+      - Archbald,_Pennsylvania (<http://dbpedia.org/resource/Archbald,_Pennsylvania>) --doo:subdivision--> Pennsylvania (dor:Pennsylvania)
+  '5':
+    attributes: {}
+    relationships:
+      - Frank_Farina_(politician) (<http://dbpedia.org/resource/Frank_Farina_(politician)>) --doo:residence--> Archbald,_Pennsylvania (<http://dbpedia.org/resource/Archbald,_Pennsylvania>)
+      - Archbald,_Pennsylvania (<http://dbpedia.org/resource/Archbald,_Pennsylvania>) --doo:subdivision--> Lackawanna_County,_Pennsylvania (<http://dbpedia.org/resource/Lackawanna_County,_Pennsylvania>)
+  '6':
+    attributes:
+      Honey_Benjamin: (children^='Hamin J.Benjamin,')
+      Kollam_district: (width^='70.0', area total km^='2491')
+    relationships:
+      - Honey_Benjamin (dor:Honey_Benjamin) --doo:residence--> Asramam (dor:Asramam)
+      - Asramam (dor:Asramam) --doo:subdivision--> Kollam_district (dor:Kollam_district)
+  '7':
+    attributes:
+      Steve_Corodemus: (children^='one daughter and one son')
+      Monmouth_County,_New_Jersey: (width^='150')
+    relationships:
+      - Steve_Corodemus (dor:Steve_Corodemus) --doo:residence--> Atlantic_Highlands,_New_Jersey (<http://dbpedia.org/resource/Atlantic_Highlands,_New_Jersey>)
+      - Atlantic_Highlands,_New_Jersey (<http://dbpedia.org/resource/Atlantic_Highlands,_New_Jersey>) --doo:subdivision--> Monmouth_County,_New_Jersey (<http://dbpedia.org/resource/Monmouth_County,_New_Jersey>)
+  '8':
+    attributes:
+      New_Jersey: (width^='128', area total km^='22591.38')
+      Steve_Corodemus: (children^='one daughter and one son')
+    relationships:
+      - Steve_Corodemus (dor:Steve_Corodemus) --doo:residence--> Atlantic_Highlands,_New_Jersey (<http://dbpedia.org/resource/Atlantic_Highlands,_New_Jersey>)
+      - Atlantic_Highlands,_New_Jersey (<http://dbpedia.org/resource/Atlantic_Highlands,_New_Jersey>) --doo:subdivision--> New_Jersey (dor:New_Jersey)
+  '9':
+    attributes:
+      Kolkata_district: (area total km^='185')
+    relationships:
+      - Pradip_Bhattacharya (dor:Pradip_Bhattacharya) --doo:residence--> Ballygunge (dor:Ballygunge)
+      - Ballygunge (dor:Ballygunge) --doo:subdivision--> Kolkata_district (dor:Kolkata_district)
+  '10':
+    attributes:
+      Priya_Dutt: (birth name^='Priya Balraj Dutt', children^='2')
+      Mumbai_Suburban_district: (area total km^='446')
+    relationships:
+      - Priya_Dutt (dor:Priya_Dutt) --doo:residence--> Bandra (dor:Bandra)
+      - Bandra (dor:Bandra) --doo:subdivision--> Mumbai_Suburban_district (dor:Mumbai_Suburban_district)
+attributes:
+  city district: --Aug precipitation inch^ (dop:augPrecipitationInch)--> double
+  office holder: --birth name^ (dop:birthName)--> langString | --children^ (dop:children)--> int | --d^ (dop:d)--> gMonthDay | --child^ (doo:child)--> Resource | --parent^ (doo:parent)--> Resource | --2p^ (dop:2p)--> int | --active years start year^ (doo:activeYearsStartYear)--> gYear
+  administrative region: --width^ (dop:width)--> langString | --affiliation^ (dop:affiliation)--> Resource | --area total km^ (dop:areaTotalKm)--> int | --Aug precipitation days^ (dop:augPrecipitationDays)--> int
+subgraph_id: 117
+relationships:
+  - office holder --doo:residence--> city district
+  - city district --doo:subdivision--> administrative region

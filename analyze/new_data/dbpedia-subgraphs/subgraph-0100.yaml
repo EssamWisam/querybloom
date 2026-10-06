@@ -1,0 +1,129 @@
+types:
+  road: doo:Road
+  town: doo:Town
+  country: doo:Country
+  settlement: doo:Settlement
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Tiraspol: (Aug precipitation mm^='49')
+      M4_highway_(Moldova): (country^='MDA')
+      Shevchenko_Transnistria_State_University: (motto^='"Through Adversity to the Stars"')
+    relationships:
+      - M4_highway_(Moldova) (<http://dbpedia.org/resource/M4_highway_(Moldova)>) --doo:routeJunction--> Tiraspol (dor:Tiraspol)
+      - M4_highway_(Moldova) (<http://dbpedia.org/resource/M4_highway_(Moldova)>) --doo:routeJunction--> Dubăsari (<http://dbpedia.org/resource/Dubăsari>)
+      - Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester (dor:Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester) --doo:capital--> Tiraspol (dor:Tiraspol)
+      - Shevchenko_Transnistria_State_University (dor:Shevchenko_Transnistria_State_University) --doo:city--> Tiraspol (dor:Tiraspol)
+  '2':
+    attributes:
+      Tiraspol: (Aug precipitation mm^='49')
+      Shevchenko_Transnistria_State_University: (motto^='"Through Adversity to the Stars"')
+    relationships:
+      - M4_highway_(Moldova) (<http://dbpedia.org/resource/M4_highway_(Moldova)>) --doo:routeJunction--> Tiraspol (dor:Tiraspol)
+      - M4_highway_(Moldova) (<http://dbpedia.org/resource/M4_highway_(Moldova)>) --doo:routeJunction--> Rîbnița (<http://dbpedia.org/resource/Rîbnița>)
+      - Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester (dor:Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester) --doo:capital--> Tiraspol (dor:Tiraspol)
+      - Shevchenko_Transnistria_State_University (dor:Shevchenko_Transnistria_State_University) --doo:city--> Tiraspol (dor:Tiraspol)
+  '3':
+    attributes:
+      Tiraspol: (Aug precipitation mm^='49')
+      M4_highway_(Moldova): (country^='MDA')
+      Shevchenko_Transnistria_State_University: (motto^='"Through Adversity to the Stars"')
+    relationships:
+      - M4_highway_(Moldova) (<http://dbpedia.org/resource/M4_highway_(Moldova)>) --doo:routeJunction--> Tiraspol (dor:Tiraspol)
+      - M4_highway_(Moldova) (<http://dbpedia.org/resource/M4_highway_(Moldova)>) --doo:routeJunction--> Sănătăuca (<http://dbpedia.org/resource/Sănătăuca>)
+      - Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester (dor:Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester) --doo:capital--> Tiraspol (dor:Tiraspol)
+      - Shevchenko_Transnistria_State_University (dor:Shevchenko_Transnistria_State_University) --doo:city--> Tiraspol (dor:Tiraspol)
+  '4':
+    attributes:
+      Seville: (Aug precipitation mm^='5')
+      A_Coruña: (Apr precipitation mm^='88', area total (m2)^='37830000.0')
+      Almohad_Caliphate: (image^='أعز ما يطلب 01.jpg')
+      European_route_E1: (country^='EUR')
+      International_University_of_Andalucía: (motto^='Expanding knowledge')
+    relationships:
+      - European_route_E1 (dor:European_route_E1) --doo:routeJunction--> Seville (dor:Seville)
+      - European_route_E1 (dor:European_route_E1) --doo:routeJunction--> A_Coruña (<http://dbpedia.org/resource/A_Coruña>)
+      - Almohad_Caliphate (dor:Almohad_Caliphate) --doo:capital--> Seville (dor:Seville)
+      - International_University_of_Andalucía (<http://dbpedia.org/resource/International_University_of_Andalucía>) --doo:city--> Seville (dor:Seville)
+  '5':
+    attributes:
+      Seville: (Aug precipitation mm^='5')
+      Aveiro,_Portugal: (Apr precipitation mm^='91.2')
+      Almohad_Caliphate: (image^='أعز ما يطلب 01.jpg')
+      European_route_E1: (country^='EUR')
+      International_University_of_Andalucía: (motto^='Expanding knowledge')
+    relationships:
+      - European_route_E1 (dor:European_route_E1) --doo:routeJunction--> Seville (dor:Seville)
+      - European_route_E1 (dor:European_route_E1) --doo:routeJunction--> Aveiro,_Portugal (<http://dbpedia.org/resource/Aveiro,_Portugal>)
+      - Almohad_Caliphate (dor:Almohad_Caliphate) --doo:capital--> Seville (dor:Seville)
+      - International_University_of_Andalucía (<http://dbpedia.org/resource/International_University_of_Andalucía>) --doo:city--> Seville (dor:Seville)
+  '6':
+    attributes:
+      Belfast: (Apr precipitation mm^='60.4', area total (m2)^='132503791.7248')
+      Seville: (Aug precipitation mm^='5')
+      Almohad_Caliphate: (image^='أعز ما يطلب 01.jpg')
+      European_route_E1: (country^='EUR')
+      International_University_of_Andalucía: (motto^='Expanding knowledge')
+    relationships:
+      - European_route_E1 (dor:European_route_E1) --doo:routeJunction--> Seville (dor:Seville)
+      - European_route_E1 (dor:European_route_E1) --doo:routeJunction--> Belfast (dor:Belfast)
+      - Almohad_Caliphate (dor:Almohad_Caliphate) --doo:capital--> Seville (dor:Seville)
+      - International_University_of_Andalucía (<http://dbpedia.org/resource/International_University_of_Andalucía>) --doo:city--> Seville (dor:Seville)
+  '7':
+    attributes:
+      Kars: (Aug precipitation mm^='45.1')
+      Gyumri: (Apr precipitation mm^='46.3', area total (m2)^='54000000.0')
+      European_route_E691: (country^='EUR')
+    relationships:
+      - European_route_E691 (dor:European_route_E691) --doo:routeJunction--> Kars (dor:Kars)
+      - European_route_E691 (dor:European_route_E691) --doo:routeJunction--> Gyumri (dor:Gyumri)
+      - Bagratid_Armenia (dor:Bagratid_Armenia) --doo:capital--> Kars (dor:Kars)
+      - Kafkas_University (dor:Kafkas_University) --doo:city--> Kars (dor:Kars)
+  '8':
+    attributes:
+      Banja_Luka: (Apr precipitation mm^='86.5', area total (m2)^='1238910000.0')
+      European_route_E661: (country^='EUR')
+      University_of_Travnik: (motto^='Science to Success')
+    relationships:
+      - European_route_E661 (dor:European_route_E661) --doo:routeJunction--> Travnik (dor:Travnik)
+      - European_route_E661 (dor:European_route_E661) --doo:routeJunction--> Banja_Luka (dor:Banja_Luka)
+      - Bosnia_Eyalet (dor:Bosnia_Eyalet) --doo:capital--> Travnik (dor:Travnik)
+      - University_of_Travnik (dor:University_of_Travnik) --doo:city--> Travnik (dor:Travnik)
+  '9':
+    attributes:
+      Barcs: (area total (m2)^='122900000.0')
+      European_route_E661: (country^='EUR')
+      University_of_Travnik: (motto^='Science to Success')
+    relationships:
+      - European_route_E661 (dor:European_route_E661) --doo:routeJunction--> Travnik (dor:Travnik)
+      - European_route_E661 (dor:European_route_E661) --doo:routeJunction--> Barcs (dor:Barcs)
+      - Bosnia_Eyalet (dor:Bosnia_Eyalet) --doo:capital--> Travnik (dor:Travnik)
+      - University_of_Travnik (dor:University_of_Travnik) --doo:city--> Travnik (dor:Travnik)
+  '10':
+    attributes:
+      Daruvar: (area total (m2)^='64000000.0')
+      European_route_E661: (country^='EUR')
+      University_of_Travnik: (motto^='Science to Success')
+    relationships:
+      - European_route_E661 (dor:European_route_E661) --doo:routeJunction--> Travnik (dor:Travnik)
+      - European_route_E661 (dor:European_route_E661) --doo:routeJunction--> Daruvar (dor:Daruvar)
+      - Bosnia_Eyalet (dor:Bosnia_Eyalet) --doo:capital--> Travnik (dor:Travnik)
+      - University_of_Travnik (dor:University_of_Travnik) --doo:city--> Travnik (dor:Travnik)
+attributes:
+  road: --country^ (dop:country)--> langString | --wordnet_type (dop:wordnet_type)--> Resource
+  town: --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --auto^ (dop:auto)--> langString
+  country: --age^ (dop:age)--> date | --image^ (dop:image)--> langString
+  settlement: --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --url^ (dop:url)--> Resource | --named for^ (dop:namedFor)--> Resource | --bot^ (dop:bot)--> langString | --area total (m2)^ (doo:areaTotal)--> double | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+  university: --motto^ (doo:motto)--> string
+subgraph_id: 100
+relationships:
+  - road --doo:routeJunction--> town
+  - road --doo:routeJunction--> settlement
+  - country --doo:capital--> town
+  - university --doo:city--> town

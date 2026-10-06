@@ -1,0 +1,92 @@
+types:
+  venue: doo:Venue
+  architect: doo:Architect
+  settlement: doo:Settlement
+  basketball team: doo:BasketballTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Espoo_United_(basketball): (capacity^='6982')
+    relationships:
+      - Espoo_Metro_Areena (dor:Espoo_Metro_Areena) --doo:location--> Espoo (dor:Espoo)
+      - Aarno_Ruusuvuori (dor:Aarno_Ruusuvuori) --doo:significantBuilding--> Espoo (dor:Espoo)
+      - Espoo_Metro_Areena (dor:Espoo_Metro_Areena) --dop:tenants--> Espoo_United_(basketball) (<http://dbpedia.org/resource/Espoo_United_(basketball)>)
+  '2':
+    attributes:
+      Helsinki: (Apr record low C^='−16.3', Apr low C^='0.1')
+      Helsinki_Seagulls: (date^='3', capacity^='2000')
+    relationships:
+      - Töölö_Sports_Hall (<http://dbpedia.org/resource/Töölö_Sports_Hall>) --doo:location--> Helsinki (dor:Helsinki)
+      - Aarno_Ruusuvuori (dor:Aarno_Ruusuvuori) --doo:significantBuilding--> Helsinki (dor:Helsinki)
+      - Töölö_Sports_Hall (<http://dbpedia.org/resource/Töölö_Sports_Hall>) --dop:tenants--> Helsinki_Seagulls (dor:Helsinki_Seagulls)
+  '3':
+    attributes:
+      Helsinki: (Apr record low C^='−16.3', Apr low C^='0.1')
+    relationships:
+      - Töölö_Sports_Hall (<http://dbpedia.org/resource/Töölö_Sports_Hall>) --doo:location--> Helsinki (dor:Helsinki)
+      - Aarno_Ruusuvuori (dor:Aarno_Ruusuvuori) --doo:significantBuilding--> Helsinki (dor:Helsinki)
+      - Töölö_Sports_Hall (<http://dbpedia.org/resource/Töölö_Sports_Hall>) --dop:tenants--> Torpan_Pojat (dor:Torpan_Pojat)
+  '4':
+    attributes:
+      Leeuwarden: (Apr record low C^='-6.6', Apr low C^='4.2')
+      Aris_Leeuwarden: (date^='4', capacity^='1700')
+    relationships:
+      - Kalverdijkje (dor:Kalverdijkje) --doo:location--> Leeuwarden (dor:Leeuwarden)
+      - Abe_Bonnema (dor:Abe_Bonnema) --doo:significantBuilding--> Leeuwarden (dor:Leeuwarden)
+      - Kalverdijkje (dor:Kalverdijkje) --dop:tenants--> Aris_Leeuwarden (dor:Aris_Leeuwarden)
+  '5':
+    attributes:
+      Haifa: (Apr record low C^='4.2', Apr low C^='12.9')
+      Hapoel_Haifa_B.C.: (date^='1', capacity^='5000')
+    relationships:
+      - Romema_Arena (dor:Romema_Arena) --doo:location--> Haifa (dor:Haifa)
+      - Alexander_Baerwald (dor:Alexander_Baerwald) --doo:significantBuilding--> Haifa (dor:Haifa)
+      - Romema_Arena (dor:Romema_Arena) --dop:tenants--> Hapoel_Haifa_B.C. (<http://dbpedia.org/resource/Hapoel_Haifa_B.C.>)
+  '6':
+    attributes:
+      Haifa: (Apr record low C^='4.2', Apr low C^='12.9')
+      Maccabi_Haifa_B.C.: (date^='3', capacity^='5000')
+    relationships:
+      - Romema_Arena (dor:Romema_Arena) --doo:location--> Haifa (dor:Haifa)
+      - Alexander_Baerwald (dor:Alexander_Baerwald) --doo:significantBuilding--> Haifa (dor:Haifa)
+      - Romema_Arena (dor:Romema_Arena) --dop:tenants--> Maccabi_Haifa_B.C. (<http://dbpedia.org/resource/Maccabi_Haifa_B.C.>)
+  '7':
+    attributes: {}
+    relationships:
+      - London_Arena (dor:London_Arena) --doo:location--> London (dor:London)
+      - Amanda_Levete (dor:Amanda_Levete) --doo:significantBuilding--> London (dor:London)
+      - London_Arena (dor:London_Arena) --dop:tenants--> London_Towers (dor:London_Towers)
+  '8':
+    attributes:
+      Lisbon: (Apr record low C^='5.5', Apr low C^='11.9')
+      S.L._Benfica_(basketball): (date^='2', capacity^='2400')
+    relationships:
+      - Pavilhão_Fidelidade (<http://dbpedia.org/resource/Pavilhão_Fidelidade>) --doo:location--> Lisbon (dor:Lisbon)
+      - Amanda_Levete (dor:Amanda_Levete) --doo:significantBuilding--> Lisbon (dor:Lisbon)
+      - Pavilhão_Fidelidade (<http://dbpedia.org/resource/Pavilhão_Fidelidade>) --dop:tenants--> S.L._Benfica_(basketball) (<http://dbpedia.org/resource/S.L._Benfica_(basketball)>)
+  '9':
+    attributes: {}
+    relationships:
+      - London_Arena (dor:London_Arena) --doo:location--> London (dor:London)
+      - Augustus_Pugin__Augustus_Pugin__1 (dor:Augustus_Pugin__Augustus_Pugin__1) --doo:significantBuilding--> London (dor:London)
+      - London_Arena (dor:London_Arena) --dop:tenants--> London_Towers (dor:London_Towers)
+  '10':
+    attributes: {}
+    relationships:
+      - London_Arena (dor:London_Arena) --doo:location--> London (dor:London)
+      - Bertie_Crewe (dor:Bertie_Crewe) --doo:significantBuilding--> London (dor:London)
+      - London_Arena (dor:London_Arena) --dop:tenants--> London_Towers (dor:London_Towers)
+attributes:
+  venue: --cost (doo:cost)--> poundSterling | --operator^ (doo:operator)--> Resource
+  settlement: --Apr record low C^ (dop:aprRecordLowC)--> double | --Aug low F^ (dop:augLowF)--> double | --Apr low C^ (dop:aprLowC)--> double | --Apr record high F^ (dop:aprRecordHighF)--> int | --named for^ (dop:namedFor)--> Resource
+  basketball team: --date^ (dop:date)--> int | --capacity^ (doo:capacity)--> int
+subgraph_id: 772
+relationships:
+  - venue --doo:location--> settlement
+  - architect --doo:significantBuilding--> settlement
+  - venue --dop:tenants--> basketball team

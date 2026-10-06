@@ -1,0 +1,95 @@
+types:
+  soccer club: doo:SoccerClub
+  soccer tournoment: doo:SoccerTournament
+  soccer club season: doo:SoccerClubSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwors: http://www.w3.org/2000/01/rdf-schema#
+instances:
+  '1':
+    attributes:
+      1997_U.S._Open_Cup: (RD1-team^='Chicago Stingers')
+      Central_Coast_Roadrunners: (season^='http://dbpedia.org/resource/2002_PDL_Season')
+      1997_San_Jose_Clash_season: (league topscorer^='http://dbpedia.org/resource/Ronald_Cerritos')
+    relationships:
+      - 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup) --dop:rd1Team--> Central_Coast_Roadrunners (dor:Central_Coast_Roadrunners)
+      - 1997_San_Jose_Clash_season (dor:1997_San_Jose_Clash_season) --wwors:seeAlso--> 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup)
+  '2':
+    attributes:
+      Colorado_Rapids: (season^='http://dbpedia.org/resource/2022_Major_League_Soccer_season')
+      1997_U.S._Open_Cup: (RD1-team^='Chicago Stingers')
+      1997_San_Jose_Clash_season: (league topscorer^='http://dbpedia.org/resource/Ronald_Cerritos')
+    relationships:
+      - 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup) --dop:rd1Team--> Colorado_Rapids (dor:Colorado_Rapids)
+      - 1997_San_Jose_Clash_season (dor:1997_San_Jose_Clash_season) --wwors:seeAlso--> 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup)
+  '3':
+    attributes:
+      1997_U.S._Open_Cup: (RD1-team^='Chicago Stingers')
+      1997_San_Jose_Clash_season: (league topscorer^='http://dbpedia.org/resource/Ronald_Cerritos')
+    relationships:
+      - 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup) --dop:rd1Team--> Hershey_Wildcats (dor:Hershey_Wildcats)
+      - 1997_San_Jose_Clash_season (dor:1997_San_Jose_Clash_season) --wwors:seeAlso--> 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup)
+  '4':
+    attributes:
+      1998_U.S._Open_Cup: (RD1-team^='Chicago Stingers')
+      1998_San_Jose_Clash_season: (league topscorer^='http://dbpedia.org/resource/Ronald_Cerritos')
+    relationships:
+      - 1998_U.S._Open_Cup (dor:1998_U.S._Open_Cup) --dop:rd1Team--> Arizona_Sahuaros (dor:Arizona_Sahuaros)
+      - 1998_San_Jose_Clash_season (dor:1998_San_Jose_Clash_season) --wwors:seeAlso--> 1998_U.S._Open_Cup (dor:1998_U.S._Open_Cup)
+  '5':
+    attributes:
+      1998_U.S._Open_Cup: (RD1-team^='Chicago Stingers')
+      1998_San_Jose_Clash_season: (league topscorer^='http://dbpedia.org/resource/Ronald_Cerritos')
+    relationships:
+      - 1998_U.S._Open_Cup (dor:1998_U.S._Open_Cup) --dop:rd1Team--> Austin_Lone_Stars (dor:Austin_Lone_Stars)
+      - 1998_San_Jose_Clash_season (dor:1998_San_Jose_Clash_season) --wwors:seeAlso--> 1998_U.S._Open_Cup (dor:1998_U.S._Open_Cup)
+  '6':
+    attributes:
+      1998_U.S._Open_Cup: (RD1-team^='Chicago Stingers')
+      1998_San_Jose_Clash_season: (league topscorer^='http://dbpedia.org/resource/Ronald_Cerritos')
+    relationships:
+      - 1998_U.S._Open_Cup (dor:1998_U.S._Open_Cup) --dop:rd1Team--> Central_Jersey_Riptide (dor:Central_Jersey_Riptide)
+      - 1998_San_Jose_Clash_season (dor:1998_San_Jose_Clash_season) --wwors:seeAlso--> 1998_U.S._Open_Cup (dor:1998_U.S._Open_Cup)
+  '7':
+    attributes:
+      2000_U.S._Open_Cup: (RD1-team^='Chicago Fire')
+      Cape_Cod_Crusaders: (season^='http://dbpedia.org/resource/2008_PDL_Season')
+      2000_San_Jose_Earthquakes_season: (league topscorer^='http://dbpedia.org/resource/Abdul_Thompson_Conteh')
+    relationships:
+      - 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup) --dop:rd1Team--> Cape_Cod_Crusaders (dor:Cape_Cod_Crusaders)
+      - 2000_San_Jose_Earthquakes_season (dor:2000_San_Jose_Earthquakes_season) --wwors:seeAlso--> 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup)
+  '8':
+    attributes:
+      2000_U.S._Open_Cup: (RD1-team^='Chicago Fire')
+      Charleston_Battery: (season^='http://dbpedia.org/resource/2022_USL_Championship_season')
+      2000_San_Jose_Earthquakes_season: (league topscorer^='http://dbpedia.org/resource/Abdul_Thompson_Conteh')
+    relationships:
+      - 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup) --dop:rd1Team--> Charleston_Battery (dor:Charleston_Battery)
+      - 2000_San_Jose_Earthquakes_season (dor:2000_San_Jose_Earthquakes_season) --wwors:seeAlso--> 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup)
+  '9':
+    attributes:
+      Colorado_Rapids: (season^='http://dbpedia.org/resource/2022_Major_League_Soccer_season')
+      2000_U.S._Open_Cup: (RD1-team^='Chicago Fire')
+      2000_San_Jose_Earthquakes_season: (league topscorer^='http://dbpedia.org/resource/Abdul_Thompson_Conteh')
+    relationships:
+      - 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup) --dop:rd1Team--> Colorado_Rapids (dor:Colorado_Rapids)
+      - 2000_San_Jose_Earthquakes_season (dor:2000_San_Jose_Earthquakes_season) --wwors:seeAlso--> 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup)
+  '10':
+    attributes:
+      AEK_Athens_F.C.: (season^='http://dbpedia.org/resource/2021–22_Super_League_Greece')
+      2000–01_Greek_Football_Cup: (RD1-team^='Apollon Athens', aggregate^='y')
+      2000–01_Olympiacos_F.C._season: (league topscorer^='http://dbpedia.org/resource/Predrag_Đorđević', ad^='2')
+    relationships:
+      - 2000–01_Greek_Football_Cup (<http://dbpedia.org/resource/2000–01_Greek_Football_Cup>) --dop:rd1Team--> AEK_Athens_F.C. (<http://dbpedia.org/resource/AEK_Athens_F.C.>)
+      - 2000–01_Olympiacos_F.C._season (<http://dbpedia.org/resource/2000–01_Olympiacos_F.C._season>) --wwors:seeAlso--> 2000–01_Greek_Football_Cup (<http://dbpedia.org/resource/2000–01_Greek_Football_Cup>)
+attributes:
+  soccer club: --accessdate^ (dop:accessdate)--> date | --al^ (dop:al)--> int | --home stadium^ (doo:homeStadium)--> Resource | --align^ (dop:align)--> langString | --agf^ (dop:agf)--> int | --reason^ (dop:reason)--> langString | --fcl^ (dop:fcl)--> langString | --season^ (doo:season)--> Resource
+  soccer tournoment: --RD1-team^ (dop:rd1Team)--> langString | --aggregate^ (dop:aggregate)--> langString
+  soccer club season: --league topscorer^ (dop:leagueTopscorer)--> langString | --ad^ (dop:ad)--> int | --d^ (dop:d)--> date
+subgraph_id: 39
+relationships:
+  - soccer tournoment --dop:rd1Team--> soccer club
+  - soccer club season --wwors:seeAlso--> soccer tournoment

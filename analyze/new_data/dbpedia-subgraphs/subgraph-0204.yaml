@@ -1,0 +1,86 @@
+types:
+  artwork: doo:Artwork
+  Location: doo:Location
+  businessperson: doo:BusinessPerson
+  government agency: doo:GovernmentAgency
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Aaron_Solomon (dor:Aaron_Solomon) --doo:nationality--> United_States (dor:United_States)
+      - Belgrave_Sewer_District (dor:Belgrave_Sewer_District) --doo:headquarter--> United_States (dor:United_States)
+      - (Here_I_Stand)_In_the_Spirit_of_Paul_Robeson (<http://dbpedia.org/resource/(Here_I_Stand)_In_the_Spirit_of_Paul_Robeson>) --dop:city--> United_States (dor:United_States)
+  '2':
+    attributes: {}
+    relationships:
+      - Aaron_Solomon (dor:Aaron_Solomon) --doo:nationality--> United_States (dor:United_States)
+      - Bureau_of_Administration (dor:Bureau_of_Administration) --doo:headquarter--> United_States (dor:United_States)
+      - (Here_I_Stand)_In_the_Spirit_of_Paul_Robeson (<http://dbpedia.org/resource/(Here_I_Stand)_In_the_Spirit_of_Paul_Robeson>) --dop:city--> United_States (dor:United_States)
+  '3':
+    attributes: {}
+    relationships:
+      - Aaron_Solomon (dor:Aaron_Solomon) --doo:nationality--> United_States (dor:United_States)
+      - Bureau_of_African_Affairs (dor:Bureau_of_African_Affairs) --doo:headquarter--> United_States (dor:United_States)
+      - (Here_I_Stand)_In_the_Spirit_of_Paul_Robeson (<http://dbpedia.org/resource/(Here_I_Stand)_In_the_Spirit_of_Paul_Robeson>) --dop:city--> United_States (dor:United_States)
+  '4':
+    attributes: {}
+    relationships:
+      - Karl_Holz_(executive) (<http://dbpedia.org/resource/Karl_Holz_(executive)>) --doo:nationality--> Germany (dor:Germany)
+      - Agency_for_Renewable_Resources (dor:Agency_for_Renewable_Resources) --doo:headquarter--> Germany (dor:Germany)
+      - 7000_Oaks (dor:7000_Oaks) --dop:city--> Germany (dor:Germany)
+  '5':
+    attributes: {}
+    relationships:
+      - Karl_Holz_(executive) (<http://dbpedia.org/resource/Karl_Holz_(executive)>) --doo:nationality--> Germany (dor:Germany)
+      - Council_of_Advisors_on_Digital_Economy (dor:Council_of_Advisors_on_Digital_Economy) --doo:headquarter--> Germany (dor:Germany)
+      - 7000_Oaks (dor:7000_Oaks) --dop:city--> Germany (dor:Germany)
+  '6':
+    attributes: {}
+    relationships:
+      - Karl_Holz_(executive) (<http://dbpedia.org/resource/Karl_Holz_(executive)>) --doo:nationality--> Germany (dor:Germany)
+      - European_Union_Aviation_Safety_Agency (dor:European_Union_Aviation_Safety_Agency) --doo:headquarter--> Germany (dor:Germany)
+      - 7000_Oaks (dor:7000_Oaks) --dop:city--> Germany (dor:Germany)
+qa_result:
+  status: completed
+  cost_usd: 0.210735
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.019782400000000002
+        total_tokens: 2820
+        prompt_tokens: 1996
+        completion_tokens: 824
+      generate:
+        cost_usd: 0.0735976
+        total_tokens: 6694
+        prompt_tokens: 3539
+        completion_tokens: 3155
+      verify_1:
+        cost_usd: 0.03744700000000001
+        total_tokens: 4607
+        prompt_tokens: 3646
+        completion_tokens: 961
+      complexity:
+        cost_usd: 0.079908
+        total_tokens: 7741
+        prompt_tokens: 4422
+        completion_tokens: 3319
+    total_tokens: 21862
+    prompt_tokens: 13603
+    total_cost_usd: 0.21073500000000003
+    completion_tokens: 8259
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Location: --named for^ (dop:namedFor)--> Resource | --religion^ (doo:religion)--> Resource | --Apr high C^ (dop:aprHighC)--> int | --Apr record low F^ (dop:aprRecordLowF)--> double | --Apr record low C^ (dop:aprRecordLowC)--> int | --arc-text-colorA^ (dop:arcTextColora)--> langString | --age^ (dop:age)--> langString | --area code^ (doo:areaCode)--> string | --Apr rain mm^ (dop:aprRainMm)--> int | --Apr low C^ (dop:aprLowC)--> langString | --building start date^ (doo:buildingStartDate)--> string
+subgraph_id: 204
+relationships:
+  - businessperson --doo:nationality--> Location
+  - government agency --doo:headquarter--> Location
+  - artwork --dop:city--> Location

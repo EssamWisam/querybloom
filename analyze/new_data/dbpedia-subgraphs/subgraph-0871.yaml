@@ -1,0 +1,138 @@
+types:
+  city: doo:City
+  award: doo:Award
+  country: doo:Country
+  magazine: doo:Magazine
+  music genre: doo:MusicGenre
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Canada: (width='35.0')
+      Milton_Fowler_Gregg: (spouse^='http://dbpedia.org/resource/Erica_Deichmann_Gregg')
+      Canadian_Efficiency_Decoration: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Canada-mil-hist-stub')
+    relationships:
+      - Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration) --doo:presenter--> Canada (dor:Canada)
+      - Ascent_(magazine) (<http://dbpedia.org/resource/Ascent_(magazine)>) --dop:country--> Canada (dor:Canada)
+      - Ascent_(magazine) (<http://dbpedia.org/resource/Ascent_(magazine)>) --doo:city--> Montreal (dor:Montreal)
+      - Ascent_(magazine) (<http://dbpedia.org/resource/Ascent_(magazine)>) --dop:category--> Magazine (dor:Magazine)
+      - Ascent_(magazine) (<http://dbpedia.org/resource/Ascent_(magazine)>) --doo:country--> Canada (dor:Canada)
+      - Milton_Fowler_Gregg (dor:Milton_Fowler_Gregg) --doo:honours--> Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration)
+  '2':
+    attributes:
+      Canada: (width='35.0')
+      Milton_Fowler_Gregg: (spouse^='http://dbpedia.org/resource/Erica_Deichmann_Gregg')
+      Canadian_Efficiency_Decoration: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Canada-mil-hist-stub')
+    relationships:
+      - Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration) --doo:presenter--> Canada (dor:Canada)
+      - FPS_Magazine (dor:FPS_Magazine) --dop:country--> Canada (dor:Canada)
+      - FPS_Magazine (dor:FPS_Magazine) --doo:city--> Montreal (dor:Montreal)
+      - FPS_Magazine (dor:FPS_Magazine) --dop:category--> Animation (dor:Animation)
+      - FPS_Magazine (dor:FPS_Magazine) --doo:country--> Canada (dor:Canada)
+      - Milton_Fowler_Gregg (dor:Milton_Fowler_Gregg) --doo:honours--> Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration)
+  '3':
+    attributes:
+      Canada: (width='35.0')
+      Milton_Fowler_Gregg: (spouse^='http://dbpedia.org/resource/Erica_Deichmann_Gregg')
+      Canadian_Efficiency_Decoration: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Canada-mil-hist-stub')
+    relationships:
+      - Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration) --doo:presenter--> Canada (dor:Canada)
+      - Hart_House_Review (dor:Hart_House_Review) --dop:country--> Canada (dor:Canada)
+      - Hart_House_Review (dor:Hart_House_Review) --doo:city--> Toronto (dor:Toronto)
+      - Hart_House_Review (dor:Hart_House_Review) --dop:category--> Literary_magazine (dor:Literary_magazine)
+      - Hart_House_Review (dor:Hart_House_Review) --doo:country--> Canada (dor:Canada)
+      - Milton_Fowler_Gregg (dor:Milton_Fowler_Gregg) --doo:honours--> Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration)
+  '4':
+    attributes:
+      Colonial_Medal: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:FRA')
+      Jean-Marie_Le_Pen: (spouse^='1960', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-incumbent-noun-1')
+    relationships:
+      - Colonial_Medal (dor:Colonial_Medal) --doo:presenter--> France (dor:France)
+      - Avantages (dor:Avantages) --dop:country--> France (dor:France)
+      - Avantages (dor:Avantages) --doo:city--> Paris (dor:Paris)
+      - Avantages (dor:Avantages) --dop:category--> Women's_magazine (<http://dbpedia.org/resource/Women's_magazine>)
+      - Avantages (dor:Avantages) --doo:country--> France (dor:France)
+      - Jean-Marie_Le_Pen (dor:Jean-Marie_Le_Pen) --doo:honours--> Colonial_Medal (dor:Colonial_Medal)
+  '5':
+    attributes:
+      Colonial_Medal: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:FRA')
+      Jean-Marie_Le_Pen: (spouse^='1960', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-incumbent-noun-1')
+    relationships:
+      - Colonial_Medal (dor:Colonial_Medal) --doo:presenter--> France (dor:France)
+      - Challenges_(magazine) (<http://dbpedia.org/resource/Challenges_(magazine)>) --dop:country--> France (dor:France)
+      - Challenges_(magazine) (<http://dbpedia.org/resource/Challenges_(magazine)>) --doo:city--> Paris (dor:Paris)
+      - Challenges_(magazine) (<http://dbpedia.org/resource/Challenges_(magazine)>) --dop:category--> Business_journalism (dor:Business_journalism)
+      - Challenges_(magazine) (<http://dbpedia.org/resource/Challenges_(magazine)>) --doo:country--> France (dor:France)
+      - Jean-Marie_Le_Pen (dor:Jean-Marie_Le_Pen) --doo:honours--> Colonial_Medal (dor:Colonial_Medal)
+  '6':
+    attributes:
+      Colonial_Medal: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:FRA')
+      Jean-Marie_Le_Pen: (spouse^='1960', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-incumbent-noun-1')
+    relationships:
+      - Colonial_Medal (dor:Colonial_Medal) --doo:presenter--> France (dor:France)
+      - Femme_Actuelle (dor:Femme_Actuelle) --dop:country--> France (dor:France)
+      - Femme_Actuelle (dor:Femme_Actuelle) --doo:city--> Paris (dor:Paris)
+      - Femme_Actuelle (dor:Femme_Actuelle) --dop:category--> Women's_magazine (<http://dbpedia.org/resource/Women's_magazine>)
+      - Femme_Actuelle (dor:Femme_Actuelle) --doo:country--> France (dor:France)
+      - Jean-Marie_Le_Pen (dor:Jean-Marie_Le_Pen) --doo:honours--> Colonial_Medal (dor:Colonial_Medal)
+  '7':
+    attributes:
+      Duncan_Lewis: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-person-noun-1', after^='http://dbpedia.org/resource/Dennis_Richardson_(diplomat)')
+      Conspicuous_Service_Cross_(Australia): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Australian_Honours_System')
+    relationships:
+      - Conspicuous_Service_Cross_(Australia) (<http://dbpedia.org/resource/Conspicuous_Service_Cross_(Australia)>) --doo:presenter--> Australia (dor:Australia)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --dop:country--> Australia (dor:Australia)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --doo:city--> Canberra,_ACT (<http://dbpedia.org/resource/Canberra,_ACT>)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --dop:category--> Science_fiction_magazine (dor:Science_fiction_magazine)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --doo:country--> Australia (dor:Australia)
+      - Duncan_Lewis (dor:Duncan_Lewis) --doo:honours--> Conspicuous_Service_Cross_(Australia) (<http://dbpedia.org/resource/Conspicuous_Service_Cross_(Australia)>)
+  '8':
+    attributes:
+      Conspicuous_Service_Cross_(Australia): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Australian_Honours_System')
+    relationships:
+      - Conspicuous_Service_Cross_(Australia) (<http://dbpedia.org/resource/Conspicuous_Service_Cross_(Australia)>) --doo:presenter--> Australia (dor:Australia)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --dop:country--> Australia (dor:Australia)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --doo:city--> Canberra,_ACT (<http://dbpedia.org/resource/Canberra,_ACT>)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --dop:category--> Science_fiction_magazine (dor:Science_fiction_magazine)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --doo:country--> Australia (dor:Australia)
+      - Kathryn_Campbell (dor:Kathryn_Campbell) --doo:honours--> Conspicuous_Service_Cross_(Australia) (<http://dbpedia.org/resource/Conspicuous_Service_Cross_(Australia)>)
+  '9':
+    attributes:
+      Kevin_Scarce: (spouse^='Elizabeth Anne Taylor', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-governor-noun-1')
+      Conspicuous_Service_Cross_(Australia): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Australian_Honours_System')
+    relationships:
+      - Conspicuous_Service_Cross_(Australia) (<http://dbpedia.org/resource/Conspicuous_Service_Cross_(Australia)>) --doo:presenter--> Australia (dor:Australia)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --dop:country--> Australia (dor:Australia)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --doo:city--> Canberra,_ACT (<http://dbpedia.org/resource/Canberra,_ACT>)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --dop:category--> Science_fiction_magazine (dor:Science_fiction_magazine)
+      - Andromeda_Spaceways_Inflight_Magazine (dor:Andromeda_Spaceways_Inflight_Magazine) --doo:country--> Australia (dor:Australia)
+      - Kevin_Scarce (dor:Kevin_Scarce) --doo:honours--> Conspicuous_Service_Cross_(Australia) (<http://dbpedia.org/resource/Conspicuous_Service_Cross_(Australia)>)
+  '10':
+    attributes:
+      Sarath_Fonseka: (spouse^='http://dbpedia.org/resource/Anoma_Fonseka', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-person-noun-1', after^='http://dbpedia.org/resource/Jagath_Jayasuriya')
+      Desha_Putra_Sammanaya: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Infobox_military_award')
+    relationships:
+      - Desha_Putra_Sammanaya (dor:Desha_Putra_Sammanaya) --doo:presenter--> Sri_Lanka (dor:Sri_Lanka)
+      - Navaliya (dor:Navaliya) --dop:country--> Sri_Lanka (dor:Sri_Lanka)
+      - Navaliya (dor:Navaliya) --doo:city--> Colombo (dor:Colombo)
+      - Navaliya (dor:Navaliya) --dop:category--> Women (dor:Women)
+      - Navaliya (dor:Navaliya) --doo:country--> Sri_Lanka (dor:Sri_Lanka)
+      - Sarath_Fonseka (dor:Sarath_Fonseka) --doo:honours--> Desha_Putra_Sammanaya (dor:Desha_Putra_Sammanaya)
+attributes:
+  city: --founder^ (doo:founder)--> Resource | --Aug precipitation inch^ (dop:augPrecipitationInch)--> double | --Apr rain mm^ (dop:aprRainMm)--> int | --Aug rain days^ (dop:augRainDays)--> int
+  award: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+  country: --1p^ (dop:1p)--> int | --width (dop:width)--> int
+  military person: --spouse^ (dop:spouse)--> int | --wordnet_type (dop:wordnet_type)--> Resource | --c^ (dop:c)--> langString | --after^ (dop:after)--> Resource
+subgraph_id: 871
+relationships:
+  - award --doo:presenter--> country
+  - magazine --dop:country--> country
+  - magazine --doo:city--> city
+  - magazine --dop:category--> music genre
+  - magazine --doo:country--> country
+  - military person --doo:honours--> award

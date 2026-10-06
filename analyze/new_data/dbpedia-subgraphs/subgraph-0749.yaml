@@ -1,0 +1,106 @@
+types:
+  writer: doo:Writer
+  country: doo:Country
+  Location: doo:Location
+  Christian Bishop: doo:ChristianBishop
+  Australian rules football player: doo:AustralianRulesFootballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._A._Phillips: (birth date^='1900-08-13')
+      Victoria_(Australia): (named for^='http://dbpedia.org/resource/Queen_Victoria')
+    relationships:
+      - Thomas_Carr_(archbishop_of_Melbourne) (<http://dbpedia.org/resource/Thomas_Carr_(archbishop_of_Melbourne)>) --dop:deathPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Adam_Bentick (dor:Adam_Bentick) --dop:birthPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - A._A._Phillips (dor:A._A._Phillips) --doo:birthPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Thomas_Carr_(archbishop_of_Melbourne) (<http://dbpedia.org/resource/Thomas_Carr_(archbishop_of_Melbourne)>) --doo:nationality--> Irish_people (dor:Irish_people)
+  '2':
+    attributes:
+      Alan_Villiers: (birth date^='1903-09-23')
+      Victoria_(Australia): (named for^='http://dbpedia.org/resource/Queen_Victoria')
+    relationships:
+      - Thomas_Carr_(archbishop_of_Melbourne) (<http://dbpedia.org/resource/Thomas_Carr_(archbishop_of_Melbourne)>) --dop:deathPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Adam_Bentick (dor:Adam_Bentick) --dop:birthPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Alan_Villiers (dor:Alan_Villiers) --doo:birthPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Thomas_Carr_(archbishop_of_Melbourne) (<http://dbpedia.org/resource/Thomas_Carr_(archbishop_of_Melbourne)>) --doo:nationality--> Irish_people (dor:Irish_people)
+  '3':
+    attributes:
+      Victoria_(Australia): (named for^='http://dbpedia.org/resource/Queen_Victoria')
+    relationships:
+      - Thomas_Carr_(archbishop_of_Melbourne) (<http://dbpedia.org/resource/Thomas_Carr_(archbishop_of_Melbourne)>) --dop:deathPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Adam_Bentick (dor:Adam_Bentick) --dop:birthPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Alexandra_Adornetto (dor:Alexandra_Adornetto) --doo:birthPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Thomas_Carr_(archbishop_of_Melbourne) (<http://dbpedia.org/resource/Thomas_Carr_(archbishop_of_Melbourne)>) --doo:nationality--> Irish_people (dor:Irish_people)
+  '4':
+    attributes:
+      Australia: (caption align^='center')
+      Alan_Rowland_Chisholm: (birth date^='1888-11-06')
+    relationships:
+      - James_Duhig (dor:James_Duhig) --dop:deathPlace--> Australia (dor:Australia)
+      - Adam_McPhee (dor:Adam_McPhee) --dop:birthPlace--> Australia (dor:Australia)
+      - Alan_Rowland_Chisholm (dor:Alan_Rowland_Chisholm) --doo:birthPlace--> Australia (dor:Australia)
+      - James_Duhig (dor:James_Duhig) --doo:nationality--> Australia (dor:Australia)
+  '5':
+    attributes:
+      Alan_Rowland_Chisholm: (birth date^='1888-11-06')
+    relationships:
+      - James_Duhig (dor:James_Duhig) --dop:deathPlace--> Australia (dor:Australia)
+      - Adam_McPhee (dor:Adam_McPhee) --dop:birthPlace--> Australia (dor:Australia)
+      - Alan_Rowland_Chisholm (dor:Alan_Rowland_Chisholm) --doo:birthPlace--> Australia (dor:Australia)
+      - James_Duhig (dor:James_Duhig) --doo:nationality--> Irish_(people) (<http://dbpedia.org/resource/Irish_(people)>)
+  '6':
+    attributes:
+      Australia: (caption align^='center')
+      Alan_Villiers: (birth date^='1903-09-23')
+    relationships:
+      - James_Duhig (dor:James_Duhig) --dop:deathPlace--> Australia (dor:Australia)
+      - Adam_McPhee (dor:Adam_McPhee) --dop:birthPlace--> Australia (dor:Australia)
+      - Alan_Villiers (dor:Alan_Villiers) --doo:birthPlace--> Australia (dor:Australia)
+      - James_Duhig (dor:James_Duhig) --doo:nationality--> Australia (dor:Australia)
+  '7':
+    attributes:
+      A._J._Healy: (birth date^='1969-04-02')
+    relationships:
+      - John_Alen (dor:John_Alen) --dop:deathPlace--> Ireland (dor:Ireland)
+      - Alan_McCrory (dor:Alan_McCrory) --dop:birthPlace--> Ireland (dor:Ireland)
+      - A._J._Healy (dor:A._J._Healy) --doo:birthPlace--> Ireland (dor:Ireland)
+      - John_Alen (dor:John_Alen) --doo:nationality--> English_people (dor:English_people)
+  '8':
+    attributes:
+      Adrian_Kenny: (birth date^='1945')
+    relationships:
+      - John_Alen (dor:John_Alen) --dop:deathPlace--> Ireland (dor:Ireland)
+      - Alan_McCrory (dor:Alan_McCrory) --dop:birthPlace--> Ireland (dor:Ireland)
+      - Adrian_Kenny (dor:Adrian_Kenny) --doo:birthPlace--> Ireland (dor:Ireland)
+      - John_Alen (dor:John_Alen) --doo:nationality--> English_people (dor:English_people)
+  '9':
+    attributes:
+      Alphie_McCourt: (birth date^='1940-07-29', relatives^='Frank McCourt, Malachy, Michael McCourt, , Angela Sheehan , Malachy McCourt')
+    relationships:
+      - John_Alen (dor:John_Alen) --dop:deathPlace--> Ireland (dor:Ireland)
+      - Alan_McCrory (dor:Alan_McCrory) --dop:birthPlace--> Ireland (dor:Ireland)
+      - Alphie_McCourt (dor:Alphie_McCourt) --doo:birthPlace--> Ireland (dor:Ireland)
+      - John_Alen (dor:John_Alen) --doo:nationality--> English_people (dor:English_people)
+  '10':
+    attributes:
+      Canada: "(quote^=':2.  Everyone has the following fundamental freedoms:\n::\tfreedom of conscience and religion;\n::\tfreedom of thought, belief, opinion and expression, including freedom of the press and other media of co...')"
+    relationships:
+      - Archibald_Fleming (dor:Archibald_Fleming) --dop:deathPlace--> Canada (dor:Canada)
+      - Andrew_McGrath (dor:Andrew_McGrath) --dop:birthPlace--> Canada (dor:Canada)
+      - A._C._Wise (dor:A._C._Wise) --doo:birthPlace--> Canada (dor:Canada)
+      - Archibald_Fleming (dor:Archibald_Fleming) --doo:nationality--> Scottish_people (dor:Scottish_people)
+attributes:
+  writer: --birth date^ (dop:birthDate)--> date | --relatives^ (dop:relatives)--> langString
+  country: --caption align^ (dop:captionAlign)--> langString
+  Location: --Apr low C^ (dop:aprLowC)--> langString | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --frazioni^ (doo:frazioni)--> Resource | --quote^ (dop:quote)--> langString | --designated other1 date^ (dop:designatedOther1Date)--> date | --named for^ (dop:namedFor)--> Resource | --2p^ (dop:2p)--> int
+subgraph_id: 749
+relationships:
+  - Christian Bishop --dop:deathPlace--> Location
+  - Australian rules football player --dop:birthPlace--> Location
+  - writer --doo:birthPlace--> Location
+  - Christian Bishop --doo:nationality--> country

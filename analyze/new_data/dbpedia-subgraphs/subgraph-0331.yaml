@@ -1,0 +1,83 @@
+types:
+  dam: doo:Dam
+  grape: doo:Grape
+  plant: doo:Plant
+  country: doo:Country
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Germany: (image^='Caspar David Friedrich - Wanderer above the sea of fog.jpg')
+    relationships:
+      - Aar_Dam (dor:Aar_Dam) --doo:country--> Germany (dor:Germany)
+      - Acolon (dor:Acolon) --doo:origin--> Germany (dor:Germany)
+      - Acolon (dor:Acolon) --doo:species--> Vitis_vinifera (dor:Vitis_vinifera)
+  '2':
+    attributes:
+      Germany: (image^='Caspar David Friedrich - Wanderer above the sea of fog.jpg')
+    relationships:
+      - Aar_Dam (dor:Aar_Dam) --doo:country--> Germany (dor:Germany)
+      - Arnsburger (dor:Arnsburger) --doo:origin--> Germany (dor:Germany)
+      - Arnsburger (dor:Arnsburger) --doo:species--> Vitis_vinifera (dor:Vitis_vinifera)
+  '3':
+    attributes:
+      Germany: (image^='Caspar David Friedrich - Wanderer above the sea of fog.jpg')
+    relationships:
+      - Aar_Dam (dor:Aar_Dam) --doo:country--> Germany (dor:Germany)
+      - Bacchus_(grape) (<http://dbpedia.org/resource/Bacchus_(grape)>) --doo:origin--> Germany (dor:Germany)
+      - Bacchus_(grape) (<http://dbpedia.org/resource/Bacchus_(grape)>) --doo:species--> Vitis_vinifera (dor:Vitis_vinifera)
+  '4':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg', motto^='"In God We Trust"')
+    relationships:
+      - Aberdeen_Lake_(Mississippi) (<http://dbpedia.org/resource/Aberdeen_Lake_(Mississippi)>) --doo:country--> United_States (dor:United_States)
+      - Alexander_(grape) (<http://dbpedia.org/resource/Alexander_(grape)>) --doo:origin--> United_States (dor:United_States)
+      - Alexander_(grape) (<http://dbpedia.org/resource/Alexander_(grape)>) --doo:species--> Vitis_labrusca (dor:Vitis_labrusca)
+  '5':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg', motto^='"In God We Trust"')
+    relationships:
+      - Aberdeen_Lake_(Mississippi) (<http://dbpedia.org/resource/Aberdeen_Lake_(Mississippi)>) --doo:country--> United_States (dor:United_States)
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:origin--> United_States (dor:United_States)
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:species--> Vitis_labrusca (dor:Vitis_labrusca)
+  '6':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg', motto^='"In God We Trust"')
+    relationships:
+      - Aberdeen_Lake_(Mississippi) (<http://dbpedia.org/resource/Aberdeen_Lake_(Mississippi)>) --doo:country--> United_States (dor:United_States)
+      - Concord_grape (dor:Concord_grape) --doo:origin--> United_States (dor:United_States)
+      - Concord_grape (dor:Concord_grape) --doo:species--> Vitis_labrusca (dor:Vitis_labrusca)
+  '7':
+    attributes:
+      France: (image^='EMIA Bastille Day 2007.jpg', header^='Bastille Day in Paris', motto^='"')
+    relationships:
+      - Bassin_de_Lampy (dor:Bassin_de_Lampy) --doo:country--> France (dor:France)
+      - Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>) --doo:origin--> France (dor:France)
+      - Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>) --doo:species--> Vitis_riparia (dor:Vitis_riparia)
+  '8':
+    attributes:
+      France: (image^='EMIA Bastille Day 2007.jpg', header^='Bastille Day in Paris', motto^='"')
+    relationships:
+      - Bassin_de_Lampy (dor:Bassin_de_Lampy) --doo:country--> France (dor:France)
+      - Seyval_blanc (dor:Seyval_blanc) --doo:origin--> France (dor:France)
+      - Seyval_blanc (dor:Seyval_blanc) --doo:species--> Vitis_rupestris (dor:Vitis_rupestris)
+  '9':
+    attributes:
+      France: (image^='EMIA Bastille Day 2007.jpg', header^='Bastille Day in Paris', motto^='"')
+    relationships:
+      - Bissorte_Dam (dor:Bissorte_Dam) --doo:country--> France (dor:France)
+      - Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>) --doo:origin--> France (dor:France)
+      - Léon_Millot (<http://dbpedia.org/resource/Léon_Millot>) --doo:species--> Vitis_riparia (dor:Vitis_riparia)
+attributes:
+  dam: --cost^ (dop:cost)--> usDollar | --opening date^ (doo:openingDate)--> date
+  plant: --class^ (doo:class)--> Resource | --image width^ (dop:imageWidth)--> int | --binomial authority^ (doo:binomialAuthority)--> Resource
+  country: --image^ (dop:image)--> langString | --reason^ (dop:reason)--> langString | --2p^ (dop:2p)--> int | --1a^ (dop:1a)--> langString | --header^ (dop:header)--> langString | --leader^ (dop:leader)--> langString | --motto^ (doo:motto)--> string
+subgraph_id: 331
+relationships:
+  - dam --doo:country--> country
+  - grape --doo:origin--> country
+  - grape --doo:species--> plant

@@ -1,0 +1,125 @@
+types:
+  award: doo:Award
+  person: doo:Person
+  country: doo:Country
+  military unit: doo:MilitaryUnit
+  military service: doo:MilitaryService
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Francis_Norman: (birth place^='London, England')
+      United_Kingdom_of_Great_Britain_and_Ireland: (leader^='http://dbpedia.org/resource/Edward_VII', anthem^='http://dbpedia.org/resource/God_Save_the_King')
+    relationships:
+      - Francis_Norman (dor:Francis_Norman) --doo:award--> Afghanistan_Medal_(United_Kingdom) (<http://dbpedia.org/resource/Afghanistan_Medal_(United_Kingdom)>)
+      - Afghanistan_Medal_(United_Kingdom) (<http://dbpedia.org/resource/Afghanistan_Medal_(United_Kingdom)>) --doo:presenter--> United_Kingdom_of_Great_Britain_and_Ireland (dor:United_Kingdom_of_Great_Britain_and_Ireland)
+      - Francis_Norman (dor:Francis_Norman) --dop:awards--> Afghanistan_Medal_(United_Kingdom) (<http://dbpedia.org/resource/Afghanistan_Medal_(United_Kingdom)>)
+      - James_Craig,_1st_Viscount_Craigavon__MilitaryService__1 (<http://dbpedia.org/resource/James_Craig,_1st_Viscount_Craigavon__MilitaryService__1>) --doo:country--> United_Kingdom_of_Great_Britain_and_Ireland (dor:United_Kingdom_of_Great_Britain_and_Ireland)
+      - James_Craig,_1st_Viscount_Craigavon__MilitaryService__1 (<http://dbpedia.org/resource/James_Craig,_1st_Viscount_Craigavon__MilitaryService__1>) --doo:militaryRank--> Captain_(British_Army_and_Royal_Marines) (<http://dbpedia.org/resource/Captain_(British_Army_and_Royal_Marines)>)
+  '2':
+    attributes:
+      Francis_Norman: (birth place^='London, England')
+      United_Kingdom_of_Great_Britain_and_Ireland: (leader^='http://dbpedia.org/resource/Edward_VII', anthem^='http://dbpedia.org/resource/God_Save_the_King')
+    relationships:
+      - Francis_Norman (dor:Francis_Norman) --doo:award--> Afghanistan_Medal_(United_Kingdom) (<http://dbpedia.org/resource/Afghanistan_Medal_(United_Kingdom)>)
+      - Afghanistan_Medal_(United_Kingdom) (<http://dbpedia.org/resource/Afghanistan_Medal_(United_Kingdom)>) --doo:presenter--> United_Kingdom_of_Great_Britain_and_Ireland (dor:United_Kingdom_of_Great_Britain_and_Ireland)
+      - Francis_Norman (dor:Francis_Norman) --dop:awards--> Afghanistan_Medal_(United_Kingdom) (<http://dbpedia.org/resource/Afghanistan_Medal_(United_Kingdom)>)
+      - Stephen_Gwynn__MilitaryService__1 (dor:Stephen_Gwynn__MilitaryService__1) --doo:country--> United_Kingdom_of_Great_Britain_and_Ireland (dor:United_Kingdom_of_Great_Britain_and_Ireland)
+      - Stephen_Gwynn__MilitaryService__1 (dor:Stephen_Gwynn__MilitaryService__1) --doo:militaryRank--> Captain_(British_Army_and_Royal_Marines) (<http://dbpedia.org/resource/Captain_(British_Army_and_Royal_Marines)>)
+  '3':
+    attributes:
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      William_F.S._Edwards: (birth place^='East Budleigh, Devon, U.K.')
+    relationships:
+      - William_F.S._Edwards (dor:William_F.S._Edwards) --doo:award--> Africa_General_Service_Medal (dor:Africa_General_Service_Medal)
+      - Africa_General_Service_Medal (dor:Africa_General_Service_Medal) --doo:presenter--> United_Kingdom (dor:United_Kingdom)
+      - William_F.S._Edwards (dor:William_F.S._Edwards) --dop:awards--> Africa_General_Service_Medal (dor:Africa_General_Service_Medal)
+      - Adam_Holloway__MilitaryService__1 (dor:Adam_Holloway__MilitaryService__1) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Adam_Holloway__MilitaryService__1 (dor:Adam_Holloway__MilitaryService__1) --doo:militaryRank--> Captain_(British_Army_and_Royal_Marines) (<http://dbpedia.org/resource/Captain_(British_Army_and_Royal_Marines)>)
+  '4':
+    attributes:
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      William_F.S._Edwards: (birth place^='East Budleigh, Devon, U.K.')
+    relationships:
+      - William_F.S._Edwards (dor:William_F.S._Edwards) --doo:award--> Africa_General_Service_Medal (dor:Africa_General_Service_Medal)
+      - Africa_General_Service_Medal (dor:Africa_General_Service_Medal) --doo:presenter--> United_Kingdom (dor:United_Kingdom)
+      - William_F.S._Edwards (dor:William_F.S._Edwards) --dop:awards--> Africa_General_Service_Medal (dor:Africa_General_Service_Medal)
+      - Bill_Flynn_(Australian_politician)__MilitaryService__1 (<http://dbpedia.org/resource/Bill_Flynn_(Australian_politician)__MilitaryService__1>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Bill_Flynn_(Australian_politician)__MilitaryService__1 (<http://dbpedia.org/resource/Bill_Flynn_(Australian_politician)__MilitaryService__1>) --doo:militaryRank--> Private_(rank) (<http://dbpedia.org/resource/Private_(rank)>)
+  '5':
+    attributes:
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Royal_Indian_Navy: (garrison^='http://dbpedia.org/resource/Bombay')
+      William_F.S._Edwards: (birth place^='East Budleigh, Devon, U.K.')
+    relationships:
+      - William_F.S._Edwards (dor:William_F.S._Edwards) --doo:award--> Africa_General_Service_Medal (dor:Africa_General_Service_Medal)
+      - Africa_General_Service_Medal (dor:Africa_General_Service_Medal) --doo:presenter--> United_Kingdom (dor:United_Kingdom)
+      - William_F.S._Edwards (dor:William_F.S._Edwards) --dop:awards--> Africa_General_Service_Medal (dor:Africa_General_Service_Medal)
+      - Willie_McRae__MilitaryService__1 (dor:Willie_McRae__MilitaryService__1) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Willie_McRae__MilitaryService__1 (dor:Willie_McRae__MilitaryService__1) --doo:militaryRank--> Royal_Indian_Navy (dor:Royal_Indian_Navy)
+  '6':
+    attributes:
+      Frederick_Rutland: (birth place^='Weymouth, England', Link from a Wikipage to an external page^='http://hansard.millbanksystems.com/written_answers/1942/jan/22/detainees%23S5CV0377P0_19420122_CWA_35%7Ctitle')
+      Albert_Medal_for_Lifesaving: (image size^='150')
+    relationships:
+      - Frederick_Rutland (dor:Frederick_Rutland) --doo:award--> Albert_Medal_for_Lifesaving (dor:Albert_Medal_for_Lifesaving)
+      - Albert_Medal_for_Lifesaving (dor:Albert_Medal_for_Lifesaving) --doo:presenter--> British_Empire (dor:British_Empire)
+      - Frederick_Rutland (dor:Frederick_Rutland) --dop:awards--> Albert_Medal_for_Lifesaving (dor:Albert_Medal_for_Lifesaving)
+      - Elmes_Yelverton_Steele__MilitaryService__1 (dor:Elmes_Yelverton_Steele__MilitaryService__1) --doo:country--> British_Empire (dor:British_Empire)
+      - Elmes_Yelverton_Steele__MilitaryService__1 (dor:Elmes_Yelverton_Steele__MilitaryService__1) --doo:militaryRank--> Canadian_Militia (dor:Canadian_Militia)
+  '7':
+    attributes:
+      Margaret_Purves: (birth place^='Cardiff, Wales', Link from a Wikipage to an external page^='http://www.marionhebblethwaite.co.uk/gcindex.htm')
+      Albert_Medal_for_Lifesaving: (image size^='150')
+    relationships:
+      - Margaret_Purves (dor:Margaret_Purves) --doo:award--> Albert_Medal_for_Lifesaving (dor:Albert_Medal_for_Lifesaving)
+      - Albert_Medal_for_Lifesaving (dor:Albert_Medal_for_Lifesaving) --doo:presenter--> British_Empire (dor:British_Empire)
+      - Margaret_Purves (dor:Margaret_Purves) --dop:awards--> Albert_Medal_for_Lifesaving (dor:Albert_Medal_for_Lifesaving)
+      - Elmes_Yelverton_Steele__MilitaryService__1 (dor:Elmes_Yelverton_Steele__MilitaryService__1) --doo:country--> British_Empire (dor:British_Empire)
+      - Elmes_Yelverton_Steele__MilitaryService__1 (dor:Elmes_Yelverton_Steele__MilitaryService__1) --doo:militaryRank--> Canadian_Militia (dor:Canadian_Militia)
+  '8':
+    attributes:
+      Randolph_Ridling: (birth place^='Auckland, New Zealand')
+      Albert_Medal_for_Lifesaving: (image size^='150')
+    relationships:
+      - Randolph_Ridling (dor:Randolph_Ridling) --doo:award--> Albert_Medal_for_Lifesaving (dor:Albert_Medal_for_Lifesaving)
+      - Albert_Medal_for_Lifesaving (dor:Albert_Medal_for_Lifesaving) --doo:presenter--> British_Empire (dor:British_Empire)
+      - Randolph_Ridling (dor:Randolph_Ridling) --dop:awards--> Albert_Medal_for_Lifesaving (dor:Albert_Medal_for_Lifesaving)
+      - Elmes_Yelverton_Steele__MilitaryService__1 (dor:Elmes_Yelverton_Steele__MilitaryService__1) --doo:country--> British_Empire (dor:British_Empire)
+      - Elmes_Yelverton_Steele__MilitaryService__1 (dor:Elmes_Yelverton_Steele__MilitaryService__1) --doo:militaryRank--> Canadian_Militia (dor:Canadian_Militia)
+  '9':
+    attributes:
+      Nazi_Germany: (leader^='Adolf Hitler')
+      Otto_Steinhäusl: (birth place^='http://dbpedia.org/resource/Austria-Hungary')
+    relationships:
+      - Otto_Steinhäusl (<http://dbpedia.org/resource/Otto_Steinhäusl>) --doo:award--> Anschluss_Medal (dor:Anschluss_Medal)
+      - Anschluss_Medal (dor:Anschluss_Medal) --doo:presenter--> Nazi_Germany (dor:Nazi_Germany)
+      - Otto_Steinhäusl (<http://dbpedia.org/resource/Otto_Steinhäusl>) --dop:awards--> Anschluss_Medal (dor:Anschluss_Medal)
+      - August_Eigruber__MilitaryService__1 (dor:August_Eigruber__MilitaryService__1) --doo:country--> Nazi_Germany (dor:Nazi_Germany)
+      - August_Eigruber__MilitaryService__1 (dor:August_Eigruber__MilitaryService__1) --doo:militaryRank--> Schutzstaffel (dor:Schutzstaffel)
+  '10':
+    attributes:
+      Nazi_Germany: (leader^='Adolf Hitler')
+      Otto_Steinhäusl: (birth place^='http://dbpedia.org/resource/Austria-Hungary')
+    relationships:
+      - Otto_Steinhäusl (<http://dbpedia.org/resource/Otto_Steinhäusl>) --doo:award--> Anschluss_Medal (dor:Anschluss_Medal)
+      - Anschluss_Medal (dor:Anschluss_Medal) --doo:presenter--> Nazi_Germany (dor:Nazi_Germany)
+      - Otto_Steinhäusl (<http://dbpedia.org/resource/Otto_Steinhäusl>) --dop:awards--> Anschluss_Medal (dor:Anschluss_Medal)
+      - Emil_Maurice__MilitaryService__1 (dor:Emil_Maurice__MilitaryService__1) --doo:country--> Nazi_Germany (dor:Nazi_Germany)
+      - Emil_Maurice__MilitaryService__1 (dor:Emil_Maurice__MilitaryService__1) --doo:militaryRank--> Schutzstaffel (dor:Schutzstaffel)
+attributes:
+  award: --image size^ (dop:imageSize)--> int
+  person: --image^ (dop:image)--> langString | --birth place^ (dop:birthPlace)--> Resource | --relation^ (doo:relation)--> Resource | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --quoted^ (dop:quoted)--> langString | --bot^ (dop:bot)--> langString | --child^ (doo:child)--> Resource
+  country: --2a^ (dop:2a)--> langString | --leader^ (dop:leader)--> langString | --anthem^ (doo:anthem)--> Resource
+  military unit: --commander^ (dop:commander)--> langString | --garrison^ (dop:garrison)--> Resource
+subgraph_id: 867
+relationships:
+  - person --doo:award--> award
+  - award --doo:presenter--> country
+  - person --dop:awards--> award
+  - military service --doo:country--> country
+  - military service --doo:militaryRank--> military unit

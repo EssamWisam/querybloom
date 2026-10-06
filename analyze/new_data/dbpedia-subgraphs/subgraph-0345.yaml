@@ -1,0 +1,80 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Oklahoma: (area total (m2)^='69898000000.0')
+    relationships:
+      - Aaron_Pfenning (dor:Aaron_Pfenning) --doo:birthPlace--> Oklahoma (dor:Oklahoma)
+      - Adair_County,_Oklahoma (<http://dbpedia.org/resource/Adair_County,_Oklahoma>) --wwoo:differentFrom--> Oklahoma (dor:Oklahoma)
+  '2':
+    attributes:
+      Oklahoma: (area total (m2)^='69898000000.0')
+    relationships:
+      - Ada_Brown_(judge) (<http://dbpedia.org/resource/Ada_Brown_(judge)>) --doo:birthPlace--> Oklahoma (dor:Oklahoma)
+      - Adair_County,_Oklahoma (<http://dbpedia.org/resource/Adair_County,_Oklahoma>) --wwoo:differentFrom--> Oklahoma (dor:Oklahoma)
+  '3':
+    attributes:
+      Oklahoma: (area total (m2)^='69898000000.0')
+    relationships:
+      - Alan_Dexter (dor:Alan_Dexter) --doo:birthPlace--> Oklahoma (dor:Oklahoma)
+      - Adair_County,_Oklahoma (<http://dbpedia.org/resource/Adair_County,_Oklahoma>) --wwoo:differentFrom--> Oklahoma (dor:Oklahoma)
+  '4':
+    attributes:
+      Nebraska: (area total (m2)^='77358000000.0')
+    relationships:
+      - A._Eugene_Haylett (dor:A._Eugene_Haylett) --doo:birthPlace--> Nebraska (dor:Nebraska)
+      - Adams_County,_Nebraska (<http://dbpedia.org/resource/Adams_County,_Nebraska>) --wwoo:differentFrom--> Nebraska (dor:Nebraska)
+  '5':
+    attributes:
+      Nebraska: (area total (m2)^='77358000000.0')
+    relationships:
+      - Abbie_Cornett (dor:Abbie_Cornett) --doo:birthPlace--> Nebraska (dor:Nebraska)
+      - Adams_County,_Nebraska (<http://dbpedia.org/resource/Adams_County,_Nebraska>) --wwoo:differentFrom--> Nebraska (dor:Nebraska)
+  '6':
+    attributes:
+      Nebraska: (area total (m2)^='77358000000.0')
+    relationships:
+      - Alan_K._Campbell (dor:Alan_K._Campbell) --doo:birthPlace--> Nebraska (dor:Nebraska)
+      - Adams_County,_Nebraska (<http://dbpedia.org/resource/Adams_County,_Nebraska>) --wwoo:differentFrom--> Nebraska (dor:Nebraska)
+  '7':
+    attributes:
+      North_Dakota: (area total (m2)^='70705000000.0')
+      Adams_County,_North_Dakota: (Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^='http://pnb.dbpedia.org/resource/ایڈمز_کاؤنٹی،_نارتھ_ڈیکوٹا')
+    relationships:
+      - Alec_Rauhauser (dor:Alec_Rauhauser) --doo:birthPlace--> North_Dakota (dor:North_Dakota)
+      - Adams_County,_North_Dakota (<http://dbpedia.org/resource/Adams_County,_North_Dakota>) --wwoo:differentFrom--> North_Dakota (dor:North_Dakota)
+  '8':
+    attributes:
+      North_Dakota: (area total (m2)^='70705000000.0')
+      Adams_County,_North_Dakota: (Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^='http://pnb.dbpedia.org/resource/ایڈمز_کاؤنٹی،_نارتھ_ڈیکوٹا')
+    relationships:
+      - Alyce_Spotted_Bear (dor:Alyce_Spotted_Bear) --doo:birthPlace--> North_Dakota (dor:North_Dakota)
+      - Adams_County,_North_Dakota (<http://dbpedia.org/resource/Adams_County,_North_Dakota>) --wwoo:differentFrom--> North_Dakota (dor:North_Dakota)
+  '9':
+    attributes:
+      North_Dakota: (area total (m2)^='70705000000.0')
+      Adams_County,_North_Dakota: (Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^='http://pnb.dbpedia.org/resource/ایڈمز_کاؤنٹی،_نارتھ_ڈیکوٹا')
+    relationships:
+      - Andy_Schneider (dor:Andy_Schneider) --doo:birthPlace--> North_Dakota (dor:North_Dakota)
+      - Adams_County,_North_Dakota (<http://dbpedia.org/resource/Adams_County,_North_Dakota>) --wwoo:differentFrom--> North_Dakota (dor:North_Dakota)
+  '10':
+    attributes: {}
+    relationships:
+      - Aarele_Ben_Arieh (dor:Aarele_Ben_Arieh) --doo:birthPlace--> Israel (dor:Israel)
+      - Afik (dor:Afik) --wwoo:differentFrom--> Israel (dor:Israel)
+attributes:
+  Location: --accessdate^ (dop:accessdate)--> date | --eponym^ (dop:eponym)--> Resource | --Apr record high C^ (dop:aprRecordHighC)--> double | --footer align^ (dop:footerAlign)--> langString | --colwidth^ (dop:colwidth)--> int | --arc-radiusB^ (dop:arcRadiusb)--> double | --area total (m2)^ (doo:areaTotal)--> double
+  administrative region: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --city^ (dop:city)--> langString | --data^ (dop:data)--> double
+subgraph_id: 345
+relationships:
+  - person --doo:birthPlace--> Location
+  - administrative region --wwoo:differentFrom--> Location

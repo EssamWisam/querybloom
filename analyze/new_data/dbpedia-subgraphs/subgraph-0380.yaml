@@ -1,0 +1,69 @@
+types:
+  athlete: doo:Athlete
+  Location: doo:Location
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Eindhoven: (source^='http://dbpedia.org/resource/Royal_Netherlands_Meteorological_Institute')
+      Ada_den_Haan: (club^='http://dbpedia.org/resource/Eindhoven', weight (g)^='80000.0')
+      Mike_Schilder: (has abstract^='Mike Gerardus Schilder (Eindhoven, 26 maggio 1994) è un cestista olandese.')
+    relationships:
+      - Mike_Schilder (dor:Mike_Schilder) --dop:birthPlace--> Eindhoven (dor:Eindhoven)
+      - Ada_den_Haan (dor:Ada_den_Haan) --doo:club--> Eindhoven (dor:Eindhoven)
+  '2':
+    attributes:
+      Alex_Devlin: (has abstract^='Alex Devlin, né le 12 décembre 1949, à Edmonton, en Alberta, est un ancien joueur canadien de basket-ball. Il évolue durant sa carrière au poste d''arrière.')
+      Adam_Enright: (club^='http://dbpedia.org/resource/Edmonton')
+    relationships:
+      - Alex_Devlin (dor:Alex_Devlin) --dop:birthPlace--> Edmonton (dor:Edmonton)
+      - Adam_Enright (dor:Adam_Enright) --doo:club--> Edmonton (dor:Edmonton)
+  '3':
+    attributes:
+      Helaina_Cyr: (has abstract^='Helaina Cyr (born September 5, 1996) is a Canadian Paralympic wheelchair basketball player from Edmonton, Alberta.')
+      Adam_Enright: (club^='http://dbpedia.org/resource/Edmonton')
+    relationships:
+      - Helaina_Cyr (dor:Helaina_Cyr) --dop:birthPlace--> Edmonton (dor:Edmonton)
+      - Adam_Enright (dor:Adam_Enright) --doo:club--> Edmonton (dor:Edmonton)
+  '4':
+    attributes:
+      Adam_Enright: (club^='http://dbpedia.org/resource/Edmonton')
+      Jermaine_Bucknor: (has abstract^='Jermaine Bucknor – (ur. 1 listopada 1983 roku w Edmonton) kanadyjski koszykarz grający na pozycji niskiego skrzydłowego. Obecnie występuje we francuskim zespole Le Portel. 25-krotny .', cteam^='Gladiators Trier')
+    relationships:
+      - Jermaine_Bucknor (dor:Jermaine_Bucknor) --dop:birthPlace--> Edmonton (dor:Edmonton)
+      - Adam_Enright (dor:Adam_Enright) --doo:club--> Edmonton (dor:Edmonton)
+  '5':
+    attributes:
+      Anton_Gaddefors: (has abstract^='Anton Gaddefors (born November 4, 1989) is a Swedish professional basketball player who currently plays for Södertälje.His younger brother, Viktor Gaddefors, is also a basketball player. In December 2...')
+      Agnes_Knochenhauer: (club^='http://dbpedia.org/resource/Sundbyberg')
+    relationships:
+      - Anton_Gaddefors (dor:Anton_Gaddefors) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Agnes_Knochenhauer (dor:Agnes_Knochenhauer) --doo:club--> Sweden (dor:Sweden)
+  '6':
+    attributes:
+      Cecilia_Ferm: (has abstract^='Cecilia Helena Ferm (born 9 October 1975) is a Swedish deaf female basketball player. She has represented both national and deaf basketball teams. Ferm has participated at the Deaflympics on 5 occasio...')
+      Agnes_Knochenhauer: (club^='http://dbpedia.org/resource/Sundbyberg')
+    relationships:
+      - Cecilia_Ferm (dor:Cecilia_Ferm) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Agnes_Knochenhauer (dor:Agnes_Knochenhauer) --doo:club--> Sweden (dor:Sweden)
+  '7':
+    attributes:
+      Agnes_Knochenhauer: (club^='http://dbpedia.org/resource/Sundbyberg')
+      Dimitris_Agathangelidis: (has abstract^='Dimitris Agathangelidis (born March 7, 1998) is a Greek-Swedish professional basketball player for Cazorla Jaén of the Liga EBA.')
+    relationships:
+      - Dimitris_Agathangelidis (dor:Dimitris_Agathangelidis) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Agnes_Knochenhauer (dor:Agnes_Knochenhauer) --doo:club--> Sweden (dor:Sweden)
+attributes:
+  athlete: --club^ (doo:club)--> Resource | --state of origin^ (doo:stateOfOrigin)--> Resource | --weight (g)^ (doo:weight)--> double
+  Location: --Center^ (dop:center)--> langString | --reason^ (dop:reason)--> langString | --differentFrom (wwoo:differentFrom)--> Resource | --source^ (dop:source)--> langString | --area^ (dop:area)--> hectare | --direction^ (dop:direction)--> langString
+  basketball player: --has abstract^ (doo:abstract)--> langString | --accessdate^ (dop:accessdate)--> date | --cteam^ (dop:cteam)--> langString
+subgraph_id: 380
+relationships:
+  - basketball player --dop:birthPlace--> Location
+  - athlete --doo:club--> Location

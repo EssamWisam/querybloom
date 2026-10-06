@@ -1,0 +1,108 @@
+types:
+  horse: doo:Horse
+  writer: doo:Writer
+  country: doo:Country
+  scientist: doo:Scientist
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A_Gleam: (race^='http://dbpedia.org/resource/Cinema_Handicap')
+      John_Noble_Wilford: (birth date^='1933-10-04', Link from a Wikipage to an external page^='http://topics.nytimes.com/topics/reference/timestopics/people/w/john_noble_wilford/index.html')
+    relationships:
+      - John_Noble_Wilford (dor:John_Noble_Wilford) --doo:citizenship--> United_States (dor:United_States)
+      - John_Noble_Wilford (dor:John_Noble_Wilford) --dop:genre--> Science_journalism (dor:Science_journalism)
+      - Alun_Anderson (dor:Alun_Anderson) --doo:academicDiscipline--> Science_journalism (dor:Science_journalism)
+      - A_Gleam (dor:A_Gleam) --dop:country--> United_States (dor:United_States)
+  '2':
+    attributes:
+      A_Gleam: (race^='http://dbpedia.org/resource/Cinema_Handicap')
+      Linda_Wolfe: (birth date^='1932-11-15', Link from a Wikipage to an external page^='http://www.lindawolfe.com/', death date^='2020-02-22')
+    relationships:
+      - Linda_Wolfe (dor:Linda_Wolfe) --doo:citizenship--> United_States (dor:United_States)
+      - Linda_Wolfe (dor:Linda_Wolfe) --dop:genre--> Journalism (dor:Journalism)
+      - Andrew_Moravcsik (dor:Andrew_Moravcsik) --doo:academicDiscipline--> Journalism (dor:Journalism)
+      - A_Gleam (dor:A_Gleam) --dop:country--> United_States (dor:United_States)
+  '3':
+    attributes:
+      A_Gleam: (race^='http://dbpedia.org/resource/Cinema_Handicap')
+      Lloyd_Grove: (Link from a Wikipage to an external page^='https://pqasb.pqarchiver.com/nydailynews/results.html%3Fst=advanced&QryTxt=&datetype=0&By=lloyd%20grove&Title=&num=25&lb=1')
+    relationships:
+      - Lloyd_Grove (dor:Lloyd_Grove) --doo:citizenship--> United_States (dor:United_States)
+      - Lloyd_Grove (dor:Lloyd_Grove) --dop:genre--> Journalism (dor:Journalism)
+      - Andrew_Moravcsik (dor:Andrew_Moravcsik) --doo:academicDiscipline--> Journalism (dor:Journalism)
+      - A_Gleam (dor:A_Gleam) --dop:country--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Germany: (width^='132')
+      Ivan_Panin: (birth date^='1855-12-12', Link from a Wikipage to an external page^='http://www.cuttingedge.org/NEWS/n1363.cfm', death date^='1942-10-30')
+      Acatenango_(horse): (race^='http://dbpedia.org/resource/Bavarian_Classic')
+    relationships:
+      - Ivan_Panin (dor:Ivan_Panin) --doo:citizenship--> Germany (dor:Germany)
+      - Ivan_Panin (dor:Ivan_Panin) --dop:genre--> Literature (dor:Literature)
+      - David_Gelernter (dor:David_Gelernter) --doo:academicDiscipline--> Literature (dor:Literature)
+      - Acatenango_(horse) (<http://dbpedia.org/resource/Acatenango_(horse)>) --dop:country--> Germany (dor:Germany)
+  '5':
+    attributes:
+      Germany: (width^='132')
+      Ivan_Panin: (birth date^='1855-12-12', Link from a Wikipage to an external page^='http://www.cuttingedge.org/NEWS/n1363.cfm', death date^='1942-10-30')
+      Acatenango_(horse): (race^='http://dbpedia.org/resource/Bavarian_Classic')
+    relationships:
+      - Ivan_Panin (dor:Ivan_Panin) --doo:citizenship--> Germany (dor:Germany)
+      - Ivan_Panin (dor:Ivan_Panin) --dop:genre--> Literature (dor:Literature)
+      - Edith_Anisfield_Wolf (dor:Edith_Anisfield_Wolf) --doo:academicDiscipline--> Literature (dor:Literature)
+      - Acatenango_(horse) (<http://dbpedia.org/resource/Acatenango_(horse)>) --dop:country--> Germany (dor:Germany)
+  '6':
+    attributes:
+      Germany: (width^='132')
+      Ivan_Panin: (birth date^='1855-12-12', Link from a Wikipage to an external page^='http://www.cuttingedge.org/NEWS/n1363.cfm', death date^='1942-10-30')
+      Acatenango_(horse): (race^='http://dbpedia.org/resource/Bavarian_Classic')
+    relationships:
+      - Ivan_Panin (dor:Ivan_Panin) --doo:citizenship--> Germany (dor:Germany)
+      - Ivan_Panin (dor:Ivan_Panin) --dop:genre--> Literature (dor:Literature)
+      - Hamdan_Dammag (dor:Hamdan_Dammag) --doo:academicDiscipline--> Literature (dor:Literature)
+      - Acatenango_(horse) (<http://dbpedia.org/resource/Acatenango_(horse)>) --dop:country--> Germany (dor:Germany)
+  '7':
+    attributes:
+      United_Kingdom: (width^='225')
+      Adam's_Apple_(horse): (race^='http://dbpedia.org/resource/2000_Guineas_Stakes')
+      Benedict_Wallet_Vilakazi: (doctoral advisor^='http://dbpedia.org/resource/Clement_Martyn_Doke')
+    relationships:
+      - Seán_Hewitt (<http://dbpedia.org/resource/Seán_Hewitt>) --doo:citizenship--> United_Kingdom (dor:United_Kingdom)
+      - Seán_Hewitt (<http://dbpedia.org/resource/Seán_Hewitt>) --dop:genre--> Poetry (dor:Poetry)
+      - Benedict_Wallet_Vilakazi (dor:Benedict_Wallet_Vilakazi) --doo:academicDiscipline--> Poetry (dor:Poetry)
+      - Adam's_Apple_(horse) (<http://dbpedia.org/resource/Adam's_Apple_(horse)>) --dop:country--> United_Kingdom (dor:United_Kingdom)
+  '8':
+    attributes:
+      United_Kingdom: (width^='225')
+      Adam's_Apple_(horse): (race^='http://dbpedia.org/resource/2000_Guineas_Stakes')
+    relationships:
+      - Seán_Hewitt (<http://dbpedia.org/resource/Seán_Hewitt>) --doo:citizenship--> United_Kingdom (dor:United_Kingdom)
+      - Seán_Hewitt (<http://dbpedia.org/resource/Seán_Hewitt>) --dop:genre--> Poetry (dor:Poetry)
+      - Fernando_Antonio_Bermúdez_Arias (<http://dbpedia.org/resource/Fernando_Antonio_Bermúdez_Arias>) --doo:academicDiscipline--> Poetry (dor:Poetry)
+      - Adam's_Apple_(horse) (<http://dbpedia.org/resource/Adam's_Apple_(horse)>) --dop:country--> United_Kingdom (dor:United_Kingdom)
+  '9':
+    attributes:
+      United_Kingdom: (width^='225')
+      Adam's_Apple_(horse): (race^='http://dbpedia.org/resource/2000_Guineas_Stakes')
+    relationships:
+      - Seán_Hewitt (<http://dbpedia.org/resource/Seán_Hewitt>) --doo:citizenship--> United_Kingdom (dor:United_Kingdom)
+      - Seán_Hewitt (<http://dbpedia.org/resource/Seán_Hewitt>) --dop:genre--> Poetry (dor:Poetry)
+      - Lê_Quý_Đôn (<http://dbpedia.org/resource/Lê_Quý_Đôn>) --doo:academicDiscipline--> Poetry (dor:Poetry)
+      - Adam's_Apple_(horse) (<http://dbpedia.org/resource/Adam's_Apple_(horse)>) --dop:country--> United_Kingdom (dor:United_Kingdom)
+attributes:
+  horse: --race^ (doo:race)--> Resource
+  writer: --birth date^ (doo:birthDate)--> date | --align^ (dop:align)--> langString | --1pp^ (dop:1pp)--> int | --bgcolor^ (dop:bgcolor)--> langString | --children^ (dop:children)--> int | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --death date^ (doo:deathDate)--> date
+  country: --width^ (dop:width)--> int
+  scientist: --doctoral advisor^ (doo:doctoralAdvisor)--> Resource | --b^ (dop:b)--> langString
+subgraph_id: 821
+relationships:
+  - writer --doo:citizenship--> country
+  - writer --dop:genre--> music genre
+  - scientist --doo:academicDiscipline--> music genre
+  - horse --dop:country--> country

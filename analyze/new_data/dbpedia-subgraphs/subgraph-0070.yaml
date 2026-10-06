@@ -1,0 +1,97 @@
+types:
+  rugby club: doo:RugbyClub
+  rugby league: doo:RugbyLeague
+  rugby player: doo:RugbyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Liam_Davies: (has abstract^='Liam Davies (born 10 May 1986) is a Welsh rugby union footballer. A scrum-half, Davies began his professional rugby career with the Llanelli Scarlets, and made his league debut for the Scarlets while ...')
+      Aberavon_RFC: (nickname^='The Wizards', ground^='http://dbpedia.org/resource/Talbot_Athletic_Ground', founding year^='1876', url^='www.aberavonwizards.co.uk', capacity^='3000')
+      Welsh_Premier_Division: (logo^='The-Indigo-Group-Premiership-Logo-e1637233020918.png')
+    relationships:
+      - Liam_Davies (dor:Liam_Davies) --dop:clubs--> Aberavon_RFC (dor:Aberavon_RFC)
+      - Aberavon_RFC (dor:Aberavon_RFC) --doo:league--> Welsh_Premier_Division (dor:Welsh_Premier_Division)
+  '2':
+    attributes:
+      Aberavon_RFC: (nickname^='The Wizards', ground^='http://dbpedia.org/resource/Talbot_Athletic_Ground', founding year^='1876', url^='www.aberavonwizards.co.uk', capacity^='3000')
+      Welsh_Premier_Division: (logo^='The-Indigo-Group-Premiership-Logo-e1637233020918.png')
+      Mark_Jones_(rugby,_born_1965): (birth name^='Mark Jones', has abstract^='Mark Alun Jones (born 22 June 1965) is a Welsh dual-code international professional rugby union and rugby league footballer who played in the 1980s and 1990s. He played representative level rugby unio...')
+    relationships:
+      - Mark_Jones_(rugby,_born_1965) (<http://dbpedia.org/resource/Mark_Jones_(rugby,_born_1965)>) --dop:clubs--> Aberavon_RFC (dor:Aberavon_RFC)
+      - Aberavon_RFC (dor:Aberavon_RFC) --doo:league--> Welsh_Premier_Division (dor:Welsh_Premier_Division)
+  '3':
+    attributes:
+      Rhys_Webb: (has abstract^='Rhys Webb (born 9 December 1988) is a Welsh rugby union player who plays as a scrum-half for Ospreys. Born in Bridgend, he is a product of the Ospreys academy and played club rugby for Bridgend RFC an...')
+      Aberavon_RFC: (nickname^='The Wizards', ground^='http://dbpedia.org/resource/Talbot_Athletic_Ground', founding year^='1876', url^='www.aberavonwizards.co.uk', capacity^='3000')
+      Welsh_Premier_Division: (logo^='The-Indigo-Group-Premiership-Logo-e1637233020918.png')
+    relationships:
+      - Rhys_Webb (dor:Rhys_Webb) --dop:clubs--> Aberavon_RFC (dor:Aberavon_RFC)
+      - Aberavon_RFC (dor:Aberavon_RFC) --doo:league--> Welsh_Premier_Division (dor:Welsh_Premier_Division)
+  '4':
+    attributes:
+      Super_Rugby: (logo^='Super Rugby Pacific logo.png')
+      ACT_Brumbies: (ground^='', url^='http://www.brumbies.com.au/', capacity^='25011')
+      James_Slipper: (birth name^='James A. Slipper', relatives^='Debby Slipper/ Teacher at AB Paterson College', has abstract^='James A. Slipper (Gold Coast, 6 giugno 1989) è un rugbista a 15 australiano, che gioca nel ruolo di pilone nei Brumbies, franchigia australiana di Super Rugby.')
+    relationships:
+      - James_Slipper (dor:James_Slipper) --dop:clubs--> ACT_Brumbies (dor:ACT_Brumbies)
+      - ACT_Brumbies (dor:ACT_Brumbies) --doo:league--> Super_Rugby (dor:Super_Rugby)
+  '5':
+    attributes:
+      Super_Rugby: (logo^='Super Rugby Pacific logo.png')
+      ACT_Brumbies: (ground^='', url^='http://www.brumbies.com.au/', capacity^='25011')
+      Matt_O'Connor_(rugby_union): (birth name^='', has abstract^='Matt O''Connor (born 29 January 1971) is an Australian professional rugby union coach and a former international player. He was recently the head coach of the Leicester Tigers. O''Connor has held head c...')
+    relationships:
+      - Matt_O'Connor_(rugby_union) (<http://dbpedia.org/resource/Matt_O'Connor_(rugby_union)>) --dop:clubs--> ACT_Brumbies (dor:ACT_Brumbies)
+      - ACT_Brumbies (dor:ACT_Brumbies) --doo:league--> Super_Rugby (dor:Super_Rugby)
+  '6':
+    attributes:
+      Super_Rugby: (logo^='Super Rugby Pacific logo.png')
+      ACT_Brumbies: (ground^='', url^='http://www.brumbies.com.au/', capacity^='25011')
+      Peter_Betham: (birth name^='Peter Betham', currentclub^='http://dbpedia.org/resource/Provence_Rugby', has abstract^='Peter Betham (born 6 January 1989) is a professional rugby union player. He currently plays for the Clermont Auvergne in the Top 14. He was a representative player for Australia in international rugby...')
+    relationships:
+      - Peter_Betham (dor:Peter_Betham) --dop:clubs--> ACT_Brumbies (dor:ACT_Brumbies)
+      - ACT_Brumbies (dor:ACT_Brumbies) --doo:league--> Super_Rugby (dor:Super_Rugby)
+  '7':
+    attributes:
+      Iñaki_Mateu: (currentclub^='http://dbpedia.org/resource/Rugby_Viadana', has abstract^='Iñaki Mateu, né le 17 mars 1997, est un joueur hispano-argentin de rugby à XV qui évolue au poste de centre et d''arrière.')
+      Alcobendas_Rugby: (ground^='http://dbpedia.org/resource/Campo_de_Rugby_Las_Terrazas', founding year^='2003', url^='www.alcobendasrugby.com')
+      División_de_Honor_de_Rugby: (logo^='División_de_Honor_de_Rugby_Logo.jpg')
+    relationships:
+      - Iñaki_Mateu (<http://dbpedia.org/resource/Iñaki_Mateu>) --dop:clubs--> Alcobendas_Rugby (dor:Alcobendas_Rugby)
+      - Alcobendas_Rugby (dor:Alcobendas_Rugby) --doo:league--> División_de_Honor_de_Rugby (<http://dbpedia.org/resource/División_de_Honor_de_Rugby>)
+  '8':
+    attributes:
+      Alcobendas_Rugby: (ground^='http://dbpedia.org/resource/Campo_de_Rugby_Las_Terrazas', founding year^='2003', url^='www.alcobendasrugby.com')
+      División_de_Honor_de_Rugby: (logo^='División_de_Honor_de_Rugby_Logo.jpg')
+      Juan_Cruz_González_(rugby_union): (has abstract^='Juan Cruz González (born 1 October 1992) is an Argentine rugby union player, currently playing for the Toronto Arrows of Major League Rugby (MLR). His preferred position is fly-half or fullback.')
+    relationships:
+      - Juan_Cruz_González_(rugby_union) (<http://dbpedia.org/resource/Juan_Cruz_González_(rugby_union)>) --dop:clubs--> Alcobendas_Rugby (dor:Alcobendas_Rugby)
+      - Alcobendas_Rugby (dor:Alcobendas_Rugby) --doo:league--> División_de_Honor_de_Rugby (<http://dbpedia.org/resource/División_de_Honor_de_Rugby>)
+  '9':
+    attributes:
+      Tony_Jantjies: (relative^='http://dbpedia.org/resource/Elton_Jantjies', relatives^='http://dbpedia.org/resource/Elton_Jantjies', currentclub^='http://dbpedia.org/resource/Alcobendas_Rugby', has abstract^='Altonio "Tony" Shedrick Jantjies (born 19 April 1992) is a professional South African rugby union player for Alcobendas in the División de Honor in Spain. His regular position is fly-half.')
+      Alcobendas_Rugby: (ground^='http://dbpedia.org/resource/Campo_de_Rugby_Las_Terrazas', founding year^='2003', url^='www.alcobendasrugby.com')
+      División_de_Honor_de_Rugby: (logo^='División_de_Honor_de_Rugby_Logo.jpg')
+    relationships:
+      - Tony_Jantjies (dor:Tony_Jantjies) --dop:clubs--> Alcobendas_Rugby (dor:Alcobendas_Rugby)
+      - Alcobendas_Rugby (dor:Alcobendas_Rugby) --doo:league--> División_de_Honor_de_Rugby (<http://dbpedia.org/resource/División_de_Honor_de_Rugby>)
+  '10':
+    attributes:
+      Hein_Potgieter: (has abstract^='Hein Potgieter (born 20 September 1982) is a South African rugby union player, currently playing with the SWD Eagles. His regular position is lock.')
+      Amatori_Catania: (ground^='http://dbpedia.org/resource/Stadio_Santa_Maria_Goretti', url^='amatoricataniarugby.com', capacity^='6000')
+    relationships:
+      - Hein_Potgieter (dor:Hein_Potgieter) --dop:clubs--> Amatori_Catania (dor:Amatori_Catania)
+      - Amatori_Catania (dor:Amatori_Catania) --doo:league--> Serie_A_(rugby_union) (<http://dbpedia.org/resource/Serie_A_(rugby_union)>)
+attributes:
+  rugby club: --nickname^ (dop:nickname)--> langString | --ground^ (dop:ground)--> Resource | --founding year^ (doo:foundingYear)--> gYear | --url^ (dop:url)--> langString | --capacity^ (dop:capacity)--> int
+  rugby league: --logo^ (dop:logo)--> langString
+  rugby player: --relative^ (doo:relative)--> Resource | --source^ (dop:source)--> langString | --birth name^ (dop:birthName)--> langString | --relatives^ (dop:relatives)--> langString | --currentclub^ (dop:currentclub)--> langString | --has abstract^ (doo:abstract)--> langString
+subgraph_id: 70
+relationships:
+  - rugby player --dop:clubs--> rugby club
+  - rugby club --doo:league--> rugby league

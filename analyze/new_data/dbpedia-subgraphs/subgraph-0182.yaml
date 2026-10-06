@@ -1,0 +1,132 @@
+types:
+  soccer club: doo:SoccerClub
+  soccer league: doo:SoccerLeague
+  basketball team: doo:BasketballTeam
+  basketball league: doo:BasketballLeague
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Greek_Basketball_Cup: (currentSeason='2022–23 Greek Basketball Cup')
+      A.C._Doukas_Basketball: (date^='1', logo^='AC_DOUKAS_LOGO.png', last^='Ioannou', founding year^='1979')
+    relationships:
+      - A.C._Doukas_Basketball (dor:A.C._Doukas_Basketball) --doo:league--> Greek_Basketball_Cup (dor:Greek_Basketball_Cup)
+      - A.C._Doukas_Basketball (dor:A.C._Doukas_Basketball) --doo:league--> Greek_Basketball_Cup (dor:Greek_Basketball_Cup)
+      - A.C._Doukas_Basketball (dor:A.C._Doukas_Basketball) --doo:league--> Greek_A2_Basket_League (dor:Greek_A2_Basket_League)
+  '2':
+    attributes:
+      A.E.L._1964_B.C.: (logo^='AEL1964-Crest.svg', last^='Deligiorgis', founding year^='1993')
+      Greek_Basketball_Cup: (currentSeason='2022–23 Greek Basketball Cup')
+      A.C._Doukas_Basketball: (date^='1')
+    relationships:
+      - A.C._Doukas_Basketball (dor:A.C._Doukas_Basketball) --doo:league--> Greek_Basketball_Cup (dor:Greek_Basketball_Cup)
+      - A.E.L._1964_B.C. (<http://dbpedia.org/resource/A.E.L._1964_B.C.>) --doo:league--> Greek_Basketball_Cup (dor:Greek_Basketball_Cup)
+      - A.C._Doukas_Basketball (dor:A.C._Doukas_Basketball) --doo:league--> Greek_A2_Basket_League (dor:Greek_A2_Basket_League)
+  '3':
+    attributes:
+      AEK_B.C.: (logo^='200', last^='Filippakos', owner^='Vertical Solutions', founding year^='1924')
+      Greek_Basketball_Cup: (currentSeason='2022–23 Greek Basketball Cup')
+      A.C._Doukas_Basketball: (date^='1')
+    relationships:
+      - A.C._Doukas_Basketball (dor:A.C._Doukas_Basketball) --doo:league--> Greek_Basketball_Cup (dor:Greek_Basketball_Cup)
+      - AEK_B.C. (<http://dbpedia.org/resource/AEK_B.C.>) --doo:league--> Greek_Basketball_Cup (dor:Greek_Basketball_Cup)
+      - A.C._Doukas_Basketball (dor:A.C._Doukas_Basketball) --doo:league--> Greek_A2_Basket_League (dor:Greek_A2_Basket_League)
+  '4':
+    attributes:
+      Adana_ASKİ_SK: (founding year^='2000')
+    relationships:
+      - Adana_ASKİ_SK (<http://dbpedia.org/resource/Adana_ASKİ_SK>) --doo:league--> EuroCup_Women (dor:EuroCup_Women)
+      - Adana_ASKİ_SK (<http://dbpedia.org/resource/Adana_ASKİ_SK>) --doo:league--> EuroCup_Women (dor:EuroCup_Women)
+      - Adana_ASKİ_SK (<http://dbpedia.org/resource/Adana_ASKİ_SK>) --doo:league--> Turkish_Women's_Basketball_League (<http://dbpedia.org/resource/Turkish_Women's_Basketball_League>)
+  '5':
+    attributes:
+      Elitzur_Ramla_(women's_basketball): (founding year^='1970')
+    relationships:
+      - Adana_ASKİ_SK (<http://dbpedia.org/resource/Adana_ASKİ_SK>) --doo:league--> EuroCup_Women (dor:EuroCup_Women)
+      - Elitzur_Ramla_(women's_basketball) (<http://dbpedia.org/resource/Elitzur_Ramla_(women's_basketball)>) --doo:league--> EuroCup_Women (dor:EuroCup_Women)
+      - Adana_ASKİ_SK (<http://dbpedia.org/resource/Adana_ASKİ_SK>) --doo:league--> Turkish_Women's_Basketball_League (<http://dbpedia.org/resource/Turkish_Women's_Basketball_League>)
+  '6':
+    attributes:
+      Galatasaray_S.K._(women's_basketball): (logo^='File:Galatasaray Sports Club Logo.png', last^='Alben', founding year^='1954')
+    relationships:
+      - Adana_ASKİ_SK (<http://dbpedia.org/resource/Adana_ASKİ_SK>) --doo:league--> EuroCup_Women (dor:EuroCup_Women)
+      - Galatasaray_S.K._(women's_basketball) (<http://dbpedia.org/resource/Galatasaray_S.K._(women's_basketball)>) --doo:league--> EuroCup_Women (dor:EuroCup_Women)
+      - Adana_ASKİ_SK (<http://dbpedia.org/resource/Adana_ASKİ_SK>) --doo:league--> Turkish_Women's_Basketball_League (<http://dbpedia.org/resource/Turkish_Women's_Basketball_League>)
+  '7':
+    attributes:
+      Liga_EBA: (currentSeason='2020–21 Liga EBA season')
+      AE_Sedis_Bàsquet: (date^='1', logo^='Sedis Bàsquet logo.jpg', last^='Bahí', founding year^='1965')
+    relationships:
+      - AE_Sedis_Bàsquet (<http://dbpedia.org/resource/AE_Sedis_Bàsquet>) --doo:league--> Liga_EBA (dor:Liga_EBA)
+      - AE_Sedis_Bàsquet (<http://dbpedia.org/resource/AE_Sedis_Bàsquet>) --doo:league--> Liga_EBA (dor:Liga_EBA)
+      - AE_Sedis_Bàsquet (<http://dbpedia.org/resource/AE_Sedis_Bàsquet>) --doo:league--> Liga_Femenina_de_Baloncesto (dor:Liga_Femenina_de_Baloncesto)
+  '8':
+    attributes:
+      CB_Inca: (logo^='CB Inca.jpg', founding year^='1987')
+      Liga_EBA: (currentSeason='2020–21 Liga EBA season')
+      AE_Sedis_Bàsquet: (date^='1')
+    relationships:
+      - AE_Sedis_Bàsquet (<http://dbpedia.org/resource/AE_Sedis_Bàsquet>) --doo:league--> Liga_EBA (dor:Liga_EBA)
+      - CB_Inca (dor:CB_Inca) --doo:league--> Liga_EBA (dor:Liga_EBA)
+      - AE_Sedis_Bàsquet (<http://dbpedia.org/resource/AE_Sedis_Bàsquet>) --doo:league--> Liga_Femenina_de_Baloncesto (dor:Liga_Femenina_de_Baloncesto)
+  '9':
+    attributes:
+      Liga_EBA: (currentSeason='2020–21 Liga EBA season')
+      CB_Sant_Josep: (logo^='Nou logo CB Sant Josep.jpg', founding year^='1962')
+      AE_Sedis_Bàsquet: (date^='1')
+    relationships:
+      - AE_Sedis_Bàsquet (<http://dbpedia.org/resource/AE_Sedis_Bàsquet>) --doo:league--> Liga_EBA (dor:Liga_EBA)
+      - CB_Sant_Josep (dor:CB_Sant_Josep) --doo:league--> Liga_EBA (dor:Liga_EBA)
+      - AE_Sedis_Bàsquet (<http://dbpedia.org/resource/AE_Sedis_Bàsquet>) --doo:league--> Liga_Femenina_de_Baloncesto (dor:Liga_Femenina_de_Baloncesto)
+  '10':
+    attributes:
+      Doxa_Lefkadas_B.C.: (logo^='Doxa_Lefkadas_BC_LOGO.jpg', founding year^='1982')
+    relationships:
+      - Aigaleo_B.C. (<http://dbpedia.org/resource/Aigaleo_B.C.>) --doo:league--> Greek_B_Basket_League (dor:Greek_B_Basket_League)
+      - Doxa_Lefkadas_B.C. (<http://dbpedia.org/resource/Doxa_Lefkadas_B.C.>) --doo:league--> Greek_B_Basket_League (dor:Greek_B_Basket_League)
+      - Aigaleo_B.C. (<http://dbpedia.org/resource/Aigaleo_B.C.>) --doo:league--> Greek_Basketball_Cup (dor:Greek_Basketball_Cup)
+qa_result:
+  status: completed
+  cost_usd: 0.293205
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0172074
+        total_tokens: 2773
+        prompt_tokens: 2105
+        completion_tokens: 668
+      generate:
+        cost_usd: 0.07076760000000001
+        total_tokens: 7289
+        prompt_tokens: 4521
+        completion_tokens: 2768
+      verify_1:
+        cost_usd: 0.033127000000000004
+        total_tokens: 5150
+        prompt_tokens: 4658
+        completion_tokens: 492
+      complexity:
+        cost_usd: 0.172103
+        total_tokens: 13358
+        prompt_tokens: 5765
+        completion_tokens: 7593
+    total_tokens: 28570
+    prompt_tokens: 17049
+    total_cost_usd: 0.293205
+    completion_tokens: 11521
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  soccer club: --logo^ (dop:logo)--> langString | --manager^ (doo:manager)--> Resource | --ground^ (dop:ground)--> langString | --ad^ (dop:ad)--> int | --Association^ (dop:association)--> langString | --league topscorer^ (dop:leagueTopscorer)--> langString | --last^ (dop:last)--> langString | --owner^ (dop:owner)--> langString | --alt^ (dop:alt)--> langString | --founding year^ (doo:foundingYear)--> gYear | --ground^ (doo:ground)--> Resource
+  basketball team: --date^ (dop:date)--> int
+  basketball league: --currentSeason (doo:currentSeason)--> string
+subgraph_id: 182
+relationships:
+  - basketball team --doo:league--> basketball league
+  - soccer club --doo:league--> basketball league
+  - basketball team --doo:league--> soccer league

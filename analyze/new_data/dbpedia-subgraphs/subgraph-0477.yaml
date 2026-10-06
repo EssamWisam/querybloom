@@ -1,0 +1,104 @@
+types:
+  song: doo:Song
+  company: doo:Company
+  musical artist: doo:MusicalArtist
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Entertainment_One: (page length (characters) of wiki page^='73384')
+      Moonshine_(Canadian_TV_series): (page length (characters) of wiki page^='11699')
+    relationships:
+      - Ace_Frehley (dor:Ace_Frehley) --doo:recordLabel--> Entertainment_One (dor:Entertainment_One)
+      - Moonshine_(Canadian_TV_series) (<http://dbpedia.org/resource/Moonshine_(Canadian_TV_series)>) --doo:producer--> Entertainment_One (dor:Entertainment_One)
+      - Cold_Gin (dor:Cold_Gin) --dop:writer--> Ace_Frehley (dor:Ace_Frehley)
+  '2':
+    attributes:
+      Entertainment_One: (page length (characters) of wiki page^='73384')
+      Moonshine_(Canadian_TV_series): (page length (characters) of wiki page^='11699')
+    relationships:
+      - Ace_Frehley (dor:Ace_Frehley) --doo:recordLabel--> Entertainment_One (dor:Entertainment_One)
+      - Moonshine_(Canadian_TV_series) (<http://dbpedia.org/resource/Moonshine_(Canadian_TV_series)>) --doo:producer--> Entertainment_One (dor:Entertainment_One)
+      - Flaming_Youth_(song) (<http://dbpedia.org/resource/Flaming_Youth_(song)>) --dop:writer--> Ace_Frehley (dor:Ace_Frehley)
+  '3':
+    attributes:
+      Entertainment_One: (page length (characters) of wiki page^='73384')
+      Moonshine_(Canadian_TV_series): (page length (characters) of wiki page^='11699')
+    relationships:
+      - Ace_Frehley (dor:Ace_Frehley) --doo:recordLabel--> Entertainment_One (dor:Entertainment_One)
+      - Moonshine_(Canadian_TV_series) (<http://dbpedia.org/resource/Moonshine_(Canadian_TV_series)>) --doo:producer--> Entertainment_One (dor:Entertainment_One)
+      - Parasite_(song) (<http://dbpedia.org/resource/Parasite_(song)>) --dop:writer--> Ace_Frehley (dor:Ace_Frehley)
+  '4':
+    attributes:
+      Adam_Grahn: (caption^='Adam Grahn live 2013')
+      Island_Africa_Talent: (page length (characters) of wiki page^='4187')
+    relationships:
+      - Adam_Grahn (dor:Adam_Grahn) --doo:recordLabel--> Universal_Music_Group (dor:Universal_Music_Group)
+      - Island_Africa_Talent (dor:Island_Africa_Talent) --doo:producer--> Universal_Music_Group (dor:Universal_Music_Group)
+      - Baby_(Royal_Republic_song) (<http://dbpedia.org/resource/Baby_(Royal_Republic_song)>) --dop:writer--> Adam_Grahn (dor:Adam_Grahn)
+  '5':
+    attributes:
+      Island_Africa_Talent: (page length (characters) of wiki page^='4187')
+      Universal_Music_Group: (page length (characters) of wiki page^='102688')
+    relationships:
+      - Ahmad_(rapper) (<http://dbpedia.org/resource/Ahmad_(rapper)>) --doo:recordLabel--> Universal_Music_Group (dor:Universal_Music_Group)
+      - Island_Africa_Talent (dor:Island_Africa_Talent) --doo:producer--> Universal_Music_Group (dor:Universal_Music_Group)
+      - Top_of_the_World_(Brandy_song) (<http://dbpedia.org/resource/Top_of_the_World_(Brandy_song)>) --dop:writer--> Ahmad_(rapper) (<http://dbpedia.org/resource/Ahmad_(rapper)>)
+  '6':
+    attributes:
+      Island_Africa_Talent: (page length (characters) of wiki page^='4187')
+      Universal_Music_Group: (page length (characters) of wiki page^='102688')
+    relationships:
+      - Alberto_Carpani (dor:Alberto_Carpani) --doo:recordLabel--> Universal_Music_Group (dor:Universal_Music_Group)
+      - Island_Africa_Talent (dor:Island_Africa_Talent) --doo:producer--> Universal_Music_Group (dor:Universal_Music_Group)
+      - Sing_a_Song_Now_Now (dor:Sing_a_Song_Now_Now) --dop:writer--> Alberto_Carpani (dor:Alberto_Carpani)
+  '7':
+    attributes:
+      Reg_Grundy_Organisation: (page length (characters) of wiki page^='10533')
+      John_Williamson_(singer): (caption^='John Williamson, August 2012, State Theatre, Sydney')
+      Perfect_Match_(Australian_game_show): (page length (characters) of wiki page^='8002')
+    relationships:
+      - John_Williamson_(singer) (<http://dbpedia.org/resource/John_Williamson_(singer)>) --doo:recordLabel--> Reg_Grundy_Organisation (dor:Reg_Grundy_Organisation)
+      - Perfect_Match_(Australian_game_show) (<http://dbpedia.org/resource/Perfect_Match_(Australian_game_show)>) --doo:producer--> Reg_Grundy_Organisation (dor:Reg_Grundy_Organisation)
+      - Goodbye_Blinky_Bill (dor:Goodbye_Blinky_Bill) --dop:writer--> John_Williamson_(singer) (<http://dbpedia.org/resource/John_Williamson_(singer)>)
+  '8':
+    attributes:
+      Tienes_Talento: (page length (characters) of wiki page^='3274', presenter^='http://dbpedia.org/resource/Nuria_Roca')
+      Reg_Grundy_Organisation: (page length (characters) of wiki page^='10533')
+      John_Williamson_(singer): (caption^='John Williamson, August 2012, State Theatre, Sydney')
+    relationships:
+      - John_Williamson_(singer) (<http://dbpedia.org/resource/John_Williamson_(singer)>) --doo:recordLabel--> Reg_Grundy_Organisation (dor:Reg_Grundy_Organisation)
+      - Tienes_Talento (dor:Tienes_Talento) --doo:producer--> Reg_Grundy_Organisation (dor:Reg_Grundy_Organisation)
+      - Goodbye_Blinky_Bill (dor:Goodbye_Blinky_Bill) --dop:writer--> John_Williamson_(singer) (<http://dbpedia.org/resource/John_Williamson_(singer)>)
+  '9':
+    attributes:
+      Salman_Ahmad: (caption^='Salman Ahmad')
+      Ana_(1984_TV_series): (page length (characters) of wiki page^='3582')
+      Pakistan_Television_Corporation: (page length (characters) of wiki page^='34517')
+    relationships:
+      - Salman_Ahmad (dor:Salman_Ahmad) --doo:recordLabel--> Pakistan_Television_Corporation (dor:Pakistan_Television_Corporation)
+      - Ana_(1984_TV_series) (<http://dbpedia.org/resource/Ana_(1984_TV_series)>) --doo:producer--> Pakistan_Television_Corporation (dor:Pakistan_Television_Corporation)
+      - Ehtesaab (dor:Ehtesaab) --dop:writer--> Salman_Ahmad (dor:Salman_Ahmad)
+  '10':
+    attributes:
+      Salman_Ahmad: (caption^='Salman Ahmad')
+      Dehleez_(1981_TV_series): (page length (characters) of wiki page^='3037')
+      Pakistan_Television_Corporation: (page length (characters) of wiki page^='34517')
+    relationships:
+      - Salman_Ahmad (dor:Salman_Ahmad) --doo:recordLabel--> Pakistan_Television_Corporation (dor:Pakistan_Television_Corporation)
+      - Dehleez_(1981_TV_series) (<http://dbpedia.org/resource/Dehleez_(1981_TV_series)>) --doo:producer--> Pakistan_Television_Corporation (dor:Pakistan_Television_Corporation)
+      - Ehtesaab (dor:Ehtesaab) --dop:writer--> Salman_Ahmad (dor:Salman_Ahmad)
+attributes:
+  company: --direction^ (dop:direction)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --colwidth^ (dop:colwidth)--> int
+  musical artist: --class^ (dop:class)--> langString | --caption^ (dop:caption)--> langString | --quote^ (dop:quote)--> langString
+  television show: --data^ (dop:data)--> langString | --footer^ (dop:footer)--> langString | --alt^ (dop:alt)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --presenter^ (doo:presenter)--> Resource
+subgraph_id: 477
+relationships:
+  - musical artist --doo:recordLabel--> company
+  - television show --doo:producer--> company
+  - song --dop:writer--> musical artist

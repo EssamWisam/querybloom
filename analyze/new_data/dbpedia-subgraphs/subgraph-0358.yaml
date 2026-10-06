@@ -1,0 +1,81 @@
+types:
+  person: doo:Person
+  school: doo:School
+  gymnast: doo:Gymnast
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Knesses_Chizkiyahu (dor:Knesses_Chizkiyahu) --doo:country--> Israel (dor:Israel)
+      - Eliezer_Berland (dor:Eliezer_Berland) --dop:almaMater--> Knesses_Chizkiyahu (dor:Knesses_Chizkiyahu)
+      - Adar_Friedmann (dor:Adar_Friedmann) --doo:birthPlace--> Israel (dor:Israel)
+  '2':
+    attributes: {}
+    relationships:
+      - Hebrew_Reali_School (dor:Hebrew_Reali_School) --doo:country--> Israel (dor:Israel)
+      - Uri_Lubrani (dor:Uri_Lubrani) --dop:almaMater--> Hebrew_Reali_School (dor:Hebrew_Reali_School)
+      - Adar_Friedmann (dor:Adar_Friedmann) --doo:birthPlace--> Israel (dor:Israel)
+  '3':
+    attributes: {}
+    relationships:
+      - Istanbul_High_School (dor:Istanbul_High_School) --doo:country--> Turkey (dor:Turkey)
+      - Abdullah_Kiğılı (<http://dbpedia.org/resource/Abdullah_Kiğılı>) --dop:almaMater--> Istanbul_High_School (dor:Istanbul_High_School)
+      - Ahmet_Önder (<http://dbpedia.org/resource/Ahmet_Önder>) --doo:birthPlace--> Turkey (dor:Turkey)
+  '4':
+    attributes: {}
+    relationships:
+      - Istanbul_High_School (dor:Istanbul_High_School) --doo:country--> Turkey (dor:Turkey)
+      - Ahmet_Davutoğlu (<http://dbpedia.org/resource/Ahmet_Davutoğlu>) --dop:almaMater--> Istanbul_High_School (dor:Istanbul_High_School)
+      - Ahmet_Önder (<http://dbpedia.org/resource/Ahmet_Önder>) --doo:birthPlace--> Turkey (dor:Turkey)
+  '5':
+    attributes: {}
+    relationships:
+      - Galatasaray_High_School (dor:Galatasaray_High_School) --doo:country--> Turkey (dor:Turkey)
+      - Ali_Rana_Tarhan (dor:Ali_Rana_Tarhan) --dop:almaMater--> Galatasaray_High_School (dor:Galatasaray_High_School)
+      - Ahmet_Önder (<http://dbpedia.org/resource/Ahmet_Önder>) --doo:birthPlace--> Turkey (dor:Turkey)
+  '6':
+    attributes: {}
+    relationships:
+      - University_of_Vigo (dor:University_of_Vigo) --doo:country--> Spain (dor:Spain)
+      - Alberto_Caballero_(astronomer) (<http://dbpedia.org/resource/Alberto_Caballero_(astronomer)>) --dop:almaMater--> University_of_Vigo (dor:University_of_Vigo)
+      - Alba_Bautista (dor:Alba_Bautista) --doo:birthPlace--> Spain (dor:Spain)
+  '7':
+    attributes: {}
+    relationships:
+      - University_of_Vigo (dor:University_of_Vigo) --doo:country--> Spain (dor:Spain)
+      - Carmela_Troncoso (dor:Carmela_Troncoso) --dop:almaMater--> University_of_Vigo (dor:University_of_Vigo)
+      - Alba_Bautista (dor:Alba_Bautista) --doo:birthPlace--> Spain (dor:Spain)
+  '8':
+    attributes: {}
+    relationships:
+      - University_of_Lleida (dor:University_of_Lleida) --doo:country--> Spain (dor:Spain)
+      - Concep_Cañadell (<http://dbpedia.org/resource/Concep_Cañadell>) --dop:almaMater--> University_of_Lleida (dor:University_of_Lleida)
+      - Alba_Bautista (dor:Alba_Bautista) --doo:birthPlace--> Spain (dor:Spain)
+  '9':
+    attributes: {}
+    relationships:
+      - Vaughan_Road_Academy (dor:Vaughan_Road_Academy) --doo:country--> Canada (dor:Canada)
+      - Alison_Pill (dor:Alison_Pill) --dop:almaMater--> Vaughan_Road_Academy (dor:Vaughan_Road_Academy)
+      - Aleeza_Yu (dor:Aleeza_Yu) --doo:birthPlace--> Canada (dor:Canada)
+  '10':
+    attributes: {}
+    relationships:
+      - University_of_Toronto_Faculty_of_Law (dor:University_of_Toronto_Faculty_of_Law) --doo:country--> Canada (dor:Canada)
+      - Arif_Virani (dor:Arif_Virani) --dop:almaMater--> University_of_Toronto_Faculty_of_Law (dor:University_of_Toronto_Faculty_of_Law)
+      - Aleeza_Yu (dor:Aleeza_Yu) --doo:birthPlace--> Canada (dor:Canada)
+attributes:
+  person: --education^ (doo:education)--> Resource | --parents^ (dop:parents)--> Resource | --c^ (dop:c)--> langString | --image upright^ (dop:imageUpright)--> double
+  school: --capacity^ (dop:capacity)--> int
+  Location: --architecture^ (dop:architecture)--> Resource | --Apr high F^ (dop:aprHighF)--> double | --builder^ (dop:builder)--> langString | --Apr low C^ (dop:aprLowC)--> double | --Aug low C^ (dop:augLowC)--> double | --type^ (doo:type)--> Resource | --differentFrom (wwoo:differentFrom)--> Resource
+subgraph_id: 358
+relationships:
+  - school --doo:country--> Location
+  - person --dop:almaMater--> school
+  - gymnast --doo:birthPlace--> Location

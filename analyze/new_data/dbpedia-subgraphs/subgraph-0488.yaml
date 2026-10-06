@@ -1,0 +1,99 @@
+types:
+  person: doo:Person
+  country: doo:Country
+  Location: doo:Location
+  settlement: doo:Settlement
+  martial artist: doo:MartialArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Barcelona: (source^='Agencia Estatal de Meteorología')
+    relationships:
+      - Abner_Lloveras (dor:Abner_Lloveras) --doo:residence--> Barcelona (dor:Barcelona)
+      - Abner_Lloveras (dor:Abner_Lloveras) --doo:residence--> Spain (dor:Spain)
+      - Abner_Lloveras (dor:Abner_Lloveras) --doo:birthPlace--> Barcelona (dor:Barcelona)
+      - Carmela_Arias_y_Díaz_de_Rábago (<http://dbpedia.org/resource/Carmela_Arias_y_Díaz_de_Rábago>) --doo:knownFor--> Spain (dor:Spain)
+  '2':
+    attributes: {}
+    relationships:
+      - Abner_Lloveras (dor:Abner_Lloveras) --doo:residence--> Barcelona (dor:Barcelona)
+      - Abner_Lloveras (dor:Abner_Lloveras) --doo:residence--> Spain (dor:Spain)
+      - Abner_Lloveras (dor:Abner_Lloveras) --doo:birthPlace--> Spain (dor:Spain)
+      - Carmela_Arias_y_Díaz_de_Rábago (<http://dbpedia.org/resource/Carmela_Arias_y_Díaz_de_Rábago>) --doo:knownFor--> Spain (dor:Spain)
+  '3':
+    attributes:
+      Barcelona: (source^='Agencia Estatal de Meteorología')
+    relationships:
+      - Abner_Lloveras (dor:Abner_Lloveras) --doo:residence--> Barcelona (dor:Barcelona)
+      - Abner_Lloveras (dor:Abner_Lloveras) --doo:residence--> Spain (dor:Spain)
+      - Abner_Lloveras (dor:Abner_Lloveras) --doo:birthPlace--> Barcelona (dor:Barcelona)
+      - Hans-Adolf_von_Moltke (dor:Hans-Adolf_von_Moltke) --doo:knownFor--> Spain (dor:Spain)
+  '4':
+    attributes:
+      Delta,_British_Columbia: (motto^='Ours to preserve by hand and heart')
+    relationships:
+      - Adam_Braidwood (dor:Adam_Braidwood) --doo:residence--> Delta,_British_Columbia (<http://dbpedia.org/resource/Delta,_British_Columbia>)
+      - Adam_Braidwood (dor:Adam_Braidwood) --doo:residence--> Canada (dor:Canada)
+      - Adam_Braidwood (dor:Adam_Braidwood) --doo:birthPlace--> Canada (dor:Canada)
+      - Alexandrine_Gibb (dor:Alexandrine_Gibb) --doo:knownFor--> Canada (dor:Canada)
+  '5':
+    attributes:
+      Delta,_British_Columbia: (motto^='Ours to preserve by hand and heart')
+      Richmond,_British_Columbia: (source^='http://dbpedia.org/resource/Environment_Canada')
+    relationships:
+      - Adam_Braidwood (dor:Adam_Braidwood) --doo:residence--> Delta,_British_Columbia (<http://dbpedia.org/resource/Delta,_British_Columbia>)
+      - Adam_Braidwood (dor:Adam_Braidwood) --doo:residence--> Canada (dor:Canada)
+      - Adam_Braidwood (dor:Adam_Braidwood) --doo:birthPlace--> Richmond,_British_Columbia (<http://dbpedia.org/resource/Richmond,_British_Columbia>)
+      - Alexandrine_Gibb (dor:Alexandrine_Gibb) --doo:knownFor--> Canada (dor:Canada)
+  '6':
+    attributes:
+      Delta,_British_Columbia: (motto^='Ours to preserve by hand and heart')
+    relationships:
+      - Adam_Braidwood (dor:Adam_Braidwood) --doo:residence--> Delta,_British_Columbia (<http://dbpedia.org/resource/Delta,_British_Columbia>)
+      - Adam_Braidwood (dor:Adam_Braidwood) --doo:residence--> Canada (dor:Canada)
+      - Adam_Braidwood (dor:Adam_Braidwood) --doo:birthPlace--> Canada (dor:Canada)
+      - Asoka_Weerasinghe (dor:Asoka_Weerasinghe) --doo:knownFor--> Canada (dor:Canada)
+  '7':
+    attributes: {}
+    relationships:
+      - Adam_Larfi (dor:Adam_Larfi) --doo:residence--> Algiers (dor:Algiers)
+      - Adam_Larfi (dor:Adam_Larfi) --doo:residence--> Thailand (dor:Thailand)
+      - Adam_Larfi (dor:Adam_Larfi) --doo:birthPlace--> France (dor:France)
+      - Desislava_Bogusheva (dor:Desislava_Bogusheva) --doo:knownFor--> Thailand (dor:Thailand)
+  '8':
+    attributes: {}
+    relationships:
+      - Adam_Larfi (dor:Adam_Larfi) --doo:residence--> Algiers (dor:Algiers)
+      - Adam_Larfi (dor:Adam_Larfi) --doo:residence--> Thailand (dor:Thailand)
+      - Adam_Larfi (dor:Adam_Larfi) --doo:birthPlace--> Saint-Denis,_Seine-Saint-Denis (<http://dbpedia.org/resource/Saint-Denis,_Seine-Saint-Denis>)
+      - Desislava_Bogusheva (dor:Desislava_Bogusheva) --doo:knownFor--> Thailand (dor:Thailand)
+  '9':
+    attributes: {}
+    relationships:
+      - Adam_Larfi (dor:Adam_Larfi) --doo:residence--> Algiers (dor:Algiers)
+      - Adam_Larfi (dor:Adam_Larfi) --doo:residence--> Thailand (dor:Thailand)
+      - Adam_Larfi (dor:Adam_Larfi) --doo:birthPlace--> France (dor:France)
+      - Euphemia_Cowan_Barnett (dor:Euphemia_Cowan_Barnett) --doo:knownFor--> Thailand (dor:Thailand)
+  '10':
+    attributes:
+      New_Jersey: (motto^='Liberty and prosperity')
+    relationships:
+      - Ailson_Brites (dor:Ailson_Brites) --doo:residence--> New_Jersey (dor:New_Jersey)
+      - Ailson_Brites (dor:Ailson_Brites) --doo:residence--> United_States (dor:United_States)
+      - Ailson_Brites (dor:Ailson_Brites) --doo:birthPlace--> Brazil (dor:Brazil)
+      - Anna_Maxwell (dor:Anna_Maxwell) --doo:knownFor--> United_States (dor:United_States)
+attributes:
+  person: --alias^ (dop:alias)--> langString | --relative^ (doo:relative)--> Resource | --2y^ (dop:2y)--> int | --direction^ (dop:direction)--> langString
+  Location: --mouth place^ (doo:mouthPlace)--> Resource | --source^ (dop:source)--> Resource | --administrator^ (dop:administrator)--> Resource | --area^ (dop:area)--> acre
+  settlement: --Aug rain days^ (dop:augRainDays)--> double | --motto^ (doo:motto)--> string
+subgraph_id: 488
+relationships:
+  - martial artist --doo:residence--> settlement
+  - martial artist --doo:residence--> country
+  - martial artist --doo:birthPlace--> Location
+  - person --doo:knownFor--> country

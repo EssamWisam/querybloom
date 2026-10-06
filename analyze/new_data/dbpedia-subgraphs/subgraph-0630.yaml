@@ -1,0 +1,105 @@
+types:
+  book: doo:Book
+  artist: doo:Artist
+  building: doo:Building
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Art_Deco: (reason^='Will be able to find citation, but there is multiple volumes, so many pages. Which?')
+      Art_Deco_of_the_20s_and_30s: (country^='United Kingdom', author^='http://dbpedia.org/resource/Bevis_Hillier')
+    relationships:
+      - 1_Wall_Street__1_Wall_Street__1 (dor:1_Wall_Street__1_Wall_Street__1) --doo:architecturalStyle--> Art_Deco (dor:Art_Deco)
+      - Art_Deco_of_the_20s_and_30s (dor:Art_Deco_of_the_20s_and_30s) --doo:nonFictionSubject--> Art_Deco (dor:Art_Deco)
+      - Ada_Mae_Sharpless (dor:Ada_Mae_Sharpless) --doo:movement--> Art_Deco (dor:Art_Deco)
+  '2':
+    attributes:
+      Art_Deco: (reason^='Will be able to find citation, but there is multiple volumes, so many pages. Which?')
+      100-Flat_Building: (has abstract^='L''immeuble des cent-appartements est un immeuble Art déco situé à Novossibirsk, en Sibérie. Il est classé sur la liste du patrimoine architectural de la Fédération de Russie. Il est l''œuvre de l''archi...', caption^='Street view of the building')
+      Art_Deco_of_the_20s_and_30s: (country^='United Kingdom', author^='http://dbpedia.org/resource/Bevis_Hillier')
+    relationships:
+      - 100-Flat_Building (dor:100-Flat_Building) --doo:architecturalStyle--> Art_Deco (dor:Art_Deco)
+      - Art_Deco_of_the_20s_and_30s (dor:Art_Deco_of_the_20s_and_30s) --doo:nonFictionSubject--> Art_Deco (dor:Art_Deco)
+      - Ada_Mae_Sharpless (dor:Ada_Mae_Sharpless) --doo:movement--> Art_Deco (dor:Art_Deco)
+  '3':
+    attributes:
+      Art_Deco: (reason^='Will be able to find citation, but there is multiple volumes, so many pages. Which?')
+      111_Eighth_Avenue: (current tenants^='http://dbpedia.org/resource/Google', has abstract^='111 Eighth Avenue es un edificio de usos múltiples Art Deco de cuadra completa ubicado entre las avenidas Octava y Novena, y las calles 15 y 16 en el vecindario de Chelsea en Manhattan, Nueva York. Co...', caption^='Eighth Avenue facade of 111 Eighth Avenue')
+      Art_Deco_of_the_20s_and_30s: (country^='United Kingdom', author^='http://dbpedia.org/resource/Bevis_Hillier')
+    relationships:
+      - 111_Eighth_Avenue (dor:111_Eighth_Avenue) --doo:architecturalStyle--> Art_Deco (dor:Art_Deco)
+      - Art_Deco_of_the_20s_and_30s (dor:Art_Deco_of_the_20s_and_30s) --doo:nonFictionSubject--> Art_Deco (dor:Art_Deco)
+      - Ada_Mae_Sharpless (dor:Ada_Mae_Sharpless) --doo:movement--> Art_Deco (dor:Art_Deco)
+  '4':
+    attributes:
+      17_State_Street: (has abstract^='17 State Street é um arranha-céus em Lower Manhattan, no borough de Manhattan, em Nova Iorque. Foi concluído em 1988 e tem 42 andares e 165 m de altura.', caption^='')
+      Alaukik_Istimar: (country^='http://dbpedia.org/resource/Bangladesh')
+    relationships:
+      - 17_State_Street (dor:17_State_Street) --doo:architecturalStyle--> Modernism (dor:Modernism)
+      - Alaukik_Istimar (dor:Alaukik_Istimar) --doo:nonFictionSubject--> Modernism (dor:Modernism)
+      - Adolfo_Wildt (dor:Adolfo_Wildt) --doo:movement--> Modernism (dor:Modernism)
+  '5':
+    attributes:
+      201_Portage: '(has abstract^=''201 Portage (former names: TD Centre, Canwest Place, and CanWest Global Place) is an office tower at the northwest intersection of Portage and Main in Winnipeg, Manitoba, Canada. It is the tallest bui...'')'
+      Alaukik_Istimar: (country^='http://dbpedia.org/resource/Bangladesh')
+    relationships:
+      - 201_Portage (dor:201_Portage) --doo:architecturalStyle--> Modernism (dor:Modernism)
+      - Alaukik_Istimar (dor:Alaukik_Istimar) --doo:nonFictionSubject--> Modernism (dor:Modernism)
+      - Adolfo_Wildt (dor:Adolfo_Wildt) --doo:movement--> Modernism (dor:Modernism)
+  '6':
+    attributes:
+      Addis_Ababa_City_Hall: '(current tenants^=''Government of Addis Ababa'', has abstract^=''The Addis Ababa City Hall (Amharic: አዲስ አበባ ማዘጋጃ ቤት) is a governmental department that houses the offices of the Municipality of Addis Ababa, Ethiopia.'')'
+    relationships:
+      - Addis_Ababa_City_Hall (dor:Addis_Ababa_City_Hall) --doo:architecturalStyle--> Modernism (dor:Modernism)
+      - Alaukik_Istimar (dor:Alaukik_Istimar) --doo:nonFictionSubject--> Modernism (dor:Modernism)
+      - Adolfo_Wildt (dor:Adolfo_Wildt) --doo:movement--> Modernism (dor:Modernism)
+  '7':
+    attributes:
+      Aert_Mijtens: (known for^='Altarpieces, historical and mythological paintings and portraits')
+      Abucay_Church: '(has abstract^=''The Saint Dominic Parish Church (Tagalog: Simbahan ng Parokya ni Santo Domingo de Guzman), also known as Abucay Church, is a 17th-century Baroque church located at Brgy. Laon, Abucay, Bataan, Philippi...'', caption^=''Facade of the Saint Dominic Parish Church in Abucay, Bataan'')'
+      Leonardo_da_Vinci_(Stanley_book): (country^='USA', author^='http://dbpedia.org/resource/Diane_Stanley')
+    relationships:
+      - Abucay_Church (dor:Abucay_Church) --doo:architecturalStyle--> Renaissance (dor:Renaissance)
+      - Leonardo_da_Vinci_(Stanley_book) (<http://dbpedia.org/resource/Leonardo_da_Vinci_(Stanley_book)>) --doo:nonFictionSubject--> Renaissance (dor:Renaissance)
+      - Aert_Mijtens (dor:Aert_Mijtens) --doo:movement--> Renaissance (dor:Renaissance)
+  '8':
+    attributes:
+      Aert_Mijtens: (known for^='Altarpieces, historical and mythological paintings and portraits')
+      Auckland_Art_Gallery: (has abstract^='A Galeria de Arte Toi o Tāmaki de Auckland é a principal galeria pública de Auckland, na Nova Zelândia, e possui a mais extensa coleção de arte nacional e internacional da Nova Zelândia. Acolhe freque...', caption^='The gallery building, showing the clock tower')
+      Leonardo_da_Vinci_(Stanley_book): (country^='USA', author^='http://dbpedia.org/resource/Diane_Stanley')
+    relationships:
+      - Auckland_Art_Gallery (dor:Auckland_Art_Gallery) --doo:architecturalStyle--> Renaissance (dor:Renaissance)
+      - Leonardo_da_Vinci_(Stanley_book) (<http://dbpedia.org/resource/Leonardo_da_Vinci_(Stanley_book)>) --doo:nonFictionSubject--> Renaissance (dor:Renaissance)
+      - Aert_Mijtens (dor:Aert_Mijtens) --doo:movement--> Renaissance (dor:Renaissance)
+  '9':
+    attributes:
+      Aert_Mijtens: (known for^='Altarpieces, historical and mythological paintings and portraits')
+      Leonardo_da_Vinci_(Stanley_book): (country^='USA', author^='http://dbpedia.org/resource/Diane_Stanley')
+      Basilica_of_Santa_Maria,_Igualada: (has abstract^='La iglesia de Santa María de Igualada, conocida también como Iglesia Grande, es el conjunto histórico-artístico más importante de Igualada, la capital de la comarca de Noya. Los primeros pobladores de...', caption^='Main altarpiece')
+    relationships:
+      - Basilica_of_Santa_Maria,_Igualada (<http://dbpedia.org/resource/Basilica_of_Santa_Maria,_Igualada>) --doo:architecturalStyle--> Renaissance (dor:Renaissance)
+      - Leonardo_da_Vinci_(Stanley_book) (<http://dbpedia.org/resource/Leonardo_da_Vinci_(Stanley_book)>) --doo:nonFictionSubject--> Renaissance (dor:Renaissance)
+      - Aert_Mijtens (dor:Aert_Mijtens) --doo:movement--> Renaissance (dor:Renaissance)
+  '10':
+    attributes:
+      Possible_Minds: (country^='United States')
+      Al_Jawharah_Tower: (has abstract^='Al Jawharah Tower is a residential high-rise building in the city of Jeddah, Saudi Arabia, on the Corniche Road facing the Red Sea. It is owned by DAMAC Properties.')
+    relationships:
+      - Al_Jawharah_Tower (dor:Al_Jawharah_Tower) --doo:architecturalStyle--> Futurism (dor:Futurism)
+      - Possible_Minds (dor:Possible_Minds) --doo:nonFictionSubject--> Futurism (dor:Futurism)
+      - Aleksandra_Ekster (dor:Aleksandra_Ekster) --doo:movement--> Futurism (dor:Futurism)
+attributes:
+  book: --IMDB id^ (doo:imdbId)--> string | --bgcolor^ (dop:bgcolor)--> langString | --country^ (dop:country)--> langString | --reason^ (dop:reason)--> langString | --author^ (doo:author)--> Resource
+  artist: --known for^ (dop:knownFor)--> langString
+  building: --current tenants^ (dop:currentTenants)--> langString | --has abstract^ (doo:abstract)--> langString | --caption^ (dop:caption)--> langString
+  music genre: --reason^ (dop:reason)--> langString | --quote^ (dop:quote)--> langString
+subgraph_id: 630
+relationships:
+  - building --doo:architecturalStyle--> music genre
+  - book --doo:nonFictionSubject--> music genre
+  - artist --doo:movement--> music genre

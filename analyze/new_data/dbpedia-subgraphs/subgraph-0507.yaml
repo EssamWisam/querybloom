@@ -1,0 +1,80 @@
+types:
+  noble: doo:Noble
+  person: doo:Person
+  royalty: doo:Royalty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Anna_Khanum: (issue^='http://dbpedia.org/resource/Abbas_II_of_Persia')
+    relationships:
+      - Abbas_II_of_Persia (dor:Abbas_II_of_Persia) --doo:parent--> Anna_Khanum (dor:Anna_Khanum)
+      - Abbas_II_of_Persia (dor:Abbas_II_of_Persia) --dop:mother--> Anna_Khanum (dor:Anna_Khanum)
+  '2':
+    attributes:
+      Anna_Khanum: (issue^='http://dbpedia.org/resource/Abbas_II_of_Persia')
+      Safi_of_Persia: (after^='http://dbpedia.org/resource/Abbas_II_of_Persia')
+    relationships:
+      - Abbas_II_of_Persia (dor:Abbas_II_of_Persia) --doo:parent--> Safi_of_Persia (dor:Safi_of_Persia)
+      - Abbas_II_of_Persia (dor:Abbas_II_of_Persia) --dop:mother--> Anna_Khanum (dor:Anna_Khanum)
+  '3':
+    attributes:
+      Ada_de_Warenne: (issue^='', mother^='http://dbpedia.org/resource/Elizabeth_of_Vermandois,_Countess_of_Leicester')
+    relationships:
+      - Ada_of_Scotland (dor:Ada_of_Scotland) --doo:parent--> Ada_de_Warenne (dor:Ada_de_Warenne)
+      - Ada_of_Scotland (dor:Ada_of_Scotland) --dop:mother--> Ada_de_Warenne (dor:Ada_de_Warenne)
+  '4':
+    attributes:
+      Elisabeth_of_Bavaria,_Electress_of_Saxony: (image size^='150', issue^='http://dbpedia.org/resource/Christina_of_Saxony', mother^='http://dbpedia.org/resource/Anna_of_Brunswick-Grubenhagen-Einbeck')
+    relationships:
+      - Adalbert_of_Saxony (dor:Adalbert_of_Saxony) --doo:parent--> Elisabeth_of_Bavaria,_Electress_of_Saxony (<http://dbpedia.org/resource/Elisabeth_of_Bavaria,_Electress_of_Saxony>)
+      - Adalbert_of_Saxony (dor:Adalbert_of_Saxony) --dop:mother--> Elisabeth_of_Bavaria,_Electress_of_Saxony (<http://dbpedia.org/resource/Elisabeth_of_Bavaria,_Electress_of_Saxony>)
+  '5':
+    attributes:
+      Ernest,_Elector_of_Saxony: (after^='http://dbpedia.org/resource/Frederick_III,_Elector_of_Saxony')
+      Elisabeth_of_Bavaria,_Electress_of_Saxony: (image size^='150', issue^='http://dbpedia.org/resource/Christina_of_Saxony', mother^='http://dbpedia.org/resource/Anna_of_Brunswick-Grubenhagen-Einbeck')
+    relationships:
+      - Adalbert_of_Saxony (dor:Adalbert_of_Saxony) --doo:parent--> Ernest,_Elector_of_Saxony (<http://dbpedia.org/resource/Ernest,_Elector_of_Saxony>)
+      - Adalbert_of_Saxony (dor:Adalbert_of_Saxony) --dop:mother--> Elisabeth_of_Bavaria,_Electress_of_Saxony (<http://dbpedia.org/resource/Elisabeth_of_Bavaria,_Electress_of_Saxony>)
+  '6':
+    attributes:
+      Augustyn_Józef_Czartoryski: (death date^='1946-07-01')
+      Princess_María_de_los_Dolores_of_Bourbon-Two_Sicilies: (issue^='Prince Ludwik Piotr Czartoryski', mother^='http://dbpedia.org/resource/Princess_Louise_of_Orléans')
+    relationships:
+      - Adam_Karol_Czartoryski (dor:Adam_Karol_Czartoryski) --doo:parent--> Augustyn_Józef_Czartoryski (<http://dbpedia.org/resource/Augustyn_Józef_Czartoryski>)
+      - Adam_Karol_Czartoryski (dor:Adam_Karol_Czartoryski) --dop:mother--> Princess_María_de_los_Dolores_of_Bourbon-Two_Sicilies (<http://dbpedia.org/resource/Princess_María_de_los_Dolores_of_Bourbon-Two_Sicilies>)
+  '7':
+    attributes:
+      Princess_María_de_los_Dolores_of_Bourbon-Two_Sicilies: (issue^='Prince Ludwik Piotr Czartoryski', mother^='http://dbpedia.org/resource/Princess_Louise_of_Orléans')
+    relationships:
+      - Adam_Karol_Czartoryski (dor:Adam_Karol_Czartoryski) --doo:parent--> Princess_María_de_los_Dolores_of_Bourbon-Two_Sicilies (<http://dbpedia.org/resource/Princess_María_de_los_Dolores_of_Bourbon-Two_Sicilies>)
+      - Adam_Karol_Czartoryski (dor:Adam_Karol_Czartoryski) --dop:mother--> Princess_María_de_los_Dolores_of_Bourbon-Two_Sicilies (<http://dbpedia.org/resource/Princess_María_de_los_Dolores_of_Bourbon-Two_Sicilies>)
+  '8':
+    attributes:
+      August_Aleksander_Czartoryski: (death date^='1782-04-04')
+    relationships:
+      - Adam_Kazimierz_Czartoryski (dor:Adam_Kazimierz_Czartoryski) --doo:parent--> August_Aleksander_Czartoryski (dor:August_Aleksander_Czartoryski)
+      - Adam_Kazimierz_Czartoryski (dor:Adam_Kazimierz_Czartoryski) --dop:mother--> Maria_Zofia_Sieniawska (dor:Maria_Zofia_Sieniawska)
+  '9':
+    attributes:
+      Princess_Marguerite_of_Orléans: (image size^='220', issue^='Prince Witold Kazimierz Czartoryski', mother^='http://dbpedia.org/resource/Princess_Victoria_of_Saxe-Coburg_and_Gotha')
+    relationships:
+      - Adam_Ludwik_Czartoryski (dor:Adam_Ludwik_Czartoryski) --doo:parent--> Princess_Marguerite_of_Orléans (<http://dbpedia.org/resource/Princess_Marguerite_of_Orléans>)
+      - Adam_Ludwik_Czartoryski (dor:Adam_Ludwik_Czartoryski) --dop:mother--> Princess_Marguerite_of_Orléans (<http://dbpedia.org/resource/Princess_Marguerite_of_Orléans>)
+  '10':
+    attributes:
+      Waldrada_of_Worms: (issue^='http://dbpedia.org/resource/Adelaide_of_Auxerre_(born_c._870)', mother^='Waldrada of Autun')
+    relationships:
+      - Adelaide_of_Auxerre_(born_c._870) (<http://dbpedia.org/resource/Adelaide_of_Auxerre_(born_c._870)>) --doo:parent--> Waldrada_of_Worms (dor:Waldrada_of_Worms)
+      - Adelaide_of_Auxerre_(born_c._870) (<http://dbpedia.org/resource/Adelaide_of_Auxerre_(born_c._870)>) --dop:mother--> Waldrada_of_Worms (dor:Waldrada_of_Worms)
+attributes:
+  person: --footer^ (dop:footer)--> langString | --death date^ (doo:deathDate)--> date | --width^ (dop:width)--> int | --alias^ (dop:alias)--> langString | --after^ (dop:after)--> langString | --education^ (doo:education)--> Resource
+  royalty: --image size^ (dop:imageSize)--> int | --issue^ (dop:issue)--> int | --alt^ (dop:alt)--> langString | --mother^ (dop:mother)--> Resource | --float^ (dop:float)--> langString
+subgraph_id: 507
+relationships:
+  - noble --doo:parent--> person
+  - noble --dop:mother--> royalty

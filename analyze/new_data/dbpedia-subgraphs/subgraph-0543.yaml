@@ -1,0 +1,48 @@
+types:
+  person: doo:Person
+  politician: doo:Politician
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Vienna: (Apr precipitation mm^='45', Aug precipitation days^='8.5')
+    relationships:
+      - Emilie_Schenkl (dor:Emilie_Schenkl) --dop:birthPlace--> Vienna (dor:Vienna)
+      - Subhas_Chandra_Bose (dor:Subhas_Chandra_Bose) --dop:spouse--> Emilie_Schenkl (dor:Emilie_Schenkl)
+      - 1911–12_SK_Rapid_Wien_season (<http://dbpedia.org/resource/1911–12_SK_Rapid_Wien_season>) --doo:homeStadium--> Vienna (dor:Vienna)
+      - Sarat_Chandra_Bose (dor:Sarat_Chandra_Bose) --dop:relatives--> Subhas_Chandra_Bose (dor:Subhas_Chandra_Bose)
+  '2':
+    attributes:
+      Vienna: (Apr precipitation mm^='45', Aug precipitation days^='8.5')
+    relationships:
+      - Emilie_Schenkl (dor:Emilie_Schenkl) --dop:birthPlace--> Vienna (dor:Vienna)
+      - Subhas_Chandra_Bose (dor:Subhas_Chandra_Bose) --dop:spouse--> Emilie_Schenkl (dor:Emilie_Schenkl)
+      - 1912–13_SK_Rapid_Wien_season (<http://dbpedia.org/resource/1912–13_SK_Rapid_Wien_season>) --doo:homeStadium--> Vienna (dor:Vienna)
+      - Sarat_Chandra_Bose (dor:Sarat_Chandra_Bose) --dop:relatives--> Subhas_Chandra_Bose (dor:Subhas_Chandra_Bose)
+  '3':
+    attributes:
+      Vienna: (Apr precipitation mm^='45', Aug precipitation days^='8.5')
+    relationships:
+      - Emilie_Schenkl (dor:Emilie_Schenkl) --dop:birthPlace--> Vienna (dor:Vienna)
+      - Subhas_Chandra_Bose (dor:Subhas_Chandra_Bose) --dop:spouse--> Emilie_Schenkl (dor:Emilie_Schenkl)
+      - 1913–14_SK_Rapid_Wien_season (<http://dbpedia.org/resource/1913–14_SK_Rapid_Wien_season>) --doo:homeStadium--> Vienna (dor:Vienna)
+      - Sarat_Chandra_Bose (dor:Sarat_Chandra_Bose) --dop:relatives--> Subhas_Chandra_Bose (dor:Subhas_Chandra_Bose)
+attributes:
+  person: --family^ (dop:family)--> Resource | --differentFrom (wwoo:differentFrom)--> Resource
+  politician: --1pp^ (dop:1pp)--> int
+  settlement: --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --anthem^ (doo:anthem)--> Resource | --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --float^ (dop:float)--> langString
+  office holder: --after^ (dop:after)--> langString | --residence^ (doo:residence)--> Resource | --2a^ (dop:2a)--> langString
+subgraph_id: 543
+relationships:
+  - person --dop:birthPlace--> settlement
+  - politician --dop:spouse--> person
+  - soccer club --doo:homeStadium--> settlement
+  - office holder --dop:relatives--> politician

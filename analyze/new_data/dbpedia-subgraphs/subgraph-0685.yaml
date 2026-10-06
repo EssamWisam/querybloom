@@ -1,0 +1,88 @@
+types:
+  artist: doo:Artist
+  Location: doo:Location
+  monument: doo:Monument
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ivan_Martos: (death place^='http://dbpedia.org/resource/Saint_Petersburg')
+    relationships:
+      - Monument_to_Minin_and_Pozharsky (dor:Monument_to_Minin_and_Pozharsky) --doo:location--> Russia (dor:Russia)
+      - Abdul_Madzhid_(Dagestan_rebel) (<http://dbpedia.org/resource/Abdul_Madzhid_(Dagestan_rebel)>) --doo:deathPlace--> Russia (dor:Russia)
+      - Monument_to_Minin_and_Pozharsky (dor:Monument_to_Minin_and_Pozharsky) --dop:designer--> Ivan_Martos (dor:Ivan_Martos)
+  '2':
+    attributes:
+      Oleg_Komov: (birth date^='1932-07-16', death place^='Moscow, Russia')
+    relationships:
+      - Monument_to_Peter_I_(Azov) (<http://dbpedia.org/resource/Monument_to_Peter_I_(Azov)>) --doo:location--> Russia (dor:Russia)
+      - Abdul_Madzhid_(Dagestan_rebel) (<http://dbpedia.org/resource/Abdul_Madzhid_(Dagestan_rebel)>) --doo:deathPlace--> Russia (dor:Russia)
+      - Monument_to_Peter_I_(Azov) (<http://dbpedia.org/resource/Monument_to_Peter_I_(Azov)>) --dop:designer--> Oleg_Komov (dor:Oleg_Komov)
+  '3':
+    attributes:
+      Sergey_Konenkov: (birth date^='1874-07-10')
+    relationships:
+      - Monument_to_Stepan_Razin (dor:Monument_to_Stepan_Razin) --doo:location--> Russia (dor:Russia)
+      - Abdul_Madzhid_(Dagestan_rebel) (<http://dbpedia.org/resource/Abdul_Madzhid_(Dagestan_rebel)>) --doo:deathPlace--> Russia (dor:Russia)
+      - Monument_to_Stepan_Razin (dor:Monument_to_Stepan_Razin) --dop:designer--> Sergey_Konenkov (dor:Sergey_Konenkov)
+  '4':
+    attributes:
+      Daniel_Chester_French: (birth date^='1850-04-20', death place^='Stockbridge, Massachusetts, U.S.')
+    relationships:
+      - Dupont_Circle_Fountain (dor:Dupont_Circle_Fountain) --doo:location--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Abraham_Myers (dor:Abraham_Myers) --doo:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Dupont_Circle_Fountain (dor:Dupont_Circle_Fountain) --dop:designer--> Daniel_Chester_French (dor:Daniel_Chester_French)
+  '5':
+    attributes:
+      John_Quincy_Adams_Ward: (birth date^='1830-06-29', death place^='http://dbpedia.org/resource/New_York_City')
+    relationships:
+      - Equestrian_statue_of_George_Henry_Thomas (dor:Equestrian_statue_of_George_Henry_Thomas) --doo:location--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Abraham_Myers (dor:Abraham_Myers) --doo:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Equestrian_statue_of_George_Henry_Thomas (dor:Equestrian_statue_of_George_Henry_Thomas) --dop:designer--> John_Quincy_Adams_Ward (dor:John_Quincy_Adams_Ward)
+  '6':
+    attributes:
+      Gutzon_Borglum: (birth date^='1867-03-25', death place^='Chicago, Illinois, U.S.')
+    relationships:
+      - Equestrian_statue_of_Philip_Sheridan (dor:Equestrian_statue_of_Philip_Sheridan) --doo:location--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Abraham_Myers (dor:Abraham_Myers) --doo:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Equestrian_statue_of_Philip_Sheridan (dor:Equestrian_statue_of_Philip_Sheridan) --dop:designer--> Gutzon_Borglum (dor:Gutzon_Borglum)
+  '7':
+    attributes: {}
+    relationships:
+      - Dewey_Arch (dor:Dewey_Arch) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Dewey_Arch (dor:Dewey_Arch) --dop:designer--> Charles_Rollinson_Lamb (dor:Charles_Rollinson_Lamb)
+  '8':
+    attributes:
+      Daniel_Chester_French: (birth date^='1850-04-20', death place^='Stockbridge, Massachusetts, U.S.')
+    relationships:
+      - Equestrian_statue_of_Charles_Devens (dor:Equestrian_statue_of_Charles_Devens) --doo:location--> United_States (dor:United_States)
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --doo:deathPlace--> United_States (dor:United_States)
+      - Equestrian_statue_of_Charles_Devens (dor:Equestrian_statue_of_Charles_Devens) --dop:designer--> Daniel_Chester_French (dor:Daniel_Chester_French)
+  '9':
+    attributes:
+      Edward_Clark_Potter: (birth date^='1857-11-26', death place^='http://dbpedia.org/resource/New_London,_Connecticut')
+    relationships:
+      - Equestrian_statue_of_Charles_Devens (dor:Equestrian_statue_of_Charles_Devens) --doo:location--> United_States (dor:United_States)
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --doo:deathPlace--> United_States (dor:United_States)
+      - Equestrian_statue_of_Charles_Devens (dor:Equestrian_statue_of_Charles_Devens) --dop:designer--> Edward_Clark_Potter (dor:Edward_Clark_Potter)
+  '10':
+    attributes:
+      Juan_Genovés: "(birth date^='1930-05-31', death place^='Madrid\_\_')"
+    relationships:
+      - El_abrazo_(Madrid) (<http://dbpedia.org/resource/El_abrazo_(Madrid)>) --doo:location--> Madrid (dor:Madrid)
+      - Agustín_Muñoz_Grandes (<http://dbpedia.org/resource/Agustín_Muñoz_Grandes>) --doo:deathPlace--> Madrid (dor:Madrid)
+      - El_abrazo_(Madrid) (<http://dbpedia.org/resource/El_abrazo_(Madrid)>) --dop:designer--> Juan_Genovés (<http://dbpedia.org/resource/Juan_Genovés>)
+attributes:
+  artist: --birth date^ (doo:birthDate)--> date | --death place^ (dop:deathPlace)--> langString
+  Location: --Aug precipitation inch^ (dop:augPrecipitationInch)--> double | --eponym^ (dop:eponym)--> langString | --age^ (dop:age)--> second | --founder^ (doo:founder)--> Resource | --image upright^ (dop:imageUpright)--> double | --1y^ (dop:1y)--> int | --Apr record high C^ (dop:aprRecordHighC)--> double
+subgraph_id: 685
+relationships:
+  - monument --doo:location--> Location
+  - military person --doo:deathPlace--> Location
+  - monument --dop:designer--> artist

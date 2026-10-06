@@ -1,0 +1,56 @@
+types:
+  company: doo:Company
+  magazine: doo:Magazine
+  automobile: doo:Automobile
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doom: http://dbpedia.org/ontology/MeanOfTransportation/
+instances:
+  '1':
+    attributes:
+      Ford_Motor_Company: (founded by^='http://dbpedia.org/resource/Henry_Ford', industry^='http://dbpedia.org/resource/Automotive_industry', products^='')
+    relationships:
+      - Ford_Times (dor:Ford_Times) --doo:publisher--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - 1932_Ford (dor:1932_Ford) --dop:manufacturer--> Ford_Motor_Company (dor:Ford_Motor_Company)
+  '2':
+    attributes:
+      1937_Ford: (assembly^='http://dbpedia.org/resource/Atlanta,_Georgia')
+      Ford_Motor_Company: (founded by^='http://dbpedia.org/resource/Henry_Ford', industry^='http://dbpedia.org/resource/Automotive_industry', products^='')
+    relationships:
+      - Ford_Times (dor:Ford_Times) --doo:publisher--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - 1937_Ford (dor:1937_Ford) --dop:manufacturer--> Ford_Motor_Company (dor:Ford_Motor_Company)
+  '3':
+    attributes:
+      1941_Ford: (assembly^='Argentina')
+      Ford_Motor_Company: (founded by^='http://dbpedia.org/resource/Henry_Ford', industry^='http://dbpedia.org/resource/Automotive_industry', products^='')
+    relationships:
+      - Ford_Times (dor:Ford_Times) --doo:publisher--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - 1941_Ford (dor:1941_Ford) --dop:manufacturer--> Ford_Motor_Company (dor:Ford_Motor_Company)
+  '4':
+    attributes:
+      Porsche_918_Spyder: '(assembly^=''Germany: Stuttgart, Zuffenhausen'')'
+    relationships:
+      - Christophorus_(magazine) (<http://dbpedia.org/resource/Christophorus_(magazine)>) --doo:publisher--> Porsche_AG (dor:Porsche_AG)
+      - Porsche_918_Spyder (dor:Porsche_918_Spyder) --dop:manufacturer--> Porsche_AG (dor:Porsche_AG)
+  '5':
+    attributes:
+      Porsche_928: '(weight (kg)^=''1450.0'', weight (g)^=''1450000.0'', assembly^=''Germany: Zuffenhausen'')'
+    relationships:
+      - Christophorus_(magazine) (<http://dbpedia.org/resource/Christophorus_(magazine)>) --doo:publisher--> Porsche_AG (dor:Porsche_AG)
+      - Porsche_928 (dor:Porsche_928) --dop:manufacturer--> Porsche_AG (dor:Porsche_AG)
+  '6':
+    attributes:
+      Porsche_935: '(weight (kg)^=''970.0'', weight (g)^=''970000.0'', assembly^=''West Germany: Stuttgart-Zuffenhausen'')'
+    relationships:
+      - Christophorus_(magazine) (<http://dbpedia.org/resource/Christophorus_(magazine)>) --doo:publisher--> Porsche_AG (dor:Porsche_AG)
+      - Porsche_935 (dor:Porsche_935) --dop:manufacturer--> Porsche_AG (dor:Porsche_AG)
+attributes:
+  company: --width^ (dop:width)--> int | --founded by^ (doo:foundedBy)--> Resource | --1a^ (dop:1a)--> langString | --industry^ (dop:industry)--> langString | --products^ (dop:products)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+  automobile: --weight (kg)^ (doom:weight)--> kilogram | --automobile platform^ (doo:automobilePlatform)--> Resource | --weight (g)^ (doo:weight)--> double | --assembly^ (dop:assembly)--> langString
+subgraph_id: 36
+relationships:
+  - magazine --doo:publisher--> company
+  - automobile --dop:manufacturer--> company

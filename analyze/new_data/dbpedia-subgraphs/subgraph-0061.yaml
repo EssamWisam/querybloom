@@ -1,0 +1,105 @@
+types:
+  album: doo:Album
+  cardinal: doo:Cardinal
+  settlement: doo:Settlement
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Seoul: (area total (m2)^='605210000.0')
+      Park_Yoo-chun: (birth place^='Seoul, South Korea')
+      '%22O%22-Jung.Ban.Hap.': (extra^='')
+    relationships:
+      - Park_Yoo-chun (dor:Park_Yoo-chun) --doo:birthPlace--> Seoul (dor:Seoul)
+      - Nicholas_Cheong_Jin-suk (dor:Nicholas_Cheong_Jin-suk) --doo:diocese--> Seoul (dor:Seoul)
+      - '%22O%22-Jung.Ban.Hap. (<http://dbpedia.org/resource/%22O%22-Jung.Ban.Hap.>) --dop:lyrics--> Park_Yoo-chun (dor:Park_Yoo-chun)'
+  '2':
+    attributes:
+      Seoul: (area total (m2)^='605210000.0')
+      Yoon_Sang: (birth place^='Seoul, South Korea')
+      '%22O%22-Jung.Ban.Hap.': (extra^='')
+    relationships:
+      - Yoon_Sang (dor:Yoon_Sang) --doo:birthPlace--> Seoul (dor:Seoul)
+      - Nicholas_Cheong_Jin-suk (dor:Nicholas_Cheong_Jin-suk) --doo:diocese--> Seoul (dor:Seoul)
+      - '%22O%22-Jung.Ban.Hap. (<http://dbpedia.org/resource/%22O%22-Jung.Ban.Hap.>) --dop:lyrics--> Yoon_Sang (dor:Yoon_Sang)'
+  '3':
+    attributes:
+      Seoul: (area total (m2)^='605210000.0')
+      Young-hu_Kim: (birth place^='Seoul, South Korea')
+      '%22O%22-Jung.Ban.Hap.': (extra^='')
+    relationships:
+      - Young-hu_Kim (dor:Young-hu_Kim) --doo:birthPlace--> Seoul (dor:Seoul)
+      - Nicholas_Cheong_Jin-suk (dor:Nicholas_Cheong_Jin-suk) --doo:diocese--> Seoul (dor:Seoul)
+      - '%22O%22-Jung.Ban.Hap. (<http://dbpedia.org/resource/%22O%22-Jung.Ban.Hap.>) --dop:lyrics--> Young-hu_Kim (dor:Young-hu_Kim)'
+  '4':
+    attributes:
+      Rimini: (Aug low C^='17.6', area total (m2)^='135790000.0')
+      Samuele_Bersani: (birth place^='Rimini, Italy')
+      20_–_The_Greatest_Hits_(Laura_Pausini_album): (access-date^='2013-01-09', extra^='Amateur recording of Laura Pausini singing, 1976')
+    relationships:
+      - Samuele_Bersani (dor:Samuele_Bersani) --doo:birthPlace--> Rimini (dor:Rimini)
+      - Ludovico_Valenti (dor:Ludovico_Valenti) --doo:diocese--> Rimini (dor:Rimini)
+      - 20_–_The_Greatest_Hits_(Laura_Pausini_album) (<http://dbpedia.org/resource/20_–_The_Greatest_Hits_(Laura_Pausini_album)>) --dop:lyrics--> Samuele_Bersani (dor:Samuele_Bersani)
+  '5':
+    attributes:
+      Belo_Horizonte: (Aug low C^='15.8', area total (m2)^='330900000.0')
+      Wagner_Lamounier: (birth place^='Belo Horizonte, Minas Gerais, Brazil')
+    relationships:
+      - Wagner_Lamounier (dor:Wagner_Lamounier) --doo:birthPlace--> Belo_Horizonte (dor:Belo_Horizonte)
+      - Serafim_Fernandes_de_Araújo (<http://dbpedia.org/resource/Serafim_Fernandes_de_Araújo>) --doo:diocese--> Belo_Horizonte (dor:Belo_Horizonte)
+      - Antichristian_Phenomenon (dor:Antichristian_Phenomenon) --dop:lyrics--> Wagner_Lamounier (dor:Wagner_Lamounier)
+  '6':
+    attributes:
+      Aries_(album): (access-date^='2019-05-13')
+      Santo_Domingo: (Aug low C^='23', area total (m2)^='104440000.0', named for^='http://dbpedia.org/resource/Saint_Dominic')
+    relationships:
+      - Juan_Luis_Guerra (dor:Juan_Luis_Guerra) --doo:birthPlace--> Santo_Domingo (dor:Santo_Domingo)
+      - Octavio_Beras_Rojas (dor:Octavio_Beras_Rojas) --doo:diocese--> Santo_Domingo (dor:Santo_Domingo)
+      - Aries_(album) (<http://dbpedia.org/resource/Aries_(album)>) --dop:lyrics--> Juan_Luis_Guerra (dor:Juan_Luis_Guerra)
+  '7':
+    attributes:
+      Max_Cavalera: (birth place^='Belo Horizonte, Minas Gerais, Brazil')
+      Belo_Horizonte: (Aug low C^='15.8', area total (m2)^='330900000.0')
+    relationships:
+      - Max_Cavalera (dor:Max_Cavalera) --doo:birthPlace--> Belo_Horizonte (dor:Belo_Horizonte)
+      - Serafim_Fernandes_de_Araújo (<http://dbpedia.org/resource/Serafim_Fernandes_de_Araújo>) --doo:diocese--> Belo_Horizonte (dor:Belo_Horizonte)
+      - Arise_(Sepultura_album) (<http://dbpedia.org/resource/Arise_(Sepultura_album)>) --dop:lyrics--> Max_Cavalera (dor:Max_Cavalera)
+  '8':
+    attributes:
+      Belgrade: (Aug low C^='18.5', area total (m2)^='359900000.0')
+      Marina_Tucaković: (birth place^='http://dbpedia.org/resource/Belgrade')
+    relationships:
+      - Marina_Tucaković (<http://dbpedia.org/resource/Marina_Tucaković>) --doo:birthPlace--> Belgrade (dor:Belgrade)
+      - Josip_Ujčić (<http://dbpedia.org/resource/Josip_Ujčić>) --doo:diocese--> Belgrade (dor:Belgrade)
+      - Autogram_(album) (<http://dbpedia.org/resource/Autogram_(album)>) --dop:lyrics--> Marina_Tucaković (<http://dbpedia.org/resource/Marina_Tucaković>)
+  '9':
+    attributes:
+      Belo_Horizonte: (Aug low C^='15.8', area total (m2)^='330900000.0')
+      Wagner_Lamounier: (birth place^='Belo Horizonte, Minas Gerais, Brazil')
+    relationships:
+      - Wagner_Lamounier (dor:Wagner_Lamounier) --doo:birthPlace--> Belo_Horizonte (dor:Belo_Horizonte)
+      - Serafim_Fernandes_de_Araújo (<http://dbpedia.org/resource/Serafim_Fernandes_de_Araújo>) --doo:diocese--> Belo_Horizonte (dor:Belo_Horizonte)
+      - Bestial_Devastation (dor:Bestial_Devastation) --dop:lyrics--> Wagner_Lamounier (dor:Wagner_Lamounier)
+  '10':
+    attributes:
+      Vinayak_Sasikumar: (birth place^='Thiruvananthapuram, Kerala, India')
+      Thiruvananthapuram: (Aug low C^='23.4', area total (m2)^='214000000.0')
+      Bheeshma_Parvam_(soundtrack): (extra^='Hamsika Iyer,')
+    relationships:
+      - Vinayak_Sasikumar (dor:Vinayak_Sasikumar) --doo:birthPlace--> Thiruvananthapuram (dor:Thiruvananthapuram)
+      - List_of_major_archbishops_of_Thiruvananthapuram (dor:List_of_major_archbishops_of_Thiruvananthapuram) --doo:diocese--> Thiruvananthapuram (dor:Thiruvananthapuram)
+      - Bheeshma_Parvam_(soundtrack) (<http://dbpedia.org/resource/Bheeshma_Parvam_(soundtrack)>) --dop:lyrics--> Vinayak_Sasikumar (dor:Vinayak_Sasikumar)
+attributes:
+  album: --access-date^ (dop:accessDate)--> date | --extra^ (dop:extra)--> int | --writer^ (dop:writer)--> langString
+  settlement: --Aug low F^ (dop:augLowF)--> int | --area^ (dop:area)--> double | --Aug low C^ (dop:augLowC)--> int | --winner^ (dop:winner)--> langString | --data^ (dop:data)--> int | --footer align^ (dop:footerAlign)--> langString | --area total (m2)^ (doo:areaTotal)--> double | --named for^ (dop:namedFor)--> langString
+  musical artist: --birth place^ (dop:birthPlace)--> langString | --url^ (dop:url)--> Resource
+subgraph_id: 61
+relationships:
+  - musical artist --doo:birthPlace--> settlement
+  - cardinal --doo:diocese--> settlement
+  - album --dop:lyrics--> musical artist

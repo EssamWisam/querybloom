@@ -1,0 +1,126 @@
+types:
+  city: doo:City
+  song: doo:Song
+  album: doo:Album
+  person: doo:Person
+  single: doo:Single
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - ..._And_Then_There_Was_X (<http://dbpedia.org/resource/..._And_Then_There_Was_X>) --dop:title--> Party_Up_(Up_in_Here) (<http://dbpedia.org/resource/Party_Up_(Up_in_Here)>)
+      - ..._And_Then_There_Was_X (<http://dbpedia.org/resource/..._And_Then_There_Was_X>) --dop:extra--> Irv_Gotti (dor:Irv_Gotti)
+      - ..._And_Then_There_Was_X (<http://dbpedia.org/resource/..._And_Then_There_Was_X>) --dop:artist--> DMX (dor:DMX)
+      - Irv_Gotti (dor:Irv_Gotti) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - Party_Up_(Up_in_Here) (<http://dbpedia.org/resource/Party_Up_(Up_in_Here)>) --doo:subsequentWork--> What_These_Bitches_Want (dor:What_These_Bitches_Want)
+  '2':
+    attributes:
+      Swizz_Beatz: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1')
+      ..._And_Then_There_Was_X: (page length (characters) of wiki page^='12170')
+    relationships:
+      - ..._And_Then_There_Was_X (<http://dbpedia.org/resource/..._And_Then_There_Was_X>) --dop:title--> Party_Up_(Up_in_Here) (<http://dbpedia.org/resource/Party_Up_(Up_in_Here)>)
+      - ..._And_Then_There_Was_X (<http://dbpedia.org/resource/..._And_Then_There_Was_X>) --dop:extra--> Swizz_Beatz (dor:Swizz_Beatz)
+      - ..._And_Then_There_Was_X (<http://dbpedia.org/resource/..._And_Then_There_Was_X>) --dop:artist--> DMX (dor:DMX)
+      - Swizz_Beatz (dor:Swizz_Beatz) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - Party_Up_(Up_in_Here) (<http://dbpedia.org/resource/Party_Up_(Up_in_Here)>) --doo:subsequentWork--> What_These_Bitches_Want (dor:What_These_Bitches_Want)
+  '3':
+    attributes:
+      +_(album): (page length (characters) of wiki page^='71805')
+      Small_Bump: (accessdate^='2017-03-25')
+    relationships:
+      - +_(album) (<http://dbpedia.org/resource/+_(album)>) --dop:title--> Drunk_(Ed_Sheeran_song) (<http://dbpedia.org/resource/Drunk_(Ed_Sheeran_song)>)
+      - +_(album) (<http://dbpedia.org/resource/+_(album)>) --dop:extra--> No_I.D. (<http://dbpedia.org/resource/No_I.D.>)
+      - +_(album) (<http://dbpedia.org/resource/+_(album)>) --dop:artist--> Ed_Sheeran (dor:Ed_Sheeran)
+      - No_I.D. (<http://dbpedia.org/resource/No_I.D.>) --doo:birthPlace--> Chicago (dor:Chicago)
+      - Drunk_(Ed_Sheeran_song) (<http://dbpedia.org/resource/Drunk_(Ed_Sheeran_song)>) --doo:subsequentWork--> Small_Bump (dor:Small_Bump)
+  '4':
+    attributes:
+      +_(album): (page length (characters) of wiki page^='71805')
+      Drunk_(Ed_Sheeran_song): (accessdate^='2017-03-24')
+    relationships:
+      - +_(album) (<http://dbpedia.org/resource/+_(album)>) --dop:title--> Lego_House (dor:Lego_House)
+      - +_(album) (<http://dbpedia.org/resource/+_(album)>) --dop:extra--> No_I.D. (<http://dbpedia.org/resource/No_I.D.>)
+      - +_(album) (<http://dbpedia.org/resource/+_(album)>) --dop:artist--> Ed_Sheeran (dor:Ed_Sheeran)
+      - No_I.D. (<http://dbpedia.org/resource/No_I.D.>) --doo:birthPlace--> Chicago (dor:Chicago)
+      - Lego_House (dor:Lego_House) --doo:subsequentWork--> Drunk_(Ed_Sheeran_song) (<http://dbpedia.org/resource/Drunk_(Ed_Sheeran_song)>)
+  '5':
+    attributes:
+      +_(album): (page length (characters) of wiki page^='71805')
+    relationships:
+      - +_(album) (<http://dbpedia.org/resource/+_(album)>) --dop:title--> Small_Bump (dor:Small_Bump)
+      - +_(album) (<http://dbpedia.org/resource/+_(album)>) --dop:extra--> No_I.D. (<http://dbpedia.org/resource/No_I.D.>)
+      - +_(album) (<http://dbpedia.org/resource/+_(album)>) --dop:artist--> Ed_Sheeran (dor:Ed_Sheeran)
+      - No_I.D. (<http://dbpedia.org/resource/No_I.D.>) --doo:birthPlace--> Chicago (dor:Chicago)
+      - Small_Bump (dor:Small_Bump) --doo:subsequentWork--> Hush_Little_Baby_(Wretch_32_song) (<http://dbpedia.org/resource/Hush_Little_Baby_(Wretch_32_song)>)
+  '6':
+    attributes:
+      Timbaland: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1')
+      100%25_Ginuwine: (page length (characters) of wiki page^='11331')
+    relationships:
+      - 100%25_Ginuwine (<http://dbpedia.org/resource/100%25_Ginuwine>) --dop:title--> Same_Ol'_G (<http://dbpedia.org/resource/Same_Ol'_G>)
+      - 100%25_Ginuwine (<http://dbpedia.org/resource/100%25_Ginuwine>) --dop:extra--> Timbaland (dor:Timbaland)
+      - 100%25_Ginuwine (<http://dbpedia.org/resource/100%25_Ginuwine>) --dop:artist--> Ginuwine (dor:Ginuwine)
+      - Timbaland (dor:Timbaland) --doo:birthPlace--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - Same_Ol'_G (<http://dbpedia.org/resource/Same_Ol'_G>) --doo:subsequentWork--> What's_So_Different%3F (<http://dbpedia.org/resource/What's_So_Different%3F>)
+  '7':
+    attributes:
+      Timbaland: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1')
+      100%25_Ginuwine: (page length (characters) of wiki page^='11331')
+    relationships:
+      - 100%25_Ginuwine (<http://dbpedia.org/resource/100%25_Ginuwine>) --dop:title--> She's_Out_of_My_Life (<http://dbpedia.org/resource/She's_Out_of_My_Life>)
+      - 100%25_Ginuwine (<http://dbpedia.org/resource/100%25_Ginuwine>) --dop:extra--> Timbaland (dor:Timbaland)
+      - 100%25_Ginuwine (<http://dbpedia.org/resource/100%25_Ginuwine>) --dop:artist--> Ginuwine (dor:Ginuwine)
+      - Timbaland (dor:Timbaland) --doo:birthPlace--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - She's_Out_of_My_Life (<http://dbpedia.org/resource/She's_Out_of_My_Life>) --doo:subsequentWork--> Girlfriend_(Paul_McCartney_song) (<http://dbpedia.org/resource/Girlfriend_(Paul_McCartney_song)>)
+  '8':
+    attributes:
+      Timbaland: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1')
+      100%25_Ginuwine: (page length (characters) of wiki page^='11331')
+    relationships:
+      - 100%25_Ginuwine (<http://dbpedia.org/resource/100%25_Ginuwine>) --dop:title--> So_Anxious (dor:So_Anxious)
+      - 100%25_Ginuwine (<http://dbpedia.org/resource/100%25_Ginuwine>) --dop:extra--> Timbaland (dor:Timbaland)
+      - 100%25_Ginuwine (<http://dbpedia.org/resource/100%25_Ginuwine>) --dop:artist--> Ginuwine (dor:Ginuwine)
+      - Timbaland (dor:Timbaland) --doo:birthPlace--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - So_Anxious (dor:So_Anxious) --doo:subsequentWork--> None_of_Ur_Friends_Business (dor:None_of_Ur_Friends_Business)
+  '9':
+    attributes:
+      Berlin: (Aug precipitation mm^='53')
+      Alexander_Marcus: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1')
+      The_Logical_Song: (accessdate^='2021-05-31')
+      100%25_Scooter_–_25_Years_Wild_&_Wicked: (page length (characters) of wiki page^='20820')
+    relationships:
+      - 100%25_Scooter_–_25_Years_Wild_&_Wicked (<http://dbpedia.org/resource/100%25_Scooter_–_25_Years_Wild_&_Wicked>) --dop:title--> Aiii_Shot_the_DJ (dor:Aiii_Shot_the_DJ)
+      - 100%25_Scooter_–_25_Years_Wild_&_Wicked (<http://dbpedia.org/resource/100%25_Scooter_–_25_Years_Wild_&_Wicked>) --dop:extra--> Alexander_Marcus (dor:Alexander_Marcus)
+      - 100%25_Scooter_–_25_Years_Wild_&_Wicked (<http://dbpedia.org/resource/100%25_Scooter_–_25_Years_Wild_&_Wicked>) --dop:artist--> Olga_Scheps (dor:Olga_Scheps)
+      - Alexander_Marcus (dor:Alexander_Marcus) --doo:birthPlace--> Berlin (dor:Berlin)
+      - Aiii_Shot_the_DJ (dor:Aiii_Shot_the_DJ) --doo:subsequentWork--> The_Logical_Song (dor:The_Logical_Song)
+  '10':
+    attributes:
+      Berlin: (Aug precipitation mm^='53')
+      Alexander_Marcus: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1')
+      100%25_Scooter_–_25_Years_Wild_&_Wicked: (page length (characters) of wiki page^='20820')
+    relationships:
+      - 100%25_Scooter_–_25_Years_Wild_&_Wicked (<http://dbpedia.org/resource/100%25_Scooter_–_25_Years_Wild_&_Wicked>) --dop:title--> Ain't_Nobody (<http://dbpedia.org/resource/Ain't_Nobody>)
+      - 100%25_Scooter_–_25_Years_Wild_&_Wicked (<http://dbpedia.org/resource/100%25_Scooter_–_25_Years_Wild_&_Wicked>) --dop:extra--> Alexander_Marcus (dor:Alexander_Marcus)
+      - 100%25_Scooter_–_25_Years_Wild_&_Wicked (<http://dbpedia.org/resource/100%25_Scooter_–_25_Years_Wild_&_Wicked>) --dop:artist--> Olga_Scheps (dor:Olga_Scheps)
+      - Alexander_Marcus (dor:Alexander_Marcus) --doo:birthPlace--> Berlin (dor:Berlin)
+      - Ain't_Nobody (<http://dbpedia.org/resource/Ain't_Nobody>) --doo:subsequentWork--> One_Million_Kisses (dor:One_Million_Kisses)
+attributes:
+  city: --Aug precipitation mm^ (dop:augPrecipitationMm)--> double
+  song: --reason^ (dop:reason)--> langString | --accessdate^ (dop:accessdate)--> date
+  album: --bot^ (dop:bot)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int
+  person: --parents^ (dop:parents)--> langString | --width^ (dop:width)--> int | --board (doo:board)--> Resource
+  musical artist: --wordnet_type (dop:wordnet_type)--> Resource
+subgraph_id: 775
+relationships:
+  - album --dop:title--> single
+  - album --dop:extra--> musical artist
+  - album --dop:artist--> person
+  - musical artist --doo:birthPlace--> city
+  - single --doo:subsequentWork--> song

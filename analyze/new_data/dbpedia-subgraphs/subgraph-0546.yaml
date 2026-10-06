@@ -1,0 +1,82 @@
+types:
+  writer: doo:Writer
+  language: doo:Language
+  ethnic group: doo:EthnicGroup
+  office holder: doo:OfficeHolder
+  Christian Bishop: doo:ChristianBishop
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Stanisław_Grabski: (predecessor^='http://dbpedia.org/resource/Ministry_of_Religious_Affairs_and_Public_Education_(Poland)', birth date^='1871-04-05')
+      Władysław_Jan_Grabski: (birth date^='1901-10-21', birth place^='http://dbpedia.org/resource/Congress_Poland', spouse^='Zofia Wojciechowska')
+      Adam_Franciszek_Ksawery_Rostkowski: (death date^='1738-03-05', title^='Auxiliary Bishop of Lutsk')
+    relationships:
+      - Władysław_Jan_Grabski (<http://dbpedia.org/resource/Władysław_Jan_Grabski>) --doo:nationality--> Poles (dor:Poles)
+      - Adam_Franciszek_Ksawery_Rostkowski (dor:Adam_Franciszek_Ksawery_Rostkowski) --doo:nationality--> Poles (dor:Poles)
+      - Poles (dor:Poles) --doo:language--> Kashubian_language (dor:Kashubian_language)
+      - Władysław_Jan_Grabski (<http://dbpedia.org/resource/Władysław_Jan_Grabski>) --doo:relative--> Stanisław_Grabski (<http://dbpedia.org/resource/Stanisław_Grabski>)
+  '2':
+    attributes:
+      Władysław_Jan_Grabski: (birth date^='1901-10-21', birth place^='http://dbpedia.org/resource/Congress_Poland', spouse^='Zofia Wojciechowska')
+      Stanisław_Wojciechowski: (predecessor^='Maciej Rataj', birth date^='1869-03-15')
+      Adam_Franciszek_Ksawery_Rostkowski: (death date^='1738-03-05', title^='Auxiliary Bishop of Lutsk')
+    relationships:
+      - Władysław_Jan_Grabski (<http://dbpedia.org/resource/Władysław_Jan_Grabski>) --doo:nationality--> Poles (dor:Poles)
+      - Adam_Franciszek_Ksawery_Rostkowski (dor:Adam_Franciszek_Ksawery_Rostkowski) --doo:nationality--> Poles (dor:Poles)
+      - Poles (dor:Poles) --doo:language--> Kashubian_language (dor:Kashubian_language)
+      - Władysław_Jan_Grabski (<http://dbpedia.org/resource/Władysław_Jan_Grabski>) --doo:relative--> Stanisław_Wojciechowski (<http://dbpedia.org/resource/Stanisław_Wojciechowski>)
+  '3':
+    attributes:
+      Władysław_Grabski: (birth name^='Władysław Dominik Grabski', predecessor^='http://dbpedia.org/resource/Bolesław_Markowski', birth date^='1874-07-07')
+      Władysław_Jan_Grabski: (birth date^='1901-10-21', birth place^='http://dbpedia.org/resource/Congress_Poland', spouse^='Zofia Wojciechowska')
+      Adam_Franciszek_Ksawery_Rostkowski: (death date^='1738-03-05', title^='Auxiliary Bishop of Lutsk')
+    relationships:
+      - Władysław_Jan_Grabski (<http://dbpedia.org/resource/Władysław_Jan_Grabski>) --doo:nationality--> Poles (dor:Poles)
+      - Adam_Franciszek_Ksawery_Rostkowski (dor:Adam_Franciszek_Ksawery_Rostkowski) --doo:nationality--> Poles (dor:Poles)
+      - Poles (dor:Poles) --doo:language--> Kashubian_language (dor:Kashubian_language)
+      - Władysław_Jan_Grabski (<http://dbpedia.org/resource/Władysław_Jan_Grabski>) --doo:relative--> Władysław_Grabski (<http://dbpedia.org/resource/Władysław_Grabski>)
+  '4':
+    attributes:
+      Alden_John_Bell: (death date^='1982-08-28', title^='Bishop of Sacramento')
+      Arthur_Bourinot: (birth date^='1893-11-03', birth place^='http://dbpedia.org/resource/Ottawa')
+      John_George_Bourinot_(elder): (birth date^='1814-03-15')
+    relationships:
+      - Arthur_Bourinot (dor:Arthur_Bourinot) --doo:nationality--> Canadians (dor:Canadians)
+      - Alden_John_Bell (dor:Alden_John_Bell) --doo:nationality--> Canadians (dor:Canadians)
+      - Canadians (dor:Canadians) --doo:language--> Languages_of_Canada (dor:Languages_of_Canada)
+      - Arthur_Bourinot (dor:Arthur_Bourinot) --doo:relative--> John_George_Bourinot_(elder) (<http://dbpedia.org/resource/John_George_Bourinot_(elder)>)
+  '5':
+    attributes:
+      Alden_John_Bell: (death date^='1982-08-28', title^='Bishop of Sacramento')
+      Arthur_Bourinot: (birth date^='1893-11-03', birth place^='http://dbpedia.org/resource/Ottawa')
+      John_George_Bourinot_(younger): (parents^='http://dbpedia.org/resource/John_George_Bourinot_(elder)', predecessor^='http://dbpedia.org/resource/Alfred_Patrick')
+    relationships:
+      - Arthur_Bourinot (dor:Arthur_Bourinot) --doo:nationality--> Canadians (dor:Canadians)
+      - Alden_John_Bell (dor:Alden_John_Bell) --doo:nationality--> Canadians (dor:Canadians)
+      - Canadians (dor:Canadians) --doo:language--> Languages_of_Canada (dor:Languages_of_Canada)
+      - Arthur_Bourinot (dor:Arthur_Bourinot) --doo:relative--> John_George_Bourinot_(younger) (<http://dbpedia.org/resource/John_George_Bourinot_(younger)>)
+  '6':
+    attributes:
+      Alden_John_Bell: (death date^='1982-08-28', title^='Bishop of Sacramento')
+      Arthur_Bourinot: (birth date^='1893-11-03', birth place^='http://dbpedia.org/resource/Ottawa')
+      John_George_Bourinot_(elder): (birth date^='1814-03-15')
+    relationships:
+      - Arthur_Bourinot (dor:Arthur_Bourinot) --doo:nationality--> Canadians (dor:Canadians)
+      - Alden_John_Bell (dor:Alden_John_Bell) --doo:nationality--> Canadians (dor:Canadians)
+      - Canadians (dor:Canadians) --doo:language--> Punjabi_language (dor:Punjabi_language)
+      - Arthur_Bourinot (dor:Arthur_Bourinot) --doo:relative--> John_George_Bourinot_(elder) (<http://dbpedia.org/resource/John_George_Bourinot_(elder)>)
+attributes:
+  writer: --birth date^ (dop:birthDate)--> date | --1y^ (dop:1y)--> int | --wordnet_type (dop:wordnet_type)--> Resource | --birth place^ (dop:birthPlace)--> langString | --spouse^ (dop:spouse)--> int
+  office holder: --parents^ (dop:parents)--> Resource | --birth name^ (dop:birthName)--> langString | --predecessor^ (dop:predecessor)--> langString | --c^ (dop:c)--> langString | --honorific suffix^ (dop:honorificSuffix)--> Resource | --birth date^ (doo:birthDate)--> date
+  Christian Bishop: --death date^ (dop:deathDate)--> int | --title^ (doo:title)--> langString
+subgraph_id: 546
+relationships:
+  - writer --doo:nationality--> ethnic group
+  - Christian Bishop --doo:nationality--> ethnic group
+  - ethnic group --doo:language--> language
+  - writer --doo:relative--> office holder

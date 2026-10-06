@@ -1,0 +1,119 @@
+types:
+  city: doo:City
+  venue: doo:Venue
+  company: doo:Company
+  building: doo:Building
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      1_Bligh_Street: (cost^='A$270 million')
+      Theatre_Royal,_Sydney: (opened^='1875', capacity^='1200')
+    relationships:
+      - 1_Bligh_Street (dor:1_Bligh_Street) --doo:location--> Sydney (dor:Sydney)
+      - All_for_Australia_League (dor:All_for_Australia_League) --doo:headquarter--> Sydney (dor:Sydney)
+      - 1_Bligh_Street (dor:1_Bligh_Street) --doo:owner--> Dexus (dor:Dexus)
+      - Theatre_Royal,_Sydney (<http://dbpedia.org/resource/Theatre_Royal,_Sydney>) --doo:owner--> Dexus (dor:Dexus)
+  '2':
+    attributes:
+      1_Bligh_Street: (cost^='A$270 million')
+      Theatre_Royal,_Sydney: (opened^='1875', capacity^='1200')
+    relationships:
+      - 1_Bligh_Street (dor:1_Bligh_Street) --doo:location--> Sydney (dor:Sydney)
+      - Australian_Labor_Party_(New_South_Wales_Branch) (<http://dbpedia.org/resource/Australian_Labor_Party_(New_South_Wales_Branch)>) --doo:headquarter--> Sydney (dor:Sydney)
+      - 1_Bligh_Street (dor:1_Bligh_Street) --doo:owner--> Dexus (dor:Dexus)
+      - Theatre_Royal,_Sydney (<http://dbpedia.org/resource/Theatre_Royal,_Sydney>) --doo:owner--> Dexus (dor:Dexus)
+  '3':
+    attributes:
+      1_Bligh_Street: (cost^='A$270 million')
+      Theatre_Royal,_Sydney: (opened^='1875', capacity^='1200')
+    relationships:
+      - 1_Bligh_Street (dor:1_Bligh_Street) --doo:location--> Sydney (dor:Sydney)
+      - Australian_Labor_Party_(Non-Communist) (<http://dbpedia.org/resource/Australian_Labor_Party_(Non-Communist)>) --doo:headquarter--> Sydney (dor:Sydney)
+      - 1_Bligh_Street (dor:1_Bligh_Street) --doo:owner--> Dexus (dor:Dexus)
+      - Theatre_Royal,_Sydney (<http://dbpedia.org/resource/Theatre_Royal,_Sydney>) --doo:owner--> Dexus (dor:Dexus)
+  '4':
+    attributes:
+      Tokyo_Dome: (opened^='1988-03-17', capacity^='42000')
+      New_York_City: (named for^='http://dbpedia.org/resource/James_II_of_England')
+      Mitsui_Fudosan: (industry^='http://dbpedia.org/resource/Real_estate')
+    relationships:
+      - 1251_Avenue_of_the_Americas (dor:1251_Avenue_of_the_Americas) --doo:location--> New_York_City (dor:New_York_City)
+      - American_Labor_Party (dor:American_Labor_Party) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - 1251_Avenue_of_the_Americas (dor:1251_Avenue_of_the_Americas) --doo:owner--> Mitsui_Fudosan (dor:Mitsui_Fudosan)
+      - Tokyo_Dome (dor:Tokyo_Dome) --doo:owner--> Mitsui_Fudosan (dor:Mitsui_Fudosan)
+  '5':
+    attributes:
+      Tokyo_Dome: (opened^='1988-03-17', capacity^='42000')
+      New_York_City: (named for^='http://dbpedia.org/resource/James_II_of_England')
+      Mitsui_Fudosan: (industry^='http://dbpedia.org/resource/Real_estate')
+    relationships:
+      - 1251_Avenue_of_the_Americas (dor:1251_Avenue_of_the_Americas) --doo:location--> New_York_City (dor:New_York_City)
+      - American_Republican_Party_(1843)__American_Republican_Party__1 (<http://dbpedia.org/resource/American_Republican_Party_(1843)__American_Republican_Party__1>) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - 1251_Avenue_of_the_Americas (dor:1251_Avenue_of_the_Americas) --doo:owner--> Mitsui_Fudosan (dor:Mitsui_Fudosan)
+      - Tokyo_Dome (dor:Tokyo_Dome) --doo:owner--> Mitsui_Fudosan (dor:Mitsui_Fudosan)
+  '6':
+    attributes:
+      Tokyo_Dome: (opened^='1988-03-17', capacity^='42000')
+      New_York_City: (named for^='http://dbpedia.org/resource/James_II_of_England')
+      Mitsui_Fudosan: (industry^='http://dbpedia.org/resource/Real_estate')
+    relationships:
+      - 1251_Avenue_of_the_Americas (dor:1251_Avenue_of_the_Americas) --doo:location--> New_York_City (dor:New_York_City)
+      - Communist_Party_USA (dor:Communist_Party_USA) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - 1251_Avenue_of_the_Americas (dor:1251_Avenue_of_the_Americas) --doo:owner--> Mitsui_Fudosan (dor:Mitsui_Fudosan)
+      - Tokyo_Dome (dor:Tokyo_Dome) --doo:owner--> Mitsui_Fudosan (dor:Mitsui_Fudosan)
+  '7':
+    attributes:
+      CIM_Group: (founder^='Shaul KubaAvi ShemeshRichard Ressler')
+      Los_Angeles: (named for^='http://dbpedia.org/resource/Queen_of_Heaven')
+      Dolby_Theatre: (opened^='2001-11-09')
+    relationships:
+      - 2Cal (dor:2Cal) --doo:location--> Los_Angeles (dor:Los_Angeles)
+      - California_Progressive_Party (dor:California_Progressive_Party) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - 2Cal (dor:2Cal) --doo:owner--> CIM_Group (dor:CIM_Group)
+      - Dolby_Theatre (dor:Dolby_Theatre) --doo:owner--> CIM_Group (dor:CIM_Group)
+  '8':
+    attributes:
+      CIM_Group: (founder^='Shaul KubaAvi ShemeshRichard Ressler')
+      Los_Angeles: (named for^='http://dbpedia.org/resource/Queen_of_Heaven')
+      Dolby_Theatre: (opened^='2001-11-09')
+    relationships:
+      - 2Cal (dor:2Cal) --doo:location--> Los_Angeles (dor:Los_Angeles)
+      - Constitutionalist_Party_of_Iran (dor:Constitutionalist_Party_of_Iran) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - 2Cal (dor:2Cal) --doo:owner--> CIM_Group (dor:CIM_Group)
+      - Dolby_Theatre (dor:Dolby_Theatre) --doo:owner--> CIM_Group (dor:CIM_Group)
+  '9':
+    attributes:
+      CIM_Group: (founder^='Shaul KubaAvi ShemeshRichard Ressler')
+      Los_Angeles: (named for^='http://dbpedia.org/resource/Queen_of_Heaven')
+      Dolby_Theatre: (opened^='2001-11-09')
+    relationships:
+      - 2Cal (dor:2Cal) --doo:location--> Los_Angeles (dor:Los_Angeles)
+      - Glorious_Frontiers_Party (dor:Glorious_Frontiers_Party) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - 2Cal (dor:2Cal) --doo:owner--> CIM_Group (dor:CIM_Group)
+      - Dolby_Theatre (dor:Dolby_Theatre) --doo:owner--> CIM_Group (dor:CIM_Group)
+  '10':
+    attributes:
+      44th_and_Parkside_Ballpark: (opened^='1903-05-02')
+    relationships:
+      - 44th_and_Parkside_Ballpark (dor:44th_and_Parkside_Ballpark) --doo:location--> Philadelphia (dor:Philadelphia)
+      - Anti-Administration_party (dor:Anti-Administration_party) --doo:headquarter--> Philadelphia (dor:Philadelphia)
+      - 44th_and_Parkside_Ballpark (dor:44th_and_Parkside_Ballpark) --doo:owner--> Pennsylvania_Railroad (dor:Pennsylvania_Railroad)
+      - 44th_and_Parkside_Ballpark (dor:44th_and_Parkside_Ballpark) --doo:owner--> Pennsylvania_Railroad (dor:Pennsylvania_Railroad)
+attributes:
+  city: --named for^ (dop:namedFor)--> Resource
+  venue: --opened^ (dop:opened)--> langString | --capacity^ (dop:capacity)--> langString
+  company: --founder^ (dop:founder)--> langString | --logo width^ (dop:logoWidth)--> int | --predecessor^ (dop:predecessor)--> langString | --industry^ (doo:industry)--> Resource
+  building: --type^ (doo:type)--> Resource | --designated other1 date^ (dop:designatedOther1Date)--> date | --cost^ (dop:cost)--> int
+  political party: --affiliation^ (dop:affiliation)--> langString
+subgraph_id: 676
+relationships:
+  - building --doo:location--> city
+  - political party --doo:headquarter--> city
+  - building --doo:owner--> company
+  - venue --doo:owner--> company

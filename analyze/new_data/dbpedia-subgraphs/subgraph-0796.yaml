@@ -1,0 +1,101 @@
+types:
+  city: doo:City
+  park: doo:Park
+  country: doo:Country
+  settlement: doo:Settlement
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Parc_Roland-Veillet (dor:Parc_Roland-Veillet) --doo:location--> Val-d'Or (<http://dbpedia.org/resource/Val-d'Or>)
+      - Parc_Roland-Veillet (dor:Parc_Roland-Veillet) --doo:location--> Abitibi-Témiscamingue (<http://dbpedia.org/resource/Abitibi-Témiscamingue>)
+      - Parc_Roland-Veillet (dor:Parc_Roland-Veillet) --doo:location--> Canada (dor:Canada)
+      - Abitibi-Témiscamingue (<http://dbpedia.org/resource/Abitibi-Témiscamingue>) --doo:subdivision--> Abitibi_Regional_County_Municipality,_Quebec (<http://dbpedia.org/resource/Abitibi_Regional_County_Municipality,_Quebec>)
+  '2':
+    attributes: {}
+    relationships:
+      - Parc_Roland-Veillet (dor:Parc_Roland-Veillet) --doo:location--> Val-d'Or (<http://dbpedia.org/resource/Val-d'Or>)
+      - Parc_Roland-Veillet (dor:Parc_Roland-Veillet) --doo:location--> Abitibi-Témiscamingue (<http://dbpedia.org/resource/Abitibi-Témiscamingue>)
+      - Parc_Roland-Veillet (dor:Parc_Roland-Veillet) --doo:location--> Canada (dor:Canada)
+      - Abitibi-Témiscamingue (<http://dbpedia.org/resource/Abitibi-Témiscamingue>) --doo:subdivision--> La_Vallée-de-l'Or_Regional_County_Municipality,_Quebec (<http://dbpedia.org/resource/La_Vallée-de-l'Or_Regional_County_Municipality,_Quebec>)
+  '3':
+    attributes: {}
+    relationships:
+      - Parc_Roland-Veillet (dor:Parc_Roland-Veillet) --doo:location--> Val-d'Or (<http://dbpedia.org/resource/Val-d'Or>)
+      - Parc_Roland-Veillet (dor:Parc_Roland-Veillet) --doo:location--> Abitibi-Témiscamingue (<http://dbpedia.org/resource/Abitibi-Témiscamingue>)
+      - Parc_Roland-Veillet (dor:Parc_Roland-Veillet) --doo:location--> Canada (dor:Canada)
+      - Abitibi-Témiscamingue (<http://dbpedia.org/resource/Abitibi-Témiscamingue>) --doo:subdivision--> Quebec (dor:Quebec)
+  '4':
+    attributes:
+      New_Taipei_City: (Aug high C^='33.1')
+    relationships:
+      - Stone_Sculpture_Park,_New_Taipei (<http://dbpedia.org/resource/Stone_Sculpture_Park,_New_Taipei>) --doo:location--> New_Taipei (dor:New_Taipei)
+      - Stone_Sculpture_Park,_New_Taipei (<http://dbpedia.org/resource/Stone_Sculpture_Park,_New_Taipei>) --doo:location--> Banqiao_District (dor:Banqiao_District)
+      - Stone_Sculpture_Park,_New_Taipei (<http://dbpedia.org/resource/Stone_Sculpture_Park,_New_Taipei>) --doo:location--> Taiwan (dor:Taiwan)
+      - Banqiao_District (dor:Banqiao_District) --doo:subdivision--> New_Taipei_City (dor:New_Taipei_City)
+  '5':
+    attributes:
+      Shanghai: (elevation (μ)^='4.0')
+    relationships:
+      - Zhongshan_Park_(Shanghai) (<http://dbpedia.org/resource/Zhongshan_Park_(Shanghai)>) --doo:location--> Shanghai (dor:Shanghai)
+      - Zhongshan_Park_(Shanghai) (<http://dbpedia.org/resource/Zhongshan_Park_(Shanghai)>) --doo:location--> Changning_District (dor:Changning_District)
+      - Zhongshan_Park_(Shanghai) (<http://dbpedia.org/resource/Zhongshan_Park_(Shanghai)>) --doo:location--> China (dor:China)
+      - Changning_District (dor:Changning_District) --doo:subdivision--> Shanghai (dor:Shanghai)
+  '6':
+    attributes:
+      Beijing: (elevation (μ)^='43.5')
+    relationships:
+      - Ritan_(Beijing) (<http://dbpedia.org/resource/Ritan_(Beijing)>) --doo:location--> Beijing (dor:Beijing)
+      - Ritan_(Beijing) (<http://dbpedia.org/resource/Ritan_(Beijing)>) --doo:location--> Chaoyang_District,_Beijing (<http://dbpedia.org/resource/Chaoyang_District,_Beijing>)
+      - Ritan_(Beijing) (<http://dbpedia.org/resource/Ritan_(Beijing)>) --doo:location--> China (dor:China)
+      - Chaoyang_District,_Beijing (<http://dbpedia.org/resource/Chaoyang_District,_Beijing>) --doo:subdivision--> Beijing (dor:Beijing)
+  '7':
+    attributes:
+      Ulsan: (Apr record low C^='-2.6', Aug high C^='30')
+    relationships:
+      - Daewangam_Park (dor:Daewangam_Park) --doo:location--> Ulsan (dor:Ulsan)
+      - Daewangam_Park (dor:Daewangam_Park) --doo:location--> Dong_District,_Ulsan (<http://dbpedia.org/resource/Dong_District,_Ulsan>)
+      - Daewangam_Park (dor:Daewangam_Park) --doo:location--> South_Korea (dor:South_Korea)
+      - Dong_District,_Ulsan (<http://dbpedia.org/resource/Dong_District,_Ulsan>) --doo:subdivision--> Ulsan (dor:Ulsan)
+  '8':
+    attributes:
+      Ulsan: (Apr record low C^='-2.6')
+    relationships:
+      - Daewangam_Park (dor:Daewangam_Park) --doo:location--> Ulsan (dor:Ulsan)
+      - Daewangam_Park (dor:Daewangam_Park) --doo:location--> Dong_District,_Ulsan (<http://dbpedia.org/resource/Dong_District,_Ulsan>)
+      - Daewangam_Park (dor:Daewangam_Park) --doo:location--> South_Korea (dor:South_Korea)
+      - Dong_District,_Ulsan (<http://dbpedia.org/resource/Dong_District,_Ulsan>) --doo:subdivision--> Yeongnam (dor:Yeongnam)
+  '9':
+    attributes:
+      Port_of_Spain: (Aug high C^='31.7')
+      Trinidad_and_Tobago: (religion^='http://dbpedia.org/resource/Christianity')
+    relationships:
+      - Memorial_Park,_Port_of_Spain (<http://dbpedia.org/resource/Memorial_Park,_Port_of_Spain>) --doo:location--> Port_of_Spain (dor:Port_of_Spain)
+      - Memorial_Park,_Port_of_Spain (<http://dbpedia.org/resource/Memorial_Park,_Port_of_Spain>) --doo:location--> Downtown_Port_of_Spain (dor:Downtown_Port_of_Spain)
+      - Memorial_Park,_Port_of_Spain (<http://dbpedia.org/resource/Memorial_Park,_Port_of_Spain>) --doo:location--> Trinidad_and_Tobago (dor:Trinidad_and_Tobago)
+      - Downtown_Port_of_Spain (dor:Downtown_Port_of_Spain) --doo:subdivision--> Port_of_Spain (dor:Port_of_Spain)
+  '10':
+    attributes:
+      Manila: (Apr record low C^='17.2')
+    relationships:
+      - Arroceros_Urban_Forest_Park (dor:Arroceros_Urban_Forest_Park) --doo:location--> Manila (dor:Manila)
+      - Arroceros_Urban_Forest_Park (dor:Arroceros_Urban_Forest_Park) --doo:location--> Ermita (dor:Ermita)
+      - Arroceros_Urban_Forest_Park (dor:Arroceros_Urban_Forest_Park) --doo:location--> Philippines (dor:Philippines)
+      - Ermita (dor:Ermita) --doo:subdivision--> Congressional_Districts_of_Manila (dor:Congressional_Districts_of_Manila)
+attributes:
+  city: --elevation (μ)^ (doo:elevation)--> double | --Apr record low C^ (dop:aprRecordLowC)--> double
+  country: --Apr low C^ (dop:aprLowC)--> double | --religion^ (doo:religion)--> Resource
+  settlement: --Aug high C^ (dop:augHighC)--> double | --Aug low F^ (dop:augLowF)--> int | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+  administrative region: --capital (doo:capital)--> Resource | --area^ (dop:area)--> int | --altname^ (dop:altname)--> langString
+subgraph_id: 796
+relationships:
+  - park --doo:location--> city
+  - park --doo:location--> administrative region
+  - park --doo:location--> country
+  - administrative region --doo:subdivision--> settlement

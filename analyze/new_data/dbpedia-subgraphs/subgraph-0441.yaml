@@ -1,0 +1,109 @@
+types:
+  city: doo:City
+  politician: doo:Politician
+  musical artist: doo:MusicalArtist
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bobby_Shew: (genre^='http://dbpedia.org/resource/Big_band')
+      Albuquerque,_New_Mexico: (has abstract^='Albuquerque – miasto w Stanach Zjednoczonych, w stanie Nowy Meksyk, ośrodek administracyjny hrabstwa Bernalillo, położone nad rzeką Rio Grande, u podnóża pasma górskiego (na wschodzie). Największe mia...')
+      Francisco_Fernández_de_la_Cueva,_10th_Duke_of_Alburquerque: (predecessor^='http://dbpedia.org/resource/Juan_Ortega_y_Montañés', title^='http://dbpedia.org/resource/Duke_of_Alburquerque')
+    relationships:
+      - Battle_of_Albuquerque (dor:Battle_of_Albuquerque) --doo:place--> Albuquerque,_New_Mexico (<http://dbpedia.org/resource/Albuquerque,_New_Mexico>)
+      - Bobby_Shew (dor:Bobby_Shew) --doo:hometown--> Albuquerque,_New_Mexico (<http://dbpedia.org/resource/Albuquerque,_New_Mexico>)
+      - Albuquerque,_New_Mexico (<http://dbpedia.org/resource/Albuquerque,_New_Mexico>) --dop:namedFor--> Francisco_Fernández_de_la_Cueva,_10th_Duke_of_Alburquerque (<http://dbpedia.org/resource/Francisco_Fernández_de_la_Cueva,_10th_Duke_of_Alburquerque>)
+  '2':
+    attributes:
+      Albuquerque,_New_Mexico: (has abstract^='Albuquerque – miasto w Stanach Zjednoczonych, w stanie Nowy Meksyk, ośrodek administracyjny hrabstwa Bernalillo, położone nad rzeką Rio Grande, u podnóża pasma górskiego (na wschodzie). Największe mia...')
+      Francisco_Fernández_de_la_Cueva,_10th_Duke_of_Alburquerque: (predecessor^='http://dbpedia.org/resource/Juan_Ortega_y_Montañés', title^='http://dbpedia.org/resource/Duke_of_Alburquerque')
+    relationships:
+      - Battle_of_Albuquerque (dor:Battle_of_Albuquerque) --doo:place--> Albuquerque,_New_Mexico (<http://dbpedia.org/resource/Albuquerque,_New_Mexico>)
+      - Dave_Hernandez (dor:Dave_Hernandez) --doo:hometown--> Albuquerque,_New_Mexico (<http://dbpedia.org/resource/Albuquerque,_New_Mexico>)
+      - Albuquerque,_New_Mexico (<http://dbpedia.org/resource/Albuquerque,_New_Mexico>) --dop:namedFor--> Francisco_Fernández_de_la_Cueva,_10th_Duke_of_Alburquerque (<http://dbpedia.org/resource/Francisco_Fernández_de_la_Cueva,_10th_Duke_of_Alburquerque>)
+  '3':
+    attributes:
+      Albuquerque,_New_Mexico: (has abstract^='Albuquerque – miasto w Stanach Zjednoczonych, w stanie Nowy Meksyk, ośrodek administracyjny hrabstwa Bernalillo, położone nad rzeką Rio Grande, u podnóża pasma górskiego (na wschodzie). Największe mia...')
+      James_Mercer_(musician): (genre^='')
+      Francisco_Fernández_de_la_Cueva,_10th_Duke_of_Alburquerque: (predecessor^='http://dbpedia.org/resource/Juan_Ortega_y_Montañés', title^='http://dbpedia.org/resource/Duke_of_Alburquerque')
+    relationships:
+      - Battle_of_Albuquerque (dor:Battle_of_Albuquerque) --doo:place--> Albuquerque,_New_Mexico (<http://dbpedia.org/resource/Albuquerque,_New_Mexico>)
+      - James_Mercer_(musician) (<http://dbpedia.org/resource/James_Mercer_(musician)>) --doo:hometown--> Albuquerque,_New_Mexico (<http://dbpedia.org/resource/Albuquerque,_New_Mexico>)
+      - Albuquerque,_New_Mexico (<http://dbpedia.org/resource/Albuquerque,_New_Mexico>) --dop:namedFor--> Francisco_Fernández_de_la_Cueva,_10th_Duke_of_Alburquerque (<http://dbpedia.org/resource/Francisco_Fernández_de_la_Cueva,_10th_Duke_of_Alburquerque>)
+  '4':
+    attributes:
+      3D_Friends: (genre^='http://dbpedia.org/resource/Ambient_music')
+      Austin,_Texas: (has abstract^='Austin (/ˈɔs.tɪn/) est une ville américaine, capitale de l’État du Texas et siège du comté de Travis. Située sur le fleuve Colorado entre les lacs Travis, Austin, et Lady Bird, elle abrite depuis long...')
+      Stephen_F._Austin: (predecessor^='William Houston Jack', title^='President of the Convention of 1832')
+    relationships:
+      - Texas_Archive_War (dor:Texas_Archive_War) --doo:place--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - 3D_Friends (dor:3D_Friends) --doo:hometown--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>) --dop:namedFor--> Stephen_F._Austin (dor:Stephen_F._Austin)
+  '5':
+    attributes:
+      Austin,_Texas: (has abstract^='Austin (/ˈɔs.tɪn/) est une ville américaine, capitale de l’État du Texas et siège du comté de Travis. Située sur le fleuve Colorado entre les lacs Travis, Austin, et Lady Bird, elle abrite depuis long...')
+      Anew_Revolution: (genre^='Nu metal, alternative metal')
+      Stephen_F._Austin: (predecessor^='William Houston Jack', title^='President of the Convention of 1832')
+    relationships:
+      - Texas_Archive_War (dor:Texas_Archive_War) --doo:place--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - Anew_Revolution (dor:Anew_Revolution) --doo:hometown--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>) --dop:namedFor--> Stephen_F._Austin (dor:Stephen_F._Austin)
+  '6':
+    attributes:
+      ArcAttack: (genre^='http://dbpedia.org/resource/Electronic_rock')
+      Austin,_Texas: (has abstract^='Austin (/ˈɔs.tɪn/) est une ville américaine, capitale de l’État du Texas et siège du comté de Travis. Située sur le fleuve Colorado entre les lacs Travis, Austin, et Lady Bird, elle abrite depuis long...')
+      Stephen_F._Austin: (predecessor^='William Houston Jack', title^='President of the Convention of 1832')
+    relationships:
+      - Texas_Archive_War (dor:Texas_Archive_War) --doo:place--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - ArcAttack (dor:ArcAttack) --doo:hometown--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>) --dop:namedFor--> Stephen_F._Austin (dor:Stephen_F._Austin)
+  '7':
+    attributes:
+      Baltimore: (has abstract^='( 다른 뜻에 대해서는 볼티모어 (동음이의) 문서를 참고하십시오.) 볼티모어(Baltimore)는 미국 메릴랜드주의 독립시이며, 패텁스코 강 하류에 위치해 있다. 2020년 현재 인구는 약 73만여 명이다. 메릴랜드주에서 가장 큰 도시로 문화와 산업의 중심지이다. 1729년에 도시가 창설되었는데, 초기에는 상업도시였고 조선(造船)으로도 알려진 체서피크만 깊...')
+      Cecil_Calvert,_2nd_Baron_Baltimore: (spouse^='http://dbpedia.org/resource/Anne_Arundell', title^='http://dbpedia.org/resource/Baron_Baltimore')
+    relationships:
+      - Baltimore_riot_of_1861 (dor:Baltimore_riot_of_1861) --doo:place--> Baltimore (dor:Baltimore)
+      - Abby_Portner__Drawlings__1 (dor:Abby_Portner__Drawlings__1) --doo:hometown--> Baltimore (dor:Baltimore)
+      - Baltimore (dor:Baltimore) --dop:namedFor--> Cecil_Calvert,_2nd_Baron_Baltimore (<http://dbpedia.org/resource/Cecil_Calvert,_2nd_Baron_Baltimore>)
+  '8':
+    attributes:
+      Baltimore: (has abstract^='( 다른 뜻에 대해서는 볼티모어 (동음이의) 문서를 참고하십시오.) 볼티모어(Baltimore)는 미국 메릴랜드주의 독립시이며, 패텁스코 강 하류에 위치해 있다. 2020년 현재 인구는 약 73만여 명이다. 메릴랜드주에서 가장 큰 도시로 문화와 산업의 중심지이다. 1729년에 도시가 창설되었는데, 초기에는 상업도시였고 조선(造船)으로도 알려진 체서피크만 깊...')
+      Amy_Speace: (genre^='http://dbpedia.org/resource/Americana_(music)')
+      Cecil_Calvert,_2nd_Baron_Baltimore: (spouse^='http://dbpedia.org/resource/Anne_Arundell', title^='http://dbpedia.org/resource/Baron_Baltimore')
+    relationships:
+      - Baltimore_riot_of_1861 (dor:Baltimore_riot_of_1861) --doo:place--> Baltimore (dor:Baltimore)
+      - Amy_Speace (dor:Amy_Speace) --doo:hometown--> Baltimore (dor:Baltimore)
+      - Baltimore (dor:Baltimore) --dop:namedFor--> Cecil_Calvert,_2nd_Baron_Baltimore (<http://dbpedia.org/resource/Cecil_Calvert,_2nd_Baron_Baltimore>)
+  '9':
+    attributes:
+      Baltimore: (has abstract^='( 다른 뜻에 대해서는 볼티모어 (동음이의) 문서를 참고하십시오.) 볼티모어(Baltimore)는 미국 메릴랜드주의 독립시이며, 패텁스코 강 하류에 위치해 있다. 2020년 현재 인구는 약 73만여 명이다. 메릴랜드주에서 가장 큰 도시로 문화와 산업의 중심지이다. 1729년에 도시가 창설되었는데, 초기에는 상업도시였고 조선(造船)으로도 알려진 체서피크만 깊...')
+      Andy_Ennis: (genre^='http://dbpedia.org/resource/Jazz')
+      Cecil_Calvert,_2nd_Baron_Baltimore: (spouse^='http://dbpedia.org/resource/Anne_Arundell', title^='http://dbpedia.org/resource/Baron_Baltimore')
+    relationships:
+      - Baltimore_riot_of_1861 (dor:Baltimore_riot_of_1861) --doo:place--> Baltimore (dor:Baltimore)
+      - Andy_Ennis (dor:Andy_Ennis) --doo:hometown--> Baltimore (dor:Baltimore)
+      - Baltimore (dor:Baltimore) --dop:namedFor--> Cecil_Calvert,_2nd_Baron_Baltimore (<http://dbpedia.org/resource/Cecil_Calvert,_2nd_Baron_Baltimore>)
+  '10':
+    attributes:
+      Larkin_Poe: (genre^='')
+      John_C._Calhoun: (spouse^='', predecessor^='http://dbpedia.org/resource/Abel_P._Upshur', title^='Chair of the Senate Finance Committee')
+      Calhoun,_Georgia: (has abstract^='Calhoun – miasto w hrabstwie Gordon w Georgii w Stanach Zjednoczonych. Według spisu w 2020 roku liczy 16,9 tys. mieszkańców.')
+    relationships:
+      - Battle_of_Rome_Cross_Roads (dor:Battle_of_Rome_Cross_Roads) --doo:place--> Calhoun,_Georgia (<http://dbpedia.org/resource/Calhoun,_Georgia>)
+      - Larkin_Poe (dor:Larkin_Poe) --doo:hometown--> Calhoun,_Georgia (<http://dbpedia.org/resource/Calhoun,_Georgia>)
+      - Calhoun,_Georgia (<http://dbpedia.org/resource/Calhoun,_Georgia>) --dop:namedFor--> John_C._Calhoun (dor:John_C._Calhoun)
+attributes:
+  city: --has abstract^ (doo:abstract)--> langString | --float^ (dop:float)--> langString | --Aug low C^ (dop:augLowC)--> int | --Aug high C^ (dop:augHighC)--> int
+  politician: --spouse^ (dop:spouse)--> langString | --honorific suffix^ (dop:honorificSuffix)--> langString | --bot^ (dop:bot)--> langString | --predecessor^ (dop:predecessor)--> langString | --title^ (dop:title)--> langString | --IMDB id^ (doo:imdbId)--> string
+  musical artist: --genre^ (dop:genre)--> langString
+  military conflict: --1y^ (dop:1y)--> int | --quote^ (dop:quote)--> langString
+subgraph_id: 441
+relationships:
+  - military conflict --doo:place--> city
+  - musical artist --doo:hometown--> city
+  - city --dop:namedFor--> politician

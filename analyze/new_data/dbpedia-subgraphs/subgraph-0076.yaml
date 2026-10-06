@@ -1,0 +1,81 @@
+types:
+  stadium: doo:Stadium
+  architect: doo:Architect
+  national collegiate athletic association team season: doo:NCAATeamSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Camp_Randall_Stadium: (operator^='University of Wisconsin–Madison', tenant='http://dbpedia.org/resource/Wisconsin_Badgers_football')
+    relationships:
+      - Camp_Randall_Stadium (dor:Camp_Randall_Stadium) --doo:architect--> Arthur_Peabody (dor:Arthur_Peabody)
+      - 1892_Michigan_Wolverines_football_team (dor:1892_Michigan_Wolverines_football_team) --dop:location--> Camp_Randall_Stadium (dor:Camp_Randall_Stadium)
+  '2':
+    attributes:
+      Franklin_Field: (operator^='http://dbpedia.org/resource/University_of_Pennsylvania', tenant='http://dbpedia.org/resource/Penn_Quakers')
+      Charles_Klauder: (death date^='1938-10-30', death date^='1938-10-30')
+    relationships:
+      - Franklin_Field (dor:Franklin_Field) --doo:architect--> Charles_Klauder (dor:Charles_Klauder)
+      - 1906_Michigan_Wolverines_football_team (dor:1906_Michigan_Wolverines_football_team) --dop:location--> Franklin_Field (dor:Franklin_Field)
+  '3':
+    attributes:
+      Franklin_Field: (operator^='http://dbpedia.org/resource/University_of_Pennsylvania', tenant='http://dbpedia.org/resource/Penn_Quakers')
+    relationships:
+      - Franklin_Field (dor:Franklin_Field) --doo:architect--> Frank_Miles_Day (dor:Frank_Miles_Day)
+      - 1906_Michigan_Wolverines_football_team (dor:1906_Michigan_Wolverines_football_team) --dop:location--> Franklin_Field (dor:Franklin_Field)
+  '4':
+    attributes:
+      Franklin_Field: (operator^='http://dbpedia.org/resource/University_of_Pennsylvania', tenant='http://dbpedia.org/resource/Penn_Quakers')
+      Charles_Klauder: (death date^='1938-10-30', death date^='1938-10-30')
+    relationships:
+      - Franklin_Field (dor:Franklin_Field) --doo:architect--> Charles_Klauder (dor:Charles_Klauder)
+      - 1909_Michigan_Wolverines_football_team (dor:1909_Michigan_Wolverines_football_team) --dop:location--> Franklin_Field (dor:Franklin_Field)
+  '5':
+    attributes:
+      Forbes_Field: (Closed^='1970-06-28', tenant='http://dbpedia.org/resource/Card-Pitt')
+    relationships:
+      - Forbes_Field (dor:Forbes_Field) --doo:architect--> Charles_Wellford_Leavitt (dor:Charles_Wellford_Leavitt)
+      - 1909_Pittsburgh_Panthers_football_team (dor:1909_Pittsburgh_Panthers_football_team) --dop:location--> Forbes_Field (dor:Forbes_Field)
+  '6':
+    attributes:
+      Forbes_Field: (Closed^='1970-06-28', tenant='http://dbpedia.org/resource/Card-Pitt')
+    relationships:
+      - Forbes_Field (dor:Forbes_Field) --doo:architect--> Charles_Wellford_Leavitt (dor:Charles_Wellford_Leavitt)
+      - 1910_Pittsburgh_Panthers_football_team (dor:1910_Pittsburgh_Panthers_football_team) --dop:location--> Forbes_Field (dor:Forbes_Field)
+  '7':
+    attributes:
+      Forbes_Field: (Closed^='1970-06-28', tenant='http://dbpedia.org/resource/Card-Pitt')
+    relationships:
+      - Forbes_Field (dor:Forbes_Field) --doo:architect--> Charles_Wellford_Leavitt (dor:Charles_Wellford_Leavitt)
+      - 1911_Pittsburgh_Panthers_football_team (dor:1911_Pittsburgh_Panthers_football_team) --dop:location--> Forbes_Field (dor:Forbes_Field)
+  '8':
+    attributes:
+      Providence_Park: (operator^='http://dbpedia.org/resource/Portland_Timbers', tenant='http://dbpedia.org/resource/American_Professional_Soccer_League')
+      Morris_H._Whitehouse: (death date^='1944-04-04', death date^='1944-04-04')
+    relationships:
+      - Providence_Park (dor:Providence_Park) --doo:architect--> Morris_H._Whitehouse (dor:Morris_H._Whitehouse)
+      - 1916_Nebraska_Cornhuskers_football_team (dor:1916_Nebraska_Cornhuskers_football_team) --dop:location--> Providence_Park (dor:Providence_Park)
+  '9':
+    attributes:
+      Camp_Randall_Stadium: (operator^='University of Wisconsin–Madison', tenant='http://dbpedia.org/resource/Wisconsin_Badgers_football')
+    relationships:
+      - Camp_Randall_Stadium (dor:Camp_Randall_Stadium) --doo:architect--> Arthur_Peabody (dor:Arthur_Peabody)
+      - 1921_Michigan_Wolverines_football_team (dor:1921_Michigan_Wolverines_football_team) --dop:location--> Camp_Randall_Stadium (dor:Camp_Randall_Stadium)
+  '10':
+    attributes:
+      Camp_Randall_Stadium: (operator^='University of Wisconsin–Madison', tenant='http://dbpedia.org/resource/Wisconsin_Badgers_football')
+    relationships:
+      - Camp_Randall_Stadium (dor:Camp_Randall_Stadium) --doo:architect--> Arthur_Peabody (dor:Arthur_Peabody)
+      - 1923_Michigan_Wolverines_football_team (dor:1923_Michigan_Wolverines_football_team) --dop:location--> Camp_Randall_Stadium (dor:Camp_Randall_Stadium)
+attributes:
+  stadium: --operator^ (dop:operator)--> langString | --Closed^ (dop:closed)--> int | --tenant (doo:tenant)--> Resource
+  architect: --death date^ (dop:deathDate)--> date | --parents^ (dop:parents)--> langString | --death date^ (doo:deathDate)--> date
+  national collegiate athletic association team season: --ac1 year^ (dop:ac1Year)--> stone | --accessdate^ (dop:accessdate)--> int | --TVAnnouncers^ (dop:tvannouncers)--> Resource
+subgraph_id: 76
+relationships:
+  - stadium --doo:architect--> architect
+  - national collegiate athletic association team season --dop:location--> stadium

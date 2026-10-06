@@ -1,0 +1,86 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  military unit: doo:MilitaryUnit
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      A._J._Beck: (death date^='2006-07-02')
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - A._J._Beck (dor:A._J._Beck) --doo:militaryBranch--> United_States_Air_Force (dor:United_States_Air_Force)
+      - 1948_Lake_Mead_Boeing_B-29_crash (dor:1948_Lake_Mead_Boeing_B-29_crash) --dop:operator--> United_States_Air_Force (dor:United_States_Air_Force)
+      - United_States_Air_Force (dor:United_States_Air_Force) --dop:garrison--> United_States (dor:United_States)
+  '2':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - Aaron_Prupas (dor:Aaron_Prupas) --doo:militaryBranch--> United_States_Air_Force (dor:United_States_Air_Force)
+      - 1948_Lake_Mead_Boeing_B-29_crash (dor:1948_Lake_Mead_Boeing_B-29_crash) --dop:operator--> United_States_Air_Force (dor:United_States_Air_Force)
+      - United_States_Air_Force (dor:United_States_Air_Force) --dop:garrison--> United_States (dor:United_States)
+  '3':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - Abner_B._Martin (dor:Abner_B._Martin) --doo:militaryBranch--> United_States_Air_Force (dor:United_States_Air_Force)
+      - 1948_Lake_Mead_Boeing_B-29_crash (dor:1948_Lake_Mead_Boeing_B-29_crash) --dop:operator--> United_States_Air_Force (dor:United_States_Air_Force)
+      - United_States_Air_Force (dor:United_States_Air_Force) --dop:garrison--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Alan_Bourne: (death date^='1967-06-24')
+    relationships:
+      - Alan_Bourne (dor:Alan_Bourne) --doo:militaryBranch--> Royal_Marines (dor:Royal_Marines)
+      - Forward_Operating_Base_Gibraltar (dor:Forward_Operating_Base_Gibraltar) --dop:operator--> Royal_Marines (dor:Royal_Marines)
+      - Royal_Marines (dor:Royal_Marines) --dop:garrison--> England (dor:England)
+  '5':
+    attributes:
+      Alexander_Anderson_(Royal_Marines_officer): (death date^='1877-11-21')
+    relationships:
+      - Alexander_Anderson_(Royal_Marines_officer) (<http://dbpedia.org/resource/Alexander_Anderson_(Royal_Marines_officer)>) --doo:militaryBranch--> Royal_Marines (dor:Royal_Marines)
+      - Forward_Operating_Base_Gibraltar (dor:Forward_Operating_Base_Gibraltar) --dop:operator--> Royal_Marines (dor:Royal_Marines)
+      - Royal_Marines (dor:Royal_Marines) --dop:garrison--> England (dor:England)
+  '6':
+    attributes:
+      Alexander_Richard_Hamilton_Hutchison: (death date^='1930')
+    relationships:
+      - Alexander_Richard_Hamilton_Hutchison (dor:Alexander_Richard_Hamilton_Hutchison) --doo:militaryBranch--> Royal_Marines (dor:Royal_Marines)
+      - Forward_Operating_Base_Gibraltar (dor:Forward_Operating_Base_Gibraltar) --dop:operator--> Royal_Marines (dor:Royal_Marines)
+      - Royal_Marines (dor:Royal_Marines) --dop:garrison--> England (dor:England)
+  '7':
+    attributes:
+      Namibia: (capital^='http://dbpedia.org/resource/Windhoek')
+    relationships:
+      - Alweendo_Amungulu (dor:Alweendo_Amungulu) --doo:militaryBranch--> Namibian_Navy (dor:Namibian_Navy)
+      - Naval_Base_Capt_(N)_P.N._Sacharia (<http://dbpedia.org/resource/Naval_Base_Capt_(N)_P.N._Sacharia>) --dop:operator--> Namibian_Navy (dor:Namibian_Navy)
+      - Namibian_Navy (dor:Namibian_Navy) --dop:garrison--> Namibia (dor:Namibia)
+  '8':
+    attributes:
+      Namibia: (capital^='http://dbpedia.org/resource/Windhoek')
+      Phestus_Sacharia: (death date^='2002-07-12')
+    relationships:
+      - Phestus_Sacharia (dor:Phestus_Sacharia) --doo:militaryBranch--> Namibian_Navy (dor:Namibian_Navy)
+      - Naval_Base_Capt_(N)_P.N._Sacharia (<http://dbpedia.org/resource/Naval_Base_Capt_(N)_P.N._Sacharia>) --dop:operator--> Namibian_Navy (dor:Namibian_Navy)
+      - Namibian_Navy (dor:Namibian_Navy) --dop:garrison--> Namibia (dor:Namibia)
+  '9':
+    attributes:
+      Namibia: (capital^='http://dbpedia.org/resource/Windhoek')
+    relationships:
+      - Sinsy_Nghipandua (dor:Sinsy_Nghipandua) --doo:militaryBranch--> Namibian_Navy (dor:Namibian_Navy)
+      - Naval_Base_Capt_(N)_P.N._Sacharia (<http://dbpedia.org/resource/Naval_Base_Capt_(N)_P.N._Sacharia>) --dop:operator--> Namibian_Navy (dor:Namibian_Navy)
+      - Namibian_Navy (dor:Namibian_Navy) --dop:garrison--> Namibia (dor:Namibia)
+attributes:
+  country: --capital^ (doo:capital)--> Resource
+  Location: --group^ (dop:group)--> langString | --coordinates^ (dop:coordinates)--> double | --Apr sun^ (dop:aprSun)--> int | --named after^ (dop:namedAfter)--> langString | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --differentFrom (wwoo:differentFrom)--> Resource | --leader^ (dop:leader)--> langString | --arc-textA^ (dop:arcTexta)--> langString
+  military person: --image size^ (dop:imageSize)--> int | --c^ (dop:c)--> langString | --death date^ (dop:deathDate)--> gMonthDay
+subgraph_id: 315
+relationships:
+  - military person --doo:militaryBranch--> military unit
+  - Location --dop:operator--> military unit
+  - military unit --dop:garrison--> country

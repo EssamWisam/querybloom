@@ -1,0 +1,94 @@
+types:
+  museum: doo:Museum
+  writer: doo:Writer
+  scientist: doo:Scientist
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Philadelphia: (width^='220', elevation (μ)^='11.8872')
+      James_Bond_(ornithologist): (award^='http://dbpedia.org/resource/Leidy_Award')
+    relationships:
+      - James_Bond_(ornithologist) (<http://dbpedia.org/resource/James_Bond_(ornithologist)>) --doo:institution--> Academy_of_Natural_Sciences_of_Drexel_University (dor:Academy_of_Natural_Sciences_of_Drexel_University)
+      - Academy_of_Natural_Sciences_of_Drexel_University (dor:Academy_of_Natural_Sciences_of_Drexel_University) --doo:location--> Philadelphia (dor:Philadelphia)
+      - A._Grove_Day (dor:A._Grove_Day) --doo:birthPlace--> Philadelphia (dor:Philadelphia)
+  '2':
+    attributes:
+      Philadelphia: (width^='220', elevation (μ)^='11.8872')
+      James_Bond_(ornithologist): (award^='http://dbpedia.org/resource/Leidy_Award')
+    relationships:
+      - James_Bond_(ornithologist) (<http://dbpedia.org/resource/James_Bond_(ornithologist)>) --doo:institution--> Academy_of_Natural_Sciences_of_Drexel_University (dor:Academy_of_Natural_Sciences_of_Drexel_University)
+      - Academy_of_Natural_Sciences_of_Drexel_University (dor:Academy_of_Natural_Sciences_of_Drexel_University) --doo:location--> Philadelphia (dor:Philadelphia)
+      - Adam_Gopnik (dor:Adam_Gopnik) --doo:birthPlace--> Philadelphia (dor:Philadelphia)
+  '3':
+    attributes:
+      Pennsylvania: (width^='129', elevation (μ)^='335.28')
+      Adrienne_Kennedy: (notable works^='Funnyhouse of a Negro')
+      James_Bond_(ornithologist): (award^='http://dbpedia.org/resource/Leidy_Award')
+    relationships:
+      - James_Bond_(ornithologist) (<http://dbpedia.org/resource/James_Bond_(ornithologist)>) --doo:institution--> Academy_of_Natural_Sciences_of_Drexel_University (dor:Academy_of_Natural_Sciences_of_Drexel_University)
+      - Academy_of_Natural_Sciences_of_Drexel_University (dor:Academy_of_Natural_Sciences_of_Drexel_University) --doo:location--> Pennsylvania (dor:Pennsylvania)
+      - Adrienne_Kennedy (dor:Adrienne_Kennedy) --doo:birthPlace--> Pennsylvania (dor:Pennsylvania)
+  '4':
+    attributes:
+      Oberlin,_Ohio: (elevation (μ)^='248.0')
+    relationships:
+      - Sharon_Patton (dor:Sharon_Patton) --doo:institution--> Allen_Memorial_Art_Museum (dor:Allen_Memorial_Art_Museum)
+      - Allen_Memorial_Art_Museum (dor:Allen_Memorial_Art_Museum) --doo:location--> Oberlin,_Ohio (<http://dbpedia.org/resource/Oberlin,_Ohio>)
+      - Anne_Eugenia_Felicia_Morgan (dor:Anne_Eugenia_Felicia_Morgan) --doo:birthPlace--> Oberlin,_Ohio (<http://dbpedia.org/resource/Oberlin,_Ohio>)
+  '5':
+    attributes:
+      Oberlin,_Ohio: (elevation (μ)^='248.0')
+    relationships:
+      - Sharon_Patton (dor:Sharon_Patton) --doo:institution--> Allen_Memorial_Art_Museum (dor:Allen_Memorial_Art_Museum)
+      - Allen_Memorial_Art_Museum (dor:Allen_Memorial_Art_Museum) --doo:location--> Oberlin,_Ohio (<http://dbpedia.org/resource/Oberlin,_Ohio>)
+      - David_Grimm_(writer) (<http://dbpedia.org/resource/David_Grimm_(writer)>) --doo:birthPlace--> Oberlin,_Ohio (<http://dbpedia.org/resource/Oberlin,_Ohio>)
+  '6':
+    attributes: {}
+    relationships:
+      - CJ_Skead (dor:CJ_Skead) --doo:institution--> Amathole_Museum (dor:Amathole_Museum)
+      - Amathole_Museum (dor:Amathole_Museum) --doo:location--> King_William's_Town (<http://dbpedia.org/resource/King_William's_Town>)
+      - James_Percy_FitzPatrick (dor:James_Percy_FitzPatrick) --doo:birthPlace--> King_William's_Town (<http://dbpedia.org/resource/King_William's_Town>)
+  '7':
+    attributes:
+      A._J._Finn: (notable works^='The Woman in the Window')
+      New_York_City: (colwidth^='20', width^='225', elevation (μ)^='10.0')
+    relationships:
+      - Alice_Gray (dor:Alice_Gray) --doo:institution--> American_Museum_of_Natural_History (dor:American_Museum_of_Natural_History)
+      - American_Museum_of_Natural_History (dor:American_Museum_of_Natural_History) --doo:location--> New_York_City (dor:New_York_City)
+      - A._J._Finn (dor:A._J._Finn) --doo:birthPlace--> New_York_City (dor:New_York_City)
+  '8':
+    attributes:
+      New_York_City: (colwidth^='20', width^='225', elevation (μ)^='10.0')
+    relationships:
+      - Alice_Gray (dor:Alice_Gray) --doo:institution--> American_Museum_of_Natural_History (dor:American_Museum_of_Natural_History)
+      - American_Museum_of_Natural_History (dor:American_Museum_of_Natural_History) --doo:location--> New_York_City (dor:New_York_City)
+      - Aaron_Fogel (dor:Aaron_Fogel) --doo:birthPlace--> New_York_City (dor:New_York_City)
+  '9':
+    attributes:
+      New_York_City: (colwidth^='20', width^='225', elevation (μ)^='10.0')
+    relationships:
+      - Alice_Gray (dor:Alice_Gray) --doo:institution--> American_Museum_of_Natural_History (dor:American_Museum_of_Natural_History)
+      - American_Museum_of_Natural_History (dor:American_Museum_of_Natural_History) --doo:location--> New_York_City (dor:New_York_City)
+      - Ada_Louise_Huxtable (dor:Ada_Louise_Huxtable) --doo:birthPlace--> New_York_City (dor:New_York_City)
+  '10':
+    attributes:
+      Wayne_Maddison: (award^='http://dbpedia.org/resource/David_and_Lucile_Packard_Foundation')
+    relationships:
+      - Wayne_Maddison (dor:Wayne_Maddison) --doo:institution--> Beaty_Biodiversity_Museum (dor:Beaty_Biodiversity_Museum)
+      - Beaty_Biodiversity_Museum (dor:Beaty_Biodiversity_Museum) --doo:location--> Vancouver (dor:Vancouver)
+      - Alexandra_Oliver (dor:Alexandra_Oliver) --doo:birthPlace--> Vancouver (dor:Vancouver)
+attributes:
+  writer: --1pp^ (dop:1pp)--> int | --relatives^ (dop:relatives)--> langString | --notable works^ (dop:notableWorks)--> langString
+  scientist: --image size^ (dop:imageSize)--> int | --award^ (doo:award)--> Resource
+  settlement: --colwidth^ (dop:colwidth)--> int | --Aug low C^ (dop:augLowC)--> int | --district^ (doo:district)--> Resource | --width^ (dop:width)--> langString | --elevation (μ)^ (doo:elevation)--> double
+subgraph_id: 463
+relationships:
+  - scientist --doo:institution--> museum
+  - museum --doo:location--> settlement
+  - writer --doo:birthPlace--> settlement

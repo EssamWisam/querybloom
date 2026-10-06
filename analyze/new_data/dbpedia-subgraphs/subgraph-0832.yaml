@@ -1,0 +1,105 @@
+types:
+  athlete: doo:Athlete
+  country: doo:Country
+  Location: doo:Location
+  settlement: doo:Settlement
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Turkey: (caption^='(President)')
+    relationships:
+      - Erman_Bulucu (dor:Erman_Bulucu) --doo:birthPlace--> Akhisar (dor:Akhisar)
+      - Akhisar (dor:Akhisar) --wwoo:differentFrom--> Akhisar (dor:Akhisar)
+      - Erman_Bulucu (dor:Erman_Bulucu) --dop:birthPlace--> Turkey (dor:Turkey)
+      - Al-Malikiyah (dor:Al-Malikiyah) --wwoo:differentFrom--> Turkey (dor:Turkey)
+  '2':
+    attributes:
+      Turkey: (caption^='(President)')
+    relationships:
+      - Erman_Bulucu (dor:Erman_Bulucu) --doo:birthPlace--> Akhisar (dor:Akhisar)
+      - Akhisar (dor:Akhisar) --wwoo:differentFrom--> İnegöl (<http://dbpedia.org/resource/İnegöl>)
+      - Erman_Bulucu (dor:Erman_Bulucu) --dop:birthPlace--> Turkey (dor:Turkey)
+      - Al-Malikiyah (dor:Al-Malikiyah) --wwoo:differentFrom--> Turkey (dor:Turkey)
+  '3':
+    attributes:
+      Turkey: (caption^='(President)')
+      Anatolia: (Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=AwwNS0diXP4C')
+    relationships:
+      - Erman_Bulucu (dor:Erman_Bulucu) --doo:birthPlace--> Akhisar (dor:Akhisar)
+      - Akhisar (dor:Akhisar) --wwoo:differentFrom--> Akhisar (dor:Akhisar)
+      - Erman_Bulucu (dor:Erman_Bulucu) --dop:birthPlace--> Turkey (dor:Turkey)
+      - Anatolia (dor:Anatolia) --wwoo:differentFrom--> Turkey (dor:Turkey)
+  '4':
+    attributes:
+      Scotland: (caption^='Bute House is the official residence and workplace of the first minister')
+      Alba_County: (Link from a Wikipage to an external page^='http://romaniainterbelica.memoria.ro/judete/alba/index.html')
+    relationships:
+      - Cecil_Dixon_(cricketer) (<http://dbpedia.org/resource/Cecil_Dixon_(cricketer)>) --doo:birthPlace--> Berwickshire (dor:Berwickshire)
+      - Berwickshire (dor:Berwickshire) --wwoo:differentFrom--> Berwick-upon-Tweed_(borough) (<http://dbpedia.org/resource/Berwick-upon-Tweed_(borough)>)
+      - Cecil_Dixon_(cricketer) (<http://dbpedia.org/resource/Cecil_Dixon_(cricketer)>) --dop:birthPlace--> Scotland (dor:Scotland)
+      - Alba_County (dor:Alba_County) --wwoo:differentFrom--> Scotland (dor:Scotland)
+  '5':
+    attributes:
+      Scotland: (caption^='Bute House is the official residence and workplace of the first minister')
+    relationships:
+      - Cecil_Dixon_(cricketer) (<http://dbpedia.org/resource/Cecil_Dixon_(cricketer)>) --doo:birthPlace--> Berwickshire (dor:Berwickshire)
+      - Berwickshire (dor:Berwickshire) --wwoo:differentFrom--> Berwick-upon-Tweed_(borough) (<http://dbpedia.org/resource/Berwick-upon-Tweed_(borough)>)
+      - Cecil_Dixon_(cricketer) (<http://dbpedia.org/resource/Cecil_Dixon_(cricketer)>) --dop:birthPlace--> Scotland (dor:Scotland)
+      - Càrna (<http://dbpedia.org/resource/Càrna>) --wwoo:differentFrom--> Scotland (dor:Scotland)
+  '6':
+    attributes:
+      Scotland: (caption^='Bute House is the official residence and workplace of the first minister')
+    relationships:
+      - Cecil_Dixon_(cricketer) (<http://dbpedia.org/resource/Cecil_Dixon_(cricketer)>) --doo:birthPlace--> Berwickshire (dor:Berwickshire)
+      - Berwickshire (dor:Berwickshire) --wwoo:differentFrom--> Berwick-upon-Tweed_(borough) (<http://dbpedia.org/resource/Berwick-upon-Tweed_(borough)>)
+      - Cecil_Dixon_(cricketer) (<http://dbpedia.org/resource/Cecil_Dixon_(cricketer)>) --dop:birthPlace--> Scotland (dor:Scotland)
+      - Craigie_(hamlet),_Perth_and_Kinross (<http://dbpedia.org/resource/Craigie_(hamlet),_Perth_and_Kinross>) --wwoo:differentFrom--> Scotland (dor:Scotland)
+  '7':
+    attributes:
+      Dalston,_Cumbria: (Link from a Wikipage to an external page^='http://www.cumbriacountyhistory.org.uk/township/dalston')
+    relationships:
+      - Dale_Iniff (dor:Dale_Iniff) --doo:birthPlace--> Cumbria (dor:Cumbria)
+      - Cumbria (dor:Cumbria) --wwoo:differentFrom--> Cumberland (dor:Cumberland)
+      - Dale_Iniff (dor:Dale_Iniff) --dop:birthPlace--> Cumbria (dor:Cumbria)
+      - Dalston,_Cumbria (<http://dbpedia.org/resource/Dalston,_Cumbria>) --wwoo:differentFrom--> Cumbria (dor:Cumbria)
+  '8':
+    attributes:
+      Dalston,_Cumbria: (Link from a Wikipage to an external page^='http://www.cumbriacountyhistory.org.uk/township/dalston')
+    relationships:
+      - Dale_Iniff (dor:Dale_Iniff) --doo:birthPlace--> Cumbria (dor:Cumbria)
+      - Cumbria (dor:Cumbria) --wwoo:differentFrom--> Umbria (dor:Umbria)
+      - Dale_Iniff (dor:Dale_Iniff) --dop:birthPlace--> Cumbria (dor:Cumbria)
+      - Dalston,_Cumbria (<http://dbpedia.org/resource/Dalston,_Cumbria>) --wwoo:differentFrom--> Cumbria (dor:Cumbria)
+  '9':
+    attributes: {}
+    relationships:
+      - Dale_Iniff (dor:Dale_Iniff) --doo:birthPlace--> Cumbria (dor:Cumbria)
+      - Cumbria (dor:Cumbria) --wwoo:differentFrom--> Cumberland (dor:Cumberland)
+      - Dale_Iniff (dor:Dale_Iniff) --dop:birthPlace--> Cumbria (dor:Cumbria)
+      - Dalton-in-Furness (dor:Dalton-in-Furness) --wwoo:differentFrom--> Cumbria (dor:Cumbria)
+  '10':
+    attributes:
+      Haiti: (caption^='Religion in Haiti according to the Pew Research Center')
+    relationships:
+      - Samuel_Pompée (<http://dbpedia.org/resource/Samuel_Pompée>) --doo:birthPlace--> Gonâve_Island (<http://dbpedia.org/resource/Gonâve_Island>)
+      - Gonâve_Island (<http://dbpedia.org/resource/Gonâve_Island>) --wwoo:differentFrom--> Gonaïves (<http://dbpedia.org/resource/Gonaïves>)
+      - Samuel_Pompée (<http://dbpedia.org/resource/Samuel_Pompée>) --dop:birthPlace--> Haiti (dor:Haiti)
+      - Hiati (dor:Hiati) --wwoo:differentFrom--> Haiti (dor:Haiti)
+attributes:
+  country: --caption^ (dop:caption)--> langString
+  Location: --coordinates^ (dop:coordinates)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --image upright^ (dop:imageUpright)--> double | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --length (μ)^ (doo:length)--> double
+  settlement: --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int
+  administrative region: --affiliation^ (dop:affiliation)--> Resource
+subgraph_id: 832
+relationships:
+  - athlete --doo:birthPlace--> administrative region
+  - administrative region --wwoo:differentFrom--> settlement
+  - athlete --dop:birthPlace--> country
+  - Location --wwoo:differentFrom--> country

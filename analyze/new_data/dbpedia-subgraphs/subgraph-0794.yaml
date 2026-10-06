@@ -1,0 +1,115 @@
+types:
+  town: doo:Town
+  person: doo:Person
+  tenure: doo:Tenure
+  politician: doo:Politician
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Stockholm: (Aug high C^='22')
+      Carl_Winberg: (caption^='Carl Winberg')
+    relationships:
+      - Zeth_Höglund__Tenure__1 (<http://dbpedia.org/resource/Zeth_Höglund__Tenure__1>) --doo:alongside--> Carl_Winberg (dor:Carl_Winberg)
+      - Carl_Winberg (dor:Carl_Winberg) --doo:deathPlace--> Stockholm (dor:Stockholm)
+      - 1987_(artist) (<http://dbpedia.org/resource/1987_(artist)>) --doo:birthPlace--> Stockholm (dor:Stockholm)
+      - Konstfack (dor:Konstfack) --dop:city--> Stockholm (dor:Stockholm)
+  '2':
+    attributes:
+      Stockholm: (Aug high C^='22')
+      Carl_Winberg: (caption^='Carl Winberg')
+      KTH_Royal_Institute_of_Technology: (affiliation^='http://dbpedia.org/resource/CESAER_Association')
+    relationships:
+      - Zeth_Höglund__Tenure__1 (<http://dbpedia.org/resource/Zeth_Höglund__Tenure__1>) --doo:alongside--> Carl_Winberg (dor:Carl_Winberg)
+      - Carl_Winberg (dor:Carl_Winberg) --doo:deathPlace--> Stockholm (dor:Stockholm)
+      - 1987_(artist) (<http://dbpedia.org/resource/1987_(artist)>) --doo:birthPlace--> Stockholm (dor:Stockholm)
+      - KTH_Royal_Institute_of_Technology (dor:KTH_Royal_Institute_of_Technology) --dop:city--> Stockholm (dor:Stockholm)
+  '3':
+    attributes:
+      Stockholm: (Aug high C^='22')
+      Carl_Winberg: (caption^='Carl Winberg')
+      Military_Academy_Karlberg: (type^='http://dbpedia.org/resource/Military_academy')
+    relationships:
+      - Zeth_Höglund__Tenure__1 (<http://dbpedia.org/resource/Zeth_Höglund__Tenure__1>) --doo:alongside--> Carl_Winberg (dor:Carl_Winberg)
+      - Carl_Winberg (dor:Carl_Winberg) --doo:deathPlace--> Stockholm (dor:Stockholm)
+      - 1987_(artist) (<http://dbpedia.org/resource/1987_(artist)>) --doo:birthPlace--> Stockholm (dor:Stockholm)
+      - Military_Academy_Karlberg (dor:Military_Academy_Karlberg) --dop:city--> Stockholm (dor:Stockholm)
+  '4':
+    attributes:
+      Truro,_Nova_Scotia: (Apr precipitation days^='13.2', Aug high C^='23.7')
+      Nova_Scotia_Teachers_College: (type^='http://dbpedia.org/resource/Teachers''_college')
+    relationships:
+      - Robert_Stanfield__Tenure__4 (dor:Robert_Stanfield__Tenure__4) --doo:alongside--> George_Isaac_Smith (dor:George_Isaac_Smith)
+      - George_Isaac_Smith (dor:George_Isaac_Smith) --doo:deathPlace--> Truro,_Nova_Scotia (<http://dbpedia.org/resource/Truro,_Nova_Scotia>)
+      - A._J._B._Johnston (dor:A._J._B._Johnston) --doo:birthPlace--> Truro,_Nova_Scotia (<http://dbpedia.org/resource/Truro,_Nova_Scotia>)
+      - Nova_Scotia_Teachers_College (dor:Nova_Scotia_Teachers_College) --dop:city--> Truro,_Nova_Scotia (<http://dbpedia.org/resource/Truro,_Nova_Scotia>)
+  '5':
+    attributes:
+      Truro,_Nova_Scotia: (Apr precipitation days^='13.2', Aug high C^='23.7')
+      Nova_Scotia_Teachers_College: (type^='http://dbpedia.org/resource/Teachers''_college')
+    relationships:
+      - George_Isaac_Smith__Tenure__2 (dor:George_Isaac_Smith__Tenure__2) --doo:alongside--> Gerald_Ritcey (dor:Gerald_Ritcey)
+      - Gerald_Ritcey (dor:Gerald_Ritcey) --doo:deathPlace--> Truro,_Nova_Scotia (<http://dbpedia.org/resource/Truro,_Nova_Scotia>)
+      - A._J._B._Johnston (dor:A._J._B._Johnston) --doo:birthPlace--> Truro,_Nova_Scotia (<http://dbpedia.org/resource/Truro,_Nova_Scotia>)
+      - Nova_Scotia_Teachers_College (dor:Nova_Scotia_Teachers_College) --dop:city--> Truro,_Nova_Scotia (<http://dbpedia.org/resource/Truro,_Nova_Scotia>)
+  '6':
+    attributes:
+      Truro,_Nova_Scotia: (Apr precipitation days^='13.2', Aug high C^='23.7')
+      Nova_Scotia_Teachers_College: (type^='http://dbpedia.org/resource/Teachers''_college')
+    relationships:
+      - Frank_Stanfield__Tenure__2 (dor:Frank_Stanfield__Tenure__2) --doo:alongside--> Robert_H._Kennedy (dor:Robert_H._Kennedy)
+      - Robert_H._Kennedy (dor:Robert_H._Kennedy) --doo:deathPlace--> Truro,_Nova_Scotia (<http://dbpedia.org/resource/Truro,_Nova_Scotia>)
+      - A._J._B._Johnston (dor:A._J._B._Johnston) --doo:birthPlace--> Truro,_Nova_Scotia (<http://dbpedia.org/resource/Truro,_Nova_Scotia>)
+      - Nova_Scotia_Teachers_College (dor:Nova_Scotia_Teachers_College) --dop:city--> Truro,_Nova_Scotia (<http://dbpedia.org/resource/Truro,_Nova_Scotia>)
+  '7':
+    attributes:
+      Hastings: (Aug high C^='21.2')
+      John_Foster_McCreight: (caption^='Hon. John Foster McCreight')
+      University_Centre_Hastings: (affiliation^='http://dbpedia.org/resource/Open_University', type^='http://dbpedia.org/resource/Higher_education')
+    relationships:
+      - Robert_Beaven__Tenure__2 (dor:Robert_Beaven__Tenure__2) --doo:alongside--> John_Foster_McCreight (dor:John_Foster_McCreight)
+      - John_Foster_McCreight (dor:John_Foster_McCreight) --doo:deathPlace--> Hastings (dor:Hastings)
+      - A._W._Andrews (dor:A._W._Andrews) --doo:birthPlace--> Hastings (dor:Hastings)
+      - University_Centre_Hastings (dor:University_Centre_Hastings) --dop:city--> Hastings (dor:Hastings)
+  '8':
+    attributes:
+      Hastings: (Aug high C^='21.2')
+      University_Centre_Hastings: (affiliation^='http://dbpedia.org/resource/Open_University', type^='http://dbpedia.org/resource/Higher_education')
+    relationships:
+      - Fulke_Greville-Nugent,_1st_Baron_Greville__Tenure__2 (<http://dbpedia.org/resource/Fulke_Greville-Nugent,_1st_Baron_Greville__Tenure__2>) --doo:alongside--> Richard_Maxwell_Fox (dor:Richard_Maxwell_Fox)
+      - Richard_Maxwell_Fox (dor:Richard_Maxwell_Fox) --doo:deathPlace--> Hastings (dor:Hastings)
+      - A._W._Andrews (dor:A._W._Andrews) --doo:birthPlace--> Hastings (dor:Hastings)
+      - University_Centre_Hastings (dor:University_Centre_Hastings) --dop:city--> Hastings (dor:Hastings)
+  '9':
+    attributes:
+      Bournemouth: (founder^='http://dbpedia.org/resource/Lewis_Tregonwell', Aug high C^='22')
+      Aaron_Bastani: (known for^='Co-founder of Novara Media')
+    relationships:
+      - Ebenezer_Ward__Tenure__1 (dor:Ebenezer_Ward__Tenure__1) --doo:alongside--> Arthur_Blyth (dor:Arthur_Blyth)
+      - Arthur_Blyth (dor:Arthur_Blyth) --doo:deathPlace--> Bournemouth (dor:Bournemouth)
+      - Aaron_Bastani (dor:Aaron_Bastani) --doo:birthPlace--> Bournemouth (dor:Bournemouth)
+      - AECC_University_College (dor:AECC_University_College) --dop:city--> Bournemouth (dor:Bournemouth)
+  '10':
+    attributes:
+      Bournemouth: (founder^='http://dbpedia.org/resource/Lewis_Tregonwell', Aug high C^='22')
+    relationships:
+      - Ebenezer_Ward__Tenure__1 (dor:Ebenezer_Ward__Tenure__1) --doo:alongside--> Arthur_Blyth (dor:Arthur_Blyth)
+      - Arthur_Blyth (dor:Arthur_Blyth) --doo:deathPlace--> Bournemouth (dor:Bournemouth)
+      - Aaron_Hardie (dor:Aaron_Hardie) --doo:birthPlace--> Bournemouth (dor:Bournemouth)
+      - AECC_University_College (dor:AECC_University_College) --dop:city--> Bournemouth (dor:Bournemouth)
+attributes:
+  town: --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --founder^ (dop:founder)--> langString | --Aug high C^ (dop:augHighC)--> int
+  person: --known for^ (dop:knownFor)--> int | --domesticpartner^ (dop:domesticpartner)--> langString
+  politician: --caption^ (dop:caption)--> langString | --direction^ (dop:direction)--> langString
+  university: --affiliation^ (doo:affiliation)--> Resource | --type^ (doo:type)--> Resource
+subgraph_id: 794
+relationships:
+  - tenure --doo:alongside--> politician
+  - politician --doo:deathPlace--> town
+  - person --doo:birthPlace--> town
+  - university --dop:city--> town

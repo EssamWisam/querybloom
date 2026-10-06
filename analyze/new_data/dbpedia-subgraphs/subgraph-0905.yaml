@@ -1,0 +1,112 @@
+types:
+  grape: doo:Grape
+  athlete: doo:Athlete
+  country: doo:Country
+  Location: doo:Location
+  sports team: doo:SportsTeam
+  wine region: doo:WineRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Virtus_Bologna: (logo^='170')
+    relationships:
+      - Barbera (dor:Barbera) --doo:origin--> Italy (dor:Italy)
+      - Columbia_Valley_AVA (dor:Columbia_Valley_AVA) --doo:varietals--> Barbera (dor:Barbera)
+      - Columbia_Valley_AVA (dor:Columbia_Valley_AVA) --doo:subregion--> Ancient_Lakes_of_the_Columbia_Valley_AVA (dor:Ancient_Lakes_of_the_Columbia_Valley_AVA)
+      - Adolfo_Contoli (dor:Adolfo_Contoli) --doo:birthPlace--> Italy (dor:Italy)
+      - Adolfo_Contoli (dor:Adolfo_Contoli) --doo:club--> Virtus_Bologna (dor:Virtus_Bologna)
+  '2':
+    attributes:
+      Virtus_Bologna: (logo^='170')
+    relationships:
+      - Barbera (dor:Barbera) --doo:origin--> Italy (dor:Italy)
+      - Columbia_Valley_AVA (dor:Columbia_Valley_AVA) --doo:varietals--> Barbera (dor:Barbera)
+      - Columbia_Valley_AVA (dor:Columbia_Valley_AVA) --doo:subregion--> Horse_Heaven_Hills_AVA (dor:Horse_Heaven_Hills_AVA)
+      - Adolfo_Contoli (dor:Adolfo_Contoli) --doo:birthPlace--> Italy (dor:Italy)
+      - Adolfo_Contoli (dor:Adolfo_Contoli) --doo:club--> Virtus_Bologna (dor:Virtus_Bologna)
+  '3':
+    attributes:
+      Virtus_Bologna: (logo^='170')
+    relationships:
+      - Barbera (dor:Barbera) --doo:origin--> Italy (dor:Italy)
+      - Columbia_Valley_AVA (dor:Columbia_Valley_AVA) --doo:varietals--> Barbera (dor:Barbera)
+      - Columbia_Valley_AVA (dor:Columbia_Valley_AVA) --doo:subregion--> Lake_Chelan_AVA (dor:Lake_Chelan_AVA)
+      - Adolfo_Contoli (dor:Adolfo_Contoli) --doo:birthPlace--> Italy (dor:Italy)
+      - Adolfo_Contoli (dor:Adolfo_Contoli) --doo:club--> Virtus_Bologna (dor:Virtus_Bologna)
+  '4':
+    attributes:
+      HAVK_Mladost: (logo^='HAVK Mladost logo.png')
+    relationships:
+      - Zinfandel (dor:Zinfandel) --doo:origin--> Croatia (dor:Croatia)
+      - Napa_Valley_AVA (dor:Napa_Valley_AVA) --doo:varietals--> Zinfandel (dor:Zinfandel)
+      - Napa_Valley_AVA (dor:Napa_Valley_AVA) --doo:subregion--> Atlas_Peak_AVA (dor:Atlas_Peak_AVA)
+      - Andrija_Bašić (<http://dbpedia.org/resource/Andrija_Bašić>) --doo:birthPlace--> Croatia (dor:Croatia)
+      - Andrija_Bašić (<http://dbpedia.org/resource/Andrija_Bašić>) --doo:club--> HAVK_Mladost (dor:HAVK_Mladost)
+  '5':
+    attributes:
+      NC_Vouliagmeni: (logo^='NC Vouliagmeni logo.jpg')
+    relationships:
+      - Zinfandel (dor:Zinfandel) --doo:origin--> Croatia (dor:Croatia)
+      - Napa_Valley_AVA (dor:Napa_Valley_AVA) --doo:varietals--> Zinfandel (dor:Zinfandel)
+      - Napa_Valley_AVA (dor:Napa_Valley_AVA) --doo:subregion--> Atlas_Peak_AVA (dor:Atlas_Peak_AVA)
+      - Andrija_Bašić (<http://dbpedia.org/resource/Andrija_Bašić>) --doo:birthPlace--> Croatia (dor:Croatia)
+      - Andrija_Bašić (<http://dbpedia.org/resource/Andrija_Bašić>) --doo:club--> NC_Vouliagmeni (dor:NC_Vouliagmeni)
+  '6':
+    attributes:
+      HAVK_Mladost: (logo^='HAVK Mladost logo.png')
+    relationships:
+      - Zinfandel (dor:Zinfandel) --doo:origin--> Croatia (dor:Croatia)
+      - Napa_Valley_AVA (dor:Napa_Valley_AVA) --doo:varietals--> Zinfandel (dor:Zinfandel)
+      - Napa_Valley_AVA (dor:Napa_Valley_AVA) --doo:subregion--> Calistoga_AVA (dor:Calistoga_AVA)
+      - Andrija_Bašić (<http://dbpedia.org/resource/Andrija_Bašić>) --doo:birthPlace--> Croatia (dor:Croatia)
+      - Andrija_Bašić (<http://dbpedia.org/resource/Andrija_Bašić>) --doo:club--> HAVK_Mladost (dor:HAVK_Mladost)
+  '7':
+    attributes: {}
+    relationships:
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:origin--> United_States (dor:United_States)
+      - New_York_wine (dor:New_York_wine) --doo:varietals--> Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>)
+      - New_York_wine (dor:New_York_wine) --doo:subregion--> Cayuga_Lake_AVA (dor:Cayuga_Lake_AVA)
+      - Atle_Lie_McGrath (dor:Atle_Lie_McGrath) --doo:birthPlace--> United_States (dor:United_States)
+      - Atle_Lie_McGrath (dor:Atle_Lie_McGrath) --doo:club--> Bærums_SK (<http://dbpedia.org/resource/Bærums_SK>)
+  '8':
+    attributes: {}
+    relationships:
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:origin--> United_States (dor:United_States)
+      - New_York_wine (dor:New_York_wine) --doo:varietals--> Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>)
+      - New_York_wine (dor:New_York_wine) --doo:subregion--> Finger_Lakes_AVA (dor:Finger_Lakes_AVA)
+      - Atle_Lie_McGrath (dor:Atle_Lie_McGrath) --doo:birthPlace--> United_States (dor:United_States)
+      - Atle_Lie_McGrath (dor:Atle_Lie_McGrath) --doo:club--> Bærums_SK (<http://dbpedia.org/resource/Bærums_SK>)
+  '9':
+    attributes: {}
+    relationships:
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:origin--> United_States (dor:United_States)
+      - New_York_wine (dor:New_York_wine) --doo:varietals--> Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>)
+      - New_York_wine (dor:New_York_wine) --doo:subregion--> Hudson_River_Region_AVA (dor:Hudson_River_Region_AVA)
+      - Atle_Lie_McGrath (dor:Atle_Lie_McGrath) --doo:birthPlace--> United_States (dor:United_States)
+      - Atle_Lie_McGrath (dor:Atle_Lie_McGrath) --doo:club--> Bærums_SK (<http://dbpedia.org/resource/Bærums_SK>)
+  '10':
+    attributes:
+      LA_Current: (logo^='http://dbpedia.org/resource/File:LA_Current_logo.jpg')
+    relationships:
+      - Aligoté (<http://dbpedia.org/resource/Aligoté>) --doo:origin--> France (dor:France)
+      - Armenian_wine (dor:Armenian_wine) --doo:varietals--> Aligoté (<http://dbpedia.org/resource/Aligoté>)
+      - Armenian_wine (dor:Armenian_wine) --doo:subregion--> Ararat_Province (dor:Ararat_Province)
+      - Béryl_Gastaldello (<http://dbpedia.org/resource/Béryl_Gastaldello>) --doo:birthPlace--> France (dor:France)
+      - Béryl_Gastaldello (<http://dbpedia.org/resource/Béryl_Gastaldello>) --doo:club--> LA_Current (dor:LA_Current)
+attributes:
+  athlete: --death place^ (dop:deathPlace)--> langString
+  country: --url^ (dop:url)--> Resource
+  Location: --url^ (dop:url)--> Resource | --arc-textA^ (dop:arcTexta)--> langString | --Apr high C^ (dop:aprHighC)--> int | --arc-textB^ (dop:arcTextb)--> langString | --builder^ (dop:builder)--> Resource | --partof^ (dop:partof)--> langString | --architectural style^ (doo:architecturalStyle)--> Resource | --named after^ (doo:namedAfter)--> Resource
+  sports team: --logo^ (dop:logo)--> langString
+subgraph_id: 905
+relationships:
+  - grape --doo:origin--> country
+  - wine region --doo:varietals--> grape
+  - wine region --doo:subregion--> Location
+  - athlete --doo:birthPlace--> country
+  - athlete --doo:club--> sports team

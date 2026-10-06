@@ -1,0 +1,66 @@
+types:
+  lake: doo:Lake
+  river: doo:River
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Gievenbach (dor:Gievenbach) --doo:mouthMountain--> Aasee_(Münster) (<http://dbpedia.org/resource/Aasee_(Münster)>)
+      - Aasee_(Münster) (<http://dbpedia.org/resource/Aasee_(Münster)>) --doo:outflow--> Münstersche_Aa (<http://dbpedia.org/resource/Münstersche_Aa>)
+  '2':
+    attributes: {}
+    relationships:
+      - La_Leona_River (dor:La_Leona_River) --doo:mouthMountain--> Argentino_Lake (dor:Argentino_Lake)
+      - Argentino_Lake (dor:Argentino_Lake) --doo:outflow--> Santa_Cruz_River_(Argentina) (<http://dbpedia.org/resource/Santa_Cruz_River_(Argentina)>)
+  '3':
+    attributes: {}
+    relationships:
+      - Seeache (dor:Seeache) --doo:mouthMountain--> Attersee_(lake) (<http://dbpedia.org/resource/Attersee_(lake)>)
+      - Attersee_(lake) (<http://dbpedia.org/resource/Attersee_(lake)>) --doo:outflow--> Ager_(river) (<http://dbpedia.org/resource/Ager_(river)>)
+  '4':
+    attributes: {}
+    relationships:
+      - Amargosa_River (dor:Amargosa_River) --doo:mouthMountain--> Badwater_Basin (dor:Badwater_Basin)
+      - Badwater_Basin (dor:Badwater_Basin) --doo:outflow--> Evaporation (dor:Evaporation)
+  '5':
+    attributes: {}
+    relationships:
+      - Aalbek_(Hemmelsdorfer_See) (<http://dbpedia.org/resource/Aalbek_(Hemmelsdorfer_See)>) --doo:mouthMountain--> Baltic_Sea (dor:Baltic_Sea)
+      - Baltic_Sea (dor:Baltic_Sea) --doo:outflow--> Danish_Straits (dor:Danish_Straits)
+  '6':
+    attributes: {}
+    relationships:
+      - Błotnica_(river) (<http://dbpedia.org/resource/Błotnica_(river)>) --doo:mouthMountain--> Baltic_Sea (dor:Baltic_Sea)
+      - Baltic_Sea (dor:Baltic_Sea) --doo:outflow--> Danish_Straits (dor:Danish_Straits)
+  '7':
+    attributes: {}
+    relationships:
+      - Czerwona_(river) (<http://dbpedia.org/resource/Czerwona_(river)>) --doo:mouthMountain--> Baltic_Sea (dor:Baltic_Sea)
+      - Baltic_Sea (dor:Baltic_Sea) --doo:outflow--> Danish_Straits (dor:Danish_Straits)
+  '8':
+    attributes: {}
+    relationships:
+      - Little_Minnesota_River (dor:Little_Minnesota_River) --doo:mouthMountain--> Big_Stone_Lake (dor:Big_Stone_Lake)
+      - Big_Stone_Lake (dor:Big_Stone_Lake) --doo:outflow--> Minnesota_River (dor:Minnesota_River)
+  '9':
+    attributes: {}
+    relationships:
+      - Black_Lake_Bayou (dor:Black_Lake_Bayou) --doo:mouthMountain--> Black_Lake_(Louisiana) (<http://dbpedia.org/resource/Black_Lake_(Louisiana)>)
+      - Black_Lake_(Louisiana) (<http://dbpedia.org/resource/Black_Lake_(Louisiana)>) --doo:outflow--> Red_River_of_the_South (dor:Red_River_of_the_South)
+  '10':
+    attributes: {}
+    relationships:
+      - Paatsjoki (dor:Paatsjoki) --doo:mouthMountain--> Bøkfjorden (<http://dbpedia.org/resource/Bøkfjorden>)
+      - Bøkfjorden (<http://dbpedia.org/resource/Bøkfjorden>) --doo:outflow--> Varangerfjorden (dor:Varangerfjorden)
+attributes:
+  Location: --class^ (dop:class)--> langString | --Apr sun^ (dop:aprSun)--> double | --area^ (dop:area)--> acre | --title^ (dop:title)--> langString | --wordnet_type (dop:wordnet_type)--> Resource | --designated nrhp type^ (dop:designatedNrhpType)--> date | --founding year^ (doo:foundingYear)--> gYear | --d^ (dop:d)--> langString
+subgraph_id: 425
+relationships:
+  - Location --doo:mouthMountain--> lake
+  - lake --doo:outflow--> river

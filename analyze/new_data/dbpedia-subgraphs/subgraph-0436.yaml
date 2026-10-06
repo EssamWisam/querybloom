@@ -1,0 +1,87 @@
+types:
+  Location: doo:Location
+  organisation: doo:Organisation
+  baseball player: doo:BaseballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Muskogee,_Oklahoma: (Aug low F^='70', source^='https://wrcc.dri.edu/cgi-bin/cliMAIN.pl%3Fok6130', Apr low F^='50', area total km^='115.21')
+      City_of_Muskogee_Foundation: (subject='http://dbpedia.org/resource/Category:2008_establishments_in_Oklahoma')
+    relationships:
+      - City_of_Muskogee_Foundation (dor:City_of_Muskogee_Foundation) --doo:location--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+      - Ab_Wright (dor:Ab_Wright) --dop:deathPlace--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+  '2':
+    attributes:
+      Muskogee,_Oklahoma: (Aug low F^='70', source^='https://wrcc.dri.edu/cgi-bin/cliMAIN.pl%3Fok6130', Apr low F^='50', area total km^='115.21')
+      Oklahoma_School_for_the_Blind: (subject='http://dbpedia.org/resource/Category:Boarding_schools_in_Oklahoma')
+    relationships:
+      - Oklahoma_School_for_the_Blind (dor:Oklahoma_School_for_the_Blind) --doo:location--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+      - Ab_Wright (dor:Ab_Wright) --dop:deathPlace--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+  '3':
+    attributes:
+      Detroit: (source^='—Martin Luther King Jr.', area total km^='370.09')
+      Abbott-Detroit: (subject='http://dbpedia.org/resource/Category:1909_establishments_in_Michigan')
+    relationships:
+      - Abbott-Detroit (dor:Abbott-Detroit) --doo:location--> Detroit (dor:Detroit)
+      - Abbie_Johnson (dor:Abbie_Johnson) --dop:deathPlace--> Detroit (dor:Detroit)
+  '4':
+    attributes:
+      Detroit: (source^='—Martin Luther King Jr.', area total km^='370.09')
+      Aerocar_(1905_automobile): (subject='http://dbpedia.org/resource/Category:Brass_Era_vehicles')
+    relationships:
+      - Aerocar_(1905_automobile) (<http://dbpedia.org/resource/Aerocar_(1905_automobile)>) --doo:location--> Detroit (dor:Detroit)
+      - Abbie_Johnson (dor:Abbie_Johnson) --dop:deathPlace--> Detroit (dor:Detroit)
+  '5':
+    attributes:
+      Michigan: (area total km^='250493')
+      Aerocar_(1905_automobile): (subject='http://dbpedia.org/resource/Category:Brass_Era_vehicles')
+    relationships:
+      - Aerocar_(1905_automobile) (<http://dbpedia.org/resource/Aerocar_(1905_automobile)>) --doo:location--> Michigan (dor:Michigan)
+      - Abbie_Johnson (dor:Abbie_Johnson) --dop:deathPlace--> Michigan (dor:Michigan)
+  '6':
+    attributes:
+      Akron,_Ohio: (Aug low F^='61.9', source^='http://dbpedia.org/resource/NOAA', Apr low F^='39.8', area total km^='161.29')
+      Akron_Firestone_Non-Skids: (subject='http://dbpedia.org/resource/Category:1937_establishments_in_Ohio')
+    relationships:
+      - Akron_Firestone_Non-Skids (dor:Akron_Firestone_Non-Skids) --doo:location--> Akron,_Ohio (<http://dbpedia.org/resource/Akron,_Ohio>)
+      - Abe_Atkins (dor:Abe_Atkins) --dop:deathPlace--> Akron,_Ohio (<http://dbpedia.org/resource/Akron,_Ohio>)
+  '7':
+    attributes:
+      Akron,_Ohio: (Aug low F^='61.9', source^='http://dbpedia.org/resource/NOAA', Apr low F^='39.8', area total km^='161.29')
+      Country_Pure_Foods: (subject='http://dbpedia.org/resource/Category:Companies_based_in_Ohio')
+    relationships:
+      - Country_Pure_Foods (dor:Country_Pure_Foods) --doo:location--> Akron,_Ohio (<http://dbpedia.org/resource/Akron,_Ohio>)
+      - Abe_Atkins (dor:Abe_Atkins) --dop:deathPlace--> Akron,_Ohio (<http://dbpedia.org/resource/Akron,_Ohio>)
+  '8':
+    attributes:
+      Cuyahoga_Valley_Scenic_Railroad: (subject='http://dbpedia.org/resource/Category:Cuyahoga_Valley_Scenic_Railroad')
+    relationships:
+      - Cuyahoga_Valley_Scenic_Railroad (dor:Cuyahoga_Valley_Scenic_Railroad) --doo:location--> Akron,_Ohio (<http://dbpedia.org/resource/Akron,_Ohio>)
+      - Abe_Atkins (dor:Abe_Atkins) --dop:deathPlace--> Akron,_Ohio (<http://dbpedia.org/resource/Akron,_Ohio>)
+  '9':
+    attributes:
+      Longview,_Texas: (Aug low F^='71.7', source^='http://dbpedia.org/resource/NOAA', Apr low F^='51.8', area total km^='144.85')
+      LeTourneau_Empowering_Global_Solutions: (subject='http://dbpedia.org/resource/Category:Longview,_Texas')
+    relationships:
+      - LeTourneau_Empowering_Global_Solutions (dor:LeTourneau_Empowering_Global_Solutions) --doo:location--> Longview,_Texas (<http://dbpedia.org/resource/Longview,_Texas>)
+      - Abe_Bowman (dor:Abe_Bowman) --dop:deathPlace--> Longview,_Texas (<http://dbpedia.org/resource/Longview,_Texas>)
+  '10':
+    attributes:
+      Stemco: (subject='http://dbpedia.org/resource/Category:1951_establishments_in_Missouri')
+      Longview,_Texas: (Aug low F^='71.7', source^='http://dbpedia.org/resource/NOAA', Apr low F^='51.8', area total km^='144.85')
+    relationships:
+      - Stemco (dor:Stemco) --doo:location--> Longview,_Texas (<http://dbpedia.org/resource/Longview,_Texas>)
+      - Abe_Bowman (dor:Abe_Bowman) --dop:deathPlace--> Longview,_Texas (<http://dbpedia.org/resource/Longview,_Texas>)
+attributes:
+  Location: --Aug low F^ (dop:augLowF)--> int | --2y^ (dop:2y)--> int | --source^ (dop:source)--> langString | --2a^ (dop:2a)--> langString | --Apr rain days^ (dop:aprRainDays)--> int | --Apr low F^ (dop:aprLowF)--> int | --area total km^ (dop:areaTotalKm)--> double | --alt^ (dop:alt)--> langString
+  organisation: --subject (podt:subject)--> Resource
+subgraph_id: 436
+relationships:
+  - organisation --doo:location--> Location
+  - baseball player --dop:deathPlace--> Location

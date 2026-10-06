@@ -1,0 +1,77 @@
+types:
+  Band: doo:Band
+  person: doo:Person
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Busta_Rhymes: (birth date^='1972-05-20', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1', caption^='Busta Rhymes performing in 2022')
+    relationships:
+      - Q-Tip_(musician) (<http://dbpedia.org/resource/Q-Tip_(musician)>) --dop:currentMemberOf--> A_Tribe_Called_Quest (dor:A_Tribe_Called_Quest)
+      - A_Tribe_Called_Quest (dor:A_Tribe_Called_Quest) --doo:associatedMusicalArtist--> Busta_Rhymes (dor:Busta_Rhymes)
+  '2':
+    attributes:
+      Consequence_(rapper): (birth date^='1977-06-14', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1', caption^='Consequence in 2007')
+    relationships:
+      - Q-Tip_(musician) (<http://dbpedia.org/resource/Q-Tip_(musician)>) --dop:currentMemberOf--> A_Tribe_Called_Quest (dor:A_Tribe_Called_Quest)
+      - A_Tribe_Called_Quest (dor:A_Tribe_Called_Quest) --doo:associatedMusicalArtist--> Consequence_(rapper) (<http://dbpedia.org/resource/Consequence_(rapper)>)
+  '3':
+    attributes:
+      J_Dilla: (birth date^='1974-02-07', caption^='J Dilla in 2004')
+    relationships:
+      - Q-Tip_(musician) (<http://dbpedia.org/resource/Q-Tip_(musician)>) --dop:currentMemberOf--> A_Tribe_Called_Quest (dor:A_Tribe_Called_Quest)
+      - A_Tribe_Called_Quest (dor:A_Tribe_Called_Quest) --doo:associatedMusicalArtist--> J_Dilla (dor:J_Dilla)
+  '4':
+    attributes:
+      Babyface_(musician): (birth date^='1959-04-10', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1', caption^='Babyface in 2013')
+    relationships:
+      - Kevon_Edmonds (dor:Kevon_Edmonds) --dop:currentMemberOf--> After_7 (dor:After_7)
+      - After_7 (dor:After_7) --doo:associatedMusicalArtist--> Babyface_(musician) (<http://dbpedia.org/resource/Babyface_(musician)>)
+  '5':
+    attributes:
+      Perturbator: (caption^='Perturbator at Rock am Ring in 2017')
+    relationships:
+      - Neige_(musician) (<http://dbpedia.org/resource/Neige_(musician)>) --dop:currentMemberOf--> Alcest (dor:Alcest)
+      - Alcest (dor:Alcest) --doo:associatedMusicalArtist--> Perturbator (dor:Perturbator)
+  '6':
+    attributes:
+      Jerry_Cantrell: (id^='jerry-cantrell-mn0000323194')
+    relationships:
+      - Jerry_Cantrell (dor:Jerry_Cantrell) --dop:currentMemberOf--> Alice_in_Chains (dor:Alice_in_Chains)
+      - Alice_in_Chains (dor:Alice_in_Chains) --doo:associatedMusicalArtist--> Sleze (dor:Sleze)
+  '7':
+    attributes:
+      Mike_Inez: (id^='mike-inez-mn0000485284')
+    relationships:
+      - Mike_Inez (dor:Mike_Inez) --dop:currentMemberOf--> Alice_in_Chains (dor:Alice_in_Chains)
+      - Alice_in_Chains (dor:Alice_in_Chains) --doo:associatedMusicalArtist--> Sleze (dor:Sleze)
+  '8':
+    attributes:
+      Sean_Kinney: (id^='sean-kinney-mn0000839194')
+    relationships:
+      - Sean_Kinney (dor:Sean_Kinney) --dop:currentMemberOf--> Alice_in_Chains (dor:Alice_in_Chains)
+      - Alice_in_Chains (dor:Alice_in_Chains) --doo:associatedMusicalArtist--> Sleze (dor:Sleze)
+  '9':
+    attributes: {}
+    relationships:
+      - Jeff_Waters (dor:Jeff_Waters) --dop:currentMemberOf--> Annihilator_(band) (<http://dbpedia.org/resource/Annihilator_(band)>)
+      - Annihilator_(band) (<http://dbpedia.org/resource/Annihilator_(band)>) --doo:associatedMusicalArtist--> Big_John_Bates (dor:Big_John_Bates)
+  '10':
+    attributes:
+      David_Bowie: (birth date^='1947-01-08', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1', caption^='Bowie in 2002')
+    relationships:
+      - Win_Butler (dor:Win_Butler) --dop:currentMemberOf--> Arcade_Fire (dor:Arcade_Fire)
+      - Arcade_Fire (dor:Arcade_Fire) --doo:associatedMusicalArtist--> David_Bowie (dor:David_Bowie)
+attributes:
+  Band: --direction^ (dop:direction)--> langString
+  person: --birth date^ (dop:birthDate)--> langString | --wordnet_type (dop:wordnet_type)--> Resource | --caption^ (dop:caption)--> langString | --header^ (dop:header)--> langString | --known for^ (doo:knownFor)--> Resource
+  musical artist: --after^ (dop:after)--> langString | --source^ (dop:source)--> langString | --id^ (dop:id)--> int
+subgraph_id: 50
+relationships:
+  - musical artist --dop:currentMemberOf--> Band
+  - Band --doo:associatedMusicalArtist--> person

@@ -1,0 +1,146 @@
+types:
+  noble: doo:Noble
+  company: doo:Company
+  settlement: doo:Settlement
+  radio station: doo:RadioStation
+  historic building: doo:HistoricBuilding
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      BBC: (Wikipage page ID^='19344654')
+      London: (country^='http://dbpedia.org/resource/United_Kingdom', Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1')
+    relationships:
+      - 2BD (dor:2BD) --doo:owner--> BBC (dor:BBC)
+      - BBC (dor:BBC) --doo:location--> London (dor:London)
+      - Chelsea_Old_Church (dor:Chelsea_Old_Church) --doo:location--> London (dor:London)
+      - Gregory_Fiennes,_10th_Baron_Dacre (<http://dbpedia.org/resource/Gregory_Fiennes,_10th_Baron_Dacre>) --doo:placeOfBurial--> Chelsea_Old_Church (dor:Chelsea_Old_Church)
+  '2':
+    attributes:
+      BBC: (Wikipage page ID^='19344654')
+      London: (country^='http://dbpedia.org/resource/United_Kingdom', Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1')
+    relationships:
+      - BBC_Asian_Network (dor:BBC_Asian_Network) --doo:owner--> BBC (dor:BBC)
+      - BBC (dor:BBC) --doo:location--> London (dor:London)
+      - Chelsea_Old_Church (dor:Chelsea_Old_Church) --doo:location--> London (dor:London)
+      - Gregory_Fiennes,_10th_Baron_Dacre (<http://dbpedia.org/resource/Gregory_Fiennes,_10th_Baron_Dacre>) --doo:placeOfBurial--> Chelsea_Old_Church (dor:Chelsea_Old_Church)
+  '3':
+    attributes:
+      BBC: (Wikipage page ID^='19344654')
+      London: (country^='http://dbpedia.org/resource/United_Kingdom', Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1')
+    relationships:
+      - BBC_Music_Jazz (dor:BBC_Music_Jazz) --doo:owner--> BBC (dor:BBC)
+      - BBC (dor:BBC) --doo:location--> London (dor:London)
+      - Chelsea_Old_Church (dor:Chelsea_Old_Church) --doo:location--> London (dor:London)
+      - Gregory_Fiennes,_10th_Baron_Dacre (<http://dbpedia.org/resource/Gregory_Fiennes,_10th_Baron_Dacre>) --doo:placeOfBurial--> Chelsea_Old_Church (dor:Chelsea_Old_Church)
+  '4':
+    attributes:
+      Milan: (date^='November 2022', country^='http://dbpedia.org/resource/Italy', Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=i0hKAAAACAAJ')
+      Class_Editori: (Wikipage page ID^='19487805')
+      Milan_Cathedral: (architect^='et al.', architectural style^='http://dbpedia.org/resource/Italian_Gothic_architecture')
+    relationships:
+      - Radio_Classica (dor:Radio_Classica) --doo:owner--> Class_Editori (dor:Class_Editori)
+      - Class_Editori (dor:Class_Editori) --doo:location--> Milan (dor:Milan)
+      - Milan_Cathedral (dor:Milan_Cathedral) --doo:location--> Milan (dor:Milan)
+      - Ottone_Visconti (dor:Ottone_Visconti) --doo:placeOfBurial--> Milan_Cathedral (dor:Milan_Cathedral)
+  '5':
+    attributes:
+      Milan: (date^='November 2022', country^='http://dbpedia.org/resource/Italy', Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=i0hKAAAACAAJ')
+      Mediaset: (Wikipage page ID^='1579765')
+      Milan_Cathedral: (architect^='et al.', architectural style^='http://dbpedia.org/resource/Italian_Gothic_architecture')
+    relationships:
+      - R101_(Italy) (<http://dbpedia.org/resource/R101_(Italy)>) --doo:owner--> Mediaset (dor:Mediaset)
+      - Mediaset (dor:Mediaset) --doo:location--> Milan (dor:Milan)
+      - Milan_Cathedral (dor:Milan_Cathedral) --doo:location--> Milan (dor:Milan)
+      - Ottone_Visconti (dor:Ottone_Visconti) --doo:placeOfBurial--> Milan_Cathedral (dor:Milan_Cathedral)
+  '6':
+    attributes:
+      Milan: (date^='November 2022', country^='http://dbpedia.org/resource/Italy', Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=i0hKAAAACAAJ')
+      Mediaset: (Wikipage page ID^='1579765')
+      Milan_Cathedral: (architect^='et al.', architectural style^='http://dbpedia.org/resource/Italian_Gothic_architecture')
+    relationships:
+      - Radio_105 (dor:Radio_105) --doo:owner--> Mediaset (dor:Mediaset)
+      - Mediaset (dor:Mediaset) --doo:location--> Milan (dor:Milan)
+      - Milan_Cathedral (dor:Milan_Cathedral) --doo:location--> Milan (dor:Milan)
+      - Ottone_Visconti (dor:Ottone_Visconti) --doo:placeOfBurial--> Milan_Cathedral (dor:Milan_Cathedral)
+  '7':
+    attributes:
+      RAI: (Wikipage page ID^='420162')
+      Rome: (date^='December 2014', country^='http://dbpedia.org/resource/Italy', Link from a Wikipage to an external page^='http://en.museicapitolini.org/')
+      San_Luigi_dei_Francesi: (architect^='http://dbpedia.org/resource/Domenico_Fontana', architectural style^='http://dbpedia.org/resource/Baroque')
+    relationships:
+      - Rai_Gr_Parlamento (dor:Rai_Gr_Parlamento) --doo:owner--> RAI (dor:RAI)
+      - RAI (dor:RAI) --doo:location--> Rome (dor:Rome)
+      - San_Luigi_dei_Francesi (dor:San_Luigi_dei_Francesi) --doo:location--> Rome (dor:Rome)
+      - Henri_Albert_de_La_Grange_d'Arquien (<http://dbpedia.org/resource/Henri_Albert_de_La_Grange_d'Arquien>) --doo:placeOfBurial--> San_Luigi_dei_Francesi (dor:San_Luigi_dei_Francesi)
+  '8':
+    attributes:
+      RAI: (Wikipage page ID^='420162')
+      Rome: (date^='December 2014', country^='http://dbpedia.org/resource/Italy', Link from a Wikipage to an external page^='http://en.museicapitolini.org/')
+      San_Luigi_dei_Francesi: (architect^='http://dbpedia.org/resource/Domenico_Fontana', architectural style^='http://dbpedia.org/resource/Baroque')
+    relationships:
+      - Rai_Isoradio (dor:Rai_Isoradio) --doo:owner--> RAI (dor:RAI)
+      - RAI (dor:RAI) --doo:location--> Rome (dor:Rome)
+      - San_Luigi_dei_Francesi (dor:San_Luigi_dei_Francesi) --doo:location--> Rome (dor:Rome)
+      - Henri_Albert_de_La_Grange_d'Arquien (<http://dbpedia.org/resource/Henri_Albert_de_La_Grange_d'Arquien>) --doo:placeOfBurial--> San_Luigi_dei_Francesi (dor:San_Luigi_dei_Francesi)
+  '9':
+    attributes:
+      RAI: (Wikipage page ID^='420162')
+      Rome: (date^='December 2014', country^='http://dbpedia.org/resource/Italy', Link from a Wikipage to an external page^='http://en.museicapitolini.org/')
+      San_Luigi_dei_Francesi: (architect^='http://dbpedia.org/resource/Domenico_Fontana', architectural style^='http://dbpedia.org/resource/Baroque')
+    relationships:
+      - Rai_Radio_1 (dor:Rai_Radio_1) --doo:owner--> RAI (dor:RAI)
+      - RAI (dor:RAI) --doo:location--> Rome (dor:Rome)
+      - San_Luigi_dei_Francesi (dor:San_Luigi_dei_Francesi) --doo:location--> Rome (dor:Rome)
+      - Henri_Albert_de_La_Grange_d'Arquien (<http://dbpedia.org/resource/Henri_Albert_de_La_Grange_d'Arquien>) --doo:placeOfBurial--> San_Luigi_dei_Francesi (dor:San_Luigi_dei_Francesi)
+qa_result:
+  status: completed
+  cost_usd: 0.461787
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0353674
+        total_tokens: 3879
+        prompt_tokens: 2369
+        completion_tokens: 1510
+      generate:
+        cost_usd: 0.10523260000000001
+        total_tokens: 9217
+        prompt_tokens: 4794
+        completion_tokens: 4423
+      verify_1:
+        cost_usd: 0.176272
+        total_tokens: 13262
+        prompt_tokens: 5931
+        completion_tokens: 7331
+      verify_2:
+        cost_usd: 0.040592
+        total_tokens: 6274
+        prompt_tokens: 5659
+        completion_tokens: 615
+      complexity:
+        cost_usd: 0.104323
+        total_tokens: 10521
+        prompt_tokens: 6501
+        completion_tokens: 4020
+    total_tokens: 43153
+    prompt_tokens: 25254
+    total_cost_usd: 0.46178700000000006
+    completion_tokens: 17899
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  company: --Wikipage page ID^ (doo:wikiPageID)--> int | --logo width^ (dop:logoWidth)--> int | --direction^ (dop:direction)--> langString
+  settlement: --date^ (dop:date)--> langString | --quote^ (dop:quote)--> langString | --borough^ (dop:borough)--> langString | --country^ (doo:country)--> Resource | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  historic building: --architect^ (dop:architect)--> langString | --architectural style^ (doo:architecturalStyle)--> Resource
+subgraph_id: 196
+relationships:
+  - radio station --doo:owner--> company
+  - company --doo:location--> settlement
+  - historic building --doo:location--> settlement
+  - noble --doo:placeOfBurial--> historic building

@@ -1,0 +1,130 @@
+types:
+  city: doo:City
+  person: doo:Person
+  writer: doo:Writer
+  soccer club: doo:SoccerClub
+  soccer player: doo:SoccerPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      New_Delhi: (Aug high C^='33.9')
+      Ishan_Pandita: (birth place^='New Delhi, India')
+      India_national_football_team: (date^='2022-03-23')
+    relationships:
+      - Ishan_Pandita (dor:Ishan_Pandita) --doo:birthPlace--> New_Delhi (dor:New_Delhi)
+      - Abas_Basir (dor:Abas_Basir) --doo:education--> New_Delhi (dor:New_Delhi)
+      - Ishan_Pandita (dor:Ishan_Pandita) --doo:birthPlace--> India_national_football_team (dor:India_national_football_team)
+      - Arun_Sarma (dor:Arun_Sarma) --dop:deathPlace--> New_Delhi (dor:New_Delhi)
+  '2':
+    attributes:
+      New_Delhi: (Aug high C^='33.9')
+      Ishan_Pandita: (birth place^='New Delhi, India')
+      India_national_football_team: (date^='2022-03-23')
+    relationships:
+      - Ishan_Pandita (dor:Ishan_Pandita) --doo:birthPlace--> New_Delhi (dor:New_Delhi)
+      - Abas_Basir (dor:Abas_Basir) --doo:education--> New_Delhi (dor:New_Delhi)
+      - Ishan_Pandita (dor:Ishan_Pandita) --doo:birthPlace--> India_national_football_team (dor:India_national_football_team)
+      - Bhagwati_Charan_Verma (dor:Bhagwati_Charan_Verma) --dop:deathPlace--> New_Delhi (dor:New_Delhi)
+  '3':
+    attributes:
+      New_Delhi: (Aug high C^='33.9')
+      Ishan_Pandita: (birth place^='New Delhi, India')
+      India_national_football_team: (date^='2022-03-23')
+    relationships:
+      - Ishan_Pandita (dor:Ishan_Pandita) --doo:birthPlace--> New_Delhi (dor:New_Delhi)
+      - Abas_Basir (dor:Abas_Basir) --doo:education--> New_Delhi (dor:New_Delhi)
+      - Ishan_Pandita (dor:Ishan_Pandita) --doo:birthPlace--> India_national_football_team (dor:India_national_football_team)
+      - Firaq_Gorakhpuri (dor:Firaq_Gorakhpuri) --dop:deathPlace--> New_Delhi (dor:New_Delhi)
+  '4':
+    attributes:
+      Oklahoma_City: (type^='http://dbpedia.org/resource/List_of_capitals_in_the_United_States')
+      Rachel_Blankenship: (birth place^='Oklahoma City, Oklahoma, United States')
+      Abbas_Eqbal_Kitabchi: (death place^='http://dbpedia.org/resource/Memphis,_Tennessee')
+      United_States_women's_national_soccer_team: (date^='--01-17')
+    relationships:
+      - Rachel_Blankenship (dor:Rachel_Blankenship) --doo:birthPlace--> Oklahoma_City (dor:Oklahoma_City)
+      - Abbas_Eqbal_Kitabchi (dor:Abbas_Eqbal_Kitabchi) --doo:education--> Oklahoma_City (dor:Oklahoma_City)
+      - Rachel_Blankenship (dor:Rachel_Blankenship) --doo:birthPlace--> United_States_women's_national_soccer_team (<http://dbpedia.org/resource/United_States_women's_national_soccer_team>)
+      - Paul_Yawitz (dor:Paul_Yawitz) --dop:deathPlace--> Oklahoma_City (dor:Oklahoma_City)
+  '5':
+    attributes:
+      Tehran: (Aug high C^='33.6', type^='http://dbpedia.org/resource/Capital_city')
+      Abbas_Sahhat: (death place^='http://dbpedia.org/resource/Azerbaijan')
+      Alireza_Mansourian: (managerClub='http://dbpedia.org/resource/Esteghlal_F.C.', birth place^='Tehran, Iran')
+      Iran_national_football_team: (date^='--01-27')
+    relationships:
+      - Alireza_Mansourian (dor:Alireza_Mansourian) --doo:birthPlace--> Tehran (dor:Tehran)
+      - Abbas_Sahhat (dor:Abbas_Sahhat) --doo:education--> Tehran (dor:Tehran)
+      - Alireza_Mansourian (dor:Alireza_Mansourian) --doo:birthPlace--> Iran_national_football_team (dor:Iran_national_football_team)
+      - Abbas_Zaryab (dor:Abbas_Zaryab) --dop:deathPlace--> Tehran (dor:Tehran)
+  '6':
+    attributes:
+      Tehran: (Aug high C^='33.6', type^='http://dbpedia.org/resource/Capital_city')
+      Abbas_Sahhat: (death place^='http://dbpedia.org/resource/Azerbaijan')
+      Alireza_Mansourian: (managerClub='http://dbpedia.org/resource/Esteghlal_F.C.', birth place^='Tehran, Iran')
+      Iran_national_football_team: (date^='--01-27')
+    relationships:
+      - Alireza_Mansourian (dor:Alireza_Mansourian) --doo:birthPlace--> Tehran (dor:Tehran)
+      - Abbas_Sahhat (dor:Abbas_Sahhat) --doo:education--> Tehran (dor:Tehran)
+      - Alireza_Mansourian (dor:Alireza_Mansourian) --doo:birthPlace--> Iran_national_football_team (dor:Iran_national_football_team)
+      - Abdul-Chalig_Achundow (dor:Abdul-Chalig_Achundow) --dop:deathPlace--> Tehran (dor:Tehran)
+  '7':
+    attributes:
+      Tehran: (Aug high C^='33.6', type^='http://dbpedia.org/resource/Capital_city')
+      Abbas_Sahhat: (death place^='http://dbpedia.org/resource/Azerbaijan')
+      Alireza_Mansourian: (managerClub='http://dbpedia.org/resource/Esteghlal_F.C.', birth place^='Tehran, Iran')
+      Iran_national_football_team: (date^='--01-27')
+    relationships:
+      - Alireza_Mansourian (dor:Alireza_Mansourian) --doo:birthPlace--> Tehran (dor:Tehran)
+      - Abbas_Sahhat (dor:Abbas_Sahhat) --doo:education--> Tehran (dor:Tehran)
+      - Alireza_Mansourian (dor:Alireza_Mansourian) --doo:birthPlace--> Iran_national_football_team (dor:Iran_national_football_team)
+      - Amir_Mahmud_Anvar (dor:Amir_Mahmud_Anvar) --dop:deathPlace--> Tehran (dor:Tehran)
+  '8':
+    attributes:
+      Beirut: (Aug high C^='30.7', type^='http://dbpedia.org/resource/List_of_cities_and_towns_in_Lebanon')
+      Ahmad_Itani: (birth place^='Beirut, Lebanon')
+      Abdul_Latif_Galadari: (death place^='Karachi, Pakistan')
+      Lebanon_national_football_team: (date^='2021-12-01')
+    relationships:
+      - Ahmad_Itani (dor:Ahmad_Itani) --doo:birthPlace--> Beirut (dor:Beirut)
+      - Abdul_Latif_Galadari (dor:Abdul_Latif_Galadari) --doo:education--> Beirut (dor:Beirut)
+      - Ahmad_Itani (dor:Ahmad_Itani) --doo:birthPlace--> Lebanon_national_football_team (dor:Lebanon_national_football_team)
+      - Cornelius_Van_Alen_Van_Dyck (dor:Cornelius_Van_Alen_Van_Dyck) --dop:deathPlace--> Beirut (dor:Beirut)
+  '9':
+    attributes:
+      Beirut: (Aug high C^='30.7', type^='http://dbpedia.org/resource/List_of_cities_and_towns_in_Lebanon')
+      Ahmad_Itani: (birth place^='Beirut, Lebanon')
+      Abdul_Latif_Galadari: (death place^='Karachi, Pakistan')
+      Lebanon_national_football_team: (date^='2021-12-01')
+    relationships:
+      - Ahmad_Itani (dor:Ahmad_Itani) --doo:birthPlace--> Beirut (dor:Beirut)
+      - Abdul_Latif_Galadari (dor:Abdul_Latif_Galadari) --doo:education--> Beirut (dor:Beirut)
+      - Ahmad_Itani (dor:Ahmad_Itani) --doo:birthPlace--> Lebanon_national_football_team (dor:Lebanon_national_football_team)
+      - Elias_Abu_Shabaki (dor:Elias_Abu_Shabaki) --dop:deathPlace--> Beirut (dor:Beirut)
+  '10':
+    attributes:
+      Beirut: (Aug high C^='30.7', type^='http://dbpedia.org/resource/List_of_cities_and_towns_in_Lebanon')
+      Ahmad_Itani: (birth place^='Beirut, Lebanon')
+      Abdul_Latif_Galadari: (death place^='Karachi, Pakistan')
+      Lebanon_national_football_team: (date^='2021-12-01')
+    relationships:
+      - Ahmad_Itani (dor:Ahmad_Itani) --doo:birthPlace--> Beirut (dor:Beirut)
+      - Abdul_Latif_Galadari (dor:Abdul_Latif_Galadari) --doo:education--> Beirut (dor:Beirut)
+      - Ahmad_Itani (dor:Ahmad_Itani) --doo:birthPlace--> Lebanon_national_football_team (dor:Lebanon_national_football_team)
+      - Filip_Shiroka (dor:Filip_Shiroka) --dop:deathPlace--> Beirut (dor:Beirut)
+attributes:
+  city: --Aug high C^ (dop:augHighC)--> double | --Apr record low F^ (dop:aprRecordLowF)--> int | --type^ (doo:type)--> Resource | --d^ (dop:d)--> langString | --wordnet_type (dop:wordnet_type)--> Resource
+  person: --death place^ (dop:deathPlace)--> Resource | --image^ (dop:image)--> langString | --parents^ (dop:parents)--> langString
+  soccer club: --date^ (dop:date)--> int | --bot^ (dop:bot)--> langString
+  soccer player: --managerClub (doo:managerClub)--> Resource | --birth place^ (dop:birthPlace)--> Resource
+subgraph_id: 935
+relationships:
+  - soccer player --doo:birthPlace--> city
+  - person --doo:education--> city
+  - soccer player --doo:birthPlace--> soccer club
+  - writer --dop:deathPlace--> city

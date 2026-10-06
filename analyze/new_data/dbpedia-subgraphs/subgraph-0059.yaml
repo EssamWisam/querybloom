@@ -1,0 +1,40 @@
+types:
+  city: doo:City
+  musical artist: doo:MusicalArtist
+  baseball player: doo:BaseballPlayer
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Cape_Girardeau,_Missouri: (Apr precipitation days^='11')
+    relationships:
+      - Cape_Girardeau,_Missouri (<http://dbpedia.org/resource/Cape_Girardeau,_Missouri>) --doo:type--> City (dor:City)
+      - A._J._Ellis (dor:A._J._Ellis) --dop:birthPlace--> Cape_Girardeau,_Missouri (<http://dbpedia.org/resource/Cape_Girardeau,_Missouri>)
+      - Snooky_Pryor (dor:Snooky_Pryor) --doo:deathPlace--> Cape_Girardeau,_Missouri (<http://dbpedia.org/resource/Cape_Girardeau,_Missouri>)
+  '2':
+    attributes: {}
+    relationships:
+      - Thomasville,_Georgia (<http://dbpedia.org/resource/Thomasville,_Georgia>) --doo:type--> City (dor:City)
+      - A._J._Lockhart (dor:A._J._Lockhart) --dop:birthPlace--> Thomasville,_Georgia (<http://dbpedia.org/resource/Thomasville,_Georgia>)
+      - Brother_Joe_May (dor:Brother_Joe_May) --doo:deathPlace--> Thomasville,_Georgia (<http://dbpedia.org/resource/Thomasville,_Georgia>)
+  '3':
+    attributes:
+      Winter_Haven,_Florida: (Apr precipitation days^='6')
+    relationships:
+      - Winter_Haven,_Florida (<http://dbpedia.org/resource/Winter_Haven,_Florida>) --doo:type--> City (dor:City)
+      - A._J._Schugel (dor:A._J._Schugel) --dop:birthPlace--> Winter_Haven,_Florida (<http://dbpedia.org/resource/Winter_Haven,_Florida>)
+      - James_Lord_Pierpont (dor:James_Lord_Pierpont) --doo:deathPlace--> Winter_Haven,_Florida (<http://dbpedia.org/resource/Winter_Haven,_Florida>)
+attributes:
+  city: --c^ (dop:c)--> langString | --Apr rain days^ (dop:aprRainDays)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --direction^ (dop:direction)--> langString | --caption^ (dop:caption)--> langString | --Apr sun^ (dop:aprSun)--> double
+  musical artist: --alias^ (dop:alias)--> langString
+  administrative region: --Apr record low C^ (dop:aprRecordLowC)--> double | --Aug high C^ (dop:augHighC)--> double
+subgraph_id: 59
+relationships:
+  - city --doo:type--> administrative region
+  - baseball player --dop:birthPlace--> city
+  - musical artist --doo:deathPlace--> city

@@ -1,0 +1,56 @@
+types:
+  game: doo:Game
+  comic: doo:Comic
+  publisher: doo:Publisher
+  comics creator: doo:ComicsCreator
+  comics character: doo:ComicsCharacter
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Batman: (aliases^='', cat^='super')
+      Gerry_Conway: (notable works^='http://dbpedia.org/resource/Batman')
+      Marvel_Comics: (founder^='http://dbpedia.org/resource/Martin_Goodman_(publisher)', founder^='http://dbpedia.org/resource/Martin_Goodman_(publisher)')
+      Marvel_Universe_Roleplaying_Game: (publisher^='http://dbpedia.org/resource/Marvel_Comics')
+    relationships:
+      - Amazing_Adventures (dor:Amazing_Adventures) --doo:publisher--> Marvel_Comics (dor:Marvel_Comics)
+      - Amazing_Adventures (dor:Amazing_Adventures) --doo:writer--> Gerry_Conway (dor:Gerry_Conway)
+      - Marvel_Universe_Roleplaying_Game (dor:Marvel_Universe_Roleplaying_Game) --doo:publisher--> Marvel_Comics (dor:Marvel_Comics)
+      - Gerry_Conway (dor:Gerry_Conway) --dop:notableWorks--> Batman (dor:Batman)
+  '2':
+    attributes:
+      Jason_Todd: (aliases^='Wingman', cat^='super')
+      Gerry_Conway: (notable works^='http://dbpedia.org/resource/Batman')
+      Marvel_Comics: (founder^='http://dbpedia.org/resource/Martin_Goodman_(publisher)', founder^='http://dbpedia.org/resource/Martin_Goodman_(publisher)')
+      Marvel_Universe_Roleplaying_Game: (publisher^='http://dbpedia.org/resource/Marvel_Comics')
+    relationships:
+      - Amazing_Adventures (dor:Amazing_Adventures) --doo:publisher--> Marvel_Comics (dor:Marvel_Comics)
+      - Amazing_Adventures (dor:Amazing_Adventures) --doo:writer--> Gerry_Conway (dor:Gerry_Conway)
+      - Marvel_Universe_Roleplaying_Game (dor:Marvel_Universe_Roleplaying_Game) --doo:publisher--> Marvel_Comics (dor:Marvel_Comics)
+      - Gerry_Conway (dor:Gerry_Conway) --dop:notableWorks--> Jason_Todd (dor:Jason_Todd)
+  '3':
+    attributes:
+      Killer_Croc: (aliases^='Croc')
+      Gerry_Conway: (notable works^='http://dbpedia.org/resource/Batman')
+      Marvel_Comics: (founder^='http://dbpedia.org/resource/Martin_Goodman_(publisher)', founder^='http://dbpedia.org/resource/Martin_Goodman_(publisher)')
+      Marvel_Universe_Roleplaying_Game: (publisher^='http://dbpedia.org/resource/Marvel_Comics')
+    relationships:
+      - Amazing_Adventures (dor:Amazing_Adventures) --doo:publisher--> Marvel_Comics (dor:Marvel_Comics)
+      - Amazing_Adventures (dor:Amazing_Adventures) --doo:writer--> Gerry_Conway (dor:Gerry_Conway)
+      - Marvel_Universe_Roleplaying_Game (dor:Marvel_Universe_Roleplaying_Game) --doo:publisher--> Marvel_Comics (dor:Marvel_Comics)
+      - Gerry_Conway (dor:Gerry_Conway) --dop:notableWorks--> Killer_Croc (dor:Killer_Croc)
+attributes:
+  game: --publisher^ (doo:publisher)--> Resource
+  publisher: --url^ (dop:url)--> Resource | --founder^ (dop:founder)--> langString | --founder^ (doo:founder)--> Resource
+  comics creator: --notable works^ (dop:notableWorks)--> langString | --alias^ (dop:alias)--> langString | --1p^ (dop:1p)--> int
+  comics character: --aliases^ (dop:aliases)--> langString | --cat^ (dop:cat)--> langString | --aliases^ (dop:aliases)--> Resource
+subgraph_id: 974
+relationships:
+  - comic --doo:publisher--> publisher
+  - comic --doo:writer--> comics creator
+  - game --doo:publisher--> publisher
+  - comics creator --dop:notableWorks--> comics character

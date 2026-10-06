@@ -1,0 +1,95 @@
+types:
+  venue: doo:Venue
+  Location: doo:Location
+  building: doo:Building
+  architect: doo:Architect
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Tramway_Gas_Station: (architect^='')
+      Palm_Springs,_California: (Apr precipitation days^='1.1', Aug high F^='108.1')
+    relationships:
+      - Racquet_Club_of_Palm_Springs (dor:Racquet_Club_of_Palm_Springs) --dop:architect--> Albert_Frey_(architect) (<http://dbpedia.org/resource/Albert_Frey_(architect)>)
+      - Albert_Frey_(architect) (<http://dbpedia.org/resource/Albert_Frey_(architect)>) --doo:deathPlace--> Palm_Springs,_California (<http://dbpedia.org/resource/Palm_Springs,_California>)
+      - Albert_Frey_(architect) (<http://dbpedia.org/resource/Albert_Frey_(architect)>) --doo:significantBuilding--> Tramway_Gas_Station (dor:Tramway_Gas_Station)
+  '2':
+    attributes:
+      Palm_Springs,_California: (Apr precipitation days^='1.1', Aug high F^='108.1')
+    relationships:
+      - Racquet_Club_of_Palm_Springs (dor:Racquet_Club_of_Palm_Springs) --dop:architect--> Albert_Frey_(architect) (<http://dbpedia.org/resource/Albert_Frey_(architect)>)
+      - Albert_Frey_(architect) (<http://dbpedia.org/resource/Albert_Frey_(architect)>) --doo:deathPlace--> Palm_Springs,_California (<http://dbpedia.org/resource/Palm_Springs,_California>)
+      - Albert_Frey_(architect) (<http://dbpedia.org/resource/Albert_Frey_(architect)>) --doo:significantBuilding--> Villa_Hermosa_(Palm_Springs) (<http://dbpedia.org/resource/Villa_Hermosa_(Palm_Springs)>)
+  '3':
+    attributes:
+      Teatro_Carlo_Felice: (architect^='http://dbpedia.org/resource/Aldo_Rossi')
+    relationships:
+      - Teatro_Carlo_Felice (dor:Teatro_Carlo_Felice) --dop:architect--> Aldo_Rossi (dor:Aldo_Rossi)
+      - Aldo_Rossi (dor:Aldo_Rossi) --doo:deathPlace--> Italy (dor:Italy)
+      - Aldo_Rossi (dor:Aldo_Rossi) --doo:significantBuilding--> Teatro_Carlo_Felice (dor:Teatro_Carlo_Felice)
+  '4':
+    attributes:
+      Teatro_Carlo_Felice: (architect^='http://dbpedia.org/resource/Aldo_Rossi')
+    relationships:
+      - Teatro_Carlo_Felice (dor:Teatro_Carlo_Felice) --dop:architect--> Aldo_Rossi (dor:Aldo_Rossi)
+      - Aldo_Rossi (dor:Aldo_Rossi) --doo:deathPlace--> Milan (dor:Milan)
+      - Aldo_Rossi (dor:Aldo_Rossi) --doo:significantBuilding--> Teatro_Carlo_Felice (dor:Teatro_Carlo_Felice)
+  '5':
+    attributes:
+      Madrid: (Apr precipitation days^='7', Aug low C^='18.8')
+      Pontevedra_Municipal_Sports_Hall: (architect^='http://dbpedia.org/resource/Alejandro_de_la_Sota_(architect)')
+    relationships:
+      - Pontevedra_Municipal_Sports_Hall (dor:Pontevedra_Municipal_Sports_Hall) --dop:architect--> Alejandro_de_la_Sota_(architect) (<http://dbpedia.org/resource/Alejandro_de_la_Sota_(architect)>)
+      - Alejandro_de_la_Sota_(architect) (<http://dbpedia.org/resource/Alejandro_de_la_Sota_(architect)>) --doo:deathPlace--> Madrid (dor:Madrid)
+      - Alejandro_de_la_Sota_(architect) (<http://dbpedia.org/resource/Alejandro_de_la_Sota_(architect)>) --doo:significantBuilding--> Pontevedra_Municipal_Sports_Hall (dor:Pontevedra_Municipal_Sports_Hall)
+  '6':
+    attributes:
+      Spain: (b^='no')
+      Pontevedra_Municipal_Sports_Hall: (architect^='http://dbpedia.org/resource/Alejandro_de_la_Sota_(architect)')
+    relationships:
+      - Pontevedra_Municipal_Sports_Hall (dor:Pontevedra_Municipal_Sports_Hall) --dop:architect--> Alejandro_de_la_Sota_(architect) (<http://dbpedia.org/resource/Alejandro_de_la_Sota_(architect)>)
+      - Alejandro_de_la_Sota_(architect) (<http://dbpedia.org/resource/Alejandro_de_la_Sota_(architect)>) --doo:deathPlace--> Spain (dor:Spain)
+      - Alejandro_de_la_Sota_(architect) (<http://dbpedia.org/resource/Alejandro_de_la_Sota_(architect)>) --doo:significantBuilding--> Pontevedra_Municipal_Sports_Hall (dor:Pontevedra_Municipal_Sports_Hall)
+  '7':
+    attributes:
+      Helsinki: (nickname^='Stadi , Hesa , the Daughter of the Baltic, the Pearl of the Baltic Sea', Aug low C^='12')
+      Finlandia_Hall: (architect^='http://dbpedia.org/resource/Alvar_Aalto')
+    relationships:
+      - Jyväskylä_City_Theatre (<http://dbpedia.org/resource/Jyväskylä_City_Theatre>) --dop:architect--> Alvar_Aalto (dor:Alvar_Aalto)
+      - Alvar_Aalto (dor:Alvar_Aalto) --doo:deathPlace--> Helsinki (dor:Helsinki)
+      - Alvar_Aalto (dor:Alvar_Aalto) --doo:significantBuilding--> Finlandia_Hall (dor:Finlandia_Hall)
+  '8':
+    attributes:
+      Helsinki: (nickname^='Stadi , Hesa , the Daughter of the Baltic, the Pearl of the Baltic Sea', Aug low C^='12')
+      Finlandia_Hall: (architect^='http://dbpedia.org/resource/Alvar_Aalto')
+    relationships:
+      - Seinäjoki_City_Theatre (<http://dbpedia.org/resource/Seinäjoki_City_Theatre>) --dop:architect--> Alvar_Aalto (dor:Alvar_Aalto)
+      - Alvar_Aalto (dor:Alvar_Aalto) --doo:deathPlace--> Helsinki (dor:Helsinki)
+      - Alvar_Aalto (dor:Alvar_Aalto) --doo:significantBuilding--> Finlandia_Hall (dor:Finlandia_Hall)
+  '9':
+    attributes:
+      Grand_Theatre,_Warsaw: (architect^='http://dbpedia.org/resource/Antonio_Corazzi')
+    relationships:
+      - Grand_Theatre,_Warsaw (<http://dbpedia.org/resource/Grand_Theatre,_Warsaw>) --dop:architect--> Antonio_Corazzi (dor:Antonio_Corazzi)
+      - Antonio_Corazzi (dor:Antonio_Corazzi) --doo:deathPlace--> Florence (dor:Florence)
+      - Antonio_Corazzi (dor:Antonio_Corazzi) --doo:significantBuilding--> Grand_Theatre,_Warsaw (<http://dbpedia.org/resource/Grand_Theatre,_Warsaw>)
+  '10':
+    attributes:
+      Madrid: (Apr precipitation days^='7', Aug low C^='18.8')
+      Santiago_Bernabéu_Stadium: (architect^='Luis Alemany Soler')
+    relationships:
+      - Estadio_Las_Gaunas (dor:Estadio_Las_Gaunas) --dop:architect--> Antonio_Lamela (dor:Antonio_Lamela)
+      - Antonio_Lamela (dor:Antonio_Lamela) --doo:deathPlace--> Madrid (dor:Madrid)
+      - Antonio_Lamela (dor:Antonio_Lamela) --doo:significantBuilding--> Santiago_Bernabéu_Stadium (<http://dbpedia.org/resource/Santiago_Bernabéu_Stadium>)
+attributes:
+  Location: --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --nickname^ (dop:nickname)--> langString | --b^ (dop:b)--> langString | --Aug high F^ (dop:augHighF)--> double | --Aug low C^ (dop:augLowC)--> int | --frazioni^ (doo:frazioni)--> Resource
+  building: --architectural style^ (dop:architecturalStyle)--> langString | --architect^ (dop:architect)--> Resource | --designated other1 link^ (dop:designatedOther1Link)--> langString
+subgraph_id: 643
+relationships:
+  - venue --dop:architect--> architect
+  - architect --doo:deathPlace--> Location
+  - architect --doo:significantBuilding--> building

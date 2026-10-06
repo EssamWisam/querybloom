@@ -1,0 +1,93 @@
+types:
+  person: doo:Person
+  school: doo:School
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Alex_Allan: (1namedata^='http://dbpedia.org/resource/Charles_Falconer,_Baron_Falconer_of_Thoroton')
+      Robert_Allan,_Baron_Allan_of_Kilmahew: (before^='http://dbpedia.org/resource/Somerset_de_Chair')
+    relationships:
+      - Alastair_Gordon,_6th_Marquess_of_Aberdeen_and_Temair (<http://dbpedia.org/resource/Alastair_Gordon,_6th_Marquess_of_Aberdeen_and_Temair>) --doo:almaMater--> Harrow_School (dor:Harrow_School)
+      - Alex_Allan (dor:Alex_Allan) --doo:almaMater--> Harrow_School (dor:Harrow_School)
+      - Robert_Allan,_Baron_Allan_of_Kilmahew (<http://dbpedia.org/resource/Robert_Allan,_Baron_Allan_of_Kilmahew>) --dop:children--> Alex_Allan (dor:Alex_Allan)
+  '2':
+    attributes:
+      Alex_Allan: (1namedata^='http://dbpedia.org/resource/Charles_Falconer,_Baron_Falconer_of_Thoroton')
+      Robert_Allan,_Baron_Allan_of_Kilmahew: (before^='http://dbpedia.org/resource/Somerset_de_Chair')
+    relationships:
+      - Alex_Allan (dor:Alex_Allan) --doo:almaMater--> Harrow_School (dor:Harrow_School)
+      - Alex_Allan (dor:Alex_Allan) --doo:almaMater--> Harrow_School (dor:Harrow_School)
+      - Robert_Allan,_Baron_Allan_of_Kilmahew (<http://dbpedia.org/resource/Robert_Allan,_Baron_Allan_of_Kilmahew>) --dop:children--> Alex_Allan (dor:Alex_Allan)
+  '3':
+    attributes:
+      Alex_Allan: (1namedata^='http://dbpedia.org/resource/Charles_Falconer,_Baron_Falconer_of_Thoroton')
+      Robert_Allan,_Baron_Allan_of_Kilmahew: (before^='http://dbpedia.org/resource/Somerset_de_Chair')
+    relationships:
+      - Amirteymour_Kalali (dor:Amirteymour_Kalali) --doo:almaMater--> Harrow_School (dor:Harrow_School)
+      - Alex_Allan (dor:Alex_Allan) --doo:almaMater--> Harrow_School (dor:Harrow_School)
+      - Robert_Allan,_Baron_Allan_of_Kilmahew (<http://dbpedia.org/resource/Robert_Allan,_Baron_Allan_of_Kilmahew>) --dop:children--> Alex_Allan (dor:Alex_Allan)
+  '4':
+    attributes:
+      S._W._R._D._Bandaranaike: (spouse^='http://dbpedia.org/resource/Sirimavo_Bandaranaike', birth place^='http://dbpedia.org/resource/British_Ceylon')
+    relationships:
+      - A._Jeyaratnam_Wilson (dor:A._Jeyaratnam_Wilson) --doo:almaMater--> Royal_College,_Colombo (<http://dbpedia.org/resource/Royal_College,_Colombo>)
+      - Anura_Bandaranaike (dor:Anura_Bandaranaike) --doo:almaMater--> Royal_College,_Colombo (<http://dbpedia.org/resource/Royal_College,_Colombo>)
+      - S._W._R._D._Bandaranaike (dor:S._W._R._D._Bandaranaike) --dop:children--> Anura_Bandaranaike (dor:Anura_Bandaranaike)
+  '5':
+    attributes:
+      Sirimavo_Bandaranaike: (before^='http://dbpedia.org/resource/Dudley_Senanayake', spouse^='', birth name^='Sirima Ratwatte', birth place^='http://dbpedia.org/resource/British_Ceylon')
+    relationships:
+      - A._Jeyaratnam_Wilson (dor:A._Jeyaratnam_Wilson) --doo:almaMater--> Royal_College,_Colombo (<http://dbpedia.org/resource/Royal_College,_Colombo>)
+      - Anura_Bandaranaike (dor:Anura_Bandaranaike) --doo:almaMater--> Royal_College,_Colombo (<http://dbpedia.org/resource/Royal_College,_Colombo>)
+      - Sirimavo_Bandaranaike (dor:Sirimavo_Bandaranaike) --dop:children--> Anura_Bandaranaike (dor:Anura_Bandaranaike)
+  '6':
+    attributes:
+      S._W._R._D._Bandaranaike: (spouse^='http://dbpedia.org/resource/Sirimavo_Bandaranaike', birth place^='http://dbpedia.org/resource/British_Ceylon')
+    relationships:
+      - A._P._Jayasuriya (dor:A._P._Jayasuriya) --doo:almaMater--> Royal_College,_Colombo (<http://dbpedia.org/resource/Royal_College,_Colombo>)
+      - Anura_Bandaranaike (dor:Anura_Bandaranaike) --doo:almaMater--> Royal_College,_Colombo (<http://dbpedia.org/resource/Royal_College,_Colombo>)
+      - S._W._R._D._Bandaranaike (dor:S._W._R._D._Bandaranaike) --dop:children--> Anura_Bandaranaike (dor:Anura_Bandaranaike)
+  '7':
+    attributes:
+      Reggie_Ranatunga: (birth place^='http://dbpedia.org/resource/Sri_Lanka')
+    relationships:
+      - Ajith_Perera (dor:Ajith_Perera) --doo:almaMater--> Ananda_College (dor:Ananda_College)
+      - Arjuna_Ranatunga (dor:Arjuna_Ranatunga) --doo:almaMater--> Ananda_College (dor:Ananda_College)
+      - Reggie_Ranatunga (dor:Reggie_Ranatunga) --dop:children--> Arjuna_Ranatunga (dor:Arjuna_Ranatunga)
+  '8':
+    attributes:
+      Reggie_Ranatunga: (birth place^='http://dbpedia.org/resource/Sri_Lanka')
+    relationships:
+      - Arjuna_Ranatunga (dor:Arjuna_Ranatunga) --doo:almaMater--> Ananda_College (dor:Ananda_College)
+      - Arjuna_Ranatunga (dor:Arjuna_Ranatunga) --doo:almaMater--> Ananda_College (dor:Ananda_College)
+      - Reggie_Ranatunga (dor:Reggie_Ranatunga) --dop:children--> Arjuna_Ranatunga (dor:Arjuna_Ranatunga)
+  '9':
+    attributes:
+      Reggie_Ranatunga: (birth place^='http://dbpedia.org/resource/Sri_Lanka')
+    relationships:
+      - Asanga_Abeyagoonasekera (dor:Asanga_Abeyagoonasekera) --doo:almaMater--> Ananda_College (dor:Ananda_College)
+      - Arjuna_Ranatunga (dor:Arjuna_Ranatunga) --doo:almaMater--> Ananda_College (dor:Ananda_College)
+      - Reggie_Ranatunga (dor:Reggie_Ranatunga) --dop:children--> Arjuna_Ranatunga (dor:Arjuna_Ranatunga)
+  '10':
+    attributes:
+      Charles_Delemere_Haines: (before^='http://dbpedia.org/resource/Charles_Tracey', spouse^='Katherine L.', birth place^='http://dbpedia.org/resource/Medusa,_New_York')
+    relationships:
+      - Albert_D._Bosson (dor:Albert_D._Bosson) --doo:almaMater--> Boston_University_School_of_Law (dor:Boston_University_School_of_Law)
+      - Benjamin_F._Haines (dor:Benjamin_F._Haines) --doo:almaMater--> Boston_University_School_of_Law (dor:Boston_University_School_of_Law)
+      - Charles_Delemere_Haines (dor:Charles_Delemere_Haines) --dop:children--> Benjamin_F._Haines (dor:Benjamin_F._Haines)
+attributes:
+  school: --nickname^ (dop:nickname)--> langString | --reason^ (dop:reason)--> langString
+  politician: --before^ (dop:before)--> Resource | --spouse^ (dop:spouse)--> Resource | --birth name^ (dop:birthName)--> langString | --1p^ (dop:1p)--> int | --birth place^ (doo:birthPlace)--> Resource
+  office holder: --aga^ (dop:aga)--> int | --1namedata^ (dop:1namedata)--> langString | --issue^ (dop:issue)--> langString
+subgraph_id: 757
+relationships:
+  - person --doo:almaMater--> school
+  - office holder --doo:almaMater--> school
+  - politician --dop:children--> office holder

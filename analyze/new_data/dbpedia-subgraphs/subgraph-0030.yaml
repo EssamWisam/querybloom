@@ -1,0 +1,92 @@
+types:
+  noble: doo:Noble
+  royalty: doo:Royalty
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Philip_I,_Count_of_Savoy: (birth date^='1207')
+      Adelaide,_Countess_of_Burgundy: (spouse^='http://dbpedia.org/resource/Hugh,_Count_of_Salins')
+    relationships:
+      - Adelaide,_Countess_of_Burgundy (<http://dbpedia.org/resource/Adelaide,_Countess_of_Burgundy>) --dop:deathPlace--> Évian-les-Bains (<http://dbpedia.org/resource/Évian-les-Bains>)
+      - Adelaide,_Countess_of_Burgundy (<http://dbpedia.org/resource/Adelaide,_Countess_of_Burgundy>) --doo:spouse--> Philip_I,_Count_of_Savoy (<http://dbpedia.org/resource/Philip_I,_Count_of_Savoy>)
+  '2':
+    attributes:
+      Sønderborg: (Apr low C^='3.4')
+      Agnes_Hedwig_of_Anhalt: (spouse^='http://dbpedia.org/resource/Augustus,_Elector_of_Saxony')
+    relationships:
+      - Agnes_Hedwig_of_Anhalt (dor:Agnes_Hedwig_of_Anhalt) --dop:deathPlace--> Sønderborg (<http://dbpedia.org/resource/Sønderborg>)
+      - Agnes_Hedwig_of_Anhalt (dor:Agnes_Hedwig_of_Anhalt) --doo:spouse--> Augustus,_Elector_of_Saxony (<http://dbpedia.org/resource/Augustus,_Elector_of_Saxony>)
+  '3':
+    attributes:
+      Amt_Neuhaus: (area^='237.16')
+      Philipp_Julius,_Duke_of_Pomerania: (birth date^='1584-12-27')
+      Agnes_of_Brandenburg,_Duchess_of_Pomerania: (spouse^='http://dbpedia.org/resource/Francis_Charles_of_Saxe-Lauenburg')
+    relationships:
+      - Agnes_of_Brandenburg,_Duchess_of_Pomerania (<http://dbpedia.org/resource/Agnes_of_Brandenburg,_Duchess_of_Pomerania>) --dop:deathPlace--> Amt_Neuhaus (dor:Amt_Neuhaus)
+      - Agnes_of_Brandenburg,_Duchess_of_Pomerania (<http://dbpedia.org/resource/Agnes_of_Brandenburg,_Duchess_of_Pomerania>) --doo:spouse--> Philipp_Julius,_Duke_of_Pomerania (<http://dbpedia.org/resource/Philipp_Julius,_Duke_of_Pomerania>)
+  '4':
+    attributes:
+      Kutaisi: (Apr low C^='9.6', government type^='http://dbpedia.org/resource/Mayor–council_government')
+      Agrippina_Japaridze: (spouse^='Prince Tariel Dadiani')
+      Duke_Constantine_Petrovich_of_Oldenburg: (birth date^='1850-05-09')
+    relationships:
+      - Agrippina_Japaridze (dor:Agrippina_Japaridze) --dop:deathPlace--> Kutaisi (dor:Kutaisi)
+      - Agrippina_Japaridze (dor:Agrippina_Japaridze) --doo:spouse--> Duke_Constantine_Petrovich_of_Oldenburg (dor:Duke_Constantine_Petrovich_of_Oldenburg)
+  '5':
+    attributes:
+      Soviet_Union: (government type^='http://dbpedia.org/resource/Directorial_system')
+      Agrippina_Japaridze: (spouse^='Prince Tariel Dadiani')
+      Duke_Constantine_Petrovich_of_Oldenburg: (birth date^='1850-05-09')
+    relationships:
+      - Agrippina_Japaridze (dor:Agrippina_Japaridze) --dop:deathPlace--> Soviet_Union (dor:Soviet_Union)
+      - Agrippina_Japaridze (dor:Agrippina_Japaridze) --doo:spouse--> Duke_Constantine_Petrovich_of_Oldenburg (dor:Duke_Constantine_Petrovich_of_Oldenburg)
+  '6':
+    attributes:
+      Halsbrücke: (area^='41.07')
+      Albert_I,_Margrave_of_Meissen: (spouse^='Sophie, daughter of Frederick, Duke of Bohemia')
+    relationships:
+      - Albert_I,_Margrave_of_Meissen (<http://dbpedia.org/resource/Albert_I,_Margrave_of_Meissen>) --dop:deathPlace--> Halsbrücke (<http://dbpedia.org/resource/Halsbrücke>)
+      - Albert_I,_Margrave_of_Meissen (<http://dbpedia.org/resource/Albert_I,_Margrave_of_Meissen>) --doo:spouse--> Frederick,_Duke_of_Bohemia (<http://dbpedia.org/resource/Frederick,_Duke_of_Bohemia>)
+  '7':
+    attributes:
+      Aleksander_Jan_Jabłonowski: (spouse^='http://dbpedia.org/resource/Teofilia_Sieniawska')
+    relationships:
+      - Aleksander_Jan_Jabłonowski (<http://dbpedia.org/resource/Aleksander_Jan_Jabłonowski>) --dop:deathPlace--> Busk,_Ukraine (<http://dbpedia.org/resource/Busk,_Ukraine>)
+      - Aleksander_Jan_Jabłonowski (<http://dbpedia.org/resource/Aleksander_Jan_Jabłonowski>) --doo:spouse--> Teofilia_Sieniawska (dor:Teofilia_Sieniawska)
+  '8':
+    attributes:
+      Stirling: (Apr rain days^='10.6', Apr low C^='4.3', government type^='http://dbpedia.org/resource/Stirling_(council_area)')
+      Alexander_I_of_Scotland: (spouse^='http://dbpedia.org/resource/Sybilla_of_Normandy')
+    relationships:
+      - Alexander_I_of_Scotland (dor:Alexander_I_of_Scotland) --dop:deathPlace--> Stirling (dor:Stirling)
+      - Alexander_I_of_Scotland (dor:Alexander_I_of_Scotland) --doo:spouse--> Sybilla_of_Normandy (dor:Sybilla_of_Normandy)
+  '9':
+    attributes:
+      Hoym: (area^='20.27')
+      Alexander_Karl,_Duke_of_Anhalt-Bernburg: (spouse^='http://dbpedia.org/resource/Princess_Friederike_of_Schleswig-Holstein-Sonderburg-Glücksburg')
+      Princess_Friederike_of_Schleswig-Holstein-Sonderburg-Glücksburg: (birth date^='1811-10-09')
+    relationships:
+      - Alexander_Karl,_Duke_of_Anhalt-Bernburg (<http://dbpedia.org/resource/Alexander_Karl,_Duke_of_Anhalt-Bernburg>) --dop:deathPlace--> Hoym (dor:Hoym)
+      - Alexander_Karl,_Duke_of_Anhalt-Bernburg (<http://dbpedia.org/resource/Alexander_Karl,_Duke_of_Anhalt-Bernburg>) --doo:spouse--> Princess_Friederike_of_Schleswig-Holstein-Sonderburg-Glücksburg (<http://dbpedia.org/resource/Princess_Friederike_of_Schleswig-Holstein-Sonderburg-Glücksburg>)
+  '10':
+    attributes:
+      Szczecin: (Apr low C^='4')
+      Amalie_of_the_Palatinate: (spouse^='http://dbpedia.org/resource/George_I,_Duke_of_Pomerania')
+      George_I,_Duke_of_Pomerania: (birth date^='1493-04-11')
+    relationships:
+      - Amalie_of_the_Palatinate (dor:Amalie_of_the_Palatinate) --dop:deathPlace--> Szczecin (dor:Szczecin)
+      - Amalie_of_the_Palatinate (dor:Amalie_of_the_Palatinate) --doo:spouse--> George_I,_Duke_of_Pomerania (<http://dbpedia.org/resource/George_I,_Duke_of_Pomerania>)
+attributes:
+  noble: --spouse^ (dop:spouse)--> langString
+  royalty: --birth date^ (dop:birthDate)--> date
+  Location: --Apr rain days^ (dop:aprRainDays)--> int | --Apr low C^ (dop:aprLowC)--> double | --building start date^ (doo:buildingStartDate)--> string | --government type^ (doo:governmentType)--> Resource | --Aug low F^ (dop:augLowF)--> double | --area^ (dop:area)--> langString | --Apr low F^ (dop:aprLowF)--> int | --coordinates^ (dop:coordinates)--> langString | --designatedOther1Date (dop:designatedOther1Date)--> int
+subgraph_id: 30
+relationships:
+  - noble --dop:deathPlace--> Location
+  - noble --doo:spouse--> royalty

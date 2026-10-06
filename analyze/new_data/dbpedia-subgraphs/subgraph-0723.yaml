@@ -1,0 +1,104 @@
+types:
+  river: doo:River
+  artist: doo:Artist
+  country: doo:Country
+  city district: doo:CityDistrict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      4mat: (birth date^='1974-03-15')
+      United_Kingdom: (image^='--08-17')
+      Borough_of_Guildford: (type^='http://dbpedia.org/resource/Borough_status_in_the_United_Kingdom')
+    relationships:
+      - Borough_of_Guildford (dor:Borough_of_Guildford) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - 4mat (dor:4mat) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Law_Brook,_Surrey (<http://dbpedia.org/resource/Law_Brook,_Surrey>) --doo:mouthPlace--> Borough_of_Guildford (dor:Borough_of_Guildford)
+  '2':
+    attributes:
+      4mat: (birth date^='1974-03-15')
+      United_Kingdom: (image^='--08-17')
+      Borough_of_Spelthorne: (type^='http://dbpedia.org/resource/Borough_status_in_the_United_Kingdom')
+    relationships:
+      - Borough_of_Spelthorne (dor:Borough_of_Spelthorne) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - 4mat (dor:4mat) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - River_Ash,_Surrey__River_Ash__1 (<http://dbpedia.org/resource/River_Ash,_Surrey__River_Ash__1>) --doo:mouthPlace--> Borough_of_Spelthorne (dor:Borough_of_Spelthorne)
+  '3':
+    attributes:
+      4mat: (birth date^='1974-03-15')
+      United_Kingdom: (image^='--08-17')
+      East_Staffordshire: (type^='http://dbpedia.org/resource/Borough')
+    relationships:
+      - East_Staffordshire (dor:East_Staffordshire) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - 4mat (dor:4mat) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - River_Churnet (dor:River_Churnet) --doo:mouthPlace--> East_Staffordshire (dor:East_Staffordshire)
+  '4':
+    attributes:
+      A._B._Frost: (birth date^='1851-01-17', death place^='http://dbpedia.org/resource/Pasadena,_California')
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg', footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+      Bridesburg,_Philadelphia: (type^='http://dbpedia.org/resource/List_of_towns_and_boroughs_in_Pennsylvania')
+    relationships:
+      - Bridesburg,_Philadelphia (<http://dbpedia.org/resource/Bridesburg,_Philadelphia>) --doo:country--> United_States (dor:United_States)
+      - A._B._Frost (dor:A._B._Frost) --doo:nationality--> United_States (dor:United_States)
+      - Frankford_Creek (dor:Frankford_Creek) --doo:mouthPlace--> Bridesburg,_Philadelphia (<http://dbpedia.org/resource/Bridesburg,_Philadelphia>)
+  '5':
+    attributes:
+      A._B._Frost: (birth date^='1851-01-17', death place^='http://dbpedia.org/resource/Pasadena,_California')
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg', footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+      Carnegie,_Pennsylvania: (elevation (μ)^='253.8984', type^='http://dbpedia.org/resource/Borough_(Pennsylvania)')
+    relationships:
+      - Carnegie,_Pennsylvania (<http://dbpedia.org/resource/Carnegie,_Pennsylvania>) --doo:country--> United_States (dor:United_States)
+      - A._B._Frost (dor:A._B._Frost) --doo:nationality--> United_States (dor:United_States)
+      - Campbells_Run_(Chartiers_Creek_tributary) (<http://dbpedia.org/resource/Campbells_Run_(Chartiers_Creek_tributary)>) --doo:mouthPlace--> Carnegie,_Pennsylvania (<http://dbpedia.org/resource/Carnegie,_Pennsylvania>)
+  '6':
+    attributes:
+      A._B._Frost: (birth date^='1851-01-17', death place^='http://dbpedia.org/resource/Pasadena,_California')
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg', footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+      Carnegie,_Pennsylvania: (elevation (μ)^='253.8984', type^='http://dbpedia.org/resource/Borough_(Pennsylvania)')
+    relationships:
+      - Carnegie,_Pennsylvania (<http://dbpedia.org/resource/Carnegie,_Pennsylvania>) --doo:country--> United_States (dor:United_States)
+      - A._B._Frost (dor:A._B._Frost) --doo:nationality--> United_States (dor:United_States)
+      - Whiskey_Run_(Chartiers_Creek_tributary) (<http://dbpedia.org/resource/Whiskey_Run_(Chartiers_Creek_tributary)>) --doo:mouthPlace--> Carnegie,_Pennsylvania (<http://dbpedia.org/resource/Carnegie,_Pennsylvania>)
+  '7':
+    attributes:
+      Poland: (image^='Ayuntamiento, Poznan, Polonia, 2014-09-18, DD 67-72 HDR.jpg')
+    relationships:
+      - Dąbie,_Szczecin (<http://dbpedia.org/resource/Dąbie,_Szczecin>) --doo:country--> Poland (dor:Poland)
+      - Abraham_Straski (dor:Abraham_Straski) --doo:nationality--> Poland (dor:Poland)
+      - Płonia_(river) (<http://dbpedia.org/resource/Płonia_(river)>) --doo:mouthPlace--> Dąbie,_Szczecin (<http://dbpedia.org/resource/Dąbie,_Szczecin>)
+  '8':
+    attributes:
+      Adalbert_J._Volck: (birth date^='1828-04-14', death place^='http://dbpedia.org/resource/Baltimore')
+      Wilmington,_Los_Angeles: (named for^='http://dbpedia.org/resource/Wilmington,_Delaware', type^='http://dbpedia.org/resource/List_of_districts_and_neighborhoods_in_Los_Angeles')
+    relationships:
+      - Wilmington,_Los_Angeles (<http://dbpedia.org/resource/Wilmington,_Los_Angeles>) --doo:country--> United_States_of_America (dor:United_States_of_America)
+      - Adalbert_J._Volck (dor:Adalbert_J._Volck) --doo:nationality--> United_States_of_America (dor:United_States_of_America)
+      - Dominguez_Channel (dor:Dominguez_Channel) --doo:mouthPlace--> Wilmington,_Los_Angeles (<http://dbpedia.org/resource/Wilmington,_Los_Angeles>)
+  '9':
+    attributes:
+      Wilmington,_Los_Angeles: (named for^='http://dbpedia.org/resource/Wilmington,_Delaware', type^='http://dbpedia.org/resource/List_of_districts_and_neighborhoods_in_Los_Angeles')
+      Adeline_Oppenheim_Guimard: (birth date^='1872-10-01', death place^='Orangetown, United States')
+    relationships:
+      - Wilmington,_Los_Angeles (<http://dbpedia.org/resource/Wilmington,_Los_Angeles>) --doo:country--> United_States_of_America (dor:United_States_of_America)
+      - Adeline_Oppenheim_Guimard (dor:Adeline_Oppenheim_Guimard) --doo:nationality--> United_States_of_America (dor:United_States_of_America)
+      - Dominguez_Channel (dor:Dominguez_Channel) --doo:mouthPlace--> Wilmington,_Los_Angeles (<http://dbpedia.org/resource/Wilmington,_Los_Angeles>)
+  '10':
+    attributes:
+      Poland: (image^='Ayuntamiento, Poznan, Polonia, 2014-09-18, DD 67-72 HDR.jpg')
+    relationships:
+      - Dąbie,_Szczecin (<http://dbpedia.org/resource/Dąbie,_Szczecin>) --doo:country--> Poland (dor:Poland)
+      - Agata_Materowicz (dor:Agata_Materowicz) --doo:nationality--> Poland (dor:Poland)
+      - Płonia_(river) (<http://dbpedia.org/resource/Płonia_(river)>) --doo:mouthPlace--> Dąbie,_Szczecin (<http://dbpedia.org/resource/Dąbie,_Szczecin>)
+attributes:
+  artist: --birth date^ (dop:birthDate)--> int | --movement^ (doo:movement)--> Resource | --death place^ (dop:deathPlace)--> langString | --reason^ (dop:reason)--> langString
+  country: --c^ (dop:c)--> langString | --image^ (dop:image)--> langString | --footer^ (dop:footer)--> langString | --leader^ (dop:leader)--> Resource
+  city district: --elevation (μ)^ (doo:elevation)--> double | --named for^ (dop:namedFor)--> langString | --type^ (doo:type)--> Resource
+subgraph_id: 723
+relationships:
+  - city district --doo:country--> country
+  - artist --doo:nationality--> country
+  - river --doo:mouthPlace--> city district

@@ -1,0 +1,74 @@
+types:
+  tenure: doo:Tenure
+  university: doo:University
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      La_Trobe_University: (logo^='File:La Trobe University logo.svg', nickname^='La Trobians and')
+    relationships:
+      - Anwar_Ibrahim__Tenure__8 (dor:Anwar_Ibrahim__Tenure__8) --doo:deputy--> Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman)
+      - Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman) --dop:almaMater--> La_Trobe_University (dor:La_Trobe_University)
+  '2':
+    attributes:
+      University_of_Queensland: (logo^='Logo of the University of Queensland.svg')
+    relationships:
+      - Anwar_Ibrahim__Tenure__8 (dor:Anwar_Ibrahim__Tenure__8) --doo:deputy--> Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman)
+      - Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman) --dop:almaMater--> University_of_Queensland (dor:University_of_Queensland)
+  '3':
+    attributes:
+      La_Trobe_University: (logo^='File:La Trobe University logo.svg', nickname^='La Trobians and')
+    relationships:
+      - Daim_Zainuddin__Tenure__2 (dor:Daim_Zainuddin__Tenure__2) --doo:deputy--> Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman)
+      - Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman) --dop:almaMater--> La_Trobe_University (dor:La_Trobe_University)
+  '4':
+    attributes: {}
+    relationships:
+      - Ghazali_Shafie__Tenure__1 (dor:Ghazali_Shafie__Tenure__1) --doo:deputy--> Abdul_Kadir_Sheikh_Fadzir (dor:Abdul_Kadir_Sheikh_Fadzir)
+      - Abdul_Kadir_Sheikh_Fadzir (dor:Abdul_Kadir_Sheikh_Fadzir) --dop:almaMater--> Lincoln's_Inn (<http://dbpedia.org/resource/Lincoln's_Inn>)
+  '5':
+    attributes: {}
+    relationships:
+      - Tengku_Ahmad_Rithauddeen_Ismail__Tenure__4 (dor:Tengku_Ahmad_Rithauddeen_Ismail__Tenure__4) --doo:deputy--> Abdul_Kadir_Sheikh_Fadzir (dor:Abdul_Kadir_Sheikh_Fadzir)
+      - Abdul_Kadir_Sheikh_Fadzir (dor:Abdul_Kadir_Sheikh_Fadzir) --dop:almaMater--> Lincoln's_Inn (<http://dbpedia.org/resource/Lincoln's_Inn>)
+  '6':
+    attributes:
+      Abdul_Razak_Hussein: (death date^='1976-01-14')
+      Raffles_Institution: (logo^='150')
+    relationships:
+      - Rahah_Noah__Tenure__2 (dor:Rahah_Noah__Tenure__2) --doo:deputy--> Abdul_Razak_Hussein (dor:Abdul_Razak_Hussein)
+      - Abdul_Razak_Hussein (dor:Abdul_Razak_Hussein) --dop:almaMater--> Raffles_Institution (dor:Raffles_Institution)
+  '7':
+    attributes:
+      Abdul_Razak_Hussein: (death date^='1976-01-14')
+      Raffles_Institution: (logo^='150')
+    relationships:
+      - Tunku_Abdul_Rahman__Tenure__1 (dor:Tunku_Abdul_Rahman__Tenure__1) --doo:deputy--> Abdul_Razak_Hussein (dor:Abdul_Razak_Hussein)
+      - Abdul_Razak_Hussein (dor:Abdul_Razak_Hussein) --dop:almaMater--> Raffles_Institution (dor:Raffles_Institution)
+  '8':
+    attributes: {}
+    relationships:
+      - Hafez_al-Assad__Tenure__4 (dor:Hafez_al-Assad__Tenure__4) --doo:deputy--> Abdullah_al-Ahmar (dor:Abdullah_al-Ahmar)
+      - Abdullah_al-Ahmar (dor:Abdullah_al-Ahmar) --dop:almaMater--> University_of_Damascus (dor:University_of_Damascus)
+  '9':
+    attributes: {}
+    relationships:
+      - Muhammad_Naji_al-Otari__Tenure__1 (dor:Muhammad_Naji_al-Otari__Tenure__1) --doo:deputy--> Abdullah_Dardari (dor:Abdullah_Dardari)
+      - Abdullah_Dardari (dor:Abdullah_Dardari) --dop:almaMater--> Richmond,_The_American_International_University_in_London (<http://dbpedia.org/resource/Richmond,_The_American_International_University_in_London>)
+  '10':
+    attributes: {}
+    relationships:
+      - Muhammad_Naji_al-Otari__Tenure__1 (dor:Muhammad_Naji_al-Otari__Tenure__1) --doo:deputy--> Abdullah_Dardari (dor:Abdullah_Dardari)
+      - Abdullah_Dardari (dor:Abdullah_Dardari) --dop:almaMater--> University_of_Grenoble (dor:University_of_Grenoble)
+attributes:
+  university: --head^ (doo:head)--> Resource | --logo^ (dop:logo)--> langString | --Closed^ (dop:closed)--> int | --direction^ (dop:direction)--> langString | --nickname^ (dop:nickname)--> langString
+  office holder: --2p^ (dop:2p)--> int | --relatives^ (dop:relatives)--> langString | --align^ (dop:align)--> langString | --aggregatescore^ (dop:aggregatescore)--> int | --death date^ (doo:deathDate)--> date
+subgraph_id: 570
+relationships:
+  - tenure --doo:deputy--> office holder
+  - office holder --dop:almaMater--> university

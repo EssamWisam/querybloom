@@ -1,0 +1,77 @@
+types:
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  radio station: doo:RadioStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Auburn_Tigers: (logo^='Auburn Tigers logo.svg')
+    relationships:
+      - Auburn_Sports_Network (dor:Auburn_Sports_Network) --dop:area--> Alabama (dor:Alabama)
+      - Auburn_Sports_Network (dor:Auburn_Sports_Network) --doo:broadcastNetwork--> Auburn_Tigers (dor:Auburn_Tigers)
+  '2':
+    attributes:
+      Denver_Broncos: (logo^='Denver Broncos logo.svg')
+    relationships:
+      - CFAC (dor:CFAC) --dop:area--> Southern_Alberta (dor:Southern_Alberta)
+      - CFAC (dor:CFAC) --doo:broadcastNetwork--> Denver_Broncos (dor:Denver_Broncos)
+  '3':
+    attributes:
+      Toronto_Raptors: (logo^='Toronto Raptors logo.svg')
+    relationships:
+      - CFAC (dor:CFAC) --dop:area--> Southern_Alberta (dor:Southern_Alberta)
+      - CFAC (dor:CFAC) --doo:broadcastNetwork--> Toronto_Raptors (dor:Toronto_Raptors)
+  '4':
+    attributes: {}
+    relationships:
+      - CFAM (dor:CFAM) --dop:area--> Pembina_Valley_Region,_Manitoba (<http://dbpedia.org/resource/Pembina_Valley_Region,_Manitoba>)
+      - CFAM (dor:CFAM) --doo:broadcastNetwork--> Winnipeg_Jets (dor:Winnipeg_Jets)
+  '5':
+    attributes:
+      Seattle_Seahawks: (logo^='Seattle Seahawks logo.svg')
+    relationships:
+      - CFTE (dor:CFTE) --dop:area--> Greater_Vancouver (dor:Greater_Vancouver)
+      - CFTE (dor:CFTE) --doo:broadcastNetwork--> Seattle_Seahawks (dor:Seattle_Seahawks)
+  '6':
+    attributes:
+      Toronto_Argonauts: (logo^='Toronto Argonauts logo.svg')
+    relationships:
+      - CHUM_(AM) (<http://dbpedia.org/resource/CHUM_(AM)>) --dop:area--> Greater_Toronto_Area (dor:Greater_Toronto_Area)
+      - CHUM_(AM) (<http://dbpedia.org/resource/CHUM_(AM)>) --doo:broadcastNetwork--> Toronto_Argonauts (dor:Toronto_Argonauts)
+  '7':
+    attributes:
+      Toronto_Raptors: (logo^='Toronto Raptors logo.svg')
+    relationships:
+      - CHUM_(AM) (<http://dbpedia.org/resource/CHUM_(AM)>) --dop:area--> Greater_Toronto_Area (dor:Greater_Toronto_Area)
+      - CHUM_(AM) (<http://dbpedia.org/resource/CHUM_(AM)>) --doo:broadcastNetwork--> Toronto_Raptors (dor:Toronto_Raptors)
+  '8':
+    attributes: {}
+    relationships:
+      - CJKR-FM (dor:CJKR-FM) --dop:area--> Winnipeg_Metropolitan_Region (dor:Winnipeg_Metropolitan_Region)
+      - CJKR-FM (dor:CJKR-FM) --doo:broadcastNetwork--> Winnipeg_Jets (dor:Winnipeg_Jets)
+  '9':
+    attributes: {}
+    relationships:
+      - CKXA-FM (dor:CKXA-FM) --dop:area--> Westman_Region (dor:Westman_Region)
+      - CKXA-FM (dor:CKXA-FM) --doo:broadcastNetwork--> Winnipeg_Jets (dor:Winnipeg_Jets)
+  '10':
+    attributes:
+      KABC_(AM): (coordinates^='')
+      USC_Trojans: (logo^='USC Trojans logo.svg')
+    relationships:
+      - KABC_(AM) (<http://dbpedia.org/resource/KABC_(AM)>) --dop:area--> Greater_Los_Angeles_Area (dor:Greater_Los_Angeles_Area)
+      - KABC_(AM) (<http://dbpedia.org/resource/KABC_(AM)>) --doo:broadcastNetwork--> USC_Trojans (dor:USC_Trojans)
+attributes:
+  settlement: --region^ (doo:region)--> Resource | --differentFrom (wwoo:differentFrom)--> Resource | --c^ (dop:c)--> langString
+  soccer club: --age^ (dop:age)--> date | --squad number^ (doo:squadNumber)--> int | --logo^ (dop:logo)--> langString | --alt^ (dop:alt)--> langString
+  radio station: --coordinates^ (dop:coordinates)--> langString
+subgraph_id: 519
+relationships:
+  - radio station --dop:area--> settlement
+  - radio station --doo:broadcastNetwork--> soccer club

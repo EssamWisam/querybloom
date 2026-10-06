@@ -1,0 +1,86 @@
+types:
+  person: doo:Person
+  cyclist: doo:Cyclist
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Oslo: (Apr sun^='182')
+      Aage_Myhrvold: (death date^='1987-06-16')
+      Johan_Fahlstrøm: (children^='1', birth place^='http://dbpedia.org/resource/Trondheim', death year^='1938')
+    relationships:
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --doo:birthPlace--> Oslo (dor:Oslo)
+      - Johan_Fahlstrøm (<http://dbpedia.org/resource/Johan_Fahlstrøm>) --doo:knownFor--> Oslo (dor:Oslo)
+  '2':
+    attributes:
+      Auckland: (Apr sun^='157.3')
+    relationships:
+      - Aaron_Gate (dor:Aaron_Gate) --doo:birthPlace--> Auckland (dor:Auckland)
+      - Samuel_Jackson_(lawyer) (<http://dbpedia.org/resource/Samuel_Jackson_(lawyer)>) --doo:knownFor--> Auckland (dor:Auckland)
+  '3':
+    attributes:
+      Eugene,_Oregon: (Aug low F^='51.5', Apr sun^='201')
+      Eugene_Skinner: (children^='1', birth place^='http://dbpedia.org/resource/Essex,_New_York', death year^='1864')
+    relationships:
+      - Aaron_Olsen (dor:Aaron_Olsen) --doo:birthPlace--> Eugene,_Oregon (<http://dbpedia.org/resource/Eugene,_Oregon>)
+      - Eugene_Skinner (dor:Eugene_Skinner) --doo:knownFor--> Eugene,_Oregon (<http://dbpedia.org/resource/Eugene,_Oregon>)
+  '4':
+    attributes:
+      Roy_Hicks_Jr.: (birth place^='http://dbpedia.org/resource/Glendale,_California', death year^='1994')
+      Eugene,_Oregon: (Aug low F^='51.5', Apr sun^='201')
+    relationships:
+      - Aaron_Olsen (dor:Aaron_Olsen) --doo:birthPlace--> Eugene,_Oregon (<http://dbpedia.org/resource/Eugene,_Oregon>)
+      - Roy_Hicks_Jr. (<http://dbpedia.org/resource/Roy_Hicks_Jr.>) --doo:knownFor--> Eugene,_Oregon (<http://dbpedia.org/resource/Eugene,_Oregon>)
+  '5':
+    attributes:
+      Karachi: (Apr sun^='276')
+      Mary_Emily_Gonsalves: (birth place^='http://dbpedia.org/resource/British_Raj', death year^='1919')
+    relationships:
+      - Abdul_Razzaq_Baloch (dor:Abdul_Razzaq_Baloch) --doo:birthPlace--> Karachi (dor:Karachi)
+      - Mary_Emily_Gonsalves (dor:Mary_Emily_Gonsalves) --doo:knownFor--> Karachi (dor:Karachi)
+  '6':
+    attributes:
+      Karachi: (Apr sun^='276')
+      Perween_Rahman: (birth place^='http://dbpedia.org/resource/Bangladesh', death year^='2013')
+    relationships:
+      - Abdul_Razzaq_Baloch (dor:Abdul_Razzaq_Baloch) --doo:birthPlace--> Karachi (dor:Karachi)
+      - Perween_Rahman (dor:Perween_Rahman) --doo:knownFor--> Karachi (dor:Karachi)
+  '7':
+    attributes:
+      Harley_Baldwin: (alma mater^='http://dbpedia.org/resource/Syracuse_University', death year^='2005')
+      Aspen,_Colorado: (Aug low F^='47.1')
+    relationships:
+      - Abigail_Mickey (dor:Abigail_Mickey) --doo:birthPlace--> Aspen,_Colorado (<http://dbpedia.org/resource/Aspen,_Colorado>)
+      - Harley_Baldwin (dor:Harley_Baldwin) --doo:knownFor--> Aspen,_Colorado (<http://dbpedia.org/resource/Aspen,_Colorado>)
+  '8':
+    attributes:
+      Alfred_Pettibone: (children^='4', alma mater^='http://dbpedia.org/resource/Beloit_College')
+      Victoria,_British_Columbia: (Apr sun^='201.5')
+    relationships:
+      - Adam_de_Vos (dor:Adam_de_Vos) --doo:birthPlace--> Victoria,_British_Columbia (<http://dbpedia.org/resource/Victoria,_British_Columbia>)
+      - Alfred_Pettibone (dor:Alfred_Pettibone) --doo:knownFor--> Victoria,_British_Columbia (<http://dbpedia.org/resource/Victoria,_British_Columbia>)
+  '9':
+    attributes:
+      Victoria,_British_Columbia: (Apr sun^='201.5')
+    relationships:
+      - Adam_de_Vos (dor:Adam_de_Vos) --doo:birthPlace--> Victoria,_British_Columbia (<http://dbpedia.org/resource/Victoria,_British_Columbia>)
+      - Robert_Cross_(Canadian_politician) (<http://dbpedia.org/resource/Robert_Cross_(Canadian_politician)>) --doo:knownFor--> Victoria,_British_Columbia (<http://dbpedia.org/resource/Victoria,_British_Columbia>)
+  '10':
+    attributes:
+      Edmund_Zavitz: (birth place^='http://dbpedia.org/resource/Ridgeway,_Ontario', alma mater^='http://dbpedia.org/resource/University_of_Michigan', death year^='1968')
+    relationships:
+      - Adam_Jamieson (dor:Adam_Jamieson) --doo:birthPlace--> Ontario (dor:Ontario)
+      - Edmund_Zavitz (dor:Edmund_Zavitz) --doo:knownFor--> Ontario (dor:Ontario)
+attributes:
+  person: --children^ (dop:children)--> Resource | --birth place^ (doo:birthPlace)--> Resource | --alma mater^ (doo:almaMater)--> Resource | --alias^ (dop:alias)--> langString | --author^ (dop:author)--> langString | --id^ (dop:id)--> int | --death year^ (doo:deathYear)--> gYear
+  cyclist: --death date^ (dop:deathDate)--> date
+  settlement: --Aug low F^ (dop:augLowF)--> double | --bot^ (dop:bot)--> langString | --Apr sun^ (dop:aprSun)--> double | --id^ (dop:id)--> langString
+subgraph_id: 25
+relationships:
+  - cyclist --doo:birthPlace--> settlement
+  - person --doo:knownFor--> settlement

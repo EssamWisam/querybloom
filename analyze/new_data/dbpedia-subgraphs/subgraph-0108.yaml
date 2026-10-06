@@ -1,0 +1,92 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  settlement: doo:Settlement
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Saudi_Arabia: (anthem^='http://dbpedia.org/resource/National_Anthem_of_Saudi_Arabia')
+      Abdel_Mohsin_Musellem: (birth year^='1958')
+    relationships:
+      - Abdel_Rahman_Swar_al-Dahab (dor:Abdel_Rahman_Swar_al-Dahab) --dop:birthPlace--> Omdurman (dor:Omdurman)
+      - Abdel_Rahman_Swar_al-Dahab (dor:Abdel_Rahman_Swar_al-Dahab) --doo:deathPlace--> Saudi_Arabia (dor:Saudi_Arabia)
+      - Abdel_Mohsin_Musellem (dor:Abdel_Mohsin_Musellem) --doo:nationality--> Saudi_Arabia (dor:Saudi_Arabia)
+  '2':
+    attributes:
+      Saudi_Arabia: (anthem^='http://dbpedia.org/resource/National_Anthem_of_Saudi_Arabia')
+    relationships:
+      - Abdel_Rahman_Swar_al-Dahab (dor:Abdel_Rahman_Swar_al-Dahab) --dop:birthPlace--> Omdurman (dor:Omdurman)
+      - Abdel_Rahman_Swar_al-Dahab (dor:Abdel_Rahman_Swar_al-Dahab) --doo:deathPlace--> Saudi_Arabia (dor:Saudi_Arabia)
+      - Abdul_Aziz_al-Harbi (dor:Abdul_Aziz_al-Harbi) --doo:nationality--> Saudi_Arabia (dor:Saudi_Arabia)
+  '3':
+    attributes: {}
+    relationships:
+      - Abdel_Rahman_Swar_al-Dahab (dor:Abdel_Rahman_Swar_al-Dahab) --dop:birthPlace--> Omdurman (dor:Omdurman)
+      - Abdel_Rahman_Swar_al-Dahab (dor:Abdel_Rahman_Swar_al-Dahab) --doo:deathPlace--> Saudi_Arabia (dor:Saudi_Arabia)
+      - Abdul_Aziz_bin_Laboun (dor:Abdul_Aziz_bin_Laboun) --doo:nationality--> Saudi_Arabia (dor:Saudi_Arabia)
+  '4':
+    attributes:
+      Russia: (anthem^='http://dbpedia.org/resource/State_Anthem_of_the_Russian_Federation')
+    relationships:
+      - Abdul_Madzhid_(Dagestan_rebel) (<http://dbpedia.org/resource/Abdul_Madzhid_(Dagestan_rebel)>) --dop:birthPlace--> Zaqatala_(city) (<http://dbpedia.org/resource/Zaqatala_(city)>)
+      - Abdul_Madzhid_(Dagestan_rebel) (<http://dbpedia.org/resource/Abdul_Madzhid_(Dagestan_rebel)>) --doo:deathPlace--> Russia (dor:Russia)
+      - Abasgadzhi_Magomedov (dor:Abasgadzhi_Magomedov) --doo:nationality--> Russia (dor:Russia)
+  '5':
+    attributes:
+      Russia: (anthem^='http://dbpedia.org/resource/State_Anthem_of_the_Russian_Federation')
+      Abdulmanap_Nurmagomedov: (birth year^='1962')
+    relationships:
+      - Abdul_Madzhid_(Dagestan_rebel) (<http://dbpedia.org/resource/Abdul_Madzhid_(Dagestan_rebel)>) --dop:birthPlace--> Zaqatala_(city) (<http://dbpedia.org/resource/Zaqatala_(city)>)
+      - Abdul_Madzhid_(Dagestan_rebel) (<http://dbpedia.org/resource/Abdul_Madzhid_(Dagestan_rebel)>) --doo:deathPlace--> Russia (dor:Russia)
+      - Abdulmanap_Nurmagomedov (dor:Abdulmanap_Nurmagomedov) --doo:nationality--> Russia (dor:Russia)
+  '6':
+    attributes:
+      Russia: (anthem^='http://dbpedia.org/resource/State_Anthem_of_the_Russian_Federation')
+    relationships:
+      - Abdul_Madzhid_(Dagestan_rebel) (<http://dbpedia.org/resource/Abdul_Madzhid_(Dagestan_rebel)>) --dop:birthPlace--> Zaqatala_(city) (<http://dbpedia.org/resource/Zaqatala_(city)>)
+      - Abdul_Madzhid_(Dagestan_rebel) (<http://dbpedia.org/resource/Abdul_Madzhid_(Dagestan_rebel)>) --doo:deathPlace--> Russia (dor:Russia)
+      - Abdusalam_Gadisov (dor:Abdusalam_Gadisov) --doo:nationality--> Russia (dor:Russia)
+  '7':
+    attributes:
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+    relationships:
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --dop:birthPlace--> New_York_City (dor:New_York_City)
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --doo:deathPlace--> United_States (dor:United_States)
+      - 2016_St._Cloud,_Minnesota_knife_attack (<http://dbpedia.org/resource/2016_St._Cloud,_Minnesota_knife_attack>) --doo:nationality--> United_States (dor:United_States)
+  '8':
+    attributes:
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+      A._Arthur_Giddon: (birth year^='1909')
+    relationships:
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --dop:birthPlace--> New_York_City (dor:New_York_City)
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --doo:deathPlace--> United_States (dor:United_States)
+      - A._Arthur_Giddon (dor:A._Arthur_Giddon) --doo:nationality--> United_States (dor:United_States)
+  '9':
+    attributes:
+      A._B._Frost: (id^='Frost,+A.+B.+')
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+    relationships:
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --dop:birthPlace--> New_York_City (dor:New_York_City)
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --doo:deathPlace--> United_States (dor:United_States)
+      - A._B._Frost (dor:A._B._Frost) --doo:nationality--> United_States (dor:United_States)
+  '10':
+    attributes: {}
+    relationships:
+      - Abu_Musab_al-Zarqawi (dor:Abu_Musab_al-Zarqawi) --dop:birthPlace--> Zarqa (dor:Zarqa)
+      - Abu_Musab_al-Zarqawi (dor:Abu_Musab_al-Zarqawi) --doo:deathPlace--> Iraq (dor:Iraq)
+      - Abd_al-Karim_Qasim (dor:Abd_al-Karim_Qasim) --doo:nationality--> Iraq (dor:Iraq)
+attributes:
+  person: --alias^ (dop:alias)--> langString | --award^ (doo:award)--> Resource | --id^ (dop:id)--> int | --birth year^ (doo:birthYear)--> gYear | --float^ (dop:float)--> langString
+  Location: --age^ (dop:age)--> Resource | --anthem^ (doo:anthem)--> Resource | --width^ (dop:width)--> int | --designated other1 abbr^ (dop:designatedOther1Abbr)--> langString
+  settlement: --area (dop:area)--> double
+subgraph_id: 108
+relationships:
+  - military person --dop:birthPlace--> settlement
+  - military person --doo:deathPlace--> Location
+  - person --doo:nationality--> Location

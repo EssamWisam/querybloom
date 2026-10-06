@@ -1,0 +1,77 @@
+types:
+  city: doo:City
+  artist: doo:Artist
+  historic place: doo:HistoricPlace
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Woodward_Avenue_Baptist_Church (dor:Woodward_Avenue_Baptist_Church) --doo:location--> Detroit,_Michigan (<http://dbpedia.org/resource/Detroit,_Michigan>)
+      - '%22Frantic%22_Fay_Thomas (<http://dbpedia.org/resource/%22Frantic%22_Fay_Thomas>) --doo:deathPlace--> Detroit,_Michigan (<http://dbpedia.org/resource/Detroit,_Michigan>)'
+  '2':
+    attributes:
+      Long_Beach,_California: (date^='August 2010', area code^='562')
+    relationships:
+      - American_Legion_Post_No._560_(Long_Beach,_California) (<http://dbpedia.org/resource/American_Legion_Post_No._560_(Long_Beach,_California)>) --doo:location--> Long_Beach,_California (<http://dbpedia.org/resource/Long_Beach,_California>)
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --doo:deathPlace--> Long_Beach,_California (<http://dbpedia.org/resource/Long_Beach,_California>)'
+  '3':
+    attributes:
+      Long_Beach,_California: (date^='August 2010', area code^='562')
+    relationships:
+      - Breakers_Hotel_(Long_Beach,_California) (<http://dbpedia.org/resource/Breakers_Hotel_(Long_Beach,_California)>) --doo:location--> Long_Beach,_California (<http://dbpedia.org/resource/Long_Beach,_California>)
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --doo:deathPlace--> Long_Beach,_California (<http://dbpedia.org/resource/Long_Beach,_California>)'
+  '4':
+    attributes:
+      Long_Beach,_California: (date^='August 2010', area code^='562')
+    relationships:
+      - Leonie_Pray_House (dor:Leonie_Pray_House) --doo:location--> Long_Beach,_California (<http://dbpedia.org/resource/Long_Beach,_California>)
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --doo:deathPlace--> Long_Beach,_California (<http://dbpedia.org/resource/Long_Beach,_California>)'
+  '5':
+    attributes:
+      Paris: (date^='February 2019')
+      A-One_(graffiti_artist): (known for^='Graffiti art')
+    relationships:
+      - Wall_of_Love (dor:Wall_of_Love) --doo:location--> Paris (dor:Paris)
+      - A-One_(graffiti_artist) (<http://dbpedia.org/resource/A-One_(graffiti_artist)>) --doo:deathPlace--> Paris (dor:Paris)
+  '6':
+    attributes:
+      Pasadena,_California: (area code^='323,626,818')
+    relationships:
+      - Bekins_Storage_Co._Roof_Sign (dor:Bekins_Storage_Co._Roof_Sign) --doo:location--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+      - A._B._Frost (dor:A._B._Frost) --doo:deathPlace--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+  '7':
+    attributes:
+      Pasadena,_California: (area code^='323,626,818')
+    relationships:
+      - Bonnie_Court (dor:Bonnie_Court) --doo:location--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+      - A._B._Frost (dor:A._B._Frost) --doo:deathPlace--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+  '8':
+    attributes:
+      Pasadena,_California: (area code^='323,626,818')
+    relationships:
+      - Bryan_Court (dor:Bryan_Court) --doo:location--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+      - A._B._Frost (dor:A._B._Frost) --doo:deathPlace--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+  '9':
+    attributes: {}
+    relationships:
+      - 27_Pembridge_Gardens (dor:27_Pembridge_Gardens) --doo:location--> London (dor:London)
+      - A._E._Coleby (dor:A._E._Coleby) --doo:deathPlace--> London (dor:London)
+  '10':
+    attributes: {}
+    relationships:
+      - 55_Broadway (dor:55_Broadway) --doo:location--> London (dor:London)
+      - A._E._Coleby (dor:A._E._Coleby) --doo:deathPlace--> London (dor:London)
+attributes:
+  city: --date^ (dop:date)--> langString | --Apr high C^ (dop:aprHighC)--> double | --area code^ (doo:areaCode)--> string | --differentFrom (wwoo:differentFrom)--> Resource | --Aug precipitation inch^ (dop:augPrecipitationInch)--> double
+  artist: --known for^ (dop:knownFor)--> Resource | --awards^ (dop:awards)--> langString
+  historic place: --id^ (dop:id)--> langString | --designated other1 date^ (dop:designatedOther1Date)--> int
+subgraph_id: 313
+relationships:
+  - historic place --doo:location--> city
+  - artist --doo:deathPlace--> city

@@ -1,0 +1,115 @@
+types:
+  person: doo:Person
+  writer: doo:Writer
+  country: doo:Country
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bella_Shmurda: (birth name^='Abiola Ahmed Akinbiyi', birth place^='Okokomaiko, Lagos, Nigeria')
+      Mustapha_Adamu_Animashaun: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-writer-noun-1')
+    relationships:
+      - Mustapha_Adamu_Animashaun (dor:Mustapha_Adamu_Animashaun) --doo:movement--> Islamic (dor:Islamic)
+      - Mustapha_Adamu_Animashaun (dor:Mustapha_Adamu_Animashaun) --doo:deathPlace--> Nigeria (dor:Nigeria)
+      - 9ice (dor:9ice) --doo:hometown--> Nigeria (dor:Nigeria)
+      - 9ice (dor:9ice) --doo:associatedBand--> Bella_Shmurda (dor:Bella_Shmurda)
+  '2':
+    attributes:
+      Burna_Boy: (birth name^='Damini Ebunoluwa Ogulu', birth place^='Port Harcourt, Rivers State, Nigeria')
+      Mustapha_Adamu_Animashaun: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-writer-noun-1')
+    relationships:
+      - Mustapha_Adamu_Animashaun (dor:Mustapha_Adamu_Animashaun) --doo:movement--> Islamic (dor:Islamic)
+      - Mustapha_Adamu_Animashaun (dor:Mustapha_Adamu_Animashaun) --doo:deathPlace--> Nigeria (dor:Nigeria)
+      - 9ice (dor:9ice) --doo:hometown--> Nigeria (dor:Nigeria)
+      - 9ice (dor:9ice) --doo:associatedBand--> Burna_Boy (dor:Burna_Boy)
+  '3':
+    attributes:
+      Olamide: (birth name^='Olamide Gbenga Adedeji', birth place^='Bariga, Lagos State, Nigeria', caption^='Olamide performing at the first edition of his OLIC concert')
+      Mustapha_Adamu_Animashaun: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-writer-noun-1')
+    relationships:
+      - Mustapha_Adamu_Animashaun (dor:Mustapha_Adamu_Animashaun) --doo:movement--> Islamic (dor:Islamic)
+      - Mustapha_Adamu_Animashaun (dor:Mustapha_Adamu_Animashaun) --doo:deathPlace--> Nigeria (dor:Nigeria)
+      - 9ice (dor:9ice) --doo:hometown--> Nigeria (dor:Nigeria)
+      - 9ice (dor:9ice) --doo:associatedBand--> Olamide (dor:Olamide)
+  '4':
+    attributes:
+      Erasmo_Carlos: (birth name^='Erasmo Esteves', birth place^='http://dbpedia.org/resource/Rio_de_Janeiro', death date^='2022-11-22', caption^='Carlos in 2015')
+      Alberto_de_Oliveira: (death date^='1937-01-19')
+    relationships:
+      - Alberto_de_Oliveira (dor:Alberto_de_Oliveira) --doo:movement--> Parnassianism (dor:Parnassianism)
+      - Alberto_de_Oliveira (dor:Alberto_de_Oliveira) --doo:deathPlace--> Brazil (dor:Brazil)
+      - A_Bolha (dor:A_Bolha) --doo:hometown--> Brazil (dor:Brazil)
+      - A_Bolha (dor:A_Bolha) --doo:associatedBand--> Erasmo_Carlos (dor:Erasmo_Carlos)
+  '5':
+    attributes:
+      Gal_Costa: (birth name^='Maria da Graça Costa Penna Burgos', birth place^='http://dbpedia.org/resource/Bahia', death date^='2022-11-09', caption^='Costa in 1969')
+      Alberto_de_Oliveira: (death date^='1937-01-19')
+    relationships:
+      - Alberto_de_Oliveira (dor:Alberto_de_Oliveira) --doo:movement--> Parnassianism (dor:Parnassianism)
+      - Alberto_de_Oliveira (dor:Alberto_de_Oliveira) --doo:deathPlace--> Brazil (dor:Brazil)
+      - A_Bolha (dor:A_Bolha) --doo:hometown--> Brazil (dor:Brazil)
+      - A_Bolha (dor:A_Bolha) --doo:associatedBand--> Gal_Costa (dor:Gal_Costa)
+  '6':
+    attributes:
+      Raul_Seixas: (birth name^='Raul Santos Seixas', birth place^='Salvador, Bahia, Brazil', death date^='1989-08-21', caption^='1970.0')
+    relationships:
+      - Alberto_de_Oliveira (dor:Alberto_de_Oliveira) --doo:movement--> Parnassianism (dor:Parnassianism)
+      - Alberto_de_Oliveira (dor:Alberto_de_Oliveira) --doo:deathPlace--> Brazil (dor:Brazil)
+      - A_Bolha (dor:A_Bolha) --doo:hometown--> Brazil (dor:Brazil)
+      - A_Bolha (dor:A_Bolha) --doo:associatedBand--> Raul_Seixas (dor:Raul_Seixas)
+  '7':
+    attributes:
+      Pakistan: (alt^='Muhammad Ali Jinnah  served as Pakistan''s first Governor-General and the leader of the Pakistan Movement')
+      Ada_Jafri: (death date^='2015-03-12')
+      Maha_Ali_Kazmi: (birth place^='http://dbpedia.org/resource/Karachi', caption^='Maha Ali Kazmi Performing Sahibo in Acoustic Station')
+    relationships:
+      - Ada_Jafri (dor:Ada_Jafri) --doo:movement--> Urdu_literature (dor:Urdu_literature)
+      - Ada_Jafri (dor:Ada_Jafri) --doo:deathPlace--> Pakistan (dor:Pakistan)
+      - Aamir_Zaki (dor:Aamir_Zaki) --doo:hometown--> Pakistan (dor:Pakistan)
+      - Aamir_Zaki (dor:Aamir_Zaki) --doo:associatedBand--> Maha_Ali_Kazmi (dor:Maha_Ali_Kazmi)
+  '8':
+    attributes:
+      Pakistan: (alt^='Muhammad Ali Jinnah  served as Pakistan''s first Governor-General and the leader of the Pakistan Movement')
+      Atta_Shad: (death date^='1997-02-13')
+      Maha_Ali_Kazmi: (birth place^='http://dbpedia.org/resource/Karachi', caption^='Maha Ali Kazmi Performing Sahibo in Acoustic Station')
+    relationships:
+      - Atta_Shad (dor:Atta_Shad) --doo:movement--> Romantic_poetry (dor:Romantic_poetry)
+      - Atta_Shad (dor:Atta_Shad) --doo:deathPlace--> Pakistan (dor:Pakistan)
+      - Aamir_Zaki (dor:Aamir_Zaki) --doo:hometown--> Pakistan (dor:Pakistan)
+      - Aamir_Zaki (dor:Aamir_Zaki) --doo:associatedBand--> Maha_Ali_Kazmi (dor:Maha_Ali_Kazmi)
+  '9':
+    attributes:
+      Pakistan: (alt^='Muhammad Ali Jinnah  served as Pakistan''s first Governor-General and the leader of the Pakistan Movement')
+      Maha_Ali_Kazmi: (birth place^='http://dbpedia.org/resource/Karachi', caption^='Maha Ali Kazmi Performing Sahibo in Acoustic Station')
+      Fakir_Muhammad_Lashari: (death date^='1993-07-17')
+    relationships:
+      - Fakir_Muhammad_Lashari (dor:Fakir_Muhammad_Lashari) --doo:movement--> Progressivism (dor:Progressivism)
+      - Fakir_Muhammad_Lashari (dor:Fakir_Muhammad_Lashari) --doo:deathPlace--> Pakistan (dor:Pakistan)
+      - Aamir_Zaki (dor:Aamir_Zaki) --doo:hometown--> Pakistan (dor:Pakistan)
+      - Aamir_Zaki (dor:Aamir_Zaki) --doo:associatedBand--> Maha_Ali_Kazmi (dor:Maha_Ali_Kazmi)
+  '10':
+    attributes:
+      Ahmad_Shamlou: (death date^='2000-07-23')
+      Mohsen_Namjoo: (birth place^='Torbat-e Jam, Razavi Khorasan, Iran', caption^='Mohsen Namjoo in 2013', birth year^='1976')
+    relationships:
+      - Ahmad_Shamlou (dor:Ahmad_Shamlou) --doo:movement--> Contemporary_literature (dor:Contemporary_literature)
+      - Ahmad_Shamlou (dor:Ahmad_Shamlou) --doo:deathPlace--> Iran (dor:Iran)
+      - Abdi_Behravanfar (dor:Abdi_Behravanfar) --doo:hometown--> Iran (dor:Iran)
+      - Abdi_Behravanfar (dor:Abdi_Behravanfar) --doo:associatedBand--> Mohsen_Namjoo (dor:Mohsen_Namjoo)
+attributes:
+  person: --birth name^ (dop:birthName)--> langString | --birth place^ (dop:birthPlace)--> langString | --death date^ (dop:deathDate)--> gMonthDay | --relations^ (dop:relations)--> langString | --caption^ (dop:caption)--> langString | --birth year^ (doo:birthYear)--> gYear
+  writer: --reason^ (dop:reason)--> langString | --wordnet_type (dop:wordnet_type)--> Resource | --death date^ (doo:deathDate)--> date
+  country: --alt^ (dop:alt)--> langString
+  musical artist: --2a^ (dop:2a)--> langString | --spouse^ (dop:spouse)--> int
+subgraph_id: 341
+relationships:
+  - writer --doo:movement--> music genre
+  - writer --doo:deathPlace--> country
+  - musical artist --doo:hometown--> country
+  - musical artist --doo:associatedBand--> person

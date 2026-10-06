@@ -1,0 +1,80 @@
+types:
+  park: doo:Park
+  Location: doo:Location
+  wrestling event: doo:WrestlingEvent
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      San_Jose,_California: '(Apr high F^=''70'', footer^=''Clockwise: Five Wounds Portuguese National Church, Tết Parade, Japanese American Museum of San Jose, Sikh Gurdwara of San Jose'')'
+    relationships:
+      - Battle_in_the_Valley (dor:Battle_in_the_Valley) --doo:location--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+      - Alum_Rock_Park (dor:Alum_Rock_Park) --dop:operator--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+  '2':
+    attributes:
+      San_Jose,_California: '(Apr high F^=''70'', footer^=''Clockwise: Five Wounds Portuguese National Church, Tết Parade, Japanese American Museum of San Jose, Sikh Gurdwara of San Jose'')'
+    relationships:
+      - ChickFight__Shimmer_Women_Athletes_Volume_71__1 (dor:ChickFight__Shimmer_Women_Athletes_Volume_71__1) --doo:location--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+      - Alum_Rock_Park (dor:Alum_Rock_Park) --dop:operator--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+  '3':
+    attributes:
+      San_Jose,_California: '(Apr high F^=''70'', footer^=''Clockwise: Five Wounds Portuguese National Church, Tết Parade, Japanese American Museum of San Jose, Sikh Gurdwara of San Jose'')'
+    relationships:
+      - List_of_Evolve_Wrestling_events__Evolve_39__1 (dor:List_of_Evolve_Wrestling_events__Evolve_39__1) --doo:location--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+      - Alum_Rock_Park (dor:Alum_Rock_Park) --dop:operator--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+  '4':
+    attributes:
+      Dearborn,_Michigan: (Apr high F^='58.3')
+    relationships:
+      - Glory_By_Honor_XV (dor:Glory_By_Honor_XV) --doo:location--> Dearborn,_Michigan (<http://dbpedia.org/resource/Dearborn,_Michigan>)
+      - Camp_Dearborn (dor:Camp_Dearborn) --dop:operator--> Dearborn,_Michigan (<http://dbpedia.org/resource/Dearborn,_Michigan>)
+  '5':
+    attributes:
+      Las_Vegas: (Apr high F^='78.5')
+      UWF_Blackjack_Brawl: (caption^='Promotional poster featuring the UWF World Heavyweight Champion Steve Williams and Sid Vicious')
+    relationships:
+      - UWF_Blackjack_Brawl (dor:UWF_Blackjack_Brawl) --doo:location--> Las_Vegas (dor:Las_Vegas)
+      - Centennial_Hills_Park (dor:Centennial_Hills_Park) --dop:operator--> Las_Vegas (dor:Las_Vegas)
+  '6':
+    attributes:
+      Denver: (Apr high F^='62.5')
+    relationships:
+      - Clash_of_the_Champions__XXXIII__1 (dor:Clash_of_the_Champions__XXXIII__1) --doo:location--> Denver (dor:Denver)
+      - Confluence_Park (dor:Confluence_Park) --dop:operator--> Denver (dor:Denver)
+  '7':
+    attributes:
+      Denver: (Apr high F^='62.5')
+    relationships:
+      - Spring_Stampede_(1998) (<http://dbpedia.org/resource/Spring_Stampede_(1998)>) --doo:location--> Denver (dor:Denver)
+      - Confluence_Park (dor:Confluence_Park) --dop:operator--> Denver (dor:Denver)
+  '8':
+    attributes:
+      Denver: (Apr high F^='62.5')
+      Vengeance_(2003): (caption^='Promotional poster featuring The Undertaker')
+    relationships:
+      - Vengeance_(2003) (<http://dbpedia.org/resource/Vengeance_(2003)>) --doo:location--> Denver (dor:Denver)
+      - Confluence_Park (dor:Confluence_Park) --dop:operator--> Denver (dor:Denver)
+  '9':
+    attributes:
+      Glasgow: '(footer^=''Clockwise, from upper left: The People''''s Palace is an example of 19th-century architecture within the city centre of Glasgow. The People''''s Palace is a Category A listed building. The SEC Armadillo ope...'')'
+      WWA_Retribution: (caption^='http://dbpedia.org/resource/SEC_Centre')
+    relationships:
+      - WWA_Retribution (dor:WWA_Retribution) --doo:location--> Glasgow (dor:Glasgow)
+      - Dams_to_Darnley_Country_Park (dor:Dams_to_Darnley_Country_Park) --dop:operator--> Glasgow (dor:Glasgow)
+  '10':
+    attributes:
+      In_Your_House_16:_Canadian_Stampede: (caption^='Promotional poster featuring Owen Hart, Bret Hart, and The British Bulldog')
+    relationships:
+      - In_Your_House_16:_Canadian_Stampede (<http://dbpedia.org/resource/In_Your_House_16:_Canadian_Stampede>) --doo:location--> Calgary (dor:Calgary)
+      - Edworthy_Park (dor:Edworthy_Park) --dop:operator--> Calgary (dor:Calgary)
+attributes:
+  Location: --affiliation^ (dop:affiliation)--> Resource | --Apr high F^ (dop:aprHighF)--> int | --arc-angleA^ (dop:arcAnglea)--> int | --Apr high C^ (dop:aprHighC)--> int | --age^ (dop:age)--> langString | --religion^ (doo:religion)--> Resource | --building start date^ (doo:buildingStartDate)--> string | --footer^ (dop:footer)--> langString
+  wrestling event: --caption^ (dop:caption)--> langString
+subgraph_id: 8
+relationships:
+  - wrestling event --doo:location--> Location
+  - park --dop:operator--> Location

@@ -1,0 +1,100 @@
+types:
+  book: doo:Book
+  writer: doo:Writer
+  Location: doo:Location
+  military unit: doo:MilitaryUnit
+  person function: doo:PersonFunction
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Voltaire (dor:Voltaire) --doo:restingPlace--> Paris (dor:Paris)
+      - 325th_Security_Division_(Wehrmacht) (<http://dbpedia.org/resource/325th_Security_Division_(Wehrmacht)>) --dop:garrison--> Paris (dor:Paris)
+      - Commentaires_sur_Corneille (dor:Commentaires_sur_Corneille) --doo:author--> Voltaire (dor:Voltaire)
+      - 325th_Security_Division_(Wehrmacht) (<http://dbpedia.org/resource/325th_Security_Division_(Wehrmacht)>) --doo:battle--> Liberation_of_Paris (dor:Liberation_of_Paris)
+      - Commentaires_sur_Corneille (dor:Commentaires_sur_Corneille) --doo:nonFictionSubject--> Theatre (dor:Theatre)
+  '2':
+    attributes: {}
+    relationships:
+      - Voltaire (dor:Voltaire) --doo:restingPlace--> Paris (dor:Paris)
+      - 46th_Infantry_Regiment_(France) (<http://dbpedia.org/resource/46th_Infantry_Regiment_(France)>) --dop:garrison--> Paris (dor:Paris)
+      - Commentaires_sur_Corneille (dor:Commentaires_sur_Corneille) --doo:author--> Voltaire (dor:Voltaire)
+      - 46th_Infantry_Regiment_(France) (<http://dbpedia.org/resource/46th_Infantry_Regiment_(France)>) --doo:battle--> French_invasion_of_Russia (dor:French_invasion_of_Russia)
+      - Commentaires_sur_Corneille (dor:Commentaires_sur_Corneille) --doo:nonFictionSubject--> Theatre (dor:Theatre)
+  '3':
+    attributes: {}
+    relationships:
+      - Voltaire (dor:Voltaire) --doo:restingPlace--> Paris (dor:Paris)
+      - 46th_Infantry_Regiment_(France) (<http://dbpedia.org/resource/46th_Infantry_Regiment_(France)>) --dop:garrison--> Paris (dor:Paris)
+      - Commentaires_sur_Corneille (dor:Commentaires_sur_Corneille) --doo:author--> Voltaire (dor:Voltaire)
+      - 46th_Infantry_Regiment_(France) (<http://dbpedia.org/resource/46th_Infantry_Regiment_(France)>) --doo:battle--> World_War_I (dor:World_War_I)
+      - Commentaires_sur_Corneille (dor:Commentaires_sur_Corneille) --doo:nonFictionSubject--> Theatre (dor:Theatre)
+  '4':
+    attributes:
+      Moscow: (url^='https://web.archive.org/web/20200623093543/https:/strelkamag.com/ru/article/moscow-housing-map')
+    relationships:
+      - Konstantin_Stanislavski (dor:Konstantin_Stanislavski) --doo:restingPlace--> Moscow (dor:Moscow)
+      - 1st_Fighter_Air_Defense_Army (dor:1st_Fighter_Air_Defense_Army) --dop:garrison--> Moscow (dor:Moscow)
+      - Creating_a_Role (dor:Creating_a_Role) --doo:author--> Konstantin_Stanislavski (dor:Konstantin_Stanislavski)
+      - 1st_Fighter_Air_Defense_Army (dor:1st_Fighter_Air_Defense_Army) --doo:battle--> World_War_II (dor:World_War_II)
+      - Creating_a_Role (dor:Creating_a_Role) --doo:nonFictionSubject--> Acting (dor:Acting)
+  '5':
+    attributes:
+      Moscow: (url^='https://web.archive.org/web/20200623093543/https:/strelkamag.com/ru/article/moscow-housing-map')
+    relationships:
+      - Konstantin_Stanislavski (dor:Konstantin_Stanislavski) --doo:restingPlace--> Moscow (dor:Moscow)
+      - 1st_Guards_Anti-Aircraft_Artillery_Division (dor:1st_Guards_Anti-Aircraft_Artillery_Division) --dop:garrison--> Moscow (dor:Moscow)
+      - Creating_a_Role (dor:Creating_a_Role) --doo:author--> Konstantin_Stanislavski (dor:Konstantin_Stanislavski)
+      - 1st_Guards_Anti-Aircraft_Artillery_Division (dor:1st_Guards_Anti-Aircraft_Artillery_Division) --doo:battle--> World_War_II (dor:World_War_II)
+      - Creating_a_Role (dor:Creating_a_Role) --doo:nonFictionSubject--> Acting (dor:Acting)
+  '6':
+    attributes:
+      Moscow: (url^='https://web.archive.org/web/20200623093543/https:/strelkamag.com/ru/article/moscow-housing-map')
+    relationships:
+      - Konstantin_Stanislavski (dor:Konstantin_Stanislavski) --doo:restingPlace--> Moscow (dor:Moscow)
+      - 38th_Guards_Communications_Brigade (dor:38th_Guards_Communications_Brigade) --dop:garrison--> Moscow (dor:Moscow)
+      - Creating_a_Role (dor:Creating_a_Role) --doo:author--> Konstantin_Stanislavski (dor:Konstantin_Stanislavski)
+      - 38th_Guards_Communications_Brigade (dor:38th_Guards_Communications_Brigade) --doo:battle--> Insurgency_in_the_North_Caucasus (dor:Insurgency_in_the_North_Caucasus)
+      - Creating_a_Role (dor:Creating_a_Role) --doo:nonFictionSubject--> Acting (dor:Acting)
+  '7':
+    attributes: {}
+    relationships:
+      - Leo_Tolstoy (dor:Leo_Tolstoy) --doo:restingPlace--> Tula,_Russia (<http://dbpedia.org/resource/Tula,_Russia>)
+      - 106th_Guards_Airborne_Division (dor:106th_Guards_Airborne_Division) --dop:garrison--> Tula,_Russia (<http://dbpedia.org/resource/Tula,_Russia>)
+      - The_Kingdom_of_God_Is_Within_You (dor:The_Kingdom_of_God_Is_Within_You) --doo:author--> Leo_Tolstoy (dor:Leo_Tolstoy)
+      - 106th_Guards_Airborne_Division (dor:106th_Guards_Airborne_Division) --doo:battle--> First_Chechen_War (dor:First_Chechen_War)
+      - The_Kingdom_of_God_Is_Within_You (dor:The_Kingdom_of_God_Is_Within_You) --doo:nonFictionSubject--> Philosophy (dor:Philosophy)
+  '8':
+    attributes: {}
+    relationships:
+      - Leo_Tolstoy (dor:Leo_Tolstoy) --doo:restingPlace--> Tula,_Russia (<http://dbpedia.org/resource/Tula,_Russia>)
+      - 106th_Guards_Airborne_Division (dor:106th_Guards_Airborne_Division) --dop:garrison--> Tula,_Russia (<http://dbpedia.org/resource/Tula,_Russia>)
+      - The_Kingdom_of_God_Is_Within_You (dor:The_Kingdom_of_God_Is_Within_You) --doo:author--> Leo_Tolstoy (dor:Leo_Tolstoy)
+      - 106th_Guards_Airborne_Division (dor:106th_Guards_Airborne_Division) --doo:battle--> Second_Chechen_War (dor:Second_Chechen_War)
+      - The_Kingdom_of_God_Is_Within_You (dor:The_Kingdom_of_God_Is_Within_You) --doo:nonFictionSubject--> Philosophy (dor:Philosophy)
+  '9':
+    attributes: {}
+    relationships:
+      - Leo_Tolstoy (dor:Leo_Tolstoy) --doo:restingPlace--> Tula,_Russia (<http://dbpedia.org/resource/Tula,_Russia>)
+      - 106th_Guards_Airborne_Division (dor:106th_Guards_Airborne_Division) --dop:garrison--> Tula,_Russia (<http://dbpedia.org/resource/Tula,_Russia>)
+      - The_Kingdom_of_God_Is_Within_You (dor:The_Kingdom_of_God_Is_Within_You) --doo:author--> Leo_Tolstoy (dor:Leo_Tolstoy)
+      - 106th_Guards_Airborne_Division (dor:106th_Guards_Airborne_Division) --doo:battle--> Soviet–Afghan_War (<http://dbpedia.org/resource/Soviet–Afghan_War>)
+      - The_Kingdom_of_God_Is_Within_You (dor:The_Kingdom_of_God_Is_Within_You) --doo:nonFictionSubject--> Philosophy (dor:Philosophy)
+attributes:
+  book: --release date^ (doo:releaseDate)--> date | --2p^ (dop:2p)--> int
+  writer: --source^ (dop:source)--> langString | --parents^ (dop:parents)--> langString
+  Location: --last^ (dop:last)--> langString | --building start date^ (doo:buildingStartDate)--> string | --founder^ (doo:founder)--> Resource | --url^ (dop:url)--> Resource
+  military conflict: --2y^ (dop:2y)--> int
+subgraph_id: 906
+relationships:
+  - writer --doo:restingPlace--> Location
+  - military unit --dop:garrison--> Location
+  - book --doo:author--> writer
+  - military unit --doo:battle--> military conflict
+  - book --doo:nonFictionSubject--> person function

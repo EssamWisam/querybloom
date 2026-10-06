@@ -1,0 +1,93 @@
+types:
+  book: doo:Book
+  Location: doo:Location
+  automobile: doo:Automobile
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Soviet_Union: (leader^='Georgy Malenkov')
+      A_History_of_Vodka: (author^='http://dbpedia.org/resource/William_Pokhlyobkin')
+    relationships:
+      - A_History_of_Vodka (dor:A_History_of_Vodka) --doo:country--> Soviet_Union (dor:Soviet_Union)
+      - Aleko (dor:Aleko) --dop:assembly--> Soviet_Union (dor:Soviet_Union)
+      - Battle_of_Määritsa (<http://dbpedia.org/resource/Battle_of_Määritsa>) --doo:isPartOfMilitaryConflict--> Soviet_Union (dor:Soviet_Union)
+  '2':
+    attributes:
+      Soviet_Union: (leader^='Georgy Malenkov')
+      Aelita_(novel): (author^='http://dbpedia.org/resource/Aleksey_Nikolayevich_Tolstoy')
+    relationships:
+      - Aelita_(novel) (<http://dbpedia.org/resource/Aelita_(novel)>) --doo:country--> Soviet_Union (dor:Soviet_Union)
+      - Aleko (dor:Aleko) --dop:assembly--> Soviet_Union (dor:Soviet_Union)
+      - Battle_of_Määritsa (<http://dbpedia.org/resource/Battle_of_Määritsa>) --doo:isPartOfMilitaryConflict--> Soviet_Union (dor:Soviet_Union)
+  '3':
+    attributes:
+      Soviet_Union: (leader^='Georgy Malenkov')
+      An_Incident_at_Krechetovka_Station: (author^='http://dbpedia.org/resource/Aleksandr_Solzhenitsyn')
+    relationships:
+      - An_Incident_at_Krechetovka_Station (dor:An_Incident_at_Krechetovka_Station) --doo:country--> Soviet_Union (dor:Soviet_Union)
+      - Aleko (dor:Aleko) --dop:assembly--> Soviet_Union (dor:Soviet_Union)
+      - Battle_of_Määritsa (<http://dbpedia.org/resource/Battle_of_Määritsa>) --doo:isPartOfMilitaryConflict--> Soviet_Union (dor:Soviet_Union)
+  '4':
+    attributes:
+      Bengal_Nights: (author^='http://dbpedia.org/resource/Mircea_Eliade')
+    relationships:
+      - Bengal_Nights (dor:Bengal_Nights) --doo:country--> Romania (dor:Romania)
+      - ARO_10 (dor:ARO_10) --dop:assembly--> Romania (dor:Romania)
+      - Battle_of_Karanovasa (dor:Battle_of_Karanovasa) --doo:isPartOfMilitaryConflict--> Romania (dor:Romania)
+  '5':
+    attributes:
+      Cel_mai_iubit_dintre_pământeni: (author^='http://dbpedia.org/resource/Marin_Preda')
+    relationships:
+      - Cel_mai_iubit_dintre_pământeni (<http://dbpedia.org/resource/Cel_mai_iubit_dintre_pământeni>) --doo:country--> Romania (dor:Romania)
+      - ARO_10 (dor:ARO_10) --dop:assembly--> Romania (dor:Romania)
+      - Battle_of_Karanovasa (dor:Battle_of_Karanovasa) --doo:isPartOfMilitaryConflict--> Romania (dor:Romania)
+  '6':
+    attributes:
+      Childhood_Memories_(book): (author^='http://dbpedia.org/resource/Ion_Creangă')
+    relationships:
+      - Childhood_Memories_(book) (<http://dbpedia.org/resource/Childhood_Memories_(book)>) --doo:country--> Romania (dor:Romania)
+      - ARO_10 (dor:ARO_10) --dop:assembly--> Romania (dor:Romania)
+      - Battle_of_Karanovasa (dor:Battle_of_Karanovasa) --doo:isPartOfMilitaryConflict--> Romania (dor:Romania)
+  '7':
+    attributes:
+      2_States:_The_Story_of_My_Marriage: (author^='http://dbpedia.org/resource/Chetan_Bhagat')
+    relationships:
+      - 2_States:_The_Story_of_My_Marriage (<http://dbpedia.org/resource/2_States:_The_Story_of_My_Marriage>) --doo:country--> India (dor:India)
+      - Ashok_Leyland_STiLE (dor:Ashok_Leyland_STiLE) --dop:assembly--> India (dor:India)
+      - Operation_Puttur (dor:Operation_Puttur) --doo:isPartOfMilitaryConflict--> India (dor:India)
+  '8':
+    attributes:
+      400_Days_(novel): (author^='http://dbpedia.org/resource/Chetan_Bhagat')
+    relationships:
+      - 400_Days_(novel) (<http://dbpedia.org/resource/400_Days_(novel)>) --doo:country--> India (dor:India)
+      - Ashok_Leyland_STiLE (dor:Ashok_Leyland_STiLE) --dop:assembly--> India (dor:India)
+      - Operation_Puttur (dor:Operation_Puttur) --doo:isPartOfMilitaryConflict--> India (dor:India)
+  '9':
+    attributes:
+      A_Dominant_Character: (author^='http://dbpedia.org/resource/Samanth_Subramanian')
+    relationships:
+      - A_Dominant_Character (dor:A_Dominant_Character) --doo:country--> India (dor:India)
+      - Ashok_Leyland_STiLE (dor:Ashok_Leyland_STiLE) --dop:assembly--> India (dor:India)
+      - Operation_Puttur (dor:Operation_Puttur) --doo:isPartOfMilitaryConflict--> India (dor:India)
+  '10':
+    attributes: {}
+    relationships:
+      - 99_Francs__99_Francs__1 (dor:99_Francs__99_Francs__1) --doo:country--> France (dor:France)
+      - Automobiles_Chatenet (dor:Automobiles_Chatenet) --dop:assembly--> France (dor:France)
+      - Battle_of_Dormans (dor:Battle_of_Dormans) --doo:isPartOfMilitaryConflict--> France (dor:France)
+attributes:
+  book: --author^ (dop:author)--> Resource
+  Location: --leader^ (dop:leader)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> double | --Aug high F^ (dop:augHighF)--> double | --Aug high C^ (dop:augHighC)--> double | --founder^ (dop:founder)--> langString | --bgcolor^ (dop:bgcolor)--> langString | --Apr high F^ (dop:aprHighF)--> int | --architecture^ (dop:architecture)--> langString | --arc-angleA^ (dop:arcAnglea)--> int
+  automobile: --designer company^ (doo:designCompany)--> Resource
+  military conflict: --width^ (dop:width)--> int
+subgraph_id: 442
+relationships:
+  - book --doo:country--> Location
+  - automobile --dop:assembly--> Location
+  - military conflict --doo:isPartOfMilitaryConflict--> Location

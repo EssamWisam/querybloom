@@ -1,0 +1,125 @@
+types:
+  city: doo:City
+  hockey team: doo:HockeyTeam
+  sports team: doo:SportsTeam
+  soccer league: doo:SoccerLeague
+  ice hockey league: doo:IceHockeyLeague
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Czech_Extraliga: (founding year^='1993')
+      Mladá_Boleslav: (UTC offset^='+1', area total (km2)^='28.9', area total km^='28.9')
+    relationships:
+      - BK_Mladá_Boleslav (<http://dbpedia.org/resource/BK_Mladá_Boleslav>) --dop:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - BK_Mladá_Boleslav (<http://dbpedia.org/resource/BK_Mladá_Boleslav>) --dop:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - BK_Mladá_Boleslav (<http://dbpedia.org/resource/BK_Mladá_Boleslav>) --doo:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - BK_Mladá_Boleslav (<http://dbpedia.org/resource/BK_Mladá_Boleslav>) --doo:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - BK_Mladá_Boleslav (<http://dbpedia.org/resource/BK_Mladá_Boleslav>) --dop:city--> Mladá_Boleslav (<http://dbpedia.org/resource/Mladá_Boleslav>)
+  '2':
+    attributes:
+      Czech_Extraliga: (founding year^='1993')
+      Mladá_Boleslav: (UTC offset^='+1', area total (km2)^='28.9', area total km^='28.9')
+    relationships:
+      - BK_Mladá_Boleslav (<http://dbpedia.org/resource/BK_Mladá_Boleslav>) --dop:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - HC_Bílí_Tygři_Liberec (<http://dbpedia.org/resource/HC_Bílí_Tygři_Liberec>) --dop:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - HC_Bílí_Tygři_Liberec (<http://dbpedia.org/resource/HC_Bílí_Tygři_Liberec>) --doo:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - BK_Mladá_Boleslav (<http://dbpedia.org/resource/BK_Mladá_Boleslav>) --doo:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - BK_Mladá_Boleslav (<http://dbpedia.org/resource/BK_Mladá_Boleslav>) --dop:city--> Mladá_Boleslav (<http://dbpedia.org/resource/Mladá_Boleslav>)
+  '3':
+    attributes:
+      Czech_Extraliga: (founding year^='1993')
+      Mladá_Boleslav: (UTC offset^='+1', area total (km2)^='28.9', area total km^='28.9')
+    relationships:
+      - BK_Mladá_Boleslav (<http://dbpedia.org/resource/BK_Mladá_Boleslav>) --dop:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - HC_Dynamo_Pardubice (dor:HC_Dynamo_Pardubice) --dop:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - HC_Dynamo_Pardubice (dor:HC_Dynamo_Pardubice) --doo:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - BK_Mladá_Boleslav (<http://dbpedia.org/resource/BK_Mladá_Boleslav>) --doo:league--> Czech_Extraliga (dor:Czech_Extraliga)
+      - BK_Mladá_Boleslav (<http://dbpedia.org/resource/BK_Mladá_Boleslav>) --dop:city--> Mladá_Boleslav (<http://dbpedia.org/resource/Mladá_Boleslav>)
+  '4':
+    attributes:
+      Berlin: (Aug precipitation days^='7', Apr record low C^='-6.7', UTC offset^='+01:00', area total (km2)^='891.3', area total km^='891.3', Aug high C^='22.8')
+      Deutsche_Eishockey_Liga: (founding year^='1994')
+    relationships:
+      - BSC_Preussen (dor:BSC_Preussen) --dop:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - BSC_Preussen (dor:BSC_Preussen) --dop:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - BSC_Preussen (dor:BSC_Preussen) --doo:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - BSC_Preussen (dor:BSC_Preussen) --doo:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - BSC_Preussen (dor:BSC_Preussen) --dop:city--> Berlin (dor:Berlin)
+  '5':
+    attributes:
+      Berlin: (Aug precipitation days^='7', Apr record low C^='-6.7', UTC offset^='+01:00', area total (km2)^='891.3', area total km^='891.3', Aug high C^='22.8')
+      Deutsche_Eishockey_Liga: (founding year^='1994')
+    relationships:
+      - BSC_Preussen (dor:BSC_Preussen) --dop:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - Löwen_Frankfurt (<http://dbpedia.org/resource/Löwen_Frankfurt>) --dop:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - Löwen_Frankfurt (<http://dbpedia.org/resource/Löwen_Frankfurt>) --doo:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - BSC_Preussen (dor:BSC_Preussen) --doo:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - BSC_Preussen (dor:BSC_Preussen) --dop:city--> Berlin (dor:Berlin)
+  '6':
+    attributes:
+      Berlin: (Aug precipitation days^='7', Apr record low C^='-6.7', UTC offset^='+01:00', area total (km2)^='891.3', area total km^='891.3', Aug high C^='22.8')
+      Deutsche_Eishockey_Liga: (founding year^='1994')
+    relationships:
+      - BSC_Preussen (dor:BSC_Preussen) --dop:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - Maddogs_München (<http://dbpedia.org/resource/Maddogs_München>) --dop:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - Maddogs_München (<http://dbpedia.org/resource/Maddogs_München>) --doo:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - BSC_Preussen (dor:BSC_Preussen) --doo:league--> Deutsche_Eishockey_Liga (dor:Deutsche_Eishockey_Liga)
+      - BSC_Preussen (dor:BSC_Preussen) --dop:city--> Berlin (dor:Berlin)
+  '7':
+    attributes:
+      Campbell_River,_British_Columbia: (Aug precipitation days^='9.3', Apr record low C^='-5.6', UTC offset^='-8', area total (km2)^='143.12', area total km^='143.12', Aug high C^='23.3')
+      Vancouver_Island_Junior_Hockey_League: (founding year^='1965')
+    relationships:
+      - Campbell_River_Storm (dor:Campbell_River_Storm) --dop:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Campbell_River_Storm (dor:Campbell_River_Storm) --dop:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Campbell_River_Storm (dor:Campbell_River_Storm) --doo:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Campbell_River_Storm (dor:Campbell_River_Storm) --doo:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Campbell_River_Storm (dor:Campbell_River_Storm) --dop:city--> Campbell_River,_British_Columbia (<http://dbpedia.org/resource/Campbell_River,_British_Columbia>)
+  '8':
+    attributes:
+      Campbell_River,_British_Columbia: (Aug precipitation days^='9.3', Apr record low C^='-5.6', UTC offset^='-8', area total (km2)^='143.12', area total km^='143.12', Aug high C^='23.3')
+      Vancouver_Island_Junior_Hockey_League: (founding year^='1965')
+    relationships:
+      - Campbell_River_Storm (dor:Campbell_River_Storm) --dop:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Comox_Valley_Glacier_Kings (dor:Comox_Valley_Glacier_Kings) --dop:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Comox_Valley_Glacier_Kings (dor:Comox_Valley_Glacier_Kings) --doo:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Campbell_River_Storm (dor:Campbell_River_Storm) --doo:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Campbell_River_Storm (dor:Campbell_River_Storm) --dop:city--> Campbell_River,_British_Columbia (<http://dbpedia.org/resource/Campbell_River,_British_Columbia>)
+  '9':
+    attributes:
+      Campbell_River,_British_Columbia: (Aug precipitation days^='9.3', Apr record low C^='-5.6', UTC offset^='-8', area total (km2)^='143.12', area total km^='143.12', Aug high C^='23.3')
+      Vancouver_Island_Junior_Hockey_League: (founding year^='1965')
+    relationships:
+      - Campbell_River_Storm (dor:Campbell_River_Storm) --dop:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Kerry_Park_Islanders (dor:Kerry_Park_Islanders) --dop:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Kerry_Park_Islanders (dor:Kerry_Park_Islanders) --doo:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Campbell_River_Storm (dor:Campbell_River_Storm) --doo:league--> Vancouver_Island_Junior_Hockey_League (dor:Vancouver_Island_Junior_Hockey_League)
+      - Campbell_River_Storm (dor:Campbell_River_Storm) --dop:city--> Campbell_River,_British_Columbia (<http://dbpedia.org/resource/Campbell_River,_British_Columbia>)
+  '10':
+    attributes:
+      Castlegar,_British_Columbia: (UTC offset^='−08:00', area total (km2)^='19.58', area total km^='19.58')
+      Kootenay_International_Junior_Hockey_League: (founding year^='1966')
+    relationships:
+      - Castlegar_Rebels (dor:Castlegar_Rebels) --dop:league--> Kootenay_International_Junior_Hockey_League (dor:Kootenay_International_Junior_Hockey_League)
+      - 100_Mile_House_Wranglers (dor:100_Mile_House_Wranglers) --dop:league--> Kootenay_International_Junior_Hockey_League (dor:Kootenay_International_Junior_Hockey_League)
+      - 100_Mile_House_Wranglers (dor:100_Mile_House_Wranglers) --doo:league--> Kootenay_International_Junior_Hockey_League (dor:Kootenay_International_Junior_Hockey_League)
+      - Castlegar_Rebels (dor:Castlegar_Rebels) --doo:league--> Kootenay_International_Junior_Hockey_League (dor:Kootenay_International_Junior_Hockey_League)
+      - Castlegar_Rebels (dor:Castlegar_Rebels) --dop:city--> Castlegar,_British_Columbia (<http://dbpedia.org/resource/Castlegar,_British_Columbia>)
+attributes:
+  city: --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --Apr record low C^ (dop:aprRecordLowC)--> double | --Aug low F^ (dop:augLowF)--> double | --UTC offset^ (doo:utcOffset)--> string | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --area total km^ (dop:areaTotalKm)--> int | --Aug high C^ (dop:augHighC)--> double
+  hockey team: --last^ (dop:last)--> langString
+  sports team: --nickname^ (dop:nickname)--> langString
+  soccer league: --founding year^ (doo:foundingYear)--> gYear
+subgraph_id: 584
+relationships:
+  - hockey team --dop:league--> soccer league
+  - sports team --dop:league--> soccer league
+  - sports team --doo:league--> soccer league
+  - hockey team --doo:league--> ice hockey league
+  - hockey team --dop:city--> city

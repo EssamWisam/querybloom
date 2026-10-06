@@ -1,0 +1,121 @@
+types:
+  song: doo:Song
+  album: doo:Album
+  person: doo:Person
+  single: doo:Single
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+  dorcm: http://dbpedia.org/resource/C'mon/
+instances:
+  '1':
+    attributes:
+      Bonnie_Tyler: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Dieter_Bohlen: (subject='http://dbpedia.org/resource/Category:1954_births')
+      21st_Century_(Blue_System_album): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', subject='http://dbpedia.org/resource/Category:1994_albums')
+    relationships:
+      - We_Take_the_Chance (dor:We_Take_the_Chance) --doo:composer--> Dieter_Bohlen (dor:Dieter_Bohlen)
+      - We_Take_the_Chance (dor:We_Take_the_Chance) --doo:type--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+      - Against_the_Wind_(Bonnie_Tyler_song) (<http://dbpedia.org/resource/Against_the_Wind_(Bonnie_Tyler_song)>) --doo:writer--> Dieter_Bohlen (dor:Dieter_Bohlen)
+      - 21st_Century_(Blue_System_album) (<http://dbpedia.org/resource/21st_Century_(Blue_System_album)>) --dop:allWriting--> Dieter_Bohlen (dor:Dieter_Bohlen)
+      - Against_the_Wind_(Bonnie_Tyler_song) (<http://dbpedia.org/resource/Against_the_Wind_(Bonnie_Tyler_song)>) --dop:artist--> Bonnie_Tyler (dor:Bonnie_Tyler)
+  '2':
+    attributes:
+      Dieter_Bohlen: (subject='http://dbpedia.org/resource/Category:1954_births')
+      Daniel_Schuhmacher: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      21st_Century_(Blue_System_album): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', subject='http://dbpedia.org/resource/Category:1994_albums')
+    relationships:
+      - We_Take_the_Chance (dor:We_Take_the_Chance) --doo:composer--> Dieter_Bohlen (dor:Dieter_Bohlen)
+      - We_Take_the_Chance (dor:We_Take_the_Chance) --doo:type--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+      - Anything_but_Love_(song) (<http://dbpedia.org/resource/Anything_but_Love_(song)>) --doo:writer--> Dieter_Bohlen (dor:Dieter_Bohlen)
+      - 21st_Century_(Blue_System_album) (<http://dbpedia.org/resource/21st_Century_(Blue_System_album)>) --dop:allWriting--> Dieter_Bohlen (dor:Dieter_Bohlen)
+      - Anything_but_Love_(song) (<http://dbpedia.org/resource/Anything_but_Love_(song)>) --dop:artist--> Daniel_Schuhmacher (dor:Daniel_Schuhmacher)
+  '3':
+    attributes:
+      Dieter_Bohlen: (subject='http://dbpedia.org/resource/Category:1954_births')
+      Alexander_Klaws: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Alexander_Klaws')
+      21st_Century_(Blue_System_album): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', subject='http://dbpedia.org/resource/Category:1994_albums')
+    relationships:
+      - We_Take_the_Chance (dor:We_Take_the_Chance) --doo:composer--> Dieter_Bohlen (dor:Dieter_Bohlen)
+      - We_Take_the_Chance (dor:We_Take_the_Chance) --doo:type--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+      - Behind_the_Sun_(Alexander_Klaws_song) (<http://dbpedia.org/resource/Behind_the_Sun_(Alexander_Klaws_song)>) --doo:writer--> Dieter_Bohlen (dor:Dieter_Bohlen)
+      - 21st_Century_(Blue_System_album) (<http://dbpedia.org/resource/21st_Century_(Blue_System_album)>) --dop:allWriting--> Dieter_Bohlen (dor:Dieter_Bohlen)
+      - Behind_the_Sun_(Alexander_Klaws_song) (<http://dbpedia.org/resource/Behind_the_Sun_(Alexander_Klaws_song)>) --dop:artist--> Alexander_Klaws (dor:Alexander_Klaws)
+  '4':
+    attributes:
+      Syd_Barrett: (subject='http://dbpedia.org/resource/Category:1946_births')
+      David_Gilmour: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:1996_Rock_and_Roll_Hall_of_Fame')
+      Barrett_(album): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Album_ratings', subject='http://dbpedia.org/resource/Category:1970_albums')
+    relationships:
+      - Interstellar_Overdrive (dor:Interstellar_Overdrive) --doo:composer--> Syd_Barrett (dor:Syd_Barrett)
+      - Interstellar_Overdrive (dor:Interstellar_Overdrive) --doo:type--> Instrumental (dor:Instrumental)
+      - Arnold_Layne (dor:Arnold_Layne) --doo:writer--> Syd_Barrett (dor:Syd_Barrett)
+      - Barrett_(album) (<http://dbpedia.org/resource/Barrett_(album)>) --dop:allWriting--> Syd_Barrett (dor:Syd_Barrett)
+      - Arnold_Layne (dor:Arnold_Layne) --dop:artist--> David_Gilmour (dor:David_Gilmour)
+  '5':
+    attributes:
+      Roger_Waters: (subject='http://dbpedia.org/resource/Category:1943_births', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''')
+      The_Final_Cut_(album): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''', subject='http://dbpedia.org/resource/Category:1983_albums')
+    relationships:
+      - Interstellar_Overdrive (dor:Interstellar_Overdrive) --doo:composer--> Roger_Waters (dor:Roger_Waters)
+      - Interstellar_Overdrive (dor:Interstellar_Overdrive) --doo:type--> Instrumental (dor:Instrumental)
+      - Hello_(I_Love_You) (<http://dbpedia.org/resource/Hello_(I_Love_You)>) --doo:writer--> Roger_Waters (dor:Roger_Waters)
+      - The_Final_Cut_(album) (<http://dbpedia.org/resource/The_Final_Cut_(album)>) --dop:allWriting--> Roger_Waters (dor:Roger_Waters)
+      - Hello_(I_Love_You) (<http://dbpedia.org/resource/Hello_(I_Love_You)>) --dop:artist--> Roger_Waters (dor:Roger_Waters)
+  '6':
+    attributes:
+      Roger_Waters: (subject='http://dbpedia.org/resource/Category:1943_births', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''')
+      The_Final_Cut_(album): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''', subject='http://dbpedia.org/resource/Category:1983_albums')
+    relationships:
+      - Interstellar_Overdrive (dor:Interstellar_Overdrive) --doo:composer--> Roger_Waters (dor:Roger_Waters)
+      - Interstellar_Overdrive (dor:Interstellar_Overdrive) --doo:type--> Instrumental (dor:Instrumental)
+      - Sunset_Strip_(song) (<http://dbpedia.org/resource/Sunset_Strip_(song)>) --doo:writer--> Roger_Waters (dor:Roger_Waters)
+      - The_Final_Cut_(album) (<http://dbpedia.org/resource/The_Final_Cut_(album)>) --dop:allWriting--> Roger_Waters (dor:Roger_Waters)
+      - Sunset_Strip_(song) (<http://dbpedia.org/resource/Sunset_Strip_(song)>) --dop:artist--> Roger_Waters (dor:Roger_Waters)
+  '7':
+    attributes:
+      Per_Gessle: (subject='http://dbpedia.org/resource/Category:1959_births', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About')
+      The_Pop_Hits: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Album_ratings', subject='http://dbpedia.org/resource/Category:2003_compilation_albums')
+    relationships:
+      - När_alla_vännerna_gått_hem (<http://dbpedia.org/resource/När_alla_vännerna_gått_hem>) --doo:composer--> Per_Gessle (dor:Per_Gessle)
+      - När_alla_vännerna_gått_hem (<http://dbpedia.org/resource/När_alla_vännerna_gått_hem>) --doo:type--> Song (dor:Song)
+      - Jo-Anna_Says (dorcm:Jo-Anna_Says) --doo:writer--> Per_Gessle (dor:Per_Gessle)
+      - The_Pop_Hits (dor:The_Pop_Hits) --dop:allWriting--> Per_Gessle (dor:Per_Gessle)
+      - Jo-Anna_Says (dorcm:Jo-Anna_Says) --dop:artist--> Per_Gessle (dor:Per_Gessle)
+  '8':
+    attributes:
+      Per_Gessle: (subject='http://dbpedia.org/resource/Category:1959_births', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About')
+      The_Pop_Hits: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Album_ratings', subject='http://dbpedia.org/resource/Category:2003_compilation_albums')
+    relationships:
+      - När_alla_vännerna_gått_hem (<http://dbpedia.org/resource/När_alla_vännerna_gått_hem>) --doo:composer--> Per_Gessle (dor:Per_Gessle)
+      - När_alla_vännerna_gått_hem (<http://dbpedia.org/resource/När_alla_vännerna_gått_hem>) --doo:type--> Song (dor:Song)
+      - Do_You_Wanna_Be_My_Baby%3F (<http://dbpedia.org/resource/Do_You_Wanna_Be_My_Baby%3F>) --doo:writer--> Per_Gessle (dor:Per_Gessle)
+      - The_Pop_Hits (dor:The_Pop_Hits) --dop:allWriting--> Per_Gessle (dor:Per_Gessle)
+      - Do_You_Wanna_Be_My_Baby%3F (<http://dbpedia.org/resource/Do_You_Wanna_Be_My_Baby%3F>) --dop:artist--> Per_Gessle (dor:Per_Gessle)
+  '9':
+    attributes:
+      Per_Gessle: (subject='http://dbpedia.org/resource/Category:1959_births', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About')
+      The_Pop_Hits: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Album_ratings', subject='http://dbpedia.org/resource/Category:2003_compilation_albums')
+    relationships:
+      - När_alla_vännerna_gått_hem (<http://dbpedia.org/resource/När_alla_vännerna_gått_hem>) --doo:composer--> Per_Gessle (dor:Per_Gessle)
+      - När_alla_vännerna_gått_hem (<http://dbpedia.org/resource/När_alla_vännerna_gått_hem>) --doo:type--> Song (dor:Song)
+      - En_händig_man_(song) (<http://dbpedia.org/resource/En_händig_man_(song)>) --doo:writer--> Per_Gessle (dor:Per_Gessle)
+      - The_Pop_Hits (dor:The_Pop_Hits) --dop:allWriting--> Per_Gessle (dor:Per_Gessle)
+      - En_händig_man_(song) (<http://dbpedia.org/resource/En_händig_man_(song)>) --dop:artist--> Per_Gessle (dor:Per_Gessle)
+attributes:
+  song: --reason^ (dop:reason)--> langString
+  album: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --subject (podt:subject)--> Resource
+  person: --by^ (dop:by)--> langString | --audio^ (dop:audio)--> langString | --known for^ (dop:knownFor)--> langString | --honorific suffix^ (dop:honorificSuffix)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+  musical artist: --1p^ (dop:1p)--> int | --subject (podt:subject)--> Resource | --death year^ (doo:deathYear)--> gYear
+subgraph_id: 924
+relationships:
+  - song --doo:composer--> musical artist
+  - song --doo:type--> music genre
+  - single --doo:writer--> musical artist
+  - album --dop:allWriting--> musical artist
+  - single --dop:artist--> person

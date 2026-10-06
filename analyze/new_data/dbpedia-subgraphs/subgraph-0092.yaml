@@ -1,0 +1,84 @@
+types:
+  actor: doo:Actor
+  company: doo:Company
+  person function: doo:PersonFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Film: (width^='25.0')
+      BBC_Film: (owner^='http://dbpedia.org/resource/BBC', owner^='http://dbpedia.org/resource/BBC', Wikipage page ID^='9307584')
+      Avantika_Khattri: (birth name^='Avantika Khattri')
+    relationships:
+      - Avantika_Khattri (dor:Avantika_Khattri) --doo:occupation--> Film (dor:Film)
+      - BBC_Film (dor:BBC_Film) --doo:service--> Film (dor:Film)
+  '2':
+    attributes:
+      Film: (width^='25.0')
+      Avantika_Khattri: (birth name^='Avantika Khattri')
+    relationships:
+      - Avantika_Khattri (dor:Avantika_Khattri) --doo:occupation--> Film (dor:Film)
+      - Celador__CPL_Productions__1 (dor:Celador__CPL_Productions__1) --doo:service--> Film (dor:Film)
+  '3':
+    attributes:
+      Film: (width^='25.0')
+      Enjoy_Movies: (Wikipage page ID^='39373529')
+      Avantika_Khattri: (birth name^='Avantika Khattri')
+    relationships:
+      - Avantika_Khattri (dor:Avantika_Khattri) --doo:occupation--> Film (dor:Film)
+      - Enjoy_Movies (dor:Enjoy_Movies) --doo:service--> Film (dor:Film)
+  '4':
+    attributes:
+      All-Russia_State_Television_and_Radio_Broadcasting_Company: (owner^='http://dbpedia.org/resource/Government_of_Russia', owner^='Federal Government of Russia', Wikipage page ID^='9383998')
+    relationships:
+      - Bob_Dishy (dor:Bob_Dishy) --doo:occupation--> Television (dor:Television)
+      - All-Russia_State_Television_and_Radio_Broadcasting_Company (dor:All-Russia_State_Television_and_Radio_Broadcasting_Company) --doo:service--> Television (dor:Television)
+  '5':
+    attributes:
+      Big_Beach_(company): (owner^='http://dbpedia.org/resource/Marc_Turtletaub', owner^='', Wikipage page ID^='41830513')
+    relationships:
+      - Bob_Dishy (dor:Bob_Dishy) --doo:occupation--> Theatre (dor:Theatre)
+      - Big_Beach_(company) (<http://dbpedia.org/resource/Big_Beach_(company)>) --doo:service--> Theatre (dor:Theatre)
+  '6':
+    attributes:
+      Centracom: (Wikipage page ID^='24387029')
+    relationships:
+      - Bob_Dishy (dor:Bob_Dishy) --doo:occupation--> Television (dor:Television)
+      - Centracom (dor:Centracom) --doo:service--> Television (dor:Television)
+  '7':
+    attributes:
+      Magic_(company): (owner^='Alexander "Sandy" Marshall', Wikipage page ID^='35511175')
+    relationships:
+      - Éric_Antoine (<http://dbpedia.org/resource/Éric_Antoine>) --doo:occupation--> Magic_(illusion) (<http://dbpedia.org/resource/Magic_(illusion)>)
+      - Magic_(company) (<http://dbpedia.org/resource/Magic_(company)>) --doo:service--> Magic_(illusion) (<http://dbpedia.org/resource/Magic_(illusion)>)
+  '8':
+    attributes:
+      Big_Beach_(company): (owner^='http://dbpedia.org/resource/Marc_Turtletaub', owner^='', Wikipage page ID^='41830513')
+    relationships:
+      - Hilda_Spong (dor:Hilda_Spong) --doo:occupation--> Theatre (dor:Theatre)
+      - Big_Beach_(company) (<http://dbpedia.org/resource/Big_Beach_(company)>) --doo:service--> Theatre (dor:Theatre)
+  '9':
+    attributes:
+      Cumberland_Theatre: (Wikipage page ID^='11253563')
+    relationships:
+      - Hilda_Spong (dor:Hilda_Spong) --doo:occupation--> Theatre (dor:Theatre)
+      - Cumberland_Theatre (dor:Cumberland_Theatre) --doo:service--> Theatre (dor:Theatre)
+  '10':
+    attributes:
+      Iluvlive: (Wikipage page ID^='68106060')
+    relationships:
+      - Jean-Baptiste_Nicolet (dor:Jean-Baptiste_Nicolet) --doo:occupation--> Talent_manager (dor:Talent_manager)
+      - Iluvlive (dor:Iluvlive) --doo:service--> Talent_manager (dor:Talent_manager)
+attributes:
+  actor: --birth name^ (doo:birthName)--> langString
+  company: --owner^ (doo:owner)--> Resource | --owner^ (dop:owner)--> Resource | --differentFrom (wwoo:differentFrom)--> Resource | --headquarter^ (doo:headquarter)--> Resource | --1a^ (dop:1a)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int
+  person function: --width^ (dop:width)--> int | --2p^ (dop:2p)--> int | --1p^ (dop:1p)--> int | --title^ (doo:title)--> langString
+subgraph_id: 92
+relationships:
+  - actor --doo:occupation--> person function
+  - company --doo:service--> person function

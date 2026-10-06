@@ -1,0 +1,38 @@
+types:
+  person: doo:Person
+  language: doo:Language
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      26_Men: (producer^='http://dbpedia.org/resource/Russell_Hayden', person^='http://dbpedia.org/resource/John_Mathew_Nickolaus_Jr.', film director^='http://dbpedia.org/resource/Reg_Browne')
+      Russell_Hayden: (birth date^='1912-06-12', children^='1', active years end year^='1937')
+    relationships:
+      - 26_Men (dor:26_Men) --doo:format--> Black-and-white (dor:Black-and-white)
+      - 26_Men (dor:26_Men) --dop:themeMusicComposer--> Russell_Hayden (dor:Russell_Hayden)
+  '2':
+    attributes:
+      77_Sunset_Strip: (producer^='http://dbpedia.org/resource/Filmmaking', film director^='http://dbpedia.org/resource/Irving_J._Moore')
+      Bob_Thompson_(musician): (birth date^='1924-08-24', active years end year^='1980')
+    relationships:
+      - 77_Sunset_Strip (dor:77_Sunset_Strip) --doo:format--> Black-and-white (dor:Black-and-white)
+      - 77_Sunset_Strip (dor:77_Sunset_Strip) --dop:themeMusicComposer--> Bob_Thompson_(musician) (<http://dbpedia.org/resource/Bob_Thompson_(musician)>)
+  '3':
+    attributes:
+      Mack_David: (birth date^='1912-07-05')
+      77_Sunset_Strip: (producer^='http://dbpedia.org/resource/Filmmaking', film director^='http://dbpedia.org/resource/Irving_J._Moore')
+    relationships:
+      - 77_Sunset_Strip (dor:77_Sunset_Strip) --doo:format--> Black-and-white (dor:Black-and-white)
+      - 77_Sunset_Strip (dor:77_Sunset_Strip) --dop:themeMusicComposer--> Mack_David (dor:Mack_David)
+attributes:
+  person: --birth date^ (dop:birthDate)--> date | --children^ (dop:children)--> int | --active years end year^ (doo:activeYearsEndYear)--> gYear | --title^ (doo:title)--> langString
+  television show: --producer^ (doo:producer)--> Resource | --person^ (doo:person)--> Resource | --aux^ (dop:aux)--> date | --film director^ (doo:director)--> Resource | --data^ (dop:data)--> langString
+subgraph_id: 549
+relationships:
+  - television show --doo:format--> language
+  - television show --dop:themeMusicComposer--> person

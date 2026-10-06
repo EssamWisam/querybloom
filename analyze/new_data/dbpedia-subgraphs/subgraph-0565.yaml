@@ -1,0 +1,109 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  language: doo:Language
+  magazine: doo:Magazine
+  military unit: doo:MilitaryUnit
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+  doras: http://dbpedia.org/resource/Air_&_Space/
+instances:
+  '1':
+    attributes:
+      Tirana: (float^='right', Apr high C^='19')
+    relationships:
+      - Albanian_language (dor:Albanian_language) --doo:spokenIn--> Italy (dor:Italy)
+      - Gjuha_Jonë (<http://dbpedia.org/resource/Gjuha_Jonë>) --doo:language--> Albanian_language (dor:Albanian_language)
+      - 207th_Military_Intelligence_Brigade_(United_States) (<http://dbpedia.org/resource/207th_Military_Intelligence_Brigade_(United_States)>) --doo:garrison--> Italy (dor:Italy)
+      - Gjuha_Jonë (<http://dbpedia.org/resource/Gjuha_Jonë>) --doo:city--> Tirana (dor:Tirana)
+  '2':
+    attributes:
+      Tirana: (float^='right', Apr high C^='19')
+      2nd_Infantry_Division_%22Sforzesca%22: (image size^='160')
+    relationships:
+      - Albanian_language (dor:Albanian_language) --doo:spokenIn--> Italy (dor:Italy)
+      - Gjuha_Jonë (<http://dbpedia.org/resource/Gjuha_Jonë>) --doo:language--> Albanian_language (dor:Albanian_language)
+      - 2nd_Infantry_Division_%22Sforzesca%22 (<http://dbpedia.org/resource/2nd_Infantry_Division_%22Sforzesca%22>) --doo:garrison--> Italy (dor:Italy)
+      - Gjuha_Jonë (<http://dbpedia.org/resource/Gjuha_Jonë>) --doo:city--> Tirana (dor:Tirana)
+  '3':
+    attributes:
+      Tirana: (float^='right', Apr high C^='19')
+      36th_Air_Brigade_(Italy): (image size^='150')
+    relationships:
+      - Albanian_language (dor:Albanian_language) --doo:spokenIn--> Italy (dor:Italy)
+      - Gjuha_Jonë (<http://dbpedia.org/resource/Gjuha_Jonë>) --doo:language--> Albanian_language (dor:Albanian_language)
+      - 36th_Air_Brigade_(Italy) (<http://dbpedia.org/resource/36th_Air_Brigade_(Italy)>) --doo:garrison--> Italy (dor:Italy)
+      - Gjuha_Jonë (<http://dbpedia.org/resource/Gjuha_Jonë>) --doo:city--> Tirana (dor:Tirana)
+  '4':
+    attributes:
+      Washington,_D.C.: (image^='6')
+      308th_Brigade_Support_Battalion: (image size^='150')
+    relationships:
+      - American_English (dor:American_English) --doo:spokenIn--> United_States (dor:United_States)
+      - Smithsonian (doras:Smithsonian) --doo:language--> American_English (dor:American_English)
+      - 308th_Brigade_Support_Battalion (dor:308th_Brigade_Support_Battalion) --doo:garrison--> United_States (dor:United_States)
+      - Smithsonian (doras:Smithsonian) --doo:city--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '5':
+    attributes:
+      Washington,_D.C.: (image^='6')
+      Alaska_Territorial_Guard: (image size^='300')
+    relationships:
+      - American_English (dor:American_English) --doo:spokenIn--> United_States (dor:United_States)
+      - Smithsonian (doras:Smithsonian) --doo:language--> American_English (dor:American_English)
+      - Alaska_Territorial_Guard (dor:Alaska_Territorial_Guard) --doo:garrison--> United_States (dor:United_States)
+      - Smithsonian (doras:Smithsonian) --doo:city--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '6':
+    attributes:
+      Washington,_D.C.: (image^='6')
+    relationships:
+      - American_English (dor:American_English) --doo:spokenIn--> United_States (dor:United_States)
+      - Smithsonian (doras:Smithsonian) --doo:language--> American_English (dor:American_English)
+      - Civil_Air_Patrol (dor:Civil_Air_Patrol) --doo:garrison--> United_States (dor:United_States)
+      - Smithsonian (doras:Smithsonian) --doo:city--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '7':
+    attributes:
+      Redfern,_New_South_Wales: (image^='205')
+      30th_Aircraft_Carrier_Squadron: (image size^='130')
+    relationships:
+      - Australian_English (dor:Australian_English) --doo:spokenIn--> Australia (dor:Australia)
+      - Australian_Railway_History (dor:Australian_Railway_History) --doo:language--> Australian_English (dor:Australian_English)
+      - 30th_Aircraft_Carrier_Squadron (dor:30th_Aircraft_Carrier_Squadron) --doo:garrison--> Australia (dor:Australia)
+      - Australian_Railway_History (dor:Australian_Railway_History) --doo:city--> Redfern,_New_South_Wales (<http://dbpedia.org/resource/Redfern,_New_South_Wales>)
+  '8':
+    attributes:
+      Redfern,_New_South_Wales: (image^='205')
+    relationships:
+      - Australian_English (dor:Australian_English) --doo:spokenIn--> Australia (dor:Australia)
+      - Australian_Railway_History (dor:Australian_Railway_History) --doo:language--> Australian_English (dor:Australian_English)
+      - 39th_Operational_Support_Battalion (dor:39th_Operational_Support_Battalion) --doo:garrison--> Australia (dor:Australia)
+      - Australian_Railway_History (dor:Australian_Railway_History) --doo:city--> Redfern,_New_South_Wales (<http://dbpedia.org/resource/Redfern,_New_South_Wales>)
+  '9':
+    attributes:
+      Redfern,_New_South_Wales: (image^='205')
+    relationships:
+      - Australian_English (dor:Australian_English) --doo:spokenIn--> Australia (dor:Australia)
+      - Australian_Railway_History (dor:Australian_Railway_History) --doo:language--> Australian_English (dor:Australian_English)
+      - 5th_Engineer_Regiment_(Australia) (<http://dbpedia.org/resource/5th_Engineer_Regiment_(Australia)>) --doo:garrison--> Australia (dor:Australia)
+      - Australian_Railway_History (dor:Australian_Railway_History) --doo:city--> Redfern,_New_South_Wales (<http://dbpedia.org/resource/Redfern,_New_South_Wales>)
+  '10':
+    attributes:
+      Vienna: (differentFrom='http://dbpedia.org/resource/Isère', Apr high C^='16.1')
+      Jagdkommando: (image size^='150')
+    relationships:
+      - Austrian_German (dor:Austrian_German) --doo:spokenIn--> Austria (dor:Austria)
+      - The_Gap_(magazine) (<http://dbpedia.org/resource/The_Gap_(magazine)>) --doo:language--> Austrian_German (dor:Austrian_German)
+      - Jagdkommando (dor:Jagdkommando) --doo:garrison--> Austria (dor:Austria)
+      - The_Gap_(magazine) (<http://dbpedia.org/resource/The_Gap_(magazine)>) --doo:city--> Vienna (dor:Vienna)
+attributes:
+  Location: --1p^ (dop:1p)--> int | --image^ (dop:image)--> langString | --float^ (dop:float)--> langString | --Apr record low F^ (dop:aprRecordLowF)--> langString | --architect^ (dop:architect)--> langString | --architecture^ (dop:architecture)--> Resource | --Aug high F^ (dop:augHighF)--> double | --differentFrom (wwoo:differentFrom)--> Resource | --image width^ (dop:imageWidth)--> int | --Apr high C^ (dop:aprHighC)--> int
+  military unit: --image size^ (dop:imageSize)--> int
+subgraph_id: 565
+relationships:
+  - language --doo:spokenIn--> country
+  - magazine --doo:language--> language
+  - military unit --doo:garrison--> country
+  - magazine --doo:city--> Location

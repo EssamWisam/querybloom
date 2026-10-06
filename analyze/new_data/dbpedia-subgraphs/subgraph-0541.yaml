@@ -1,0 +1,84 @@
+types:
+  person: doo:Person
+  website: doo:Website
+  television season: doo:TelevisionSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bokyem: (caption^='Bokyem of 2019')
+      Bakugan:_Armored_Alliance: (background^='#EAAF37')
+    relationships:
+      - Bokyem (dor:Bokyem) --doo:knownFor--> YouTube (dor:YouTube)
+      - Bakugan:_Armored_Alliance (<http://dbpedia.org/resource/Bakugan:_Armored_Alliance>) --doo:network--> YouTube (dor:YouTube)
+  '2':
+    attributes:
+      Bokyem: (caption^='Bokyem of 2019')
+      Bakugan:_Evolutions: (background^='FF631A')
+    relationships:
+      - Bokyem (dor:Bokyem) --doo:knownFor--> YouTube (dor:YouTube)
+      - Bakugan:_Evolutions (<http://dbpedia.org/resource/Bakugan:_Evolutions>) --doo:network--> YouTube (dor:YouTube)
+  '3':
+    attributes:
+      Bokyem: (caption^='Bokyem of 2019')
+      Bakugan:_Geogan_Rising: (background^='120')
+    relationships:
+      - Bokyem (dor:Bokyem) --doo:knownFor--> YouTube (dor:YouTube)
+      - Bakugan:_Geogan_Rising (<http://dbpedia.org/resource/Bakugan:_Geogan_Rising>) --doo:network--> YouTube (dor:YouTube)
+  '4':
+    attributes:
+      Bret_Taylor: (caption^='Taylor in July 2009')
+    relationships:
+      - Bret_Taylor (dor:Bret_Taylor) --doo:knownFor--> Facebook (dor:Facebook)
+      - The_Voice_Kids_(Albanian_season_2) (<http://dbpedia.org/resource/The_Voice_Kids_(Albanian_season_2)>) --doo:network--> Facebook (dor:Facebook)
+  '5':
+    attributes:
+      Bret_Taylor: (caption^='Taylor in July 2009')
+    relationships:
+      - Bret_Taylor (dor:Bret_Taylor) --doo:knownFor--> Facebook (dor:Facebook)
+      - The_Voice_Kids_(Albanian_season_3) (<http://dbpedia.org/resource/The_Voice_Kids_(Albanian_season_3)>) --doo:network--> Facebook (dor:Facebook)
+  '6':
+    attributes:
+      Candice_DeLong: (children^='1')
+      Drag_Race_Italia_(season_1): (background^='#DDC293')
+    relationships:
+      - Candice_DeLong (dor:Candice_DeLong) --doo:knownFor--> Discovery+ (<http://dbpedia.org/resource/Discovery+>)
+      - Drag_Race_Italia_(season_1) (<http://dbpedia.org/resource/Drag_Race_Italia_(season_1)>) --doo:network--> Discovery+ (<http://dbpedia.org/resource/Discovery+>)
+  '7':
+    attributes:
+      Candice_DeLong: (children^='1')
+      Drag_Race_Italia_(season_2): (background^='#A50749')
+    relationships:
+      - Candice_DeLong (dor:Candice_DeLong) --doo:knownFor--> Discovery+ (<http://dbpedia.org/resource/Discovery+>)
+      - Drag_Race_Italia_(season_2) (<http://dbpedia.org/resource/Drag_Race_Italia_(season_2)>) --doo:network--> Discovery+ (<http://dbpedia.org/resource/Discovery+>)
+  '8':
+    attributes:
+      Candice_DeLong: (children^='1')
+      Drag_Race_Philippines_(season_1): (background^='#F16A80')
+    relationships:
+      - Candice_DeLong (dor:Candice_DeLong) --doo:knownFor--> Discovery+ (<http://dbpedia.org/resource/Discovery+>)
+      - Drag_Race_Philippines_(season_1) (<http://dbpedia.org/resource/Drag_Race_Philippines_(season_1)>) --doo:network--> Discovery+ (<http://dbpedia.org/resource/Discovery+>)
+  '9':
+    attributes:
+      Charlie_Cheever: (caption^='Charlie Cheever')
+    relationships:
+      - Charlie_Cheever (dor:Charlie_Cheever) --doo:knownFor--> Facebook (dor:Facebook)
+      - The_Voice_Kids_(Albanian_season_2) (<http://dbpedia.org/resource/The_Voice_Kids_(Albanian_season_2)>) --doo:network--> Facebook (dor:Facebook)
+  '10':
+    attributes:
+      Criminal_Minds_(season_16): (background^='#A70207')
+      David_Nevins_(television_producer): (children^='3')
+    relationships:
+      - David_Nevins_(television_producer) (<http://dbpedia.org/resource/David_Nevins_(television_producer)>) --doo:knownFor--> Paramount+ (<http://dbpedia.org/resource/Paramount+>)
+      - Criminal_Minds_(season_16) (<http://dbpedia.org/resource/Criminal_Minds_(season_16)>) --doo:network--> Paramount+ (<http://dbpedia.org/resource/Paramount+>)
+attributes:
+  person: --children^ (dop:children)--> langString | --parents^ (dop:parents)--> langString | --first appearance^ (doo:firstAppearance)--> string | --last^ (dop:last)--> langString | --death place^ (dop:deathPlace)--> langString | --family^ (dop:family)--> langString | --board^ (doo:board)--> Resource | --caption^ (dop:caption)--> langString | --nickname^ (dop:nickname)--> langString
+  television season: --footer^ (dop:footer)--> langString | --background^ (dop:background)--> int
+subgraph_id: 541
+relationships:
+  - person --doo:knownFor--> website
+  - television season --doo:network--> website

@@ -1,0 +1,120 @@
+types:
+  curler: doo:Curler
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  rugby player: doo:RugbyPlayer
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Edmonton: (named after^='http://dbpedia.org/resource/Edmonton,_London')
+      1980–81_NASL_Indoor_season: (date^='1981-03-02')
+    relationships:
+      - Adam_Enright (dor:Adam_Enright) --doo:club--> Edmonton (dor:Edmonton)
+      - 1980–81_NASL_Indoor_season (<http://dbpedia.org/resource/1980–81_NASL_Indoor_season>) --dop:location--> Edmonton (dor:Edmonton)
+      - 1980–81_Fort_Lauderdale_Strikers_indoor_season (<http://dbpedia.org/resource/1980–81_Fort_Lauderdale_Strikers_indoor_season>) --doo:season--> 1980–81_NASL_Indoor_season (<http://dbpedia.org/resource/1980–81_NASL_Indoor_season>)
+      - Art_Turnbull (dor:Art_Turnbull) --dop:birthPlace--> Edmonton (dor:Edmonton)
+  '2':
+    attributes:
+      Edmonton: (named after^='http://dbpedia.org/resource/Edmonton,_London')
+      Jared_Barker: (bot^='medic')
+      1980–81_NASL_Indoor_season: (date^='1981-03-02')
+    relationships:
+      - Adam_Enright (dor:Adam_Enright) --doo:club--> Edmonton (dor:Edmonton)
+      - 1980–81_NASL_Indoor_season (<http://dbpedia.org/resource/1980–81_NASL_Indoor_season>) --dop:location--> Edmonton (dor:Edmonton)
+      - 1980–81_Fort_Lauderdale_Strikers_indoor_season (<http://dbpedia.org/resource/1980–81_Fort_Lauderdale_Strikers_indoor_season>) --doo:season--> 1980–81_NASL_Indoor_season (<http://dbpedia.org/resource/1980–81_NASL_Indoor_season>)
+      - Jared_Barker (dor:Jared_Barker) --dop:birthPlace--> Edmonton (dor:Edmonton)
+  '3':
+    attributes:
+      Edmonton: (named after^='http://dbpedia.org/resource/Edmonton,_London')
+      1980–81_NASL_Indoor_season: (date^='1981-03-02')
+    relationships:
+      - Adam_Enright (dor:Adam_Enright) --doo:club--> Edmonton (dor:Edmonton)
+      - 1980–81_NASL_Indoor_season (<http://dbpedia.org/resource/1980–81_NASL_Indoor_season>) --dop:location--> Edmonton (dor:Edmonton)
+      - 1980–81_Fort_Lauderdale_Strikers_indoor_season (<http://dbpedia.org/resource/1980–81_Fort_Lauderdale_Strikers_indoor_season>) --doo:season--> 1980–81_NASL_Indoor_season (<http://dbpedia.org/resource/1980–81_NASL_Indoor_season>)
+      - Ric_Suggitt (dor:Ric_Suggitt) --dop:birthPlace--> Edmonton (dor:Edmonton)
+  '4':
+    attributes:
+      Vancouver: (named after^='http://dbpedia.org/resource/George_Vancouver')
+      2012_in_American_soccer: (date^='--01-20')
+      2012_Carolina_RailHawks_FC_season: (al^='6')
+    relationships:
+      - Alessandra_Barros (dor:Alessandra_Barros) --doo:club--> Vancouver (dor:Vancouver)
+      - 2012_in_American_soccer (dor:2012_in_American_soccer) --dop:location--> Vancouver (dor:Vancouver)
+      - 2012_Carolina_RailHawks_FC_season (dor:2012_Carolina_RailHawks_FC_season) --doo:season--> 2012_in_American_soccer (dor:2012_in_American_soccer)
+      - Brittany_Waters (dor:Brittany_Waters) --dop:birthPlace--> Vancouver (dor:Vancouver)
+  '5':
+    attributes:
+      Vancouver: (named after^='http://dbpedia.org/resource/George_Vancouver')
+      2012_in_American_soccer: (date^='--01-20')
+      2012_New_York_Red_Bulls_season: (al^='7', highest attendance^='25219')
+    relationships:
+      - Alessandra_Barros (dor:Alessandra_Barros) --doo:club--> Vancouver (dor:Vancouver)
+      - 2012_in_American_soccer (dor:2012_in_American_soccer) --dop:location--> Vancouver (dor:Vancouver)
+      - 2012_New_York_Red_Bulls_season (dor:2012_New_York_Red_Bulls_season) --doo:season--> 2012_in_American_soccer (dor:2012_in_American_soccer)
+      - Brittany_Waters (dor:Brittany_Waters) --dop:birthPlace--> Vancouver (dor:Vancouver)
+  '6':
+    attributes:
+      Vancouver: (named after^='http://dbpedia.org/resource/George_Vancouver')
+      2012_in_American_soccer: (date^='--01-20')
+      2012_San_Antonio_Scorpions_FC_season: (al^='4', highest attendance^='13151')
+    relationships:
+      - Alessandra_Barros (dor:Alessandra_Barros) --doo:club--> Vancouver (dor:Vancouver)
+      - 2012_in_American_soccer (dor:2012_in_American_soccer) --dop:location--> Vancouver (dor:Vancouver)
+      - 2012_San_Antonio_Scorpions_FC_season (dor:2012_San_Antonio_Scorpions_FC_season) --doo:season--> 2012_in_American_soccer (dor:2012_in_American_soccer)
+      - Brittany_Waters (dor:Brittany_Waters) --dop:birthPlace--> Vancouver (dor:Vancouver)
+  '7':
+    attributes:
+      Perth,_Scotland: (Apr sun^='153.3', c^='Perth, Scotland')
+      2013–14_in_Scottish_football: (date^='')
+      2013–14_Ayr_United_F.C._season: (highest attendance^='--10-06')
+    relationships:
+      - Alex_Young_(curler) (<http://dbpedia.org/resource/Alex_Young_(curler)>) --doo:club--> Perth,_Scotland (<http://dbpedia.org/resource/Perth,_Scotland>)
+      - 2013–14_in_Scottish_football (<http://dbpedia.org/resource/2013–14_in_Scottish_football>) --dop:location--> Perth,_Scotland (<http://dbpedia.org/resource/Perth,_Scotland>)
+      - 2013–14_Ayr_United_F.C._season (<http://dbpedia.org/resource/2013–14_Ayr_United_F.C._season>) --doo:season--> 2013–14_in_Scottish_football (<http://dbpedia.org/resource/2013–14_in_Scottish_football>)
+      - Benjamin_Burns (dor:Benjamin_Burns) --dop:birthPlace--> Perth,_Scotland (<http://dbpedia.org/resource/Perth,_Scotland>)
+  '8':
+    attributes:
+      Perth,_Scotland: (Apr sun^='153.3', c^='Perth, Scotland')
+      2013–14_in_Scottish_football: (date^='')
+    relationships:
+      - Alex_Young_(curler) (<http://dbpedia.org/resource/Alex_Young_(curler)>) --doo:club--> Perth,_Scotland (<http://dbpedia.org/resource/Perth,_Scotland>)
+      - 2013–14_in_Scottish_football (<http://dbpedia.org/resource/2013–14_in_Scottish_football>) --dop:location--> Perth,_Scotland (<http://dbpedia.org/resource/Perth,_Scotland>)
+      - 2013–14_Celtic_F.C._season (<http://dbpedia.org/resource/2013–14_Celtic_F.C._season>) --doo:season--> 2013–14_in_Scottish_football (<http://dbpedia.org/resource/2013–14_in_Scottish_football>)
+      - Benjamin_Burns (dor:Benjamin_Burns) --dop:birthPlace--> Perth,_Scotland (<http://dbpedia.org/resource/Perth,_Scotland>)
+  '9':
+    attributes:
+      Perth,_Scotland: (Apr sun^='153.3', c^='Perth, Scotland')
+      2013–14_in_Scottish_football: (date^='')
+      2013–14_Dunfermline_Athletic_F.C._season: (al^='6', highest attendance^='--12-30')
+    relationships:
+      - Alex_Young_(curler) (<http://dbpedia.org/resource/Alex_Young_(curler)>) --doo:club--> Perth,_Scotland (<http://dbpedia.org/resource/Perth,_Scotland>)
+      - 2013–14_in_Scottish_football (<http://dbpedia.org/resource/2013–14_in_Scottish_football>) --dop:location--> Perth,_Scotland (<http://dbpedia.org/resource/Perth,_Scotland>)
+      - 2013–14_Dunfermline_Athletic_F.C._season (<http://dbpedia.org/resource/2013–14_Dunfermline_Athletic_F.C._season>) --doo:season--> 2013–14_in_Scottish_football (<http://dbpedia.org/resource/2013–14_in_Scottish_football>)
+      - Benjamin_Burns (dor:Benjamin_Burns) --dop:birthPlace--> Perth,_Scotland (<http://dbpedia.org/resource/Perth,_Scotland>)
+  '10':
+    attributes:
+      Moscow: (anthem^='http://dbpedia.org/resource/Moya_Moskva', Apr sun^='213')
+      2009–10_A.C._Milan_season: (al^='6')
+      2009–10_in_Italian_football: (date^='2009-09-16')
+    relationships:
+      - Alexander_Kirikov (dor:Alexander_Kirikov) --doo:club--> Moscow (dor:Moscow)
+      - 2009–10_in_Italian_football (<http://dbpedia.org/resource/2009–10_in_Italian_football>) --dop:location--> Moscow (dor:Moscow)
+      - 2009–10_A.C._Milan_season (<http://dbpedia.org/resource/2009–10_A.C._Milan_season>) --doo:season--> 2009–10_in_Italian_football (<http://dbpedia.org/resource/2009–10_in_Italian_football>)
+      - Alexander_Khrokin (dor:Alexander_Khrokin) --dop:birthPlace--> Moscow (dor:Moscow)
+attributes:
+  settlement: --anthem^ (doo:anthem)--> Resource | --Apr sun^ (dop:aprSun)--> double | --named after^ (doo:namedAfter)--> Resource | --c^ (dop:c)--> langString
+  soccer club: --ground^ (dop:ground)--> langString | --colwidth^ (dop:colwidth)--> int | --al^ (dop:al)--> int | --highest attendance^ (dop:highestAttendance)--> gMonthDay
+  rugby player: --bot^ (dop:bot)--> langString
+  football league season: --date^ (dop:date)--> date
+subgraph_id: 96
+relationships:
+  - curler --doo:club--> settlement
+  - football league season --dop:location--> settlement
+  - soccer club --doo:season--> football league season
+  - rugby player --dop:birthPlace--> settlement

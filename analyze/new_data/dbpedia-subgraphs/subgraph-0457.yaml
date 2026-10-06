@@ -1,0 +1,107 @@
+types:
+  person: doo:Person
+  writer: doo:Writer
+  country: doo:Country
+  scientist: doo:Scientist
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Canada: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Andrew_Hendry: (academic discipline^='http://dbpedia.org/resource/Biology', Link from a Wikipage to an external page^='http://www.andrew-hendry.ca/')
+    relationships:
+      - Frédérique_Bernier (<http://dbpedia.org/resource/Frédérique_Bernier>) --dop:almaMater--> McGill_University (dor:McGill_University)
+      - Ajung_Moon (dor:Ajung_Moon) --dop:employer--> McGill_University (dor:McGill_University)
+      - Andrew_Hendry (dor:Andrew_Hendry) --doo:award--> McGill_University (dor:McGill_University)
+      - Frédérique_Bernier (<http://dbpedia.org/resource/Frédérique_Bernier>) --doo:country--> Canada (dor:Canada)
+  '2':
+    attributes:
+      Andrew_Hendry: (academic discipline^='http://dbpedia.org/resource/Biology', Link from a Wikipage to an external page^='http://www.andrew-hendry.ca/')
+    relationships:
+      - Nadine_Bismuth (dor:Nadine_Bismuth) --dop:almaMater--> McGill_University (dor:McGill_University)
+      - Ajung_Moon (dor:Ajung_Moon) --dop:employer--> McGill_University (dor:McGill_University)
+      - Andrew_Hendry (dor:Andrew_Hendry) --doo:award--> McGill_University (dor:McGill_University)
+      - Nadine_Bismuth (dor:Nadine_Bismuth) --doo:country--> Canada (dor:Canada)
+  '3':
+    attributes:
+      Canada: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+      Andrew_Hendry: (academic discipline^='http://dbpedia.org/resource/Biology', Link from a Wikipage to an external page^='http://www.andrew-hendry.ca/')
+    relationships:
+      - Norah_McClintock (dor:Norah_McClintock) --dop:almaMater--> McGill_University (dor:McGill_University)
+      - Ajung_Moon (dor:Ajung_Moon) --dop:employer--> McGill_University (dor:McGill_University)
+      - Andrew_Hendry (dor:Andrew_Hendry) --doo:award--> McGill_University (dor:McGill_University)
+      - Norah_McClintock (dor:Norah_McClintock) --doo:country--> Canada (dor:Canada)
+  '4':
+    attributes: {}
+    relationships:
+      - Iain_Martin (dor:Iain_Martin) --dop:almaMater--> University_of_Glasgow (dor:University_of_Glasgow)
+      - Alexander_Negris (dor:Alexander_Negris) --dop:employer--> University_of_Glasgow (dor:University_of_Glasgow)
+      - Alexander_John_Haddow (dor:Alexander_John_Haddow) --doo:award--> University_of_Glasgow (dor:University_of_Glasgow)
+      - Iain_Martin (dor:Iain_Martin) --doo:country--> Scotland (dor:Scotland)
+  '5':
+    attributes:
+      United_Kingdom: (anthem^='http://dbpedia.org/resource/God_Save_the_King')
+    relationships:
+      - Iain_Martin (dor:Iain_Martin) --dop:almaMater--> University_of_Glasgow (dor:University_of_Glasgow)
+      - Alexander_Negris (dor:Alexander_Negris) --dop:employer--> University_of_Glasgow (dor:University_of_Glasgow)
+      - Alexander_John_Haddow (dor:Alexander_John_Haddow) --doo:award--> University_of_Glasgow (dor:University_of_Glasgow)
+      - Iain_Martin (dor:Iain_Martin) --doo:country--> United_Kingdom (dor:United_Kingdom)
+  '6':
+    attributes:
+      Heather_Reid: (academic discipline^='http://dbpedia.org/resource/Meteorology', Link from a Wikipage to an external page^='https://web.archive.org/web/20050310060229/http:/www.britishcouncil.org/science-testimonials-heather-reid.htm')
+    relationships:
+      - Iain_Martin (dor:Iain_Martin) --dop:almaMater--> University_of_Glasgow (dor:University_of_Glasgow)
+      - Alexander_Negris (dor:Alexander_Negris) --dop:employer--> University_of_Glasgow (dor:University_of_Glasgow)
+      - Heather_Reid (dor:Heather_Reid) --doo:award--> University_of_Glasgow (dor:University_of_Glasgow)
+      - Iain_Martin (dor:Iain_Martin) --doo:country--> Scotland (dor:Scotland)
+  '7':
+    attributes:
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+      Bonnie_E._John: (academic discipline^='http://dbpedia.org/resource/Cognitive_psychology', Link from a Wikipage to an external page^='http://engfac.cooper.edu/bonnie')
+    relationships:
+      - Dorothy_Hinshaw_Patent (dor:Dorothy_Hinshaw_Patent) --dop:almaMater--> Stanford_University (dor:Stanford_University)
+      - Allen_Weiner (dor:Allen_Weiner) --dop:employer--> Stanford_University (dor:Stanford_University)
+      - Bonnie_E._John (dor:Bonnie_E._John) --doo:award--> Stanford_University (dor:Stanford_University)
+      - Dorothy_Hinshaw_Patent (dor:Dorothy_Hinshaw_Patent) --doo:country--> United_States (dor:United_States)
+  '8':
+    attributes:
+      Bonnie_E._John: (academic discipline^='http://dbpedia.org/resource/Cognitive_psychology', Link from a Wikipage to an external page^='http://engfac.cooper.edu/bonnie')
+    relationships:
+      - Jeremy_Hearder (dor:Jeremy_Hearder) --dop:almaMater--> Stanford_University (dor:Stanford_University)
+      - Allen_Weiner (dor:Allen_Weiner) --dop:employer--> Stanford_University (dor:Stanford_University)
+      - Bonnie_E._John (dor:Bonnie_E._John) --doo:award--> Stanford_University (dor:Stanford_University)
+      - Jeremy_Hearder (dor:Jeremy_Hearder) --doo:country--> Australia (dor:Australia)
+  '9':
+    attributes:
+      John_Tuzo_Wilson: (academic discipline^='http://dbpedia.org/resource/Geophysics', Link from a Wikipage to an external page^='http://gsahist.org/gsat/gt01sep24_25.htm')
+      Amadeus_William_Grabau: (children^='one daughter', spouse^='http://dbpedia.org/resource/Mary_Antin')
+    relationships:
+      - Siddhartha_Deb (dor:Siddhartha_Deb) --dop:almaMater--> Columbia_University (dor:Columbia_University)
+      - Amadeus_William_Grabau (dor:Amadeus_William_Grabau) --dop:employer--> Columbia_University (dor:Columbia_University)
+      - John_Tuzo_Wilson (dor:John_Tuzo_Wilson) --doo:award--> Columbia_University (dor:Columbia_University)
+      - Siddhartha_Deb (dor:Siddhartha_Deb) --doo:country--> India (dor:India)
+  '10':
+    attributes:
+      Rudolph_Leibel: (academic discipline^='http://dbpedia.org/resource/Diabetes_Mellitus')
+      Amadeus_William_Grabau: (children^='one daughter', spouse^='http://dbpedia.org/resource/Mary_Antin')
+    relationships:
+      - Siddhartha_Deb (dor:Siddhartha_Deb) --dop:almaMater--> Columbia_University (dor:Columbia_University)
+      - Amadeus_William_Grabau (dor:Amadeus_William_Grabau) --dop:employer--> Columbia_University (dor:Columbia_University)
+      - Rudolph_Leibel (dor:Rudolph_Leibel) --doo:award--> Columbia_University (dor:Columbia_University)
+      - Siddhartha_Deb (dor:Siddhartha_Deb) --doo:country--> India (dor:India)
+attributes:
+  person: --parents^ (dop:parents)--> Resource | --honorific suffix^ (dop:honorificSuffix)--> langString | --by^ (dop:by)--> langString | --children^ (dop:children)--> langString | --children^ (dop:children)--> int | --spouse^ (doo:spouse)--> Resource
+  country: --Aug low C^ (dop:augLowC)--> double | --anthem^ (doo:anthem)--> Resource | --age^ (dop:age)--> date | --leader^ (dop:leader)--> langString
+  scientist: --academic discipline^ (doo:academicDiscipline)--> Resource | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  university: --affiliation^ (dop:affiliation)--> Resource
+subgraph_id: 457
+relationships:
+  - writer --dop:almaMater--> university
+  - person --dop:employer--> university
+  - scientist --doo:award--> university
+  - writer --doo:country--> country

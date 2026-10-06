@@ -1,0 +1,117 @@
+types:
+  Food: doo:Food
+  country: doo:Country
+  automobile: doo:Automobile
+  university: doo:University
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Allstate_(automobile): (manufacturer^='http://dbpedia.org/resource/Kaiser-Frazer_Corporation')
+      Eugene_Applebaum_College_of_Pharmacy_and_Health_Sciences: (page length (characters) of wiki page^='4137')
+    relationships:
+      - Michigan_salad (dor:Michigan_salad) --dop:country--> United_States (dor:United_States)
+      - Michigan_salad (dor:Michigan_salad) --doo:region--> Michigan (dor:Michigan)
+      - Eugene_Applebaum_College_of_Pharmacy_and_Health_Sciences (dor:Eugene_Applebaum_College_of_Pharmacy_and_Health_Sciences) --doo:city--> Michigan (dor:Michigan)
+      - Allstate_(automobile) (<http://dbpedia.org/resource/Allstate_(automobile)>) --dop:assembly--> Michigan (dor:Michigan)
+  '2':
+    attributes:
+      Allstate_(automobile): (manufacturer^='http://dbpedia.org/resource/Kaiser-Frazer_Corporation')
+      Monroe_County_Community_College: (page length (characters) of wiki page^='12066')
+    relationships:
+      - Michigan_salad (dor:Michigan_salad) --dop:country--> United_States (dor:United_States)
+      - Michigan_salad (dor:Michigan_salad) --doo:region--> Michigan (dor:Michigan)
+      - Monroe_County_Community_College (dor:Monroe_County_Community_College) --doo:city--> Michigan (dor:Michigan)
+      - Allstate_(automobile) (<http://dbpedia.org/resource/Allstate_(automobile)>) --dop:assembly--> Michigan (dor:Michigan)
+  '3':
+    attributes:
+      Liaoning: (population total^='42591407')
+      Brilliance_BC3: (designer^='http://dbpedia.org/resource/Pininfarina', manufacturer^='http://dbpedia.org/resource/Brilliance_Auto')
+      China_Medical_University_(PRC): (page length (characters) of wiki page^='6106')
+    relationships:
+      - Hasma (dor:Hasma) --dop:country--> China (dor:China)
+      - Hasma (dor:Hasma) --doo:region--> Liaoning (dor:Liaoning)
+      - China_Medical_University_(PRC) (<http://dbpedia.org/resource/China_Medical_University_(PRC)>) --doo:city--> Liaoning (dor:Liaoning)
+      - Brilliance_BC3 (dor:Brilliance_BC3) --dop:assembly--> Liaoning (dor:Liaoning)
+  '4':
+    attributes:
+      Brilliance_BC3: (designer^='http://dbpedia.org/resource/Pininfarina', manufacturer^='http://dbpedia.org/resource/Brilliance_Auto')
+      Dalian_Naval_Academy: (page length (characters) of wiki page^='2047')
+    relationships:
+      - Hasma (dor:Hasma) --dop:country--> China (dor:China)
+      - Hasma (dor:Hasma) --doo:region--> Liaoning (dor:Liaoning)
+      - Dalian_Naval_Academy (dor:Dalian_Naval_Academy) --doo:city--> Liaoning (dor:Liaoning)
+      - Brilliance_BC3 (dor:Brilliance_BC3) --dop:assembly--> Liaoning (dor:Liaoning)
+  '5':
+    attributes:
+      Liaoning: (population total^='42591407')
+      Brilliance_BS2: (designer^='http://dbpedia.org/resource/Italdesign_Giugiaro', manufacturer^='http://dbpedia.org/resource/Brilliance_Auto')
+      China_Medical_University_(PRC): (page length (characters) of wiki page^='6106')
+    relationships:
+      - Hasma (dor:Hasma) --dop:country--> China (dor:China)
+      - Hasma (dor:Hasma) --doo:region--> Liaoning (dor:Liaoning)
+      - China_Medical_University_(PRC) (<http://dbpedia.org/resource/China_Medical_University_(PRC)>) --doo:city--> Liaoning (dor:Liaoning)
+      - Brilliance_BS2 (dor:Brilliance_BS2) --dop:assembly--> Liaoning (dor:Liaoning)
+  '6':
+    attributes:
+      Buick_Reatta: (manufacturer^='http://dbpedia.org/resource/General_Motors')
+      Eugene_Applebaum_College_of_Pharmacy_and_Health_Sciences: (page length (characters) of wiki page^='4137')
+    relationships:
+      - Michigan_salad (dor:Michigan_salad) --dop:country--> United_States (dor:United_States)
+      - Michigan_salad (dor:Michigan_salad) --doo:region--> Michigan (dor:Michigan)
+      - Eugene_Applebaum_College_of_Pharmacy_and_Health_Sciences (dor:Eugene_Applebaum_College_of_Pharmacy_and_Health_Sciences) --doo:city--> Michigan (dor:Michigan)
+      - Buick_Reatta (dor:Buick_Reatta) --dop:assembly--> Michigan (dor:Michigan)
+  '7':
+    attributes:
+      Guangdong: (population total^='126012510')
+      Guangdong_Institute_of_Arts_and_Sciences: (page length (characters) of wiki page^='5527')
+    relationships:
+      - Malay_sponge_cake (dor:Malay_sponge_cake) --dop:country--> Malaysia (dor:Malaysia)
+      - Malay_sponge_cake (dor:Malay_sponge_cake) --doo:region--> Guangdong (dor:Guangdong)
+      - Guangdong_Institute_of_Arts_and_Sciences (dor:Guangdong_Institute_of_Arts_and_Sciences) --doo:city--> Guangdong (dor:Guangdong)
+      - Byton_K-Byte (dor:Byton_K-Byte) --dop:assembly--> Guangdong (dor:Guangdong)
+  '8':
+    attributes:
+      Guangdong: (population total^='126012510')
+      Byton_K-Byte: (manufacturer^='http://dbpedia.org/resource/Byton_(company)')
+    relationships:
+      - Malay_sponge_cake (dor:Malay_sponge_cake) --dop:country--> Malaysia (dor:Malaysia)
+      - Malay_sponge_cake (dor:Malay_sponge_cake) --doo:region--> Guangdong (dor:Guangdong)
+      - Harbin_Institute_of_Technology__Harbin_Institute_of_Technology__1 (dor:Harbin_Institute_of_Technology__Harbin_Institute_of_Technology__1) --doo:city--> Guangdong (dor:Guangdong)
+      - Byton_K-Byte (dor:Byton_K-Byte) --dop:assembly--> Guangdong (dor:Guangdong)
+  '9':
+    attributes:
+      Guangdong: (population total^='126012510')
+      Byton_K-Byte: (manufacturer^='http://dbpedia.org/resource/Byton_(company)')
+      Peking_University_HSBC_Business_School: (page length (characters) of wiki page^='10915')
+    relationships:
+      - Malay_sponge_cake (dor:Malay_sponge_cake) --dop:country--> Malaysia (dor:Malaysia)
+      - Malay_sponge_cake (dor:Malay_sponge_cake) --doo:region--> Guangdong (dor:Guangdong)
+      - Peking_University_HSBC_Business_School (dor:Peking_University_HSBC_Business_School) --doo:city--> Guangdong (dor:Guangdong)
+      - Byton_K-Byte (dor:Byton_K-Byte) --dop:assembly--> Guangdong (dor:Guangdong)
+  '10':
+    attributes:
+      Jakarta: (population total^='10609681', Apr low C^='23.9')
+      Chery_Tiggo_3: (manufacturer^='http://dbpedia.org/resource/Chery')
+      Bakrie_University: (page length (characters) of wiki page^='22531')
+    relationships:
+      - Asinan (dor:Asinan) --dop:country--> Indonesia (dor:Indonesia)
+      - Asinan (dor:Asinan) --doo:region--> Jakarta (dor:Jakarta)
+      - Bakrie_University (dor:Bakrie_University) --doo:city--> Jakarta (dor:Jakarta)
+      - Chery_Tiggo_3 (dor:Chery_Tiggo_3) --dop:assembly--> Jakarta (dor:Jakarta)
+attributes:
+  country: --founding year^ (doo:foundingYear)--> gYear | --leader^ (dop:leader)--> langString | --Apr low C^ (dop:aprLowC)--> double
+  automobile: --designer^ (doo:designer)--> Resource | --manufacturer^ (doo:manufacturer)--> Resource
+  university: --former name^ (doo:formerName)--> langString | --affiliations^ (dop:affiliations)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int
+  administrative region: --wordnet_type (dop:wordnet_type)--> Resource | --population total^ (doo:populationTotal)--> int | --Apr low C^ (dop:aprLowC)--> int
+subgraph_id: 731
+relationships:
+  - Food --dop:country--> country
+  - Food --doo:region--> administrative region
+  - university --doo:city--> administrative region
+  - automobile --dop:assembly--> administrative region

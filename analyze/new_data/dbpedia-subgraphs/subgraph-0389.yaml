@@ -1,0 +1,66 @@
+types:
+  grape: doo:Grape
+  plant: doo:Plant
+  Location: doo:Location
+  australian football Team: doo:AustralianFootballTeam
+  Australian rules football player: doo:AustralianRulesFootballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      South_Africa: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', government type^='http://dbpedia.org/resource/Unitary_state')
+      Melbourne_Football_Club: '(ground^=''AFL: Melbourne Cricket Ground'')'
+    relationships:
+      - Aubrey_MacKenzie (dor:Aubrey_MacKenzie) --doo:birthPlace--> South_Africa (dor:South_Africa)
+      - Pinotage (dor:Pinotage) --doo:origin--> South_Africa (dor:South_Africa)
+      - Aubrey_MacKenzie (dor:Aubrey_MacKenzie) --dop:club--> Melbourne_Football_Club (dor:Melbourne_Football_Club)
+      - Pinotage (dor:Pinotage) --doo:species--> Vitis_vinifera (dor:Vitis_vinifera)
+  '2':
+    attributes:
+      South_Africa: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', government type^='http://dbpedia.org/resource/Unitary_state')
+      St_Kilda_Football_Club: (ground^='http://dbpedia.org/resource/Docklands_Stadium')
+    relationships:
+      - Aubrey_MacKenzie (dor:Aubrey_MacKenzie) --doo:birthPlace--> South_Africa (dor:South_Africa)
+      - Pinotage (dor:Pinotage) --doo:origin--> South_Africa (dor:South_Africa)
+      - Aubrey_MacKenzie (dor:Aubrey_MacKenzie) --dop:club--> St_Kilda_Football_Club (dor:St_Kilda_Football_Club)
+      - Pinotage (dor:Pinotage) --doo:species--> Vitis_vinifera (dor:Vitis_vinifera)
+  '3':
+    attributes:
+      Germany: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr', government type^='http://dbpedia.org/resource/Federal_parliamentary_republic')
+      East_Fremantle_Football_Club: (ground^='http://dbpedia.org/resource/East_Fremantle_Oval')
+    relationships:
+      - Dolph_Heinrichs (dor:Dolph_Heinrichs) --doo:birthPlace--> Germany (dor:Germany)
+      - Acolon (dor:Acolon) --doo:origin--> Germany (dor:Germany)
+      - Dolph_Heinrichs (dor:Dolph_Heinrichs) --dop:club--> East_Fremantle_Football_Club (dor:East_Fremantle_Football_Club)
+      - Acolon (dor:Acolon) --doo:species--> Vitis_vinifera (dor:Vitis_vinifera)
+  '4':
+    attributes:
+      Germany: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr', government type^='http://dbpedia.org/resource/Federal_parliamentary_republic')
+      East_Fremantle_Football_Club: (ground^='http://dbpedia.org/resource/East_Fremantle_Oval')
+    relationships:
+      - Dolph_Heinrichs (dor:Dolph_Heinrichs) --doo:birthPlace--> Germany (dor:Germany)
+      - Bronner_(grape) (<http://dbpedia.org/resource/Bronner_(grape)>) --doo:origin--> Germany (dor:Germany)
+      - Dolph_Heinrichs (dor:Dolph_Heinrichs) --dop:club--> East_Fremantle_Football_Club (dor:East_Fremantle_Football_Club)
+      - Bronner_(grape) (<http://dbpedia.org/resource/Bronner_(grape)>) --doo:species--> Vitis_amurensis (dor:Vitis_amurensis)
+  '5':
+    attributes:
+      Germany: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr', government type^='http://dbpedia.org/resource/Federal_parliamentary_republic')
+      Kalgoorlie_City_Football_Club: (ground^='http://dbpedia.org/resource/Sir_Richard_Moore_Oval')
+    relationships:
+      - Dolph_Heinrichs (dor:Dolph_Heinrichs) --doo:birthPlace--> Germany (dor:Germany)
+      - Bronner_(grape) (<http://dbpedia.org/resource/Bronner_(grape)>) --doo:origin--> Germany (dor:Germany)
+      - Dolph_Heinrichs (dor:Dolph_Heinrichs) --dop:club--> Kalgoorlie_City_Football_Club (dor:Kalgoorlie_City_Football_Club)
+      - Bronner_(grape) (<http://dbpedia.org/resource/Bronner_(grape)>) --doo:species--> Vitis_amurensis (dor:Vitis_amurensis)
+attributes:
+  Location: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --group^ (dop:group)--> Resource | --location^ (doo:location)--> Resource | --border^ (dop:border)--> langString | --augPrecipitationDays (dop:augPrecipitationDays)--> double | --auto^ (dop:auto)--> langString | --length m^ (dop:lengthM)--> int | --government type^ (doo:governmentType)--> Resource
+  australian football Team: --ground^ (dop:ground)--> langString
+subgraph_id: 389
+relationships:
+  - Australian rules football player --doo:birthPlace--> Location
+  - grape --doo:origin--> Location
+  - Australian rules football player --dop:club--> australian football Team
+  - grape --doo:species--> plant

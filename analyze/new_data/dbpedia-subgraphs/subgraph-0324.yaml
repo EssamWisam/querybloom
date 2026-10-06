@@ -1,0 +1,89 @@
+types:
+  person: doo:Person
+  disease: doo:Disease
+  Location: doo:Location
+  military service: doo:MilitaryService
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Killing_of_Marilee_Bruszer: (known for^='Formerly unidentified victim of homicide', death date^='August 1978')
+    relationships:
+      - A._A._Ames__MilitaryService__1 (dor:A._A._Ames__MilitaryService__1) --doo:country--> United_States (dor:United_States)
+      - Killing_of_Marilee_Bruszer (dor:Killing_of_Marilee_Bruszer) --doo:bodyDiscovered--> United_States (dor:United_States)
+      - Killing_of_Marilee_Bruszer (dor:Killing_of_Marilee_Bruszer) --doo:deathCause--> Homicide (dor:Homicide)
+  '2':
+    attributes:
+      Murder_of_Reyna_Marroquín: (known for^='Murder victim, former unidentified decedent', death date^='January 1969')
+    relationships:
+      - A._A._Ames__MilitaryService__1 (dor:A._A._Ames__MilitaryService__1) --doo:country--> United_States (dor:United_States)
+      - Murder_of_Reyna_Marroquín (<http://dbpedia.org/resource/Murder_of_Reyna_Marroquín>) --doo:bodyDiscovered--> United_States (dor:United_States)
+      - Murder_of_Reyna_Marroquín (<http://dbpedia.org/resource/Murder_of_Reyna_Marroquín>) --doo:deathCause--> Blunt_force_trauma (dor:Blunt_force_trauma)
+  '3':
+    attributes:
+      Killing_of_Marilee_Bruszer: (known for^='Formerly unidentified victim of homicide', death date^='August 1978')
+    relationships:
+      - A._A._Townsend__MilitaryService__1 (dor:A._A._Townsend__MilitaryService__1) --doo:country--> United_States (dor:United_States)
+      - Killing_of_Marilee_Bruszer (dor:Killing_of_Marilee_Bruszer) --doo:bodyDiscovered--> United_States (dor:United_States)
+      - Killing_of_Marilee_Bruszer (dor:Killing_of_Marilee_Bruszer) --doo:deathCause--> Homicide (dor:Homicide)
+  '4':
+    attributes:
+      Marsinah: (mother^='Sumini')
+    relationships:
+      - A._J._Witono__MilitaryService__1 (dor:A._J._Witono__MilitaryService__1) --doo:country--> Indonesia (dor:Indonesia)
+      - Marsinah (dor:Marsinah) --doo:bodyDiscovered--> Indonesia (dor:Indonesia)
+      - Marsinah (dor:Marsinah) --doo:deathCause--> Murder (dor:Murder)
+  '5':
+    attributes:
+      Murder_of_Hanifa_Abubakar: (known for^='Murder victim', death date^='2021-12-18')
+    relationships:
+      - Abayomi_Olonisakin__MilitaryService__1 (dor:Abayomi_Olonisakin__MilitaryService__1) --doo:country--> Nigeria (dor:Nigeria)
+      - Murder_of_Hanifa_Abubakar (dor:Murder_of_Hanifa_Abubakar) --doo:bodyDiscovered--> Nigeria (dor:Nigeria)
+      - Murder_of_Hanifa_Abubakar (dor:Murder_of_Hanifa_Abubakar) --doo:deathCause--> Homicide (dor:Homicide)
+  '6':
+    attributes:
+      Marsinah: (mother^='Sumini')
+    relationships:
+      - Abdul_Haris_Nasution__MilitaryService__1 (dor:Abdul_Haris_Nasution__MilitaryService__1) --doo:country--> Indonesia (dor:Indonesia)
+      - Marsinah (dor:Marsinah) --doo:bodyDiscovered--> Indonesia (dor:Indonesia)
+      - Marsinah (dor:Marsinah) --doo:deathCause--> Murder (dor:Murder)
+  '7':
+    attributes:
+      Marsinah: (mother^='Sumini')
+    relationships:
+      - Abdullah_Mahmud_Hendropriyono__MilitaryService__1 (dor:Abdullah_Mahmud_Hendropriyono__MilitaryService__1) --doo:country--> Indonesia (dor:Indonesia)
+      - Marsinah (dor:Marsinah) --doo:bodyDiscovered--> Indonesia (dor:Indonesia)
+      - Marsinah (dor:Marsinah) --doo:deathCause--> Murder (dor:Murder)
+  '8':
+    attributes:
+      Robert_Hall_(Canadian): (death date^='2016-06-13')
+    relationships:
+      - Adeluis_Bordado__MilitaryService__1 (dor:Adeluis_Bordado__MilitaryService__1) --doo:country--> Philippines (dor:Philippines)
+      - Robert_Hall_(Canadian) (<http://dbpedia.org/resource/Robert_Hall_(Canadian)>) --doo:bodyDiscovered--> Philippines (dor:Philippines)
+      - Robert_Hall_(Canadian) (<http://dbpedia.org/resource/Robert_Hall_(Canadian)>) --doo:deathCause--> Decapitation (dor:Decapitation)
+  '9':
+    attributes:
+      Robert_Hall_(Canadian): (death date^='2016-06-13')
+    relationships:
+      - Alan_Purisima__MilitaryService__1 (dor:Alan_Purisima__MilitaryService__1) --doo:country--> Philippines (dor:Philippines)
+      - Robert_Hall_(Canadian) (<http://dbpedia.org/resource/Robert_Hall_(Canadian)>) --doo:bodyDiscovered--> Philippines (dor:Philippines)
+      - Robert_Hall_(Canadian) (<http://dbpedia.org/resource/Robert_Hall_(Canadian)>) --doo:deathCause--> Decapitation (dor:Decapitation)
+  '10':
+    attributes:
+      New_York_(state): (area total km^='141297')
+    relationships:
+      - Albert_D._Shaw__MilitaryService__1 (dor:Albert_D._Shaw__MilitaryService__1) --doo:country--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Murder_of_Reyna_Marroquín (<http://dbpedia.org/resource/Murder_of_Reyna_Marroquín>) --doo:bodyDiscovered--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Murder_of_Reyna_Marroquín (<http://dbpedia.org/resource/Murder_of_Reyna_Marroquín>) --doo:deathCause--> Blunt_force_trauma (dor:Blunt_force_trauma)
+attributes:
+  person: --alma mater^ (doo:almaMater)--> Resource | --align^ (dop:align)--> langString | --known for^ (dop:knownFor)--> langString | --mother^ (dop:mother)--> Resource | --1a^ (dop:1a)--> langString | --spouse^ (doo:spouse)--> Resource | --after^ (dop:after)--> Resource | --death date^ (dop:deathDate)--> gMonthDay
+  Location: --arc-angleA^ (dop:arcAnglea)--> int | --certain^ (dop:certain)--> langString | --alt^ (dop:alt)--> langString | --source^ (dop:source)--> langString | --area total km^ (dop:areaTotalKm)--> int
+subgraph_id: 324
+relationships:
+  - military service --doo:country--> Location
+  - person --doo:bodyDiscovered--> Location
+  - person --doo:deathCause--> disease

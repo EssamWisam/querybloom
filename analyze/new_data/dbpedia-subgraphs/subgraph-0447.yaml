@@ -1,0 +1,82 @@
+types:
+  country: doo:Country
+  soccer club: doo:SoccerClub
+  organisation: doo:Organisation
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Angel_Tasevski (dor:Angel_Tasevski) --doo:nationality--> Republic_of_Macedonia (dor:Republic_of_Macedonia)
+      - Neptun_Electronics (dor:Neptun_Electronics) --dop:areaServed--> Republic_of_Macedonia (dor:Republic_of_Macedonia)
+      - KK_Karpoš_Sokoli (<http://dbpedia.org/resource/KK_Karpoš_Sokoli>) --doo:coach--> Angel_Tasevski (dor:Angel_Tasevski)
+  '2':
+    attributes: {}
+    relationships:
+      - Dragan_Bajić (<http://dbpedia.org/resource/Dragan_Bajić>) --doo:nationality--> Bosnia_and_Herzegovina (dor:Bosnia_and_Herzegovina)
+      - Apatin_Brewery (dor:Apatin_Brewery) --dop:areaServed--> Bosnia_and_Herzegovina (dor:Bosnia_and_Herzegovina)
+      - KK_Igokea (dor:KK_Igokea) --doo:coach--> Dragan_Bajić (<http://dbpedia.org/resource/Dragan_Bajić>)
+  '3':
+    attributes: {}
+    relationships:
+      - Dragan_Bajić (<http://dbpedia.org/resource/Dragan_Bajić>) --doo:nationality--> Bosnia_and_Herzegovina (dor:Bosnia_and_Herzegovina)
+      - BIHAMK (dor:BIHAMK) --dop:areaServed--> Bosnia_and_Herzegovina (dor:Bosnia_and_Herzegovina)
+      - KK_Igokea (dor:KK_Igokea) --doo:coach--> Dragan_Bajić (<http://dbpedia.org/resource/Dragan_Bajić>)
+  '4':
+    attributes: {}
+    relationships:
+      - Dragan_Bajić (<http://dbpedia.org/resource/Dragan_Bajić>) --doo:nationality--> Bosnia_and_Herzegovina (dor:Bosnia_and_Herzegovina)
+      - Bingo_(supermarket) (<http://dbpedia.org/resource/Bingo_(supermarket)>) --dop:areaServed--> Bosnia_and_Herzegovina (dor:Bosnia_and_Herzegovina)
+      - KK_Igokea (dor:KK_Igokea) --doo:coach--> Dragan_Bajić (<http://dbpedia.org/resource/Dragan_Bajić>)
+  '5':
+    attributes: {}
+    relationships:
+      - Ed_Ocampo (dor:Ed_Ocampo) --doo:nationality--> Philippines (dor:Philippines)
+      - 2GO (dor:2GO) --dop:areaServed--> Philippines (dor:Philippines)
+      - YCO_Painters (dor:YCO_Painters) --doo:coach--> Ed_Ocampo (dor:Ed_Ocampo)
+  '6':
+    attributes: {}
+    relationships:
+      - Ed_Ocampo (dor:Ed_Ocampo) --doo:nationality--> Philippines (dor:Philippines)
+      - Action_For_Economic_Reforms (dor:Action_For_Economic_Reforms) --dop:areaServed--> Philippines (dor:Philippines)
+      - YCO_Painters (dor:YCO_Painters) --doo:coach--> Ed_Ocampo (dor:Ed_Ocampo)
+  '7':
+    attributes: {}
+    relationships:
+      - Ed_Ocampo (dor:Ed_Ocampo) --doo:nationality--> Philippines (dor:Philippines)
+      - AgostoDos_Pictures (dor:AgostoDos_Pictures) --dop:areaServed--> Philippines (dor:Philippines)
+      - YCO_Painters (dor:YCO_Painters) --doo:coach--> Ed_Ocampo (dor:Ed_Ocampo)
+  '8':
+    attributes:
+      Aegean_Oil: (founded by^='http://dbpedia.org/resource/Dimitris_Melisanidis')
+    relationships:
+      - Eleni_Kapogianni (dor:Eleni_Kapogianni) --doo:nationality--> Greece (dor:Greece)
+      - Aegean_Oil (dor:Aegean_Oil) --dop:areaServed--> Greece (dor:Greece)
+      - Panathinaikos_women's_basketball (<http://dbpedia.org/resource/Panathinaikos_women's_basketball>) --doo:coach--> Eleni_Kapogianni (dor:Eleni_Kapogianni)
+  '9':
+    attributes:
+      Attica_Group: (founded by^='http://dbpedia.org/resource/Pericles_Panagopoulos')
+    relationships:
+      - Eleni_Kapogianni (dor:Eleni_Kapogianni) --doo:nationality--> Greece (dor:Greece)
+      - Attica_Group (dor:Attica_Group) --dop:areaServed--> Greece (dor:Greece)
+      - Panathinaikos_women's_basketball (<http://dbpedia.org/resource/Panathinaikos_women's_basketball>) --doo:coach--> Eleni_Kapogianni (dor:Eleni_Kapogianni)
+  '10':
+    attributes: {}
+    relationships:
+      - Eleni_Kapogianni (dor:Eleni_Kapogianni) --doo:nationality--> Greece (dor:Greece)
+      - Carrefour_Planet (dor:Carrefour_Planet) --dop:areaServed--> Greece (dor:Greece)
+      - Panathinaikos_women's_basketball (<http://dbpedia.org/resource/Panathinaikos_women's_basketball>) --doo:coach--> Eleni_Kapogianni (dor:Eleni_Kapogianni)
+attributes:
+  country: --2p^ (dop:2p)--> int | --Apr low C^ (dop:aprLowC)--> double
+  soccer club: --motto^ (doo:motto)--> string | --colwidth^ (dop:colwidth)--> int | --alt^ (dop:alt)--> langString | --aggregatescore^ (dop:aggregatescore)--> int | --highest attendance^ (dop:highestAttendance)--> date | --chairman^ (doo:chairman)--> Resource | --lowest attendance^ (dop:lowestAttendance)--> langString
+  organisation: --motto^ (doo:motto)--> string | --founded by^ (doo:foundedBy)--> Resource
+subgraph_id: 447
+relationships:
+  - basketball player --doo:nationality--> country
+  - organisation --dop:areaServed--> country
+  - soccer club --doo:coach--> basketball player

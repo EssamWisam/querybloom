@@ -1,0 +1,51 @@
+types:
+  tenure: doo:Tenure
+  station: doo:Station
+  Location: doo:Location
+  legislature: doo:Legislature
+  trade union: doo:TradeUnion
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Morrab_Gardens: (Wikipage revision ID^='1084801281')
+    relationships:
+      - Cornwall_Council (dor:Cornwall_Council) --doo:politicalPartyInLegislature--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Diana_Johnson__Tenure__5 (dor:Diana_Johnson__Tenure__5) --doo:constituencyDistrict--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Amalgamated_Engineering_Union (dor:Amalgamated_Engineering_Union) --doo:affiliation--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Morrab_Gardens (dor:Morrab_Gardens) --dop:operator--> Cornwall_Council (dor:Cornwall_Council)
+      - Bodmin_General_railway_station (dor:Bodmin_General_railway_station) --dop:borough--> Cornwall_Council (dor:Cornwall_Council)
+  '2':
+    attributes:
+      Morrab_Gardens: (Wikipage revision ID^='1084801281')
+    relationships:
+      - Cornwall_Council (dor:Cornwall_Council) --doo:politicalPartyInLegislature--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Diana_Johnson__Tenure__5 (dor:Diana_Johnson__Tenure__5) --doo:constituencyDistrict--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Amalgamated_Society_of_Boilermakers,_Shipwrights,_Blacksmiths_and_Structural_Workers (<http://dbpedia.org/resource/Amalgamated_Society_of_Boilermakers,_Shipwrights,_Blacksmiths_and_Structural_Workers>) --doo:affiliation--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Morrab_Gardens (dor:Morrab_Gardens) --dop:operator--> Cornwall_Council (dor:Cornwall_Council)
+      - Bodmin_General_railway_station (dor:Bodmin_General_railway_station) --dop:borough--> Cornwall_Council (dor:Cornwall_Council)
+  '3':
+    attributes:
+      Morrab_Gardens: (Wikipage revision ID^='1084801281')
+    relationships:
+      - Cornwall_Council (dor:Cornwall_Council) --doo:politicalPartyInLegislature--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Diana_Johnson__Tenure__5 (dor:Diana_Johnson__Tenure__5) --doo:constituencyDistrict--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Amalgamated_Society_of_Dyers,_Finishers_and_Kindred_Trades (<http://dbpedia.org/resource/Amalgamated_Society_of_Dyers,_Finishers_and_Kindred_Trades>) --doo:affiliation--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Morrab_Gardens (dor:Morrab_Gardens) --dop:operator--> Cornwall_Council (dor:Cornwall_Council)
+      - Bodmin_General_railway_station (dor:Bodmin_General_railway_station) --dop:borough--> Cornwall_Council (dor:Cornwall_Council)
+attributes:
+  station: --Closed^ (dop:closed)--> langString
+  Location: --government type^ (doo:governmentType)--> Resource | --Aug low C^ (dop:augLowC)--> double | --2p^ (dop:2p)--> int | --age^ (dop:age)--> second | --Aug rain days^ (dop:augRainDays)--> int | --mountain range^ (doo:mountainRange)--> Resource | --Apr record low F^ (dop:aprRecordLowF)--> int | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --designated other1 name^ (dop:designatedOther1Name)--> langString | --alt name^ (dop:altName)--> langString | --Aug high C^ (dop:augHighC)--> double | --area total (km2)^ (doop:areaTotal)--> squareKilometre
+subgraph_id: 994
+relationships:
+  - legislature --doo:politicalPartyInLegislature--> political party
+  - tenure --doo:constituencyDistrict--> political party
+  - trade union --doo:affiliation--> political party
+  - Location --dop:operator--> legislature
+  - station --dop:borough--> legislature

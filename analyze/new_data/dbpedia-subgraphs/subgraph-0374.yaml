@@ -1,0 +1,81 @@
+types:
+  person: doo:Person
+  scientist: doo:Scientist
+  ethnic group: doo:EthnicGroup
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Ali_Khademhosseini (dor:Ali_Khademhosseini) --doo:citizenship--> Canadians (dor:Canadians)
+      - 2010–2017_Toronto_serial_homicides (<http://dbpedia.org/resource/2010–2017_Toronto_serial_homicides>) --doo:nationality--> Canadians (dor:Canadians)
+  '2':
+    attributes: {}
+    relationships:
+      - Amitai_Ziv (dor:Amitai_Ziv) --doo:citizenship--> Canadians (dor:Canadians)
+      - 2010–2017_Toronto_serial_homicides (<http://dbpedia.org/resource/2010–2017_Toronto_serial_homicides>) --doo:nationality--> Canadians (dor:Canadians)
+  '3':
+    attributes:
+      Barth_Netterfield: (institution^='http://dbpedia.org/resource/University_of_Toronto')
+    relationships:
+      - Barth_Netterfield (dor:Barth_Netterfield) --doo:citizenship--> Canadians (dor:Canadians)
+      - 2010–2017_Toronto_serial_homicides (<http://dbpedia.org/resource/2010–2017_Toronto_serial_homicides>) --doo:nationality--> Canadians (dor:Canadians)
+  '4':
+    attributes:
+      Indian_people: (image^='Cave 26, Ajanta.jpg')
+      2019_Hyderabad_gang_rape: (title^='2019')
+    relationships:
+      - A._P._Balachandran (dor:A._P._Balachandran) --doo:citizenship--> Indian_people (dor:Indian_people)
+      - 2019_Hyderabad_gang_rape (dor:2019_Hyderabad_gang_rape) --doo:nationality--> Indian_people (dor:Indian_people)
+  '5':
+    attributes:
+      B._E._Vijayam: (institution^='http://dbpedia.org/resource/Geological_Society_of_India')
+      Indian_people: (image^='Cave 26, Ajanta.jpg')
+      2019_Hyderabad_gang_rape: (title^='2019')
+    relationships:
+      - B._E._Vijayam (dor:B._E._Vijayam) --doo:citizenship--> Indian_people (dor:Indian_people)
+      - 2019_Hyderabad_gang_rape (dor:2019_Hyderabad_gang_rape) --doo:nationality--> Indian_people (dor:Indian_people)
+  '6':
+    attributes:
+      Indian_people: (image^='Cave 26, Ajanta.jpg')
+      2019_Hyderabad_gang_rape: (title^='2019')
+    relationships:
+      - Debabrata_Goswami (dor:Debabrata_Goswami) --doo:citizenship--> Indian_people (dor:Indian_people)
+      - 2019_Hyderabad_gang_rape (dor:2019_Hyderabad_gang_rape) --doo:nationality--> Indian_people (dor:Indian_people)
+  '7':
+    attributes:
+      Americans: (image^='ColumbiaStahrArtwork.jpg', footer^='"Uncle Sam" is a national personification of the United States. The image bears a resemblance to the real Samuel Wilson and the pose used here is based on Lord Kitchener Wants You. The female personif...')
+      Alexander_Wendt: (institution^='http://dbpedia.org/resource/Dartmouth_College')
+    relationships:
+      - Alexander_Wendt (dor:Alexander_Wendt) --doo:citizenship--> Americans (dor:Americans)
+      - A._Alonso_Aguirre (dor:A._Alonso_Aguirre) --doo:nationality--> Americans (dor:Americans)
+  '8':
+    attributes:
+      Americans: (image^='ColumbiaStahrArtwork.jpg', footer^='"Uncle Sam" is a national personification of the United States. The image bears a resemblance to the real Samuel Wilson and the pose used here is based on Lord Kitchener Wants You. The female personif...')
+    relationships:
+      - Ali_Khademhosseini (dor:Ali_Khademhosseini) --doo:citizenship--> Americans (dor:Americans)
+      - A._Alonso_Aguirre (dor:A._Alonso_Aguirre) --doo:nationality--> Americans (dor:Americans)
+  '9':
+    attributes:
+      Americans: (image^='ColumbiaStahrArtwork.jpg', footer^='"Uncle Sam" is a national personification of the United States. The image bears a resemblance to the real Samuel Wilson and the pose used here is based on Lord Kitchener Wants You. The female personif...')
+      Arthur_Pardee: (institution^='http://dbpedia.org/resource/Dana-Farber_Cancer_Institute')
+    relationships:
+      - Arthur_Pardee (dor:Arthur_Pardee) --doo:citizenship--> Americans (dor:Americans)
+      - A._Alonso_Aguirre (dor:A._Alonso_Aguirre) --doo:nationality--> Americans (dor:Americans)
+  '10':
+    attributes: {}
+    relationships:
+      - Adam_Rutherford (dor:Adam_Rutherford) --doo:citizenship--> British_people (dor:British_people)
+      - A._C._Gimson (dor:A._C._Gimson) --doo:nationality--> British_people (dor:British_people)
+attributes:
+  person: --known for^ (dop:knownFor)--> Resource | --first appearance^ (doo:firstAppearance)--> string | --death date^ (doo:deathDate)--> date | --title^ (dop:title)--> langString | --nickname^ (dop:nickname)--> langString | --children^ (dop:children)--> Resource | --author^ (dop:author)--> langString | --1pp^ (dop:1pp)--> int
+  scientist: --institution^ (doo:institution)--> Resource
+  ethnic group: --image^ (dop:image)--> langString | --footer^ (dop:footer)--> langString
+subgraph_id: 374
+relationships:
+  - scientist --doo:citizenship--> ethnic group
+  - person --doo:nationality--> ethnic group

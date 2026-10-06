@@ -1,0 +1,88 @@
+types:
+  tenure: doo:Tenure
+  Election: doo:Election
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Republican_People's_Party: (leader^='http://dbpedia.org/resource/Kemal_Kılıçdaroğlu', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', formation date^='1919-09-07', colour^='http://dbpedia.org/resource/Red')
+      1927_Turkish_general_election: (after election^='http://dbpedia.org/resource/İsmet_İnönü', image^='150')
+    relationships:
+      - 1927_Turkish_general_election (dor:1927_Turkish_general_election) --doo:affiliation--> Republican_People's_Party (<http://dbpedia.org/resource/Republican_People's_Party>)
+      - Ali_Çetinkaya__Tenure__3 (<http://dbpedia.org/resource/Ali_Çetinkaya__Tenure__3>) --doo:constituencyDistrict--> 1927_Turkish_general_election (dor:1927_Turkish_general_election)
+  '2':
+    attributes:
+      Republican_People's_Party: (leader^='http://dbpedia.org/resource/Kemal_Kılıçdaroğlu', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', formation date^='1919-09-07', colour^='http://dbpedia.org/resource/Red')
+      1927_Turkish_general_election: (after election^='http://dbpedia.org/resource/İsmet_İnönü', image^='150')
+    relationships:
+      - 1927_Turkish_general_election (dor:1927_Turkish_general_election) --doo:affiliation--> Republican_People's_Party (<http://dbpedia.org/resource/Republican_People's_Party>)
+      - Celâl_Bayar__Tenure__4 (<http://dbpedia.org/resource/Celâl_Bayar__Tenure__4>) --doo:constituencyDistrict--> 1927_Turkish_general_election (dor:1927_Turkish_general_election)
+  '3':
+    attributes:
+      Republican_People's_Party: (leader^='http://dbpedia.org/resource/Kemal_Kılıçdaroğlu', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', formation date^='1919-09-07', colour^='http://dbpedia.org/resource/Red')
+      1927_Turkish_general_election: (after election^='http://dbpedia.org/resource/İsmet_İnönü', image^='150')
+    relationships:
+      - 1927_Turkish_general_election (dor:1927_Turkish_general_election) --doo:affiliation--> Republican_People's_Party (<http://dbpedia.org/resource/Republican_People's_Party>)
+      - İsmet_İnönü__Tenure__10 (<http://dbpedia.org/resource/İsmet_İnönü__Tenure__10>) --doo:constituencyDistrict--> 1927_Turkish_general_election (dor:1927_Turkish_general_election)
+  '4':
+    attributes:
+      Communist_Party_of_Kazakhstan: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', formation date^='1991-10-16')
+      1990_Kazakh_Supreme_Soviet_election: (image^='150')
+    relationships:
+      - 1990_Kazakh_Supreme_Soviet_election (dor:1990_Kazakh_Supreme_Soviet_election) --doo:affiliation--> Communist_Party_of_Kazakhstan (dor:Communist_Party_of_Kazakhstan)
+      - Abish_Kekilbayev__Tenure__5 (dor:Abish_Kekilbayev__Tenure__5) --doo:constituencyDistrict--> 1990_Kazakh_Supreme_Soviet_election (dor:1990_Kazakh_Supreme_Soviet_election)
+  '5':
+    attributes:
+      True_Path_Party: (leader^='http://dbpedia.org/resource/Ahmet_Nusret_Tuna', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', formation date^='1983-06-23')
+      1991_Turkish_general_election: (after election^='http://dbpedia.org/resource/Süleyman_Demirel', image^='3')
+    relationships:
+      - 1991_Turkish_general_election (dor:1991_Turkish_general_election) --doo:affiliation--> True_Path_Party (dor:True_Path_Party)
+      - Ahmet_Türk__Tenure__4 (<http://dbpedia.org/resource/Ahmet_Türk__Tenure__4>) --doo:constituencyDistrict--> 1991_Turkish_general_election (dor:1991_Turkish_general_election)
+  '6':
+    attributes:
+      True_Path_Party: (leader^='http://dbpedia.org/resource/Ahmet_Nusret_Tuna', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', formation date^='1983-06-23')
+      1991_Turkish_general_election: (after election^='http://dbpedia.org/resource/Süleyman_Demirel', image^='3')
+    relationships:
+      - 1991_Turkish_general_election (dor:1991_Turkish_general_election) --doo:affiliation--> True_Path_Party (dor:True_Path_Party)
+      - Cavit_Şadi_Pehlivanoğlu__Tenure__2 (<http://dbpedia.org/resource/Cavit_Şadi_Pehlivanoğlu__Tenure__2>) --doo:constituencyDistrict--> 1991_Turkish_general_election (dor:1991_Turkish_general_election)
+  '7':
+    attributes:
+      True_Path_Party: (leader^='http://dbpedia.org/resource/Ahmet_Nusret_Tuna', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', formation date^='1983-06-23')
+      1991_Turkish_general_election: (after election^='http://dbpedia.org/resource/Süleyman_Demirel', image^='3')
+    relationships:
+      - 1991_Turkish_general_election (dor:1991_Turkish_general_election) --doo:affiliation--> True_Path_Party (dor:True_Path_Party)
+      - Deniz_Baykal__Tenure__13 (dor:Deniz_Baykal__Tenure__13) --doo:constituencyDistrict--> 1991_Turkish_general_election (dor:1991_Turkish_general_election)
+  '8':
+    attributes:
+      Welfare_Party: (leader^='http://dbpedia.org/resource/Necmettin_Erbakan', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:•', formation date^='1983-07-19')
+      1995_Turkish_general_election: (after election^='http://dbpedia.org/resource/Tansu_Çiller', image^='Bülent Ecevit-Davos 2000 cropped.jpg')
+    relationships:
+      - 1995_Turkish_general_election (dor:1995_Turkish_general_election) --doo:affiliation--> Welfare_Party (dor:Welfare_Party)
+      - Abdullah_Gül__Abdullah_Gül__1__Tenure__6 (<http://dbpedia.org/resource/Abdullah_Gül__Abdullah_Gül__1__Tenure__6>) --doo:constituencyDistrict--> 1995_Turkish_general_election (dor:1995_Turkish_general_election)
+  '9':
+    attributes:
+      Welfare_Party: (leader^='http://dbpedia.org/resource/Necmettin_Erbakan', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:•', formation date^='1983-07-19')
+      1995_Turkish_general_election: (after election^='http://dbpedia.org/resource/Tansu_Çiller', image^='Bülent Ecevit-Davos 2000 cropped.jpg')
+    relationships:
+      - 1995_Turkish_general_election (dor:1995_Turkish_general_election) --doo:affiliation--> Welfare_Party (dor:Welfare_Party)
+      - Abdüllatif_Şener__Tenure__5 (<http://dbpedia.org/resource/Abdüllatif_Şener__Tenure__5>) --doo:constituencyDistrict--> 1995_Turkish_general_election (dor:1995_Turkish_general_election)
+  '10':
+    attributes:
+      Welfare_Party: (leader^='http://dbpedia.org/resource/Necmettin_Erbakan', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:•', formation date^='1983-07-19')
+      1995_Turkish_general_election: (after election^='http://dbpedia.org/resource/Tansu_Çiller', image^='Bülent Ecevit-Davos 2000 cropped.jpg')
+    relationships:
+      - 1995_Turkish_general_election (dor:1995_Turkish_general_election) --doo:affiliation--> Welfare_Party (dor:Welfare_Party)
+      - Deniz_Baykal__Tenure__13 (dor:Deniz_Baykal__Tenure__13) --doo:constituencyDistrict--> 1995_Turkish_general_election (dor:1995_Turkish_general_election)
+attributes:
+  tenure: --deputy^ (doo:deputy)--> Resource
+  Election: --1data^ (dop:1data)--> langString | --2data^ (dop:2data)--> perCent | --after election^ (dop:afterElection)--> Resource | --image^ (dop:image)--> langString | --4data^ (dop:4data)--> double
+  political party: --affiliation^ (dop:affiliation)--> langString | --leader^ (dop:leader)--> Resource | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --formation date^ (doo:formationDate)--> date | --president^ (doo:president)--> Resource | --colour^ (doo:colour)--> Resource
+subgraph_id: 435
+relationships:
+  - Election --doo:affiliation--> political party
+  - tenure --doo:constituencyDistrict--> Election

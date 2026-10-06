@@ -1,0 +1,69 @@
+types:
+  school: doo:School
+  writer: doo:Writer
+  Location: doo:Location
+  organisation: doo:Organisation
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Congregation_of_Christian_Brothers: (original name^='Congregatio Fratrum Christianorum')
+    relationships:
+      - Clarendon_County,_South_Carolina (<http://dbpedia.org/resource/Clarendon_County,_South_Carolina>) --wwoo:differentFrom--> New_South_Wales (dor:New_South_Wales)
+      - St_Edward's_College,_East_Gosford (<http://dbpedia.org/resource/St_Edward's_College,_East_Gosford>) --doo:location--> New_South_Wales (dor:New_South_Wales)
+      - Alan_Seymour (dor:Alan_Seymour) --doo:deathPlace--> New_South_Wales (dor:New_South_Wales)
+      - St_Edward's_College,_East_Gosford (<http://dbpedia.org/resource/St_Edward's_College,_East_Gosford>) --doo:foundedBy--> Congregation_of_Christian_Brothers (dor:Congregation_of_Christian_Brothers)
+  '2':
+    attributes:
+      Congregation_of_Christian_Brothers: (original name^='Congregatio Fratrum Christianorum')
+    relationships:
+      - Clarendon_County,_South_Carolina (<http://dbpedia.org/resource/Clarendon_County,_South_Carolina>) --wwoo:differentFrom--> New_South_Wales (dor:New_South_Wales)
+      - St_Edward's_College,_East_Gosford (<http://dbpedia.org/resource/St_Edward's_College,_East_Gosford>) --doo:location--> New_South_Wales (dor:New_South_Wales)
+      - Alex_Buzo (dor:Alex_Buzo) --doo:deathPlace--> New_South_Wales (dor:New_South_Wales)
+      - St_Edward's_College,_East_Gosford (<http://dbpedia.org/resource/St_Edward's_College,_East_Gosford>) --doo:foundedBy--> Congregation_of_Christian_Brothers (dor:Congregation_of_Christian_Brothers)
+  '3':
+    attributes:
+      Congregation_of_Christian_Brothers: (original name^='Congregatio Fratrum Christianorum')
+    relationships:
+      - Clarendon_County,_South_Carolina (<http://dbpedia.org/resource/Clarendon_County,_South_Carolina>) --wwoo:differentFrom--> New_South_Wales (dor:New_South_Wales)
+      - St_Edward's_College,_East_Gosford (<http://dbpedia.org/resource/St_Edward's_College,_East_Gosford>) --doo:location--> New_South_Wales (dor:New_South_Wales)
+      - Arthur_Henry_Adams__Arthur_Henry_Adams__1 (dor:Arthur_Henry_Adams__Arthur_Henry_Adams__1) --doo:deathPlace--> New_South_Wales (dor:New_South_Wales)
+      - St_Edward's_College,_East_Gosford (<http://dbpedia.org/resource/St_Edward's_College,_East_Gosford>) --doo:foundedBy--> Congregation_of_Christian_Brothers (dor:Congregation_of_Christian_Brothers)
+  '4':
+    attributes: {}
+    relationships:
+      - Independence,_Utah (<http://dbpedia.org/resource/Independence,_Utah>) --wwoo:differentFrom--> Utah (dor:Utah)
+      - SUCCESS_Academy (dor:SUCCESS_Academy) --doo:location--> Utah (dor:Utah)
+      - Barbara_Williams_(writer) (<http://dbpedia.org/resource/Barbara_Williams_(writer)>) --doo:deathPlace--> Utah (dor:Utah)
+      - SUCCESS_Academy (dor:SUCCESS_Academy) --doo:foundedBy--> Southern_Utah_University (dor:Southern_Utah_University)
+  '5':
+    attributes: {}
+    relationships:
+      - Independence,_Utah (<http://dbpedia.org/resource/Independence,_Utah>) --wwoo:differentFrom--> Utah (dor:Utah)
+      - SUCCESS_Academy (dor:SUCCESS_Academy) --doo:location--> Utah (dor:Utah)
+      - Hannah_T._King (dor:Hannah_T._King) --doo:deathPlace--> Utah (dor:Utah)
+      - SUCCESS_Academy (dor:SUCCESS_Academy) --doo:foundedBy--> Southern_Utah_University (dor:Southern_Utah_University)
+  '6':
+    attributes: {}
+    relationships:
+      - Independence,_Utah (<http://dbpedia.org/resource/Independence,_Utah>) --wwoo:differentFrom--> Utah (dor:Utah)
+      - SUCCESS_Academy (dor:SUCCESS_Academy) --doo:location--> Utah (dor:Utah)
+      - Janice_Loeb (dor:Janice_Loeb) --doo:deathPlace--> Utah (dor:Utah)
+      - SUCCESS_Academy (dor:SUCCESS_Academy) --doo:foundedBy--> Southern_Utah_University (dor:Southern_Utah_University)
+attributes:
+  writer: --caption^ (dop:caption)--> langString
+  Location: --group^ (dop:group)--> Resource | --arc-text-colorB^ (dop:arcTextColorb)--> langString | --number of vineyards^ (doo:numberOfVineyards)--> int | --abolished^ (dop:abolished)--> date | --administrator^ (dop:administrator)--> Resource | --named after^ (dop:namedAfter)--> Resource
+  organisation: --original name^ (doo:originalName)--> langString
+  administrative region: --image width^ (dop:imageWidth)--> int | --Apr rain mm^ (dop:aprRainMm)--> int
+subgraph_id: 343
+relationships:
+  - Location --wwoo:differentFrom--> administrative region
+  - school --doo:location--> administrative region
+  - writer --doo:deathPlace--> administrative region
+  - school --doo:foundedBy--> organisation

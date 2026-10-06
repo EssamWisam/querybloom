@@ -1,0 +1,95 @@
+types:
+  train: doo:Train
+  station: doo:Station
+  settlement: doo:Settlement
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Acela_Express_(trainset): (capacity^='304', Brakes^='')
+    relationships:
+      - Acela_Express_(trainset) (<http://dbpedia.org/resource/Acela_Express_(trainset)>) --dop:operator--> Amtrak (dor:Amtrak)
+      - Amtrak (dor:Amtrak) --doo:location--> Ontario (dor:Ontario)
+      - Ardmore_station_(Pennsylvania) (<http://dbpedia.org/resource/Ardmore_station_(Pennsylvania)>) --doo:type--> Amtrak (dor:Amtrak)
+  '2':
+    attributes:
+      Acela_Express_(trainset): (capacity^='304', Brakes^='')
+    relationships:
+      - Acela_Express_(trainset) (<http://dbpedia.org/resource/Acela_Express_(trainset)>) --dop:operator--> Amtrak (dor:Amtrak)
+      - Amtrak (dor:Amtrak) --doo:location--> Quebec (dor:Quebec)
+      - Ardmore_station_(Pennsylvania) (<http://dbpedia.org/resource/Ardmore_station_(Pennsylvania)>) --doo:type--> Amtrak (dor:Amtrak)
+  '3':
+    attributes:
+      Wyoming: (motto^='Equal Rights')
+      Acela_Express_(trainset): (capacity^='304', Brakes^='')
+    relationships:
+      - Acela_Express_(trainset) (<http://dbpedia.org/resource/Acela_Express_(trainset)>) --dop:operator--> Amtrak (dor:Amtrak)
+      - Amtrak (dor:Amtrak) --doo:location--> Wyoming (dor:Wyoming)
+      - Ardmore_station_(Pennsylvania) (<http://dbpedia.org/resource/Ardmore_station_(Pennsylvania)>) --doo:type--> Amtrak (dor:Amtrak)
+  '4':
+    attributes:
+      Big_Dome: (capacity^='57')
+      California: (motto^='"Eureka"')
+    relationships:
+      - Big_Dome (dor:Big_Dome) --dop:operator--> Atchison,_Topeka_and_Santa_Fe_Railway (<http://dbpedia.org/resource/Atchison,_Topeka_and_Santa_Fe_Railway>)
+      - Atchison,_Topeka_and_Santa_Fe_Railway (<http://dbpedia.org/resource/Atchison,_Topeka_and_Santa_Fe_Railway>) --doo:location--> California (dor:California)
+      - Chillicothe_station_(Illinois) (<http://dbpedia.org/resource/Chillicothe_station_(Illinois)>) --doo:type--> Atchison,_Topeka_and_Santa_Fe_Railway (<http://dbpedia.org/resource/Atchison,_Topeka_and_Santa_Fe_Railway>)
+  '5':
+    attributes:
+      Big_Dome: (capacity^='57')
+      Colorado: (motto^='Nil sine numine')
+    relationships:
+      - Big_Dome (dor:Big_Dome) --dop:operator--> Atchison,_Topeka_and_Santa_Fe_Railway (<http://dbpedia.org/resource/Atchison,_Topeka_and_Santa_Fe_Railway>)
+      - Atchison,_Topeka_and_Santa_Fe_Railway (<http://dbpedia.org/resource/Atchison,_Topeka_and_Santa_Fe_Railway>) --doo:location--> Colorado (dor:Colorado)
+      - Chillicothe_station_(Illinois) (<http://dbpedia.org/resource/Chillicothe_station_(Illinois)>) --doo:type--> Atchison,_Topeka_and_Santa_Fe_Railway (<http://dbpedia.org/resource/Atchison,_Topeka_and_Santa_Fe_Railway>)
+  '6':
+    attributes:
+      Iowa: (motto^='Our liberties we prize and our rights we will maintain.')
+      Big_Dome: (capacity^='57')
+    relationships:
+      - Big_Dome (dor:Big_Dome) --dop:operator--> Atchison,_Topeka_and_Santa_Fe_Railway (<http://dbpedia.org/resource/Atchison,_Topeka_and_Santa_Fe_Railway>)
+      - Atchison,_Topeka_and_Santa_Fe_Railway (<http://dbpedia.org/resource/Atchison,_Topeka_and_Santa_Fe_Railway>) --doo:location--> Iowa (dor:Iowa)
+      - Chillicothe_station_(Illinois) (<http://dbpedia.org/resource/Chillicothe_station_(Illinois)>) --doo:type--> Atchison,_Topeka_and_Santa_Fe_Railway (<http://dbpedia.org/resource/Atchison,_Topeka_and_Santa_Fe_Railway>)
+  '7':
+    attributes:
+      Delaware: (motto^='Liberty and Independence')
+    relationships:
+      - Strata-Dome (dor:Strata-Dome) --dop:operator--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+      - Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad) --doo:location--> Delaware (dor:Delaware)
+      - Aberdeen_station_(Baltimore_and_Ohio_Railroad) (<http://dbpedia.org/resource/Aberdeen_station_(Baltimore_and_Ohio_Railroad)>) --doo:type--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+  '8':
+    attributes:
+      Indiana: (motto^='"The Crossroads of America"')
+    relationships:
+      - Strata-Dome (dor:Strata-Dome) --dop:operator--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+      - Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad) --doo:location--> Indiana (dor:Indiana)
+      - Aberdeen_station_(Baltimore_and_Ohio_Railroad) (<http://dbpedia.org/resource/Aberdeen_station_(Baltimore_and_Ohio_Railroad)>) --doo:type--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+  '9':
+    attributes: {}
+    relationships:
+      - Strata-Dome (dor:Strata-Dome) --dop:operator--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+      - Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad) --doo:location--> Maryland (dor:Maryland)
+      - Aberdeen_station_(Baltimore_and_Ohio_Railroad) (<http://dbpedia.org/resource/Aberdeen_station_(Baltimore_and_Ohio_Railroad)>) --doo:type--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+  '10':
+    attributes:
+      Arkansas: '(motto^=''Regnat populus (Latin: The People Rule)'')'
+      El_Comedor: (capacity^='36')
+    relationships:
+      - El_Comedor (dor:El_Comedor) --dop:operator--> Chicago,_Rock_Island_and_Pacific_Railroad (<http://dbpedia.org/resource/Chicago,_Rock_Island_and_Pacific_Railroad>)
+      - Chicago,_Rock_Island_and_Pacific_Railroad (<http://dbpedia.org/resource/Chicago,_Rock_Island_and_Pacific_Railroad>) --doo:location--> Arkansas (dor:Arkansas)
+      - Minooka_station (dor:Minooka_station) --doo:type--> Chicago,_Rock_Island_and_Pacific_Railroad (<http://dbpedia.org/resource/Chicago,_Rock_Island_and_Pacific_Railroad>)
+attributes:
+  train: --capacity^ (dop:capacity)--> int | --art-sections^ (dop:artSections)--> int | --replaced^ (dop:replaced)--> int | --capacity^ (dop:capacity)--> langString | --Brakes^ (dop:brakes)--> langString
+  station: --accessdate^ (dop:accessdate)--> date
+  settlement: --Apr record high C^ (dop:aprRecordHighC)--> double | --display^ (dop:display)--> langString | --motto^ (doo:motto)--> string
+  public transit system: --operator^ (doo:operator)--> Resource
+subgraph_id: 88
+relationships:
+  - train --dop:operator--> public transit system
+  - public transit system --doo:location--> settlement
+  - station --doo:type--> public transit system

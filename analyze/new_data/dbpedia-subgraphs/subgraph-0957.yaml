@@ -1,0 +1,113 @@
+types:
+  company: doo:Company
+  Location: doo:Location
+  politician: doo:Politician
+  settlement: doo:Settlement
+  power station: doo:PowerStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      California: (colwidth^='20', area total (km2)^='163696.0')
+      A._Andrew_Hauk: (education^='http://dbpedia.org/resource/Columbus_School_of_Law')
+      Long_Beach,_California: (source^='NOAA')
+    relationships:
+      - Alamitos_Energy_Center (dor:Alamitos_Energy_Center) --doo:location--> Long_Beach,_California (<http://dbpedia.org/resource/Long_Beach,_California>)
+      - Alamitos_Energy_Center (dor:Alamitos_Energy_Center) --dop:owner--> AES_Corporation (dor:AES_Corporation)
+      - Alamitos_Energy_Center (dor:Alamitos_Energy_Center) --doo:location--> California (dor:California)
+      - A._Andrew_Hauk (dor:A._Andrew_Hauk) --dop:deathPlace--> California (dor:California)
+  '2':
+    attributes:
+      California: (colwidth^='20', area total (km2)^='163696.0')
+      A._Andrew_Hauk: (education^='http://dbpedia.org/resource/Columbus_School_of_Law')
+    relationships:
+      - Beacon_Solar_Project (dor:Beacon_Solar_Project) --doo:location--> Kern_County,_California (<http://dbpedia.org/resource/Kern_County,_California>)
+      - Beacon_Solar_Project (dor:Beacon_Solar_Project) --dop:owner--> Los_Angeles_Department_of_Water_and_Power (dor:Los_Angeles_Department_of_Water_and_Power)
+      - Beacon_Solar_Project (dor:Beacon_Solar_Project) --doo:location--> California (dor:California)
+      - A._Andrew_Hauk (dor:A._Andrew_Hauk) --dop:deathPlace--> California (dor:California)
+  '3':
+    attributes:
+      California: (colwidth^='20', area total (km2)^='163696.0')
+      A._Andrew_Hauk: (education^='http://dbpedia.org/resource/Columbus_School_of_Law')
+    relationships:
+      - Desert_Sunlight_Solar_Farm (dor:Desert_Sunlight_Solar_Farm) --doo:location--> Riverside_County,_California (<http://dbpedia.org/resource/Riverside_County,_California>)
+      - Desert_Sunlight_Solar_Farm (dor:Desert_Sunlight_Solar_Farm) --dop:owner--> GE_Energy_Financial_Services (dor:GE_Energy_Financial_Services)
+      - Desert_Sunlight_Solar_Farm (dor:Desert_Sunlight_Solar_Farm) --doo:location--> California (dor:California)
+      - A._Andrew_Hauk (dor:A._Andrew_Hauk) --dop:deathPlace--> California (dor:California)
+  '4':
+    attributes:
+      West_Bengal: (area total (km2)^='88752.0')
+      Birbhum_district: (float^='right')
+    relationships:
+      - Bakreshwar_Thermal_Power_Station (dor:Bakreshwar_Thermal_Power_Station) --doo:location--> Birbhum_district (dor:Birbhum_district)
+      - Bakreshwar_Thermal_Power_Station (dor:Bakreshwar_Thermal_Power_Station) --dop:owner--> West_Bengal_Power_Development_Corporation_Limited (dor:West_Bengal_Power_Development_Corporation_Limited)
+      - Bakreshwar_Thermal_Power_Station (dor:Bakreshwar_Thermal_Power_Station) --doo:location--> West_Bengal (dor:West_Bengal)
+      - A._B._A._Ghani_Khan_Choudhury (dor:A._B._A._Ghani_Khan_Choudhury) --dop:deathPlace--> West_Bengal (dor:West_Bengal)
+  '5':
+    attributes:
+      West_Bengal: (area total (km2)^='88752.0')
+    relationships:
+      - Bandel_Thermal_Power_Station (dor:Bandel_Thermal_Power_Station) --doo:location--> Tribeni,_Hooghly (<http://dbpedia.org/resource/Tribeni,_Hooghly>)
+      - Bandel_Thermal_Power_Station (dor:Bandel_Thermal_Power_Station) --dop:owner--> West_Bengal_Power_Development_Corporation (dor:West_Bengal_Power_Development_Corporation)
+      - Bandel_Thermal_Power_Station (dor:Bandel_Thermal_Power_Station) --doo:location--> West_Bengal (dor:West_Bengal)
+      - A._B._A._Ghani_Khan_Choudhury (dor:A._B._A._Ghani_Khan_Choudhury) --dop:deathPlace--> West_Bengal (dor:West_Bengal)
+  '6':
+    attributes:
+      Durgapur: (float^='centre')
+      West_Bengal: (area total (km2)^='88752.0')
+    relationships:
+      - Durgapur_Steel_Thermal_Power_Station (dor:Durgapur_Steel_Thermal_Power_Station) --doo:location--> Durgapur (dor:Durgapur)
+      - Durgapur_Steel_Thermal_Power_Station (dor:Durgapur_Steel_Thermal_Power_Station) --dop:owner--> Damodar_Valley_Corporation (dor:Damodar_Valley_Corporation)
+      - Durgapur_Steel_Thermal_Power_Station (dor:Durgapur_Steel_Thermal_Power_Station) --doo:location--> West_Bengal (dor:West_Bengal)
+      - A._B._A._Ghani_Khan_Choudhury (dor:A._B._A._Ghani_Khan_Choudhury) --dop:deathPlace--> West_Bengal (dor:West_Bengal)
+  '7':
+    attributes:
+      Kochi: (area total (km2)^='94.88', Apr rain days^='6.9')
+    relationships:
+      - BSES_Kerala_Power_Limited (dor:BSES_Kerala_Power_Limited) --doo:location--> Eloor (dor:Eloor)
+      - BSES_Kerala_Power_Limited (dor:BSES_Kerala_Power_Limited) --dop:owner--> Reliance_Infrastructure (dor:Reliance_Infrastructure)
+      - BSES_Kerala_Power_Limited (dor:BSES_Kerala_Power_Limited) --doo:location--> Kochi (dor:Kochi)
+      - A._C._Jose (dor:A._C._Jose) --dop:deathPlace--> Kochi (dor:Kochi)
+  '8':
+    attributes:
+      Massachusetts: (area total (km2)^='10565.0')
+      A._David_Mazzone: (education^='http://dbpedia.org/resource/DePaul_University_College_of_Law')
+    relationships:
+      - Pilgrim_Nuclear_Power_Station (dor:Pilgrim_Nuclear_Power_Station) --doo:location--> Plymouth_County,_Massachusetts (<http://dbpedia.org/resource/Plymouth_County,_Massachusetts>)
+      - Pilgrim_Nuclear_Power_Station (dor:Pilgrim_Nuclear_Power_Station) --dop:owner--> Entergy (dor:Entergy)
+      - Pilgrim_Nuclear_Power_Station (dor:Pilgrim_Nuclear_Power_Station) --doo:location--> Massachusetts (dor:Massachusetts)
+      - A._David_Mazzone (dor:A._David_Mazzone) --dop:deathPlace--> Massachusetts (dor:Massachusetts)
+  '9':
+    attributes:
+      Massachusetts: (area total (km2)^='10565.0')
+      A._David_Mazzone: (education^='http://dbpedia.org/resource/DePaul_University_College_of_Law')
+      Plymouth,_Massachusetts: (source^='http://dbpedia.org/resource/NOAA')
+    relationships:
+      - Pilgrim_Nuclear_Power_Station (dor:Pilgrim_Nuclear_Power_Station) --doo:location--> Plymouth,_Massachusetts (<http://dbpedia.org/resource/Plymouth,_Massachusetts>)
+      - Pilgrim_Nuclear_Power_Station (dor:Pilgrim_Nuclear_Power_Station) --dop:owner--> Entergy (dor:Entergy)
+      - Pilgrim_Nuclear_Power_Station (dor:Pilgrim_Nuclear_Power_Station) --doo:location--> Massachusetts (dor:Massachusetts)
+      - A._David_Mazzone (dor:A._David_Mazzone) --dop:deathPlace--> Massachusetts (dor:Massachusetts)
+  '10':
+    attributes:
+      Illinois: (area total (km2)^='149997.0')
+    relationships:
+      - Byron_Nuclear_Generating_Station (dor:Byron_Nuclear_Generating_Station) --doo:location--> Byron,_Illinois (<http://dbpedia.org/resource/Byron,_Illinois>)
+      - Byron_Nuclear_Generating_Station (dor:Byron_Nuclear_Generating_Station) --dop:owner--> Constellation_Energy (dor:Constellation_Energy)
+      - Byron_Nuclear_Generating_Station (dor:Byron_Nuclear_Generating_Station) --doo:location--> Illinois (dor:Illinois)
+      - A._F._Maciejewski (dor:A._F._Maciejewski) --dop:deathPlace--> Illinois (dor:Illinois)
+attributes:
+  company: --formation date^ (doo:formationDate)--> date
+  Location: --colwidth^ (dop:colwidth)--> int | --region^ (doo:region)--> Resource | --district^ (doo:district)--> Resource | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --Apr rain days^ (dop:aprRainDays)--> int
+  politician: --education^ (doo:education)--> Resource | --2p^ (dop:2p)--> int | --float^ (dop:float)--> langString | --relatives^ (dop:relatives)--> langString
+  settlement: --source^ (dop:source)--> langString | --float^ (dop:float)--> langString
+subgraph_id: 957
+relationships:
+  - power station --doo:location--> settlement
+  - power station --dop:owner--> company
+  - power station --doo:location--> Location
+  - politician --dop:deathPlace--> Location

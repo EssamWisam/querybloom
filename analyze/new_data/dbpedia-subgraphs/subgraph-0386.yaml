@@ -1,0 +1,66 @@
+types:
+  country: doo:Country
+  volcano: doo:Volcano
+  Location: doo:Location
+  hockey team: doo:HockeyTeam
+  ice hockey player: doo:IceHockeyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Mikhail_Kravets: (height ft^='5', active years start year^='1982')
+      Kamchatka_Peninsula: (width^='127')
+    relationships:
+      - Avangard_Omsk (dor:Avangard_Omsk) --dop:city--> Russia (dor:Russia)
+      - Avangard_Omsk (dor:Avangard_Omsk) --doo:coach--> Mikhail_Kravets (dor:Mikhail_Kravets)
+      - Akademia_Nauk (dor:Akademia_Nauk) --doo:locatedInArea--> Russia (dor:Russia)
+      - Akademia_Nauk (dor:Akademia_Nauk) --doo:locatedInArea--> Kamchatka_Peninsula (dor:Kamchatka_Peninsula)
+  '2':
+    attributes:
+      Mikhail_Kravets: (height ft^='5', active years start year^='1982')
+      Kamchatka_Peninsula: (width^='127')
+    relationships:
+      - Avangard_Omsk (dor:Avangard_Omsk) --dop:city--> Russia (dor:Russia)
+      - Avangard_Omsk (dor:Avangard_Omsk) --doo:coach--> Mikhail_Kravets (dor:Mikhail_Kravets)
+      - Akhtang (dor:Akhtang) --doo:locatedInArea--> Russia (dor:Russia)
+      - Akhtang (dor:Akhtang) --doo:locatedInArea--> Kamchatka_Peninsula (dor:Kamchatka_Peninsula)
+  '3':
+    attributes:
+      Mikhail_Kravets: (height ft^='5', active years start year^='1982')
+      Kamchatka_Peninsula: (width^='127')
+    relationships:
+      - Avangard_Omsk (dor:Avangard_Omsk) --dop:city--> Russia (dor:Russia)
+      - Avangard_Omsk (dor:Avangard_Omsk) --doo:coach--> Mikhail_Kravets (dor:Mikhail_Kravets)
+      - Alney-Chashakondzha (dor:Alney-Chashakondzha) --doo:locatedInArea--> Russia (dor:Russia)
+      - Alney-Chashakondzha (dor:Alney-Chashakondzha) --doo:locatedInArea--> Kamchatka_Peninsula (dor:Kamchatka_Peninsula)
+  '4':
+    attributes:
+      Rome: (width^='277', Apr low C^='6.8')
+      Tomáš_Demel: (active years start year^='1997')
+    relationships:
+      - HC_Eppan_Pirates (dor:HC_Eppan_Pirates) --dop:city--> Italy (dor:Italy)
+      - HC_Eppan_Pirates (dor:HC_Eppan_Pirates) --doo:coach--> Tomáš_Demel (<http://dbpedia.org/resource/Tomáš_Demel>)
+      - Alban_Hills__Alban_Hills__1 (dor:Alban_Hills__Alban_Hills__1) --doo:locatedInArea--> Italy (dor:Italy)
+      - Alban_Hills__Alban_Hills__1 (dor:Alban_Hills__Alban_Hills__1) --doo:locatedInArea--> Rome (dor:Rome)
+  '5':
+    attributes:
+      Tomáš_Demel: (active years start year^='1997')
+    relationships:
+      - HC_Eppan_Pirates (dor:HC_Eppan_Pirates) --dop:city--> Italy (dor:Italy)
+      - HC_Eppan_Pirates (dor:HC_Eppan_Pirates) --doo:coach--> Tomáš_Demel (<http://dbpedia.org/resource/Tomáš_Demel>)
+      - Mount_Etna (dor:Mount_Etna) --doo:locatedInArea--> Italy (dor:Italy)
+      - Mount_Etna (dor:Mount_Etna) --doo:locatedInArea--> Sicily (dor:Sicily)
+attributes:
+  country: --caption align^ (dop:captionAlign)--> langString | --width^ (dop:width)--> int | --Apr low C^ (dop:aprLowC)--> double
+  Location: --Apr low F^ (dop:aprLowF)--> double | --named after^ (dop:namedAfter)--> langString | --bgcolor^ (dop:bgcolor)--> langString | --arc-radiusB^ (dop:arcRadiusb)--> double | --age^ (dop:age)--> Resource
+  ice hockey player: --height ft^ (dop:heightFt)--> int | --appearances^ (dop:appearances)--> int | --active years start year^ (doo:activeYearsStartYear)--> gYear | --death date^ (doo:deathDate)--> date
+subgraph_id: 386
+relationships:
+  - hockey team --dop:city--> Location
+  - hockey team --doo:coach--> ice hockey player
+  - volcano --doo:locatedInArea--> Location
+  - volcano --doo:locatedInArea--> country

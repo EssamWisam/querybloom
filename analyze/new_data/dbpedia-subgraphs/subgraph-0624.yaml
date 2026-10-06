@@ -1,0 +1,101 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  hospital: doo:Hospital
+  scientist: doo:Scientist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Lanmadaw_Township: (area total (km2)^='1.4', subject='http://dbpedia.org/resource/Category:Townships_of_Yangon')
+    relationships:
+      - 500–bed_Specialty_Hospital,_Yangon (<http://dbpedia.org/resource/500–bed_Specialty_Hospital,_Yangon>) --doo:location--> Lanmadaw_Township (dor:Lanmadaw_Township)
+      - 500–bed_Specialty_Hospital,_Yangon (<http://dbpedia.org/resource/500–bed_Specialty_Hospital,_Yangon>) --doo:region--> Yangon (dor:Yangon)
+      - Chit_Ko_Ko (dor:Chit_Ko_Ko) --doo:deathPlace--> Yangon (dor:Yangon)
+  '2':
+    attributes:
+      Tha_Myat: (alma mater^='http://dbpedia.org/resource/University_of_Mumbai')
+      Lanmadaw_Township: (area total (km2)^='1.4', subject='http://dbpedia.org/resource/Category:Townships_of_Yangon')
+    relationships:
+      - 500–bed_Specialty_Hospital,_Yangon (<http://dbpedia.org/resource/500–bed_Specialty_Hospital,_Yangon>) --doo:location--> Lanmadaw_Township (dor:Lanmadaw_Township)
+      - 500–bed_Specialty_Hospital,_Yangon (<http://dbpedia.org/resource/500–bed_Specialty_Hospital,_Yangon>) --doo:region--> Yangon (dor:Yangon)
+      - Tha_Myat (dor:Tha_Myat) --doo:deathPlace--> Yangon (dor:Yangon)
+  '3':
+    attributes:
+      Foresterhill: (subject='http://dbpedia.org/resource/Category:Areas_of_Aberdeen')
+      Alexander_Bain_(philosopher): (influenced^='http://dbpedia.org/resource/British_idealism')
+    relationships:
+      - Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary) --doo:location--> Foresterhill (dor:Foresterhill)
+      - Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary) --doo:region--> Aberdeen (dor:Aberdeen)
+      - Alexander_Bain_(philosopher) (<http://dbpedia.org/resource/Alexander_Bain_(philosopher)>) --doo:deathPlace--> Aberdeen (dor:Aberdeen)
+  '4':
+    attributes:
+      Foresterhill: (subject='http://dbpedia.org/resource/Category:Areas_of_Aberdeen')
+      Alexander_Ogston: (alma mater^='http://dbpedia.org/resource/University_of_Aberdeen')
+    relationships:
+      - Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary) --doo:location--> Foresterhill (dor:Foresterhill)
+      - Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary) --doo:region--> Aberdeen (dor:Aberdeen)
+      - Alexander_Ogston (dor:Alexander_Ogston) --doo:deathPlace--> Aberdeen (dor:Aberdeen)
+  '5':
+    attributes:
+      Alfred_Adler: (alma mater^='http://dbpedia.org/resource/University_of_Vienna')
+      Foresterhill: (subject='http://dbpedia.org/resource/Category:Areas_of_Aberdeen')
+    relationships:
+      - Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary) --doo:location--> Foresterhill (dor:Foresterhill)
+      - Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary) --doo:region--> Aberdeen (dor:Aberdeen)
+      - Alfred_Adler (dor:Alfred_Adler) --doo:deathPlace--> Aberdeen (dor:Aberdeen)
+  '6':
+    attributes:
+      Fazakerley: (subject='http://dbpedia.org/resource/Category:Areas_of_Liverpool')
+      Edgar_Allison_Peers: (alma mater^='http://dbpedia.org/resource/Christ''s_College,_Cambridge')
+    relationships:
+      - Aintree_University_Hospital (dor:Aintree_University_Hospital) --doo:location--> Fazakerley (dor:Fazakerley)
+      - Aintree_University_Hospital (dor:Aintree_University_Hospital) --doo:region--> Liverpool (dor:Liverpool)
+      - Edgar_Allison_Peers (dor:Edgar_Allison_Peers) --doo:deathPlace--> Liverpool (dor:Liverpool)
+  '7':
+    attributes:
+      Fazakerley: (subject='http://dbpedia.org/resource/Category:Areas_of_Liverpool')
+      Ferdinand_Hurter: (alma mater^='http://dbpedia.org/resource/ETH_Zurich')
+    relationships:
+      - Aintree_University_Hospital (dor:Aintree_University_Hospital) --doo:location--> Fazakerley (dor:Fazakerley)
+      - Aintree_University_Hospital (dor:Aintree_University_Hospital) --doo:region--> Liverpool (dor:Liverpool)
+      - Ferdinand_Hurter (dor:Ferdinand_Hurter) --doo:deathPlace--> Liverpool (dor:Liverpool)
+  '8':
+    attributes:
+      Fazakerley: (subject='http://dbpedia.org/resource/Category:Areas_of_Liverpool')
+      Henry_Brunner: (alma mater^='http://dbpedia.org/resource/ETH_Zurich')
+    relationships:
+      - Aintree_University_Hospital (dor:Aintree_University_Hospital) --doo:location--> Fazakerley (dor:Fazakerley)
+      - Aintree_University_Hospital (dor:Aintree_University_Hospital) --doo:region--> Liverpool (dor:Liverpool)
+      - Henry_Brunner (dor:Henry_Brunner) --doo:deathPlace--> Liverpool (dor:Liverpool)
+  '9':
+    attributes:
+      Maitland,_Cape_Town: (area total (km2)^='3.95', subject='http://dbpedia.org/resource/Category:Suburbs_of_Cape_Town')
+      Alan_William_James_Cousins: (alma mater^='http://dbpedia.org/resource/University_of_Cape_Town')
+    relationships:
+      - Alexandra_Hospital_(Cape_Town) (<http://dbpedia.org/resource/Alexandra_Hospital_(Cape_Town)>) --doo:location--> Maitland,_Cape_Town (<http://dbpedia.org/resource/Maitland,_Cape_Town>)
+      - Alexandra_Hospital_(Cape_Town) (<http://dbpedia.org/resource/Alexandra_Hospital_(Cape_Town)>) --doo:region--> Cape_Town (dor:Cape_Town)
+      - Alan_William_James_Cousins (dor:Alan_William_James_Cousins) --doo:deathPlace--> Cape_Town (dor:Cape_Town)
+  '10':
+    attributes:
+      Maitland,_Cape_Town: (area total (km2)^='3.95', subject='http://dbpedia.org/resource/Category:Suburbs_of_Cape_Town')
+      Alexander_Brown_(mathematician): (alma mater^='http://dbpedia.org/resource/Gonville_and_Caius_College,_Cambridge')
+    relationships:
+      - Alexandra_Hospital_(Cape_Town) (<http://dbpedia.org/resource/Alexandra_Hospital_(Cape_Town)>) --doo:location--> Maitland,_Cape_Town (<http://dbpedia.org/resource/Maitland,_Cape_Town>)
+      - Alexandra_Hospital_(Cape_Town) (<http://dbpedia.org/resource/Alexandra_Hospital_(Cape_Town)>) --doo:region--> Cape_Town (dor:Cape_Town)
+      - Alexander_Brown_(mathematician) (<http://dbpedia.org/resource/Alexander_Brown_(mathematician)>) --doo:deathPlace--> Cape_Town (dor:Cape_Town)
+attributes:
+  city: --Apr record low F^ (dop:aprRecordLowF)--> langString
+  Location: --designated other1 name^ (dop:designatedOther1Name)--> langString | --nickname^ (dop:nickname)--> langString | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --subject (podt:subject)--> Resource | --Center^ (dop:center)--> langString | --frazioni^ (doo:frazioni)--> Resource | --mouth mountain^ (doo:mouthMountain)--> Resource | --1p^ (dop:1p)--> int | --width^ (dop:width)--> langString
+  scientist: --influenced^ (doo:influenced)--> Resource | --alma mater^ (doo:almaMater)--> Resource
+subgraph_id: 624
+relationships:
+  - hospital --doo:location--> Location
+  - hospital --doo:region--> city
+  - scientist --doo:deathPlace--> city

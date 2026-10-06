@@ -1,0 +1,103 @@
+types:
+  person: doo:Person
+  university: doo:University
+  trade union: doo:TradeUnion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._W._Pryor: (death place^='http://dbpedia.org/resource/Sydney')
+    relationships:
+      - University_of_Queensland_Union (dor:University_of_Queensland_Union) --doo:affiliation--> University_of_Queensland (dor:University_of_Queensland)
+      - A._W._Pryor (dor:A._W._Pryor) --dop:almaMater--> University_of_Queensland (dor:University_of_Queensland)
+  '2':
+    attributes:
+      Aaron_Violi: (spouse^='Rachel Violi')
+      La_Trobe_University: (nickname^='La Trobians and')
+    relationships:
+      - La_Trobe_Student_Union (dor:La_Trobe_Student_Union) --doo:affiliation--> La_Trobe_University (dor:La_Trobe_University)
+      - Aaron_Violi (dor:Aaron_Violi) --dop:almaMater--> La_Trobe_University (dor:La_Trobe_University)
+  '3':
+    attributes:
+      La_Trobe_University: (nickname^='La Trobians and')
+    relationships:
+      - La_Trobe_Student_Union (dor:La_Trobe_Student_Union) --doo:affiliation--> La_Trobe_University (dor:La_Trobe_University)
+      - Abdirahman_Farole (dor:Abdirahman_Farole) --dop:almaMater--> La_Trobe_University (dor:La_Trobe_University)
+  '4':
+    attributes:
+      Abdul_Ghani_Othman: (spouse^='Jamilah Ariffin')
+      La_Trobe_University: (nickname^='La Trobians and')
+    relationships:
+      - La_Trobe_Student_Union (dor:La_Trobe_Student_Union) --doo:affiliation--> La_Trobe_University (dor:La_Trobe_University)
+      - Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman) --dop:almaMater--> La_Trobe_University (dor:La_Trobe_University)
+  '5':
+    attributes:
+      Abdul_Ghani_Othman: (spouse^='Jamilah Ariffin')
+    relationships:
+      - University_of_Queensland_Union (dor:University_of_Queensland_Union) --doo:affiliation--> University_of_Queensland (dor:University_of_Queensland)
+      - Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman) --dop:almaMater--> University_of_Queensland (dor:University_of_Queensland)
+  '6':
+    attributes: {}
+    relationships:
+      - University_of_Queensland_Union (dor:University_of_Queensland_Union) --doo:affiliation--> University_of_Queensland (dor:University_of_Queensland)
+      - Adrian_G._Barnett (dor:Adrian_G._Barnett) --dop:almaMater--> University_of_Queensland (dor:University_of_Queensland)
+  '7':
+    attributes:
+      Alan_Crook: (death place^='http://dbpedia.org/resource/Sydney')
+    relationships:
+      - RMIT_University_Student_Union (dor:RMIT_University_Student_Union) --doo:affiliation--> RMIT_University (dor:RMIT_University)
+      - Alan_Crook (dor:Alan_Crook) --dop:almaMater--> RMIT_University (dor:RMIT_University)
+  '8':
+    attributes: {}
+    relationships:
+      - RMIT_University_Student_Union (dor:RMIT_University_Student_Union) --doo:affiliation--> RMIT_University (dor:RMIT_University)
+      - Alan_Wrigley (dor:Alan_Wrigley) --dop:almaMater--> RMIT_University (dor:RMIT_University)
+  '9':
+    attributes:
+      Albert_Kitson: (spouse^='1910', death place^='http://dbpedia.org/resource/Beaconsfield')
+    relationships:
+      - RMIT_University_Student_Union (dor:RMIT_University_Student_Union) --doo:affiliation--> RMIT_University (dor:RMIT_University)
+      - Albert_Kitson (dor:Albert_Kitson) --dop:almaMater--> RMIT_University (dor:RMIT_University)
+qa_result:
+  status: completed
+  cost_usd: 0.292785
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0841124
+        total_tokens: 6200
+        prompt_tokens: 2214
+        completion_tokens: 3986
+      generate:
+        cost_usd: 0.0954626
+        total_tokens: 7590
+        prompt_tokens: 3276
+        completion_tokens: 4314
+      verify_1:
+        cost_usd: 0.029882000000000002
+        total_tokens: 4189
+        prompt_tokens: 3593
+        completion_tokens: 596
+      complexity:
+        cost_usd: 0.08332800000000001
+        total_tokens: 8134
+        prompt_tokens: 4718
+        completion_tokens: 3416
+    total_tokens: 26113
+    prompt_tokens: 13801
+    total_cost_usd: 0.292785
+    completion_tokens: 12312
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --spouse^ (dop:spouse)--> Resource | --parents^ (dop:parents)--> langString | --alias (doo:alias)--> langString | --2a (dop:2a)--> langString | --alt^ (dop:alt)--> langString | --parents^ (dop:parents)--> Resource | --death place^ (doo:deathPlace)--> Resource
+  university: --nickname^ (dop:nickname)--> langString
+subgraph_id: 244
+relationships:
+  - trade union --doo:affiliation--> university
+  - person --dop:almaMater--> university

@@ -1,0 +1,111 @@
+types:
+  city: doo:City
+  road: doo:Road
+  scientist: doo:Scientist
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Budapest: (aprHighC='18.3')
+      Ana_Aslan: (death date^='')
+      Bucharest: (differentFrom='http://dbpedia.org/resource/Budapest')
+    relationships:
+      - Ana_Aslan (dor:Ana_Aslan) --dop:deathPlace--> Bucharest (dor:Bucharest)
+      - A1_motorway_(Romania) (<http://dbpedia.org/resource/A1_motorway_(Romania)>) --doo:city--> Bucharest (dor:Bucharest)
+      - Bucharest (dor:Bucharest) --wwoo:differentFrom--> Budapest (dor:Budapest)
+  '2':
+    attributes:
+      Budapest: (aprHighC='18.3')
+      Bucharest: (differentFrom='http://dbpedia.org/resource/Budapest')
+      Aristide_Caradja: (death date^='1955-05-29')
+    relationships:
+      - Aristide_Caradja (dor:Aristide_Caradja) --dop:deathPlace--> Bucharest (dor:Bucharest)
+      - A1_motorway_(Romania) (<http://dbpedia.org/resource/A1_motorway_(Romania)>) --doo:city--> Bucharest (dor:Bucharest)
+      - Bucharest (dor:Bucharest) --wwoo:differentFrom--> Budapest (dor:Budapest)
+  '3':
+    attributes:
+      Budapest: (aprHighC='18.3')
+      Bucharest: (differentFrom='http://dbpedia.org/resource/Budapest')
+      Aurel_Babeș: (death date^='1961-12-31')
+    relationships:
+      - Aurel_Babeș (<http://dbpedia.org/resource/Aurel_Babeș>) --dop:deathPlace--> Bucharest (dor:Bucharest)
+      - A1_motorway_(Romania) (<http://dbpedia.org/resource/A1_motorway_(Romania)>) --doo:city--> Bucharest (dor:Bucharest)
+      - Bucharest (dor:Bucharest) --wwoo:differentFrom--> Budapest (dor:Budapest)
+  '4':
+    attributes:
+      Budapest: (differentFrom='http://dbpedia.org/resource/Bucharest')
+      Bucharest: (aprHighC='18')
+      András_Lévai: (death date^='2003-04-23')
+    relationships:
+      - András_Lévai (<http://dbpedia.org/resource/András_Lévai>) --dop:deathPlace--> Budapest (dor:Budapest)
+      - M1_motorway_(Hungary) (<http://dbpedia.org/resource/M1_motorway_(Hungary)>) --doo:city--> Budapest (dor:Budapest)
+      - Budapest (dor:Budapest) --wwoo:differentFrom--> Bucharest (dor:Bucharest)
+  '5':
+    attributes:
+      Budapest: (differentFrom='http://dbpedia.org/resource/Bucharest')
+      Bucharest: (aprHighC='18')
+      Béla_Krekó: (death date^='1994-12-07')
+    relationships:
+      - Béla_Krekó (<http://dbpedia.org/resource/Béla_Krekó>) --dop:deathPlace--> Budapest (dor:Budapest)
+      - M1_motorway_(Hungary) (<http://dbpedia.org/resource/M1_motorway_(Hungary)>) --doo:city--> Budapest (dor:Budapest)
+      - Budapest (dor:Budapest) --wwoo:differentFrom--> Bucharest (dor:Bucharest)
+  '6':
+    attributes:
+      Budapest: (differentFrom='http://dbpedia.org/resource/Bucharest')
+      Bucharest: (aprHighC='18')
+      Cornelius_Lanczos: (academic advisor^='http://dbpedia.org/resource/Erwin_Madelung', death date^='1974-06-25')
+    relationships:
+      - Cornelius_Lanczos (dor:Cornelius_Lanczos) --dop:deathPlace--> Budapest (dor:Budapest)
+      - M1_motorway_(Hungary) (<http://dbpedia.org/resource/M1_motorway_(Hungary)>) --doo:city--> Budapest (dor:Budapest)
+      - Budapest (dor:Budapest) --wwoo:differentFrom--> Bucharest (dor:Bucharest)
+  '7':
+    attributes:
+      Quanzhou: (aprHighC='23.6')
+      Guangzhou: (differentFrom='http://dbpedia.org/resource/Leased_Territory_of_Guangzhouwan')
+      Lu_Yonggen: (academic advisor^='http://dbpedia.org/resource/Ding_Ying', death date^='2019-08-12')
+    relationships:
+      - Lu_Yonggen (dor:Lu_Yonggen) --dop:deathPlace--> Guangzhou (dor:Guangzhou)
+      - Guangshen_Expressway (dor:Guangshen_Expressway) --doo:city--> Guangzhou (dor:Guangzhou)
+      - Guangzhou (dor:Guangzhou) --wwoo:differentFrom--> Quanzhou (dor:Quanzhou)
+  '8':
+    attributes:
+      Linz: (differentFrom='http://dbpedia.org/resource/Lienz')
+      Lienz: (aprHighC='14.4')
+      Anton_Edler_von_Gapp: (death date^='1862-04-01')
+    relationships:
+      - Anton_Edler_von_Gapp (dor:Anton_Edler_von_Gapp) --dop:deathPlace--> Linz (dor:Linz)
+      - Mühlkreis_Autobahn (<http://dbpedia.org/resource/Mühlkreis_Autobahn>) --doo:city--> Linz (dor:Linz)
+      - Linz (dor:Linz) --wwoo:differentFrom--> Lienz (dor:Lienz)
+  '9':
+    attributes:
+      Linz: (differentFrom='http://dbpedia.org/resource/Lienz')
+      Lienz: (aprHighC='14.4')
+      Helmut_Paul: (death date^='2015-12-21')
+    relationships:
+      - Helmut_Paul (dor:Helmut_Paul) --dop:deathPlace--> Linz (dor:Linz)
+      - Mühlkreis_Autobahn (<http://dbpedia.org/resource/Mühlkreis_Autobahn>) --doo:city--> Linz (dor:Linz)
+      - Linz (dor:Linz) --wwoo:differentFrom--> Lienz (dor:Lienz)
+  '10':
+    attributes:
+      Linz: (differentFrom='http://dbpedia.org/resource/Lienz')
+      Lienz: (aprHighC='14.4')
+      Ludwig_von_Bogdandy: (death date^='1996-05-05')
+    relationships:
+      - Ludwig_von_Bogdandy (dor:Ludwig_von_Bogdandy) --dop:deathPlace--> Linz (dor:Linz)
+      - Mühlkreis_Autobahn (<http://dbpedia.org/resource/Mühlkreis_Autobahn>) --doo:city--> Linz (dor:Linz)
+      - Linz (dor:Linz) --wwoo:differentFrom--> Lienz (dor:Lienz)
+attributes:
+  city: --Aug low F^ (dop:augLowF)--> double | --Apr record high F^ (dop:aprRecordHighF)--> int | --Apr low F^ (dop:aprLowF)--> double | --differentFrom (wwoo:differentFrom)--> Resource
+  scientist: --academic advisor^ (doo:academicAdvisor)--> Resource | --death date^ (dop:deathDate)--> date
+  settlement: --aprHighC (dop:aprHighC)--> int | --area^ (dop:area)--> double | --named after^ (doo:namedAfter)--> Resource
+subgraph_id: 540
+relationships:
+  - scientist --dop:deathPlace--> city
+  - road --doo:city--> city
+  - city --wwoo:differentFrom--> settlement

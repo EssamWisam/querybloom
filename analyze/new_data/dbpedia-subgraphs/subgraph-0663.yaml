@@ -1,0 +1,122 @@
+types:
+  book: doo:Book
+  cleric: doo:Cleric
+  country: doo:Country
+  settlement: doo:Settlement
+  ethnic group: doo:EthnicGroup
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Inverness: (Apr precipitation days^='10.1')
+      Indian_people: (image^='Cave 26, Ajanta.jpg')
+    relationships:
+      - Indian_people (dor:Indian_people) --doo:populationPlace--> United_Kingdom (dor:United_Kingdom)
+      - Inverness (dor:Inverness) --doo:subdivision--> United_Kingdom (dor:United_Kingdom)
+      - An_Là (<http://dbpedia.org/resource/An_Là>) --doo:location--> Inverness (dor:Inverness)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --doo:country--> United_Kingdom (dor:United_Kingdom)'
+      - A._C._Solomon_Raj (dor:A._C._Solomon_Raj) --doo:nationality--> Indian_people (dor:Indian_people)
+  '2':
+    attributes:
+      Inverness: (Apr precipitation days^='10.1')
+    relationships:
+      - Canadians (dor:Canadians) --doo:populationPlace--> United_Kingdom (dor:United_Kingdom)
+      - Inverness (dor:Inverness) --doo:subdivision--> United_Kingdom (dor:United_Kingdom)
+      - An_Là (<http://dbpedia.org/resource/An_Là>) --doo:location--> Inverness (dor:Inverness)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --doo:country--> United_Kingdom (dor:United_Kingdom)'
+      - A._D._Matheson (dor:A._D._Matheson) --doo:nationality--> Canadians (dor:Canadians)
+  '3':
+    attributes:
+      Inverness: (Apr precipitation days^='10.1')
+      Indian_people: (image^='Cave 26, Ajanta.jpg')
+    relationships:
+      - Indian_people (dor:Indian_people) --doo:populationPlace--> United_Kingdom (dor:United_Kingdom)
+      - Inverness (dor:Inverness) --doo:subdivision--> United_Kingdom (dor:United_Kingdom)
+      - An_Là (<http://dbpedia.org/resource/An_Là>) --doo:location--> Inverness (dor:Inverness)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --doo:country--> United_Kingdom (dor:United_Kingdom)'
+      - A._E._Inbanathan (dor:A._E._Inbanathan) --doo:nationality--> Indian_people (dor:Indian_people)
+  '4':
+    attributes:
+      Anglesey: (area total km^='714')
+    relationships:
+      - English_people (dor:English_people) --doo:populationPlace--> Wales (dor:Wales)
+      - Anglesey (dor:Anglesey) --doo:subdivision--> Wales (dor:Wales)
+      - Trip_Hazard:_My_Great_British_Adventure (<http://dbpedia.org/resource/Trip_Hazard:_My_Great_British_Adventure>) --doo:location--> Anglesey (dor:Anglesey)
+      - 100_Great_Welsh_Women (dor:100_Great_Welsh_Women) --doo:country--> Wales (dor:Wales)
+      - Accepted_Frewen (dor:Accepted_Frewen) --doo:nationality--> English_people (dor:English_people)
+  '5':
+    attributes:
+      Cardiff: (area total km^='140.3', Apr precipitation days^='10.7')
+    relationships:
+      - English_people (dor:English_people) --doo:populationPlace--> Wales (dor:Wales)
+      - Cardiff (dor:Cardiff) --doo:subdivision--> Wales (dor:Wales)
+      - Barry_Welsh_Is_Coming (dor:Barry_Welsh_Is_Coming) --doo:location--> Cardiff (dor:Cardiff)
+      - 100_Great_Welsh_Women (dor:100_Great_Welsh_Women) --doo:country--> Wales (dor:Wales)
+      - Accepted_Frewen (dor:Accepted_Frewen) --doo:nationality--> English_people (dor:English_people)
+  '6':
+    attributes:
+      Cardiff: (area total km^='140.3', Apr precipitation days^='10.7')
+    relationships:
+      - English_people (dor:English_people) --doo:populationPlace--> Wales (dor:Wales)
+      - Cardiff (dor:Cardiff) --doo:subdivision--> Wales (dor:Wales)
+      - BBC_Wales_Today (dor:BBC_Wales_Today) --doo:location--> Cardiff (dor:Cardiff)
+      - 100_Great_Welsh_Women (dor:100_Great_Welsh_Women) --doo:country--> Wales (dor:Wales)
+      - Accepted_Frewen (dor:Accepted_Frewen) --doo:nationality--> English_people (dor:English_people)
+  '7':
+    attributes:
+      Poles: (image^='Krakow city and old town.jpg')
+      Republic_of_Crimea: (area total km^='26081')
+      Ekaterina_(TV_series): (last='Episode 3.16')
+    relationships:
+      - Poles (dor:Poles) --doo:populationPlace--> Russia (dor:Russia)
+      - Republic_of_Crimea (dor:Republic_of_Crimea) --doo:subdivision--> Russia (dor:Russia)
+      - Ekaterina_(TV_series) (<http://dbpedia.org/resource/Ekaterina_(TV_series)>) --doo:location--> Republic_of_Crimea (dor:Republic_of_Crimea)
+      - 12_Who_Don't_Agree (<http://dbpedia.org/resource/12_Who_Don't_Agree>) --doo:country--> Russia (dor:Russia)
+      - Adam_Franciszek_Ksawery_Rostkowski (dor:Adam_Franciszek_Ksawery_Rostkowski) --doo:nationality--> Poles (dor:Poles)
+  '8':
+    attributes:
+      Republic_of_Crimea: (area total km^='26081')
+      Ekaterina_(TV_series): (last='Episode 3.16')
+    relationships:
+      - Hungarians (dor:Hungarians) --doo:populationPlace--> Russia (dor:Russia)
+      - Republic_of_Crimea (dor:Republic_of_Crimea) --doo:subdivision--> Russia (dor:Russia)
+      - Ekaterina_(TV_series) (<http://dbpedia.org/resource/Ekaterina_(TV_series)>) --doo:location--> Republic_of_Crimea (dor:Republic_of_Crimea)
+      - 12_Who_Don't_Agree (<http://dbpedia.org/resource/12_Who_Don't_Agree>) --doo:country--> Russia (dor:Russia)
+      - Alexander_Rudnay (dor:Alexander_Rudnay) --doo:nationality--> Hungarians (dor:Hungarians)
+  '9':
+    attributes:
+      Republic_of_Crimea: (area total km^='26081')
+      Ekaterina_(TV_series): (last='Episode 3.16')
+    relationships:
+      - Estonians (dor:Estonians) --doo:populationPlace--> Russia (dor:Russia)
+      - Republic_of_Crimea (dor:Republic_of_Crimea) --doo:subdivision--> Russia (dor:Russia)
+      - Ekaterina_(TV_series) (<http://dbpedia.org/resource/Ekaterina_(TV_series)>) --doo:location--> Republic_of_Crimea (dor:Republic_of_Crimea)
+      - 12_Who_Don't_Agree (<http://dbpedia.org/resource/12_Who_Don't_Agree>) --doo:country--> Russia (dor:Russia)
+      - Alfred_Tooming (dor:Alfred_Tooming) --doo:nationality--> Estonians (dor:Estonians)
+  '10':
+    attributes:
+      Americans: (image^='ColumbiaStahrArtwork.jpg')
+    relationships:
+      - Americans (dor:Americans) --doo:populationPlace--> Israel (dor:Israel)
+      - Jerusalem (dor:Jerusalem) --doo:subdivision--> Israel (dor:Israel)
+      - Apocalipse (dor:Apocalipse) --doo:location--> Jerusalem (dor:Jerusalem)
+      - 21_Lessons_for_the_21st_Century (dor:21_Lessons_for_the_21st_Century) --doo:country--> Israel (dor:Israel)
+      - A._Ervine_Swift (dor:A._Ervine_Swift) --doo:nationality--> Americans (dor:Americans)
+attributes:
+  book: --c^ (dop:c)--> langString
+  country: --Apr low C^ (dop:aprLowC)--> double
+  settlement: --canton^ (doo:canton)--> Resource | --float^ (dop:float)--> langString | --named for^ (dop:namedFor)--> langString | --area total km^ (dop:areaTotalKm)--> double | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int
+  ethnic group: --image^ (dop:image)--> langString
+  television show: --last (dop:last)--> langString | --url^ (dop:url)--> Resource
+subgraph_id: 663
+relationships:
+  - ethnic group --doo:populationPlace--> country
+  - settlement --doo:subdivision--> country
+  - television show --doo:location--> settlement
+  - book --doo:country--> country
+  - cleric --doo:nationality--> ethnic group

@@ -1,0 +1,88 @@
+types:
+  city: doo:City
+  mountain: doo:Mountain
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Auckland: (Apr record low C^='3.9', UTC offset^='+12:00')
+      Frank_Burton_(footballer,_born_1890): (manager club^='http://dbpedia.org/resource/Real_Oviedo', birth date^='1890-09-07')
+    relationships:
+      - Albert_Park_Volcano (dor:Albert_Park_Volcano) --doo:locatedInArea--> Auckland (dor:Auckland)
+      - Frank_Burton_(footballer,_born_1890) (<http://dbpedia.org/resource/Frank_Burton_(footballer,_born_1890)>) --doo:deathPlace--> Auckland (dor:Auckland)
+  '2':
+    attributes:
+      Auckland: (Apr record low C^='3.9', UTC offset^='+12:00')
+      Juan_Schwanner: (manager club^='http://dbpedia.org/resource/Club_Brugge_K.V.', birth date^='1921-02-05')
+    relationships:
+      - Albert_Park_Volcano (dor:Albert_Park_Volcano) --doo:locatedInArea--> Auckland (dor:Auckland)
+      - Juan_Schwanner (dor:Juan_Schwanner) --doo:deathPlace--> Auckland (dor:Auckland)
+  '3':
+    attributes:
+      Auckland: (Apr record low C^='3.9', UTC offset^='+12:00')
+      Wally_Hughes: (manager club^='http://dbpedia.org/resource/Fiji_national_football_team', birth date^='1934-03-15')
+    relationships:
+      - Albert_Park_Volcano (dor:Albert_Park_Volcano) --doo:locatedInArea--> Auckland (dor:Auckland)
+      - Wally_Hughes (dor:Wally_Hughes) --doo:deathPlace--> Auckland (dor:Auckland)
+  '4':
+    attributes:
+      Panama_City: (area total km^='275')
+      Miguel_Mansilla: (manager club^='http://dbpedia.org/resource/Once_Municipal', birth date^='1953-04-25')
+    relationships:
+      - Ancon_Hill (dor:Ancon_Hill) --doo:locatedInArea--> Panama_City (dor:Panama_City)
+      - Miguel_Mansilla (dor:Miguel_Mansilla) --doo:deathPlace--> Panama_City (dor:Panama_City)
+  '5':
+    attributes:
+      Seoul: (government type^='http://dbpedia.org/resource/Mayor–council_government', area total km^='605.21')
+      Cho_Yoon-ok: (manager club^='http://dbpedia.org/resource/Busan_IPark', birth date^='1940-02-25')
+    relationships:
+      - Ansan_(Seoul)__Ansan__1 (<http://dbpedia.org/resource/Ansan_(Seoul)__Ansan__1>) --doo:locatedInArea--> Seoul (dor:Seoul)
+      - Cho_Yoon-ok (dor:Cho_Yoon-ok) --doo:deathPlace--> Seoul (dor:Seoul)
+  '6':
+    attributes:
+      Seoul: (government type^='http://dbpedia.org/resource/Mayor–council_government', area total km^='605.21')
+      Choi_Chung-min: (manager club^='http://dbpedia.org/resource/South_Korea_national_football_team', birth date^='1930-08-30')
+    relationships:
+      - Ansan_(Seoul)__Ansan__1 (<http://dbpedia.org/resource/Ansan_(Seoul)__Ansan__1>) --doo:locatedInArea--> Seoul (dor:Seoul)
+      - Choi_Chung-min (dor:Choi_Chung-min) --doo:deathPlace--> Seoul (dor:Seoul)
+  '7':
+    attributes:
+      Seoul: (government type^='http://dbpedia.org/resource/Mayor–council_government', area total km^='605.21')
+      Choi_Eun-taek: (manager club^='http://dbpedia.org/resource/Hanyang_University', birth date^='1938')
+    relationships:
+      - Ansan_(Seoul)__Ansan__1 (<http://dbpedia.org/resource/Ansan_(Seoul)__Ansan__1>) --doo:locatedInArea--> Seoul (dor:Seoul)
+      - Choi_Eun-taek (dor:Choi_Eun-taek) --doo:deathPlace--> Seoul (dor:Seoul)
+  '8':
+    attributes:
+      Berlin: (area total km^='891.3', Apr record low C^='-6.7', UTC offset^='+01:00')
+      Günter_Schröter: (manager club^='http://dbpedia.org/resource/BFC_Dynamo', birth date^='1927-05-03')
+    relationships:
+      - Arkenberge (dor:Arkenberge) --doo:locatedInArea--> Berlin (dor:Berlin)
+      - Günter_Schröter (<http://dbpedia.org/resource/Günter_Schröter>) --doo:deathPlace--> Berlin (dor:Berlin)
+  '9':
+    attributes:
+      Edinburgh: (government type^='http://dbpedia.org/resource/Unitary_authority', area total km^='264', Apr record low C^='-6.1', UTC offset^='+1')
+      Alex_Wright_(footballer,_born_1897): (manager club^='http://dbpedia.org/resource/Queen_of_the_South_F.C.', birth date^='1897')
+    relationships:
+      - Arthur's_Seat (<http://dbpedia.org/resource/Arthur's_Seat>) --doo:locatedInArea--> Edinburgh (dor:Edinburgh)
+      - Alex_Wright_(footballer,_born_1897) (<http://dbpedia.org/resource/Alex_Wright_(footballer,_born_1897)>) --doo:deathPlace--> Edinburgh (dor:Edinburgh)
+  '10':
+    attributes:
+      Edinburgh: (government type^='http://dbpedia.org/resource/Unitary_authority', area total km^='264', Apr record low C^='-6.1', UTC offset^='+1')
+      Alex_Young_(footballer,_born_1937): (manager club^='http://dbpedia.org/resource/Glentoran_F.C.', birth date^='1937-02-03')
+    relationships:
+      - Arthur's_Seat (<http://dbpedia.org/resource/Arthur's_Seat>) --doo:locatedInArea--> Edinburgh (dor:Edinburgh)
+      - Alex_Young_(footballer,_born_1937) (<http://dbpedia.org/resource/Alex_Young_(footballer,_born_1937)>) --doo:deathPlace--> Edinburgh (dor:Edinburgh)
+attributes:
+  city: --government type^ (doo:governmentType)--> Resource | --area total km^ (dop:areaTotalKm)--> int | --Apr record low C^ (dop:aprRecordLowC)--> int | --UTC offset^ (doo:utcOffset)--> string | --Apr record low C^ (dop:aprRecordLowC)--> langString
+  mountain: --Center^ (dop:center)--> langString
+  soccer manager: --d^ (dop:d)--> date | --manager club^ (doo:managerClub)--> Resource | --id^ (dop:id)--> int | --birth date^ (dop:birthDate)--> date
+subgraph_id: 74
+relationships:
+  - mountain --doo:locatedInArea--> city
+  - soccer manager --doo:deathPlace--> city

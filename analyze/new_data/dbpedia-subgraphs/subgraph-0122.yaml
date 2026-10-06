@@ -1,0 +1,108 @@
+types:
+  town: doo:Town
+  athlete: doo:Athlete
+  country: doo:Country
+  Location: doo:Location
+  architect: doo:Architect
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - Montana_wine__Montana__1 (dor:Montana_wine__Montana__1) --doo:type--> United_States (dor:United_States)
+      - Abel_C._Martin (dor:Abel_C._Martin) --doo:nationality--> United_States (dor:United_States)
+      - Andrew_Wheating (dor:Andrew_Wheating) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - Andrew_Wheating (dor:Andrew_Wheating) --doo:birthPlace--> Norwich,_Vermont (<http://dbpedia.org/resource/Norwich,_Vermont>)
+  '2':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - Montana_wine__Montana__1 (dor:Montana_wine__Montana__1) --doo:type--> United_States (dor:United_States)
+      - Abel_C._Martin (dor:Abel_C._Martin) --doo:nationality--> United_States (dor:United_States)
+      - Antonio_Sales (dor:Antonio_Sales) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - Antonio_Sales (dor:Antonio_Sales) --doo:birthPlace--> Chapel_Hill,_North_Carolina (<http://dbpedia.org/resource/Chapel_Hill,_North_Carolina>)
+  '3':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - Montana_wine__Montana__1 (dor:Montana_wine__Montana__1) --doo:type--> United_States (dor:United_States)
+      - Abel_C._Martin (dor:Abel_C._Martin) --doo:nationality--> United_States (dor:United_States)
+      - Brian_Johnson_(long_jumper) (<http://dbpedia.org/resource/Brian_Johnson_(long_jumper)>) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - Brian_Johnson_(long_jumper) (<http://dbpedia.org/resource/Brian_Johnson_(long_jumper)>) --doo:birthPlace--> Iowa,_Louisiana (<http://dbpedia.org/resource/Iowa,_Louisiana>)
+  '4':
+    attributes:
+      Germany: (capital^='http://dbpedia.org/resource/Berlin')
+    relationships:
+      - Palatinate_(region) (<http://dbpedia.org/resource/Palatinate_(region)>) --doo:type--> Germany (dor:Germany)
+      - Adolf_Lang (dor:Adolf_Lang) --doo:nationality--> Germany (dor:Germany)
+      - Alexander_Leipold (dor:Alexander_Leipold) --doo:stateOfOrigin--> Germany (dor:Germany)
+      - Alexander_Leipold (dor:Alexander_Leipold) --doo:birthPlace--> Alzenau (dor:Alzenau)
+  '5':
+    attributes:
+      Germany: (capital^='http://dbpedia.org/resource/Berlin')
+    relationships:
+      - Palatinate_(region) (<http://dbpedia.org/resource/Palatinate_(region)>) --doo:type--> Germany (dor:Germany)
+      - Adolf_Lang (dor:Adolf_Lang) --doo:nationality--> Germany (dor:Germany)
+      - André_Lange (<http://dbpedia.org/resource/André_Lange>) --doo:stateOfOrigin--> Germany (dor:Germany)
+      - André_Lange (<http://dbpedia.org/resource/André_Lange>) --doo:birthPlace--> Ilmenau (dor:Ilmenau)
+  '6':
+    attributes:
+      Germany: (capital^='http://dbpedia.org/resource/Berlin')
+    relationships:
+      - Palatinate_(region) (<http://dbpedia.org/resource/Palatinate_(region)>) --doo:type--> Germany (dor:Germany)
+      - Adolf_Lang (dor:Adolf_Lang) --doo:nationality--> Germany (dor:Germany)
+      - Anke_Wischnewski (dor:Anke_Wischnewski) --doo:stateOfOrigin--> Germany (dor:Germany)
+      - Anke_Wischnewski (dor:Anke_Wischnewski) --doo:birthPlace--> Annaberg-Buchholz (dor:Annaberg-Buchholz)
+  '7':
+    attributes:
+      Russia: (capital^='http://dbpedia.org/resource/Moscow')
+      Afanasy_Grigoriev: (significant building^='http://dbpedia.org/resource/Alexander_Pushkin')
+    relationships:
+      - Barentsburg (dor:Barentsburg) --doo:type--> Russia (dor:Russia)
+      - Afanasy_Grigoriev (dor:Afanasy_Grigoriev) --doo:nationality--> Russia (dor:Russia)
+      - Denis_Tsargush (dor:Denis_Tsargush) --doo:stateOfOrigin--> Russia (dor:Russia)
+      - Denis_Tsargush (dor:Denis_Tsargush) --doo:birthPlace--> Gudauta (dor:Gudauta)
+  '8':
+    attributes:
+      Spain: (capital^='http://dbpedia.org/resource/Madrid')
+      Alejandro_Zaera-Polo: (significant building^='http://dbpedia.org/resource/Ōsanbashi_Pier')
+    relationships:
+      - El_Real_de_la_Jara (dor:El_Real_de_la_Jara) --doo:type--> Spain (dor:Spain)
+      - Alejandro_Zaera-Polo (dor:Alejandro_Zaera-Polo) --doo:nationality--> Spain (dor:Spain)
+      - Abelardo_Gandía (<http://dbpedia.org/resource/Abelardo_Gandía>) --doo:stateOfOrigin--> Spain (dor:Spain)
+      - Abelardo_Gandía (<http://dbpedia.org/resource/Abelardo_Gandía>) --doo:birthPlace--> Requena,_Valencia (<http://dbpedia.org/resource/Requena,_Valencia>)
+  '9':
+    attributes:
+      Spain: (capital^='http://dbpedia.org/resource/Madrid')
+      Alejandro_Zaera-Polo: (significant building^='http://dbpedia.org/resource/Ōsanbashi_Pier')
+    relationships:
+      - Gascas_de_Alarcón (<http://dbpedia.org/resource/Gascas_de_Alarcón>) --doo:type--> Spain (dor:Spain)
+      - Alejandro_Zaera-Polo (dor:Alejandro_Zaera-Polo) --doo:nationality--> Spain (dor:Spain)
+      - Abelardo_Gandía (<http://dbpedia.org/resource/Abelardo_Gandía>) --doo:stateOfOrigin--> Spain (dor:Spain)
+      - Abelardo_Gandía (<http://dbpedia.org/resource/Abelardo_Gandía>) --doo:birthPlace--> Requena,_Valencia (<http://dbpedia.org/resource/Requena,_Valencia>)
+  '10':
+    attributes:
+      Spain: (capital^='http://dbpedia.org/resource/Madrid')
+      Alejandro_Zaera-Polo: (significant building^='http://dbpedia.org/resource/Ōsanbashi_Pier')
+    relationships:
+      - El_Real_de_la_Jara (dor:El_Real_de_la_Jara) --doo:type--> Spain (dor:Spain)
+      - Alejandro_Zaera-Polo (dor:Alejandro_Zaera-Polo) --doo:nationality--> Spain (dor:Spain)
+      - Albert_Gelis (dor:Albert_Gelis) --doo:stateOfOrigin--> Spain (dor:Spain)
+      - Albert_Gelis (dor:Albert_Gelis) --doo:birthPlace--> Girona (dor:Girona)
+attributes:
+  town: --Center^ (dop:center)--> langString | --arc-radiusA^ (dop:arcRadiusa)--> double
+  athlete: --collegeteam^ (dop:collegeteam)--> langString
+  country: --capital^ (doo:capital)--> Resource
+  Location: --built^ (dop:built)--> langString | --number of members^ (doo:numberOfMembers)--> int | --Apr low F^ (dop:aprLowF)--> double | --Apr record low F^ (dop:aprRecordLowF)--> int | --reason^ (dop:reason)--> langString | --data^ (dop:data)--> double | --1y^ (dop:1y)--> int | --area code^ (doo:areaCode)--> string
+  architect: --significant building^ (doo:significantBuilding)--> Resource
+subgraph_id: 122
+relationships:
+  - Location --doo:type--> country
+  - architect --doo:nationality--> country
+  - athlete --doo:stateOfOrigin--> country
+  - athlete --doo:birthPlace--> town

@@ -1,0 +1,99 @@
+types:
+  town: doo:Town
+  person: doo:Person
+  politician: doo:Politician
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._David_Mazzone: (birth place^='http://dbpedia.org/resource/Everett,_Massachusetts')
+      George_H._Tinkham: (alma mater^='http://dbpedia.org/resource/Harvard_University')
+    relationships:
+      - George_H._Tinkham (dor:George_H._Tinkham) --doo:restingPlace--> Massachusetts (dor:Massachusetts)
+      - George_H._Tinkham (dor:George_H._Tinkham) --dop:deathPlace--> Cramerton,_North_Carolina (<http://dbpedia.org/resource/Cramerton,_North_Carolina>)
+      - A._David_Mazzone (dor:A._David_Mazzone) --dop:deathPlace--> Massachusetts (dor:Massachusetts)
+  '2':
+    attributes:
+      Samuel_Taggart: (alma mater^='Dartmouth College, 1774')
+      A._David_Mazzone: (birth place^='http://dbpedia.org/resource/Everett,_Massachusetts')
+    relationships:
+      - Samuel_Taggart (dor:Samuel_Taggart) --doo:restingPlace--> Massachusetts (dor:Massachusetts)
+      - Samuel_Taggart (dor:Samuel_Taggart) --dop:deathPlace--> Colrain,_Massachusetts (<http://dbpedia.org/resource/Colrain,_Massachusetts>)
+      - A._David_Mazzone (dor:A._David_Mazzone) --dop:deathPlace--> Massachusetts (dor:Massachusetts)
+  '3':
+    attributes:
+      A._David_Mazzone: (birth place^='http://dbpedia.org/resource/Everett,_Massachusetts')
+      Stockbridge,_Massachusetts: (Aug precipitation inch^='4.56')
+    relationships:
+      - Theodore_Sedgwick_(lawyer) (<http://dbpedia.org/resource/Theodore_Sedgwick_(lawyer)>) --doo:restingPlace--> Massachusetts (dor:Massachusetts)
+      - Theodore_Sedgwick_(lawyer) (<http://dbpedia.org/resource/Theodore_Sedgwick_(lawyer)>) --dop:deathPlace--> Stockbridge,_Massachusetts (<http://dbpedia.org/resource/Stockbridge,_Massachusetts>)
+      - A._David_Mazzone (dor:A._David_Mazzone) --dop:deathPlace--> Massachusetts (dor:Massachusetts)
+  '4':
+    attributes:
+      Normal,_Illinois: (Aug precipitation inch^='3.83')
+      A._F._Maciejewski: (birth place^='http://dbpedia.org/resource/Anderson,_Texas', after^='Vacant')
+    relationships:
+      - Louis_FitzHenry (dor:Louis_FitzHenry) --doo:restingPlace--> Illinois (dor:Illinois)
+      - Louis_FitzHenry (dor:Louis_FitzHenry) --dop:deathPlace--> Normal,_Illinois (<http://dbpedia.org/resource/Normal,_Illinois>)
+      - A._F._Maciejewski (dor:A._F._Maciejewski) --dop:deathPlace--> Illinois (dor:Illinois)
+  '5':
+    attributes:
+      A._H._Woods: (birth place^='http://dbpedia.org/resource/Budapest')
+    relationships:
+      - Alfred_Conkling_Coxe_Jr. (<http://dbpedia.org/resource/Alfred_Conkling_Coxe_Jr.>) --doo:restingPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Alfred_Conkling_Coxe_Jr. (<http://dbpedia.org/resource/Alfred_Conkling_Coxe_Jr.>) --dop:deathPlace--> Old_Lyme,_Connecticut (<http://dbpedia.org/resource/Old_Lyme,_Connecticut>)
+      - A._H._Woods (dor:A._H._Woods) --dop:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '6':
+    attributes:
+      A._H._Woods: (birth place^='http://dbpedia.org/resource/Budapest')
+      Bibliography_of_Ulysses_S._Grant: (alma mater^='http://dbpedia.org/resource/United_States_Military_Academy')
+    relationships:
+      - Bibliography_of_Ulysses_S._Grant (dor:Bibliography_of_Ulysses_S._Grant) --doo:restingPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Bibliography_of_Ulysses_S._Grant (dor:Bibliography_of_Ulysses_S._Grant) --dop:deathPlace--> Wilton,_New_York (<http://dbpedia.org/resource/Wilton,_New_York>)
+      - A._H._Woods (dor:A._H._Woods) --dop:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '7':
+    attributes:
+      A._H._Woods: (birth place^='http://dbpedia.org/resource/Budapest')
+    relationships:
+      - Churchill_C._Cambreleng (dor:Churchill_C._Cambreleng) --doo:restingPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Churchill_C._Cambreleng (dor:Churchill_C._Cambreleng) --dop:deathPlace--> Huntington,_New_York (<http://dbpedia.org/resource/Huntington,_New_York>)
+      - A._H._Woods (dor:A._H._Woods) --dop:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '8':
+    attributes:
+      A._J._McNamara: (birth place^='http://dbpedia.org/resource/Louisiana')
+      Edward_Sparrow: (alma mater^='http://dbpedia.org/resource/Kenyon_College')
+    relationships:
+      - Edward_Sparrow (dor:Edward_Sparrow) --doo:restingPlace--> Louisiana (dor:Louisiana)
+      - Edward_Sparrow (dor:Edward_Sparrow) --dop:deathPlace--> Lake_Providence,_Louisiana (<http://dbpedia.org/resource/Lake_Providence,_Louisiana>)
+      - A._J._McNamara (dor:A._J._McNamara) --dop:deathPlace--> Louisiana (dor:Louisiana)
+  '9':
+    attributes:
+      A._K._Ramanujan: (birth place^='')
+      Normal,_Illinois: (Aug precipitation inch^='3.83')
+    relationships:
+      - Louis_FitzHenry (dor:Louis_FitzHenry) --doo:restingPlace--> Illinois (dor:Illinois)
+      - Louis_FitzHenry (dor:Louis_FitzHenry) --dop:deathPlace--> Normal,_Illinois (<http://dbpedia.org/resource/Normal,_Illinois>)
+      - A._K._Ramanujan (dor:A._K._Ramanujan) --dop:deathPlace--> Illinois (dor:Illinois)
+  '10':
+    attributes:
+      A.B.C._Whipple: (birth place^='http://dbpedia.org/resource/Glen_Falls,_New_York')
+      Greenwich,_Connecticut: (Aug precipitation inch^='4')
+    relationships:
+      - Albert_P._Morano (dor:Albert_P._Morano) --doo:restingPlace--> Connecticut (dor:Connecticut)
+      - Albert_P._Morano (dor:Albert_P._Morano) --dop:deathPlace--> Greenwich,_Connecticut (<http://dbpedia.org/resource/Greenwich,_Connecticut>)
+      - A.B.C._Whipple (dor:A.B.C._Whipple) --dop:deathPlace--> Connecticut (dor:Connecticut)
+attributes:
+  town: --Apr rain mm^ (dop:aprRainMm)--> int | --Aug precipitation inch^ (dop:augPrecipitationInch)--> double | --Aug low C^ (dop:augLowC)--> int
+  person: --spouse (dop:spouse)--> date | --mother^ (dop:mother)--> langString | --birth place^ (dop:birthPlace)--> Resource | --after^ (dop:after)--> langString | --float^ (dop:float)--> langString | --1p^ (dop:1p)--> int
+  politician: --alma mater^ (dop:almaMater)--> langString
+  administrative region: --Apr sun^ (dop:aprSun)--> int | --Aug high C^ (dop:augHighC)--> double
+subgraph_id: 717
+relationships:
+  - politician --doo:restingPlace--> administrative region
+  - politician --dop:deathPlace--> town
+  - person --dop:deathPlace--> administrative region

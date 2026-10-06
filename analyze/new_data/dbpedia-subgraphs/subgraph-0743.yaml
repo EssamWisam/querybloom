@@ -1,0 +1,49 @@
+types:
+  politician: doo:Politician
+  university: doo:University
+  organisation: doo:Organisation
+  sports league: doo:SportsLeague
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bill_Mitchell_(politician): (alma mater^='http://dbpedia.org/resource/Eastern_Illinois_University')
+      Eastern_Illinois_University: (city^='http://dbpedia.org/resource/Charleston,_Illinois')
+    relationships:
+      - Bill_Mitchell_(politician) (<http://dbpedia.org/resource/Bill_Mitchell_(politician)>) --dop:almaMater--> Eastern_Illinois_University (dor:Eastern_Illinois_University)
+      - Allie_LeClaire (dor:Allie_LeClaire) --dop:cteam--> Eastern_Illinois_University (dor:Eastern_Illinois_University)
+      - Allie_LeClaire (dor:Allie_LeClaire) --dop:league--> Ohio_Valley_Conference (dor:Ohio_Valley_Conference)
+      - Ohio_Valley_Conference (dor:Ohio_Valley_Conference) --dop:association--> National_Collegiate_Athletic_Association (dor:National_Collegiate_Athletic_Association)
+  '2':
+    attributes:
+      Brandon_Phelps: (alma mater^='http://dbpedia.org/resource/Eastern_Illinois_University')
+      Eastern_Illinois_University: (city^='http://dbpedia.org/resource/Charleston,_Illinois')
+    relationships:
+      - Brandon_Phelps (dor:Brandon_Phelps) --dop:almaMater--> Eastern_Illinois_University (dor:Eastern_Illinois_University)
+      - Allie_LeClaire (dor:Allie_LeClaire) --dop:cteam--> Eastern_Illinois_University (dor:Eastern_Illinois_University)
+      - Allie_LeClaire (dor:Allie_LeClaire) --dop:league--> Ohio_Valley_Conference (dor:Ohio_Valley_Conference)
+      - Ohio_Valley_Conference (dor:Ohio_Valley_Conference) --dop:association--> National_Collegiate_Athletic_Association (dor:National_Collegiate_Athletic_Association)
+  '3':
+    attributes:
+      Chuck_Curran: (children^='3', alma mater^='http://dbpedia.org/resource/Bellefontaine_High_School')
+      Eastern_Illinois_University: (city^='http://dbpedia.org/resource/Charleston,_Illinois')
+    relationships:
+      - Chuck_Curran (dor:Chuck_Curran) --dop:almaMater--> Eastern_Illinois_University (dor:Eastern_Illinois_University)
+      - Allie_LeClaire (dor:Allie_LeClaire) --dop:cteam--> Eastern_Illinois_University (dor:Eastern_Illinois_University)
+      - Allie_LeClaire (dor:Allie_LeClaire) --dop:league--> Ohio_Valley_Conference (dor:Ohio_Valley_Conference)
+      - Ohio_Valley_Conference (dor:Ohio_Valley_Conference) --dop:association--> National_Collegiate_Athletic_Association (dor:National_Collegiate_Athletic_Association)
+attributes:
+  politician: --1namedata^ (dop:1namedata)--> langString | --honorific suffix^ (dop:honorificSuffix)--> langString | --colwidth^ (dop:colwidth)--> int | --predecessor^ (dop:predecessor)--> langString | --bot^ (dop:bot)--> langString | --2y^ (dop:2y)--> int | --children^ (dop:children)--> int | --1pp^ (dop:1pp)--> int | --alt^ (dop:alt)--> langString | --alma mater^ (dop:almaMater)--> langString
+  university: --last^ (dop:last)--> langString | --city^ (dop:city)--> Resource
+  basketball player: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+subgraph_id: 743
+relationships:
+  - politician --dop:almaMater--> university
+  - basketball player --dop:cteam--> university
+  - basketball player --dop:league--> sports league
+  - sports league --dop:association--> organisation

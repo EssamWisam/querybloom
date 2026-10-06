@@ -1,0 +1,131 @@
+types:
+  company: doo:Company
+  country: doo:Country
+  Location: doo:Location
+  automobile: doo:Automobile
+  horse race: doo:HorseRace
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Milan: '(has abstract^=''( 밀란은 여기로 연결됩니다. 다른 뜻에 대해서는 밀란 (동음이의) 문서를 참고하십시오.) 밀라노(이탈리아어: Milano, 롬바르드어: Milan, 독일어: Mailand, 라틴어: Mediolanum)는 이탈리아의 북부에 있는 도시로, 롬바르디아주의 주도이다. 밀라노는 이탈리아 북부의 최대 도시로, 롬바르디아 평원에 위치하고 있으며, 포 강이 이 도시를...'', width^=''188'')'
+      Alfa_Romeo: (owner^='http://dbpedia.org/resource/Stellantis', brands^='http://dbpedia.org/resource/Alfa_Romeo_Quadrifoglio', owning company^='http://dbpedia.org/resource/Stellantis')
+    relationships:
+      - Italian_Social_Republic (dor:Italian_Social_Republic) --doo:capital--> Milan (dor:Milan)
+      - Alfa_Romeo_Diva (dor:Alfa_Romeo_Diva) --dop:assembly--> Milan (dor:Milan)
+      - Alfa_Romeo_Diva (dor:Alfa_Romeo_Diva) --dop:manufacturer--> Alfa_Romeo (dor:Alfa_Romeo)
+      - Coppa_d'Oro_di_Milano (<http://dbpedia.org/resource/Coppa_d'Oro_di_Milano>) --doo:location--> Milan (dor:Milan)
+      - Republican_Fascist_Party (dor:Republican_Fascist_Party) --doo:headquarter--> Italian_Social_Republic (dor:Italian_Social_Republic)
+  '2':
+    attributes:
+      Milan: '(has abstract^=''( 밀란은 여기로 연결됩니다. 다른 뜻에 대해서는 밀란 (동음이의) 문서를 참고하십시오.) 밀라노(이탈리아어: Milano, 롬바르드어: Milan, 독일어: Mailand, 라틴어: Mediolanum)는 이탈리아의 북부에 있는 도시로, 롬바르디아주의 주도이다. 밀라노는 이탈리아 북부의 최대 도시로, 롬바르디아 평원에 위치하고 있으며, 포 강이 이 도시를...'', width^=''188'')'
+      Alfa_Romeo: (owner^='http://dbpedia.org/resource/Stellantis', brands^='http://dbpedia.org/resource/Alfa_Romeo_Quadrifoglio', owning company^='http://dbpedia.org/resource/Stellantis')
+    relationships:
+      - Italian_Social_Republic (dor:Italian_Social_Republic) --doo:capital--> Milan (dor:Milan)
+      - Alfa_Romeo_Diva (dor:Alfa_Romeo_Diva) --dop:assembly--> Milan (dor:Milan)
+      - Alfa_Romeo_Diva (dor:Alfa_Romeo_Diva) --dop:manufacturer--> Alfa_Romeo (dor:Alfa_Romeo)
+      - Gran_Criterium (dor:Gran_Criterium) --doo:location--> Milan (dor:Milan)
+      - Republican_Fascist_Party (dor:Republican_Fascist_Party) --doo:headquarter--> Italian_Social_Republic (dor:Italian_Social_Republic)
+  '3':
+    attributes:
+      Milan: '(has abstract^=''( 밀란은 여기로 연결됩니다. 다른 뜻에 대해서는 밀란 (동음이의) 문서를 참고하십시오.) 밀라노(이탈리아어: Milano, 롬바르드어: Milan, 독일어: Mailand, 라틴어: Mediolanum)는 이탈리아의 북부에 있는 도시로, 롬바르디아주의 주도이다. 밀라노는 이탈리아 북부의 최대 도시로, 롬바르디아 평원에 위치하고 있으며, 포 강이 이 도시를...'', width^=''188'')'
+      Alfa_Romeo: (owner^='http://dbpedia.org/resource/Stellantis', brands^='http://dbpedia.org/resource/Alfa_Romeo_Quadrifoglio', owning company^='http://dbpedia.org/resource/Stellantis')
+    relationships:
+      - Italian_Social_Republic (dor:Italian_Social_Republic) --doo:capital--> Milan (dor:Milan)
+      - Alfa_Romeo_Diva (dor:Alfa_Romeo_Diva) --dop:assembly--> Milan (dor:Milan)
+      - Alfa_Romeo_Diva (dor:Alfa_Romeo_Diva) --dop:manufacturer--> Alfa_Romeo (dor:Alfa_Romeo)
+      - Gran_Premio_d'Italia (<http://dbpedia.org/resource/Gran_Premio_d'Italia>) --doo:location--> Milan (dor:Milan)
+      - Republican_Fascist_Party (dor:Republican_Fascist_Party) --doo:headquarter--> Italian_Social_Republic (dor:Italian_Social_Republic)
+  '4':
+    attributes:
+      Paris: |-
+        (has abstract^='( 파리시는 여기로 연결됩니다. 다른 뜻에 대해서는 파리시 (동음이의) 문서를 참고하십시오.)( 파리지앵은 여기로 연결됩니다. 빵에 대해서는 바게트 문서를 참고하십시오.)
+        파리(프랑스어: Paris)는 프랑스의 수도로, 프랑스 북부 일드프랑스 지방의 중앙에 있다. 센 강 중류에 있으며, 면적은 105 km2. 인구는 2010년 기준으로 224만 명이다. 파...')
+      Citroën: (owner^='http://dbpedia.org/resource/Stellantis', owning company^='http://dbpedia.org/resource/Stellantis')
+    relationships:
+      - France (dor:France) --doo:capital--> Paris (dor:Paris)
+      - Citroën_Traction_Avant (<http://dbpedia.org/resource/Citroën_Traction_Avant>) --dop:assembly--> Paris (dor:Paris)
+      - Citroën_Traction_Avant (<http://dbpedia.org/resource/Citroën_Traction_Avant>) --dop:manufacturer--> Citroën (<http://dbpedia.org/resource/Citroën>)
+      - 1978_Prix_de_l'Arc_de_Triomphe (<http://dbpedia.org/resource/1978_Prix_de_l'Arc_de_Triomphe>) --doo:location--> Paris (dor:Paris)
+      - Académie_de_Marine (<http://dbpedia.org/resource/Académie_de_Marine>) --doo:headquarter--> France (dor:France)
+  '5':
+    attributes:
+      Paris: |-
+        (has abstract^='( 파리시는 여기로 연결됩니다. 다른 뜻에 대해서는 파리시 (동음이의) 문서를 참고하십시오.)( 파리지앵은 여기로 연결됩니다. 빵에 대해서는 바게트 문서를 참고하십시오.)
+        파리(프랑스어: Paris)는 프랑스의 수도로, 프랑스 북부 일드프랑스 지방의 중앙에 있다. 센 강 중류에 있으며, 면적은 105 km2. 인구는 2010년 기준으로 224만 명이다. 파...')
+      Citroën: (owner^='http://dbpedia.org/resource/Stellantis', owning company^='http://dbpedia.org/resource/Stellantis')
+    relationships:
+      - France (dor:France) --doo:capital--> Paris (dor:Paris)
+      - Citroën_Traction_Avant (<http://dbpedia.org/resource/Citroën_Traction_Avant>) --dop:assembly--> Paris (dor:Paris)
+      - Citroën_Traction_Avant (<http://dbpedia.org/resource/Citroën_Traction_Avant>) --dop:manufacturer--> Citroën (<http://dbpedia.org/resource/Citroën>)
+      - 1978_Prix_de_l'Arc_de_Triomphe (<http://dbpedia.org/resource/1978_Prix_de_l'Arc_de_Triomphe>) --doo:location--> Paris (dor:Paris)
+      - Académie_des_Arts_et_Techniques_du_Cinéma (<http://dbpedia.org/resource/Académie_des_Arts_et_Techniques_du_Cinéma>) --doo:headquarter--> France (dor:France)
+  '6':
+    attributes:
+      Paris: |-
+        (has abstract^='( 파리시는 여기로 연결됩니다. 다른 뜻에 대해서는 파리시 (동음이의) 문서를 참고하십시오.)( 파리지앵은 여기로 연결됩니다. 빵에 대해서는 바게트 문서를 참고하십시오.)
+        파리(프랑스어: Paris)는 프랑스의 수도로, 프랑스 북부 일드프랑스 지방의 중앙에 있다. 센 강 중류에 있으며, 면적은 105 km2. 인구는 2010년 기준으로 224만 명이다. 파...')
+      Citroën: (owner^='http://dbpedia.org/resource/Stellantis', owning company^='http://dbpedia.org/resource/Stellantis')
+    relationships:
+      - France (dor:France) --doo:capital--> Paris (dor:Paris)
+      - Citroën_Traction_Avant (<http://dbpedia.org/resource/Citroën_Traction_Avant>) --dop:assembly--> Paris (dor:Paris)
+      - Citroën_Traction_Avant (<http://dbpedia.org/resource/Citroën_Traction_Avant>) --dop:manufacturer--> Citroën (<http://dbpedia.org/resource/Citroën>)
+      - 1978_Prix_de_l'Arc_de_Triomphe (<http://dbpedia.org/resource/1978_Prix_de_l'Arc_de_Triomphe>) --doo:location--> Paris (dor:Paris)
+      - Action_Against_Hunger (dor:Action_Against_Hunger) --doo:headquarter--> France (dor:France)
+  '7':
+    attributes:
+      Montevideo: '(has abstract^=''( 다른 뜻에 대해서는 몬테비데오 (동음이의) 문서를 참고하십시오.) 몬테비데오(스페인어: Montevideo, 문화어: 몬떼비데오)는 우루과이의 수도이자 최대의 무역항이며, 우루과이 국내에서 인구가 백만이 넘는 도시이다. 몬테비데오주의 주도이기도 하다. 2010년 현재 인구는 132만 7115명이다.'', width^=''22'')'
+      Ford_Motor_Company: (owner^='http://dbpedia.org/resource/Henry_Ford_family_tree', brands^='', owning company^='http://dbpedia.org/resource/Henry_Ford_family_tree')
+    relationships:
+      - Uruguay (dor:Uruguay) --doo:capital--> Montevideo (dor:Montevideo)
+      - Ford_Transit (dor:Ford_Transit) --dop:assembly--> Montevideo (dor:Montevideo)
+      - Ford_Transit (dor:Ford_Transit) --dop:manufacturer--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - Gran_Premio_José_Pedro_Ramírez (<http://dbpedia.org/resource/Gran_Premio_José_Pedro_Ramírez>) --doo:location--> Montevideo (dor:Montevideo)
+      - Aero_Uruguay (dor:Aero_Uruguay) --doo:headquarter--> Uruguay (dor:Uruguay)
+  '8':
+    attributes:
+      Montevideo: '(has abstract^=''( 다른 뜻에 대해서는 몬테비데오 (동음이의) 문서를 참고하십시오.) 몬테비데오(스페인어: Montevideo, 문화어: 몬떼비데오)는 우루과이의 수도이자 최대의 무역항이며, 우루과이 국내에서 인구가 백만이 넘는 도시이다. 몬테비데오주의 주도이기도 하다. 2010년 현재 인구는 132만 7115명이다.'', width^=''22'')'
+    relationships:
+      - Uruguay (dor:Uruguay) --doo:capital--> Montevideo (dor:Montevideo)
+      - Ford_Transit (dor:Ford_Transit) --dop:assembly--> Montevideo (dor:Montevideo)
+      - Ford_Transit (dor:Ford_Transit) --dop:manufacturer--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - Gran_Premio_José_Pedro_Ramírez (<http://dbpedia.org/resource/Gran_Premio_José_Pedro_Ramírez>) --doo:location--> Montevideo (dor:Montevideo)
+      - Aeromás (<http://dbpedia.org/resource/Aeromás>) --doo:headquarter--> Uruguay (dor:Uruguay)
+  '9':
+    attributes:
+      Montevideo: '(has abstract^=''( 다른 뜻에 대해서는 몬테비데오 (동음이의) 문서를 참고하십시오.) 몬테비데오(스페인어: Montevideo, 문화어: 몬떼비데오)는 우루과이의 수도이자 최대의 무역항이며, 우루과이 국내에서 인구가 백만이 넘는 도시이다. 몬테비데오주의 주도이기도 하다. 2010년 현재 인구는 132만 7115명이다.'', width^=''22'')'
+      Ford_Motor_Company: (owner^='http://dbpedia.org/resource/Henry_Ford_family_tree', brands^='', owning company^='http://dbpedia.org/resource/Henry_Ford_family_tree')
+    relationships:
+      - Uruguay (dor:Uruguay) --doo:capital--> Montevideo (dor:Montevideo)
+      - Ford_Transit (dor:Ford_Transit) --dop:assembly--> Montevideo (dor:Montevideo)
+      - Ford_Transit (dor:Ford_Transit) --dop:manufacturer--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - Gran_Premio_José_Pedro_Ramírez (<http://dbpedia.org/resource/Gran_Premio_José_Pedro_Ramírez>) --doo:location--> Montevideo (dor:Montevideo)
+      - Air_Class_Líneas_Aéreas (<http://dbpedia.org/resource/Air_Class_Líneas_Aéreas>) --doo:headquarter--> Uruguay (dor:Uruguay)
+  '10':
+    attributes:
+      Lima: |-
+        (has abstract^='( 다른 뜻에 대해서는 리마 (동음이의) 문서를 참고하십시오.)( 비슷한 이름의 라마에 관해서는 해당 문서를 참조하십시오.)
+        리마(스페인어: Lima)는 페루의 수도이자 리마군의 군청 소재지이다. 태평양에 면해 있다. 정복자 프란시스코 피사로에 의해 쿠스코 대신 수도로 건설되었으며 식민지 시대에는 페루 부왕령의 수도였다. 인구 약 800만명으로 공화국 최대...', width^='24')
+    relationships:
+      - Peru (dor:Peru) --doo:capital--> Lima (dor:Lima)
+      - Grieve (dor:Grieve) --dop:assembly--> Lima (dor:Lima)
+      - Grieve (dor:Grieve) --dop:manufacturer--> Juan_Alberto_Grieve (dor:Juan_Alberto_Grieve)
+      - Derby_Nacional (dor:Derby_Nacional) --doo:location--> Lima (dor:Lima)
+      - AerCaribe (dor:AerCaribe) --doo:headquarter--> Peru (dor:Peru)
+attributes:
+  company: --owner^ (dop:owner)--> Resource | --brands^ (dop:brands)--> langString | --owning company^ (doo:owningCompany)--> Resource
+  country: --Aug low C^ (dop:augLowC)--> double | --last^ (dop:last)--> langString
+  Location: --former name^ (doo:formerName)--> langString | --has abstract^ (doo:abstract)--> langString | --Apr rain mm^ (dop:aprRainMm)--> int | --width^ (dop:width)--> perCent | --anthem^ (doo:anthem)--> Resource
+  organisation: --2p^ (dop:2p)--> int
+subgraph_id: 735
+relationships:
+  - country --doo:capital--> Location
+  - automobile --dop:assembly--> Location
+  - automobile --dop:manufacturer--> company
+  - horse race --doo:location--> Location
+  - organisation --doo:headquarter--> country

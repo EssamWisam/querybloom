@@ -1,0 +1,115 @@
+types:
+  road: doo:Road
+  ship: doo:Ship
+  country: doo:Country
+  military unit: doo:MilitaryUnit
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Big_Difference: (Wikipage page ID^='29835333')
+      Ukrainian_Navy: (garrison^='http://dbpedia.org/resource/Odesa', imageSize='150')
+      Chernihiv–Ovruch_railway: (image width^='300')
+    relationships:
+      - Ukrainian_frigate_Hetman_Sahaidachny (dor:Ukrainian_frigate_Hetman_Sahaidachny) --doo:owner--> Ukraine (dor:Ukraine)
+      - Big_Difference (dor:Big_Difference) --dop:country--> Ukraine (dor:Ukraine)
+      - Ukrainian_frigate_Hetman_Sahaidachny (dor:Ukrainian_frigate_Hetman_Sahaidachny) --doo:operator--> Ukrainian_Navy (dor:Ukrainian_Navy)
+      - Chernihiv–Ovruch_railway (<http://dbpedia.org/resource/Chernihiv–Ovruch_railway>) --doo:routeStart--> Ukraine (dor:Ukraine)
+  '2':
+    attributes:
+      Calambur: (Wikipage page ID^='49537336')
+      Ukrainian_Navy: (garrison^='http://dbpedia.org/resource/Odesa', imageSize='150')
+      Chernihiv–Ovruch_railway: (image width^='300')
+    relationships:
+      - Ukrainian_frigate_Hetman_Sahaidachny (dor:Ukrainian_frigate_Hetman_Sahaidachny) --doo:owner--> Ukraine (dor:Ukraine)
+      - Calambur (dor:Calambur) --dop:country--> Ukraine (dor:Ukraine)
+      - Ukrainian_frigate_Hetman_Sahaidachny (dor:Ukrainian_frigate_Hetman_Sahaidachny) --doo:operator--> Ukrainian_Navy (dor:Ukrainian_Navy)
+      - Chernihiv–Ovruch_railway (<http://dbpedia.org/resource/Chernihiv–Ovruch_railway>) --doo:routeStart--> Ukraine (dor:Ukraine)
+  '3':
+    attributes:
+      Ukrainian_Navy: (garrison^='http://dbpedia.org/resource/Odesa', imageSize='150')
+      Dovhonosyky_Show: (Wikipage page ID^='67741901', followed by^='Full Mamadu')
+      Chernihiv–Ovruch_railway: (image width^='300')
+    relationships:
+      - Ukrainian_frigate_Hetman_Sahaidachny (dor:Ukrainian_frigate_Hetman_Sahaidachny) --doo:owner--> Ukraine (dor:Ukraine)
+      - Dovhonosyky_Show (dor:Dovhonosyky_Show) --dop:country--> Ukraine (dor:Ukraine)
+      - Ukrainian_frigate_Hetman_Sahaidachny (dor:Ukrainian_frigate_Hetman_Sahaidachny) --doo:operator--> Ukrainian_Navy (dor:Ukrainian_Navy)
+      - Chernihiv–Ovruch_railway (<http://dbpedia.org/resource/Chernihiv–Ovruch_railway>) --doo:routeStart--> Ukraine (dor:Ukraine)
+  '4':
+    attributes:
+      Royal_Navy: (align^='left', garrison^='Whitehall, London, United Kingdom', imageSize='200')
+      2010_Nobel_Peace_Prize: (Wikipage page ID^='29122088', width^='33.0')
+    relationships:
+      - HMS_Protector_(A173) (<http://dbpedia.org/resource/HMS_Protector_(A173)>) --doo:owner--> Norway (dor:Norway)
+      - 2010_Nobel_Peace_Prize (dor:2010_Nobel_Peace_Prize) --dop:country--> Norway (dor:Norway)
+      - HMS_Protector_(A173) (<http://dbpedia.org/resource/HMS_Protector_(A173)>) --doo:operator--> Royal_Navy (dor:Royal_Navy)
+      - European_route_E10 (dor:European_route_E10) --doo:routeStart--> Norway (dor:Norway)
+  '5':
+    attributes:
+      Abel_Prize: (Wikipage page ID^='159285')
+      Royal_Navy: (align^='left', garrison^='Whitehall, London, United Kingdom', imageSize='200')
+    relationships:
+      - HMS_Protector_(A173) (<http://dbpedia.org/resource/HMS_Protector_(A173)>) --doo:owner--> Norway (dor:Norway)
+      - Abel_Prize (dor:Abel_Prize) --dop:country--> Norway (dor:Norway)
+      - HMS_Protector_(A173) (<http://dbpedia.org/resource/HMS_Protector_(A173)>) --doo:operator--> Royal_Navy (dor:Royal_Navy)
+      - European_route_E10 (dor:European_route_E10) --doo:routeStart--> Norway (dor:Norway)
+  '6':
+    attributes:
+      Royal_Navy: (align^='left', garrison^='Whitehall, London, United Kingdom', imageSize='200')
+      Amigo_(game_show): (Wikipage page ID^='9831112')
+    relationships:
+      - HMS_Protector_(A173) (<http://dbpedia.org/resource/HMS_Protector_(A173)>) --doo:owner--> Norway (dor:Norway)
+      - Amigo_(game_show) (<http://dbpedia.org/resource/Amigo_(game_show)>) --dop:country--> Norway (dor:Norway)
+      - HMS_Protector_(A173) (<http://dbpedia.org/resource/HMS_Protector_(A173)>) --doo:operator--> Royal_Navy (dor:Royal_Navy)
+      - European_route_E10 (dor:European_route_E10) --doo:routeStart--> Norway (dor:Norway)
+  '7':
+    attributes:
+      Belgian_Navy: (garrison^='http://dbpedia.org/resource/Antwerp')
+      A_Town_Called_Panic: (Wikipage page ID^='8902330')
+    relationships:
+      - Borys_Aleksandrov_(research_vessel) (<http://dbpedia.org/resource/Borys_Aleksandrov_(research_vessel)>) --doo:owner--> Belgium (dor:Belgium)
+      - A_Town_Called_Panic (dor:A_Town_Called_Panic) --dop:country--> Belgium (dor:Belgium)
+      - Borys_Aleksandrov_(research_vessel) (<http://dbpedia.org/resource/Borys_Aleksandrov_(research_vessel)>) --doo:operator--> Belgian_Navy (dor:Belgian_Navy)
+      - European_route_E17 (dor:European_route_E17) --doo:routeStart--> Belgium (dor:Belgium)
+  '8':
+    attributes:
+      Belgian_Navy: (garrison^='http://dbpedia.org/resource/Antwerp')
+      Astrid_in_Wonderland: (Wikipage page ID^='31090695')
+    relationships:
+      - Borys_Aleksandrov_(research_vessel) (<http://dbpedia.org/resource/Borys_Aleksandrov_(research_vessel)>) --doo:owner--> Belgium (dor:Belgium)
+      - Astrid_in_Wonderland (dor:Astrid_in_Wonderland) --dop:country--> Belgium (dor:Belgium)
+      - Borys_Aleksandrov_(research_vessel) (<http://dbpedia.org/resource/Borys_Aleksandrov_(research_vessel)>) --doo:operator--> Belgian_Navy (dor:Belgian_Navy)
+      - European_route_E17 (dor:European_route_E17) --doo:routeStart--> Belgium (dor:Belgium)
+  '9':
+    attributes:
+      Belgian_Navy: (garrison^='http://dbpedia.org/resource/Antwerp')
+    relationships:
+      - Borys_Aleksandrov_(research_vessel) (<http://dbpedia.org/resource/Borys_Aleksandrov_(research_vessel)>) --doo:owner--> Belgium (dor:Belgium)
+      - Charley_and_Mimmo (dor:Charley_and_Mimmo) --dop:country--> Belgium (dor:Belgium)
+      - Borys_Aleksandrov_(research_vessel) (<http://dbpedia.org/resource/Borys_Aleksandrov_(research_vessel)>) --doo:operator--> Belgian_Navy (dor:Belgian_Navy)
+      - European_route_E17 (dor:European_route_E17) --doo:routeStart--> Belgium (dor:Belgium)
+  '10':
+    attributes:
+      Khar_Bii: (Wikipage page ID^='43137018')
+    relationships:
+      - MV_Le_Joola (dor:MV_Le_Joola) --doo:owner--> Senegal (dor:Senegal)
+      - Khar_Bii (dor:Khar_Bii) --dop:country--> Senegal (dor:Senegal)
+      - MV_Le_Joola (dor:MV_Le_Joola) --doo:operator--> Armed_Forces_of_Senegal (dor:Armed_Forces_of_Senegal)
+      - Trans-Sahelian_Highway (dor:Trans-Sahelian_Highway) --doo:routeStart--> Senegal (dor:Senegal)
+attributes:
+  road: --image width^ (dop:imageWidth)--> int
+  ship: --reason^ (dop:reason)--> langString
+  country: --Aug low C^ (dop:augLowC)--> double
+  military unit: --align^ (dop:align)--> langString | --garrison^ (dop:garrison)--> int | --imageSize (dop:imageSize)--> int | --direction^ (dop:direction)--> langString | --battle^ (doo:battle)--> Resource
+  television show: --Wikipage page ID^ (doo:wikiPageID)--> int | --followed by^ (dop:followedBy)--> Resource | --width^ (dop:width)--> int
+subgraph_id: 559
+relationships:
+  - ship --doo:owner--> country
+  - television show --dop:country--> country
+  - ship --doo:operator--> military unit
+  - road --doo:routeStart--> country

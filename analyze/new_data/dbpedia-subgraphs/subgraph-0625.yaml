@@ -1,0 +1,45 @@
+types:
+  song: doo:Song
+  single: doo:Single
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Malang_(song): (producer^='http://dbpedia.org/resource/Aditya_Chopra')
+    relationships:
+      - Malang_(song) (<http://dbpedia.org/resource/Malang_(song)>) --doo:artist--> Pritam (dor:Pritam)
+      - Malang_(song) (<http://dbpedia.org/resource/Malang_(song)>) --dop:composer--> Pritam (dor:Pritam)
+      - Malang_(song) (<http://dbpedia.org/resource/Malang_(song)>) --doo:genre--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+      - ¡Corre! (<http://dbpedia.org/resource/¡Corre!>) --doo:type--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+  '2':
+    attributes:
+      Malang_(song): (producer^='http://dbpedia.org/resource/Aditya_Chopra')
+    relationships:
+      - Malang_(song) (<http://dbpedia.org/resource/Malang_(song)>) --doo:artist--> Pritam (dor:Pritam)
+      - Malang_(song) (<http://dbpedia.org/resource/Malang_(song)>) --dop:composer--> Pritam (dor:Pritam)
+      - Malang_(song) (<http://dbpedia.org/resource/Malang_(song)>) --doo:genre--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+      - ¿Quién_Me_Iba_a_Decir%3F (<http://dbpedia.org/resource/¿Quién_Me_Iba_a_Decir%3F>) --doo:type--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+  '3':
+    attributes:
+      Malang_(song): (producer^='http://dbpedia.org/resource/Aditya_Chopra')
+    relationships:
+      - Malang_(song) (<http://dbpedia.org/resource/Malang_(song)>) --doo:artist--> Pritam (dor:Pritam)
+      - Malang_(song) (<http://dbpedia.org/resource/Malang_(song)>) --dop:composer--> Pritam (dor:Pritam)
+      - Malang_(song) (<http://dbpedia.org/resource/Malang_(song)>) --doo:genre--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+      - ...Baby_One_More_Time_(song) (<http://dbpedia.org/resource/...Baby_One_More_Time_(song)>) --doo:type--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+attributes:
+  song: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --producer^ (doo:producer)--> Resource
+  music genre: --1y^ (dop:1y)--> int | --instruments^ (dop:instruments)--> Resource | --url^ (dop:url)--> Resource
+  musical artist: --death year^ (doo:deathYear)--> gYear | --associated acts^ (dop:associatedActs)--> langString | --death place^ (dop:deathPlace)--> langString
+subgraph_id: 625
+relationships:
+  - song --doo:artist--> musical artist
+  - song --dop:composer--> musical artist
+  - song --doo:genre--> music genre
+  - single --doo:type--> music genre

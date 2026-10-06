@@ -1,0 +1,144 @@
+types:
+  venue: doo:Venue
+  medician: doo:Medician
+  university: doo:University
+  person function: doo:PersonFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Allon_Barsam: (known for^='Surgical innovations, Training in Ophthalmology co-author')
+      Bloomsbury_Theatre: (capacity^='547')
+      University_College_London: (page length (characters) of wiki page^='212266', motto^='')
+    relationships:
+      - Bloomsbury_Theatre (dor:Bloomsbury_Theatre) --dop:owner--> University_College_London (dor:University_College_London)
+      - Allon_Barsam (dor:Allon_Barsam) --doo:institution--> University_College_London (dor:University_College_London)
+      - Allon_Barsam (dor:Allon_Barsam) --doo:profession--> Ophthalmologist (dor:Ophthalmologist)
+  '2':
+    attributes:
+      Allon_Barsam: (known for^='Surgical innovations, Training in Ophthalmology co-author')
+      University_College_London: (page length (characters) of wiki page^='212266', motto^='')
+    relationships:
+      - Watford_Football_Club_Training_Ground (dor:Watford_Football_Club_Training_Ground) --dop:owner--> University_College_London (dor:University_College_London)
+      - Allon_Barsam (dor:Allon_Barsam) --doo:institution--> University_College_London (dor:University_College_London)
+      - Allon_Barsam (dor:Allon_Barsam) --doo:profession--> Ophthalmologist (dor:Ophthalmologist)
+  '3':
+    attributes:
+      Alton_Ochsner: (known for^='Founder of Ochsner Clinic')
+      Tulane_University: (page length (characters) of wiki page^='88090', motto^='"Not for oneself, but for one''s own"')
+      Greer_Field_at_Turchin_Stadium: (opened^='1991-03-11')
+    relationships:
+      - Greer_Field_at_Turchin_Stadium (dor:Greer_Field_at_Turchin_Stadium) --dop:owner--> Tulane_University (dor:Tulane_University)
+      - Alton_Ochsner (dor:Alton_Ochsner) --doo:institution--> Tulane_University (dor:Tulane_University)
+      - Alton_Ochsner (dor:Alton_Ochsner) --doo:profession--> Medical_researcher (dor:Medical_researcher)
+  '4':
+    attributes:
+      Alton_Ochsner: (known for^='Founder of Ochsner Clinic')
+      Tulane_University: (page length (characters) of wiki page^='88090', motto^='"Not for oneself, but for one''s own"')
+      Greer_Field_at_Turchin_Stadium: (opened^='1991-03-11')
+    relationships:
+      - Greer_Field_at_Turchin_Stadium (dor:Greer_Field_at_Turchin_Stadium) --dop:owner--> Tulane_University (dor:Tulane_University)
+      - Alton_Ochsner (dor:Alton_Ochsner) --doo:institution--> Tulane_University (dor:Tulane_University)
+      - Alton_Ochsner (dor:Alton_Ochsner) --doo:profession--> Surgeon (dor:Surgeon)
+  '5':
+    attributes:
+      Alton_Ochsner: (known for^='Founder of Ochsner Clinic')
+      Tulane_Stadium: (opened^='1926-10-23', capacity^='35000')
+      Tulane_University: (page length (characters) of wiki page^='88090', motto^='"Not for oneself, but for one''s own"')
+    relationships:
+      - Tulane_Stadium (dor:Tulane_Stadium) --dop:owner--> Tulane_University (dor:Tulane_University)
+      - Alton_Ochsner (dor:Alton_Ochsner) --doo:institution--> Tulane_University (dor:Tulane_University)
+      - Alton_Ochsner (dor:Alton_Ochsner) --doo:profession--> Medical_researcher (dor:Medical_researcher)
+  '6':
+    attributes:
+      University_of_Oxford: (page length (characters) of wiki page^='192788', motto^='')
+      Roger_Bannister_running_track: (opened^='--11-30', capacity^='500')
+    relationships:
+      - Roger_Bannister_running_track (dor:Roger_Bannister_running_track) --dop:owner--> University_of_Oxford (dor:University_of_Oxford)
+      - Andrew_J._Carr (dor:Andrew_J._Carr) --doo:institution--> University_of_Oxford (dor:University_of_Oxford)
+      - Andrew_J._Carr (dor:Andrew_J._Carr) --doo:profession--> Surgeon (dor:Surgeon)
+  '7':
+    attributes:
+      Howard_University: (page length (characters) of wiki page^='62313')
+      William_H._Greene_Stadium: (opened^='1926', capacity^='10000')
+    relationships:
+      - William_H._Greene_Stadium (dor:William_H._Greene_Stadium) --dop:owner--> Howard_University (dor:Howard_University)
+      - Angella_D._Ferguson (dor:Angella_D._Ferguson) --doo:institution--> Howard_University (dor:Howard_University)
+      - Angella_D._Ferguson (dor:Angella_D._Ferguson) --doo:profession--> Doctor_(title) (<http://dbpedia.org/resource/Doctor_(title)>)
+  '8':
+    attributes:
+      Agganis_Arena: (opened^='2005-01-03')
+      Anthony_Gianelly: (known for^='Inventing the biodimentional technique in orthodontics; Chair of Orthodontics Program at Boston University')
+      Boston_University: (page length (characters) of wiki page^='166666')
+    relationships:
+      - Agganis_Arena (dor:Agganis_Arena) --dop:owner--> Boston_University (dor:Boston_University)
+      - Anthony_Gianelly (dor:Anthony_Gianelly) --doo:institution--> Boston_University (dor:Boston_University)
+      - Anthony_Gianelly (dor:Anthony_Gianelly) --doo:profession--> Dentist (dor:Dentist)
+  '9':
+    attributes:
+      Anthony_Gianelly: (known for^='Inventing the biodimentional technique in orthodontics; Chair of Orthodontics Program at Boston University')
+      Boston_University: (page length (characters) of wiki page^='166666')
+      Boston_Playwrights'_Theatre: (opened^='1981')
+    relationships:
+      - Boston_Playwrights'_Theatre (<http://dbpedia.org/resource/Boston_Playwrights'_Theatre>) --dop:owner--> Boston_University (dor:Boston_University)
+      - Anthony_Gianelly (dor:Anthony_Gianelly) --doo:institution--> Boston_University (dor:Boston_University)
+      - Anthony_Gianelly (dor:Anthony_Gianelly) --doo:profession--> Dentist (dor:Dentist)
+  '10':
+    attributes:
+      Braves_Field: (opened^='1915-08-18')
+      Anthony_Gianelly: (known for^='Inventing the biodimentional technique in orthodontics; Chair of Orthodontics Program at Boston University')
+      Boston_University: (page length (characters) of wiki page^='166666')
+    relationships:
+      - Braves_Field (dor:Braves_Field) --dop:owner--> Boston_University (dor:Boston_University)
+      - Anthony_Gianelly (dor:Anthony_Gianelly) --doo:institution--> Boston_University (dor:Boston_University)
+      - Anthony_Gianelly (dor:Anthony_Gianelly) --doo:profession--> Dentist (dor:Dentist)
+qa_result:
+  status: completed
+  cost_usd: 0.358547
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0352574
+        total_tokens: 3587
+        prompt_tokens: 1987
+        completion_tokens: 1600
+      generate:
+        cost_usd: 0.07578760000000001
+        total_tokens: 7345
+        prompt_tokens: 4261
+        completion_tokens: 3084
+      verify_1:
+        cost_usd: 0.10849700000000002
+        total_tokens: 8842
+        prompt_tokens: 4556
+        completion_tokens: 4286
+      verify_2:
+        cost_usd: 0.03904200000000001
+        total_tokens: 5325
+        prompt_tokens: 4497
+        completion_tokens: 828
+      complexity:
+        cost_usd: 0.09996300000000001
+        total_tokens: 9598
+        prompt_tokens: 5561
+        completion_tokens: 4037
+    total_tokens: 34697
+    prompt_tokens: 20862
+    total_cost_usd: 0.35854700000000006
+    completion_tokens: 13835
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  venue: --opened^ (dop:opened)--> int | --capacity^ (dop:capacity)--> int
+  medician: --known for^ (dop:knownFor)--> langString
+  university: --head^ (doo:head)--> Resource | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --motto^ (doo:motto)--> string | --founder^ (dop:founder)--> langString | --affiliation^ (dop:affiliation)--> Resource
+subgraph_id: 218
+relationships:
+  - venue --dop:owner--> university
+  - medician --doo:institution--> university
+  - medician --doo:profession--> person function

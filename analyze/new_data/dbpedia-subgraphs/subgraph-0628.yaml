@@ -1,0 +1,114 @@
+types:
+  city: doo:City
+  writer: doo:Writer
+  Location: doo:Location
+  magazine: doo:Magazine
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Acra,_New_York: (elevation (μ)^='199.0344')
+      New_York_(state): (subject='http://dbpedia.org/resource/Category:1788_establishments_in_the_United_States')
+      Roswell_George_Mills: (birth place^='http://dbpedia.org/resource/Buffalo,_New_York')
+      Les_Mouches_fantastiques: (country^='Canada')
+    relationships:
+      - Roswell_George_Mills (dor:Roswell_George_Mills) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Acra,_New_York (<http://dbpedia.org/resource/Acra,_New_York>) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Les_Mouches_fantastiques (dor:Les_Mouches_fantastiques) --doo:editor--> Roswell_George_Mills (dor:Roswell_George_Mills)
+  '2':
+    attributes:
+      Acra,_New_York: (elevation (μ)^='199.0344')
+      New_York_(state): (subject='http://dbpedia.org/resource/Category:1788_establishments_in_the_United_States')
+      Libertarian_Review: (country^='http://dbpedia.org/resource/United_States')
+      Joan_Kennedy_Taylor: (birth place^='http://dbpedia.org/resource/New_York_(state)')
+    relationships:
+      - Joan_Kennedy_Taylor (dor:Joan_Kennedy_Taylor) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Acra,_New_York (<http://dbpedia.org/resource/Acra,_New_York>) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Libertarian_Review (dor:Libertarian_Review) --doo:editor--> Joan_Kennedy_Taylor (dor:Joan_Kennedy_Taylor)
+  '3':
+    attributes:
+      Oklahoma: (subject='http://dbpedia.org/resource/Category:1907_establishments_in_the_United_States')
+      Ada,_Oklahoma: (elevation (μ)^='307.848')
+      Michael_Paul_Mason: (birth place^='http://dbpedia.org/resource/Oklahoma')
+    relationships:
+      - Michael_Paul_Mason (dor:Michael_Paul_Mason) --dop:birthPlace--> Oklahoma (dor:Oklahoma)
+      - Ada,_Oklahoma (<http://dbpedia.org/resource/Ada,_Oklahoma>) --doo:subdivision--> Oklahoma (dor:Oklahoma)
+      - This_Land_Press (dor:This_Land_Press) --doo:editor--> Michael_Paul_Mason (dor:Michael_Paul_Mason)
+  '4':
+    attributes:
+      Gujarat: (subject='http://dbpedia.org/resource/Category:1960_establishments_in_India')
+      Akhand_Jyoti: (country^='http://dbpedia.org/resource/India')
+      Pranav_Pandya: (birth place^='http://dbpedia.org/resource/Amreli')
+    relationships:
+      - Pranav_Pandya (dor:Pranav_Pandya) --dop:birthPlace--> Gujarat (dor:Gujarat)
+      - Ahmedabad_Cantonment (dor:Ahmedabad_Cantonment) --doo:subdivision--> Gujarat (dor:Gujarat)
+      - Akhand_Jyoti (dor:Akhand_Jyoti) --doo:editor--> Pranav_Pandya (dor:Pranav_Pandya)
+  '5':
+    attributes:
+      Gujarat: (subject='http://dbpedia.org/resource/Category:1960_establishments_in_India')
+      Dalpatram: (birth place^='http://dbpedia.org/resource/Gujarat')
+      Buddhiprakash: (country^='India')
+    relationships:
+      - Dalpatram (dor:Dalpatram) --dop:birthPlace--> Gujarat (dor:Gujarat)
+      - Ahmedabad_Cantonment (dor:Ahmedabad_Cantonment) --doo:subdivision--> Gujarat (dor:Gujarat)
+      - Buddhiprakash (dor:Buddhiprakash) --doo:editor--> Dalpatram (dor:Dalpatram)
+  '6':
+    attributes:
+      Gujarat: (subject='http://dbpedia.org/resource/Category:1960_establishments_in_India')
+      Kavilok: (country^='http://dbpedia.org/resource/India')
+      Praful_Raval: (birth place^='http://dbpedia.org/resource/Gujarat')
+    relationships:
+      - Praful_Raval (dor:Praful_Raval) --dop:birthPlace--> Gujarat (dor:Gujarat)
+      - Ahmedabad_Cantonment (dor:Ahmedabad_Cantonment) --doo:subdivision--> Gujarat (dor:Gujarat)
+      - Kavilok (dor:Kavilok) --doo:editor--> Praful_Raval (dor:Praful_Raval)
+  '7':
+    attributes:
+      Oklahoma: (subject='http://dbpedia.org/resource/Category:1907_establishments_in_the_United_States')
+      Altus,_Oklahoma: (elevation (μ)^='426.1104')
+      Michael_Paul_Mason: (birth place^='http://dbpedia.org/resource/Oklahoma')
+    relationships:
+      - Michael_Paul_Mason (dor:Michael_Paul_Mason) --dop:birthPlace--> Oklahoma (dor:Oklahoma)
+      - Altus,_Oklahoma (<http://dbpedia.org/resource/Altus,_Oklahoma>) --doo:subdivision--> Oklahoma (dor:Oklahoma)
+      - This_Land_Press (dor:This_Land_Press) --doo:editor--> Michael_Paul_Mason (dor:Michael_Paul_Mason)
+  '8':
+    attributes:
+      Oklahoma: (subject='http://dbpedia.org/resource/Category:1907_establishments_in_the_United_States')
+      Alva,_Oklahoma: (elevation (μ)^='409.956')
+      Michael_Paul_Mason: (birth place^='http://dbpedia.org/resource/Oklahoma')
+    relationships:
+      - Michael_Paul_Mason (dor:Michael_Paul_Mason) --dop:birthPlace--> Oklahoma (dor:Oklahoma)
+      - Alva,_Oklahoma (<http://dbpedia.org/resource/Alva,_Oklahoma>) --doo:subdivision--> Oklahoma (dor:Oklahoma)
+      - This_Land_Press (dor:This_Land_Press) --doo:editor--> Michael_Paul_Mason (dor:Michael_Paul_Mason)
+  '9':
+    attributes:
+      New_York_(state): (subject='http://dbpedia.org/resource/Category:1788_establishments_in_the_United_States')
+      Les_Mouches_fantastiques: (country^='Canada')
+      Amsterdam_(city),_New_York__Amsterdam,_New_York__1: (elevation (μ)^='110.0')
+    relationships:
+      - Roswell_George_Mills (dor:Roswell_George_Mills) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Amsterdam_(city),_New_York__Amsterdam,_New_York__1 (<http://dbpedia.org/resource/Amsterdam_(city),_New_York__Amsterdam,_New_York__1>) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Les_Mouches_fantastiques (dor:Les_Mouches_fantastiques) --doo:editor--> Roswell_George_Mills (dor:Roswell_George_Mills)
+  '10':
+    attributes:
+      Shabkhoon: (country^='India')
+      Shamsur_Rahman_Faruqi: (birth place^='http://dbpedia.org/resource/British_India')
+      Pratapgarh_district,_Uttar_Pradesh: (subject='http://dbpedia.org/resource/Category:1858_establishments_in_India')
+    relationships:
+      - Shamsur_Rahman_Faruqi (dor:Shamsur_Rahman_Faruqi) --dop:birthPlace--> Pratapgarh_district,_Uttar_Pradesh (<http://dbpedia.org/resource/Pratapgarh_district,_Uttar_Pradesh>)
+      - Bela_Pratapgarh (dor:Bela_Pratapgarh) --doo:subdivision--> Pratapgarh_district,_Uttar_Pradesh (<http://dbpedia.org/resource/Pratapgarh_district,_Uttar_Pradesh>)
+      - Shabkhoon (dor:Shabkhoon) --doo:editor--> Shamsur_Rahman_Faruqi (dor:Shamsur_Rahman_Faruqi)
+attributes:
+  city: --elevation (μ)^ (doo:elevation)--> double
+  writer: --birth place^ (dop:birthPlace)--> langString | --spouse^ (dop:spouse)--> langString | --honorific suffix^ (dop:honorificSuffix)--> Resource | --1p^ (dop:1p)--> int
+  Location: --Apr record high F^ (dop:aprRecordHighF)--> double | --Apr rain mm^ (dop:aprRainMm)--> int | --subject (podt:subject)--> Resource | --architecture^ (dop:architecture)--> langString
+  magazine: --country^ (dop:country)--> langString
+subgraph_id: 628
+relationships:
+  - writer --dop:birthPlace--> Location
+  - city --doo:subdivision--> Location
+  - magazine --doo:editor--> writer

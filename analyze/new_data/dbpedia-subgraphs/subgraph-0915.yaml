@@ -1,0 +1,110 @@
+types:
+  city: doo:City
+  road: doo:Road
+  writer: doo:Writer
+  Location: doo:Location
+  magazine: doo:Magazine
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Berlin: (Link from a Wikipage to an external page^='http://maps.presscom.co.uk/berlin/berlin-school-atlas-1916.html')
+      Berlin_Township,_New_Jersey: (area total (m2)^='8670000.0', area total (km2)^='8.67')
+    relationships:
+      - L-MAG (dor:L-MAG) --doo:city--> Berlin (dor:Berlin)
+      - Berlin_Township,_New_Jersey (<http://dbpedia.org/resource/Berlin_Township,_New_Jersey>) --dop:namedFor--> Berlin (dor:Berlin)
+      - Olimpijka (dor:Olimpijka) --doo:city--> Berlin (dor:Berlin)
+      - L-MAG (dor:L-MAG) --doo:editor--> Manuela_Kay (dor:Manuela_Kay)
+  '2':
+    attributes:
+      Berlin: (Link from a Wikipage to an external page^='http://maps.presscom.co.uk/berlin/berlin-school-atlas-1916.html')
+      Berlin_Township,_Wayne_County,_Pennsylvania: (area total (m2)^='102459929.6449', area total (km2)^='102.45992964489216')
+    relationships:
+      - L-MAG (dor:L-MAG) --doo:city--> Berlin (dor:Berlin)
+      - Berlin_Township,_Wayne_County,_Pennsylvania (<http://dbpedia.org/resource/Berlin_Township,_Wayne_County,_Pennsylvania>) --dop:namedFor--> Berlin (dor:Berlin)
+      - Olimpijka (dor:Olimpijka) --doo:city--> Berlin (dor:Berlin)
+      - L-MAG (dor:L-MAG) --doo:editor--> Manuela_Kay (dor:Manuela_Kay)
+  '3':
+    attributes:
+      Madrid: (Link from a Wikipage to an external page^='http://madrid.es', government type^='http://dbpedia.org/resource/Ayuntamiento_(Spain)')
+    relationships:
+      - La_Violeta (dor:La_Violeta) --doo:city--> Madrid (dor:Madrid)
+      - Madrid,_Surigao_del_Sur (<http://dbpedia.org/resource/Madrid,_Surigao_del_Sur>) --dop:namedFor--> Madrid (dor:Madrid)
+      - Autopista_de_Circunvalación_M-30 (<http://dbpedia.org/resource/Autopista_de_Circunvalación_M-30>) --doo:city--> Madrid (dor:Madrid)
+      - La_Violeta (dor:La_Violeta) --doo:editor--> Faustina_Sáez_de_Melgar (<http://dbpedia.org/resource/Faustina_Sáez_de_Melgar>)
+  '4':
+    attributes:
+      Madrid: (Link from a Wikipage to an external page^='http://madrid.es', government type^='http://dbpedia.org/resource/Ayuntamiento_(Spain)')
+    relationships:
+      - La_Violeta (dor:La_Violeta) --doo:city--> Madrid (dor:Madrid)
+      - Madrid,_Surigao_del_Sur (<http://dbpedia.org/resource/Madrid,_Surigao_del_Sur>) --dop:namedFor--> Madrid (dor:Madrid)
+      - MP-203 (dor:MP-203) --doo:city--> Madrid (dor:Madrid)
+      - La_Violeta (dor:La_Violeta) --doo:editor--> Faustina_Sáez_de_Melgar (<http://dbpedia.org/resource/Faustina_Sáez_de_Melgar>)
+  '5':
+    attributes:
+      Saint_Petersburg: (Link from a Wikipage to an external page^='http://eng.gov.spb.ru/')
+      St._Petersburg,_Florida: (Apr precipitation inch^='2.6', area total (m2)^='350917489.0694', area total (km2)^='350.9174890694246')
+    relationships:
+      - Novy_Put (dor:Novy_Put) --doo:city--> Saint_Petersburg (dor:Saint_Petersburg)
+      - St._Petersburg,_Florida (<http://dbpedia.org/resource/St._Petersburg,_Florida>) --dop:namedFor--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Saint_Petersburg_Ring_Road (dor:Saint_Petersburg_Ring_Road) --doo:city--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Novy_Put (dor:Novy_Put) --doo:editor--> Dmitry_Filosofov (dor:Dmitry_Filosofov)
+  '6':
+    attributes:
+      Saint_Petersburg: (Link from a Wikipage to an external page^='http://eng.gov.spb.ru/')
+      St._Petersburg,_Florida: (Apr precipitation inch^='2.6', area total (m2)^='350917489.0694', area total (km2)^='350.9174890694246')
+    relationships:
+      - Polar_Star_(Decembrist_journal) (<http://dbpedia.org/resource/Polar_Star_(Decembrist_journal)>) --doo:city--> Saint_Petersburg (dor:Saint_Petersburg)
+      - St._Petersburg,_Florida (<http://dbpedia.org/resource/St._Petersburg,_Florida>) --dop:namedFor--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Saint_Petersburg_Ring_Road (dor:Saint_Petersburg_Ring_Road) --doo:city--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Polar_Star_(Decembrist_journal) (<http://dbpedia.org/resource/Polar_Star_(Decembrist_journal)>) --doo:editor--> Alexander_Bestuzhev (dor:Alexander_Bestuzhev)
+  '7':
+    attributes:
+      Saint_Petersburg: (Link from a Wikipage to an external page^='http://eng.gov.spb.ru/')
+      St._Petersburg,_Florida: (Apr precipitation inch^='2.6', area total (m2)^='350917489.0694', area total (km2)^='350.9174890694246')
+    relationships:
+      - Severny_Vestnik (dor:Severny_Vestnik) --doo:city--> Saint_Petersburg (dor:Saint_Petersburg)
+      - St._Petersburg,_Florida (<http://dbpedia.org/resource/St._Petersburg,_Florida>) --dop:namedFor--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Saint_Petersburg_Ring_Road (dor:Saint_Petersburg_Ring_Road) --doo:city--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Severny_Vestnik (dor:Severny_Vestnik) --doo:editor--> Mikhail_Albov (dor:Mikhail_Albov)
+  '8':
+    attributes:
+      Toronto: (Link from a Wikipage to an external page^='http://www.thecanadianencyclopedia.com/index.cfm%3FPgNm=TCE&Params=A1ARTA0008050', government type^='http://dbpedia.org/resource/List_of_municipalities_in_Ontario')
+      Toronto,_Iowa: (area total (m2)^='466197.8598605', area total (km2)^='0.46619785986048')
+    relationships:
+      - Brick_(magazine) (<http://dbpedia.org/resource/Brick_(magazine)>) --doo:city--> Toronto (dor:Toronto)
+      - Toronto,_Iowa (<http://dbpedia.org/resource/Toronto,_Iowa>) --dop:namedFor--> Toronto (dor:Toronto)
+      - Allen_Road (dor:Allen_Road) --doo:city--> Toronto (dor:Toronto)
+      - Brick_(magazine) (<http://dbpedia.org/resource/Brick_(magazine)>) --doo:editor--> David_Chariandy (dor:David_Chariandy)
+  '9':
+    attributes:
+      Toronto: (Link from a Wikipage to an external page^='http://www.thecanadianencyclopedia.com/index.cfm%3FPgNm=TCE&Params=A1ARTA0008050', government type^='http://dbpedia.org/resource/List_of_municipalities_in_Ontario')
+      Toronto,_Iowa: (area total (m2)^='466197.8598605', area total (km2)^='0.46619785986048')
+    relationships:
+      - Brick_(magazine) (<http://dbpedia.org/resource/Brick_(magazine)>) --doo:city--> Toronto (dor:Toronto)
+      - Toronto,_Iowa (<http://dbpedia.org/resource/Toronto,_Iowa>) --dop:namedFor--> Toronto (dor:Toronto)
+      - Allen_Road (dor:Allen_Road) --doo:city--> Toronto (dor:Toronto)
+      - Brick_(magazine) (<http://dbpedia.org/resource/Brick_(magazine)>) --doo:editor--> Dionne_Brand (dor:Dionne_Brand)
+  '10':
+    attributes:
+      Toronto: (Link from a Wikipage to an external page^='http://www.thecanadianencyclopedia.com/index.cfm%3FPgNm=TCE&Params=A1ARTA0008050', government type^='http://dbpedia.org/resource/List_of_municipalities_in_Ontario')
+      Toronto,_Iowa: (area total (m2)^='466197.8598605', area total (km2)^='0.46619785986048')
+    relationships:
+      - Brick_(magazine) (<http://dbpedia.org/resource/Brick_(magazine)>) --doo:city--> Toronto (dor:Toronto)
+      - Toronto,_Iowa (<http://dbpedia.org/resource/Toronto,_Iowa>) --dop:namedFor--> Toronto (dor:Toronto)
+      - Allen_Road (dor:Allen_Road) --doo:city--> Toronto (dor:Toronto)
+      - Brick_(magazine) (<http://dbpedia.org/resource/Brick_(magazine)>) --doo:editor--> Madeleine_Thien (dor:Madeleine_Thien)
+attributes:
+  city: --Apr record high F^ (dop:aprRecordHighF)--> int | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --government type^ (doo:governmentType)--> Resource | --founder^ (dop:founder)--> langString
+  Location: --Apr precipitation inch^ (dop:aprPrecipitationInch)--> int | --leader^ (dop:leader)--> langString | --territory^ (doo:territory)--> Resource | --area total (m2)^ (doo:areaTotal)--> double | --arc-text-colorB^ (dop:arcTextColorb)--> langString | --builder^ (dop:builder)--> langString | --area total (km2)^ (doop:areaTotal)--> squareKilometre
+subgraph_id: 915
+relationships:
+  - magazine --doo:city--> city
+  - Location --dop:namedFor--> city
+  - road --doo:city--> city
+  - magazine --doo:editor--> writer

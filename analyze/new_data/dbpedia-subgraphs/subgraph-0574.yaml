@@ -1,0 +1,80 @@
+types:
+  city: doo:City
+  writer: doo:Writer
+  station: doo:Station
+  Location: doo:Location
+  tennis player: doo:TennisPlayer
+  tennis tournament: doo:TennisTournament
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Bulgaria (dor:Bulgaria) --doo:capital--> Sofia (dor:Sofia)
+      - Akademik_Aleksandar_Teodorov_-_Balan_Metro_Station (dor:Akademik_Aleksandar_Teodorov_-_Balan_Metro_Station) --doo:owningOrganisation--> Sofia (dor:Sofia)
+      - 2016_Garanti_Koza_Sofia_Open (dor:2016_Garanti_Koza_Sofia_Open) --dop:location--> Bulgaria (dor:Bulgaria)
+      - 2016_Garanti_Koza_Sofia_Open (dor:2016_Garanti_Koza_Sofia_Open) --doo:championInDoubleMale--> Matwé_Middelkoop (<http://dbpedia.org/resource/Matwé_Middelkoop>)
+      - 2016_Garanti_Koza_Sofia_Open (dor:2016_Garanti_Koza_Sofia_Open) --dop:location--> Sofia (dor:Sofia)
+      - Assen_Razcvetnikov (dor:Assen_Razcvetnikov) --doo:nationality--> Bulgaria (dor:Bulgaria)
+  '2':
+    attributes: {}
+    relationships:
+      - Bulgaria (dor:Bulgaria) --doo:capital--> Sofia (dor:Sofia)
+      - Akademik_Aleksandar_Teodorov_-_Balan_Metro_Station (dor:Akademik_Aleksandar_Teodorov_-_Balan_Metro_Station) --doo:owningOrganisation--> Sofia (dor:Sofia)
+      - 2016_Garanti_Koza_Sofia_Open (dor:2016_Garanti_Koza_Sofia_Open) --dop:location--> Bulgaria (dor:Bulgaria)
+      - 2016_Garanti_Koza_Sofia_Open (dor:2016_Garanti_Koza_Sofia_Open) --doo:championInDoubleMale--> Wesley_Koolhof (dor:Wesley_Koolhof)
+      - 2016_Garanti_Koza_Sofia_Open (dor:2016_Garanti_Koza_Sofia_Open) --dop:location--> Sofia (dor:Sofia)
+      - Assen_Razcvetnikov (dor:Assen_Razcvetnikov) --doo:nationality--> Bulgaria (dor:Bulgaria)
+  '3':
+    attributes:
+      Dimitar_Talev: (children^='Bratislav Talev')
+    relationships:
+      - Bulgaria (dor:Bulgaria) --doo:capital--> Sofia (dor:Sofia)
+      - Akademik_Aleksandar_Teodorov_-_Balan_Metro_Station (dor:Akademik_Aleksandar_Teodorov_-_Balan_Metro_Station) --doo:owningOrganisation--> Sofia (dor:Sofia)
+      - 2016_Garanti_Koza_Sofia_Open (dor:2016_Garanti_Koza_Sofia_Open) --dop:location--> Bulgaria (dor:Bulgaria)
+      - 2016_Garanti_Koza_Sofia_Open (dor:2016_Garanti_Koza_Sofia_Open) --doo:championInDoubleMale--> Matwé_Middelkoop (<http://dbpedia.org/resource/Matwé_Middelkoop>)
+      - 2016_Garanti_Koza_Sofia_Open (dor:2016_Garanti_Koza_Sofia_Open) --dop:location--> Sofia (dor:Sofia)
+      - Dimitar_Talev (dor:Dimitar_Talev) --doo:nationality--> Bulgaria (dor:Bulgaria)
+  '4':
+    attributes: {}
+    relationships:
+      - Serbia (dor:Serbia) --doo:capital--> Belgrade (dor:Belgrade)
+      - Belgrade_Bus_Station (dor:Belgrade_Bus_Station) --doo:owningOrganisation--> Belgrade (dor:Belgrade)
+      - 2011_Serbia_Open (dor:2011_Serbia_Open) --dop:location--> Serbia (dor:Serbia)
+      - 2011_Serbia_Open (dor:2011_Serbia_Open) --doo:championInDoubleMale--> Filip_Polášek (<http://dbpedia.org/resource/Filip_Polášek>)
+      - 2011_Serbia_Open (dor:2011_Serbia_Open) --dop:location--> Belgrade (dor:Belgrade)
+      - Ana_Ilić (<http://dbpedia.org/resource/Ana_Ilić>) --doo:nationality--> Serbia (dor:Serbia)
+  '5':
+    attributes: {}
+    relationships:
+      - Serbia (dor:Serbia) --doo:capital--> Belgrade (dor:Belgrade)
+      - Belgrade_Bus_Station (dor:Belgrade_Bus_Station) --doo:owningOrganisation--> Belgrade (dor:Belgrade)
+      - 2011_Serbia_Open (dor:2011_Serbia_Open) --dop:location--> Serbia (dor:Serbia)
+      - 2011_Serbia_Open (dor:2011_Serbia_Open) --doo:championInDoubleMale--> František_Čermák (<http://dbpedia.org/resource/František_Čermák>)
+      - 2011_Serbia_Open (dor:2011_Serbia_Open) --dop:location--> Belgrade (dor:Belgrade)
+      - Ana_Ilić (<http://dbpedia.org/resource/Ana_Ilić>) --doo:nationality--> Serbia (dor:Serbia)
+  '6':
+    attributes: {}
+    relationships:
+      - Serbia (dor:Serbia) --doo:capital--> Belgrade (dor:Belgrade)
+      - Belgrade_Bus_Station (dor:Belgrade_Bus_Station) --doo:owningOrganisation--> Belgrade (dor:Belgrade)
+      - 2011_Serbia_Open (dor:2011_Serbia_Open) --dop:location--> Serbia (dor:Serbia)
+      - 2011_Serbia_Open (dor:2011_Serbia_Open) --doo:championInDoubleMale--> Filip_Polášek (<http://dbpedia.org/resource/Filip_Polášek>)
+      - 2011_Serbia_Open (dor:2011_Serbia_Open) --dop:location--> Belgrade (dor:Belgrade)
+      - Ana_Tasić (<http://dbpedia.org/resource/Ana_Tasić>) --doo:nationality--> Serbia (dor:Serbia)
+attributes:
+  writer: --children^ (dop:children)--> langString | --bgcolor^ (dop:bgcolor)--> langString
+  station: --direction^ (dop:direction)--> langString | --operator^ (doo:operator)--> Resource
+  Location: --administrator^ (dop:administrator)--> Resource | --named after^ (doo:namedAfter)--> Resource | --arc-gapB^ (dop:arcGapb)--> double | --age^ (dop:age)--> Resource | --mountain range^ (doo:mountainRange)--> Resource | --display^ (dop:display)--> langString | --source^ (dop:source)--> langString
+subgraph_id: 574
+relationships:
+  - Location --doo:capital--> city
+  - station --doo:owningOrganisation--> city
+  - tennis tournament --dop:location--> Location
+  - tennis tournament --doo:championInDoubleMale--> tennis player
+  - tennis tournament --dop:location--> city
+  - writer --doo:nationality--> Location

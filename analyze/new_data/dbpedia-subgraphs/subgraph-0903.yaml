@@ -1,0 +1,111 @@
+types:
+  person: doo:Person
+  college: doo:College
+  scientist: doo:Scientist
+  politician: doo:Politician
+  city district: doo:CityDistrict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      E._J._Bowen: (academic discipline^='http://dbpedia.org/resource/Photochemistry')
+      Christopher_Ewart-Biggs: (birth place^='Thanet, Kent, England', birth date^='1921-08-05')
+      Alan_Williams_(Swansea_West_MP): (1namedata^='http://dbpedia.org/resource/John_Bercow')
+    relationships:
+      - E._J._Bowen (dor:E._J._Bowen) --doo:institution--> University_College,_Oxford (<http://dbpedia.org/resource/University_College,_Oxford>)
+      - Christopher_Ewart-Biggs (dor:Christopher_Ewart-Biggs) --dop:almaMater--> University_College,_Oxford (<http://dbpedia.org/resource/University_College,_Oxford>)
+      - Christopher_Ewart-Biggs (dor:Christopher_Ewart-Biggs) --doo:deathPlace--> Sandyford (dor:Sandyford)
+      - Alan_Williams_(Swansea_West_MP) (<http://dbpedia.org/resource/Alan_Williams_(Swansea_West_MP)>) --dop:almaMater--> University_College,_Oxford (<http://dbpedia.org/resource/University_College,_Oxford>)
+  '2':
+    attributes:
+      John_Albery: (academic discipline^='http://dbpedia.org/resource/Physical_chemistry')
+      Christopher_Ewart-Biggs: (birth place^='Thanet, Kent, England', birth date^='1921-08-05')
+      Alan_Williams_(Swansea_West_MP): (1namedata^='http://dbpedia.org/resource/John_Bercow')
+    relationships:
+      - John_Albery (dor:John_Albery) --doo:institution--> University_College,_Oxford (<http://dbpedia.org/resource/University_College,_Oxford>)
+      - Christopher_Ewart-Biggs (dor:Christopher_Ewart-Biggs) --dop:almaMater--> University_College,_Oxford (<http://dbpedia.org/resource/University_College,_Oxford>)
+      - Christopher_Ewart-Biggs (dor:Christopher_Ewart-Biggs) --doo:deathPlace--> Sandyford (dor:Sandyford)
+      - Alan_Williams_(Swansea_West_MP) (<http://dbpedia.org/resource/Alan_Williams_(Swansea_West_MP)>) --dop:almaMater--> University_College,_Oxford (<http://dbpedia.org/resource/University_College,_Oxford>)
+  '3':
+    attributes:
+      Christopher_Ewart-Biggs: (birth place^='Thanet, Kent, England', birth date^='1921-08-05')
+      Alan_Williams_(Swansea_West_MP): (1namedata^='http://dbpedia.org/resource/John_Bercow')
+    relationships:
+      - Ngaire_Woods (dor:Ngaire_Woods) --doo:institution--> University_College,_Oxford (<http://dbpedia.org/resource/University_College,_Oxford>)
+      - Christopher_Ewart-Biggs (dor:Christopher_Ewart-Biggs) --dop:almaMater--> University_College,_Oxford (<http://dbpedia.org/resource/University_College,_Oxford>)
+      - Christopher_Ewart-Biggs (dor:Christopher_Ewart-Biggs) --doo:deathPlace--> Sandyford (dor:Sandyford)
+      - Alan_Williams_(Swansea_West_MP) (<http://dbpedia.org/resource/Alan_Williams_(Swansea_West_MP)>) --dop:almaMater--> University_College,_Oxford (<http://dbpedia.org/resource/University_College,_Oxford>)
+  '4':
+    attributes:
+      Antony_Hewish: (academic discipline^='http://dbpedia.org/resource/Radio_astronomy')
+      Frederick_Keeble: (awards^='Commander of the Order of the British Empire', birth place^='Westminster, England', birth date^='1870-03-02')
+    relationships:
+      - Antony_Hewish (dor:Antony_Hewish) --doo:institution--> Gonville_and_Caius_College,_Cambridge (<http://dbpedia.org/resource/Gonville_and_Caius_College,_Cambridge>)
+      - Frederick_Keeble (dor:Frederick_Keeble) --dop:almaMater--> Gonville_and_Caius_College,_Cambridge (<http://dbpedia.org/resource/Gonville_and_Caius_College,_Cambridge>)
+      - Frederick_Keeble (dor:Frederick_Keeble) --doo:deathPlace--> Royal_Borough_of_Kensington_and_Chelsea (dor:Royal_Borough_of_Kensington_and_Chelsea)
+      - Adair_Turner,_Baron_Turner_of_Ecchinswell (<http://dbpedia.org/resource/Adair_Turner,_Baron_Turner_of_Ecchinswell>) --dop:almaMater--> Gonville_and_Caius_College,_Cambridge (<http://dbpedia.org/resource/Gonville_and_Caius_College,_Cambridge>)
+  '5':
+    attributes:
+      Frederick_Keeble: (awards^='Commander of the Order of the British Empire', birth place^='Westminster, England', birth date^='1870-03-02')
+      David_Riches_(anatomist): (academic discipline^='http://dbpedia.org/resource/Anatomy')
+    relationships:
+      - David_Riches_(anatomist) (<http://dbpedia.org/resource/David_Riches_(anatomist)>) --doo:institution--> Gonville_and_Caius_College,_Cambridge (<http://dbpedia.org/resource/Gonville_and_Caius_College,_Cambridge>)
+      - Frederick_Keeble (dor:Frederick_Keeble) --dop:almaMater--> Gonville_and_Caius_College,_Cambridge (<http://dbpedia.org/resource/Gonville_and_Caius_College,_Cambridge>)
+      - Frederick_Keeble (dor:Frederick_Keeble) --doo:deathPlace--> Royal_Borough_of_Kensington_and_Chelsea (dor:Royal_Borough_of_Kensington_and_Chelsea)
+      - Adair_Turner,_Baron_Turner_of_Ecchinswell (<http://dbpedia.org/resource/Adair_Turner,_Baron_Turner_of_Ecchinswell>) --dop:almaMater--> Gonville_and_Caius_College,_Cambridge (<http://dbpedia.org/resource/Gonville_and_Caius_College,_Cambridge>)
+  '6':
+    attributes:
+      Frederick_Keeble: (awards^='Commander of the Order of the British Empire', birth place^='Westminster, England', birth date^='1870-03-02')
+    relationships:
+      - George_Green_(mathematician) (<http://dbpedia.org/resource/George_Green_(mathematician)>) --doo:institution--> Gonville_and_Caius_College,_Cambridge (<http://dbpedia.org/resource/Gonville_and_Caius_College,_Cambridge>)
+      - Frederick_Keeble (dor:Frederick_Keeble) --dop:almaMater--> Gonville_and_Caius_College,_Cambridge (<http://dbpedia.org/resource/Gonville_and_Caius_College,_Cambridge>)
+      - Frederick_Keeble (dor:Frederick_Keeble) --doo:deathPlace--> Royal_Borough_of_Kensington_and_Chelsea (dor:Royal_Borough_of_Kensington_and_Chelsea)
+      - Adair_Turner,_Baron_Turner_of_Ecchinswell (<http://dbpedia.org/resource/Adair_Turner,_Baron_Turner_of_Ecchinswell>) --dop:almaMater--> Gonville_and_Caius_College,_Cambridge (<http://dbpedia.org/resource/Gonville_and_Caius_College,_Cambridge>)
+  '7':
+    attributes:
+      Herchel_Smith: (birth place^='http://dbpedia.org/resource/Plymouth', birth date^='1925-05-06')
+    relationships:
+      - Amy_Orben (dor:Amy_Orben) --doo:institution--> Emmanuel_College,_Cambridge (<http://dbpedia.org/resource/Emmanuel_College,_Cambridge>)
+      - Herchel_Smith (dor:Herchel_Smith) --dop:almaMater--> Emmanuel_College,_Cambridge (<http://dbpedia.org/resource/Emmanuel_College,_Cambridge>)
+      - Herchel_Smith (dor:Herchel_Smith) --doo:deathPlace--> West_Chester,_Pennsylvania (<http://dbpedia.org/resource/West_Chester,_Pennsylvania>)
+      - Allegra_Stratton (dor:Allegra_Stratton) --dop:almaMater--> Emmanuel_College,_Cambridge (<http://dbpedia.org/resource/Emmanuel_College,_Cambridge>)
+  '8':
+    attributes:
+      Herchel_Smith: (birth place^='http://dbpedia.org/resource/Plymouth', birth date^='1925-05-06')
+      Frederick_Tom_Brooks: (academic discipline^='http://dbpedia.org/resource/Botany')
+    relationships:
+      - Frederick_Tom_Brooks (dor:Frederick_Tom_Brooks) --doo:institution--> Emmanuel_College,_Cambridge (<http://dbpedia.org/resource/Emmanuel_College,_Cambridge>)
+      - Herchel_Smith (dor:Herchel_Smith) --dop:almaMater--> Emmanuel_College,_Cambridge (<http://dbpedia.org/resource/Emmanuel_College,_Cambridge>)
+      - Herchel_Smith (dor:Herchel_Smith) --doo:deathPlace--> West_Chester,_Pennsylvania (<http://dbpedia.org/resource/West_Chester,_Pennsylvania>)
+      - Allegra_Stratton (dor:Allegra_Stratton) --dop:almaMater--> Emmanuel_College,_Cambridge (<http://dbpedia.org/resource/Emmanuel_College,_Cambridge>)
+  '9':
+    attributes:
+      Herchel_Smith: (birth place^='http://dbpedia.org/resource/Plymouth', birth date^='1925-05-06')
+    relationships:
+      - Gordon_Sutherland (dor:Gordon_Sutherland) --doo:institution--> Emmanuel_College,_Cambridge (<http://dbpedia.org/resource/Emmanuel_College,_Cambridge>)
+      - Herchel_Smith (dor:Herchel_Smith) --dop:almaMater--> Emmanuel_College,_Cambridge (<http://dbpedia.org/resource/Emmanuel_College,_Cambridge>)
+      - Herchel_Smith (dor:Herchel_Smith) --doo:deathPlace--> West_Chester,_Pennsylvania (<http://dbpedia.org/resource/West_Chester,_Pennsylvania>)
+      - Allegra_Stratton (dor:Allegra_Stratton) --dop:almaMater--> Emmanuel_College,_Cambridge (<http://dbpedia.org/resource/Emmanuel_College,_Cambridge>)
+  '10':
+    attributes:
+      Isaac_Butt: (birth place^='County Donegal,', birth date^='1813-09-06')
+      Adrian_Constantin: (academic discipline^='http://dbpedia.org/resource/Mathematics')
+    relationships:
+      - Adrian_Constantin (dor:Adrian_Constantin) --doo:institution--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Isaac_Butt (dor:Isaac_Butt) --dop:almaMater--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Isaac_Butt (dor:Isaac_Butt) --doo:deathPlace--> Clonskeagh (dor:Clonskeagh)
+      - Alan_Abernethy (dor:Alan_Abernethy) --dop:almaMater--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+attributes:
+  person: --parents^ (dop:parents)--> Resource | --awards^ (dop:awards)--> int | --birth place^ (dop:birthPlace)--> Resource | --birth date^ (dop:birthDate)--> int | --employer^ (dop:employer)--> langString | --header^ (dop:header)--> langString
+  scientist: --academic discipline^ (doo:academicDiscipline)--> Resource
+  politician: --father^ (dop:father)--> langString | --1namedata^ (dop:1namedata)--> langString | --data^ (dop:data)--> Resource
+subgraph_id: 903
+relationships:
+  - scientist --doo:institution--> college
+  - person --dop:almaMater--> college
+  - person --doo:deathPlace--> city district
+  - politician --dop:almaMater--> college

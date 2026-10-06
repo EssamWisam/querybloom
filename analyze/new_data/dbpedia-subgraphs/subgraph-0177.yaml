@@ -1,0 +1,123 @@
+types:
+  artist: doo:Artist
+  Location: doo:Location
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Malaysia: (UTC offset^='+8')
+      Putrajaya: (UTC offset^='+8', Link from a Wikipage to an external page^='http://www.tourism.gov.my/en/my/web-page/places/states-of-malaysia/putrajaya')
+    relationships:
+      - Malaysia (dor:Malaysia) --doo:capital--> Putrajaya (dor:Putrajaya)
+      - A._Ali (dor:A._Ali) --doo:deathPlace--> Malaysia (dor:Malaysia)
+  '2':
+    attributes:
+      Sri_Lanka: (UTC offset^='+5:30')
+      A._C._G._S._Amarasekara: (birth date^='1883-03-02')
+      Sri_Jayawardenepura_Kotte: (UTC offset^='+5:30', Link from a Wikipage to an external page^='http://www.kotte.mc.gov.lk/')
+    relationships:
+      - Sri_Lanka (dor:Sri_Lanka) --doo:capital--> Sri_Jayawardenepura_Kotte (dor:Sri_Jayawardenepura_Kotte)
+      - A._C._G._S._Amarasekara (dor:A._C._G._S._Amarasekara) --doo:deathPlace--> Sri_Lanka (dor:Sri_Lanka)
+  '3':
+    attributes:
+      Philippines: (UTC offset^='+08:00')
+      Metro_Manila: (reason^='This needs to be rewritten in light of the fact that the CITY of Maynila, which was basically Intramuros, was not the same as the PROVINCE of Maynila, which encompassed its suburbs . Did the entire PR...', UTC offset^='+8', Link from a Wikipage to an external page^='https://sprout.ph/blog/how-much-is-the-minimum-wage-in-manila/')
+      Abdulmari_Imao: (birth date^='1936-01-14')
+    relationships:
+      - Philippines (dor:Philippines) --doo:capital--> Metro_Manila (dor:Metro_Manila)
+      - Abdulmari_Imao (dor:Abdulmari_Imao) --doo:deathPlace--> Philippines (dor:Philippines)
+  '4':
+    attributes:
+      Ādams_Alksnis: (birth date^='1864-03-10')
+      Saint_Petersburg: (Link from a Wikipage to an external page^='http://eng.gov.spb.ru/')
+    relationships:
+      - Russian_Empire (dor:Russian_Empire) --doo:capital--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Ādams_Alksnis (<http://dbpedia.org/resource/Ādams_Alksnis>) --doo:deathPlace--> Russian_Empire (dor:Russian_Empire)
+  '5':
+    attributes:
+      Bangkok: (reason^='Text was changed after the edit which added the citation.', UTC offset^='+07:00', Link from a Wikipage to an external page^='http://bhs.doh.go.th/files/accident/53/report_accident53.pdf%7Cpublisher=Traffic')
+      Thailand: (UTC offset^='+7')
+      Adrian_Fisher_(musician): (birth date^='1952-09-02')
+    relationships:
+      - Thailand (dor:Thailand) --doo:capital--> Bangkok (dor:Bangkok)
+      - Adrian_Fisher_(musician) (<http://dbpedia.org/resource/Adrian_Fisher_(musician)>) --doo:deathPlace--> Thailand (dor:Thailand)
+  '6':
+    attributes:
+      Saint_Petersburg: (Link from a Wikipage to an external page^='http://eng.gov.spb.ru/')
+    relationships:
+      - Russian_Empire (dor:Russian_Empire) --doo:capital--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Adrian_Volkov (dor:Adrian_Volkov) --doo:deathPlace--> Russian_Empire (dor:Russian_Empire)
+  '7':
+    attributes:
+      Jakarta: (UTC offset^='+07:00', Link from a Wikipage to an external page^='http://www.indonesia-dutchcolonialheritage.nl/Special%20Subjects/Railroads.html/tram-batavia')
+      Indonesia: (UTC offset^='+7 to +9')
+      Ahmad_Sadali: (birth date^='1924-07-24')
+    relationships:
+      - Indonesia (dor:Indonesia) --doo:capital--> Jakarta (dor:Jakarta)
+      - Ahmad_Sadali (dor:Ahmad_Sadali) --doo:deathPlace--> Indonesia (dor:Indonesia)
+  '8':
+    attributes:
+      Bangkok: (reason^='Text was changed after the edit which added the citation.', UTC offset^='+07:00', Link from a Wikipage to an external page^='http://bhs.doh.go.th/files/accident/53/report_accident53.pdf%7Cpublisher=Traffic')
+      Thailand: (UTC offset^='+7')
+      Aki_Sirkesalo: (birth date^='1962-07-25')
+    relationships:
+      - Thailand (dor:Thailand) --doo:capital--> Bangkok (dor:Bangkok)
+      - Aki_Sirkesalo (dor:Aki_Sirkesalo) --doo:deathPlace--> Thailand (dor:Thailand)
+  '9':
+    attributes:
+      Al_Ritz: (birth date^='1901-08-27')
+    relationships:
+      - Louisiana (dor:Louisiana) --doo:capital--> Louisiana_(New_France) (<http://dbpedia.org/resource/Louisiana_(New_France)>)
+      - Al_Ritz (dor:Al_Ritz) --doo:deathPlace--> Louisiana (dor:Louisiana)
+  '10':
+    attributes:
+      Alex_Chilton: (birth date^='1950-12-28')
+      Louisiana_(New_France): (Link from a Wikipage to an external page^='http://j.pazzoni.free.fr/')
+    relationships:
+      - Louisiana (dor:Louisiana) --doo:capital--> Louisiana_(New_France) (<http://dbpedia.org/resource/Louisiana_(New_France)>)
+      - Alex_Chilton (dor:Alex_Chilton) --doo:deathPlace--> Louisiana (dor:Louisiana)
+qa_result:
+  status: completed
+  cost_usd: 0.21505
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.045782
+        total_tokens: 3847
+        prompt_tokens: 2077
+        completion_tokens: 1770
+      generate:
+        cost_usd: 0.0530576
+        total_tokens: 5832
+        prompt_tokens: 3759
+        completion_tokens: 2073
+      verify_1:
+        cost_usd: 0.032182
+        total_tokens: 4679
+        prompt_tokens: 4093
+        completion_tokens: 586
+      complexity:
+        cost_usd: 0.084028
+        total_tokens: 8304
+        prompt_tokens: 4898
+        completion_tokens: 3406
+    total_tokens: 22662
+    prompt_tokens: 14827
+    total_cost_usd: 0.2150496
+    completion_tokens: 7835
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  artist: --url^ (dop:url)--> Resource | --birth date^ (doo:birthDate)--> date
+  Location: --named after^ (doo:namedAfter)--> Resource | --UTC offset^ (doo:utcOffset)--> string | --coordinates^ (dop:coordinates)--> double | --mountain range^ (doo:mountainRange)--> Resource | --Apr record high C^ (dop:aprRecordHighC)--> int | --Apr rain mm^ (dop:aprRainMm)--> double
+  administrative region: --reason^ (dop:reason)--> langString | --image width^ (dop:imageWidth)--> int | --UTC offset^ (doo:utcOffset)--> string | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+subgraph_id: 177
+relationships:
+  - Location --doo:capital--> administrative region
+  - artist --doo:deathPlace--> Location

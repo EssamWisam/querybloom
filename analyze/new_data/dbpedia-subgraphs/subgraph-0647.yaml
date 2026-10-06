@@ -1,0 +1,68 @@
+types:
+  company: doo:Company
+  newspaper: doo:Newspaper
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Michigan: (footer^='Territorial changes of the Michigan Territory from 1818 to 1836')
+      Entertainment: (align^='right')
+      21st_Century_Newspapers: (page length (characters) of wiki page^='6817')
+    relationships:
+      - Real_Detroit_Weekly (dor:Real_Detroit_Weekly) --doo:format--> Entertainment (dor:Entertainment)
+      - Real_Detroit_Weekly (dor:Real_Detroit_Weekly) --doo:headquarter--> Michigan (dor:Michigan)
+      - 21st_Century_Newspapers (dor:21st_Century_Newspapers) --dop:areaServed--> Michigan (dor:Michigan)
+      - Al_Capps (dor:Al_Capps) --doo:deathPlace--> Michigan (dor:Michigan)
+  '2':
+    attributes:
+      Michigan: (footer^='Territorial changes of the Michigan Territory from 1818 to 1836')
+      21st_Century_Newspapers: (page length (characters) of wiki page^='6817')
+    relationships:
+      - The_Eastern_Echo (dor:The_Eastern_Echo) --doo:format--> Tabloid_(newspaper_format) (<http://dbpedia.org/resource/Tabloid_(newspaper_format)>)
+      - The_Eastern_Echo (dor:The_Eastern_Echo) --doo:headquarter--> Michigan (dor:Michigan)
+      - 21st_Century_Newspapers (dor:21st_Century_Newspapers) --dop:areaServed--> Michigan (dor:Michigan)
+      - Al_Capps (dor:Al_Capps) --doo:deathPlace--> Michigan (dor:Michigan)
+  '3':
+    attributes:
+      Michigan: (footer^='Territorial changes of the Michigan Territory from 1818 to 1836')
+      21st_Century_Newspapers: (page length (characters) of wiki page^='6817')
+    relationships:
+      - The_State_News (dor:The_State_News) --doo:format--> Tabloid_(newspaper_format) (<http://dbpedia.org/resource/Tabloid_(newspaper_format)>)
+      - The_State_News (dor:The_State_News) --doo:headquarter--> Michigan (dor:Michigan)
+      - 21st_Century_Newspapers (dor:21st_Century_Newspapers) --dop:areaServed--> Michigan (dor:Michigan)
+      - Al_Capps (dor:Al_Capps) --doo:deathPlace--> Michigan (dor:Michigan)
+  '4':
+    attributes:
+      826NYC: (page length (characters) of wiki page^='4818')
+    relationships:
+      - Akhon_Samoy (dor:Akhon_Samoy) --doo:format--> Tabloid_(newspaper_format) (<http://dbpedia.org/resource/Tabloid_(newspaper_format)>)
+      - Akhon_Samoy (dor:Akhon_Samoy) --doo:headquarter--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - 826NYC (dor:826NYC) --dop:areaServed--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - A._H._Woods (dor:A._H._Woods) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '5':
+    attributes:
+      826NYC: (page length (characters) of wiki page^='4818')
+    relationships:
+      - East_Village_Other (dor:East_Village_Other) --doo:format--> Alternative_newspaper (dor:Alternative_newspaper)
+      - East_Village_Other (dor:East_Village_Other) --doo:headquarter--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - 826NYC (dor:826NYC) --dop:areaServed--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - A._H._Woods (dor:A._H._Woods) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+attributes:
+  company: --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --type^ (doo:type)--> Resource
+  music genre: --align^ (dop:align)--> langString
+  musical artist: --d^ (dop:d)--> langString | --instruments^ (dop:instruments)--> langString | --instruments^ (dop:instruments)--> Resource
+  administrative region: --named for^ (dop:namedFor)--> langString | --Aug high C^ (dop:augHighC)--> double | --type^ (doo:type)--> Resource | --Apr rain days^ (dop:aprRainDays)--> double | --differentFrom (wwoo:differentFrom)--> Resource | --footer^ (dop:footer)--> langString | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int
+subgraph_id: 647
+relationships:
+  - newspaper --doo:format--> music genre
+  - newspaper --doo:headquarter--> administrative region
+  - company --dop:areaServed--> administrative region
+  - musical artist --doo:deathPlace--> administrative region

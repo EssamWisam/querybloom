@@ -1,0 +1,50 @@
+types:
+  Location: doo:Location
+  office holder: doo:OfficeHolder
+  musical artist: doo:MusicalArtist
+  historic building: doo:HistoricBuilding
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Jiangsu: (width^='642')
+      Nanjing: (UTC offset^='+08:00', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-movie-noun-1', url^='https://web.archive.org/web/20150315013237/http:/nanjing.jiangsu.net/')
+    relationships:
+      - Bo_Gu (dor:Bo_Gu) --doo:birthPlace--> Jiangsu (dor:Jiangsu)
+      - Jiangsu (dor:Jiangsu) --doo:namedAfter--> Nanjing (dor:Nanjing)
+      - Ikuma_Dan (dor:Ikuma_Dan) --doo:deathPlace--> Jiangsu (dor:Jiangsu)
+      - Baptist_Church,_Yangzhou (<http://dbpedia.org/resource/Baptist_Church,_Yangzhou>) --doo:location--> Jiangsu (dor:Jiangsu)
+  '2':
+    attributes:
+      Suzhou: (UTC offset^='+8', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-monument-noun-2')
+      Jiangsu: (width^='642')
+    relationships:
+      - Bo_Gu (dor:Bo_Gu) --doo:birthPlace--> Jiangsu (dor:Jiangsu)
+      - Jiangsu (dor:Jiangsu) --doo:namedAfter--> Suzhou (dor:Suzhou)
+      - Ikuma_Dan (dor:Ikuma_Dan) --doo:deathPlace--> Jiangsu (dor:Jiangsu)
+      - Baptist_Church,_Yangzhou (<http://dbpedia.org/resource/Baptist_Church,_Yangzhou>) --doo:location--> Jiangsu (dor:Jiangsu)
+  '3':
+    attributes:
+      Jiangsu: (width^='642')
+      Nanjing: (UTC offset^='+08:00', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-movie-noun-1', url^='https://web.archive.org/web/20150315013237/http:/nanjing.jiangsu.net/')
+    relationships:
+      - Chen_Hao_(politician) (<http://dbpedia.org/resource/Chen_Hao_(politician)>) --doo:birthPlace--> Jiangsu (dor:Jiangsu)
+      - Jiangsu (dor:Jiangsu) --doo:namedAfter--> Nanjing (dor:Nanjing)
+      - Ikuma_Dan (dor:Ikuma_Dan) --doo:deathPlace--> Jiangsu (dor:Jiangsu)
+      - Baptist_Church,_Yangzhou (<http://dbpedia.org/resource/Baptist_Church,_Yangzhou>) --doo:location--> Jiangsu (dor:Jiangsu)
+attributes:
+  Location: --UTC offset^ (doo:utcOffset)--> string | --direction^ (dop:direction)--> langString | --area^ (dop:area)--> acre | --wordnet_type (dop:wordnet_type)--> Resource | --designated other1 color^ (dop:designatedOther1Color)--> langString | --url^ (dop:url)--> langString | --coordinates^ (dop:coordinates)--> langString
+  office holder: --active years end year^ (doo:activeYearsEndYear)--> gYear | --spouse^ (dop:spouse)--> int
+  musical artist: --1a^ (dop:1a)--> langString
+  administrative region: --winner^ (dop:winner)--> langString | --width^ (dop:width)--> langString
+subgraph_id: 563
+relationships:
+  - office holder --doo:birthPlace--> administrative region
+  - administrative region --doo:namedAfter--> Location
+  - musical artist --doo:deathPlace--> administrative region
+  - historic building --doo:location--> administrative region

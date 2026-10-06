@@ -1,0 +1,102 @@
+types:
+  award: doo:Award
+  artist: doo:Artist
+  country: doo:Country
+  politician: doo:Politician
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Pakistan: (image^='Abdus Salam 1987.jpg')
+      Afzal_Ahsan_Randhawa: (party^='http://dbpedia.org/resource/Pakistan_Peoples_Party')
+      Abdur_Rahman_Chughtai: (image size^='200')
+    relationships:
+      - Afzal_Ahsan_Randhawa (dor:Afzal_Ahsan_Randhawa) --dop:awards--> Pride_of_Performance (dor:Pride_of_Performance)
+      - Abdur_Rahman_Chughtai (dor:Abdur_Rahman_Chughtai) --doo:award--> Pride_of_Performance (dor:Pride_of_Performance)
+      - Abdur_Rahman_Chughtai (dor:Abdur_Rahman_Chughtai) --doo:deathPlace--> Pakistan (dor:Pakistan)
+  '2':
+    attributes:
+      Pakistan: (image^='Abdus Salam 1987.jpg')
+      Malcolm_Forbes: (party^='http://dbpedia.org/resource/Republican_Party_(United_States)')
+      Abdur_Rahman_Chughtai: (image size^='200')
+    relationships:
+      - Malcolm_Forbes (dor:Malcolm_Forbes) --dop:awards--> Pride_of_Performance (dor:Pride_of_Performance)
+      - Abdur_Rahman_Chughtai (dor:Abdur_Rahman_Chughtai) --doo:award--> Pride_of_Performance (dor:Pride_of_Performance)
+      - Abdur_Rahman_Chughtai (dor:Abdur_Rahman_Chughtai) --doo:deathPlace--> Pakistan (dor:Pakistan)
+  '3':
+    attributes:
+      Denmark: (image^='20190614')
+      Achton_Friis: (birth name^='Johannes Achton Friis')
+      Maurice_F._Egan: (caption^='Egan in 1923, wearing the Medal of Merit (Denmark)')
+    relationships:
+      - Maurice_F._Egan (dor:Maurice_F._Egan) --dop:awards--> Medal_of_Merit_(Denmark) (<http://dbpedia.org/resource/Medal_of_Merit_(Denmark)>)
+      - Achton_Friis (dor:Achton_Friis) --doo:award--> Medal_of_Merit_(Denmark) (<http://dbpedia.org/resource/Medal_of_Merit_(Denmark)>)
+      - Achton_Friis (dor:Achton_Friis) --doo:deathPlace--> Denmark (dor:Denmark)
+  '4':
+    attributes:
+      Albert_Namatjira: (birth name^='Elea Namatjira')
+    relationships:
+      - Clive_Beadon (dor:Clive_Beadon) --dop:awards--> Queen_Elizabeth_II_Coronation_Medal (dor:Queen_Elizabeth_II_Coronation_Medal)
+      - Albert_Namatjira (dor:Albert_Namatjira) --doo:award--> Queen_Elizabeth_II_Coronation_Medal (dor:Queen_Elizabeth_II_Coronation_Medal)
+      - Albert_Namatjira (dor:Albert_Namatjira) --doo:deathPlace--> Northern_Territory (dor:Northern_Territory)
+  '5':
+    attributes:
+      Aleksandr_Vasilevsky: (caption^='Vasilevsky in 1944')
+      Alexander_Nikolayevich_Samokhvalov: (image size^='200')
+    relationships:
+      - Aleksandr_Vasilevsky (dor:Aleksandr_Vasilevsky) --dop:awards--> Order_of_Lenin (dor:Order_of_Lenin)
+      - Alexander_Nikolayevich_Samokhvalov (dor:Alexander_Nikolayevich_Samokhvalov) --doo:award--> Order_of_Lenin (dor:Order_of_Lenin)
+      - Alexander_Nikolayevich_Samokhvalov (dor:Alexander_Nikolayevich_Samokhvalov) --doo:deathPlace--> Russian_SFSR (dor:Russian_SFSR)
+  '6':
+    attributes:
+      Alexander_Zasyadko: (party^='http://dbpedia.org/resource/Communist_Party_of_the_Soviet_Union')
+      Alexander_Nikolayevich_Samokhvalov: (image size^='200')
+    relationships:
+      - Alexander_Zasyadko (dor:Alexander_Zasyadko) --dop:awards--> Order_of_Lenin (dor:Order_of_Lenin)
+      - Alexander_Nikolayevich_Samokhvalov (dor:Alexander_Nikolayevich_Samokhvalov) --doo:award--> Order_of_Lenin (dor:Order_of_Lenin)
+      - Alexander_Nikolayevich_Samokhvalov (dor:Alexander_Nikolayevich_Samokhvalov) --doo:deathPlace--> Russian_SFSR (dor:Russian_SFSR)
+  '7':
+    attributes:
+      Alexei_Yepishev: (party^='http://dbpedia.org/resource/Communist_Party_of_the_Soviet_Union')
+      Alexander_Nikolayevich_Samokhvalov: (image size^='200')
+    relationships:
+      - Alexei_Yepishev (dor:Alexei_Yepishev) --dop:awards--> Order_of_Lenin (dor:Order_of_Lenin)
+      - Alexander_Nikolayevich_Samokhvalov (dor:Alexander_Nikolayevich_Samokhvalov) --doo:award--> Order_of_Lenin (dor:Order_of_Lenin)
+      - Alexander_Nikolayevich_Samokhvalov (dor:Alexander_Nikolayevich_Samokhvalov) --doo:deathPlace--> Russian_SFSR (dor:Russian_SFSR)
+  '8':
+    attributes:
+      Russia: (image^='Caucasus-ethnic en.svg')
+    relationships:
+      - Aleksandr_Petrovich_Chumakov (dor:Aleksandr_Petrovich_Chumakov) --dop:awards--> Order_of_the_Red_Star (dor:Order_of_the_Red_Star)
+      - Andrei_Bantikov (dor:Andrei_Bantikov) --doo:award--> Order_of_the_Red_Star (dor:Order_of_the_Red_Star)
+      - Andrei_Bantikov (dor:Andrei_Bantikov) --doo:deathPlace--> Russia (dor:Russia)
+  '9':
+    attributes:
+      Russia: (image^='Caucasus-ethnic en.svg')
+      Alexander_Lebed: (caption^='Lebed at a 1996 news conference in Moscow', party^='http://dbpedia.org/resource/Congress_of_Russian_Communities')
+    relationships:
+      - Alexander_Lebed (dor:Alexander_Lebed) --dop:awards--> Order_of_the_Red_Star (dor:Order_of_the_Red_Star)
+      - Andrei_Bantikov (dor:Andrei_Bantikov) --doo:award--> Order_of_the_Red_Star (dor:Order_of_the_Red_Star)
+      - Andrei_Bantikov (dor:Andrei_Bantikov) --doo:deathPlace--> Russia (dor:Russia)
+  '10':
+    attributes:
+      Russia: (image^='Caucasus-ethnic en.svg')
+      Alexei_Yepishev: (party^='http://dbpedia.org/resource/Communist_Party_of_the_Soviet_Union')
+    relationships:
+      - Alexei_Yepishev (dor:Alexei_Yepishev) --dop:awards--> Order_of_the_Red_Star (dor:Order_of_the_Red_Star)
+      - Andrei_Bantikov (dor:Andrei_Bantikov) --doo:award--> Order_of_the_Red_Star (dor:Order_of_the_Red_Star)
+      - Andrei_Bantikov (dor:Andrei_Bantikov) --doo:deathPlace--> Russia (dor:Russia)
+attributes:
+  award: --holder^ (dop:holder)--> int
+  artist: --birth name^ (dop:birthName)--> langString | --image size^ (dop:imageSize)--> int
+  country: --image^ (dop:image)--> langString
+  politician: --d^ (dop:d)--> langString | --caption^ (dop:caption)--> langString | --profession^ (doo:profession)--> Resource | --party^ (doo:party)--> Resource | --float^ (dop:float)--> langString
+subgraph_id: 708
+relationships:
+  - politician --dop:awards--> award
+  - artist --doo:award--> award
+  - artist --doo:deathPlace--> country

@@ -1,0 +1,74 @@
+types:
+  city: doo:City
+  ice hockey player: doo:IceHockeyPlayer
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Glasgow: (direction^='horizontal', commons^='yes')
+      Alex_Gray_(ice_hockey): (death date^='1986-04-10')
+    relationships:
+      - 1890–91_Scottish_Football_League (<http://dbpedia.org/resource/1890–91_Scottish_Football_League>) --dop:location--> Glasgow (dor:Glasgow)
+      - Alex_Gray_(ice_hockey) (<http://dbpedia.org/resource/Alex_Gray_(ice_hockey)>) --doo:birthPlace--> Glasgow (dor:Glasgow)
+  '2':
+    attributes:
+      Glasgow: (direction^='horizontal', commons^='yes')
+      Andy_Aitkenhead: (death date^='1968-10-21')
+    relationships:
+      - 1890–91_Scottish_Football_League (<http://dbpedia.org/resource/1890–91_Scottish_Football_League>) --dop:location--> Glasgow (dor:Glasgow)
+      - Andy_Aitkenhead (dor:Andy_Aitkenhead) --doo:birthPlace--> Glasgow (dor:Glasgow)
+  '3':
+    attributes:
+      Glasgow: (direction^='horizontal', commons^='yes')
+      Colin_Shields: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-hockey_player-noun-1')
+    relationships:
+      - 1890–91_Scottish_Football_League (<http://dbpedia.org/resource/1890–91_Scottish_Football_League>) --dop:location--> Glasgow (dor:Glasgow)
+      - Colin_Shields (dor:Colin_Shields) --doo:birthPlace--> Glasgow (dor:Glasgow)
+  '4':
+    attributes: {}
+    relationships:
+      - 1921_Estonian_Football_Championship (dor:1921_Estonian_Football_Championship) --dop:location--> Tallinn (dor:Tallinn)
+      - Andrei_Makrov (dor:Andrei_Makrov) --doo:birthPlace--> Tallinn (dor:Tallinn)
+  '5':
+    attributes: {}
+    relationships:
+      - 1921_Estonian_Football_Championship (dor:1921_Estonian_Football_Championship) --dop:location--> Tallinn (dor:Tallinn)
+      - Dmitri_Suur (dor:Dmitri_Suur) --doo:birthPlace--> Tallinn (dor:Tallinn)
+  '6':
+    attributes: {}
+    relationships:
+      - 1921_Estonian_Football_Championship (dor:1921_Estonian_Football_Championship) --dop:location--> Tallinn (dor:Tallinn)
+      - Lauri_Lahesalu (dor:Lauri_Lahesalu) --doo:birthPlace--> Tallinn (dor:Tallinn)
+  '7':
+    attributes: {}
+    relationships:
+      - 1935_Detroit_Lions_season (dor:1935_Detroit_Lions_season) --dop:location--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Austin_Block (dor:Austin_Block) --doo:birthPlace--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+  '8':
+    attributes: {}
+    relationships:
+      - 1935_Detroit_Lions_season (dor:1935_Detroit_Lions_season) --dop:location--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Brendan_Lemieux (dor:Brendan_Lemieux) --doo:birthPlace--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+  '9':
+    attributes: {}
+    relationships:
+      - 1935_Detroit_Lions_season (dor:1935_Detroit_Lions_season) --dop:location--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Drew_Shore (dor:Drew_Shore) --doo:birthPlace--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+  '10':
+    attributes: {}
+    relationships:
+      - 1942–43_Segunda_División (<http://dbpedia.org/resource/1942–43_Segunda_División>) --dop:location--> Barcelona (dor:Barcelona)
+      - Alba_Gonzalo (dor:Alba_Gonzalo) --doo:birthPlace--> Barcelona (dor:Barcelona)
+attributes:
+  city: --direction^ (dop:direction)--> langString | --Aug low F^ (dop:augLowF)--> double | --Apr rain mm^ (dop:aprRainMm)--> int | --Aug precipitation inch^ (dop:augPrecipitationInch)--> double | --commons^ (dop:commons)--> langString
+  ice hockey player: --wordnet_type (dop:wordnet_type)--> Resource | --death date^ (dop:deathDate)--> date
+  football league season: --highest attendance^ (dop:highestAttendance)--> langString | --continentalcup2 qualifiers^ (dop:continentalcup2Qualifiers)--> langString | --highest attendance^ (dop:highestAttendance)--> int
+subgraph_id: 554
+relationships:
+  - football league season --dop:location--> city
+  - ice hockey player --doo:birthPlace--> city

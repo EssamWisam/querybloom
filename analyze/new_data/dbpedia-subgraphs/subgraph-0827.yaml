@@ -1,0 +1,106 @@
+types:
+  city: doo:City
+  soccer club: doo:SoccerClub
+  military person: doo:MilitaryPerson
+  american football Team: doo:AmericanFootballTeam
+  american football player: doo:AmericanFootballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      George_W._Dunaway: (awards^='http://dbpedia.org/resource/Air_Medal')
+    relationships:
+      - Abe_Woodson (dor:Abe_Woodson) --dop:deathPlace--> Las_Vegas,_Nevada (<http://dbpedia.org/resource/Las_Vegas,_Nevada>)
+      - Abe_Woodson (dor:Abe_Woodson) --doo:formerTeam--> San_Francisco_49ers (dor:San_Francisco_49ers)
+      - Abe_Woodson (dor:Abe_Woodson) --doo:formerTeam--> St._Louis_Cardinals_(NFL) (<http://dbpedia.org/resource/St._Louis_Cardinals_(NFL)>)
+      - George_W._Dunaway (dor:George_W._Dunaway) --dop:deathPlace--> Las_Vegas,_Nevada (<http://dbpedia.org/resource/Las_Vegas,_Nevada>)
+  '2':
+    attributes:
+      George_W._Dunaway: (awards^='http://dbpedia.org/resource/Air_Medal')
+    relationships:
+      - Abe_Woodson (dor:Abe_Woodson) --dop:deathPlace--> Las_Vegas,_Nevada (<http://dbpedia.org/resource/Las_Vegas,_Nevada>)
+      - Abe_Woodson (dor:Abe_Woodson) --doo:formerTeam--> St._Louis_Cardinals_(NFL) (<http://dbpedia.org/resource/St._Louis_Cardinals_(NFL)>)
+      - Abe_Woodson (dor:Abe_Woodson) --doo:formerTeam--> San_Francisco_49ers (dor:San_Francisco_49ers)
+      - George_W._Dunaway (dor:George_W._Dunaway) --dop:deathPlace--> Las_Vegas,_Nevada (<http://dbpedia.org/resource/Las_Vegas,_Nevada>)
+  '3':
+    attributes:
+      Harold_Fischer: (awards^='http://dbpedia.org/resource/Air_Medal')
+    relationships:
+      - Abe_Woodson (dor:Abe_Woodson) --dop:deathPlace--> Las_Vegas,_Nevada (<http://dbpedia.org/resource/Las_Vegas,_Nevada>)
+      - Abe_Woodson (dor:Abe_Woodson) --doo:formerTeam--> San_Francisco_49ers (dor:San_Francisco_49ers)
+      - Abe_Woodson (dor:Abe_Woodson) --doo:formerTeam--> St._Louis_Cardinals_(NFL) (<http://dbpedia.org/resource/St._Louis_Cardinals_(NFL)>)
+      - Harold_Fischer (dor:Harold_Fischer) --dop:deathPlace--> Las_Vegas,_Nevada (<http://dbpedia.org/resource/Las_Vegas,_Nevada>)
+  '4':
+    attributes: {}
+    relationships:
+      - Adrian_Robinson (dor:Adrian_Robinson) --dop:deathPlace--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+      - Adrian_Robinson (dor:Adrian_Robinson) --doo:formerTeam--> Denver_Broncos (dor:Denver_Broncos)
+      - Adrian_Robinson (dor:Adrian_Robinson) --doo:formerTeam--> Philadelphia_Eagles (dor:Philadelphia_Eagles)
+      - Anthony_Melio (dor:Anthony_Melio) --dop:deathPlace--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+  '5':
+    attributes: {}
+    relationships:
+      - Adrian_Robinson (dor:Adrian_Robinson) --dop:deathPlace--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+      - Adrian_Robinson (dor:Adrian_Robinson) --doo:formerTeam--> Denver_Broncos (dor:Denver_Broncos)
+      - Adrian_Robinson (dor:Adrian_Robinson) --doo:formerTeam--> Pittsburgh_Steelers (dor:Pittsburgh_Steelers)
+      - Anthony_Melio (dor:Anthony_Melio) --dop:deathPlace--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+  '6':
+    attributes: {}
+    relationships:
+      - Adrian_Robinson (dor:Adrian_Robinson) --dop:deathPlace--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+      - Adrian_Robinson (dor:Adrian_Robinson) --doo:formerTeam--> Denver_Broncos (dor:Denver_Broncos)
+      - Adrian_Robinson (dor:Adrian_Robinson) --doo:formerTeam--> San_Diego_Chargers (dor:San_Diego_Chargers)
+      - Anthony_Melio (dor:Anthony_Melio) --dop:deathPlace--> Philadelphia,_Pennsylvania (<http://dbpedia.org/resource/Philadelphia,_Pennsylvania>)
+  '7':
+    attributes:
+      Reno,_Nevada: (Apr record high F^='90', Aug low F^='58.1')
+      Brooklyn_Dodgers_(AAFC): (league^='http://dbpedia.org/resource/All-America_Football_Conference')
+      John_Henry_Parker_(general): (awards^='http://dbpedia.org/resource/Distinguished_Service_Cross_(United_States)')
+    relationships:
+      - Al_Akins (dor:Al_Akins) --dop:deathPlace--> Reno,_Nevada (<http://dbpedia.org/resource/Reno,_Nevada>)
+      - Al_Akins (dor:Al_Akins) --doo:formerTeam--> Brooklyn_Dodgers_(AAFC) (<http://dbpedia.org/resource/Brooklyn_Dodgers_(AAFC)>)
+      - Al_Akins (dor:Al_Akins) --doo:formerTeam--> Cleveland_Browns (dor:Cleveland_Browns)
+      - John_Henry_Parker_(general) (<http://dbpedia.org/resource/John_Henry_Parker_(general)>) --dop:deathPlace--> Reno,_Nevada (<http://dbpedia.org/resource/Reno,_Nevada>)
+  '8':
+    attributes:
+      Reno,_Nevada: (Apr record high F^='90', Aug low F^='58.1')
+      Buffalo_Bills_(AAFC): (league^='http://dbpedia.org/resource/All-America_Football_Conference')
+      John_Henry_Parker_(general): (awards^='http://dbpedia.org/resource/Distinguished_Service_Cross_(United_States)')
+    relationships:
+      - Al_Akins (dor:Al_Akins) --dop:deathPlace--> Reno,_Nevada (<http://dbpedia.org/resource/Reno,_Nevada>)
+      - Al_Akins (dor:Al_Akins) --doo:formerTeam--> Buffalo_Bills_(AAFC) (<http://dbpedia.org/resource/Buffalo_Bills_(AAFC)>)
+      - Al_Akins (dor:Al_Akins) --doo:formerTeam--> Cleveland_Browns (dor:Cleveland_Browns)
+      - John_Henry_Parker_(general) (<http://dbpedia.org/resource/John_Henry_Parker_(general)>) --dop:deathPlace--> Reno,_Nevada (<http://dbpedia.org/resource/Reno,_Nevada>)
+  '9':
+    attributes:
+      Reno,_Nevada: (Apr record high F^='90', Aug low F^='58.1')
+      Richard_K._Sorenson: (awards^='http://dbpedia.org/resource/Medal_of_Honor')
+      Brooklyn_Dodgers_(AAFC): (league^='http://dbpedia.org/resource/All-America_Football_Conference')
+    relationships:
+      - Al_Akins (dor:Al_Akins) --dop:deathPlace--> Reno,_Nevada (<http://dbpedia.org/resource/Reno,_Nevada>)
+      - Al_Akins (dor:Al_Akins) --doo:formerTeam--> Brooklyn_Dodgers_(AAFC) (<http://dbpedia.org/resource/Brooklyn_Dodgers_(AAFC)>)
+      - Al_Akins (dor:Al_Akins) --doo:formerTeam--> Cleveland_Browns (dor:Cleveland_Browns)
+      - Richard_K._Sorenson (dor:Richard_K._Sorenson) --dop:deathPlace--> Reno,_Nevada (<http://dbpedia.org/resource/Reno,_Nevada>)
+  '10':
+    attributes:
+      Saint_Paul,_Minnesota: (Apr record high F^='93', Aug low F^='61.7')
+    relationships:
+      - Al_Baisi (dor:Al_Baisi) --dop:deathPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Al_Baisi (dor:Al_Baisi) --doo:formerTeam--> Chicago_Bears (dor:Chicago_Bears)
+      - Al_Baisi (dor:Al_Baisi) --doo:formerTeam--> Philadelphia_Eagles (dor:Philadelphia_Eagles)
+      - Christopher_Columbus_Andrews (dor:Christopher_Columbus_Andrews) --dop:deathPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+attributes:
+  city: --Aug low C^ (dop:augLowC)--> int | --Apr record high F^ (dop:aprRecordHighF)--> int | --differentFrom (wwoo:differentFrom)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> int | --Aug low F^ (dop:augLowF)--> double | --Apr record low C^ (dop:aprRecordLowC)--> langString
+  soccer club: --last^ (dop:last)--> langString | --league^ (dop:league)--> Resource
+  military person: --2p^ (dop:2p)--> int | --awards^ (dop:awards)--> int | --1p^ (dop:1p)--> int | --reason^ (dop:reason)--> langString
+subgraph_id: 827
+relationships:
+  - american football player --dop:deathPlace--> city
+  - american football player --doo:formerTeam--> soccer club
+  - american football player --doo:formerTeam--> american football Team
+  - military person --dop:deathPlace--> city

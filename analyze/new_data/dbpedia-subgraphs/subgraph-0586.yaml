@@ -1,0 +1,67 @@
+types:
+  colour: doo:Colour
+  school: doo:School
+  Location: doo:Location
+  RaceHorse: doo:RaceHorse
+  military unit: doo:MilitaryUnit
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Broomspun (dor:Broomspun) --doo:colour--> Black (dor:Black)
+      - Baltimore_City_College (dor:Baltimore_City_College) --doo:colour--> Black (dor:Black)
+      - 20th_Waffen_Grenadier_Division_of_the_SS_(1st_Estonian) (<http://dbpedia.org/resource/20th_Waffen_Grenadier_Division_of_the_SS_(1st_Estonian)>) --doo:colour--> Black (dor:Black)
+      - Baltimore_City_College (dor:Baltimore_City_College) --doo:country--> United_States (dor:United_States)
+  '2':
+    attributes: {}
+    relationships:
+      - Broomspun (dor:Broomspun) --doo:colour--> Black (dor:Black)
+      - Banani_International_Secondary_School (dor:Banani_International_Secondary_School) --doo:colour--> Black (dor:Black)
+      - 20th_Waffen_Grenadier_Division_of_the_SS_(1st_Estonian) (<http://dbpedia.org/resource/20th_Waffen_Grenadier_Division_of_the_SS_(1st_Estonian)>) --doo:colour--> Black (dor:Black)
+      - Banani_International_Secondary_School (dor:Banani_International_Secondary_School) --doo:country--> Zambia (dor:Zambia)
+  '3':
+    attributes: {}
+    relationships:
+      - Broomspun (dor:Broomspun) --doo:colour--> Black (dor:Black)
+      - Bellefontaine_High_School (dor:Bellefontaine_High_School) --doo:colour--> Black (dor:Black)
+      - 20th_Waffen_Grenadier_Division_of_the_SS_(1st_Estonian) (<http://dbpedia.org/resource/20th_Waffen_Grenadier_Division_of_the_SS_(1st_Estonian)>) --doo:colour--> Black (dor:Black)
+      - Bellefontaine_High_School (dor:Bellefontaine_High_School) --doo:country--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Ghana: (differentFrom='http://dbpedia.org/resource/Gana')
+    relationships:
+      - Noor_(horse) (<http://dbpedia.org/resource/Noor_(horse)>) --doo:colour--> Black_(color) (<http://dbpedia.org/resource/Black_(color)>)
+      - Adisadel_College (dor:Adisadel_College) --doo:colour--> Black_(color) (<http://dbpedia.org/resource/Black_(color)>)
+      - 6th_Armoured_Division_(Pakistan) (<http://dbpedia.org/resource/6th_Armoured_Division_(Pakistan)>) --doo:colour--> Black_(color) (<http://dbpedia.org/resource/Black_(color)>)
+      - Adisadel_College (dor:Adisadel_College) --doo:country--> Ghana (dor:Ghana)
+  '5':
+    attributes:
+      Baldwin_High_School_(Georgia): (image size^='200')
+    relationships:
+      - Noor_(horse) (<http://dbpedia.org/resource/Noor_(horse)>) --doo:colour--> Black_(color) (<http://dbpedia.org/resource/Black_(color)>)
+      - Baldwin_High_School_(Georgia) (<http://dbpedia.org/resource/Baldwin_High_School_(Georgia)>) --doo:colour--> Black_(color) (<http://dbpedia.org/resource/Black_(color)>)
+      - 6th_Armoured_Division_(Pakistan) (<http://dbpedia.org/resource/6th_Armoured_Division_(Pakistan)>) --doo:colour--> Black_(color) (<http://dbpedia.org/resource/Black_(color)>)
+      - Baldwin_High_School_(Georgia) (<http://dbpedia.org/resource/Baldwin_High_School_(Georgia)>) --doo:country--> United_States (dor:United_States)
+  '6':
+    attributes: {}
+    relationships:
+      - Noor_(horse) (<http://dbpedia.org/resource/Noor_(horse)>) --doo:colour--> Black_(color) (<http://dbpedia.org/resource/Black_(color)>)
+      - Malatya_Science_High_School (dor:Malatya_Science_High_School) --doo:colour--> Black_(color) (<http://dbpedia.org/resource/Black_(color)>)
+      - 6th_Armoured_Division_(Pakistan) (<http://dbpedia.org/resource/6th_Armoured_Division_(Pakistan)>) --doo:colour--> Black_(color) (<http://dbpedia.org/resource/Black_(color)>)
+      - Malatya_Science_High_School (dor:Malatya_Science_High_School) --doo:country--> Turkey (dor:Turkey)
+attributes:
+  school: --image size^ (dop:imageSize)--> int
+  Location: --reason^ (dop:reason)--> langString | --differentFrom (wwoo:differentFrom)--> Resource | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --1y^ (dop:1y)--> int | --Apr rain days^ (dop:aprRainDays)--> double | --class^ (dop:class)--> langString | --located in area^ (doo:locatedInArea)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> int
+  military unit: --1a^ (dop:1a)--> langString
+subgraph_id: 586
+relationships:
+  - RaceHorse --doo:colour--> colour
+  - school --doo:colour--> colour
+  - military unit --doo:colour--> colour
+  - school --doo:country--> Location

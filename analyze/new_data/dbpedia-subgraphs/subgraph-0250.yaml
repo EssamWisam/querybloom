@@ -1,0 +1,114 @@
+types:
+  town: doo:Town
+  Location: doo:Location
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abtsdorf: (Wikipage page ID^='5106883')
+    relationships:
+      - Abtsdorf (dor:Abtsdorf) --doo:district--> Wittenberg (dor:Wittenberg)
+      - Abtsdorf (dor:Abtsdorf) --doo:district--> Wittenberg (dor:Wittenberg)
+  '2':
+    attributes:
+      Abtsdorf: (Wikipage page ID^='5106883')
+    relationships:
+      - Bad_Schmiedeberg (dor:Bad_Schmiedeberg) --doo:district--> Wittenberg (dor:Wittenberg)
+      - Abtsdorf (dor:Abtsdorf) --doo:district--> Wittenberg (dor:Wittenberg)
+  '3':
+    attributes:
+      Abtsdorf: (Wikipage page ID^='5106883')
+    relationships:
+      - Boßdorf (<http://dbpedia.org/resource/Boßdorf>) --doo:district--> Wittenberg (dor:Wittenberg)
+      - Abtsdorf (dor:Abtsdorf) --doo:district--> Wittenberg (dor:Wittenberg)
+  '4':
+    attributes:
+      Achslach: (Wikipage page ID^='10268865')
+    relationships:
+      - Achslach (dor:Achslach) --doo:district--> Regen (dor:Regen)
+      - Achslach (dor:Achslach) --doo:district--> Regen (dor:Regen)
+  '5':
+    attributes:
+      Achslach: (Wikipage page ID^='10268865')
+    relationships:
+      - Arnbruck (dor:Arnbruck) --doo:district--> Regen (dor:Regen)
+      - Achslach (dor:Achslach) --doo:district--> Regen (dor:Regen)
+  '6':
+    attributes:
+      Achslach: (Wikipage page ID^='10268865')
+    relationships:
+      - Böbrach (<http://dbpedia.org/resource/Böbrach>) --doo:district--> Regen (dor:Regen)
+      - Achslach (dor:Achslach) --doo:district--> Regen (dor:Regen)
+  '7':
+    attributes:
+      Adelberg: (Wikipage page ID^='1550139')
+    relationships:
+      - Adelberg (dor:Adelberg) --doo:district--> Göppingen (<http://dbpedia.org/resource/Göppingen>)
+      - Adelberg (dor:Adelberg) --doo:district--> Göppingen (<http://dbpedia.org/resource/Göppingen>)
+  '8':
+    attributes:
+      Adelberg: (Wikipage page ID^='1550139')
+    relationships:
+      - Bezgenriet (dor:Bezgenriet) --doo:district--> Göppingen (<http://dbpedia.org/resource/Göppingen>)
+      - Adelberg (dor:Adelberg) --doo:district--> Göppingen (<http://dbpedia.org/resource/Göppingen>)
+  '9':
+    attributes:
+      Adelberg: (Wikipage page ID^='1550139')
+    relationships:
+      - Donzdorf (dor:Donzdorf) --doo:district--> Göppingen (<http://dbpedia.org/resource/Göppingen>)
+      - Adelberg (dor:Adelberg) --doo:district--> Göppingen (<http://dbpedia.org/resource/Göppingen>)
+  '10':
+    attributes:
+      Adlkofen: (Wikipage page ID^='10181853')
+    relationships:
+      - Adlkofen (dor:Adlkofen) --doo:district--> Landshut (dor:Landshut)
+      - Adlkofen (dor:Adlkofen) --doo:district--> Landshut (dor:Landshut)
+qa_result:
+  status: completed
+  cost_usd: 0.247657
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0173174
+        total_tokens: 2822
+        prompt_tokens: 2163
+        completion_tokens: 659
+      generate:
+        cost_usd: 0.0387776
+        total_tokens: 4746
+        prompt_tokens: 3263
+        completion_tokens: 1483
+      verify_1:
+        cost_usd: 0.05497200000000001
+        total_tokens: 5385
+        prompt_tokens: 3515
+        completion_tokens: 1870
+      verify_2:
+        cost_usd: 0.031762
+        total_tokens: 4220
+        prompt_tokens: 3509
+        completion_tokens: 711
+      complexity:
+        cost_usd: 0.104828
+        total_tokens: 8918
+        prompt_tokens: 4330
+        completion_tokens: 4588
+    total_tokens: 26091
+    prompt_tokens: 16780
+    total_cost_usd: 0.24765700000000004
+    completion_tokens: 9311
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  town: --subdivision^ (doo:subdivision)--> Resource | --Aug low C^ (dop:augLowC)--> double | --Apr high F^ (dop:aprHighF)--> double
+  Location: --access-date^ (dop:accessDate)--> date | --administrator^ (dop:administrator)--> langString | --territory^ (doo:territory)--> Resource | --nickname^ (dop:nickname)--> langString | --line^ (dop:line)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int | --Apr record low C^ (dop:aprRecordLowC)--> langString | --number of wineries^ (doo:numberOfWineries)--> int | --Apr record high F^ (dop:aprRecordHighF)--> double
+subgraph_id: 250
+relationships:
+  - settlement --doo:district--> town
+  - Location --doo:district--> town

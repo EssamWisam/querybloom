@@ -1,0 +1,97 @@
+types:
+  stadium: doo:Stadium
+  Location: doo:Location
+  sports team: doo:SportsTeam
+  Christian Bishop: doo:ChristianBishop
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      American_Airlines_Center: (tenants^='Dallas Desperados')
+    relationships:
+      - American_Airlines_Center (dor:American_Airlines_Center) --doo:tenant--> Dallas_Mavericks (dor:Dallas_Mavericks)
+      - American_Airlines_Center (dor:American_Airlines_Center) --doo:owner--> Dallas (dor:Dallas)
+      - Alexander_Charles_Garrett (dor:Alexander_Charles_Garrett) --doo:deathPlace--> Dallas (dor:Dallas)
+  '2':
+    attributes:
+      American_Airlines_Center: (tenants^='Dallas Desperados')
+    relationships:
+      - American_Airlines_Center (dor:American_Airlines_Center) --doo:tenant--> Dallas_Stars (dor:Dallas_Stars)
+      - American_Airlines_Center (dor:American_Airlines_Center) --doo:owner--> Dallas (dor:Dallas)
+      - Alexander_Charles_Garrett (dor:Alexander_Charles_Garrett) --doo:deathPlace--> Dallas (dor:Dallas)
+  '3':
+    attributes:
+      Reunion_Arena: (Closed^='2008-06-30', operator^='http://dbpedia.org/resource/Dallas', tenants^='Dallas Mavericks')
+    relationships:
+      - Reunion_Arena (dor:Reunion_Arena) --doo:tenant--> Dallas_Mavericks (dor:Dallas_Mavericks)
+      - Reunion_Arena (dor:Reunion_Arena) --doo:owner--> Dallas (dor:Dallas)
+      - Alexander_Charles_Garrett (dor:Alexander_Charles_Garrett) --doo:deathPlace--> Dallas (dor:Dallas)
+  '4':
+    attributes:
+      Valladolid: (Apr precipitation mm^='46')
+      CB_Ciudad_de_Valladolid: (last^='Berg')
+      Pabellón_Polideportivo_Pisuerga: (tenants^='http://dbpedia.org/resource/CB_Ciudad_de_Valladolid')
+    relationships:
+      - Pabellón_Polideportivo_Pisuerga (<http://dbpedia.org/resource/Pabellón_Polideportivo_Pisuerga>) --doo:tenant--> CB_Ciudad_de_Valladolid (dor:CB_Ciudad_de_Valladolid)
+      - Pabellón_Polideportivo_Pisuerga (<http://dbpedia.org/resource/Pabellón_Polideportivo_Pisuerga>) --doo:owner--> Valladolid (dor:Valladolid)
+      - Alfonso_Guerra_(bishop) (<http://dbpedia.org/resource/Alfonso_Guerra_(bishop)>) --doo:deathPlace--> Valladolid (dor:Valladolid)
+  '5':
+    attributes:
+      Burgos: (Apr precipitation mm^='61')
+      Polideportivo_El_Plantío: (tenants^='http://dbpedia.org/resource/Basket_Burgos_2002')
+    relationships:
+      - Polideportivo_El_Plantío (<http://dbpedia.org/resource/Polideportivo_El_Plantío>) --doo:tenant--> Basket_Burgos_2002 (dor:Basket_Burgos_2002)
+      - Polideportivo_El_Plantío (<http://dbpedia.org/resource/Polideportivo_El_Plantío>) --doo:owner--> Burgos (dor:Burgos)
+      - Alfonso_Manrique (dor:Alfonso_Manrique) --doo:deathPlace--> Burgos (dor:Burgos)
+  '6':
+    attributes:
+      Burgos: (Apr precipitation mm^='61')
+      Polideportivo_El_Plantío: (tenants^='http://dbpedia.org/resource/Basket_Burgos_2002')
+    relationships:
+      - Polideportivo_El_Plantío (<http://dbpedia.org/resource/Polideportivo_El_Plantío>) --doo:tenant--> CB_Atapuerca (dor:CB_Atapuerca)
+      - Polideportivo_El_Plantío (<http://dbpedia.org/resource/Polideportivo_El_Plantío>) --doo:owner--> Burgos (dor:Burgos)
+      - Alfonso_Manrique (dor:Alfonso_Manrique) --doo:deathPlace--> Burgos (dor:Burgos)
+  '7':
+    attributes:
+      Burgos: (Apr precipitation mm^='61')
+      Polideportivo_El_Plantío: (tenants^='http://dbpedia.org/resource/Basket_Burgos_2002')
+    relationships:
+      - Polideportivo_El_Plantío (<http://dbpedia.org/resource/Polideportivo_El_Plantío>) --doo:tenant--> CB_Ciudad_de_Burgos (dor:CB_Ciudad_de_Burgos)
+      - Polideportivo_El_Plantío (<http://dbpedia.org/resource/Polideportivo_El_Plantío>) --doo:owner--> Burgos (dor:Burgos)
+      - Alfonso_Manrique (dor:Alfonso_Manrique) --doo:deathPlace--> Burgos (dor:Burgos)
+  '8':
+    attributes:
+      Norfolk_Scope: (operator^='http://dbpedia.org/resource/Norfolk,_Virginia', tenants^='Norfolk Admirals')
+    relationships:
+      - Norfolk_Scope (dor:Norfolk_Scope) --doo:tenant--> Norfolk_Admirals_(AHL) (<http://dbpedia.org/resource/Norfolk_Admirals_(AHL)>)
+      - Norfolk_Scope (dor:Norfolk_Scope) --doo:owner--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - Alfred_Magill_Randolph (dor:Alfred_Magill_Randolph) --doo:deathPlace--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+  '9':
+    attributes:
+      Norfolk_Scope: (operator^='http://dbpedia.org/resource/Norfolk,_Virginia', tenants^='Norfolk Admirals')
+      Norfolk_Admirals_(ECHL): (last^='Bertuzzi')
+    relationships:
+      - Norfolk_Scope (dor:Norfolk_Scope) --doo:tenant--> Norfolk_Admirals_(ECHL) (<http://dbpedia.org/resource/Norfolk_Admirals_(ECHL)>)
+      - Norfolk_Scope (dor:Norfolk_Scope) --doo:owner--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - Alfred_Magill_Randolph (dor:Alfred_Magill_Randolph) --doo:deathPlace--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+  '10':
+    attributes:
+      Norfolk_Scope: (operator^='http://dbpedia.org/resource/Norfolk,_Virginia', tenants^='Norfolk Admirals')
+    relationships:
+      - Norfolk_Scope (dor:Norfolk_Scope) --doo:tenant--> Old_Dominion_Monarchs (dor:Old_Dominion_Monarchs)
+      - Norfolk_Scope (dor:Norfolk_Scope) --doo:owner--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - Alfred_Magill_Randolph (dor:Alfred_Magill_Randolph) --doo:deathPlace--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+attributes:
+  stadium: --Closed^ (dop:closed)--> int | --operator^ (doo:operator)--> Resource | --tenants^ (dop:tenants)--> Resource
+  Location: --arc-gapB^ (dop:arcGapb)--> double | --leader^ (dop:leader)--> langString | --borough^ (dop:borough)--> langString | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --country^ (dop:country)--> langString | --jurisdiction^ (doo:jurisdiction)--> Resource
+  sports team: --last^ (dop:last)--> langString
+  Christian Bishop: --birth name^ (doo:birthName)--> langString
+subgraph_id: 747
+relationships:
+  - stadium --doo:tenant--> sports team
+  - stadium --doo:owner--> Location
+  - Christian Bishop --doo:deathPlace--> Location

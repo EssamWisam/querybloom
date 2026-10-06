@@ -1,0 +1,94 @@
+types:
+  soccer club: doo:SoccerClub
+  soccer manager: doo:SoccerManager
+  Sports team member: doo:SportsTeamMember
+  soccer club season: doo:SoccerClubSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Rudolf_Gramlich: (death date^='1988-03-14')
+      1958–59_Eintracht_Frankfurt_season: (lowest attendance^='--12-13', club^='http://dbpedia.org/resource/Eintracht_Frankfurt')
+    relationships:
+      - Rudolf_Gramlich (dor:Rudolf_Gramlich) --doo:managerClub--> SV_Darmstadt_98 (dor:SV_Darmstadt_98)
+      - 1958–59_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1958–59_Eintracht_Frankfurt_season>) --doo:chairman--> Rudolf_Gramlich (dor:Rudolf_Gramlich)
+      - 1929–30_Eintracht_Frankfurt_season__Rudolf_Gramlich__1 (<http://dbpedia.org/resource/1929–30_Eintracht_Frankfurt_season__Rudolf_Gramlich__1>) --doo:currentMember--> Rudolf_Gramlich (dor:Rudolf_Gramlich)
+  '2':
+    attributes:
+      Rudolf_Gramlich: (death date^='1988-03-14')
+      1959–60_Eintracht_Frankfurt_season: (lowest attendance^='--12-05', club^='http://dbpedia.org/resource/Eintracht_Frankfurt')
+    relationships:
+      - Rudolf_Gramlich (dor:Rudolf_Gramlich) --doo:managerClub--> SV_Darmstadt_98 (dor:SV_Darmstadt_98)
+      - 1959–60_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1959–60_Eintracht_Frankfurt_season>) --doo:chairman--> Rudolf_Gramlich (dor:Rudolf_Gramlich)
+      - 1929–30_Eintracht_Frankfurt_season__Rudolf_Gramlich__1 (<http://dbpedia.org/resource/1929–30_Eintracht_Frankfurt_season__Rudolf_Gramlich__1>) --doo:currentMember--> Rudolf_Gramlich (dor:Rudolf_Gramlich)
+  '3':
+    attributes:
+      Rudolf_Gramlich: (death date^='1988-03-14')
+      1960–61_Eintracht_Frankfurt_season: (lowest attendance^='--12-11', club^='http://dbpedia.org/resource/Eintracht_Frankfurt')
+    relationships:
+      - Rudolf_Gramlich (dor:Rudolf_Gramlich) --doo:managerClub--> SV_Darmstadt_98 (dor:SV_Darmstadt_98)
+      - 1960–61_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1960–61_Eintracht_Frankfurt_season>) --doo:chairman--> Rudolf_Gramlich (dor:Rudolf_Gramlich)
+      - 1929–30_Eintracht_Frankfurt_season__Rudolf_Gramlich__1 (<http://dbpedia.org/resource/1929–30_Eintracht_Frankfurt_season__Rudolf_Gramlich__1>) --doo:currentMember--> Rudolf_Gramlich (dor:Rudolf_Gramlich)
+  '4':
+    attributes:
+      1994–95_S.S._Lazio_season: (manager title^='Manager', club^='http://dbpedia.org/resource/S.S._Lazio')
+    relationships:
+      - Dino_Zoff (dor:Dino_Zoff) --doo:managerClub--> ACF_Fiorentina (dor:ACF_Fiorentina)
+      - 1994–95_S.S._Lazio_season (<http://dbpedia.org/resource/1994–95_S.S._Lazio_season>) --doo:chairman--> Dino_Zoff (dor:Dino_Zoff)
+      - 1972–73_Juventus_F.C._season__Dino_Zoff__1 (<http://dbpedia.org/resource/1972–73_Juventus_F.C._season__Dino_Zoff__1>) --doo:currentMember--> Dino_Zoff (dor:Dino_Zoff)
+  '5':
+    attributes:
+      1994–95_S.S._Lazio_season: (manager title^='Manager', club^='http://dbpedia.org/resource/S.S._Lazio')
+    relationships:
+      - Dino_Zoff (dor:Dino_Zoff) --doo:managerClub--> Italy_national_football_team (dor:Italy_national_football_team)
+      - 1994–95_S.S._Lazio_season (<http://dbpedia.org/resource/1994–95_S.S._Lazio_season>) --doo:chairman--> Dino_Zoff (dor:Dino_Zoff)
+      - 1972–73_Juventus_F.C._season__Dino_Zoff__1 (<http://dbpedia.org/resource/1972–73_Juventus_F.C._season__Dino_Zoff__1>) --doo:currentMember--> Dino_Zoff (dor:Dino_Zoff)
+  '6':
+    attributes:
+      Juventus_F.C.: (image size^='245')
+      1994–95_S.S._Lazio_season: (manager title^='Manager', club^='http://dbpedia.org/resource/S.S._Lazio')
+    relationships:
+      - Dino_Zoff (dor:Dino_Zoff) --doo:managerClub--> Juventus_F.C. (<http://dbpedia.org/resource/Juventus_F.C.>)
+      - 1994–95_S.S._Lazio_season (<http://dbpedia.org/resource/1994–95_S.S._Lazio_season>) --doo:chairman--> Dino_Zoff (dor:Dino_Zoff)
+      - 1972–73_Juventus_F.C._season__Dino_Zoff__1 (<http://dbpedia.org/resource/1972–73_Juventus_F.C._season__Dino_Zoff__1>) --doo:currentMember--> Dino_Zoff (dor:Dino_Zoff)
+  '7':
+    attributes:
+      1996–97_Portsmouth_F.C._season: (lowest attendance^='5579', club^='http://dbpedia.org/resource/Portsmouth_F.C.')
+    relationships:
+      - Terry_Venables (dor:Terry_Venables) --doo:managerClub--> Australia_national_soccer_team (dor:Australia_national_soccer_team)
+      - 1996–97_Portsmouth_F.C._season (<http://dbpedia.org/resource/1996–97_Portsmouth_F.C._season>) --doo:chairman--> Terry_Venables (dor:Terry_Venables)
+      - FA_Youth_Cup_Finals_of_the_1960s (dor:FA_Youth_Cup_Finals_of_the_1960s) --doo:currentMember--> Terry_Venables (dor:Terry_Venables)
+  '8':
+    attributes:
+      1996–97_Portsmouth_F.C._season: (lowest attendance^='5579', club^='http://dbpedia.org/resource/Portsmouth_F.C.')
+    relationships:
+      - Terry_Venables (dor:Terry_Venables) --doo:managerClub--> Crystal_Palace_F.C. (<http://dbpedia.org/resource/Crystal_Palace_F.C.>)
+      - 1996–97_Portsmouth_F.C._season (<http://dbpedia.org/resource/1996–97_Portsmouth_F.C._season>) --doo:chairman--> Terry_Venables (dor:Terry_Venables)
+      - FA_Youth_Cup_Finals_of_the_1960s (dor:FA_Youth_Cup_Finals_of_the_1960s) --doo:currentMember--> Terry_Venables (dor:Terry_Venables)
+  '9':
+    attributes:
+      1996–97_Portsmouth_F.C._season: (lowest attendance^='5579', club^='http://dbpedia.org/resource/Portsmouth_F.C.')
+    relationships:
+      - Terry_Venables (dor:Terry_Venables) --doo:managerClub--> England_national_football_team (dor:England_national_football_team)
+      - 1996–97_Portsmouth_F.C._season (<http://dbpedia.org/resource/1996–97_Portsmouth_F.C._season>) --doo:chairman--> Terry_Venables (dor:Terry_Venables)
+      - FA_Youth_Cup_Finals_of_the_1960s (dor:FA_Youth_Cup_Finals_of_the_1960s) --doo:currentMember--> Terry_Venables (dor:Terry_Venables)
+  '10':
+    attributes:
+      1997–98_FC_Bayern_Munich_season: (aggregatescore^='1', lowest attendance^='12000', club^='http://dbpedia.org/resource/FC_Bayern_Munich')
+    relationships:
+      - Franz_Beckenbauer (dor:Franz_Beckenbauer) --doo:managerClub--> FC_Bayern_Munich (dor:FC_Bayern_Munich)
+      - 1997–98_FC_Bayern_Munich_season (<http://dbpedia.org/resource/1997–98_FC_Bayern_Munich_season>) --doo:chairman--> Franz_Beckenbauer (dor:Franz_Beckenbauer)
+      - 1977_New_York_Cosmos_season__Franz_Beckenbauer__1 (dor:1977_New_York_Cosmos_season__Franz_Beckenbauer__1) --doo:currentMember--> Franz_Beckenbauer (dor:Franz_Beckenbauer)
+attributes:
+  soccer club: --d^ (dop:d)--> int | --league topscorer^ (dop:leagueTopscorer)--> Resource | --fcl^ (dop:fcl)--> langString | --season^ (doo:season)--> Resource | --image size^ (dop:imageSize)--> int
+  soccer manager: --death date^ (doo:deathDate)--> date
+  soccer club season: --manager title^ (doo:managerTitle)--> string | --aggregatescore^ (dop:aggregatescore)--> int | --lowest attendance^ (dop:lowestAttendance)--> date | --club^ (dop:club)--> langString
+subgraph_id: 366
+relationships:
+  - soccer manager --doo:managerClub--> soccer club
+  - soccer club season --doo:chairman--> soccer manager
+  - Sports team member --doo:currentMember--> soccer manager

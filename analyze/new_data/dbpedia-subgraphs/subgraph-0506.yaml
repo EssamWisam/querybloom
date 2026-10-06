@@ -1,0 +1,44 @@
+types:
+  actor: doo:Actor
+  movie: doo:Film
+  person: doo:Person
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Karl_Ragnar_Gierow: (death date^='1982-10-30')
+      Blizzard_(1944_film): (runtime (s)^='4740.0', starring^='http://dbpedia.org/resource/Åke_Ohberg')
+    relationships:
+      - Blizzard_(1944_film) (<http://dbpedia.org/resource/Blizzard_(1944_film)>) --doo:director--> Åke_Ohberg (<http://dbpedia.org/resource/Åke_Ohberg>)
+      - Blizzard_(1944_film) (<http://dbpedia.org/resource/Blizzard_(1944_film)>) --dop:writer--> Karl_Ragnar_Gierow (dor:Karl_Ragnar_Gierow)
+      - Åke_Ohberg (<http://dbpedia.org/resource/Åke_Ohberg>) --doo:nationality--> Sweden (dor:Sweden)
+  '2':
+    attributes:
+      Ragnar_Arvedson: (death date^='1973-10-02')
+      Brita_in_the_Merchant's_House: (runtime (s)^='6120.0', starring^='http://dbpedia.org/resource/Åke_Grönberg')
+    relationships:
+      - Brita_in_the_Merchant's_House (<http://dbpedia.org/resource/Brita_in_the_Merchant's_House>) --doo:director--> Åke_Ohberg (<http://dbpedia.org/resource/Åke_Ohberg>)
+      - Brita_in_the_Merchant's_House (<http://dbpedia.org/resource/Brita_in_the_Merchant's_House>) --dop:writer--> Ragnar_Arvedson (dor:Ragnar_Arvedson)
+      - Åke_Ohberg (<http://dbpedia.org/resource/Åke_Ohberg>) --doo:nationality--> Sweden (dor:Sweden)
+  '3':
+    attributes:
+      Karl_Ragnar_Gierow: (death date^='1982-10-30')
+      Elvira_Madigan_(1943_film): (runtime (s)^='6480.0', starring^='http://dbpedia.org/resource/Åke_Ohberg')
+    relationships:
+      - Elvira_Madigan_(1943_film) (<http://dbpedia.org/resource/Elvira_Madigan_(1943_film)>) --doo:director--> Åke_Ohberg (<http://dbpedia.org/resource/Åke_Ohberg>)
+      - Elvira_Madigan_(1943_film) (<http://dbpedia.org/resource/Elvira_Madigan_(1943_film)>) --dop:writer--> Karl_Ragnar_Gierow (dor:Karl_Ragnar_Gierow)
+      - Åke_Ohberg (<http://dbpedia.org/resource/Åke_Ohberg>) --doo:nationality--> Sweden (dor:Sweden)
+attributes:
+  movie: --runtime (s)^ (doo:runtime)--> double | --completion date^ (doo:completionDate)--> date | --extra^ (dop:extra)--> langString | --starring^ (doo:starring)--> Resource | --id^ (dop:id)--> langString
+  person: --spouse^ (doo:spouse)--> Resource | --father^ (dop:father)--> langString | --2p^ (dop:2p)--> int | --death date^ (doo:deathDate)--> date
+  Location: --1a^ (dop:1a)--> langString | --Apr low F^ (dop:aprLowF)--> int | --footer^ (dop:footer)--> langString
+subgraph_id: 506
+relationships:
+  - movie --doo:director--> actor
+  - movie --dop:writer--> person
+  - actor --doo:nationality--> Location

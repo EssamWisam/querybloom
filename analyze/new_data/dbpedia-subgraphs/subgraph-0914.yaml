@@ -1,0 +1,140 @@
+types:
+  Band: doo:Band
+  movie: doo:Film
+  single: doo:Single
+  music genre: doo:MusicGenre
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Mer_du_Japon: (writer^='JB Dunckel and Nicolas Godin')
+      Air_(French_band): |-
+        (image size^='250', current members^='* Nicolas Godin
+        * Jean-Benoît Dunckel')
+      The_Virgin_Suicides_(film): (budget ($)^='6100000.0', distributor^='http://dbpedia.org/resource/Paramount_Pictures')
+    relationships:
+      - The_Virgin_Suicides_(film) (<http://dbpedia.org/resource/The_Virgin_Suicides_(film)>) --doo:musicComposer--> Air_(French_band) (<http://dbpedia.org/resource/Air_(French_band)>)
+      - Air_(French_band) (<http://dbpedia.org/resource/Air_(French_band)>) --doo:genre--> Chill-out_music (dor:Chill-out_music)
+      - The_Virgin_Suicides_(film) (<http://dbpedia.org/resource/The_Virgin_Suicides_(film)>) --doo:productionCompany--> American_Zoetrope (dor:American_Zoetrope)
+      - Mer_du_Japon (dor:Mer_du_Japon) --doo:producer--> Air_(French_band) (<http://dbpedia.org/resource/Air_(French_band)>)
+  '2':
+    attributes:
+      Mer_du_Japon: (writer^='JB Dunckel and Nicolas Godin')
+      Air_(French_band): |-
+        (image size^='250', current members^='* Nicolas Godin
+        * Jean-Benoît Dunckel')
+      The_Virgin_Suicides_(film): (budget ($)^='6100000.0', distributor^='http://dbpedia.org/resource/Paramount_Pictures')
+    relationships:
+      - The_Virgin_Suicides_(film) (<http://dbpedia.org/resource/The_Virgin_Suicides_(film)>) --doo:musicComposer--> Air_(French_band) (<http://dbpedia.org/resource/Air_(French_band)>)
+      - Air_(French_band) (<http://dbpedia.org/resource/Air_(French_band)>) --doo:genre--> Chill-out_music (dor:Chill-out_music)
+      - The_Virgin_Suicides_(film) (<http://dbpedia.org/resource/The_Virgin_Suicides_(film)>) --doo:productionCompany--> Paramount_Vantage (dor:Paramount_Vantage)
+      - Mer_du_Japon (dor:Mer_du_Japon) --doo:producer--> Air_(French_band) (<http://dbpedia.org/resource/Air_(French_band)>)
+  '3':
+    attributes:
+      Mer_du_Japon: (writer^='JB Dunckel and Nicolas Godin')
+      Air_(French_band): |-
+        (image size^='250', current members^='* Nicolas Godin
+        * Jean-Benoît Dunckel')
+      The_Virgin_Suicides_(film): (budget ($)^='6100000.0', distributor^='http://dbpedia.org/resource/Paramount_Pictures')
+    relationships:
+      - The_Virgin_Suicides_(film) (<http://dbpedia.org/resource/The_Virgin_Suicides_(film)>) --doo:musicComposer--> Air_(French_band) (<http://dbpedia.org/resource/Air_(French_band)>)
+      - Air_(French_band) (<http://dbpedia.org/resource/Air_(French_band)>) --doo:genre--> Downtempo (dor:Downtempo)
+      - The_Virgin_Suicides_(film) (<http://dbpedia.org/resource/The_Virgin_Suicides_(film)>) --doo:productionCompany--> American_Zoetrope (dor:American_Zoetrope)
+      - Mer_du_Japon (dor:Mer_du_Japon) --doo:producer--> Air_(French_band) (<http://dbpedia.org/resource/Air_(French_band)>)
+  '4':
+    attributes:
+      Brother_Sport: (writer^='Animal Collective')
+      The_Inspection: (distributor^='http://dbpedia.org/resource/A24', writer^='Elegance Bratton')
+      Animal_Collective: |-
+        (current members^='* Avey Tare
+        * Panda Bear
+        * Geologist
+        * Deakin')
+    relationships:
+      - The_Inspection (dor:The_Inspection) --doo:musicComposer--> Animal_Collective (dor:Animal_Collective)
+      - Animal_Collective (dor:Animal_Collective) --doo:genre--> Electronic_music (dor:Electronic_music)
+      - The_Inspection (dor:The_Inspection) --doo:productionCompany--> A24 (dor:A24)
+      - Brother_Sport (dor:Brother_Sport) --doo:producer--> Animal_Collective (dor:Animal_Collective)
+  '5':
+    attributes:
+      Brother_Sport: (writer^='Animal Collective')
+      The_Inspection: (distributor^='http://dbpedia.org/resource/A24', writer^='Elegance Bratton')
+      Animal_Collective: |-
+        (current members^='* Avey Tare
+        * Panda Bear
+        * Geologist
+        * Deakin')
+    relationships:
+      - The_Inspection (dor:The_Inspection) --doo:musicComposer--> Animal_Collective (dor:Animal_Collective)
+      - Animal_Collective (dor:Animal_Collective) --doo:genre--> Electronic_music (dor:Electronic_music)
+      - The_Inspection (dor:The_Inspection) --doo:productionCompany--> Gamechanger_Films (dor:Gamechanger_Films)
+      - Brother_Sport (dor:Brother_Sport) --doo:producer--> Animal_Collective (dor:Animal_Collective)
+  '6':
+    attributes:
+      Brother_Sport: (writer^='Animal Collective')
+      The_Inspection: (distributor^='http://dbpedia.org/resource/A24', writer^='Elegance Bratton')
+      Animal_Collective: |-
+        (current members^='* Avey Tare
+        * Panda Bear
+        * Geologist
+        * Deakin')
+    relationships:
+      - The_Inspection (dor:The_Inspection) --doo:musicComposer--> Animal_Collective (dor:Animal_Collective)
+      - Animal_Collective (dor:Animal_Collective) --doo:genre--> Experimental_pop (dor:Experimental_pop)
+      - The_Inspection (dor:The_Inspection) --doo:productionCompany--> A24 (dor:A24)
+      - Brother_Sport (dor:Brother_Sport) --doo:producer--> Animal_Collective (dor:Animal_Collective)
+  '7':
+    attributes:
+      Her_(film): (budget ($)^='2.3E7', distributor^='http://dbpedia.org/resource/Warner_Bros._Pictures', writer^='Spike Jonze')
+      Arcade_Fire: (current members^='')
+      Afterlife_(Arcade_Fire_song): (writer^='http://dbpedia.org/resource/Jeremy_Gara')
+    relationships:
+      - Her_(film) (<http://dbpedia.org/resource/Her_(film)>) --doo:musicComposer--> Arcade_Fire (dor:Arcade_Fire)
+      - Arcade_Fire (dor:Arcade_Fire) --doo:genre--> Art_rock (dor:Art_rock)
+      - Her_(film) (<http://dbpedia.org/resource/Her_(film)>) --doo:productionCompany--> Annapurna_Pictures (dor:Annapurna_Pictures)
+      - Afterlife_(Arcade_Fire_song) (<http://dbpedia.org/resource/Afterlife_(Arcade_Fire_song)>) --doo:producer--> Arcade_Fire (dor:Arcade_Fire)
+  '8':
+    attributes:
+      Her_(film): (budget ($)^='2.3E7', distributor^='http://dbpedia.org/resource/Warner_Bros._Pictures', writer^='Spike Jonze')
+      Arcade_Fire: (current members^='')
+      Afterlife_(Arcade_Fire_song): (writer^='http://dbpedia.org/resource/Jeremy_Gara')
+    relationships:
+      - Her_(film) (<http://dbpedia.org/resource/Her_(film)>) --doo:musicComposer--> Arcade_Fire (dor:Arcade_Fire)
+      - Arcade_Fire (dor:Arcade_Fire) --doo:genre--> Baroque_pop (dor:Baroque_pop)
+      - Her_(film) (<http://dbpedia.org/resource/Her_(film)>) --doo:productionCompany--> Annapurna_Pictures (dor:Annapurna_Pictures)
+      - Afterlife_(Arcade_Fire_song) (<http://dbpedia.org/resource/Afterlife_(Arcade_Fire_song)>) --doo:producer--> Arcade_Fire (dor:Arcade_Fire)
+  '9':
+    attributes:
+      Her_(film): (budget ($)^='2.3E7', distributor^='http://dbpedia.org/resource/Warner_Bros._Pictures', writer^='Spike Jonze')
+      Arcade_Fire: (current members^='')
+      Afterlife_(Arcade_Fire_song): (writer^='http://dbpedia.org/resource/Jeremy_Gara')
+    relationships:
+      - Her_(film) (<http://dbpedia.org/resource/Her_(film)>) --doo:musicComposer--> Arcade_Fire (dor:Arcade_Fire)
+      - Arcade_Fire (dor:Arcade_Fire) --doo:genre--> Dance-rock (dor:Dance-rock)
+      - Her_(film) (<http://dbpedia.org/resource/Her_(film)>) --doo:productionCompany--> Annapurna_Pictures (dor:Annapurna_Pictures)
+      - Afterlife_(Arcade_Fire_song) (<http://dbpedia.org/resource/Afterlife_(Arcade_Fire_song)>) --doo:producer--> Arcade_Fire (dor:Arcade_Fire)
+  '10':
+    attributes:
+      Alive_(Beastie_Boys_song): (writer^='http://dbpedia.org/resource/Ad-Rock')
+      Tougher_Than_Leather_(film): (distributor^='http://dbpedia.org/resource/New_Line_Cinema', writer^='Rick Rubin')
+    relationships:
+      - Tougher_Than_Leather_(film) (<http://dbpedia.org/resource/Tougher_Than_Leather_(film)>) --doo:musicComposer--> Beastie_Boys (dor:Beastie_Boys)
+      - Beastie_Boys (dor:Beastie_Boys) --doo:genre--> Alternative_rock (dor:Alternative_rock)
+      - Tougher_Than_Leather_(film) (<http://dbpedia.org/resource/Tougher_Than_Leather_(film)>) --doo:productionCompany--> New_Line_Cinema (dor:New_Line_Cinema)
+      - Alive_(Beastie_Boys_song) (<http://dbpedia.org/resource/Alive_(Beastie_Boys_song)>) --doo:producer--> Beastie_Boys (dor:Beastie_Boys)
+attributes:
+  Band: --image size^ (dop:imageSize)--> int | --background^ (doo:background)--> string | --current members^ (dop:currentMembers)--> Resource | --instrument^ (doo:instrument)--> Resource | --instrument^ (dop:instrument)--> langString
+  movie: --budget ($)^ (doo:budget)--> czechKoruna | --format (object)^ (doo:format)--> Resource | --distributor^ (doo:distributor)--> Resource | --writer^ (dop:writer)--> Resource | --lyrics^ (dop:lyrics)--> langString
+  single: --writer^ (dop:writer)--> langString
+  music genre: --2y^ (dop:2y)--> int
+subgraph_id: 914
+relationships:
+  - movie --doo:musicComposer--> Band
+  - Band --doo:genre--> music genre
+  - movie --doo:productionCompany--> organisation
+  - single --doo:producer--> Band

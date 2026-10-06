@@ -1,0 +1,95 @@
+types:
+  station: doo:Station
+  Location: doo:Location
+  locomotive: doo:Locomotive
+  soccer club: doo:SoccerClub
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Pennsylvania: (width^='129', date^='2010-06-29')
+    relationships:
+      - Lehigh_Valley_Railroad (dor:Lehigh_Valley_Railroad) --doo:location--> Pennsylvania (dor:Pennsylvania)
+      - Allentown_station_(Lehigh_Valley_Railroad) (<http://dbpedia.org/resource/Allentown_station_(Lehigh_Valley_Railroad)>) --dop:line--> Lehigh_Valley_Railroad (dor:Lehigh_Valley_Railroad)
+      - 1898_Western_Pennsylvania_All-Star_football_team (dor:1898_Western_Pennsylvania_All-Star_football_team) --dop:city--> Pennsylvania (dor:Pennsylvania)
+      - ALCO_300 (dor:ALCO_300) --dop:operator--> Lehigh_Valley_Railroad (dor:Lehigh_Valley_Railroad)
+  '2':
+    attributes: {}
+    relationships:
+      - Lehigh_Valley_Railroad (dor:Lehigh_Valley_Railroad) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Allentown_station_(Lehigh_Valley_Railroad) (<http://dbpedia.org/resource/Allentown_station_(Lehigh_Valley_Railroad)>) --dop:line--> Lehigh_Valley_Railroad (dor:Lehigh_Valley_Railroad)
+      - Brooklyn_Bolts (dor:Brooklyn_Bolts) --dop:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - ALCO_300 (dor:ALCO_300) --dop:operator--> Lehigh_Valley_Railroad (dor:Lehigh_Valley_Railroad)
+  '3':
+    attributes:
+      Pennsylvania: (width^='129', date^='2010-06-29')
+    relationships:
+      - Lehigh_Valley_Railroad (dor:Lehigh_Valley_Railroad) --doo:location--> Pennsylvania (dor:Pennsylvania)
+      - Allentown_station_(Lehigh_Valley_Railroad) (<http://dbpedia.org/resource/Allentown_station_(Lehigh_Valley_Railroad)>) --dop:line--> Lehigh_Valley_Railroad (dor:Lehigh_Valley_Railroad)
+      - Harrisburg_Stampede (dor:Harrisburg_Stampede) --dop:city--> Pennsylvania (dor:Pennsylvania)
+      - ALCO_300 (dor:ALCO_300) --dop:operator--> Lehigh_Valley_Railroad (dor:Lehigh_Valley_Railroad)
+  '4':
+    attributes: {}
+    relationships:
+      - Boston_and_Maine_Railroad (dor:Boston_and_Maine_Railroad) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Durham–UNH_station (<http://dbpedia.org/resource/Durham–UNH_station>) --dop:line--> Boston_and_Maine_Railroad (dor:Boston_and_Maine_Railroad)
+      - Brooklyn_Bolts (dor:Brooklyn_Bolts) --dop:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - ALCO_S-5 (dor:ALCO_S-5) --dop:operator--> Boston_and_Maine_Railroad (dor:Boston_and_Maine_Railroad)
+  '5':
+    attributes: {}
+    relationships:
+      - Boston_and_Maine_Railroad (dor:Boston_and_Maine_Railroad) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Haverhill_station_(Massachusetts) (<http://dbpedia.org/resource/Haverhill_station_(Massachusetts)>) --dop:line--> Boston_and_Maine_Railroad (dor:Boston_and_Maine_Railroad)
+      - Brooklyn_Bolts (dor:Brooklyn_Bolts) --dop:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - ALCO_S-5 (dor:ALCO_S-5) --dop:operator--> Boston_and_Maine_Railroad (dor:Boston_and_Maine_Railroad)
+  '6':
+    attributes: {}
+    relationships:
+      - Atlanta_and_West_Point_Railroad (dor:Atlanta_and_West_Point_Railroad) --doo:location--> Georgia_(U.S._state) (<http://dbpedia.org/resource/Georgia_(U.S._state)>)
+      - Terminal_Station_(Atlanta) (<http://dbpedia.org/resource/Terminal_Station_(Atlanta)>) --dop:line--> Atlanta_and_West_Point_Railroad (dor:Atlanta_and_West_Point_Railroad)
+      - Albany_Panthers (dor:Albany_Panthers) --dop:city--> Georgia_(U.S._state) (<http://dbpedia.org/resource/Georgia_(U.S._state)>)
+      - Atlanta_and_West_Point_290 (dor:Atlanta_and_West_Point_290) --dop:operator--> Atlanta_and_West_Point_Railroad (dor:Atlanta_and_West_Point_Railroad)
+  '7':
+    attributes:
+      Pennsylvania: (width^='129', date^='2010-06-29')
+    relationships:
+      - Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad) --doo:location--> Pennsylvania (dor:Pennsylvania)
+      - Fostoria_station (dor:Fostoria_station) --dop:line--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+      - 1898_Western_Pennsylvania_All-Star_football_team (dor:1898_Western_Pennsylvania_All-Star_football_team) --dop:city--> Pennsylvania (dor:Pennsylvania)
+      - Atlantic_(locomotive) (<http://dbpedia.org/resource/Atlantic_(locomotive)>) --dop:operator--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+  '8':
+    attributes: {}
+    relationships:
+      - Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad) --doo:location--> Maryland (dor:Maryland)
+      - Fostoria_station (dor:Fostoria_station) --dop:line--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+      - Chesapeake_Tide (dor:Chesapeake_Tide) --dop:city--> Maryland (dor:Maryland)
+      - Atlantic_(locomotive) (<http://dbpedia.org/resource/Atlantic_(locomotive)>) --dop:operator--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+  '9':
+    attributes: {}
+    relationships:
+      - Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad) --doo:location--> Illinois (dor:Illinois)
+      - Fostoria_station (dor:Fostoria_station) --dop:line--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+      - Chicago_Blaze_(basketball) (<http://dbpedia.org/resource/Chicago_Blaze_(basketball)>) --dop:city--> Illinois (dor:Illinois)
+      - Atlantic_(locomotive) (<http://dbpedia.org/resource/Atlantic_(locomotive)>) --dop:operator--> Baltimore_and_Ohio_Railroad (dor:Baltimore_and_Ohio_Railroad)
+  '10':
+    attributes:
+      Florida: (width^='210')
+    relationships:
+      - Atlantic_Coast_Line_Railroad (dor:Atlantic_Coast_Line_Railroad) --doo:location--> Florida (dor:Florida)
+      - Atlanta_Union_Station_(1930) (<http://dbpedia.org/resource/Atlanta_Union_Station_(1930)>) --dop:line--> Atlantic_Coast_Line_Railroad (dor:Atlantic_Coast_Line_Railroad)
+      - 1984_USFL_season (dor:1984_USFL_season) --dop:city--> Florida (dor:Florida)
+      - Atlantic_Coast_Line_1504 (dor:Atlantic_Coast_Line_1504) --dop:operator--> Atlantic_Coast_Line_Railroad (dor:Atlantic_Coast_Line_Railroad)
+attributes:
+  Location: --abolished^ (dop:abolished)--> date | --arc-angleB^ (dop:arcAngleb)--> int | --Apr sun^ (dop:aprSun)--> int | --access-date^ (dop:accessDate)--> date | --added^ (dop:added)--> date | --width^ (dop:width)--> int | --arc-angleA^ (dop:arcAnglea)--> int | --image size^ (dop:imageSize)--> int | --date^ (dop:date)--> date | --coordinates^ (dop:coordinates)--> int
+  soccer club: --chairman^ (doo:chairman)--> Resource
+subgraph_id: 776
+relationships:
+  - public transit system --doo:location--> Location
+  - station --dop:line--> public transit system
+  - soccer club --dop:city--> Location
+  - locomotive --dop:operator--> public transit system

@@ -1,0 +1,107 @@
+types:
+  writer: doo:Writer
+  country: doo:Country
+  university: doo:University
+  soccer player: doo:SoccerPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Japan: (align^='right')
+      Hideo_Kobayashi: (genre^='literary criticism', Link from a Wikipage to an external page^='http://www.shinchosha.co.jp/zenshu/kobayashi/')
+      Kwansei_Gakuin_University: (type^='http://dbpedia.org/resource/Private_university', city^='http://dbpedia.org/resource/Nishinomiya,_Hyōgo')
+    relationships:
+      - Arawa_Kimura (dor:Arawa_Kimura) --dop:deathPlace--> Japan (dor:Japan)
+      - Hideo_Kobayashi (dor:Hideo_Kobayashi) --doo:restingPlace--> Japan (dor:Japan)
+      - Arawa_Kimura (dor:Arawa_Kimura) --doo:team--> Kwansei_Gakuin_University (dor:Kwansei_Gakuin_University)
+  '2':
+    attributes:
+      Japan: (align^='right')
+      Hideo_Yoshino: (genre^='poetry, essays', awards^='Chōkū Prize')
+      Kwansei_Gakuin_University: (type^='http://dbpedia.org/resource/Private_university', city^='http://dbpedia.org/resource/Nishinomiya,_Hyōgo')
+    relationships:
+      - Arawa_Kimura (dor:Arawa_Kimura) --dop:deathPlace--> Japan (dor:Japan)
+      - Hideo_Yoshino (dor:Hideo_Yoshino) --doo:restingPlace--> Japan (dor:Japan)
+      - Arawa_Kimura (dor:Arawa_Kimura) --doo:team--> Kwansei_Gakuin_University (dor:Kwansei_Gakuin_University)
+  '3':
+    attributes:
+      Japan: (align^='right')
+      Hideo_Kobayashi: (genre^='literary criticism', Link from a Wikipage to an external page^='http://www.shinchosha.co.jp/zenshu/kobayashi/')
+      University_of_Tokyo: (type^='http://dbpedia.org/resource/National_university', city^='http://dbpedia.org/resource/Bunkyō')
+    relationships:
+      - Daigoro_Kondo (dor:Daigoro_Kondo) --dop:deathPlace--> Japan (dor:Japan)
+      - Hideo_Kobayashi (dor:Hideo_Kobayashi) --doo:restingPlace--> Japan (dor:Japan)
+      - Daigoro_Kondo (dor:Daigoro_Kondo) --doo:team--> University_of_Tokyo (dor:University_of_Tokyo)
+  '4':
+    attributes:
+      South_Korea: (align^='left')
+      Kim_Joo-young: (genre^='http://dbpedia.org/resource/Korean_fiction', Link from a Wikipage to an external page^='http://www.ktlit.com/korean-literature/review-of-stingray-by-kim-joo-young-%EA%B9%80%EC%A3%BC%EC%98%81')
+      University_of_Ulsan: (type^='http://dbpedia.org/resource/Private_university', city^='http://dbpedia.org/resource/Ulsan')
+    relationships:
+      - Jang_Hyun-kyu (dor:Jang_Hyun-kyu) --dop:deathPlace--> South_Korea (dor:South_Korea)
+      - Kim_Joo-young (dor:Kim_Joo-young) --doo:restingPlace--> South_Korea (dor:South_Korea)
+      - Jang_Hyun-kyu (dor:Jang_Hyun-kyu) --doo:team--> University_of_Ulsan (dor:University_of_Ulsan)
+  '5':
+    attributes:
+      Yi_Yuksa: (genre^='http://dbpedia.org/resource/Korean_poetry', Link from a Wikipage to an external page^='http://www.264.or.kr/')
+      South_Korea: (align^='left')
+      University_of_Ulsan: (type^='http://dbpedia.org/resource/Private_university', city^='http://dbpedia.org/resource/Ulsan')
+    relationships:
+      - Jang_Hyun-kyu (dor:Jang_Hyun-kyu) --dop:deathPlace--> South_Korea (dor:South_Korea)
+      - Yi_Yuksa (dor:Yi_Yuksa) --doo:restingPlace--> South_Korea (dor:South_Korea)
+      - Jang_Hyun-kyu (dor:Jang_Hyun-kyu) --doo:team--> University_of_Ulsan (dor:University_of_Ulsan)
+  '6':
+    attributes:
+      South_Korea: (align^='left')
+      Kim_Joo-young: (genre^='http://dbpedia.org/resource/Korean_fiction', Link from a Wikipage to an external page^='http://www.ktlit.com/korean-literature/review-of-stingray-by-kim-joo-young-%EA%B9%80%EC%A3%BC%EC%98%81')
+      International_University_of_Korea: (type^='http://dbpedia.org/resource/Private_university', city^='http://dbpedia.org/resource/Jinju')
+    relationships:
+      - Jeong_Min-hyeong (dor:Jeong_Min-hyeong) --dop:deathPlace--> South_Korea (dor:South_Korea)
+      - Kim_Joo-young (dor:Kim_Joo-young) --doo:restingPlace--> South_Korea (dor:South_Korea)
+      - Jeong_Min-hyeong (dor:Jeong_Min-hyeong) --doo:team--> International_University_of_Korea (dor:International_University_of_Korea)
+  '7':
+    attributes:
+      Kobe_University: (type^='http://dbpedia.org/resource/National_university', direction^='horizontal', city^='http://dbpedia.org/resource/Kobe')
+      Kaitarō_Hasegawa: (Link from a Wikipage to an external page^='http://www.aozora.gr.jp/index_pages/person272.html')
+    relationships:
+      - Naoemon_Shimizu (dor:Naoemon_Shimizu) --dop:deathPlace--> Empire_of_Japan (dor:Empire_of_Japan)
+      - Kaitarō_Hasegawa (<http://dbpedia.org/resource/Kaitarō_Hasegawa>) --doo:restingPlace--> Empire_of_Japan (dor:Empire_of_Japan)
+      - Naoemon_Shimizu (dor:Naoemon_Shimizu) --doo:team--> Kobe_University (dor:Kobe_University)
+  '8':
+    attributes:
+      Kaitarō_Hasegawa: (Link from a Wikipage to an external page^='http://www.aozora.gr.jp/index_pages/person272.html')
+      University_of_Tokyo: (type^='http://dbpedia.org/resource/National_university', city^='http://dbpedia.org/resource/Bunkyō')
+    relationships:
+      - Takeo_Wakabayashi (dor:Takeo_Wakabayashi) --dop:deathPlace--> Empire_of_Japan (dor:Empire_of_Japan)
+      - Kaitarō_Hasegawa (<http://dbpedia.org/resource/Kaitarō_Hasegawa>) --doo:restingPlace--> Empire_of_Japan (dor:Empire_of_Japan)
+      - Takeo_Wakabayashi (dor:Takeo_Wakabayashi) --doo:team--> University_of_Tokyo (dor:University_of_Tokyo)
+  '9':
+    attributes:
+      Albert_R._Lyman: (Link from a Wikipage to an external page^='http://archives.lib.byu.edu/agents/people/2791')
+      University_of_Ghana: (type^='http://dbpedia.org/resource/Public_university', city^='http://dbpedia.org/resource/Accra')
+    relationships:
+      - Theophidack_Nti (dor:Theophidack_Nti) --dop:deathPlace--> United_States (dor:United_States)
+      - Albert_R._Lyman (dor:Albert_R._Lyman) --doo:restingPlace--> United_States (dor:United_States)
+      - Theophidack_Nti (dor:Theophidack_Nti) --doo:team--> University_of_Ghana (dor:University_of_Ghana)
+  '10':
+    attributes:
+      Alvin_F._Harlow: (genre^='Biography')
+      University_of_Ghana: (type^='http://dbpedia.org/resource/Public_university', city^='http://dbpedia.org/resource/Accra')
+    relationships:
+      - Theophidack_Nti (dor:Theophidack_Nti) --dop:deathPlace--> United_States (dor:United_States)
+      - Alvin_F._Harlow (dor:Alvin_F._Harlow) --doo:restingPlace--> United_States (dor:United_States)
+      - Theophidack_Nti (dor:Theophidack_Nti) --doo:team--> University_of_Ghana (dor:University_of_Ghana)
+attributes:
+  writer: --genre^ (dop:genre)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --awards^ (dop:awards)--> int | --reason^ (dop:reason)--> langString
+  country: --align^ (dop:align)--> langString | --alt^ (dop:alt)--> langString
+  university: --affiliation^ (dop:affiliation)--> langString | --type^ (doo:type)--> Resource | --direction^ (dop:direction)--> langString | --city^ (dop:city)--> langString
+  soccer player: --d^ (dop:d)--> date | --bot^ (dop:bot)--> langString | --image upright^ (dop:imageUpright)--> double
+subgraph_id: 433
+relationships:
+  - soccer player --dop:deathPlace--> country
+  - writer --doo:restingPlace--> country
+  - soccer player --doo:team--> university

@@ -1,0 +1,103 @@
+types:
+  book: doo:Book
+  person: doo:Person
+  video game: doo:VideoGame
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      F.E.A.R._3: (designer^='Frank Rooke', composer^='http://dbpedia.org/resource/Jason_Graves')
+    relationships:
+      - F.E.A.R._3 (dor:F.E.A.R._3) --dop:genre--> First-person_shooter (dor:First-person_shooter)
+      - F.E.A.R._3 (dor:F.E.A.R._3) --dop:composer--> Jason_Graves (dor:Jason_Graves)
+      - F.E.A.R._3 (dor:F.E.A.R._3) --doo:writer--> Steve_Niles (dor:Steve_Niles)
+      - 30_Days_of_Night:_Immortal_Remains (<http://dbpedia.org/resource/30_Days_of_Night:_Immortal_Remains>) --doo:author--> Steve_Niles (dor:Steve_Niles)
+  '2':
+    attributes:
+      F.E.A.R._3: (designer^='Frank Rooke', composer^='http://dbpedia.org/resource/Jason_Graves')
+    relationships:
+      - F.E.A.R._3 (dor:F.E.A.R._3) --dop:genre--> Horror_game (dor:Horror_game)
+      - F.E.A.R._3 (dor:F.E.A.R._3) --dop:composer--> Jason_Graves (dor:Jason_Graves)
+      - F.E.A.R._3 (dor:F.E.A.R._3) --doo:writer--> Steve_Niles (dor:Steve_Niles)
+      - 30_Days_of_Night:_Immortal_Remains (<http://dbpedia.org/resource/30_Days_of_Night:_Immortal_Remains>) --doo:author--> Steve_Niles (dor:Steve_Niles)
+  '3':
+    attributes:
+      F.E.A.R._3: (designer^='Frank Rooke', composer^='http://dbpedia.org/resource/Jason_Graves')
+    relationships:
+      - F.E.A.R._3 (dor:F.E.A.R._3) --dop:genre--> First-person_shooter (dor:First-person_shooter)
+      - F.E.A.R._3 (dor:F.E.A.R._3) --dop:composer--> Jason_Graves (dor:Jason_Graves)
+      - F.E.A.R._3 (dor:F.E.A.R._3) --doo:writer--> Steve_Niles (dor:Steve_Niles)
+      - 30_Days_of_Night:_Rumors_of_the_Undead (<http://dbpedia.org/resource/30_Days_of_Night:_Rumors_of_the_Undead>) --doo:author--> Steve_Niles (dor:Steve_Niles)
+  '4':
+    attributes:
+      Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse: (composer^='http://dbpedia.org/resource/George_Sanger_(musician)')
+    relationships:
+      - Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse (<http://dbpedia.org/resource/Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse>) --dop:genre--> Adventure_game (dor:Adventure_game)
+      - Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse (<http://dbpedia.org/resource/Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse>) --dop:composer--> George_Sanger_(musician) (<http://dbpedia.org/resource/George_Sanger_(musician)>)
+      - Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse (<http://dbpedia.org/resource/Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse>) --doo:writer--> Raymond_Benson (dor:Raymond_Benson)
+      - A_Hard_Day's_Death (<http://dbpedia.org/resource/A_Hard_Day's_Death>) --doo:author--> Raymond_Benson (dor:Raymond_Benson)
+  '5':
+    attributes:
+      Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse: (composer^='http://dbpedia.org/resource/George_Sanger_(musician)')
+    relationships:
+      - Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse (<http://dbpedia.org/resource/Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse>) --dop:genre--> Horror_video_game (dor:Horror_video_game)
+      - Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse (<http://dbpedia.org/resource/Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse>) --dop:composer--> George_Sanger_(musician) (<http://dbpedia.org/resource/George_Sanger_(musician)>)
+      - Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse (<http://dbpedia.org/resource/Are_You_Afraid_of_the_Dark%3F_The_Tale_of_Orpheo's_Curse>) --doo:writer--> Raymond_Benson (dor:Raymond_Benson)
+      - A_Hard_Day's_Death (<http://dbpedia.org/resource/A_Hard_Day's_Death>) --doo:author--> Raymond_Benson (dor:Raymond_Benson)
+  '6':
+    attributes:
+      Dark_Seed_II: (designer^='http://dbpedia.org/resource/Raymond_Benson', composer^='http://dbpedia.org/resource/Mark_Morgan_(composer)')
+    relationships:
+      - Dark_Seed_II (dor:Dark_Seed_II) --dop:genre--> Point-and-click_adventure (dor:Point-and-click_adventure)
+      - Dark_Seed_II (dor:Dark_Seed_II) --dop:composer--> Mark_Morgan_(composer) (<http://dbpedia.org/resource/Mark_Morgan_(composer)>)
+      - Dark_Seed_II (dor:Dark_Seed_II) --doo:writer--> Raymond_Benson (dor:Raymond_Benson)
+      - A_Hard_Day's_Death (<http://dbpedia.org/resource/A_Hard_Day's_Death>) --doo:author--> Raymond_Benson (dor:Raymond_Benson)
+  '7':
+    attributes:
+      Advent_Rising: (designer^='Donald Mustard', composer^='http://dbpedia.org/resource/Michael_Richard_Plowman')
+    relationships:
+      - Advent_Rising (dor:Advent_Rising) --dop:genre--> Action-adventure_game (dor:Action-adventure_game)
+      - Advent_Rising (dor:Advent_Rising) --dop:composer--> Michael_Richard_Plowman (dor:Michael_Richard_Plowman)
+      - Advent_Rising (dor:Advent_Rising) --doo:writer--> Orson_Scott_Card (dor:Orson_Scott_Card)
+      - A_Planet_Called_Treason__Treason__1 (dor:A_Planet_Called_Treason__Treason__1) --doo:author--> Orson_Scott_Card (dor:Orson_Scott_Card)
+  '8':
+    attributes:
+      Advent_Rising: (designer^='Donald Mustard', composer^='http://dbpedia.org/resource/Michael_Richard_Plowman')
+    relationships:
+      - Advent_Rising (dor:Advent_Rising) --dop:genre--> Action-adventure_game (dor:Action-adventure_game)
+      - Advent_Rising (dor:Advent_Rising) --dop:composer--> Tommy_Tallarico (dor:Tommy_Tallarico)
+      - Advent_Rising (dor:Advent_Rising) --doo:writer--> Orson_Scott_Card (dor:Orson_Scott_Card)
+      - A_Planet_Called_Treason__Treason__1 (dor:A_Planet_Called_Treason__Treason__1) --doo:author--> Orson_Scott_Card (dor:Orson_Scott_Card)
+  '9':
+    attributes:
+      Advent_Rising: (designer^='Donald Mustard', composer^='http://dbpedia.org/resource/Michael_Richard_Plowman')
+    relationships:
+      - Advent_Rising (dor:Advent_Rising) --dop:genre--> Third-person_shooter (dor:Third-person_shooter)
+      - Advent_Rising (dor:Advent_Rising) --dop:composer--> Michael_Richard_Plowman (dor:Michael_Richard_Plowman)
+      - Advent_Rising (dor:Advent_Rising) --doo:writer--> Orson_Scott_Card (dor:Orson_Scott_Card)
+      - A_Planet_Called_Treason__Treason__1 (dor:A_Planet_Called_Treason__Treason__1) --doo:author--> Orson_Scott_Card (dor:Orson_Scott_Card)
+  '10':
+    attributes:
+      Midnight_Star_(video_game): (designer^='http://dbpedia.org/resource/Alex_Seropian', composer^='http://dbpedia.org/resource/Serj_Tankian')
+    relationships:
+      - Midnight_Star_(video_game) (<http://dbpedia.org/resource/Midnight_Star_(video_game)>) --dop:genre--> First-person_shooter (dor:First-person_shooter)
+      - Midnight_Star_(video_game) (<http://dbpedia.org/resource/Midnight_Star_(video_game)>) --dop:composer--> Serj_Tankian (dor:Serj_Tankian)
+      - Midnight_Star_(video_game) (<http://dbpedia.org/resource/Midnight_Star_(video_game)>) --doo:writer--> John_Scalzi (dor:John_Scalzi)
+      - A_Very_Scalzi_Christmas (dor:A_Very_Scalzi_Christmas) --doo:author--> John_Scalzi (dor:John_Scalzi)
+attributes:
+  person: --differentFrom (wwoo:differentFrom)--> Resource | --2p^ (dop:2p)--> int | --alt^ (dop:alt)--> langString
+  video game: --designer^ (dop:designer)--> langString | --composer^ (dop:composer)--> langString | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --platform^ (dop:platform)--> Resource | --footer^ (dop:footer)--> langString
+  musical artist: --birth name^ (doo:birthName)--> langString | --honorific suffix^ (dop:honorificSuffix)--> Resource
+subgraph_id: 976
+relationships:
+  - video game --dop:genre--> music genre
+  - video game --dop:composer--> musical artist
+  - video game --doo:writer--> person
+  - book --doo:author--> person

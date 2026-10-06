@@ -1,0 +1,97 @@
+types:
+  town: doo:Town
+  company: doo:Company
+  politician: doo:Politician
+  person function: doo:PersonFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Barrington,_Rhode_Island: (subject='http://dbpedia.org/resource/Category:Barrington,_Rhode_Island')
+    relationships:
+      - Henry_Fletcher_(mayor) (<http://dbpedia.org/resource/Henry_Fletcher_(mayor)>) --doo:occupation--> Jewellery (dor:Jewellery)
+      - A._E._Köchert (<http://dbpedia.org/resource/A._E._Köchert>) --dop:industry--> Jewellery (dor:Jewellery)
+      - Henry_Fletcher_(mayor) (<http://dbpedia.org/resource/Henry_Fletcher_(mayor)>) --dop:deathPlace--> Barrington,_Rhode_Island (<http://dbpedia.org/resource/Barrington,_Rhode_Island>)
+  '2':
+    attributes:
+      AA_Insurance: (products^='Car, Home, Contents Insurance')
+      Greenwich,_Connecticut: (Aug low F^='63', subject='http://dbpedia.org/resource/Category:1640_establishments_in_Connecticut')
+    relationships:
+      - Albert_P._Morano (dor:Albert_P._Morano) --doo:occupation--> Insurance (dor:Insurance)
+      - AA_Insurance (dor:AA_Insurance) --dop:industry--> Insurance (dor:Insurance)
+      - Albert_P._Morano (dor:Albert_P._Morano) --dop:deathPlace--> Greenwich,_Connecticut (<http://dbpedia.org/resource/Greenwich,_Connecticut>)
+  '3':
+    attributes:
+      AAMI: (products^='Business insurance')
+      Greenwich,_Connecticut: (Aug low F^='63', subject='http://dbpedia.org/resource/Category:1640_establishments_in_Connecticut')
+    relationships:
+      - Albert_P._Morano (dor:Albert_P._Morano) --doo:occupation--> Insurance (dor:Insurance)
+      - AAMI (dor:AAMI) --dop:industry--> Insurance (dor:Insurance)
+      - Albert_P._Morano (dor:Albert_P._Morano) --dop:deathPlace--> Greenwich,_Connecticut (<http://dbpedia.org/resource/Greenwich,_Connecticut>)
+  '4':
+    attributes:
+      Greenwich,_Connecticut: (Aug low F^='63', subject='http://dbpedia.org/resource/Category:1640_establishments_in_Connecticut')
+    relationships:
+      - Albert_P._Morano (dor:Albert_P._Morano) --doo:occupation--> Insurance (dor:Insurance)
+      - ABD_Insurance_&_Financial (<http://dbpedia.org/resource/ABD_Insurance_&_Financial>) --dop:industry--> Insurance (dor:Insurance)
+      - Albert_P._Morano (dor:Albert_P._Morano) --dop:deathPlace--> Greenwich,_Connecticut (<http://dbpedia.org/resource/Greenwich,_Connecticut>)
+  '5':
+    attributes:
+      Bayreuth: (Aug low F^='52', subject='http://dbpedia.org/resource/Category:Bayreuth_(district)')
+      Ateliers_et_Chantiers_de_Bacalan: (products^='Industrial machinery')
+    relationships:
+      - Hans_Zimmermann (dor:Hans_Zimmermann) --doo:occupation--> Mechanical_engineering (dor:Mechanical_engineering)
+      - Ateliers_et_Chantiers_de_Bacalan (dor:Ateliers_et_Chantiers_de_Bacalan) --dop:industry--> Mechanical_engineering (dor:Mechanical_engineering)
+      - Hans_Zimmermann (dor:Hans_Zimmermann) --dop:deathPlace--> Bayreuth (dor:Bayreuth)
+  '6':
+    attributes:
+      Atlas_Jewellery: (products^='http://dbpedia.org/resource/Diamond')
+      Barrington,_Rhode_Island: (subject='http://dbpedia.org/resource/Category:Barrington,_Rhode_Island')
+    relationships:
+      - Henry_Fletcher_(mayor) (<http://dbpedia.org/resource/Henry_Fletcher_(mayor)>) --doo:occupation--> Jewellery (dor:Jewellery)
+      - Atlas_Jewellery (dor:Atlas_Jewellery) --dop:industry--> Jewellery (dor:Jewellery)
+      - Henry_Fletcher_(mayor) (<http://dbpedia.org/resource/Henry_Fletcher_(mayor)>) --dop:deathPlace--> Barrington,_Rhode_Island (<http://dbpedia.org/resource/Barrington,_Rhode_Island>)
+  '7':
+    attributes:
+      Barrington,_Rhode_Island: (subject='http://dbpedia.org/resource/Category:Barrington,_Rhode_Island')
+    relationships:
+      - Henry_Fletcher_(mayor) (<http://dbpedia.org/resource/Henry_Fletcher_(mayor)>) --doo:occupation--> Jewellery (dor:Jewellery)
+      - Au_Bijou (dor:Au_Bijou) --dop:industry--> Jewellery (dor:Jewellery)
+      - Henry_Fletcher_(mayor) (<http://dbpedia.org/resource/Henry_Fletcher_(mayor)>) --dop:deathPlace--> Barrington,_Rhode_Island (<http://dbpedia.org/resource/Barrington,_Rhode_Island>)
+  '8':
+    attributes:
+      Bayreuth: (Aug low F^='52', subject='http://dbpedia.org/resource/Category:Bayreuth_(district)')
+    relationships:
+      - Hans_Zimmermann (dor:Hans_Zimmermann) --doo:occupation--> Mechanical_engineering (dor:Mechanical_engineering)
+      - Aventics (dor:Aventics) --dop:industry--> Mechanical_engineering (dor:Mechanical_engineering)
+      - Hans_Zimmermann (dor:Hans_Zimmermann) --dop:deathPlace--> Bayreuth (dor:Bayreuth)
+  '9':
+    attributes:
+      Medellín: (subject='http://dbpedia.org/resource/Category:1616_establishments_in_South_America')
+      Pedro_Nel_Ospina_Vázquez: (relations^='http://dbpedia.org/resource/Mariano_Ospina_Rodríguez')
+    relationships:
+      - Pedro_Nel_Ospina_Vázquez (<http://dbpedia.org/resource/Pedro_Nel_Ospina_Vázquez>) --doo:occupation--> Mining_engineering (dor:Mining_engineering)
+      - Bard_Ventures (dor:Bard_Ventures) --dop:industry--> Mining_engineering (dor:Mining_engineering)
+      - Pedro_Nel_Ospina_Vázquez (<http://dbpedia.org/resource/Pedro_Nel_Ospina_Vázquez>) --dop:deathPlace--> Medellín (<http://dbpedia.org/resource/Medellín>)
+  '10':
+    attributes:
+      Medellín: (subject='http://dbpedia.org/resource/Category:1616_establishments_in_South_America')
+      Pedro_Nel_Ospina_Vázquez: (relations^='http://dbpedia.org/resource/Mariano_Ospina_Rodríguez')
+    relationships:
+      - Pedro_Nel_Ospina_Vázquez (<http://dbpedia.org/resource/Pedro_Nel_Ospina_Vázquez>) --doo:occupation--> Mining_engineering (dor:Mining_engineering)
+      - Bell_Brothers_(Western_Australia) (<http://dbpedia.org/resource/Bell_Brothers_(Western_Australia)>) --dop:industry--> Mining_engineering (dor:Mining_engineering)
+      - Pedro_Nel_Ospina_Vázquez (<http://dbpedia.org/resource/Pedro_Nel_Ospina_Vázquez>) --dop:deathPlace--> Medellín (<http://dbpedia.org/resource/Medellín>)
+attributes:
+  town: --arc-text-colorA^ (dop:arcTextColora)--> langString | --Aug low F^ (dop:augLowF)--> double | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --subject (podt:subject)--> Resource | --data^ (dop:data)--> int
+  company: --products^ (dop:products)--> Resource
+  politician: --relations^ (dop:relations)--> langString | --colwidth (dop:colwidth)--> int | --father^ (dop:father)--> Resource | --c^ (dop:c)--> langString | --float^ (dop:float)--> langString | --father^ (doo:father)--> Resource | --original name^ (doo:originalName)--> langString
+subgraph_id: 653
+relationships:
+  - politician --doo:occupation--> person function
+  - company --dop:industry--> person function
+  - politician --dop:deathPlace--> town

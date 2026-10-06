@@ -1,0 +1,118 @@
+types:
+  venue: doo:Venue
+  person: doo:Person
+  school: doo:School
+  country: doo:Country
+  soccer club: doo:SoccerClub
+  soccer tournoment: doo:SoccerTournament
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Jubilee_Oval (dor:Jubilee_Oval) --doo:tenant--> Sydney_FC (dor:Sydney_FC)
+      - Jubilee_Oval (dor:Jubilee_Oval) --doo:location--> Australia (dor:Australia)
+      - Adelaide_Law_School (dor:Adelaide_Law_School) --doo:country--> Australia (dor:Australia)
+      - 2016_FFA_Cup (dor:2016_FFA_Cup) --dop:rd5Team--> Sydney_FC (dor:Sydney_FC)
+      - '''Jock''_Tradd (<http://dbpedia.org/resource/''Jock''_Tradd>) --dop:deathPlace--> Australia (dor:Australia)'
+  '2':
+    attributes: {}
+    relationships:
+      - Jubilee_Oval (dor:Jubilee_Oval) --doo:tenant--> Sydney_FC (dor:Sydney_FC)
+      - Jubilee_Oval (dor:Jubilee_Oval) --doo:location--> Australia (dor:Australia)
+      - Adelaide_Law_School (dor:Adelaide_Law_School) --doo:country--> Australia (dor:Australia)
+      - 2018_FFA_Cup (dor:2018_FFA_Cup) --dop:rd5Team--> Sydney_FC (dor:Sydney_FC)
+      - '''Jock''_Tradd (<http://dbpedia.org/resource/''Jock''_Tradd>) --dop:deathPlace--> Australia (dor:Australia)'
+  '3':
+    attributes: {}
+    relationships:
+      - Jubilee_Oval (dor:Jubilee_Oval) --doo:tenant--> Sydney_FC (dor:Sydney_FC)
+      - Jubilee_Oval (dor:Jubilee_Oval) --doo:location--> Australia (dor:Australia)
+      - Al_Amanah_College (dor:Al_Amanah_College) --doo:country--> Australia (dor:Australia)
+      - 2016_FFA_Cup (dor:2016_FFA_Cup) --dop:rd5Team--> Sydney_FC (dor:Sydney_FC)
+      - '''Jock''_Tradd (<http://dbpedia.org/resource/''Jock''_Tradd>) --dop:deathPlace--> Australia (dor:Australia)'
+  '4':
+    attributes:
+      PFC_CSKA_Moscow: (league^='http://dbpedia.org/resource/Russian_Premier_League', alt^='Club crest')
+      1992_Tatarstan_shooting: (caption^='Shpagonov in court')
+    relationships:
+      - Arena_Khimki (dor:Arena_Khimki) --doo:tenant--> PFC_CSKA_Moscow (dor:PFC_CSKA_Moscow)
+      - Arena_Khimki (dor:Arena_Khimki) --doo:location--> Russia (dor:Russia)
+      - Boarding_School_of_Humanities_for_Gifted_Children_in_Aktanysh (dor:Boarding_School_of_Humanities_for_Gifted_Children_in_Aktanysh) --doo:country--> Russia (dor:Russia)
+      - 1991–92_Soviet_Cup (<http://dbpedia.org/resource/1991–92_Soviet_Cup>) --dop:rd5Team--> PFC_CSKA_Moscow (dor:PFC_CSKA_Moscow)
+      - 1992_Tatarstan_shooting (dor:1992_Tatarstan_shooting) --dop:deathPlace--> Russia (dor:Russia)
+  '5':
+    attributes:
+      PFC_CSKA_Moscow: (league^='http://dbpedia.org/resource/Russian_Premier_League', alt^='Club crest')
+      1992_Tatarstan_shooting: (caption^='Shpagonov in court')
+    relationships:
+      - Trud_Stadium_(Podolsk) (<http://dbpedia.org/resource/Trud_Stadium_(Podolsk)>) --doo:tenant--> PFC_CSKA_Moscow (dor:PFC_CSKA_Moscow)
+      - Trud_Stadium_(Podolsk) (<http://dbpedia.org/resource/Trud_Stadium_(Podolsk)>) --doo:location--> Russia (dor:Russia)
+      - Boarding_School_of_Humanities_for_Gifted_Children_in_Aktanysh (dor:Boarding_School_of_Humanities_for_Gifted_Children_in_Aktanysh) --doo:country--> Russia (dor:Russia)
+      - 1991–92_Soviet_Cup (<http://dbpedia.org/resource/1991–92_Soviet_Cup>) --dop:rd5Team--> PFC_CSKA_Moscow (dor:PFC_CSKA_Moscow)
+      - 1992_Tatarstan_shooting (dor:1992_Tatarstan_shooting) --dop:deathPlace--> Russia (dor:Russia)
+  '6':
+    attributes:
+      FC_Ural_Yekaterinburg: (league^='http://dbpedia.org/resource/Russian_Premier_League')
+      1992_Tatarstan_shooting: (caption^='Shpagonov in court')
+    relationships:
+      - Central_Stadium_(Yekaterinburg) (<http://dbpedia.org/resource/Central_Stadium_(Yekaterinburg)>) --doo:tenant--> FC_Ural_Yekaterinburg (dor:FC_Ural_Yekaterinburg)
+      - Central_Stadium_(Yekaterinburg) (<http://dbpedia.org/resource/Central_Stadium_(Yekaterinburg)>) --doo:location--> Russia (dor:Russia)
+      - Boarding_School_of_Humanities_for_Gifted_Children_in_Aktanysh (dor:Boarding_School_of_Humanities_for_Gifted_Children_in_Aktanysh) --doo:country--> Russia (dor:Russia)
+      - 2016–17_Russian_Cup (<http://dbpedia.org/resource/2016–17_Russian_Cup>) --dop:rd5Team--> FC_Ural_Yekaterinburg (dor:FC_Ural_Yekaterinburg)
+      - 1992_Tatarstan_shooting (dor:1992_Tatarstan_shooting) --dop:deathPlace--> Russia (dor:Russia)
+  '7':
+    attributes:
+      205_Martyrs_of_Japan: (caption^='Painting of the Nagasaki Martyrs')
+      Nojima_Stella_Kanagawa_Sagamihara: (league^='http://dbpedia.org/resource/WE_League')
+    relationships:
+      - Sagamihara_Gion_Stadium (dor:Sagamihara_Gion_Stadium) --doo:tenant--> Nojima_Stella_Kanagawa_Sagamihara (dor:Nojima_Stella_Kanagawa_Sagamihara)
+      - Sagamihara_Gion_Stadium (dor:Sagamihara_Gion_Stadium) --doo:location--> Japan (dor:Japan)
+      - Aichi_Korean_Middle_and_High_School (dor:Aichi_Korean_Middle_and_High_School) --doo:country--> Japan (dor:Japan)
+      - 2017_Empress's_Cup (<http://dbpedia.org/resource/2017_Empress's_Cup>) --dop:rd5Team--> Nojima_Stella_Kanagawa_Sagamihara (dor:Nojima_Stella_Kanagawa_Sagamihara)
+      - 205_Martyrs_of_Japan (dor:205_Martyrs_of_Japan) --dop:deathPlace--> Japan (dor:Japan)
+  '8':
+    attributes:
+      205_Martyrs_of_Japan: (caption^='Painting of the Nagasaki Martyrs')
+      Nojima_Stella_Kanagawa_Sagamihara: (league^='http://dbpedia.org/resource/WE_League')
+    relationships:
+      - Sagamihara_Gion_Stadium (dor:Sagamihara_Gion_Stadium) --doo:tenant--> Nojima_Stella_Kanagawa_Sagamihara (dor:Nojima_Stella_Kanagawa_Sagamihara)
+      - Sagamihara_Gion_Stadium (dor:Sagamihara_Gion_Stadium) --doo:location--> Japan (dor:Japan)
+      - Aichi_Prefectural_Asahigaoka_Senior_High_School (dor:Aichi_Prefectural_Asahigaoka_Senior_High_School) --doo:country--> Japan (dor:Japan)
+      - 2017_Empress's_Cup (<http://dbpedia.org/resource/2017_Empress's_Cup>) --dop:rd5Team--> Nojima_Stella_Kanagawa_Sagamihara (dor:Nojima_Stella_Kanagawa_Sagamihara)
+      - 205_Martyrs_of_Japan (dor:205_Martyrs_of_Japan) --dop:deathPlace--> Japan (dor:Japan)
+  '9':
+    attributes:
+      205_Martyrs_of_Japan: (caption^='Painting of the Nagasaki Martyrs')
+      Nojima_Stella_Kanagawa_Sagamihara: (league^='http://dbpedia.org/resource/WE_League')
+    relationships:
+      - Sagamihara_Gion_Stadium (dor:Sagamihara_Gion_Stadium) --doo:tenant--> Nojima_Stella_Kanagawa_Sagamihara (dor:Nojima_Stella_Kanagawa_Sagamihara)
+      - Sagamihara_Gion_Stadium (dor:Sagamihara_Gion_Stadium) --doo:location--> Japan (dor:Japan)
+      - Asano_Junior_&_Senior_High_School (<http://dbpedia.org/resource/Asano_Junior_&_Senior_High_School>) --doo:country--> Japan (dor:Japan)
+      - 2017_Empress's_Cup (<http://dbpedia.org/resource/2017_Empress's_Cup>) --dop:rd5Team--> Nojima_Stella_Kanagawa_Sagamihara (dor:Nojima_Stella_Kanagawa_Sagamihara)
+      - 205_Martyrs_of_Japan (dor:205_Martyrs_of_Japan) --dop:deathPlace--> Japan (dor:Japan)
+  '10':
+    attributes:
+      Persewangi_Banyuwangi: (league^='http://dbpedia.org/resource/Liga_3_(Indonesia)')
+    relationships:
+      - Diponegoro_Stadium (dor:Diponegoro_Stadium) --doo:tenant--> Persewangi_Banyuwangi (dor:Persewangi_Banyuwangi)
+      - Diponegoro_Stadium (dor:Diponegoro_Stadium) --doo:location--> Indonesia (dor:Indonesia)
+      - ACG_School_Jakarta (dor:ACG_School_Jakarta) --doo:country--> Indonesia (dor:Indonesia)
+      - 2021_Liga_3_East_Java (dor:2021_Liga_3_East_Java) --dop:rd5Team--> Persewangi_Banyuwangi (dor:Persewangi_Banyuwangi)
+      - A._A._Baramuli (dor:A._A._Baramuli) --dop:deathPlace--> Indonesia (dor:Indonesia)
+attributes:
+  venue: --Closed^ (dop:closed)--> int
+  person: --relatives^ (dop:relatives)--> langString | --wordnet_type (dop:wordnet_type)--> Resource | --before^ (dop:before)--> Resource | --caption^ (dop:caption)--> langString
+  school: --affiliations^ (dop:affiliations)--> Resource
+  soccer club: --league^ (dop:league)--> langString | --alt^ (dop:alt)--> langString
+subgraph_id: 985
+relationships:
+  - venue --doo:tenant--> soccer club
+  - venue --doo:location--> country
+  - school --doo:country--> country
+  - soccer tournoment --dop:rd5Team--> soccer club
+  - person --dop:deathPlace--> country

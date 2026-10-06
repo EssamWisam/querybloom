@@ -1,0 +1,118 @@
+types:
+  Election: doo:Election
+  politician: doo:Politician
+  time period: doo:TimePeriod
+  office holder: doo:OfficeHolder
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      George_Law_Curry: (spouse^='Chloe Boone', death date^='1878-07-28')
+      Alexander_Hill_Everett: (alma mater^='http://dbpedia.org/resource/Harvard_College')
+      1844–45_United_States_House_of_Representatives_elections: (leader^='http://dbpedia.org/resource/John_Wesley_Davis')
+    relationships:
+      - 1844–45_United_States_House_of_Representatives_elections (<http://dbpedia.org/resource/1844–45_United_States_House_of_Representatives_elections>) --dop:leader--> John_Wesley_Davis (dor:John_Wesley_Davis)
+      - John_Wesley_Davis (dor:John_Wesley_Davis) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - George_Law_Curry (dor:George_Law_Curry) --dop:predecessor--> John_Wesley_Davis (dor:John_Wesley_Davis)
+      - John_Wesley_Davis (dor:John_Wesley_Davis) --dop:predecessor--> Alexander_Hill_Everett (dor:Alexander_Hill_Everett)
+  '2':
+    attributes:
+      George_Law_Curry: (spouse^='Chloe Boone', death date^='1878-07-28')
+      1844–45_United_States_House_of_Representatives_elections: (leader^='http://dbpedia.org/resource/John_Wesley_Davis')
+    relationships:
+      - 1844–45_United_States_House_of_Representatives_elections (<http://dbpedia.org/resource/1844–45_United_States_House_of_Representatives_elections>) --dop:leader--> John_Wesley_Davis (dor:John_Wesley_Davis)
+      - John_Wesley_Davis (dor:John_Wesley_Davis) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - George_Law_Curry (dor:George_Law_Curry) --dop:predecessor--> John_Wesley_Davis (dor:John_Wesley_Davis)
+      - John_Wesley_Davis (dor:John_Wesley_Davis) --dop:predecessor--> David_Wallace_(Indiana_politician) (<http://dbpedia.org/resource/David_Wallace_(Indiana_politician)>)
+  '3':
+    attributes:
+      George_Law_Curry: (spouse^='Chloe Boone', death date^='1878-07-28')
+      1844–45_United_States_House_of_Representatives_elections: (leader^='http://dbpedia.org/resource/John_Wesley_Davis')
+    relationships:
+      - 1844–45_United_States_House_of_Representatives_elections (<http://dbpedia.org/resource/1844–45_United_States_House_of_Representatives_elections>) --dop:leader--> John_Wesley_Davis (dor:John_Wesley_Davis)
+      - John_Wesley_Davis (dor:John_Wesley_Davis) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - George_Law_Curry (dor:George_Law_Curry) --dop:predecessor--> John_Wesley_Davis (dor:John_Wesley_Davis)
+      - John_Wesley_Davis (dor:John_Wesley_Davis) --dop:predecessor--> George_Law_Curry (dor:George_Law_Curry)
+  '4':
+    attributes:
+      Samuel_S._Cox: (1namedata^='http://dbpedia.org/resource/John_G._Carlisle', death date^='1889-09-10')
+      Horace_Greeley: (b^='no')
+      1864–65_United_States_House_of_Representatives_elections: (leader^='http://dbpedia.org/resource/James_Brooks_(politician)')
+    relationships:
+      - 1864–65_United_States_House_of_Representatives_elections (<http://dbpedia.org/resource/1864–65_United_States_House_of_Representatives_elections>) --dop:leader--> James_Brooks_(politician) (<http://dbpedia.org/resource/James_Brooks_(politician)>)
+      - James_Brooks_(politician) (<http://dbpedia.org/resource/James_Brooks_(politician)>) --doo:party--> Whig_Party_(United_States) (<http://dbpedia.org/resource/Whig_Party_(United_States)>)
+      - Samuel_S._Cox (dor:Samuel_S._Cox) --dop:predecessor--> James_Brooks_(politician) (<http://dbpedia.org/resource/James_Brooks_(politician)>)
+      - James_Brooks_(politician) (<http://dbpedia.org/resource/James_Brooks_(politician)>) --dop:predecessor--> Horace_Greeley (dor:Horace_Greeley)
+  '5':
+    attributes:
+      Horace_Greeley: (b^='no')
+      William_E._Dodge: (spouse^='Melissa Phelps', death date^='1883-02-09')
+      1864–65_United_States_House_of_Representatives_elections: (leader^='http://dbpedia.org/resource/James_Brooks_(politician)')
+    relationships:
+      - 1864–65_United_States_House_of_Representatives_elections (<http://dbpedia.org/resource/1864–65_United_States_House_of_Representatives_elections>) --dop:leader--> James_Brooks_(politician) (<http://dbpedia.org/resource/James_Brooks_(politician)>)
+      - James_Brooks_(politician) (<http://dbpedia.org/resource/James_Brooks_(politician)>) --doo:party--> Whig_Party_(United_States) (<http://dbpedia.org/resource/Whig_Party_(United_States)>)
+      - William_E._Dodge (dor:William_E._Dodge) --dop:predecessor--> James_Brooks_(politician) (<http://dbpedia.org/resource/James_Brooks_(politician)>)
+      - James_Brooks_(politician) (<http://dbpedia.org/resource/James_Brooks_(politician)>) --dop:predecessor--> Horace_Greeley (dor:Horace_Greeley)
+  '6':
+    attributes:
+      Aristeidis_Moraitinis: (death date^='1875')
+      1872_Greek_legislative_election: (leader^='http://dbpedia.org/resource/Alexandros_Koumoundouros')
+    relationships:
+      - 1872_Greek_legislative_election (dor:1872_Greek_legislative_election) --dop:leader--> Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros)
+      - Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros) --doo:party--> Nationalist_Party_(Greece) (<http://dbpedia.org/resource/Nationalist_Party_(Greece)>)
+      - Aristeidis_Moraitinis (dor:Aristeidis_Moraitinis) --dop:predecessor--> Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros)
+      - Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros) --dop:predecessor--> Charilaos_Trikoupis (dor:Charilaos_Trikoupis)
+  '7':
+    attributes:
+      Aristeidis_Moraitinis: (death date^='1875')
+      1872_Greek_legislative_election: (leader^='http://dbpedia.org/resource/Alexandros_Koumoundouros')
+    relationships:
+      - 1872_Greek_legislative_election (dor:1872_Greek_legislative_election) --dop:leader--> Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros)
+      - Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros) --doo:party--> Nationalist_Party_(Greece) (<http://dbpedia.org/resource/Nationalist_Party_(Greece)>)
+      - Aristeidis_Moraitinis (dor:Aristeidis_Moraitinis) --dop:predecessor--> Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros)
+      - Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros) --dop:predecessor--> Dimitrios_Voulgaris (dor:Dimitrios_Voulgaris)
+  '8':
+    attributes:
+      Aristeidis_Moraitinis: (death date^='1875')
+      1872_Greek_legislative_election: (leader^='http://dbpedia.org/resource/Alexandros_Koumoundouros')
+    relationships:
+      - 1872_Greek_legislative_election (dor:1872_Greek_legislative_election) --dop:leader--> Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros)
+      - Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros) --doo:party--> Nationalist_Party_(Greece) (<http://dbpedia.org/resource/Nationalist_Party_(Greece)>)
+      - Aristeidis_Moraitinis (dor:Aristeidis_Moraitinis) --dop:predecessor--> Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros)
+      - Alexandros_Koumoundouros (dor:Alexandros_Koumoundouros) --dop:predecessor--> Epameinondas_Deligeorgis (dor:Epameinondas_Deligeorgis)
+  '9':
+    attributes:
+      Dissident_Left: (merged with^='http://dbpedia.org/resource/Historical_Left')
+      Giovanni_Giolitti: (spouse^='1869', death date^='1928-07-17')
+      1880_Italian_general_election: (leader^='http://dbpedia.org/resource/Agostino_Depretis')
+    relationships:
+      - 1880_Italian_general_election (dor:1880_Italian_general_election) --dop:leader--> Giuseppe_Zanardelli (dor:Giuseppe_Zanardelli)
+      - Giuseppe_Zanardelli (dor:Giuseppe_Zanardelli) --doo:party--> Dissident_Left (dor:Dissident_Left)
+      - Giovanni_Giolitti (dor:Giovanni_Giolitti) --dop:predecessor--> Giuseppe_Zanardelli (dor:Giuseppe_Zanardelli)
+      - Giuseppe_Zanardelli (dor:Giuseppe_Zanardelli) --dop:predecessor--> Agostino_Depretis (dor:Agostino_Depretis)
+  '10':
+    attributes:
+      Dissident_Left: (merged with^='http://dbpedia.org/resource/Historical_Left')
+      Giovanni_Giolitti: (alma mater^='http://dbpedia.org/resource/University_of_Turin', spouse^='1869', death date^='1928-07-17')
+      1880_Italian_general_election: (leader^='http://dbpedia.org/resource/Agostino_Depretis')
+    relationships:
+      - 1880_Italian_general_election (dor:1880_Italian_general_election) --dop:leader--> Giuseppe_Zanardelli (dor:Giuseppe_Zanardelli)
+      - Giuseppe_Zanardelli (dor:Giuseppe_Zanardelli) --doo:party--> Dissident_Left (dor:Dissident_Left)
+      - Giovanni_Giolitti (dor:Giovanni_Giolitti) --dop:predecessor--> Giuseppe_Zanardelli (dor:Giuseppe_Zanardelli)
+      - Giuseppe_Zanardelli (dor:Giuseppe_Zanardelli) --dop:predecessor--> Giovanni_Giolitti (dor:Giovanni_Giolitti)
+attributes:
+  Election: --1data^ (dop:1data)--> double | --4data^ (dop:4data)--> double | --leader^ (dop:leader)--> langString | --2data^ (dop:2data)--> int
+  politician: --spouse^ (dop:spouse)--> Resource | --mother^ (dop:mother)--> langString | --1namedata^ (dop:1namedata)--> langString | --death date^ (dop:deathDate)--> int | --image upright^ (dop:imageUpright)--> double
+  office holder: --honorific suffix^ (dop:honorificSuffix)--> langString | --b^ (dop:b)--> langString | --alma mater^ (dop:almaMater)--> langString
+  political party: --merged with^ (doo:mergedWith)--> Resource
+subgraph_id: 568
+relationships:
+  - Election --dop:leader--> time period
+  - time period --doo:party--> political party
+  - politician --dop:predecessor--> time period
+  - time period --dop:predecessor--> office holder

@@ -1,0 +1,50 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  soccer club: doo:SoccerClub
+  football match: doo:FootballMatch
+  national collegiate athletic association team season: doo:NCAATeamSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Florida: (align^='right')
+      Orlando,_Florida: (Link from a Wikipage to an external page^='http://lbvfs.com/')
+    relationships:
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:location--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - 1977_Florida_State_Seminoles_football_team (dor:1977_Florida_State_Seminoles_football_team) --dop:location--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:location--> Florida (dor:Florida)
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:club--> Atlanta_United_FC (dor:Atlanta_United_FC)
+  '2':
+    attributes:
+      Florida: (align^='right')
+      Orlando,_Florida: (Link from a Wikipage to an external page^='http://lbvfs.com/')
+    relationships:
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:location--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - 1977_Florida_State_Seminoles_football_team (dor:1977_Florida_State_Seminoles_football_team) --dop:location--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:location--> Florida (dor:Florida)
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:club--> Chicago_Fire_Soccer_Club (dor:Chicago_Fire_Soccer_Club)
+  '3':
+    attributes:
+      Florida: (align^='right')
+      Orlando,_Florida: (Link from a Wikipage to an external page^='http://lbvfs.com/')
+    relationships:
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:location--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - 1977_Florida_State_Seminoles_football_team (dor:1977_Florida_State_Seminoles_football_team) --dop:location--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:location--> Florida (dor:Florida)
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:club--> Colorado_Rapids (dor:Colorado_Rapids)
+attributes:
+  city: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  Location: --float^ (dop:float)--> langString | --align^ (dop:align)--> langString | --Apr record low F^ (dop:aprRecordLowF)--> langString | --length m^ (dop:lengthM)--> int | --architect^ (dop:architect)--> langString | --image width^ (dop:imageWidth)--> int
+  soccer club: --agf^ (dop:agf)--> int | --Association^ (dop:association)--> langString
+  national collegiate athletic association team season: --colwidth^ (dop:colwidth)--> int
+subgraph_id: 42
+relationships:
+  - football match --dop:location--> city
+  - national collegiate athletic association team season --dop:location--> city
+  - football match --dop:location--> Location
+  - football match --dop:club--> soccer club

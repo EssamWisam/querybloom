@@ -1,0 +1,109 @@
+types:
+  RaceHorse: doo:RaceHorse
+  horse race: doo:HorseRace
+  racecourse: doo:Racecourse
+  jockey (horse racer): doo:Jockey
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Joel_Rosario: (race^='http://dbpedia.org/resource/A_Gleam_Handicap', race horse^='http://dbpedia.org/resource/Accelerate_(horse)')
+      Ack_Ack_(horse): (honours^='http://dbpedia.org/resource/Ack_Ack_Handicap_(Churchill_Downs)', award^='http://dbpedia.org/resource/Eclipse_Award_for_Horse_of_the_Year', owner^='http://dbpedia.org/resource/Buddy_Fogelson', owner^='http://dbpedia.org/resource/Buddy_Fogelson')
+      Ack_Ack_Handicap_(Hollywood_Park): (distance^='furlongs', class^='Grade III')
+    relationships:
+      - Joel_Rosario (dor:Joel_Rosario) --doo:race--> Ack_Ack_Handicap_(Hollywood_Park) (<http://dbpedia.org/resource/Ack_Ack_Handicap_(Hollywood_Park)>)
+      - Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>) --doo:honours--> Ack_Ack_Handicap_(Hollywood_Park) (<http://dbpedia.org/resource/Ack_Ack_Handicap_(Hollywood_Park)>)
+      - Ack_Ack_Handicap_(Hollywood_Park) (<http://dbpedia.org/resource/Ack_Ack_Handicap_(Hollywood_Park)>) --doo:location--> Hollywood_Park_Racetrack (dor:Hollywood_Park_Racetrack)
+  '2':
+    attributes:
+      Aaron_Gryder: (race^='http://dbpedia.org/resource/Adirondack_Stakes', race horse^='http://dbpedia.org/resource/Calidoscopio')
+      Affectionately: (honours^='http://dbpedia.org/resource/Affectionately_Handicap', award^='http://dbpedia.org/resource/American_Champion_Sprint_Horse', owner^='http://dbpedia.org/resource/Ethel_D._Jacobs', owner^='http://dbpedia.org/resource/Ethel_D._Jacobs')
+      Affectionately_Handicap: (distance^='1', class^='Discontinued stakes')
+    relationships:
+      - Aaron_Gryder (dor:Aaron_Gryder) --doo:race--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately (dor:Affectionately) --doo:honours--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately_Handicap (dor:Affectionately_Handicap) --doo:location--> Aqueduct_Racetrack (dor:Aqueduct_Racetrack)
+  '3':
+    attributes:
+      Affectionately: (honours^='http://dbpedia.org/resource/Affectionately_Handicap', award^='http://dbpedia.org/resource/American_Champion_Sprint_Horse', owner^='http://dbpedia.org/resource/Ethel_D._Jacobs', owner^='http://dbpedia.org/resource/Ethel_D._Jacobs')
+      Frank_Lovato_Jr.: (race^='http://dbpedia.org/resource/Affectionately_Handicap', race horse^='http://dbpedia.org/resource/Little_Sister_(horse)')
+      Affectionately_Handicap: (distance^='1', class^='Discontinued stakes')
+    relationships:
+      - Frank_Lovato_Jr. (<http://dbpedia.org/resource/Frank_Lovato_Jr.>) --doo:race--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately (dor:Affectionately) --doo:honours--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately_Handicap (dor:Affectionately_Handicap) --doo:location--> Aqueduct_Racetrack (dor:Aqueduct_Racetrack)
+  '4':
+    attributes:
+      Affectionately: (honours^='http://dbpedia.org/resource/Affectionately_Handicap', award^='http://dbpedia.org/resource/American_Champion_Sprint_Horse', owner^='http://dbpedia.org/resource/Ethel_D._Jacobs', owner^='http://dbpedia.org/resource/Ethel_D._Jacobs')
+      Heberto_Castillo_Jr.: (race^='http://dbpedia.org/resource/Affectionately_Handicap', race horse^='http://dbpedia.org/resource/Pistols_and_Roses')
+      Affectionately_Handicap: (distance^='1', class^='Discontinued stakes')
+    relationships:
+      - Heberto_Castillo_Jr. (<http://dbpedia.org/resource/Heberto_Castillo_Jr.>) --doo:race--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately (dor:Affectionately) --doo:honours--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately_Handicap (dor:Affectionately_Handicap) --doo:location--> Aqueduct_Racetrack (dor:Aqueduct_Racetrack)
+  '5':
+    attributes:
+      All_Along: '(honours^=''http://dbpedia.org/resource/All_Along_Stakes'', award^=''http://dbpedia.org/resource/American_Champion_Female_Turf_Horse'', owner^=''Daniel Wildenstein. Racing colors: Dark blue, light blue cap.'')'
+      Jeremy_Rose: (race^='http://dbpedia.org/resource/All_Along_Stakes', race horse^='http://dbpedia.org/resource/Afleet_Alex')
+      All_Along_Stakes: (distance^='miles', class^='Grade III')
+    relationships:
+      - Jeremy_Rose (dor:Jeremy_Rose) --doo:race--> All_Along_Stakes (dor:All_Along_Stakes)
+      - All_Along (dor:All_Along) --doo:honours--> All_Along_Stakes (dor:All_Along_Stakes)
+      - All_Along_Stakes (dor:All_Along_Stakes) --doo:location--> Colonial_Downs (dor:Colonial_Downs)
+  '6':
+    attributes:
+      All_Along: '(honours^=''http://dbpedia.org/resource/All_Along_Stakes'', award^=''http://dbpedia.org/resource/American_Champion_Female_Turf_Horse'', owner^=''Daniel Wildenstein. Racing colors: Dark blue, light blue cap.'')'
+      Jon_Court: (race^='http://dbpedia.org/resource/All_Along_Stakes', race horse^='http://dbpedia.org/resource/Archarcharch')
+      All_Along_Stakes: (distance^='miles', class^='Grade III')
+    relationships:
+      - Jon_Court (dor:Jon_Court) --doo:race--> All_Along_Stakes (dor:All_Along_Stakes)
+      - All_Along (dor:All_Along) --doo:honours--> All_Along_Stakes (dor:All_Along_Stakes)
+      - All_Along_Stakes (dor:All_Along_Stakes) --doo:location--> Colonial_Downs (dor:Colonial_Downs)
+  '7':
+    attributes:
+      All_Along: '(honours^=''http://dbpedia.org/resource/All_Along_Stakes'', award^=''http://dbpedia.org/resource/American_Champion_Female_Turf_Horse'', owner^=''Daniel Wildenstein. Racing colors: Dark blue, light blue cap.'')'
+      Jose_Valdivia_Jr.: (race^='http://dbpedia.org/resource/All_Along_Stakes', race horse^='http://dbpedia.org/resource/Arravale')
+    relationships:
+      - Jose_Valdivia_Jr. (<http://dbpedia.org/resource/Jose_Valdivia_Jr.>) --doo:race--> All_Along_Stakes (dor:All_Along_Stakes)
+      - All_Along (dor:All_Along) --doo:honours--> All_Along_Stakes (dor:All_Along_Stakes)
+      - All_Along_Stakes (dor:All_Along_Stakes) --doo:location--> Colonial_Downs (dor:Colonial_Downs)
+  '8':
+    attributes:
+      Alysheba: (honours^='http://dbpedia.org/resource/Alysheba_Stakes', award^='http://dbpedia.org/resource/Eclipse_Award_for_Horse_of_the_Year', owner^='Dorothy & Pamela Scharbauer')
+      Alysheba_Stakes: (distance^='miles', class^='Grade II')
+      Charles_LoPresti: (race^='http://dbpedia.org/resource/Alysheba_Stakes', race horse^='http://dbpedia.org/resource/Successful_Dan')
+    relationships:
+      - Charles_LoPresti (dor:Charles_LoPresti) --doo:race--> Alysheba_Stakes (dor:Alysheba_Stakes)
+      - Alysheba (dor:Alysheba) --doo:honours--> Alysheba_Stakes (dor:Alysheba_Stakes)
+      - Alysheba_Stakes (dor:Alysheba_Stakes) --doo:location--> Churchill_Downs (dor:Churchill_Downs)
+  '9':
+    attributes:
+      Alysheba: (honours^='http://dbpedia.org/resource/Alysheba_Stakes', award^='http://dbpedia.org/resource/Eclipse_Award_for_Horse_of_the_Year', owner^='Dorothy & Pamela Scharbauer')
+      Corey_Lanerie: (race^='http://dbpedia.org/resource/Alysheba_Stakes', race horse^='http://dbpedia.org/resource/Brody''s_Cause')
+      Alysheba_Stakes: (distance^='miles', class^='Grade II')
+    relationships:
+      - Corey_Lanerie (dor:Corey_Lanerie) --doo:race--> Alysheba_Stakes (dor:Alysheba_Stakes)
+      - Alysheba (dor:Alysheba) --doo:honours--> Alysheba_Stakes (dor:Alysheba_Stakes)
+      - Alysheba_Stakes (dor:Alysheba_Stakes) --doo:location--> Churchill_Downs (dor:Churchill_Downs)
+  '10':
+    attributes:
+      Alysheba: (honours^='http://dbpedia.org/resource/Alysheba_Stakes', award^='http://dbpedia.org/resource/Eclipse_Award_for_Horse_of_the_Year', owner^='Dorothy & Pamela Scharbauer')
+      Alysheba_Stakes: (distance^='miles', class^='Grade II')
+      Martin_Garcia_(jockey): (race^='http://dbpedia.org/resource/Acorn_Stakes', race horse^='http://dbpedia.org/resource/Bayern_(horse)')
+    relationships:
+      - Martin_Garcia_(jockey) (<http://dbpedia.org/resource/Martin_Garcia_(jockey)>) --doo:race--> Alysheba_Stakes (dor:Alysheba_Stakes)
+      - Alysheba (dor:Alysheba) --doo:honours--> Alysheba_Stakes (dor:Alysheba_Stakes)
+      - Alysheba_Stakes (dor:Alysheba_Stakes) --doo:location--> Churchill_Downs (dor:Churchill_Downs)
+attributes:
+  RaceHorse: --honours^ (doo:honours)--> Resource | --award^ (doo:award)--> Resource | --owner^ (dop:owner)--> Resource | --owner^ (doo:owner)--> Resource
+  horse race: --distance^ (dop:distance)--> second | --class^ (dop:class)--> langString | --caption^ (dop:caption)--> langString | --alt^ (dop:alt)--> langString | --distance^ (dop:distance)--> metre | --image^ (dop:image)--> langString
+  jockey (horse racer): --race^ (doo:race)--> Resource | --race horse^ (doo:raceHorse)--> Resource
+subgraph_id: 102
+relationships:
+  - jockey (horse racer) --doo:race--> horse race
+  - RaceHorse --doo:honours--> horse race
+  - horse race --doo:location--> racecourse

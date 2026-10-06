@@ -1,0 +1,81 @@
+types:
+  president: doo:President
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ellis_Clarke: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-incumbent-noun-1')
+      Noor_Hassanali: (death date^='2006-08-25', before^='http://dbpedia.org/resource/Ellis_Clarke')
+    relationships:
+      - A._N._R._Robinson (dor:A._N._R._Robinson) --doo:president--> Ellis_Clarke (dor:Ellis_Clarke)
+      - A._N._R._Robinson (dor:A._N._R._Robinson) --doo:president--> Noor_Hassanali (dor:Noor_Hassanali)
+  '2':
+    attributes:
+      Ellis_Clarke: (death date^='2010-12-30')
+      Noor_Hassanali: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-incumbent-noun-1', children^='Amena Hassanali-Sutton')
+    relationships:
+      - A._N._R._Robinson (dor:A._N._R._Robinson) --doo:president--> Noor_Hassanali (dor:Noor_Hassanali)
+      - A._N._R._Robinson (dor:A._N._R._Robinson) --doo:president--> Ellis_Clarke (dor:Ellis_Clarke)
+  '3':
+    attributes:
+      Mohammad_Khatami: (before^='Majid Moadikhah')
+      Akbar_Hashemi_Rafsanjani: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-incumbent-noun-1', children^='')
+    relationships:
+      - Abdollah_Nouri (dor:Abdollah_Nouri) --doo:president--> Akbar_Hashemi_Rafsanjani (dor:Akbar_Hashemi_Rafsanjani)
+      - Abdollah_Nouri (dor:Abdollah_Nouri) --doo:president--> Mohammad_Khatami (dor:Mohammad_Khatami)
+  '4':
+    attributes:
+      Mohammad_Khatami: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-incumbent-noun-1', children^='3')
+      Akbar_Hashemi_Rafsanjani: (death date^='2017-01-08', before^='None')
+    relationships:
+      - Abdollah_Nouri (dor:Abdollah_Nouri) --doo:president--> Mohammad_Khatami (dor:Mohammad_Khatami)
+      - Abdollah_Nouri (dor:Abdollah_Nouri) --doo:president--> Akbar_Hashemi_Rafsanjani (dor:Akbar_Hashemi_Rafsanjani)
+  '5':
+    attributes:
+      Bautista_Saavedra: (death date^='1939-05-01', education^='http://dbpedia.org/resource/Higher_University_of_San_Andrés')
+      Hernando_Siles_Reyes: (children^='')
+    relationships:
+      - Abdón_Saavedra (<http://dbpedia.org/resource/Abdón_Saavedra>) --doo:president--> Hernando_Siles_Reyes (dor:Hernando_Siles_Reyes)
+      - Abdón_Saavedra (<http://dbpedia.org/resource/Abdón_Saavedra>) --doo:president--> Bautista_Saavedra (dor:Bautista_Saavedra)
+  '6':
+    attributes: {}
+    relationships:
+      - Alejandro_Maldonado (dor:Alejandro_Maldonado) --doo:president--> Carlos_Manuel_Arana_Osorio (dor:Carlos_Manuel_Arana_Osorio)
+      - Alejandro_Maldonado (dor:Alejandro_Maldonado) --doo:president--> Jimmy_Morales (dor:Jimmy_Morales)
+  '7':
+    attributes: {}
+    relationships:
+      - Alejandro_Maldonado (dor:Alejandro_Maldonado) --doo:president--> Carlos_Manuel_Arana_Osorio (dor:Carlos_Manuel_Arana_Osorio)
+      - Alejandro_Maldonado (dor:Alejandro_Maldonado) --doo:president--> Otto_Pérez_Molina (<http://dbpedia.org/resource/Otto_Pérez_Molina>)
+  '8':
+    attributes:
+      Ramiro_de_León_Carpio: (death date^='2002-04-16', before^='http://dbpedia.org/resource/Gustavo_Adolfo_Espina_Salguero')
+    relationships:
+      - Alejandro_Maldonado (dor:Alejandro_Maldonado) --doo:president--> Carlos_Manuel_Arana_Osorio (dor:Carlos_Manuel_Arana_Osorio)
+      - Alejandro_Maldonado (dor:Alejandro_Maldonado) --doo:president--> Ramiro_de_León_Carpio (<http://dbpedia.org/resource/Ramiro_de_León_Carpio>)
+  '9':
+    attributes:
+      Leónidas_Plaza: (children^='http://dbpedia.org/resource/Galo_Plaza')
+      Lizardo_García: (death date^='1937-05-29', before^='http://dbpedia.org/resource/Leonidas_Plaza')
+    relationships:
+      - Alfredo_Baquerizo (dor:Alfredo_Baquerizo) --doo:president--> Leónidas_Plaza (<http://dbpedia.org/resource/Leónidas_Plaza>)
+      - Alfredo_Baquerizo (dor:Alfredo_Baquerizo) --doo:president--> Lizardo_García (<http://dbpedia.org/resource/Lizardo_García>)
+  '10':
+    attributes:
+      Leónidas_Plaza: (death date^='1932-11-17', before^='http://dbpedia.org/resource/Alfredo_Baquerizo')
+    relationships:
+      - Alfredo_Baquerizo (dor:Alfredo_Baquerizo) --doo:president--> Lizardo_García (<http://dbpedia.org/resource/Lizardo_García>)
+      - Alfredo_Baquerizo (dor:Alfredo_Baquerizo) --doo:president--> Leónidas_Plaza (<http://dbpedia.org/resource/Leónidas_Plaza>)
+attributes:
+  politician: --death date^ (doo:deathDate)--> date | --2y^ (dop:2y)--> int | --education^ (doo:education)--> Resource | --before^ (dop:before)--> Resource | --relations^ (dop:relations)--> Resource | --known for^ (dop:knownFor)--> langString | --commons^ (dop:commons)--> langString | --winner^ (dop:winner)--> langString
+  office holder: --assembly^ (dop:assembly)--> langString | --direction^ (dop:direction)--> langString | --wordnet_type (dop:wordnet_type)--> Resource | --children^ (dop:children)--> int
+subgraph_id: 52
+relationships:
+  - president --doo:president--> office holder
+  - president --doo:president--> politician

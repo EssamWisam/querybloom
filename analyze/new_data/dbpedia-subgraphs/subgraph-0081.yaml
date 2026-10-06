@@ -1,0 +1,74 @@
+types:
+  device: doo:Device
+  company: doo:Company
+  soccer club: doo:SoccerClub
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - The_Racer's_Group (<http://dbpedia.org/resource/The_Racer's_Group>) --dop:manufacturer--> Aston_Martin (dor:Aston_Martin)
+      - Aston_Martin_2.0_straight-six_racing_engine (dor:Aston_Martin_2.0_straight-six_racing_engine) --doo:manufacturer--> Aston_Martin (dor:Aston_Martin)
+  '2':
+    attributes: {}
+    relationships:
+      - The_Racer's_Group (<http://dbpedia.org/resource/The_Racer's_Group>) --dop:manufacturer--> Aston_Martin (dor:Aston_Martin)
+      - Aston_Martin_RB6_engine (dor:Aston_Martin_RB6_engine) --doo:manufacturer--> Aston_Martin (dor:Aston_Martin)
+  '3':
+    attributes: {}
+    relationships:
+      - The_Racer's_Group (<http://dbpedia.org/resource/The_Racer's_Group>) --dop:manufacturer--> Aston_Martin (dor:Aston_Martin)
+      - Aston_Martin_V12_engine (dor:Aston_Martin_V12_engine) --doo:manufacturer--> Aston_Martin (dor:Aston_Martin)
+  '4':
+    attributes:
+      Buick: (key person^='http://dbpedia.org/resource/Benjamin_Briscoe')
+    relationships:
+      - King_Racing (dor:King_Racing) --dop:manufacturer--> Buick (dor:Buick)
+      - Buick_Indy_V6_engine (dor:Buick_Indy_V6_engine) --doo:manufacturer--> Buick (dor:Buick)
+  '5':
+    attributes:
+      Buick: (key person^='http://dbpedia.org/resource/Benjamin_Briscoe')
+    relationships:
+      - King_Racing (dor:King_Racing) --dop:manufacturer--> Buick (dor:Buick)
+      - Buick_Straight-6_engine (dor:Buick_Straight-6_engine) --doo:manufacturer--> Buick (dor:Buick)
+  '6':
+    attributes:
+      Buick: (key person^='http://dbpedia.org/resource/Benjamin_Briscoe')
+    relationships:
+      - King_Racing (dor:King_Racing) --dop:manufacturer--> Buick (dor:Buick)
+      - Buick_Straight-8_engine (dor:Buick_Straight-8_engine) --doo:manufacturer--> Buick (dor:Buick)
+  '7':
+    attributes:
+      Chevrolet: (align^='left')
+    relationships:
+      - Bobby_Gerhart_Racing (dor:Bobby_Gerhart_Racing) --dop:manufacturer--> Chevrolet (dor:Chevrolet)
+      - Chevrolet_2300_engine (dor:Chevrolet_2300_engine) --doo:manufacturer--> Chevrolet (dor:Chevrolet)
+  '8':
+    attributes:
+      Chevrolet: (align^='left')
+    relationships:
+      - Dreyer_&_Reinbold_Racing (<http://dbpedia.org/resource/Dreyer_&_Reinbold_Racing>) --dop:manufacturer--> Chevrolet (dor:Chevrolet)
+      - Chevrolet_2300_engine (dor:Chevrolet_2300_engine) --doo:manufacturer--> Chevrolet (dor:Chevrolet)
+  '9':
+    attributes:
+      Chevrolet: (align^='left')
+    relationships:
+      - Ed_Carpenter_Racing (dor:Ed_Carpenter_Racing) --dop:manufacturer--> Chevrolet (dor:Chevrolet)
+      - Chevrolet_2300_engine (dor:Chevrolet_2300_engine) --doo:manufacturer--> Chevrolet (dor:Chevrolet)
+  '10':
+    attributes:
+      Ford_Motor_Company: (key person^='http://dbpedia.org/resource/Jim_Farley_(businessman)', owning company^='http://dbpedia.org/resource/Henry_Ford_family_tree', brands='')
+    relationships:
+      - Britek_Motorsport (dor:Britek_Motorsport) --dop:manufacturer--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - Cosworth_CR (dor:Cosworth_CR) --doo:manufacturer--> Ford_Motor_Company (dor:Ford_Motor_Company)
+attributes:
+  company: --key person^ (doo:keyPerson)--> Resource | --owning company^ (doo:owningCompany)--> Resource | --brands (dop:brands)--> Resource | --align^ (dop:align)--> langString | --1a^ (dop:1a)--> langString
+  soccer club: --lowest attendance^ (dop:lowestAttendance)--> gMonthDay | --date^ (dop:date)--> int | --logo width^ (dop:logoWidth)--> int | --reason^ (dop:reason)--> langString | --owner^ (doo:owner)--> Resource | --league^ (dop:league)--> int | --align^ (dop:align)--> langString
+subgraph_id: 81
+relationships:
+  - soccer club --dop:manufacturer--> company
+  - device --doo:manufacturer--> company

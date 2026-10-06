@@ -1,0 +1,100 @@
+types:
+  book: doo:Book
+  saint: doo:Saint
+  school: doo:School
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      St._Jean_de_Brébeuf_Catholic_Secondary_School: (city^='http://dbpedia.org/resource/Hamilton,_Ontario')
+    relationships:
+      - St._Jean_de_Brébeuf_Catholic_Secondary_School (<http://dbpedia.org/resource/St._Jean_de_Brébeuf_Catholic_Secondary_School>) --doo:patronSaint--> Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>)
+      - Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>) --doo:canonizedPlace--> Canada (dor:Canada)
+      - A_Ballet_of_Lepers (dor:A_Ballet_of_Lepers) --dop:country--> Canada (dor:Canada)
+  '2':
+    attributes:
+      A_Dedicated_Man: (genre^='http://dbpedia.org/resource/Crime_novel')
+      St._Jean_de_Brébeuf_Catholic_Secondary_School: (city^='http://dbpedia.org/resource/Hamilton,_Ontario')
+    relationships:
+      - St._Jean_de_Brébeuf_Catholic_Secondary_School (<http://dbpedia.org/resource/St._Jean_de_Brébeuf_Catholic_Secondary_School>) --doo:patronSaint--> Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>)
+      - Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>) --doo:canonizedPlace--> Canada (dor:Canada)
+      - A_Dedicated_Man (dor:A_Dedicated_Man) --dop:country--> Canada (dor:Canada)
+  '3':
+    attributes:
+      A_Fine_Balance: (genre^='http://dbpedia.org/resource/Historical_novel')
+      St._Jean_de_Brébeuf_Catholic_Secondary_School: (city^='http://dbpedia.org/resource/Hamilton,_Ontario')
+    relationships:
+      - St._Jean_de_Brébeuf_Catholic_Secondary_School (<http://dbpedia.org/resource/St._Jean_de_Brébeuf_Catholic_Secondary_School>) --doo:patronSaint--> Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>)
+      - Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>) --doo:canonizedPlace--> Canada (dor:Canada)
+      - A_Fine_Balance (dor:A_Fine_Balance) --dop:country--> Canada (dor:Canada)
+  '4':
+    attributes:
+      Annuario_Pontificio: (genre^='http://dbpedia.org/resource/Reference')
+      École_secondaire_catholique_Saint-Frère-André: (city^='http://dbpedia.org/resource/Brockton_Village')
+    relationships:
+      - École_secondaire_catholique_Saint-Frère-André (<http://dbpedia.org/resource/École_secondaire_catholique_Saint-Frère-André>) --doo:patronSaint--> André_Bessette (<http://dbpedia.org/resource/André_Bessette>)
+      - André_Bessette (<http://dbpedia.org/resource/André_Bessette>) --doo:canonizedPlace--> Vatican_City (dor:Vatican_City)
+      - Annuario_Pontificio (dor:Annuario_Pontificio) --dop:country--> Vatican_City (dor:Vatican_City)
+  '5':
+    attributes:
+      Damien_High_School: (city^='http://dbpedia.org/resource/La_Verne,_California')
+      Annuario_Pontificio: (genre^='http://dbpedia.org/resource/Reference')
+    relationships:
+      - Damien_High_School (dor:Damien_High_School) --doo:patronSaint--> Father_Damien (dor:Father_Damien)
+      - Father_Damien (dor:Father_Damien) --doo:canonizedPlace--> Vatican_City (dor:Vatican_City)
+      - Annuario_Pontificio (dor:Annuario_Pontificio) --dop:country--> Vatican_City (dor:Vatican_City)
+  '6':
+    attributes:
+      Kianda_School: (city^='Nairobi')
+      Annuario_Pontificio: (genre^='http://dbpedia.org/resource/Reference')
+    relationships:
+      - Kianda_School (dor:Kianda_School) --doo:patronSaint--> Josemaría_Escrivá (<http://dbpedia.org/resource/Josemaría_Escrivá>)
+      - Josemaría_Escrivá (<http://dbpedia.org/resource/Josemaría_Escrivá>) --doo:canonizedPlace--> Vatican_City (dor:Vatican_City)
+      - Annuario_Pontificio (dor:Annuario_Pontificio) --dop:country--> Vatican_City (dor:Vatican_City)
+  '7':
+    attributes:
+      Bovo-Bukh: (genre^='http://dbpedia.org/resource/Chivalric_romance')
+      Eiko_Gakuen: (city^='Oboe, Kamakura')
+    relationships:
+      - Eiko_Gakuen (dor:Eiko_Gakuen) --doo:patronSaint--> Aloysius_Gonzaga (dor:Aloysius_Gonzaga)
+      - Aloysius_Gonzaga (dor:Aloysius_Gonzaga) --doo:canonizedPlace--> Papal_States (dor:Papal_States)
+      - Bovo-Bukh (dor:Bovo-Bukh) --dop:country--> Papal_States (dor:Papal_States)
+  '8':
+    attributes:
+      Bovo-Bukh: (genre^='http://dbpedia.org/resource/Chivalric_romance')
+      Gonzaga_College_High_School: (city^='http://dbpedia.org/resource/Washington,_D._C.')
+    relationships:
+      - Gonzaga_College_High_School (dor:Gonzaga_College_High_School) --doo:patronSaint--> Aloysius_Gonzaga (dor:Aloysius_Gonzaga)
+      - Aloysius_Gonzaga (dor:Aloysius_Gonzaga) --doo:canonizedPlace--> Papal_States (dor:Papal_States)
+      - Bovo-Bukh (dor:Bovo-Bukh) --dop:country--> Papal_States (dor:Papal_States)
+  '9':
+    attributes:
+      Bovo-Bukh: (genre^='http://dbpedia.org/resource/Chivalric_romance')
+      St_Aloysius'_College_(Melbourne): (city^='http://dbpedia.org/resource/North_Melbourne,_Victoria')
+    relationships:
+      - St_Aloysius'_College_(Melbourne) (<http://dbpedia.org/resource/St_Aloysius'_College_(Melbourne)>) --doo:patronSaint--> Aloysius_Gonzaga (dor:Aloysius_Gonzaga)
+      - Aloysius_Gonzaga (dor:Aloysius_Gonzaga) --doo:canonizedPlace--> Papal_States (dor:Papal_States)
+      - Bovo-Bukh (dor:Bovo-Bukh) --dop:country--> Papal_States (dor:Papal_States)
+  '10':
+    attributes:
+      The_Adventures_of_Pinocchio: (genre^='http://dbpedia.org/resource/Adventure_fiction', image size^='190')
+      St._Lawrence_Seminary_High_School: (city^='http://dbpedia.org/resource/Mount_Calvary,_Wisconsin')
+    relationships:
+      - St._Lawrence_Seminary_High_School (dor:St._Lawrence_Seminary_High_School) --doo:patronSaint--> Lawrence_of_Brindisi (dor:Lawrence_of_Brindisi)
+      - Lawrence_of_Brindisi (dor:Lawrence_of_Brindisi) --doo:canonizedPlace--> Kingdom_of_Italy (dor:Kingdom_of_Italy)
+      - The_Adventures_of_Pinocchio (dor:The_Adventures_of_Pinocchio) --dop:country--> Kingdom_of_Italy (dor:Kingdom_of_Italy)
+attributes:
+  book: --genre^ (dop:genre)--> langString | --quote^ (dop:quote)--> langString | --image size^ (dop:imageSize)--> int
+  school: --city^ (dop:city)--> langString | --administrator^ (dop:administrator)--> langString
+  Location: --area total (km2)^ (doop:areaTotal)--> squareKilometre | --named after^ (doo:namedAfter)--> Resource | --designated other1 date^ (dop:designatedOther1Date)--> date | --discoverer^ (doo:discoverer)--> Resource | --coordinates^ (dop:coordinates)--> langString | --group^ (dop:group)--> Resource | --arc-text-colorB^ (dop:arcTextColorb)--> langString
+subgraph_id: 621
+relationships:
+  - school --doo:patronSaint--> saint
+  - saint --doo:canonizedPlace--> Location
+  - book --dop:country--> Location

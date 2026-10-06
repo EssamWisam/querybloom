@@ -1,0 +1,157 @@
+types:
+  Food: doo:Food
+  book: doo:Book
+  place: doo:Place
+  country: doo:Country
+  language: doo:Language
+  continent: doo:Continent
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Germany: (image^='Caspar David Friedrich - Wanderer above the sea of fog.jpg', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr')
+      —We_Also_Walk_Dogs: (genre^='http://dbpedia.org/resource/Science_fiction')
+    relationships:
+      - Mount_Athos (dor:Mount_Athos) --doo:locatedInArea--> Europe (dor:Europe)
+      - Europe (dor:Europe) --doo:language--> English_language (dor:English_language)
+      - Bratwurst (dor:Bratwurst) --doo:region--> Europe (dor:Europe)
+      - —We_Also_Walk_Dogs (<http://dbpedia.org/resource/—We_Also_Walk_Dogs>) --doo:language--> English_language (dor:English_language)
+      - Bratwurst (dor:Bratwurst) --dop:country--> Germany (dor:Germany)
+  '2':
+    attributes:
+      —We_Also_Walk_Dogs: (genre^='http://dbpedia.org/resource/Science_fiction')
+    relationships:
+      - Pashallora (dor:Pashallora) --doo:locatedInArea--> Europe (dor:Europe)
+      - Europe (dor:Europe) --doo:language--> English_language (dor:English_language)
+      - Bratwurst (dor:Bratwurst) --doo:region--> Europe (dor:Europe)
+      - —We_Also_Walk_Dogs (<http://dbpedia.org/resource/—We_Also_Walk_Dogs>) --doo:language--> English_language (dor:English_language)
+      - Bratwurst (dor:Bratwurst) --dop:country--> Germany (dor:Germany)
+  '3':
+    attributes:
+      —We_Also_Walk_Dogs: (genre^='http://dbpedia.org/resource/Science_fiction')
+    relationships:
+      - Mount_Athos (dor:Mount_Athos) --doo:locatedInArea--> Europe (dor:Europe)
+      - Europe (dor:Europe) --doo:language--> English_language (dor:English_language)
+      - Morteau_sausage (dor:Morteau_sausage) --doo:region--> Europe (dor:Europe)
+      - —We_Also_Walk_Dogs (<http://dbpedia.org/resource/—We_Also_Walk_Dogs>) --doo:language--> English_language (dor:English_language)
+      - Morteau_sausage (dor:Morteau_sausage) --dop:country--> French_cuisine (dor:French_cuisine)
+  '4':
+    attributes:
+      Poland: (image^='Ayuntamiento, Poznan, Polonia, 2014-09-18, DD 67-72 HDR.jpg', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - Grays_Peak (dor:Grays_Peak) --doo:locatedInArea--> North_America (dor:North_America)
+      - North_America (dor:North_America) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Pączki (<http://dbpedia.org/resource/Pączki>) --doo:region--> North_America (dor:North_America)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Pączki (<http://dbpedia.org/resource/Pączki>) --dop:country--> Poland (dor:Poland)
+  '5':
+    attributes:
+      Mesoamerica: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About')
+    relationships:
+      - Grays_Peak (dor:Grays_Peak) --doo:locatedInArea--> North_America (dor:North_America)
+      - North_America (dor:North_America) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Tamale (dor:Tamale) --doo:region--> North_America (dor:North_America)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Tamale (dor:Tamale) --dop:country--> Mesoamerica (dor:Mesoamerica)
+  '6':
+    attributes:
+      Colombia: (image^='AdamandEve-FernandoBotero-20100414.jpg', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!', religion^='http://dbpedia.org/resource/Catholic_Church_in_Colombia')
+    relationships:
+      - Agua_Poca (dor:Agua_Poca) --doo:locatedInArea--> South_America (dor:South_America)
+      - South_America (dor:South_America) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Butifarra_Soledeñas (<http://dbpedia.org/resource/Butifarra_Soledeñas>) --doo:region--> South_America (dor:South_America)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Butifarra_Soledeñas (<http://dbpedia.org/resource/Butifarra_Soledeñas>) --dop:country--> Colombia (dor:Colombia)
+  '7':
+    attributes:
+      '''GAPÔ': (genre^='http://dbpedia.org/resource/Fiction')
+      Afghanistan: (image^='Abdul_Ghani_Baradar.jpg', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Afghanistan_topics', religion^='http://dbpedia.org/resource/Demographics_of_Afghanistan')
+    relationships:
+      - Hilly_Flanks (dor:Hilly_Flanks) --doo:locatedInArea--> Western_Asia (dor:Western_Asia)
+      - Western_Asia (dor:Western_Asia) --doo:language--> Tagalog_language (dor:Tagalog_language)
+      - Jalebi (dor:Jalebi) --doo:region--> Western_Asia (dor:Western_Asia)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --doo:language--> Tagalog_language (dor:Tagalog_language)'
+      - Jalebi (dor:Jalebi) --dop:country--> Afghanistan (dor:Afghanistan)
+  '8':
+    attributes:
+      '''GAPÔ': (genre^='http://dbpedia.org/resource/Fiction')
+      Algeria: (image^='Kateb Yacine Nedjma authograph.jpg', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', religion^='http://dbpedia.org/resource/Christianity_in_Algeria')
+    relationships:
+      - Hilly_Flanks (dor:Hilly_Flanks) --doo:locatedInArea--> Western_Asia (dor:Western_Asia)
+      - Western_Asia (dor:Western_Asia) --doo:language--> Tagalog_language (dor:Tagalog_language)
+      - Jalebi (dor:Jalebi) --doo:region--> Western_Asia (dor:Western_Asia)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --doo:language--> Tagalog_language (dor:Tagalog_language)'
+      - Jalebi (dor:Jalebi) --dop:country--> Algeria (dor:Algeria)
+  '9':
+    attributes:
+      '''GAPÔ': (genre^='http://dbpedia.org/resource/Fiction')
+      Azerbaijan: (image^='Azərbaycan ipəyindən kəlağayılar 1.JPG', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', religion^='http://dbpedia.org/resource/Christianity_in_Azerbaijan')
+    relationships:
+      - Hilly_Flanks (dor:Hilly_Flanks) --doo:locatedInArea--> Western_Asia (dor:Western_Asia)
+      - Western_Asia (dor:Western_Asia) --doo:language--> Tagalog_language (dor:Tagalog_language)
+      - Jalebi (dor:Jalebi) --doo:region--> Western_Asia (dor:Western_Asia)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --doo:language--> Tagalog_language (dor:Tagalog_language)'
+      - Jalebi (dor:Jalebi) --dop:country--> Azerbaijan (dor:Azerbaijan)
+  '10':
+    attributes:
+      Indian_subcontinent: (image^='Opening of eastern Indian Ocean 120 Ma.png', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About')
+      1001_Vrouwen_uit_de_Nederlandse_geschiedenis: (genre^='http://dbpedia.org/resource/Biographical_dictionary')
+    relationships:
+      - Chances_Peak (dor:Chances_Peak) --doo:locatedInArea--> Caribbean (dor:Caribbean)
+      - Caribbean (dor:Caribbean) --doo:language--> Dutch_language (dor:Dutch_language)
+      - Barfi (dor:Barfi) --doo:region--> Caribbean (dor:Caribbean)
+      - 1001_Vrouwen_uit_de_Nederlandse_geschiedenis (dor:1001_Vrouwen_uit_de_Nederlandse_geschiedenis) --doo:language--> Dutch_language (dor:Dutch_language)
+      - Barfi (dor:Barfi) --dop:country--> Indian_subcontinent (dor:Indian_subcontinent)
+qa_result:
+  status: completed
+  cost_usd: 0.424197
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.036967400000000004
+        total_tokens: 3680
+        prompt_tokens: 1997
+        completion_tokens: 1683
+      generate:
+        cost_usd: 0.12169260000000001
+        total_tokens: 10259
+        prompt_tokens: 5086
+        completion_tokens: 5173
+      verify_1:
+        cost_usd: 0.071177
+        total_tokens: 7417
+        prompt_tokens: 5144
+        completion_tokens: 2273
+      verify_2:
+        cost_usd: 0.08140200000000002
+        total_tokens: 7938
+        prompt_tokens: 5157
+        completion_tokens: 2781
+      complexity:
+        cost_usd: 0.112958
+        total_tokens: 10718
+        prompt_tokens: 6188
+        completion_tokens: 4530
+    total_tokens: 40012
+    prompt_tokens: 23572
+    total_cost_usd: 0.42419700000000005
+    completion_tokens: 16440
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  book: --2a^ (dop:2a)--> langString | --genre^ (dop:genre)--> langString | --previous work^ (doo:previousWork)--> Resource
+  country: --2p^ (dop:2p)--> int | --image^ (dop:image)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --religion^ (doo:religion)--> Resource
+  language: --differentFrom (wwoo:differentFrom)--> Resource | --family^ (dop:family)--> Resource
+subgraph_id: 263
+relationships:
+  - place --doo:locatedInArea--> continent
+  - continent --doo:language--> language
+  - Food --doo:region--> continent
+  - book --doo:language--> language
+  - Food --dop:country--> country

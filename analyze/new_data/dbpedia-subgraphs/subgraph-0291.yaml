@@ -1,0 +1,143 @@
+types:
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  radio station: doo:RadioStation
+  soccer player: doo:SoccerPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Carlos_Vela: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:2018_MLS_Best_XI', clubs^='→ Celta Vigo')
+      Los_Angeles_FC: (owner^='', Link from a Wikipage to an external page^='https://www.lafc.com/', American^='true', chairman^='http://dbpedia.org/resource/Henry_Nguyen')
+    relationships:
+      - Carlos_Vela (dor:Carlos_Vela) --doo:team--> Los_Angeles_FC (dor:Los_Angeles_FC)
+      - Carlos_Vela (dor:Carlos_Vela) --dop:currentclub--> Los_Angeles_FC (dor:Los_Angeles_FC)
+      - KFWB (dor:KFWB) --dop:affiliations--> Los_Angeles_FC (dor:Los_Angeles_FC)
+      - KFWB (dor:KFWB) --dop:area--> Greater_Los_Angeles (dor:Greater_Los_Angeles)
+  '2':
+    attributes:
+      Los_Angeles_FC: (owner^='', Link from a Wikipage to an external page^='https://www.lafc.com/', American^='true', chairman^='http://dbpedia.org/resource/Henry_Nguyen')
+      Christian_Torres_(footballer,_born_2004): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age', clubs^='→ Las Vegas Lights')
+    relationships:
+      - Christian_Torres_(footballer,_born_2004) (<http://dbpedia.org/resource/Christian_Torres_(footballer,_born_2004)>) --doo:team--> Los_Angeles_FC (dor:Los_Angeles_FC)
+      - Christian_Torres_(footballer,_born_2004) (<http://dbpedia.org/resource/Christian_Torres_(footballer,_born_2004)>) --dop:currentclub--> Los_Angeles_FC (dor:Los_Angeles_FC)
+      - KFWB (dor:KFWB) --dop:affiliations--> Los_Angeles_FC (dor:Los_Angeles_FC)
+      - KFWB (dor:KFWB) --dop:area--> Greater_Los_Angeles (dor:Greater_Los_Angeles)
+  '3':
+    attributes:
+      Los_Angeles_FC: (owner^='', Link from a Wikipage to an external page^='https://www.lafc.com/', American^='true', chairman^='http://dbpedia.org/resource/Henry_Nguyen')
+      Cristian_Arango: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age', clubs^='→ Aves')
+    relationships:
+      - Cristian_Arango (dor:Cristian_Arango) --doo:team--> Los_Angeles_FC (dor:Los_Angeles_FC)
+      - Cristian_Arango (dor:Cristian_Arango) --dop:currentclub--> Los_Angeles_FC (dor:Los_Angeles_FC)
+      - KFWB (dor:KFWB) --dop:affiliations--> Los_Angeles_FC (dor:Los_Angeles_FC)
+      - KFWB (dor:KFWB) --dop:area--> Greater_Los_Angeles (dor:Greater_Los_Angeles)
+  '4':
+    attributes:
+      Abdoulaye_Cissoko: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age', clubs^='→ San Diego 1904')
+      Seattle_Sounders_FC: (owner^='http://dbpedia.org/resource/Adrian_Hanauer', Link from a Wikipage to an external page^='https://www.soundersfc.com/', American^='true')
+    relationships:
+      - Abdoulaye_Cissoko (dor:Abdoulaye_Cissoko) --doo:team--> Seattle_Sounders_FC (dor:Seattle_Sounders_FC)
+      - Abdoulaye_Cissoko (dor:Abdoulaye_Cissoko) --dop:currentclub--> Seattle_Sounders_FC (dor:Seattle_Sounders_FC)
+      - KJR-FM (dor:KJR-FM) --dop:affiliations--> Seattle_Sounders_FC (dor:Seattle_Sounders_FC)
+      - KJR-FM (dor:KJR-FM) --dop:area--> Seattle_metropolitan_area (dor:Seattle_metropolitan_area)
+  '5':
+    attributes:
+      Seattle_Sounders_FC: (owner^='http://dbpedia.org/resource/Adrian_Hanauer', Link from a Wikipage to an external page^='https://www.soundersfc.com/', American^='true')
+      Albert_Rusnák_(footballer,_born_1994): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age', clubs^='→ Birmingham City')
+    relationships:
+      - Albert_Rusnák_(footballer,_born_1994) (<http://dbpedia.org/resource/Albert_Rusnák_(footballer,_born_1994)>) --doo:team--> Seattle_Sounders_FC (dor:Seattle_Sounders_FC)
+      - Albert_Rusnák_(footballer,_born_1994) (<http://dbpedia.org/resource/Albert_Rusnák_(footballer,_born_1994)>) --dop:currentclub--> Seattle_Sounders_FC (dor:Seattle_Sounders_FC)
+      - KJR-FM (dor:KJR-FM) --dop:affiliations--> Seattle_Sounders_FC (dor:Seattle_Sounders_FC)
+      - KJR-FM (dor:KJR-FM) --dop:area--> Seattle_metropolitan_area (dor:Seattle_metropolitan_area)
+  '6':
+    attributes:
+      Alex_Roldan: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:2018_MLS_SuperDraft', clubs^='→ Tacoma Defiance')
+      Seattle_Sounders_FC: (owner^='http://dbpedia.org/resource/Adrian_Hanauer', Link from a Wikipage to an external page^='https://www.soundersfc.com/', American^='true')
+    relationships:
+      - Alex_Roldan (dor:Alex_Roldan) --doo:team--> Seattle_Sounders_FC (dor:Seattle_Sounders_FC)
+      - Alex_Roldan (dor:Alex_Roldan) --dop:currentclub--> Seattle_Sounders_FC (dor:Seattle_Sounders_FC)
+      - KJR-FM (dor:KJR-FM) --dop:affiliations--> Seattle_Sounders_FC (dor:Seattle_Sounders_FC)
+      - KJR-FM (dor:KJR-FM) --dop:area--> Seattle_metropolitan_area (dor:Seattle_metropolitan_area)
+  '7':
+    attributes:
+      Colorado_Rapids: (owner^='http://dbpedia.org/resource/Kroenke_Sports_&_Entertainment', Link from a Wikipage to an external page^='http://www.coloradorapids.com/schedule%3Fmonth=all&year=1996&competition_type=46&broadcast_type=all&op=Search&form_id=mls_schedule_form', American^='true')
+      Abraham_Rodriguez_(soccer): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age', clubs^='→ Colorado Springs Switchbacks')
+    relationships:
+      - Abraham_Rodriguez_(soccer) (<http://dbpedia.org/resource/Abraham_Rodriguez_(soccer)>) --doo:team--> Colorado_Rapids (dor:Colorado_Rapids)
+      - Abraham_Rodriguez_(soccer) (<http://dbpedia.org/resource/Abraham_Rodriguez_(soccer)>) --dop:currentclub--> Colorado_Rapids (dor:Colorado_Rapids)
+      - KKSE_(AM) (<http://dbpedia.org/resource/KKSE_(AM)>) --dop:affiliations--> Colorado_Rapids (dor:Colorado_Rapids)
+      - KKSE_(AM) (<http://dbpedia.org/resource/KKSE_(AM)>) --dop:area--> Denver_metropolitan_area (dor:Denver_metropolitan_area)
+  '8':
+    attributes:
+      Colorado_Rapids: (owner^='http://dbpedia.org/resource/Kroenke_Sports_&_Entertainment', Link from a Wikipage to an external page^='http://www.coloradorapids.com/schedule%3Fmonth=all&year=1996&competition_type=46&broadcast_type=all&op=Search&form_id=mls_schedule_form', American^='true')
+      Anthony_Markanich: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:2022_MLS_SuperDraft', clubs^='http://dbpedia.org/resource/Colorado_Rapids_2')
+    relationships:
+      - Anthony_Markanich (dor:Anthony_Markanich) --doo:team--> Colorado_Rapids (dor:Colorado_Rapids)
+      - Anthony_Markanich (dor:Anthony_Markanich) --dop:currentclub--> Colorado_Rapids (dor:Colorado_Rapids)
+      - KKSE_(AM) (<http://dbpedia.org/resource/KKSE_(AM)>) --dop:affiliations--> Colorado_Rapids (dor:Colorado_Rapids)
+      - KKSE_(AM) (<http://dbpedia.org/resource/KKSE_(AM)>) --dop:area--> Denver_metropolitan_area (dor:Denver_metropolitan_area)
+  '9':
+    attributes:
+      Braian_Galván: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age', clubs^='http://dbpedia.org/resource/Club_Atlético_Colón')
+      Colorado_Rapids: (owner^='http://dbpedia.org/resource/Kroenke_Sports_&_Entertainment', Link from a Wikipage to an external page^='http://www.coloradorapids.com/schedule%3Fmonth=all&year=1996&competition_type=46&broadcast_type=all&op=Search&form_id=mls_schedule_form', American^='true')
+    relationships:
+      - Braian_Galván (<http://dbpedia.org/resource/Braian_Galván>) --doo:team--> Colorado_Rapids (dor:Colorado_Rapids)
+      - Braian_Galván (<http://dbpedia.org/resource/Braian_Galván>) --dop:currentclub--> Colorado_Rapids (dor:Colorado_Rapids)
+      - KKSE_(AM) (<http://dbpedia.org/resource/KKSE_(AM)>) --dop:affiliations--> Colorado_Rapids (dor:Colorado_Rapids)
+      - KKSE_(AM) (<http://dbpedia.org/resource/KKSE_(AM)>) --dop:area--> Denver_metropolitan_area (dor:Denver_metropolitan_area)
+  '10':
+    attributes:
+      Salma_Ghazal: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age', clubs^='Texas Titans')
+      Greater_Houston: (Apr high F^='78.8')
+    relationships:
+      - Salma_Ghazal (dor:Salma_Ghazal) --doo:team--> Houston_Cougars (dor:Houston_Cougars)
+      - Salma_Ghazal (dor:Salma_Ghazal) --dop:currentclub--> Houston_Cougars (dor:Houston_Cougars)
+      - KPRC_(AM) (<http://dbpedia.org/resource/KPRC_(AM)>) --dop:affiliations--> Houston_Cougars (dor:Houston_Cougars)
+      - KPRC_(AM) (<http://dbpedia.org/resource/KPRC_(AM)>) --dop:area--> Greater_Houston (dor:Greater_Houston)
+qa_result:
+  status: completed
+  cost_usd: 0.25597
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0284074
+        total_tokens: 3303
+        prompt_tokens: 2065
+        completion_tokens: 1238
+      generate:
+        cost_usd: 0.06771260000000001
+        total_tokens: 7611
+        prompt_tokens: 5154
+        completion_tokens: 2457
+      verify_1:
+        cost_usd: 0.033897000000000004
+        total_tokens: 5622
+        prompt_tokens: 5236
+        completion_tokens: 386
+      complexity:
+        cost_usd: 0.125953
+        total_tokens: 11556
+        prompt_tokens: 6439
+        completion_tokens: 5117
+    total_tokens: 28092
+    prompt_tokens: 18894
+    total_cost_usd: 0.25597000000000003
+    completion_tokens: 9198
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  settlement: --Apr high F^ (dop:aprHighF)--> double | --quote^ (dop:quote)--> int | --winner^ (dop:winner)--> langString
+  soccer club: --owner^ (dop:owner)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --American^ (dop:american)--> langString | --direction^ (dop:direction)--> langString | --footer^ (dop:footer)--> langString | --chairman^ (doo:chairman)--> Resource
+  soccer player: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --clubs^ (dop:clubs)--> int
+subgraph_id: 291
+relationships:
+  - soccer player --doo:team--> soccer club
+  - soccer player --dop:currentclub--> soccer club
+  - radio station --dop:affiliations--> soccer club
+  - radio station --dop:area--> settlement

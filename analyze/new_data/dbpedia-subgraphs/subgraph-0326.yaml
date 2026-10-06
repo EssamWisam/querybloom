@@ -1,0 +1,118 @@
+types:
+  Band: doo:Band
+  album: doo:Album
+  single: doo:Single
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dorbd: http://dbpedia.org/resource/Bold_&_Delicious/
+instances:
+  '1':
+    attributes:
+      Pride: (genre^='')
+      (Miss)understood: (Wikipage revision ID^='1041607808')
+      Hal_(Japanese_band): (past members^='Atsushi Sato, Halna, Yuta Nakano')
+    relationships:
+      - Pride (dorbd:Pride) --doo:album--> (Miss)understood (<http://dbpedia.org/resource/(Miss)understood>)
+      - Pride (dorbd:Pride) --dop:writer--> Ayumi_Hamasaki (dor:Ayumi_Hamasaki)
+      - (Miss)understood (<http://dbpedia.org/resource/(Miss)understood>) --dop:extra--> Hal_(Japanese_band) (<http://dbpedia.org/resource/Hal_(Japanese_band)>)
+  '2':
+    attributes:
+      (Miss)understood: (Wikipage revision ID^='1041607808')
+      Hal_(Japanese_band): (past members^='Atsushi Sato, Halna, Yuta Nakano')
+      Heaven_(Ayumi_Hamasaki_song): (genre^='http://dbpedia.org/resource/J-pop')
+    relationships:
+      - Heaven_(Ayumi_Hamasaki_song) (<http://dbpedia.org/resource/Heaven_(Ayumi_Hamasaki_song)>) --doo:album--> (Miss)understood (<http://dbpedia.org/resource/(Miss)understood>)
+      - Heaven_(Ayumi_Hamasaki_song) (<http://dbpedia.org/resource/Heaven_(Ayumi_Hamasaki_song)>) --dop:writer--> Ayumi_Hamasaki (dor:Ayumi_Hamasaki)
+      - (Miss)understood (<http://dbpedia.org/resource/(Miss)understood>) --dop:extra--> Hal_(Japanese_band) (<http://dbpedia.org/resource/Hal_(Japanese_band)>)
+  '3':
+    attributes:
+      (Miss)understood: (Wikipage revision ID^='1041607808')
+      Hal_(Japanese_band): (past members^='Atsushi Sato, Halna, Yuta Nakano')
+      Heaven_(Ayumi_Hamasaki_song): (genre^='http://dbpedia.org/resource/J-pop')
+    relationships:
+      - Heaven_(Ayumi_Hamasaki_song) (<http://dbpedia.org/resource/Heaven_(Ayumi_Hamasaki_song)>) --doo:album--> (Miss)understood (<http://dbpedia.org/resource/(Miss)understood>)
+      - Heaven_(Ayumi_Hamasaki_song) (<http://dbpedia.org/resource/Heaven_(Ayumi_Hamasaki_song)>) --dop:writer--> Kazuhito_Kikuchi (dor:Kazuhito_Kikuchi)
+      - (Miss)understood (<http://dbpedia.org/resource/(Miss)understood>) --dop:extra--> Hal_(Japanese_band) (<http://dbpedia.org/resource/Hal_(Japanese_band)>)
+  '4':
+    attributes:
+      The_Killers: |-
+        (past members^='* Dell Neal
+        * Matt Norcross
+        * Brian Havens')
+      A_Great_Big_Sled: (genre^='http://dbpedia.org/resource/Christmas_music')
+      (Red)_Christmas_EP: (Wikipage revision ID^='1109894858')
+    relationships:
+      - A_Great_Big_Sled (dor:A_Great_Big_Sled) --doo:album--> (Red)_Christmas_EP (<http://dbpedia.org/resource/(Red)_Christmas_EP>)
+      - A_Great_Big_Sled (dor:A_Great_Big_Sled) --dop:writer--> Brandon_Flowers (dor:Brandon_Flowers)
+      - (Red)_Christmas_EP (<http://dbpedia.org/resource/(Red)_Christmas_EP>) --dop:extra--> The_Killers (dor:The_Killers)
+  '5':
+    attributes:
+      The_Killers: |-
+        (past members^='* Dell Neal
+        * Matt Norcross
+        * Brian Havens')
+      A_Great_Big_Sled: (genre^='http://dbpedia.org/resource/Christmas_music')
+      (Red)_Christmas_EP: (Wikipage revision ID^='1109894858')
+    relationships:
+      - A_Great_Big_Sled (dor:A_Great_Big_Sled) --doo:album--> (Red)_Christmas_EP (<http://dbpedia.org/resource/(Red)_Christmas_EP>)
+      - A_Great_Big_Sled (dor:A_Great_Big_Sled) --dop:writer--> Dave_Keuning (dor:Dave_Keuning)
+      - (Red)_Christmas_EP (<http://dbpedia.org/resource/(Red)_Christmas_EP>) --dop:extra--> The_Killers (dor:The_Killers)
+  '6':
+    attributes:
+      The_Killers: |-
+        (past members^='* Dell Neal
+        * Matt Norcross
+        * Brian Havens')
+      A_Great_Big_Sled: (genre^='http://dbpedia.org/resource/Christmas_music')
+      (Red)_Christmas_EP: (Wikipage revision ID^='1109894858')
+    relationships:
+      - A_Great_Big_Sled (dor:A_Great_Big_Sled) --doo:album--> (Red)_Christmas_EP (<http://dbpedia.org/resource/(Red)_Christmas_EP>)
+      - A_Great_Big_Sled (dor:A_Great_Big_Sled) --dop:writer--> Mark_Stoermer (dor:Mark_Stoermer)
+      - (Red)_Christmas_EP (<http://dbpedia.org/resource/(Red)_Christmas_EP>) --dop:extra--> The_Killers (dor:The_Killers)
+  '7':
+    attributes:
+      10_(LL_Cool_J_album): (Wikipage revision ID^='1115660633')
+      Amazin'_(LL_Cool_J_song): (genre^='http://dbpedia.org/resource/Hip_hop_music')
+    relationships:
+      - Amazin'_(LL_Cool_J_song) (<http://dbpedia.org/resource/Amazin'_(LL_Cool_J_song)>) --doo:album--> 10_(LL_Cool_J_album) (<http://dbpedia.org/resource/10_(LL_Cool_J_album)>)
+      - Amazin'_(LL_Cool_J_song) (<http://dbpedia.org/resource/Amazin'_(LL_Cool_J_song)>) --dop:writer--> LL_Cool_J (dor:LL_Cool_J)
+      - 10_(LL_Cool_J_album) (<http://dbpedia.org/resource/10_(LL_Cool_J_album)>) --dop:extra--> The_Neptunes (dor:The_Neptunes)
+  '8':
+    attributes:
+      Trackmasters: (past members^='')
+      10_(LL_Cool_J_album): (Wikipage revision ID^='1115660633')
+      Amazin'_(LL_Cool_J_song): (genre^='http://dbpedia.org/resource/Hip_hop_music')
+    relationships:
+      - Amazin'_(LL_Cool_J_song) (<http://dbpedia.org/resource/Amazin'_(LL_Cool_J_song)>) --doo:album--> 10_(LL_Cool_J_album) (<http://dbpedia.org/resource/10_(LL_Cool_J_album)>)
+      - Amazin'_(LL_Cool_J_song) (<http://dbpedia.org/resource/Amazin'_(LL_Cool_J_song)>) --dop:writer--> LL_Cool_J (dor:LL_Cool_J)
+      - 10_(LL_Cool_J_album) (<http://dbpedia.org/resource/10_(LL_Cool_J_album)>) --dop:extra--> Trackmasters (dor:Trackmasters)
+  '9':
+    attributes:
+      112_(album): (Wikipage revision ID^='1122353864')
+      Cupid_(112_song): (genre^='http://dbpedia.org/resource/Contemporary_R&B')
+    relationships:
+      - Cupid_(112_song) (<http://dbpedia.org/resource/Cupid_(112_song)>) --doo:album--> 112_(album) (<http://dbpedia.org/resource/112_(album)>)
+      - Cupid_(112_song) (<http://dbpedia.org/resource/Cupid_(112_song)>) --dop:writer--> Daron_Jones (dor:Daron_Jones)
+      - 112_(album) (<http://dbpedia.org/resource/112_(album)>) --dop:extra--> Tim_&_Bob (<http://dbpedia.org/resource/Tim_&_Bob>)
+  '10':
+    attributes:
+      112_(album): (Wikipage revision ID^='1122353864')
+      Cupid_(112_song): (genre^='http://dbpedia.org/resource/Contemporary_R&B')
+    relationships:
+      - Cupid_(112_song) (<http://dbpedia.org/resource/Cupid_(112_song)>) --doo:album--> 112_(album) (<http://dbpedia.org/resource/112_(album)>)
+      - Cupid_(112_song) (<http://dbpedia.org/resource/Cupid_(112_song)>) --dop:writer--> Quinnes_Parker (dor:Quinnes_Parker)
+      - 112_(album) (<http://dbpedia.org/resource/112_(album)>) --dop:extra--> Tim_&_Bob (<http://dbpedia.org/resource/Tim_&_Bob>)
+attributes:
+  Band: --d^ (dop:d)--> langString | --past members^ (dop:pastMembers)--> Resource
+  album: --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --wordnet_type (dop:wordnet_type)--> Resource | --width^ (dop:width)--> perCent | --release date^ (doo:releaseDate)--> date
+  single: --accessdate^ (dop:accessdate)--> date | --genre^ (dop:genre)--> langString | --footer^ (dop:footer)--> langString
+  musical artist: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --past members^ (dop:pastMembers)--> langString
+subgraph_id: 326
+relationships:
+  - single --doo:album--> album
+  - single --dop:writer--> musical artist
+  - album --dop:extra--> Band

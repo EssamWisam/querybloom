@@ -1,0 +1,88 @@
+types:
+  book: doo:Book
+  country: doo:Country
+  person function: doo:PersonFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      England: (image^='After Hans Holbein the Younger  - Henry VIII  - RCIN 404438 - Royal Collection.jpg')
+      A_Guide_to_Grand-Jury_Men: (subject='http://dbpedia.org/resource/Category:1627_books')
+    relationships:
+      - A_Guide_to_Grand-Jury_Men (dor:A_Guide_to_Grand-Jury_Men) --doo:literaryGenre--> Philosophy (dor:Philosophy)
+      - A_Guide_to_Grand-Jury_Men (dor:A_Guide_to_Grand-Jury_Men) --dop:country--> England (dor:England)
+  '2':
+    attributes:
+      India: (url^='https://books.google.com/books%3Fid=Vr2qnK_QOuAC&pg=PA1140', image^='--07-14')
+      Aadhunik_Bharat_Ke_Bramharshi-Pt._Deendayal_Upadhyaya: (subject='http://dbpedia.org/resource/Category:2017_non-fiction_books')
+    relationships:
+      - Aadhunik_Bharat_Ke_Bramharshi-Pt._Deendayal_Upadhyaya (dor:Aadhunik_Bharat_Ke_Bramharshi-Pt._Deendayal_Upadhyaya) --doo:literaryGenre--> Research (dor:Research)
+      - Aadhunik_Bharat_Ke_Bramharshi-Pt._Deendayal_Upadhyaya (dor:Aadhunik_Bharat_Ke_Bramharshi-Pt._Deendayal_Upadhyaya) --dop:country--> India (dor:India)
+  '3':
+    attributes:
+      Brazil: (image^='14')
+      Aleph_(novel): (subject='http://dbpedia.org/resource/Category:2011_novels')
+    relationships:
+      - Aleph_(novel) (<http://dbpedia.org/resource/Aleph_(novel)>) --doo:literaryGenre--> Philosophy (dor:Philosophy)
+      - Aleph_(novel) (<http://dbpedia.org/resource/Aleph_(novel)>) --dop:country--> Brazil (dor:Brazil)
+  '4':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg')
+      All_Marketers_Are_Liars: (subject='http://dbpedia.org/resource/Category:2005_non-fiction_books')
+    relationships:
+      - All_Marketers_Are_Liars (dor:All_Marketers_Are_Liars) --doo:literaryGenre--> Business (dor:Business)
+      - All_Marketers_Are_Liars (dor:All_Marketers_Are_Liars) --dop:country--> United_States (dor:United_States)
+  '5':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg')
+      All_Marketers_Are_Liars: (subject='http://dbpedia.org/resource/Category:2005_non-fiction_books')
+    relationships:
+      - All_Marketers_Are_Liars (dor:All_Marketers_Are_Liars) --doo:literaryGenre--> Marketing (dor:Marketing)
+      - All_Marketers_Are_Liars (dor:All_Marketers_Are_Liars) --dop:country--> United_States (dor:United_States)
+  '6':
+    attributes:
+      Soviet_Union: (2p^='50', url^='https://web.archive.org/web/20061024175600/http:/rs6.loc.gov/frd/cs/sutoc.html')
+      Anarchism_or_Socialism%3F: (subject='http://dbpedia.org/resource/Category:1906_non-fiction_books')
+    relationships:
+      - Anarchism_or_Socialism%3F (<http://dbpedia.org/resource/Anarchism_or_Socialism%3F>) --doo:literaryGenre--> Political_philosophy (dor:Political_philosophy)
+      - Anarchism_or_Socialism%3F (<http://dbpedia.org/resource/Anarchism_or_Socialism%3F>) --dop:country--> Soviet_Union (dor:Soviet_Union)
+  '7':
+    attributes:
+      Arte_de_la_lengua_mexicana_(1754_book): (subject='http://dbpedia.org/resource/Category:1754_books')
+    relationships:
+      - Arte_de_la_lengua_mexicana_(1754_book) (<http://dbpedia.org/resource/Arte_de_la_lengua_mexicana_(1754_book)>) --doo:literaryGenre--> Grammar (dor:Grammar)
+      - Arte_de_la_lengua_mexicana_(1754_book) (<http://dbpedia.org/resource/Arte_de_la_lengua_mexicana_(1754_book)>) --dop:country--> Mexico (dor:Mexico)
+  '8':
+    attributes:
+      India: (url^='https://books.google.com/books%3Fid=Vr2qnK_QOuAC&pg=PA1140', image^='--07-14')
+      Arvachin_Kavita: (subject='http://dbpedia.org/resource/Category:1946_non-fiction_books')
+    relationships:
+      - Arvachin_Kavita (dor:Arvachin_Kavita) --doo:literaryGenre--> History_of_literature (dor:History_of_literature)
+      - Arvachin_Kavita (dor:Arvachin_Kavita) --dop:country--> India (dor:India)
+  '9':
+    attributes:
+      United_Kingdom: (image^='--08-17')
+      Ascher:_Fabric,_Art,_Fashion: (subject='http://dbpedia.org/resource/Category:1987_in_art')
+    relationships:
+      - Ascher:_Fabric,_Art,_Fashion (<http://dbpedia.org/resource/Ascher:_Fabric,_Art,_Fashion>) --doo:literaryGenre--> Fashion_Design (dor:Fashion_Design)
+      - Ascher:_Fabric,_Art,_Fashion (<http://dbpedia.org/resource/Ascher:_Fabric,_Art,_Fashion>) --dop:country--> United_Kingdom (dor:United_Kingdom)
+  '10':
+    attributes:
+      Croatia: (image^='820')
+      Ballads_of_Petrica_Kerempuh: (subject='http://dbpedia.org/resource/Category:1936_books')
+    relationships:
+      - Ballads_of_Petrica_Kerempuh (dor:Ballads_of_Petrica_Kerempuh) --doo:literaryGenre--> Philosophy (dor:Philosophy)
+      - Ballads_of_Petrica_Kerempuh (dor:Ballads_of_Petrica_Kerempuh) --dop:country--> Croatia (dor:Croatia)
+attributes:
+  book: --subject (podt:subject)--> Resource | --1a^ (dop:1a)--> langString | --reason^ (dop:reason)--> langString | --previous work^ (doo:previousWork)--> Resource | --bgcolor^ (dop:bgcolor)--> langString
+  country: --2p^ (dop:2p)--> int | --url^ (dop:url)--> Resource | --image^ (dop:image)--> langString
+  person function: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+subgraph_id: 325
+relationships:
+  - book --doo:literaryGenre--> person function
+  - book --dop:country--> country

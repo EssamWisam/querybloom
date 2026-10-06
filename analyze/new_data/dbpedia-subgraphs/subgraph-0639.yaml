@@ -1,0 +1,98 @@
+types:
+  city: doo:City
+  road: doo:Road
+  station: doo:Station
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._R._Antulay: (death date^='2014-12-02')
+      Kurla_railway_station: (type^='http://dbpedia.org/resource/Indian_Railways')
+    relationships:
+      - A._R._Antulay (dor:A._R._Antulay) --dop:deathPlace--> Mumbai (dor:Mumbai)
+      - Harbour_line_(Mumbai_Suburban_Railway) (<http://dbpedia.org/resource/Harbour_line_(Mumbai_Suburban_Railway)>) --doo:location--> Mumbai (dor:Mumbai)
+      - Kurla_railway_station (dor:Kurla_railway_station) --doo:servingRailwayLine--> Harbour_line_(Mumbai_Suburban_Railway) (<http://dbpedia.org/resource/Harbour_line_(Mumbai_Suburban_Railway)>)
+  '2':
+    attributes:
+      A._R._Antulay: (death date^='2014-12-02')
+      Seawoods–Darave_railway_station: (type^='http://dbpedia.org/resource/Mumbai_Suburban_Railway')
+    relationships:
+      - A._R._Antulay (dor:A._R._Antulay) --dop:deathPlace--> Mumbai (dor:Mumbai)
+      - Harbour_line_(Mumbai_Suburban_Railway) (<http://dbpedia.org/resource/Harbour_line_(Mumbai_Suburban_Railway)>) --doo:location--> Mumbai (dor:Mumbai)
+      - Seawoods–Darave_railway_station (<http://dbpedia.org/resource/Seawoods–Darave_railway_station>) --doo:servingRailwayLine--> Harbour_line_(Mumbai_Suburban_Railway) (<http://dbpedia.org/resource/Harbour_line_(Mumbai_Suburban_Railway)>)
+  '3':
+    attributes:
+      Ahilya_Rangnekar: (children^='Ajit and Abhay', death date^='2009-04-19')
+      Kurla_railway_station: (type^='http://dbpedia.org/resource/Indian_Railways')
+    relationships:
+      - Ahilya_Rangnekar (dor:Ahilya_Rangnekar) --dop:deathPlace--> Mumbai (dor:Mumbai)
+      - Harbour_line_(Mumbai_Suburban_Railway) (<http://dbpedia.org/resource/Harbour_line_(Mumbai_Suburban_Railway)>) --doo:location--> Mumbai (dor:Mumbai)
+      - Kurla_railway_station (dor:Kurla_railway_station) --doo:servingRailwayLine--> Harbour_line_(Mumbai_Suburban_Railway) (<http://dbpedia.org/resource/Harbour_line_(Mumbai_Suburban_Railway)>)
+  '4':
+    attributes:
+      Adelaide: (Apr record low C^='4.3')
+      Albert_Hawke: (children^='1', death date^='1986-02-14')
+    relationships:
+      - Albert_Hawke (dor:Albert_Hawke) --dop:deathPlace--> Adelaide (dor:Adelaide)
+      - Hendon_railway_line (dor:Hendon_railway_line) --doo:location--> Adelaide (dor:Adelaide)
+      - Hendon_railway_station,_Adelaide (<http://dbpedia.org/resource/Hendon_railway_station,_Adelaide>) --doo:servingRailwayLine--> Hendon_railway_line (dor:Hendon_railway_line)
+  '5':
+    attributes:
+      Albert_L._Myer: (death date^='1914-07-16')
+    relationships:
+      - Albert_L._Myer (dor:Albert_L._Myer) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - Hudson_Line_(Metro-North) (<http://dbpedia.org/resource/Hudson_Line_(Metro-North)>) --doo:location--> New_York_City (dor:New_York_City)
+      - Ardsley-on-Hudson_station (dor:Ardsley-on-Hudson_station) --doo:servingRailwayLine--> Hudson_Line_(Metro-North) (<http://dbpedia.org/resource/Hudson_Line_(Metro-North)>)
+  '6':
+    attributes:
+      Albert_L._Myer: (death date^='1914-07-16')
+    relationships:
+      - Albert_L._Myer (dor:Albert_L._Myer) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - Hudson_Line_(Metro-North) (<http://dbpedia.org/resource/Hudson_Line_(Metro-North)>) --doo:location--> New_York_City (dor:New_York_City)
+      - Beacon_station__Beacon__1 (dor:Beacon_station__Beacon__1) --doo:servingRailwayLine--> Hudson_Line_(Metro-North) (<http://dbpedia.org/resource/Hudson_Line_(Metro-North)>)
+  '7':
+    attributes:
+      Albert_L._Myer: (death date^='1914-07-16')
+    relationships:
+      - Albert_L._Myer (dor:Albert_L._Myer) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - Hudson_Line_(Metro-North) (<http://dbpedia.org/resource/Hudson_Line_(Metro-North)>) --doo:location--> New_York_City (dor:New_York_City)
+      - Breakneck_Ridge_station (dor:Breakneck_Ridge_station) --doo:servingRailwayLine--> Hudson_Line_(Metro-North) (<http://dbpedia.org/resource/Hudson_Line_(Metro-North)>)
+  '8':
+    attributes:
+      Long_Island: (Apr low F^='40.4')
+      Andrew_Messenger: (children^='Mary Messenger Benedict', death date^='October 1730')
+    relationships:
+      - Andrew_Messenger (dor:Andrew_Messenger) --dop:deathPlace--> Long_Island (dor:Long_Island)
+      - Main_Line_(Long_Island_Rail_Road) (<http://dbpedia.org/resource/Main_Line_(Long_Island_Rail_Road)>) --doo:location--> Long_Island (dor:Long_Island)
+      - Aquebogue_station (dor:Aquebogue_station) --doo:servingRailwayLine--> Main_Line_(Long_Island_Rail_Road) (<http://dbpedia.org/resource/Main_Line_(Long_Island_Rail_Road)>)
+  '9':
+    attributes:
+      Long_Island: (Apr low F^='40.4')
+      Andrew_Messenger: (children^='Mary Messenger Benedict', death date^='October 1730')
+    relationships:
+      - Andrew_Messenger (dor:Andrew_Messenger) --dop:deathPlace--> Long_Island (dor:Long_Island)
+      - Main_Line_(Long_Island_Rail_Road) (<http://dbpedia.org/resource/Main_Line_(Long_Island_Rail_Road)>) --doo:location--> Long_Island (dor:Long_Island)
+      - Bellaire_station (dor:Bellaire_station) --doo:servingRailwayLine--> Main_Line_(Long_Island_Rail_Road) (<http://dbpedia.org/resource/Main_Line_(Long_Island_Rail_Road)>)
+  '10':
+    attributes:
+      Long_Island: (Apr low F^='40.4')
+      Andrew_Messenger: (children^='Mary Messenger Benedict', death date^='October 1730')
+    relationships:
+      - Andrew_Messenger (dor:Andrew_Messenger) --dop:deathPlace--> Long_Island (dor:Long_Island)
+      - Main_Line_(Long_Island_Rail_Road) (<http://dbpedia.org/resource/Main_Line_(Long_Island_Rail_Road)>) --doo:location--> Long_Island (dor:Long_Island)
+      - Bellerose_station (dor:Bellerose_station) --doo:servingRailwayLine--> Main_Line_(Long_Island_Rail_Road) (<http://dbpedia.org/resource/Main_Line_(Long_Island_Rail_Road)>)
+attributes:
+  city: --Apr record low C^ (dop:aprRecordLowC)--> double | --Apr low F^ (dop:aprLowF)--> int
+  road: --route junction^ (doo:routeJunction)--> Resource
+  station: --type^ (doo:type)--> Resource | --operator^ (dop:operator)--> langString | --architect^ (dop:architect)--> langString
+  office holder: --children^ (dop:children)--> langString | --children^ (dop:children)--> int | --death date^ (dop:deathDate)--> date | --chairman^ (doo:chairman)--> Resource | --regent^ (dop:regent)--> Resource
+subgraph_id: 639
+relationships:
+  - office holder --dop:deathPlace--> city
+  - road --doo:location--> city
+  - station --doo:servingRailwayLine--> road

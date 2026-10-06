@@ -1,0 +1,77 @@
+types:
+  dam: doo:Dam
+  Location: doo:Location
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Turkey: (capital^='http://dbpedia.org/resource/Ankara')
+    relationships:
+      - International_Association_of_South-East_European_Studies (dor:International_Association_of_South-East_European_Studies) --doo:foundedBy--> Turkey (dor:Turkey)
+      - 4_Eylül_Dam (<http://dbpedia.org/resource/4_Eylül_Dam>) --doo:location--> Turkey (dor:Turkey)
+  '2':
+    attributes:
+      Turkey: (capital^='http://dbpedia.org/resource/Ankara')
+    relationships:
+      - Removing_Barriers_Movement (dor:Removing_Barriers_Movement) --doo:foundedBy--> Turkey (dor:Turkey)
+      - 4_Eylül_Dam (<http://dbpedia.org/resource/4_Eylül_Dam>) --doo:location--> Turkey (dor:Turkey)
+  '3':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - '@Cafe (<http://dbpedia.org/resource/@Cafe>) --doo:foundedBy--> United_States (dor:United_States)'
+      - Aberdeen_Lake_(Mississippi) (<http://dbpedia.org/resource/Aberdeen_Lake_(Mississippi)>) --doo:location--> United_States (dor:United_States)
+  '4':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - BCFS_Health_and_Human_Services (dor:BCFS_Health_and_Human_Services) --doo:foundedBy--> United_States (dor:United_States)
+      - Aberdeen_Lake_(Mississippi) (<http://dbpedia.org/resource/Aberdeen_Lake_(Mississippi)>) --doo:location--> United_States (dor:United_States)
+  '5':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - Black_Alliance_for_Peace (dor:Black_Alliance_for_Peace) --doo:foundedBy--> United_States (dor:United_States)
+      - Aberdeen_Lake_(Mississippi) (<http://dbpedia.org/resource/Aberdeen_Lake_(Mississippi)>) --doo:location--> United_States (dor:United_States)
+  '6':
+    attributes:
+      Japan: (capital^='http://dbpedia.org/resource/Tokyo')
+    relationships:
+      - Asia-Japan_Women's_Resource_Center (<http://dbpedia.org/resource/Asia-Japan_Women's_Resource_Center>) --doo:foundedBy--> Japan (dor:Japan)
+      - Aburagi_Dam (dor:Aburagi_Dam) --doo:location--> Japan (dor:Japan)
+  '7':
+    attributes:
+      Japan: (capital^='http://dbpedia.org/resource/Tokyo')
+    relationships:
+      - Asia-Japan_Women's_Resource_Center (<http://dbpedia.org/resource/Asia-Japan_Women's_Resource_Center>) --doo:foundedBy--> Japan (dor:Japan)
+      - Aburumagawa_Dam (dor:Aburumagawa_Dam) --doo:location--> Japan (dor:Japan)
+  '8':
+    attributes:
+      Massachusetts: (capital^='http://dbpedia.org/resource/Boston')
+    relationships:
+      - New_England_Historic_Genealogical_Society (dor:New_England_Historic_Genealogical_Society) --doo:foundedBy--> Massachusetts (dor:Massachusetts)
+      - Accord_Pond (dor:Accord_Pond) --doo:location--> Massachusetts (dor:Massachusetts)
+  '9':
+    attributes:
+      Japan: (capital^='http://dbpedia.org/resource/Tokyo')
+    relationships:
+      - Asia-Japan_Women's_Resource_Center (<http://dbpedia.org/resource/Asia-Japan_Women's_Resource_Center>) --doo:foundedBy--> Japan (dor:Japan)
+      - Achibake_Dam (dor:Achibake_Dam) --doo:location--> Japan (dor:Japan)
+  '10':
+    attributes:
+      Turkey: (capital^='http://dbpedia.org/resource/Ankara')
+    relationships:
+      - International_Association_of_South-East_European_Studies (dor:International_Association_of_South-East_European_Studies) --doo:foundedBy--> Turkey (dor:Turkey)
+      - Adatepe_Dam (dor:Adatepe_Dam) --doo:location--> Turkey (dor:Turkey)
+attributes:
+  Location: --Aug low F^ (dop:augLowF)--> double | --capital^ (doo:capital)--> Resource | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --Apr low F^ (dop:aprLowF)--> double | --url^ (dop:url)--> langString | --discoverer^ (doo:discoverer)--> Resource | --Aug high F^ (dop:augHighF)--> double | --access-date^ (dop:accessDate)--> date | --operator^ (dop:operator)--> langString | --image width^ (dop:imageWidth)--> int
+  organisation: --2p^ (dop:2p)--> int
+subgraph_id: 110
+relationships:
+  - organisation --doo:foundedBy--> Location
+  - dam --doo:location--> Location

@@ -1,0 +1,80 @@
+types:
+  song: doo:Song
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Gloria_Estefan: (genre^='http://dbpedia.org/resource/Dance-pop', active years start year^='1975')
+    relationships:
+      - ¡Sí_Señor!... (<http://dbpedia.org/resource/¡Sí_Señor!...>) --dop:genre--> Son_cubano (dor:Son_cubano)
+      - ¡Sí_Señor!... (<http://dbpedia.org/resource/¡Sí_Señor!...>) --dop:artist--> Gloria_Estefan (dor:Gloria_Estefan)
+  '2':
+    attributes:
+      Thalía: (genre^='http://dbpedia.org/resource/Latin_pop', active years start year^='1981')
+    relationships:
+      - ¿A_quién_le_importa%3F (<http://dbpedia.org/resource/¿A_quién_le_importa%3F>) --dop:genre--> Dance-pop (dor:Dance-pop)
+      - ¿A_quién_le_importa%3F (<http://dbpedia.org/resource/¿A_quién_le_importa%3F>) --dop:artist--> Thalía (<http://dbpedia.org/resource/Thalía>)
+  '3':
+    attributes:
+      Thalía: (genre^='http://dbpedia.org/resource/Latin_pop', active years start year^='1981')
+    relationships:
+      - ¿A_quién_le_importa%3F (<http://dbpedia.org/resource/¿A_quién_le_importa%3F>) --dop:genre--> Hi-NRG (dor:Hi-NRG)
+      - ¿A_quién_le_importa%3F (<http://dbpedia.org/resource/¿A_quién_le_importa%3F>) --dop:artist--> Thalía (<http://dbpedia.org/resource/Thalía>)
+  '4':
+    attributes:
+      Thalía: (genre^='http://dbpedia.org/resource/Latin_pop', active years start year^='1981')
+    relationships:
+      - ¿A_quién_le_importa%3F (<http://dbpedia.org/resource/¿A_quién_le_importa%3F>) --dop:genre--> Latin_house (dor:Latin_house)
+      - ¿A_quién_le_importa%3F (<http://dbpedia.org/resource/¿A_quién_le_importa%3F>) --dop:artist--> Thalía (<http://dbpedia.org/resource/Thalía>)
+  '5':
+    attributes:
+      Latin_ballad: (instrument^='http://dbpedia.org/resource/Guitar')
+      José_Feliciano: (genre^='http://dbpedia.org/resource/Bolero', active years start year^='1962')
+    relationships:
+      - ¿Por_Qué_Te_Tengo_Que_Olvidar%3F (<http://dbpedia.org/resource/¿Por_Qué_Te_Tengo_Que_Olvidar%3F>) --dop:genre--> Latin_ballad (dor:Latin_ballad)
+      - ¿Por_Qué_Te_Tengo_Que_Olvidar%3F (<http://dbpedia.org/resource/¿Por_Qué_Te_Tengo_Que_Olvidar%3F>) --dop:artist--> José_Feliciano (<http://dbpedia.org/resource/José_Feliciano>)
+  '6':
+    attributes:
+      José_Feliciano: (genre^='http://dbpedia.org/resource/Bolero', active years start year^='1962')
+    relationships:
+      - ¿Por_Qué_Te_Tengo_Que_Olvidar%3F (<http://dbpedia.org/resource/¿Por_Qué_Te_Tengo_Que_Olvidar%3F>) --dop:genre--> Latin_pop (dor:Latin_pop)
+      - ¿Por_Qué_Te_Tengo_Que_Olvidar%3F (<http://dbpedia.org/resource/¿Por_Qué_Te_Tengo_Que_Olvidar%3F>) --dop:artist--> José_Feliciano (<http://dbpedia.org/resource/José_Feliciano>)
+  '7':
+    attributes:
+      Kany_García: (genre^='http://dbpedia.org/resource/Latin_pop', active years start year^='2006')
+    relationships:
+      - ¿Qué_Nos_Pasó%3F (<http://dbpedia.org/resource/¿Qué_Nos_Pasó%3F>) --dop:genre--> Latin_pop (dor:Latin_pop)
+      - ¿Qué_Nos_Pasó%3F (<http://dbpedia.org/resource/¿Qué_Nos_Pasó%3F>) --dop:artist--> Kany_García (<http://dbpedia.org/resource/Kany_García>)
+  '8':
+    attributes:
+      Daddy_Yankee: (active years start year^='1990')
+    relationships:
+      - ¿Qué_Tengo_Que_Hacer%3F (<http://dbpedia.org/resource/¿Qué_Tengo_Que_Hacer%3F>) --dop:genre--> Merengue_music (dor:Merengue_music)
+      - ¿Qué_Tengo_Que_Hacer%3F (<http://dbpedia.org/resource/¿Qué_Tengo_Que_Hacer%3F>) --dop:artist--> Daddy_Yankee (dor:Daddy_Yankee)
+  '9':
+    attributes:
+      Reggaeton: (instrument^='http://dbpedia.org/resource/Dembow')
+      Daddy_Yankee: (active years start year^='1990')
+    relationships:
+      - ¿Qué_Tengo_Que_Hacer%3F (<http://dbpedia.org/resource/¿Qué_Tengo_Que_Hacer%3F>) --dop:genre--> Reggaeton (dor:Reggaeton)
+      - ¿Qué_Tengo_Que_Hacer%3F (<http://dbpedia.org/resource/¿Qué_Tengo_Que_Hacer%3F>) --dop:artist--> Daddy_Yankee (dor:Daddy_Yankee)
+  '10':
+    attributes:
+      David_Bisbal: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1', active years start year^='2001')
+    relationships:
+      - ¿Quién_Me_Iba_a_Decir%3F (<http://dbpedia.org/resource/¿Quién_Me_Iba_a_Decir%3F>) --dop:genre--> Latin_music_(genre) (<http://dbpedia.org/resource/Latin_music_(genre)>)
+      - ¿Quién_Me_Iba_a_Decir%3F (<http://dbpedia.org/resource/¿Quién_Me_Iba_a_Decir%3F>) --dop:artist--> David_Bisbal (dor:David_Bisbal)
+attributes:
+  song: --bot^ (dop:bot)--> langString | --all lyrics^ (dop:allLyrics)--> langString
+  music genre: --quote (dop:quote)--> langString | --instrument^ (doo:instrument)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+  musical artist: --aliases^ (dop:aliases)--> langString | --death date^ (dop:deathDate)--> date | --wordnet_type (dop:wordnet_type)--> Resource | --genre^ (doo:genre)--> Resource | --active years start year^ (doo:activeYearsStartYear)--> gYear
+subgraph_id: 83
+relationships:
+  - song --dop:genre--> music genre
+  - song --dop:artist--> musical artist

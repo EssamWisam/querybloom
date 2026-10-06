@@ -1,0 +1,118 @@
+types:
+  book: doo:Book
+  company: doo:Company
+  music genre: doo:MusicGenre
+  philosopher: doo:Philosopher
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Fuuse: (logo^='Fuuse Official Logo.jpg')
+      A_Short_History_of_Decay_(book): (author^='http://dbpedia.org/resource/Emil_Cioran')
+    relationships:
+      - Fuuse (dor:Fuuse) --dop:industry--> Music (dor:Music)
+      - America's_War_on_Abortion (<http://dbpedia.org/resource/America's_War_on_Abortion>) --doo:distributor--> Fuuse (dor:Fuuse)
+      - Emil_Cioran (dor:Emil_Cioran) --doo:mainInterest--> Music (dor:Music)
+      - A_Short_History_of_Decay_(book) (<http://dbpedia.org/resource/A_Short_History_of_Decay_(book)>) --dop:author--> Emil_Cioran (dor:Emil_Cioran)
+  '2':
+    attributes:
+      Fuuse: (logo^='Fuuse Official Logo.jpg')
+      A_Short_History_of_Decay_(book): (author^='http://dbpedia.org/resource/Emil_Cioran')
+    relationships:
+      - Fuuse (dor:Fuuse) --dop:industry--> Music (dor:Music)
+      - Banaz:_A_Love_Story (<http://dbpedia.org/resource/Banaz:_A_Love_Story>) --doo:distributor--> Fuuse (dor:Fuuse)
+      - Emil_Cioran (dor:Emil_Cioran) --doo:mainInterest--> Music (dor:Music)
+      - A_Short_History_of_Decay_(book) (<http://dbpedia.org/resource/A_Short_History_of_Decay_(book)>) --dop:author--> Emil_Cioran (dor:Emil_Cioran)
+  '3':
+    attributes:
+      Fuuse: (logo^='Fuuse Official Logo.jpg')
+      A_Short_History_of_Decay_(book): (author^='http://dbpedia.org/resource/Emil_Cioran')
+    relationships:
+      - Fuuse (dor:Fuuse) --dop:industry--> Music (dor:Music)
+      - Behind_the_Rage:_America’s_Domestic_Violence (<http://dbpedia.org/resource/Behind_the_Rage:_America’s_Domestic_Violence>) --doo:distributor--> Fuuse (dor:Fuuse)
+      - Emil_Cioran (dor:Emil_Cioran) --doo:mainInterest--> Music (dor:Music)
+      - A_Short_History_of_Decay_(book) (<http://dbpedia.org/resource/A_Short_History_of_Decay_(book)>) --dop:author--> Emil_Cioran (dor:Emil_Cioran)
+  '4':
+    attributes:
+      ALTBalaji: (logo^='Altbalaji Logo.svg')
+      Aesthetic_Theory: (author^='http://dbpedia.org/resource/Theodor_W._Adorno')
+      Apharan_(web_series): (writer^='Dialogues')
+    relationships:
+      - ALTBalaji (dor:ALTBalaji) --dop:industry--> Mass_media (dor:Mass_media)
+      - Apharan_(web_series) (<http://dbpedia.org/resource/Apharan_(web_series)>) --doo:distributor--> ALTBalaji (dor:ALTBalaji)
+      - Theodor_W._Adorno (dor:Theodor_W._Adorno) --doo:mainInterest--> Mass_media (dor:Mass_media)
+      - Aesthetic_Theory (dor:Aesthetic_Theory) --dop:author--> Theodor_W._Adorno (dor:Theodor_W._Adorno)
+  '5':
+    attributes:
+      ALTBalaji: (logo^='Altbalaji Logo.svg')
+      Aesthetic_Theory: (author^='http://dbpedia.org/resource/Theodor_W._Adorno')
+      Baarish_(web_series): (writer^='Aayush Agrawal')
+    relationships:
+      - ALTBalaji (dor:ALTBalaji) --dop:industry--> Mass_media (dor:Mass_media)
+      - Baarish_(web_series) (<http://dbpedia.org/resource/Baarish_(web_series)>) --doo:distributor--> ALTBalaji (dor:ALTBalaji)
+      - Theodor_W._Adorno (dor:Theodor_W._Adorno) --doo:mainInterest--> Mass_media (dor:Mass_media)
+      - Aesthetic_Theory (dor:Aesthetic_Theory) --dop:author--> Theodor_W._Adorno (dor:Theodor_W._Adorno)
+  '6':
+    attributes:
+      ALTBalaji: (logo^='Altbalaji Logo.svg')
+      Baby_Come_Naa: (writer^='Screenplay and Dialogues')
+      Aesthetic_Theory: (author^='http://dbpedia.org/resource/Theodor_W._Adorno')
+    relationships:
+      - ALTBalaji (dor:ALTBalaji) --dop:industry--> Mass_media (dor:Mass_media)
+      - Baby_Come_Naa (dor:Baby_Come_Naa) --doo:distributor--> ALTBalaji (dor:ALTBalaji)
+      - Theodor_W._Adorno (dor:Theodor_W._Adorno) --doo:mainInterest--> Mass_media (dor:Mass_media)
+      - Aesthetic_Theory (dor:Aesthetic_Theory) --dop:author--> Theodor_W._Adorno (dor:Theodor_W._Adorno)
+  '7':
+    attributes:
+      20th_Century_Studios: (logo^='20')
+      Bela_Tarr,_the_Time_After: (author^='http://dbpedia.org/resource/Jacques_Rancière')
+    relationships:
+      - 20th_Century_Studios (dor:20th_Century_Studios) --dop:industry--> Film_industry (dor:Film_industry)
+      - Ice_Age:_Scrat_Tales (<http://dbpedia.org/resource/Ice_Age:_Scrat_Tales>) --doo:distributor--> 20th_Century_Studios (dor:20th_Century_Studios)
+      - Jacques_Rancière (<http://dbpedia.org/resource/Jacques_Rancière>) --doo:mainInterest--> Film_industry (dor:Film_industry)
+      - Bela_Tarr,_the_Time_After (<http://dbpedia.org/resource/Bela_Tarr,_the_Time_After>) --dop:author--> Jacques_Rancière (<http://dbpedia.org/resource/Jacques_Rancière>)
+  '8':
+    attributes:
+      AGC_Studios: (logo^='AGC Studios logo.jpg')
+      Bela_Tarr,_the_Time_After: (author^='http://dbpedia.org/resource/Jacques_Rancière')
+      War_of_the_Worlds_(2019_TV_series): (writer^='20')
+    relationships:
+      - AGC_Studios (dor:AGC_Studios) --dop:industry--> Film_industry (dor:Film_industry)
+      - War_of_the_Worlds_(2019_TV_series) (<http://dbpedia.org/resource/War_of_the_Worlds_(2019_TV_series)>) --doo:distributor--> AGC_Studios (dor:AGC_Studios)
+      - Jacques_Rancière (<http://dbpedia.org/resource/Jacques_Rancière>) --doo:mainInterest--> Film_industry (dor:Film_industry)
+      - Bela_Tarr,_the_Time_After (<http://dbpedia.org/resource/Bela_Tarr,_the_Time_After>) --dop:author--> Jacques_Rancière (<http://dbpedia.org/resource/Jacques_Rancière>)
+  '9':
+    attributes:
+      Broadway_Worldwide: (logo^='BROADWAYWORLDWIDELOGO.png')
+      Bela_Tarr,_the_Time_After: (author^='http://dbpedia.org/resource/Jacques_Rancière')
+    relationships:
+      - Broadway_Worldwide (dor:Broadway_Worldwide) --dop:industry--> Film_industry (dor:Film_industry)
+      - Jekyll_&_Hyde:_Direct_from_Broadway (<http://dbpedia.org/resource/Jekyll_&_Hyde:_Direct_from_Broadway>) --doo:distributor--> Broadway_Worldwide (dor:Broadway_Worldwide)
+      - Jacques_Rancière (<http://dbpedia.org/resource/Jacques_Rancière>) --doo:mainInterest--> Film_industry (dor:Film_industry)
+      - Bela_Tarr,_the_Time_After (<http://dbpedia.org/resource/Bela_Tarr,_the_Time_After>) --dop:author--> Jacques_Rancière (<http://dbpedia.org/resource/Jacques_Rancière>)
+  '10':
+    attributes:
+      Third_Productions: (logo^='Third productions logo.jpg')
+      Lucidity_(web_series): (writer^='Sean Oliver and Danny Torgersen')
+      In_the_Shadow_of_the_Silent_Majorities: (author^='http://dbpedia.org/resource/Jean_Baudrillard')
+    relationships:
+      - Third_Productions (dor:Third_Productions) --dop:industry--> Art (dor:Art)
+      - Lucidity_(web_series) (<http://dbpedia.org/resource/Lucidity_(web_series)>) --doo:distributor--> Third_Productions (dor:Third_Productions)
+      - Jean_Baudrillard (dor:Jean_Baudrillard) --doo:mainInterest--> Art (dor:Art)
+      - In_the_Shadow_of_the_Silent_Majorities (dor:In_the_Shadow_of_the_Silent_Majorities) --dop:author--> Jean_Baudrillard (dor:Jean_Baudrillard)
+attributes:
+  book: --quote^ (dop:quote)--> langString | --IMDB id^ (doo:imdbId)--> string | --author^ (doo:author)--> Resource
+  company: --formation date^ (doo:formationDate)--> date | --logo^ (dop:logo)--> Resource
+  music genre: --1pp^ (dop:1pp)--> int
+  television show: --writer^ (dop:writer)--> langString | --related^ (doo:related)--> Resource | --extra^ (dop:extra)--> langString | --subsequent work^ (doo:subsequentWork)--> Resource | --date^ (dop:date)--> date
+subgraph_id: 635
+relationships:
+  - company --dop:industry--> music genre
+  - television show --doo:distributor--> company
+  - philosopher --doo:mainInterest--> music genre
+  - book --dop:author--> philosopher

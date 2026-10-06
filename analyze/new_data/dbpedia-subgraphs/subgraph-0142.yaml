@@ -1,0 +1,76 @@
+types:
+  person: doo:Person
+  artwork: doo:Artwork
+  country: doo:Country
+  television show: doo:TelevisionShow
+  historic building: doo:HistoricBuilding
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adrian_(TV_series): (executive producer^='http://dbpedia.org/resource/Claudia_Mori')
+      Gian_Lorenzo_Bernini: (birth date^='1598-12-07')
+    relationships:
+      - Sant'Andrea_al_Quirinale (<http://dbpedia.org/resource/Sant'Andrea_al_Quirinale>) --doo:architect--> Gian_Lorenzo_Bernini (dor:Gian_Lorenzo_Bernini)
+      - Sant'Andrea_al_Quirinale (<http://dbpedia.org/resource/Sant'Andrea_al_Quirinale>) --doo:country--> Italy (dor:Italy)
+      - A_Faun_Teased_by_Children (dor:A_Faun_Teased_by_Children) --doo:author--> Gian_Lorenzo_Bernini (dor:Gian_Lorenzo_Bernini)
+      - Adrian_(TV_series) (<http://dbpedia.org/resource/Adrian_(TV_series)>) --doo:language--> Italy (dor:Italy)
+  '2':
+    attributes:
+      Italy: (width='126', anthem^='http://dbpedia.org/resource/Il_Canto_degli_Italiani')
+      Alex_&_Co.: (subsequent work^='http://dbpedia.org/resource/Penny_on_M.A.R.S.')
+      Gian_Lorenzo_Bernini: (birth date^='1598-12-07')
+    relationships:
+      - Sant'Andrea_al_Quirinale (<http://dbpedia.org/resource/Sant'Andrea_al_Quirinale>) --doo:architect--> Gian_Lorenzo_Bernini (dor:Gian_Lorenzo_Bernini)
+      - Sant'Andrea_al_Quirinale (<http://dbpedia.org/resource/Sant'Andrea_al_Quirinale>) --doo:country--> Italy (dor:Italy)
+      - A_Faun_Teased_by_Children (dor:A_Faun_Teased_by_Children) --doo:author--> Gian_Lorenzo_Bernini (dor:Gian_Lorenzo_Bernini)
+      - Alex_&_Co. (<http://dbpedia.org/resource/Alex_&_Co.>) --doo:language--> Italy (dor:Italy)
+  '3':
+    attributes:
+      Italy: (width='126', anthem^='http://dbpedia.org/resource/Il_Canto_degli_Italiani')
+      Gian_Lorenzo_Bernini: (birth date^='1598-12-07')
+    relationships:
+      - Sant'Andrea_al_Quirinale (<http://dbpedia.org/resource/Sant'Andrea_al_Quirinale>) --doo:architect--> Gian_Lorenzo_Bernini (dor:Gian_Lorenzo_Bernini)
+      - Sant'Andrea_al_Quirinale (<http://dbpedia.org/resource/Sant'Andrea_al_Quirinale>) --doo:country--> Italy (dor:Italy)
+      - A_Faun_Teased_by_Children (dor:A_Faun_Teased_by_Children) --doo:author--> Gian_Lorenzo_Bernini (dor:Gian_Lorenzo_Bernini)
+      - Arsène_Lupin_(TV_series) (<http://dbpedia.org/resource/Arsène_Lupin_(TV_series)>) --doo:language--> Italy (dor:Italy)
+  '4':
+    attributes:
+      Mattia_Preti: (birth date^='1613-02-24')
+    relationships:
+      - Sarria_Church (dor:Sarria_Church) --doo:architect--> Mattia_Preti (dor:Mattia_Preti)
+      - Sarria_Church (dor:Sarria_Church) --doo:country--> Malta (dor:Malta)
+      - Judith_and_Holofernes_(Preti) (<http://dbpedia.org/resource/Judith_and_Holofernes_(Preti)>) --doo:author--> Mattia_Preti (dor:Mattia_Preti)
+      - Deal_or_No_Deal_(Maltese_game_show) (<http://dbpedia.org/resource/Deal_or_No_Deal_(Maltese_game_show)>) --doo:language--> Malta (dor:Malta)
+  '5':
+    attributes:
+      Malta: (width='80.0')
+      Mattia_Preti: (birth date^='1613-02-24')
+    relationships:
+      - Sarria_Church (dor:Sarria_Church) --doo:architect--> Mattia_Preti (dor:Mattia_Preti)
+      - Sarria_Church (dor:Sarria_Church) --doo:country--> Malta (dor:Malta)
+      - Judith_and_Holofernes_(Preti) (<http://dbpedia.org/resource/Judith_and_Holofernes_(Preti)>) --doo:author--> Mattia_Preti (dor:Mattia_Preti)
+      - Xarabank (dor:Xarabank) --doo:language--> Malta (dor:Malta)
+  '6':
+    attributes:
+      Malta: (width='80.0')
+      Mattia_Preti: (birth date^='1613-02-24')
+    relationships:
+      - Sarria_Church (dor:Sarria_Church) --doo:architect--> Mattia_Preti (dor:Mattia_Preti)
+      - Sarria_Church (dor:Sarria_Church) --doo:country--> Malta (dor:Malta)
+      - Plato_and_Diogenes_(Preti) (<http://dbpedia.org/resource/Plato_and_Diogenes_(Preti)>) --doo:author--> Mattia_Preti (dor:Mattia_Preti)
+      - Deal_or_No_Deal_(Maltese_game_show) (<http://dbpedia.org/resource/Deal_or_No_Deal_(Maltese_game_show)>) --doo:language--> Malta (dor:Malta)
+attributes:
+  person: --cname^ (dop:cname)--> langString | --birth date^ (doo:birthDate)--> date | --by^ (dop:by)--> langString | --family^ (dop:family)--> Resource | --education^ (doo:education)--> Resource
+  country: --original name^ (doo:originalName)--> langString | --city^ (dop:city)--> langString | --width (dop:width)--> int | --anthem^ (doo:anthem)--> Resource
+  television show: --executive producer^ (doo:executiveProducer)--> Resource | --d^ (dop:d)--> langString | --subsequent work^ (doo:subsequentWork)--> Resource
+subgraph_id: 142
+relationships:
+  - historic building --doo:architect--> person
+  - historic building --doo:country--> country
+  - artwork --doo:author--> person
+  - television show --doo:language--> country

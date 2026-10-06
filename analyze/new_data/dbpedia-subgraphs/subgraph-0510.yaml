@@ -1,0 +1,128 @@
+types:
+  venue: doo:Venue
+  person: doo:Person
+  Location: doo:Location
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Indianapolis: (subdivision^='http://dbpedia.org/resource/Center_Township,_Marion_County,_Indiana')
+      Indianapolis_Capitols: (league^='http://dbpedia.org/resource/Atlantic_Coast_Football_League')
+    relationships:
+      - Bart_Peterson (dor:Bart_Peterson) --doo:residence--> Indianapolis (dor:Indianapolis)
+      - Kurt_Vonnegut_Sr. (<http://dbpedia.org/resource/Kurt_Vonnegut_Sr.>) --dop:birthPlace--> Indianapolis (dor:Indianapolis)
+      - Anderson_Bank_Building (dor:Anderson_Bank_Building) --doo:architect--> Kurt_Vonnegut_Sr. (<http://dbpedia.org/resource/Kurt_Vonnegut_Sr.>)
+      - Bush_Stadium__Bush_Stadium__1 (dor:Bush_Stadium__Bush_Stadium__1) --doo:owner--> Indianapolis (dor:Indianapolis)
+      - Bush_Stadium__Bush_Stadium__1 (dor:Bush_Stadium__Bush_Stadium__1) --doo:tenant--> Indianapolis_Capitols (dor:Indianapolis_Capitols)
+  '2':
+    attributes:
+      Indy_Eleven: (league^='http://dbpedia.org/resource/USL_Championship')
+    relationships:
+      - Bart_Peterson (dor:Bart_Peterson) --doo:residence--> Indiana (dor:Indiana)
+      - Kurt_Vonnegut_Sr. (<http://dbpedia.org/resource/Kurt_Vonnegut_Sr.>) --dop:birthPlace--> Indiana (dor:Indiana)
+      - Anderson_Bank_Building (dor:Anderson_Bank_Building) --doo:architect--> Kurt_Vonnegut_Sr. (<http://dbpedia.org/resource/Kurt_Vonnegut_Sr.>)
+      - Eleven_Park (dor:Eleven_Park) --doo:owner--> Indiana (dor:Indiana)
+      - Eleven_Park (dor:Eleven_Park) --doo:tenant--> Indy_Eleven (dor:Indy_Eleven)
+  '3':
+    attributes:
+      Indianapolis: (subdivision^='http://dbpedia.org/resource/Center_Township,_Marion_County,_Indiana')
+    relationships:
+      - Bart_Peterson (dor:Bart_Peterson) --doo:residence--> Indianapolis (dor:Indianapolis)
+      - Kurt_Vonnegut_Sr. (<http://dbpedia.org/resource/Kurt_Vonnegut_Sr.>) --dop:birthPlace--> Indianapolis (dor:Indianapolis)
+      - Anderson_Bank_Building (dor:Anderson_Bank_Building) --doo:architect--> Kurt_Vonnegut_Sr. (<http://dbpedia.org/resource/Kurt_Vonnegut_Sr.>)
+      - Gainbridge_Fieldhouse (dor:Gainbridge_Fieldhouse) --doo:owner--> Indianapolis (dor:Indianapolis)
+      - Gainbridge_Fieldhouse (dor:Gainbridge_Fieldhouse) --doo:tenant--> Indiana_Fever (dor:Indiana_Fever)
+  '4':
+    attributes:
+      St._Louis: (subdivision^='http://dbpedia.org/resource/Greater_St._Louis')
+    relationships:
+      - Fred_Pestello (dor:Fred_Pestello) --doo:residence--> St._Louis (dor:St._Louis)
+      - William_B._Ittner (dor:William_B._Ittner) --dop:birthPlace--> St._Louis (dor:St._Louis)
+      - Central_Visual_and_Performing_Arts_High_School__Central_High_School__1 (dor:Central_Visual_and_Performing_Arts_High_School__Central_High_School__1) --doo:architect--> William_B._Ittner (dor:William_B._Ittner)
+      - St._Louis_Arena (dor:St._Louis_Arena) --doo:owner--> St._Louis (dor:St._Louis)
+      - St._Louis_Arena (dor:St._Louis_Arena) --doo:tenant--> Spirits_of_St._Louis (dor:Spirits_of_St._Louis)
+  '5':
+    attributes:
+      St._Louis: (subdivision^='http://dbpedia.org/resource/Greater_St._Louis')
+    relationships:
+      - Fred_Pestello (dor:Fred_Pestello) --doo:residence--> St._Louis (dor:St._Louis)
+      - William_B._Ittner (dor:William_B._Ittner) --dop:birthPlace--> St._Louis (dor:St._Louis)
+      - Central_Visual_and_Performing_Arts_High_School__Central_High_School__1 (dor:Central_Visual_and_Performing_Arts_High_School__Central_High_School__1) --doo:architect--> William_B._Ittner (dor:William_B._Ittner)
+      - St._Louis_Arena (dor:St._Louis_Arena) --doo:owner--> St._Louis (dor:St._Louis)
+      - St._Louis_Arena (dor:St._Louis_Arena) --doo:tenant--> St._Louis_Ambush_(NPSL) (<http://dbpedia.org/resource/St._Louis_Ambush_(NPSL)>)
+  '6':
+    attributes:
+      St._Louis: (subdivision^='http://dbpedia.org/resource/Greater_St._Louis')
+    relationships:
+      - Fred_Pestello (dor:Fred_Pestello) --doo:residence--> St._Louis (dor:St._Louis)
+      - William_B._Ittner (dor:William_B._Ittner) --dop:birthPlace--> St._Louis (dor:St._Louis)
+      - Central_Visual_and_Performing_Arts_High_School__Central_High_School__1 (dor:Central_Visual_and_Performing_Arts_High_School__Central_High_School__1) --doo:architect--> William_B._Ittner (dor:William_B._Ittner)
+      - St._Louis_Arena (dor:St._Louis_Arena) --doo:owner--> St._Louis (dor:St._Louis)
+      - St._Louis_Arena (dor:St._Louis_Arena) --doo:tenant--> St._Louis_Bombers_(NBA) (<http://dbpedia.org/resource/St._Louis_Bombers_(NBA)>)
+  '7':
+    attributes:
+      Cleveland: (Apr sun^='216', subdivision^='http://dbpedia.org/resource/Cuyahoga_County,_Ohio')
+      Sherrod_Brown: (relation^='http://dbpedia.org/resource/Charlie_Brown_(West_Virginia_politician)')
+    relationships:
+      - Sherrod_Brown (dor:Sherrod_Brown) --doo:residence--> Cleveland (dor:Cleveland)
+      - Oscar_Ruffini (dor:Oscar_Ruffini) --dop:birthPlace--> Cleveland (dor:Cleveland)
+      - Concho_County_Courthouse (dor:Concho_County_Courthouse) --doo:architect--> Oscar_Ruffini (dor:Oscar_Ruffini)
+      - Cleveland_Stadium (dor:Cleveland_Stadium) --doo:owner--> Cleveland (dor:Cleveland)
+      - Cleveland_Stadium (dor:Cleveland_Stadium) --doo:tenant--> Cleveland_Browns (dor:Cleveland_Browns)
+  '8':
+    attributes:
+      Cleveland: (Apr sun^='216', subdivision^='http://dbpedia.org/resource/Cuyahoga_County,_Ohio')
+      Sherrod_Brown: (relation^='http://dbpedia.org/resource/Charlie_Brown_(West_Virginia_politician)')
+      Cleveland_Indians_(NFL_1931): (league^='http://dbpedia.org/resource/National_Football_League')
+    relationships:
+      - Sherrod_Brown (dor:Sherrod_Brown) --doo:residence--> Cleveland (dor:Cleveland)
+      - Oscar_Ruffini (dor:Oscar_Ruffini) --dop:birthPlace--> Cleveland (dor:Cleveland)
+      - Concho_County_Courthouse (dor:Concho_County_Courthouse) --doo:architect--> Oscar_Ruffini (dor:Oscar_Ruffini)
+      - Cleveland_Stadium (dor:Cleveland_Stadium) --doo:owner--> Cleveland (dor:Cleveland)
+      - Cleveland_Stadium (dor:Cleveland_Stadium) --doo:tenant--> Cleveland_Indians_(NFL_1931) (<http://dbpedia.org/resource/Cleveland_Indians_(NFL_1931)>)
+  '9':
+    attributes:
+      Cleveland: (Apr sun^='216', subdivision^='http://dbpedia.org/resource/Cuyahoga_County,_Ohio')
+      Sherrod_Brown: (relation^='http://dbpedia.org/resource/Charlie_Brown_(West_Virginia_politician)')
+      Cleveland_Rams: (league^='http://dbpedia.org/resource/American_Football_League_(1936)')
+    relationships:
+      - Sherrod_Brown (dor:Sherrod_Brown) --doo:residence--> Cleveland (dor:Cleveland)
+      - Oscar_Ruffini (dor:Oscar_Ruffini) --dop:birthPlace--> Cleveland (dor:Cleveland)
+      - Concho_County_Courthouse (dor:Concho_County_Courthouse) --doo:architect--> Oscar_Ruffini (dor:Oscar_Ruffini)
+      - Cleveland_Stadium (dor:Cleveland_Stadium) --doo:owner--> Cleveland (dor:Cleveland)
+      - Cleveland_Stadium (dor:Cleveland_Stadium) --doo:tenant--> Cleveland_Rams (dor:Cleveland_Rams)
+  '10':
+    attributes:
+      Norfolk,_Virginia: (subdivision^='http://dbpedia.org/resource/Independent_city_(United_States)')
+      Norfolk_Nighthawks: |-
+        (league^='af2 
+        * American Conference 
+        ** Eastern Division 
+        ** Atlantic Division')
+    relationships:
+      - Jerrauld_Jones (dor:Jerrauld_Jones) --doo:residence--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - William_Couper_(sculptor) (<http://dbpedia.org/resource/William_Couper_(sculptor)>) --dop:birthPlace--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - Elmwood_Cemetery_(Norfolk,_Virginia) (<http://dbpedia.org/resource/Elmwood_Cemetery_(Norfolk,_Virginia)>) --doo:architect--> William_Couper_(sculptor) (<http://dbpedia.org/resource/William_Couper_(sculptor)>)
+      - Norfolk_Scope (dor:Norfolk_Scope) --doo:owner--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - Norfolk_Scope (dor:Norfolk_Scope) --doo:tenant--> Norfolk_Nighthawks (dor:Norfolk_Nighthawks)
+attributes:
+  person: --relations^ (dop:relations)--> langString | --notable works^ (dop:notableWorks)--> int | --image^ (dop:image)--> langString
+  Location: --abolished^ (dop:abolished)--> int
+  settlement: --Aug high C^ (dop:augHighC)--> double | --Apr sun^ (dop:aprSun)--> int | --subdivision^ (doo:subdivision)--> Resource
+  soccer club: --league^ (dop:league)--> int
+  office holder: --differentFrom (wwoo:differentFrom)--> Resource | --relation^ (doo:relation)--> Resource
+subgraph_id: 510
+relationships:
+  - office holder --doo:residence--> settlement
+  - person --dop:birthPlace--> settlement
+  - Location --doo:architect--> person
+  - venue --doo:owner--> settlement
+  - venue --doo:tenant--> soccer club

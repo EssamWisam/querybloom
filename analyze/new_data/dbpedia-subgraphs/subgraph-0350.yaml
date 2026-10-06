@@ -1,0 +1,85 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  office holder: doo:OfficeHolder
+  tennis player: doo:TennisPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adriano_Espaillat: (title^='from the 31st district')
+    relationships:
+      - Anna_Tatishvili (dor:Anna_Tatishvili) --doo:residence--> New_York_City (dor:New_York_City)
+      - 115-119_Eighth_Avenue_(Brooklyn) (<http://dbpedia.org/resource/115-119_Eighth_Avenue_(Brooklyn)>) --doo:location--> New_York_City (dor:New_York_City)
+      - Adriano_Espaillat (dor:Adriano_Espaillat) --doo:residence--> New_York_City (dor:New_York_City)
+  '2':
+    attributes:
+      Adriano_Espaillat: (title^='from the 31st district')
+    relationships:
+      - Clark_Graebner (dor:Clark_Graebner) --doo:residence--> New_York_City (dor:New_York_City)
+      - 115-119_Eighth_Avenue_(Brooklyn) (<http://dbpedia.org/resource/115-119_Eighth_Avenue_(Brooklyn)>) --doo:location--> New_York_City (dor:New_York_City)
+      - Adriano_Espaillat (dor:Adriano_Espaillat) --doo:residence--> New_York_City (dor:New_York_City)
+  '3':
+    attributes:
+      Adriano_Espaillat: (title^='from the 31st district')
+    relationships:
+      - Ester_Goldfeld (dor:Ester_Goldfeld) --doo:residence--> New_York_City (dor:New_York_City)
+      - 115-119_Eighth_Avenue_(Brooklyn) (<http://dbpedia.org/resource/115-119_Eighth_Avenue_(Brooklyn)>) --doo:location--> New_York_City (dor:New_York_City)
+      - Adriano_Espaillat (dor:Adriano_Espaillat) --doo:residence--> New_York_City (dor:New_York_City)
+  '4':
+    attributes: {}
+    relationships:
+      - Chase_Buchanan (dor:Chase_Buchanan) --doo:residence--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - 120_S._Central_Avenue (dor:120_S._Central_Avenue) --doo:location--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - Charles_R._Saxbe (dor:Charles_R._Saxbe) --doo:residence--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+  '5':
+    attributes:
+      George_J._Karb: (title^='http://dbpedia.org/resource/List_of_Mayors_of_Columbus,_Ohio')
+    relationships:
+      - Chase_Buchanan (dor:Chase_Buchanan) --doo:residence--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - 120_S._Central_Avenue (dor:120_S._Central_Avenue) --doo:location--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - George_J._Karb (dor:George_J._Karb) --doo:residence--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+  '6':
+    attributes:
+      George_W._Meeker: (title^='http://dbpedia.org/resource/List_of_Mayors_of_Columbus,_Ohio')
+    relationships:
+      - Chase_Buchanan (dor:Chase_Buchanan) --doo:residence--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - 120_S._Central_Avenue (dor:120_S._Central_Avenue) --doo:location--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - George_W._Meeker (dor:George_W._Meeker) --doo:residence--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+  '7':
+    attributes: {}
+    relationships:
+      - Jeff_Borowiak (dor:Jeff_Borowiak) --doo:residence--> Seattle (dor:Seattle)
+      - 1411_Fourth_Avenue_Building (dor:1411_Fourth_Avenue_Building) --doo:location--> Seattle (dor:Seattle)
+      - Ana_Mari_Cauce (dor:Ana_Mari_Cauce) --doo:residence--> Seattle (dor:Seattle)
+  '8':
+    attributes: {}
+    relationships:
+      - Kelly_Evernden (dor:Kelly_Evernden) --doo:residence--> Seattle (dor:Seattle)
+      - 1411_Fourth_Avenue_Building (dor:1411_Fourth_Avenue_Building) --doo:location--> Seattle (dor:Seattle)
+      - Ana_Mari_Cauce (dor:Ana_Mari_Cauce) --doo:residence--> Seattle (dor:Seattle)
+  '9':
+    attributes: {}
+    relationships:
+      - Jeff_Borowiak (dor:Jeff_Borowiak) --doo:residence--> Seattle (dor:Seattle)
+      - 1411_Fourth_Avenue_Building (dor:1411_Fourth_Avenue_Building) --doo:location--> Seattle (dor:Seattle)
+      - Dow_Constantine (dor:Dow_Constantine) --doo:residence--> Seattle (dor:Seattle)
+  '10':
+    attributes: {}
+    relationships:
+      - Julia_Cohen__Julia_Cohen__1 (dor:Julia_Cohen__Julia_Cohen__1) --doo:residence--> Philadelphia (dor:Philadelphia)
+      - 1616_Walnut_Street_Building (dor:1616_Walnut_Street_Building) --doo:location--> Philadelphia (dor:Philadelphia)
+      - Benjamin_Ramos (dor:Benjamin_Ramos) --doo:residence--> Philadelphia (dor:Philadelphia)
+attributes:
+  city: --Apr low C^ (dop:aprLowC)--> int | --Apr record low F^ (dop:aprRecordLowF)--> langString
+  Location: --altname^ (dop:altname)--> langString | --capital^ (doo:capital)--> Resource | --mouth place^ (doo:mouthPlace)--> Resource | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --arc-text-colorB^ (dop:arcTextColorb)--> langString | --bgcolor^ (dop:bgcolor)--> langString
+  office holder: --title^ (dop:title)--> Resource | --issue^ (dop:issue)--> langString | --assembly^ (dop:assembly)--> langString
+subgraph_id: 350
+relationships:
+  - tennis player --doo:residence--> city
+  - Location --doo:location--> city
+  - office holder --doo:residence--> city

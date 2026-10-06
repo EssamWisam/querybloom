@@ -1,0 +1,96 @@
+types:
+  person: doo:Person
+  writer: doo:Writer
+  college: doo:College
+  scientist: doo:Scientist
+  politician: doo:Politician
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Adrian_Seligman: (caption^='Commander Adrian C. C. Seligman')
+      University_of_Cambridge: (caption^='http://dbpedia.org/resource/Coat_of_arms_of_the_University_of_Cambridge')
+      Alan_Howard_(nutritionist): (birth date^='1929-03-16')
+    relationships:
+      - Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>) --doo:isPartOf--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Adrian_Seligman (dor:Adrian_Seligman) --doo:almaMater--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Alan_Howard_(nutritionist) (<http://dbpedia.org/resource/Alan_Howard_(nutritionist)>) --doo:education--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+      - Alan_Howard_(nutritionist) (<http://dbpedia.org/resource/Alan_Howard_(nutritionist)>) --doo:almaMater--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+      - Richard_Bowring (dor:Richard_Bowring) --doo:institution--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+      - Aitzaz_Ahsan (dor:Aitzaz_Ahsan) --doo:almaMater--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+  '2':
+    attributes:
+      Alwyn_Hamilton: (caption^='Portrait of Alwyn Hamilton')
+      University_of_Cambridge: (caption^='http://dbpedia.org/resource/Coat_of_arms_of_the_University_of_Cambridge')
+      Alan_Howard_(nutritionist): (birth date^='1929-03-16')
+    relationships:
+      - Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>) --doo:isPartOf--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Alwyn_Hamilton (dor:Alwyn_Hamilton) --doo:almaMater--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Alan_Howard_(nutritionist) (<http://dbpedia.org/resource/Alan_Howard_(nutritionist)>) --doo:education--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+      - Alan_Howard_(nutritionist) (<http://dbpedia.org/resource/Alan_Howard_(nutritionist)>) --doo:almaMater--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+      - Richard_Bowring (dor:Richard_Bowring) --doo:institution--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+      - Aitzaz_Ahsan (dor:Aitzaz_Ahsan) --doo:almaMater--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+  '3':
+    attributes:
+      University_of_Cambridge: (caption^='http://dbpedia.org/resource/Coat_of_arms_of_the_University_of_Cambridge')
+      Alan_Howard_(nutritionist): (birth date^='1929-03-16')
+    relationships:
+      - Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>) --doo:isPartOf--> University_of_Cambridge (dor:University_of_Cambridge)
+      - André_Schiffrin (<http://dbpedia.org/resource/André_Schiffrin>) --doo:almaMater--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Alan_Howard_(nutritionist) (<http://dbpedia.org/resource/Alan_Howard_(nutritionist)>) --doo:education--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+      - Alan_Howard_(nutritionist) (<http://dbpedia.org/resource/Alan_Howard_(nutritionist)>) --doo:almaMater--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+      - Richard_Bowring (dor:Richard_Bowring) --doo:institution--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+      - Aitzaz_Ahsan (dor:Aitzaz_Ahsan) --doo:almaMater--> Downing_College,_Cambridge (<http://dbpedia.org/resource/Downing_College,_Cambridge>)
+  '4':
+    attributes:
+      Thomas_Johnes: (birth date^='1748-09-01')
+      University_of_Oxford: (direction^='horizontal', caption^='Lady Margaret Hall, founded in 1878')
+    relationships:
+      - Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>) --doo:isPartOf--> University_of_Oxford (dor:University_of_Oxford)
+      - Amanda_Coe (dor:Amanda_Coe) --doo:almaMater--> University_of_Oxford (dor:University_of_Oxford)
+      - Thomas_Johnes (dor:Thomas_Johnes) --doo:education--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+      - Thomas_Johnes (dor:Thomas_Johnes) --doo:almaMater--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+      - Basil_Gomez (dor:Basil_Gomez) --doo:institution--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+      - Alison_Foster (dor:Alison_Foster) --doo:almaMater--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+  '5':
+    attributes:
+      Amitav_Ghosh: (caption^='Ghosh in 2017')
+      Thomas_Johnes: (birth date^='1748-09-01')
+      University_of_Oxford: (direction^='horizontal', caption^='Lady Margaret Hall, founded in 1878')
+    relationships:
+      - Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>) --doo:isPartOf--> University_of_Oxford (dor:University_of_Oxford)
+      - Amitav_Ghosh (dor:Amitav_Ghosh) --doo:almaMater--> University_of_Oxford (dor:University_of_Oxford)
+      - Thomas_Johnes (dor:Thomas_Johnes) --doo:education--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+      - Thomas_Johnes (dor:Thomas_Johnes) --doo:almaMater--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+      - Basil_Gomez (dor:Basil_Gomez) --doo:institution--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+      - Alison_Foster (dor:Alison_Foster) --doo:almaMater--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+  '6':
+    attributes:
+      Thomas_Johnes: (birth date^='1748-09-01')
+      University_of_Oxford: (direction^='horizontal', caption^='Lady Margaret Hall, founded in 1878')
+    relationships:
+      - Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>) --doo:isPartOf--> University_of_Oxford (dor:University_of_Oxford)
+      - Andrew_Harvey_(religious_writer) (<http://dbpedia.org/resource/Andrew_Harvey_(religious_writer)>) --doo:almaMater--> University_of_Oxford (dor:University_of_Oxford)
+      - Thomas_Johnes (dor:Thomas_Johnes) --doo:education--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+      - Thomas_Johnes (dor:Thomas_Johnes) --doo:almaMater--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+      - Basil_Gomez (dor:Basil_Gomez) --doo:institution--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+      - Alison_Foster (dor:Alison_Foster) --doo:almaMater--> Jesus_College,_Oxford (<http://dbpedia.org/resource/Jesus_College,_Oxford>)
+attributes:
+  person: --relative^ (doo:relative)--> Resource | --differentFrom (wwoo:differentFrom)--> Resource | --birth date^ (dop:birthDate)--> int | --width^ (dop:width)--> int
+  writer: --caption^ (dop:caption)--> langString
+  politician: --honorific suffix^ (dop:honorificSuffix)--> langString
+  university: --direction^ (dop:direction)--> langString | --campus^ (doo:campus)--> Resource | --caption^ (dop:caption)--> langString
+subgraph_id: 880
+relationships:
+  - college --doo:isPartOf--> university
+  - writer --doo:almaMater--> university
+  - person --doo:education--> college
+  - person --doo:almaMater--> college
+  - scientist --doo:institution--> college
+  - politician --doo:almaMater--> college

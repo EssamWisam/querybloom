@@ -1,0 +1,89 @@
+types:
+  city: doo:City
+  town: doo:Town
+  Location: doo:Location
+  language: doo:Language
+  organisation: doo:Organisation
+  government agency: doo:GovernmentAgency
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Rangamati: (Apr high C^='33')
+      Bangladesh: (Wikipage page ID^='3454')
+      Bawm_language: (altname^='Banjogi')
+    relationships:
+      - Rangamati (dor:Rangamati) --dop:source--> Bangladesh_Meteorological_Department (dor:Bangladesh_Meteorological_Department)
+      - Bangladesh_Meteorological_Department (dor:Bangladesh_Meteorological_Department) --doo:headquarter--> Bangladesh (dor:Bangladesh)
+      - Bangladesh_Meteorological_Department (dor:Bangladesh_Meteorological_Department) --doo:headquarter--> Dhaka (dor:Dhaka)
+      - 10_Minute_School (dor:10_Minute_School) --dop:areaServed--> Bangladesh (dor:Bangladesh)
+      - Bawm_language (dor:Bawm_language) --doo:spokenIn--> Rangamati (dor:Rangamati)
+  '2':
+    attributes:
+      Rangamati: (Apr high C^='33')
+      Bangladesh: (Wikipage page ID^='3454')
+      Bawm_language: (altname^='Banjogi')
+    relationships:
+      - Rangamati (dor:Rangamati) --dop:source--> Bangladesh_Meteorological_Department (dor:Bangladesh_Meteorological_Department)
+      - Bangladesh_Meteorological_Department (dor:Bangladesh_Meteorological_Department) --doo:headquarter--> Bangladesh (dor:Bangladesh)
+      - Bangladesh_Meteorological_Department (dor:Bangladesh_Meteorological_Department) --doo:headquarter--> Dhaka (dor:Dhaka)
+      - A._F._Ferguson_&_Co. (<http://dbpedia.org/resource/A._F._Ferguson_&_Co.>) --dop:areaServed--> Bangladesh (dor:Bangladesh)
+      - Bawm_language (dor:Bawm_language) --doo:spokenIn--> Rangamati (dor:Rangamati)
+  '3':
+    attributes:
+      Rangamati: (Apr high C^='33')
+      Bangladesh: (Wikipage page ID^='3454')
+      Bawm_language: (altname^='Banjogi')
+    relationships:
+      - Rangamati (dor:Rangamati) --dop:source--> Bangladesh_Meteorological_Department (dor:Bangladesh_Meteorological_Department)
+      - Bangladesh_Meteorological_Department (dor:Bangladesh_Meteorological_Department) --doo:headquarter--> Bangladesh (dor:Bangladesh)
+      - Bangladesh_Meteorological_Department (dor:Bangladesh_Meteorological_Department) --doo:headquarter--> Dhaka (dor:Dhaka)
+      - AB_Bank (dor:AB_Bank) --dop:areaServed--> Bangladesh (dor:Bangladesh)
+      - Bawm_language (dor:Bawm_language) --doo:spokenIn--> Rangamati (dor:Rangamati)
+  '4':
+    attributes:
+      Japan: (Wikipage page ID^='15573', anthem^='http://dbpedia.org/resource/Kimigayo')
+      Sumita,_Iwate: (Apr record high C^='29.5', Apr high C^='14.7')
+    relationships:
+      - Sumita,_Iwate (<http://dbpedia.org/resource/Sumita,_Iwate>) --dop:source--> Japan_Meteorological_Agency (dor:Japan_Meteorological_Agency)
+      - Japan_Meteorological_Agency (dor:Japan_Meteorological_Agency) --doo:headquarter--> Japan (dor:Japan)
+      - Japan_Meteorological_Agency (dor:Japan_Meteorological_Agency) --doo:headquarter--> Minato,_Tokyo (<http://dbpedia.org/resource/Minato,_Tokyo>)
+      - 2_Cheap_Cars (dor:2_Cheap_Cars) --dop:areaServed--> Japan (dor:Japan)
+      - Kesen_dialect (dor:Kesen_dialect) --doo:spokenIn--> Sumita,_Iwate (<http://dbpedia.org/resource/Sumita,_Iwate>)
+  '5':
+    attributes:
+      Japan: (Wikipage page ID^='15573', anthem^='http://dbpedia.org/resource/Kimigayo')
+      Tokyo: (Aug precipitation mm^='114.7')
+      Sumita,_Iwate: (Apr record high C^='29.5', Apr high C^='14.7')
+    relationships:
+      - Sumita,_Iwate (<http://dbpedia.org/resource/Sumita,_Iwate>) --dop:source--> Japan_Meteorological_Agency (dor:Japan_Meteorological_Agency)
+      - Japan_Meteorological_Agency (dor:Japan_Meteorological_Agency) --doo:headquarter--> Japan (dor:Japan)
+      - Japan_Meteorological_Agency (dor:Japan_Meteorological_Agency) --doo:headquarter--> Tokyo (dor:Tokyo)
+      - 2_Cheap_Cars (dor:2_Cheap_Cars) --dop:areaServed--> Japan (dor:Japan)
+      - Kesen_dialect (dor:Kesen_dialect) --doo:spokenIn--> Sumita,_Iwate (<http://dbpedia.org/resource/Sumita,_Iwate>)
+  '6':
+    attributes:
+      Japan: (Wikipage page ID^='15573', anthem^='http://dbpedia.org/resource/Kimigayo')
+      Sumita,_Iwate: (Apr record high C^='29.5', Apr high C^='14.7')
+    relationships:
+      - Sumita,_Iwate (<http://dbpedia.org/resource/Sumita,_Iwate>) --dop:source--> Japan_Meteorological_Agency (dor:Japan_Meteorological_Agency)
+      - Japan_Meteorological_Agency (dor:Japan_Meteorological_Agency) --doo:headquarter--> Japan (dor:Japan)
+      - Japan_Meteorological_Agency (dor:Japan_Meteorological_Agency) --doo:headquarter--> Minato,_Tokyo (<http://dbpedia.org/resource/Minato,_Tokyo>)
+      - Agean_Cymbals (dor:Agean_Cymbals) --dop:areaServed--> Japan (dor:Japan)
+      - Kesen_dialect (dor:Kesen_dialect) --doo:spokenIn--> Sumita,_Iwate (<http://dbpedia.org/resource/Sumita,_Iwate>)
+attributes:
+  city: --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --Apr record low F^ (dop:aprRecordLowF)--> langString
+  town: --Apr record high C^ (dop:aprRecordHighC)--> double | --Apr high C^ (dop:aprHighC)--> int
+  Location: --partof^ (dop:partof)--> Resource | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --c^ (dop:c)--> langString | --area total km^ (dop:areaTotalKm)--> int | --Wikipage page ID^ (doo:wikiPageID)--> int | --anthem^ (doo:anthem)--> Resource
+  language: --reason^ (dop:reason)--> langString | --altname^ (dop:altname)--> langString
+subgraph_id: 968
+relationships:
+  - town --dop:source--> government agency
+  - government agency --doo:headquarter--> Location
+  - government agency --doo:headquarter--> city
+  - organisation --dop:areaServed--> Location
+  - language --doo:spokenIn--> town

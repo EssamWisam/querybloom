@@ -1,0 +1,58 @@
+types:
+  city: doo:City
+  country: doo:Country
+  gymnast: doo:Gymnast
+  settlement: doo:Settlement
+  military unit: doo:MilitaryUnit
+  military structure: doo:MilitaryStructure
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      London: (population total^='8799800', area total km^='1572.03')
+      England: (align^='left')
+      Royal_Air_Force: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Air_forces_in_Europe', url^='https://web.archive.org/web/20161221011431/http:/www.dtic.mil/get-tr-doc/pdf%3FAD=ADA450007')
+    relationships:
+      - Battle_of_Britain_Bunker (dor:Battle_of_Britain_Bunker) --dop:operator--> Royal_Air_Force (dor:Royal_Air_Force)
+      - Royal_Air_Force (dor:Royal_Air_Force) --doo:garrison--> London (dor:London)
+      - Royal_Air_Force (dor:Royal_Air_Force) --dop:garrison--> London (dor:London)
+      - London (dor:London) --doo:subdivision--> England (dor:England)
+      - Ellis_O'Reilly (<http://dbpedia.org/resource/Ellis_O'Reilly>) --doo:hometown--> London (dor:London)
+  '2':
+    attributes:
+      London: (population total^='8799800', area total km^='1572.03')
+      England: (align^='left')
+      Royal_Air_Force: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Air_forces_in_Europe', url^='https://web.archive.org/web/20161221011431/http:/www.dtic.mil/get-tr-doc/pdf%3FAD=ADA450007')
+    relationships:
+      - Bent_Rigg_radar_station (dor:Bent_Rigg_radar_station) --dop:operator--> Royal_Air_Force (dor:Royal_Air_Force)
+      - Royal_Air_Force (dor:Royal_Air_Force) --doo:garrison--> London (dor:London)
+      - Royal_Air_Force (dor:Royal_Air_Force) --dop:garrison--> London (dor:London)
+      - London (dor:London) --doo:subdivision--> England (dor:England)
+      - Ellis_O'Reilly (<http://dbpedia.org/resource/Ellis_O'Reilly>) --doo:hometown--> London (dor:London)
+  '3':
+    attributes:
+      London: (population total^='8799800', area total km^='1572.03')
+      England: (align^='left')
+      Royal_Air_Force: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Air_forces_in_Europe', url^='https://web.archive.org/web/20161221011431/http:/www.dtic.mil/get-tr-doc/pdf%3FAD=ADA450007')
+    relationships:
+      - Beverley_Aerodrome (dor:Beverley_Aerodrome) --dop:operator--> Royal_Air_Force (dor:Royal_Air_Force)
+      - Royal_Air_Force (dor:Royal_Air_Force) --doo:garrison--> London (dor:London)
+      - Royal_Air_Force (dor:Royal_Air_Force) --dop:garrison--> London (dor:London)
+      - London (dor:London) --doo:subdivision--> England (dor:England)
+      - Ellis_O'Reilly (<http://dbpedia.org/resource/Ellis_O'Reilly>) --doo:hometown--> London (dor:London)
+attributes:
+  city: --population total^ (doo:populationTotal)--> int | --bot^ (dop:bot)--> langString | --Apr record high C^ (dop:aprRecordHighC)--> int | --named for^ (dop:namedFor)--> Resource
+  country: --align^ (dop:align)--> langString
+  settlement: --district^ (doo:district)--> Resource | --id^ (dop:id)--> langString | --area total km^ (dop:areaTotalKm)--> double
+  military unit: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --reason^ (dop:reason)--> langString | --url^ (dop:url)--> Resource
+subgraph_id: 965
+relationships:
+  - military structure --dop:operator--> military unit
+  - military unit --doo:garrison--> settlement
+  - military unit --dop:garrison--> city
+  - settlement --doo:subdivision--> country
+  - gymnast --doo:hometown--> city

@@ -1,0 +1,99 @@
+types:
+  horse: doo:Horse
+  person: doo:Person
+  horse race: doo:HorseRace
+  horse trainer: doo:HorseTrainer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Buddy_Fogelson: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date')
+      Ack_Ack_(horse): (owner^='http://dbpedia.org/resource/Buddy_Fogelson')
+    relationships:
+      - Lynn_S._Whiting (dor:Lynn_S._Whiting) --doo:race--> Ack_Ack_Handicap_(Churchill_Downs) (<http://dbpedia.org/resource/Ack_Ack_Handicap_(Churchill_Downs)>)
+      - Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>) --doo:honours--> Ack_Ack_Handicap_(Churchill_Downs) (<http://dbpedia.org/resource/Ack_Ack_Handicap_(Churchill_Downs)>)
+      - Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>) --dop:owner--> Buddy_Fogelson (dor:Buddy_Fogelson)
+  '2':
+    attributes:
+      Buddy_Fogelson: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date')
+      Ack_Ack_(horse): (owner^='http://dbpedia.org/resource/Buddy_Fogelson')
+    relationships:
+      - Warren_Stute (dor:Warren_Stute) --doo:race--> Ack_Ack_Handicap_(Hollywood_Park) (<http://dbpedia.org/resource/Ack_Ack_Handicap_(Hollywood_Park)>)
+      - Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>) --doo:honours--> Ack_Ack_Handicap_(Hollywood_Park) (<http://dbpedia.org/resource/Ack_Ack_Handicap_(Hollywood_Park)>)
+      - Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>) --dop:owner--> Buddy_Fogelson (dor:Buddy_Fogelson)
+  '3':
+    attributes:
+      Affectionately: (owner^='http://dbpedia.org/resource/Ethel_D._Jacobs')
+      Ethel_D._Jacobs: (children^='Thomas E.W.', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Frank_I._Wright (dor:Frank_I._Wright) --doo:race--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately (dor:Affectionately) --doo:honours--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately (dor:Affectionately) --dop:owner--> Ethel_D._Jacobs (dor:Ethel_D._Jacobs)
+  '4':
+    attributes:
+      Affectionately: (owner^='http://dbpedia.org/resource/Ethel_D._Jacobs')
+      Ethel_D._Jacobs: (children^='Thomas E.W.', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Howard_M._Tesher (dor:Howard_M._Tesher) --doo:race--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately (dor:Affectionately) --doo:honours--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately (dor:Affectionately) --dop:owner--> Ethel_D._Jacobs (dor:Ethel_D._Jacobs)
+  '5':
+    attributes:
+      Affectionately: (owner^='http://dbpedia.org/resource/Ethel_D._Jacobs')
+      Ethel_D._Jacobs: (children^='Thomas E.W.', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - John_Parisella (dor:John_Parisella) --doo:race--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately (dor:Affectionately) --doo:honours--> Affectionately_Handicap (dor:Affectionately_Handicap)
+      - Affectionately (dor:Affectionately) --dop:owner--> Ethel_D._Jacobs (dor:Ethel_D._Jacobs)
+  '6':
+    attributes:
+      Anita_Peabody: (owner^='http://dbpedia.org/resource/John_D._Hertz')
+      John_D._Hertz: (children^='3', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Ernie_T._Poulos (dor:Ernie_T._Poulos) --doo:race--> Lincoln_Heritage_Handicap (dor:Lincoln_Heritage_Handicap)
+      - Anita_Peabody (dor:Anita_Peabody) --doo:honours--> Lincoln_Heritage_Handicap (dor:Lincoln_Heritage_Handicap)
+      - Anita_Peabody (dor:Anita_Peabody) --dop:owner--> John_D._Hertz (dor:John_D._Hertz)
+  '7':
+    attributes:
+      Anita_Peabody: (owner^='http://dbpedia.org/resource/John_D._Hertz')
+      John_D._Hertz: (children^='3', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Paul_T._Adwell (dor:Paul_T._Adwell) --doo:race--> Lincoln_Heritage_Handicap (dor:Lincoln_Heritage_Handicap)
+      - Anita_Peabody (dor:Anita_Peabody) --doo:honours--> Lincoln_Heritage_Handicap (dor:Lincoln_Heritage_Handicap)
+      - Anita_Peabody (dor:Anita_Peabody) --dop:owner--> John_D._Hertz (dor:John_D._Hertz)
+  '8':
+    attributes:
+      Anita_Peabody: (owner^='http://dbpedia.org/resource/John_D._Hertz')
+      John_D._Hertz: (children^='3', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Stephen_L._DiMauro (dor:Stephen_L._DiMauro) --doo:race--> Lincoln_Heritage_Handicap (dor:Lincoln_Heritage_Handicap)
+      - Anita_Peabody (dor:Anita_Peabody) --doo:honours--> Lincoln_Heritage_Handicap (dor:Lincoln_Heritage_Handicap)
+      - Anita_Peabody (dor:Anita_Peabody) --dop:owner--> John_D._Hertz (dor:John_D._Hertz)
+  '9':
+    attributes:
+      Arkle: (owner^='http://dbpedia.org/resource/Anne_Grosvenor,_Duchess_of_Westminster')
+      Anne_Grosvenor,_Duchess_of_Westminster: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date')
+    relationships:
+      - Paul_Nicholls_(horse_racing) (<http://dbpedia.org/resource/Paul_Nicholls_(horse_racing)>) --doo:race--> Arkle_Challenge_Trophy (dor:Arkle_Challenge_Trophy)
+      - Arkle (dor:Arkle) --doo:honours--> Arkle_Challenge_Trophy (dor:Arkle_Challenge_Trophy)
+      - Arkle (dor:Arkle) --dop:owner--> Anne_Grosvenor,_Duchess_of_Westminster (<http://dbpedia.org/resource/Anne_Grosvenor,_Duchess_of_Westminster>)
+  '10':
+    attributes:
+      Arkle: (owner^='http://dbpedia.org/resource/Anne_Grosvenor,_Duchess_of_Westminster')
+      Anne_Grosvenor,_Duchess_of_Westminster: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date')
+    relationships:
+      - Peter_Casey_(horse_trainer) (<http://dbpedia.org/resource/Peter_Casey_(horse_trainer)>) --doo:race--> Arkle_Novice_Chase (dor:Arkle_Novice_Chase)
+      - Arkle (dor:Arkle) --doo:honours--> Arkle_Novice_Chase (dor:Arkle_Novice_Chase)
+      - Arkle (dor:Arkle) --dop:owner--> Anne_Grosvenor,_Duchess_of_Westminster (<http://dbpedia.org/resource/Anne_Grosvenor,_Duchess_of_Westminster>)
+attributes:
+  horse: --foal date^ (doo:foalDate)--> date | --owner^ (dop:owner)--> Resource
+  person: --IMDB id^ (doo:imdbId)--> string | --children^ (dop:children)--> Resource | --reason^ (dop:reason)--> langString | --author^ (dop:author)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --active years end year^ (doo:activeYearsEndYear)--> gYear | --known for^ (dop:knownFor)--> Resource | --2pp^ (dop:2pp)--> int
+subgraph_id: 320
+relationships:
+  - horse trainer --doo:race--> horse race
+  - horse --doo:honours--> horse race
+  - horse --dop:owner--> person

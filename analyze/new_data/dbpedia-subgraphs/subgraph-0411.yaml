@@ -1,0 +1,114 @@
+types:
+  country: doo:Country
+  settlement: doo:Settlement
+  university: doo:University
+  ethnic group: doo:EthnicGroup
+  Academic Person: doo:Academic
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Pakistan: (width^='25')
+      Islamabad: (Wikipage revision ID^='1123920517')
+      University_of_Karachi: (float^='right')
+    relationships:
+      - University_of_Karachi (dor:University_of_Karachi) --doo:country--> Pakistan (dor:Pakistan)
+      - Afghan_diaspora (dor:Afghan_diaspora) --doo:populationPlace--> Pakistan (dor:Pakistan)
+      - Pakistan (dor:Pakistan) --doo:capital--> Islamabad (dor:Islamabad)
+      - A._C._Matin (dor:A._C._Matin) --dop:almaMater--> University_of_Karachi (dor:University_of_Karachi)
+  '2':
+    attributes:
+      Pakistan: (width^='25')
+      Islamabad: (Wikipage revision ID^='1123920517')
+      A._C._Matin: (awards^='Elected Associate Fellow, Aerospace Medical Association')
+      University_of_Karachi: (float^='right')
+    relationships:
+      - University_of_Karachi (dor:University_of_Karachi) --doo:country--> Pakistan (dor:Pakistan)
+      - Afridi (dor:Afridi) --doo:populationPlace--> Pakistan (dor:Pakistan)
+      - Pakistan (dor:Pakistan) --doo:capital--> Islamabad (dor:Islamabad)
+      - A._C._Matin (dor:A._C._Matin) --dop:almaMater--> University_of_Karachi (dor:University_of_Karachi)
+  '3':
+    attributes:
+      Pakistan: (width^='25')
+      Islamabad: (Wikipage revision ID^='1123920517')
+      A._C._Matin: (awards^='Elected Associate Fellow, Aerospace Medical Association')
+      University_of_Karachi: (float^='right')
+    relationships:
+      - University_of_Karachi (dor:University_of_Karachi) --doo:country--> Pakistan (dor:Pakistan)
+      - Amrohi_Syed (dor:Amrohi_Syed) --doo:populationPlace--> Pakistan (dor:Pakistan)
+      - Pakistan (dor:Pakistan) --doo:capital--> Islamabad (dor:Islamabad)
+      - A._C._Matin (dor:A._C._Matin) --dop:almaMater--> University_of_Karachi (dor:University_of_Karachi)
+  '4':
+    attributes:
+      Duke_University: (direction^='horizontal', float^='right')
+      Washington,_D.C.: (Wikipage revision ID^='1124625637')
+    relationships:
+      - Duke_University (dor:Duke_University) --doo:country--> United_States (dor:United_States)
+      - Absentee_Shawnee_Tribe_of_Indians (dor:Absentee_Shawnee_Tribe_of_Indians) --doo:populationPlace--> United_States (dor:United_States)
+      - United_States (dor:United_States) --doo:capital--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - A._K._M._Adam (dor:A._K._M._Adam) --dop:almaMater--> Duke_University (dor:Duke_University)
+  '5':
+    attributes:
+      Duke_University: (direction^='horizontal', float^='right')
+      Washington,_D.C.: (Wikipage revision ID^='1124625637')
+    relationships:
+      - Duke_University (dor:Duke_University) --doo:country--> United_States (dor:United_States)
+      - Afghan_diaspora (dor:Afghan_diaspora) --doo:populationPlace--> United_States (dor:United_States)
+      - United_States (dor:United_States) --doo:capital--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - A._K._M._Adam (dor:A._K._M._Adam) --dop:almaMater--> Duke_University (dor:Duke_University)
+  '6':
+    attributes:
+      Duke_University: (direction^='horizontal', float^='right')
+      Washington,_D.C.: (Wikipage revision ID^='1124625637')
+    relationships:
+      - Duke_University (dor:Duke_University) --doo:country--> United_States (dor:United_States)
+      - African_diaspora_in_the_Americas (dor:African_diaspora_in_the_Americas) --doo:populationPlace--> United_States (dor:United_States)
+      - United_States (dor:United_States) --doo:capital--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - A._K._M._Adam (dor:A._K._M._Adam) --dop:almaMater--> Duke_University (dor:Duke_University)
+  '7':
+    attributes:
+      Paris: (Wikipage revision ID^='1124910932')
+    relationships:
+      - University_of_Paris (dor:University_of_Paris) --doo:country--> France (dor:France)
+      - African_diaspora (dor:African_diaspora) --doo:populationPlace--> France (dor:France)
+      - France (dor:France) --doo:capital--> Paris (dor:Paris)
+      - Abdelkebir_Khatibi (dor:Abdelkebir_Khatibi) --dop:almaMater--> University_of_Paris (dor:University_of_Paris)
+  '8':
+    attributes:
+      Paris: (Wikipage revision ID^='1124910932')
+    relationships:
+      - University_of_Paris (dor:University_of_Paris) --doo:country--> France (dor:France)
+      - Afro-Caribbean_people (dor:Afro-Caribbean_people) --doo:populationPlace--> France (dor:France)
+      - France (dor:France) --doo:capital--> Paris (dor:Paris)
+      - Abdelkebir_Khatibi (dor:Abdelkebir_Khatibi) --dop:almaMater--> University_of_Paris (dor:University_of_Paris)
+  '9':
+    attributes:
+      Paris: (Wikipage revision ID^='1124910932')
+    relationships:
+      - University_of_Paris (dor:University_of_Paris) --doo:country--> France (dor:France)
+      - Americans_in_France (dor:Americans_in_France) --doo:populationPlace--> France (dor:France)
+      - France (dor:France) --doo:capital--> Paris (dor:Paris)
+      - Abdelkebir_Khatibi (dor:Abdelkebir_Khatibi) --dop:almaMater--> University_of_Paris (dor:University_of_Paris)
+  '10':
+    attributes:
+      Dhaka: (Wikipage revision ID^='1124182670', caption align^='center')
+    relationships:
+      - Dhaka_College (dor:Dhaka_College) --doo:country--> Bangladesh (dor:Bangladesh)
+      - Anglo-Indian_people (dor:Anglo-Indian_people) --doo:populationPlace--> Bangladesh (dor:Bangladesh)
+      - Bangladesh (dor:Bangladesh) --doo:capital--> Dhaka (dor:Dhaka)
+      - Abdur_Razzaq_(professor) (<http://dbpedia.org/resource/Abdur_Razzaq_(professor)>) --dop:almaMater--> Dhaka_College (dor:Dhaka_College)
+attributes:
+  country: --c^ (dop:c)--> langString | --width^ (dop:width)--> int | --2p^ (dop:2p)--> int
+  settlement: --c^ (dop:c)--> langString | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --caption align^ (dop:captionAlign)--> langString | --Apr record low C^ (dop:aprRecordLowC)--> double
+  university: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --direction^ (dop:direction)--> langString | --float^ (dop:float)--> langString
+  Academic Person: --awards^ (dop:awards)--> langString
+subgraph_id: 411
+relationships:
+  - university --doo:country--> country
+  - ethnic group --doo:populationPlace--> country
+  - country --doo:capital--> settlement
+  - Academic Person --dop:almaMater--> university

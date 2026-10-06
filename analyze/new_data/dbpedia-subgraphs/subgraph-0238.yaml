@@ -1,0 +1,144 @@
+types:
+  city: doo:City
+  soccer club: doo:SoccerClub
+  darts player: doo:DartsPlayer
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      London: (commons^='yes')
+      Rangers_F.C.: (manager^='http://dbpedia.org/resource/Michael_Beale_(football_coach)')
+      Harry_Watling: (birth place^='http://dbpedia.org/resource/England', manager club^='http://dbpedia.org/resource/Chelsea_F.C.')
+    relationships:
+      - Harry_Watling (dor:Harry_Watling) --dop:birthPlace--> London (dor:London)
+      - Harry_Watling (dor:Harry_Watling) --dop:currentclub--> Rangers_F.C. (<http://dbpedia.org/resource/Rangers_F.C.>)
+      - Aaron_Beeney (dor:Aaron_Beeney) --doo:hometown--> London (dor:London)
+  '2':
+    attributes:
+      London: (commons^='yes')
+      Sutton_United_F.C.: (manager^='http://dbpedia.org/resource/Matt_Gray_(footballer,_born_1981)')
+      Matt_Gray_(footballer,_born_1981): (birth place^='http://dbpedia.org/resource/England', manager club^='http://dbpedia.org/resource/Sutton_United_F.C.')
+    relationships:
+      - Matt_Gray_(footballer,_born_1981) (<http://dbpedia.org/resource/Matt_Gray_(footballer,_born_1981)>) --dop:birthPlace--> London (dor:London)
+      - Matt_Gray_(footballer,_born_1981) (<http://dbpedia.org/resource/Matt_Gray_(footballer,_born_1981)>) --dop:currentclub--> Sutton_United_F.C. (<http://dbpedia.org/resource/Sutton_United_F.C.>)
+      - Aaron_Beeney (dor:Aaron_Beeney) --doo:hometown--> London (dor:London)
+  '3':
+    attributes:
+      London: (commons^='yes')
+      Ross_Weare: (birth place^='http://dbpedia.org/resource/England', manager club^='http://dbpedia.org/resource/Clapton_F.C.')
+      Clapton_F.C.: (manager^='http://dbpedia.org/resource/Ross_Weare')
+    relationships:
+      - Ross_Weare (dor:Ross_Weare) --dop:birthPlace--> London (dor:London)
+      - Ross_Weare (dor:Ross_Weare) --dop:currentclub--> Clapton_F.C. (<http://dbpedia.org/resource/Clapton_F.C.>)
+      - Aaron_Beeney (dor:Aaron_Beeney) --doo:hometown--> London (dor:London)
+  '4':
+    attributes:
+      Zagreb: (Apr low C^='5.2', Apr record low C^='-4.4', Aug high C^='26.3')
+      Alen_Peternac: (birth place^='http://dbpedia.org/resource/Socialist_Federal_Republic_of_Yugoslavia', manager club^='http://dbpedia.org/resource/GNK_Dinamo_Zagreb')
+      GNK_Dinamo_Zagreb: (manager^='http://dbpedia.org/resource/Ante_Čačić', season^='http://dbpedia.org/resource/2021–22_Croatian_First_Football_League')
+    relationships:
+      - Alen_Peternac (dor:Alen_Peternac) --dop:birthPlace--> Zagreb (dor:Zagreb)
+      - Alen_Peternac (dor:Alen_Peternac) --dop:currentclub--> GNK_Dinamo_Zagreb (dor:GNK_Dinamo_Zagreb)
+      - Alan_Ljubić (<http://dbpedia.org/resource/Alan_Ljubić>) --doo:hometown--> Zagreb (dor:Zagreb)
+  '5':
+    attributes:
+      Zagreb: (Apr low C^='5.2', Apr record low C^='-4.4', Aug high C^='26.3')
+      FC_Ferizaj: (manager^='http://dbpedia.org/resource/Andrej_Panadić', season^='http://dbpedia.org/resource/Football_Superleague_of_Kosovo')
+      Andrej_Panadić: (birth place^='http://dbpedia.org/resource/SFR_Yugoslavia', manager club^='http://dbpedia.org/resource/FC_Ferizaj')
+    relationships:
+      - Andrej_Panadić (<http://dbpedia.org/resource/Andrej_Panadić>) --dop:birthPlace--> Zagreb (dor:Zagreb)
+      - Andrej_Panadić (<http://dbpedia.org/resource/Andrej_Panadić>) --dop:currentclub--> FC_Ferizaj (dor:FC_Ferizaj)
+      - Alan_Ljubić (<http://dbpedia.org/resource/Alan_Ljubić>) --doo:hometown--> Zagreb (dor:Zagreb)
+  '6':
+    attributes:
+      Zagreb: (Apr low C^='5.2', Apr record low C^='-4.4', Aug high C^='26.3')
+      Ante_Čačić: (birth place^='http://dbpedia.org/resource/Socialist_Federal_Republic_of_Yugoslavia', manager club^='http://dbpedia.org/resource/Croatia_national_under-21_football_team')
+      GNK_Dinamo_Zagreb: (manager^='http://dbpedia.org/resource/Ante_Čačić', season^='http://dbpedia.org/resource/2021–22_Croatian_First_Football_League')
+    relationships:
+      - Ante_Čačić (<http://dbpedia.org/resource/Ante_Čačić>) --dop:birthPlace--> Zagreb (dor:Zagreb)
+      - Ante_Čačić (<http://dbpedia.org/resource/Ante_Čačić>) --dop:currentclub--> GNK_Dinamo_Zagreb (dor:GNK_Dinamo_Zagreb)
+      - Alan_Ljubić (<http://dbpedia.org/resource/Alan_Ljubić>) --doo:hometown--> Zagreb (dor:Zagreb)
+  '7':
+    attributes:
+      Andrei_Kondrashov: (birth place^='http://dbpedia.org/resource/Russian_SFSR', manager club^='http://dbpedia.org/resource/FC_Baltika_Kaliningrad')
+    relationships:
+      - Andrei_Kondrashov (dor:Andrei_Kondrashov) --dop:birthPlace--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Andrei_Kondrashov (dor:Andrei_Kondrashov) --dop:currentclub--> FC_Petrotrest_Saint_Petersburg (dor:FC_Petrotrest_Saint_Petersburg)
+      - Aleksandr_Oreshkin (dor:Aleksandr_Oreshkin) --doo:hometown--> Saint_Petersburg (dor:Saint_Petersburg)
+  '8':
+    attributes:
+      Vyacheslav_Malafeev: (birth place^='http://dbpedia.org/resource/Russian_SFSR', manager club^='http://dbpedia.org/resource/FC_Zenit_Saint_Petersburg')
+      FC_Zenit_Saint_Petersburg: (manager^='http://dbpedia.org/resource/Sergei_Semak', season^='http://dbpedia.org/resource/2021–22_Russian_Premier_League')
+    relationships:
+      - Vyacheslav_Malafeev (dor:Vyacheslav_Malafeev) --dop:birthPlace--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Vyacheslav_Malafeev (dor:Vyacheslav_Malafeev) --dop:currentclub--> FC_Zenit_Saint_Petersburg (dor:FC_Zenit_Saint_Petersburg)
+      - Aleksandr_Oreshkin (dor:Aleksandr_Oreshkin) --doo:hometown--> Saint_Petersburg (dor:Saint_Petersburg)
+  '9':
+    attributes:
+      Tver: (Apr low C^='0.9', Apr record low C^='−21.4', Aug high C^='22.3')
+      Igor_Aksyonov: (birth place^='http://dbpedia.org/resource/Russian_SFSR', manager club^='http://dbpedia.org/resource/PFC_CSKA_Moscow')
+      PFC_CSKA_Moscow: (manager^='http://dbpedia.org/resource/Vladimir_Fedotov_(footballer,_born_1966)', season^='http://dbpedia.org/resource/2021–22_Russian_Premier_League')
+    relationships:
+      - Igor_Aksyonov (dor:Igor_Aksyonov) --dop:birthPlace--> Tver (dor:Tver)
+      - Igor_Aksyonov (dor:Igor_Aksyonov) --dop:currentclub--> PFC_CSKA_Moscow (dor:PFC_CSKA_Moscow)
+      - Aleksei_Kadochnikov (dor:Aleksei_Kadochnikov) --doo:hometown--> Tver (dor:Tver)
+  '10':
+    attributes:
+      Bremen: (Apr low C^='3.4', Apr record low C^='-7.6', Aug high C^='22.6')
+      Josef_Çınar: (birth place^='http://dbpedia.org/resource/Bremen', manager club^='http://dbpedia.org/resource/SV_Eintracht_Trier_05')
+      SV_Eintracht_Trier_05: (manager^='http://dbpedia.org/resource/Josef_Çınar', season^='http://dbpedia.org/resource/2021–22_Oberliga')
+    relationships:
+      - Josef_Çınar (<http://dbpedia.org/resource/Josef_Çınar>) --dop:birthPlace--> Bremen (dor:Bremen)
+      - Josef_Çınar (<http://dbpedia.org/resource/Josef_Çınar>) --dop:currentclub--> SV_Eintracht_Trier_05 (dor:SV_Eintracht_Trier_05)
+      - Andree_Welge (dor:Andree_Welge) --doo:hometown--> Bremen (dor:Bremen)
+qa_result:
+  status: completed
+  cost_usd: 0.383597
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.06056740000000001
+        total_tokens: 5217
+        prompt_tokens: 2473
+        completion_tokens: 2744
+      generate:
+        cost_usd: 0.0935976
+        total_tokens: 8552
+        prompt_tokens: 4683
+        completion_tokens: 3869
+      verify_1:
+        cost_usd: 0.065612
+        total_tokens: 7393
+        prompt_tokens: 5483
+        completion_tokens: 1910
+      verify_2:
+        cost_usd: 0.03536700000000001
+        total_tokens: 5889
+        prompt_tokens: 5494
+        completion_tokens: 395
+      complexity:
+        cost_usd: 0.128453
+        total_tokens: 11723
+        prompt_tokens: 6495
+        completion_tokens: 5228
+    total_tokens: 38774
+    prompt_tokens: 24628
+    total_cost_usd: 0.383597
+    completion_tokens: 14146
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --commons^ (dop:commons)--> langString | --Apr low C^ (dop:aprLowC)--> int | --Apr record low C^ (dop:aprRecordLowC)--> langString | --Aug high C^ (dop:augHighC)--> double | --bot^ (dop:bot)--> langString | --founder^ (doo:founder)--> Resource
+  soccer club: --manager^ (doo:manager)--> Resource | --season^ (doo:season)--> Resource | --lowest attendance^ (dop:lowestAttendance)--> int | --al^ (dop:al)--> int
+  soccer manager: --birth place^ (dop:birthPlace)--> langString | --manager club^ (doo:managerClub)--> Resource
+subgraph_id: 238
+relationships:
+  - soccer manager --dop:birthPlace--> city
+  - soccer manager --dop:currentclub--> soccer club
+  - darts player --doo:hometown--> city

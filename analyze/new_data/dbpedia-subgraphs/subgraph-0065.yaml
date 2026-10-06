@@ -1,0 +1,80 @@
+types:
+  country: doo:Country
+  scientist: doo:Scientist
+  politician: doo:Politician
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ziauddin_Ahmad: (awards^='CIE')
+    relationships:
+      - 8-Pass_Charlie (dor:8-Pass_Charlie) --dop:birthPlace--> British_India (dor:British_India)
+      - Ziauddin_Ahmad (dor:Ziauddin_Ahmad) --doo:citizenship--> British_India (dor:British_India)
+  '2':
+    attributes:
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - A_C_Wharton (dor:A_C_Wharton) --dop:birthPlace--> United_States (dor:United_States)
+      - Abby_Howe_Turner (dor:Abby_Howe_Turner) --doo:citizenship--> United_States (dor:United_States)
+  '3':
+    attributes:
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - A_C_Wharton (dor:A_C_Wharton) --dop:birthPlace--> United_States (dor:United_States)
+      - Alan_S._Kaufman (dor:Alan_S._Kaufman) --doo:citizenship--> United_States (dor:United_States)
+  '4':
+    attributes:
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+      Alan_V._Oppenheim: (awards^='')
+    relationships:
+      - A_C_Wharton (dor:A_C_Wharton) --dop:birthPlace--> United_States (dor:United_States)
+      - Alan_V._Oppenheim (dor:Alan_V._Oppenheim) --doo:citizenship--> United_States (dor:United_States)
+  '5':
+    attributes: {}
+    relationships:
+      - A._A._Heaps (dor:A._A._Heaps) --dop:birthPlace--> England (dor:England)
+      - John_Blagrave (dor:John_Blagrave) --doo:citizenship--> England (dor:England)
+  '6':
+    attributes: {}
+    relationships:
+      - A._A._Heaps (dor:A._A._Heaps) --dop:birthPlace--> England (dor:England)
+      - Michael_Graham_Saunders (dor:Michael_Graham_Saunders) --doo:citizenship--> England (dor:England)
+  '7':
+    attributes: {}
+    relationships:
+      - A._A._Heaps (dor:A._A._Heaps) --dop:birthPlace--> England (dor:England)
+      - Philip_Lawley (dor:Philip_Lawley) --doo:citizenship--> England (dor:England)
+  '8':
+    attributes:
+      British_Raj: (alt^='Chelmsford')
+      A._A._K._Niazi: (after^='Office abolished')
+      Srinivasa_Ramanujan: (awards^='http://dbpedia.org/resource/Fellow_of_the_Royal_Society')
+    relationships:
+      - A._A._K._Niazi (dor:A._A._K._Niazi) --dop:birthPlace--> British_Raj (dor:British_Raj)
+      - Srinivasa_Ramanujan (dor:Srinivasa_Ramanujan) --doo:citizenship--> British_Raj (dor:British_Raj)
+  '9':
+    attributes:
+      British_Raj: (alt^='Chelmsford')
+      Srinivasa_Ramanujan: (awards^='http://dbpedia.org/resource/Fellow_of_the_Royal_Society')
+    relationships:
+      - A._B._A._Ghani_Khan_Choudhury (dor:A._B._A._Ghani_Khan_Choudhury) --dop:birthPlace--> British_Raj (dor:British_Raj)
+      - Srinivasa_Ramanujan (dor:Srinivasa_Ramanujan) --doo:citizenship--> British_Raj (dor:British_Raj)
+  '10':
+    attributes:
+      A._C._Jose: (source^='http://164.100.47.194/Loksabha/Members/MemberBioprofile.aspx%3Fmpsno=171&lastls=13')
+      Ziauddin_Ahmad: (awards^='CIE')
+    relationships:
+      - A._C._Jose (dor:A._C._Jose) --dop:birthPlace--> British_India (dor:British_India)
+      - Ziauddin_Ahmad (dor:Ziauddin_Ahmad) --doo:citizenship--> British_India (dor:British_India)
+attributes:
+  country: --alt^ (dop:alt)--> langString | --footer^ (dop:footer)--> langString | --group^ (dop:group)--> langString
+  scientist: --awards^ (dop:awards)--> langString | --spouse^ (doo:spouse)--> Resource
+  politician: --data^ (dop:data)--> langString | --relatives^ (dop:relatives)--> langString | --after^ (dop:after)--> langString | --2pp^ (dop:2pp)--> int | --url^ (dop:url)--> Resource | --source^ (dop:source)--> Resource
+subgraph_id: 65
+relationships:
+  - politician --dop:birthPlace--> country
+  - scientist --doo:citizenship--> country

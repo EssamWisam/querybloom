@@ -1,0 +1,124 @@
+types:
+  island: doo:Island
+  person: doo:Person
+  country: doo:Country
+  ethnic group: doo:EthnicGroup
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._L._Morton: (occupation^='http://dbpedia.org/resource/A._L._Morton__PersonFunction__1')
+      Great_Britain: (elevation (μ)^='1345.0')
+    relationships:
+      - A._L._Morton (dor:A._L._Morton) --doo:birthPlace--> United_Kingdom (dor:United_Kingdom)
+      - Great_Britain (dor:Great_Britain) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Abdalla_Sabdi (dor:Abdalla_Sabdi) --doo:populationPlace--> Great_Britain (dor:Great_Britain)
+  '2':
+    attributes:
+      Great_Britain: (elevation (μ)^='1345.0')
+      A._W._Baskcomb: (occupation^='http://dbpedia.org/resource/A._W._Baskcomb__PersonFunction__1')
+    relationships:
+      - A._W._Baskcomb (dor:A._W._Baskcomb) --doo:birthPlace--> United_Kingdom (dor:United_Kingdom)
+      - Great_Britain (dor:Great_Britain) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Abdalla_Sabdi (dor:Abdalla_Sabdi) --doo:populationPlace--> Great_Britain (dor:Great_Britain)
+  '3':
+    attributes:
+      Great_Britain: (elevation (μ)^='1345.0')
+    relationships:
+      - Aaron_Skelton (dor:Aaron_Skelton) --doo:birthPlace--> United_Kingdom (dor:United_Kingdom)
+      - Great_Britain (dor:Great_Britain) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Abdalla_Sabdi (dor:Abdalla_Sabdi) --doo:populationPlace--> Great_Britain (dor:Great_Britain)
+  '4':
+    attributes:
+      A._Rafiq: (occupation^='http://dbpedia.org/resource/Actor')
+      Alor_Island: (elevation (μ)^='1423.0')
+    relationships:
+      - A._Rafiq (dor:A._Rafiq) --doo:birthPlace--> Indonesia (dor:Indonesia)
+      - Alor_Island (dor:Alor_Island) --doo:country--> Indonesia (dor:Indonesia)
+      - Abui_people (dor:Abui_people) --doo:populationPlace--> Alor_Island (dor:Alor_Island)
+  '5':
+    attributes:
+      Alor_Island: (elevation (μ)^='1423.0')
+      Abdee_Negara: (alias^='Abdee')
+    relationships:
+      - Abdee_Negara (dor:Abdee_Negara) --doo:birthPlace--> Indonesia (dor:Indonesia)
+      - Alor_Island (dor:Alor_Island) --doo:country--> Indonesia (dor:Indonesia)
+      - Abui_people (dor:Abui_people) --doo:populationPlace--> Alor_Island (dor:Alor_Island)
+  '6':
+    attributes:
+      Alor_Island: (elevation (μ)^='1423.0')
+    relationships:
+      - Abdul_Aziz_(Indonesian_politician) (<http://dbpedia.org/resource/Abdul_Aziz_(Indonesian_politician)>) --doo:birthPlace--> Indonesia (dor:Indonesia)
+      - Alor_Island (dor:Alor_Island) --doo:country--> Indonesia (dor:Indonesia)
+      - Abui_people (dor:Abui_people) --doo:populationPlace--> Alor_Island (dor:Alor_Island)
+  '7':
+    attributes: {}
+    relationships:
+      - Ábner_Méndez (<http://dbpedia.org/resource/Ábner_Méndez>) --doo:birthPlace--> Honduras (dor:Honduras)
+      - Roatán (<http://dbpedia.org/resource/Roatán>) --doo:country--> Honduras (dor:Honduras)
+      - Afro-Hondurans (dor:Afro-Hondurans) --doo:populationPlace--> Roatán (<http://dbpedia.org/resource/Roatán>)
+  '8':
+    attributes: {}
+    relationships:
+      - Adalid_Puerto (dor:Adalid_Puerto) --doo:birthPlace--> Honduras (dor:Honduras)
+      - Roatán (<http://dbpedia.org/resource/Roatán>) --doo:country--> Honduras (dor:Honduras)
+      - Afro-Hondurans (dor:Afro-Hondurans) --doo:populationPlace--> Roatán (<http://dbpedia.org/resource/Roatán>)
+  '9':
+    attributes:
+      Alba_Alonso_de_Quesada: (alias^='Alba Alonso Cleaves de Quesada, Alba Alonso Quesada', occupation^='http://dbpedia.org/resource/Alba_Alonso_de_Quesada__PersonFunction__1')
+    relationships:
+      - Alba_Alonso_de_Quesada (dor:Alba_Alonso_de_Quesada) --doo:birthPlace--> Honduras (dor:Honduras)
+      - Roatán (<http://dbpedia.org/resource/Roatán>) --doo:country--> Honduras (dor:Honduras)
+      - Afro-Hondurans (dor:Afro-Hondurans) --doo:populationPlace--> Roatán (<http://dbpedia.org/resource/Roatán>)
+  '10':
+    attributes:
+      Mindanao: (elevation (μ)^='2954.0')
+    relationships:
+      - A._J._Banal (dor:A._J._Banal) --doo:birthPlace--> Philippines (dor:Philippines)
+      - Mindanao (dor:Mindanao) --doo:country--> Philippines (dor:Philippines)
+      - Aklanon_people (dor:Aklanon_people) --doo:populationPlace--> Mindanao (dor:Mindanao)
+qa_result:
+  status: completed
+  cost_usd: 0.32765
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.045737400000000004
+        total_tokens: 4315
+        prompt_tokens: 2259
+        completion_tokens: 2056
+      generate:
+        cost_usd: 0.0982426
+        total_tokens: 8197
+        prompt_tokens: 3900
+        completion_tokens: 4297
+      verify_1:
+        cost_usd: 0.053607000000000016
+        total_tokens: 5895
+        prompt_tokens: 4286
+        completion_tokens: 1609
+      complexity:
+        cost_usd: 0.130063
+        total_tokens: 10737
+        prompt_tokens: 5073
+        completion_tokens: 5664
+    total_tokens: 29144
+    prompt_tokens: 15518
+    total_cost_usd: 0.32765
+    completion_tokens: 13626
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  island: --elevation (μ)^ (doo:elevation)--> double
+  person: --alt^ (dop:alt)--> langString | --alias^ (doo:alias)--> langString | --occupation^ (doo:occupation)--> Resource | --2pp^ (dop:2pp)--> int | --honorific suffix^ (dop:honorificSuffix)--> langString | --alma mater^ (dop:almaMater)--> Resource
+  country: --founding year^ (doo:foundingYear)--> gYear | --1p^ (dop:1p)--> int
+subgraph_id: 276
+relationships:
+  - person --doo:birthPlace--> country
+  - island --doo:country--> country
+  - ethnic group --doo:populationPlace--> island

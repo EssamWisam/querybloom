@@ -1,0 +1,138 @@
+types:
+  horse: doo:Horse
+  colour: doo:Colour
+  school: doo:School
+  wrestler: doo:Wrestler
+  RaceHorse: doo:RaceHorse
+  horse race: doo:HorseRace
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Archers_Bay: (owner^='Eugene Melnyk & Iris Bristow')
+      Val_de_l'Orne: (owner^='http://dbpedia.org/resource/Jacques_Wertheimer')
+      Alan_B._Shepard_High_School: (address^='')
+    relationships:
+      - Archers_Bay (dor:Archers_Bay) --doo:damsire--> Val_de_l'Orne (<http://dbpedia.org/resource/Val_de_l'Orne>)
+      - Archers_Bay (dor:Archers_Bay) --doo:race--> Canadian_Triple_Crown_of_Thoroughbred_Racing (dor:Canadian_Triple_Crown_of_Thoroughbred_Racing)
+      - James_C._Bentley (dor:James_C._Bentley) --doo:race--> Canadian_Triple_Crown_of_Thoroughbred_Racing (dor:Canadian_Triple_Crown_of_Thoroughbred_Racing)
+      - Archers_Bay (dor:Archers_Bay) --doo:colour--> Brown (dor:Brown)
+      - Alan_B._Shepard_High_School (dor:Alan_B._Shepard_High_School) --doo:colour--> Brown (dor:Brown)
+  '2':
+    attributes:
+      Archers_Bay: (owner^='Eugene Melnyk & Iris Bristow')
+      Queen's_Plate: (class^='Restricted')
+      Val_de_l'Orne: (owner^='http://dbpedia.org/resource/Jacques_Wertheimer')
+      Alan_B._Shepard_High_School: (address^='')
+    relationships:
+      - Archers_Bay (dor:Archers_Bay) --doo:damsire--> Val_de_l'Orne (<http://dbpedia.org/resource/Val_de_l'Orne>)
+      - Archers_Bay (dor:Archers_Bay) --doo:race--> Queen's_Plate (<http://dbpedia.org/resource/Queen's_Plate>)
+      - James_C._Bentley (dor:James_C._Bentley) --doo:race--> Queen's_Plate (<http://dbpedia.org/resource/Queen's_Plate>)
+      - Archers_Bay (dor:Archers_Bay) --doo:colour--> Brown (dor:Brown)
+      - Alan_B._Shepard_High_School (dor:Alan_B._Shepard_High_School) --doo:colour--> Brown (dor:Brown)
+  '3':
+    attributes:
+      Archers_Bay: (owner^='Eugene Melnyk & Iris Bristow')
+      Val_de_l'Orne: (owner^='http://dbpedia.org/resource/Jacques_Wertheimer')
+      Alan_B._Shepard_High_School: (address^='')
+    relationships:
+      - Archers_Bay (dor:Archers_Bay) --doo:damsire--> Val_de_l'Orne (<http://dbpedia.org/resource/Val_de_l'Orne>)
+      - Archers_Bay (dor:Archers_Bay) --doo:race--> Canadian_Triple_Crown_of_Thoroughbred_Racing (dor:Canadian_Triple_Crown_of_Thoroughbred_Racing)
+      - Mark_Frostad (dor:Mark_Frostad) --doo:race--> Canadian_Triple_Crown_of_Thoroughbred_Racing (dor:Canadian_Triple_Crown_of_Thoroughbred_Racing)
+      - Archers_Bay (dor:Archers_Bay) --doo:colour--> Brown (dor:Brown)
+      - Alan_B._Shepard_High_School (dor:Alan_B._Shepard_High_School) --doo:colour--> Brown (dor:Brown)
+  '4':
+    attributes:
+      Epsom_Derby: (alt^='Apricot', class^='Group 1', distance^='1.8934566E8')
+      Benny_the_Dip: (owner^='Charles Landon Knight II & Claiborne Farm')
+      Ack_Ack_(horse): (owner^='http://dbpedia.org/resource/Buddy_Fogelson')
+    relationships:
+      - Benny_the_Dip (dor:Benny_the_Dip) --doo:damsire--> Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>)
+      - Benny_the_Dip (dor:Benny_the_Dip) --doo:race--> Epsom_Derby (dor:Epsom_Derby)
+      - Georges_Bridgland (dor:Georges_Bridgland) --doo:race--> Epsom_Derby (dor:Epsom_Derby)
+      - Benny_the_Dip (dor:Benny_the_Dip) --doo:colour--> Brown_(color) (<http://dbpedia.org/resource/Brown_(color)>)
+      - Clarkstown_High_School_South (dor:Clarkstown_High_School_South) --doo:colour--> Brown_(color) (<http://dbpedia.org/resource/Brown_(color)>)
+  '5':
+    attributes:
+      Epsom_Derby: (alt^='Apricot', class^='Group 1', distance^='1.8934566E8')
+      Benny_the_Dip: (owner^='Charles Landon Knight II & Claiborne Farm')
+      Garden_City_High_School_(Kansas): (caption^='Sabine Hall served as the original high school from 1910 to 1917.', address^='2720 Buffalo Way Boulevard')
+    relationships:
+      - Benny_the_Dip (dor:Benny_the_Dip) --doo:damsire--> Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>)
+      - Benny_the_Dip (dor:Benny_the_Dip) --doo:race--> Epsom_Derby (dor:Epsom_Derby)
+      - Georges_Bridgland (dor:Georges_Bridgland) --doo:race--> Epsom_Derby (dor:Epsom_Derby)
+      - Benny_the_Dip (dor:Benny_the_Dip) --doo:colour--> Brown_(color) (<http://dbpedia.org/resource/Brown_(color)>)
+      - Garden_City_High_School_(Kansas) (<http://dbpedia.org/resource/Garden_City_High_School_(Kansas)>) --doo:colour--> Brown_(color) (<http://dbpedia.org/resource/Brown_(color)>)
+  '6':
+    attributes:
+      Bold_Reasoning: (owner^='Kosgrove Stable')
+      Hail_To_Reason: (owner^='Harbor View Farm', foal date^='1958-04-18')
+      Withers_Stakes: (class^='Grade III', distance^='miles')
+    relationships:
+      - Bold_Reasoning (dor:Bold_Reasoning) --doo:damsire--> Hail_To_Reason (dor:Hail_To_Reason)
+      - Bold_Reasoning (dor:Bold_Reasoning) --doo:race--> Withers_Stakes (dor:Withers_Stakes)
+      - Herbert_J._Thompson (dor:Herbert_J._Thompson) --doo:race--> Withers_Stakes (dor:Withers_Stakes)
+      - Bold_Reasoning (dor:Bold_Reasoning) --doo:colour--> Brown_(color) (<http://dbpedia.org/resource/Brown_(color)>)
+      - Clarkstown_High_School_South (dor:Clarkstown_High_School_South) --doo:colour--> Brown_(color) (<http://dbpedia.org/resource/Brown_(color)>)
+  '7':
+    attributes:
+      Broomspun: (owner^='http://dbpedia.org/resource/Harry_Payne_Whitney')
+      Rock_Sand: (owner^='August Belmont Jr.')
+      Preakness_Stakes: (class^='Grade I', distance^='miles')
+      Abundant_Life_Christian_School: (address^='4901 E Buckeye Rd')
+    relationships:
+      - Broomspun (dor:Broomspun) --doo:damsire--> Rock_Sand (dor:Rock_Sand)
+      - Broomspun (dor:Broomspun) --doo:race--> Preakness_Stakes (dor:Preakness_Stakes)
+      - Frank_D._Weir (dor:Frank_D._Weir) --doo:race--> Preakness_Stakes (dor:Preakness_Stakes)
+      - Broomspun (dor:Broomspun) --doo:colour--> Black (dor:Black)
+      - Abundant_Life_Christian_School (dor:Abundant_Life_Christian_School) --doo:colour--> Black (dor:Black)
+  '8':
+    attributes:
+      Broomspun: (owner^='http://dbpedia.org/resource/Harry_Payne_Whitney')
+      Rock_Sand: (owner^='August Belmont Jr.')
+      Abundant_Life_Christian_School: (address^='4901 E Buckeye Rd')
+    relationships:
+      - Broomspun (dor:Broomspun) --doo:damsire--> Rock_Sand (dor:Rock_Sand)
+      - Broomspun (dor:Broomspun) --doo:race--> Triple_Crown_of_Thoroughbred_Racing_(United_States) (<http://dbpedia.org/resource/Triple_Crown_of_Thoroughbred_Racing_(United_States)>)
+      - Frank_D._Weir (dor:Frank_D._Weir) --doo:race--> Triple_Crown_of_Thoroughbred_Racing_(United_States) (<http://dbpedia.org/resource/Triple_Crown_of_Thoroughbred_Racing_(United_States)>)
+      - Broomspun (dor:Broomspun) --doo:colour--> Black (dor:Black)
+      - Abundant_Life_Christian_School (dor:Abundant_Life_Christian_School) --doo:colour--> Black (dor:Black)
+  '9':
+    attributes:
+      Broomspun: (owner^='http://dbpedia.org/resource/Harry_Payne_Whitney')
+      Rock_Sand: (owner^='August Belmont Jr.')
+      Preakness_Stakes: (class^='Grade I', distance^='miles')
+      Abundant_Life_Christian_School: (address^='4901 E Buckeye Rd')
+    relationships:
+      - Broomspun (dor:Broomspun) --doo:damsire--> Rock_Sand (dor:Rock_Sand)
+      - Broomspun (dor:Broomspun) --doo:race--> Preakness_Stakes (dor:Preakness_Stakes)
+      - Herbert_J._Thompson (dor:Herbert_J._Thompson) --doo:race--> Preakness_Stakes (dor:Preakness_Stakes)
+      - Broomspun (dor:Broomspun) --doo:colour--> Black (dor:Black)
+      - Abundant_Life_Christian_School (dor:Abundant_Life_Christian_School) --doo:colour--> Black (dor:Black)
+  '10':
+    attributes:
+      Noor_(horse): (owner^='HH Aga Khan III')
+      Bahram_(horse): (owner^='HH Aga Khan III')
+      Adisadel_College: (caption^='School Crest', address^='', denomination^='http://dbpedia.org/resource/Anglican')
+    relationships:
+      - Noor_(horse) (<http://dbpedia.org/resource/Noor_(horse)>) --doo:damsire--> Bahram_(horse) (<http://dbpedia.org/resource/Bahram_(horse)>)
+      - Noor_(horse) (<http://dbpedia.org/resource/Noor_(horse)>) --doo:race--> Hollywood_Gold_Cup (dor:Hollywood_Gold_Cup)
+      - Laura_de_Seroux (dor:Laura_de_Seroux) --doo:race--> Hollywood_Gold_Cup (dor:Hollywood_Gold_Cup)
+      - Noor_(horse) (<http://dbpedia.org/resource/Noor_(horse)>) --doo:colour--> Black_(color) (<http://dbpedia.org/resource/Black_(color)>)
+      - Adisadel_College (dor:Adisadel_College) --doo:colour--> Black_(color) (<http://dbpedia.org/resource/Black_(color)>)
+attributes:
+  horse: --owner^ (dop:owner)--> Resource | --foal date^ (doo:foalDate)--> date
+  school: --caption^ (dop:caption)--> langString | --address^ (doo:address)--> langString | --denomination^ (doo:denomination)--> Resource
+  RaceHorse: --foal date^ (doo:foalDate)--> date | --owner^ (dop:owner)--> Resource
+  horse race: --alt^ (dop:alt)--> langString | --class^ (dop:class)--> langString | --distance^ (dop:distance)--> langString
+subgraph_id: 993
+relationships:
+  - RaceHorse --doo:damsire--> horse
+  - RaceHorse --doo:race--> horse race
+  - wrestler --doo:race--> horse race
+  - RaceHorse --doo:colour--> colour
+  - school --doo:colour--> colour

@@ -1,0 +1,91 @@
+types:
+  river: doo:River
+  country: doo:Country
+  Location: doo:Location
+  body of water: doo:BodyOfWater
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Arabian_Sea (dor:Arabian_Sea) --doo:country--> Iran (dor:Iran)
+      - Arabian_Sea (dor:Arabian_Sea) --doo:isPartOf--> Indian_Ocean (dor:Indian_Ocean)
+      - Anjarakandi_River (dor:Anjarakandi_River) --doo:mouthPlace--> Arabian_Sea (dor:Arabian_Sea)
+      - Abbas_Aghaei (dor:Abbas_Aghaei) --doo:birthPlace--> Iran (dor:Iran)
+  '2':
+    attributes: {}
+    relationships:
+      - Arabian_Sea (dor:Arabian_Sea) --doo:country--> Iran (dor:Iran)
+      - Arabian_Sea (dor:Arabian_Sea) --doo:isPartOf--> Indian_Ocean (dor:Indian_Ocean)
+      - Anjarakandi_River (dor:Anjarakandi_River) --doo:mouthPlace--> Arabian_Sea (dor:Arabian_Sea)
+      - Abbas_Chamanyan (dor:Abbas_Chamanyan) --doo:birthPlace--> Iran (dor:Iran)
+  '3':
+    attributes: {}
+    relationships:
+      - Arabian_Sea (dor:Arabian_Sea) --doo:country--> Iran (dor:Iran)
+      - Arabian_Sea (dor:Arabian_Sea) --doo:isPartOf--> Indian_Ocean (dor:Indian_Ocean)
+      - Anjarakandi_River (dor:Anjarakandi_River) --doo:mouthPlace--> Arabian_Sea (dor:Arabian_Sea)
+      - Abbas_Razavi (dor:Abbas_Razavi) --doo:birthPlace--> Iran (dor:Iran)
+  '4':
+    attributes: {}
+    relationships:
+      - Argentine_Sea (dor:Argentine_Sea) --doo:country--> Argentina (dor:Argentina)
+      - Argentine_Sea (dor:Argentine_Sea) --doo:isPartOf--> South_Atlantic_Ocean (dor:South_Atlantic_Ocean)
+      - Río_de_la_Plata (<http://dbpedia.org/resource/Río_de_la_Plata>) --doo:mouthPlace--> Argentine_Sea (dor:Argentine_Sea)
+      - Abel_Moralejo (dor:Abel_Moralejo) --doo:birthPlace--> Argentina (dor:Argentina)
+  '5':
+    attributes: {}
+    relationships:
+      - Argentine_Sea (dor:Argentine_Sea) --doo:country--> Chile (dor:Chile)
+      - Argentine_Sea (dor:Argentine_Sea) --doo:isPartOf--> South_Atlantic_Ocean (dor:South_Atlantic_Ocean)
+      - Río_de_la_Plata (<http://dbpedia.org/resource/Río_de_la_Plata>) --doo:mouthPlace--> Argentine_Sea (dor:Argentine_Sea)
+      - Adán_Vergara (<http://dbpedia.org/resource/Adán_Vergara>) --doo:birthPlace--> Chile (dor:Chile)
+  '6':
+    attributes: {}
+    relationships:
+      - Argentine_Sea (dor:Argentine_Sea) --doo:country--> Argentina (dor:Argentina)
+      - Argentine_Sea (dor:Argentine_Sea) --doo:isPartOf--> South_Atlantic_Ocean (dor:South_Atlantic_Ocean)
+      - Río_de_la_Plata (<http://dbpedia.org/resource/Río_de_la_Plata>) --doo:mouthPlace--> Argentine_Sea (dor:Argentine_Sea)
+      - Adrián_Czornomaz (<http://dbpedia.org/resource/Adrián_Czornomaz>) --doo:birthPlace--> Argentina (dor:Argentina)
+  '7':
+    attributes: {}
+    relationships:
+      - Bismarck_Sea (dor:Bismarck_Sea) --doo:country--> Papua_New_Guinea (dor:Papua_New_Guinea)
+      - Bismarck_Sea (dor:Bismarck_Sea) --doo:isPartOf--> Pacific_Ocean (dor:Pacific_Ocean)
+      - Malas_River (dor:Malas_River) --doo:mouthPlace--> Bismarck_Sea (dor:Bismarck_Sea)
+      - Ano_Tisam (dor:Ano_Tisam) --doo:birthPlace--> Papua_New_Guinea (dor:Papua_New_Guinea)
+  '8':
+    attributes: {}
+    relationships:
+      - Bismarck_Sea (dor:Bismarck_Sea) --doo:country--> Papua_New_Guinea (dor:Papua_New_Guinea)
+      - Bismarck_Sea (dor:Bismarck_Sea) --doo:isPartOf--> Pacific_Ocean (dor:Pacific_Ocean)
+      - Malas_River (dor:Malas_River) --doo:mouthPlace--> Bismarck_Sea (dor:Bismarck_Sea)
+      - Bob_Morris_(football_manager) (<http://dbpedia.org/resource/Bob_Morris_(football_manager)>) --doo:birthPlace--> Papua_New_Guinea (dor:Papua_New_Guinea)
+  '9':
+    attributes: {}
+    relationships:
+      - Bismarck_Sea (dor:Bismarck_Sea) --doo:country--> Papua_New_Guinea (dor:Papua_New_Guinea)
+      - Bismarck_Sea (dor:Bismarck_Sea) --doo:isPartOf--> Pacific_Ocean (dor:Pacific_Ocean)
+      - Malas_River (dor:Malas_River) --doo:mouthPlace--> Bismarck_Sea (dor:Bismarck_Sea)
+      - John_Davani (dor:John_Davani) --doo:birthPlace--> Papua_New_Guinea (dor:Papua_New_Guinea)
+  '10':
+    attributes: {}
+    relationships:
+      - Caribbean_Sea (dor:Caribbean_Sea) --doo:country--> Jamaica (dor:Jamaica)
+      - Caribbean_Sea (dor:Caribbean_Sea) --doo:isPartOf--> Atlantic_Ocean (dor:Atlantic_Ocean)
+      - Atrato_River (dor:Atrato_River) --doo:mouthPlace--> Caribbean_Sea (dor:Caribbean_Sea)
+      - Aaron_Lawrence_(footballer) (<http://dbpedia.org/resource/Aaron_Lawrence_(footballer)>) --doo:birthPlace--> Jamaica (dor:Jamaica)
+attributes:
+  country: --header^ (dop:header)--> langString | --original name^ (doo:originalName)--> langString | --align^ (dop:align)--> langString
+  Location: --built^ (dop:built)--> int | --number of vineyards^ (doo:numberOfVineyards)--> int | --affiliation^ (dop:affiliation)--> Resource | --nickname^ (dop:nickname)--> langString | --utcOffset (doo:utcOffset)--> string | --reason^ (dop:reason)--> langString | --coordinates^ (dop:coordinates)--> double
+subgraph_id: 910
+relationships:
+  - body of water --doo:country--> country
+  - body of water --doo:isPartOf--> river
+  - Location --doo:mouthPlace--> body of water
+  - soccer manager --doo:birthPlace--> country

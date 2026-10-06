@@ -1,0 +1,85 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  settlement: doo:Settlement
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Edmonton_Chinese_Bilingual_Education_Association (dor:Edmonton_Chinese_Bilingual_Education_Association) --dop:areaServed--> Edmonton (dor:Edmonton)
+      - Canora,_Edmonton (<http://dbpedia.org/resource/Canora,_Edmonton>) --wwoo:differentFrom--> Edmonton (dor:Edmonton)
+      - Edmonton_Public_Schools (dor:Edmonton_Public_Schools) --dop:city--> Edmonton (dor:Edmonton)
+  '2':
+    attributes: {}
+    relationships:
+      - Freshlocal_Solutions (dor:Freshlocal_Solutions) --dop:areaServed--> Edmonton (dor:Edmonton)
+      - Canora,_Edmonton (<http://dbpedia.org/resource/Canora,_Edmonton>) --wwoo:differentFrom--> Edmonton (dor:Edmonton)
+      - Edmonton_Public_Schools (dor:Edmonton_Public_Schools) --dop:city--> Edmonton (dor:Edmonton)
+  '3':
+    attributes: {}
+    relationships:
+      - Navigator_Ltd (dor:Navigator_Ltd) --dop:areaServed--> Edmonton (dor:Edmonton)
+      - Canora,_Edmonton (<http://dbpedia.org/resource/Canora,_Edmonton>) --wwoo:differentFrom--> Edmonton (dor:Edmonton)
+      - Edmonton_Public_Schools (dor:Edmonton_Public_Schools) --dop:city--> Edmonton (dor:Edmonton)
+  '4':
+    attributes: {}
+    relationships:
+      - Australian_Transit_Enterprises (dor:Australian_Transit_Enterprises) --dop:areaServed--> Perth (dor:Perth)
+      - Craigie_(hamlet),_Perth_and_Kinross (<http://dbpedia.org/resource/Craigie_(hamlet),_Perth_and_Kinross>) --wwoo:differentFrom--> Perth (dor:Perth)
+      - Alfred_Cove,_Western_Australia (<http://dbpedia.org/resource/Alfred_Cove,_Western_Australia>) --dop:city--> Perth (dor:Perth)
+  '5':
+    attributes: {}
+    relationships:
+      - Australian_Transit_Enterprises (dor:Australian_Transit_Enterprises) --dop:areaServed--> Perth (dor:Perth)
+      - Craigie_(hamlet),_Perth_and_Kinross (<http://dbpedia.org/resource/Craigie_(hamlet),_Perth_and_Kinross>) --wwoo:differentFrom--> Perth (dor:Perth)
+      - Applecross,_Western_Australia (<http://dbpedia.org/resource/Applecross,_Western_Australia>) --dop:city--> Perth (dor:Perth)
+  '6':
+    attributes: {}
+    relationships:
+      - Australian_Transit_Enterprises (dor:Australian_Transit_Enterprises) --dop:areaServed--> Perth (dor:Perth)
+      - Craigie_(hamlet),_Perth_and_Kinross (<http://dbpedia.org/resource/Craigie_(hamlet),_Perth_and_Kinross>) --wwoo:differentFrom--> Perth (dor:Perth)
+      - Armadale,_Western_Australia (<http://dbpedia.org/resource/Armadale,_Western_Australia>) --dop:city--> Perth (dor:Perth)
+  '7':
+    attributes: {}
+    relationships:
+      - Information_and_Communication_Technology_Academy_of_Kerala (dor:Information_and_Communication_Technology_Academy_of_Kerala) --dop:areaServed--> Thiruvananthapuram (dor:Thiruvananthapuram)
+      - Kallara (dor:Kallara) --wwoo:differentFrom--> Thiruvananthapuram (dor:Thiruvananthapuram)
+      - Jaihind_Vayanasala (dor:Jaihind_Vayanasala) --dop:city--> Thiruvananthapuram (dor:Thiruvananthapuram)
+  '8':
+    attributes:
+      Minneapolis: (founder^='John H. Stevens and Franklin Steele')
+    relationships:
+      - Amazon_Bookstore_Cooperative (dor:Amazon_Bookstore_Cooperative) --dop:areaServed--> Minneapolis (dor:Minneapolis)
+      - Near_North_(neighborhood),_Minneapolis (<http://dbpedia.org/resource/Near_North_(neighborhood),_Minneapolis>) --wwoo:differentFrom--> Minneapolis (dor:Minneapolis)
+      - Hiawatha,_Minneapolis (<http://dbpedia.org/resource/Hiawatha,_Minneapolis>) --dop:city--> Minneapolis (dor:Minneapolis)
+  '9':
+    attributes:
+      Minneapolis: (founder^='John H. Stevens and Franklin Steele')
+    relationships:
+      - Harris_Williams_&_Co. (<http://dbpedia.org/resource/Harris_Williams_&_Co.>) --dop:areaServed--> Minneapolis (dor:Minneapolis)
+      - Near_North_(neighborhood),_Minneapolis (<http://dbpedia.org/resource/Near_North_(neighborhood),_Minneapolis>) --wwoo:differentFrom--> Minneapolis (dor:Minneapolis)
+      - Hiawatha,_Minneapolis (<http://dbpedia.org/resource/Hiawatha,_Minneapolis>) --dop:city--> Minneapolis (dor:Minneapolis)
+  '10':
+    attributes:
+      Minneapolis: (founder^='John H. Stevens and Franklin Steele')
+    relationships:
+      - Amazon_Bookstore_Cooperative (dor:Amazon_Bookstore_Cooperative) --dop:areaServed--> Minneapolis (dor:Minneapolis)
+      - Near_North,_Minneapolis (<http://dbpedia.org/resource/Near_North,_Minneapolis>) --wwoo:differentFrom--> Minneapolis (dor:Minneapolis)
+      - Hiawatha,_Minneapolis (<http://dbpedia.org/resource/Hiawatha,_Minneapolis>) --dop:city--> Minneapolis (dor:Minneapolis)
+attributes:
+  city: --founder^ (dop:founder)--> langString
+  Location: --alt name^ (dop:altName)--> langString | --territory^ (doo:territory)--> Resource | --2p^ (dop:2p)--> int | --original name^ (doo:originalName)--> langString | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double
+  settlement: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --url^ (dop:url)--> Resource | --direction^ (dop:direction)--> langString
+  organisation: --named after^ (doo:namedAfter)--> Resource | --caption^ (dop:caption)--> langString | --headquarter^ (doo:headquarter)--> Resource
+subgraph_id: 451
+relationships:
+  - organisation --dop:areaServed--> city
+  - Location --wwoo:differentFrom--> city
+  - settlement --dop:city--> city

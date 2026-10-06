@@ -1,0 +1,92 @@
+types:
+  city: doo:City
+  island: doo:Island
+  ethnic group: doo:EthnicGroup
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwors: http://www.w3.org/2000/01/rdf-schema#
+instances:
+  '1':
+    attributes:
+      Tegucigalpa: (area code^='(country)+504(city) 2')
+    relationships:
+      - Afro-Hondurans (dor:Afro-Hondurans) --doo:populationPlace--> Roatán (<http://dbpedia.org/resource/Roatán>)
+      - Afro-Hondurans (dor:Afro-Hondurans) --doo:populationPlace--> Tegucigalpa (dor:Tegucigalpa)
+      - 1947_Honduran_Amateur_League (dor:1947_Honduran_Amateur_League) --dop:location--> Tegucigalpa (dor:Tegucigalpa)
+  '2':
+    attributes:
+      Tegucigalpa: (area code^='(country)+504(city) 2')
+    relationships:
+      - Afro-Hondurans (dor:Afro-Hondurans) --doo:populationPlace--> Roatán (<http://dbpedia.org/resource/Roatán>)
+      - Afro-Hondurans (dor:Afro-Hondurans) --doo:populationPlace--> Tegucigalpa (dor:Tegucigalpa)
+      - 1948_Honduran_Amateur_League (dor:1948_Honduran_Amateur_League) --dop:location--> Tegucigalpa (dor:Tegucigalpa)
+  '3':
+    attributes:
+      Tegucigalpa: (area code^='(country)+504(city) 2')
+    relationships:
+      - Afro-Hondurans (dor:Afro-Hondurans) --doo:populationPlace--> Roatán (<http://dbpedia.org/resource/Roatán>)
+      - Afro-Hondurans (dor:Afro-Hondurans) --doo:populationPlace--> Tegucigalpa (dor:Tegucigalpa)
+      - 1949_Honduran_Amateur_League (dor:1949_Honduran_Amateur_League) --dop:location--> Tegucigalpa (dor:Tegucigalpa)
+  '4':
+    attributes:
+      Jakarta: (b^='yes', area code^='+62 21')
+    relationships:
+      - Arab_Indonesians (dor:Arab_Indonesians) --doo:populationPlace--> Maluku_Islands (dor:Maluku_Islands)
+      - Arab_Indonesians (dor:Arab_Indonesians) --doo:populationPlace--> Jakarta (dor:Jakarta)
+      - 2010–11_in_Indonesian_football (<http://dbpedia.org/resource/2010–11_in_Indonesian_football>) --dop:location--> Jakarta (dor:Jakarta)
+  '5':
+    attributes:
+      Jakarta: (b^='yes', area code^='+62 21')
+    relationships:
+      - Arab_Indonesians (dor:Arab_Indonesians) --doo:populationPlace--> Maluku_Islands (dor:Maluku_Islands)
+      - Arab_Indonesians (dor:Arab_Indonesians) --doo:populationPlace--> Jakarta (dor:Jakarta)
+      - 2010–11_Liga_Indonesia_Second_Division (<http://dbpedia.org/resource/2010–11_Liga_Indonesia_Second_Division>) --dop:location--> Jakarta (dor:Jakarta)
+  '6':
+    attributes:
+      Caracas: (area code^='212')
+    relationships:
+      - Arab_Venezuelans (dor:Arab_Venezuelans) --doo:populationPlace--> Margarita_Island (dor:Margarita_Island)
+      - Arab_Venezuelans (dor:Arab_Venezuelans) --doo:populationPlace--> Caracas (dor:Caracas)
+      - 2017_Venezuelan_Primera_División_season (<http://dbpedia.org/resource/2017_Venezuelan_Primera_División_season>) --dop:location--> Caracas (dor:Caracas)
+  '7':
+    attributes:
+      Caracas: (area code^='212')
+    relationships:
+      - Arab_Venezuelans (dor:Arab_Venezuelans) --doo:populationPlace--> Margarita_Island (dor:Margarita_Island)
+      - Arab_Venezuelans (dor:Arab_Venezuelans) --doo:populationPlace--> Caracas (dor:Caracas)
+      - 2018_Venezuelan_Primera_División_season (<http://dbpedia.org/resource/2018_Venezuelan_Primera_División_season>) --dop:location--> Caracas (dor:Caracas)
+  '8':
+    attributes:
+      Caracas: (area code^='212')
+    relationships:
+      - Arab_Venezuelans (dor:Arab_Venezuelans) --doo:populationPlace--> Margarita_Island (dor:Margarita_Island)
+      - Arab_Venezuelans (dor:Arab_Venezuelans) --doo:populationPlace--> Caracas (dor:Caracas)
+      - 2019_Venezuelan_Primera_División_season (<http://dbpedia.org/resource/2019_Venezuelan_Primera_División_season>) --dop:location--> Caracas (dor:Caracas)
+  '9':
+    attributes:
+      Kyiv: (named for^='http://dbpedia.org/resource/Kyi', area code^='+380 44')
+    relationships:
+      - Armenians_in_Ukraine (dor:Armenians_in_Ukraine) --doo:populationPlace--> Crimea (dor:Crimea)
+      - Armenians_in_Ukraine (dor:Armenians_in_Ukraine) --doo:populationPlace--> Kyiv (dor:Kyiv)
+      - 2009–10_in_Italian_football (<http://dbpedia.org/resource/2009–10_in_Italian_football>) --dop:location--> Kyiv (dor:Kyiv)
+  '10':
+    attributes:
+      Kyiv: (named for^='http://dbpedia.org/resource/Kyi', area code^='+380 44')
+    relationships:
+      - Armenians_in_Ukraine (dor:Armenians_in_Ukraine) --doo:populationPlace--> Crimea (dor:Crimea)
+      - Armenians_in_Ukraine (dor:Armenians_in_Ukraine) --doo:populationPlace--> Kyiv (dor:Kyiv)
+      - 2011–12_in_French_football (<http://dbpedia.org/resource/2011–12_in_French_football>) --dop:location--> Kyiv (dor:Kyiv)
+attributes:
+  city: --named for^ (dop:namedFor)--> Resource | --quote^ (dop:quote)--> int | --b^ (dop:b)--> langString | --area code^ (doo:areaCode)--> string
+  island: --Aug high C^ (dop:augHighC)--> double | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --length m^ (dop:lengthM)--> int
+  ethnic group: --float^ (dop:float)--> langString
+  football league season: --header^ (dop:header)--> langString | --longest unbeaten^ (dop:longestUnbeaten)--> int | --seeAlso (wwors:seeAlso)--> Resource
+subgraph_id: 763
+relationships:
+  - ethnic group --doo:populationPlace--> island
+  - ethnic group --doo:populationPlace--> city
+  - football league season --dop:location--> city

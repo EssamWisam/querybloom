@@ -1,0 +1,103 @@
+types:
+  country: doo:Country
+  cricketer: doo:Cricketer
+  cricket team: doo:CricketTeam
+  career station: doo:CareerStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      India: (c^='The Middle East and South Asia')
+      A_I_Harrsha: (source^='http://www.espncricinfo.com/ci/content/player/477047.html Cricinfo', birth place^='http://dbpedia.org/resource/Chennai')
+      Hyderabad_cricket_team: (ground^='http://dbpedia.org/resource/Rajiv_Gandhi_International_Stadium', capacity^='55000')
+    relationships:
+      - A_I_Harrsha (dor:A_I_Harrsha) --doo:careerStation--> A_I_Harrsha__CareerStation__1 (dor:A_I_Harrsha__CareerStation__1)
+      - A_I_Harrsha__CareerStation__1 (dor:A_I_Harrsha__CareerStation__1) --doo:team--> Hyderabad_cricket_team (dor:Hyderabad_cricket_team)
+      - A_I_Harrsha (dor:A_I_Harrsha) --dop:birthPlace--> India (dor:India)
+  '2':
+    attributes:
+      A._C._M._Lafir: (source^='http://www.espncricinfo.com/srilanka/content/player/49568.html Cricinfo', birth place^='http://dbpedia.org/resource/British_Ceylon')
+    relationships:
+      - A._C._M._Lafir (dor:A._C._M._Lafir) --doo:careerStation--> A._C._M._Lafir__CareerStation__1 (dor:A._C._M._Lafir__CareerStation__1)
+      - A._C._M._Lafir__CareerStation__1 (dor:A._C._M._Lafir__CareerStation__1) --doo:team--> Sri_Lanka_national_cricket_team (dor:Sri_Lanka_national_cricket_team)
+      - A._C._M._Lafir (dor:A._C._M._Lafir) --dop:birthPlace--> British_Ceylon (dor:British_Ceylon)
+  '3':
+    attributes:
+      England: (city^='Birmingham', caption align^='center')
+      A._H._Hornby: (source^='Albert Hornby. ESPN Cricket archive', birth place^='http://dbpedia.org/resource/Cheshire')
+      Lancashire_County_Cricket_Club: (ground^='http://dbpedia.org/resource/Old_Trafford_Cricket_Ground', capacity^='25000')
+    relationships:
+      - A._H._Hornby (dor:A._H._Hornby) --doo:careerStation--> A._H._Hornby__CareerStation__1 (dor:A._H._Hornby__CareerStation__1)
+      - A._H._Hornby__CareerStation__1 (dor:A._H._Hornby__CareerStation__1) --doo:team--> Lancashire_County_Cricket_Club (dor:Lancashire_County_Cricket_Club)
+      - A._H._Hornby (dor:A._H._Hornby) --dop:birthPlace--> England (dor:England)
+  '4':
+    attributes:
+      A._K._M._Mahmood: (source^='https://cricketarchive.com/Archive/Players/35/35143/35143.html CricketArchive', birth place^='http://dbpedia.org/resource/Bangladesh')
+    relationships:
+      - A._K._M._Mahmood (dor:A._K._M._Mahmood) --doo:careerStation--> A._K._M._Mahmood__CareerStation__1 (dor:A._K._M._Mahmood__CareerStation__1)
+      - A._K._M._Mahmood__CareerStation__1 (dor:A._K._M._Mahmood__CareerStation__1) --doo:team--> Sylhet_Division_cricket_team (dor:Sylhet_Division_cricket_team)
+      - A._K._M._Mahmood (dor:A._K._M._Mahmood) --dop:birthPlace--> Bangladesh (dor:Bangladesh)
+  '5':
+    attributes:
+      Kerala_cricket_team: (ground^='http://dbpedia.org/resource/Greenfield_International_Stadium', capacity^='55000')
+      A._P._M._Gopalakrishnan: (source^='https://cricketarchive.com/Archive/Players/35/35764/35764.html CricketArchive', birth place^='http://dbpedia.org/resource/British_India')
+    relationships:
+      - A._P._M._Gopalakrishnan (dor:A._P._M._Gopalakrishnan) --doo:careerStation--> A._P._M._Gopalakrishnan__CareerStation__1 (dor:A._P._M._Gopalakrishnan__CareerStation__1)
+      - A._P._M._Gopalakrishnan__CareerStation__1 (dor:A._P._M._Gopalakrishnan__CareerStation__1) --doo:team--> Kerala_cricket_team (dor:Kerala_cricket_team)
+      - A._P._M._Gopalakrishnan (dor:A._P._M._Gopalakrishnan) --dop:birthPlace--> British_India (dor:British_India)
+  '6':
+    attributes:
+      Kerala_cricket_team: (ground^='http://dbpedia.org/resource/Greenfield_International_Stadium', capacity^='55000')
+      A._P._M._Gopalakrishnan: (source^='https://cricketarchive.com/Archive/Players/35/35764/35764.html CricketArchive', birth place^='http://dbpedia.org/resource/British_India')
+    relationships:
+      - A._P._M._Gopalakrishnan (dor:A._P._M._Gopalakrishnan) --doo:careerStation--> A._P._M._Gopalakrishnan__CareerStation__1 (dor:A._P._M._Gopalakrishnan__CareerStation__1)
+      - A._P._M._Gopalakrishnan__CareerStation__1 (dor:A._P._M._Gopalakrishnan__CareerStation__1) --doo:team--> Kerala_cricket_team (dor:Kerala_cricket_team)
+      - A._P._M._Gopalakrishnan (dor:A._P._M._Gopalakrishnan) --dop:birthPlace--> Madras_Presidency (dor:Madras_Presidency)
+  '7':
+    attributes:
+      Pakistan: (city^='Bahawalpur', caption align^='center')
+      Aamer_Jamal: (source^='http://www.espncricinfo.com/ci/content/player/793441.html Cricinfo', birth place^='http://dbpedia.org/resource/Mianwali')
+      Northern_cricket_team: (ground^='http://dbpedia.org/resource/House_of_Northern_Cricket_Ground')
+    relationships:
+      - Aamer_Jamal (dor:Aamer_Jamal) --doo:careerStation--> Aamer_Jamal__CareerStation__1 (dor:Aamer_Jamal__CareerStation__1)
+      - Aamer_Jamal__CareerStation__1 (dor:Aamer_Jamal__CareerStation__1) --doo:team--> Northern_cricket_team (dor:Northern_cricket_team)
+      - Aamer_Jamal (dor:Aamer_Jamal) --dop:birthPlace--> Pakistan (dor:Pakistan)
+  '8':
+    attributes:
+      Pakistan: (city^='Bahawalpur', caption align^='center')
+      Aamer_Jamal: (source^='http://www.espncricinfo.com/ci/content/player/793441.html Cricinfo', birth place^='http://dbpedia.org/resource/Mianwali')
+      Peshawar_Zalmi: (ground^='http://dbpedia.org/resource/Arbab_Niaz_Stadium', capacity^='35000')
+    relationships:
+      - Aamer_Jamal (dor:Aamer_Jamal) --doo:careerStation--> Aamer_Jamal__CareerStation__2 (dor:Aamer_Jamal__CareerStation__2)
+      - Aamer_Jamal__CareerStation__2 (dor:Aamer_Jamal__CareerStation__2) --doo:team--> Peshawar_Zalmi (dor:Peshawar_Zalmi)
+      - Aamer_Jamal (dor:Aamer_Jamal) --dop:birthPlace--> Pakistan (dor:Pakistan)
+  '9':
+    attributes:
+      India: (c^='The Middle East and South Asia')
+      Aamir_Gani: (source^='http://www.espncricinfo.com/Bangladesh/content/player/642543.html Cricinfo', birth place^='http://dbpedia.org/resource/India')
+      Bengal_cricket_team: (ground^='http://dbpedia.org/resource/Eden_Gardens', capacity^='66349')
+    relationships:
+      - Aamir_Gani (dor:Aamir_Gani) --doo:careerStation--> Aamir_Gani__CareerStation__1 (dor:Aamir_Gani__CareerStation__1)
+      - Aamir_Gani__CareerStation__1 (dor:Aamir_Gani__CareerStation__1) --doo:team--> Bengal_cricket_team (dor:Bengal_cricket_team)
+      - Aamir_Gani (dor:Aamir_Gani) --dop:birthPlace--> India (dor:India)
+  '10':
+    attributes:
+      Aaron_Heal: (source^='https://cricketarchive.com/Archive/Players/45/45480/45480.html CricketArchive', birth place^='http://dbpedia.org/resource/Armadale,_Western_Australia')
+      Western_Australia_cricket_team: (ground^='http://dbpedia.org/resource/WACA_Ground', capacity^='20000')
+    relationships:
+      - Aaron_Heal (dor:Aaron_Heal) --doo:careerStation--> Aaron_Heal__CareerStation__1 (dor:Aaron_Heal__CareerStation__1)
+      - Aaron_Heal__CareerStation__1 (dor:Aaron_Heal__CareerStation__1) --doo:team--> Western_Australia_cricket_team (dor:Western_Australia_cricket_team)
+      - Aaron_Heal (dor:Aaron_Heal) --dop:birthPlace--> Western_Australia (dor:Western_Australia)
+attributes:
+  country: --1p^ (dop:1p)--> int | --2p^ (dop:2p)--> int | --c^ (dop:c)--> langString | --city^ (dop:city)--> langString | --caption align^ (dop:captionAlign)--> langString | --religion^ (doo:religion)--> Resource | --Apr low C^ (dop:aprLowC)--> double
+  cricketer: --source^ (dop:source)--> langString | --birth place^ (dop:birthPlace)--> langString
+  cricket team: --ground^ (dop:ground)--> langString | --capacity^ (dop:capacity)--> int | --ground^ (dop:ground)--> Resource
+subgraph_id: 700
+relationships:
+  - cricketer --doo:careerStation--> career station
+  - career station --doo:team--> cricket team
+  - cricketer --dop:birthPlace--> country

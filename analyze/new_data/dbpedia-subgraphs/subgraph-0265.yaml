@@ -1,0 +1,115 @@
+types:
+  country: doo:Country
+  settlement: doo:Settlement
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adelaide: (population total^='1387290')
+    relationships:
+      - 13cabs (dor:13cabs) --dop:areaServed--> Adelaide (dor:Adelaide)
+      - Adelaide (dor:Adelaide) --doo:country--> Australia (dor:Australia)
+  '2':
+    attributes:
+      Brisbane: (Aug precipitation mm^='34.2', Aug rain days^='3.5', population total^='2582007')
+    relationships:
+      - 13cabs (dor:13cabs) --dop:areaServed--> Brisbane (dor:Brisbane)
+      - Brisbane (dor:Brisbane) --doo:country--> Australia (dor:Australia)
+  '3':
+    attributes:
+      Hobart: (Aug rain days^='13.6', population total^='247068')
+    relationships:
+      - 13cabs (dor:13cabs) --dop:areaServed--> Hobart (dor:Hobart)
+      - Hobart (dor:Hobart) --doo:country--> Australia (dor:Australia)
+  '4':
+    attributes:
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - 21st_Century_Newspapers (dor:21st_Century_Newspapers) --dop:areaServed--> Michigan (dor:Michigan)
+      - Michigan (dor:Michigan) --doo:country--> United_States (dor:United_States)
+  '5':
+    attributes:
+      India: (url^='https://books.google.com/books%3Fid=Vr2qnK_QOuAC&pg=PA1140')
+      Kerala: (population total^='34630192')
+    relationships:
+      - 33_kV_Substation,_Perunad (<http://dbpedia.org/resource/33_kV_Substation,_Perunad>) --dop:areaServed--> Kerala (dor:Kerala)
+      - Kerala (dor:Kerala) --doo:country--> India (dor:India)
+  '6':
+    attributes:
+      Brooklyn: (population total^='2736074')
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - 826NYC (dor:826NYC) --dop:areaServed--> Brooklyn (dor:Brooklyn)
+      - Brooklyn (dor:Brooklyn) --doo:country--> United_States (dor:United_States)
+  '7':
+    attributes:
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - 826NYC (dor:826NYC) --dop:areaServed--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>) --doo:country--> United_States (dor:United_States)
+  '8':
+    attributes:
+      Cambodia: '(reason^=''Further KR leaders were prosecuted in 2018 and 2020'', footer^=''Clockwise from top left: Curry soup , coconut prahok dip , num banhchok and samlar kako.'', url^=''https://web.archive.org/web/20111023143655/http:/www.freedomhouse.org/template.cfm%3Fpage=22&year=2011&country=8009'')'
+      Phnom_Penh: (Aug rain days^='18.3', population total^='2281951')
+    relationships:
+      - A_New_Day_Cambodia (dor:A_New_Day_Cambodia) --dop:areaServed--> Phnom_Penh (dor:Phnom_Penh)
+      - Phnom_Penh (dor:Phnom_Penh) --doo:country--> Cambodia (dor:Cambodia)
+  '9':
+    attributes:
+      Assam: (population total^='31169272')
+      India: (url^='https://books.google.com/books%3Fid=Vr2qnK_QOuAC&pg=PA1140')
+    relationships:
+      - Aaranyak (dor:Aaranyak) --dop:areaServed--> Assam (dor:Assam)
+      - Assam (dor:Assam) --doo:country--> India (dor:India)
+  '10':
+    attributes:
+      Bristol: (Aug precipitation mm^='75.1', population total^='465866')
+      United_Kingdom: (reason^='successful in what way?')
+    relationships:
+      - Aardman_Animations (dor:Aardman_Animations) --dop:areaServed--> Bristol (dor:Bristol)
+      - Bristol (dor:Bristol) --doo:country--> United_Kingdom (dor:United_Kingdom)
+qa_result:
+  status: completed
+  cost_usd: 0.371955
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.025177400000000003
+        total_tokens: 3326
+        prompt_tokens: 2311
+        completion_tokens: 1015
+      generate:
+        cost_usd: 0.09406260000000002
+        total_tokens: 7673
+        prompt_tokens: 3480
+        completion_tokens: 4193
+      verify_1:
+        cost_usd: 0.039497000000000004
+        total_tokens: 4960
+        prompt_tokens: 3980
+        completion_tokens: 980
+      complexity:
+        cost_usd: 0.213218
+        total_tokens: 14774
+        prompt_tokens: 4912
+        completion_tokens: 9862
+    total_tokens: 30733
+    prompt_tokens: 14683
+    total_cost_usd: 0.37195500000000004
+    completion_tokens: 16050
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  country: --2a^ (dop:2a)--> langString | --reason^ (dop:reason)--> langString | --footer^ (dop:footer)--> langString | --1p^ (dop:1p)--> int | --url^ (dop:url)--> Resource
+  settlement: --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --Aug rain days^ (dop:augRainDays)--> int | --winner^ (dop:winner)--> langString | --population total^ (doo:populationTotal)--> int
+  organisation: --original name^ (doo:originalName)--> langString | --main organ^ (doo:mainOrgan)--> Resource
+subgraph_id: 265
+relationships:
+  - organisation --dop:areaServed--> settlement
+  - settlement --doo:country--> country

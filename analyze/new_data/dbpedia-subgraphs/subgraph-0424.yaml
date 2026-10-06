@@ -1,0 +1,84 @@
+types:
+  ship: doo:Ship
+  town: doo:Town
+  river: doo:River
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Eye_of_the_Wind: (builder^='http://dbpedia.org/resource/Brake,_Lower_Saxony')
+    relationships:
+      - Braker_Sieltief (dor:Braker_Sieltief) --doo:mouthPlace--> Brake,_Lower_Saxony (<http://dbpedia.org/resource/Brake,_Lower_Saxony>)
+      - Eye_of_the_Wind (dor:Eye_of_the_Wind) --doo:builder--> Brake,_Lower_Saxony (<http://dbpedia.org/resource/Brake,_Lower_Saxony>)
+  '2':
+    attributes:
+      Fehmarnbelt_Lightship: (builder^='http://dbpedia.org/resource/Brake,_Lower_Saxony')
+    relationships:
+      - Braker_Sieltief (dor:Braker_Sieltief) --doo:mouthPlace--> Brake,_Lower_Saxony (<http://dbpedia.org/resource/Brake,_Lower_Saxony>)
+      - Fehmarnbelt_Lightship (dor:Fehmarnbelt_Lightship) --doo:builder--> Brake,_Lower_Saxony (<http://dbpedia.org/resource/Brake,_Lower_Saxony>)
+  '3':
+    attributes:
+      SS_Cap_Lopez: (builder^='http://dbpedia.org/resource/Brake,_Lower_Saxony')
+    relationships:
+      - Braker_Sieltief (dor:Braker_Sieltief) --doo:mouthPlace--> Brake,_Lower_Saxony (<http://dbpedia.org/resource/Brake,_Lower_Saxony>)
+      - SS_Cap_Lopez (dor:SS_Cap_Lopez) --doo:builder--> Brake,_Lower_Saxony (<http://dbpedia.org/resource/Brake,_Lower_Saxony>)
+  '4':
+    attributes:
+      Rio_de_Janeiro: (aprSun='181', type^='http://dbpedia.org/resource/List_of_cities_in_Brazil')
+      Brazilian_ironclad_Barroso: (builder^='http://dbpedia.org/resource/Rio_de_Janeiro', cost='55046.0')
+    relationships:
+      - Carioca_River (dor:Carioca_River) --doo:mouthPlace--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Brazilian_ironclad_Barroso (dor:Brazilian_ironclad_Barroso) --doo:builder--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+  '5':
+    attributes:
+      Rio_de_Janeiro: (aprSun='181', type^='http://dbpedia.org/resource/List_of_cities_in_Brazil')
+      Brazilian_ironclad_Rio_de_Janeiro: (builder^='http://dbpedia.org/resource/Rio_de_Janeiro', cost='47409.0')
+    relationships:
+      - Carioca_River (dor:Carioca_River) --doo:mouthPlace--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Brazilian_ironclad_Rio_de_Janeiro (dor:Brazilian_ironclad_Rio_de_Janeiro) --doo:builder--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+  '6':
+    attributes:
+      Rio_de_Janeiro: (aprSun='181', type^='http://dbpedia.org/resource/List_of_cities_in_Brazil')
+      Brazilian_ironclad_Sete_de_Setembro: (builder^='http://dbpedia.org/resource/Arsenal_de_Marinha_do_Rio_de_Janeiro')
+    relationships:
+      - Carioca_River (dor:Carioca_River) --doo:mouthPlace--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+      - Brazilian_ironclad_Sete_de_Setembro (dor:Brazilian_ironclad_Sete_de_Setembro) --doo:builder--> Rio_de_Janeiro (dor:Rio_de_Janeiro)
+  '7':
+    attributes:
+      Emden: (aprSun='179.5', Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^='http://uz.dbpedia.org/resource/Emden')
+      ARA_San_Juan_(S-42): (builder^='http://dbpedia.org/resource/Emden')
+    relationships:
+      - Ems_(river) (<http://dbpedia.org/resource/Ems_(river)>) --doo:mouthPlace--> Emden (dor:Emden)
+      - ARA_San_Juan_(S-42) (<http://dbpedia.org/resource/ARA_San_Juan_(S-42)>) --doo:builder--> Emden (dor:Emden)
+  '8':
+    attributes:
+      Emden: (aprSun='179.5', Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^='http://uz.dbpedia.org/resource/Emden')
+      Brigantine_Yankee: (builder^='http://dbpedia.org/resource/Brixham')
+    relationships:
+      - Ems_(river) (<http://dbpedia.org/resource/Ems_(river)>) --doo:mouthPlace--> Emden (dor:Emden)
+      - Brigantine_Yankee (dor:Brigantine_Yankee) --doo:builder--> Emden (dor:Emden)
+  '9':
+    attributes:
+      Emden: (aprSun='179.5', Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^='http://uz.dbpedia.org/resource/Emden')
+      E-Ship_1: (builder^='http://dbpedia.org/resource/Emden')
+    relationships:
+      - Ems_(river) (<http://dbpedia.org/resource/Ems_(river)>) --doo:mouthPlace--> Emden (dor:Emden)
+      - E-Ship_1 (dor:E-Ship_1) --doo:builder--> Emden (dor:Emden)
+  '10':
+    attributes:
+      Rockport,_Maine: (type^='http://dbpedia.org/resource/New_England_town')
+      Lynx_(tall_ship): (builder^='http://dbpedia.org/resource/Rockport,_Maine')
+    relationships:
+      - Goose_River_(Rockport_Harbor) (<http://dbpedia.org/resource/Goose_River_(Rockport_Harbor)>) --doo:mouthPlace--> Rockport,_Maine (<http://dbpedia.org/resource/Rockport,_Maine>)
+      - Lynx_(tall_ship) (<http://dbpedia.org/resource/Lynx_(tall_ship)>) --doo:builder--> Rockport,_Maine (<http://dbpedia.org/resource/Rockport,_Maine>)
+attributes:
+  ship: --cost^ (dop:cost)--> langString | --builder^ (doo:builder)--> Resource | --cost (doo:cost)--> poundSterling | --built^ (dop:built)--> int
+  town: --arc-gapA^ (dop:arcGapa)--> double | --Center^ (dop:center)--> langString | --Apr high F^ (dop:aprHighF)--> int | --aprSun (dop:aprSun)--> double | --type^ (doo:type)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int
+subgraph_id: 424
+relationships:
+  - river --doo:mouthPlace--> town
+  - ship --doo:builder--> town

@@ -1,0 +1,108 @@
+types:
+  city: doo:City
+  colour: doo:Colour
+  school: doo:School
+  magazine: doo:Magazine
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Columbia_blue: (source^='http://dbpedia.org/resource/Columbia_University')
+      Columbia_Grammar_&_Preparatory_School: (city^='http://dbpedia.org/resource/New_York,_New_York', colour^='http://dbpedia.org/resource/Columbia_blue')
+    relationships:
+      - Columbia_Grammar_&_Preparatory_School (<http://dbpedia.org/resource/Columbia_Grammar_&_Preparatory_School>) --dop:city--> New_York,_New_York (<http://dbpedia.org/resource/New_York,_New_York>)
+      - '''47_(magazine) (<http://dbpedia.org/resource/''47_(magazine)>) --doo:city--> New_York,_New_York (<http://dbpedia.org/resource/New_York,_New_York>)'
+      - Columbia_Grammar_&_Preparatory_School (<http://dbpedia.org/resource/Columbia_Grammar_&_Preparatory_School>) --doo:colour--> Columbia_blue (dor:Columbia_blue)
+  '2':
+    attributes:
+      Blue: (source^='http://dbpedia.org/resource/HTML_color_names')
+      Seoul: (government type^='http://dbpedia.org/resource/Mayor–council_government', date^='April 2022')
+      Dwight_School_Seoul: (city^='http://dbpedia.org/resource/Seoul', colour^='http://dbpedia.org/resource/Blue')
+    relationships:
+      - Dwight_School_Seoul (dor:Dwight_School_Seoul) --dop:city--> Seoul (dor:Seoul)
+      - 10_Magazine_(South_Korean_magazine) (<http://dbpedia.org/resource/10_Magazine_(South_Korean_magazine)>) --doo:city--> Seoul (dor:Seoul)
+      - Dwight_School_Seoul (dor:Dwight_School_Seoul) --doo:colour--> Blue (dor:Blue)
+  '3':
+    attributes:
+      Red: (source^='http://dbpedia.org/resource/X11_color_names')
+      Seoul: (government type^='http://dbpedia.org/resource/Mayor–council_government', date^='April 2022')
+      Dwight_School_Seoul: (city^='http://dbpedia.org/resource/Seoul', colour^='http://dbpedia.org/resource/Blue')
+    relationships:
+      - Dwight_School_Seoul (dor:Dwight_School_Seoul) --dop:city--> Seoul (dor:Seoul)
+      - 10_Magazine_(South_Korean_magazine) (<http://dbpedia.org/resource/10_Magazine_(South_Korean_magazine)>) --doo:city--> Seoul (dor:Seoul)
+      - Dwight_School_Seoul (dor:Dwight_School_Seoul) --doo:colour--> Red (dor:Red)
+  '4':
+    attributes:
+      Blue: (source^='http://dbpedia.org/resource/HTML_color_names')
+      Seoul: (government type^='http://dbpedia.org/resource/Mayor–council_government', date^='April 2022')
+      Global_Christian_Foreign_School: (city^='http://dbpedia.org/resource/Seoul', colour^='http://dbpedia.org/resource/Blue')
+    relationships:
+      - Global_Christian_Foreign_School (dor:Global_Christian_Foreign_School) --dop:city--> Seoul (dor:Seoul)
+      - 10_Magazine_(South_Korean_magazine) (<http://dbpedia.org/resource/10_Magazine_(South_Korean_magazine)>) --doo:city--> Seoul (dor:Seoul)
+      - Global_Christian_Foreign_School (dor:Global_Christian_Foreign_School) --doo:colour--> Blue (dor:Blue)
+  '5':
+    attributes:
+      London: (government type^='http://dbpedia.org/resource/Deliberative_assembly', width^='215')
+      Navy_blue: (source^='Gallego and Sanz')
+      Archbishop_Tenison's_School: (city^='http://dbpedia.org/resource/London', colour^='http://dbpedia.org/resource/Navy_blue')
+    relationships:
+      - Archbishop_Tenison's_School (<http://dbpedia.org/resource/Archbishop_Tenison's_School>) --dop:city--> London (dor:London)
+      - 125_Magazine (dor:125_Magazine) --doo:city--> London (dor:London)
+      - Archbishop_Tenison's_School (<http://dbpedia.org/resource/Archbishop_Tenison's_School>) --doo:colour--> Navy_blue (dor:Navy_blue)
+  '6':
+    attributes:
+      Red: (source^='http://dbpedia.org/resource/X11_color_names')
+      London: (government type^='http://dbpedia.org/resource/Deliberative_assembly', width^='215')
+      Archbishop_Tenison's_School: (city^='http://dbpedia.org/resource/London', colour^='http://dbpedia.org/resource/Navy_blue')
+    relationships:
+      - Archbishop_Tenison's_School (<http://dbpedia.org/resource/Archbishop_Tenison's_School>) --dop:city--> London (dor:London)
+      - 125_Magazine (dor:125_Magazine) --doo:city--> London (dor:London)
+      - Archbishop_Tenison's_School (<http://dbpedia.org/resource/Archbishop_Tenison's_School>) --doo:colour--> Red (dor:Red)
+  '7':
+    attributes:
+      Blue: (source^='http://dbpedia.org/resource/HTML_color_names')
+      London: (government type^='http://dbpedia.org/resource/Deliberative_assembly', width^='215')
+      Our_Lady_of_Lourdes_School,_Arnos_Grove: (city^='http://dbpedia.org/resource/London', colour^='http://dbpedia.org/resource/Blue')
+    relationships:
+      - Our_Lady_of_Lourdes_School,_Arnos_Grove (<http://dbpedia.org/resource/Our_Lady_of_Lourdes_School,_Arnos_Grove>) --dop:city--> London (dor:London)
+      - 125_Magazine (dor:125_Magazine) --doo:city--> London (dor:London)
+      - Our_Lady_of_Lourdes_School,_Arnos_Grove (<http://dbpedia.org/resource/Our_Lady_of_Lourdes_School,_Arnos_Grove>) --doo:colour--> Blue (dor:Blue)
+  '8':
+    attributes:
+      Columbia_blue: (source^='http://dbpedia.org/resource/Columbia_University')
+      New_York_City: (government type^='http://dbpedia.org/resource/Strong_Mayor', width^='225')
+      Archbishop_Molloy_High_School: (city^='http://dbpedia.org/resource/Briarwood,_Queens', colour^='http://dbpedia.org/resource/Columbia_blue')
+    relationships:
+      - Archbishop_Molloy_High_School (dor:Archbishop_Molloy_High_School) --dop:city--> New_York_City (dor:New_York_City)
+      - 16_(magazine) (<http://dbpedia.org/resource/16_(magazine)>) --doo:city--> New_York_City (dor:New_York_City)
+      - Archbishop_Molloy_High_School (dor:Archbishop_Molloy_High_School) --doo:colour--> Columbia_blue (dor:Columbia_blue)
+  '9':
+    attributes:
+      New_York_City: (government type^='http://dbpedia.org/resource/Strong_Mayor', width^='225')
+      Archbishop_Molloy_High_School: (city^='http://dbpedia.org/resource/Briarwood,_Queens', colour^='http://dbpedia.org/resource/Columbia_blue')
+    relationships:
+      - Archbishop_Molloy_High_School (dor:Archbishop_Molloy_High_School) --dop:city--> New_York_City (dor:New_York_City)
+      - 16_(magazine) (<http://dbpedia.org/resource/16_(magazine)>) --doo:city--> New_York_City (dor:New_York_City)
+      - Archbishop_Molloy_High_School (dor:Archbishop_Molloy_High_School) --doo:colour--> White (dor:White)
+  '10':
+    attributes:
+      New_York_City: (government type^='http://dbpedia.org/resource/Strong_Mayor', width^='225')
+      Brooklyn_Preparatory_School: (city^='http://dbpedia.org/resource/New_York_City', colour^='http://dbpedia.org/resource/Blue')
+    relationships:
+      - Brooklyn_Preparatory_School (dor:Brooklyn_Preparatory_School) --dop:city--> New_York_City (dor:New_York_City)
+      - 16_(magazine) (<http://dbpedia.org/resource/16_(magazine)>) --doo:city--> New_York_City (dor:New_York_City)
+      - Brooklyn_Preparatory_School (dor:Brooklyn_Preparatory_School) --doo:colour--> White (dor:White)
+attributes:
+  city: --Apr sun^ (dop:aprSun)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --government type^ (doo:governmentType)--> Resource | --date^ (dop:date)--> langString | --Aug low C^ (dop:augLowC)--> int | --Aug low F^ (dop:augLowF)--> int | --Apr rain days^ (dop:aprRainDays)--> double | --width^ (dop:width)--> int
+  colour: --source^ (dop:source)--> Resource
+  school: --city^ (dop:city)--> langString | --colour^ (doo:colour)--> Resource
+  magazine: --founder^ (doo:founder)--> Resource
+subgraph_id: 578
+relationships:
+  - school --dop:city--> city
+  - magazine --doo:city--> city
+  - school --doo:colour--> colour

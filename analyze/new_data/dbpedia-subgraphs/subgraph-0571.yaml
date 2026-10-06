@@ -1,0 +1,127 @@
+types:
+  city: doo:City
+  Grand Prix: doo:GrandPrix
+  settlement: doo:Settlement
+  sports team: doo:SportsTeam
+  basketball league: doo:BasketballLeague
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adam_Mokoka: (birth date^='1998-07-18')
+      Club_des_Patineurs_de_Paris: (founding year^='1902')
+    relationships:
+      - 1946_René_le_Bègue_Cup (<http://dbpedia.org/resource/1946_René_le_Bègue_Cup>) --dop:location--> Saint-Cloud (dor:Saint-Cloud)
+      - 1946_René_le_Bègue_Cup (<http://dbpedia.org/resource/1946_René_le_Bègue_Cup>) --dop:location--> Paris (dor:Paris)
+      - Adam_Mokoka (dor:Adam_Mokoka) --doo:birthPlace--> Paris (dor:Paris)
+      - Club_des_Patineurs_de_Paris (dor:Club_des_Patineurs_de_Paris) --doo:city--> Paris (dor:Paris)
+      - Adam_Mokoka (dor:Adam_Mokoka) --dop:league--> NBA_G_League (dor:NBA_G_League)
+  '2':
+    attributes:
+      Adam_Mokoka: (birth date^='1998-07-18')
+      Eternal_Academy: (founding year^='2019')
+    relationships:
+      - 1946_René_le_Bègue_Cup (<http://dbpedia.org/resource/1946_René_le_Bègue_Cup>) --dop:location--> Saint-Cloud (dor:Saint-Cloud)
+      - 1946_René_le_Bègue_Cup (<http://dbpedia.org/resource/1946_René_le_Bègue_Cup>) --dop:location--> Paris (dor:Paris)
+      - Adam_Mokoka (dor:Adam_Mokoka) --doo:birthPlace--> Paris (dor:Paris)
+      - Eternal_Academy (dor:Eternal_Academy) --doo:city--> Paris (dor:Paris)
+      - Adam_Mokoka (dor:Adam_Mokoka) --dop:league--> NBA_G_League (dor:NBA_G_League)
+  '3':
+    attributes:
+      Français_Volants: (founding year^='1933')
+    relationships:
+      - 1946_René_le_Bègue_Cup (<http://dbpedia.org/resource/1946_René_le_Bègue_Cup>) --dop:location--> Saint-Cloud (dor:Saint-Cloud)
+      - 1946_René_le_Bègue_Cup (<http://dbpedia.org/resource/1946_René_le_Bègue_Cup>) --dop:location--> Paris (dor:Paris)
+      - Adam_Mokoka (dor:Adam_Mokoka) --doo:birthPlace--> Paris (dor:Paris)
+      - Français_Volants (<http://dbpedia.org/resource/Français_Volants>) --doo:city--> Paris (dor:Paris)
+      - Adam_Mokoka (dor:Adam_Mokoka) --dop:league--> NBA_G_League (dor:NBA_G_League)
+  '4':
+    attributes:
+      London: (direction^='vertical', width^='215', UTC offset^='+1')
+      Admiral_Schofield: (birth date^='1997-03-30')
+      British_Hurricane: (founding year^='2018')
+    relationships:
+      - 2015_London_ePrix (dor:2015_London_ePrix) --dop:location--> Battersea (dor:Battersea)
+      - 2015_London_ePrix (dor:2015_London_ePrix) --dop:location--> London (dor:London)
+      - Admiral_Schofield (dor:Admiral_Schofield) --doo:birthPlace--> London (dor:London)
+      - British_Hurricane (dor:British_Hurricane) --doo:city--> London (dor:London)
+      - Admiral_Schofield (dor:Admiral_Schofield) --dop:league--> National_Basketball_Association (dor:National_Basketball_Association)
+  '5':
+    attributes:
+      London: (direction^='vertical', width^='215', UTC offset^='+1')
+      Admiral_Schofield: (birth date^='1997-03-30')
+      Earls_Court_Rangers: (founding year^='1935')
+    relationships:
+      - 2015_London_ePrix (dor:2015_London_ePrix) --dop:location--> Battersea (dor:Battersea)
+      - 2015_London_ePrix (dor:2015_London_ePrix) --dop:location--> London (dor:London)
+      - Admiral_Schofield (dor:Admiral_Schofield) --doo:birthPlace--> London (dor:London)
+      - Earls_Court_Rangers (dor:Earls_Court_Rangers) --doo:city--> London (dor:London)
+      - Admiral_Schofield (dor:Admiral_Schofield) --dop:league--> National_Basketball_Association (dor:National_Basketball_Association)
+  '6':
+    attributes:
+      London: (direction^='vertical', width^='215', UTC offset^='+1')
+      Admiral_Schofield: (birth date^='1997-03-30')
+    relationships:
+      - 2015_London_ePrix (dor:2015_London_ePrix) --dop:location--> Battersea (dor:Battersea)
+      - 2015_London_ePrix (dor:2015_London_ePrix) --dop:location--> London (dor:London)
+      - Admiral_Schofield (dor:Admiral_Schofield) --doo:birthPlace--> London (dor:London)
+      - Excel_Esports (dor:Excel_Esports) --doo:city--> London (dor:London)
+      - Admiral_Schofield (dor:Admiral_Schofield) --dop:league--> National_Basketball_Association (dor:National_Basketball_Association)
+  '7':
+    attributes:
+      Detroit: (direction^='vertical', width^='130', UTC offset^='−4')
+      Aerial_Powers: (birth date^='1994-01-17')
+    relationships:
+      - 1984_Detroit_Grand_Prix (dor:1984_Detroit_Grand_Prix) --dop:location--> Michigan (dor:Michigan)
+      - 1984_Detroit_Grand_Prix (dor:1984_Detroit_Grand_Prix) --dop:location--> Detroit (dor:Detroit)
+      - Aerial_Powers (dor:Aerial_Powers) --doo:birthPlace--> Detroit (dor:Detroit)
+      - Detroit_Jr._Red_Wings_(SOJHL) (<http://dbpedia.org/resource/Detroit_Jr._Red_Wings_(SOJHL)>) --doo:city--> Detroit (dor:Detroit)
+      - Aerial_Powers (dor:Aerial_Powers) --dop:league--> Women's_National_Basketball_Association (<http://dbpedia.org/resource/Women's_National_Basketball_Association>)
+  '8':
+    attributes:
+      Detroit: (direction^='vertical', width^='130', UTC offset^='−4')
+      Aerial_Powers: (birth date^='1994-01-17')
+    relationships:
+      - 1984_Detroit_Grand_Prix (dor:1984_Detroit_Grand_Prix) --dop:location--> Michigan (dor:Michigan)
+      - 1984_Detroit_Grand_Prix (dor:1984_Detroit_Grand_Prix) --dop:location--> Detroit (dor:Detroit)
+      - Aerial_Powers (dor:Aerial_Powers) --doo:birthPlace--> Detroit (dor:Detroit)
+      - Detroit_Junior_Red_Wings (dor:Detroit_Junior_Red_Wings) --doo:city--> Detroit (dor:Detroit)
+      - Aerial_Powers (dor:Aerial_Powers) --dop:league--> Women's_National_Basketball_Association (<http://dbpedia.org/resource/Women's_National_Basketball_Association>)
+  '9':
+    attributes:
+      Detroit: (direction^='vertical', width^='130', UTC offset^='−4')
+      Aerial_Powers: (birth date^='1994-01-17')
+    relationships:
+      - 1984_Detroit_Grand_Prix (dor:1984_Detroit_Grand_Prix) --dop:location--> Michigan (dor:Michigan)
+      - 1984_Detroit_Grand_Prix (dor:1984_Detroit_Grand_Prix) --dop:location--> Detroit (dor:Detroit)
+      - Aerial_Powers (dor:Aerial_Powers) --doo:birthPlace--> Detroit (dor:Detroit)
+      - Detroit_Lions (dor:Detroit_Lions) --doo:city--> Detroit (dor:Detroit)
+      - Aerial_Powers (dor:Aerial_Powers) --dop:league--> Women's_National_Basketball_Association (<http://dbpedia.org/resource/Women's_National_Basketball_Association>)
+  '10':
+    attributes:
+      Alex_Mallari: (birth date^='1987-03-26')
+      Long_Beach_Admirals: (founding year^='1967')
+      Long_Beach,_California: (width^='auto', UTC offset^='-07:00')
+    relationships:
+      - 1977_United_States_Grand_Prix_West (dor:1977_United_States_Grand_Prix_West) --dop:location--> California (dor:California)
+      - 1977_United_States_Grand_Prix_West (dor:1977_United_States_Grand_Prix_West) --dop:location--> Long_Beach,_California (<http://dbpedia.org/resource/Long_Beach,_California>)
+      - Alex_Mallari (dor:Alex_Mallari) --doo:birthPlace--> Long_Beach,_California (<http://dbpedia.org/resource/Long_Beach,_California>)
+      - Long_Beach_Admirals (dor:Long_Beach_Admirals) --doo:city--> Long_Beach,_California (<http://dbpedia.org/resource/Long_Beach,_California>)
+      - Alex_Mallari (dor:Alex_Mallari) --dop:league--> Philippine_Basketball_Association (dor:Philippine_Basketball_Association)
+attributes:
+  city: --direction^ (dop:direction)--> langString | --width^ (dop:width)--> langString | --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --float^ (dop:float)--> langString | --UTC offset^ (doo:utcOffset)--> string
+  settlement: --Aug rain days^ (dop:augRainDays)--> double | --Apr record high C^ (dop:aprRecordHighC)--> double
+  sports team: --founding year^ (doo:foundingYear)--> gYear
+  basketball player: --birth date^ (doo:birthDate)--> date
+subgraph_id: 571
+relationships:
+  - Grand Prix --dop:location--> settlement
+  - Grand Prix --dop:location--> city
+  - basketball player --doo:birthPlace--> city
+  - sports team --doo:city--> city
+  - basketball player --dop:league--> basketball league

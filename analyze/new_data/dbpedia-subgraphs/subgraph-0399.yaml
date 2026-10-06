@@ -1,0 +1,93 @@
+types:
+  road: doo:Road
+  Location: doo:Location
+  ethnic group: doo:EthnicGroup
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Atlanta: (source^='—National Geographic magazine, in naming Atlanta a "Place of a Lifetime"', population total^='498715', align^='right')
+    relationships:
+      - Georgia_(U.S._state) (<http://dbpedia.org/resource/Georgia_(U.S._state)>) --doo:capital--> Atlanta (dor:Atlanta)
+      - Afghan_Americans (dor:Afghan_Americans) --doo:populationPlace--> Georgia_(U.S._state) (<http://dbpedia.org/resource/Georgia_(U.S._state)>)
+      - Georgia_State_Route_60 (dor:Georgia_State_Route_60) --doo:routeJunction--> Georgia_(U.S._state) (<http://dbpedia.org/resource/Georgia_(U.S._state)>)
+  '2':
+    attributes:
+      Atlanta: (source^='—National Geographic magazine, in naming Atlanta a "Place of a Lifetime"', population total^='498715', align^='right')
+    relationships:
+      - Georgia_(U.S._state) (<http://dbpedia.org/resource/Georgia_(U.S._state)>) --doo:capital--> Atlanta (dor:Atlanta)
+      - Afghan_Americans (dor:Afghan_Americans) --doo:populationPlace--> Georgia_(U.S._state) (<http://dbpedia.org/resource/Georgia_(U.S._state)>)
+      - U.S._Route_76 (dor:U.S._Route_76) --doo:routeJunction--> Georgia_(U.S._state) (<http://dbpedia.org/resource/Georgia_(U.S._state)>)
+  '3':
+    attributes:
+      Atlanta: (source^='—National Geographic magazine, in naming Atlanta a "Place of a Lifetime"', population total^='498715', align^='right')
+    relationships:
+      - Georgia_(U.S._state) (<http://dbpedia.org/resource/Georgia_(U.S._state)>) --doo:capital--> Atlanta (dor:Atlanta)
+      - Afghan_Americans (dor:Afghan_Americans) --doo:populationPlace--> Georgia_(U.S._state) (<http://dbpedia.org/resource/Georgia_(U.S._state)>)
+      - U.S._Route_78 (dor:U.S._Route_78) --doo:routeJunction--> Georgia_(U.S._state) (<http://dbpedia.org/resource/Georgia_(U.S._state)>)
+  '4':
+    attributes:
+      Saint_Paul,_Minnesota: (source^='The Weather Channel', population total^='311527')
+    relationships:
+      - Minnesota (dor:Minnesota) --doo:capital--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Anishinaabe (dor:Anishinaabe) --doo:populationPlace--> Minnesota (dor:Minnesota)
+      - Avenue_of_the_Saints (dor:Avenue_of_the_Saints) --doo:routeJunction--> Minnesota (dor:Minnesota)
+  '5':
+    attributes:
+      Saint_Paul,_Minnesota: (source^='The Weather Channel', population total^='311527')
+    relationships:
+      - Minnesota (dor:Minnesota) --doo:capital--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Bosnian_Americans (dor:Bosnian_Americans) --doo:populationPlace--> Minnesota (dor:Minnesota)
+      - Avenue_of_the_Saints (dor:Avenue_of_the_Saints) --doo:routeJunction--> Minnesota (dor:Minnesota)
+  '6':
+    attributes:
+      Saint_Paul,_Minnesota: (source^='The Weather Channel', population total^='311527')
+    relationships:
+      - Minnesota (dor:Minnesota) --doo:capital--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Cambodian_Americans (dor:Cambodian_Americans) --doo:populationPlace--> Minnesota (dor:Minnesota)
+      - Avenue_of_the_Saints (dor:Avenue_of_the_Saints) --doo:routeJunction--> Minnesota (dor:Minnesota)
+  '7':
+    attributes:
+      New_Jersey: (align^='right')
+      Trenton,_New_Jersey: (population total^='90871')
+    relationships:
+      - New_Jersey (dor:New_Jersey) --doo:capital--> Trenton,_New_Jersey (<http://dbpedia.org/resource/Trenton,_New_Jersey>)
+      - African_immigration_to_the_United_States (dor:African_immigration_to_the_United_States) --doo:populationPlace--> New_Jersey (dor:New_Jersey)
+      - Interstate_676 (dor:Interstate_676) --doo:routeJunction--> New_Jersey (dor:New_Jersey)
+  '8':
+    attributes:
+      New_Jersey: (align^='right')
+      Trenton,_New_Jersey: (population total^='90871')
+    relationships:
+      - New_Jersey (dor:New_Jersey) --doo:capital--> Trenton,_New_Jersey (<http://dbpedia.org/resource/Trenton,_New_Jersey>)
+      - Albanian_Americans (dor:Albanian_Americans) --doo:populationPlace--> New_Jersey (dor:New_Jersey)
+      - Interstate_676 (dor:Interstate_676) --doo:routeJunction--> New_Jersey (dor:New_Jersey)
+  '9':
+    attributes:
+      New_Jersey: (align^='right')
+      Trenton,_New_Jersey: (population total^='90871')
+    relationships:
+      - New_Jersey (dor:New_Jersey) --doo:capital--> Trenton,_New_Jersey (<http://dbpedia.org/resource/Trenton,_New_Jersey>)
+      - American_Jews (dor:American_Jews) --doo:populationPlace--> New_Jersey (dor:New_Jersey)
+      - Interstate_676 (dor:Interstate_676) --doo:routeJunction--> New_Jersey (dor:New_Jersey)
+  '10':
+    attributes:
+      North_Carolina: (align^='center')
+      Raleigh,_North_Carolina: '(source^=''Weather Atlas'', population total^=''467665'', caption^=''Clockwise from top left: NC State bell tower, Confederate monument at the North Carolina State Capitol , houses in Boylan Heights, houses in Historic Oakwood, statue of Sir Walter Raleigh, skyline of ...'')'
+    relationships:
+      - North_Carolina (dor:North_Carolina) --doo:capital--> Raleigh,_North_Carolina (<http://dbpedia.org/resource/Raleigh,_North_Carolina>)
+      - Appalachian_Americans (dor:Appalachian_Americans) --doo:populationPlace--> North_Carolina (dor:North_Carolina)
+      - U.S._Route_21 (dor:U.S._Route_21) --doo:routeJunction--> North_Carolina (dor:North_Carolina)
+attributes:
+  Location: --source^ (dop:source)--> Resource | --population total^ (doo:populationTotal)--> int | --original name^ (doo:originalName)--> langString | --built^ (dop:built)--> int | --caption^ (dop:caption)--> langString | --align^ (dop:align)--> langString | --line^ (dop:line)--> int
+  administrative region: --type^ (doo:type)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> int | --Apr low C^ (dop:aprLowC)--> int | --align^ (dop:align)--> langString | --population total^ (doo:populationTotal)--> int | --Aug low C^ (dop:augLowC)--> int
+subgraph_id: 399
+relationships:
+  - administrative region --doo:capital--> Location
+  - ethnic group --doo:populationPlace--> administrative region
+  - road --doo:routeJunction--> administrative region

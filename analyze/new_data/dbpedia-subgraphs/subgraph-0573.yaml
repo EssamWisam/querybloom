@@ -1,0 +1,83 @@
+types:
+  cleric: doo:Cleric
+  country: doo:Country
+  university: doo:University
+  organisation: doo:Organisation
+  Academic Person: doo:Academic
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Salesians_of_Don_Bosco: (Link from a Wikipage to an external page^='http://www.salesianmissions.org')
+      Alberto_Lorenzelli_Rossi: (birth name^='Alberto Ricardo Lorenzelli Rossi')
+    relationships:
+      - Salesians_of_Don_Bosco (dor:Salesians_of_Don_Bosco) --doo:headquarter--> Italy (dor:Italy)
+      - Alberto_Lorenzelli_Rossi (dor:Alberto_Lorenzelli_Rossi) --dop:honorificSuffix--> Salesians_of_Don_Bosco (dor:Salesians_of_Don_Bosco)
+      - Alberto_Lorenzelli_Rossi (dor:Alberto_Lorenzelli_Rossi) --doo:almaMater--> Pontifical_Salesian_University (dor:Pontifical_Salesian_University)
+      - Andrea_Alciato (dor:Andrea_Alciato) --doo:nationality--> Italy (dor:Italy)
+  '2':
+    attributes:
+      Italy: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr')
+      Salesians_of_Don_Bosco: (Link from a Wikipage to an external page^='http://www.salesianmissions.org')
+      Alberto_Lorenzelli_Rossi: (birth name^='Alberto Ricardo Lorenzelli Rossi')
+    relationships:
+      - Salesians_of_Don_Bosco (dor:Salesians_of_Don_Bosco) --doo:headquarter--> Italy (dor:Italy)
+      - Alberto_Lorenzelli_Rossi (dor:Alberto_Lorenzelli_Rossi) --dop:honorificSuffix--> Salesians_of_Don_Bosco (dor:Salesians_of_Don_Bosco)
+      - Alberto_Lorenzelli_Rossi (dor:Alberto_Lorenzelli_Rossi) --doo:almaMater--> Pontifical_Urban_University (dor:Pontifical_Urban_University)
+      - Andrea_Alciato (dor:Andrea_Alciato) --doo:nationality--> Italy (dor:Italy)
+  '3':
+    attributes:
+      Italy: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr')
+      Salesians_of_Don_Bosco: (Link from a Wikipage to an external page^='http://www.salesianmissions.org')
+      Alfredo_José_Espinoza_Mateus: (birth name^='Alfredo José Espinoza Mateus', predecessor^='http://dbpedia.org/resource/Fausto_Trávez_Trávez')
+    relationships:
+      - Salesians_of_Don_Bosco (dor:Salesians_of_Don_Bosco) --doo:headquarter--> Italy (dor:Italy)
+      - Alfredo_José_Espinoza_Mateus (<http://dbpedia.org/resource/Alfredo_José_Espinoza_Mateus>) --dop:honorificSuffix--> Salesians_of_Don_Bosco (dor:Salesians_of_Don_Bosco)
+      - Alfredo_José_Espinoza_Mateus (<http://dbpedia.org/resource/Alfredo_José_Espinoza_Mateus>) --doo:almaMater--> Pontificia_Universidad_Católica_del_Ecuador (<http://dbpedia.org/resource/Pontificia_Universidad_Católica_del_Ecuador>)
+      - Andrea_Alciato (dor:Andrea_Alciato) --doo:nationality--> Italy (dor:Italy)
+  '4':
+    attributes:
+      Canada: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr')
+      J._Michael_Miller: (birth name^='John Michael Miller', predecessor^='http://dbpedia.org/resource/Raymond_Roussin')
+      Congregation_of_St._Basil: (Link from a Wikipage to an external page^='http://basilianfathersmissions.org/')
+    relationships:
+      - Congregation_of_St._Basil (dor:Congregation_of_St._Basil) --doo:headquarter--> Canada (dor:Canada)
+      - J._Michael_Miller (dor:J._Michael_Miller) --dop:honorificSuffix--> Congregation_of_St._Basil (dor:Congregation_of_St._Basil)
+      - J._Michael_Miller (dor:J._Michael_Miller) --doo:almaMater--> Pontifical_Gregorian_University (dor:Pontifical_Gregorian_University)
+      - Christopher_Goscha (dor:Christopher_Goscha) --doo:nationality--> Canada (dor:Canada)
+  '5':
+    attributes:
+      Canada: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr')
+      J._Michael_Miller: (birth name^='John Michael Miller', predecessor^='http://dbpedia.org/resource/Raymond_Roussin')
+      Congregation_of_St._Basil: (Link from a Wikipage to an external page^='http://basilianfathersmissions.org/')
+    relationships:
+      - Congregation_of_St._Basil (dor:Congregation_of_St._Basil) --doo:headquarter--> Canada (dor:Canada)
+      - J._Michael_Miller (dor:J._Michael_Miller) --dop:honorificSuffix--> Congregation_of_St._Basil (dor:Congregation_of_St._Basil)
+      - J._Michael_Miller (dor:J._Michael_Miller) --doo:almaMater--> St._Michael's_College,_Toronto (<http://dbpedia.org/resource/St._Michael's_College,_Toronto>)
+      - Christopher_Goscha (dor:Christopher_Goscha) --doo:nationality--> Canada (dor:Canada)
+  '6':
+    attributes:
+      Canada: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr')
+      J._Michael_Miller: (birth name^='John Michael Miller', predecessor^='http://dbpedia.org/resource/Raymond_Roussin')
+      Congregation_of_St._Basil: (Link from a Wikipage to an external page^='http://basilianfathersmissions.org/')
+    relationships:
+      - Congregation_of_St._Basil (dor:Congregation_of_St._Basil) --doo:headquarter--> Canada (dor:Canada)
+      - J._Michael_Miller (dor:J._Michael_Miller) --dop:honorificSuffix--> Congregation_of_St._Basil (dor:Congregation_of_St._Basil)
+      - J._Michael_Miller (dor:J._Michael_Miller) --doo:almaMater--> University_of_Wisconsin–Madison (<http://dbpedia.org/resource/University_of_Wisconsin–Madison>)
+      - Christopher_Goscha (dor:Christopher_Goscha) --doo:nationality--> Canada (dor:Canada)
+attributes:
+  cleric: --birth name^ (dop:birthName)--> langString | --predecessor^ (doo:predecessor)--> Resource
+  country: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+  university: --bot^ (dop:bot)--> langString | --head^ (doo:head)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+  organisation: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --align^ (dop:align)--> langString
+  Academic Person: --known for^ (dop:knownFor)--> langString | --honorific suffix^ (dop:honorificSuffix)--> Resource
+subgraph_id: 573
+relationships:
+  - organisation --doo:headquarter--> country
+  - cleric --dop:honorificSuffix--> organisation
+  - cleric --doo:almaMater--> university
+  - Academic Person --doo:nationality--> country

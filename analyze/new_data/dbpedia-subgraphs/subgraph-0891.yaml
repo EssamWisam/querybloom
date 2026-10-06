@@ -1,0 +1,125 @@
+types:
+  venue: doo:Venue
+  college coach: doo:CollegeCoach
+  sports league: doo:SportsLeague
+  basketball team: doo:BasketballTeam
+  basketball league: doo:BasketballLeague
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Jack_Ramsay: (death date^='2014-04-28')
+      Moda_Center: (opening date^='1995-10-12', owner^='http://dbpedia.org/resource/Vulcan_Inc.')
+      Chauncey_Billups: (league^='http://dbpedia.org/resource/National_Basketball_Association', cteam^='Los Angeles Clippers', has abstract^='Chauncey Billups (Denver, Colorado, 25 de septiembre de 1976) es un exjugador y entrenador estadounidense de baloncesto que disputó 16 temporadas en la NBA y que actualmente es el entrenador de Portla...', Link from a Wikipage to an external page^='http://www.jockbio.com/Bios/Billups/Billups_bio.html')
+    relationships:
+      - Moda_Center (dor:Moda_Center) --doo:tenant--> Portland_Trail_Blazers (dor:Portland_Trail_Blazers)
+      - Jack_Ramsay (dor:Jack_Ramsay) --dop:cteam--> Portland_Trail_Blazers (dor:Portland_Trail_Blazers)
+      - Portland_Trail_Blazers (dor:Portland_Trail_Blazers) --doo:coach--> Chauncey_Billups (dor:Chauncey_Billups)
+      - Portland_Trail_Blazers (dor:Portland_Trail_Blazers) --doo:league--> Western_Conference_(NBA) (<http://dbpedia.org/resource/Western_Conference_(NBA)>)
+      - Chauncey_Billups (dor:Chauncey_Billups) --doo:league--> National_Basketball_Association (dor:National_Basketball_Association)
+  '2':
+    attributes:
+      Jack_Ramsay: (death date^='2014-04-28')
+      Chauncey_Billups: (league^='http://dbpedia.org/resource/National_Basketball_Association', cteam^='Los Angeles Clippers', has abstract^='Chauncey Billups (Denver, Colorado, 25 de septiembre de 1976) es un exjugador y entrenador estadounidense de baloncesto que disputó 16 temporadas en la NBA y que actualmente es el entrenador de Portla...', Link from a Wikipage to an external page^='http://www.jockbio.com/Bios/Billups/Billups_bio.html')
+      Veterans_Memorial_Coliseum_(Portland,_Oregon): (opening date^='1960-11-03')
+    relationships:
+      - Veterans_Memorial_Coliseum_(Portland,_Oregon) (<http://dbpedia.org/resource/Veterans_Memorial_Coliseum_(Portland,_Oregon)>) --doo:tenant--> Portland_Trail_Blazers (dor:Portland_Trail_Blazers)
+      - Jack_Ramsay (dor:Jack_Ramsay) --dop:cteam--> Portland_Trail_Blazers (dor:Portland_Trail_Blazers)
+      - Portland_Trail_Blazers (dor:Portland_Trail_Blazers) --doo:coach--> Chauncey_Billups (dor:Chauncey_Billups)
+      - Portland_Trail_Blazers (dor:Portland_Trail_Blazers) --doo:league--> Western_Conference_(NBA) (<http://dbpedia.org/resource/Western_Conference_(NBA)>)
+      - Chauncey_Billups (dor:Chauncey_Billups) --doo:league--> National_Basketball_Association (dor:National_Basketball_Association)
+  '3':
+    attributes:
+      Chauncey_Billups: (league^='http://dbpedia.org/resource/National_Basketball_Association', cteam^='Los Angeles Clippers', has abstract^='Chauncey Billups (Denver, Colorado, 25 de septiembre de 1976) es un exjugador y entrenador estadounidense de baloncesto que disputó 16 temporadas en la NBA y que actualmente es el entrenador de Portla...', Link from a Wikipage to an external page^='http://www.jockbio.com/Bios/Billups/Billups_bio.html')
+    relationships:
+      - Moda_Center (dor:Moda_Center) --doo:tenant--> Portland_Trail_Blazers (dor:Portland_Trail_Blazers)
+      - Mike_Schuler (dor:Mike_Schuler) --dop:cteam--> Portland_Trail_Blazers (dor:Portland_Trail_Blazers)
+      - Portland_Trail_Blazers (dor:Portland_Trail_Blazers) --doo:coach--> Chauncey_Billups (dor:Chauncey_Billups)
+      - Portland_Trail_Blazers (dor:Portland_Trail_Blazers) --doo:league--> Western_Conference_(NBA) (<http://dbpedia.org/resource/Western_Conference_(NBA)>)
+      - Chauncey_Billups (dor:Chauncey_Billups) --doo:league--> National_Basketball_Association (dor:National_Basketball_Association)
+  '4':
+    attributes:
+      John_Rillie: (league^='http://dbpedia.org/resource/National_Basketball_League_(Australia)', cteam^='http://dbpedia.org/resource/Boise_State_Broncos_men''s_basketball', has abstract^='John Peter Rillie (born 4 November 1971) is an Australian basketball player and coach. Rillie previously captained the Townsville Crocodiles in the NBL but his contract was not renewed. In his first s...', Link from a Wikipage to an external page^='https://broncosports.com/sports/mens-basketball/roster/coaches/john-rillie/91')
+      Burswood_Dome: (opening date^='1987-08-28')
+    relationships:
+      - Burswood_Dome (dor:Burswood_Dome) --doo:tenant--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Rob_Beveridge (dor:Rob_Beveridge) --dop:cteam--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Perth_Wildcats (dor:Perth_Wildcats) --doo:coach--> John_Rillie (dor:John_Rillie)
+      - Perth_Wildcats (dor:Perth_Wildcats) --doo:league--> National_Basketball_League_(Australia) (<http://dbpedia.org/resource/National_Basketball_League_(Australia)>)
+      - John_Rillie (dor:John_Rillie) --doo:league--> National_Basketball_League_(Australia) (<http://dbpedia.org/resource/National_Basketball_League_(Australia)>)
+  '5':
+    attributes:
+      John_Rillie: (league^='http://dbpedia.org/resource/National_Basketball_League_(Australia)', cteam^='http://dbpedia.org/resource/Boise_State_Broncos_men''s_basketball', has abstract^='John Peter Rillie (born 4 November 1971) is an Australian basketball player and coach. Rillie previously captained the Townsville Crocodiles in the NBL but his contract was not renewed. In his first s...', Link from a Wikipage to an external page^='https://broncosports.com/sports/mens-basketball/roster/coaches/john-rillie/91')
+      Perth_Arena: (opening date^='2012-11-10')
+    relationships:
+      - Perth_Arena (dor:Perth_Arena) --doo:tenant--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Rob_Beveridge (dor:Rob_Beveridge) --dop:cteam--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Perth_Wildcats (dor:Perth_Wildcats) --doo:coach--> John_Rillie (dor:John_Rillie)
+      - Perth_Wildcats (dor:Perth_Wildcats) --doo:league--> National_Basketball_League_(Australia) (<http://dbpedia.org/resource/National_Basketball_League_(Australia)>)
+      - John_Rillie (dor:John_Rillie) --doo:league--> National_Basketball_League_(Australia) (<http://dbpedia.org/resource/National_Basketball_League_(Australia)>)
+  '6':
+    attributes:
+      John_Rillie: (league^='http://dbpedia.org/resource/National_Basketball_League_(Australia)', cteam^='http://dbpedia.org/resource/Boise_State_Broncos_men''s_basketball', has abstract^='John Peter Rillie (born 4 November 1971) is an Australian basketball player and coach. Rillie previously captained the Townsville Crocodiles in the NBL but his contract was not renewed. In his first s...', Link from a Wikipage to an external page^='https://broncosports.com/sports/mens-basketball/roster/coaches/john-rillie/91')
+      Perth_Entertainment_Centre: (owner^='http://dbpedia.org/resource/Seven_Network')
+    relationships:
+      - Perth_Entertainment_Centre (dor:Perth_Entertainment_Centre) --doo:tenant--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Rob_Beveridge (dor:Rob_Beveridge) --dop:cteam--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Perth_Wildcats (dor:Perth_Wildcats) --doo:coach--> John_Rillie (dor:John_Rillie)
+      - Perth_Wildcats (dor:Perth_Wildcats) --doo:league--> National_Basketball_League_(Australia) (<http://dbpedia.org/resource/National_Basketball_League_(Australia)>)
+      - John_Rillie (dor:John_Rillie) --doo:league--> National_Basketball_League_(Australia) (<http://dbpedia.org/resource/National_Basketball_League_(Australia)>)
+  '7':
+    attributes:
+      Kameron_Woods: (league^='http://dbpedia.org/resource/NBA_G_League', cteam^='http://dbpedia.org/resource/Oklahoma_City_Blue', has abstract^='Kameron Woods (Louisville, 22 aprile 1993) è un ex cestista e allenatore di pallacanestro statunitense.', Link from a Wikipage to an external page^='https://butlersports.com/sports/mens-basketball/roster/kameron-woods/1227')
+      Paycom_Center: (opening date^='2002-06-08', owner^='http://dbpedia.org/resource/Oklahoma_City')
+    relationships:
+      - Paycom_Center (dor:Paycom_Center) --doo:tenant--> Oklahoma_City_Blue (dor:Oklahoma_City_Blue)
+      - Mark_Daigneault (dor:Mark_Daigneault) --dop:cteam--> Oklahoma_City_Blue (dor:Oklahoma_City_Blue)
+      - Oklahoma_City_Blue (dor:Oklahoma_City_Blue) --doo:coach--> Kameron_Woods (dor:Kameron_Woods)
+      - Oklahoma_City_Blue (dor:Oklahoma_City_Blue) --doo:league--> NBA_G_League (dor:NBA_G_League)
+      - Kameron_Woods (dor:Kameron_Woods) --doo:league--> NBA_G_League (dor:NBA_G_League)
+  '8':
+    attributes:
+      Kameron_Woods: (league^='http://dbpedia.org/resource/NBA_G_League', cteam^='http://dbpedia.org/resource/Oklahoma_City_Blue', has abstract^='Kameron Woods (Louisville, 22 aprile 1993) è un ex cestista e allenatore di pallacanestro statunitense.', Link from a Wikipage to an external page^='https://butlersports.com/sports/mens-basketball/roster/kameron-woods/1227')
+      Prairie_Surf_Studios: (opening date^='1972-11-05')
+    relationships:
+      - Prairie_Surf_Studios (dor:Prairie_Surf_Studios) --doo:tenant--> Oklahoma_City_Blue (dor:Oklahoma_City_Blue)
+      - Mark_Daigneault (dor:Mark_Daigneault) --dop:cteam--> Oklahoma_City_Blue (dor:Oklahoma_City_Blue)
+      - Oklahoma_City_Blue (dor:Oklahoma_City_Blue) --doo:coach--> Kameron_Woods (dor:Kameron_Woods)
+      - Oklahoma_City_Blue (dor:Oklahoma_City_Blue) --doo:league--> NBA_G_League (dor:NBA_G_League)
+      - Kameron_Woods (dor:Kameron_Woods) --doo:league--> NBA_G_League (dor:NBA_G_League)
+  '9':
+    attributes:
+      Kasib_Powell: (league^='http://dbpedia.org/resource/NBA_G_League', cteam^='Sioux Falls Skyforce', has abstract^='Kasib Ismir Powell (nacido el 18 de marzo de 1981 en Teaneck, Nueva Jersey) es un exjugador de baloncesto estadounidense queactualmente ejerce como entrenador asistente de los Sioux Falls Skyforce de ...', Link from a Wikipage to an external page^='https://web.archive.org/web/20090410084228/http:/www.nba.com/dleague/playerfile/index.jsp%3Fplayer=kasib_powell')
+      Flip_Saunders: (death date^='2015-10-25')
+      Sanford_Pentagon: (owner^='http://dbpedia.org/resource/Sanford_Health')
+    relationships:
+      - Sanford_Pentagon (dor:Sanford_Pentagon) --doo:tenant--> Sioux_Falls_Skyforce (dor:Sioux_Falls_Skyforce)
+      - Flip_Saunders (dor:Flip_Saunders) --dop:cteam--> Sioux_Falls_Skyforce (dor:Sioux_Falls_Skyforce)
+      - Sioux_Falls_Skyforce (dor:Sioux_Falls_Skyforce) --doo:coach--> Kasib_Powell (dor:Kasib_Powell)
+      - Sioux_Falls_Skyforce (dor:Sioux_Falls_Skyforce) --doo:league--> NBA_G_League (dor:NBA_G_League)
+      - Kasib_Powell (dor:Kasib_Powell) --doo:league--> NBA_G_League (dor:NBA_G_League)
+  '10':
+    attributes:
+      Keno_Davis: (league^='http://dbpedia.org/resource/The_Basketball_League', cteam^='http://dbpedia.org/resource/Central_Michigan_Chippewas_men''s_basketball', has abstract^='Keno Davis, (nacido el 10 de marzo de 1972 en Estados Unidos) es un entrenador de baloncesto estadounidense que ejerce en la NCAA.​', Link from a Wikipage to an external page^='http://coachkenodavis.com')
+    relationships:
+      - Dort_Federal_Credit_Union_Event_Center (dor:Dort_Federal_Credit_Union_Event_Center) --doo:tenant--> Flint_United (dor:Flint_United)
+      - Keno_Davis (dor:Keno_Davis) --dop:cteam--> Flint_United (dor:Flint_United)
+      - Flint_United (dor:Flint_United) --doo:coach--> Keno_Davis (dor:Keno_Davis)
+      - Flint_United (dor:Flint_United) --doo:league--> The_Basketball_League (dor:The_Basketball_League)
+      - Keno_Davis (dor:Keno_Davis) --doo:league--> The_Basketball_League (dor:The_Basketball_League)
+attributes:
+  venue: --opening date^ (doo:openingDate)--> date | --owner^ (doo:owner)--> Resource | --number of suites^ (doo:numberOfSuites)--> int
+  college coach: --death date^ (dop:deathDate)--> date | --current record^ (doo:currentRecord)--> string
+  basketball player: --league^ (dop:league)--> Resource | --cteam^ (dop:cteam)--> Resource | --has abstract^ (doo:abstract)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+subgraph_id: 891
+relationships:
+  - venue --doo:tenant--> basketball team
+  - college coach --dop:cteam--> basketball team
+  - basketball team --doo:coach--> basketball player
+  - basketball team --doo:league--> basketball league
+  - basketball player --doo:league--> sports league

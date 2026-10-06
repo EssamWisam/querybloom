@@ -1,0 +1,83 @@
+types:
+  island: doo:Island
+  person: doo:Person
+  college: doo:College
+  scientist: doo:Scientist
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Lewis_Clive: (birth place^='http://dbpedia.org/resource/Herefordshire')
+      Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton: (after^='himself', spouse^='1938')
+    relationships:
+      - Lewis_Clive (dor:Lewis_Clive) --doo:education--> Christ_Church,_Oxford (<http://dbpedia.org/resource/Christ_Church,_Oxford>)
+      - Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton (<http://dbpedia.org/resource/Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton>) --doo:almaMater--> Christ_Church,_Oxford (<http://dbpedia.org/resource/Christ_Church,_Oxford>)
+      - Augustus_George_Vernon_Harcourt (dor:Augustus_George_Vernon_Harcourt) --doo:institution--> Christ_Church,_Oxford (<http://dbpedia.org/resource/Christ_Church,_Oxford>)
+      - Mark_Lennox-Boyd (dor:Mark_Lennox-Boyd) --dop:father--> Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton (<http://dbpedia.org/resource/Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton>)
+      - Lewis_Clive (dor:Lewis_Clive) --doo:nationality--> Great_Britain (dor:Great_Britain)
+  '2':
+    attributes:
+      Lewis_Clive: (birth place^='http://dbpedia.org/resource/Herefordshire')
+      Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton: (after^='himself', spouse^='1938')
+    relationships:
+      - Lewis_Clive (dor:Lewis_Clive) --doo:education--> Christ_Church,_Oxford (<http://dbpedia.org/resource/Christ_Church,_Oxford>)
+      - Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton (<http://dbpedia.org/resource/Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton>) --doo:almaMater--> Christ_Church,_Oxford (<http://dbpedia.org/resource/Christ_Church,_Oxford>)
+      - Becky_Smethurst (dor:Becky_Smethurst) --doo:institution--> Christ_Church,_Oxford (<http://dbpedia.org/resource/Christ_Church,_Oxford>)
+      - Mark_Lennox-Boyd (dor:Mark_Lennox-Boyd) --dop:father--> Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton (<http://dbpedia.org/resource/Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton>)
+      - Lewis_Clive (dor:Lewis_Clive) --doo:nationality--> Great_Britain (dor:Great_Britain)
+  '3':
+    attributes:
+      Lewis_Clive: (birth place^='http://dbpedia.org/resource/Herefordshire')
+      Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton: (after^='himself', spouse^='1938')
+    relationships:
+      - Lewis_Clive (dor:Lewis_Clive) --doo:education--> Christ_Church,_Oxford (<http://dbpedia.org/resource/Christ_Church,_Oxford>)
+      - Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton (<http://dbpedia.org/resource/Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton>) --doo:almaMater--> Christ_Church,_Oxford (<http://dbpedia.org/resource/Christ_Church,_Oxford>)
+      - Belinda_Jack (dor:Belinda_Jack) --doo:institution--> Christ_Church,_Oxford (<http://dbpedia.org/resource/Christ_Church,_Oxford>)
+      - Mark_Lennox-Boyd (dor:Mark_Lennox-Boyd) --dop:father--> Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton (<http://dbpedia.org/resource/Alan_Lennox-Boyd,_1st_Viscount_Boyd_of_Merton>)
+      - Lewis_Clive (dor:Lewis_Clive) --doo:nationality--> Great_Britain (dor:Great_Britain)
+  '4':
+    attributes:
+      Éamon_de_Valera: (mother^='http://dbpedia.org/resource/Catherine_Coll', after^='Himself', spouse^='1910')
+      John_Griffith_(engineer): (birth place^='Holyhead, Wales')
+    relationships:
+      - John_Griffith_(engineer) (<http://dbpedia.org/resource/John_Griffith_(engineer)>) --doo:education--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Éamon_de_Valera (<http://dbpedia.org/resource/Éamon_de_Valera>) --doo:almaMater--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Adrian_Constantin (dor:Adrian_Constantin) --doo:institution--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Vivion_de_Valera (dor:Vivion_de_Valera) --dop:father--> Éamon_de_Valera (<http://dbpedia.org/resource/Éamon_de_Valera>)
+      - John_Griffith_(engineer) (<http://dbpedia.org/resource/John_Griffith_(engineer)>) --doo:nationality--> Ireland (dor:Ireland)
+  '5':
+    attributes:
+      Éamon_de_Valera: (mother^='http://dbpedia.org/resource/Catherine_Coll', after^='Himself', spouse^='1910')
+      John_Griffith_(engineer): (birth place^='Holyhead, Wales')
+    relationships:
+      - John_Griffith_(engineer) (<http://dbpedia.org/resource/John_Griffith_(engineer)>) --doo:education--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Éamon_de_Valera (<http://dbpedia.org/resource/Éamon_de_Valera>) --doo:almaMater--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Cathy_Whitlock (dor:Cathy_Whitlock) --doo:institution--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Vivion_de_Valera (dor:Vivion_de_Valera) --dop:father--> Éamon_de_Valera (<http://dbpedia.org/resource/Éamon_de_Valera>)
+      - John_Griffith_(engineer) (<http://dbpedia.org/resource/John_Griffith_(engineer)>) --doo:nationality--> Ireland (dor:Ireland)
+  '6':
+    attributes:
+      John_Griffith_(engineer): (birth place^='Holyhead, Wales')
+    relationships:
+      - John_Griffith_(engineer) (<http://dbpedia.org/resource/John_Griffith_(engineer)>) --doo:education--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Éamon_de_Valera (<http://dbpedia.org/resource/Éamon_de_Valera>) --doo:almaMater--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Christine_Loscher (dor:Christine_Loscher) --doo:institution--> Trinity_College_Dublin (dor:Trinity_College_Dublin)
+      - Vivion_de_Valera (dor:Vivion_de_Valera) --dop:father--> Éamon_de_Valera (<http://dbpedia.org/resource/Éamon_de_Valera>)
+      - John_Griffith_(engineer) (<http://dbpedia.org/resource/John_Griffith_(engineer)>) --doo:nationality--> Ireland (dor:Ireland)
+attributes:
+  person: --author^ (dop:author)--> langString | --2p^ (dop:2p)--> int | --birth place^ (dop:birthPlace)--> Resource | --partner^ (doo:partner)--> Resource | --last^ (dop:last)--> langString
+  politician: --footer^ (dop:footer)--> langString
+  office holder: --mother^ (dop:mother)--> Resource | --after^ (dop:after)--> Resource | --spouse^ (dop:spouse)--> int
+subgraph_id: 990
+relationships:
+  - person --doo:education--> college
+  - office holder --doo:almaMater--> college
+  - scientist --doo:institution--> college
+  - politician --dop:father--> office holder
+  - person --doo:nationality--> island

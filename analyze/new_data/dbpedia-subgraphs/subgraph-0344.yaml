@@ -1,0 +1,98 @@
+types:
+  software: doo:Software
+  scientist: doo:Scientist
+  university: doo:University
+  college coach: doo:CollegeCoach
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._Bernard_Ackerman: (death place^='http://dbpedia.org/resource/New_York_City,_New_York')
+      Columbia_University: (president^='http://dbpedia.org/resource/Lee_Bollinger', city^='http://dbpedia.org/resource/New_York,_New_York')
+    relationships:
+      - A._Bernard_Ackerman (dor:A._Bernard_Ackerman) --dop:almaMater--> Columbia_University (dor:Columbia_University)
+      - Geworkbench (dor:Geworkbench) --doo:developer--> Columbia_University (dor:Columbia_University)
+      - Bill_Swiacki (dor:Bill_Swiacki) --doo:college--> Columbia_University (dor:Columbia_University)
+  '2':
+    attributes:
+      Columbia_University: (president^='http://dbpedia.org/resource/Lee_Bollinger', city^='http://dbpedia.org/resource/New_York,_New_York')
+    relationships:
+      - A._James_Gregor (dor:A._James_Gregor) --dop:almaMater--> Columbia_University (dor:Columbia_University)
+      - Geworkbench (dor:Geworkbench) --doo:developer--> Columbia_University (dor:Columbia_University)
+      - Bill_Swiacki (dor:Bill_Swiacki) --doo:college--> Columbia_University (dor:Columbia_University)
+  '3':
+    attributes:
+      Abel_Joel_Grout: (death place^='East Bradenton, Florida')
+      Columbia_University: (president^='http://dbpedia.org/resource/Lee_Bollinger', city^='http://dbpedia.org/resource/New_York,_New_York')
+    relationships:
+      - Abel_Joel_Grout (dor:Abel_Joel_Grout) --dop:almaMater--> Columbia_University (dor:Columbia_University)
+      - Geworkbench (dor:Geworkbench) --doo:developer--> Columbia_University (dor:Columbia_University)
+      - Bill_Swiacki (dor:Bill_Swiacki) --doo:college--> Columbia_University (dor:Columbia_University)
+  '4':
+    attributes:
+      EROS_(microkernel): (url^='--01-04')
+      University_of_Pennsylvania: (nickname^='http://dbpedia.org/resource/Penn_Quakers', president^='http://dbpedia.org/resource/M._Elizabeth_Magill', city^='http://dbpedia.org/resource/Philadelphia')
+    relationships:
+      - Adrian_Wells (dor:Adrian_Wells) --dop:almaMater--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+      - EROS_(microkernel) (<http://dbpedia.org/resource/EROS_(microkernel)>) --doo:developer--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+      - Blondy_Wallace (dor:Blondy_Wallace) --doo:college--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+  '5':
+    attributes:
+      EROS_(microkernel): (url^='--01-04')
+      University_of_Pennsylvania: (nickname^='http://dbpedia.org/resource/Penn_Quakers', president^='http://dbpedia.org/resource/M._Elizabeth_Magill', city^='http://dbpedia.org/resource/Philadelphia')
+    relationships:
+      - Alan_Gelperin (dor:Alan_Gelperin) --dop:almaMater--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+      - EROS_(microkernel) (<http://dbpedia.org/resource/EROS_(microkernel)>) --doo:developer--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+      - Blondy_Wallace (dor:Blondy_Wallace) --doo:college--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+  '6':
+    attributes:
+      EROS_(microkernel): (url^='--01-04')
+      University_of_Pennsylvania: (nickname^='http://dbpedia.org/resource/Penn_Quakers', president^='http://dbpedia.org/resource/M._Elizabeth_Magill', city^='http://dbpedia.org/resource/Philadelphia')
+    relationships:
+      - Alan_S._Kaufman (dor:Alan_S._Kaufman) --dop:almaMater--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+      - EROS_(microkernel) (<http://dbpedia.org/resource/EROS_(microkernel)>) --doo:developer--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+      - Blondy_Wallace (dor:Blondy_Wallace) --doo:college--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+  '7':
+    attributes:
+      New_York_University: (nickname^='http://dbpedia.org/resource/NYU_Violets', president^='http://dbpedia.org/resource/Andrew_D._Hamilton', city^='http://dbpedia.org/resource/New_York_City')
+    relationships:
+      - A._F._K._Organski (dor:A._F._K._Organski) --dop:almaMater--> New_York_University (dor:New_York_University)
+      - GNAT (dor:GNAT) --doo:developer--> New_York_University (dor:New_York_University)
+      - Doc_Young (dor:Doc_Young) --doo:college--> New_York_University (dor:New_York_University)
+  '8':
+    attributes:
+      GNAT: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-software-noun-1')
+      New_York_University: (nickname^='http://dbpedia.org/resource/NYU_Violets', president^='http://dbpedia.org/resource/Andrew_D._Hamilton', city^='http://dbpedia.org/resource/New_York_City')
+    relationships:
+      - Adrian_Constantin (dor:Adrian_Constantin) --dop:almaMater--> New_York_University (dor:New_York_University)
+      - GNAT (dor:GNAT) --doo:developer--> New_York_University (dor:New_York_University)
+      - Doc_Young (dor:Doc_Young) --doo:college--> New_York_University (dor:New_York_University)
+  '9':
+    attributes:
+      GNAT: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-software-noun-1')
+      New_York_University: (nickname^='http://dbpedia.org/resource/NYU_Violets', president^='http://dbpedia.org/resource/Andrew_D._Hamilton', city^='http://dbpedia.org/resource/New_York_City')
+    relationships:
+      - Alan_N._Shapiro (dor:Alan_N._Shapiro) --dop:almaMater--> New_York_University (dor:New_York_University)
+      - GNAT (dor:GNAT) --doo:developer--> New_York_University (dor:New_York_University)
+      - Doc_Young (dor:Doc_Young) --doo:college--> New_York_University (dor:New_York_University)
+  '10':
+    attributes:
+      Michigan_State_University: (president^='http://dbpedia.org/resource/Teresa_Woodruff', city^='http://dbpedia.org/resource/East_Lansing,_Michigan')
+    relationships:
+      - Alan_R._Price (dor:Alan_R._Price) --dop:almaMater--> Michigan_State_University (dor:Michigan_State_University)
+      - LISE++ (<http://dbpedia.org/resource/LISE++>) --doo:developer--> Michigan_State_University (dor:Michigan_State_University)
+      - Jim_Popp (dor:Jim_Popp) --doo:college--> Michigan_State_University (dor:Michigan_State_University)
+attributes:
+  software: --wordnet_type (dop:wordnet_type)--> Resource | --author^ (dop:author)--> langString | --url^ (dop:url)--> Resource
+  scientist: --id^ (dop:id)--> langString | --by^ (dop:by)--> langString | --death place^ (dop:deathPlace)--> langString
+  university: --nickname^ (dop:nickname)--> langString | --direction^ (dop:direction)--> langString | --president^ (doo:president)--> Resource | --city^ (doo:city)--> Resource
+  college coach: --current team^ (dop:currentTeam)--> Resource
+subgraph_id: 344
+relationships:
+  - scientist --dop:almaMater--> university
+  - software --doo:developer--> university
+  - college coach --doo:college--> university

@@ -1,0 +1,106 @@
+types:
+  place: doo:Place
+  country: doo:Country
+  Location: doo:Location
+  organisation: doo:Organisation
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Florida: (elevation (μ)^='30.0')
+      Salish_Sea: (Wikipage revision ID^='1121497372')
+    relationships:
+      - Boundary_Bay (dor:Boundary_Bay) --doo:isPartOf--> Salish_Sea (dor:Salish_Sea)
+      - Boundary_Bay (dor:Boundary_Bay) --doo:country--> United_States (dor:United_States)
+      - 4Ocean (dor:4Ocean) --doo:headquarter--> United_States (dor:United_States)
+      - 4Ocean (dor:4Ocean) --doo:headquarter--> Florida (dor:Florida)
+  '2':
+    attributes:
+      Florida: (elevation (μ)^='30.0')
+      Salish_Sea: (Wikipage revision ID^='1121497372')
+    relationships:
+      - Boundary_Pass (dor:Boundary_Pass) --doo:isPartOf--> Salish_Sea (dor:Salish_Sea)
+      - Boundary_Pass (dor:Boundary_Pass) --doo:country--> United_States (dor:United_States)
+      - 4Ocean (dor:4Ocean) --doo:headquarter--> United_States (dor:United_States)
+      - 4Ocean (dor:4Ocean) --doo:headquarter--> Florida (dor:Florida)
+  '3':
+    attributes:
+      Florida: (elevation (μ)^='30.0')
+      Pacific_Ocean: (Wikipage revision ID^='1123775355')
+    relationships:
+      - Chilliwack_Lake (dor:Chilliwack_Lake) --doo:isPartOf--> Pacific_Ocean (dor:Pacific_Ocean)
+      - Chilliwack_Lake (dor:Chilliwack_Lake) --doo:country--> United_States (dor:United_States)
+      - 4Ocean (dor:4Ocean) --doo:headquarter--> United_States (dor:United_States)
+      - 4Ocean (dor:4Ocean) --doo:headquarter--> Florida (dor:Florida)
+  '4':
+    attributes:
+      Pacific_Ocean: (Wikipage revision ID^='1123775355')
+    relationships:
+      - Celebes_Sea (dor:Celebes_Sea) --doo:isPartOf--> Pacific_Ocean (dor:Pacific_Ocean)
+      - Celebes_Sea (dor:Celebes_Sea) --doo:country--> Malaysia (dor:Malaysia)
+      - 8TV_(Malaysian_TV_network)__8TV__1 (<http://dbpedia.org/resource/8TV_(Malaysian_TV_network)__8TV__1>) --doo:headquarter--> Malaysia (dor:Malaysia)
+      - 8TV_(Malaysian_TV_network)__8TV__1 (<http://dbpedia.org/resource/8TV_(Malaysian_TV_network)__8TV__1>) --doo:headquarter--> Selangor (dor:Selangor)
+  '5':
+    attributes:
+      Strait_of_Malacca: (Wikipage revision ID^='1115416956')
+    relationships:
+      - Penang_Strait (dor:Penang_Strait) --doo:isPartOf--> Strait_of_Malacca (dor:Strait_of_Malacca)
+      - Penang_Strait (dor:Penang_Strait) --doo:country--> Malaysia (dor:Malaysia)
+      - 8TV_(Malaysian_TV_network)__8TV__1 (<http://dbpedia.org/resource/8TV_(Malaysian_TV_network)__8TV__1>) --doo:headquarter--> Malaysia (dor:Malaysia)
+      - 8TV_(Malaysian_TV_network)__8TV__1 (<http://dbpedia.org/resource/8TV_(Malaysian_TV_network)__8TV__1>) --doo:headquarter--> Selangor (dor:Selangor)
+  '6':
+    attributes:
+      Pacific_Ocean: (Wikipage revision ID^='1123775355')
+    relationships:
+      - South_China_Sea (dor:South_China_Sea) --doo:isPartOf--> Pacific_Ocean (dor:Pacific_Ocean)
+      - South_China_Sea (dor:South_China_Sea) --doo:country--> Malaysia (dor:Malaysia)
+      - 8TV_(Malaysian_TV_network)__8TV__1 (<http://dbpedia.org/resource/8TV_(Malaysian_TV_network)__8TV__1>) --doo:headquarter--> Malaysia (dor:Malaysia)
+      - 8TV_(Malaysian_TV_network)__8TV__1 (<http://dbpedia.org/resource/8TV_(Malaysian_TV_network)__8TV__1>) --doo:headquarter--> Selangor (dor:Selangor)
+  '7':
+    attributes:
+      Ionian_Sea: (Wikipage revision ID^='1122615885')
+    relationships:
+      - Ambracian_Gulf (dor:Ambracian_Gulf) --doo:isPartOf--> Ionian_Sea (dor:Ionian_Sea)
+      - Ambracian_Gulf (dor:Ambracian_Gulf) --doo:country--> Greece (dor:Greece)
+      - ABEA (dor:ABEA) --doo:headquarter--> Greece (dor:Greece)
+      - ABEA (dor:ABEA) --doo:headquarter--> Chania (dor:Chania)
+  '8':
+    attributes:
+      Aegean_Sea: (Wikipage revision ID^='1124838391')
+    relationships:
+      - Argolic_Gulf (dor:Argolic_Gulf) --doo:isPartOf--> Aegean_Sea (dor:Aegean_Sea)
+      - Argolic_Gulf (dor:Argolic_Gulf) --doo:country--> Greece (dor:Greece)
+      - ABEA (dor:ABEA) --doo:headquarter--> Greece (dor:Greece)
+      - ABEA (dor:ABEA) --doo:headquarter--> Chania (dor:Chania)
+  '9':
+    attributes:
+      Ionian_Sea: (Wikipage revision ID^='1122615885')
+    relationships:
+      - Gulf_of_Corinth (dor:Gulf_of_Corinth) --doo:isPartOf--> Ionian_Sea (dor:Ionian_Sea)
+      - Gulf_of_Corinth (dor:Gulf_of_Corinth) --doo:country--> Greece (dor:Greece)
+      - ABEA (dor:ABEA) --doo:headquarter--> Greece (dor:Greece)
+      - ABEA (dor:ABEA) --doo:headquarter--> Chania (dor:Chania)
+  '10':
+    attributes:
+      Tasmania: (named for^='http://dbpedia.org/resource/Abel_Tasman')
+      Torres_Strait: (Wikipage revision ID^='1120040632')
+    relationships:
+      - Adolphus_Channel (dor:Adolphus_Channel) --doo:isPartOf--> Torres_Strait (dor:Torres_Strait)
+      - Adolphus_Channel (dor:Adolphus_Channel) --doo:country--> Australia (dor:Australia)
+      - Aboriginal_Provisional_Government (dor:Aboriginal_Provisional_Government) --doo:headquarter--> Australia (dor:Australia)
+      - Aboriginal_Provisional_Government (dor:Aboriginal_Provisional_Government) --doo:headquarter--> Tasmania (dor:Tasmania)
+attributes:
+  country: --c^ (dop:c)--> langString
+  Location: --area total km^ (dop:areaTotalKm)--> int | --Apr record high C^ (dop:aprRecordHighC)--> double | --country^ (dop:country)--> langString | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --date^ (dop:date)--> langString | --nickname^ (dop:nickname)--> langString | --arc-angleB^ (dop:arcAngleb)--> int
+  administrative region: --elevation (μ)^ (doo:elevation)--> double | --named for^ (dop:namedFor)--> Resource
+subgraph_id: 782
+relationships:
+  - place --doo:isPartOf--> Location
+  - place --doo:country--> country
+  - organisation --doo:headquarter--> country
+  - organisation --doo:headquarter--> administrative region

@@ -1,0 +1,73 @@
+types:
+  Location: doo:Location
+  soccer club: doo:SoccerClub
+  Sports team member: doo:SportsTeamMember
+  Australian rules football player: doo:AustralianRulesFootballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Montrose_F.C. (<http://dbpedia.org/resource/Montrose_F.C.>) --dop:location--> Barnsley (dor:Barnsley)
+      - Montrose_F.C.__Aaron_Lennox__1 (dor:Montrose_F.C.__Aaron_Lennox__1) --doo:team--> Montrose_F.C. (<http://dbpedia.org/resource/Montrose_F.C.>)
+      - Brian_Roberts_(Australian_rules_footballer) (<http://dbpedia.org/resource/Brian_Roberts_(Australian_rules_footballer)>) --dop:birthPlace--> Barnsley (dor:Barnsley)
+  '2':
+    attributes: {}
+    relationships:
+      - Montrose_F.C. (<http://dbpedia.org/resource/Montrose_F.C.>) --dop:location--> Barnsley (dor:Barnsley)
+      - Montrose_F.C.__Adam_Hutchinson__1 (dor:Montrose_F.C.__Adam_Hutchinson__1) --doo:team--> Montrose_F.C. (<http://dbpedia.org/resource/Montrose_F.C.>)
+      - Brian_Roberts_(Australian_rules_footballer) (<http://dbpedia.org/resource/Brian_Roberts_(Australian_rules_footballer)>) --dop:birthPlace--> Barnsley (dor:Barnsley)
+  '3':
+    attributes: {}
+    relationships:
+      - Montrose_F.C. (<http://dbpedia.org/resource/Montrose_F.C.>) --dop:location--> Barnsley (dor:Barnsley)
+      - Montrose_F.C.__Adam_Mackinnon__1 (dor:Montrose_F.C.__Adam_Mackinnon__1) --doo:team--> Montrose_F.C. (<http://dbpedia.org/resource/Montrose_F.C.>)
+      - Brian_Roberts_(Australian_rules_footballer) (<http://dbpedia.org/resource/Brian_Roberts_(Australian_rules_footballer)>) --dop:birthPlace--> Barnsley (dor:Barnsley)
+  '4':
+    attributes: {}
+    relationships:
+      - England_women's_national_beach_soccer_team (<http://dbpedia.org/resource/England_women's_national_beach_soccer_team>) --dop:location--> Switzerland (dor:Switzerland)
+      - England_women's_national_beach_soccer_team__Gemma_Hillier__1 (<http://dbpedia.org/resource/England_women's_national_beach_soccer_team__Gemma_Hillier__1>) --doo:team--> England_women's_national_beach_soccer_team (<http://dbpedia.org/resource/England_women's_national_beach_soccer_team>)
+      - Henri_Jeanneret (dor:Henri_Jeanneret) --dop:birthPlace--> Switzerland (dor:Switzerland)
+  '5':
+    attributes: {}
+    relationships:
+      - England_women's_national_beach_soccer_team (<http://dbpedia.org/resource/England_women's_national_beach_soccer_team>) --dop:location--> Switzerland (dor:Switzerland)
+      - England_women's_national_beach_soccer_team__Hannah_Short__1 (<http://dbpedia.org/resource/England_women's_national_beach_soccer_team__Hannah_Short__1>) --doo:team--> England_women's_national_beach_soccer_team (<http://dbpedia.org/resource/England_women's_national_beach_soccer_team>)
+      - Henri_Jeanneret (dor:Henri_Jeanneret) --dop:birthPlace--> Switzerland (dor:Switzerland)
+  '6':
+    attributes: {}
+    relationships:
+      - England_women's_national_beach_soccer_team (<http://dbpedia.org/resource/England_women's_national_beach_soccer_team>) --dop:location--> Switzerland (dor:Switzerland)
+      - England_women's_national_beach_soccer_team__Jade_Widdowson__1 (<http://dbpedia.org/resource/England_women's_national_beach_soccer_team__Jade_Widdowson__1>) --doo:team--> England_women's_national_beach_soccer_team (<http://dbpedia.org/resource/England_women's_national_beach_soccer_team>)
+      - Henri_Jeanneret (dor:Henri_Jeanneret) --dop:birthPlace--> Switzerland (dor:Switzerland)
+  '7':
+    attributes: {}
+    relationships:
+      - Sweden_national_beach_soccer_team (dor:Sweden_national_beach_soccer_team) --dop:location--> Sweden (dor:Sweden)
+      - Sweden_national_beach_soccer_team__Amo_Cartwright__1 (dor:Sweden_national_beach_soccer_team__Amo_Cartwright__1) --doo:team--> Sweden_national_beach_soccer_team (dor:Sweden_national_beach_soccer_team)
+      - Kris_Massie (dor:Kris_Massie) --dop:birthPlace--> Sweden (dor:Sweden)
+  '8':
+    attributes: {}
+    relationships:
+      - Sweden_national_beach_soccer_team (dor:Sweden_national_beach_soccer_team) --dop:location--> Sweden (dor:Sweden)
+      - Sweden_national_beach_soccer_team__Daniel_Granberg__1 (dor:Sweden_national_beach_soccer_team__Daniel_Granberg__1) --doo:team--> Sweden_national_beach_soccer_team (dor:Sweden_national_beach_soccer_team)
+      - Kris_Massie (dor:Kris_Massie) --dop:birthPlace--> Sweden (dor:Sweden)
+  '9':
+    attributes: {}
+    relationships:
+      - Sweden_national_beach_soccer_team (dor:Sweden_national_beach_soccer_team) --dop:location--> Sweden (dor:Sweden)
+      - Sweden_national_beach_soccer_team__Eril_Gustafsson__1 (dor:Sweden_national_beach_soccer_team__Eril_Gustafsson__1) --doo:team--> Sweden_national_beach_soccer_team (dor:Sweden_national_beach_soccer_team)
+      - Kris_Massie (dor:Kris_Massie) --dop:birthPlace--> Sweden (dor:Sweden)
+attributes:
+  Location: --auto^ (dop:auto)--> langString | --named for^ (dop:namedFor)--> Resource | --original name^ (doo:originalName)--> langString | --length (μ)^ (doo:length)--> double | --access-date^ (dop:accessDate)--> date | --Aug low F^ (dop:augLowF)--> int | --Aug high F^ (dop:augHighF)--> double
+  soccer club: --lowest attendance^ (dop:lowestAttendance)--> date | --agf^ (dop:agf)--> int
+subgraph_id: 47
+relationships:
+  - soccer club --dop:location--> Location
+  - Sports team member --doo:team--> soccer club
+  - Australian rules football player --dop:birthPlace--> Location

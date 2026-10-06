@@ -1,0 +1,56 @@
+types:
+  book: doo:Book
+  country: doo:Country
+  economist: doo:Economist
+  university: doo:University
+  career station: doo:CareerStation
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric')
+      Yale_University: (image upright^='0.7')
+    relationships:
+      - Christopher_A._Sims (dor:Christopher_A._Sims) --doo:institution--> Yale_University (dor:Yale_University)
+      - Brian_Roberts_(soccer)__CareerStation__1 (<http://dbpedia.org/resource/Brian_Roberts_(soccer)__CareerStation__1>) --doo:team--> Yale_University (dor:Yale_University)
+      - God_and_Man_at_Yale (dor:God_and_Man_at_Yale) --doo:nonFictionSubject--> Yale_University (dor:Yale_University)
+      - Christopher_A._Sims (dor:Christopher_A._Sims) --doo:nationality--> United_States (dor:United_States)
+      - A._H._Woods (dor:A._H._Woods) --doo:deathPlace--> United_States (dor:United_States)
+  '2':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric')
+      Yale_University: (image upright^='0.7')
+    relationships:
+      - Christopher_A._Sims (dor:Christopher_A._Sims) --doo:institution--> Yale_University (dor:Yale_University)
+      - Brian_Roberts_(soccer)__CareerStation__1 (<http://dbpedia.org/resource/Brian_Roberts_(soccer)__CareerStation__1>) --doo:team--> Yale_University (dor:Yale_University)
+      - God_and_Man_at_Yale (dor:God_and_Man_at_Yale) --doo:nonFictionSubject--> Yale_University (dor:Yale_University)
+      - Christopher_A._Sims (dor:Christopher_A._Sims) --doo:nationality--> United_States (dor:United_States)
+      - A.C._Reed (dor:A.C._Reed) --doo:deathPlace--> United_States (dor:United_States)
+  '3':
+    attributes:
+      Abner_Silver: (Link from a Wikipage to an external page^='https://adp.library.ucsb.edu/names/108549')
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric')
+      Yale_University: (image upright^='0.7')
+    relationships:
+      - Christopher_A._Sims (dor:Christopher_A._Sims) --doo:institution--> Yale_University (dor:Yale_University)
+      - Brian_Roberts_(soccer)__CareerStation__1 (<http://dbpedia.org/resource/Brian_Roberts_(soccer)__CareerStation__1>) --doo:team--> Yale_University (dor:Yale_University)
+      - God_and_Man_at_Yale (dor:God_and_Man_at_Yale) --doo:nonFictionSubject--> Yale_University (dor:Yale_University)
+      - Christopher_A._Sims (dor:Christopher_A._Sims) --doo:nationality--> United_States (dor:United_States)
+      - Abner_Silver (dor:Abner_Silver) --doo:deathPlace--> United_States (dor:United_States)
+attributes:
+  book: --followed by^ (dop:followedBy)--> Resource | --1p^ (dop:1p)--> int
+  country: --leader^ (dop:leader)--> Resource | --age^ (dop:age)--> date | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  university: --image upright^ (dop:imageUpright)--> double | --direction^ (dop:direction)--> langString
+  musical artist: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --bgcolor^ (dop:bgcolor)--> langString | --footer^ (dop:footer)--> langString
+subgraph_id: 707
+relationships:
+  - economist --doo:institution--> university
+  - career station --doo:team--> university
+  - book --doo:nonFictionSubject--> university
+  - economist --doo:nationality--> country
+  - musical artist --doo:deathPlace--> country

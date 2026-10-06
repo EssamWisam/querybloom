@@ -1,0 +1,121 @@
+types:
+  country: doo:Country
+  settlement: doo:Settlement
+  radio station: doo:RadioStation
+  television show: doo:TelevisionShow
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Berlin: (Aug high C^='22.8', country^='http://dbpedia.org/resource/Germany', Aug precipitation days^='7', width^='192')
+      Germany: (image^='Caspar David Friedrich - Wanderer above the sea of fog.jpg')
+    relationships:
+      - 13th_Street_(German_TV_channel) (<http://dbpedia.org/resource/13th_Street_(German_TV_channel)>) --doo:headquarter--> Germany (dor:Germany)
+      - DW_News (dor:DW_News) --doo:language--> Germany (dor:Germany)
+      - DW_News (dor:DW_News) --doo:location--> Berlin (dor:Berlin)
+      - 13th_Street_(German_TV_channel) (<http://dbpedia.org/resource/13th_Street_(German_TV_channel)>) --dop:country--> Germany (dor:Germany)
+      - 104.6_RTL (dor:104.6_RTL) --dop:area--> Berlin (dor:Berlin)
+  '2':
+    attributes:
+      Berlin: (Aug high C^='22.8', country^='http://dbpedia.org/resource/Germany', Aug precipitation days^='7', width^='192')
+    relationships:
+      - 9Live (dor:9Live) --doo:headquarter--> Germany (dor:Germany)
+      - DW_News (dor:DW_News) --doo:language--> Germany (dor:Germany)
+      - DW_News (dor:DW_News) --doo:location--> Berlin (dor:Berlin)
+      - 9Live (dor:9Live) --dop:country--> Germany (dor:Germany)
+      - 104.6_RTL (dor:104.6_RTL) --dop:area--> Berlin (dor:Berlin)
+  '3':
+    attributes:
+      Berlin: (Aug high C^='22.8', country^='http://dbpedia.org/resource/Germany', Aug precipitation days^='7', width^='192')
+      Germany: (image^='Caspar David Friedrich - Wanderer above the sea of fog.jpg')
+    relationships:
+      - A&E_(German_TV_channel) (<http://dbpedia.org/resource/A&E_(German_TV_channel)>) --doo:headquarter--> Germany (dor:Germany)
+      - DW_News (dor:DW_News) --doo:language--> Germany (dor:Germany)
+      - DW_News (dor:DW_News) --doo:location--> Berlin (dor:Berlin)
+      - A&E_(German_TV_channel) (<http://dbpedia.org/resource/A&E_(German_TV_channel)>) --dop:country--> Germany (dor:Germany)
+      - 104.6_RTL (dor:104.6_RTL) --dop:area--> Berlin (dor:Berlin)
+  '4':
+    attributes:
+      Greece: (image^='AH-64A Apache Greek Army Stefanovikion 2.jpg')
+    relationships:
+      - Attica_TV (dor:Attica_TV) --doo:headquarter--> Greece (dor:Greece)
+      - S1ngles (dor:S1ngles) --doo:language--> Greece (dor:Greece)
+      - S1ngles (dor:S1ngles) --doo:location--> Attica (dor:Attica)
+      - Attica_TV (dor:Attica_TV) --dop:country--> Greece (dor:Greece)
+      - Athens_98.4_FM (dor:Athens_98.4_FM) --dop:area--> Attica (dor:Attica)
+  '5':
+    attributes:
+      Greece: (image^='AH-64A Apache Greek Army Stefanovikion 2.jpg')
+    relationships:
+      - ERT_World (dor:ERT_World) --doo:headquarter--> Greece (dor:Greece)
+      - S1ngles (dor:S1ngles) --doo:language--> Greece (dor:Greece)
+      - S1ngles (dor:S1ngles) --doo:location--> Attica (dor:Attica)
+      - ERT_World (dor:ERT_World) --dop:country--> Greece (dor:Greece)
+      - Athens_98.4_FM (dor:Athens_98.4_FM) --dop:area--> Attica (dor:Attica)
+  '6':
+    attributes:
+      Greece: (image^='AH-64A Apache Greek Army Stefanovikion 2.jpg')
+    relationships:
+      - ERT3 (dor:ERT3) --doo:headquarter--> Greece (dor:Greece)
+      - S1ngles (dor:S1ngles) --doo:language--> Greece (dor:Greece)
+      - S1ngles (dor:S1ngles) --doo:location--> Attica (dor:Attica)
+      - ERT3 (dor:ERT3) --dop:country--> Greece (dor:Greece)
+      - Athens_98.4_FM (dor:Athens_98.4_FM) --dop:area--> Attica (dor:Attica)
+  '7':
+    attributes:
+      China: (image^='2022')
+      Beijing: (width^='600')
+    relationships:
+      - CCTV-5+ (<http://dbpedia.org/resource/CCTV-5+>) --doo:headquarter--> China (dor:China)
+      - Hot_Blood_Dance_Crew (dor:Hot_Blood_Dance_Crew) --doo:language--> China (dor:China)
+      - Hot_Blood_Dance_Crew (dor:Hot_Blood_Dance_Crew) --doo:location--> Beijing (dor:Beijing)
+      - CCTV-5+ (<http://dbpedia.org/resource/CCTV-5+>) --dop:country--> China (dor:China)
+      - Beijing_Public_Service_Radio (dor:Beijing_Public_Service_Radio) --dop:area--> Beijing (dor:Beijing)
+  '8':
+    attributes:
+      China: (image^='2022')
+      Beijing: (width^='600')
+    relationships:
+      - CCTV+ (<http://dbpedia.org/resource/CCTV+>) --doo:headquarter--> China (dor:China)
+      - Hot_Blood_Dance_Crew (dor:Hot_Blood_Dance_Crew) --doo:language--> China (dor:China)
+      - Hot_Blood_Dance_Crew (dor:Hot_Blood_Dance_Crew) --doo:location--> Beijing (dor:Beijing)
+      - CCTV+ (<http://dbpedia.org/resource/CCTV+>) --dop:country--> China (dor:China)
+      - Beijing_Public_Service_Radio (dor:Beijing_Public_Service_Radio) --dop:area--> Beijing (dor:Beijing)
+  '9':
+    attributes:
+      China: (image^='2022')
+      Beijing: (width^='600')
+    relationships:
+      - CGTN_(TV_channel) (<http://dbpedia.org/resource/CGTN_(TV_channel)>) --doo:headquarter--> China (dor:China)
+      - Hot_Blood_Dance_Crew (dor:Hot_Blood_Dance_Crew) --doo:language--> China (dor:China)
+      - Hot_Blood_Dance_Crew (dor:Hot_Blood_Dance_Crew) --doo:location--> Beijing (dor:Beijing)
+      - CGTN_(TV_channel) (<http://dbpedia.org/resource/CGTN_(TV_channel)>) --dop:country--> China (dor:China)
+      - Beijing_Public_Service_Radio (dor:Beijing_Public_Service_Radio) --dop:area--> Beijing (dor:Beijing)
+  '10':
+    attributes:
+      Spain: (image^='1')
+      Bogotá: (Aug high C^='18.8', country^='http://dbpedia.org/resource/Colombia')
+      Mesa_para_tres: (title^='Mesa para tres')
+    relationships:
+      - 0_por_Movistar_Plus+ (<http://dbpedia.org/resource/0_por_Movistar_Plus+>) --doo:headquarter--> Spain (dor:Spain)
+      - Mesa_para_tres (dor:Mesa_para_tres) --doo:language--> Spain (dor:Spain)
+      - Mesa_para_tres (dor:Mesa_para_tres) --doo:location--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+      - 0_por_Movistar_Plus+ (<http://dbpedia.org/resource/0_por_Movistar_Plus+>) --dop:country--> Spain (dor:Spain)
+      - Bluradio (dor:Bluradio) --dop:area--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+attributes:
+  country: --image^ (dop:image)--> langString
+  settlement: --canton^ (doo:canton)--> Resource | --Aug high C^ (dop:augHighC)--> int | --country^ (doo:country)--> Resource | --Apr rain mm^ (dop:aprRainMm)--> int | --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --width^ (dop:width)--> langString
+  television show: --aux^ (dop:aux)--> int | --title^ (dop:title)--> langString
+  television station: --airdate^ (dop:airdate)--> date
+subgraph_id: 881
+relationships:
+  - television station --doo:headquarter--> country
+  - television show --doo:language--> country
+  - television show --doo:location--> settlement
+  - television station --dop:country--> country
+  - radio station --dop:area--> settlement

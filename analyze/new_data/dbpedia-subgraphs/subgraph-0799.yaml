@@ -1,0 +1,79 @@
+types:
+  Location: doo:Location
+  architect: doo:Architect
+  music genre: doo:MusicGenre
+  religious building: doo:ReligiousBuilding
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Agoudas_Hakehilos_Synagogue (dor:Agoudas_Hakehilos_Synagogue) --dop:architectureStyle--> Art_Nouveau (dor:Art_Nouveau)
+      - 223_Main_Street (dor:223_Main_Street) --doo:architecturalStyle--> Art_Nouveau (dor:Art_Nouveau)
+      - Agoudas_Hakehilos_Synagogue (dor:Agoudas_Hakehilos_Synagogue) --dop:architect--> Hector_Guimard (dor:Hector_Guimard)
+  '2':
+    attributes: {}
+    relationships:
+      - Kirche_am_Steinhof (dor:Kirche_am_Steinhof) --dop:architectureStyle--> Art_Nouveau (dor:Art_Nouveau)
+      - 223_Main_Street (dor:223_Main_Street) --doo:architecturalStyle--> Art_Nouveau (dor:Art_Nouveau)
+      - Kirche_am_Steinhof (dor:Kirche_am_Steinhof) --dop:architect--> Otto_Wagner (dor:Otto_Wagner)
+  '3':
+    attributes: {}
+    relationships:
+      - Novi_Sad_Synagogue (dor:Novi_Sad_Synagogue) --dop:architectureStyle--> Art_Nouveau (dor:Art_Nouveau)
+      - 223_Main_Street (dor:223_Main_Street) --doo:architecturalStyle--> Art_Nouveau (dor:Art_Nouveau)
+      - Novi_Sad_Synagogue (dor:Novi_Sad_Synagogue) --dop:architect--> Lipót_Baumhorn (<http://dbpedia.org/resource/Lipót_Baumhorn>)
+  '4':
+    attributes: {}
+    relationships:
+      - Mozes_en_Aäronkerk (<http://dbpedia.org/resource/Mozes_en_Aäronkerk>) --dop:architectureStyle--> Neoclassicism (dor:Neoclassicism)
+      - Allen_Memorial_Medical_Library (dor:Allen_Memorial_Medical_Library) --doo:architecturalStyle--> Neoclassicism (dor:Neoclassicism)
+      - Mozes_en_Aäronkerk (<http://dbpedia.org/resource/Mozes_en_Aäronkerk>) --dop:architect--> Tilman-François_Suys (<http://dbpedia.org/resource/Tilman-François_Suys>)
+  '5':
+    attributes: {}
+    relationships:
+      - Oudenbosch_Basilica (dor:Oudenbosch_Basilica) --dop:architectureStyle--> Neoclassicism (dor:Neoclassicism)
+      - Allen_Memorial_Medical_Library (dor:Allen_Memorial_Medical_Library) --doo:architecturalStyle--> Neoclassicism (dor:Neoclassicism)
+      - Oudenbosch_Basilica (dor:Oudenbosch_Basilica) --dop:architect--> Pierre_Cuypers (dor:Pierre_Cuypers)
+  '6':
+    attributes: {}
+    relationships:
+      - Mozes_en_Aäronkerk (<http://dbpedia.org/resource/Mozes_en_Aäronkerk>) --dop:architectureStyle--> Neoclassicism (dor:Neoclassicism)
+      - Arcadia_Historic_District (dor:Arcadia_Historic_District) --doo:architecturalStyle--> Neoclassicism (dor:Neoclassicism)
+      - Mozes_en_Aäronkerk (<http://dbpedia.org/resource/Mozes_en_Aäronkerk>) --dop:architect--> Tilman-François_Suys (<http://dbpedia.org/resource/Tilman-François_Suys>)
+  '7':
+    attributes: {}
+    relationships:
+      - Križevci_Cathedral (<http://dbpedia.org/resource/Križevci_Cathedral>) --dop:architectureStyle--> Baroque (dor:Baroque)
+      - Colonial_Theatre_(Hagerstown,_Maryland) (<http://dbpedia.org/resource/Colonial_Theatre_(Hagerstown,_Maryland)>) --doo:architecturalStyle--> Baroque (dor:Baroque)
+      - Križevci_Cathedral (<http://dbpedia.org/resource/Križevci_Cathedral>) --dop:architect--> Hermann_Bollé (<http://dbpedia.org/resource/Hermann_Bollé>)
+  '8':
+    attributes: {}
+    relationships:
+      - Mozes_en_Aäronkerk (<http://dbpedia.org/resource/Mozes_en_Aäronkerk>) --dop:architectureStyle--> Baroque (dor:Baroque)
+      - Colonial_Theatre_(Hagerstown,_Maryland) (<http://dbpedia.org/resource/Colonial_Theatre_(Hagerstown,_Maryland)>) --doo:architecturalStyle--> Baroque (dor:Baroque)
+      - Mozes_en_Aäronkerk (<http://dbpedia.org/resource/Mozes_en_Aäronkerk>) --dop:architect--> Tilman-François_Suys (<http://dbpedia.org/resource/Tilman-François_Suys>)
+  '9':
+    attributes: {}
+    relationships:
+      - Church_of_St._Clement_of_Ohrid (dor:Church_of_St._Clement_of_Ohrid) --dop:architectureStyle--> Modernism (dor:Modernism)
+      - Michigan_State_Medical_Society_Building (dor:Michigan_State_Medical_Society_Building) --doo:architecturalStyle--> Modernism (dor:Modernism)
+      - Church_of_St._Clement_of_Ohrid (dor:Church_of_St._Clement_of_Ohrid) --dop:architect--> Slavko_Brezoski (dor:Slavko_Brezoski)
+  '10':
+    attributes: {}
+    relationships:
+      - Congregation_Shaarey_Zedek (dor:Congregation_Shaarey_Zedek) --dop:architectureStyle--> Modernism (dor:Modernism)
+      - Michigan_State_Medical_Society_Building (dor:Michigan_State_Medical_Society_Building) --doo:architecturalStyle--> Modernism (dor:Modernism)
+      - Congregation_Shaarey_Zedek (dor:Congregation_Shaarey_Zedek) --dop:architect--> Percival_Goodman (dor:Percival_Goodman)
+attributes:
+  Location: --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --data^ (dop:data)--> int | --2y^ (dop:2y)--> int | --coroner^ (dop:coroner)--> langString | --1p^ (dop:1p)--> int | --auto^ (dop:auto)--> langString | --built^ (dop:built)--> int | --Apr high F^ (dop:aprHighF)--> int | --Apr record high F^ (dop:aprRecordHighF)--> int | --arc-textB^ (dop:arcTextb)--> langString | --chapter^ (dop:chapter)--> langString | --Aug low C^ (dop:augLowC)--> double
+  music genre: --instruments^ (dop:instruments)--> langString
+subgraph_id: 799
+relationships:
+  - religious building --dop:architectureStyle--> music genre
+  - Location --doo:architecturalStyle--> music genre
+  - religious building --dop:architect--> architect

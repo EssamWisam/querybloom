@@ -1,0 +1,86 @@
+types:
+  dam: doo:Dam
+  person: doo:Person
+  company: doo:Company
+  Location: doo:Location
+  university: doo:University
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      California: (area total km^='423970', caption^='An ad to sail to California,')
+      Robert_Grant_Aitken: (death place^='http://dbpedia.org/resource/Berkeley,_California')
+    relationships:
+      - Anderson_Lake_(California) (<http://dbpedia.org/resource/Anderson_Lake_(California)>) --doo:location--> California (dor:California)
+      - Robert_Grant_Aitken (dor:Robert_Grant_Aitken) --dop:deathPlace--> California (dor:California)
+      - Aitken_(crater) (<http://dbpedia.org/resource/Aitken_(crater)>) --dop:eponym--> Robert_Grant_Aitken (dor:Robert_Grant_Aitken)
+      - 100_Thieves (dor:100_Thieves) --doo:headquarter--> California (dor:California)
+      - American_Academy_of_Dramatic_Arts (dor:American_Academy_of_Dramatic_Arts) --dop:city--> California (dor:California)
+  '2':
+    attributes:
+      California: (area total km^='423970', caption^='An ad to sail to California,')
+      Robert_Grant_Aitken: (death place^='http://dbpedia.org/resource/Berkeley,_California')
+    relationships:
+      - Anderson_Lake_(California) (<http://dbpedia.org/resource/Anderson_Lake_(California)>) --doo:location--> California (dor:California)
+      - Robert_Grant_Aitken (dor:Robert_Grant_Aitken) --dop:deathPlace--> California (dor:California)
+      - Aitken_(crater) (<http://dbpedia.org/resource/Aitken_(crater)>) --dop:eponym--> Robert_Grant_Aitken (dor:Robert_Grant_Aitken)
+      - 100_Thieves (dor:100_Thieves) --doo:headquarter--> California (dor:California)
+      - Bay_Area_Medical_Academy (dor:Bay_Area_Medical_Academy) --dop:city--> California (dor:California)
+  '3':
+    attributes:
+      California: (area total km^='423970', caption^='An ad to sail to California,')
+      Robert_Grant_Aitken: (death place^='http://dbpedia.org/resource/Berkeley,_California')
+    relationships:
+      - Anderson_Lake_(California) (<http://dbpedia.org/resource/Anderson_Lake_(California)>) --doo:location--> California (dor:California)
+      - Robert_Grant_Aitken (dor:Robert_Grant_Aitken) --dop:deathPlace--> California (dor:California)
+      - Aitken_(crater) (<http://dbpedia.org/resource/Aitken_(crater)>) --dop:eponym--> Robert_Grant_Aitken (dor:Robert_Grant_Aitken)
+      - 100_Thieves (dor:100_Thieves) --doo:headquarter--> California (dor:California)
+      - Cinema_Makeup_School (dor:Cinema_Makeup_School) --dop:city--> California (dor:California)
+  '4':
+    attributes:
+      Illinois: (area total km^='149997', caption^='Racial Makeup of Hispanics in Illinois')
+      Edwin_Brant_Frost: (death place^='http://dbpedia.org/resource/Chicago')
+    relationships:
+      - Carlyle_Lake (dor:Carlyle_Lake) --doo:location--> Illinois (dor:Illinois)
+      - Edwin_Brant_Frost (dor:Edwin_Brant_Frost) --dop:deathPlace--> Illinois (dor:Illinois)
+      - Frost_(crater) (<http://dbpedia.org/resource/Frost_(crater)>) --dop:eponym--> Edwin_Brant_Frost (dor:Edwin_Brant_Frost)
+      - Acquity_Group (dor:Acquity_Group) --doo:headquarter--> Illinois (dor:Illinois)
+      - Argonne_National_Laboratory (dor:Argonne_National_Laboratory) --dop:city--> Illinois (dor:Illinois)
+  '5':
+    attributes:
+      Illinois: (area total km^='149997', caption^='Racial Makeup of Hispanics in Illinois')
+      Edwin_Brant_Frost: (death place^='http://dbpedia.org/resource/Chicago')
+    relationships:
+      - Carlyle_Lake (dor:Carlyle_Lake) --doo:location--> Illinois (dor:Illinois)
+      - Edwin_Brant_Frost (dor:Edwin_Brant_Frost) --dop:deathPlace--> Illinois (dor:Illinois)
+      - Frost_(crater) (<http://dbpedia.org/resource/Frost_(crater)>) --dop:eponym--> Edwin_Brant_Frost (dor:Edwin_Brant_Frost)
+      - Acquity_Group (dor:Acquity_Group) --doo:headquarter--> Illinois (dor:Illinois)
+      - Lewis_and_Clark_Community_College (dor:Lewis_and_Clark_Community_College) --dop:city--> Illinois (dor:Illinois)
+  '6':
+    attributes:
+      Illinois: (area total km^='149997', caption^='Racial Makeup of Hispanics in Illinois')
+      Edwin_Brant_Frost: (death place^='http://dbpedia.org/resource/Chicago')
+    relationships:
+      - Carlyle_Lake (dor:Carlyle_Lake) --doo:location--> Illinois (dor:Illinois)
+      - Edwin_Brant_Frost (dor:Edwin_Brant_Frost) --dop:deathPlace--> Illinois (dor:Illinois)
+      - Frost_(crater) (<http://dbpedia.org/resource/Frost_(crater)>) --dop:eponym--> Edwin_Brant_Frost (dor:Edwin_Brant_Frost)
+      - Acquity_Group (dor:Acquity_Group) --doo:headquarter--> Illinois (dor:Illinois)
+      - Moody_Bible_Institute (dor:Moody_Bible_Institute) --dop:city--> Illinois (dor:Illinois)
+attributes:
+  person: --death place^ (dop:deathPlace)--> langString | --1y^ (dop:1y)--> int
+  company: --products^ (dop:products)--> langString
+  Location: --partof^ (dop:partof)--> langString | --mouth place^ (doo:mouthPlace)--> Resource
+  university: --footer^ (dop:footer)--> langString
+  administrative region: --original name^ (doo:originalName)--> langString | --area total km^ (dop:areaTotalKm)--> int | --bot^ (dop:bot)--> langString | --caption^ (dop:caption)--> langString
+subgraph_id: 987
+relationships:
+  - dam --doo:location--> administrative region
+  - person --dop:deathPlace--> administrative region
+  - Location --dop:eponym--> person
+  - company --doo:headquarter--> administrative region
+  - university --dop:city--> administrative region

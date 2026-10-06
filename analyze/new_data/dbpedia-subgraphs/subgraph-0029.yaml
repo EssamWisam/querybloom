@@ -1,0 +1,87 @@
+types:
+  politician: doo:Politician
+  university: doo:University
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      A_Just_Costa_Rica: (subject='http://dbpedia.org/resource/Category:Political_parties_established_in_2021', logo^='Bandera Partido Costa Rica Justa.svg')
+    relationships:
+      - A_Just_Costa_Rica (dor:A_Just_Costa_Rica) --dop:founder--> Dragos_Dolanescu_Valenciano (dor:Dragos_Dolanescu_Valenciano)
+      - Dragos_Dolanescu_Valenciano (dor:Dragos_Dolanescu_Valenciano) --doo:education--> University_of_Alcalá (<http://dbpedia.org/resource/University_of_Alcalá>)
+  '2':
+    attributes:
+      A_Just_Costa_Rica: (subject='http://dbpedia.org/resource/Category:Political_parties_established_in_2021', logo^='Bandera Partido Costa Rica Justa.svg')
+      Dragos_Dolanescu_Valenciano: (birth date^='1975-11-19')
+    relationships:
+      - A_Just_Costa_Rica (dor:A_Just_Costa_Rica) --dop:founder--> Dragos_Dolanescu_Valenciano (dor:Dragos_Dolanescu_Valenciano)
+      - Dragos_Dolanescu_Valenciano (dor:Dragos_Dolanescu_Valenciano) --doo:education--> University_of_Bucharest (dor:University_of_Bucharest)
+  '3':
+    attributes:
+      Kay_Bailey_Hutchison: (birth date^='1943-07-22')
+      Academy_of_Medicine,_Engineering_and_Science_of_Texas: (subject='http://dbpedia.org/resource/Category:2004_establishments_in_Texas')
+    relationships:
+      - Academy_of_Medicine,_Engineering_and_Science_of_Texas (<http://dbpedia.org/resource/Academy_of_Medicine,_Engineering_and_Science_of_Texas>) --dop:founder--> Kay_Bailey_Hutchison (dor:Kay_Bailey_Hutchison)
+      - Kay_Bailey_Hutchison (dor:Kay_Bailey_Hutchison) --doo:education--> Juris_Doctor (dor:Juris_Doctor)
+  '4':
+    attributes:
+      Kay_Bailey_Hutchison: (birth date^='1943-07-22')
+      Academy_of_Medicine,_Engineering_and_Science_of_Texas: (subject='http://dbpedia.org/resource/Category:2004_establishments_in_Texas')
+    relationships:
+      - Academy_of_Medicine,_Engineering_and_Science_of_Texas (<http://dbpedia.org/resource/Academy_of_Medicine,_Engineering_and_Science_of_Texas>) --dop:founder--> Kay_Bailey_Hutchison (dor:Kay_Bailey_Hutchison)
+      - Kay_Bailey_Hutchison (dor:Kay_Bailey_Hutchison) --doo:education--> University_of_Texas_at_Austin (dor:University_of_Texas_at_Austin)
+  '5':
+    attributes:
+      John_Jay: (colwidth^='30', birth date^='1745-12-12')
+      African_Free_School: (caption^='Lithograph of second school, 1922, after an 1830 engraving from a drawing by student Patrick H. Reason', subject='http://dbpedia.org/resource/Category:1787_establishments_in_New_York_(state)')
+    relationships:
+      - African_Free_School (dor:African_Free_School) --dop:founder--> John_Jay (dor:John_Jay)
+      - John_Jay (dor:John_Jay) --doo:education--> Columbia_University (dor:Columbia_University)
+  '6':
+    attributes:
+      John_Jay: (colwidth^='30', birth date^='1745-12-12')
+      African_Free_School: (caption^='Lithograph of second school, 1922, after an 1830 engraving from a drawing by student Patrick H. Reason', subject='http://dbpedia.org/resource/Category:1787_establishments_in_New_York_(state)')
+    relationships:
+      - African_Free_School (dor:African_Free_School) --dop:founder--> John_Jay (dor:John_Jay)
+      - John_Jay (dor:John_Jay) --doo:education--> Master_of_Arts (dor:Master_of_Arts)
+  '7':
+    attributes:
+      Ahnenerbe: (caption^='Emblem', subject='http://dbpedia.org/resource/Category:1935_establishments_in_Germany')
+      Heinrich_Himmler: (birth date^='1900-10-07')
+    relationships:
+      - Ahnenerbe (dor:Ahnenerbe) --dop:founder--> Heinrich_Himmler (dor:Heinrich_Himmler)
+      - Heinrich_Himmler (dor:Heinrich_Himmler) --doo:education--> Technische_Universität_München (<http://dbpedia.org/resource/Technische_Universität_München>)
+  '8':
+    attributes:
+      Tom_Thabane: (birth date^='1939-05-28')
+      All_Basotho_Convention: (subject='http://dbpedia.org/resource/Category:Political_parties_established_in_2006', logo^='Logo of the All Basotho Convention.png')
+    relationships:
+      - All_Basotho_Convention (dor:All_Basotho_Convention) --dop:founder--> Tom_Thabane (dor:Tom_Thabane)
+      - Tom_Thabane (dor:Tom_Thabane) --doo:education--> National_University_of_Lesotho (dor:National_University_of_Lesotho)
+  '9':
+    attributes:
+      Hassan_Ayariga: (birth date^='1972-09-04')
+      All_People's_Congress_(Ghana): (caption^='Logo of the All People''s Congress', subject='http://dbpedia.org/resource/Category:2016_establishments_in_Ghana', logo^='File:All People''s Congress Ghana Logo.jpg')
+    relationships:
+      - All_People's_Congress_(Ghana) (<http://dbpedia.org/resource/All_People's_Congress_(Ghana)>) --dop:founder--> Hassan_Ayariga (dor:Hassan_Ayariga)
+      - Hassan_Ayariga (dor:Hassan_Ayariga) --doo:education--> Atlantic_International_University (dor:Atlantic_International_University)
+  '10':
+    attributes:
+      Kwame_Nkrumah: (direction^='vertical', birth date^='1909-09-21')
+      All-African_People's_Revolutionary_Party: (subject='http://dbpedia.org/resource/Category:1968_establishments_in_Guinea', logo^='All-African People''s Revolutionary Party logo.png')
+    relationships:
+      - All-African_People's_Revolutionary_Party (<http://dbpedia.org/resource/All-African_People's_Revolutionary_Party>) --dop:founder--> Kwame_Nkrumah (dor:Kwame_Nkrumah)
+      - Kwame_Nkrumah (dor:Kwame_Nkrumah) --doo:education--> City_Law_School (dor:City_Law_School)
+attributes:
+  politician: --direction^ (dop:direction)--> langString | --parents^ (dop:parents)--> Resource | --nickname^ (dop:nickname)--> langString | --colwidth^ (dop:colwidth)--> int | --birth date^ (doo:birthDate)--> date
+  organisation: --key person^ (doo:keyPerson)--> Resource | --caption^ (dop:caption)--> langString | --subject (podt:subject)--> Resource | --motto^ (doo:motto)--> string | --logo^ (dop:logo)--> langString
+subgraph_id: 29
+relationships:
+  - organisation --dop:founder--> politician
+  - politician --doo:education--> university

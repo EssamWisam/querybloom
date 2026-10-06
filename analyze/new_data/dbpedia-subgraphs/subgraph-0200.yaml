@@ -1,0 +1,116 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  university: doo:University
+  Christian Bishop: doo:ChristianBishop
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - A._Robert_Hirschfeld (dor:A._Robert_Hirschfeld) --dop:almaMater--> Dartmouth_College (dor:Dartmouth_College)
+      - Dartmouth_College (dor:Dartmouth_College) --doo:country--> United_States (dor:United_States)
+      - A._Robert_Hirschfeld (dor:A._Robert_Hirschfeld) --doo:birthPlace--> Red_Wing,_Minnesota (<http://dbpedia.org/resource/Red_Wing,_Minnesota>)
+  '2':
+    attributes: {}
+    relationships:
+      - A._Robert_Hirschfeld (dor:A._Robert_Hirschfeld) --dop:almaMater--> Dartmouth_College (dor:Dartmouth_College)
+      - Dartmouth_College (dor:Dartmouth_College) --doo:country--> United_States (dor:United_States)
+      - A._Robert_Hirschfeld (dor:A._Robert_Hirschfeld) --doo:birthPlace--> United_States (dor:United_States)
+  '3':
+    attributes: {}
+    relationships:
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --dop:almaMater--> Dr._Hari_Singh_Gour_University (dor:Dr._Hari_Singh_Gour_University)
+      - Dr._Hari_Singh_Gour_University (dor:Dr._Hari_Singh_Gour_University) --doo:country--> India (dor:India)
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:birthPlace--> British_Raj (dor:British_Raj)
+  '4':
+    attributes:
+      Kerala: (Apr low C^='25')
+    relationships:
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --dop:almaMater--> Dr._Hari_Singh_Gour_University (dor:Dr._Hari_Singh_Gour_University)
+      - Dr._Hari_Singh_Gour_University (dor:Dr._Hari_Singh_Gour_University) --doo:country--> India (dor:India)
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:birthPlace--> Kerala (dor:Kerala)
+  '5':
+    attributes: {}
+    relationships:
+      - Adel_Zaky (dor:Adel_Zaky) --dop:almaMater--> Assiut_University (dor:Assiut_University)
+      - Assiut_University (dor:Assiut_University) --doo:country--> Egypt (dor:Egypt)
+      - Adel_Zaky (dor:Adel_Zaky) --doo:birthPlace--> Egypt (dor:Egypt)
+  '6':
+    attributes:
+      Luxor: (Apr record high C^='46.2', Apr low C^='16')
+    relationships:
+      - Adel_Zaky (dor:Adel_Zaky) --dop:almaMater--> Assiut_University (dor:Assiut_University)
+      - Assiut_University (dor:Assiut_University) --doo:country--> Egypt (dor:Egypt)
+      - Adel_Zaky (dor:Adel_Zaky) --doo:birthPlace--> Luxor (dor:Luxor)
+  '7':
+    attributes: {}
+    relationships:
+      - Adel_Zaky (dor:Adel_Zaky) --dop:almaMater--> Saint_Joseph_University (dor:Saint_Joseph_University)
+      - Saint_Joseph_University (dor:Saint_Joseph_University) --doo:country--> Lebanon (dor:Lebanon)
+      - Adel_Zaky (dor:Adel_Zaky) --doo:birthPlace--> Egypt (dor:Egypt)
+  '8':
+    attributes: {}
+    relationships:
+      - Adrian_Put (dor:Adrian_Put) --dop:almaMater--> University_of_Szczecin (dor:University_of_Szczecin)
+      - University_of_Szczecin (dor:University_of_Szczecin) --doo:country--> Poland (dor:Poland)
+      - Adrian_Put (dor:Adrian_Put) --doo:birthPlace--> Polish_People's_Republic (<http://dbpedia.org/resource/Polish_People's_Republic>)
+  '9':
+    attributes:
+      Szczecin: (Apr record high C^='30.6', Apr low C^='4')
+    relationships:
+      - Adrian_Put (dor:Adrian_Put) --dop:almaMater--> University_of_Szczecin (dor:University_of_Szczecin)
+      - University_of_Szczecin (dor:University_of_Szczecin) --doo:country--> Poland (dor:Poland)
+      - Adrian_Put (dor:Adrian_Put) --doo:birthPlace--> Szczecin (dor:Szczecin)
+  '10':
+    attributes:
+      Oxford: (Apr record high C^='27.6', Apr low C^='5.3')
+      King's_College_London: (caption^='Novelist and poet Thomas Hardy')
+    relationships:
+      - Alan_Hopes (dor:Alan_Hopes) --dop:almaMater--> King's_College_London (<http://dbpedia.org/resource/King's_College_London>)
+      - King's_College_London (<http://dbpedia.org/resource/King's_College_London>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Alan_Hopes (dor:Alan_Hopes) --doo:birthPlace--> Oxford (dor:Oxford)
+qa_result:
+  status: completed
+  cost_usd: 0.283135
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.04279240000000001
+        total_tokens: 4242
+        prompt_tokens: 2358
+        completion_tokens: 1884
+      generate:
+        cost_usd: 0.09538260000000001
+        total_tokens: 8015
+        prompt_tokens: 3848
+        completion_tokens: 4167
+      verify_1:
+        cost_usd: 0.054832000000000006
+        total_tokens: 6110
+        prompt_tokens: 4491
+        completion_tokens: 1619
+      complexity:
+        cost_usd: 0.09012800000000001
+        total_tokens: 8975
+        prompt_tokens: 5386
+        completion_tokens: 3589
+    total_tokens: 27342
+    prompt_tokens: 16083
+    total_cost_usd: 0.283135
+    completion_tokens: 11259
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Location: --Apr record high C^ (dop:aprRecordHighC)--> int | --Apr high F^ (dop:aprHighF)--> int | --number of members^ (doo:numberOfMembers)--> int | --designated other1 date^ (dop:designatedOther1Date)--> int | --jurisdiction^ (doo:jurisdiction)--> Resource | --Apr low C^ (dop:aprLowC)--> double | --area^ (dop:area)--> acre | --location^ (doo:location)--> Resource
+  university: --caption^ (dop:caption)--> langString
+subgraph_id: 200
+relationships:
+  - Christian Bishop --dop:almaMater--> university
+  - university --doo:country--> country
+  - Christian Bishop --doo:birthPlace--> Location

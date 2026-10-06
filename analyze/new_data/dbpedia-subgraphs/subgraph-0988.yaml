@@ -1,0 +1,81 @@
+types:
+  station: doo:Station
+  Location: doo:Location
+  hockey team: doo:HockeyTeam
+  soccer player: doo:SoccerPlayer
+  government agency: doo:GovernmentAgency
+  ice hockey player: doo:IceHockeyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Finland: (direction^='horizontal')
+      Arto_Tolsa: (clubs^='http://dbpedia.org/resource/K._Beerschot_V.A.C.')
+    relationships:
+      - Heikki_Leime (dor:Heikki_Leime) --doo:birthPlace--> Finland (dor:Finland)
+      - Anglet_Hormadi_Élite (<http://dbpedia.org/resource/Anglet_Hormadi_Élite>) --doo:coach--> Heikki_Leime (dor:Heikki_Leime)
+      - Finnish_Transport_Infrastructure_Agency (dor:Finnish_Transport_Infrastructure_Agency) --doo:headquarter--> Finland (dor:Finland)
+      - Ainola_railway_station (dor:Ainola_railway_station) --doo:owningOrganisation--> Finnish_Transport_Infrastructure_Agency (dor:Finnish_Transport_Infrastructure_Agency)
+      - Arto_Tolsa (dor:Arto_Tolsa) --dop:deathPlace--> Finland (dor:Finland)
+  '2':
+    attributes:
+      Finland: (direction^='horizontal')
+      Arto_Tolsa: (clubs^='http://dbpedia.org/resource/K._Beerschot_V.A.C.')
+    relationships:
+      - Heikki_Leime (dor:Heikki_Leime) --doo:birthPlace--> Finland (dor:Finland)
+      - Anglet_Hormadi_Élite (<http://dbpedia.org/resource/Anglet_Hormadi_Élite>) --doo:coach--> Heikki_Leime (dor:Heikki_Leime)
+      - Finnish_Transport_Infrastructure_Agency (dor:Finnish_Transport_Infrastructure_Agency) --doo:headquarter--> Finland (dor:Finland)
+      - Dragsvik_railway_station (dor:Dragsvik_railway_station) --doo:owningOrganisation--> Finnish_Transport_Infrastructure_Agency (dor:Finnish_Transport_Infrastructure_Agency)
+      - Arto_Tolsa (dor:Arto_Tolsa) --dop:deathPlace--> Finland (dor:Finland)
+  '3':
+    attributes:
+      Finland: (direction^='horizontal')
+      Arto_Tolsa: (clubs^='http://dbpedia.org/resource/K._Beerschot_V.A.C.')
+    relationships:
+      - Heikki_Leime (dor:Heikki_Leime) --doo:birthPlace--> Finland (dor:Finland)
+      - Anglet_Hormadi_Élite (<http://dbpedia.org/resource/Anglet_Hormadi_Élite>) --doo:coach--> Heikki_Leime (dor:Heikki_Leime)
+      - Finnish_Transport_Infrastructure_Agency (dor:Finnish_Transport_Infrastructure_Agency) --doo:headquarter--> Finland (dor:Finland)
+      - Ekenäs_railway_station (<http://dbpedia.org/resource/Ekenäs_railway_station>) --doo:owningOrganisation--> Finnish_Transport_Infrastructure_Agency (dor:Finnish_Transport_Infrastructure_Agency)
+      - Arto_Tolsa (dor:Arto_Tolsa) --dop:deathPlace--> Finland (dor:Finland)
+  '4':
+    attributes:
+      Bruce_Smith_(Canadian_football): (height ft^='6')
+    relationships:
+      - Harry_Pidhirny (dor:Harry_Pidhirny) --doo:birthPlace--> Toronto (dor:Toronto)
+      - Barrie_Flyers_(1966–1979) (<http://dbpedia.org/resource/Barrie_Flyers_(1966–1979)>) --doo:coach--> Harry_Pidhirny (dor:Harry_Pidhirny)
+      - Metrolinx (dor:Metrolinx) --doo:headquarter--> Toronto (dor:Toronto)
+      - Acton_GO_Station (dor:Acton_GO_Station) --doo:owningOrganisation--> Metrolinx (dor:Metrolinx)
+      - Bruce_Smith_(Canadian_football) (<http://dbpedia.org/resource/Bruce_Smith_(Canadian_football)>) --dop:deathPlace--> Toronto (dor:Toronto)
+  '5':
+    attributes:
+      Bruce_Smith_(Canadian_football): (height ft^='6')
+    relationships:
+      - Harry_Pidhirny (dor:Harry_Pidhirny) --doo:birthPlace--> Toronto (dor:Toronto)
+      - Barrie_Flyers_(1966–1979) (<http://dbpedia.org/resource/Barrie_Flyers_(1966–1979)>) --doo:coach--> Harry_Pidhirny (dor:Harry_Pidhirny)
+      - Metrolinx (dor:Metrolinx) --doo:headquarter--> Toronto (dor:Toronto)
+      - Agincourt_GO_Station (dor:Agincourt_GO_Station) --doo:owningOrganisation--> Metrolinx (dor:Metrolinx)
+      - Bruce_Smith_(Canadian_football) (<http://dbpedia.org/resource/Bruce_Smith_(Canadian_football)>) --dop:deathPlace--> Toronto (dor:Toronto)
+  '6':
+    attributes:
+      Bruce_Smith_(Canadian_football): (height ft^='6')
+    relationships:
+      - Harry_Pidhirny (dor:Harry_Pidhirny) --doo:birthPlace--> Toronto (dor:Toronto)
+      - Barrie_Flyers_(1966–1979) (<http://dbpedia.org/resource/Barrie_Flyers_(1966–1979)>) --doo:coach--> Harry_Pidhirny (dor:Harry_Pidhirny)
+      - Metrolinx (dor:Metrolinx) --doo:headquarter--> Toronto (dor:Toronto)
+      - Ajax_GO_Station (dor:Ajax_GO_Station) --doo:owningOrganisation--> Metrolinx (dor:Metrolinx)
+      - Bruce_Smith_(Canadian_football) (<http://dbpedia.org/resource/Bruce_Smith_(Canadian_football)>) --dop:deathPlace--> Toronto (dor:Toronto)
+attributes:
+  station: --b^ (dop:b)--> langString | --next^ (dop:next)--> langString
+  Location: --designated other1 link^ (dop:designatedOther1Link)--> langString | --religion^ (doo:religion)--> Resource | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --line^ (dop:line)--> int | --direction^ (dop:direction)--> langString
+  soccer player: --height ft^ (dop:heightFt)--> int | --clubs^ (dop:clubs)--> int
+subgraph_id: 988
+relationships:
+  - ice hockey player --doo:birthPlace--> Location
+  - hockey team --doo:coach--> ice hockey player
+  - government agency --doo:headquarter--> Location
+  - station --doo:owningOrganisation--> government agency
+  - soccer player --dop:deathPlace--> Location

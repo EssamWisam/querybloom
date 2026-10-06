@@ -1,0 +1,82 @@
+types:
+  town: doo:Town
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Aaron_Leland: (death date^='1832-08-25')
+    relationships:
+      - Aaron_Leland (dor:Aaron_Leland) --dop:after--> Dudley_Chase (dor:Dudley_Chase)
+      - Aaron_Leland (dor:Aaron_Leland) --doo:restingPlace--> Chester,_Vermont (<http://dbpedia.org/resource/Chester,_Vermont>)
+  '2':
+    attributes:
+      Aaron_Leland: (death date^='1832-08-25')
+    relationships:
+      - Aaron_Leland (dor:Aaron_Leland) --dop:after--> Henry_Olin (dor:Henry_Olin)
+      - Aaron_Leland (dor:Aaron_Leland) --doo:restingPlace--> Chester,_Vermont (<http://dbpedia.org/resource/Chester,_Vermont>)
+  '3':
+    attributes:
+      Albert_H._Roberts: (death date^='1946-06-25', spouse^='Nora Dean Bowden')
+      Livingston,_Tennessee: (named for^='http://dbpedia.org/resource/Edward_Livingston')
+    relationships:
+      - Albert_H._Roberts (dor:Albert_H._Roberts) --dop:after--> Alfred_A._Taylor (dor:Alfred_A._Taylor)
+      - Albert_H._Roberts (dor:Albert_H._Roberts) --doo:restingPlace--> Livingston,_Tennessee (<http://dbpedia.org/resource/Livingston,_Tennessee>)
+  '4':
+    attributes:
+      Alva_B._Adams: (death date^='1941-12-01')
+      Pueblo,_Colorado: (government type^='http://dbpedia.org/resource/Colorado_municipalities')
+    relationships:
+      - Alva_B._Adams (dor:Alva_B._Adams) --dop:after--> Rice_W._Means (dor:Rice_W._Means)
+      - Alva_B._Adams (dor:Alva_B._Adams) --doo:restingPlace--> Pueblo,_Colorado (<http://dbpedia.org/resource/Pueblo,_Colorado>)
+  '5':
+    attributes:
+      Archibald_Stuart: (death date^='1855-09-20')
+    relationships:
+      - Archibald_Stuart (dor:Archibald_Stuart) --dop:after--> William_L._Goggin (dor:William_L._Goggin)
+      - Archibald_Stuart (dor:Archibald_Stuart) --doo:restingPlace--> Saltville,_Virginia (<http://dbpedia.org/resource/Saltville,_Virginia>)
+  '6':
+    attributes:
+      Arthur_C._McCall: (death date^='1916-03-16', children^='Donald', spouse^='Harriet L. Tupper')
+    relationships:
+      - Arthur_C._McCall (dor:Arthur_C._McCall) --dop:after--> John_C._Zimmerman_Sr. (<http://dbpedia.org/resource/John_C._Zimmerman_Sr.>)
+      - Arthur_C._McCall (dor:Arthur_C._McCall) --doo:restingPlace--> Grand_Blanc_Township,_Michigan (<http://dbpedia.org/resource/Grand_Blanc_Township,_Michigan>)
+  '7':
+    attributes:
+      Arthur_Meighen: (death date^='1960-08-05', children^='http://dbpedia.org/resource/Lillian_Meighen_Wright', spouse^='1904')
+    relationships:
+      - Arthur_Meighen (dor:Arthur_Meighen) --dop:after--> Hugh_Guthrie (dor:Hugh_Guthrie)
+      - Arthur_Meighen (dor:Arthur_Meighen) --doo:restingPlace--> St._Marys,_Ontario (<http://dbpedia.org/resource/St._Marys,_Ontario>)
+  '8':
+    attributes:
+      Arthur_Meighen: (death date^='1960-08-05', children^='http://dbpedia.org/resource/Lillian_Meighen_Wright', spouse^='1904')
+    relationships:
+      - Arthur_Meighen (dor:Arthur_Meighen) --dop:after--> James_Alexander_Lougheed (dor:James_Alexander_Lougheed)
+      - Arthur_Meighen (dor:Arthur_Meighen) --doo:restingPlace--> St._Marys,_Ontario (<http://dbpedia.org/resource/St._Marys,_Ontario>)
+  '9':
+    attributes:
+      Arthur_Meighen: (death date^='1960-08-05', children^='http://dbpedia.org/resource/Lillian_Meighen_Wright', spouse^='1904')
+      Martin_Burrell: (bot^='InternetArchiveBot')
+    relationships:
+      - Arthur_Meighen (dor:Arthur_Meighen) --dop:after--> Martin_Burrell (dor:Martin_Burrell)
+      - Arthur_Meighen (dor:Arthur_Meighen) --doo:restingPlace--> St._Marys,_Ontario (<http://dbpedia.org/resource/St._Marys,_Ontario>)
+  '10':
+    attributes:
+      Istanbul: (government type^='http://dbpedia.org/resource/Mayor–council_government')
+      Aysel_Baykal: (death date^='2003-01-24')
+    relationships:
+      - Aysel_Baykal (dor:Aysel_Baykal) --dop:after--> Işılay_Saygın (<http://dbpedia.org/resource/Işılay_Saygın>)
+      - Aysel_Baykal (dor:Aysel_Baykal) --doo:restingPlace--> Istanbul (dor:Istanbul)
+attributes:
+  town: --named for^ (dop:namedFor)--> langString | --government type^ (doo:governmentType)--> Resource
+  politician: --mother^ (doo:mother)--> Resource | --bot^ (dop:bot)--> langString
+  office holder: --agf^ (dop:agf)--> int | --death date^ (dop:deathDate)--> date | --honorific suffix^ (dop:honorificSuffix)--> langString | --children^ (dop:children)--> langString | --spouse^ (dop:spouse)--> int | --issue (dop:issue)--> langString
+subgraph_id: 26
+relationships:
+  - office holder --dop:after--> politician
+  - office holder --doo:restingPlace--> town

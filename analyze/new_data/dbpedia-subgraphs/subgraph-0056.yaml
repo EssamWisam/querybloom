@@ -1,0 +1,88 @@
+types:
+  city: doo:City
+  country: doo:Country
+  tennis tournament: doo:TennisTournament
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - 1946_NCAA_Tennis_Championships (dor:1946_NCAA_Tennis_Championships) --dop:location--> Evanston,_Illinois (<http://dbpedia.org/resource/Evanston,_Illinois>)
+      - 1946_NCAA_Tennis_Championships (dor:1946_NCAA_Tennis_Championships) --dop:location--> United_States (dor:United_States)
+  '2':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - 1947_NCAA_Tennis_Championships (dor:1947_NCAA_Tennis_Championships) --dop:location--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - 1947_NCAA_Tennis_Championships (dor:1947_NCAA_Tennis_Championships) --dop:location--> United_States (dor:United_States)
+  '3':
+    attributes:
+      Australia: (capital^='http://dbpedia.org/resource/Canberra')
+      Melbourne: (Apr record low C^='1.2')
+      1948_Australian_Championships: (category^='http://dbpedia.org/resource/Grand_Slam_(tennis)')
+    relationships:
+      - 1948_Australian_Championships (dor:1948_Australian_Championships) --dop:location--> Melbourne (dor:Melbourne)
+      - 1948_Australian_Championships (dor:1948_Australian_Championships) --dop:location--> Australia (dor:Australia)
+  '4':
+    attributes:
+      Australia: (capital^='http://dbpedia.org/resource/Canberra')
+      Melbourne: (Apr record low C^='1.2')
+      1950_Australian_Championships: (category^='http://dbpedia.org/resource/Grand_Slam_(tennis)')
+    relationships:
+      - 1950_Australian_Championships (dor:1950_Australian_Championships) --dop:location--> Melbourne (dor:Melbourne)
+      - 1950_Australian_Championships (dor:1950_Australian_Championships) --dop:location--> Australia (dor:Australia)
+  '5':
+    attributes:
+      Australia: (capital^='http://dbpedia.org/resource/Canberra')
+      1951_Australian_Championships: (category^='http://dbpedia.org/resource/Grand_Slam_(tennis)')
+    relationships:
+      - 1951_Australian_Championships (dor:1951_Australian_Championships) --dop:location--> Sydney (dor:Sydney)
+      - 1951_Australian_Championships (dor:1951_Australian_Championships) --dop:location--> Australia (dor:Australia)
+  '6':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+      Syracuse,_New_York: (Apr record low F^='7', elevation (μ)^='115.824', named for^='http://dbpedia.org/resource/Syracuse,_Sicily')
+    relationships:
+      - 1953_NCAA_Tennis_Championships (dor:1953_NCAA_Tennis_Championships) --dop:location--> Syracuse,_New_York (<http://dbpedia.org/resource/Syracuse,_New_York>)
+      - 1953_NCAA_Tennis_Championships (dor:1953_NCAA_Tennis_Championships) --dop:location--> United_States (dor:United_States)
+  '7':
+    attributes:
+      Argentina: (last^='Arbena', capital^='http://dbpedia.org/resource/Buenos_Aires')
+      Buenos_Aires: (Apr record low C^='−2.3', elevation (μ)^='24.9936')
+    relationships:
+      - 1968_South_American_Open (dor:1968_South_American_Open) --dop:location--> Buenos_Aires (dor:Buenos_Aires)
+      - 1968_South_American_Open (dor:1968_South_American_Open) --dop:location--> Argentina (dor:Argentina)
+  '8':
+    attributes:
+      Gstaad: (elevation (μ)^='1050.0')
+      Switzerland: (url^='https://web.archive.org/web/20061205103158/http:/hls-dhs-dss.ch/', capital^='http://dbpedia.org/resource/Bern')
+    relationships:
+      - 1968_Suisse_Open_Gstaad (dor:1968_Suisse_Open_Gstaad) --dop:location--> Gstaad (dor:Gstaad)
+      - 1968_Suisse_Open_Gstaad (dor:1968_Suisse_Open_Gstaad) --dop:location--> Switzerland (dor:Switzerland)
+  '9':
+    attributes:
+      Hilversum: (elevation (μ)^='15.0')
+      Netherlands: (url^='https://web.archive.org/web/20131117065936/http:/nbtc.nl/en/homepage.htm')
+    relationships:
+      - 1969_Dutch_Open_(tennis) (<http://dbpedia.org/resource/1969_Dutch_Open_(tennis)>) --dop:location--> Hilversum (dor:Hilversum)
+      - 1969_Dutch_Open_(tennis) (<http://dbpedia.org/resource/1969_Dutch_Open_(tennis)>) --dop:location--> Netherlands (dor:Netherlands)
+  '10':
+    attributes:
+      Gstaad: (elevation (μ)^='1050.0')
+      Switzerland: (url^='https://web.archive.org/web/20061205103158/http:/hls-dhs-dss.ch/', capital^='http://dbpedia.org/resource/Bern')
+    relationships:
+      - 1969_Suisse_Open_Gstaad (dor:1969_Suisse_Open_Gstaad) --dop:location--> Gstaad (dor:Gstaad)
+      - 1969_Suisse_Open_Gstaad (dor:1969_Suisse_Open_Gstaad) --dop:location--> Switzerland (dor:Switzerland)
+attributes:
+  city: --Apr record low C^ (dop:aprRecordLowC)--> langString | --Apr record low F^ (dop:aprRecordLowF)--> langString | --founder^ (dop:founder)--> langString | --Apr rain mm^ (dop:aprRainMm)--> int | --elevation (μ)^ (doo:elevation)--> double | --Apr rain mm^ (dop:aprRainMm)--> double | --named for^ (dop:namedFor)--> Resource
+  country: --url^ (dop:url)--> Resource | --last^ (dop:last)--> langString | --capital^ (doo:capital)--> Resource
+  tennis tournament: --category^ (dop:category)--> langString
+subgraph_id: 56
+relationships:
+  - tennis tournament --dop:location--> city
+  - tennis tournament --dop:location--> country

@@ -1,0 +1,128 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  cricket team: doo:CricketTeam
+  career station: doo:CareerStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      India: (population total^='1375586000')
+    relationships:
+      - Jaipur (dor:Jaipur) --doo:country--> India (dor:India)
+      - Rajasthan_cricket_team (dor:Rajasthan_cricket_team) --doo:ground--> Jaipur (dor:Jaipur)
+      - Aakash_Chopra__1__CareerStation__2 (dor:Aakash_Chopra__1__CareerStation__2) --doo:team--> Rajasthan_cricket_team (dor:Rajasthan_cricket_team)
+  '2':
+    attributes:
+      India: (population total^='1375586000')
+    relationships:
+      - Kolkata (dor:Kolkata) --doo:country--> India (dor:India)
+      - Kolkata_Knight_Riders (dor:Kolkata_Knight_Riders) --doo:ground--> Kolkata (dor:Kolkata)
+      - Aakash_Chopra__1__CareerStation__4 (dor:Aakash_Chopra__1__CareerStation__4) --doo:team--> Kolkata_Knight_Riders (dor:Kolkata_Knight_Riders)
+  '3':
+    attributes:
+      India: (population total^='1375586000')
+    relationships:
+      - Jaipur (dor:Jaipur) --doo:country--> India (dor:India)
+      - Rajasthan_Royals (dor:Rajasthan_Royals) --doo:ground--> Jaipur (dor:Jaipur)
+      - Aakash_Chopra__1__CareerStation__5 (dor:Aakash_Chopra__1__CareerStation__5) --doo:team--> Rajasthan_Royals (dor:Rajasthan_Royals)
+  '4':
+    attributes:
+      United_Kingdom: (population total^='67791400')
+    relationships:
+      - Durham,_England (<http://dbpedia.org/resource/Durham,_England>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - Durham_Women_cricket_team (dor:Durham_Women_cricket_team) --doo:ground--> Durham,_England (<http://dbpedia.org/resource/Durham,_England>)
+      - Aaliyah_Alleyne__CareerStation__2 (dor:Aaliyah_Alleyne__CareerStation__2) --doo:team--> Durham_Women_cricket_team (dor:Durham_Women_cricket_team)
+  '5':
+    attributes:
+      Karachi: (source^='PMD , Weather Atlas, and Karachi Extremes')
+      Pakistan: (population total^='242923845')
+    relationships:
+      - Karachi (dor:Karachi) --doo:country--> Pakistan (dor:Pakistan)
+      - Sindh_cricket_team (dor:Sindh_cricket_team) --doo:ground--> Karachi (dor:Karachi)
+      - Aaliyan_Mehmood__CareerStation__1 (dor:Aaliyan_Mehmood__CareerStation__1) --doo:team--> Sindh_cricket_team (dor:Sindh_cricket_team)
+  '6':
+    attributes:
+      Multan: (source^='NOAA')
+      Pakistan: (population total^='242923845')
+    relationships:
+      - Multan (dor:Multan) --doo:country--> Pakistan (dor:Pakistan)
+      - Southern_Punjab_cricket_team_(Pakistan) (<http://dbpedia.org/resource/Southern_Punjab_cricket_team_(Pakistan)>) --doo:ground--> Multan (dor:Multan)
+      - Aamer_Yamin__CareerStation__6 (dor:Aamer_Yamin__CareerStation__6) --doo:team--> Southern_Punjab_cricket_team_(Pakistan) (<http://dbpedia.org/resource/Southern_Punjab_cricket_team_(Pakistan)>)
+  '7':
+    attributes:
+      Karachi: (source^='PMD , Weather Atlas, and Karachi Extremes')
+      Pakistan: (population total^='242923845')
+    relationships:
+      - Karachi (dor:Karachi) --doo:country--> Pakistan (dor:Pakistan)
+      - Sindh_cricket_team (dor:Sindh_cricket_team) --doo:ground--> Karachi (dor:Karachi)
+      - Aamir_Ali_(cricketer)__CareerStation__1 (<http://dbpedia.org/resource/Aamir_Ali_(cricketer)__CareerStation__1>) --doo:team--> Sindh_cricket_team (dor:Sindh_cricket_team)
+  '8':
+    attributes: {}
+    relationships:
+      - Melbourne (dor:Melbourne) --doo:country--> Australia (dor:Australia)
+      - Melbourne_Renegades (dor:Melbourne_Renegades) --doo:ground--> Melbourne (dor:Melbourne)
+      - Aaron_Ayre__CareerStation__2 (dor:Aaron_Ayre__CareerStation__2) --doo:team--> Melbourne_Renegades (dor:Melbourne_Renegades)
+  '9':
+    attributes:
+      Cork_(city): (source^='Met Éireann')
+      Republic_of_Ireland: (population total^='5123536')
+    relationships:
+      - Cork_(city) (<http://dbpedia.org/resource/Cork_(city)>) --doo:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - Munster_Reds (dor:Munster_Reds) --doo:ground--> Cork_(city) (<http://dbpedia.org/resource/Cork_(city)>)
+      - Aaron_Cawley__CareerStation__1 (dor:Aaron_Cawley__CareerStation__1) --doo:team--> Munster_Reds (dor:Munster_Reds)
+  '10':
+    attributes: {}
+    relationships:
+      - Melbourne (dor:Melbourne) --doo:country--> Australia (dor:Australia)
+      - Melbourne_Renegades (dor:Melbourne_Renegades) --doo:ground--> Melbourne (dor:Melbourne)
+      - Aaron_Finch__CareerStation__4 (dor:Aaron_Finch__CareerStation__4) --doo:team--> Melbourne_Renegades (dor:Melbourne_Renegades)
+qa_result:
+  status: completed
+  cost_usd: 0.462421
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.04460240000000001
+        total_tokens: 4046
+        prompt_tokens: 1976
+        completion_tokens: 2070
+      generate:
+        cost_usd: 0.0508576
+        total_tokens: 5806
+        prompt_tokens: 3871
+        completion_tokens: 1935
+      verify_1:
+        cost_usd: 0.13555200000000003
+        total_tokens: 9990
+        prompt_tokens: 4283
+        completion_tokens: 5707
+      verify_2:
+        cost_usd: 0.094062
+        total_tokens: 7818
+        prompt_tokens: 4153
+        completion_tokens: 3665
+      complexity:
+        cost_usd: 0.13734700000000002
+        total_tokens: 10589
+        prompt_tokens: 4962
+        completion_tokens: 5627
+    total_tokens: 38249
+    prompt_tokens: 19245
+    total_cost_usd: 0.462421
+    completion_tokens: 19004
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --source^ (dop:source)--> langString
+  Location: --2y^ (dop:2y)--> int | --image upright^ (dop:imageUpright)--> double | --logo^ (dop:logo)--> langString | --mouth mountain^ (doo:mouthMountain)--> Resource | --Aug low F^ (dop:augLowF)--> int | --area code^ (doo:areaCode)--> string | --colwidth^ (dop:colwidth)--> int | --population total^ (doo:populationTotal)--> int | --group^ (dop:group)--> langString
+subgraph_id: 181
+relationships:
+  - city --doo:country--> Location
+  - cricket team --doo:ground--> city
+  - career station --doo:team--> cricket team

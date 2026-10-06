@@ -1,0 +1,113 @@
+types:
+  venue: doo:Venue
+  school: doo:School
+  soccer club: doo:SoccerClub
+  college coach: doo:CollegeCoach
+  american football Team: doo:AmericanFootballTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Fenway_Park: (tenants^='Boston Beacons', cost ($)^='650000.0', opening date^='1912-04-20')
+      Bill_O'Brien_(American_football): (awards^='')
+    relationships:
+      - Bill_O'Brien_(American_football) (<http://dbpedia.org/resource/Bill_O'Brien_(American_football)>) --dop:currentTeam--> Alabama_Crimson_Tide_football (dor:Alabama_Crimson_Tide_football)
+      - Bill_O'Brien_(American_football) (<http://dbpedia.org/resource/Bill_O'Brien_(American_football)>) --dop:coachTeam--> New_England_Patriots (dor:New_England_Patriots)
+      - Fenway_Park (dor:Fenway_Park) --doo:tenant--> New_England_Patriots (dor:New_England_Patriots)
+      - Bill_O'Brien_(American_football) (<http://dbpedia.org/resource/Bill_O'Brien_(American_football)>) --dop:coachTeam--> Duke_Blue_Devils_football (dor:Duke_Blue_Devils_football)
+  '2':
+    attributes:
+      Fenway_Park: (tenants^='Boston Beacons', cost ($)^='650000.0', opening date^='1912-04-20')
+      Bill_O'Brien_(American_football): (awards^='')
+    relationships:
+      - Bill_O'Brien_(American_football) (<http://dbpedia.org/resource/Bill_O'Brien_(American_football)>) --dop:currentTeam--> Alabama_Crimson_Tide_football (dor:Alabama_Crimson_Tide_football)
+      - Bill_O'Brien_(American_football) (<http://dbpedia.org/resource/Bill_O'Brien_(American_football)>) --dop:coachTeam--> New_England_Patriots (dor:New_England_Patriots)
+      - Fenway_Park (dor:Fenway_Park) --doo:tenant--> New_England_Patriots (dor:New_England_Patriots)
+      - Bill_O'Brien_(American_football) (<http://dbpedia.org/resource/Bill_O'Brien_(American_football)>) --dop:coachTeam--> Houston_Texans (dor:Houston_Texans)
+  '3':
+    attributes:
+      Foxboro_Stadium: (tenants^='New England Patriots', cost ($)^='7100000.0', opening date^='1971-08-15')
+      Bill_O'Brien_(American_football): (awards^='')
+    relationships:
+      - Bill_O'Brien_(American_football) (<http://dbpedia.org/resource/Bill_O'Brien_(American_football)>) --dop:currentTeam--> Alabama_Crimson_Tide_football (dor:Alabama_Crimson_Tide_football)
+      - Bill_O'Brien_(American_football) (<http://dbpedia.org/resource/Bill_O'Brien_(American_football)>) --dop:coachTeam--> New_England_Patriots (dor:New_England_Patriots)
+      - Foxboro_Stadium (dor:Foxboro_Stadium) --doo:tenant--> New_England_Patriots (dor:New_England_Patriots)
+      - Bill_O'Brien_(American_football) (<http://dbpedia.org/resource/Bill_O'Brien_(American_football)>) --dop:coachTeam--> Duke_Blue_Devils_football (dor:Duke_Blue_Devils_football)
+  '4':
+    attributes:
+      Future_Tennessee_Titans_stadium: (tenants^='Tennessee State', cost ($)^='2.1E9')
+    relationships:
+      - Bob_Bostad (dor:Bob_Bostad) --dop:currentTeam--> Wisconsin_Badgers_football (dor:Wisconsin_Badgers_football)
+      - Bob_Bostad (dor:Bob_Bostad) --dop:coachTeam--> Tennessee_Titans (dor:Tennessee_Titans)
+      - Future_Tennessee_Titans_stadium (dor:Future_Tennessee_Titans_stadium) --doo:tenant--> Tennessee_Titans (dor:Tennessee_Titans)
+      - Bob_Bostad (dor:Bob_Bostad) --dop:coachTeam--> Tampa_Bay_Buccaneers (dor:Tampa_Bay_Buccaneers)
+  '5':
+    attributes:
+      Nissan_Stadium: (tenants^='Music City Bowl  1999-present', cost ($)^='2.9E8', opening date^='1999-08-27')
+    relationships:
+      - Bob_Bostad (dor:Bob_Bostad) --dop:currentTeam--> Wisconsin_Badgers_football (dor:Wisconsin_Badgers_football)
+      - Bob_Bostad (dor:Bob_Bostad) --dop:coachTeam--> Tennessee_Titans (dor:Tennessee_Titans)
+      - Nissan_Stadium (dor:Nissan_Stadium) --doo:tenant--> Tennessee_Titans (dor:Tennessee_Titans)
+      - Bob_Bostad (dor:Bob_Bostad) --dop:coachTeam--> Tampa_Bay_Buccaneers (dor:Tampa_Bay_Buccaneers)
+  '6':
+    attributes:
+      Raymond_James_Stadium: (tenants^='Gasparilla Bowl', cost ($)^='1.685E8', opening date^='1998-09-20')
+    relationships:
+      - Bob_Bostad (dor:Bob_Bostad) --dop:currentTeam--> Wisconsin_Badgers_football (dor:Wisconsin_Badgers_football)
+      - Bob_Bostad (dor:Bob_Bostad) --dop:coachTeam--> Tampa_Bay_Buccaneers (dor:Tampa_Bay_Buccaneers)
+      - Raymond_James_Stadium (dor:Raymond_James_Stadium) --doo:tenant--> Tampa_Bay_Buccaneers (dor:Tampa_Bay_Buccaneers)
+      - Bob_Bostad (dor:Bob_Bostad) --dop:coachTeam--> Tennessee_Titans (dor:Tennessee_Titans)
+  '7':
+    attributes:
+      Nippert_Stadium: (tenants^='', cost ($)^='1.05E7', opening date^='1924-09-27')
+    relationships:
+      - Bob_Surace (dor:Bob_Surace) --dop:currentTeam--> Princeton_Tigers_football (dor:Princeton_Tigers_football)
+      - Bob_Surace (dor:Bob_Surace) --dop:coachTeam--> Cincinnati_Bengals (dor:Cincinnati_Bengals)
+      - Nippert_Stadium (dor:Nippert_Stadium) --doo:tenant--> Cincinnati_Bengals (dor:Cincinnati_Bengals)
+      - Bob_Surace (dor:Bob_Surace) --dop:coachTeam--> Shreveport_Pirates (dor:Shreveport_Pirates)
+  '8':
+    attributes:
+      Paycor_Stadium: (tenants^='Cincinnati Bearcats  2014', cost ($)^='4.55E8', opening date^='2000-08-19')
+    relationships:
+      - Bob_Surace (dor:Bob_Surace) --dop:currentTeam--> Princeton_Tigers_football (dor:Princeton_Tigers_football)
+      - Bob_Surace (dor:Bob_Surace) --dop:coachTeam--> Cincinnati_Bengals (dor:Cincinnati_Bengals)
+      - Paycor_Stadium (dor:Paycor_Stadium) --doo:tenant--> Cincinnati_Bengals (dor:Cincinnati_Bengals)
+      - Bob_Surace (dor:Bob_Surace) --dop:coachTeam--> Shreveport_Pirates (dor:Shreveport_Pirates)
+  '9':
+    attributes:
+      Riverfront_Stadium: (tenants^='Cincinnati Bearcats', cost ($)^='4.5E7', opening date^='1970-06-30')
+    relationships:
+      - Bob_Surace (dor:Bob_Surace) --dop:currentTeam--> Princeton_Tigers_football (dor:Princeton_Tigers_football)
+      - Bob_Surace (dor:Bob_Surace) --dop:coachTeam--> Cincinnati_Bengals (dor:Cincinnati_Bengals)
+      - Riverfront_Stadium (dor:Riverfront_Stadium) --doo:tenant--> Cincinnati_Bengals (dor:Cincinnati_Bengals)
+      - Bob_Surace (dor:Bob_Surace) --dop:coachTeam--> Shreveport_Pirates (dor:Shreveport_Pirates)
+  '10':
+    attributes:
+      Brady_Hoke: |-
+        (awards^='* MAC Coach of the Year 
+        * AFCA Regional Coach of the Year 
+        * 2× MW Coach of the Year 
+        * Big Ten Coach of the Year 
+        * Maxwell Football Club Collegiate Coach of the Year 
+        * George Munger Award')
+      Bank_of_America_Stadium: (tenants^='Carolina Panthers', cost ($)^='2.48E8', opening date^='1996-08-03')
+    relationships:
+      - Brady_Hoke (dor:Brady_Hoke) --dop:currentTeam--> San_Diego_State_Aztecs_football (dor:San_Diego_State_Aztecs_football)
+      - Brady_Hoke (dor:Brady_Hoke) --dop:coachTeam--> Carolina_Panthers (dor:Carolina_Panthers)
+      - Bank_of_America_Stadium (dor:Bank_of_America_Stadium) --doo:tenant--> Carolina_Panthers (dor:Carolina_Panthers)
+      - Brady_Hoke (dor:Brady_Hoke) --dop:coachTeam--> Michigan_Wolverines_football (dor:Michigan_Wolverines_football)
+attributes:
+  venue: --tenants^ (dop:tenants)--> langString | --cost ($)^ (doo:cost)--> poundSterling | --opening date^ (doo:openingDate)--> date | --cost^ (dop:cost)--> usDollar
+  school: --wordnet_type (dop:wordnet_type)--> Resource | --affiliation^ (doo:affiliation)--> Resource | --city^ (doo:city)--> Resource | --closing date^ (doo:closingDate)--> date
+  soccer club: --Association^ (dop:association)--> Resource | --motto^ (doo:motto)--> string | --league^ (dop:league)--> int
+  college coach: --awards^ (dop:awards)--> langString
+subgraph_id: 966
+relationships:
+  - college coach --dop:currentTeam--> school
+  - college coach --dop:coachTeam--> american football Team
+  - venue --doo:tenant--> american football Team
+  - college coach --dop:coachTeam--> soccer club

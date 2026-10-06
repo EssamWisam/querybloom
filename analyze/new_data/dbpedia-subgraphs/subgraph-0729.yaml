@@ -1,0 +1,115 @@
+types:
+  book: doo:Book
+  city: doo:City
+  person: doo:Person
+  publisher: doo:Publisher
+  academic journal: doo:AcademicJournal
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ningbo: (Apr high C^='20.7')
+      Fanghua_Lin: (has abstract^='Fang-Hua Lin, auch Fanghua Lin, (* 11. März 1959 im Stadtbezirk Zhenhai von Ningbo, Provinz Zhejiang, China) ist ein chinesisch-US-amerikanischer Mathematiker, der sich mit Analysis beschäftigt. Lin m...', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Concise_Encyclopedia_of_Supersymmetry_and_Noncommutative_Structures_in_Mathematics_and_Physics: (country^='http://dbpedia.org/resource/Netherlands')
+    relationships:
+      - Acta_Mathematica_Sinica (dor:Acta_Mathematica_Sinica) --doo:publisher--> Springer_Science+Business_Media (<http://dbpedia.org/resource/Springer_Science+Business_Media>)
+      - Acta_Mathematica_Sinica (dor:Acta_Mathematica_Sinica) --doo:editor--> Fanghua_Lin (dor:Fanghua_Lin)
+      - Fanghua_Lin (dor:Fanghua_Lin) --doo:birthPlace--> Ningbo (dor:Ningbo)
+      - Concise_Encyclopedia_of_Supersymmetry_and_Noncommutative_Structures_in_Mathematics_and_Physics (dor:Concise_Encyclopedia_of_Supersymmetry_and_Noncommutative_Structures_in_Mathematics_and_Physics) --doo:publisher--> Springer_Science+Business_Media (<http://dbpedia.org/resource/Springer_Science+Business_Media>)
+  '2':
+    attributes:
+      Ningbo: (Apr high C^='20.7')
+      Local_Fields: (country^='France')
+    relationships:
+      - Acta_Mathematica_Sinica (dor:Acta_Mathematica_Sinica) --doo:publisher--> Springer_Science+Business_Media (<http://dbpedia.org/resource/Springer_Science+Business_Media>)
+      - Acta_Mathematica_Sinica (dor:Acta_Mathematica_Sinica) --doo:editor--> Fanghua_Lin (dor:Fanghua_Lin)
+      - Fanghua_Lin (dor:Fanghua_Lin) --doo:birthPlace--> Ningbo (dor:Ningbo)
+      - Local_Fields (dor:Local_Fields) --doo:publisher--> Springer_Science+Business_Media (<http://dbpedia.org/resource/Springer_Science+Business_Media>)
+  '3':
+    attributes:
+      Ningbo: (Apr high C^='20.7')
+      Fanghua_Lin: (has abstract^='Fang-Hua Lin, auch Fanghua Lin, (* 11. März 1959 im Stadtbezirk Zhenhai von Ningbo, Provinz Zhejiang, China) ist ein chinesisch-US-amerikanischer Mathematiker, der sich mit Analysis beschäftigt. Lin m...', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Acta_Mathematica_Sinica (dor:Acta_Mathematica_Sinica) --doo:publisher--> Springer_Science+Business_Media (<http://dbpedia.org/resource/Springer_Science+Business_Media>)
+      - Acta_Mathematica_Sinica (dor:Acta_Mathematica_Sinica) --doo:editor--> Fanghua_Lin (dor:Fanghua_Lin)
+      - Fanghua_Lin (dor:Fanghua_Lin) --doo:birthPlace--> Ningbo (dor:Ningbo)
+      - Mathematical_Biology__II:_Spatial_Models_and_Biomed__1 (<http://dbpedia.org/resource/Mathematical_Biology__II:_Spatial_Models_and_Biomed__1>) --doo:publisher--> Springer_Science+Business_Media (<http://dbpedia.org/resource/Springer_Science+Business_Media>)
+  '4':
+    attributes:
+      Mashhad: (Apr high C^='20.9')
+      Infinity_and_the_Mind: (country^='United States')
+      Mohammad_Sal_Moslehian: (spouse^='Maryam Amyari', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Advances_in_Operator_Theory (dor:Advances_in_Operator_Theory) --doo:publisher--> Birkhäuser (<http://dbpedia.org/resource/Birkhäuser>)
+      - Advances_in_Operator_Theory (dor:Advances_in_Operator_Theory) --doo:editor--> Mohammad_Sal_Moslehian (dor:Mohammad_Sal_Moslehian)
+      - Mohammad_Sal_Moslehian (dor:Mohammad_Sal_Moslehian) --doo:birthPlace--> Mashhad (dor:Mashhad)
+      - Infinity_and_the_Mind (dor:Infinity_and_the_Mind) --doo:publisher--> Birkhäuser (<http://dbpedia.org/resource/Birkhäuser>)
+  '5':
+    attributes:
+      Mashhad: (Apr high C^='20.9')
+      Mohammad_Sal_Moslehian: (spouse^='Maryam Amyari', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      The_Secret_Guide_to_Computers: (country^='United States')
+    relationships:
+      - Advances_in_Operator_Theory (dor:Advances_in_Operator_Theory) --doo:publisher--> Birkhäuser (<http://dbpedia.org/resource/Birkhäuser>)
+      - Advances_in_Operator_Theory (dor:Advances_in_Operator_Theory) --doo:editor--> Mohammad_Sal_Moslehian (dor:Mohammad_Sal_Moslehian)
+      - Mohammad_Sal_Moslehian (dor:Mohammad_Sal_Moslehian) --doo:birthPlace--> Mashhad (dor:Mashhad)
+      - The_Secret_Guide_to_Computers (dor:The_Secret_Guide_to_Computers) --doo:publisher--> Birkhäuser (<http://dbpedia.org/resource/Birkhäuser>)
+  '6':
+    attributes:
+      Mashhad: (Apr high C^='20.9')
+      Mohammad_Sal_Moslehian: (spouse^='Maryam Amyari', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Advances_in_Operator_Theory (dor:Advances_in_Operator_Theory) --doo:publisher--> Birkhäuser (<http://dbpedia.org/resource/Birkhäuser>)
+      - Advances_in_Operator_Theory (dor:Advances_in_Operator_Theory) --doo:editor--> Mohammad_Sal_Moslehian (dor:Mohammad_Sal_Moslehian)
+      - Mohammad_Sal_Moslehian (dor:Mohammad_Sal_Moslehian) --doo:birthPlace--> Mashhad (dor:Mashhad)
+      - The_Tower_of_Hanoi_–_Myths_and_Maths (<http://dbpedia.org/resource/The_Tower_of_Hanoi_–_Myths_and_Maths>) --doo:publisher--> Birkhäuser (<http://dbpedia.org/resource/Birkhäuser>)
+  '7':
+    attributes:
+      Henry_Kranzler: (spouse^='Yes', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      A_Companion_to_Continental_Philosophy: (cover artist^='http://dbpedia.org/resource/Giorgio_de_Chirico')
+    relationships:
+      - Alcoholism:_Clinical_and_Experimental_Research (<http://dbpedia.org/resource/Alcoholism:_Clinical_and_Experimental_Research>) --doo:publisher--> Wiley-Blackwell (dor:Wiley-Blackwell)
+      - Alcoholism:_Clinical_and_Experimental_Research (<http://dbpedia.org/resource/Alcoholism:_Clinical_and_Experimental_Research>) --doo:editor--> Henry_Kranzler (dor:Henry_Kranzler)
+      - Henry_Kranzler (dor:Henry_Kranzler) --doo:birthPlace--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - A_Companion_to_Continental_Philosophy (dor:A_Companion_to_Continental_Philosophy) --doo:publisher--> Wiley-Blackwell (dor:Wiley-Blackwell)
+  '8':
+    attributes:
+      Henry_Kranzler: (spouse^='Yes', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      A_Companion_to_J._R._R._Tolkien: (country^='United States')
+    relationships:
+      - Alcoholism:_Clinical_and_Experimental_Research (<http://dbpedia.org/resource/Alcoholism:_Clinical_and_Experimental_Research>) --doo:publisher--> Wiley-Blackwell (dor:Wiley-Blackwell)
+      - Alcoholism:_Clinical_and_Experimental_Research (<http://dbpedia.org/resource/Alcoholism:_Clinical_and_Experimental_Research>) --doo:editor--> Henry_Kranzler (dor:Henry_Kranzler)
+      - Henry_Kranzler (dor:Henry_Kranzler) --doo:birthPlace--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - A_Companion_to_J._R._R._Tolkien (dor:A_Companion_to_J._R._R._Tolkien) --doo:publisher--> Wiley-Blackwell (dor:Wiley-Blackwell)
+  '9':
+    attributes:
+      Henry_Kranzler: (spouse^='Yes', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      An_Introduction_to_Hegel:_Freedom,_Truth_and_History: (country^='United Kingdom')
+    relationships:
+      - Alcoholism:_Clinical_and_Experimental_Research (<http://dbpedia.org/resource/Alcoholism:_Clinical_and_Experimental_Research>) --doo:publisher--> Wiley-Blackwell (dor:Wiley-Blackwell)
+      - Alcoholism:_Clinical_and_Experimental_Research (<http://dbpedia.org/resource/Alcoholism:_Clinical_and_Experimental_Research>) --doo:editor--> Henry_Kranzler (dor:Henry_Kranzler)
+      - Henry_Kranzler (dor:Henry_Kranzler) --doo:birthPlace--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - An_Introduction_to_Hegel:_Freedom,_Truth_and_History (<http://dbpedia.org/resource/An_Introduction_to_Hegel:_Freedom,_Truth_and_History>) --doo:publisher--> Wiley-Blackwell (dor:Wiley-Blackwell)
+  '10':
+    attributes:
+      A_Cage_of_Eagles: (country^='United States')
+      Stephen_Hetherington: (spouse^='Parveen Kaur Seehra', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Australasian_Journal_of_Philosophy (dor:Australasian_Journal_of_Philosophy) --doo:publisher--> Routledge (dor:Routledge)
+      - Australasian_Journal_of_Philosophy (dor:Australasian_Journal_of_Philosophy) --doo:editor--> Stephen_Hetherington (dor:Stephen_Hetherington)
+      - Stephen_Hetherington (dor:Stephen_Hetherington) --doo:birthPlace--> Sydney (dor:Sydney)
+      - A_Cage_of_Eagles (dor:A_Cage_of_Eagles) --doo:publisher--> Routledge (dor:Routledge)
+attributes:
+  book: --cover artist^ (doo:coverArtist)--> Resource | --id (dop:id)--> int | --country^ (dop:country)--> langString | --followed by^ (dop:followedBy)--> langString
+  city: --Apr low F^ (dop:aprLowF)--> double | --Apr high C^ (dop:aprHighC)--> double
+  person: --width^ (dop:width)--> perCent | --spouse^ (dop:spouse)--> langString | --has abstract^ (doo:abstract)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --align^ (dop:align)--> langString | --employer^ (dop:employer)--> langString
+subgraph_id: 729
+relationships:
+  - academic journal --doo:publisher--> publisher
+  - academic journal --doo:editor--> person
+  - person --doo:birthPlace--> city
+  - book --doo:publisher--> publisher

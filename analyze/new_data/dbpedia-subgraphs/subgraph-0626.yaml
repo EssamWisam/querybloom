@@ -1,0 +1,106 @@
+types:
+  person: doo:Person
+  country: doo:Country
+  settlement: doo:Settlement
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      03_Greedo: (birth place^='http://dbpedia.org/resource/California')
+      California: (align^='left')
+      Los_Angeles: (width^='210')
+    relationships:
+      - Los_Angeles (dor:Los_Angeles) --doo:subdivision--> Los_Angeles_metropolitan_area (dor:Los_Angeles_metropolitan_area)
+      - 03_Greedo (dor:03_Greedo) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - Los_Angeles (dor:Los_Angeles) --doo:subdivision--> California (dor:California)
+  '2':
+    attributes:
+      03_Greedo: (birth place^='http://dbpedia.org/resource/California')
+      Los_Angeles: (width^='210')
+    relationships:
+      - Los_Angeles (dor:Los_Angeles) --doo:subdivision--> Los_Angeles_metropolitan_area (dor:Los_Angeles_metropolitan_area)
+      - 03_Greedo (dor:03_Greedo) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - Los_Angeles (dor:Los_Angeles) --doo:subdivision--> Los_Angeles_County,_California (<http://dbpedia.org/resource/Los_Angeles_County,_California>)
+  '3':
+    attributes:
+      88-Keys: (birth place^='http://dbpedia.org/resource/New_York_(state)')
+      New_York_City: (width^='225')
+      New_York_(state): (align^='right')
+    relationships:
+      - New_York_City (dor:New_York_City) --doo:subdivision--> New_Netherland (dor:New_Netherland)
+      - 88-Keys (dor:88-Keys) --dop:birthPlace--> New_York_City (dor:New_York_City)
+      - New_York_City (dor:New_York_City) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '4':
+    attributes:
+      88-Keys: (birth place^='http://dbpedia.org/resource/New_York_(state)')
+      New_York_City: (width^='225')
+      New_York_(state): (align^='right')
+      Province_of_New_York: (leader^='http://dbpedia.org/resource/Anne,_Queen_of_Great_Britain')
+    relationships:
+      - New_York_City (dor:New_York_City) --doo:subdivision--> Province_of_New_York (dor:Province_of_New_York)
+      - 88-Keys (dor:88-Keys) --dop:birthPlace--> New_York_City (dor:New_York_City)
+      - New_York_City (dor:New_York_City) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '5':
+    attributes:
+      A._Atwater_Kent: (death place^='http://dbpedia.org/resource/Hollywood,_California', birth place^='http://dbpedia.org/resource/Burlington,_Vermont', spouse^='Mabel')
+    relationships:
+      - Burlington,_Vermont (<http://dbpedia.org/resource/Burlington,_Vermont>) --doo:subdivision--> New_England (dor:New_England)
+      - A._Atwater_Kent (dor:A._Atwater_Kent) --dop:birthPlace--> Burlington,_Vermont (<http://dbpedia.org/resource/Burlington,_Vermont>)
+      - Burlington,_Vermont (<http://dbpedia.org/resource/Burlington,_Vermont>) --doo:subdivision--> Chittenden_County,_Vermont (<http://dbpedia.org/resource/Chittenden_County,_Vermont>)
+  '6':
+    attributes:
+      A._Atwater_Kent: (death place^='http://dbpedia.org/resource/Hollywood,_California', birth place^='http://dbpedia.org/resource/Burlington,_Vermont', spouse^='Mabel')
+    relationships:
+      - Burlington,_Vermont (<http://dbpedia.org/resource/Burlington,_Vermont>) --doo:subdivision--> New_England (dor:New_England)
+      - A._Atwater_Kent (dor:A._Atwater_Kent) --dop:birthPlace--> Burlington,_Vermont (<http://dbpedia.org/resource/Burlington,_Vermont>)
+      - Burlington,_Vermont (<http://dbpedia.org/resource/Burlington,_Vermont>) --doo:subdivision--> Vermont (dor:Vermont)
+  '7':
+    attributes:
+      Boston: (width^='30.0')
+      Massachusetts: (align^='right')
+      A._Austin_Tate: (death place^='http://dbpedia.org/resource/Bethlehem,_Pennsylvania', birth place^='http://dbpedia.org/resource/Boston')
+    relationships:
+      - Boston (dor:Boston) --doo:subdivision--> Commonwealth_of_England (dor:Commonwealth_of_England)
+      - A._Austin_Tate (dor:A._Austin_Tate) --dop:birthPlace--> Boston (dor:Boston)
+      - Boston (dor:Boston) --doo:subdivision--> Massachusetts (dor:Massachusetts)
+  '8':
+    attributes:
+      Boston: (width^='30.0')
+      A._Austin_Tate: (death place^='http://dbpedia.org/resource/Bethlehem,_Pennsylvania', birth place^='http://dbpedia.org/resource/Boston')
+    relationships:
+      - Boston (dor:Boston) --doo:subdivision--> Commonwealth_of_England (dor:Commonwealth_of_England)
+      - A._Austin_Tate (dor:A._Austin_Tate) --dop:birthPlace--> Boston (dor:Boston)
+      - Boston (dor:Boston) --doo:subdivision--> Suffolk_County,_Massachusetts (<http://dbpedia.org/resource/Suffolk_County,_Massachusetts>)
+  '9':
+    attributes:
+      Boston: (width^='30.0')
+      Massachusetts: (align^='right')
+      A._Austin_Tate: (death place^='http://dbpedia.org/resource/Bethlehem,_Pennsylvania', birth place^='http://dbpedia.org/resource/Boston')
+      Dominion_of_New_England: (leader^='http://dbpedia.org/resource/James_II_of_England')
+    relationships:
+      - Boston (dor:Boston) --doo:subdivision--> Dominion_of_New_England (dor:Dominion_of_New_England)
+      - A._Austin_Tate (dor:A._Austin_Tate) --dop:birthPlace--> Boston (dor:Boston)
+      - Boston (dor:Boston) --doo:subdivision--> Massachusetts (dor:Massachusetts)
+  '10':
+    attributes:
+      London: (width^='215')
+      A._B._Campbell: (birth place^='http://dbpedia.org/resource/London')
+    relationships:
+      - London (dor:London) --doo:subdivision--> England (dor:England)
+      - A._B._Campbell (dor:A._B._Campbell) --dop:birthPlace--> London (dor:London)
+      - London (dor:London) --doo:subdivision--> Greater_London (dor:Greater_London)
+attributes:
+  person: --death place^ (doo:deathPlace)--> Resource | --birth place^ (dop:birthPlace)--> langString | --parent^ (doo:parent)--> Resource | --spouse^ (dop:spouse)--> Resource | --float^ (dop:float)--> langString
+  country: --leader^ (dop:leader)--> langString
+  settlement: --width^ (dop:width)--> langString | --Apr high F^ (dop:aprHighF)--> int | --Aug precipitation days^ (dop:augPrecipitationDays)--> int
+  administrative region: --Aug low C^ (dop:augLowC)--> double | --align^ (dop:align)--> langString | --image width^ (dop:imageWidth)--> int | --image upright^ (dop:imageUpright)--> double
+subgraph_id: 626
+relationships:
+  - settlement --doo:subdivision--> country
+  - person --dop:birthPlace--> settlement
+  - settlement --doo:subdivision--> administrative region

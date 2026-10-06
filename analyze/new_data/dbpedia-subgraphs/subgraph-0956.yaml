@@ -1,0 +1,80 @@
+types:
+  artist: doo:Artist
+  country: doo:Country
+  Location: doo:Location
+  politician: doo:Politician
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Florence: (width^='25')
+      Domenico_Ghirlandaio: (birth name^='Domenico di Tommaso Curradi di Doffo Bigordi', birth name^='Domenico di Tommaso Curradi di Doffo Bigordi')
+    relationships:
+      - Florence (dor:Florence) --doo:region--> Tuscany (dor:Tuscany)
+      - Alberto_Cerreti (dor:Alberto_Cerreti) --doo:birthPlace--> Tuscany (dor:Tuscany)
+      - Domenico_Ghirlandaio (dor:Domenico_Ghirlandaio) --doo:notableWork--> Florence (dor:Florence)
+      - Domenico_Ghirlandaio (dor:Domenico_Ghirlandaio) --doo:deathPlace--> Florence (dor:Florence)
+  '2':
+    attributes:
+      Domenico_Ghirlandaio: (birth name^='Domenico di Tommaso Curradi di Doffo Bigordi', birth name^='Domenico di Tommaso Curradi di Doffo Bigordi')
+    relationships:
+      - Florence (dor:Florence) --doo:region--> Tuscany (dor:Tuscany)
+      - Alberto_Cerreti (dor:Alberto_Cerreti) --doo:birthPlace--> Tuscany (dor:Tuscany)
+      - Domenico_Ghirlandaio (dor:Domenico_Ghirlandaio) --doo:notableWork--> Florence (dor:Florence)
+      - Domenico_Ghirlandaio (dor:Domenico_Ghirlandaio) --doo:deathPlace--> Republic_of_Florence (dor:Republic_of_Florence)
+  '3':
+    attributes:
+      Florence: (width^='25')
+      Domenico_Ghirlandaio: (birth name^='Domenico di Tommaso Curradi di Doffo Bigordi', birth name^='Domenico di Tommaso Curradi di Doffo Bigordi')
+    relationships:
+      - Florence (dor:Florence) --doo:region--> Tuscany (dor:Tuscany)
+      - Alberto_Del_Nero (dor:Alberto_Del_Nero) --doo:birthPlace--> Tuscany (dor:Tuscany)
+      - Domenico_Ghirlandaio (dor:Domenico_Ghirlandaio) --doo:notableWork--> Florence (dor:Florence)
+      - Domenico_Ghirlandaio (dor:Domenico_Ghirlandaio) --doo:deathPlace--> Florence (dor:Florence)
+  '4':
+    attributes:
+      Italy: (caption align^='center', width^='126')
+      Venice: (image size^='275', Apr precipitation days^='8.3')
+      Gae_Aulenti: (birth name^='Gaetana Aulenti', birth name^='Gaetana Aulenti')
+    relationships:
+      - Venice (dor:Venice) --doo:region--> Veneto (dor:Veneto)
+      - Aldo_Brancher (dor:Aldo_Brancher) --doo:birthPlace--> Veneto (dor:Veneto)
+      - Gae_Aulenti (dor:Gae_Aulenti) --doo:notableWork--> Venice (dor:Venice)
+      - Gae_Aulenti (dor:Gae_Aulenti) --doo:deathPlace--> Italy (dor:Italy)
+  '5':
+    attributes:
+      Italy: (caption align^='center', width^='126')
+      Venice: (image size^='275', Apr precipitation days^='8.3')
+      Gae_Aulenti: (birth name^='Gaetana Aulenti', birth name^='Gaetana Aulenti')
+    relationships:
+      - Venice (dor:Venice) --doo:region--> Veneto (dor:Veneto)
+      - Antonio_Bisaglia (dor:Antonio_Bisaglia) --doo:birthPlace--> Veneto (dor:Veneto)
+      - Gae_Aulenti (dor:Gae_Aulenti) --doo:notableWork--> Venice (dor:Venice)
+      - Gae_Aulenti (dor:Gae_Aulenti) --doo:deathPlace--> Italy (dor:Italy)
+  '6':
+    attributes:
+      Italy: (caption align^='center', width^='126')
+      Venice: (image size^='275', Apr precipitation days^='8.3')
+      Gae_Aulenti: (birth name^='Gaetana Aulenti', birth name^='Gaetana Aulenti')
+    relationships:
+      - Venice (dor:Venice) --doo:region--> Veneto (dor:Veneto)
+      - Bruno_Ferrero (dor:Bruno_Ferrero) --doo:birthPlace--> Veneto (dor:Veneto)
+      - Gae_Aulenti (dor:Gae_Aulenti) --doo:notableWork--> Venice (dor:Venice)
+      - Gae_Aulenti (dor:Gae_Aulenti) --doo:deathPlace--> Italy (dor:Italy)
+attributes:
+  artist: --birth name^ (doo:birthName)--> langString | --birth name^ (dop:birthName)--> langString
+  country: --caption align^ (dop:captionAlign)--> langString | --width^ (dop:width)--> int
+  Location: --c^ (dop:c)--> langString | --founder (dop:founder)--> langString | --image size^ (dop:imageSize)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int
+  politician: --children^ (dop:children)--> int
+  administrative region: --caption^ (dop:caption)--> langString
+subgraph_id: 956
+relationships:
+  - Location --doo:region--> administrative region
+  - politician --doo:birthPlace--> administrative region
+  - artist --doo:notableWork--> Location
+  - artist --doo:deathPlace--> country

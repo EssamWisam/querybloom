@@ -1,0 +1,100 @@
+types:
+  writer: doo:Writer
+  economist: doo:Economist
+  scientist: doo:Scientist
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Edwin_Goldmann: (birth date^='1862-11-12')
+      Friedrich_Hayek: (birth date^='1899-05-08')
+    relationships:
+      - Friedrich_Hayek (dor:Friedrich_Hayek) --doo:deathPlace--> Freiburg_im_Breisgau (dor:Freiburg_im_Breisgau)
+      - Edwin_Goldmann (dor:Edwin_Goldmann) --doo:deathPlace--> Freiburg_im_Breisgau (dor:Freiburg_im_Breisgau)
+      - Abba_P._Lerner (dor:Abba_P._Lerner) --doo:influencedBy--> Friedrich_Hayek (dor:Friedrich_Hayek)
+  '2':
+    attributes:
+      Ernst_Zermelo: (alma mater^='http://dbpedia.org/resource/University_of_Berlin', caption^='1900.0', birth date^='1871-07-27')
+      Friedrich_Hayek: (birth date^='1899-05-08')
+    relationships:
+      - Friedrich_Hayek (dor:Friedrich_Hayek) --doo:deathPlace--> Freiburg_im_Breisgau (dor:Freiburg_im_Breisgau)
+      - Ernst_Zermelo (dor:Ernst_Zermelo) --doo:deathPlace--> Freiburg_im_Breisgau (dor:Freiburg_im_Breisgau)
+      - Abba_P._Lerner (dor:Abba_P._Lerner) --doo:influencedBy--> Friedrich_Hayek (dor:Friedrich_Hayek)
+  '3':
+    attributes:
+      Friedrich_Hayek: (birth date^='1899-05-08')
+      Georg_von_Langsdorff: (birth date^='1774-04-08')
+    relationships:
+      - Friedrich_Hayek (dor:Friedrich_Hayek) --doo:deathPlace--> Freiburg_im_Breisgau (dor:Freiburg_im_Breisgau)
+      - Georg_von_Langsdorff (dor:Georg_von_Langsdorff) --doo:deathPlace--> Freiburg_im_Breisgau (dor:Freiburg_im_Breisgau)
+      - Abba_P._Lerner (dor:Abba_P._Lerner) --doo:influencedBy--> Friedrich_Hayek (dor:Friedrich_Hayek)
+  '4':
+    attributes:
+      Joan_Robinson: (birth date^='1903-10-31')
+      A._David_Buckingham: (alma mater^='Cambridge University', birth date^='1930-01-28')
+    relationships:
+      - Joan_Robinson (dor:Joan_Robinson) --doo:deathPlace--> Cambridge (dor:Cambridge)
+      - A._David_Buckingham (dor:A._David_Buckingham) --doo:deathPlace--> Cambridge (dor:Cambridge)
+      - Alfred_Eichner (dor:Alfred_Eichner) --doo:influencedBy--> Joan_Robinson (dor:Joan_Robinson)
+  '5':
+    attributes:
+      Aaron_Klug: (alma mater^='', caption^='Aaron Klug in 1979', birth date^='1926-08-11')
+      Joan_Robinson: (birth date^='1903-10-31')
+    relationships:
+      - Joan_Robinson (dor:Joan_Robinson) --doo:deathPlace--> Cambridge (dor:Cambridge)
+      - Aaron_Klug (dor:Aaron_Klug) --doo:deathPlace--> Cambridge (dor:Cambridge)
+      - Alfred_Eichner (dor:Alfred_Eichner) --doo:influencedBy--> Joan_Robinson (dor:Joan_Robinson)
+  '6':
+    attributes:
+      Joan_Robinson: (birth date^='1903-10-31')
+      Abram_Besicovitch: (alma mater^='http://dbpedia.org/resource/St_Petersburg_University', caption^='Abram Samoilovitch Besicovitch', birth date^='1891-01-23')
+    relationships:
+      - Joan_Robinson (dor:Joan_Robinson) --doo:deathPlace--> Cambridge (dor:Cambridge)
+      - Abram_Besicovitch (dor:Abram_Besicovitch) --doo:deathPlace--> Cambridge (dor:Cambridge)
+      - Alfred_Eichner (dor:Alfred_Eichner) --doo:influencedBy--> Joan_Robinson (dor:Joan_Robinson)
+  '7':
+    attributes:
+      John_Ruskin: (author^='John Ruskin', birth date^='1819-02-08', spouse^='1848')
+      Julius_B._Cohen: (caption^='© National Portrait Gallery, London', birth date^='1859-05-06')
+    relationships:
+      - John_Ruskin (dor:John_Ruskin) --doo:deathPlace--> Coniston,_Cumbria (<http://dbpedia.org/resource/Coniston,_Cumbria>)
+      - Julius_B._Cohen (dor:Julius_B._Cohen) --doo:deathPlace--> Coniston,_Cumbria (<http://dbpedia.org/resource/Coniston,_Cumbria>)
+      - Alfred_Marshall (dor:Alfred_Marshall) --doo:influencedBy--> John_Ruskin (dor:John_Ruskin)
+  '8':
+    attributes:
+      Abraham_Maslow: (alma mater^='http://dbpedia.org/resource/City_College_of_New_York', birth date^='1908-04-01')
+      Milton_Friedman: (author^='Milton Friedman', birth date^='1912-07-31', spouse^='http://dbpedia.org/resource/Rose_Friedman')
+    relationships:
+      - Milton_Friedman (dor:Milton_Friedman) --doo:deathPlace--> California (dor:California)
+      - Abraham_Maslow (dor:Abraham_Maslow) --doo:deathPlace--> California (dor:California)
+      - Allan_H._Meltzer (dor:Allan_H._Meltzer) --doo:influencedBy--> Milton_Friedman (dor:Milton_Friedman)
+  '9':
+    attributes:
+      Alan_Hofmann: (birth date^='1931-05-17')
+      Milton_Friedman: (author^='Milton Friedman', birth date^='1912-07-31', spouse^='http://dbpedia.org/resource/Rose_Friedman')
+    relationships:
+      - Milton_Friedman (dor:Milton_Friedman) --doo:deathPlace--> California (dor:California)
+      - Alan_Hofmann (dor:Alan_Hofmann) --doo:deathPlace--> California (dor:California)
+      - Allan_H._Meltzer (dor:Allan_H._Meltzer) --doo:influencedBy--> Milton_Friedman (dor:Milton_Friedman)
+  '10':
+    attributes:
+      Albert_Ghiorso: (caption^='Albert Ghiorso around 1970', birth date^='1915-07-15')
+      Milton_Friedman: (author^='Milton Friedman', birth date^='1912-07-31', spouse^='http://dbpedia.org/resource/Rose_Friedman')
+    relationships:
+      - Milton_Friedman (dor:Milton_Friedman) --doo:deathPlace--> California (dor:California)
+      - Albert_Ghiorso (dor:Albert_Ghiorso) --doo:deathPlace--> California (dor:California)
+      - Allan_H._Meltzer (dor:Allan_H._Meltzer) --doo:influencedBy--> Milton_Friedman (dor:Milton_Friedman)
+attributes:
+  writer: --1a^ (dop:1a)--> langString | --author^ (dop:author)--> langString | --birth date^ (doo:birthDate)--> date | --1y^ (dop:1y)--> int | --spouse^ (dop:spouse)--> int
+  scientist: --alma mater^ (dop:almaMater)--> langString | --caption^ (dop:caption)--> langString | --birth date^ (dop:birthDate)--> date
+  settlement: --Center^ (dop:center)--> langString
+subgraph_id: 732
+relationships:
+  - writer --doo:deathPlace--> settlement
+  - scientist --doo:deathPlace--> settlement
+  - economist --doo:influencedBy--> writer

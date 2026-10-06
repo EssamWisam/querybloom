@@ -1,0 +1,91 @@
+types:
+  city: doo:City
+  athlete: doo:Athlete
+  station: doo:Station
+  Location: doo:Location
+  football match: doo:FootballMatch
+  government agency: doo:GovernmentAgency
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Florida: (city^='Cape Coral, FloridaCape Coral')
+      Adreian_Payne: (weight='107503.2', subject='http://dbpedia.org/resource/Category:1991_births')
+      AdventHealth_station: (subject='http://dbpedia.org/resource/Category:2014_establishments_in_Florida')
+    relationships:
+      - AdventHealth_station (dor:AdventHealth_station) --dop:borough--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - Adreian_Payne (dor:Adreian_Payne) --doo:deathPlace--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - AdventHealth_station (dor:AdventHealth_station) --doo:owningOrganisation--> Florida_Department_of_Transportation (dor:Florida_Department_of_Transportation)
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:location--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:location--> Florida (dor:Florida)
+  '2':
+    attributes:
+      Florida: (city^='Cape Coral, FloridaCape Coral')
+      Adreian_Payne: (weight='107503.2', subject='http://dbpedia.org/resource/Category:1991_births')
+      Church_Street_Station: (subject='http://dbpedia.org/resource/Category:1889_establishments_in_Florida')
+    relationships:
+      - Church_Street_Station (dor:Church_Street_Station) --dop:borough--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - Adreian_Payne (dor:Adreian_Payne) --doo:deathPlace--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - Church_Street_Station (dor:Church_Street_Station) --doo:owningOrganisation--> Florida_Department_of_Transportation (dor:Florida_Department_of_Transportation)
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:location--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - 2019_MLS_Homegrown_Game (dor:2019_MLS_Homegrown_Game) --dop:location--> Florida (dor:Florida)
+  '3':
+    attributes:
+      Alan_Ruddock: (subject='http://dbpedia.org/resource/Category:1944_births')
+      Beechwood_Luas_stop: (subject='http://dbpedia.org/resource/Category:1896_establishments_in_Ireland')
+    relationships:
+      - Beechwood_Luas_stop (dor:Beechwood_Luas_stop) --dop:borough--> Dublin (dor:Dublin)
+      - Alan_Ruddock (dor:Alan_Ruddock) --doo:deathPlace--> Dublin (dor:Dublin)
+      - Beechwood_Luas_stop (dor:Beechwood_Luas_stop) --doo:owningOrganisation--> Transport_Infrastructure_Ireland (dor:Transport_Infrastructure_Ireland)
+      - 2018_All-Ireland_Senior_Football_Championship_Final (dor:2018_All-Ireland_Senior_Football_Championship_Final) --dop:location--> Dublin (dor:Dublin)
+      - 2018_All-Ireland_Senior_Football_Championship_Final (dor:2018_All-Ireland_Senior_Football_Championship_Final) --dop:location--> Ballybofey (dor:Ballybofey)
+  '4':
+    attributes:
+      Carlow: (Apr low C^='4.4')
+      Alan_Ruddock: (subject='http://dbpedia.org/resource/Category:1944_births')
+      Beechwood_Luas_stop: (subject='http://dbpedia.org/resource/Category:1896_establishments_in_Ireland')
+    relationships:
+      - Beechwood_Luas_stop (dor:Beechwood_Luas_stop) --dop:borough--> Dublin (dor:Dublin)
+      - Alan_Ruddock (dor:Alan_Ruddock) --doo:deathPlace--> Dublin (dor:Dublin)
+      - Beechwood_Luas_stop (dor:Beechwood_Luas_stop) --doo:owningOrganisation--> Transport_Infrastructure_Ireland (dor:Transport_Infrastructure_Ireland)
+      - 2018_All-Ireland_Senior_Football_Championship_Final (dor:2018_All-Ireland_Senior_Football_Championship_Final) --dop:location--> Dublin (dor:Dublin)
+      - 2018_All-Ireland_Senior_Football_Championship_Final (dor:2018_All-Ireland_Senior_Football_Championship_Final) --dop:location--> Carlow (dor:Carlow)
+  '5':
+    attributes:
+      Enniskillen: (Apr low C^='2.2')
+      Alan_Ruddock: (subject='http://dbpedia.org/resource/Category:1944_births')
+      Beechwood_Luas_stop: (subject='http://dbpedia.org/resource/Category:1896_establishments_in_Ireland')
+    relationships:
+      - Beechwood_Luas_stop (dor:Beechwood_Luas_stop) --dop:borough--> Dublin (dor:Dublin)
+      - Alan_Ruddock (dor:Alan_Ruddock) --doo:deathPlace--> Dublin (dor:Dublin)
+      - Beechwood_Luas_stop (dor:Beechwood_Luas_stop) --doo:owningOrganisation--> Transport_Infrastructure_Ireland (dor:Transport_Infrastructure_Ireland)
+      - 2018_All-Ireland_Senior_Football_Championship_Final (dor:2018_All-Ireland_Senior_Football_Championship_Final) --dop:location--> Dublin (dor:Dublin)
+      - 2018_All-Ireland_Senior_Football_Championship_Final (dor:2018_All-Ireland_Senior_Football_Championship_Final) --dop:location--> Enniskillen (dor:Enniskillen)
+  '6':
+    attributes:
+      Aldo_Donelli: (subject='http://dbpedia.org/resource/Category:1907_births')
+      Washington,_D.C.: '(type^=''http://dbpedia.org/resource/Capital_city'', footer^=''Left to right from the top: The Basilica of the National Shrine of the Immaculate Conception; the Islamic Center of Washington; the Sixth & I Historic Synagogue; St. John''''s Episcopal Church'')'
+      Fort_Lauderdale_station: (subject='http://dbpedia.org/resource/Category:1927_establishments_in_Florida')
+    relationships:
+      - Fort_Lauderdale_station (dor:Fort_Lauderdale_station) --dop:borough--> Fort_Lauderdale,_Florida (<http://dbpedia.org/resource/Fort_Lauderdale,_Florida>)
+      - Aldo_Donelli (dor:Aldo_Donelli) --doo:deathPlace--> Fort_Lauderdale,_Florida (<http://dbpedia.org/resource/Fort_Lauderdale,_Florida>)
+      - Fort_Lauderdale_station (dor:Fort_Lauderdale_station) --doo:owningOrganisation--> Florida_Department_of_Transportation (dor:Florida_Department_of_Transportation)
+      - 1998_Copa_Interamericana (dor:1998_Copa_Interamericana) --dop:location--> Fort_Lauderdale,_Florida (<http://dbpedia.org/resource/Fort_Lauderdale,_Florida>)
+      - 1998_Copa_Interamericana (dor:1998_Copa_Interamericana) --dop:location--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+attributes:
+  city: --direction^ (dop:direction)--> langString | --caption^ (dop:caption)--> langString
+  athlete: --weight (doo:weight)--> double | --subject (podt:subject)--> Resource
+  station: --subject (podt:subject)--> Resource
+  Location: --Apr high F^ (dop:aprHighF)--> double | --type^ (doo:type)--> Resource | --Apr low C^ (dop:aprLowC)--> langString | --footer^ (dop:footer)--> langString | --territory^ (doo:territory)--> Resource | --city^ (dop:city)--> langString | --Apr record low F^ (dop:aprRecordLowF)--> double | --Aug rain days^ (dop:augRainDays)--> double
+subgraph_id: 878
+relationships:
+  - station --dop:borough--> city
+  - athlete --doo:deathPlace--> city
+  - station --doo:owningOrganisation--> government agency
+  - football match --dop:location--> city
+  - football match --dop:location--> Location

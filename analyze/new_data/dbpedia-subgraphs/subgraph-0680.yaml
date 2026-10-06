@@ -1,0 +1,122 @@
+types:
+  venue: doo:Venue
+  person: doo:Person
+  soccer club: doo:SoccerClub
+  office holder: doo:OfficeHolder
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Fulham_F.C.: (nickname^='The Cottagers')
+      Shahid_Khan: (birth year^='1950')
+      Jimmy_Hindmarsh: (birthDate='q2 1885')
+    relationships:
+      - Jimmy_Hindmarsh (dor:Jimmy_Hindmarsh) --dop:clubs--> Fulham_F.C. (<http://dbpedia.org/resource/Fulham_F.C.>)
+      - Fulham_F.C. (<http://dbpedia.org/resource/Fulham_F.C.>) --doo:chairman--> Shahid_Khan (dor:Shahid_Khan)
+      - 1922–23_Newport_County_A.F.C._season (<http://dbpedia.org/resource/1922–23_Newport_County_A.F.C._season>) --doo:manager--> Jimmy_Hindmarsh (dor:Jimmy_Hindmarsh)
+      - Fulham_F.C. (<http://dbpedia.org/resource/Fulham_F.C.>) --doo:ground--> Craven_Cottage (dor:Craven_Cottage)
+  '2':
+    attributes:
+      Jimmy_Hindmarsh: (birthDate='q2 1885')
+      Khaldoon_Al_Mubarak: (birth year^='1975')
+      Manchester_City_F.C.: (nickname^='The Citizens')
+    relationships:
+      - Jimmy_Hindmarsh (dor:Jimmy_Hindmarsh) --dop:clubs--> Manchester_City_F.C. (<http://dbpedia.org/resource/Manchester_City_F.C.>)
+      - Manchester_City_F.C. (<http://dbpedia.org/resource/Manchester_City_F.C.>) --doo:chairman--> Khaldoon_Al_Mubarak (dor:Khaldoon_Al_Mubarak)
+      - 1922–23_Newport_County_A.F.C._season (<http://dbpedia.org/resource/1922–23_Newport_County_A.F.C._season>) --doo:manager--> Jimmy_Hindmarsh (dor:Jimmy_Hindmarsh)
+      - Manchester_City_F.C. (<http://dbpedia.org/resource/Manchester_City_F.C.>) --doo:ground--> City_of_Manchester_Stadium (dor:City_of_Manchester_Stadium)
+  '3':
+    attributes:
+      Jimmy_Hindmarsh: (birthDate='q2 1885')
+      Sunderland_A.F.C.: (nickname^='The Black Cats')
+      Kyril_Louis-Dreyfus: (birth year^='1997')
+    relationships:
+      - Jimmy_Hindmarsh (dor:Jimmy_Hindmarsh) --dop:clubs--> Sunderland_A.F.C. (<http://dbpedia.org/resource/Sunderland_A.F.C.>)
+      - Sunderland_A.F.C. (<http://dbpedia.org/resource/Sunderland_A.F.C.>) --doo:chairman--> Kyril_Louis-Dreyfus (dor:Kyril_Louis-Dreyfus)
+      - 1922–23_Newport_County_A.F.C._season (<http://dbpedia.org/resource/1922–23_Newport_County_A.F.C._season>) --doo:manager--> Jimmy_Hindmarsh (dor:Jimmy_Hindmarsh)
+      - Sunderland_A.F.C. (<http://dbpedia.org/resource/Sunderland_A.F.C.>) --doo:ground--> Stadium_of_Light (dor:Stadium_of_Light)
+  '4':
+    attributes:
+      Andrew_Pilley: (birth year^='1970')
+      Fleetwood_Town_F.C.: (nickname^='The Fishermen, The Cods')
+      Percy_Smith_(English_footballer): (birthDate='1880')
+    relationships:
+      - Percy_Smith_(English_footballer) (<http://dbpedia.org/resource/Percy_Smith_(English_footballer)>) --dop:clubs--> Fleetwood_Town_F.C. (<http://dbpedia.org/resource/Fleetwood_Town_F.C.>)
+      - Fleetwood_Town_F.C. (<http://dbpedia.org/resource/Fleetwood_Town_F.C.>) --doo:chairman--> Andrew_Pilley (dor:Andrew_Pilley)
+      - 1925–26_Nelson_F.C._season (<http://dbpedia.org/resource/1925–26_Nelson_F.C._season>) --doo:manager--> Percy_Smith_(English_footballer) (<http://dbpedia.org/resource/Percy_Smith_(English_footballer)>)
+      - Fleetwood_Town_F.C. (<http://dbpedia.org/resource/Fleetwood_Town_F.C.>) --doo:ground--> Highbury_Stadium_(Fleetwood) (<http://dbpedia.org/resource/Highbury_Stadium_(Fleetwood)>)
+  '5':
+    attributes:
+      Yasir_Al-Rumayyan: (birth year^='1970')
+      Newcastle_United_F.C.: (nickname^='The Magpies')
+      Scott_Duncan_(footballer): (birthDate='1888-11-02')
+    relationships:
+      - Scott_Duncan_(footballer) (<http://dbpedia.org/resource/Scott_Duncan_(footballer)>) --dop:clubs--> Newcastle_United_F.C. (<http://dbpedia.org/resource/Newcastle_United_F.C.>)
+      - Newcastle_United_F.C. (<http://dbpedia.org/resource/Newcastle_United_F.C.>) --doo:chairman--> Yasir_Al-Rumayyan (dor:Yasir_Al-Rumayyan)
+      - 1932–33_Manchester_United_F.C._season (<http://dbpedia.org/resource/1932–33_Manchester_United_F.C._season>) --doo:manager--> Scott_Duncan_(footballer) (<http://dbpedia.org/resource/Scott_Duncan_(footballer)>)
+      - Newcastle_United_F.C. (<http://dbpedia.org/resource/Newcastle_United_F.C.>) --doo:ground--> St_James'_Park (<http://dbpedia.org/resource/St_James'_Park>)
+  '6':
+    attributes:
+      Rangers_F.C.: (nickname^='The Gers')
+      Scott_Duncan_(footballer): (birthDate='1888-11-02')
+      Douglas_Park_(businessman): (birth year^='1950')
+    relationships:
+      - Scott_Duncan_(footballer) (<http://dbpedia.org/resource/Scott_Duncan_(footballer)>) --dop:clubs--> Rangers_F.C. (<http://dbpedia.org/resource/Rangers_F.C.>)
+      - Rangers_F.C. (<http://dbpedia.org/resource/Rangers_F.C.>) --doo:chairman--> Douglas_Park_(businessman) (<http://dbpedia.org/resource/Douglas_Park_(businessman)>)
+      - 1932–33_Manchester_United_F.C._season (<http://dbpedia.org/resource/1932–33_Manchester_United_F.C._season>) --doo:manager--> Scott_Duncan_(footballer) (<http://dbpedia.org/resource/Scott_Duncan_(footballer)>)
+      - Rangers_F.C. (<http://dbpedia.org/resource/Rangers_F.C.>) --doo:ground--> Ibrox_Stadium (dor:Ibrox_Stadium)
+  '7':
+    attributes:
+      Yasir_Al-Rumayyan: (birth year^='1970')
+      Newcastle_United_F.C.: (nickname^='The Magpies')
+      Scott_Duncan_(footballer): (birthDate='1888-11-02')
+    relationships:
+      - Scott_Duncan_(footballer) (<http://dbpedia.org/resource/Scott_Duncan_(footballer)>) --dop:clubs--> Newcastle_United_F.C. (<http://dbpedia.org/resource/Newcastle_United_F.C.>)
+      - Newcastle_United_F.C. (<http://dbpedia.org/resource/Newcastle_United_F.C.>) --doo:chairman--> Yasir_Al-Rumayyan (dor:Yasir_Al-Rumayyan)
+      - 1933–34_Manchester_United_F.C._season (<http://dbpedia.org/resource/1933–34_Manchester_United_F.C._season>) --doo:manager--> Scott_Duncan_(footballer) (<http://dbpedia.org/resource/Scott_Duncan_(footballer)>)
+      - Newcastle_United_F.C. (<http://dbpedia.org/resource/Newcastle_United_F.C.>) --doo:ground--> St_James'_Park (<http://dbpedia.org/resource/St_James'_Park>)
+  '8':
+    attributes:
+      Louis_Page: (birthDate='1899-03-27')
+      Bill_Kenwright: (birth year^='1945')
+    relationships:
+      - Louis_Page (dor:Louis_Page) --dop:clubs--> Everton_F.C. (<http://dbpedia.org/resource/Everton_F.C.>)
+      - Everton_F.C. (<http://dbpedia.org/resource/Everton_F.C.>) --doo:chairman--> Bill_Kenwright (dor:Bill_Kenwright)
+      - 1935–36_Newport_County_A.F.C._season (<http://dbpedia.org/resource/1935–36_Newport_County_A.F.C._season>) --doo:manager--> Louis_Page (dor:Louis_Page)
+      - Everton_F.C. (<http://dbpedia.org/resource/Everton_F.C.>) --doo:ground--> Goodison_Park (dor:Goodison_Park)
+  '9':
+    attributes:
+      Louis_Page: (birthDate='1899-03-27')
+      Avram_Glazer: (birth year^='1960')
+      Manchester_United_F.C.: (nickname^='The Red Devils')
+    relationships:
+      - Louis_Page (dor:Louis_Page) --dop:clubs--> Manchester_United_F.C. (<http://dbpedia.org/resource/Manchester_United_F.C.>)
+      - Manchester_United_F.C. (<http://dbpedia.org/resource/Manchester_United_F.C.>) --doo:chairman--> Avram_Glazer (dor:Avram_Glazer)
+      - 1935–36_Newport_County_A.F.C._season (<http://dbpedia.org/resource/1935–36_Newport_County_A.F.C._season>) --doo:manager--> Louis_Page (dor:Louis_Page)
+      - Manchester_United_F.C. (<http://dbpedia.org/resource/Manchester_United_F.C.>) --doo:ground--> Old_Trafford (dor:Old_Trafford)
+  '10':
+    attributes:
+      Louis_Page: (birthDate='1899-03-27')
+      Joel_Glazer: (birth year^='1967')
+      Manchester_United_F.C.: (nickname^='The Red Devils')
+    relationships:
+      - Louis_Page (dor:Louis_Page) --dop:clubs--> Manchester_United_F.C. (<http://dbpedia.org/resource/Manchester_United_F.C.>)
+      - Manchester_United_F.C. (<http://dbpedia.org/resource/Manchester_United_F.C.>) --doo:chairman--> Joel_Glazer (dor:Joel_Glazer)
+      - 1935–36_Newport_County_A.F.C._season (<http://dbpedia.org/resource/1935–36_Newport_County_A.F.C._season>) --doo:manager--> Louis_Page (dor:Louis_Page)
+      - Manchester_United_F.C. (<http://dbpedia.org/resource/Manchester_United_F.C.>) --doo:ground--> Old_Trafford (dor:Old_Trafford)
+attributes:
+  person: --employer^ (dop:employer)--> langString | --1y^ (dop:1y)--> int | --2pp^ (dop:2pp)--> int | --birth year^ (doo:birthYear)--> gYear
+  soccer club: --league^ (dop:league)--> langString | --nickname^ (dop:nickname)--> langString
+  office holder: --spouse^ (dop:spouse)--> langString | --birth place^ (dop:birthPlace)--> langString
+  soccer manager: --birthDate (dop:birthDate)--> date
+subgraph_id: 680
+relationships:
+  - soccer manager --dop:clubs--> soccer club
+  - soccer club --doo:chairman--> person
+  - office holder --doo:manager--> soccer manager
+  - soccer club --doo:ground--> venue

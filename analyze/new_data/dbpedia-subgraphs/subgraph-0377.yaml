@@ -1,0 +1,105 @@
+types:
+  city: doo:City
+  writer: doo:Writer
+  settlement: doo:Settlement
+  railway line: doo:RailwayLine
+  record label: doo:RecordLabel
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      New_York_City: (d^='yes')
+    relationships:
+      - Bayside,_Queens (<http://dbpedia.org/resource/Bayside,_Queens>) --doo:subdivision--> New_York_City (dor:New_York_City)
+      - Charles_Ghigna (dor:Charles_Ghigna) --doo:birthPlace--> Bayside,_Queens (<http://dbpedia.org/resource/Bayside,_Queens>)
+      - 63rd_Street_lines (dor:63rd_Street_lines) --dop:owner--> New_York_City (dor:New_York_City)
+      - 157_Shelter_Records (dor:157_Shelter_Records) --doo:location--> New_York_City (dor:New_York_City)
+  '2':
+    attributes:
+      New_York_City: (d^='yes')
+      Grace_Denio_Litchfield: (death date^='1944-12-04')
+    relationships:
+      - Brooklyn_Heights (dor:Brooklyn_Heights) --doo:subdivision--> New_York_City (dor:New_York_City)
+      - Grace_Denio_Litchfield (dor:Grace_Denio_Litchfield) --doo:birthPlace--> Brooklyn_Heights (dor:Brooklyn_Heights)
+      - 63rd_Street_lines (dor:63rd_Street_lines) --dop:owner--> New_York_City (dor:New_York_City)
+      - 157_Shelter_Records (dor:157_Shelter_Records) --doo:location--> New_York_City (dor:New_York_City)
+  '3':
+    attributes:
+      Aaron_Kramer: (death date^='1997-04-07')
+      New_York_City: (d^='yes')
+    relationships:
+      - Brooklyn (dor:Brooklyn) --doo:subdivision--> New_York_City (dor:New_York_City)
+      - Aaron_Kramer (dor:Aaron_Kramer) --doo:birthPlace--> Brooklyn (dor:Brooklyn)
+      - 63rd_Street_lines (dor:63rd_Street_lines) --dop:owner--> New_York_City (dor:New_York_City)
+      - 157_Shelter_Records (dor:157_Shelter_Records) --doo:location--> New_York_City (dor:New_York_City)
+  '4':
+    attributes:
+      Louisa_May_Alcott: (death date^='1888-03-06')
+    relationships:
+      - Germantown,_Philadelphia (<http://dbpedia.org/resource/Germantown,_Philadelphia>) --doo:subdivision--> Philadelphia (dor:Philadelphia)
+      - Louisa_May_Alcott (dor:Louisa_May_Alcott) --doo:birthPlace--> Germantown,_Philadelphia (<http://dbpedia.org/resource/Germantown,_Philadelphia>)
+      - Broad_Street_Line (dor:Broad_Street_Line) --dop:owner--> Philadelphia (dor:Philadelphia)
+      - Burnt_Toast_Vinyl (dor:Burnt_Toast_Vinyl) --doo:location--> Philadelphia (dor:Philadelphia)
+  '5':
+    attributes:
+      Walter_B._Gibson: (death date^='1985-12-06')
+    relationships:
+      - Germantown,_Philadelphia (<http://dbpedia.org/resource/Germantown,_Philadelphia>) --doo:subdivision--> Philadelphia (dor:Philadelphia)
+      - Walter_B._Gibson (dor:Walter_B._Gibson) --doo:birthPlace--> Germantown,_Philadelphia (<http://dbpedia.org/resource/Germantown,_Philadelphia>)
+      - Broad_Street_Line (dor:Broad_Street_Line) --dop:owner--> Philadelphia (dor:Philadelphia)
+      - Burnt_Toast_Vinyl (dor:Burnt_Toast_Vinyl) --doo:location--> Philadelphia (dor:Philadelphia)
+  '6':
+    attributes: {}
+    relationships:
+      - Kensington,_Philadelphia (<http://dbpedia.org/resource/Kensington,_Philadelphia>) --doo:subdivision--> Philadelphia (dor:Philadelphia)
+      - Jonathan_Maberry__Jonathan_Maberry__1 (dor:Jonathan_Maberry__Jonathan_Maberry__1) --doo:birthPlace--> Kensington,_Philadelphia (<http://dbpedia.org/resource/Kensington,_Philadelphia>)
+      - Broad_Street_Line (dor:Broad_Street_Line) --dop:owner--> Philadelphia (dor:Philadelphia)
+      - Burnt_Toast_Vinyl (dor:Burnt_Toast_Vinyl) --doo:location--> Philadelphia (dor:Philadelphia)
+  '7':
+    attributes:
+      Doris_Hedges: (death date^='1972-07-14')
+    relationships:
+      - Lachine,_Quebec (<http://dbpedia.org/resource/Lachine,_Quebec>) --doo:subdivision--> Montreal (dor:Montreal)
+      - Doris_Hedges (dor:Doris_Hedges) --doo:birthPlace--> Lachine,_Quebec (<http://dbpedia.org/resource/Lachine,_Quebec>)
+      - Expo_Express (dor:Expo_Express) --dop:owner--> Montreal (dor:Montreal)
+      - Alien8_Recordings (dor:Alien8_Recordings) --doo:location--> Montreal (dor:Montreal)
+  '8':
+    attributes:
+      Saul_Bellow: (death date^='2005-04-05')
+    relationships:
+      - Lachine,_Quebec (<http://dbpedia.org/resource/Lachine,_Quebec>) --doo:subdivision--> Montreal (dor:Montreal)
+      - Saul_Bellow (dor:Saul_Bellow) --doo:birthPlace--> Lachine,_Quebec (<http://dbpedia.org/resource/Lachine,_Quebec>)
+      - Expo_Express (dor:Expo_Express) --dop:owner--> Montreal (dor:Montreal)
+      - Alien8_Recordings (dor:Alien8_Recordings) --doo:location--> Montreal (dor:Montreal)
+  '9':
+    attributes:
+      Laurent_Laplante: (death date^='2017-03-15')
+    relationships:
+      - Verdun,_Quebec (<http://dbpedia.org/resource/Verdun,_Quebec>) --doo:subdivision--> Montreal (dor:Montreal)
+      - Laurent_Laplante (dor:Laurent_Laplante) --doo:birthPlace--> Verdun,_Quebec (<http://dbpedia.org/resource/Verdun,_Quebec>)
+      - Expo_Express (dor:Expo_Express) --dop:owner--> Montreal (dor:Montreal)
+      - Alien8_Recordings (dor:Alien8_Recordings) --doo:location--> Montreal (dor:Montreal)
+  '10':
+    attributes:
+      Harvey_Manning: (death date^='2006-11-12')
+      First_Hill_Streetcar: (box width^='330')
+    relationships:
+      - Ballard,_Seattle (<http://dbpedia.org/resource/Ballard,_Seattle>) --doo:subdivision--> Seattle (dor:Seattle)
+      - Harvey_Manning (dor:Harvey_Manning) --doo:birthPlace--> Ballard,_Seattle (<http://dbpedia.org/resource/Ballard,_Seattle>)
+      - First_Hill_Streetcar (dor:First_Hill_Streetcar) --dop:owner--> Seattle (dor:Seattle)
+      - Automation_Records (dor:Automation_Records) --doo:location--> Seattle (dor:Seattle)
+attributes:
+  city: --d^ (dop:d)--> langString | --Apr rain mm^ (dop:aprRainMm)--> int
+  writer: --relatives^ (dop:relatives)--> Resource | --awards^ (dop:awards)--> Resource | --death date^ (doo:deathDate)--> date
+  settlement: --bgcolor^ (dop:bgcolor)--> langString | --frazioni^ (doo:frazioni)--> Resource | --direction^ (dop:direction)--> langString | --Apr rain days^ (dop:aprRainDays)--> int
+  railway line: --box width^ (dop:boxWidth)--> langString
+subgraph_id: 377
+relationships:
+  - settlement --doo:subdivision--> city
+  - writer --doo:birthPlace--> settlement
+  - railway line --dop:owner--> city
+  - record label --doo:location--> city

@@ -1,0 +1,130 @@
+types:
+  song: doo:Song
+  album: doo:Album
+  sound: doo:Sound
+  building: doo:Building
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doow: http://dbpedia.org/ontology/Work/
+instances:
+  '1':
+    attributes:
+      Record_Plant: (Link from a Wikipage to an external page^='http://www.plantstudios.com')
+      Arturo_Sandoval: (associated band^='http://dbpedia.org/resource/Dizzy_Gillespie')
+      Imagine_(John_Lennon_song): |-
+        (producer^='*John Lennon
+        *Yoko Ono
+        *Phil Spector')
+    relationships:
+      - (I_Got_No_Kick_Against)_Modern_Jazz (<http://dbpedia.org/resource/(I_Got_No_Kick_Against)_Modern_Jazz>) --dop:title--> Imagine_(John_Lennon_song) (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)>)
+      - Imagine_(John_Lennon_song) (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)>) --doo:soundRecording--> Imagine_(John_Lennon_song)__Sound__1 (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)__Sound__1>)
+      - Imagine_(John_Lennon_song) (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)>) --doo:recordedIn--> Record_Plant (dor:Record_Plant)
+      - (I_Got_No_Kick_Against)_Modern_Jazz (<http://dbpedia.org/resource/(I_Got_No_Kick_Against)_Modern_Jazz>) --dop:extra--> Arturo_Sandoval (dor:Arturo_Sandoval)
+  '2':
+    attributes:
+      Chick_Corea: (associated band^='http://dbpedia.org/resource/Chick_Corea_Elektric_Band')
+      Record_Plant: (Link from a Wikipage to an external page^='http://www.plantstudios.com')
+      Imagine_(John_Lennon_song): |-
+        (producer^='*John Lennon
+        *Yoko Ono
+        *Phil Spector')
+    relationships:
+      - (I_Got_No_Kick_Against)_Modern_Jazz (<http://dbpedia.org/resource/(I_Got_No_Kick_Against)_Modern_Jazz>) --dop:title--> Imagine_(John_Lennon_song) (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)>)
+      - Imagine_(John_Lennon_song) (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)>) --doo:soundRecording--> Imagine_(John_Lennon_song)__Sound__1 (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)__Sound__1>)
+      - Imagine_(John_Lennon_song) (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)>) --doo:recordedIn--> Record_Plant (dor:Record_Plant)
+      - (I_Got_No_Kick_Against)_Modern_Jazz (<http://dbpedia.org/resource/(I_Got_No_Kick_Against)_Modern_Jazz>) --dop:extra--> Chick_Corea (dor:Chick_Corea)
+  '3':
+    attributes:
+      Dave_Grusin: (associated band^='http://dbpedia.org/resource/Lee_Ritenour')
+      Record_Plant: (Link from a Wikipage to an external page^='http://www.plantstudios.com')
+      Imagine_(John_Lennon_song): |-
+        (producer^='*John Lennon
+        *Yoko Ono
+        *Phil Spector')
+    relationships:
+      - (I_Got_No_Kick_Against)_Modern_Jazz (<http://dbpedia.org/resource/(I_Got_No_Kick_Against)_Modern_Jazz>) --dop:title--> Imagine_(John_Lennon_song) (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)>)
+      - Imagine_(John_Lennon_song) (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)>) --doo:soundRecording--> Imagine_(John_Lennon_song)__Sound__1 (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)__Sound__1>)
+      - Imagine_(John_Lennon_song) (<http://dbpedia.org/resource/Imagine_(John_Lennon_song)>) --doo:recordedIn--> Record_Plant (dor:Record_Plant)
+      - (I_Got_No_Kick_Against)_Modern_Jazz (<http://dbpedia.org/resource/(I_Got_No_Kick_Against)_Modern_Jazz>) --dop:extra--> Dave_Grusin (dor:Dave_Grusin)
+  '4':
+    attributes:
+      Stjepan_Hauser: (associated band^='http://dbpedia.org/resource/2CELLOS')
+      10050_Cielo_Drive: (architectural style^='French Country', architect^='http://dbpedia.org/resource/Robert_Byrd_(architect)')
+      Hurt_(Nine_Inch_Nails_song): (producer^='Trent Reznor')
+    relationships:
+      - 2Cellos_(album) (<http://dbpedia.org/resource/2Cellos_(album)>) --dop:title--> Hurt_(Nine_Inch_Nails_song) (<http://dbpedia.org/resource/Hurt_(Nine_Inch_Nails_song)>)
+      - Hurt_(Nine_Inch_Nails_song) (<http://dbpedia.org/resource/Hurt_(Nine_Inch_Nails_song)>) --doo:soundRecording--> Hurt_(Nine_Inch_Nails_song)__Sound__1 (<http://dbpedia.org/resource/Hurt_(Nine_Inch_Nails_song)__Sound__1>)
+      - Hurt_(Nine_Inch_Nails_song) (<http://dbpedia.org/resource/Hurt_(Nine_Inch_Nails_song)>) --doo:recordedIn--> 10050_Cielo_Drive (dor:10050_Cielo_Drive)
+      - 2Cellos_(album) (<http://dbpedia.org/resource/2Cellos_(album)>) --dop:extra--> Stjepan_Hauser (dor:Stjepan_Hauser)
+  '5':
+    attributes:
+      Stjepan_Hauser: (associated band^='http://dbpedia.org/resource/2CELLOS')
+      Windmill_Lane_Studios: (Link from a Wikipage to an external page^='http://www.u2tour.de/travelguide/guides/en/Windmill_Lane_Windmilllane_Studios.html')
+      Where_the_Streets_Have_No_Name: (producer^='')
+    relationships:
+      - 2Cellos_(album) (<http://dbpedia.org/resource/2Cellos_(album)>) --dop:title--> Where_the_Streets_Have_No_Name (dor:Where_the_Streets_Have_No_Name)
+      - Where_the_Streets_Have_No_Name (dor:Where_the_Streets_Have_No_Name) --doo:soundRecording--> Where_the_Streets_Have_No_Name__Sound__1 (dor:Where_the_Streets_Have_No_Name__Sound__1)
+      - Where_the_Streets_Have_No_Name (dor:Where_the_Streets_Have_No_Name) --doo:recordedIn--> Windmill_Lane_Studios (dor:Windmill_Lane_Studios)
+      - 2Cellos_(album) (<http://dbpedia.org/resource/2Cellos_(album)>) --dop:extra--> Stjepan_Hauser (dor:Stjepan_Hauser)
+  '6':
+    attributes:
+      RCA_Studio_B: (Link from a Wikipage to an external page^='http://www.studiob.org/')
+      I_Will_Always_Love_You: (producer^='')
+    relationships:
+      - 30_Rock_Original_Television_Soundtrack (dor:30_Rock_Original_Television_Soundtrack) --dop:title--> I_Will_Always_Love_You (dor:I_Will_Always_Love_You)
+      - I_Will_Always_Love_You (dor:I_Will_Always_Love_You) --doo:soundRecording--> I_Will_Always_Love_You__Sound__1 (dor:I_Will_Always_Love_You__Sound__1)
+      - I_Will_Always_Love_You (dor:I_Will_Always_Love_You) --doo:recordedIn--> RCA_Studio_B (dor:RCA_Studio_B)
+      - 30_Rock_Original_Television_Soundtrack (dor:30_Rock_Original_Television_Soundtrack) --dop:extra--> Jeff_Richmond (dor:Jeff_Richmond)
+  '7':
+    attributes:
+      Sound_and_Vision: (producer^='')
+    relationships:
+      - A_Century_of_Song (dor:A_Century_of_Song) --dop:title--> Sound_and_Vision (dor:Sound_and_Vision)
+      - Sound_and_Vision (dor:Sound_and_Vision) --doo:soundRecording--> Sound_and_Vision__Sound__1 (dor:Sound_and_Vision__Sound__1)
+      - Sound_and_Vision (dor:Sound_and_Vision) --doo:recordedIn--> Hansa_Tonstudio (dor:Hansa_Tonstudio)
+      - A_Century_of_Song (dor:A_Century_of_Song) --dop:extra--> Abe_Holzmann (dor:Abe_Holzmann)
+  '8':
+    attributes:
+      Bessie_Smith: (associated band^='http://dbpedia.org/resource/Alberta_Hunter')
+      Hansa_Tonstudio: (Link from a Wikipage to an external page^='http://www.hansatonstudio.de')
+      Sound_and_Vision: (producer^='')
+    relationships:
+      - A_Century_of_Song (dor:A_Century_of_Song) --dop:title--> Sound_and_Vision (dor:Sound_and_Vision)
+      - Sound_and_Vision (dor:Sound_and_Vision) --doo:soundRecording--> Sound_and_Vision__Sound__1 (dor:Sound_and_Vision__Sound__1)
+      - Sound_and_Vision (dor:Sound_and_Vision) --doo:recordedIn--> Hansa_Tonstudio (dor:Hansa_Tonstudio)
+      - A_Century_of_Song (dor:A_Century_of_Song) --dop:extra--> Bessie_Smith (dor:Bessie_Smith)
+  '9':
+    attributes:
+      Hansa_Tonstudio: (Link from a Wikipage to an external page^='http://www.hansatonstudio.de')
+      Sound_and_Vision: (producer^='')
+      Billy_Murray_(singer): (id^='Murray,+Billy')
+    relationships:
+      - A_Century_of_Song (dor:A_Century_of_Song) --dop:title--> Sound_and_Vision (dor:Sound_and_Vision)
+      - Sound_and_Vision (dor:Sound_and_Vision) --doo:soundRecording--> Sound_and_Vision__Sound__1 (dor:Sound_and_Vision__Sound__1)
+      - Sound_and_Vision (dor:Sound_and_Vision) --doo:recordedIn--> Hansa_Tonstudio (dor:Hansa_Tonstudio)
+      - A_Century_of_Song (dor:A_Century_of_Song) --dop:extra--> Billy_Murray_(singer) (<http://dbpedia.org/resource/Billy_Murray_(singer)>)
+  '10':
+    attributes:
+      Smart_Studios: (Link from a Wikipage to an external page^='http://smartstudiosdocumentary.com')
+      Sophie_Muller: (id^='612244')
+      Only_Happy_When_It_Rains: (producer^='Garbage')
+    relationships:
+      - Absolute_Garbage (dor:Absolute_Garbage) --dop:title--> Only_Happy_When_It_Rains (dor:Only_Happy_When_It_Rains)
+      - Only_Happy_When_It_Rains (dor:Only_Happy_When_It_Rains) --doo:soundRecording--> Only_Happy_When_It_Rains__Sound__1 (dor:Only_Happy_When_It_Rains__Sound__1)
+      - Only_Happy_When_It_Rains (dor:Only_Happy_When_It_Rains) --doo:recordedIn--> Smart_Studios (dor:Smart_Studios)
+      - Absolute_Garbage (dor:Absolute_Garbage) --dop:extra--> Sophie_Muller (dor:Sophie_Muller)
+attributes:
+  song: --producer^ (dop:producer)--> langString
+  album: --runtime (m)^ (doow:runtime)--> minute
+  building: --architectural style^ (dop:architecturalStyle)--> Resource | --architect^ (dop:architect)--> Resource | --status^ (doo:status)--> string | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  musical artist: --associated band^ (doo:associatedBand)--> Resource | --2a^ (dop:2a)--> langString | --image upright^ (dop:imageUpright)--> double | --id^ (dop:id)--> int
+subgraph_id: 869
+relationships:
+  - album --dop:title--> song
+  - song --doo:soundRecording--> sound
+  - song --doo:recordedIn--> building
+  - album --dop:extra--> musical artist

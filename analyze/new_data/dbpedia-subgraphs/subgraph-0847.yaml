@@ -1,0 +1,49 @@
+types:
+  company: doo:Company
+  Location: doo:Location
+  beverage: doo:Beverage
+  historian: doo:Historian
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Keurig_Dr_Pepper: (logo^='Keurig Dr Pepper.svg')
+      Al-Tanf_(U.S._military_base): '(has abstract^=''Al-Tanf (Arabic: التَّنْف‎, romanized: at-Tanf), also known as the Al-Tanf garrison (ATG) is a United States military base that was constructed inside of territory controlled by the Syrian Opposition ...'', page length (characters) of wiki page^=''38182'')'
+    relationships:
+      - Al-Tanf_(U.S._military_base) (<http://dbpedia.org/resource/Al-Tanf_(U.S._military_base)>) --doo:subdivision--> United_States (dor:United_States)
+      - A._Walton_Litz (dor:A._Walton_Litz) --doo:nationality--> United_States (dor:United_States)
+      - 7_Up (dor:7_Up) --doo:origin--> United_States (dor:United_States)
+      - 7_Up (dor:7_Up) --doo:manufacturer--> Keurig_Dr_Pepper (dor:Keurig_Dr_Pepper)
+  '2':
+    attributes:
+      PepsiCo: (logo^='PepsiCo logo.svg', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-company-noun-1', area served^='Worldwide')
+      Al-Tanf_(U.S._military_base): '(has abstract^=''Al-Tanf (Arabic: التَّنْف‎, romanized: at-Tanf), also known as the Al-Tanf garrison (ATG) is a United States military base that was constructed inside of territory controlled by the Syrian Opposition ...'', page length (characters) of wiki page^=''38182'')'
+    relationships:
+      - Al-Tanf_(U.S._military_base) (<http://dbpedia.org/resource/Al-Tanf_(U.S._military_base)>) --doo:subdivision--> United_States (dor:United_States)
+      - A._Walton_Litz (dor:A._Walton_Litz) --doo:nationality--> United_States (dor:United_States)
+      - 7_Up (dor:7_Up) --doo:origin--> United_States (dor:United_States)
+      - 7_Up (dor:7_Up) --doo:manufacturer--> PepsiCo (dor:PepsiCo)
+  '3':
+    attributes:
+      Keurig_Dr_Pepper: (logo^='Keurig Dr Pepper.svg')
+      Alden_Township,_Hardin_County,_Iowa: (has abstract^='Alden Township est un township, du comté de Hardin en Iowa, aux États-Unis. Le township est fondé en 1856, il est nommé en référence à Henry Alden, un pionnier.', page length (characters) of wiki page^='2758')
+    relationships:
+      - Alden_Township,_Hardin_County,_Iowa (<http://dbpedia.org/resource/Alden_Township,_Hardin_County,_Iowa>) --doo:subdivision--> United_States (dor:United_States)
+      - A._Walton_Litz (dor:A._Walton_Litz) --doo:nationality--> United_States (dor:United_States)
+      - 7_Up (dor:7_Up) --doo:origin--> United_States (dor:United_States)
+      - 7_Up (dor:7_Up) --doo:manufacturer--> Keurig_Dr_Pepper (dor:Keurig_Dr_Pepper)
+attributes:
+  company: --logo^ (dop:logo)--> langString | --wordnet_type (dop:wordnet_type)--> Resource | --area served^ (dop:areaServed)--> langString
+  Location: --outflow^ (doo:outflow)--> Resource | --city^ (dop:city)--> langString | --frazioni^ (doo:frazioni)--> Resource | --builder^ (dop:builder)--> langString
+  settlement: --Apr record low C^ (dop:aprRecordLowC)--> double | --has abstract^ (doo:abstract)--> langString | --government type^ (doo:governmentType)--> Resource | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int
+subgraph_id: 847
+relationships:
+  - settlement --doo:subdivision--> Location
+  - historian --doo:nationality--> Location
+  - beverage --doo:origin--> Location
+  - beverage --doo:manufacturer--> company

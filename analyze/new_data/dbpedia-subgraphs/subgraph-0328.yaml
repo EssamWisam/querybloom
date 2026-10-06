@@ -1,0 +1,59 @@
+types:
+  tenure: doo:Tenure
+  royalty: doo:Royalty
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Kuala_Lumpur: (population total^='1982112', motto^='Bersedia Menyumbang Bandaraya Cemerlang')
+      Ahmad_Shah_of_Pahang: (active years end year^='1984', spouse^='1954')
+    relationships:
+      - Ahmad_Shah_of_Pahang (dor:Ahmad_Shah_of_Pahang) --dop:deathPlace--> Kuala_Lumpur (dor:Kuala_Lumpur)
+      - Abdul_Hamid_AbuSulayman__Tenure__1 (dor:Abdul_Hamid_AbuSulayman__Tenure__1) --doo:chancellor--> Ahmad_Shah_of_Pahang (dor:Ahmad_Shah_of_Pahang)
+  '2':
+    attributes:
+      Kuala_Lumpur: (population total^='1982112', motto^='Bersedia Menyumbang Bandaraya Cemerlang')
+      Ahmad_Shah_of_Pahang: (active years end year^='1984', spouse^='1954')
+    relationships:
+      - Ahmad_Shah_of_Pahang (dor:Ahmad_Shah_of_Pahang) --dop:deathPlace--> Kuala_Lumpur (dor:Kuala_Lumpur)
+      - Anwar_Ibrahim__Tenure__14 (dor:Anwar_Ibrahim__Tenure__14) --doo:chancellor--> Ahmad_Shah_of_Pahang (dor:Ahmad_Shah_of_Pahang)
+  '3':
+    attributes:
+      Kuala_Lumpur: (population total^='1982112', motto^='Bersedia Menyumbang Bandaraya Cemerlang')
+      Ahmad_Shah_of_Pahang: (active years end year^='1984', spouse^='1954')
+    relationships:
+      - Ahmad_Shah_of_Pahang (dor:Ahmad_Shah_of_Pahang) --dop:deathPlace--> Kuala_Lumpur (dor:Kuala_Lumpur)
+      - Hussein_Onn__Tenure__9 (dor:Hussein_Onn__Tenure__9) --doo:chancellor--> Ahmad_Shah_of_Pahang (dor:Ahmad_Shah_of_Pahang)
+  '4':
+    attributes:
+      Cao_Cao: (active years end year^='0220', spouse^='Consort Ding')
+      Luoyang: (Apr record high C^='35.5', population total^='7056699', Aug precipitation days^='10.7')
+    relationships:
+      - Cao_Cao (dor:Cao_Cao) --dop:deathPlace--> Luoyang (dor:Luoyang)
+      - Cai_Mao__Tenure__1 (dor:Cai_Mao__Tenure__1) --doo:chancellor--> Cao_Cao (dor:Cao_Cao)
+  '5':
+    attributes:
+      Cao_Cao: (active years end year^='0220', spouse^='Consort Ding')
+      Luoyang: (Apr record high C^='35.5', population total^='7056699', Aug precipitation days^='10.7')
+    relationships:
+      - Cao_Cao (dor:Cao_Cao) --dop:deathPlace--> Luoyang (dor:Luoyang)
+      - Cai_Mao__Tenure__2 (dor:Cai_Mao__Tenure__2) --doo:chancellor--> Cao_Cao (dor:Cao_Cao)
+  '6':
+    attributes:
+      Cao_Cao: (active years end year^='0220', spouse^='Consort Ding')
+      Luoyang: (Apr record high C^='35.5', population total^='7056699', Aug precipitation days^='10.7')
+    relationships:
+      - Cao_Cao (dor:Cao_Cao) --dop:deathPlace--> Luoyang (dor:Luoyang)
+      - Cai_Mao__Tenure__3 (dor:Cai_Mao__Tenure__3) --doo:chancellor--> Cao_Cao (dor:Cao_Cao)
+attributes:
+  royalty: --active years end year^ (doo:activeYearsEndYear)--> gYear | --1a^ (dop:1a)--> langString | --spouse^ (dop:spouse)--> langString
+  settlement: --Aug low F^ (dop:augLowF)--> double | --Apr record high C^ (dop:aprRecordHighC)--> double | --Apr rain days^ (dop:aprRainDays)--> int | --population total^ (doo:populationTotal)--> int | --motto^ (doo:motto)--> string | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --Aug low F^ (dop:augLowF)--> int | --colwidth^ (dop:colwidth)--> int | --Apr rain mm^ (dop:aprRainMm)--> int
+subgraph_id: 328
+relationships:
+  - royalty --dop:deathPlace--> settlement
+  - tenure --doo:chancellor--> royalty

@@ -1,0 +1,92 @@
+types:
+  athlete: doo:Athlete
+  university: doo:University
+  Academic Person: doo:Academic
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Eric_Prabhakar: (collegeteam^='http://dbpedia.org/resource/University_of_Oxford', death date^='2011-09-10')
+      A._C._de_la_Mare: (alma mater^='http://dbpedia.org/resource/University_of_Oxford', birth date^='1932-06-02')
+      University_of_Oxford: (header^='Actors who attended Oxford University', image size^='135')
+    relationships:
+      - Eric_Prabhakar (dor:Eric_Prabhakar) --dop:collegeteam--> University_of_Oxford (dor:University_of_Oxford)
+      - A._C._de_la_Mare (dor:A._C._de_la_Mare) --dop:almaMater--> University_of_Oxford (dor:University_of_Oxford)
+  '2':
+    attributes:
+      A._C._Matin: (alma mater^='http://dbpedia.org/resource/Pakistan')
+      Alyssa_Beckerman: (collegeteam^='http://dbpedia.org/resource/University_of_California,_Los_Angeles')
+    relationships:
+      - Alyssa_Beckerman (dor:Alyssa_Beckerman) --dop:collegeteam--> University_of_California,_Los_Angeles (<http://dbpedia.org/resource/University_of_California,_Los_Angeles>)
+      - A._C._Matin (dor:A._C._Matin) --dop:almaMater--> University_of_California,_Los_Angeles (<http://dbpedia.org/resource/University_of_California,_Los_Angeles>)
+  '3':
+    attributes:
+      A._C._Matin: (alma mater^='http://dbpedia.org/resource/Pakistan')
+      Bronte_Halligan: (collegeteam^='http://dbpedia.org/resource/University_of_California,_Los_Angeles')
+    relationships:
+      - Bronte_Halligan (dor:Bronte_Halligan) --dop:collegeteam--> University_of_California,_Los_Angeles (<http://dbpedia.org/resource/University_of_California,_Los_Angeles>)
+      - A._C._Matin (dor:A._C._Matin) --dop:almaMater--> University_of_California,_Los_Angeles (<http://dbpedia.org/resource/University_of_California,_Los_Angeles>)
+  '4':
+    attributes:
+      A._C._Matin: (alma mater^='http://dbpedia.org/resource/Pakistan')
+      Kyra_Edwards: (collegeteam^='http://dbpedia.org/resource/University_of_California,_Los_Angeles')
+    relationships:
+      - Kyra_Edwards (dor:Kyra_Edwards) --dop:collegeteam--> University_of_California,_Los_Angeles (<http://dbpedia.org/resource/University_of_California,_Los_Angeles>)
+      - A._C._Matin (dor:A._C._Matin) --dop:almaMater--> University_of_California,_Los_Angeles (<http://dbpedia.org/resource/University_of_California,_Los_Angeles>)
+  '5':
+    attributes:
+      Nick_McCrory: (collegeteam^='http://dbpedia.org/resource/Duke_University', caption^='http://dbpedia.org/resource/Courtesy_U.S._Olympic_Committee')
+      A._K._M._Adam: (alma mater^='http://dbpedia.org/resource/Duke_University', birth date^='1957-09-10')
+    relationships:
+      - Nick_McCrory (dor:Nick_McCrory) --dop:collegeteam--> Duke_University (dor:Duke_University)
+      - A._K._M._Adam (dor:A._K._M._Adam) --dop:almaMater--> Duke_University (dor:Duke_University)
+  '6':
+    attributes:
+      A._Thomas_Kraabel: (alma mater^='http://dbpedia.org/resource/Harvard_University', birth date^='1934-11-04')
+      University_of_Iowa: (nickname^='http://dbpedia.org/resource/Iowa_Hawkeyes')
+      Buddy_Lucas_(swimmer): (collegeteam^='http://dbpedia.org/resource/University_of_Iowa', death date^='2002-10-18')
+    relationships:
+      - Buddy_Lucas_(swimmer) (<http://dbpedia.org/resource/Buddy_Lucas_(swimmer)>) --dop:collegeteam--> University_of_Iowa (dor:University_of_Iowa)
+      - A._Thomas_Kraabel (dor:A._Thomas_Kraabel) --dop:almaMater--> University_of_Iowa (dor:University_of_Iowa)
+  '7':
+    attributes:
+      Burke_Boyce: (collegeteam^='http://dbpedia.org/resource/Harvard_University', death date^='1969-12-15')
+      A._Thomas_Kraabel: (alma mater^='http://dbpedia.org/resource/Harvard_University', birth date^='1934-11-04')
+    relationships:
+      - Burke_Boyce (dor:Burke_Boyce) --dop:collegeteam--> Harvard_University (dor:Harvard_University)
+      - A._Thomas_Kraabel (dor:A._Thomas_Kraabel) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+  '8':
+    attributes:
+      A._Thomas_Kraabel: (alma mater^='http://dbpedia.org/resource/Harvard_University', birth date^='1934-11-04')
+      Cameron_Winklevoss: (collegeteam^='http://dbpedia.org/resource/Harvard_University', caption^='Winklevoss in 2015')
+    relationships:
+      - Cameron_Winklevoss (dor:Cameron_Winklevoss) --dop:collegeteam--> Harvard_University (dor:Harvard_University)
+      - A._Thomas_Kraabel (dor:A._Thomas_Kraabel) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+  '9':
+    attributes:
+      Jaclyn_Stelmaszyk: (collegeteam^='http://dbpedia.org/resource/University_of_Western_Ontario')
+      Aaron_James_(organist): (alma mater^='', birth date^='1986-09-01')
+      University_of_Western_Ontario: (image size^='180', nickname^='http://dbpedia.org/resource/Western_Mustangs')
+    relationships:
+      - Jaclyn_Stelmaszyk (dor:Jaclyn_Stelmaszyk) --dop:collegeteam--> University_of_Western_Ontario (dor:University_of_Western_Ontario)
+      - Aaron_James_(organist) (<http://dbpedia.org/resource/Aaron_James_(organist)>) --dop:almaMater--> University_of_Western_Ontario (dor:University_of_Western_Ontario)
+  '10':
+    attributes:
+      Liam_Parsons: (collegeteam^='http://dbpedia.org/resource/University_of_Western_Ontario')
+      Aaron_James_(organist): (alma mater^='', birth date^='1986-09-01')
+      University_of_Western_Ontario: (image size^='180', nickname^='http://dbpedia.org/resource/Western_Mustangs')
+    relationships:
+      - Liam_Parsons (dor:Liam_Parsons) --dop:collegeteam--> University_of_Western_Ontario (dor:University_of_Western_Ontario)
+      - Aaron_James_(organist) (<http://dbpedia.org/resource/Aaron_James_(organist)>) --dop:almaMater--> University_of_Western_Ontario (dor:University_of_Western_Ontario)
+attributes:
+  athlete: --collegeteam^ (dop:collegeteam)--> Resource | --caption^ (dop:caption)--> langString | --death date^ (doo:deathDate)--> date
+  university: --header^ (dop:header)--> langString | --affiliation^ (dop:affiliation)--> Resource | --affiliation^ (doo:affiliation)--> Resource | --image size^ (dop:imageSize)--> int | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --nickname^ (dop:nickname)--> langString | --capacity^ (dop:capacity)--> int
+  Academic Person: --alma mater^ (dop:almaMater)--> langString | --birth date^ (doo:birthDate)--> date
+subgraph_id: 72
+relationships:
+  - athlete --dop:collegeteam--> university
+  - Academic Person --dop:almaMater--> university

@@ -1,0 +1,101 @@
+types:
+  park: doo:Park
+  ship: doo:Ship
+  person: doo:Person
+  country: doo:Country
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      SS_Huddersfield_(1872): (status^='Sunk in collision 26 May 1903')
+      John_Elder_(shipbuilder): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', death date^='1869-09-17', spouse^='Isabella Elder', death place^='http://dbpedia.org/resource/England')
+    relationships:
+      - SS_Huddersfield_(1872) (<http://dbpedia.org/resource/SS_Huddersfield_(1872)>) --doo:builder--> Scotland (dor:Scotland)
+      - Aberdeen_Beach_and_Queens_Links (dor:Aberdeen_Beach_and_Queens_Links) --doo:location--> Scotland (dor:Scotland)
+      - SS_Huddersfield_(1872) (<http://dbpedia.org/resource/SS_Huddersfield_(1872)>) --doo:builder--> John_Elder_(shipbuilder) (<http://dbpedia.org/resource/John_Elder_(shipbuilder)>)
+  '2':
+    attributes:
+      SS_Oregon_(1883): (status^='Sank in 1886 after a collision with a schoonerSouth of Long Island, New York')
+      John_Elder_(shipbuilder): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', death date^='1869-09-17', spouse^='Isabella Elder', death place^='http://dbpedia.org/resource/England')
+    relationships:
+      - SS_Oregon_(1883) (<http://dbpedia.org/resource/SS_Oregon_(1883)>) --doo:builder--> Scotland (dor:Scotland)
+      - Aberdeen_Beach_and_Queens_Links (dor:Aberdeen_Beach_and_Queens_Links) --doo:location--> Scotland (dor:Scotland)
+      - SS_Oregon_(1883) (<http://dbpedia.org/resource/SS_Oregon_(1883)>) --doo:builder--> John_Elder_(shipbuilder) (<http://dbpedia.org/resource/John_Elder_(shipbuilder)>)
+  '3':
+    attributes:
+      Horacio_Echevarrieta: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', death date^='--05-20', death place^='Barakaldo, Spain')
+      Spanish_training_ship_Juan_Sebastián_de_Elcano: (status^='Active')
+    relationships:
+      - Spanish_training_ship_Juan_Sebastián_de_Elcano (<http://dbpedia.org/resource/Spanish_training_ship_Juan_Sebastián_de_Elcano>) --doo:builder--> Spain (dor:Spain)
+      - Alamillo_Park (dor:Alamillo_Park) --doo:location--> Spain (dor:Spain)
+      - Spanish_training_ship_Juan_Sebastián_de_Elcano (<http://dbpedia.org/resource/Spanish_training_ship_Juan_Sebastián_de_Elcano>) --doo:builder--> Horacio_Echevarrieta (dor:Horacio_Echevarrieta)
+  '4':
+    attributes:
+      SS_Huddersfield_(1872): (status^='Sunk in collision 26 May 1903')
+      John_Elder_(shipbuilder): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', death date^='1869-09-17', spouse^='Isabella Elder', death place^='http://dbpedia.org/resource/England')
+    relationships:
+      - SS_Huddersfield_(1872) (<http://dbpedia.org/resource/SS_Huddersfield_(1872)>) --doo:builder--> Scotland (dor:Scotland)
+      - Alexandra_Park,_Glasgow (<http://dbpedia.org/resource/Alexandra_Park,_Glasgow>) --doo:location--> Scotland (dor:Scotland)
+      - SS_Huddersfield_(1872) (<http://dbpedia.org/resource/SS_Huddersfield_(1872)>) --doo:builder--> John_Elder_(shipbuilder) (<http://dbpedia.org/resource/John_Elder_(shipbuilder)>)
+  '5':
+    attributes:
+      HMS_Levant_(1758): (status^='Broken up atDeptford Dockyard, September 1780')
+      Henry_Adams_(shipbuilder): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', death date^='1805')
+    relationships:
+      - HMS_Levant_(1758) (<http://dbpedia.org/resource/HMS_Levant_(1758)>) --doo:builder--> Hampshire (dor:Hampshire)
+      - Ancells_Farm (dor:Ancells_Farm) --doo:location--> Hampshire (dor:Hampshire)
+      - HMS_Levant_(1758) (<http://dbpedia.org/resource/HMS_Levant_(1758)>) --doo:builder--> Henry_Adams_(shipbuilder) (<http://dbpedia.org/resource/Henry_Adams_(shipbuilder)>)
+  '6':
+    attributes:
+      HMS_Levant_(1758): (status^='Broken up atDeptford Dockyard, September 1780')
+      Henry_Adams_(shipbuilder): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', death date^='1805')
+    relationships:
+      - HMS_Levant_(1758) (<http://dbpedia.org/resource/HMS_Levant_(1758)>) --doo:builder--> Hampshire (dor:Hampshire)
+      - Anton_Lakes (dor:Anton_Lakes) --doo:location--> Hampshire (dor:Hampshire)
+      - HMS_Levant_(1758) (<http://dbpedia.org/resource/HMS_Levant_(1758)>) --doo:builder--> Henry_Adams_(shipbuilder) (<http://dbpedia.org/resource/Henry_Adams_(shipbuilder)>)
+  '7':
+    attributes:
+      HMS_Levant_(1758): (status^='Broken up atDeptford Dockyard, September 1780')
+      Henry_Adams_(shipbuilder): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', death date^='1805')
+    relationships:
+      - HMS_Levant_(1758) (<http://dbpedia.org/resource/HMS_Levant_(1758)>) --doo:builder--> Hampshire (dor:Hampshire)
+      - Bishops_Waltham_Branch_LNR (dor:Bishops_Waltham_Branch_LNR) --doo:location--> Hampshire (dor:Hampshire)
+      - HMS_Levant_(1758) (<http://dbpedia.org/resource/HMS_Levant_(1758)>) --doo:builder--> Henry_Adams_(shipbuilder) (<http://dbpedia.org/resource/Henry_Adams_(shipbuilder)>)
+  '8':
+    attributes:
+      Horacio_Echevarrieta: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', death date^='--05-20', death place^='Barakaldo, Spain')
+      Spanish_training_ship_Juan_Sebastián_de_Elcano: (status^='Active')
+    relationships:
+      - Spanish_training_ship_Juan_Sebastián_de_Elcano (<http://dbpedia.org/resource/Spanish_training_ship_Juan_Sebastián_de_Elcano>) --doo:builder--> Spain (dor:Spain)
+      - Botanical_Garden_of_Lourizán (<http://dbpedia.org/resource/Botanical_Garden_of_Lourizán>) --doo:location--> Spain (dor:Spain)
+      - Spanish_training_ship_Juan_Sebastián_de_Elcano (<http://dbpedia.org/resource/Spanish_training_ship_Juan_Sebastián_de_Elcano>) --doo:builder--> Horacio_Echevarrieta (dor:Horacio_Echevarrieta)
+  '9':
+    attributes:
+      Horacio_Echevarrieta: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', death date^='--05-20', death place^='Barakaldo, Spain')
+      Spanish_training_ship_Juan_Sebastián_de_Elcano: (status^='Active')
+    relationships:
+      - Spanish_training_ship_Juan_Sebastián_de_Elcano (<http://dbpedia.org/resource/Spanish_training_ship_Juan_Sebastián_de_Elcano>) --doo:builder--> Spain (dor:Spain)
+      - Doña_Casilda_Iturrizar_Park (<http://dbpedia.org/resource/Doña_Casilda_Iturrizar_Park>) --doo:location--> Spain (dor:Spain)
+      - Spanish_training_ship_Juan_Sebastián_de_Elcano (<http://dbpedia.org/resource/Spanish_training_ship_Juan_Sebastián_de_Elcano>) --doo:builder--> Horacio_Echevarrieta (dor:Horacio_Echevarrieta)
+  '10':
+    attributes:
+      Norway: (group^='note')
+      Fram_(ship): (status^='Preserved; on display at theFram Museum,Oslo')
+      Colin_Archer: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', death date^='1921-02-08', spouse^='Karen Sophie Wiborg', death place^='Larvik, Norway')
+    relationships:
+      - Fram_(ship) (<http://dbpedia.org/resource/Fram_(ship)>) --doo:builder--> Norway (dor:Norway)
+      - Nygårdsparken (<http://dbpedia.org/resource/Nygårdsparken>) --doo:location--> Norway (dor:Norway)
+      - Fram_(ship) (<http://dbpedia.org/resource/Fram_(ship)>) --doo:builder--> Colin_Archer (dor:Colin_Archer)
+attributes:
+  ship: --owner (doo:owner)--> Resource | --status^ (doo:status)--> string
+  person: --bot^ (dop:bot)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --relations^ (dop:relations)--> langString | --nickname (dop:nickname)--> langString | --death date^ (dop:deathDate)--> gMonthDay | --spouse^ (dop:spouse)--> int | --birth name^ (dop:birthName)--> langString | --death place^ (dop:deathPlace)--> Resource
+  country: --group^ (dop:group)--> langString
+subgraph_id: 455
+relationships:
+  - ship --doo:builder--> country
+  - park --doo:location--> country
+  - ship --doo:builder--> person

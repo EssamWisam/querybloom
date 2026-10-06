@@ -1,0 +1,55 @@
+types:
+  person: doo:Person
+  college: doo:College
+  company: doo:Company
+  television show: doo:TelevisionShow
+  broadcast network: doo:BroadcastNetwork
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Granada_plc: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Tony_Wilson: (Link from a Wikipage to an external page^='http://music.guardian.co.uk/tonywilson/story/0,,2148635,00.html', birth place^='Pendleton, Salford, Lancashire, England', death date^='2007-08-10')
+    relationships:
+      - Tony_Wilson (dor:Tony_Wilson) --dop:employer--> ITV_Granada (dor:ITV_Granada)
+      - A_Good_Thief (dor:A_Good_Thief) --doo:company--> ITV_Granada (dor:ITV_Granada)
+      - Granada_Talk_TV (dor:Granada_Talk_TV) --doo:owningCompany--> ITV_Granada (dor:ITV_Granada)
+      - Tony_Wilson (dor:Tony_Wilson) --doo:almaMater--> Jesus_College,_Cambridge (<http://dbpedia.org/resource/Jesus_College,_Cambridge>)
+      - ITV_Granada (dor:ITV_Granada) --doo:owningCompany--> Granada_plc (dor:Granada_plc)
+  '2':
+    attributes:
+      ITV_plc: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+      Tony_Wilson: (Link from a Wikipage to an external page^='http://music.guardian.co.uk/tonywilson/story/0,,2148635,00.html', birth place^='Pendleton, Salford, Lancashire, England', death date^='2007-08-10')
+    relationships:
+      - Tony_Wilson (dor:Tony_Wilson) --dop:employer--> ITV_Granada (dor:ITV_Granada)
+      - A_Good_Thief (dor:A_Good_Thief) --doo:company--> ITV_Granada (dor:ITV_Granada)
+      - Granada_Talk_TV (dor:Granada_Talk_TV) --doo:owningCompany--> ITV_Granada (dor:ITV_Granada)
+      - Tony_Wilson (dor:Tony_Wilson) --doo:almaMater--> Jesus_College,_Cambridge (<http://dbpedia.org/resource/Jesus_College,_Cambridge>)
+      - ITV_Granada (dor:ITV_Granada) --doo:owningCompany--> ITV_plc (dor:ITV_plc)
+  '3':
+    attributes:
+      Granada_plc: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Tony_Wilson: (Link from a Wikipage to an external page^='http://music.guardian.co.uk/tonywilson/story/0,,2148635,00.html', birth place^='Pendleton, Salford, Lancashire, England', death date^='2007-08-10')
+    relationships:
+      - Tony_Wilson (dor:Tony_Wilson) --dop:employer--> ITV_Granada (dor:ITV_Granada)
+      - A_Good_Thief (dor:A_Good_Thief) --doo:company--> ITV_Granada (dor:ITV_Granada)
+      - Wellbeing_(TV_channel) (<http://dbpedia.org/resource/Wellbeing_(TV_channel)>) --doo:owningCompany--> ITV_Granada (dor:ITV_Granada)
+      - Tony_Wilson (dor:Tony_Wilson) --doo:almaMater--> Jesus_College,_Cambridge (<http://dbpedia.org/resource/Jesus_College,_Cambridge>)
+      - ITV_Granada (dor:ITV_Granada) --doo:owningCompany--> Granada_plc (dor:Granada_plc)
+attributes:
+  person: --spouse^ (dop:spouse)--> Resource | --spouse^ (dop:spouse)--> date | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --image size^ (dop:imageSize)--> int | --birth place^ (dop:birthPlace)--> Resource | --death date^ (dop:deathDate)--> int
+  company: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --data^ (dop:data)--> langString | --founder^ (dop:founder)--> langString
+  television show: --publication date^ (doo:publicationDate)--> date
+  television station: --airdate^ (dop:airdate)--> date
+subgraph_id: 998
+relationships:
+  - person --dop:employer--> broadcast network
+  - television show --doo:company--> broadcast network
+  - television station --doo:owningCompany--> broadcast network
+  - person --doo:almaMater--> college
+  - broadcast network --doo:owningCompany--> company

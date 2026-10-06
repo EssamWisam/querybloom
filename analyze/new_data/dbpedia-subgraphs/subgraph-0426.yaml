@@ -1,0 +1,86 @@
+types:
+  country: doo:Country
+  language: doo:Language
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Afghanistan: (image^='Abdul_Ghani_Baradar.jpg', capital^='http://dbpedia.org/resource/Kabul')
+      Babrak_Karmal: (resting place^='http://dbpedia.org/resource/Afghanistan')
+    relationships:
+      - Babrak_Karmal (dor:Babrak_Karmal) --doo:restingPlace--> Afghanistan (dor:Afghanistan)
+      - Afghanistan (dor:Afghanistan) --doo:language--> Dari (dor:Dari)
+  '2':
+    attributes:
+      Afghanistan: (image^='Abdul_Ghani_Baradar.jpg', capital^='http://dbpedia.org/resource/Kabul')
+      Babrak_Karmal: (resting place^='http://dbpedia.org/resource/Afghanistan')
+    relationships:
+      - Babrak_Karmal (dor:Babrak_Karmal) --doo:restingPlace--> Afghanistan (dor:Afghanistan)
+      - Afghanistan (dor:Afghanistan) --doo:language--> Pashto (dor:Pashto)
+  '3':
+    attributes:
+      Bolivia: (capital^='http://dbpedia.org/resource/La_Paz')
+      Hernán_Siles_Zuazo: (resting place^='http://dbpedia.org/resource/Bolivia', award^='http://dbpedia.org/resource/Order_of_Isabella_the_Catholic')
+    relationships:
+      - Hernán_Siles_Zuazo (<http://dbpedia.org/resource/Hernán_Siles_Zuazo>) --doo:restingPlace--> Bolivia (dor:Bolivia)
+      - Bolivia (dor:Bolivia) --doo:language--> Aymara_language (dor:Aymara_language)
+  '4':
+    attributes:
+      Bolivia: (capital^='http://dbpedia.org/resource/La_Paz')
+      Hernán_Siles_Zuazo: (resting place^='http://dbpedia.org/resource/Bolivia', award^='http://dbpedia.org/resource/Order_of_Isabella_the_Catholic')
+    relationships:
+      - Hernán_Siles_Zuazo (<http://dbpedia.org/resource/Hernán_Siles_Zuazo>) --doo:restingPlace--> Bolivia (dor:Bolivia)
+      - Bolivia (dor:Bolivia) --doo:language--> Bolivian_Spanish (dor:Bolivian_Spanish)
+  '5':
+    attributes:
+      Bolivia: (capital^='http://dbpedia.org/resource/La_Paz')
+      Hernán_Siles_Zuazo: (resting place^='http://dbpedia.org/resource/Bolivia', award^='http://dbpedia.org/resource/Order_of_Isabella_the_Catholic')
+    relationships:
+      - Hernán_Siles_Zuazo (<http://dbpedia.org/resource/Hernán_Siles_Zuazo>) --doo:restingPlace--> Bolivia (dor:Bolivia)
+      - Bolivia (dor:Bolivia) --doo:language--> Languages_of_Bolivia (dor:Languages_of_Bolivia)
+  '6':
+    attributes:
+      Botswana: (image^='Aeropuerto Internacional Sir Seretse Khama de Gaborone, Botswana.jpg', capital^='http://dbpedia.org/resource/Gaborone')
+      Seretse_Khama: (resting place^='http://dbpedia.org/resource/Botswana')
+    relationships:
+      - Seretse_Khama (dor:Seretse_Khama) --doo:restingPlace--> Botswana (dor:Botswana)
+      - Botswana (dor:Botswana) --doo:language--> Tswana_language (dor:Tswana_language)
+  '7':
+    attributes:
+      Brazil: (image^='14', capital^='http://dbpedia.org/resource/Brasília')
+      Getúlio_Vargas: (resting place^='http://dbpedia.org/resource/Brazil')
+    relationships:
+      - Getúlio_Vargas (<http://dbpedia.org/resource/Getúlio_Vargas>) --doo:restingPlace--> Brazil (dor:Brazil)
+      - Brazil (dor:Brazil) --doo:language--> Portuguese_language (dor:Portuguese_language)
+  '8':
+    attributes:
+      Bulgaria: (image^='Galab Donev full portrait, 2021.jpg', capital^='http://dbpedia.org/resource/Sofia')
+      Vasil_Radoslavov: (resting place^='http://dbpedia.org/resource/Bulgaria')
+    relationships:
+      - Vasil_Radoslavov (dor:Vasil_Radoslavov) --doo:restingPlace--> Bulgaria (dor:Bulgaria)
+      - Bulgaria (dor:Bulgaria) --doo:language--> Cyrillic_script (dor:Cyrillic_script)
+  '9':
+    attributes:
+      Burkina_Faso: (capital^='http://dbpedia.org/resource/Ouagadougou', leader^='http://dbpedia.org/resource/Thomas_Sankara')
+    relationships:
+      - Thomas_Sankara (dor:Thomas_Sankara) --doo:restingPlace--> Burkina_Faso (dor:Burkina_Faso)
+      - Burkina_Faso (dor:Burkina_Faso) --doo:language--> French_language (dor:French_language)
+  '10':
+    attributes:
+      Chile: (image^='Gabriela Mistral 1945.jpg', capital^='http://dbpedia.org/resource/Santiago')
+      Carlos_Ibáñez_del_Campo: (resting place^='http://dbpedia.org/resource/Cementerio_General_de_Santiago')
+    relationships:
+      - Carlos_Ibáñez_del_Campo (<http://dbpedia.org/resource/Carlos_Ibáñez_del_Campo>) --doo:restingPlace--> Chile (dor:Chile)
+      - Chile (dor:Chile) --doo:language--> Chilean_Spanish (dor:Chilean_Spanish)
+attributes:
+  country: --image^ (dop:image)--> langString | --Apr high C^ (dop:aprHighC)--> double | --capital^ (doo:capital)--> Resource | --leader^ (dop:leader)--> langString
+  office holder: --2a^ (dop:2a)--> langString | --dynasty^ (dop:dynasty)--> Resource | --resting place^ (doo:restingPlace)--> Resource | --father^ (dop:father)--> Resource | --quote^ (dop:quote)--> langString | --issue^ (dop:issue)--> Resource | --award^ (doo:award)--> Resource | --regent^ (dop:regent)--> Resource
+subgraph_id: 426
+relationships:
+  - office holder --doo:restingPlace--> country
+  - country --doo:language--> language

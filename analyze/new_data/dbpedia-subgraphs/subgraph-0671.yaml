@@ -1,0 +1,88 @@
+types:
+  city: doo:City
+  single: doo:Single
+  newspaper: doo:Newspaper
+  railway line: doo:RailwayLine
+  person function: doo:PersonFunction
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Could_It_Be_I'm_Falling_in_Love: (recorded in^='http://dbpedia.org/resource/Pennsylvania')
+    relationships:
+      - Almanac_(Pennsylvania) (<http://dbpedia.org/resource/Almanac_(Pennsylvania)>) --doo:headquarter--> Pittsburgh,_Pennsylvania (<http://dbpedia.org/resource/Pittsburgh,_Pennsylvania>)
+      - Almanac_(Pennsylvania) (<http://dbpedia.org/resource/Almanac_(Pennsylvania)>) --doo:headquarter--> Pennsylvania (dor:Pennsylvania)
+      - Could_It_Be_I'm_Falling_in_Love (<http://dbpedia.org/resource/Could_It_Be_I'm_Falling_in_Love>) --doo:recordedIn--> Pennsylvania (dor:Pennsylvania)
+      - Almanac_(Pennsylvania) (<http://dbpedia.org/resource/Almanac_(Pennsylvania)>) --doo:type--> Newspaper (dor:Newspaper)
+      - Monongahela_Incline (dor:Monongahela_Incline) --doo:location--> Pittsburgh,_Pennsylvania (<http://dbpedia.org/resource/Pittsburgh,_Pennsylvania>)
+  '2':
+    attributes:
+      Me_and_Mrs._Jones: (recorded in^='http://dbpedia.org/resource/Pennsylvania')
+      Almanac_(Pennsylvania): (owner^='http://dbpedia.org/resource/Observer_Publishing_Company')
+    relationships:
+      - Almanac_(Pennsylvania) (<http://dbpedia.org/resource/Almanac_(Pennsylvania)>) --doo:headquarter--> Pittsburgh,_Pennsylvania (<http://dbpedia.org/resource/Pittsburgh,_Pennsylvania>)
+      - Almanac_(Pennsylvania) (<http://dbpedia.org/resource/Almanac_(Pennsylvania)>) --doo:headquarter--> Pennsylvania (dor:Pennsylvania)
+      - Me_and_Mrs._Jones (dor:Me_and_Mrs._Jones) --doo:recordedIn--> Pennsylvania (dor:Pennsylvania)
+      - Almanac_(Pennsylvania) (<http://dbpedia.org/resource/Almanac_(Pennsylvania)>) --doo:type--> Newspaper (dor:Newspaper)
+      - Monongahela_Incline (dor:Monongahela_Incline) --doo:location--> Pittsburgh,_Pennsylvania (<http://dbpedia.org/resource/Pittsburgh,_Pennsylvania>)
+  '3':
+    attributes:
+      Almanac_(Pennsylvania): (owner^='http://dbpedia.org/resource/Observer_Publishing_Company')
+      One_of_Us_(Joan_Osborne_song): (recorded in^='http://dbpedia.org/resource/Glen_Cove,_New_York')
+    relationships:
+      - Almanac_(Pennsylvania) (<http://dbpedia.org/resource/Almanac_(Pennsylvania)>) --doo:headquarter--> Pittsburgh,_Pennsylvania (<http://dbpedia.org/resource/Pittsburgh,_Pennsylvania>)
+      - Almanac_(Pennsylvania) (<http://dbpedia.org/resource/Almanac_(Pennsylvania)>) --doo:headquarter--> Pennsylvania (dor:Pennsylvania)
+      - One_of_Us_(Joan_Osborne_song) (<http://dbpedia.org/resource/One_of_Us_(Joan_Osborne_song)>) --doo:recordedIn--> Pennsylvania (dor:Pennsylvania)
+      - Almanac_(Pennsylvania) (<http://dbpedia.org/resource/Almanac_(Pennsylvania)>) --doo:type--> Newspaper (dor:Newspaper)
+      - Monongahela_Incline (dor:Monongahela_Incline) --doo:location--> Pittsburgh,_Pennsylvania (<http://dbpedia.org/resource/Pittsburgh,_Pennsylvania>)
+  '4':
+    attributes:
+      Boston: (area total (km2)^='232.08883456720895', width^='30.0')
+      Massachusetts: (footer^='Harvard University and MIT are both widely regarded as in the top handful of universities worldwide for academic research in various disciplines.', capital^='http://dbpedia.org/resource/Boston')
+      Inspiration_on_Demand: (recorded in^='http://dbpedia.org/resource/Hadley,_Massachusetts')
+    relationships:
+      - Liberty_(1881–1908) (<http://dbpedia.org/resource/Liberty_(1881–1908)>) --doo:headquarter--> Boston (dor:Boston)
+      - Liberty_(1881–1908) (<http://dbpedia.org/resource/Liberty_(1881–1908)>) --doo:headquarter--> Massachusetts (dor:Massachusetts)
+      - Inspiration_on_Demand (dor:Inspiration_on_Demand) --doo:recordedIn--> Massachusetts (dor:Massachusetts)
+      - Liberty_(1881–1908) (<http://dbpedia.org/resource/Liberty_(1881–1908)>) --doo:type--> Political_philosophy (dor:Political_philosophy)
+      - Ashmont–Mattapan_High-Speed_Line (<http://dbpedia.org/resource/Ashmont–Mattapan_High-Speed_Line>) --doo:location--> Boston (dor:Boston)
+  '5':
+    attributes:
+      Boston: (area total (km2)^='232.08883456720895', width^='30.0')
+      Massachusetts: (footer^='Harvard University and MIT are both widely regarded as in the top handful of universities worldwide for academic research in various disciplines.', capital^='http://dbpedia.org/resource/Boston')
+      The_State_of_Massachusetts: (recorded in^='http://dbpedia.org/resource/Massachusetts')
+    relationships:
+      - Liberty_(1881–1908) (<http://dbpedia.org/resource/Liberty_(1881–1908)>) --doo:headquarter--> Boston (dor:Boston)
+      - Liberty_(1881–1908) (<http://dbpedia.org/resource/Liberty_(1881–1908)>) --doo:headquarter--> Massachusetts (dor:Massachusetts)
+      - The_State_of_Massachusetts (dor:The_State_of_Massachusetts) --doo:recordedIn--> Massachusetts (dor:Massachusetts)
+      - Liberty_(1881–1908) (<http://dbpedia.org/resource/Liberty_(1881–1908)>) --doo:type--> Political_philosophy (dor:Political_philosophy)
+      - Ashmont–Mattapan_High-Speed_Line (<http://dbpedia.org/resource/Ashmont–Mattapan_High-Speed_Line>) --doo:location--> Boston (dor:Boston)
+  '6':
+    attributes:
+      Boston: (area total (km2)^='232.08883456720895', width^='30.0')
+      Massachusetts: (footer^='Harvard University and MIT are both widely regarded as in the top handful of universities worldwide for academic research in various disciplines.', capital^='http://dbpedia.org/resource/Boston')
+      What_Drives_the_Weak: (recorded in^='http://dbpedia.org/resource/Hadley,_Massachusetts')
+    relationships:
+      - Liberty_(1881–1908) (<http://dbpedia.org/resource/Liberty_(1881–1908)>) --doo:headquarter--> Boston (dor:Boston)
+      - Liberty_(1881–1908) (<http://dbpedia.org/resource/Liberty_(1881–1908)>) --doo:headquarter--> Massachusetts (dor:Massachusetts)
+      - What_Drives_the_Weak (dor:What_Drives_the_Weak) --doo:recordedIn--> Massachusetts (dor:Massachusetts)
+      - Liberty_(1881–1908) (<http://dbpedia.org/resource/Liberty_(1881–1908)>) --doo:type--> Political_philosophy (dor:Political_philosophy)
+      - Ashmont–Mattapan_High-Speed_Line (<http://dbpedia.org/resource/Ashmont–Mattapan_High-Speed_Line>) --doo:location--> Boston (dor:Boston)
+attributes:
+  city: --area total (km2)^ (doop:areaTotal)--> squareKilometre | --width^ (dop:width)--> langString
+  single: --composer^ (dop:composer)--> langString | --recorded in^ (doo:recordedIn)--> Resource
+  newspaper: --owner^ (doo:owner)--> Resource
+  administrative region: --footer^ (dop:footer)--> langString | --Apr sun^ (dop:aprSun)--> int | --abolished^ (dop:abolished)--> date | --capital^ (doo:capital)--> Resource
+subgraph_id: 671
+relationships:
+  - newspaper --doo:headquarter--> city
+  - newspaper --doo:headquarter--> administrative region
+  - single --doo:recordedIn--> administrative region
+  - newspaper --doo:type--> person function
+  - railway line --doo:location--> city

@@ -1,0 +1,125 @@
+types:
+  company: doo:Company
+  settlement: doo:Settlement
+  railway line: doo:RailwayLine
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Auckland_Transport: (owner^='http://dbpedia.org/resource/Auckland_Council', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Commons_Category')
+    relationships:
+      - Eastern_Busway,_Auckland (<http://dbpedia.org/resource/Eastern_Busway,_Auckland>) --doo:owner--> Auckland_Transport (dor:Auckland_Transport)
+      - Auckland_Transport (dor:Auckland_Transport) --dop:areaServed--> Auckland_Region (dor:Auckland_Region)
+  '2':
+    attributes:
+      Auckland_Transport: (owner^='http://dbpedia.org/resource/Auckland_Council', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Commons_Category')
+      Eastern_Line_(Auckland): (railway rolling stock^='http://dbpedia.org/resource/New_Zealand_AM_class_electric_multiple_unit')
+    relationships:
+      - Eastern_Line_(Auckland) (<http://dbpedia.org/resource/Eastern_Line_(Auckland)>) --doo:owner--> Auckland_Transport (dor:Auckland_Transport)
+      - Auckland_Transport (dor:Auckland_Transport) --dop:areaServed--> Auckland_Region (dor:Auckland_Region)
+  '3':
+    attributes:
+      Manukau_Branch: (railway rolling stock^='http://dbpedia.org/resource/New_Zealand_AM_class_electric_multiple_unit')
+    relationships:
+      - Manukau_Branch (dor:Manukau_Branch) --doo:owner--> Auckland_Transport (dor:Auckland_Transport)
+      - Auckland_Transport (dor:Auckland_Transport) --dop:areaServed--> Auckland_Region (dor:Auckland_Region)
+  '4':
+    attributes:
+      Gotemba_Line: (railway rolling stock^='http://dbpedia.org/resource/211_series')
+      Central_Japan_Railway_Company: '(owner^=''Public float, largest single shareholder: Mizuho Bank'', wikiPageUsesTemplate=''http://dbpedia.org/resource/Template:Authority_control'')'
+    relationships:
+      - Gotemba_Line (dor:Gotemba_Line) --doo:owner--> Central_Japan_Railway_Company (dor:Central_Japan_Railway_Company)
+      - Central_Japan_Railway_Company (dor:Central_Japan_Railway_Company) --dop:areaServed--> Tōkai_region (<http://dbpedia.org/resource/Tōkai_region>)
+  '5':
+    attributes:
+      China_Railway_Beijing_Group: (owner^='http://dbpedia.org/resource/Government_of_China', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Beijing–Harbin_high-speed_railway: (railway rolling stock^='http://dbpedia.org/resource/China_Railways_CRH3')
+    relationships:
+      - Beijing–Harbin_high-speed_railway (<http://dbpedia.org/resource/Beijing–Harbin_high-speed_railway>) --doo:owner--> China_Railway_Beijing_Group (dor:China_Railway_Beijing_Group)
+      - China_Railway_Beijing_Group (dor:China_Railway_Beijing_Group) --dop:areaServed--> Beijing (dor:Beijing)
+  '6':
+    attributes:
+      Hebei: (caption^='Great Temple of Zhang Hui, the central ancestral shrine of the Zhang lineage, in Qinghe')
+      China_Railway_Beijing_Group: (owner^='http://dbpedia.org/resource/Government_of_China', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Beijing–Harbin_high-speed_railway: (railway rolling stock^='http://dbpedia.org/resource/China_Railways_CRH3')
+    relationships:
+      - Beijing–Harbin_high-speed_railway (<http://dbpedia.org/resource/Beijing–Harbin_high-speed_railway>) --doo:owner--> China_Railway_Beijing_Group (dor:China_Railway_Beijing_Group)
+      - China_Railway_Beijing_Group (dor:China_Railway_Beijing_Group) --dop:areaServed--> Hebei (dor:Hebei)
+  '7':
+    attributes:
+      Tianjin: (date^='June 2021', Aug low C^='22.2', caption^='A traditional Tianjin lunch of Goubuli baozi')
+      China_Railway_Beijing_Group: (owner^='http://dbpedia.org/resource/Government_of_China', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Beijing–Harbin_high-speed_railway: (railway rolling stock^='http://dbpedia.org/resource/China_Railways_CRH3')
+    relationships:
+      - Beijing–Harbin_high-speed_railway (<http://dbpedia.org/resource/Beijing–Harbin_high-speed_railway>) --doo:owner--> China_Railway_Beijing_Group (dor:China_Railway_Beijing_Group)
+      - China_Railway_Beijing_Group (dor:China_Railway_Beijing_Group) --dop:areaServed--> Tianjin (dor:Tianjin)
+  '8':
+    attributes:
+      Chongqing: (Aug low C^='24.7', caption^='Buddhist temple in Jiulongpo')
+      China_Railway_Chengdu_Group: (owner^='http://dbpedia.org/resource/Government_of_China', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Bureaus_of_China_Railway')
+    relationships:
+      - Chongqing–Lichuan_railway (<http://dbpedia.org/resource/Chongqing–Lichuan_railway>) --doo:owner--> China_Railway_Chengdu_Group (dor:China_Railway_Chengdu_Group)
+      - China_Railway_Chengdu_Group (dor:China_Railway_Chengdu_Group) --dop:areaServed--> Chongqing (dor:Chongqing)
+  '9':
+    attributes:
+      Guizhou: (date^='2010-07-12', caption^='Major autonomous areas within Guizhou, excluding Hui.')
+      China_Railway_Chengdu_Group: (owner^='http://dbpedia.org/resource/Government_of_China', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Bureaus_of_China_Railway')
+    relationships:
+      - Chongqing–Lichuan_railway (<http://dbpedia.org/resource/Chongqing–Lichuan_railway>) --doo:owner--> China_Railway_Chengdu_Group (dor:China_Railway_Chengdu_Group)
+      - China_Railway_Chengdu_Group (dor:China_Railway_Chengdu_Group) --dop:areaServed--> Guizhou (dor:Guizhou)
+  '10':
+    attributes:
+      Sichuan: (caption^='Religion in Sichuan')
+      China_Railway_Chengdu_Group: (owner^='http://dbpedia.org/resource/Government_of_China', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Bureaus_of_China_Railway')
+    relationships:
+      - Chongqing–Lichuan_railway (<http://dbpedia.org/resource/Chongqing–Lichuan_railway>) --doo:owner--> China_Railway_Chengdu_Group (dor:China_Railway_Chengdu_Group)
+      - China_Railway_Chengdu_Group (dor:China_Railway_Chengdu_Group) --dop:areaServed--> Sichuan (dor:Sichuan)
+qa_result:
+  status: completed
+  cost_usd: 0.327302
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0235174
+        total_tokens: 3141
+        prompt_tokens: 2175
+        completion_tokens: 966
+      generate:
+        cost_usd: 0.0823876
+        total_tokens: 7456
+        prompt_tokens: 3969
+        completion_tokens: 3487
+      verify_1:
+        cost_usd: 0.064157
+        total_tokens: 6439
+        prompt_tokens: 4308
+        completion_tokens: 2131
+      verify_2:
+        cost_usd: 0.03295700000000001
+        total_tokens: 4774
+        prompt_tokens: 4168
+        completion_tokens: 606
+      complexity:
+        cost_usd: 0.12428300000000002
+        total_tokens: 10520
+        prompt_tokens: 5169
+        completion_tokens: 5351
+    total_tokens: 32330
+    prompt_tokens: 19789
+    total_cost_usd: 0.3273020000000001
+    completion_tokens: 12541
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  company: --owner^ (dop:owner)--> langString | --quote^ (dop:quote)--> langString | --direction^ (dop:direction)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --colwidth^ (dop:colwidth)--> int
+  settlement: --area^ (dop:area)--> double | --date^ (dop:date)--> date | --Aug low C^ (dop:augLowC)--> double | --district^ (doo:district)--> Resource | --caption^ (dop:caption)--> langString
+  railway line: --railway rolling stock^ (doo:railwayRollingStock)--> Resource
+subgraph_id: 192
+relationships:
+  - railway line --doo:owner--> company
+  - company --dop:areaServed--> settlement

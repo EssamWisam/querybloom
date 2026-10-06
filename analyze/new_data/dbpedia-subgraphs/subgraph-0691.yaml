@@ -1,0 +1,90 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  office holder: doo:OfficeHolder
+  volleyball player: doo:VolleyballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Pune: (date^='May 2014', differentFrom='http://dbpedia.org/resource/Puno')
+      A._B._A._Ghani_Khan_Choudhury: (residence^='http://dbpedia.org/resource/Malda_district')
+    relationships:
+      - Priyanka_Bora_(volleyball) (<http://dbpedia.org/resource/Priyanka_Bora_(volleyball)>) --doo:nationality--> India (dor:India)
+      - A._B._A._Ghani_Khan_Choudhury (dor:A._B._A._Ghani_Khan_Choudhury) --doo:deathPlace--> India (dor:India)
+      - Priyanka_Bora_(volleyball) (<http://dbpedia.org/resource/Priyanka_Bora_(volleyball)>) --doo:hometown--> Pune (dor:Pune)
+  '2':
+    attributes:
+      Nagpur: (date^='December 2017')
+      A._B._A._Ghani_Khan_Choudhury: (residence^='http://dbpedia.org/resource/Malda_district')
+    relationships:
+      - Priyanka_Khedkar (dor:Priyanka_Khedkar) --doo:nationality--> India (dor:India)
+      - A._B._A._Ghani_Khan_Choudhury (dor:A._B._A._Ghani_Khan_Choudhury) --doo:deathPlace--> India (dor:India)
+      - Priyanka_Khedkar (dor:Priyanka_Khedkar) --doo:hometown--> Nagpur (dor:Nagpur)
+  '3':
+    attributes:
+      Pune: (date^='May 2014', differentFrom='http://dbpedia.org/resource/Puno')
+      A._P._J._Abdul_Kalam: (caption^='Official portrait, 2002')
+    relationships:
+      - Priyanka_Bora_(volleyball) (<http://dbpedia.org/resource/Priyanka_Bora_(volleyball)>) --doo:nationality--> India (dor:India)
+      - A._P._J._Abdul_Kalam (dor:A._P._J._Abdul_Kalam) --doo:deathPlace--> India (dor:India)
+      - Priyanka_Bora_(volleyball) (<http://dbpedia.org/resource/Priyanka_Bora_(volleyball)>) --doo:hometown--> Pune (dor:Pune)
+  '4':
+    attributes: {}
+    relationships:
+      - Alexandra_Gouldie (dor:Alexandra_Gouldie) --doo:nationality--> United_States (dor:United_States)
+      - A._Vernon_Weaver (dor:A._Vernon_Weaver) --doo:deathPlace--> United_States (dor:United_States)
+      - Alexandra_Gouldie (dor:Alexandra_Gouldie) --doo:hometown--> St._Paul,_Nebraska (<http://dbpedia.org/resource/St._Paul,_Nebraska>)
+  '5':
+    attributes: {}
+    relationships:
+      - Anna_Hall_(volleyball) (<http://dbpedia.org/resource/Anna_Hall_(volleyball)>) --doo:nationality--> United_States (dor:United_States)
+      - A._Vernon_Weaver (dor:A._Vernon_Weaver) --doo:deathPlace--> United_States (dor:United_States)
+      - Anna_Hall_(volleyball) (<http://dbpedia.org/resource/Anna_Hall_(volleyball)>) --doo:hometown--> Laurens,_South_Carolina (<http://dbpedia.org/resource/Laurens,_South_Carolina>)
+  '6':
+    attributes: {}
+    relationships:
+      - Avery_Skinner_(volleyball) (<http://dbpedia.org/resource/Avery_Skinner_(volleyball)>) --doo:nationality--> United_States (dor:United_States)
+      - A._Vernon_Weaver (dor:A._Vernon_Weaver) --doo:deathPlace--> United_States (dor:United_States)
+      - Avery_Skinner_(volleyball) (<http://dbpedia.org/resource/Avery_Skinner_(volleyball)>) --doo:hometown--> Katy,_Texas (<http://dbpedia.org/resource/Katy,_Texas>)
+  '7':
+    attributes:
+      Istanbul: (date^='August 2020')
+    relationships:
+      - Deniz_Hakyemez (dor:Deniz_Hakyemez) --doo:nationality--> Turkey (dor:Turkey)
+      - Abaza_Siyavuş_Pasha_I (<http://dbpedia.org/resource/Abaza_Siyavuş_Pasha_I>) --doo:deathPlace--> Turkey (dor:Turkey)
+      - Deniz_Hakyemez (dor:Deniz_Hakyemez) --doo:hometown--> Istanbul (dor:Istanbul)
+  '8':
+    attributes:
+      Istanbul: (date^='August 2020')
+    relationships:
+      - İpek_Soroğlu (<http://dbpedia.org/resource/İpek_Soroğlu>) --doo:nationality--> Turkey (dor:Turkey)
+      - Abaza_Siyavuş_Pasha_I (<http://dbpedia.org/resource/Abaza_Siyavuş_Pasha_I>) --doo:deathPlace--> Turkey (dor:Turkey)
+      - İpek_Soroğlu (<http://dbpedia.org/resource/İpek_Soroğlu>) --doo:hometown--> Istanbul (dor:Istanbul)
+  '9':
+    attributes: {}
+    relationships:
+      - Nihan_Güneyligil (<http://dbpedia.org/resource/Nihan_Güneyligil>) --doo:nationality--> Turkey (dor:Turkey)
+      - Abaza_Siyavuş_Pasha_I (<http://dbpedia.org/resource/Abaza_Siyavuş_Pasha_I>) --doo:deathPlace--> Turkey (dor:Turkey)
+      - Nihan_Güneyligil (<http://dbpedia.org/resource/Nihan_Güneyligil>) --doo:hometown--> İstanbul (<http://dbpedia.org/resource/İstanbul>)
+  '10':
+    attributes: {}
+    relationships:
+      - Victoria_Ravva (dor:Victoria_Ravva) --doo:nationality--> Azerbaijan (dor:Azerbaijan)
+      - Abbas_Alasgarov (dor:Abbas_Alasgarov) --doo:deathPlace--> Azerbaijan (dor:Azerbaijan)
+      - Victoria_Ravva (dor:Victoria_Ravva) --doo:hometown--> Tbilisi (dor:Tbilisi)
+attributes:
+  city: --date^ (dop:date)--> langString | --differentFrom (wwoo:differentFrom)--> Resource
+  Location: --area total (km2)^ (doop:areaTotal)--> squareKilometre | --architectural style^ (doo:architecturalStyle)--> Resource | --Apr rain mm^ (dop:aprRainMm)--> int | --coordinates^ (dop:coordinates)--> int
+  office holder: --caption^ (dop:caption)--> langString | --height ft^ (dop:heightFt)--> int | --residence^ (doo:residence)--> Resource
+subgraph_id: 691
+relationships:
+  - volleyball player --doo:nationality--> Location
+  - office holder --doo:deathPlace--> Location
+  - volleyball player --doo:hometown--> city

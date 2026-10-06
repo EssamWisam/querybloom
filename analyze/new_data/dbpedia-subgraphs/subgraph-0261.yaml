@@ -1,0 +1,117 @@
+types:
+  building: doo:Building
+  settlement: doo:Settlement
+  military structure: doo:MilitaryStructure
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dora: http://dbpedia.org/resource/AN/
+instances:
+  '1':
+    attributes:
+      London: (area total km^='1572.03', header^='Maps of Greater London showing percentage distribution of selected ethnic groups according to the 2011 Census')
+      '@sohoplace': (owner^='http://dbpedia.org/resource/Nimax_Theatres')
+    relationships:
+      - Allitsen_Road_drill_hall (dor:Allitsen_Road_drill_hall) --doo:location--> London (dor:London)
+      - '@sohoplace (<http://dbpedia.org/resource/@sohoplace>) --doo:city--> London (dor:London)'
+  '2':
+    attributes:
+      London: (area total km^='1572.03', header^='Maps of Greater London showing percentage distribution of selected ethnic groups according to the 2011 Census')
+      '@sohoplace': (owner^='http://dbpedia.org/resource/Nimax_Theatres')
+    relationships:
+      - Blackheath_drill_hall (dor:Blackheath_drill_hall) --doo:location--> London (dor:London)
+      - '@sohoplace (<http://dbpedia.org/resource/@sohoplace>) --doo:city--> London (dor:London)'
+  '3':
+    attributes:
+      London: (area total km^='1572.03', header^='Maps of Greater London showing percentage distribution of selected ethnic groups according to the 2011 Census')
+      '@sohoplace': (owner^='http://dbpedia.org/resource/Nimax_Theatres')
+    relationships:
+      - Braganza_Street_drill_hall (dor:Braganza_Street_drill_hall) --doo:location--> London (dor:London)
+      - '@sohoplace (<http://dbpedia.org/resource/@sohoplace>) --doo:city--> London (dor:London)'
+  '4':
+    attributes:
+      1_Pace_Plaza: (owner^='http://dbpedia.org/resource/Pace_University')
+    relationships:
+      - Blockhouse_No._1 (dor:Blockhouse_No._1) --doo:location--> Manhattan (dor:Manhattan)
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> Manhattan (dor:Manhattan)
+  '5':
+    attributes:
+      1_Pace_Plaza: (owner^='http://dbpedia.org/resource/Pace_University')
+      New_York_(state): (area total km^='141297')
+    relationships:
+      - Brooklyn_Navy_Yard (dor:Brooklyn_Navy_Yard) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '6':
+    attributes:
+      1_Pace_Plaza: (owner^='http://dbpedia.org/resource/Pace_University')
+      New_York_City: (area total km^='1223.59', named after^='http://dbpedia.org/resource/James_II_of_England')
+    relationships:
+      - Brooklyn_Navy_Yard (dor:Brooklyn_Navy_Yard) --doo:location--> New_York_City (dor:New_York_City)
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> New_York_City (dor:New_York_City)
+  '7':
+    attributes:
+      New_York_City: (area total km^='1223.59', named after^='http://dbpedia.org/resource/James_II_of_England')
+    relationships:
+      - Brooklyn_Navy_Yard (dor:Brooklyn_Navy_Yard) --doo:location--> New_York_City (dor:New_York_City)
+      - 1_Wall_Street_Court__1_Wall_Street_Court__1 (dor:1_Wall_Street_Court__1_Wall_Street_Court__1) --doo:city--> New_York_City (dor:New_York_City)
+  '8':
+    attributes:
+      New_York_City: (area total km^='1223.59', named after^='http://dbpedia.org/resource/James_II_of_England')
+    relationships:
+      - Fort_Gansevoort (dor:Fort_Gansevoort) --doo:location--> New_York_City (dor:New_York_City)
+      - 1_Wall_Street_Court__1_Wall_Street_Court__1 (dor:1_Wall_Street_Court__1_Wall_Street_Court__1) --doo:city--> New_York_City (dor:New_York_City)
+  '9':
+    attributes:
+      Ontario: (area total km^='1076395')
+      10_Peel_Centre_Drive: (owner^='http://dbpedia.org/resource/Regional_Municipality_of_Peel')
+    relationships:
+      - FSQ-7_Combat_Direction_Central (dora:FSQ-7_Combat_Direction_Central) --doo:location--> Ontario (dor:Ontario)
+      - 10_Peel_Centre_Drive (dor:10_Peel_Centre_Drive) --doo:city--> Ontario (dor:Ontario)
+  '10':
+    attributes:
+      Ontario: (area total km^='1076395')
+      10_Peel_Centre_Drive: (owner^='http://dbpedia.org/resource/Regional_Municipality_of_Peel')
+    relationships:
+      - CFB_Picton (dor:CFB_Picton) --doo:location--> Ontario (dor:Ontario)
+      - 10_Peel_Centre_Drive (dor:10_Peel_Centre_Drive) --doo:city--> Ontario (dor:Ontario)
+qa_result:
+  status: completed
+  cost_usd: 0.246045
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0207924
+        total_tokens: 2890
+        prompt_tokens: 2022
+        completion_tokens: 868
+      generate:
+        cost_usd: 0.0588776
+        total_tokens: 6048
+        prompt_tokens: 3659
+        completion_tokens: 2389
+      verify_1:
+        cost_usd: 0.027812000000000003
+        total_tokens: 4207
+        prompt_tokens: 3755
+        completion_tokens: 452
+      complexity:
+        cost_usd: 0.13856300000000002
+        total_tokens: 10853
+        prompt_tokens: 4661
+        completion_tokens: 6192
+    total_tokens: 23998
+    prompt_tokens: 14097
+    total_cost_usd: 0.246045
+    completion_tokens: 9901
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  building: --cost^ (dop:cost)--> usDollar | --owner^ (doo:owner)--> Resource
+  settlement: --area total km^ (dop:areaTotalKm)--> double | --Aug high C^ (dop:augHighC)--> double | --canton^ (doo:canton)--> Resource | --quote^ (dop:quote)--> langString | --anthem^ (doo:anthem)--> Resource | --Apr rain mm^ (dop:aprRainMm)--> double | --header^ (dop:header)--> langString | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --named after^ (doo:namedAfter)--> Resource
+subgraph_id: 261
+relationships:
+  - military structure --doo:location--> settlement
+  - building --doo:city--> settlement

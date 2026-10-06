@@ -1,0 +1,117 @@
+types:
+  song: doo:Song
+  movie: doo:Film
+  comedian: doo:Comedian
+  music genre: doo:MusicGenre
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bad_Night: (starring^='Adam Pally')
+      Champaign_ILL: (producer^='')
+    relationships:
+      - Champaign_ILL (dor:Champaign_ILL) --doo:executiveProducer--> Adam_Pally (dor:Adam_Pally)
+      - Bad_Night (dor:Bad_Night) --doo:starring--> Adam_Pally (dor:Adam_Pally)
+      - Adam_Pally (dor:Adam_Pally) --dop:genre--> Satire (dor:Satire)
+      - Blame_Canada (dor:Blame_Canada) --dop:genre--> Satire (dor:Satire)
+  '2':
+    attributes:
+      Bad_Night: (starring^='Adam Pally')
+      Blame_Canada: (writer^='Trey Parker and Marc Shaiman')
+    relationships:
+      - The_President_Show (dor:The_President_Show) --doo:executiveProducer--> Adam_Pally (dor:Adam_Pally)
+      - Bad_Night (dor:Bad_Night) --doo:starring--> Adam_Pally (dor:Adam_Pally)
+      - Adam_Pally (dor:Adam_Pally) --dop:genre--> Satire (dor:Satire)
+      - Blame_Canada (dor:Blame_Canada) --dop:genre--> Satire (dor:Satire)
+  '3':
+    attributes:
+      Bad_Night: (starring^='Adam Pally')
+      Champaign_ILL: (producer^='')
+      Coco_(PewDiePie_song): (writer^='')
+    relationships:
+      - Champaign_ILL (dor:Champaign_ILL) --doo:executiveProducer--> Adam_Pally (dor:Adam_Pally)
+      - Bad_Night (dor:Bad_Night) --doo:starring--> Adam_Pally (dor:Adam_Pally)
+      - Adam_Pally (dor:Adam_Pally) --dop:genre--> Satire (dor:Satire)
+      - Coco_(PewDiePie_song) (<http://dbpedia.org/resource/Coco_(PewDiePie_song)>) --dop:genre--> Satire (dor:Satire)
+  '4':
+    attributes:
+      Acapella_(Karmin_song): (writer^='')
+      Alone_Together_(TV_series): (producer^='')
+      Popstar:_Never_Stop_Never_Stopping: (starring^='', cinematography^='http://dbpedia.org/resource/Brandon_Trost')
+    relationships:
+      - Alone_Together_(TV_series) (<http://dbpedia.org/resource/Alone_Together_(TV_series)>) --doo:executiveProducer--> Akiva_Schaffer (dor:Akiva_Schaffer)
+      - Popstar:_Never_Stop_Never_Stopping (<http://dbpedia.org/resource/Popstar:_Never_Stop_Never_Stopping>) --doo:starring--> Akiva_Schaffer (dor:Akiva_Schaffer)
+      - Akiva_Schaffer (dor:Akiva_Schaffer) --dop:genre--> Comedy_hip_hop (dor:Comedy_hip_hop)
+      - Acapella_(Karmin_song) (<http://dbpedia.org/resource/Acapella_(Karmin_song)>) --dop:genre--> Comedy_hip_hop (dor:Comedy_hip_hop)
+  '5':
+    attributes:
+      Acapella_(Karmin_song): (writer^='')
+      Popstar:_Never_Stop_Never_Stopping: (starring^='', cinematography^='http://dbpedia.org/resource/Brandon_Trost')
+      I_Think_You_Should_Leave_with_Tim_Robinson: (producer^='Jay Patumanoan')
+    relationships:
+      - I_Think_You_Should_Leave_with_Tim_Robinson (dor:I_Think_You_Should_Leave_with_Tim_Robinson) --doo:executiveProducer--> Akiva_Schaffer (dor:Akiva_Schaffer)
+      - Popstar:_Never_Stop_Never_Stopping (<http://dbpedia.org/resource/Popstar:_Never_Stop_Never_Stopping>) --doo:starring--> Akiva_Schaffer (dor:Akiva_Schaffer)
+      - Akiva_Schaffer (dor:Akiva_Schaffer) --dop:genre--> Comedy_hip_hop (dor:Comedy_hip_hop)
+      - Acapella_(Karmin_song) (<http://dbpedia.org/resource/Acapella_(Karmin_song)>) --dop:genre--> Comedy_hip_hop (dor:Comedy_hip_hop)
+  '6':
+    attributes:
+      Acapella_(Karmin_song): (writer^='')
+      Popstar:_Never_Stop_Never_Stopping: (starring^='', cinematography^='http://dbpedia.org/resource/Brandon_Trost')
+    relationships:
+      - I'm_Sorry_(TV_series) (<http://dbpedia.org/resource/I'm_Sorry_(TV_series)>) --doo:executiveProducer--> Akiva_Schaffer (dor:Akiva_Schaffer)
+      - Popstar:_Never_Stop_Never_Stopping (<http://dbpedia.org/resource/Popstar:_Never_Stop_Never_Stopping>) --doo:starring--> Akiva_Schaffer (dor:Akiva_Schaffer)
+      - Akiva_Schaffer (dor:Akiva_Schaffer) --dop:genre--> Comedy_hip_hop (dor:Comedy_hip_hop)
+      - Acapella_(Karmin_song) (<http://dbpedia.org/resource/Acapella_(Karmin_song)>) --dop:genre--> Comedy_hip_hop (dor:Comedy_hip_hop)
+  '7':
+    attributes:
+      17_Million_Fuck_Offs: (writer^='Dominic Frisby')
+      Conan_O'Brien_Can't_Stop: (starring^='Fredericka Meek', cinematography^='http://dbpedia.org/resource/Rodman_Flender')
+    relationships:
+      - Andy_Barker,_P.I. (<http://dbpedia.org/resource/Andy_Barker,_P.I.>) --doo:executiveProducer--> Conan_O'Brien (<http://dbpedia.org/resource/Conan_O'Brien>)
+      - Conan_O'Brien_Can't_Stop (<http://dbpedia.org/resource/Conan_O'Brien_Can't_Stop>) --doo:starring--> Conan_O'Brien (<http://dbpedia.org/resource/Conan_O'Brien>)
+      - Conan_O'Brien (<http://dbpedia.org/resource/Conan_O'Brien>) --dop:genre--> Comedy_music (dor:Comedy_music)
+      - 17_Million_Fuck_Offs (dor:17_Million_Fuck_Offs) --dop:genre--> Comedy_music (dor:Comedy_music)
+  '8':
+    attributes:
+      Conan_(talk_show): (producer^='Matt O''Brien')
+      17_Million_Fuck_Offs: (writer^='Dominic Frisby')
+      Conan_O'Brien_Can't_Stop: (starring^='Fredericka Meek', cinematography^='http://dbpedia.org/resource/Rodman_Flender')
+    relationships:
+      - Conan_(talk_show) (<http://dbpedia.org/resource/Conan_(talk_show)>) --doo:executiveProducer--> Conan_O'Brien (<http://dbpedia.org/resource/Conan_O'Brien>)
+      - Conan_O'Brien_Can't_Stop (<http://dbpedia.org/resource/Conan_O'Brien_Can't_Stop>) --doo:starring--> Conan_O'Brien (<http://dbpedia.org/resource/Conan_O'Brien>)
+      - Conan_O'Brien (<http://dbpedia.org/resource/Conan_O'Brien>) --dop:genre--> Comedy_music (dor:Comedy_music)
+      - 17_Million_Fuck_Offs (dor:17_Million_Fuck_Offs) --dop:genre--> Comedy_music (dor:Comedy_music)
+  '9':
+    attributes:
+      17_Million_Fuck_Offs: (writer^='Dominic Frisby')
+      Conan_Without_Borders: (producer^='')
+      Conan_O'Brien_Can't_Stop: (starring^='Fredericka Meek', cinematography^='http://dbpedia.org/resource/Rodman_Flender')
+    relationships:
+      - Conan_Without_Borders (dor:Conan_Without_Borders) --doo:executiveProducer--> Conan_O'Brien (<http://dbpedia.org/resource/Conan_O'Brien>)
+      - Conan_O'Brien_Can't_Stop (<http://dbpedia.org/resource/Conan_O'Brien_Can't_Stop>) --doo:starring--> Conan_O'Brien (<http://dbpedia.org/resource/Conan_O'Brien>)
+      - Conan_O'Brien (<http://dbpedia.org/resource/Conan_O'Brien>) --dop:genre--> Comedy_music (dor:Comedy_music)
+      - 17_Million_Fuck_Offs (dor:17_Million_Fuck_Offs) --dop:genre--> Comedy_music (dor:Comedy_music)
+  '10':
+    attributes:
+      Keith_Lemon:_The_Film: (starring^='')
+    relationships:
+      - Keith_Lemon's_Very_Brilliant_World_Tour (<http://dbpedia.org/resource/Keith_Lemon's_Very_Brilliant_World_Tour>) --doo:executiveProducer--> Leigh_Francis (dor:Leigh_Francis)
+      - Keith_Lemon:_The_Film (<http://dbpedia.org/resource/Keith_Lemon:_The_Film>) --doo:starring--> Leigh_Francis (dor:Leigh_Francis)
+      - Leigh_Francis (dor:Leigh_Francis) --dop:genre--> Parody (dor:Parody)
+      - Chicken_Pot_Pie (dor:Chicken_Pot_Pie) --dop:genre--> Parody (dor:Parody)
+attributes:
+  song: --publication date^ (doo:publicationDate)--> date | --writer^ (dop:writer)--> Resource
+  movie: --2y^ (dop:2y)--> int | --starring^ (dop:starring)--> langString | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --cinematography^ (doo:cinematography)--> Resource | --bgcolor^ (dop:bgcolor)--> langString
+  music genre: --2p^ (dop:2p)--> int
+  television show: --producer^ (dop:producer)--> langString | --aux^ (dop:aux)--> double | --person^ (doo:person)--> Resource
+subgraph_id: 930
+relationships:
+  - television show --doo:executiveProducer--> comedian
+  - movie --doo:starring--> comedian
+  - comedian --dop:genre--> music genre
+  - song --dop:genre--> music genre

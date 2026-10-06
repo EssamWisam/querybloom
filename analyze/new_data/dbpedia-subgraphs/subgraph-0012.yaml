@@ -1,0 +1,83 @@
+types:
+  Food: doo:Food
+  athlete: doo:Athlete
+  country: doo:Country
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Norway: (caption^='Religions in Norway', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:15_kV_AC')
+      Aage_Eriksen: (death date^='1998-06-17')
+    relationships:
+      - Aage_Eriksen (dor:Aage_Eriksen) --doo:stateOfOrigin--> Norway (dor:Norway)
+      - Brunost (dor:Brunost) --dop:country--> Norway (dor:Norway)
+  '2':
+    attributes:
+      Norway: (caption^='Religions in Norway', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:15_kV_AC')
+      Aage_Eriksen: (death date^='1998-06-17')
+    relationships:
+      - Aage_Eriksen (dor:Aage_Eriksen) --doo:stateOfOrigin--> Norway (dor:Norway)
+      - Fårikål (<http://dbpedia.org/resource/Fårikål>) --dop:country--> Norway (dor:Norway)
+  '3':
+    attributes:
+      Norway: (caption^='Religions in Norway', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:15_kV_AC')
+      Aage_Eriksen: (death date^='1998-06-17')
+    relationships:
+      - Aage_Eriksen (dor:Aage_Eriksen) --doo:stateOfOrigin--> Norway (dor:Norway)
+      - Flatbrød (<http://dbpedia.org/resource/Flatbrød>) --dop:country--> Norway (dor:Norway)
+  '4':
+    attributes:
+      United_States: (caption^='Racial and ethnic groups in the United States', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Anchor')
+    relationships:
+      - Aaron_Ernest (dor:Aaron_Ernest) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - 15_Bean_Soup (dor:15_Bean_Soup) --dop:country--> United_States (dor:United_States)
+  '5':
+    attributes:
+      United_States: (caption^='Racial and ethnic groups in the United States', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Anchor')
+    relationships:
+      - Aaron_Ernest (dor:Aaron_Ernest) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - Adobe_bread (dor:Adobe_bread) --dop:country--> United_States (dor:United_States)
+  '6':
+    attributes:
+      United_States: (caption^='Racial and ethnic groups in the United States', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Anchor')
+    relationships:
+      - Aaron_Ernest (dor:Aaron_Ernest) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - Alaea_salt (dor:Alaea_salt) --dop:country--> United_States (dor:United_States)
+  '7':
+    attributes:
+      Italy: (caption^='Apennine landscape in Marche', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr', caption align^='center')
+      Aaron_March: (club^='http://dbpedia.org/resource/Centro_Sportivo_Esercito')
+    relationships:
+      - Aaron_March (dor:Aaron_March) --doo:stateOfOrigin--> Italy (dor:Italy)
+      - '''O_pere_e_''o_musso (<http://dbpedia.org/resource/''O_pere_e_''o_musso>) --dop:country--> Italy (dor:Italy)'
+  '8':
+    attributes:
+      Italy: (caption^='Apennine landscape in Marche', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr', caption align^='center')
+      Aaron_March: (club^='http://dbpedia.org/resource/Centro_Sportivo_Esercito')
+    relationships:
+      - Aaron_March (dor:Aaron_March) --doo:stateOfOrigin--> Italy (dor:Italy)
+      - Acini_di_pepe (dor:Acini_di_pepe) --dop:country--> Italy (dor:Italy)
+  '9':
+    attributes:
+      Italy: (caption^='Apennine landscape in Marche', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr', caption align^='center')
+      Aaron_March: (club^='http://dbpedia.org/resource/Centro_Sportivo_Esercito')
+    relationships:
+      - Aaron_March (dor:Aaron_March) --doo:stateOfOrigin--> Italy (dor:Italy)
+      - Agnolini (dor:Agnolini) --dop:country--> Italy (dor:Italy)
+  '10':
+    attributes:
+      Ethiopia: (caption^='Languages of Ethiopia  Census', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - Ababel_Yeshaneh (dor:Ababel_Yeshaneh) --doo:stateOfOrigin--> Ethiopia (dor:Ethiopia)
+      - Fah-fah (dor:Fah-fah) --dop:country--> Ethiopia (dor:Ethiopia)
+attributes:
+  athlete: --death date^ (doo:deathDate)--> date | --club^ (dop:club)--> Resource
+  country: --caption^ (dop:caption)--> langString | --leader^ (dop:leader)--> Resource | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --religion^ (doo:religion)--> Resource | --1p^ (dop:1p)--> int | --caption align^ (dop:captionAlign)--> langString | --c^ (dop:c)--> langString
+subgraph_id: 12
+relationships:
+  - athlete --doo:stateOfOrigin--> country
+  - Food --dop:country--> country

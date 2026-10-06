@@ -1,0 +1,52 @@
+types:
+  train: doo:Train
+  station: doo:Station
+  Location: doo:Location
+  train station: doo:RailwayStation
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Airolo: (page length (characters) of wiki page^='24639')
+      RABe_520: (operator^='http://dbpedia.org/resource/Swiss_Federal_Railways', manufacturer^='http://dbpedia.org/resource/Stadler_Rail')
+      Aadorf_railway_station: (line^='http://dbpedia.org/resource/St._Gallen–Winterthur_railway')
+    relationships:
+      - Aadorf_railway_station (dor:Aadorf_railway_station) --dop:owned--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - RABe_520 (dor:RABe_520) --dop:operator--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Airolo_railway_station (dor:Airolo_railway_station) --doo:owningOrganisation--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Airolo_railway_station (dor:Airolo_railway_station) --dop:borough--> Airolo (dor:Airolo)
+  '2':
+    attributes:
+      Airolo: (page length (characters) of wiki page^='24639')
+      SBB_Bem_550: (operator^='http://dbpedia.org/resource/Swiss_Federal_Railways', manufacturer^='Ateliers de Construction Mécaniques de Vevey')
+      Aadorf_railway_station: (line^='http://dbpedia.org/resource/St._Gallen–Winterthur_railway')
+    relationships:
+      - Aadorf_railway_station (dor:Aadorf_railway_station) --dop:owned--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - SBB_Bem_550 (dor:SBB_Bem_550) --dop:operator--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Airolo_railway_station (dor:Airolo_railway_station) --doo:owningOrganisation--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Airolo_railway_station (dor:Airolo_railway_station) --dop:borough--> Airolo (dor:Airolo)
+  '3':
+    attributes:
+      Airolo: (page length (characters) of wiki page^='24639')
+      SBB_RABe_501: (operator^='http://dbpedia.org/resource/Philippine_National_Railways', manufacturer^='http://dbpedia.org/resource/Stadler_Rail')
+      Aadorf_railway_station: (line^='http://dbpedia.org/resource/St._Gallen–Winterthur_railway')
+    relationships:
+      - Aadorf_railway_station (dor:Aadorf_railway_station) --dop:owned--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - SBB_RABe_501 (dor:SBB_RABe_501) --dop:operator--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Airolo_railway_station (dor:Airolo_railway_station) --doo:owningOrganisation--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Airolo_railway_station (dor:Airolo_railway_station) --dop:borough--> Airolo (dor:Airolo)
+attributes:
+  train: --Brakes^ (dop:brakes)--> Resource | --operator^ (doo:operator)--> Resource | --manufacturer^ (dop:manufacturer)--> langString
+  station: --line^ (dop:line)--> langString
+  Location: --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --Apr high C^ (dop:aprHighC)--> int | --garrison^ (dop:garrison)--> int | --architect (doo:architect)--> Resource | --building end date^ (doo:buildingEndDate)--> string | --age^ (dop:age)--> langString | --eponym^ (dop:eponym)--> Resource | --2y^ (dop:2y)--> int | --abolished^ (dop:abolished)--> int
+subgraph_id: 822
+relationships:
+  - station --dop:owned--> public transit system
+  - train --dop:operator--> public transit system
+  - train station --doo:owningOrganisation--> public transit system
+  - train station --dop:borough--> Location

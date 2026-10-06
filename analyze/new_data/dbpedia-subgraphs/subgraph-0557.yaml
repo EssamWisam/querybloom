@@ -1,0 +1,110 @@
+types:
+  city: doo:City
+  album: doo:Album
+  railway line: doo:RailwayLine
+  office holder: doo:OfficeHolder
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Alexander_Ramsey: (title^='from Pennsylvania''s 14th congressional district')
+      Saint_Paul,_Minnesota: (named after^='http://dbpedia.org/resource/St._Paul_the_Apostle')
+    relationships:
+      - Merriam_Park_Subdivision (dor:Merriam_Park_Subdivision) --doo:routeEnd--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Alexander_Ramsey (dor:Alexander_Ramsey) --doo:deathPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Bobby_Raps (dor:Bobby_Raps) --doo:birthPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - '!_(Trippie_Redd_album) (<http://dbpedia.org/resource/!_(Trippie_Redd_album)>) --dop:writer--> Bobby_Raps (dor:Bobby_Raps)'
+  '2':
+    attributes:
+      Saint_Paul,_Minnesota: (named after^='http://dbpedia.org/resource/St._Paul_the_Apostle')
+      Elisha_Mills_Huntington: (title^='Judge of the United States District Courtfor the District of Indiana')
+    relationships:
+      - Merriam_Park_Subdivision (dor:Merriam_Park_Subdivision) --doo:routeEnd--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Elisha_Mills_Huntington (dor:Elisha_Mills_Huntington) --doo:deathPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Bobby_Raps (dor:Bobby_Raps) --doo:birthPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - '!_(Trippie_Redd_album) (<http://dbpedia.org/resource/!_(Trippie_Redd_album)>) --dop:writer--> Bobby_Raps (dor:Bobby_Raps)'
+  '3':
+    attributes:
+      Frank_B._Kellogg: (title^='Republican nominee for U.S. Senator from Minnesota')
+      Saint_Paul,_Minnesota: (named after^='http://dbpedia.org/resource/St._Paul_the_Apostle')
+    relationships:
+      - Merriam_Park_Subdivision (dor:Merriam_Park_Subdivision) --doo:routeEnd--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Frank_B._Kellogg (dor:Frank_B._Kellogg) --doo:deathPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Bobby_Raps (dor:Bobby_Raps) --doo:birthPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - '!_(Trippie_Redd_album) (<http://dbpedia.org/resource/!_(Trippie_Redd_album)>) --dop:writer--> Bobby_Raps (dor:Bobby_Raps)'
+  '4':
+    attributes:
+      Milwaukee: (named after^='http://dbpedia.org/resource/Potawatomi_language')
+    relationships:
+      - Watertown_Subdivision (dor:Watertown_Subdivision) --doo:routeEnd--> Milwaukee (dor:Milwaukee)
+      - Benjamin_F._Hopkins (dor:Benjamin_F._Hopkins) --doo:deathPlace--> Milwaukee (dor:Milwaukee)
+      - Herbert_Stothart (dor:Herbert_Stothart) --doo:birthPlace--> Milwaukee (dor:Milwaukee)
+      - ¡Olé_Tormé! (<http://dbpedia.org/resource/¡Olé_Tormé!>) --dop:writer--> Herbert_Stothart (dor:Herbert_Stothart)
+  '5':
+    attributes:
+      Milwaukee: (named after^='http://dbpedia.org/resource/Potawatomi_language')
+      F._Ryan_Duffy: (title^='Chief Judge of the United States Court of Appeals for the Seventh Circuit')
+    relationships:
+      - Watertown_Subdivision (dor:Watertown_Subdivision) --doo:routeEnd--> Milwaukee (dor:Milwaukee)
+      - F._Ryan_Duffy (dor:F._Ryan_Duffy) --doo:deathPlace--> Milwaukee (dor:Milwaukee)
+      - Herbert_Stothart (dor:Herbert_Stothart) --doo:birthPlace--> Milwaukee (dor:Milwaukee)
+      - ¡Olé_Tormé! (<http://dbpedia.org/resource/¡Olé_Tormé!>) --dop:writer--> Herbert_Stothart (dor:Herbert_Stothart)
+  '6':
+    attributes:
+      Milwaukee: (named after^='http://dbpedia.org/resource/Potawatomi_language')
+      Francis_E._McGovern: (title^='Chair of the National Governors Association')
+    relationships:
+      - Watertown_Subdivision (dor:Watertown_Subdivision) --doo:routeEnd--> Milwaukee (dor:Milwaukee)
+      - Francis_E._McGovern (dor:Francis_E._McGovern) --doo:deathPlace--> Milwaukee (dor:Milwaukee)
+      - Herbert_Stothart (dor:Herbert_Stothart) --doo:birthPlace--> Milwaukee (dor:Milwaukee)
+      - ¡Olé_Tormé! (<http://dbpedia.org/resource/¡Olé_Tormé!>) --dop:writer--> Herbert_Stothart (dor:Herbert_Stothart)
+  '7':
+    attributes:
+      New_York_City: (named after^='http://dbpedia.org/resource/James_II_of_England', float^='right', caption^='Citi Field, also in Flushing Meadows-Corona Park, has been home to the New York Mets since 2009.')
+      Ādolfs_Bļodnieks: (title^='http://dbpedia.org/resource/Prime_Minister_of_Latvia')
+    relationships:
+      - Gateway_Program_(Northeast_Corridor) (<http://dbpedia.org/resource/Gateway_Program_(Northeast_Corridor)>) --doo:routeEnd--> New_York_City (dor:New_York_City)
+      - Ādolfs_Bļodnieks (<http://dbpedia.org/resource/Ādolfs_Bļodnieks>) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Buddy_DeSylva (dor:Buddy_DeSylva) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - ¡Viva!_Vaughan (<http://dbpedia.org/resource/¡Viva!_Vaughan>) --dop:writer--> Buddy_DeSylva (dor:Buddy_DeSylva)
+  '8':
+    attributes:
+      Al_Smith: (title^='Democratic nominee for Governor of New York')
+      New_York_City: (named after^='http://dbpedia.org/resource/James_II_of_England', float^='right', caption^='Citi Field, also in Flushing Meadows-Corona Park, has been home to the New York Mets since 2009.')
+    relationships:
+      - Gateway_Program_(Northeast_Corridor) (<http://dbpedia.org/resource/Gateway_Program_(Northeast_Corridor)>) --doo:routeEnd--> New_York_City (dor:New_York_City)
+      - Al_Smith (dor:Al_Smith) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Buddy_DeSylva (dor:Buddy_DeSylva) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - ¡Viva!_Vaughan (<http://dbpedia.org/resource/¡Viva!_Vaughan>) --dop:writer--> Buddy_DeSylva (dor:Buddy_DeSylva)
+  '9':
+    attributes:
+      New_York_City: (named after^='http://dbpedia.org/resource/James_II_of_England', float^='right', caption^='Citi Field, also in Flushing Meadows-Corona Park, has been home to the New York Mets since 2009.')
+      Albert_Gallatin: (title^='Democratic-Republican nominee for Vice President of the United States¹')
+    relationships:
+      - Gateway_Program_(Northeast_Corridor) (<http://dbpedia.org/resource/Gateway_Program_(Northeast_Corridor)>) --doo:routeEnd--> New_York_City (dor:New_York_City)
+      - Albert_Gallatin (dor:Albert_Gallatin) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Buddy_DeSylva (dor:Buddy_DeSylva) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - ¡Viva!_Vaughan (<http://dbpedia.org/resource/¡Viva!_Vaughan>) --dop:writer--> Buddy_DeSylva (dor:Buddy_DeSylva)
+  '10':
+    attributes:
+      Chicago: (caption^='Portage Park on the Northwest Side')
+    relationships:
+      - Fort_Wayne_Line (dor:Fort_Wayne_Line) --doo:routeEnd--> Chicago (dor:Chicago)
+      - A._F._Maciejewski (dor:A._F._Maciejewski) --doo:deathPlace--> Chicago (dor:Chicago)
+      - Sheldon_Harnick (dor:Sheldon_Harnick) --doo:birthPlace--> Chicago (dor:Chicago)
+      - ...from_the_%22Hungry_i%22 (<http://dbpedia.org/resource/...from_the_%22Hungry_i%22>) --dop:writer--> Sheldon_Harnick (dor:Sheldon_Harnick)
+attributes:
+  city: --wordnet_type (dop:wordnet_type)--> Resource | --named after^ (doo:namedAfter)--> Resource | --float^ (dop:float)--> langString | --Apr high C^ (dop:aprHighC)--> double | --quote^ (dop:quote)--> int | --caption^ (dop:caption)--> langString
+  album: --release date^ (doo:releaseDate)--> date
+  office holder: --footer^ (dop:footer)--> langString | --parent^ (doo:parent)--> Resource | --title^ (dop:title)--> langString | --ad^ (dop:ad)--> int | --aggregatescore^ (dop:aggregatescore)--> int
+subgraph_id: 557
+relationships:
+  - railway line --doo:routeEnd--> city
+  - office holder --doo:deathPlace--> city
+  - musical artist --doo:birthPlace--> city
+  - album --dop:writer--> musical artist

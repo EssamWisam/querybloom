@@ -1,0 +1,55 @@
+types:
+  school: doo:School
+  language: doo:Language
+  magazine: doo:Magazine
+  music genre: doo:MusicGenre
+  academic journal: doo:AcademicJournal
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Christianity: (align^='right')
+      .info_(magazine): (subject='http://dbpedia.org/resource/Category:Amiga_magazines')
+      Bryanston_High_School: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Colourbox')
+    relationships:
+      - Bryanston_High_School (dor:Bryanston_High_School) --doo:religion--> Christianity (dor:Christianity)
+      - Bryanston_High_School (dor:Bryanston_High_School) --doo:language--> English_language (dor:English_language)
+      - .info_(magazine) (<http://dbpedia.org/resource/.info_(magazine)>) --doo:language--> English_language (dor:English_language)
+      - Acoustic_Guitar_(magazine) (<http://dbpedia.org/resource/Acoustic_Guitar_(magazine)>) --doo:language--> English_language (dor:English_language)
+  '2':
+    attributes:
+      Christianity: (align^='right')
+      .info_(magazine): (subject='http://dbpedia.org/resource/Category:Amiga_magazines')
+      Camps_Bay_High_School: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Colourbox')
+    relationships:
+      - Camps_Bay_High_School (dor:Camps_Bay_High_School) --doo:religion--> Christianity (dor:Christianity)
+      - Camps_Bay_High_School (dor:Camps_Bay_High_School) --doo:language--> English_language (dor:English_language)
+      - .info_(magazine) (<http://dbpedia.org/resource/.info_(magazine)>) --doo:language--> English_language (dor:English_language)
+      - Acoustic_Guitar_(magazine) (<http://dbpedia.org/resource/Acoustic_Guitar_(magazine)>) --doo:language--> English_language (dor:English_language)
+  '3':
+    attributes:
+      Christianity: (align^='right')
+      .info_(magazine): (subject='http://dbpedia.org/resource/Category:Amiga_magazines')
+      Cape_Academy_of_Mathematics,_Science_and_Technology: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Cape_Town')
+    relationships:
+      - Cape_Academy_of_Mathematics,_Science_and_Technology (<http://dbpedia.org/resource/Cape_Academy_of_Mathematics,_Science_and_Technology>) --doo:religion--> Christianity (dor:Christianity)
+      - Cape_Academy_of_Mathematics,_Science_and_Technology (<http://dbpedia.org/resource/Cape_Academy_of_Mathematics,_Science_and_Technology>) --doo:language--> English_language (dor:English_language)
+      - .info_(magazine) (<http://dbpedia.org/resource/.info_(magazine)>) --doo:language--> English_language (dor:English_language)
+      - Acoustic_Guitar_(magazine) (<http://dbpedia.org/resource/Acoustic_Guitar_(magazine)>) --doo:language--> English_language (dor:English_language)
+attributes:
+  school: --affiliations^ (dop:affiliations)--> langString | --reason^ (dop:reason)--> langString | --Closed^ (dop:closed)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --url^ (dop:url)--> Resource
+  language: --family^ (dop:family)--> Resource
+  magazine: --subject (podt:subject)--> Resource
+  music genre: --instruments^ (dop:instruments)--> Resource | --align^ (dop:align)--> langString | --2p^ (dop:2p)--> int | --1a^ (dop:1a)--> langString | --2a^ (dop:2a)--> langString
+  academic journal: --former name^ (doo:formerName)--> langString
+subgraph_id: 614
+relationships:
+  - school --doo:religion--> music genre
+  - school --doo:language--> language
+  - magazine --doo:language--> language
+  - academic journal --doo:language--> language

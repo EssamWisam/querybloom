@@ -1,0 +1,107 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  soccer club: doo:SoccerClub
+  soccer manager: doo:SoccerManager
+  soccer club season: doo:SoccerClubSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bornholm: (Aug low C^='13.4', Apr record high C^='26.6')
+      2008–09_AaB_Fodbold_season: (manager^='http://dbpedia.org/resource/Allan_Kuhn')
+    relationships:
+      - 2008–09_AaB_Fodbold_season (<http://dbpedia.org/resource/2008–09_AaB_Fodbold_season>) --doo:manager--> Allan_Kuhn (dor:Allan_Kuhn)
+      - 2008–09_AaB_Fodbold_season (<http://dbpedia.org/resource/2008–09_AaB_Fodbold_season>) --dop:club--> AaB_Fodbold (dor:AaB_Fodbold)
+      - Allan_Kuhn (dor:Allan_Kuhn) --doo:birthPlace--> Bornholm (dor:Bornholm)
+      - AaB_Fodbold (dor:AaB_Fodbold) --dop:ground--> Aalborg (dor:Aalborg)
+  '2':
+    attributes:
+      2008–09_AaB_Fodbold_season: (manager^='http://dbpedia.org/resource/Allan_Kuhn')
+    relationships:
+      - 2008–09_AaB_Fodbold_season (<http://dbpedia.org/resource/2008–09_AaB_Fodbold_season>) --doo:manager--> Bruce_Rioch (dor:Bruce_Rioch)
+      - 2008–09_AaB_Fodbold_season (<http://dbpedia.org/resource/2008–09_AaB_Fodbold_season>) --dop:club--> AaB_Fodbold (dor:AaB_Fodbold)
+      - Bruce_Rioch (dor:Bruce_Rioch) --doo:birthPlace--> Aldershot (dor:Aldershot)
+      - AaB_Fodbold (dor:AaB_Fodbold) --dop:ground--> Aalborg (dor:Aalborg)
+  '3':
+    attributes:
+      Malmö: (Aug low C^='13.7', Apr record high C^='26.2')
+      2008–09_AaB_Fodbold_season: (manager^='http://dbpedia.org/resource/Allan_Kuhn')
+    relationships:
+      - 2008–09_AaB_Fodbold_season (<http://dbpedia.org/resource/2008–09_AaB_Fodbold_season>) --doo:manager--> Magnus_Pehrsson (dor:Magnus_Pehrsson)
+      - 2008–09_AaB_Fodbold_season (<http://dbpedia.org/resource/2008–09_AaB_Fodbold_season>) --dop:club--> AaB_Fodbold (dor:AaB_Fodbold)
+      - Magnus_Pehrsson (dor:Magnus_Pehrsson) --doo:birthPlace--> Malmö (<http://dbpedia.org/resource/Malmö>)
+      - AaB_Fodbold (dor:AaB_Fodbold) --dop:ground--> Aalborg (dor:Aalborg)
+  '4':
+    attributes:
+      Skagen: (Aug low C^='13', Apr record high C^='19')
+      2020–21_Aarhus_Gymnastikforening_season: (manager^='http://dbpedia.org/resource/David_Nielsen', d^='0')
+    relationships:
+      - 2020–21_Aarhus_Gymnastikforening_season (<http://dbpedia.org/resource/2020–21_Aarhus_Gymnastikforening_season>) --doo:manager--> David_Nielsen (dor:David_Nielsen)
+      - 2020–21_Aarhus_Gymnastikforening_season (<http://dbpedia.org/resource/2020–21_Aarhus_Gymnastikforening_season>) --dop:club--> Aarhus_Gymnastikforening (dor:Aarhus_Gymnastikforening)
+      - David_Nielsen (dor:David_Nielsen) --doo:birthPlace--> Skagen (dor:Skagen)
+      - Aarhus_Gymnastikforening (dor:Aarhus_Gymnastikforening) --dop:ground--> Aarhus (dor:Aarhus)
+  '5':
+    attributes:
+      Tunisia: (religion^='http://dbpedia.org/resource/Demographics_of_Tunisia')
+      2019–20_Abha_Club_season: (manager^='http://dbpedia.org/resource/Abderrazek_Chebbi', d^='1')
+    relationships:
+      - 2019–20_Abha_Club_season (<http://dbpedia.org/resource/2019–20_Abha_Club_season>) --doo:manager--> Abderrazek_Chebbi (dor:Abderrazek_Chebbi)
+      - 2019–20_Abha_Club_season (<http://dbpedia.org/resource/2019–20_Abha_Club_season>) --dop:club--> Abha_Club (dor:Abha_Club)
+      - Abderrazek_Chebbi (dor:Abderrazek_Chebbi) --doo:birthPlace--> Tunisia (dor:Tunisia)
+      - Abha_Club (dor:Abha_Club) --dop:ground--> Abha (dor:Abha)
+  '6':
+    attributes:
+      Tunisia: (religion^='http://dbpedia.org/resource/Demographics_of_Tunisia')
+      2020–21_Abha_Club_season: (manager^='http://dbpedia.org/resource/Abderrazek_Chebbi')
+    relationships:
+      - 2020–21_Abha_Club_season (<http://dbpedia.org/resource/2020–21_Abha_Club_season>) --doo:manager--> Abderrazek_Chebbi (dor:Abderrazek_Chebbi)
+      - 2020–21_Abha_Club_season (<http://dbpedia.org/resource/2020–21_Abha_Club_season>) --dop:club--> Abha_Club (dor:Abha_Club)
+      - Abderrazek_Chebbi (dor:Abderrazek_Chebbi) --doo:birthPlace--> Tunisia (dor:Tunisia)
+      - Abha_Club (dor:Abha_Club) --dop:ground--> Abha (dor:Abha)
+  '7':
+    attributes:
+      2021–22_Abha_Club_season: (manager^='http://dbpedia.org/resource/Martin_Ševela')
+    relationships:
+      - 2021–22_Abha_Club_season (<http://dbpedia.org/resource/2021–22_Abha_Club_season>) --doo:manager--> Martin_Ševela (<http://dbpedia.org/resource/Martin_Ševela>)
+      - 2021–22_Abha_Club_season (<http://dbpedia.org/resource/2021–22_Abha_Club_season>) --dop:club--> Abha_Club (dor:Abha_Club)
+      - Martin_Ševela (<http://dbpedia.org/resource/Martin_Ševela>) --doo:birthPlace--> Czechoslovakia (dor:Czechoslovakia)
+      - Abha_Club (dor:Abha_Club) --dop:ground--> Abha (dor:Abha)
+  '8':
+    attributes:
+      2010_AC_St._Louis_season: (manager^='http://dbpedia.org/resource/Dale_Schilly')
+    relationships:
+      - 2010_AC_St._Louis_season (dor:2010_AC_St._Louis_season) --doo:manager--> Dale_Schilly (dor:Dale_Schilly)
+      - 2010_AC_St._Louis_season (dor:2010_AC_St._Louis_season) --dop:club--> AC_St._Louis (dor:AC_St._Louis)
+      - Dale_Schilly (dor:Dale_Schilly) --doo:birthPlace--> Missouri (dor:Missouri)
+      - AC_St._Louis (dor:AC_St._Louis) --dop:ground--> Fenton,_Missouri (<http://dbpedia.org/resource/Fenton,_Missouri>)
+  '9':
+    attributes:
+      2010_AC_St._Louis_season: (manager^='http://dbpedia.org/resource/Dale_Schilly')
+    relationships:
+      - 2010_AC_St._Louis_season (dor:2010_AC_St._Louis_season) --doo:manager--> Dale_Schilly (dor:Dale_Schilly)
+      - 2010_AC_St._Louis_season (dor:2010_AC_St._Louis_season) --dop:club--> AC_St._Louis (dor:AC_St._Louis)
+      - Dale_Schilly (dor:Dale_Schilly) --doo:birthPlace--> St._Louis (dor:St._Louis)
+      - AC_St._Louis (dor:AC_St._Louis) --dop:ground--> Fenton,_Missouri (<http://dbpedia.org/resource/Fenton,_Missouri>)
+  '10':
+    attributes:
+      2010_AC_St._Louis_season: (manager^='http://dbpedia.org/resource/Dale_Schilly')
+    relationships:
+      - 2010_AC_St._Louis_season (dor:2010_AC_St._Louis_season) --doo:manager--> Dale_Schilly (dor:Dale_Schilly)
+      - 2010_AC_St._Louis_season (dor:2010_AC_St._Louis_season) --dop:club--> AC_St._Louis (dor:AC_St._Louis)
+      - Dale_Schilly (dor:Dale_Schilly) --doo:birthPlace--> United_States (dor:United_States)
+      - AC_St._Louis (dor:AC_St._Louis) --dop:ground--> Fenton,_Missouri (<http://dbpedia.org/resource/Fenton,_Missouri>)
+attributes:
+  Location: --religion^ (doo:religion)--> Resource | --Aug low C^ (dop:augLowC)--> double | --administrator^ (dop:administrator)--> langString | --borough^ (dop:borough)--> langString | --added^ (dop:added)--> date | --data^ (dop:data)--> int | --Apr record high C^ (dop:aprRecordHighC)--> double
+  soccer club: --aggregatescore^ (dop:aggregatescore)--> int | --bot^ (dop:bot)--> langString
+  soccer club season: --manager^ (doo:manager)--> Resource | --d^ (dop:d)--> date
+subgraph_id: 927
+relationships:
+  - soccer club season --doo:manager--> soccer manager
+  - soccer club season --dop:club--> soccer club
+  - soccer manager --doo:birthPlace--> Location
+  - soccer club --dop:ground--> city

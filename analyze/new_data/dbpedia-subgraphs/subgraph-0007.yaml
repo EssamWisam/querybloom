@@ -1,0 +1,85 @@
+types:
+  city: doo:City
+  baseball player: doo:BaseballPlayer
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._J._Sager: (birth date^='1965-03-03')
+      Columbus,_Ohio: (named after^='http://dbpedia.org/resource/Christopher_Columbus')
+    relationships:
+      - A._J._Sager (dor:A._J._Sager) --doo:birthPlace--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - Libertarian_Party_of_Ohio (dor:Libertarian_Party_of_Ohio) --doo:headquarter--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+  '2':
+    attributes:
+      A._J._Sager: (birth date^='1965-03-03')
+      Columbus,_Ohio: (named after^='http://dbpedia.org/resource/Christopher_Columbus')
+    relationships:
+      - A._J._Sager (dor:A._J._Sager) --doo:birthPlace--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - Ohio_Democratic_Party (dor:Ohio_Democratic_Party) --doo:headquarter--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+  '3':
+    attributes:
+      A._J._Sager: (birth date^='1965-03-03')
+      Columbus,_Ohio: (named after^='http://dbpedia.org/resource/Christopher_Columbus')
+    relationships:
+      - A._J._Sager (dor:A._J._Sager) --doo:birthPlace--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - Ohio_Republican_Party (dor:Ohio_Republican_Party) --doo:headquarter--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+  '4':
+    attributes:
+      A._J._Simcox: (birth date^='1994-06-22')
+      Knoxville,_Tennessee: (named after^='http://dbpedia.org/resource/Henry_Knox', Apr low F^='48', Apr record low F^='22')
+    relationships:
+      - A._J._Simcox (dor:A._J._Simcox) --doo:birthPlace--> Knoxville,_Tennessee (<http://dbpedia.org/resource/Knoxville,_Tennessee>)
+      - National_States'_Rights_Party (<http://dbpedia.org/resource/National_States'_Rights_Party>) --doo:headquarter--> Knoxville,_Tennessee (<http://dbpedia.org/resource/Knoxville,_Tennessee>)
+  '5':
+    attributes:
+      Aarom_Baldiris: (birth date^='1983-01-05')
+    relationships:
+      - Aarom_Baldiris (dor:Aarom_Baldiris) --doo:birthPlace--> Caracas (dor:Caracas)
+      - Agreement_for_Change (dor:Agreement_for_Change) --doo:headquarter--> Caracas (dor:Caracas)
+  '6':
+    attributes:
+      Aarom_Baldiris: (birth date^='1983-01-05')
+    relationships:
+      - Aarom_Baldiris (dor:Aarom_Baldiris) --doo:birthPlace--> Caracas (dor:Caracas)
+      - Authentic_Renewal_Organization (dor:Authentic_Renewal_Organization) --doo:headquarter--> Caracas (dor:Caracas)
+  '7':
+    attributes:
+      Aarom_Baldiris: (birth date^='1983-01-05')
+    relationships:
+      - Aarom_Baldiris (dor:Aarom_Baldiris) --doo:birthPlace--> Caracas (dor:Caracas)
+      - Come_Venezuela (dor:Come_Venezuela) --doo:headquarter--> Caracas (dor:Caracas)
+  '8':
+    attributes:
+      Aaron_Crow: (birth date^='1986-11-10')
+      Topeka,_Kansas: (Apr low F^='43.5', Apr record low F^='10')
+    relationships:
+      - Aaron_Crow (dor:Aaron_Crow) --doo:birthPlace--> Topeka,_Kansas (<http://dbpedia.org/resource/Topeka,_Kansas>)
+      - Kansas_Republican_Party (dor:Kansas_Republican_Party) --doo:headquarter--> Topeka,_Kansas (<http://dbpedia.org/resource/Topeka,_Kansas>)
+  '9':
+    attributes:
+      Aaron_Cunningham: (birth date^='1986-04-24')
+      Anchorage,_Alaska: (named after^='http://dbpedia.org/resource/Anchorage_(shipping)', Apr low F^='22')
+    relationships:
+      - Aaron_Cunningham (dor:Aaron_Cunningham) --doo:birthPlace--> Anchorage,_Alaska (<http://dbpedia.org/resource/Anchorage,_Alaska>)
+      - Alaska_Democratic_Party (dor:Alaska_Democratic_Party) --doo:headquarter--> Anchorage,_Alaska (<http://dbpedia.org/resource/Anchorage,_Alaska>)
+  '10':
+    attributes:
+      Aaron_Cunningham: (birth date^='1986-04-24')
+      Anchorage,_Alaska: (named after^='http://dbpedia.org/resource/Anchorage_(shipping)', Apr low F^='22')
+    relationships:
+      - Aaron_Cunningham (dor:Aaron_Cunningham) --doo:birthPlace--> Anchorage,_Alaska (<http://dbpedia.org/resource/Anchorage,_Alaska>)
+      - Alaska_Libertarian_Party (dor:Alaska_Libertarian_Party) --doo:headquarter--> Anchorage,_Alaska (<http://dbpedia.org/resource/Anchorage,_Alaska>)
+attributes:
+  city: --bot^ (dop:bot)--> langString | --Aug rain days^ (dop:augRainDays)--> double | --quote^ (dop:quote)--> int | --named after^ (doo:namedAfter)--> Resource | --Apr low F^ (dop:aprLowF)--> double | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --wordnet_type (dop:wordnet_type)--> Resource | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --Apr record low F^ (dop:aprRecordLowF)--> int | --Apr record high C^ (dop:aprRecordHighC)--> double
+  baseball player: --birth date^ (doo:birthDate)--> date
+  political party: --affiliation^ (dop:affiliation)--> Resource
+subgraph_id: 7
+relationships:
+  - baseball player --doo:birthPlace--> city
+  - political party --doo:headquarter--> city

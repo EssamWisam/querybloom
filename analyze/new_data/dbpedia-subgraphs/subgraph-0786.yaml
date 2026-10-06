@@ -1,0 +1,75 @@
+types:
+  movie: doo:Film
+  country: doo:Country
+  beverage: doo:Beverage
+  city district: doo:CityDistrict
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Blois-Vienne: (area total (km2)^='6.47497027584')
+      Michael_Nyman: (IMDB id^='0006219')
+      The_Hairdresser's_Husband: (title^='The Hairdresser''s Husband')
+    relationships:
+      - Absinthe (dor:Absinthe) --doo:origin--> France (dor:France)
+      - The_Hairdresser's_Husband (<http://dbpedia.org/resource/The_Hairdresser's_Husband>) --doo:language--> France (dor:France)
+      - Blois-Vienne (dor:Blois-Vienne) --doo:country--> France (dor:France)
+      - The_Hairdresser's_Husband (<http://dbpedia.org/resource/The_Hairdresser's_Husband>) --dop:artist--> Michael_Nyman (dor:Michael_Nyman)
+  '2':
+    attributes:
+      The_Hairdresser's_Husband: (title^='The Hairdresser''s Husband')
+    relationships:
+      - Absinthe (dor:Absinthe) --doo:origin--> France (dor:France)
+      - The_Hairdresser's_Husband (<http://dbpedia.org/resource/The_Hairdresser's_Husband>) --doo:language--> France (dor:France)
+      - La_Charbonnière (<http://dbpedia.org/resource/La_Charbonnière>) --doo:country--> France (dor:France)
+      - The_Hairdresser's_Husband (<http://dbpedia.org/resource/The_Hairdresser's_Husband>) --dop:artist--> Michael_Nyman (dor:Michael_Nyman)
+  '3':
+    attributes:
+      Michael_Nyman: (IMDB id^='0006219')
+      The_Hairdresser's_Husband: (title^='The Hairdresser''s Husband')
+    relationships:
+      - Absinthe (dor:Absinthe) --doo:origin--> France (dor:France)
+      - The_Hairdresser's_Husband (<http://dbpedia.org/resource/The_Hairdresser's_Husband>) --doo:language--> France (dor:France)
+      - Saint-Germain-des-Prés (<http://dbpedia.org/resource/Saint-Germain-des-Prés>) --doo:country--> France (dor:France)
+      - The_Hairdresser's_Husband (<http://dbpedia.org/resource/The_Hairdresser's_Husband>) --dop:artist--> Michael_Nyman (dor:Michael_Nyman)
+  '4':
+    attributes:
+      Marco_Beltrami: (genre^='http://dbpedia.org/resource/Ambient_music')
+    relationships:
+      - Urge_(drink) (<http://dbpedia.org/resource/Urge_(drink)>) --doo:origin--> Norway (dor:Norway)
+      - The_Thing_(2011_film) (<http://dbpedia.org/resource/The_Thing_(2011_film)>) --doo:language--> Norway (dor:Norway)
+      - Ammerud (dor:Ammerud) --doo:country--> Norway (dor:Norway)
+      - The_Thing_(2011_film) (<http://dbpedia.org/resource/The_Thing_(2011_film)>) --dop:artist--> Marco_Beltrami (dor:Marco_Beltrami)
+  '5':
+    attributes:
+      Arna,_Norway: (area total (km2)^='99.71')
+      Marco_Beltrami: (genre^='http://dbpedia.org/resource/Ambient_music')
+    relationships:
+      - Urge_(drink) (<http://dbpedia.org/resource/Urge_(drink)>) --doo:origin--> Norway (dor:Norway)
+      - The_Thing_(2011_film) (<http://dbpedia.org/resource/The_Thing_(2011_film)>) --doo:language--> Norway (dor:Norway)
+      - Arna,_Norway (<http://dbpedia.org/resource/Arna,_Norway>) --doo:country--> Norway (dor:Norway)
+      - The_Thing_(2011_film) (<http://dbpedia.org/resource/The_Thing_(2011_film)>) --dop:artist--> Marco_Beltrami (dor:Marco_Beltrami)
+  '6':
+    attributes:
+      Marco_Beltrami: (genre^='http://dbpedia.org/resource/Ambient_music')
+    relationships:
+      - Urge_(drink) (<http://dbpedia.org/resource/Urge_(drink)>) --doo:origin--> Norway (dor:Norway)
+      - The_Thing_(2011_film) (<http://dbpedia.org/resource/The_Thing_(2011_film)>) --doo:language--> Norway (dor:Norway)
+      - Årø,_Norway (<http://dbpedia.org/resource/Årø,_Norway>) --doo:country--> Norway (dor:Norway)
+      - The_Thing_(2011_film) (<http://dbpedia.org/resource/The_Thing_(2011_film)>) --dop:artist--> Marco_Beltrami (dor:Marco_Beltrami)
+attributes:
+  movie: --all writing^ (dop:allWriting)--> langString | --display^ (dop:display)--> langString | --width^ (dop:width)--> int | --title^ (dop:title)--> langString
+  city district: --motto^ (doo:motto)--> string | --area total (km2)^ (doop:areaTotal)--> squareKilometre
+  musical artist: --IMDB id^ (doo:imdbId)--> string | --genre^ (doo:genre)--> Resource | --death year^ (doo:deathYear)--> gYear | --after^ (dop:after)--> langString | --colwidth^ (dop:colwidth)--> int
+subgraph_id: 786
+relationships:
+  - beverage --doo:origin--> country
+  - movie --doo:language--> country
+  - city district --doo:country--> country
+  - movie --dop:artist--> musical artist

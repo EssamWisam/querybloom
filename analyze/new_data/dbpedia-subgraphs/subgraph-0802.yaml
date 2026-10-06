@@ -1,0 +1,52 @@
+types:
+  Band: doo:Band
+  road: doo:Road
+  ship: doo:Ship
+  single: doo:Single
+  city district: doo:CityDistrict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doow: http://dbpedia.org/ontology/Work/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Honey_(Moby_song): (runtime (m)^='3.3', subject='http://dbpedia.org/resource/Category:1998_singles')
+      Broadway_(Manhattan): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - Honey_(Moby_song) (<http://dbpedia.org/resource/Honey_(Moby_song)>) --doo:recordedIn--> Manhattan (dor:Manhattan)
+      - Broadway_(Manhattan) (<http://dbpedia.org/resource/Broadway_(Manhattan)>) --doo:routeJunction--> Manhattan (dor:Manhattan)
+      - AJR_(band)__AJR__1 (<http://dbpedia.org/resource/AJR_(band)__AJR__1>) --doo:hometown--> Manhattan (dor:Manhattan)
+      - New_York_(1836_steamboat) (<http://dbpedia.org/resource/New_York_(1836_steamboat)>) --doo:builder--> Manhattan (dor:Manhattan)
+  '2':
+    attributes:
+      Broadway_(Manhattan): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+      I_Love_to_Move_in_Here: (runtime (m)^='4.75', subject='http://dbpedia.org/resource/Category:2008_singles')
+    relationships:
+      - I_Love_to_Move_in_Here (dor:I_Love_to_Move_in_Here) --doo:recordedIn--> Manhattan (dor:Manhattan)
+      - Broadway_(Manhattan) (<http://dbpedia.org/resource/Broadway_(Manhattan)>) --doo:routeJunction--> Manhattan (dor:Manhattan)
+      - AJR_(band)__AJR__1 (<http://dbpedia.org/resource/AJR_(band)__AJR__1>) --doo:hometown--> Manhattan (dor:Manhattan)
+      - New_York_(1836_steamboat) (<http://dbpedia.org/resource/New_York_(1836_steamboat)>) --doo:builder--> Manhattan (dor:Manhattan)
+  '3':
+    attributes:
+      Broadway_(Manhattan): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+      Let's_Dance_(David_Bowie_song): (runtime (m)^='4.133333333333334', id^='3811', subject='http://dbpedia.org/resource/Category:1983_singles')
+    relationships:
+      - Let's_Dance_(David_Bowie_song) (<http://dbpedia.org/resource/Let's_Dance_(David_Bowie_song)>) --doo:recordedIn--> Manhattan (dor:Manhattan)
+      - Broadway_(Manhattan) (<http://dbpedia.org/resource/Broadway_(Manhattan)>) --doo:routeJunction--> Manhattan (dor:Manhattan)
+      - AJR_(band)__AJR__1 (<http://dbpedia.org/resource/AJR_(band)__AJR__1>) --doo:hometown--> Manhattan (dor:Manhattan)
+      - New_York_(1836_steamboat) (<http://dbpedia.org/resource/New_York_(1836_steamboat)>) --doo:builder--> Manhattan (dor:Manhattan)
+attributes:
+  Band: --alias^ (dop:alias)--> langString | --class^ (dop:class)--> langString | --alt^ (dop:alt)--> langString | --associated musical artist^ (doo:associatedMusicalArtist)--> Resource
+  road: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --borough^ (dop:borough)--> langString | --image width^ (dop:imageWidth)--> int
+  single: --runtime (m)^ (doow:runtime)--> minute | --id^ (dop:id)--> langString | --subject (podt:subject)--> Resource
+  city district: --elevation (μ)^ (doo:elevation)--> double
+subgraph_id: 802
+relationships:
+  - single --doo:recordedIn--> city district
+  - road --doo:routeJunction--> city district
+  - Band --doo:hometown--> city district
+  - ship --doo:builder--> city district

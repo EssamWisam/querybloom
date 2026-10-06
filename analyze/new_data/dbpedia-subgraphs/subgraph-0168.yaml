@@ -1,0 +1,107 @@
+types:
+  play: doo:Play
+  person: doo:Person
+  writer: doo:Writer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - 1984_(play) (<http://dbpedia.org/resource/1984_(play)>) --doo:author--> Duncan_Macmillan_(playwright) (<http://dbpedia.org/resource/Duncan_Macmillan_(playwright)>)
+      - 1984_(play) (<http://dbpedia.org/resource/1984_(play)>) --doo:author--> George_Orwell (dor:George_Orwell)
+  '2':
+    attributes: {}
+    relationships:
+      - 1984_(play) (<http://dbpedia.org/resource/1984_(play)>) --doo:author--> Duncan_Macmillan_(playwright) (<http://dbpedia.org/resource/Duncan_Macmillan_(playwright)>)
+      - 1984_(play) (<http://dbpedia.org/resource/1984_(play)>) --doo:author--> Robert_Icke (dor:Robert_Icke)
+  '3':
+    attributes:
+      George_Orwell: (birth name^='Eric Arthur Blair')
+    relationships:
+      - 1984_(play) (<http://dbpedia.org/resource/1984_(play)>) --doo:author--> George_Orwell (dor:George_Orwell)
+      - 1984_(play) (<http://dbpedia.org/resource/1984_(play)>) --doo:author--> Duncan_Macmillan_(playwright) (<http://dbpedia.org/resource/Duncan_Macmillan_(playwright)>)
+  '4':
+    attributes:
+      Chris_Rapley: (before^='Jon Tucker')
+    relationships:
+      - 2071_(play) (<http://dbpedia.org/resource/2071_(play)>) --doo:author--> Chris_Rapley (dor:Chris_Rapley)
+      - 2071_(play) (<http://dbpedia.org/resource/2071_(play)>) --doo:author--> Duncan_Macmillan_(playwright) (<http://dbpedia.org/resource/Duncan_Macmillan_(playwright)>)
+  '5':
+    attributes: {}
+    relationships:
+      - 2071_(play) (<http://dbpedia.org/resource/2071_(play)>) --doo:author--> Duncan_Macmillan_(playwright) (<http://dbpedia.org/resource/Duncan_Macmillan_(playwright)>)
+      - 2071_(play) (<http://dbpedia.org/resource/2071_(play)>) --doo:author--> Chris_Rapley (dor:Chris_Rapley)
+  '6':
+    attributes:
+      Tracy-Ann_Oberman: (birth name^='Tracy Anne Oberman')
+    relationships:
+      - 3_Sisters_on_Hope_Street__3_Sisters_on_Hope_Street__1 (dor:3_Sisters_on_Hope_Street__3_Sisters_on_Hope_Street__1) --doo:author--> Tracy-Ann_Oberman (dor:Tracy-Ann_Oberman)
+      - 3_Sisters_on_Hope_Street__3_Sisters_on_Hope_Street__1 (dor:3_Sisters_on_Hope_Street__3_Sisters_on_Hope_Street__1) --doo:author--> Diane_Samuels (dor:Diane_Samuels)
+  '7':
+    attributes: {}
+    relationships:
+      - A_Christmas_Carol_(1988_play) (<http://dbpedia.org/resource/A_Christmas_Carol_(1988_play)>) --doo:author--> Patrick_Stewart (dor:Patrick_Stewart)
+      - A_Christmas_Carol_(1988_play) (<http://dbpedia.org/resource/A_Christmas_Carol_(1988_play)>) --doo:author--> Charles_Dickens (dor:Charles_Dickens)
+  '8':
+    attributes: {}
+    relationships:
+      - A_Christmas_Carol_(2017_play) (<http://dbpedia.org/resource/A_Christmas_Carol_(2017_play)>) --doo:author--> Jack_Thorne (dor:Jack_Thorne)
+      - A_Christmas_Carol_(2017_play) (<http://dbpedia.org/resource/A_Christmas_Carol_(2017_play)>) --doo:author--> Charles_Dickens (dor:Charles_Dickens)
+  '9':
+    attributes: {}
+    relationships:
+      - A_Monster_Calls_(play) (<http://dbpedia.org/resource/A_Monster_Calls_(play)>) --doo:author--> Patrick_Ness (dor:Patrick_Ness)
+      - A_Monster_Calls_(play) (<http://dbpedia.org/resource/A_Monster_Calls_(play)>) --doo:author--> Siobhan_Dowd (dor:Siobhan_Dowd)
+  '10':
+    attributes: {}
+    relationships:
+      - A_Monster_Calls_(play) (<http://dbpedia.org/resource/A_Monster_Calls_(play)>) --doo:author--> Siobhan_Dowd (dor:Siobhan_Dowd)
+      - A_Monster_Calls_(play) (<http://dbpedia.org/resource/A_Monster_Calls_(play)>) --doo:author--> Patrick_Ness (dor:Patrick_Ness)
+qa_result:
+  status: completed
+  cost_usd: 0.310907
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.016367400000000004
+        total_tokens: 2776
+        prompt_tokens: 2165
+        completion_tokens: 611
+      generate:
+        cost_usd: 0.06365760000000001
+        total_tokens: 6101
+        prompt_tokens: 3411
+        completion_tokens: 2690
+      verify_1:
+        cost_usd: 0.067557
+        total_tokens: 6195
+        prompt_tokens: 3756
+        completion_tokens: 2439
+      verify_2:
+        cost_usd: 0.030432000000000004
+        total_tokens: 4140
+        prompt_tokens: 3491
+        completion_tokens: 649
+      complexity:
+        cost_usd: 0.132893
+        total_tokens: 10346
+        prompt_tokens: 4363
+        completion_tokens: 5983
+    total_tokens: 29558
+    prompt_tokens: 17186
+    total_cost_usd: 0.31090700000000004
+    completion_tokens: 12372
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --authorlink^ (dop:authorlink)--> langString | --relation^ (doo:relation)--> Resource | --birth name^ (dop:birthName)--> langString | --family^ (dop:family)--> Resource | --2pp (dop:2pp)--> int | --relative^ (doo:relative)--> Resource | --1y^ (dop:1y)--> int | --before^ (dop:before)--> langString | --cname^ (dop:cname)--> langString
+  writer: --1a^ (dop:1a)--> langString | --notable works^ (dop:notableWorks)--> langString | --relatives^ (dop:relatives)--> Resource
+subgraph_id: 168
+relationships:
+  - play --doo:author--> person
+  - play --doo:author--> writer

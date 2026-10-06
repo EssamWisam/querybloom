@@ -1,0 +1,85 @@
+types:
+  country: doo:Country
+  settlement: doo:Settlement
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Sukhumi: (area total (km2)^='372.0', Wikipage revision ID^='1122787639')
+      Abkhazia: (original name^='', url='http://www.oxfordreference.com/view/10.1093/acref/9780198662778.001.0001/acref-9780198662778-e-4%3Frskey=LIcawH&result=1%7Cfirst=Manana%7Clast=Odisheli')
+    relationships:
+      - Abkhazia (dor:Abkhazia) --doo:capital--> Sukhumi (dor:Sukhumi)
+      - Abkhazian_State_University (dor:Abkhazian_State_University) --doo:country--> Abkhazia (dor:Abkhazia)
+  '2':
+    attributes:
+      Kabul: (area total (km2)^='1028.24', bot^='InternetArchiveBot', Wikipage revision ID^='1124841556')
+      Afghanistan: (caption align^='center')
+    relationships:
+      - Afghanistan (dor:Afghanistan) --doo:capital--> Kabul (dor:Kabul)
+      - Afghanistan_Institute_of_Higher_Education (dor:Afghanistan_Institute_of_Higher_Education) --doo:country--> Afghanistan (dor:Afghanistan)
+  '3':
+    attributes:
+      Kabul: (area total (km2)^='1028.24', bot^='InternetArchiveBot', Wikipage revision ID^='1124841556')
+      Afghanistan: (caption align^='center')
+    relationships:
+      - Afghanistan (dor:Afghanistan) --doo:capital--> Kabul (dor:Kabul)
+      - Afghanistan_Public_Policy_Research_Organization (dor:Afghanistan_Public_Policy_Research_Organization) --doo:country--> Afghanistan (dor:Afghanistan)
+  '4':
+    attributes:
+      Kabul: (area total (km2)^='1028.24', bot^='InternetArchiveBot', Wikipage revision ID^='1124841556')
+      Afghanistan: (caption align^='center')
+    relationships:
+      - Afghanistan (dor:Afghanistan) --doo:capital--> Kabul (dor:Kabul)
+      - Afghanistan_Technical_Vocational_Institute (dor:Afghanistan_Technical_Vocational_Institute) --doo:country--> Afghanistan (dor:Afghanistan)
+  '5':
+    attributes:
+      Tirana: (Wikipage revision ID^='1123687311')
+      Albania: (url='https://web.archive.org/web/20211205050155/https:/www.parlament.al/')
+    relationships:
+      - Albania (dor:Albania) --doo:capital--> Tirana (dor:Tirana)
+      - Agricultural_University_of_Tirana (dor:Agricultural_University_of_Tirana) --doo:country--> Albania (dor:Albania)
+  '6':
+    attributes:
+      Tirana: (Wikipage revision ID^='1123687311')
+      Albania: (url='https://web.archive.org/web/20211205050155/https:/www.parlament.al/')
+    relationships:
+      - Albania (dor:Albania) --doo:capital--> Tirana (dor:Tirana)
+      - Albanian_School_of_Magistrates (dor:Albanian_School_of_Magistrates) --doo:country--> Albania (dor:Albania)
+  '7':
+    attributes:
+      Tirana: (Wikipage revision ID^='1123687311')
+      Albania: (url='https://web.archive.org/web/20211205050155/https:/www.parlament.al/')
+    relationships:
+      - Albania (dor:Albania) --doo:capital--> Tirana (dor:Tirana)
+      - Albanian_University (dor:Albanian_University) --doo:country--> Albania (dor:Albania)
+  '8':
+    attributes:
+      Algiers: (area total (km2)^='363.0', Wikipage revision ID^='1123004921')
+    relationships:
+      - Algeria (dor:Algeria) --doo:capital--> Algiers (dor:Algiers)
+      - AES_Algiers (dor:AES_Algiers) --doo:country--> Algeria (dor:Algeria)
+  '9':
+    attributes:
+      Algiers: (area total (km2)^='363.0', Wikipage revision ID^='1123004921')
+    relationships:
+      - Algeria (dor:Algeria) --doo:capital--> Algiers (dor:Algiers)
+      - Algiers_1_University (dor:Algiers_1_University) --doo:country--> Algeria (dor:Algeria)
+  '10':
+    attributes:
+      Algiers: (area total (km2)^='363.0', Wikipage revision ID^='1123004921')
+    relationships:
+      - Algeria (dor:Algeria) --doo:capital--> Algiers (dor:Algiers)
+      - Algiers_2_University (dor:Algiers_2_University) --doo:country--> Algeria (dor:Algeria)
+attributes:
+  country: --original name^ (doo:originalName)--> langString | --url (dop:url)--> Resource | --caption align^ (dop:captionAlign)--> langString | --founding year^ (doo:foundingYear)--> gYear
+  settlement: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --area^ (dop:area)--> double | --motto^ (doo:motto)--> string | --c^ (dop:c)--> langString | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --bot^ (dop:bot)--> langString | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int
+subgraph_id: 48
+relationships:
+  - country --doo:capital--> settlement
+  - university --doo:country--> country

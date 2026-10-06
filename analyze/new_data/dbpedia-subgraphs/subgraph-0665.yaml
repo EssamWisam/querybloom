@@ -1,0 +1,104 @@
+types:
+  park: doo:Park
+  country: doo:Country
+  Location: doo:Location
+  martial artist: doo:MartialArtist
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adana: (Apr low C^='12.4', subdivision^='http://dbpedia.org/resource/Adana_Province', date^='2011-07-30', Apr record high C^='37.5')
+    relationships:
+      - Lehize_Hilal_Benli (dor:Lehize_Hilal_Benli) --doo:residence--> Turkey (dor:Turkey)
+      - Lehize_Hilal_Benli (dor:Lehize_Hilal_Benli) --doo:residence--> Adana (dor:Adana)
+      - Altınpark (<http://dbpedia.org/resource/Altınpark>) --doo:location--> Turkey (dor:Turkey)
+      - Adana (dor:Adana) --doo:subdivision--> Adana_Province (dor:Adana_Province)
+  '2':
+    attributes:
+      Adana: (Apr low C^='12.4', subdivision^='http://dbpedia.org/resource/Adana_Province', date^='2011-07-30', Apr record high C^='37.5')
+    relationships:
+      - Lehize_Hilal_Benli (dor:Lehize_Hilal_Benli) --doo:residence--> Turkey (dor:Turkey)
+      - Lehize_Hilal_Benli (dor:Lehize_Hilal_Benli) --doo:residence--> Adana (dor:Adana)
+      - Altınpark (<http://dbpedia.org/resource/Altınpark>) --doo:location--> Turkey (dor:Turkey)
+      - Adana (dor:Adana) --doo:subdivision--> Mediterranean_Region,_Turkey (<http://dbpedia.org/resource/Mediterranean_Region,_Turkey>)
+  '3':
+    attributes:
+      Adana: (Apr low C^='12.4', subdivision^='http://dbpedia.org/resource/Adana_Province', date^='2011-07-30', Apr record high C^='37.5')
+      Sarıçam: (UTC offset^='+2')
+    relationships:
+      - Lehize_Hilal_Benli (dor:Lehize_Hilal_Benli) --doo:residence--> Turkey (dor:Turkey)
+      - Lehize_Hilal_Benli (dor:Lehize_Hilal_Benli) --doo:residence--> Adana (dor:Adana)
+      - Altınpark (<http://dbpedia.org/resource/Altınpark>) --doo:location--> Turkey (dor:Turkey)
+      - Adana (dor:Adana) --doo:subdivision--> Sarıçam (<http://dbpedia.org/resource/Sarıçam>)
+  '4':
+    attributes:
+      Chūbu_region: (UTC offset^='+9')
+      Aichi_Prefecture: (subdivision^='http://dbpedia.org/resource/Chūbu_region', date^='2013-11-27')
+    relationships:
+      - Hisaki_Kato (dor:Hisaki_Kato) --doo:residence--> Japan (dor:Japan)
+      - Hisaki_Kato (dor:Hisaki_Kato) --doo:residence--> Aichi_Prefecture (dor:Aichi_Prefecture)
+      - Aibahama_Park (dor:Aibahama_Park) --doo:location--> Japan (dor:Japan)
+      - Aichi_Prefecture (dor:Aichi_Prefecture) --doo:subdivision--> Chūbu_region (<http://dbpedia.org/resource/Chūbu_region>)
+  '5':
+    attributes:
+      Aichi_Prefecture: (subdivision^='http://dbpedia.org/resource/Chūbu_region', date^='2013-11-27')
+    relationships:
+      - Hisaki_Kato (dor:Hisaki_Kato) --doo:residence--> Japan (dor:Japan)
+      - Hisaki_Kato (dor:Hisaki_Kato) --doo:residence--> Aichi_Prefecture (dor:Aichi_Prefecture)
+      - Aibahama_Park (dor:Aibahama_Park) --doo:location--> Japan (dor:Japan)
+      - Aichi_Prefecture (dor:Aichi_Prefecture) --doo:subdivision--> Honshu (dor:Honshu)
+  '6':
+    attributes:
+      Chūbu_region: (UTC offset^='+9')
+      Aichi_Prefecture: (subdivision^='http://dbpedia.org/resource/Chūbu_region', date^='2013-11-27')
+    relationships:
+      - Hisaki_Kato (dor:Hisaki_Kato) --doo:residence--> Japan (dor:Japan)
+      - Hisaki_Kato (dor:Hisaki_Kato) --doo:residence--> Aichi_Prefecture (dor:Aichi_Prefecture)
+      - Akabane_Nature_Observatory_Park (dor:Akabane_Nature_Observatory_Park) --doo:location--> Japan (dor:Japan)
+      - Aichi_Prefecture (dor:Aichi_Prefecture) --doo:subdivision--> Chūbu_region (<http://dbpedia.org/resource/Chūbu_region>)
+  '7':
+    attributes:
+      Aiea,_Hawaii: (subdivision^='http://dbpedia.org/resource/Hawaii', date^='November 2011')
+    relationships:
+      - Relson_Gracie (dor:Relson_Gracie) --doo:residence--> Hawaii (dor:Hawaii)
+      - Relson_Gracie (dor:Relson_Gracie) --doo:residence--> Aiea,_Hawaii (<http://dbpedia.org/resource/Aiea,_Hawaii>)
+      - Kualoa_Regional_Park (dor:Kualoa_Regional_Park) --doo:location--> Hawaii (dor:Hawaii)
+      - Aiea,_Hawaii (<http://dbpedia.org/resource/Aiea,_Hawaii>) --doo:subdivision--> Hawaii (dor:Hawaii)
+  '8':
+    attributes:
+      Aiea,_Hawaii: (subdivision^='http://dbpedia.org/resource/Hawaii', date^='November 2011')
+    relationships:
+      - Relson_Gracie (dor:Relson_Gracie) --doo:residence--> Hawaii (dor:Hawaii)
+      - Relson_Gracie (dor:Relson_Gracie) --doo:residence--> Aiea,_Hawaii (<http://dbpedia.org/resource/Aiea,_Hawaii>)
+      - Magic_Island_(Hawaii) (<http://dbpedia.org/resource/Magic_Island_(Hawaii)>) --doo:location--> Hawaii (dor:Hawaii)
+      - Aiea,_Hawaii (<http://dbpedia.org/resource/Aiea,_Hawaii>) --doo:subdivision--> Hawaii (dor:Hawaii)
+  '9':
+    attributes:
+      Aiea,_Hawaii: (subdivision^='http://dbpedia.org/resource/Hawaii', date^='November 2011')
+    relationships:
+      - Relson_Gracie (dor:Relson_Gracie) --doo:residence--> Hawaii (dor:Hawaii)
+      - Relson_Gracie (dor:Relson_Gracie) --doo:residence--> Aiea,_Hawaii (<http://dbpedia.org/resource/Aiea,_Hawaii>)
+      - Moir_Gardens (dor:Moir_Gardens) --doo:location--> Hawaii (dor:Hawaii)
+      - Aiea,_Hawaii (<http://dbpedia.org/resource/Aiea,_Hawaii>) --doo:subdivision--> Hawaii (dor:Hawaii)
+  '10':
+    attributes:
+      Apache_Junction,_Arizona: (subdivision^='http://dbpedia.org/resource/Arizona')
+    relationships:
+      - Seth_Baczynski (dor:Seth_Baczynski) --doo:residence--> United_States (dor:United_States)
+      - Seth_Baczynski (dor:Seth_Baczynski) --doo:residence--> Apache_Junction,_Arizona (<http://dbpedia.org/resource/Apache_Junction,_Arizona>)
+      - '%22Yes_We_Can%22_Community_Center (<http://dbpedia.org/resource/%22Yes_We_Can%22_Community_Center>) --doo:location--> United_States (dor:United_States)'
+      - Apache_Junction,_Arizona (<http://dbpedia.org/resource/Apache_Junction,_Arizona>) --doo:subdivision--> Arizona (dor:Arizona)
+attributes:
+  Location: --city^ (dop:city)--> langString | --located in area^ (doo:locatedInArea)--> Resource | --Apr low C^ (dop:aprLowC)--> langString | --named after^ (dop:namedAfter)--> langString | --subdivision^ (doo:subdivision)--> Resource | --named for^ (dop:namedFor)--> Resource | --date^ (dop:date)--> date | --age^ (dop:age)--> langString | --Apr record high C^ (dop:aprRecordHighC)--> double | --garrison^ (dop:garrison)--> int
+  administrative region: --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --UTC offset^ (doo:utcOffset)--> string
+subgraph_id: 665
+relationships:
+  - martial artist --doo:residence--> country
+  - martial artist --doo:residence--> Location
+  - park --doo:location--> country
+  - Location --doo:subdivision--> administrative region

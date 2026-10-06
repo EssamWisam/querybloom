@@ -1,0 +1,45 @@
+types:
+  book: doo:Book
+  artist: doo:Artist
+  music genre: doo:MusicGenre
+  "Ø±Û\x8CÚ\x88Û\x8CÙ\x88 Ù¾Ø±Ù\x88Ú¯Ø±Ø§Ù\N": doo:RadioProgram
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Darrell_K._Sweet: (birth date^='1934-08-15', field^='http://dbpedia.org/resource/Fantasy', death date^='2011-12-05')
+      A_Crown_of_Swords: (subject='http://dbpedia.org/resource/Category:1996_American_novels', followed by^='http://dbpedia.org/resource/The_Path_of_Daggers')
+    relationships:
+      - A_Crown_of_Swords (dor:A_Crown_of_Swords) --doo:coverArtist--> Darrell_K._Sweet (dor:Darrell_K._Sweet)
+      - Darrell_K._Sweet (dor:Darrell_K._Sweet) --doo:field--> Science_fiction (dor:Science_fiction)
+      - Dimension_X_(radio_program) (<http://dbpedia.org/resource/Dimension_X_(radio_program)>) --doo:format--> Science_fiction (dor:Science_fiction)
+  '2':
+    attributes:
+      Darrell_K._Sweet: (birth date^='1934-08-15', field^='http://dbpedia.org/resource/Fantasy', death date^='2011-12-05')
+      A_Crown_of_Swords: (subject='http://dbpedia.org/resource/Category:1996_American_novels', followed by^='http://dbpedia.org/resource/The_Path_of_Daggers')
+    relationships:
+      - A_Crown_of_Swords (dor:A_Crown_of_Swords) --doo:coverArtist--> Darrell_K._Sweet (dor:Darrell_K._Sweet)
+      - Darrell_K._Sweet (dor:Darrell_K._Sweet) --doo:field--> Science_fiction (dor:Science_fiction)
+      - Journey_into_Space (dor:Journey_into_Space) --doo:format--> Science_fiction (dor:Science_fiction)
+  '3':
+    attributes:
+      Darrell_K._Sweet: (birth date^='1934-08-15', field^='http://dbpedia.org/resource/Fantasy', death date^='2011-12-05')
+      A_Crown_of_Swords: (subject='http://dbpedia.org/resource/Category:1996_American_novels', followed by^='http://dbpedia.org/resource/The_Path_of_Daggers')
+    relationships:
+      - A_Crown_of_Swords (dor:A_Crown_of_Swords) --doo:coverArtist--> Darrell_K._Sweet (dor:Darrell_K._Sweet)
+      - Darrell_K._Sweet (dor:Darrell_K._Sweet) --doo:field--> Fantasy (dor:Fantasy)
+      - Neverwhere_(radio_play) (<http://dbpedia.org/resource/Neverwhere_(radio_play)>) --doo:format--> Fantasy (dor:Fantasy)
+attributes:
+  book: --cname^ (dop:cname)--> langString | --subject (podt:subject)--> Resource | --2a^ (dop:2a)--> langString | --followed by^ (dop:followedBy)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+  artist: --academic discipline^ (doo:academicDiscipline)--> Resource | --birth date^ (doo:birthDate)--> date | --field^ (doo:field)--> Resource | --spouse^ (doo:spouse)--> Resource | --death date^ (doo:deathDate)--> date | --alma mater^ (dop:almaMater)--> langString
+  music genre: --url^ (dop:url)--> Resource
+subgraph_id: 754
+relationships:
+  - book --doo:coverArtist--> artist
+  - artist --doo:field--> music genre
+  - "Ø±Û\x8CÚ\x88Û\x8CÙ\x88 Ù¾Ø±Ù\x88Ú¯Ø±Ø§Ù\N --doo:format--> music genre"

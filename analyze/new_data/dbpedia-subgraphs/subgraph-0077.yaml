@@ -1,0 +1,78 @@
+types:
+  road: doo:Road
+  settlement: doo:Settlement
+  protected area: doo:ProtectedArea
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Elk_County,_Pennsylvania: (Wikipage revision ID^='1121629132')
+    relationships:
+      - Pennsylvania_Route_346 (dor:Pennsylvania_Route_346) --doo:routeStart--> Allegheny_National_Forest (dor:Allegheny_National_Forest)
+      - Allegheny_National_Forest (dor:Allegheny_National_Forest) --doo:location--> Elk_County,_Pennsylvania (<http://dbpedia.org/resource/Elk_County,_Pennsylvania>)
+  '2':
+    attributes:
+      McKean_County,_Pennsylvania: (Wikipage revision ID^='1122676789')
+    relationships:
+      - Pennsylvania_Route_346 (dor:Pennsylvania_Route_346) --doo:routeStart--> Allegheny_National_Forest (dor:Allegheny_National_Forest)
+      - Allegheny_National_Forest (dor:Allegheny_National_Forest) --doo:location--> McKean_County,_Pennsylvania (<http://dbpedia.org/resource/McKean_County,_Pennsylvania>)
+  '3':
+    attributes:
+      Pennsylvania: (Wikipage revision ID^='1124382473')
+    relationships:
+      - Pennsylvania_Route_346 (dor:Pennsylvania_Route_346) --doo:routeStart--> Allegheny_National_Forest (dor:Allegheny_National_Forest)
+      - Allegheny_National_Forest (dor:Allegheny_National_Forest) --doo:location--> Pennsylvania (dor:Pennsylvania)
+  '4':
+    attributes:
+      Aloha_Township,_Michigan: (Wikipage revision ID^='1116689974', subdivision^='http://dbpedia.org/resource/Cheboygan_County,_Michigan')
+    relationships:
+      - M-212_(Michigan_highway) (<http://dbpedia.org/resource/M-212_(Michigan_highway)>) --doo:routeStart--> Aloha_State_Park (dor:Aloha_State_Park)
+      - Aloha_State_Park (dor:Aloha_State_Park) --doo:location--> Aloha_Township,_Michigan (<http://dbpedia.org/resource/Aloha_Township,_Michigan>)
+  '5':
+    attributes:
+      Cheboygan_County,_Michigan: (Wikipage revision ID^='1124514381')
+    relationships:
+      - M-212_(Michigan_highway) (<http://dbpedia.org/resource/M-212_(Michigan_highway)>) --doo:routeStart--> Aloha_State_Park (dor:Aloha_State_Park)
+      - Aloha_State_Park (dor:Aloha_State_Park) --doo:location--> Cheboygan_County,_Michigan (<http://dbpedia.org/resource/Cheboygan_County,_Michigan>)
+  '6':
+    attributes:
+      California: (Wikipage revision ID^='1124854404')
+    relationships:
+      - Angeles_Forest_Highway (dor:Angeles_Forest_Highway) --doo:routeStart--> Angeles_National_Forest (dor:Angeles_National_Forest)
+      - Angeles_National_Forest (dor:Angeles_National_Forest) --doo:location--> California (dor:California)
+  '7':
+    attributes:
+      Los_Angeles_County,_California: (Wikipage revision ID^='1124781260', subdivision^='http://dbpedia.org/resource/California')
+    relationships:
+      - Angeles_Forest_Highway (dor:Angeles_Forest_Highway) --doo:routeStart--> Angeles_National_Forest (dor:Angeles_National_Forest)
+      - Angeles_National_Forest (dor:Angeles_National_Forest) --doo:location--> Los_Angeles_County,_California (<http://dbpedia.org/resource/Los_Angeles_County,_California>)
+  '8':
+    attributes:
+      San_Bernardino_County,_California: (Wikipage revision ID^='1124262852', subdivision^='http://dbpedia.org/resource/California')
+    relationships:
+      - Angeles_Forest_Highway (dor:Angeles_Forest_Highway) --doo:routeStart--> Angeles_National_Forest (dor:Angeles_National_Forest)
+      - Angeles_National_Forest (dor:Angeles_National_Forest) --doo:location--> San_Bernardino_County,_California (<http://dbpedia.org/resource/San_Bernardino_County,_California>)
+  '9':
+    attributes:
+      Monterey_County,_California: (Wikipage revision ID^='1117883523', subdivision^='http://dbpedia.org/resource/California')
+    relationships:
+      - California_State_Route_68 (dor:California_State_Route_68) --doo:routeStart--> Asilomar_State_Beach (dor:Asilomar_State_Beach)
+      - Asilomar_State_Beach (dor:Asilomar_State_Beach) --doo:location--> Monterey_County,_California (<http://dbpedia.org/resource/Monterey_County,_California>)
+  '10':
+    attributes:
+      Northern_Cape: (Wikipage revision ID^='1122942476', subdivision^='http://dbpedia.org/resource/Frances_Baard_District_Municipality')
+    relationships:
+      - R359_(South_Africa) (<http://dbpedia.org/resource/R359_(South_Africa)>) --doo:routeStart--> Augrabies_Falls_National_Park (dor:Augrabies_Falls_National_Park)
+      - Augrabies_Falls_National_Park (dor:Augrabies_Falls_National_Park) --doo:location--> Northern_Cape (dor:Northern_Cape)
+attributes:
+  road: --area^ (dop:area)--> langString
+  settlement: --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --Apr rain mm^ (dop:aprRainMm)--> double | --quote^ (dop:quote)--> int | --subdivision^ (doo:subdivision)--> Resource | --Aug high F^ (dop:augHighF)--> double | --Apr record high F^ (dop:aprRecordHighF)--> int | --frazioni^ (doo:frazioni)--> Resource | --Apr rain mm^ (dop:aprRainMm)--> int
+  protected area: --bot^ (dop:bot)--> langString
+subgraph_id: 77
+relationships:
+  - road --doo:routeStart--> protected area
+  - protected area --doo:location--> settlement

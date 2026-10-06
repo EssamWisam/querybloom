@@ -1,0 +1,68 @@
+types:
+  artist: doo:Artist
+  Location: doo:Location
+  cricketer: doo:Cricketer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - A._E._Hayward (dor:A._E._Hayward) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - Anton_Roux (dor:Anton_Roux) --dop:birthPlace--> New_York_City (dor:New_York_City)
+  '2':
+    attributes: {}
+    relationships:
+      - A._E._Hayward (dor:A._E._Hayward) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - Gordon_Burnham (dor:Gordon_Burnham) --dop:birthPlace--> New_York_City (dor:New_York_City)
+  '3':
+    attributes: {}
+    relationships:
+      - A._Hameed (dor:A._Hameed) --dop:deathPlace--> Punjab,_Pakistan (<http://dbpedia.org/resource/Punjab,_Pakistan>)
+      - Aamer_Jamal (dor:Aamer_Jamal) --dop:birthPlace--> Punjab,_Pakistan (<http://dbpedia.org/resource/Punjab,_Pakistan>)
+  '4':
+    attributes: {}
+    relationships:
+      - A._Hameed (dor:A._Hameed) --dop:deathPlace--> Punjab,_Pakistan (<http://dbpedia.org/resource/Punjab,_Pakistan>)
+      - Aamer_Khan (dor:Aamer_Khan) --dop:birthPlace--> Punjab,_Pakistan (<http://dbpedia.org/resource/Punjab,_Pakistan>)
+  '5':
+    attributes: {}
+    relationships:
+      - A._Hameed (dor:A._Hameed) --dop:deathPlace--> Punjab,_Pakistan (<http://dbpedia.org/resource/Punjab,_Pakistan>)
+      - Aamer_Sajjad (dor:Aamer_Sajjad) --dop:birthPlace--> Punjab,_Pakistan (<http://dbpedia.org/resource/Punjab,_Pakistan>)
+  '6':
+    attributes: {}
+    relationships:
+      - A._L._Raghavan (dor:A._L._Raghavan) --dop:deathPlace--> Chennai (dor:Chennai)
+      - A_I_Harrsha (dor:A_I_Harrsha) --dop:birthPlace--> Chennai (dor:Chennai)
+  '7':
+    attributes: {}
+    relationships:
+      - A._L._Raghavan (dor:A._L._Raghavan) --dop:deathPlace--> Chennai (dor:Chennai)
+      - A._G._Kripal_Singh (dor:A._G._Kripal_Singh) --dop:birthPlace--> Chennai (dor:Chennai)
+  '8':
+    attributes: {}
+    relationships:
+      - A._L._Raghavan (dor:A._L._Raghavan) --dop:deathPlace--> Chennai (dor:Chennai)
+      - A._G._Milkha_Singh (dor:A._G._Milkha_Singh) --dop:birthPlace--> Chennai (dor:Chennai)
+  '9':
+    attributes:
+      Oslo: (Apr record high C^='25.4', Apr high C^='11')
+    relationships:
+      - Aage_Teigen (dor:Aage_Teigen) --dop:deathPlace--> Oslo (dor:Oslo)
+      - Abdullah_Sheikh (dor:Abdullah_Sheikh) --dop:birthPlace--> Oslo (dor:Oslo)
+  '10':
+    attributes:
+      Oslo: (Apr record high C^='25.4', Apr high C^='11')
+    relationships:
+      - Aage_Teigen (dor:Aage_Teigen) --dop:deathPlace--> Oslo (dor:Oslo)
+      - Junaid_Sheikh_(cricketer) (<http://dbpedia.org/resource/Junaid_Sheikh_(cricketer)>) --dop:birthPlace--> Oslo (dor:Oslo)
+attributes:
+  Location: --Apr record high C^ (dop:aprRecordHighC)--> int | --Apr high F^ (dop:aprHighF)--> int | --Apr record high F^ (dop:aprRecordHighF)--> int | --bot^ (dop:bot)--> langString | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --architectural style^ (doo:architecturalStyle)--> Resource | --Apr high C^ (dop:aprHighC)--> double | --Aug high F^ (dop:augHighF)--> int
+subgraph_id: 402
+relationships:
+  - artist --dop:deathPlace--> Location
+  - cricketer --dop:birthPlace--> Location

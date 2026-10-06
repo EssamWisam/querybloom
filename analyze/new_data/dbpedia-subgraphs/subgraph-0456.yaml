@@ -1,0 +1,90 @@
+types:
+  city: doo:City
+  road: doo:Road
+  village: doo:Village
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Abita_River (dor:Abita_River) --doo:mouthPlace--> Covington,_Louisiana (<http://dbpedia.org/resource/Covington,_Louisiana>)
+      - Louisiana_Highway_25 (dor:Louisiana_Highway_25) --doo:routeStart--> Covington,_Louisiana (<http://dbpedia.org/resource/Covington,_Louisiana>)
+      - Louisiana_Highway_25 (dor:Louisiana_Highway_25) --doo:routeJunction--> Clifton,_Louisiana (<http://dbpedia.org/resource/Clifton,_Louisiana>)
+  '2':
+    attributes: {}
+    relationships:
+      - Abita_River (dor:Abita_River) --doo:mouthPlace--> Covington,_Louisiana (<http://dbpedia.org/resource/Covington,_Louisiana>)
+      - Louisiana_Highway_25 (dor:Louisiana_Highway_25) --doo:routeStart--> Covington,_Louisiana (<http://dbpedia.org/resource/Covington,_Louisiana>)
+      - Louisiana_Highway_25 (dor:Louisiana_Highway_25) --doo:routeJunction--> Folsom,_Louisiana (<http://dbpedia.org/resource/Folsom,_Louisiana>)
+  '3':
+    attributes:
+      Amstel: (width^='220')
+      Amsterdam: (Apr high C^='14.3', Aug precipitation days^='11.6')
+      A1_motorway_(Netherlands): (country^='Netherlands')
+    relationships:
+      - Amstel (dor:Amstel) --doo:mouthPlace--> Amsterdam (dor:Amsterdam)
+      - A1_motorway_(Netherlands) (<http://dbpedia.org/resource/A1_motorway_(Netherlands)>) --doo:routeStart--> Amsterdam (dor:Amsterdam)
+      - A1_motorway_(Netherlands) (<http://dbpedia.org/resource/A1_motorway_(Netherlands)>) --doo:routeJunction--> Muiderberg (dor:Muiderberg)
+  '4':
+    attributes:
+      Amstel: (width^='220')
+      Amsterdam: (Apr high C^='14.3', Aug precipitation days^='11.6')
+      A2_motorway_(Netherlands): (country^='NLD')
+    relationships:
+      - Amstel (dor:Amstel) --doo:mouthPlace--> Amsterdam (dor:Amsterdam)
+      - A2_motorway_(Netherlands) (<http://dbpedia.org/resource/A2_motorway_(Netherlands)>) --doo:routeStart--> Amsterdam (dor:Amsterdam)
+      - A2_motorway_(Netherlands) (<http://dbpedia.org/resource/A2_motorway_(Netherlands)>) --doo:routeJunction--> Deil (dor:Deil)
+  '5':
+    attributes:
+      Amstel: (width^='220')
+      Amsterdam: (Apr high C^='14.3', Aug precipitation days^='11.6')
+      European_route_E19_in_the_Netherlands: (country^='Netherlands')
+    relationships:
+      - Amstel (dor:Amstel) --doo:mouthPlace--> Amsterdam (dor:Amsterdam)
+      - European_route_E19_in_the_Netherlands (dor:European_route_E19_in_the_Netherlands) --doo:routeStart--> Amsterdam (dor:Amsterdam)
+      - European_route_E19_in_the_Netherlands (dor:European_route_E19_in_the_Netherlands) --doo:routeJunction--> Leimuiden (dor:Leimuiden)
+  '6':
+    attributes: {}
+    relationships:
+      - Anacostia_River (dor:Anacostia_River) --doo:mouthPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Maryland_Route_185 (dor:Maryland_Route_185) --doo:routeStart--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Maryland_Route_185 (dor:Maryland_Route_185) --doo:routeJunction--> Chevy_Chase,_Maryland (<http://dbpedia.org/resource/Chevy_Chase,_Maryland>)
+  '7':
+    attributes:
+      Reading,_Pennsylvania: (Aug precipitation days^='11.2')
+    relationships:
+      - Antietam_Creek_(Schuylkill_River_tributary) (<http://dbpedia.org/resource/Antietam_Creek_(Schuylkill_River_tributary)>) --doo:mouthPlace--> Reading,_Pennsylvania (<http://dbpedia.org/resource/Reading,_Pennsylvania>)
+      - Pennsylvania_Route_183 (dor:Pennsylvania_Route_183) --doo:routeStart--> Reading,_Pennsylvania (<http://dbpedia.org/resource/Reading,_Pennsylvania>)
+      - Pennsylvania_Route_183 (dor:Pennsylvania_Route_183) --doo:routeJunction--> Strausstown,_Pennsylvania (<http://dbpedia.org/resource/Strausstown,_Pennsylvania>)
+  '8':
+    attributes: {}
+    relationships:
+      - Apple_River_(Illinois) (<http://dbpedia.org/resource/Apple_River_(Illinois)>) --doo:mouthPlace--> Savanna,_Illinois (<http://dbpedia.org/resource/Savanna,_Illinois>)
+      - Illinois_Route_64 (dor:Illinois_Route_64) --doo:routeStart--> Savanna,_Illinois (<http://dbpedia.org/resource/Savanna,_Illinois>)
+      - Illinois_Route_64 (dor:Illinois_Route_64) --doo:routeJunction--> Glendale_Heights,_Illinois (<http://dbpedia.org/resource/Glendale_Heights,_Illinois>)
+  '9':
+    attributes: {}
+    relationships:
+      - Apple_River_(Illinois) (<http://dbpedia.org/resource/Apple_River_(Illinois)>) --doo:mouthPlace--> Savanna,_Illinois (<http://dbpedia.org/resource/Savanna,_Illinois>)
+      - Illinois_Route_64 (dor:Illinois_Route_64) --doo:routeStart--> Savanna,_Illinois (<http://dbpedia.org/resource/Savanna,_Illinois>)
+      - Illinois_Route_64 (dor:Illinois_Route_64) --doo:routeJunction--> Lindenwood,_Illinois (<http://dbpedia.org/resource/Lindenwood,_Illinois>)
+  '10':
+    attributes: {}
+    relationships:
+      - Apple_River_(Illinois) (<http://dbpedia.org/resource/Apple_River_(Illinois)>) --doo:mouthPlace--> Savanna,_Illinois (<http://dbpedia.org/resource/Savanna,_Illinois>)
+      - U.S._Route_52_in_Illinois (dor:U.S._Route_52_in_Illinois) --doo:routeStart--> Savanna,_Illinois (<http://dbpedia.org/resource/Savanna,_Illinois>)
+      - U.S._Route_52_in_Illinois (dor:U.S._Route_52_in_Illinois) --doo:routeJunction--> Andres,_Illinois (<http://dbpedia.org/resource/Andres,_Illinois>)
+attributes:
+  city: --Apr high C^ (dop:aprHighC)--> int | --Aug precipitation days^ (dop:augPrecipitationDays)--> int
+  road: --country^ (dop:country)--> langString
+  Location: --width^ (dop:width)--> perCent | --frazioni^ (doo:frazioni)--> Resource | --logo^ (dop:logo)--> langString | --coordinates^ (dop:coordinates)--> int | --arc-gapB^ (dop:arcGapb)--> double | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --url^ (dop:url)--> Resource
+subgraph_id: 456
+relationships:
+  - Location --doo:mouthPlace--> city
+  - road --doo:routeStart--> city
+  - road --doo:routeJunction--> village

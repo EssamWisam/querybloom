@@ -1,0 +1,110 @@
+types:
+  album: doo:Album
+  person: doo:Person
+  single: doo:Single
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doow: http://dbpedia.org/ontology/Work/
+instances:
+  '1':
+    attributes:
+      Adam_Ant: (IMDB id^='0001914')
+      Digging_the_Grave: (runtime (m)^='3.066666666666667')
+    relationships:
+      - ¡Ciaütistico! (<http://dbpedia.org/resource/¡Ciaütistico!>) --dop:genre--> Experimental_rock (dor:Experimental_rock)
+      - ¡Ciaütistico! (<http://dbpedia.org/resource/¡Ciaütistico!>) --dop:lyrics--> Adam_Ant (dor:Adam_Ant)
+      - Billy_Gould (dor:Billy_Gould) --dop:genre--> Experimental_rock (dor:Experimental_rock)
+      - Digging_the_Grave (dor:Digging_the_Grave) --dop:composer--> Billy_Gould (dor:Billy_Gould)
+  '2':
+    attributes:
+      Marco_Pirroni: (before^='http://dbpedia.org/resource/Cha_Burns')
+      Digging_the_Grave: (runtime (m)^='3.066666666666667')
+    relationships:
+      - ¡Ciaütistico! (<http://dbpedia.org/resource/¡Ciaütistico!>) --dop:genre--> Experimental_rock (dor:Experimental_rock)
+      - ¡Ciaütistico! (<http://dbpedia.org/resource/¡Ciaütistico!>) --dop:lyrics--> Marco_Pirroni (dor:Marco_Pirroni)
+      - Billy_Gould (dor:Billy_Gould) --dop:genre--> Experimental_rock (dor:Experimental_rock)
+      - Digging_the_Grave (dor:Digging_the_Grave) --dop:composer--> Billy_Gould (dor:Billy_Gould)
+  '3':
+    attributes:
+      Adam_Ant: (IMDB id^='0001914')
+      Falling_to_Pieces: (runtime (m)^='5.25', genre^='')
+    relationships:
+      - ¡Ciaütistico! (<http://dbpedia.org/resource/¡Ciaütistico!>) --dop:genre--> Experimental_rock (dor:Experimental_rock)
+      - ¡Ciaütistico! (<http://dbpedia.org/resource/¡Ciaütistico!>) --dop:lyrics--> Adam_Ant (dor:Adam_Ant)
+      - Billy_Gould (dor:Billy_Gould) --dop:genre--> Experimental_rock (dor:Experimental_rock)
+      - Falling_to_Pieces (dor:Falling_to_Pieces) --dop:composer--> Billy_Gould (dor:Billy_Gould)
+  '4':
+    attributes:
+      Turn_It_into_Love: (runtime (m)^='3.6166666666666667', genre^='')
+    relationships:
+      - '''91_Oginome_Collection (<http://dbpedia.org/resource/''91_Oginome_Collection>) --dop:genre--> Dance-pop (dor:Dance-pop)'
+      - '''91_Oginome_Collection (<http://dbpedia.org/resource/''91_Oginome_Collection>) --dop:lyrics--> James_Christian (dor:James_Christian)'
+      - Matt_Aitken (dor:Matt_Aitken) --dop:genre--> Dance-pop (dor:Dance-pop)
+      - Turn_It_into_Love (dor:Turn_It_into_Love) --dop:composer--> Matt_Aitken (dor:Matt_Aitken)
+  '5':
+    attributes:
+      Turn_It_into_Love: (runtime (m)^='3.6166666666666667', genre^='')
+    relationships:
+      - '''91_Oginome_Collection (<http://dbpedia.org/resource/''91_Oginome_Collection>) --dop:genre--> Dance-pop (dor:Dance-pop)'
+      - '''91_Oginome_Collection (<http://dbpedia.org/resource/''91_Oginome_Collection>) --dop:lyrics--> Masao_Urino (dor:Masao_Urino)'
+      - Matt_Aitken (dor:Matt_Aitken) --dop:genre--> Dance-pop (dor:Dance-pop)
+      - Turn_It_into_Love (dor:Turn_It_into_Love) --dop:composer--> Matt_Aitken (dor:Matt_Aitken)
+  '6':
+    attributes:
+      Turn_It_into_Love: (runtime (m)^='3.6166666666666667', genre^='')
+    relationships:
+      - '''91_Oginome_Collection (<http://dbpedia.org/resource/''91_Oginome_Collection>) --dop:genre--> Dance-pop (dor:Dance-pop)'
+      - '''91_Oginome_Collection (<http://dbpedia.org/resource/''91_Oginome_Collection>) --dop:lyrics--> Yōsui_Inoue (<http://dbpedia.org/resource/Yōsui_Inoue>)'
+      - Matt_Aitken (dor:Matt_Aitken) --dop:genre--> Dance-pop (dor:Dance-pop)
+      - Turn_It_into_Love (dor:Turn_It_into_Love) --dop:composer--> Matt_Aitken (dor:Matt_Aitken)
+  '7':
+    attributes:
+      CeeLo_Green: (alias^='Thomas Burton')
+      Do_Something_(Macy_Gray_song): (runtime (m)^='4.983333333333333')
+    relationships:
+      - '&10 (<http://dbpedia.org/resource/&10>) --dop:genre--> Contemporary_R&B (<http://dbpedia.org/resource/Contemporary_R&B>)'
+      - '&10 (<http://dbpedia.org/resource/&10>) --dop:lyrics--> Kang_Min-kyung (dor:Kang_Min-kyung)'
+      - CeeLo_Green (dor:CeeLo_Green) --dop:genre--> Contemporary_R&B (<http://dbpedia.org/resource/Contemporary_R&B>)
+      - Do_Something_(Macy_Gray_song) (<http://dbpedia.org/resource/Do_Something_(Macy_Gray_song)>) --dop:composer--> CeeLo_Green (dor:CeeLo_Green)
+  '8':
+    attributes:
+      CeeLo_Green: (alias^='Thomas Burton')
+      Do_Something_(Macy_Gray_song): (runtime (m)^='4.983333333333333')
+    relationships:
+      - '&10 (<http://dbpedia.org/resource/&10>) --dop:genre--> Contemporary_R&B (<http://dbpedia.org/resource/Contemporary_R&B>)'
+      - '&10 (<http://dbpedia.org/resource/&10>) --dop:lyrics--> Lee_Hae-ri (dor:Lee_Hae-ri)'
+      - CeeLo_Green (dor:CeeLo_Green) --dop:genre--> Contemporary_R&B (<http://dbpedia.org/resource/Contemporary_R&B>)
+      - Do_Something_(Macy_Gray_song) (<http://dbpedia.org/resource/Do_Something_(Macy_Gray_song)>) --dop:composer--> CeeLo_Green (dor:CeeLo_Green)
+  '9':
+    attributes:
+      CeeLo_Green: (alias^='Thomas Burton')
+      Do_Something_(Macy_Gray_song): (runtime (m)^='4.983333333333333')
+    relationships:
+      - '&10 (<http://dbpedia.org/resource/&10>) --dop:genre--> Soul_music (dor:Soul_music)'
+      - '&10 (<http://dbpedia.org/resource/&10>) --dop:lyrics--> Kang_Min-kyung (dor:Kang_Min-kyung)'
+      - CeeLo_Green (dor:CeeLo_Green) --dop:genre--> Soul_music (dor:Soul_music)
+      - Do_Something_(Macy_Gray_song) (<http://dbpedia.org/resource/Do_Something_(Macy_Gray_song)>) --dop:composer--> CeeLo_Green (dor:CeeLo_Green)
+  '10':
+    attributes:
+      Wishing_on_the_Same_Star: (lyrics^='', runtime (m)^='3.8', genre^='http://dbpedia.org/resource/J-pop')
+    relationships:
+      - '%22O%22-Jung.Ban.Hap. (<http://dbpedia.org/resource/%22O%22-Jung.Ban.Hap.>) --dop:genre--> Contemporary_R&B (<http://dbpedia.org/resource/Contemporary_R&B>)'
+      - '%22O%22-Jung.Ban.Hap. (<http://dbpedia.org/resource/%22O%22-Jung.Ban.Hap.>) --dop:lyrics--> Kim_Junsu (dor:Kim_Junsu)'
+      - Diane_Warren (dor:Diane_Warren) --dop:genre--> Contemporary_R&B (<http://dbpedia.org/resource/Contemporary_R&B>)
+      - Wishing_on_the_Same_Star (dor:Wishing_on_the_Same_Star) --dop:composer--> Diane_Warren (dor:Diane_Warren)
+attributes:
+  album: --writer^ (dop:writer)--> langString
+  person: --honorific suffix^ (dop:honorificSuffix)--> Resource | --before^ (dop:before)--> Resource | --IMDB id^ (doo:imdbId)--> string | --audio^ (dop:audio)--> langString | --width^ (dop:width)--> perCent
+  single: --lyrics^ (dop:lyrics)--> langString | --runtime (m)^ (doow:runtime)--> minute | --genre^ (dop:genre)--> langString | --reason^ (dop:reason)--> langString
+  musical artist: --group^ (dop:group)--> langString | --alias^ (dop:alias)--> langString
+subgraph_id: 361
+relationships:
+  - album --dop:genre--> music genre
+  - album --dop:lyrics--> person
+  - musical artist --dop:genre--> music genre
+  - single --dop:composer--> musical artist

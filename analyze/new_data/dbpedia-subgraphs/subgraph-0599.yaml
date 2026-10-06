@@ -1,0 +1,93 @@
+types:
+  person: doo:Person
+  company: doo:Company
+  automobile engine: doo:AutomobileEngine
+  motorsport season: doo:MotorsportSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Chrysler: (area served^='Worldwide', founding year^='1925', parent company^='http://dbpedia.org/resource/Stellantis')
+    relationships:
+      - Chrysler_Hemi_engine (dor:Chrysler_Hemi_engine) --dop:manufacturer--> Chrysler (dor:Chrysler)
+      - Walter_Chrysler (dor:Walter_Chrysler) --doo:board--> Chrysler (dor:Chrysler)
+      - 1975_24_Hours_of_Le_Mans__DNQ__11 (dor:1975_24_Hours_of_Le_Mans__DNQ__11) --doo:manufacturer--> Chrysler_Hemi_engine (dor:Chrysler_Hemi_engine)
+  '2':
+    attributes:
+      Ferrari: (area served^='Worldwide', founding year^='1939')
+    relationships:
+      - Ferrari_F154_engine (dor:Ferrari_F154_engine) --dop:manufacturer--> Ferrari (dor:Ferrari)
+      - Benedetto_Vigna (dor:Benedetto_Vigna) --doo:board--> Ferrari (dor:Ferrari)
+      - 2021_European_Le_Mans_Series__AF_Corse__1 (dor:2021_European_Le_Mans_Series__AF_Corse__1) --doo:manufacturer--> Ferrari_F154_engine (dor:Ferrari_F154_engine)
+  '3':
+    attributes:
+      Ferrari: (area served^='Worldwide', founding year^='1939')
+      Piero_Ferrari: (before^='http://dbpedia.org/resource/Bruno_Senna')
+    relationships:
+      - Ferrari_F154_engine (dor:Ferrari_F154_engine) --dop:manufacturer--> Ferrari (dor:Ferrari)
+      - Piero_Ferrari (dor:Piero_Ferrari) --doo:board--> Ferrari (dor:Ferrari)
+      - 2021_European_Le_Mans_Series__AF_Corse__1 (dor:2021_European_Le_Mans_Series__AF_Corse__1) --doo:manufacturer--> Ferrari_F154_engine (dor:Ferrari_F154_engine)
+  '4':
+    attributes:
+      Ferrari: (area served^='Worldwide', founding year^='1939')
+    relationships:
+      - Ferrari_F154_engine (dor:Ferrari_F154_engine) --dop:manufacturer--> Ferrari (dor:Ferrari)
+      - Benedetto_Vigna (dor:Benedetto_Vigna) --doo:board--> Ferrari (dor:Ferrari)
+      - 2021_European_Le_Mans_Series__AF_Corse__2 (dor:2021_European_Le_Mans_Series__AF_Corse__2) --doo:manufacturer--> Ferrari_F154_engine (dor:Ferrari_F154_engine)
+  '5':
+    attributes:
+      Alfred_Ford: (image size^='200')
+      Ford_Motor_Company: (area served^='Worldwide', founding year^='1903')
+    relationships:
+      - Ford_Cyclone_engine (dor:Ford_Cyclone_engine) --dop:manufacturer--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - Alfred_Ford (dor:Alfred_Ford) --doo:board--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - 2022_24H_GT_Series__JOTA_Motorsport__1 (dor:2022_24H_GT_Series__JOTA_Motorsport__1) --doo:manufacturer--> Ford_Cyclone_engine (dor:Ford_Cyclone_engine)
+  '6':
+    attributes:
+      Alfred_Ford: (image size^='200')
+      Ford_Motor_Company: (area served^='Worldwide', founding year^='1903')
+    relationships:
+      - Ford_Cyclone_engine (dor:Ford_Cyclone_engine) --dop:manufacturer--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - Alfred_Ford (dor:Alfred_Ford) --doo:board--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - 2022_24H_GT_Series__JOTA_Motorsport__2 (dor:2022_24H_GT_Series__JOTA_Motorsport__2) --doo:manufacturer--> Ford_Cyclone_engine (dor:Ford_Cyclone_engine)
+  '7':
+    attributes:
+      Alfred_Ford: (image size^='200')
+      Ford_Motor_Company: (area served^='Worldwide', founding year^='1903')
+    relationships:
+      - Ford_EcoBoost_engine (dor:Ford_EcoBoost_engine) --dop:manufacturer--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - Alfred_Ford (dor:Alfred_Ford) --doo:board--> Ford_Motor_Company (dor:Ford_Motor_Company)
+      - 2022_Australian_Formula_3_Championship__DiBiase_Motorsport__1 (dor:2022_Australian_Formula_3_Championship__DiBiase_Motorsport__1) --doo:manufacturer--> Ford_EcoBoost_engine (dor:Ford_EcoBoost_engine)
+  '8':
+    attributes:
+      Honda: (area served^='Worldwide', founding year^='1948')
+    relationships:
+      - Honda_K_engine (dor:Honda_K_engine) --dop:manufacturer--> Honda (dor:Honda)
+      - Takahiro_Hachigo (dor:Takahiro_Hachigo) --doo:board--> Honda (dor:Honda)
+      - 2017_V_de_V_Proto_Endurance_Challenge__CD_Sport__1 (dor:2017_V_de_V_Proto_Endurance_Challenge__CD_Sport__1) --doo:manufacturer--> Honda_K_engine (dor:Honda_K_engine)
+  '9':
+    attributes:
+      Honda: (area served^='Worldwide', founding year^='1948')
+    relationships:
+      - Honda_K_engine (dor:Honda_K_engine) --dop:manufacturer--> Honda (dor:Honda)
+      - Takanobu_Ito (dor:Takanobu_Ito) --doo:board--> Honda (dor:Honda)
+      - 2017_V_de_V_Proto_Endurance_Challenge__CD_Sport__1 (dor:2017_V_de_V_Proto_Endurance_Challenge__CD_Sport__1) --doo:manufacturer--> Honda_K_engine (dor:Honda_K_engine)
+  '10':
+    attributes:
+      Honda: (area served^='Worldwide', founding year^='1948')
+    relationships:
+      - Honda_K_engine (dor:Honda_K_engine) --dop:manufacturer--> Honda (dor:Honda)
+      - Takahiro_Hachigo (dor:Takahiro_Hachigo) --doo:board--> Honda (dor:Honda)
+      - 2017_V_de_V_Proto_Endurance_Challenge__CD_Sport__2 (dor:2017_V_de_V_Proto_Endurance_Challenge__CD_Sport__2) --doo:manufacturer--> Honda_K_engine (dor:Honda_K_engine)
+attributes:
+  person: --before^ (dop:before)--> Resource | --2a^ (dop:2a)--> langString | --state of origin^ (doo:stateOfOrigin)--> Resource | --image size^ (dop:imageSize)--> int | --honorific suffix^ (dop:honorificSuffix)--> Resource | --display^ (dop:display)--> langString
+  company: --area served^ (dop:areaServed)--> Resource | --founding year^ (doo:foundingYear)--> gYear | --parent company^ (doo:parentCompany)--> Resource
+subgraph_id: 599
+relationships:
+  - automobile engine --dop:manufacturer--> company
+  - person --doo:board--> company
+  - motorsport season --doo:manufacturer--> automobile engine

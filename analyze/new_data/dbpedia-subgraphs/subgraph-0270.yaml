@@ -1,0 +1,119 @@
+types:
+  cleric: doo:Cleric
+  diocese: doo:Diocese
+  archbishop: doo:Archbishop
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._G._Edwards_(bishop): (diocese^='http://dbpedia.org/resource/Diocese_of_St_Asaph', death date^='1937-07-22', death date^='1937-07-22', successor^='http://dbpedia.org/resource/Charles_Green_(bishop)')
+    relationships:
+      - A._G._Edwards_(bishop) (<http://dbpedia.org/resource/A._G._Edwards_(bishop)>) --doo:diocese--> Diocese_of_St_Asaph (dor:Diocese_of_St_Asaph)
+      - A._G._Edwards_(bishop) (<http://dbpedia.org/resource/A._G._Edwards_(bishop)>) --doo:diocese--> Diocese_of_St_Asaph (dor:Diocese_of_St_Asaph)
+  '2':
+    attributes:
+      Alwyn_Rice_Jones: (death date^='2007-08-12', death date^='2007-08-12', successor^='http://dbpedia.org/resource/Rowan_Williams', diocese^='http://dbpedia.org/resource/Diocese_of_St_Asaph', religion^='http://dbpedia.org/resource/Anglicanism')
+      A._G._Edwards_(bishop): (diocese^='http://dbpedia.org/resource/Diocese_of_St_Asaph')
+    relationships:
+      - A._G._Edwards_(bishop) (<http://dbpedia.org/resource/A._G._Edwards_(bishop)>) --doo:diocese--> Diocese_of_St_Asaph (dor:Diocese_of_St_Asaph)
+      - Alwyn_Rice_Jones (dor:Alwyn_Rice_Jones) --doo:diocese--> Diocese_of_St_Asaph (dor:Diocese_of_St_Asaph)
+  '3':
+    attributes:
+      Gregory_Cameron: (birth name^='Gregory Kenneth Cameron', diocese^='http://dbpedia.org/resource/Diocese_of_St_Asaph')
+      A._G._Edwards_(bishop): (diocese^='http://dbpedia.org/resource/Diocese_of_St_Asaph')
+    relationships:
+      - A._G._Edwards_(bishop) (<http://dbpedia.org/resource/A._G._Edwards_(bishop)>) --doo:diocese--> Diocese_of_St_Asaph (dor:Diocese_of_St_Asaph)
+      - Gregory_Cameron (dor:Gregory_Cameron) --doo:diocese--> Diocese_of_St_Asaph (dor:Diocese_of_St_Asaph)
+  '4':
+    attributes:
+      Abraham_Angermannus: (diocese^='http://dbpedia.org/resource/Archdiocese_of_Uppsala', death date^='December 1607', successor^='http://dbpedia.org/resource/Nicolaus_Olai_Bothniensis')
+    relationships:
+      - Abraham_Angermannus (dor:Abraham_Angermannus) --doo:diocese--> Archdiocese_of_Uppsala (dor:Archdiocese_of_Uppsala)
+      - Abraham_Angermannus (dor:Abraham_Angermannus) --doo:diocese--> Archdiocese_of_Uppsala (dor:Archdiocese_of_Uppsala)
+  '5':
+    attributes:
+      Abraham_Angermannus: (diocese^='http://dbpedia.org/resource/Archdiocese_of_Uppsala')
+      Andreas_Laurentii_Björnram: (death date^='1591-01-01', death date^='1591-01-01', successor^='http://dbpedia.org/resource/Abraham_Angermannus', diocese^='http://dbpedia.org/resource/Archdiocese_of_Uppsala')
+    relationships:
+      - Abraham_Angermannus (dor:Abraham_Angermannus) --doo:diocese--> Archdiocese_of_Uppsala (dor:Archdiocese_of_Uppsala)
+      - Andreas_Laurentii_Björnram (<http://dbpedia.org/resource/Andreas_Laurentii_Björnram>) --doo:diocese--> Archdiocese_of_Uppsala (dor:Archdiocese_of_Uppsala)
+  '6':
+    attributes:
+      Antje_Jackelén: (birth name^='Antje Zöllner', diocese^='http://dbpedia.org/resource/Archdiocese_of_Uppsala', motto^='Gud är större ("God is greater")', religion^='http://dbpedia.org/resource/Lutheran')
+      Abraham_Angermannus: (diocese^='http://dbpedia.org/resource/Archdiocese_of_Uppsala')
+    relationships:
+      - Abraham_Angermannus (dor:Abraham_Angermannus) --doo:diocese--> Archdiocese_of_Uppsala (dor:Archdiocese_of_Uppsala)
+      - Antje_Jackelén (<http://dbpedia.org/resource/Antje_Jackelén>) --doo:diocese--> Archdiocese_of_Uppsala (dor:Archdiocese_of_Uppsala)
+  '7':
+    attributes:
+      Coptic_Orthodox_Archdiocese_of_Jerusalem: (territory^='http://dbpedia.org/resource/Iraq')
+      Abraham_II_(Coptic_archbishop_of_Jerusalem): (diocese^='http://dbpedia.org/resource/Coptic_Orthodox_Archdiocese_of_Jerusalem', death date^='2015-11-25', death date^='2015-11-25', successor^='http://dbpedia.org/resource/Antonius_(Coptic_archbishop_of_Jerusalem)')
+    relationships:
+      - Abraham_II_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Abraham_II_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+      - Abraham_II_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Abraham_II_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+  '8':
+    attributes:
+      Coptic_Orthodox_Archdiocese_of_Jerusalem: (territory^='http://dbpedia.org/resource/Iraq')
+      Antonius_(Coptic_archbishop_of_Jerusalem): '(birth name^=''Emad Timotheos Sharmokh (Arabic: عماد القمص تيموثاوس شرموخ‎)'', diocese^=''http://dbpedia.org/resource/Coptic_Orthodox_Archdiocese_of_Jerusalem'')'
+      Abraham_II_(Coptic_archbishop_of_Jerusalem): (diocese^='http://dbpedia.org/resource/Coptic_Orthodox_Archdiocese_of_Jerusalem')
+    relationships:
+      - Abraham_II_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Abraham_II_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+      - Antonius_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Antonius_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+  '9':
+    attributes:
+      Coptic_Orthodox_Archdiocese_of_Jerusalem: (territory^='http://dbpedia.org/resource/Iraq')
+      Basil_III_(Coptic_archbishop_of_Jerusalem): (death date^='1935-05-09', death date^='1935-05-09', successor^='http://dbpedia.org/resource/Theophilus_(Coptic_archbishop_of_Jerusalem)', diocese^='http://dbpedia.org/resource/Coptic_Orthodox_Archdiocese_of_Jerusalem')
+      Abraham_II_(Coptic_archbishop_of_Jerusalem): (diocese^='http://dbpedia.org/resource/Coptic_Orthodox_Archdiocese_of_Jerusalem')
+    relationships:
+      - Abraham_II_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Abraham_II_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+      - Basil_III_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Basil_III_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+  '10':
+    attributes:
+      Abraham_Viruthakulangara: (diocese^='http://dbpedia.org/resource/Nagpur', death date^='2018-04-19', death date^='2018-04-19', motto^='DUNIYA KE LEE MASSEH')
+    relationships:
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:diocese--> Roman_Catholic_Archdiocese_of_Nagpur (dor:Roman_Catholic_Archdiocese_of_Nagpur)
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:diocese--> Roman_Catholic_Archdiocese_of_Nagpur (dor:Roman_Catholic_Archdiocese_of_Nagpur)
+qa_result:
+  status: completed
+  cost_usd: 0.273535
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.04947240000000001
+        total_tokens: 4462
+        prompt_tokens: 2206
+        completion_tokens: 2256
+      generate:
+        cost_usd: 0.06639760000000001
+        total_tokens: 6937
+        prompt_tokens: 4343
+        completion_tokens: 2594
+      verify_1:
+        cost_usd: 0.035482
+        total_tokens: 5465
+        prompt_tokens: 4921
+        completion_tokens: 544
+      complexity:
+        cost_usd: 0.12218300000000001
+        total_tokens: 10769
+        prompt_tokens: 5641
+        completion_tokens: 5128
+    total_tokens: 27633
+    prompt_tokens: 17111
+    total_cost_usd: 0.2735350000000001
+    completion_tokens: 10522
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  cleric: --birth name^ (doo:birthName)--> langString | --death date^ (dop:deathDate)--> date | --death date^ (doo:deathDate)--> date | --successor^ (doo:successor)--> Resource | --1p^ (dop:1p)--> int | --2p^ (dop:2p)--> int | --diocese^ (doo:diocese)--> Resource | --motto^ (doo:motto)--> string | --religion^ (doo:religion)--> Resource
+  diocese: --territory^ (doo:territory)--> Resource
+  archbishop: --diocese^ (doo:diocese)--> Resource | --religion^ (doo:religion)--> Resource
+subgraph_id: 270
+relationships:
+  - archbishop --doo:diocese--> diocese
+  - cleric --doo:diocese--> diocese

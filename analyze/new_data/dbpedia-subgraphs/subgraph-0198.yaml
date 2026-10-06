@@ -1,0 +1,106 @@
+types:
+  city: doo:City
+  organisation: doo:Organisation
+  baseball player: doo:BaseballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - A._J._Lockhart (dor:A._J._Lockhart) --doo:deathPlace--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+      - Air_Atlanta (dor:Air_Atlanta) --doo:headquarter--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+  '2':
+    attributes:
+      Alston_&_Bird: (logo^='Alston & Bird LLP logo.svg')
+    relationships:
+      - A._J._Lockhart (dor:A._J._Lockhart) --doo:deathPlace--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+      - Alston_&_Bird (<http://dbpedia.org/resource/Alston_&_Bird>) --doo:headquarter--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+  '3':
+    attributes: {}
+    relationships:
+      - A._J._Lockhart (dor:A._J._Lockhart) --doo:deathPlace--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+      - American_Anglican_Council (dor:American_Anglican_Council) --doo:headquarter--> Atlanta,_Georgia (<http://dbpedia.org/resource/Atlanta,_Georgia>)
+  '4':
+    attributes:
+      Lancaster,_South_Carolina: (Link from a Wikipage to an external page^='http://www.lancastercitysc.com')
+    relationships:
+      - Aaron_Robinson_(baseball) (<http://dbpedia.org/resource/Aaron_Robinson_(baseball)>) --doo:deathPlace--> Lancaster,_South_Carolina (<http://dbpedia.org/resource/Lancaster,_South_Carolina>)
+      - Lancaster_and_Chester_Railroad (dor:Lancaster_and_Chester_Railroad) --doo:headquarter--> Lancaster,_South_Carolina (<http://dbpedia.org/resource/Lancaster,_South_Carolina>)
+  '5':
+    attributes: {}
+    relationships:
+      - Aaron_Ward_(baseball) (<http://dbpedia.org/resource/Aaron_Ward_(baseball)>) --doo:deathPlace--> New_Orleans,_Louisiana (<http://dbpedia.org/resource/New_Orleans,_Louisiana>)
+      - D._H._Holmes (dor:D._H._Holmes) --doo:headquarter--> New_Orleans,_Louisiana (<http://dbpedia.org/resource/New_Orleans,_Louisiana>)
+  '6':
+    attributes:
+      GLO_Airlines: (logo^='File:GLO Airlines Logo.png')
+    relationships:
+      - Aaron_Ward_(baseball) (<http://dbpedia.org/resource/Aaron_Ward_(baseball)>) --doo:deathPlace--> New_Orleans,_Louisiana (<http://dbpedia.org/resource/New_Orleans,_Louisiana>)
+      - GLO_Airlines (dor:GLO_Airlines) --doo:headquarter--> New_Orleans,_Louisiana (<http://dbpedia.org/resource/New_Orleans,_Louisiana>)
+  '7':
+    attributes:
+      Knights_of_Peter_Claver: (affiliations^='Saint Peter Claver Foundation')
+    relationships:
+      - Aaron_Ward_(baseball) (<http://dbpedia.org/resource/Aaron_Ward_(baseball)>) --doo:deathPlace--> New_Orleans,_Louisiana (<http://dbpedia.org/resource/New_Orleans,_Louisiana>)
+      - Knights_of_Peter_Claver (dor:Knights_of_Peter_Claver) --doo:headquarter--> New_Orleans,_Louisiana (<http://dbpedia.org/resource/New_Orleans,_Louisiana>)
+  '8':
+    attributes:
+      Muskogee,_Oklahoma: (Aug precipitation inch^='3.14', Link from a Wikipage to an external page^='http://cityofmuskogee.com/')
+    relationships:
+      - Ab_Wright (dor:Ab_Wright) --doo:deathPlace--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+      - Kansas,_Oklahoma_and_Gulf_Railway (<http://dbpedia.org/resource/Kansas,_Oklahoma_and_Gulf_Railway>) --doo:headquarter--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+  '9':
+    attributes:
+      Muskogee,_Oklahoma: (Aug precipitation inch^='3.14', Link from a Wikipage to an external page^='http://cityofmuskogee.com/')
+    relationships:
+      - Ab_Wright (dor:Ab_Wright) --doo:deathPlace--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+      - Midland_Valley_Railroad (dor:Midland_Valley_Railroad) --doo:headquarter--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+  '10':
+    attributes:
+      Muskogee,_Oklahoma: (Aug precipitation inch^='3.14', Link from a Wikipage to an external page^='http://cityofmuskogee.com/')
+    relationships:
+      - Ab_Wright (dor:Ab_Wright) --doo:deathPlace--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+      - Muskogee_Roads (dor:Muskogee_Roads) --doo:headquarter--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+qa_result:
+  status: completed
+  cost_usd: 0.223045
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0323574
+        total_tokens: 3574
+        prompt_tokens: 2163
+        completion_tokens: 1411
+      generate:
+        cost_usd: 0.05955260000000001
+        total_tokens: 6051
+        prompt_tokens: 3618
+        completion_tokens: 2433
+      verify_1:
+        cost_usd: 0.028767000000000004
+        total_tokens: 4338
+        prompt_tokens: 3866
+        completion_tokens: 472
+      complexity:
+        cost_usd: 0.102368
+        total_tokens: 9146
+        prompt_tokens: 4798
+        completion_tokens: 4348
+    total_tokens: 23109
+    prompt_tokens: 14445
+    total_cost_usd: 0.22304500000000005
+    completion_tokens: 8664
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --Aug precipitation inch^ (dop:augPrecipitationInch)--> double | --Apr low C^ (dop:aprLowC)--> double | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --align^ (dop:align)--> langString | --Aug low C^ (dop:augLowC)--> int
+  organisation: --named after^ (doo:namedAfter)--> Resource | --affiliations^ (dop:affiliations)--> langString | --affiliation^ (doo:affiliation)--> Resource | --colwidth^ (dop:colwidth)--> int | --logo^ (dop:logo)--> langString
+subgraph_id: 198
+relationships:
+  - baseball player --doo:deathPlace--> city
+  - organisation --doo:headquarter--> city

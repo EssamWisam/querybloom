@@ -1,0 +1,137 @@
+types:
+  swimmer: doo:Swimmer
+  sports team: doo:SportsTeam
+  college coach: doo:CollegeCoach
+  basketball league: doo:BasketballLeague
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Pamela_Rai: (birth date^='1966-03-29', club^='Hyack Swim Club')
+      Aaron_Olson: (has abstract^='Aaron Duane Olson (born 11 May 1978) is a Canadian-New Zealand former professional basketball player who played the majority of his career in New Zealand.', birth date^='1978-05-11')
+      Victoria_Vikes: (nickname^='Vikes')
+      National_Basketball_League_(New_Zealand): (participant^='[[#Current teams')
+    relationships:
+      - Pamela_Rai (dor:Pamela_Rai) --dop:collegeteam--> Victoria_Vikes (dor:Victoria_Vikes)
+      - Kathy_Shields (dor:Kathy_Shields) --dop:coachTeam--> Victoria_Vikes (dor:Victoria_Vikes)
+      - Aaron_Olson (dor:Aaron_Olson) --doo:college--> Victoria_Vikes (dor:Victoria_Vikes)
+      - Aaron_Olson (dor:Aaron_Olson) --doo:award--> National_Basketball_League_(New_Zealand) (<http://dbpedia.org/resource/National_Basketball_League_(New_Zealand)>)
+  '2':
+    attributes:
+      Aaron_Olson: (has abstract^='Aaron Duane Olson (born 11 May 1978) is a Canadian-New Zealand former professional basketball player who played the majority of his career in New Zealand.', birth date^='1978-05-11')
+      Victoria_Vikes: (nickname^='Vikes')
+      Richard_Weinberger: (birth date^='1990-06-07', club^='Pacific Coast Swimming')
+      National_Basketball_League_(New_Zealand): (participant^='[[#Current teams')
+    relationships:
+      - Richard_Weinberger (dor:Richard_Weinberger) --dop:collegeteam--> Victoria_Vikes (dor:Victoria_Vikes)
+      - Kathy_Shields (dor:Kathy_Shields) --dop:coachTeam--> Victoria_Vikes (dor:Victoria_Vikes)
+      - Aaron_Olson (dor:Aaron_Olson) --doo:college--> Victoria_Vikes (dor:Victoria_Vikes)
+      - Aaron_Olson (dor:Aaron_Olson) --doo:award--> National_Basketball_League_(New_Zealand) (<http://dbpedia.org/resource/National_Basketball_League_(New_Zealand)>)
+  '3':
+    attributes:
+      Rick_Say: (birth date^='1979-05-18', club^='Pacific Coast Swimming')
+      Aaron_Olson: (has abstract^='Aaron Duane Olson (born 11 May 1978) is a Canadian-New Zealand former professional basketball player who played the majority of his career in New Zealand.', birth date^='1978-05-11')
+      Victoria_Vikes: (nickname^='Vikes')
+      National_Basketball_League_(New_Zealand): (participant^='[[#Current teams')
+    relationships:
+      - Rick_Say (dor:Rick_Say) --dop:collegeteam--> Victoria_Vikes (dor:Victoria_Vikes)
+      - Kathy_Shields (dor:Kathy_Shields) --dop:coachTeam--> Victoria_Vikes (dor:Victoria_Vikes)
+      - Aaron_Olson (dor:Aaron_Olson) --doo:college--> Victoria_Vikes (dor:Victoria_Vikes)
+      - Aaron_Olson (dor:Aaron_Olson) --doo:award--> National_Basketball_League_(New_Zealand) (<http://dbpedia.org/resource/National_Basketball_League_(New_Zealand)>)
+  '4':
+    attributes:
+      Damian_Matacz: (has abstract^='Damian Richard Matacz (born 28 February 1979) is an Australian former professional basketball player who is most well known for his 18 seasons with the Joondalup Wolves in the State Basketball League ...', birth date^='1979-02-28')
+      Burt_Gustafson: (birth date^='1925-11-30')
+      Arnoldo_Herrera: (birth date^='1996-03-07')
+      Super_League_(Ireland): (currentSeason='2022–23 Irish Super League season', participant^='14')
+    relationships:
+      - Arnoldo_Herrera (dor:Arnoldo_Herrera) --dop:collegeteam--> Northern_Michigan_Wildcats (dor:Northern_Michigan_Wildcats)
+      - Burt_Gustafson (dor:Burt_Gustafson) --dop:coachTeam--> Northern_Michigan_Wildcats (dor:Northern_Michigan_Wildcats)
+      - Damian_Matacz (dor:Damian_Matacz) --doo:college--> Northern_Michigan_Wildcats (dor:Northern_Michigan_Wildcats)
+      - Damian_Matacz (dor:Damian_Matacz) --doo:award--> Super_League_(Ireland) (<http://dbpedia.org/resource/Super_League_(Ireland)>)
+  '5':
+    attributes:
+      Damian_Matacz: (has abstract^='Damian Richard Matacz (born 28 February 1979) is an Australian former professional basketball player who is most well known for his 18 seasons with the Joondalup Wolves in the State Basketball League ...', birth date^='1979-02-28')
+      Arnoldo_Herrera: (birth date^='1996-03-07')
+      Super_League_(Ireland): (currentSeason='2022–23 Irish Super League season', participant^='14')
+    relationships:
+      - Arnoldo_Herrera (dor:Arnoldo_Herrera) --dop:collegeteam--> Northern_Michigan_Wildcats (dor:Northern_Michigan_Wildcats)
+      - Jim_Driscoll_(American_football) (<http://dbpedia.org/resource/Jim_Driscoll_(American_football)>) --dop:coachTeam--> Northern_Michigan_Wildcats (dor:Northern_Michigan_Wildcats)
+      - Damian_Matacz (dor:Damian_Matacz) --doo:college--> Northern_Michigan_Wildcats (dor:Northern_Michigan_Wildcats)
+      - Damian_Matacz (dor:Damian_Matacz) --doo:award--> Super_League_(Ireland) (<http://dbpedia.org/resource/Super_League_(Ireland)>)
+  '6':
+    attributes:
+      Don_Coryell: (birth date^='1924-10-17')
+      Annamay_Pierse: (birth date^='1983-12-05', club^='Pacific Dolphins')
+      Dominic_Gilbert: (has abstract^='Dominic Gilbert (born 28 September 1996) is an Australian-Croatian professional basketball player currently playing for Heroes Den Bosch in the Dutch Basketball League. Standing 1.98 metres (6.5 ft) t...', birth date^='1996-09-28')
+      UBC_Thunderbirds: (nickname^='Thunderbirds')
+      Krešimir_Ćosić_Cup: (participant^='(both 8 titles)')
+    relationships:
+      - Annamay_Pierse (dor:Annamay_Pierse) --dop:collegeteam--> UBC_Thunderbirds (dor:UBC_Thunderbirds)
+      - Don_Coryell (dor:Don_Coryell) --dop:coachTeam--> UBC_Thunderbirds (dor:UBC_Thunderbirds)
+      - Dominic_Gilbert (dor:Dominic_Gilbert) --doo:college--> UBC_Thunderbirds (dor:UBC_Thunderbirds)
+      - Dominic_Gilbert (dor:Dominic_Gilbert) --doo:award--> Krešimir_Ćosić_Cup (<http://dbpedia.org/resource/Krešimir_Ćosić_Cup>)
+  '7':
+    attributes:
+      Bill_Mahony: (birth date^='1949-09-16', club^='Pacific Dolphins')
+      Don_Coryell: (birth date^='1924-10-17')
+      Dominic_Gilbert: (has abstract^='Dominic Gilbert (born 28 September 1996) is an Australian-Croatian professional basketball player currently playing for Heroes Den Bosch in the Dutch Basketball League. Standing 1.98 metres (6.5 ft) t...', birth date^='1996-09-28')
+      UBC_Thunderbirds: (nickname^='Thunderbirds')
+      Krešimir_Ćosić_Cup: (participant^='(both 8 titles)')
+    relationships:
+      - Bill_Mahony (dor:Bill_Mahony) --dop:collegeteam--> UBC_Thunderbirds (dor:UBC_Thunderbirds)
+      - Don_Coryell (dor:Don_Coryell) --dop:coachTeam--> UBC_Thunderbirds (dor:UBC_Thunderbirds)
+      - Dominic_Gilbert (dor:Dominic_Gilbert) --doo:college--> UBC_Thunderbirds (dor:UBC_Thunderbirds)
+      - Dominic_Gilbert (dor:Dominic_Gilbert) --doo:award--> Krešimir_Ćosić_Cup (<http://dbpedia.org/resource/Krešimir_Ćosić_Cup>)
+  '8':
+    attributes:
+      Don_Coryell: (birth date^='1924-10-17')
+      Brent_Hayden: (birth date^='1983-10-21', club^='http://dbpedia.org/resource/Vancouver_Pacific_Swim_Club')
+      Dominic_Gilbert: (has abstract^='Dominic Gilbert (born 28 September 1996) is an Australian-Croatian professional basketball player currently playing for Heroes Den Bosch in the Dutch Basketball League. Standing 1.98 metres (6.5 ft) t...', birth date^='1996-09-28')
+      UBC_Thunderbirds: (nickname^='Thunderbirds')
+      Krešimir_Ćosić_Cup: (participant^='(both 8 titles)')
+    relationships:
+      - Brent_Hayden (dor:Brent_Hayden) --dop:collegeteam--> UBC_Thunderbirds (dor:UBC_Thunderbirds)
+      - Don_Coryell (dor:Don_Coryell) --dop:coachTeam--> UBC_Thunderbirds (dor:UBC_Thunderbirds)
+      - Dominic_Gilbert (dor:Dominic_Gilbert) --doo:college--> UBC_Thunderbirds (dor:UBC_Thunderbirds)
+      - Dominic_Gilbert (dor:Dominic_Gilbert) --doo:award--> Krešimir_Ćosić_Cup (<http://dbpedia.org/resource/Krešimir_Ćosić_Cup>)
+  '9':
+    attributes:
+      Doug_Plumb: (has abstract^='Doug Plumb (born August 5, 1988) is a Canadian former professional basketball player. As of 2019, he is the head coach for the London Lightning of the National Basketball League of Canada. He finished...', birth date^='1988-08-05')
+      Cheyenne_Rova: (birth date^='1995-04-23')
+      Minnesota_State_Mavericks: (nickname^='Mavericks')
+      National_Basketball_League_of_Canada: (participant^='(1 on hiatus)')
+    relationships:
+      - Cheyenne_Rova (dor:Cheyenne_Rova) --dop:collegeteam--> Minnesota_State_Mavericks (dor:Minnesota_State_Mavericks)
+      - Aaron_Roussell (dor:Aaron_Roussell) --dop:coachTeam--> Minnesota_State_Mavericks (dor:Minnesota_State_Mavericks)
+      - Doug_Plumb (dor:Doug_Plumb) --doo:college--> Minnesota_State_Mavericks (dor:Minnesota_State_Mavericks)
+      - Doug_Plumb (dor:Doug_Plumb) --doo:award--> National_Basketball_League_of_Canada (dor:National_Basketball_League_of_Canada)
+  '10':
+    attributes:
+      Doug_Plumb: (has abstract^='Doug Plumb (born August 5, 1988) is a Canadian former professional basketball player. As of 2019, he is the head coach for the London Lightning of the National Basketball League of Canada. He finished...', birth date^='1988-08-05')
+      Carl_Pelini: (birth date^='1965-07-15')
+      Cheyenne_Rova: (birth date^='1995-04-23')
+      Minnesota_State_Mavericks: (nickname^='Mavericks')
+      National_Basketball_League_of_Canada: (participant^='(1 on hiatus)')
+    relationships:
+      - Cheyenne_Rova (dor:Cheyenne_Rova) --dop:collegeteam--> Minnesota_State_Mavericks (dor:Minnesota_State_Mavericks)
+      - Carl_Pelini (dor:Carl_Pelini) --dop:coachTeam--> Minnesota_State_Mavericks (dor:Minnesota_State_Mavericks)
+      - Doug_Plumb (dor:Doug_Plumb) --doo:college--> Minnesota_State_Mavericks (dor:Minnesota_State_Mavericks)
+      - Doug_Plumb (dor:Doug_Plumb) --doo:award--> National_Basketball_League_of_Canada (dor:National_Basketball_League_of_Canada)
+attributes:
+  swimmer: --birth date^ (dop:birthDate)--> date | --club^ (dop:club)--> langString
+  sports team: --founding year^ (doo:foundingYear)--> gYear | --nickname^ (dop:nickname)--> langString
+  college coach: --birth date^ (doo:birthDate)--> date
+  basketball league: --currentSeason (doo:currentSeason)--> string | --participant^ (doo:participant)--> string
+  basketball player: --has abstract^ (doo:abstract)--> langString | --birth date^ (doo:birthDate)--> date
+subgraph_id: 493
+relationships:
+  - swimmer --dop:collegeteam--> sports team
+  - college coach --dop:coachTeam--> sports team
+  - basketball player --doo:college--> sports team
+  - basketball player --doo:award--> basketball league

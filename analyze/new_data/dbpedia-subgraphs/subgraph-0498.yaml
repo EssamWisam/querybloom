@@ -1,0 +1,87 @@
+types:
+  venue: doo:Venue
+  person: doo:Person
+  Location: doo:Location
+  railway line: doo:RailwayLine
+  rugby player: doo:RugbyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Tehran: (type^='http://dbpedia.org/resource/Capital_city')
+      Aadel_Kardooni: '(has abstract^=''Aadel Kardooni (Persian: عادل کردونی‎, born 17 May 1968 in Tehran) is a British-Iranian former professional rugby union player.He is the first Iranian rugby union player to ever play professionally.'')'
+      Azadi_Basketball_Hall: (owner^='http://dbpedia.org/resource/Ministry_of_Youth_Affairs_and_Sports_(Iran)')
+    relationships:
+      - Railway_electrification_in_Iran (dor:Railway_electrification_in_Iran) --doo:routeStart--> Tehran (dor:Tehran)
+      - Aadel_Kardooni (dor:Aadel_Kardooni) --dop:birthPlace--> Tehran (dor:Tehran)
+      - Abdolbaghi_Darvish (dor:Abdolbaghi_Darvish) --doo:restingPlace--> Tehran (dor:Tehran)
+      - Azadi_Basketball_Hall (dor:Azadi_Basketball_Hall) --doo:operator--> Tehran (dor:Tehran)
+  '2':
+    attributes:
+      Tehran: (type^='http://dbpedia.org/resource/Capital_city')
+      Aadel_Kardooni: '(has abstract^=''Aadel Kardooni (Persian: عادل کردونی‎, born 17 May 1968 in Tehran) is a British-Iranian former professional rugby union player.He is the first Iranian rugby union player to ever play professionally.'')'
+      Azadi_Indoor_Stadium: (owner^='http://dbpedia.org/resource/Ministry_of_Sport_and_Youth_(Iran)')
+    relationships:
+      - Railway_electrification_in_Iran (dor:Railway_electrification_in_Iran) --doo:routeStart--> Tehran (dor:Tehran)
+      - Aadel_Kardooni (dor:Aadel_Kardooni) --dop:birthPlace--> Tehran (dor:Tehran)
+      - Abdolbaghi_Darvish (dor:Abdolbaghi_Darvish) --doo:restingPlace--> Tehran (dor:Tehran)
+      - Azadi_Indoor_Stadium (dor:Azadi_Indoor_Stadium) --doo:operator--> Tehran (dor:Tehran)
+  '3':
+    attributes:
+      Tehran: (type^='http://dbpedia.org/resource/Capital_city')
+      Aadel_Kardooni: '(has abstract^=''Aadel Kardooni (Persian: عادل کردونی‎, born 17 May 1968 in Tehran) is a British-Iranian former professional rugby union player.He is the first Iranian rugby union player to ever play professionally.'')'
+      Azadi_Volleyball_Hall: (owner^='http://dbpedia.org/resource/Ministry_of_Youth_Affairs_and_Sports_(Iran)')
+    relationships:
+      - Railway_electrification_in_Iran (dor:Railway_electrification_in_Iran) --doo:routeStart--> Tehran (dor:Tehran)
+      - Aadel_Kardooni (dor:Aadel_Kardooni) --dop:birthPlace--> Tehran (dor:Tehran)
+      - Abdolbaghi_Darvish (dor:Abdolbaghi_Darvish) --doo:restingPlace--> Tehran (dor:Tehran)
+      - Azadi_Volleyball_Hall (dor:Azadi_Volleyball_Hall) --doo:operator--> Tehran (dor:Tehran)
+  '4':
+    attributes:
+      Roland_Blase: (has abstract^='Roland Roy Blase (May 3, 1887 – March 16, 1979) was an American rugby union player who played at lock for the United States men''s national team in its first capped match against New Zealand in 1913.')
+      Sea_Foam_Stadium: (owner^='http://dbpedia.org/resource/Concordia_University,_Saint_Paul')
+      Addison_G._Foster: (death date^='1917-01-16')
+      Saint_Paul,_Minnesota: (type^='http://dbpedia.org/resource/List_of_capitals_in_the_United_States')
+    relationships:
+      - Altoona_Subdivision (dor:Altoona_Subdivision) --doo:routeStart--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Roland_Blase (dor:Roland_Blase) --dop:birthPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Addison_G._Foster (dor:Addison_G._Foster) --doo:restingPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Sea_Foam_Stadium (dor:Sea_Foam_Stadium) --doo:operator--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+  '5':
+    attributes:
+      Roland_Blase: (has abstract^='Roland Roy Blase (May 3, 1887 – March 16, 1979) was an American rugby union player who played at lock for the United States men''s national team in its first capped match against New Zealand in 1913.')
+      Sea_Foam_Stadium: (owner^='http://dbpedia.org/resource/Concordia_University,_Saint_Paul')
+      Addison_G._Foster: (death date^='1917-01-16')
+      Saint_Paul,_Minnesota: (type^='http://dbpedia.org/resource/List_of_capitals_in_the_United_States')
+    relationships:
+      - River_Subdivision_(Canadian_Pacific_Railway) (<http://dbpedia.org/resource/River_Subdivision_(Canadian_Pacific_Railway)>) --doo:routeStart--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Roland_Blase (dor:Roland_Blase) --dop:birthPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Addison_G._Foster (dor:Addison_G._Foster) --doo:restingPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Sea_Foam_Stadium (dor:Sea_Foam_Stadium) --doo:operator--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+  '6':
+    attributes:
+      Roland_Blase: (has abstract^='Roland Roy Blase (May 3, 1887 – March 16, 1979) was an American rugby union player who played at lock for the United States men''s national team in its first capped match against New Zealand in 1913.')
+      Carl_Van_Dyke: (death date^='1919-05-20')
+      Sea_Foam_Stadium: (owner^='http://dbpedia.org/resource/Concordia_University,_Saint_Paul')
+      Saint_Paul,_Minnesota: (type^='http://dbpedia.org/resource/List_of_capitals_in_the_United_States')
+    relationships:
+      - Altoona_Subdivision (dor:Altoona_Subdivision) --doo:routeStart--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Roland_Blase (dor:Roland_Blase) --dop:birthPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Carl_Van_Dyke (dor:Carl_Van_Dyke) --doo:restingPlace--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+      - Sea_Foam_Stadium (dor:Sea_Foam_Stadium) --doo:operator--> Saint_Paul,_Minnesota (<http://dbpedia.org/resource/Saint_Paul,_Minnesota>)
+attributes:
+  venue: --number of suites^ (doo:numberOfSuites)--> int | --owner^ (doo:owner)--> Resource
+  person: --death date^ (dop:deathDate)--> int | --notable works^ (dop:notableWorks)--> Resource
+  Location: --colwidth^ (dop:colwidth)--> int | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --designated other1 name^ (dop:designatedOther1Name)--> langString | --mountain range^ (doo:mountainRange)--> Resource | --Aug rain days^ (dop:augRainDays)--> double | --type^ (doo:type)--> Resource
+  railway line: --logo^ (dop:logo)--> langString
+  rugby player: --currentclub^ (dop:currentclub)--> langString | --has abstract^ (doo:abstract)--> langString
+subgraph_id: 498
+relationships:
+  - railway line --doo:routeStart--> Location
+  - rugby player --dop:birthPlace--> Location
+  - person --doo:restingPlace--> Location
+  - venue --doo:operator--> Location

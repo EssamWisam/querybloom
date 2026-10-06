@@ -1,0 +1,95 @@
+types:
+  Location: doo:Location
+  scientist: doo:Scientist
+  university: doo:University
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      University_of_Maiduguri: (motto^='')
+    relationships:
+      - University_of_Maiduguri (dor:University_of_Maiduguri) --doo:affiliation--> Academic_Staff_Union_of_Universities (dor:Academic_Staff_Union_of_Universities)
+      - Academic_Staff_Union_of_Universities (dor:Academic_Staff_Union_of_Universities) --doo:location--> Abuja (dor:Abuja)
+      - Danladi_Umar (dor:Danladi_Umar) --dop:almaMater--> University_of_Maiduguri (dor:University_of_Maiduguri)
+  '2':
+    attributes:
+      Anna_University: (motto^='')
+    relationships:
+      - Anna_University (dor:Anna_University) --doo:affiliation--> All_India_Council_for_Technical_Education (dor:All_India_Council_for_Technical_Education)
+      - All_India_Council_for_Technical_Education (dor:All_India_Council_for_Technical_Education) --doo:location--> Bhopal (dor:Bhopal)
+      - Ajayan_Vinu (dor:Ajayan_Vinu) --dop:almaMater--> Anna_University (dor:Anna_University)
+  '3':
+    attributes:
+      Anna_University: (motto^='')
+    relationships:
+      - Anna_University (dor:Anna_University) --doo:affiliation--> All_India_Council_for_Technical_Education (dor:All_India_Council_for_Technical_Education)
+      - All_India_Council_for_Technical_Education (dor:All_India_Council_for_Technical_Education) --doo:location--> Chandigarh (dor:Chandigarh)
+      - Ajayan_Vinu (dor:Ajayan_Vinu) --dop:almaMater--> Anna_University (dor:Anna_University)
+  '4':
+    attributes:
+      Anna_University: (motto^='')
+    relationships:
+      - Anna_University (dor:Anna_University) --doo:affiliation--> All_India_Council_for_Technical_Education (dor:All_India_Council_for_Technical_Education)
+      - All_India_Council_for_Technical_Education (dor:All_India_Council_for_Technical_Education) --doo:location--> Chennai (dor:Chennai)
+      - Ajayan_Vinu (dor:Ajayan_Vinu) --dop:almaMater--> Anna_University (dor:Anna_University)
+  '5':
+    attributes:
+      A._E._Muthunayagam: (birth name^='Abraham .E. Muthunayagam')
+      University_of_Kerala: (motto^='Wisdom manifests itself in action')
+    relationships:
+      - University_of_Kerala (dor:University_of_Kerala) --doo:affiliation--> Association_of_Indian_Universities (dor:Association_of_Indian_Universities)
+      - Association_of_Indian_Universities (dor:Association_of_Indian_Universities) --doo:location--> India (dor:India)
+      - A._E._Muthunayagam (dor:A._E._Muthunayagam) --dop:almaMater--> University_of_Kerala (dor:University_of_Kerala)
+  '6':
+    attributes:
+      A._E._Muthunayagam: (birth name^='Abraham .E. Muthunayagam')
+      University_of_Madras: (motto^='"Learning Promotes Natural Talent"')
+    relationships:
+      - University_of_Madras (dor:University_of_Madras) --doo:affiliation--> Association_of_Indian_Universities (dor:Association_of_Indian_Universities)
+      - Association_of_Indian_Universities (dor:Association_of_Indian_Universities) --doo:location--> India (dor:India)
+      - A._E._Muthunayagam (dor:A._E._Muthunayagam) --dop:almaMater--> University_of_Madras (dor:University_of_Madras)
+  '7':
+    attributes:
+      University_of_Madras: (motto^='"Learning Promotes Natural Talent"')
+    relationships:
+      - University_of_Madras (dor:University_of_Madras) --doo:affiliation--> Association_of_Indian_Universities (dor:Association_of_Indian_Universities)
+      - Association_of_Indian_Universities (dor:Association_of_Indian_Universities) --doo:location--> India (dor:India)
+      - A._P._Balachandran (dor:A._P._Balachandran) --dop:almaMater--> University_of_Madras (dor:University_of_Madras)
+  '8':
+    attributes:
+      Aladdin_Allahverdiyev: (birth name^='Allahverdiyev Ələddin Məmmədhüseyn oğlu')
+      Moscow_State_University: (motto^='')
+    relationships:
+      - Moscow_State_University (dor:Moscow_State_University) --doo:affiliation--> Association_of_Professional_Schools_of_International_Affairs (dor:Association_of_Professional_Schools_of_International_Affairs)
+      - Association_of_Professional_Schools_of_International_Affairs (dor:Association_of_Professional_Schools_of_International_Affairs) --doo:location--> College_Park,_Maryland (<http://dbpedia.org/resource/College_Park,_Maryland>)
+      - Aladdin_Allahverdiyev (dor:Aladdin_Allahverdiyev) --dop:almaMater--> Moscow_State_University (dor:Moscow_State_University)
+  '9':
+    attributes:
+      Albert_Shiryaev: (birth name^='Albert Nikolaevich Shiryaev')
+      Moscow_State_University: (motto^='')
+    relationships:
+      - Moscow_State_University (dor:Moscow_State_University) --doo:affiliation--> Association_of_Professional_Schools_of_International_Affairs (dor:Association_of_Professional_Schools_of_International_Affairs)
+      - Association_of_Professional_Schools_of_International_Affairs (dor:Association_of_Professional_Schools_of_International_Affairs) --doo:location--> College_Park,_Maryland (<http://dbpedia.org/resource/College_Park,_Maryland>)
+      - Albert_Shiryaev (dor:Albert_Shiryaev) --dop:almaMater--> Moscow_State_University (dor:Moscow_State_University)
+  '10':
+    attributes:
+      Moscow_State_University: (motto^='')
+    relationships:
+      - Moscow_State_University (dor:Moscow_State_University) --doo:affiliation--> Association_of_Professional_Schools_of_International_Affairs (dor:Association_of_Professional_Schools_of_International_Affairs)
+      - Association_of_Professional_Schools_of_International_Affairs (dor:Association_of_Professional_Schools_of_International_Affairs) --doo:location--> College_Park,_Maryland (<http://dbpedia.org/resource/College_Park,_Maryland>)
+      - Alec_Rasizade (dor:Alec_Rasizade) --dop:almaMater--> Moscow_State_University (dor:Moscow_State_University)
+attributes:
+  Location: --Apr high F^ (dop:aprHighF)--> double | --Aug precipitation inch^ (dop:augPrecipitationInch)--> int | --1y^ (dop:1y)--> int | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --coordinates^ (dop:coordinates)--> langString
+  scientist: --birth name^ (doo:birthName)--> langString
+  university: --direction^ (dop:direction)--> langString | --motto^ (doo:motto)--> string
+  organisation: --1a^ (dop:1a)--> langString
+subgraph_id: 741
+relationships:
+  - university --doo:affiliation--> organisation
+  - organisation --doo:location--> Location
+  - scientist --dop:almaMater--> university

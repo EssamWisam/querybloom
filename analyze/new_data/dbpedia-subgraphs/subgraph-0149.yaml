@@ -1,0 +1,84 @@
+types:
+  artist: doo:Artist
+  settlement: doo:Settlement
+  radio station: doo:RadioStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      KYW_(AM): (class^='A', broadcast network^='http://dbpedia.org/resource/Associated_Press')
+      Philadelphia: (motto^='"Philadelphia maneto" ("Let brotherly love endure" or "... continue")')
+    relationships:
+      - KYW_(AM) (<http://dbpedia.org/resource/KYW_(AM)>) --dop:city--> Philadelphia (dor:Philadelphia)
+      - '!PAUS3 (<http://dbpedia.org/resource/!PAUS3>) --doo:birthPlace--> Philadelphia (dor:Philadelphia)'
+  '2':
+    attributes:
+      WADV: (class^='D')
+      Pennsylvania: (motto^='Virtue, Liberty and Independence')
+    relationships:
+      - WADV (dor:WADV) --dop:city--> Pennsylvania (dor:Pennsylvania)
+      - '!PAUS3 (<http://dbpedia.org/resource/!PAUS3>) --doo:birthPlace--> Pennsylvania (dor:Pennsylvania)'
+  '3':
+    attributes:
+      WAEB_(AM): (class^='B', broadcast network^='http://dbpedia.org/resource/IHeartRadio')
+      Pennsylvania: (motto^='Virtue, Liberty and Independence')
+    relationships:
+      - WAEB_(AM) (<http://dbpedia.org/resource/WAEB_(AM)>) --dop:city--> Pennsylvania (dor:Pennsylvania)
+      - '!PAUS3 (<http://dbpedia.org/resource/!PAUS3>) --doo:birthPlace--> Pennsylvania (dor:Pennsylvania)'
+  '4':
+    attributes:
+      New_Orleans: (Apr sun^='251.9')
+    relationships:
+      - WHIV-LP (dor:WHIV-LP) --dop:city--> New_Orleans (dor:New_Orleans)
+      - '%22Bassy%22_Bob_Brockmann (<http://dbpedia.org/resource/%22Bassy%22_Bob_Brockmann>) --doo:birthPlace--> New_Orleans (dor:New_Orleans)'
+  '5':
+    attributes:
+      WNOE-FM: (class^='0.0', broadcast network^='http://dbpedia.org/resource/Premiere_Networks')
+      New_Orleans: (Apr sun^='251.9')
+    relationships:
+      - WNOE-FM (dor:WNOE-FM) --dop:city--> New_Orleans (dor:New_Orleans)
+      - '%22Bassy%22_Bob_Brockmann (<http://dbpedia.org/resource/%22Bassy%22_Bob_Brockmann>) --doo:birthPlace--> New_Orleans (dor:New_Orleans)'
+  '6':
+    attributes:
+      WODT: (class^='B', broadcast network^='http://dbpedia.org/resource/Black_Information_Network')
+      New_Orleans: (Apr sun^='251.9')
+    relationships:
+      - WODT (dor:WODT) --dop:city--> New_Orleans (dor:New_Orleans)
+      - '%22Bassy%22_Bob_Brockmann (<http://dbpedia.org/resource/%22Bassy%22_Bob_Brockmann>) --doo:birthPlace--> New_Orleans (dor:New_Orleans)'
+  '7':
+    attributes:
+      KWAM: (class^='B')
+    relationships:
+      - KWAM (dor:KWAM) --dop:city--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)
+      - '%22Frantic%22_Fay_Thomas (<http://dbpedia.org/resource/%22Frantic%22_Fay_Thomas>) --doo:birthPlace--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)'
+  '8':
+    attributes:
+      Memphis_Grizzlies_Radio_Network: (class^='Regional Satellite-delivered sports radio network')
+    relationships:
+      - Memphis_Grizzlies_Radio_Network (dor:Memphis_Grizzlies_Radio_Network) --dop:city--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)
+      - '%22Frantic%22_Fay_Thomas (<http://dbpedia.org/resource/%22Frantic%22_Fay_Thomas>) --doo:birthPlace--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)'
+  '9':
+    attributes:
+      WBBP: (class^='D')
+    relationships:
+      - WBBP (dor:WBBP) --dop:city--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)
+      - '%22Frantic%22_Fay_Thomas (<http://dbpedia.org/resource/%22Frantic%22_Fay_Thomas>) --doo:birthPlace--> Memphis,_Tennessee (<http://dbpedia.org/resource/Memphis,_Tennessee>)'
+  '10':
+    attributes:
+      K256AS: (class^='D')
+      Honolulu: (motto^='Haaheo NoO Honolulu (The Pride of Honolulu)')
+    relationships:
+      - K256AS (dor:K256AS) --dop:city--> Honolulu (dor:Honolulu)
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --doo:birthPlace--> Honolulu (dor:Honolulu)'
+attributes:
+  artist: --awards^ (dop:awards)--> Resource | --direction^ (dop:direction)--> langString | --spouse^ (dop:spouse)--> langString
+  settlement: --founding year^ (doo:foundingYear)--> gYear | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --motto^ (doo:motto)--> string | --Center^ (dop:center)--> langString | --Apr sun^ (dop:aprSun)--> int
+  radio station: --class^ (dop:class)--> langString | --broadcast network^ (doo:broadcastNetwork)--> Resource
+subgraph_id: 149
+relationships:
+  - radio station --dop:city--> settlement
+  - artist --doo:birthPlace--> settlement

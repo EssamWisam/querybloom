@@ -1,0 +1,112 @@
+types:
+  venue: doo:Venue
+  building: doo:Building
+  architect: doo:Architect
+  soccer club: doo:SoccerClub
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      CD_Logroñés: (capacity^='16000', capacity^='16000')
+      Antonio_Lamela: (significant building^='http://dbpedia.org/resource/Adolfo_Suárez_Madrid–Barajas_Airport')
+      Estadio_Las_Gaunas: (capacity^='16000')
+      Santiago_Bernabéu_Stadium: (former name^='Estadio Real Madrid Club de Fútbol (1947–1955)')
+    relationships:
+      - Estadio_Las_Gaunas (dor:Estadio_Las_Gaunas) --dop:tenants--> CD_Logroñés (<http://dbpedia.org/resource/CD_Logroñés>)
+      - Estadio_Las_Gaunas (dor:Estadio_Las_Gaunas) --dop:architect--> Antonio_Lamela (dor:Antonio_Lamela)
+      - Antonio_Lamela (dor:Antonio_Lamela) --doo:significantBuilding--> Santiago_Bernabéu_Stadium (<http://dbpedia.org/resource/Santiago_Bernabéu_Stadium>)
+  '2':
+    attributes:
+      CD_Logroñés: (capacity^='16000', capacity^='16000')
+      Antonio_Lamela: (significant building^='http://dbpedia.org/resource/Adolfo_Suárez_Madrid–Barajas_Airport')
+      Torres_de_Colón: (building end date^='1976')
+      Estadio_Las_Gaunas: (capacity^='16000')
+    relationships:
+      - Estadio_Las_Gaunas (dor:Estadio_Las_Gaunas) --dop:tenants--> CD_Logroñés (<http://dbpedia.org/resource/CD_Logroñés>)
+      - Estadio_Las_Gaunas (dor:Estadio_Las_Gaunas) --dop:architect--> Antonio_Lamela (dor:Antonio_Lamela)
+      - Antonio_Lamela (dor:Antonio_Lamela) --doo:significantBuilding--> Torres_de_Colón (<http://dbpedia.org/resource/Torres_de_Colón>)
+  '3':
+    attributes:
+      Logroñés_CF: (capacity^='16000', date^='December 2017', capacity^='16000')
+      Antonio_Lamela: (significant building^='http://dbpedia.org/resource/Adolfo_Suárez_Madrid–Barajas_Airport')
+      Estadio_Las_Gaunas: (capacity^='16000')
+      Santiago_Bernabéu_Stadium: (former name^='Estadio Real Madrid Club de Fútbol (1947–1955)')
+    relationships:
+      - Estadio_Las_Gaunas (dor:Estadio_Las_Gaunas) --dop:tenants--> Logroñés_CF (<http://dbpedia.org/resource/Logroñés_CF>)
+      - Estadio_Las_Gaunas (dor:Estadio_Las_Gaunas) --dop:architect--> Antonio_Lamela (dor:Antonio_Lamela)
+      - Antonio_Lamela (dor:Antonio_Lamela) --doo:significantBuilding--> Santiago_Bernabéu_Stadium (<http://dbpedia.org/resource/Santiago_Bernabéu_Stadium>)
+  '4':
+    attributes:
+      Camille_Robida: (significant building^='http://dbpedia.org/resource/Stade_Marcel-Saupin')
+      FC_Nantes_(women): (capacity^='1880', capacity^='1880')
+      Stade_Marcel-Saupin: (former name^='Stade Malakoff (1937–1965)', capacity^='1880')
+    relationships:
+      - Stade_Marcel-Saupin (dor:Stade_Marcel-Saupin) --dop:tenants--> FC_Nantes_(women) (<http://dbpedia.org/resource/FC_Nantes_(women)>)
+      - Stade_Marcel-Saupin (dor:Stade_Marcel-Saupin) --dop:architect--> Camille_Robida (dor:Camille_Robida)
+      - Camille_Robida (dor:Camille_Robida) --doo:significantBuilding--> Stade_Marcel-Saupin (dor:Stade_Marcel-Saupin)
+  '5':
+    attributes:
+      FC_Nantes: (capacity^='35322', capacity^='35322')
+      Camille_Robida: (significant building^='http://dbpedia.org/resource/Stade_Marcel-Saupin')
+      Stade_Marcel-Saupin: (former name^='Stade Malakoff (1937–1965)', capacity^='1880')
+    relationships:
+      - Stade_Marcel-Saupin (dor:Stade_Marcel-Saupin) --dop:tenants--> FC_Nantes (dor:FC_Nantes)
+      - Stade_Marcel-Saupin (dor:Stade_Marcel-Saupin) --dop:architect--> Camille_Robida (dor:Camille_Robida)
+      - Camille_Robida (dor:Camille_Robida) --doo:significantBuilding--> Stade_Marcel-Saupin (dor:Stade_Marcel-Saupin)
+  '6':
+    attributes:
+      Daniel_Libeskind: (significant building^='http://dbpedia.org/resource/Contemporary_Jewish_Museum')
+      Nokia_Arena_(Tampere): (capacity^='13455')
+    relationships:
+      - Nokia_Arena_(Tampere) (<http://dbpedia.org/resource/Nokia_Arena_(Tampere)>) --dop:tenants--> Ilves (dor:Ilves)
+      - Nokia_Arena_(Tampere) (<http://dbpedia.org/resource/Nokia_Arena_(Tampere)>) --dop:architect--> Daniel_Libeskind (dor:Daniel_Libeskind)
+      - Daniel_Libeskind (dor:Daniel_Libeskind) --doo:significantBuilding--> Contemporary_Jewish_Museum (dor:Contemporary_Jewish_Museum)
+  '7':
+    attributes:
+      Daniel_Libeskind: (significant building^='http://dbpedia.org/resource/Contemporary_Jewish_Museum')
+      Nokia_Arena_(Tampere): (capacity^='13455')
+    relationships:
+      - Nokia_Arena_(Tampere) (<http://dbpedia.org/resource/Nokia_Arena_(Tampere)>) --dop:tenants--> Ilves (dor:Ilves)
+      - Nokia_Arena_(Tampere) (<http://dbpedia.org/resource/Nokia_Arena_(Tampere)>) --dop:architect--> Daniel_Libeskind (dor:Daniel_Libeskind)
+      - Daniel_Libeskind (dor:Daniel_Libeskind) --doo:significantBuilding--> Imperial_War_Museum_North (dor:Imperial_War_Museum_North)
+  '8':
+    attributes:
+      Daniel_Libeskind: (significant building^='http://dbpedia.org/resource/Contemporary_Jewish_Museum')
+      Jewish_Museum_Berlin: (type^='http://dbpedia.org/resource/Jewish_museum')
+      Nokia_Arena_(Tampere): (capacity^='13455')
+    relationships:
+      - Nokia_Arena_(Tampere) (<http://dbpedia.org/resource/Nokia_Arena_(Tampere)>) --dop:tenants--> Ilves (dor:Ilves)
+      - Nokia_Arena_(Tampere) (<http://dbpedia.org/resource/Nokia_Arena_(Tampere)>) --dop:architect--> Daniel_Libeskind (dor:Daniel_Libeskind)
+      - Daniel_Libeskind (dor:Daniel_Libeskind) --doo:significantBuilding--> Jewish_Museum_Berlin (dor:Jewish_Museum_Berlin)
+  '9':
+    attributes:
+      Caja_Mágica: (former name^='Centro Olímpico de Tenis', capacity^='1772')
+      Dominique_Perrault: (significant building^='http://dbpedia.org/resource/Berlin')
+      Real_Madrid_Baloncesto: (capacity^='17953', date^='1988-10-23', capacity^='17953')
+    relationships:
+      - Caja_Mágica (<http://dbpedia.org/resource/Caja_Mágica>) --dop:tenants--> Real_Madrid_Baloncesto (dor:Real_Madrid_Baloncesto)
+      - Caja_Mágica (<http://dbpedia.org/resource/Caja_Mágica>) --dop:architect--> Dominique_Perrault (dor:Dominique_Perrault)
+      - Dominique_Perrault (dor:Dominique_Perrault) --doo:significantBuilding--> Caja_Mágica (<http://dbpedia.org/resource/Caja_Mágica>)
+  '10':
+    attributes:
+      Caja_Mágica: (capacity^='1772')
+      Dominique_Perrault: (significant building^='http://dbpedia.org/resource/Berlin')
+      Real_Madrid_Baloncesto: (capacity^='17953', date^='1988-10-23', capacity^='17953')
+    relationships:
+      - Caja_Mágica (<http://dbpedia.org/resource/Caja_Mágica>) --dop:tenants--> Real_Madrid_Baloncesto (dor:Real_Madrid_Baloncesto)
+      - Caja_Mágica (<http://dbpedia.org/resource/Caja_Mágica>) --dop:architect--> Dominique_Perrault (dor:Dominique_Perrault)
+      - Dominique_Perrault (dor:Dominique_Perrault) --doo:significantBuilding--> Palais_de_la_Cour_de_Justice (dor:Palais_de_la_Cour_de_Justice)
+attributes:
+  venue: --capacity^ (dop:capacity)--> int
+  building: --former name^ (doo:formerName)--> langString | --cost ($)^ (doo:cost)--> euro | --building end date^ (doo:buildingEndDate)--> string | --added^ (dop:added)--> date | --type^ (doo:type)--> Resource | --cost ($)^ (doo:cost)--> usDollar | --accessdate^ (dop:accessdate)--> date
+  architect: --significant building^ (doo:significantBuilding)--> Resource
+  soccer club: --capacity^ (dop:capacity)--> int | --d^ (dop:d)--> date | --date^ (dop:date)--> date | --capacity^ (doo:capacity)--> int
+subgraph_id: 634
+relationships:
+  - venue --dop:tenants--> soccer club
+  - venue --dop:architect--> architect
+  - architect --doo:significantBuilding--> building

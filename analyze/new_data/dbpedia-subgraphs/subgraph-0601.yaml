@@ -1,0 +1,128 @@
+types:
+  stadium: doo:Stadium
+  university: doo:University
+  college coach: doo:CollegeCoach
+  basketball team: doo:BasketballTeam
+  basketball league: doo:BasketballLeague
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Brendan_Suhr: (awards^='*CBA Coach of the Year')
+      Aaron_Brooks_(basketball): (height ft^='6', active years start year^='2007')
+      Madison_Square_Garden_(1925): (operator^='http://dbpedia.org/resource/Tex_Rickard')
+    relationships:
+      - Brendan_Suhr (dor:Brendan_Suhr) --dop:coachTeam--> Fairfield_Stags_men's_basketball (<http://dbpedia.org/resource/Fairfield_Stags_men's_basketball>)
+      - Brendan_Suhr (dor:Brendan_Suhr) --dop:coachTeam--> New_York_Knicks (dor:New_York_Knicks)
+      - Madison_Square_Garden_(1925) (<http://dbpedia.org/resource/Madison_Square_Garden_(1925)>) --doo:tenant--> New_York_Knicks (dor:New_York_Knicks)
+      - New_York_Knicks (dor:New_York_Knicks) --doo:league--> Eastern_Conference_(NBA) (<http://dbpedia.org/resource/Eastern_Conference_(NBA)>)
+      - Aaron_Brooks_(basketball) (<http://dbpedia.org/resource/Aaron_Brooks_(basketball)>) --dop:cteam--> New_York_Knicks (dor:New_York_Knicks)
+  '2':
+    attributes:
+      Aaron_Brooks_(basketball): (height ft^='6', active years start year^='2007')
+    relationships:
+      - Jerry_Dunn_(basketball) (<http://dbpedia.org/resource/Jerry_Dunn_(basketball)>) --dop:coachTeam--> Tuskegee_Golden_Tigers_men's_basketball (<http://dbpedia.org/resource/Tuskegee_Golden_Tigers_men's_basketball>)
+      - Jerry_Dunn_(basketball) (<http://dbpedia.org/resource/Jerry_Dunn_(basketball)>) --dop:coachTeam--> New_York_Knicks (dor:New_York_Knicks)
+      - Madison_Square_Garden_(1925) (<http://dbpedia.org/resource/Madison_Square_Garden_(1925)>) --doo:tenant--> New_York_Knicks (dor:New_York_Knicks)
+      - New_York_Knicks (dor:New_York_Knicks) --doo:league--> Eastern_Conference_(NBA) (<http://dbpedia.org/resource/Eastern_Conference_(NBA)>)
+      - Aaron_Brooks_(basketball) (<http://dbpedia.org/resource/Aaron_Brooks_(basketball)>) --dop:cteam--> New_York_Knicks (dor:New_York_Knicks)
+  '3':
+    attributes:
+      Aaron_Brooks_(basketball): (height ft^='6', active years start year^='2007')
+      Madison_Square_Garden_(1925): (operator^='http://dbpedia.org/resource/Tex_Rickard')
+    relationships:
+      - Jerry_Dunn_(basketball) (<http://dbpedia.org/resource/Jerry_Dunn_(basketball)>) --dop:coachTeam--> West_Virginia_Mountaineers_men's_basketball (<http://dbpedia.org/resource/West_Virginia_Mountaineers_men's_basketball>)
+      - Jerry_Dunn_(basketball) (<http://dbpedia.org/resource/Jerry_Dunn_(basketball)>) --dop:coachTeam--> New_York_Knicks (dor:New_York_Knicks)
+      - Madison_Square_Garden_(1925) (<http://dbpedia.org/resource/Madison_Square_Garden_(1925)>) --doo:tenant--> New_York_Knicks (dor:New_York_Knicks)
+      - New_York_Knicks (dor:New_York_Knicks) --doo:league--> Eastern_Conference_(NBA) (<http://dbpedia.org/resource/Eastern_Conference_(NBA)>)
+      - Aaron_Brooks_(basketball) (<http://dbpedia.org/resource/Aaron_Brooks_(basketball)>) --dop:cteam--> New_York_Knicks (dor:New_York_Knicks)
+  '4':
+    attributes:
+      Chase_Center: (building start date^='January 17, 2017')
+      Aaron_Miles_(basketball): (height ft^='6', active years start year^='2005')
+    relationships:
+      - Bob_Staak (dor:Bob_Staak) --dop:coachTeam--> Penn_Quakers_men's_basketball (<http://dbpedia.org/resource/Penn_Quakers_men's_basketball>)
+      - Bob_Staak (dor:Bob_Staak) --dop:coachTeam--> Golden_State_Warriors (dor:Golden_State_Warriors)
+      - Chase_Center (dor:Chase_Center) --doo:tenant--> Golden_State_Warriors (dor:Golden_State_Warriors)
+      - Golden_State_Warriors (dor:Golden_State_Warriors) --doo:league--> Western_Conference_(NBA) (<http://dbpedia.org/resource/Western_Conference_(NBA)>)
+      - Aaron_Miles_(basketball) (<http://dbpedia.org/resource/Aaron_Miles_(basketball)>) --dop:cteam--> Golden_State_Warriors (dor:Golden_State_Warriors)
+  '5':
+    attributes:
+      Chase_Center: (building start date^='January 17, 2017')
+      Aaron_Miles_(basketball): (height ft^='6', active years start year^='2005')
+    relationships:
+      - Bob_Staak (dor:Bob_Staak) --dop:coachTeam--> Wake_Forest_Demon_Deacons_men's_basketball (<http://dbpedia.org/resource/Wake_Forest_Demon_Deacons_men's_basketball>)
+      - Bob_Staak (dor:Bob_Staak) --dop:coachTeam--> Golden_State_Warriors (dor:Golden_State_Warriors)
+      - Chase_Center (dor:Chase_Center) --doo:tenant--> Golden_State_Warriors (dor:Golden_State_Warriors)
+      - Golden_State_Warriors (dor:Golden_State_Warriors) --doo:league--> Western_Conference_(NBA) (<http://dbpedia.org/resource/Western_Conference_(NBA)>)
+      - Aaron_Miles_(basketball) (<http://dbpedia.org/resource/Aaron_Miles_(basketball)>) --dop:cteam--> Golden_State_Warriors (dor:Golden_State_Warriors)
+  '6':
+    attributes:
+      Chase_Center: (building start date^='January 17, 2017')
+      Aaron_Miles_(basketball): (height ft^='6', active years start year^='2005')
+    relationships:
+      - Bob_Staak (dor:Bob_Staak) --dop:coachTeam--> William_&_Mary_Tribe_men's_basketball (<http://dbpedia.org/resource/William_&_Mary_Tribe_men's_basketball>)
+      - Bob_Staak (dor:Bob_Staak) --dop:coachTeam--> Golden_State_Warriors (dor:Golden_State_Warriors)
+      - Chase_Center (dor:Chase_Center) --doo:tenant--> Golden_State_Warriors (dor:Golden_State_Warriors)
+      - Golden_State_Warriors (dor:Golden_State_Warriors) --doo:league--> Western_Conference_(NBA) (<http://dbpedia.org/resource/Western_Conference_(NBA)>)
+      - Aaron_Miles_(basketball) (<http://dbpedia.org/resource/Aaron_Miles_(basketball)>) --dop:cteam--> Golden_State_Warriors (dor:Golden_State_Warriors)
+  '7':
+    attributes:
+      Adam_Forde: (active years start year^='2003')
+      Perth_Arena: (operator^='http://dbpedia.org/resource/AEG_Ogden', building start date^='June 2007')
+      Murray_Arnold: (awards^='2')
+      Birmingham–Southern_College: (image size^='150', country^='United States')
+    relationships:
+      - Murray_Arnold (dor:Murray_Arnold) --dop:coachTeam--> Birmingham–Southern_College (<http://dbpedia.org/resource/Birmingham–Southern_College>)
+      - Murray_Arnold (dor:Murray_Arnold) --dop:coachTeam--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Perth_Arena (dor:Perth_Arena) --doo:tenant--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Perth_Wildcats (dor:Perth_Wildcats) --doo:league--> National_Basketball_League_(Australia) (<http://dbpedia.org/resource/National_Basketball_League_(Australia)>)
+      - Adam_Forde (dor:Adam_Forde) --dop:cteam--> Perth_Wildcats (dor:Perth_Wildcats)
+  '8':
+    attributes:
+      Adam_Forde: (active years start year^='2003')
+      Perth_Arena: (operator^='http://dbpedia.org/resource/AEG_Ogden', building start date^='June 2007')
+      Murray_Arnold: (awards^='2')
+    relationships:
+      - Murray_Arnold (dor:Murray_Arnold) --dop:coachTeam--> Chattanooga_Mocs_basketball (dor:Chattanooga_Mocs_basketball)
+      - Murray_Arnold (dor:Murray_Arnold) --dop:coachTeam--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Perth_Arena (dor:Perth_Arena) --doo:tenant--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Perth_Wildcats (dor:Perth_Wildcats) --doo:league--> National_Basketball_League_(Australia) (<http://dbpedia.org/resource/National_Basketball_League_(Australia)>)
+      - Adam_Forde (dor:Adam_Forde) --dop:cteam--> Perth_Wildcats (dor:Perth_Wildcats)
+  '9':
+    attributes:
+      Adam_Forde: (active years start year^='2003')
+      Perth_Arena: (operator^='http://dbpedia.org/resource/AEG_Ogden', building start date^='June 2007')
+      Murray_Arnold: (awards^='2')
+    relationships:
+      - Murray_Arnold (dor:Murray_Arnold) --dop:coachTeam--> Mississippi_State_Bulldogs_men's_basketball (<http://dbpedia.org/resource/Mississippi_State_Bulldogs_men's_basketball>)
+      - Murray_Arnold (dor:Murray_Arnold) --dop:coachTeam--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Perth_Arena (dor:Perth_Arena) --doo:tenant--> Perth_Wildcats (dor:Perth_Wildcats)
+      - Perth_Wildcats (dor:Perth_Wildcats) --doo:league--> National_Basketball_League_(Australia) (<http://dbpedia.org/resource/National_Basketball_League_(Australia)>)
+      - Adam_Forde (dor:Adam_Forde) --dop:cteam--> Perth_Wildcats (dor:Perth_Wildcats)
+  '10':
+    attributes:
+      Gail_Goestenkors: (awards^='7')
+    relationships:
+      - Gail_Goestenkors (dor:Gail_Goestenkors) --dop:coachTeam--> Central_Michigan_Chippewas_women's_basketball (<http://dbpedia.org/resource/Central_Michigan_Chippewas_women's_basketball>)
+      - Gail_Goestenkors (dor:Gail_Goestenkors) --dop:coachTeam--> Los_Angeles_Sparks (dor:Los_Angeles_Sparks)
+      - Toyota_Sports_Center (dor:Toyota_Sports_Center) --doo:tenant--> Los_Angeles_Sparks (dor:Los_Angeles_Sparks)
+      - Los_Angeles_Sparks (dor:Los_Angeles_Sparks) --doo:league--> Western_Conference_(WNBA) (<http://dbpedia.org/resource/Western_Conference_(WNBA)>)
+      - Amber_Stocks (dor:Amber_Stocks) --dop:cteam--> Los_Angeles_Sparks (dor:Los_Angeles_Sparks)
+attributes:
+  stadium: --operator^ (doo:operator)--> Resource | --building start date^ (doo:buildingStartDate)--> string
+  university: --dean^ (doo:dean)--> Resource | --image size^ (dop:imageSize)--> int | --country^ (dop:country)--> langString
+  college coach: --current team^ (dop:currentTeam)--> Resource | --current team^ (dop:currentTeam)--> langString | --awards^ (dop:awards)--> langString
+  basketball player: --death date^ (doo:deathDate)--> date | --height ft^ (dop:heightFt)--> int | --active years start year^ (doo:activeYearsStartYear)--> gYear
+subgraph_id: 601
+relationships:
+  - college coach --dop:coachTeam--> university
+  - college coach --dop:coachTeam--> basketball team
+  - stadium --doo:tenant--> basketball team
+  - basketball team --doo:league--> basketball league
+  - basketball player --dop:cteam--> basketball team

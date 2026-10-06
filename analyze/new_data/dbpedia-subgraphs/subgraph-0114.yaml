@@ -1,0 +1,84 @@
+types:
+  Location: doo:Location
+  scientist: doo:Scientist
+  university: doo:University
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Ahmadreza_Rofougaran (dor:Ahmadreza_Rofougaran) --doo:almaMater--> Doctor_of_Philosophy (dor:Doctor_of_Philosophy)
+      - Aleksandar_Popović_(politician) (<http://dbpedia.org/resource/Aleksandar_Popović_(politician)>) --dop:honorificSuffix--> Doctor_of_Philosophy (dor:Doctor_of_Philosophy)
+      - Ahmadreza_Rofougaran (dor:Ahmadreza_Rofougaran) --dop:birthPlace--> Iran (dor:Iran)
+  '2':
+    attributes: {}
+    relationships:
+      - Ahmadreza_Rofougaran (dor:Ahmadreza_Rofougaran) --doo:almaMater--> Doctor_of_Philosophy (dor:Doctor_of_Philosophy)
+      - Aleksandar_Popović_(politician) (<http://dbpedia.org/resource/Aleksandar_Popović_(politician)>) --dop:honorificSuffix--> Doctor_of_Philosophy (dor:Doctor_of_Philosophy)
+      - Ahmadreza_Rofougaran (dor:Ahmadreza_Rofougaran) --dop:birthPlace--> Isfahan (dor:Isfahan)
+  '3':
+    attributes: {}
+    relationships:
+      - Alan_Perlis (dor:Alan_Perlis) --doo:almaMater--> Doctor_of_Philosophy (dor:Doctor_of_Philosophy)
+      - Aleksandar_Popović_(politician) (<http://dbpedia.org/resource/Aleksandar_Popović_(politician)>) --dop:honorificSuffix--> Doctor_of_Philosophy (dor:Doctor_of_Philosophy)
+      - Alan_Perlis (dor:Alan_Perlis) --dop:birthPlace--> United_States (dor:United_States)
+  '4':
+    attributes: {}
+    relationships:
+      - Albert_Spaulding (dor:Albert_Spaulding) --doo:almaMater--> Master_of_Arts (dor:Master_of_Arts)
+      - Aubin-Edmond_Arsenault (dor:Aubin-Edmond_Arsenault) --dop:honorificSuffix--> Master_of_Arts (dor:Master_of_Arts)
+      - Albert_Spaulding (dor:Albert_Spaulding) --dop:birthPlace--> Chouteau_County,_Montana (<http://dbpedia.org/resource/Chouteau_County,_Montana>)
+  '5':
+    attributes:
+      Charles_B._Morrey_Jr.: (image size^='250')
+    relationships:
+      - Charles_B._Morrey_Jr. (<http://dbpedia.org/resource/Charles_B._Morrey_Jr.>) --doo:almaMater--> Master_of_Arts (dor:Master_of_Arts)
+      - Aubin-Edmond_Arsenault (dor:Aubin-Edmond_Arsenault) --dop:honorificSuffix--> Master_of_Arts (dor:Master_of_Arts)
+      - Charles_B._Morrey_Jr. (<http://dbpedia.org/resource/Charles_B._Morrey_Jr.>) --dop:birthPlace--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+  '6':
+    attributes: {}
+    relationships:
+      - Clark_Wissler (dor:Clark_Wissler) --doo:almaMater--> Legum_Doctor (dor:Legum_Doctor)
+      - Aubin-Edmond_Arsenault (dor:Aubin-Edmond_Arsenault) --dop:honorificSuffix--> Legum_Doctor (dor:Legum_Doctor)
+      - Clark_Wissler (dor:Clark_Wissler) --dop:birthPlace--> Cambridge_City,_Indiana (<http://dbpedia.org/resource/Cambridge_City,_Indiana>)
+  '7':
+    attributes: {}
+    relationships:
+      - Abraham_Robinson (dor:Abraham_Robinson) --doo:almaMater--> University_of_London (dor:University_of_London)
+      - Audrey_Eu (dor:Audrey_Eu) --dop:honorificSuffix--> University_of_London (dor:University_of_London)
+      - Abraham_Robinson (dor:Abraham_Robinson) --dop:birthPlace--> German_Empire (dor:German_Empire)
+  '8':
+    attributes:
+      Wałbrzych: (caption align^='center')
+    relationships:
+      - Abraham_Robinson (dor:Abraham_Robinson) --doo:almaMater--> University_of_London (dor:University_of_London)
+      - Audrey_Eu (dor:Audrey_Eu) --dop:honorificSuffix--> University_of_London (dor:University_of_London)
+      - Abraham_Robinson (dor:Abraham_Robinson) --dop:birthPlace--> Wałbrzych (<http://dbpedia.org/resource/Wałbrzych>)
+  '9':
+    attributes:
+      Australia: (caption align^='center')
+    relationships:
+      - Adrien_Albert (dor:Adrien_Albert) --doo:almaMater--> University_of_London (dor:University_of_London)
+      - Audrey_Eu (dor:Audrey_Eu) --dop:honorificSuffix--> University_of_London (dor:University_of_London)
+      - Adrien_Albert (dor:Adrien_Albert) --dop:birthPlace--> Australia (dor:Australia)
+  '10':
+    attributes:
+      Barbara_Oliver_Hagerman: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-incumbent-noun-1')
+    relationships:
+      - Annmarie_Adams (dor:Annmarie_Adams) --doo:almaMater--> Bachelor_of_Arts (dor:Bachelor_of_Arts)
+      - Barbara_Oliver_Hagerman (dor:Barbara_Oliver_Hagerman) --dop:honorificSuffix--> Bachelor_of_Arts (dor:Bachelor_of_Arts)
+      - Annmarie_Adams (dor:Annmarie_Adams) --dop:birthPlace--> London,_Ontario (<http://dbpedia.org/resource/London,_Ontario>)
+attributes:
+  Location: --caption align^ (dop:captionAlign)--> langString | --region^ (doo:region)--> Resource
+  scientist: --image size^ (dop:imageSize)--> int | --quote^ (dop:quote)--> langString
+  office holder: --active years end date^ (doo:activeYearsEndDate)--> date | --cteam^ (dop:cteam)--> langString | --lowest attendance^ (dop:lowestAttendance)--> int | --alt^ (dop:alt)--> langString | --award^ (doo:award)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource
+subgraph_id: 114
+relationships:
+  - scientist --doo:almaMater--> university
+  - office holder --dop:honorificSuffix--> university
+  - scientist --dop:birthPlace--> Location

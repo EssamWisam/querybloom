@@ -1,0 +1,105 @@
+types:
+  university: doo:University
+  philosopher: doo:Philosopher
+  sports team: doo:SportsTeam
+  college coach: doo:CollegeCoach
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Aaron_Roussell: (current team^='http://dbpedia.org/resource/Richmond_Spiders_women''s_basketball')
+      Dean_Zimmerman_(philosopher): (philosophicalSchool^='http://dbpedia.org/resource/Analytical_philosophy', influenced by^='http://dbpedia.org/resource/David_Lewis_(philosopher)')
+      Minnesota_State_University,_Mankato: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2', city^='http://dbpedia.org/resource/Mankato,_Minnesota')
+    relationships:
+      - Aaron_Roussell (dor:Aaron_Roussell) --dop:coachTeam--> Minnesota_State_Mavericks (dor:Minnesota_State_Mavericks)
+      - Minnesota_State_University,_Mankato (<http://dbpedia.org/resource/Minnesota_State_University,_Mankato>) --dop:nickname--> Minnesota_State_Mavericks (dor:Minnesota_State_Mavericks)
+      - Dean_Zimmerman_(philosopher) (<http://dbpedia.org/resource/Dean_Zimmerman_(philosopher)>) --dop:almaMater--> Minnesota_State_University,_Mankato (<http://dbpedia.org/resource/Minnesota_State_University,_Mankato>)
+  '2':
+    attributes:
+      David_Bentley_Hart: (philosophicalSchool^='http://dbpedia.org/resource/Anglicanism')
+      University_of_Virginia: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-monument-noun-2', founder^='http://dbpedia.org/resource/Thomas_Jefferson', city^='http://dbpedia.org/resource/Charlottesville,_Virginia')
+    relationships:
+      - Archie_Hahn (dor:Archie_Hahn) --dop:coachTeam--> Virginia_Cavaliers (dor:Virginia_Cavaliers)
+      - University_of_Virginia (dor:University_of_Virginia) --dop:nickname--> Virginia_Cavaliers (dor:Virginia_Cavaliers)
+      - David_Bentley_Hart (dor:David_Bentley_Hart) --dop:almaMater--> University_of_Virginia (dor:University_of_Virginia)
+  '3':
+    attributes:
+      University_of_Virginia: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-monument-noun-2', founder^='http://dbpedia.org/resource/Thomas_Jefferson', city^='http://dbpedia.org/resource/Charlottesville,_Virginia')
+    relationships:
+      - Archie_Hahn (dor:Archie_Hahn) --dop:coachTeam--> Virginia_Cavaliers (dor:Virginia_Cavaliers)
+      - University_of_Virginia (dor:University_of_Virginia) --dop:nickname--> Virginia_Cavaliers (dor:Virginia_Cavaliers)
+      - Jessica_Pierce (dor:Jessica_Pierce) --dop:almaMater--> University_of_Virginia (dor:University_of_Virginia)
+  '4':
+    attributes:
+      Avital_Ronell: (philosophicalSchool^='http://dbpedia.org/resource/Continental_philosophy', influenced by^='http://dbpedia.org/resource/Carl_Schmitt')
+      Middlebury_College: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2', city^='http://dbpedia.org/resource/Middlebury,_Vermont')
+    relationships:
+      - Bill_Beaney (dor:Bill_Beaney) --dop:coachTeam--> Middlebury_Panthers (dor:Middlebury_Panthers)
+      - Middlebury_College (dor:Middlebury_College) --dop:nickname--> Middlebury_Panthers (dor:Middlebury_Panthers)
+      - Avital_Ronell (dor:Avital_Ronell) --dop:almaMater--> Middlebury_College (dor:Middlebury_College)
+  '5':
+    attributes:
+      Bonnie_Tholl: (current team^='http://dbpedia.org/resource/Michigan_Wolverines_softball')
+      David_Chalmers: (philosophicalSchool^='http://dbpedia.org/resource/Analytic_philosophy', influenced by^='http://dbpedia.org/resource/Daniel_Dennett')
+      Indiana_University_Bloomington: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2', city^='http://dbpedia.org/resource/Bloomington,_Indiana')
+    relationships:
+      - Bonnie_Tholl (dor:Bonnie_Tholl) --dop:coachTeam--> Indiana_Hoosiers (dor:Indiana_Hoosiers)
+      - Indiana_University_Bloomington (dor:Indiana_University_Bloomington) --dop:nickname--> Indiana_Hoosiers (dor:Indiana_Hoosiers)
+      - David_Chalmers (dor:David_Chalmers) --dop:almaMater--> Indiana_University_Bloomington (dor:Indiana_University_Bloomington)
+  '6':
+    attributes:
+      Bonnie_Tholl: (current team^='http://dbpedia.org/resource/Michigan_Wolverines_softball')
+      Indiana_University_Bloomington: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2', city^='http://dbpedia.org/resource/Bloomington,_Indiana')
+    relationships:
+      - Bonnie_Tholl (dor:Bonnie_Tholl) --dop:coachTeam--> Indiana_Hoosiers (dor:Indiana_Hoosiers)
+      - Indiana_University_Bloomington (dor:Indiana_University_Bloomington) --dop:nickname--> Indiana_Hoosiers (dor:Indiana_Hoosiers)
+      - Kenneth_Clatterbaugh (dor:Kenneth_Clatterbaugh) --dop:almaMater--> Indiana_University_Bloomington (dor:Indiana_University_Bloomington)
+  '7':
+    attributes:
+      Bret_Ingalls: (current team^='Michigan Wolverines')
+      Alvin_Plantinga: (philosophicalSchool^='http://dbpedia.org/resource/Analytic_philosophy', influenced by^='http://dbpedia.org/resource/Abraham_Kuyper')
+      University_of_Michigan: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2', city^='http://dbpedia.org/resource/Ann_Arbor,_Michigan')
+    relationships:
+      - Bret_Ingalls (dor:Bret_Ingalls) --dop:coachTeam--> Michigan_Wolverines (dor:Michigan_Wolverines)
+      - University_of_Michigan (dor:University_of_Michigan) --dop:nickname--> Michigan_Wolverines (dor:Michigan_Wolverines)
+      - Alvin_Plantinga (dor:Alvin_Plantinga) --dop:almaMater--> University_of_Michigan (dor:University_of_Michigan)
+  '8':
+    attributes:
+      Bret_Ingalls: (current team^='Michigan Wolverines')
+      University_of_Michigan: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2', city^='http://dbpedia.org/resource/Ann_Arbor,_Michigan')
+    relationships:
+      - Bret_Ingalls (dor:Bret_Ingalls) --dop:coachTeam--> Michigan_Wolverines (dor:Michigan_Wolverines)
+      - University_of_Michigan (dor:University_of_Michigan) --dop:nickname--> Michigan_Wolverines (dor:Michigan_Wolverines)
+      - Amina_Wadud (dor:Amina_Wadud) --dop:almaMater--> University_of_Michigan (dor:University_of_Michigan)
+  '9':
+    attributes:
+      Bret_Ingalls: (current team^='Michigan Wolverines')
+      Anita_L._Allen: (philosophicalSchool^='http://dbpedia.org/resource/Analytic_philosophy', influenced by^='http://dbpedia.org/resource/John_Locke')
+      University_of_Michigan: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2', city^='http://dbpedia.org/resource/Ann_Arbor,_Michigan')
+    relationships:
+      - Bret_Ingalls (dor:Bret_Ingalls) --dop:coachTeam--> Michigan_Wolverines (dor:Michigan_Wolverines)
+      - University_of_Michigan (dor:University_of_Michigan) --dop:nickname--> Michigan_Wolverines (dor:Michigan_Wolverines)
+      - Anita_L._Allen (dor:Anita_L._Allen) --dop:almaMater--> University_of_Michigan (dor:University_of_Michigan)
+  '10':
+    attributes:
+      Carl_Pelini: (current team^='http://dbpedia.org/resource/Cardinal_Mooney_High_School_(Ohio)')
+      Dean_Zimmerman_(philosopher): (philosophicalSchool^='http://dbpedia.org/resource/Analytical_philosophy', influenced by^='http://dbpedia.org/resource/David_Lewis_(philosopher)')
+      Minnesota_State_University,_Mankato: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2', city^='http://dbpedia.org/resource/Mankato,_Minnesota')
+    relationships:
+      - Carl_Pelini (dor:Carl_Pelini) --dop:coachTeam--> Minnesota_State_Mavericks (dor:Minnesota_State_Mavericks)
+      - Minnesota_State_University,_Mankato (<http://dbpedia.org/resource/Minnesota_State_University,_Mankato>) --dop:nickname--> Minnesota_State_Mavericks (dor:Minnesota_State_Mavericks)
+      - Dean_Zimmerman_(philosopher) (<http://dbpedia.org/resource/Dean_Zimmerman_(philosopher)>) --dop:almaMater--> Minnesota_State_University,_Mankato (<http://dbpedia.org/resource/Minnesota_State_University,_Mankato>)
+attributes:
+  university: --wordnet_type (dop:wordnet_type)--> Resource | --founder^ (dop:founder)--> langString | --city^ (dop:city)--> Resource
+  philosopher: --2p^ (dop:2p)--> int | --philosophicalSchool^ (doo:philosophicalSchool)--> Resource | --influenced by^ (doo:influencedBy)--> Resource
+  sports team: --league^ (dop:league)--> langString
+  college coach: --current team^ (dop:currentTeam)--> langString | --cteam^ (dop:cteam)--> Resource
+subgraph_id: 693
+relationships:
+  - college coach --dop:coachTeam--> sports team
+  - university --dop:nickname--> sports team
+  - philosopher --dop:almaMater--> university

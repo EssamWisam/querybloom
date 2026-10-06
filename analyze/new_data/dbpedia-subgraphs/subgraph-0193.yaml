@@ -1,0 +1,85 @@
+types:
+  plant: doo:Plant
+  artist: doo:Artist
+  country: doo:Country
+  scientist: doo:Scientist
+  person function: doo:PersonFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Germany: (capital^='http://dbpedia.org/resource/Berlin')
+      Abrie_Fourie: (birth place^='http://dbpedia.org/resource/Pretoria')
+      Epidendrum_umbelliferum: (binomial authority^='http://dbpedia.org/resource/Johann_Friedrich_Gmelin')
+    relationships:
+      - Johann_Friedrich_Gmelin (dor:Johann_Friedrich_Gmelin) --doo:citizenship--> Germany (dor:Germany)
+      - Abrie_Fourie (dor:Abrie_Fourie) --doo:nationality--> Germany (dor:Germany)
+      - Johann_Friedrich_Gmelin (dor:Johann_Friedrich_Gmelin) --doo:knownFor--> Mineralogy (dor:Mineralogy)
+      - Epidendrum_umbelliferum (dor:Epidendrum_umbelliferum) --doo:binomialAuthority--> Johann_Friedrich_Gmelin (dor:Johann_Friedrich_Gmelin)
+  '2':
+    attributes:
+      Germany: (capital^='http://dbpedia.org/resource/Berlin')
+      Ada_Isensee: (birth place^='Potsdam, Nazi Germany')
+      Epidendrum_umbelliferum: (binomial authority^='http://dbpedia.org/resource/Johann_Friedrich_Gmelin')
+    relationships:
+      - Johann_Friedrich_Gmelin (dor:Johann_Friedrich_Gmelin) --doo:citizenship--> Germany (dor:Germany)
+      - Ada_Isensee (dor:Ada_Isensee) --doo:nationality--> Germany (dor:Germany)
+      - Johann_Friedrich_Gmelin (dor:Johann_Friedrich_Gmelin) --doo:knownFor--> Mineralogy (dor:Mineralogy)
+      - Epidendrum_umbelliferum (dor:Epidendrum_umbelliferum) --doo:binomialAuthority--> Johann_Friedrich_Gmelin (dor:Johann_Friedrich_Gmelin)
+  '3':
+    attributes:
+      Germany: (capital^='http://dbpedia.org/resource/Berlin')
+      Adelaïde_Salles-Wagner: (birth place^='http://dbpedia.org/resource/Dresden')
+      Epidendrum_umbelliferum: (binomial authority^='http://dbpedia.org/resource/Johann_Friedrich_Gmelin')
+    relationships:
+      - Johann_Friedrich_Gmelin (dor:Johann_Friedrich_Gmelin) --doo:citizenship--> Germany (dor:Germany)
+      - Adelaïde_Salles-Wagner (<http://dbpedia.org/resource/Adelaïde_Salles-Wagner>) --doo:nationality--> Germany (dor:Germany)
+      - Johann_Friedrich_Gmelin (dor:Johann_Friedrich_Gmelin) --doo:knownFor--> Mineralogy (dor:Mineralogy)
+      - Epidendrum_umbelliferum (dor:Epidendrum_umbelliferum) --doo:binomialAuthority--> Johann_Friedrich_Gmelin (dor:Johann_Friedrich_Gmelin)
+qa_result:
+  status: completed
+  cost_usd: 0.26696
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.011507400000000001
+        total_tokens: 2446
+        prompt_tokens: 2049
+        completion_tokens: 397
+      generate:
+        cost_usd: 0.08225260000000001
+        total_tokens: 7222
+        prompt_tokens: 3666
+        completion_tokens: 3556
+      verify_1:
+        cost_usd: 0.039977000000000006
+        total_tokens: 4741
+        prompt_tokens: 3656
+        completion_tokens: 1085
+      complexity:
+        cost_usd: 0.133223
+        total_tokens: 10556
+        prompt_tokens: 4621
+        completion_tokens: 5935
+    total_tokens: 24965
+    prompt_tokens: 13992
+    total_cost_usd: 0.26696000000000003
+    completion_tokens: 10973
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  plant: --binomial authority^ (doo:binomialAuthority)--> Resource
+  artist: --award^ (doo:award)--> Resource | --awards^ (dop:awards)--> langString | --birth place^ (dop:birthPlace)--> langString | --notable works^ (dop:notableWorks)--> Resource | --width^ (dop:width)--> int | --reason^ (dop:reason)--> langString
+  country: --capital^ (doo:capital)--> Resource | --Aug low C^ (dop:augLowC)--> double | --Apr high C^ (dop:aprHighC)--> double | --1p^ (dop:1p)--> int | --last^ (dop:last)--> langString
+  person function: --direction^ (dop:direction)--> langString
+subgraph_id: 193
+relationships:
+  - scientist --doo:citizenship--> country
+  - artist --doo:nationality--> country
+  - scientist --doo:knownFor--> person function
+  - plant --doo:binomialAuthority--> scientist

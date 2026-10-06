@@ -1,0 +1,102 @@
+types:
+  writer: doo:Writer
+  swimmer: doo:Swimmer
+  university: doo:University
+  music genre: doo:MusicGenre
+  written work: doo:WrittenWork
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ed_Dee: (genre^='http://dbpedia.org/resource/Crime_fiction')
+    relationships:
+      - Ed_Dee (dor:Ed_Dee) --doo:education--> Arizona_State_University (dor:Arizona_State_University)
+      - Ed_Dee (dor:Ed_Dee) --dop:genre--> Crime_fiction (dor:Crime_fiction)
+      - Alexandru_Coci (dor:Alexandru_Coci) --dop:collegeteam--> Arizona_State_University (dor:Arizona_State_University)
+      - 4.50_from_Paddington (dor:4.50_from_Paddington) --doo:literaryGenre--> Crime_fiction (dor:Crime_fiction)
+  '2':
+    attributes:
+      Ed_Dee: (genre^='http://dbpedia.org/resource/Crime_fiction')
+    relationships:
+      - Ed_Dee (dor:Ed_Dee) --doo:education--> Arizona_State_University (dor:Arizona_State_University)
+      - Ed_Dee (dor:Ed_Dee) --dop:genre--> Crime_fiction (dor:Crime_fiction)
+      - Alexandru_Coci (dor:Alexandru_Coci) --dop:collegeteam--> Arizona_State_University (dor:Arizona_State_University)
+      - A_Bad_Night (dor:A_Bad_Night) --doo:literaryGenre--> Crime_fiction (dor:Crime_fiction)
+  '3':
+    attributes:
+      Ed_Dee: (genre^='http://dbpedia.org/resource/Crime_fiction')
+    relationships:
+      - Ed_Dee (dor:Ed_Dee) --doo:education--> Arizona_State_University (dor:Arizona_State_University)
+      - Ed_Dee (dor:Ed_Dee) --dop:genre--> Crime_fiction (dor:Crime_fiction)
+      - Alexandru_Coci (dor:Alexandru_Coci) --dop:collegeteam--> Arizona_State_University (dor:Arizona_State_University)
+      - A_Capitol_Death (dor:A_Capitol_Death) --doo:literaryGenre--> Crime_fiction (dor:Crime_fiction)
+  '4':
+    attributes:
+      Genese_Davis: (genre^='http://dbpedia.org/resource/Fantasy_literature')
+    relationships:
+      - Genese_Davis (dor:Genese_Davis) --doo:education--> University_of_Texas (dor:University_of_Texas)
+      - Genese_Davis (dor:Genese_Davis) --dop:genre--> Science_fiction (dor:Science_fiction)
+      - Alexi_Spann (dor:Alexi_Spann) --dop:collegeteam--> University_of_Texas (dor:University_of_Texas)
+      - —We_Also_Walk_Dogs (<http://dbpedia.org/resource/—We_Also_Walk_Dogs>) --doo:literaryGenre--> Science_fiction (dor:Science_fiction)
+  '5':
+    attributes:
+      Genese_Davis: (genre^='http://dbpedia.org/resource/Fantasy_literature')
+    relationships:
+      - Genese_Davis (dor:Genese_Davis) --doo:education--> University_of_Texas (dor:University_of_Texas)
+      - Genese_Davis (dor:Genese_Davis) --dop:genre--> Science_fiction (dor:Science_fiction)
+      - Alexi_Spann (dor:Alexi_Spann) --dop:collegeteam--> University_of_Texas (dor:University_of_Texas)
+      - ._._._That_Thou_Art_Mindful_of_Him (<http://dbpedia.org/resource/._._._That_Thou_Art_Mindful_of_Him>) --doo:literaryGenre--> Science_fiction (dor:Science_fiction)
+  '6':
+    attributes:
+      Genese_Davis: (genre^='http://dbpedia.org/resource/Fantasy_literature')
+    relationships:
+      - Genese_Davis (dor:Genese_Davis) --doo:education--> University_of_Texas (dor:University_of_Texas)
+      - Genese_Davis (dor:Genese_Davis) --dop:genre--> Science_fiction (dor:Science_fiction)
+      - Alexi_Spann (dor:Alexi_Spann) --dop:collegeteam--> University_of_Texas (dor:University_of_Texas)
+      - ..._And_Some_Were_Human (<http://dbpedia.org/resource/..._And_Some_Were_Human>) --doo:literaryGenre--> Science_fiction (dor:Science_fiction)
+  '7':
+    attributes:
+      Lee_McIntyre: (genre^='http://dbpedia.org/resource/Crime_fiction')
+    relationships:
+      - Lee_McIntyre (dor:Lee_McIntyre) --doo:education--> University_of_Michigan (dor:University_of_Michigan)
+      - Lee_McIntyre (dor:Lee_McIntyre) --dop:genre--> Non-fiction (dor:Non-fiction)
+      - Ali_DeLoof (dor:Ali_DeLoof) --dop:collegeteam--> University_of_Michigan (dor:University_of_Michigan)
+      - 100_People_Who_Are_Screwing_Up_America (dor:100_People_Who_Are_Screwing_Up_America) --doo:literaryGenre--> Non-fiction (dor:Non-fiction)
+  '8':
+    attributes:
+      Lee_McIntyre: (genre^='http://dbpedia.org/resource/Crime_fiction')
+    relationships:
+      - Lee_McIntyre (dor:Lee_McIntyre) --doo:education--> University_of_Michigan (dor:University_of_Michigan)
+      - Lee_McIntyre (dor:Lee_McIntyre) --dop:genre--> Non-fiction (dor:Non-fiction)
+      - Ali_DeLoof (dor:Ali_DeLoof) --dop:collegeteam--> University_of_Michigan (dor:University_of_Michigan)
+      - 1001_Movies_You_Must_See_Before_You_Die (dor:1001_Movies_You_Must_See_Before_You_Die) --doo:literaryGenre--> Non-fiction (dor:Non-fiction)
+  '9':
+    attributes:
+      Lee_McIntyre: (genre^='http://dbpedia.org/resource/Crime_fiction')
+    relationships:
+      - Lee_McIntyre (dor:Lee_McIntyre) --doo:education--> University_of_Michigan (dor:University_of_Michigan)
+      - Lee_McIntyre (dor:Lee_McIntyre) --dop:genre--> Non-fiction (dor:Non-fiction)
+      - Ali_DeLoof (dor:Ali_DeLoof) --dop:collegeteam--> University_of_Michigan (dor:University_of_Michigan)
+      - 102_Minutes (dor:102_Minutes) --doo:literaryGenre--> Non-fiction (dor:Non-fiction)
+  '10':
+    attributes:
+      Matthew_O'Brien: (genre^='http://dbpedia.org/resource/Creative_nonfiction')
+    relationships:
+      - Matthew_O'Brien (<http://dbpedia.org/resource/Matthew_O'Brien>) --doo:education--> University_of_Nevada_Las_Vegas (dor:University_of_Nevada_Las_Vegas)
+      - Matthew_O'Brien (<http://dbpedia.org/resource/Matthew_O'Brien>) --dop:genre--> Creative_nonfiction (dor:Creative_nonfiction)
+      - Andrew_Livingston (dor:Andrew_Livingston) --dop:collegeteam--> University_of_Nevada_Las_Vegas (dor:University_of_Nevada_Las_Vegas)
+      - A_Death_in_Belmont (dor:A_Death_in_Belmont) --doo:literaryGenre--> Creative_nonfiction (dor:Creative_nonfiction)
+attributes:
+  writer: --active years end year^ (doo:activeYearsEndYear)--> gYear | --genre^ (dop:genre)--> langString | --parents^ (dop:parents)--> langString | --honorific suffix^ (dop:honorificSuffix)--> Resource | --quote^ (dop:quote)--> langString
+  university: --head^ (doo:head)--> Resource | --affiliation^ (dop:affiliation)--> langString | --header^ (dop:header)--> langString | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+  music genre: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --1y^ (dop:1y)--> int | --quote^ (dop:quote)--> langString
+subgraph_id: 712
+relationships:
+  - writer --doo:education--> university
+  - writer --dop:genre--> music genre
+  - swimmer --dop:collegeteam--> university
+  - written work --doo:literaryGenre--> music genre

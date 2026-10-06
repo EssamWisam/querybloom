@@ -1,0 +1,136 @@
+types:
+  cleric: doo:Cleric
+  person: doo:Person
+  architect: doo:Architect
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Flora_Philip: (known for^='First female member of the Edinburgh Mathematical Society', known for^='http://dbpedia.org/resource/Edinburgh_Mathematical_Society')
+      University_of_Edinburgh: (page length (characters) of wiki page^='187820', direction^='horizontal', city^='http://dbpedia.org/resource/Edinburgh')
+    relationships:
+      - Abdur_Rahman_Hye (dor:Abdur_Rahman_Hye) --dop:almaMater--> University_of_Edinburgh (dor:University_of_Edinburgh)
+      - Aidan_Nichols (dor:Aidan_Nichols) --dop:almaMater--> University_of_Edinburgh (dor:University_of_Edinburgh)
+      - Flora_Philip (dor:Flora_Philip) --doo:knownFor--> University_of_Edinburgh (dor:University_of_Edinburgh)
+  '2':
+    attributes:
+      John_Starr_(physician): (known for^='', known for^='http://dbpedia.org/resource/University_of_Edinburgh')
+      University_of_Edinburgh: (page length (characters) of wiki page^='187820', direction^='horizontal', city^='http://dbpedia.org/resource/Edinburgh')
+    relationships:
+      - Abdur_Rahman_Hye (dor:Abdur_Rahman_Hye) --dop:almaMater--> University_of_Edinburgh (dor:University_of_Edinburgh)
+      - Aidan_Nichols (dor:Aidan_Nichols) --dop:almaMater--> University_of_Edinburgh (dor:University_of_Edinburgh)
+      - John_Starr_(physician) (<http://dbpedia.org/resource/John_Starr_(physician)>) --doo:knownFor--> University_of_Edinburgh (dor:University_of_Edinburgh)
+  '3':
+    attributes:
+      Marion_Ross_(physicist): (known for^='annual Marion A S Ross Prize, University of Edinburgh', known for^='http://dbpedia.org/resource/King''s_Buildings')
+      University_of_Edinburgh: (page length (characters) of wiki page^='187820', direction^='horizontal', city^='http://dbpedia.org/resource/Edinburgh')
+    relationships:
+      - Abdur_Rahman_Hye (dor:Abdur_Rahman_Hye) --dop:almaMater--> University_of_Edinburgh (dor:University_of_Edinburgh)
+      - Aidan_Nichols (dor:Aidan_Nichols) --dop:almaMater--> University_of_Edinburgh (dor:University_of_Edinburgh)
+      - Marion_Ross_(physicist) (<http://dbpedia.org/resource/Marion_Ross_(physicist)>) --doo:knownFor--> University_of_Edinburgh (dor:University_of_Edinburgh)
+  '4':
+    attributes:
+      Harvard_University: (page length (characters) of wiki page^='116484', city^='http://dbpedia.org/resource/Cambridge,_Massachusetts')
+      Arthur_Kingsley_Porter: (known for^='Harvard University Professor & Author', known for^='http://dbpedia.org/resource/Harvard_University')
+    relationships:
+      - Adèle_Naudé_Santos (<http://dbpedia.org/resource/Adèle_Naudé_Santos>) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+      - Alexander_Viets_Griswold (dor:Alexander_Viets_Griswold) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+      - Arthur_Kingsley_Porter (dor:Arthur_Kingsley_Porter) --doo:knownFor--> Harvard_University (dor:Harvard_University)
+  '5':
+    attributes:
+      Harvard_University: (page length (characters) of wiki page^='116484', city^='http://dbpedia.org/resource/Cambridge,_Massachusetts')
+      Eugenie_Carys_de_Silva: (known for^='Youngest Harvard University graduate', known for^='http://dbpedia.org/resource/Harvard_University')
+    relationships:
+      - Adèle_Naudé_Santos (<http://dbpedia.org/resource/Adèle_Naudé_Santos>) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+      - Alexander_Viets_Griswold (dor:Alexander_Viets_Griswold) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+      - Eugenie_Carys_de_Silva (dor:Eugenie_Carys_de_Silva) --doo:knownFor--> Harvard_University (dor:Harvard_University)
+  '6':
+    attributes:
+      Jane_Mendillo: (known for^='Managing the endowments of Wellesley College and Harvard University', known for^='http://dbpedia.org/resource/Harvard_University')
+      Harvard_University: (page length (characters) of wiki page^='116484', city^='http://dbpedia.org/resource/Cambridge,_Massachusetts')
+    relationships:
+      - Adèle_Naudé_Santos (<http://dbpedia.org/resource/Adèle_Naudé_Santos>) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+      - Alexander_Viets_Griswold (dor:Alexander_Viets_Griswold) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+      - Jane_Mendillo (dor:Jane_Mendillo) --doo:knownFor--> Harvard_University (dor:Harvard_University)
+  '7':
+    attributes:
+      Milton_Bennion: (known for^='http://dbpedia.org/resource/Southern_Utah_University', known for^='http://dbpedia.org/resource/Southern_Utah_University')
+      University_of_Utah: (page length (characters) of wiki page^='114136', city^='http://dbpedia.org/resource/Salt_Lake_City')
+    relationships:
+      - Ahmad_Jafari (dor:Ahmad_Jafari) --dop:almaMater--> University_of_Utah (dor:University_of_Utah)
+      - Kurt_Burnette (dor:Kurt_Burnette) --dop:almaMater--> University_of_Utah (dor:University_of_Utah)
+      - Milton_Bennion (dor:Milton_Bennion) --doo:knownFor--> University_of_Utah (dor:University_of_Utah)
+  '8':
+    attributes:
+      Ralph_Hosmer: (known for^='First superintendent, Hawaii Division of Forestry; Professor and head, Department of Forestry at Cornell University', known for^='http://dbpedia.org/resource/Cornell_University')
+      Cornell_University: (page length (characters) of wiki page^='182113', header^='Cornell''s founders', direction^='horizontal', city^='http://dbpedia.org/resource/Ithaca,_New_York')
+    relationships:
+      - Alberto_Kalach (dor:Alberto_Kalach) --dop:almaMater--> Cornell_University (dor:Cornell_University)
+      - G._Mott_Williams (dor:G._Mott_Williams) --dop:almaMater--> Cornell_University (dor:Cornell_University)
+      - Ralph_Hosmer (dor:Ralph_Hosmer) --doo:knownFor--> Cornell_University (dor:Cornell_University)
+  '9':
+    attributes:
+      Ralph_Hosmer: (known for^='First superintendent, Hawaii Division of Forestry; Professor and head, Department of Forestry at Cornell University', known for^='http://dbpedia.org/resource/Cornell_University')
+      Cornell_University: (page length (characters) of wiki page^='182113', header^='Cornell''s founders', direction^='horizontal', city^='http://dbpedia.org/resource/Ithaca,_New_York')
+    relationships:
+      - Alberto_Kalach (dor:Alberto_Kalach) --dop:almaMater--> Cornell_University (dor:Cornell_University)
+      - John_B._Walthour (dor:John_B._Walthour) --dop:almaMater--> Cornell_University (dor:Cornell_University)
+      - Ralph_Hosmer (dor:Ralph_Hosmer) --doo:knownFor--> Cornell_University (dor:Cornell_University)
+  '10':
+    attributes:
+      Jim_Toy: (known for^='Gay Liberation Front, Lesbian-Gay Male Programs Office at the University of Michigan, Episcopal Diocese of Michigan Commission on Homosexuality', known for^='http://dbpedia.org/resource/Episcopal_Diocese_of_Michigan')
+      University_of_Michigan: (page length (characters) of wiki page^='221675', direction^='horizontal', city^='http://dbpedia.org/resource/Ann_Arbor,_Michigan')
+    relationships:
+      - Alden_B._Dow (dor:Alden_B._Dow) --dop:almaMater--> University_of_Michigan (dor:University_of_Michigan)
+      - Charles_Sumner_Burch (dor:Charles_Sumner_Burch) --dop:almaMater--> University_of_Michigan (dor:University_of_Michigan)
+      - Jim_Toy (dor:Jim_Toy) --doo:knownFor--> University_of_Michigan (dor:University_of_Michigan)
+qa_result:
+  status: completed
+  cost_usd: 0.429087
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.025647400000000004
+        total_tokens: 3270
+        prompt_tokens: 2205
+        completion_tokens: 1065
+      generate:
+        cost_usd: 0.10299760000000002
+        total_tokens: 8902
+        prompt_tokens: 4523
+        completion_tokens: 4379
+      verify_1:
+        cost_usd: 0.059267
+        total_tokens: 7207
+        prompt_tokens: 5658
+        completion_tokens: 1549
+      verify_2:
+        cost_usd: 0.09495200000000001
+        total_tokens: 9040
+        prompt_tokens: 5723
+        completion_tokens: 3317
+      complexity:
+        cost_usd: 0.146223
+        total_tokens: 12373
+        prompt_tokens: 6177
+        completion_tokens: 6196
+    total_tokens: 40792
+    prompt_tokens: 24286
+    total_cost_usd: 0.429087
+    completion_tokens: 16506
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --relations^ (dop:relations)--> Resource | --known for^ (dop:knownFor)--> Resource | --family^ (dop:family)--> Resource | --known for^ (doo:knownFor)--> Resource | --2y^ (dop:2y)--> int
+  university: --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --header^ (dop:header)--> langString | --direction^ (dop:direction)--> langString | --city^ (dop:city)--> Resource
+subgraph_id: 223
+relationships:
+  - architect --dop:almaMater--> university
+  - cleric --dop:almaMater--> university
+  - person --doo:knownFor--> university

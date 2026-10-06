@@ -1,0 +1,99 @@
+types:
+  Location: doo:Location
+  cricketer: doo:Cricketer
+  cricket team: doo:CricketTeam
+  career station: doo:CareerStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Canberra: (Aug high C^='13.8', date^='September 2011', area^='814.2', caption^='Canberra, from top left to bottom right&ndash;the city viewed from Mount Ainslie, the Land Axis featuring Old Parliament House and New Parliament House, the Australian War Memorial, the National Caril...', Apr sun^='219')
+      Jono_Dean__CareerStation__1: (team^='http://dbpedia.org/resource/ACT_Comets')
+    relationships:
+      - ACT_Meteors (dor:ACT_Meteors) --dop:ground--> Canberra (dor:Canberra)
+      - ACT_Meteors (dor:ACT_Meteors) --doo:coach--> Jono_Dean (dor:Jono_Dean)
+      - Jono_Dean (dor:Jono_Dean) --doo:careerStation--> Jono_Dean__CareerStation__1 (dor:Jono_Dean__CareerStation__1)
+  '2':
+    attributes:
+      Canberra: (Aug high C^='13.8', date^='September 2011', area^='814.2', caption^='Canberra, from top left to bottom right&ndash;the city viewed from Mount Ainslie, the Land Axis featuring Old Parliament House and New Parliament House, the Australian War Memorial, the National Caril...', Apr sun^='219')
+      Jono_Dean__CareerStation__2: (team^='http://dbpedia.org/resource/Adelaide_Strikers')
+    relationships:
+      - ACT_Meteors (dor:ACT_Meteors) --dop:ground--> Canberra (dor:Canberra)
+      - ACT_Meteors (dor:ACT_Meteors) --doo:coach--> Jono_Dean (dor:Jono_Dean)
+      - Jono_Dean (dor:Jono_Dean) --doo:careerStation--> Jono_Dean__CareerStation__2 (dor:Jono_Dean__CareerStation__2)
+  '3':
+    attributes:
+      Mazar-i-Sharif: (Aug high C^='36.9', date^='September 2011', Apr sun^='193.8')
+      Gordon_Parsons_(cricketer)__CareerStation__1: (team^='http://dbpedia.org/resource/Leicestershire_County_Cricket_Club')
+    relationships:
+      - Amo_Sharks (dor:Amo_Sharks) --dop:ground--> Mazar-i-Sharif (dor:Mazar-i-Sharif)
+      - Amo_Sharks (dor:Amo_Sharks) --doo:coach--> Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>)
+      - Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>) --doo:careerStation--> Gordon_Parsons_(cricketer)__CareerStation__1 (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)__CareerStation__1>)
+  '4':
+    attributes:
+      Mazar-i-Sharif: (Aug high C^='36.9', date^='September 2011', Apr sun^='193.8')
+      Gordon_Parsons_(cricketer)__CareerStation__2: (team^='http://dbpedia.org/resource/Warwickshire_County_Cricket_Club')
+    relationships:
+      - Amo_Sharks (dor:Amo_Sharks) --dop:ground--> Mazar-i-Sharif (dor:Mazar-i-Sharif)
+      - Amo_Sharks (dor:Amo_Sharks) --doo:coach--> Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>)
+      - Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>) --doo:careerStation--> Gordon_Parsons_(cricketer)__CareerStation__2 (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)__CareerStation__2>)
+  '5':
+    attributes:
+      Mazar-i-Sharif: (Aug high C^='36.9', date^='September 2011', Apr sun^='193.8')
+      Gordon_Parsons_(cricketer)__CareerStation__3: (team^='http://dbpedia.org/resource/Boland_cricket_team')
+    relationships:
+      - Amo_Sharks (dor:Amo_Sharks) --dop:ground--> Mazar-i-Sharif (dor:Mazar-i-Sharif)
+      - Amo_Sharks (dor:Amo_Sharks) --doo:coach--> Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>)
+      - Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>) --doo:careerStation--> Gordon_Parsons_(cricketer)__CareerStation__3 (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)__CareerStation__3>)
+  '6':
+    attributes:
+      Dhaka: (date^='2017-04-29', caption^='Cycle rickshaws are the most popular mode of transport in Dhaka')
+      Stuart_Law__CareerStation__1: (team^='http://dbpedia.org/resource/Queensland_Bulls')
+    relationships:
+      - Bangladesh_national_under-19_cricket_team (dor:Bangladesh_national_under-19_cricket_team) --dop:ground--> Dhaka (dor:Dhaka)
+      - Bangladesh_national_under-19_cricket_team (dor:Bangladesh_national_under-19_cricket_team) --doo:coach--> Stuart_Law (dor:Stuart_Law)
+      - Stuart_Law (dor:Stuart_Law) --doo:careerStation--> Stuart_Law__CareerStation__1 (dor:Stuart_Law__CareerStation__1)
+  '7':
+    attributes:
+      Dhaka: (date^='2017-04-29', caption^='Cycle rickshaws are the most popular mode of transport in Dhaka')
+      Stuart_Law__CareerStation__2: (team^='http://dbpedia.org/resource/Essex_County_Cricket_Club')
+    relationships:
+      - Bangladesh_national_under-19_cricket_team (dor:Bangladesh_national_under-19_cricket_team) --dop:ground--> Dhaka (dor:Dhaka)
+      - Bangladesh_national_under-19_cricket_team (dor:Bangladesh_national_under-19_cricket_team) --doo:coach--> Stuart_Law (dor:Stuart_Law)
+      - Stuart_Law (dor:Stuart_Law) --doo:careerStation--> Stuart_Law__CareerStation__2 (dor:Stuart_Law__CareerStation__2)
+  '8':
+    attributes:
+      Dhaka: (date^='2017-04-29', caption^='Cycle rickshaws are the most popular mode of transport in Dhaka')
+      Stuart_Law__CareerStation__3: (team^='http://dbpedia.org/resource/Lancashire_County_Cricket_Club')
+    relationships:
+      - Bangladesh_national_under-19_cricket_team (dor:Bangladesh_national_under-19_cricket_team) --dop:ground--> Dhaka (dor:Dhaka)
+      - Bangladesh_national_under-19_cricket_team (dor:Bangladesh_national_under-19_cricket_team) --doo:coach--> Stuart_Law (dor:Stuart_Law)
+      - Stuart_Law (dor:Stuart_Law) --doo:careerStation--> Stuart_Law__CareerStation__3 (dor:Stuart_Law__CareerStation__3)
+  '9':
+    attributes:
+      Paarl: (Aug high C^='18.4')
+      Yolandi_van_der_Westhuizen__CareerStation__1: (team^='http://dbpedia.org/resource/Western_Province_women''s_cricket_team')
+    relationships:
+      - Boland_women's_cricket_team (<http://dbpedia.org/resource/Boland_women's_cricket_team>) --dop:ground--> Paarl (dor:Paarl)
+      - Boland_women's_cricket_team (<http://dbpedia.org/resource/Boland_women's_cricket_team>) --doo:coach--> Yolandi_van_der_Westhuizen (dor:Yolandi_van_der_Westhuizen)
+      - Yolandi_van_der_Westhuizen (dor:Yolandi_van_der_Westhuizen) --doo:careerStation--> Yolandi_van_der_Westhuizen__CareerStation__1 (dor:Yolandi_van_der_Westhuizen__CareerStation__1)
+  '10':
+    attributes:
+      Paarl: (Aug high C^='18.4')
+      Yolandi_van_der_Westhuizen__CareerStation__2: (team^='http://dbpedia.org/resource/Boland_women''s_cricket_team')
+    relationships:
+      - Boland_women's_cricket_team (<http://dbpedia.org/resource/Boland_women's_cricket_team>) --dop:ground--> Paarl (dor:Paarl)
+      - Boland_women's_cricket_team (<http://dbpedia.org/resource/Boland_women's_cricket_team>) --doo:coach--> Yolandi_van_der_Westhuizen (dor:Yolandi_van_der_Westhuizen)
+      - Yolandi_van_der_Westhuizen (dor:Yolandi_van_der_Westhuizen) --doo:careerStation--> Yolandi_van_der_Westhuizen__CareerStation__2 (dor:Yolandi_van_der_Westhuizen__CareerStation__2)
+attributes:
+  Location: --Aug high C^ (dop:augHighC)--> double | --date^ (dop:date)--> date | --arc-text-colorA^ (dop:arcTextColora)--> langString | --built^ (dop:built)--> langString | --area^ (dop:area)--> hectare | --coordinates^ (dop:coordinates)--> int | --caption^ (dop:caption)--> langString | --Apr sun^ (dop:aprSun)--> int
+  career station: --team^ (doo:team)--> Resource
+subgraph_id: 467
+relationships:
+  - cricket team --dop:ground--> Location
+  - cricket team --doo:coach--> cricketer
+  - cricketer --doo:careerStation--> career station

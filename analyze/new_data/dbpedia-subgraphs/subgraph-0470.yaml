@@ -1,0 +1,96 @@
+types:
+  country: doo:Country
+  university: doo:University
+  office holder: doo:OfficeHolder
+  Academic Person: doo:Academic
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      University_of_Oxford: (chancellor^='http://dbpedia.org/resource/Chris_Patten')
+      A._V._Alexander,_1st_Earl_Alexander_of_Hillsborough: (spouse^='1908')
+    relationships:
+      - A._C._de_la_Mare (dor:A._C._de_la_Mare) --doo:nationality--> England (dor:England)
+      - A._C._de_la_Mare (dor:A._C._de_la_Mare) --dop:almaMater--> University_of_Oxford (dor:University_of_Oxford)
+      - A._V._Alexander,_1st_Earl_Alexander_of_Hillsborough (<http://dbpedia.org/resource/A._V._Alexander,_1st_Earl_Alexander_of_Hillsborough>) --dop:birthPlace--> England (dor:England)
+  '2':
+    attributes:
+      Abhisit_Vejjajiva: (spouse^='Pimpen Vejjajiva')
+      University_of_Oxford: (chancellor^='http://dbpedia.org/resource/Chris_Patten')
+    relationships:
+      - A._C._de_la_Mare (dor:A._C._de_la_Mare) --doo:nationality--> England (dor:England)
+      - A._C._de_la_Mare (dor:A._C._de_la_Mare) --dop:almaMater--> University_of_Oxford (dor:University_of_Oxford)
+      - Abhisit_Vejjajiva (dor:Abhisit_Vejjajiva) --dop:birthPlace--> England (dor:England)
+  '3':
+    attributes:
+      University_of_Oxford: (chancellor^='http://dbpedia.org/resource/Chris_Patten')
+      Adam_Butler_(politician): (spouse^='Felicity Molesworth-St Aubin', bot^='medic')
+    relationships:
+      - A._C._de_la_Mare (dor:A._C._de_la_Mare) --doo:nationality--> England (dor:England)
+      - A._C._de_la_Mare (dor:A._C._de_la_Mare) --dop:almaMater--> University_of_Oxford (dor:University_of_Oxford)
+      - Adam_Butler_(politician) (<http://dbpedia.org/resource/Adam_Butler_(politician)>) --dop:birthPlace--> England (dor:England)
+  '4':
+    attributes:
+      Adriaan_de_Buck: (awards^='KNAW member')
+    relationships:
+      - Adriaan_de_Buck (dor:Adriaan_de_Buck) --doo:nationality--> Kingdom_of_the_Netherlands (dor:Kingdom_of_the_Netherlands)
+      - Adriaan_de_Buck (dor:Adriaan_de_Buck) --dop:almaMater--> Leiden_University (dor:Leiden_University)
+      - Raphaël_Bischoffsheim (<http://dbpedia.org/resource/Raphaël_Bischoffsheim>) --dop:birthPlace--> Kingdom_of_the_Netherlands (dor:Kingdom_of_the_Netherlands)
+  '5':
+    attributes:
+      Adolf_Ogi: (spouse^='Katrin Marti')
+      Ákos_Moravánszky: (awards^='1989')
+    relationships:
+      - Ákos_Moravánszky (<http://dbpedia.org/resource/Ákos_Moravánszky>) --doo:nationality--> Switzerland (dor:Switzerland)
+      - Ákos_Moravánszky (<http://dbpedia.org/resource/Ákos_Moravánszky>) --dop:almaMater--> Budapest_University_of_Technology_and_Economics (dor:Budapest_University_of_Technology_and_Economics)
+      - Adolf_Ogi (dor:Adolf_Ogi) --dop:birthPlace--> Switzerland (dor:Switzerland)
+  '6':
+    attributes:
+      Ákos_Moravánszky: (awards^='1989')
+    relationships:
+      - Ákos_Moravánszky (<http://dbpedia.org/resource/Ákos_Moravánszky>) --doo:nationality--> Hungary (dor:Hungary)
+      - Ákos_Moravánszky (<http://dbpedia.org/resource/Ákos_Moravánszky>) --dop:almaMater--> Budapest_University_of_Technology_and_Economics (dor:Budapest_University_of_Technology_and_Economics)
+      - Adolf_Samassa (dor:Adolf_Samassa) --dop:birthPlace--> Hungary (dor:Hungary)
+  '7':
+    attributes:
+      Ákos_Moravánszky: (awards^='1989')
+    relationships:
+      - Ákos_Moravánszky (<http://dbpedia.org/resource/Ákos_Moravánszky>) --doo:nationality--> Switzerland (dor:Switzerland)
+      - Ákos_Moravánszky (<http://dbpedia.org/resource/Ákos_Moravánszky>) --dop:almaMater--> Budapest_University_of_Technology_and_Economics (dor:Budapest_University_of_Technology_and_Economics)
+      - Adolf_von_Steiger (dor:Adolf_von_Steiger) --dop:birthPlace--> Switzerland (dor:Switzerland)
+  '8':
+    attributes:
+      Adolfo_Canepa: (spouse^='Julie')
+    relationships:
+      - Alan_Carter_(philosopher) (<http://dbpedia.org/resource/Alan_Carter_(philosopher)>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Alan_Carter_(philosopher) (<http://dbpedia.org/resource/Alan_Carter_(philosopher)>) --dop:almaMater--> St_Cross_College,_Oxford (<http://dbpedia.org/resource/St_Cross_College,_Oxford>)
+      - Adolfo_Canepa (dor:Adolfo_Canepa) --dop:birthPlace--> United_Kingdom (dor:United_Kingdom)
+  '9':
+    attributes:
+      Adolfo_Canepa: (spouse^='Julie')
+    relationships:
+      - Alan_Carter_(philosopher) (<http://dbpedia.org/resource/Alan_Carter_(philosopher)>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Alan_Carter_(philosopher) (<http://dbpedia.org/resource/Alan_Carter_(philosopher)>) --dop:almaMater--> University_of_Kent (dor:University_of_Kent)
+      - Adolfo_Canepa (dor:Adolfo_Canepa) --dop:birthPlace--> United_Kingdom (dor:United_Kingdom)
+  '10':
+    attributes:
+      Adolfo_Canepa: (spouse^='Julie')
+      University_of_Sussex: (chancellor^='http://dbpedia.org/resource/Sanjeev_Bhaskar')
+    relationships:
+      - Alan_Carter_(philosopher) (<http://dbpedia.org/resource/Alan_Carter_(philosopher)>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Alan_Carter_(philosopher) (<http://dbpedia.org/resource/Alan_Carter_(philosopher)>) --dop:almaMater--> University_of_Sussex (dor:University_of_Sussex)
+      - Adolfo_Canepa (dor:Adolfo_Canepa) --dop:birthPlace--> United_Kingdom (dor:United_Kingdom)
+attributes:
+  country: --last^ (dop:last)--> langString
+  university: --nickname^ (dop:nickname)--> langString | --chancellor^ (doo:chancellor)--> Resource
+  office holder: --regent (dop:regent)--> Resource | --parents^ (dop:parents)--> langString | --spouse^ (dop:spouse)--> langString | --align^ (dop:align)--> langString | --bot^ (dop:bot)--> langString | --1pp^ (dop:1pp)--> int
+  Academic Person: --awards^ (dop:awards)--> langString
+subgraph_id: 470
+relationships:
+  - Academic Person --doo:nationality--> country
+  - Academic Person --dop:almaMater--> university
+  - office holder --dop:birthPlace--> country

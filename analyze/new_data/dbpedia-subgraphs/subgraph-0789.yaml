@@ -1,0 +1,95 @@
+types:
+  Band: doo:Band
+  song: doo:Song
+  person: doo:Person
+  city district: doo:CityDistrict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      MC_Lyte: (caption^='Lyte in October 2019')
+      Audio_Two: (has abstract^='Audio Two – amerykański duet hip-hopowy założony w 1985 roku na nowojorskim Brooklynie przez dwóch braci, rapera Kirka „Milk Dee” Robinson i DJ-a/producenta Nata „Gizmo”. Audio Two określani są często...')
+    relationships:
+      - 10%25_Dis (<http://dbpedia.org/resource/10%25_Dis>) --doo:writer--> Audio_Two (dor:Audio_Two)
+      - 10%25_Dis (<http://dbpedia.org/resource/10%25_Dis>) --doo:writer--> MC_Lyte (dor:MC_Lyte)
+      - Audio_Two (dor:Audio_Two) --doo:hometown--> Brooklyn (dor:Brooklyn)
+  '2':
+    attributes:
+      50_Cent: (children^='2', caption^='50')
+      Audio_Two: (has abstract^='Audio Two – amerykański duet hip-hopowy założony w 1985 roku na nowojorskim Brooklynie przez dwóch braci, rapera Kirka „Milk Dee” Robinson i DJ-a/producenta Nata „Gizmo”. Audio Two określani są często...')
+    relationships:
+      - I_Get_Money (dor:I_Get_Money) --doo:writer--> Audio_Two (dor:Audio_Two)
+      - I_Get_Money (dor:I_Get_Money) --doo:writer--> 50_Cent (dor:50_Cent)
+      - Audio_Two (dor:Audio_Two) --doo:hometown--> Brooklyn (dor:Brooklyn)
+  '3':
+    attributes:
+      MC_Lyte: (caption^='Lyte in October 2019')
+      Audio_Two: (has abstract^='Audio Two – amerykański duet hip-hopowy założony w 1985 roku na nowojorskim Brooklynie przez dwóch braci, rapera Kirka „Milk Dee” Robinson i DJ-a/producenta Nata „Gizmo”. Audio Two określani są często...')
+    relationships:
+      - I'm_Not_Havin'_It (<http://dbpedia.org/resource/I'm_Not_Havin'_It>) --doo:writer--> Audio_Two (dor:Audio_Two)
+      - I'm_Not_Havin'_It (<http://dbpedia.org/resource/I'm_Not_Havin'_It>) --doo:writer--> MC_Lyte (dor:MC_Lyte)
+      - Audio_Two (dor:Audio_Two) --doo:hometown--> Brooklyn (dor:Brooklyn)
+  '4':
+    attributes:
+      Ben_Cauley: (caption^='Cauley performing in 2015')
+      Black_Sheep_(group): (has abstract^='Black Sheep es un dúo de hip hop alternativo originario de Queens (Nueva York), formado por los miembros Andres "Dres" Titus y William "Mista Lawnge" McLean. Fueron parte de Native Tongues Posse, que ...')
+    relationships:
+      - Be_Faithful (dor:Be_Faithful) --doo:writer--> Black_Sheep_(group) (<http://dbpedia.org/resource/Black_Sheep_(group)>)
+      - Be_Faithful (dor:Be_Faithful) --doo:writer--> Ben_Cauley (dor:Ben_Cauley)
+      - Black_Sheep_(group) (<http://dbpedia.org/resource/Black_Sheep_(group)>) --doo:hometown--> Queens (dor:Queens)
+  '5':
+    attributes:
+      Bernard_Edwards: (caption^='1970.0')
+      Black_Sheep_(group): (has abstract^='Black Sheep es un dúo de hip hop alternativo originario de Queens (Nueva York), formado por los miembros Andres "Dres" Titus y William "Mista Lawnge" McLean. Fueron parte de Native Tongues Posse, que ...')
+    relationships:
+      - Be_Faithful (dor:Be_Faithful) --doo:writer--> Black_Sheep_(group) (<http://dbpedia.org/resource/Black_Sheep_(group)>)
+      - Be_Faithful (dor:Be_Faithful) --doo:writer--> Bernard_Edwards (dor:Bernard_Edwards)
+      - Black_Sheep_(group) (<http://dbpedia.org/resource/Black_Sheep_(group)>) --doo:hometown--> Queens (dor:Queens)
+  '6':
+    attributes:
+      Black_Sheep_(group): (has abstract^='Black Sheep es un dúo de hip hop alternativo originario de Queens (Nueva York), formado por los miembros Andres "Dres" Titus y William "Mista Lawnge" McLean. Fueron parte de Native Tongues Posse, que ...')
+    relationships:
+      - Be_Faithful (dor:Be_Faithful) --doo:writer--> Black_Sheep_(group) (<http://dbpedia.org/resource/Black_Sheep_(group)>)
+      - Be_Faithful (dor:Be_Faithful) --doo:writer--> Dres_(rapper) (<http://dbpedia.org/resource/Dres_(rapper)>)
+      - Black_Sheep_(group) (<http://dbpedia.org/resource/Black_Sheep_(group)>) --doo:hometown--> Queens (dor:Queens)
+  '7':
+    attributes:
+      Cash_Cash: (alias^='The Consequence', has abstract^='Cash Cash – amerykański zespół muzyki dance powstały w 2002 roku w .')
+    relationships:
+      - Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song) (<http://dbpedia.org/resource/Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song)>) --doo:writer--> Cash_Cash (dor:Cash_Cash)
+      - Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song) (<http://dbpedia.org/resource/Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song)>) --doo:writer--> Bunny_DeBarge (dor:Bunny_DeBarge)
+      - Cash_Cash (dor:Cash_Cash) --doo:hometown--> Roseland,_New_Jersey (<http://dbpedia.org/resource/Roseland,_New_Jersey>)
+  '8':
+    attributes:
+      Cash_Cash: (alias^='The Consequence', has abstract^='Cash Cash – amerykański zespół muzyki dance powstały w 2002 roku w .')
+    relationships:
+      - Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song) (<http://dbpedia.org/resource/Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song)>) --doo:writer--> Cash_Cash (dor:Cash_Cash)
+      - Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song) (<http://dbpedia.org/resource/Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song)>) --doo:writer--> City_Spud (dor:City_Spud)
+      - Cash_Cash (dor:Cash_Cash) --doo:hometown--> Roseland,_New_Jersey (<http://dbpedia.org/resource/Roseland,_New_Jersey>)
+  '9':
+    attributes:
+      Cash_Cash: (alias^='The Consequence', has abstract^='Cash Cash – amerykański zespół muzyki dance powstały w 2002 roku w .')
+    relationships:
+      - Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song) (<http://dbpedia.org/resource/Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song)>) --doo:writer--> Cash_Cash (dor:Cash_Cash)
+      - Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song) (<http://dbpedia.org/resource/Millionaire_(Cash_Cash_and_Digital_Farm_Animals_song)>) --doo:writer--> Digital_Farm_Animals (dor:Digital_Farm_Animals)
+      - Cash_Cash (dor:Cash_Cash) --doo:hometown--> Roseland,_New_Jersey (<http://dbpedia.org/resource/Roseland,_New_Jersey>)
+  '10':
+    attributes:
+      Slick_Rick: (children^='2', caption^='Slick Rick performing at the 2009 Fresh Fest concert in Los Angeles, California')
+      Cru_(group): (alias^='Rhythm Blunt Cru', has abstract^='Cru was an American hip hop group formally signed to Def Jam Recordings composed of three members, Chadio, Mighty Ha and Yogi. The group''s first appearance was the "We Got It Goin'' On" remix by R&B gr...')
+    relationships:
+      - Just_Another_Case (dor:Just_Another_Case) --doo:writer--> Cru_(group) (<http://dbpedia.org/resource/Cru_(group)>)
+      - Just_Another_Case (dor:Just_Another_Case) --doo:writer--> Slick_Rick (dor:Slick_Rick)
+      - Cru_(group) (<http://dbpedia.org/resource/Cru_(group)>) --doo:hometown--> The_Bronx (dor:The_Bronx)
+attributes:
+  Band: --alias^ (dop:alias)--> langString | --has abstract^ (doo:abstract)--> langString | --birth name^ (dop:birthName)--> langString
+  person: --children^ (dop:children)--> Resource | --url^ (dop:url)--> Resource | --partner^ (doo:partner)--> Resource | --caption^ (dop:caption)--> langString | --known for^ (dop:knownFor)--> int | --death year^ (doo:deathYear)--> gYear
+subgraph_id: 789
+relationships:
+  - song --doo:writer--> Band
+  - song --doo:writer--> person
+  - Band --doo:hometown--> city district

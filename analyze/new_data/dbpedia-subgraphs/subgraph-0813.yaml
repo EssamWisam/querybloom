@@ -1,0 +1,105 @@
+types:
+  country: doo:Country
+  cricketer: doo:Cricketer
+  soccer club: doo:SoccerClub
+  cricket team: doo:CricketTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Jason_Gillespie: (nickname^='http://dbpedia.org/resource/Dizzy_Gillespie')
+      Glamorgan_County_Cricket_Club: (has abstract^='Der Glamorgan County Cricket Club repräsentiert als einzige walisische Mannschaft die traditionelle Grafschaft Glamorgan in den nationalen Meisterschaften im englischen Cricket.')
+      Australia_national_cricket_team: (float^='right', caption^='Australian Cricket Coat of Arms')
+    relationships:
+      - Adelaide_Strikers (dor:Adelaide_Strikers) --doo:coach--> Jason_Gillespie (dor:Jason_Gillespie)
+      - Jason_Gillespie (dor:Jason_Gillespie) --dop:club--> Glamorgan_County_Cricket_Club (dor:Glamorgan_County_Cricket_Club)
+      - Jason_Gillespie (dor:Jason_Gillespie) --doo:birthPlace--> Australia_national_cricket_team (dor:Australia_national_cricket_team)
+  '2':
+    attributes:
+      Jason_Gillespie: (nickname^='http://dbpedia.org/resource/Dizzy_Gillespie')
+      Adelaide_Strikers: (ground^='http://dbpedia.org/resource/Adelaide_Oval')
+      South_Australia_cricket_team: (has abstract^='Il South Australia cricket team è una delle 6 squadre di cricket che si contendono annualmente il prestigioso torneo di First Class cricket Sheffield Shield. In tale competizione è presente fin dalla ...')
+      Australia_national_cricket_team: (float^='right', caption^='Australian Cricket Coat of Arms')
+    relationships:
+      - Adelaide_Strikers (dor:Adelaide_Strikers) --doo:coach--> Jason_Gillespie (dor:Jason_Gillespie)
+      - Jason_Gillespie (dor:Jason_Gillespie) --dop:club--> South_Australia_cricket_team (dor:South_Australia_cricket_team)
+      - Jason_Gillespie (dor:Jason_Gillespie) --doo:birthPlace--> Australia_national_cricket_team (dor:Australia_national_cricket_team)
+  '3':
+    attributes:
+      Cape_Province: (government type^='http://dbpedia.org/resource/Cape_Provincial_Council')
+      Jonathan_Trott: (nickname^='Trotters, Booger, Leon', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-cricketer-noun-1')
+      Otago_cricket_team: (has abstract^='L''équipe d''Otago de cricket, surnommée les Volts depuis la saison 1997-1998, est une équipe néo-zélandaise de first-class cricket fondée en 1876 et représentant les régions d''Otago et de Southland. L''...')
+    relationships:
+      - Afghanistan_national_cricket_team (dor:Afghanistan_national_cricket_team) --doo:coach--> Jonathan_Trott (dor:Jonathan_Trott)
+      - Jonathan_Trott (dor:Jonathan_Trott) --dop:club--> Otago_cricket_team (dor:Otago_cricket_team)
+      - Jonathan_Trott (dor:Jonathan_Trott) --doo:birthPlace--> Cape_Province (dor:Cape_Province)
+  '4':
+    attributes:
+      Cape_Province: (government type^='http://dbpedia.org/resource/Cape_Provincial_Council')
+      Jonathan_Trott: (nickname^='Trotters, Booger, Leon', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-cricketer-noun-1')
+      Warwickshire_County_Cricket_Club: (has abstract^='Der Warwickshire County Cricket Club repräsentiert die traditionelle Grafschaft Warwickshire in den nationalen Meisterschaften im englischen Cricket.')
+    relationships:
+      - Afghanistan_national_cricket_team (dor:Afghanistan_national_cricket_team) --doo:coach--> Jonathan_Trott (dor:Jonathan_Trott)
+      - Jonathan_Trott (dor:Jonathan_Trott) --dop:club--> Warwickshire_County_Cricket_Club (dor:Warwickshire_County_Cricket_Club)
+      - Jonathan_Trott (dor:Jonathan_Trott) --doo:birthPlace--> Cape_Province (dor:Cape_Province)
+  '5':
+    attributes:
+      Amo_Sharks: (ground^='http://dbpedia.org/resource/Balkh_Cricket_Stadium')
+      Leicestershire_County_Cricket_Club: (has abstract^='Der Leicestershire County Cricket Club repräsentiert die traditionelle Grafschaft Leicestershire in den nationalen Meisterschaften im englischen Cricket.')
+    relationships:
+      - Amo_Sharks (dor:Amo_Sharks) --doo:coach--> Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>)
+      - Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>) --dop:club--> Leicestershire_County_Cricket_Club (dor:Leicestershire_County_Cricket_Club)
+      - Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>) --doo:birthPlace--> Buckinghamshire (dor:Buckinghamshire)
+  '6':
+    attributes:
+      Amo_Sharks: (ground^='http://dbpedia.org/resource/Balkh_Cricket_Stadium')
+      Warwickshire_County_Cricket_Club: (has abstract^='Der Warwickshire County Cricket Club repräsentiert die traditionelle Grafschaft Warwickshire in den nationalen Meisterschaften im englischen Cricket.')
+    relationships:
+      - Amo_Sharks (dor:Amo_Sharks) --doo:coach--> Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>)
+      - Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>) --dop:club--> Warwickshire_County_Cricket_Club (dor:Warwickshire_County_Cricket_Club)
+      - Gordon_Parsons_(cricketer) (<http://dbpedia.org/resource/Gordon_Parsons_(cricketer)>) --doo:birthPlace--> Buckinghamshire (dor:Buckinghamshire)
+  '7':
+    attributes:
+      Shelley_Nitschke: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-cricketer-noun-1')
+    relationships:
+      - Australia_women's_national_cricket_team (<http://dbpedia.org/resource/Australia_women's_national_cricket_team>) --doo:coach--> Shelley_Nitschke (dor:Shelley_Nitschke)
+      - Shelley_Nitschke (dor:Shelley_Nitschke) --dop:club--> South_Australian_Scorpions (dor:South_Australian_Scorpions)
+      - Shelley_Nitschke (dor:Shelley_Nitschke) --doo:birthPlace--> South_Australia (dor:South_Australia)
+  '8':
+    attributes:
+      Duronto_Rajshahi: '(has abstract^=''Duronto Rajshahi (Bengali: দুরন্ত রাজশাহী) was a franchise cricket team that played in the Bangladesh Premier League (BPL) representing the division of Rajshahi, Bangladesh. The team participated in f...'')'
+      Pakistan_national_cricket_team: (float^='right', caption^='--11-22')
+    relationships:
+      - Bahrain_national_cricket_team (dor:Bahrain_national_cricket_team) --doo:coach--> Shahzaib_Hasan (dor:Shahzaib_Hasan)
+      - Shahzaib_Hasan (dor:Shahzaib_Hasan) --dop:club--> Duronto_Rajshahi (dor:Duronto_Rajshahi)
+      - Shahzaib_Hasan (dor:Shahzaib_Hasan) --doo:birthPlace--> Pakistan_national_cricket_team (dor:Pakistan_national_cricket_team)
+  '9':
+    attributes:
+      Derbyshire_County_Cricket_Club: (has abstract^='Der Derbyshire County Cricket Club repräsentiert die traditionelle Grafschaft Derbyshire in den nationalen Meisterschaften im englischen Cricket.')
+      Bangladesh_national_under-19_cricket_team: (ground^='http://dbpedia.org/resource/Dhaka')
+    relationships:
+      - Bangladesh_national_under-19_cricket_team (dor:Bangladesh_national_under-19_cricket_team) --doo:coach--> Stuart_Law (dor:Stuart_Law)
+      - Stuart_Law (dor:Stuart_Law) --dop:club--> Derbyshire_County_Cricket_Club (dor:Derbyshire_County_Cricket_Club)
+      - Stuart_Law (dor:Stuart_Law) --doo:birthPlace--> Australian_cricket_team (dor:Australian_cricket_team)
+  '10':
+    attributes:
+      Essex_County_Cricket_Club: (has abstract^='Der Essex County Cricket Club repräsentiert die traditionelle Grafschaft Essex in den nationalen Meisterschaften im englischen Cricket.')
+      Bangladesh_national_under-19_cricket_team: (ground^='http://dbpedia.org/resource/Dhaka')
+    relationships:
+      - Bangladesh_national_under-19_cricket_team (dor:Bangladesh_national_under-19_cricket_team) --doo:coach--> Stuart_Law (dor:Stuart_Law)
+      - Stuart_Law (dor:Stuart_Law) --dop:club--> Essex_County_Cricket_Club (dor:Essex_County_Cricket_Club)
+      - Stuart_Law (dor:Stuart_Law) --doo:birthPlace--> Australian_cricket_team (dor:Australian_cricket_team)
+attributes:
+  country: --float^ (dop:float)--> langString | --caption^ (dop:caption)--> langString | --government type^ (doo:governmentType)--> Resource
+  cricketer: --nickname^ (dop:nickname)--> langString | --wordnet_type (dop:wordnet_type)--> Resource
+  soccer club: --age^ (dop:age)--> date | --league^ (dop:league)--> langString | --has abstract^ (doo:abstract)--> langString | --2ndRegional cup apps^ (dop:2ndregionalCupApps)--> int
+  cricket team: --ground^ (dop:ground)--> langString
+subgraph_id: 813
+relationships:
+  - cricket team --doo:coach--> cricketer
+  - cricketer --dop:club--> soccer club
+  - cricketer --doo:birthPlace--> country

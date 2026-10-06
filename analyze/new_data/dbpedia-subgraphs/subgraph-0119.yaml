@@ -1,0 +1,89 @@
+types:
+  saint: doo:Saint
+  Location: doo:Location
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Egypt: (date^='2018-11-28')
+      2015_kidnapping_and_beheading_of_Copts_in_Libya: (death date^='2015-02-15')
+    relationships:
+      - 2015_kidnapping_and_beheading_of_Copts_in_Libya (dor:2015_kidnapping_and_beheading_of_Copts_in_Libya) --doo:majorShrine--> Samalut (dor:Samalut)
+      - 2015_kidnapping_and_beheading_of_Copts_in_Libya (dor:2015_kidnapping_and_beheading_of_Copts_in_Libya) --doo:canonizedPlace--> Egypt (dor:Egypt)
+  '2':
+    attributes:
+      Minya_Governorate: (date^='February 2019')
+      2015_kidnapping_and_beheading_of_Copts_in_Libya: (death date^='2015-02-15')
+    relationships:
+      - 2015_kidnapping_and_beheading_of_Copts_in_Libya (dor:2015_kidnapping_and_beheading_of_Copts_in_Libya) --doo:majorShrine--> Samalut (dor:Samalut)
+      - 2015_kidnapping_and_beheading_of_Copts_in_Libya (dor:2015_kidnapping_and_beheading_of_Copts_in_Libya) --doo:canonizedPlace--> Minya_Governorate (dor:Minya_Governorate)
+  '3':
+    attributes:
+      2015_kidnapping_and_beheading_of_Copts_in_Libya: (death date^='2015-02-15')
+    relationships:
+      - 2015_kidnapping_and_beheading_of_Copts_in_Libya (dor:2015_kidnapping_and_beheading_of_Copts_in_Libya) --doo:majorShrine--> Samalut (dor:Samalut)
+      - 2015_kidnapping_and_beheading_of_Copts_in_Libya (dor:2015_kidnapping_and_beheading_of_Copts_in_Libya) --doo:canonizedPlace--> Samalut (dor:Samalut)
+  '4':
+    attributes:
+      Rome: (Apr high C^='18.9', Apr low C^='6.8', date^='December 2014')
+      Adalbert_of_Prague: (death date^='0997-04-23')
+    relationships:
+      - Adalbert_of_Prague (dor:Adalbert_of_Prague) --doo:majorShrine--> Gniezno (dor:Gniezno)
+      - Adalbert_of_Prague (dor:Adalbert_of_Prague) --doo:canonizedPlace--> Rome (dor:Rome)
+  '5':
+    attributes:
+      Rome: (Apr high C^='18.9', Apr low C^='6.8', date^='December 2014')
+      Prague: (c^='Praha', Apr precipitation days^='5.8')
+      Adalbert_of_Prague: (death date^='0997-04-23')
+    relationships:
+      - Adalbert_of_Prague (dor:Adalbert_of_Prague) --doo:majorShrine--> Prague (dor:Prague)
+      - Adalbert_of_Prague (dor:Adalbert_of_Prague) --doo:canonizedPlace--> Rome (dor:Rome)
+  '6':
+    attributes:
+      Prague: (c^='Praha', Apr precipitation days^='5.8')
+      Vatican_City: (id^='286', Apr high C^='17.7', Apr low C^='7.5', date^='April 2012')
+      Agnes_of_Bohemia: (death date^='1282-03-02')
+    relationships:
+      - Agnes_of_Bohemia (dor:Agnes_of_Bohemia) --doo:majorShrine--> Prague (dor:Prague)
+      - Agnes_of_Bohemia (dor:Agnes_of_Bohemia) --doo:canonizedPlace--> Vatican_City (dor:Vatican_City)
+  '7':
+    attributes:
+      Alexander_Schmorell: (death date^='1943-07-13')
+    relationships:
+      - Alexander_Schmorell (dor:Alexander_Schmorell) --doo:majorShrine--> Munich (dor:Munich)
+      - Alexander_Schmorell (dor:Alexander_Schmorell) --doo:canonizedPlace--> Germany (dor:Germany)
+  '8':
+    attributes:
+      Munich: (Apr high C^='14.2', Apr low C^='4.9', date^='2017-07-02')
+      Alexander_Schmorell: (death date^='1943-07-13')
+    relationships:
+      - Alexander_Schmorell (dor:Alexander_Schmorell) --doo:majorShrine--> Munich (dor:Munich)
+      - Alexander_Schmorell (dor:Alexander_Schmorell) --doo:canonizedPlace--> Munich (dor:Munich)
+  '9':
+    attributes:
+      Rome: (Apr precipitation days^='8.8')
+      Papal_States: (date^='July 2021')
+      Aloysius_Gonzaga: (death date^='http://dbpedia.org/resource/Papal_States')
+    relationships:
+      - Aloysius_Gonzaga (dor:Aloysius_Gonzaga) --doo:majorShrine--> Rome (dor:Rome)
+      - Aloysius_Gonzaga (dor:Aloysius_Gonzaga) --doo:canonizedPlace--> Papal_States (dor:Papal_States)
+  '10':
+    attributes:
+      Rome: (Apr high C^='18.9', Apr low C^='6.8', date^='December 2014', Apr precipitation days^='8.8')
+      Aloysius_Gonzaga: (death date^='http://dbpedia.org/resource/Papal_States')
+    relationships:
+      - Aloysius_Gonzaga (dor:Aloysius_Gonzaga) --doo:majorShrine--> Rome (dor:Rome)
+      - Aloysius_Gonzaga (dor:Aloysius_Gonzaga) --doo:canonizedPlace--> Rome (dor:Rome)
+attributes:
+  saint: --death date^ (dop:deathDate)--> date
+  Location: --id^ (dop:id)--> int | --Apr high C^ (dop:aprHighC)--> double | --Apr low C^ (dop:aprLowC)--> int | --partof^ (dop:partof)--> Resource | --date^ (dop:date)--> langString | --affiliation^ (dop:affiliation)--> Resource | --administrator^ (dop:administrator)--> Resource
+  settlement: --c^ (dop:c)--> langString | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int
+subgraph_id: 119
+relationships:
+  - saint --doo:majorShrine--> settlement
+  - saint --doo:canonizedPlace--> Location

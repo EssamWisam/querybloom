@@ -1,0 +1,48 @@
+types:
+  road: doo:Road
+  ship: doo:Ship
+  station: doo:Station
+  village: doo:Village
+  city district: doo:CityDistrict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Sleepy_Hollow,_New_York: (Link from a Wikipage to an external page^='http://tarrytown.patch.com/')
+      104th_Street_station_(IRT_Ninth_Avenue_Line): (line^='http://dbpedia.org/resource/IRT_Ninth_Avenue_Line')
+    relationships:
+      - New_York_(1836_steamboat) (<http://dbpedia.org/resource/New_York_(1836_steamboat)>) --doo:builder--> Manhattan (dor:Manhattan)
+      - Broadway_(Manhattan) (<http://dbpedia.org/resource/Broadway_(Manhattan)>) --doo:routeJunction--> Manhattan (dor:Manhattan)
+      - 104th_Street_station_(IRT_Ninth_Avenue_Line) (<http://dbpedia.org/resource/104th_Street_station_(IRT_Ninth_Avenue_Line)>) --dop:borough--> Manhattan (dor:Manhattan)
+      - Broadway_(Manhattan) (<http://dbpedia.org/resource/Broadway_(Manhattan)>) --doo:routeEnd--> Sleepy_Hollow,_New_York (<http://dbpedia.org/resource/Sleepy_Hollow,_New_York>)
+  '2':
+    attributes:
+      105th_Street_station: (line^='http://dbpedia.org/resource/IRT_Second_Avenue_Line')
+      Sleepy_Hollow,_New_York: (Link from a Wikipage to an external page^='http://tarrytown.patch.com/')
+    relationships:
+      - New_York_(1836_steamboat) (<http://dbpedia.org/resource/New_York_(1836_steamboat)>) --doo:builder--> Manhattan (dor:Manhattan)
+      - Broadway_(Manhattan) (<http://dbpedia.org/resource/Broadway_(Manhattan)>) --doo:routeJunction--> Manhattan (dor:Manhattan)
+      - 105th_Street_station (dor:105th_Street_station) --dop:borough--> Manhattan (dor:Manhattan)
+      - Broadway_(Manhattan) (<http://dbpedia.org/resource/Broadway_(Manhattan)>) --doo:routeEnd--> Sleepy_Hollow,_New_York (<http://dbpedia.org/resource/Sleepy_Hollow,_New_York>)
+  '3':
+    attributes:
+      Sleepy_Hollow,_New_York: (Link from a Wikipage to an external page^='http://tarrytown.patch.com/')
+    relationships:
+      - New_York_(1836_steamboat) (<http://dbpedia.org/resource/New_York_(1836_steamboat)>) --doo:builder--> Manhattan (dor:Manhattan)
+      - Broadway_(Manhattan) (<http://dbpedia.org/resource/Broadway_(Manhattan)>) --doo:routeJunction--> Manhattan (dor:Manhattan)
+      - 106th_Street_station_(IRT_Third_Avenue_Line) (<http://dbpedia.org/resource/106th_Street_station_(IRT_Third_Avenue_Line)>) --dop:borough--> Manhattan (dor:Manhattan)
+      - Broadway_(Manhattan) (<http://dbpedia.org/resource/Broadway_(Manhattan)>) --doo:routeEnd--> Sleepy_Hollow,_New_York (<http://dbpedia.org/resource/Sleepy_Hollow,_New_York>)
+attributes:
+  ship: --partof^ (dop:partof)--> gMonthDay | --designated nrhp type^ (dop:designatedNrhpType)--> date
+  station: --route^ (dop:route)--> langString | --distance^ (dop:distance)--> int | --alt^ (dop:alt)--> langString | --line^ (dop:line)--> langString
+  village: --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --reason^ (dop:reason)--> langString | --arc-textB^ (dop:arcTextb)--> langString | --arc-angleB^ (dop:arcAngleb)--> int
+subgraph_id: 461
+relationships:
+  - ship --doo:builder--> city district
+  - road --doo:routeJunction--> city district
+  - station --dop:borough--> city district
+  - road --doo:routeEnd--> village

@@ -1,0 +1,156 @@
+types:
+  city: doo:City
+  road: doo:Road
+  airport: doo:Airport
+  village: doo:Village
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Chennai: (government type^='http://dbpedia.org/resource/Municipal_Corporation_(India)')
+      Dankuni: (page length (characters) of wiki page^='27352', Link from a Wikipage to an external page^='http://dankunimunicipality.in/')
+      West_Bengal: (d^='yes')
+    relationships:
+      - Air_Force_Station_Arjan_Singh (dor:Air_Force_Station_Arjan_Singh) --doo:location--> West_Bengal (dor:West_Bengal)
+      - National_Highway_16_(India) (<http://dbpedia.org/resource/National_Highway_16_(India)>) --doo:routeStart--> West_Bengal (dor:West_Bengal)
+      - National_Highway_16_(India) (<http://dbpedia.org/resource/National_Highway_16_(India)>) --doo:routeEnd--> Chennai (dor:Chennai)
+      - National_Highway_16_(India) (<http://dbpedia.org/resource/National_Highway_16_(India)>) --doo:routeStart--> Dankuni (dor:Dankuni)
+  '2':
+    attributes:
+      Chennai: (government type^='http://dbpedia.org/resource/Municipal_Corporation_(India)')
+      Dankuni: (page length (characters) of wiki page^='27352', Link from a Wikipage to an external page^='http://dankunimunicipality.in/')
+      West_Bengal: (d^='yes')
+    relationships:
+      - Air_Force_Station_Salua (dor:Air_Force_Station_Salua) --doo:location--> West_Bengal (dor:West_Bengal)
+      - National_Highway_16_(India) (<http://dbpedia.org/resource/National_Highway_16_(India)>) --doo:routeStart--> West_Bengal (dor:West_Bengal)
+      - National_Highway_16_(India) (<http://dbpedia.org/resource/National_Highway_16_(India)>) --doo:routeEnd--> Chennai (dor:Chennai)
+      - National_Highway_16_(India) (<http://dbpedia.org/resource/National_Highway_16_(India)>) --doo:routeStart--> Dankuni (dor:Dankuni)
+  '3':
+    attributes:
+      Wuwei,_Gansu: (source^='China Meteorological Data Service Center', original name^='武威市')
+      Dingbian_County: (page length (characters) of wiki page^='7397', area total (km2)^='6920.0')
+    relationships:
+      - Ankang_Wulipu_Airport (dor:Ankang_Wulipu_Airport) --doo:location--> Shaanxi (dor:Shaanxi)
+      - G2012_Dingbian–Wuwei_Expressway (<http://dbpedia.org/resource/G2012_Dingbian–Wuwei_Expressway>) --doo:routeStart--> Shaanxi (dor:Shaanxi)
+      - G2012_Dingbian–Wuwei_Expressway (<http://dbpedia.org/resource/G2012_Dingbian–Wuwei_Expressway>) --doo:routeEnd--> Wuwei,_Gansu (<http://dbpedia.org/resource/Wuwei,_Gansu>)
+      - G2012_Dingbian–Wuwei_Expressway (<http://dbpedia.org/resource/G2012_Dingbian–Wuwei_Expressway>) --doo:routeStart--> Dingbian_County (dor:Dingbian_County)
+  '4':
+    attributes:
+      Zhongwei: (source^='China Meteorological Administration')
+      Dingbian_County: (page length (characters) of wiki page^='7397', area total (km2)^='6920.0')
+    relationships:
+      - Ankang_Wulipu_Airport (dor:Ankang_Wulipu_Airport) --doo:location--> Shaanxi (dor:Shaanxi)
+      - G2012_Dingbian–Wuwei_Expressway (<http://dbpedia.org/resource/G2012_Dingbian–Wuwei_Expressway>) --doo:routeStart--> Shaanxi (dor:Shaanxi)
+      - G2012_Dingbian–Wuwei_Expressway (<http://dbpedia.org/resource/G2012_Dingbian–Wuwei_Expressway>) --doo:routeEnd--> Zhongwei (dor:Zhongwei)
+      - G2012_Dingbian–Wuwei_Expressway (<http://dbpedia.org/resource/G2012_Dingbian–Wuwei_Expressway>) --doo:routeStart--> Dingbian_County (dor:Dingbian_County)
+  '5':
+    attributes:
+      Bamanbore: (page length (characters) of wiki page^='3618', Link from a Wikipage to an external page^='http://www.india9.com/i9show/Bamanbore-67008.htm')
+      Porbandar: (source^='http://dbpedia.org/resource/India_Meteorological_Department')
+    relationships:
+      - Ankleshwar_Airport (dor:Ankleshwar_Airport) --doo:location--> Gujarat (dor:Gujarat)
+      - National_Highway_8B_(India,_old_numbering) (<http://dbpedia.org/resource/National_Highway_8B_(India,_old_numbering)>) --doo:routeStart--> Gujarat (dor:Gujarat)
+      - National_Highway_8B_(India,_old_numbering) (<http://dbpedia.org/resource/National_Highway_8B_(India,_old_numbering)>) --doo:routeEnd--> Porbandar (dor:Porbandar)
+      - National_Highway_8B_(India,_old_numbering) (<http://dbpedia.org/resource/National_Highway_8B_(India,_old_numbering)>) --doo:routeStart--> Bamanbore (dor:Bamanbore)
+  '6':
+    attributes:
+      Chongzuo: (source^='National Meteorological Center of CMA')
+      Qingxiu_District: (page length (characters) of wiki page^='2879', Link from a Wikipage to an external page^='http://www.qingxiu.gov.cn/', area total (km2)^='872.0')
+      G7211_Nanning–Youyiguan_Expressway: (opening date^='2005-12-28')
+    relationships:
+      - Baise_Bama_Airport (dor:Baise_Bama_Airport) --doo:location--> Guangxi (dor:Guangxi)
+      - G7211_Nanning–Youyiguan_Expressway (<http://dbpedia.org/resource/G7211_Nanning–Youyiguan_Expressway>) --doo:routeStart--> Guangxi (dor:Guangxi)
+      - G7211_Nanning–Youyiguan_Expressway (<http://dbpedia.org/resource/G7211_Nanning–Youyiguan_Expressway>) --doo:routeEnd--> Chongzuo (dor:Chongzuo)
+      - G7211_Nanning–Youyiguan_Expressway (<http://dbpedia.org/resource/G7211_Nanning–Youyiguan_Expressway>) --doo:routeStart--> Qingxiu_District (dor:Qingxiu_District)
+  '7':
+    attributes:
+      Qingxiu_District: (page length (characters) of wiki page^='2879', Link from a Wikipage to an external page^='http://www.qingxiu.gov.cn/', area total (km2)^='872.0')
+      Pingxiang,_Guangxi: (source^='China Meteorological Data Service Center', original name^='·')
+      G7211_Nanning–Youyiguan_Expressway: (opening date^='2005-12-28')
+    relationships:
+      - Baise_Bama_Airport (dor:Baise_Bama_Airport) --doo:location--> Guangxi (dor:Guangxi)
+      - G7211_Nanning–Youyiguan_Expressway (<http://dbpedia.org/resource/G7211_Nanning–Youyiguan_Expressway>) --doo:routeStart--> Guangxi (dor:Guangxi)
+      - G7211_Nanning–Youyiguan_Expressway (<http://dbpedia.org/resource/G7211_Nanning–Youyiguan_Expressway>) --doo:routeEnd--> Pingxiang,_Guangxi (<http://dbpedia.org/resource/Pingxiang,_Guangxi>)
+      - G7211_Nanning–Youyiguan_Expressway (<http://dbpedia.org/resource/G7211_Nanning–Youyiguan_Expressway>) --doo:routeStart--> Qingxiu_District (dor:Qingxiu_District)
+  '8':
+    attributes:
+      Fangchenggang: (source^='China Meteorological Data Service Center')
+      Qinnan_District: (page length (characters) of wiki page^='1175', area total (km2)^='1972.0')
+    relationships:
+      - Baise_Bama_Airport (dor:Baise_Bama_Airport) --doo:location--> Guangxi (dor:Guangxi)
+      - G7511_Qinzhou–Dongxing_Expressway (<http://dbpedia.org/resource/G7511_Qinzhou–Dongxing_Expressway>) --doo:routeStart--> Guangxi (dor:Guangxi)
+      - G7511_Qinzhou–Dongxing_Expressway (<http://dbpedia.org/resource/G7511_Qinzhou–Dongxing_Expressway>) --doo:routeEnd--> Fangchenggang (dor:Fangchenggang)
+      - G7511_Qinzhou–Dongxing_Expressway (<http://dbpedia.org/resource/G7511_Qinzhou–Dongxing_Expressway>) --doo:routeStart--> Qinnan_District (dor:Qinnan_District)
+  '9':
+    attributes:
+      Chennai: (government type^='http://dbpedia.org/resource/Municipal_Corporation_(India)')
+      Dankuni: (page length (characters) of wiki page^='27352', Link from a Wikipage to an external page^='http://dankunimunicipality.in/')
+      West_Bengal: (d^='yes')
+    relationships:
+      - Balurghat_Airport (dor:Balurghat_Airport) --doo:location--> West_Bengal (dor:West_Bengal)
+      - National_Highway_16_(India) (<http://dbpedia.org/resource/National_Highway_16_(India)>) --doo:routeStart--> West_Bengal (dor:West_Bengal)
+      - National_Highway_16_(India) (<http://dbpedia.org/resource/National_Highway_16_(India)>) --doo:routeEnd--> Chennai (dor:Chennai)
+      - National_Highway_16_(India) (<http://dbpedia.org/resource/National_Highway_16_(India)>) --doo:routeStart--> Dankuni (dor:Dankuni)
+  '10':
+    attributes:
+      Middlesboro,_Kentucky: (source^='http://dbpedia.org/resource/NOAA', government type^='http://dbpedia.org/resource/Mayor-council_government')
+      Pruden,_Kentucky_and_Tennessee: (page length (characters) of wiki page^='4218')
+    relationships:
+      - Beech_River_Regional_Airport (dor:Beech_River_Regional_Airport) --doo:location--> Tennessee (dor:Tennessee)
+      - Kentucky_Route_74 (dor:Kentucky_Route_74) --doo:routeStart--> Tennessee (dor:Tennessee)
+      - Kentucky_Route_74 (dor:Kentucky_Route_74) --doo:routeEnd--> Middlesboro,_Kentucky (<http://dbpedia.org/resource/Middlesboro,_Kentucky>)
+      - Kentucky_Route_74 (dor:Kentucky_Route_74) --doo:routeStart--> Pruden,_Kentucky_and_Tennessee (<http://dbpedia.org/resource/Pruden,_Kentucky_and_Tennessee>)
+qa_result:
+  status: completed
+  cost_usd: 0.359172
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.041782400000000004
+        total_tokens: 4106
+        prompt_tokens: 2244
+        completion_tokens: 1862
+      generate:
+        cost_usd: 0.0943876
+        total_tokens: 9085
+        prompt_tokens: 5341
+        completion_tokens: 3744
+      verify_1:
+        cost_usd: 0.047032000000000004
+        total_tokens: 6857
+        prompt_tokens: 6007
+        completion_tokens: 850
+      verify_2:
+        cost_usd: 0.040982000000000005
+        total_tokens: 6352
+        prompt_tokens: 5737
+        completion_tokens: 615
+      complexity:
+        cost_usd: 0.134988
+        total_tokens: 12190
+        prompt_tokens: 6682
+        completion_tokens: 5508
+    total_tokens: 38590
+    prompt_tokens: 26011
+    total_cost_usd: 0.35917200000000005
+    completion_tokens: 12579
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --source^ (dop:source)--> Resource | --source^ (dop:source)--> langString | --quote^ (dop:quote)--> int | --original name^ (doo:originalName)--> langString | --government type^ (doo:governmentType)--> Resource
+  road: --opening date^ (doo:openingDate)--> date
+  village: --arc-text-colorA^ (dop:arcTextColora)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --area total (km2)^ (doop:areaTotal)--> squareKilometre
+  settlement: --d^ (dop:d)--> langString
+subgraph_id: 288
+relationships:
+  - airport --doo:location--> settlement
+  - road --doo:routeStart--> settlement
+  - road --doo:routeEnd--> city
+  - road --doo:routeStart--> village

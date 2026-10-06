@@ -1,0 +1,86 @@
+types:
+  city: doo:City
+  river: doo:River
+  venue: doo:Venue
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Excite_Ballpark: (opened^='1942-03-08')
+      San_Jose,_California: (Apr rain days^='6.4', government type^='http://dbpedia.org/resource/Council–manager_government', Aug low F^='59.8', named for^='http://dbpedia.org/resource/Saint_Joseph')
+    relationships:
+      - Excite_Ballpark (dor:Excite_Ballpark) --dop:owner--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+      - Alamitos_Creek (dor:Alamitos_Creek) --doo:mouthMountain--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+  '2':
+    attributes:
+      Hamburg: (Apr rain days^='8.9', Apr sun^='160.7', Apr rain mm^='43')
+      Deutsches_Schauspielhaus: (opened^='1901')
+    relationships:
+      - Deutsches_Schauspielhaus (dor:Deutsches_Schauspielhaus) --dop:owner--> Hamburg (dor:Hamburg)
+      - Alster (dor:Alster) --doo:mouthMountain--> Hamburg (dor:Hamburg)
+  '3':
+    attributes:
+      Hamburg: (Apr rain days^='8.9', Apr sun^='160.7', Apr rain mm^='43')
+      Thalia_Theater_(Hamburg): (opened^='1843')
+    relationships:
+      - Thalia_Theater_(Hamburg) (<http://dbpedia.org/resource/Thalia_Theater_(Hamburg)>) --dop:owner--> Hamburg (dor:Hamburg)
+      - Alster (dor:Alster) --doo:mouthMountain--> Hamburg (dor:Hamburg)
+  '4':
+    attributes:
+      Ponce,_Puerto_Rico: (government type^='http://dbpedia.org/resource/Mayor–council_government', Aug low F^='69.3', named for^='http://dbpedia.org/resource/Juan_Ponce_de_Leon_y_Loayza')
+      Auditorio_Juan_Pachín_Vicéns: (opened^='1972-05-12')
+    relationships:
+      - Auditorio_Juan_Pachín_Vicéns (<http://dbpedia.org/resource/Auditorio_Juan_Pachín_Vicéns>) --dop:owner--> Ponce,_Puerto_Rico (<http://dbpedia.org/resource/Ponce,_Puerto_Rico>)
+      - Anón_River (<http://dbpedia.org/resource/Anón_River>) --doo:mouthMountain--> Ponce,_Puerto_Rico (<http://dbpedia.org/resource/Ponce,_Puerto_Rico>)
+  '5':
+    attributes:
+      Ponce,_Puerto_Rico: (government type^='http://dbpedia.org/resource/Mayor–council_government', Aug low F^='69.3', named for^='http://dbpedia.org/resource/Juan_Ponce_de_Leon_y_Loayza')
+      Campo_Atlético_Charles_H._Terry: (opened^='1910-11-20')
+    relationships:
+      - Campo_Atlético_Charles_H._Terry (<http://dbpedia.org/resource/Campo_Atlético_Charles_H._Terry>) --dop:owner--> Ponce,_Puerto_Rico (<http://dbpedia.org/resource/Ponce,_Puerto_Rico>)
+      - Anón_River (<http://dbpedia.org/resource/Anón_River>) --doo:mouthMountain--> Ponce,_Puerto_Rico (<http://dbpedia.org/resource/Ponce,_Puerto_Rico>)
+  '6':
+    attributes:
+      Ponce,_Puerto_Rico: (government type^='http://dbpedia.org/resource/Mayor–council_government', Aug low F^='69.3', named for^='http://dbpedia.org/resource/Juan_Ponce_de_Leon_y_Loayza')
+    relationships:
+      - Estadio_Francisco_Montaner (dor:Estadio_Francisco_Montaner) --dop:owner--> Ponce,_Puerto_Rico (<http://dbpedia.org/resource/Ponce,_Puerto_Rico>)
+      - Anón_River (<http://dbpedia.org/resource/Anón_River>) --doo:mouthMountain--> Ponce,_Puerto_Rico (<http://dbpedia.org/resource/Ponce,_Puerto_Rico>)
+  '7':
+    attributes:
+      Reading,_Pennsylvania: (Aug low F^='64.1', named for^='http://dbpedia.org/resource/Reading,_Berkshire')
+      FirstEnergy_Stadium_(Reading,_Pennsylvania): (opened^='1951-04-15')
+    relationships:
+      - FirstEnergy_Stadium_(Reading,_Pennsylvania) (<http://dbpedia.org/resource/FirstEnergy_Stadium_(Reading,_Pennsylvania)>) --dop:owner--> Reading,_Pennsylvania (<http://dbpedia.org/resource/Reading,_Pennsylvania>)
+      - Antietam_Creek_(Schuylkill_River_tributary) (<http://dbpedia.org/resource/Antietam_Creek_(Schuylkill_River_tributary)>) --doo:mouthMountain--> Reading,_Pennsylvania (<http://dbpedia.org/resource/Reading,_Pennsylvania>)
+  '8':
+    attributes:
+      Winnipeg: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-school-noun-1')
+      Canad_Inns_Stadium: (Closed^='2013-01-03', opened^='1953-08-14')
+    relationships:
+      - Canad_Inns_Stadium (dor:Canad_Inns_Stadium) --dop:owner--> Winnipeg (dor:Winnipeg)
+      - Assiniboine_River (dor:Assiniboine_River) --doo:mouthMountain--> Winnipeg (dor:Winnipeg)
+  '9':
+    attributes:
+      Winnipeg: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-school-noun-1')
+      St._James_Civic_Centre: (opened^='1967')
+    relationships:
+      - St._James_Civic_Centre (dor:St._James_Civic_Centre) --dop:owner--> Winnipeg (dor:Winnipeg)
+      - Assiniboine_River (dor:Assiniboine_River) --doo:mouthMountain--> Winnipeg (dor:Winnipeg)
+  '10':
+    attributes:
+      Turku: (Apr sun^='204')
+      Veritas_Stadion: (opened^='1952')
+    relationships:
+      - Veritas_Stadion (dor:Veritas_Stadion) --dop:owner--> Turku (dor:Turku)
+      - Aura_River_(Finland)__Aura_River__1 (<http://dbpedia.org/resource/Aura_River_(Finland)__Aura_River__1>) --doo:mouthMountain--> Turku (dor:Turku)
+attributes:
+  city: --Apr rain days^ (dop:aprRainDays)--> double | --Apr sun^ (dop:aprSun)--> int | --government type^ (doo:governmentType)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource | --Apr rain mm^ (dop:aprRainMm)--> int | --Aug low F^ (dop:augLowF)--> int | --named for^ (dop:namedFor)--> langString
+  venue: --Closed^ (dop:closed)--> int | --opened^ (dop:opened)--> langString
+subgraph_id: 434
+relationships:
+  - venue --dop:owner--> city
+  - river --doo:mouthMountain--> city

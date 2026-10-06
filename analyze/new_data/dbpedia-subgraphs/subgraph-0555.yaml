@@ -1,0 +1,83 @@
+types:
+  military unit: doo:MilitaryUnit
+  office holder: doo:OfficeHolder
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Agustín_Gamarra: (birth place^='http://dbpedia.org/resource/Cuzco', spouse^='http://dbpedia.org/resource/Francisca_Zubiaga_y_Bernales')
+    relationships:
+      - Peruvian_Army (dor:Peruvian_Army) --doo:battle--> 1828_Peruvian–Bolivian_War (<http://dbpedia.org/resource/1828_Peruvian–Bolivian_War>)
+      - 1828_Peruvian–Bolivian_War (<http://dbpedia.org/resource/1828_Peruvian–Bolivian_War>) --doo:commander--> Agustín_Gamarra (<http://dbpedia.org/resource/Agustín_Gamarra>)
+  '2':
+    attributes:
+      Antonio_José_de_Sucre: (birth name^='Antonio José de Sucre y Alcalá', birth place^='Cumaná, Captaincy General of Venezuela', spouse^='http://dbpedia.org/resource/Mariana_Carcelén')
+    relationships:
+      - Peruvian_Army (dor:Peruvian_Army) --doo:battle--> 1828_Peruvian–Bolivian_War (<http://dbpedia.org/resource/1828_Peruvian–Bolivian_War>)
+      - 1828_Peruvian–Bolivian_War (<http://dbpedia.org/resource/1828_Peruvian–Bolivian_War>) --doo:commander--> Antonio_José_de_Sucre (<http://dbpedia.org/resource/Antonio_José_de_Sucre>)
+  '3':
+    attributes:
+      José_María_Pérez_de_Urdininea: (birth name^='José María Pérez de Urdininea', birth place^='near Luribay, Viceroyalty of the Río de la Plata', spouse^='Josefa Terrazas')
+    relationships:
+      - Peruvian_Army (dor:Peruvian_Army) --doo:battle--> 1828_Peruvian–Bolivian_War (<http://dbpedia.org/resource/1828_Peruvian–Bolivian_War>)
+      - 1828_Peruvian–Bolivian_War (<http://dbpedia.org/resource/1828_Peruvian–Bolivian_War>) --doo:commander--> José_María_Pérez_de_Urdininea (<http://dbpedia.org/resource/José_María_Pérez_de_Urdininea>)
+  '4':
+    attributes:
+      Chilean_Army: (garrison^='Edificio Ejército Bicentenario', active years start year^='1603')
+      Manuel_Montt: (birth place^='Petorca, Chile', spouse^='http://dbpedia.org/resource/Rosario_Montt_Goyenechea')
+    relationships:
+      - Chilean_Army (dor:Chilean_Army) --doo:battle--> 1851_Chilean_Revolution (dor:1851_Chilean_Revolution)
+      - 1851_Chilean_Revolution (dor:1851_Chilean_Revolution) --doo:commander--> Manuel_Montt (dor:Manuel_Montt)
+  '5':
+    attributes:
+      Cai_E: (birth place^='http://dbpedia.org/resource/Hunan')
+      15th_Punjab_Regiment: (garrison^='Sialkot, Punjab, Pakistan', active years start year^='1922')
+    relationships:
+      - 15th_Punjab_Regiment (dor:15th_Punjab_Regiment) --doo:battle--> 1911_Revolution (dor:1911_Revolution)
+      - 1911_Revolution (dor:1911_Revolution) --doo:commander--> Cai_E (dor:Cai_E)
+  '6':
+    attributes:
+      Chiang_Kai-shek: (1namedata^='', birth name^=')', birth place^=', Qing Empire', spouse^='1901')
+      15th_Punjab_Regiment: (garrison^='Sialkot, Punjab, Pakistan', active years start year^='1922')
+    relationships:
+      - 15th_Punjab_Regiment (dor:15th_Punjab_Regiment) --doo:battle--> 1911_Revolution (dor:1911_Revolution)
+      - 1911_Revolution (dor:1911_Revolution) --doo:commander--> Chiang_Kai-shek (dor:Chiang_Kai-shek)
+  '7':
+    attributes:
+      Duan_Qirui: (birth place^='http://dbpedia.org/resource/Anhui')
+      15th_Punjab_Regiment: (garrison^='Sialkot, Punjab, Pakistan', active years start year^='1922')
+    relationships:
+      - 15th_Punjab_Regiment (dor:15th_Punjab_Regiment) --doo:battle--> 1911_Revolution (dor:1911_Revolution)
+      - 1911_Revolution (dor:1911_Revolution) --doo:commander--> Duan_Qirui (dor:Duan_Qirui)
+  '8':
+    attributes:
+      Symon_Petliura: (birth name^='Symon Vasylyovych Petliura', birth place^='http://dbpedia.org/resource/Poltava_Governorate', spouse^='http://dbpedia.org/resource/Olha_Petliura')
+    relationships:
+      - 1st_Zadneprovsk_Ukrainian_Soviet_Division (dor:1st_Zadneprovsk_Ukrainian_Soviet_Division) --doo:battle--> 1919_Soviet_invasion_of_Ukraine (dor:1919_Soviet_invasion_of_Ukraine)
+      - 1919_Soviet_invasion_of_Ukraine (dor:1919_Soviet_invasion_of_Ukraine) --doo:commander--> Symon_Petliura (dor:Symon_Petliura)
+  '9':
+    attributes:
+      Yuriy_Kotsiubynsky: (birth place^='http://dbpedia.org/resource/Podolia_Governorate', spouse^='daughter of Petrovsky')
+    relationships:
+      - 1st_Zadneprovsk_Ukrainian_Soviet_Division (dor:1st_Zadneprovsk_Ukrainian_Soviet_Division) --doo:battle--> 1919_Soviet_invasion_of_Ukraine (dor:1919_Soviet_invasion_of_Ukraine)
+      - 1919_Soviet_invasion_of_Ukraine (dor:1919_Soviet_invasion_of_Ukraine) --doo:commander--> Yuriy_Kotsiubynsky (dor:Yuriy_Kotsiubynsky)
+  '10':
+    attributes:
+      Fathollah_Khan_Akbar: (birth place^='http://dbpedia.org/resource/Gilan')
+      Persian_Cossack_Brigade: (garrison^='Tehran, Tabriz, Isfahan, Mashhad, Ardabil, Hamadan , Urmia, Mazandaran and Gilan', active years start year^='1879')
+    relationships:
+      - Persian_Cossack_Brigade (dor:Persian_Cossack_Brigade) --doo:battle--> 1921_Persian_coup_d'état (<http://dbpedia.org/resource/1921_Persian_coup_d'état>)
+      - 1921_Persian_coup_d'état (<http://dbpedia.org/resource/1921_Persian_coup_d'état>) --doo:commander--> Fathollah_Khan_Akbar (dor:Fathollah_Khan_Akbar)
+attributes:
+  military unit: --garrison^ (dop:garrison)--> langString | --next^ (dop:next)--> int | --bot^ (dop:bot)--> langString | --active years start year^ (doo:activeYearsStartYear)--> gYear
+  office holder: --1namedata^ (dop:1namedata)--> Resource | --honorific suffix^ (dop:honorificSuffix)--> Resource | --birth name^ (doo:birthName)--> langString | --relations^ (dop:relations)--> langString | --birth place^ (dop:birthPlace)--> langString | --spouse^ (dop:spouse)--> int
+  military conflict: --quote^ (dop:quote)--> langString | --float^ (dop:float)--> langString | --chapter^ (dop:chapter)--> langString
+subgraph_id: 555
+relationships:
+  - military unit --doo:battle--> military conflict
+  - military conflict --doo:commander--> office holder

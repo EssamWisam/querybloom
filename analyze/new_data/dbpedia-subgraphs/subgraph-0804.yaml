@@ -1,0 +1,40 @@
+types:
+  cleric: doo:Cleric
+  country: doo:Country
+  Location: doo:Location
+  historian: doo:Historian
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_States: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Anchor')
+    relationships:
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --dop:deathPlace--> United_States (dor:United_States)
+      - Dimitrije_Đorđević_(historian) (<http://dbpedia.org/resource/Dimitrije_Đorđević_(historian)>) --doo:nationality--> United_States (dor:United_States)
+      - Dimitrije_Đorđević_(historian) (<http://dbpedia.org/resource/Dimitrije_Đorđević_(historian)>) --doo:nationality--> Serbs (dor:Serbs)
+  '2':
+    attributes:
+      United_States: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Anchor')
+    relationships:
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --dop:deathPlace--> United_States (dor:United_States)
+      - Elizabeth_Brown_Pryor (dor:Elizabeth_Brown_Pryor) --doo:nationality--> United_States (dor:United_States)
+      - Elizabeth_Brown_Pryor (dor:Elizabeth_Brown_Pryor) --doo:nationality--> American_people (dor:American_people)
+  '3':
+    attributes:
+      United_States: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Anchor')
+    relationships:
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --dop:deathPlace--> United_States (dor:United_States)
+      - Laurence_B._Packard (dor:Laurence_B._Packard) --doo:nationality--> United_States (dor:United_States)
+      - Laurence_B._Packard (dor:Laurence_B._Packard) --doo:nationality--> Americans (dor:Americans)
+attributes:
+  cleric: --1p^ (dop:1p)--> int
+  Location: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --chapter^ (dop:chapter)--> langString | --class^ (dop:class)--> langString | --arc-textB^ (dop:arcTextb)--> langString | --Apr record high F^ (dop:aprRecordHighF)--> int | --named for^ (dop:namedFor)--> langString | --named after^ (dop:namedAfter)--> langString | --country^ (dop:country)--> langString | --source^ (dop:source)--> Resource | --partof^ (dop:partof)--> langString | --coordinates^ (dop:coordinates)--> int
+subgraph_id: 804
+relationships:
+  - cleric --dop:deathPlace--> Location
+  - historian --doo:nationality--> Location
+  - historian --doo:nationality--> country

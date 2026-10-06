@@ -1,0 +1,161 @@
+types:
+  Band: doo:Band
+  city: doo:City
+  ship: doo:Ship
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dor2: http://dbpedia.org/resource/11/
+instances:
+  '1':
+    attributes:
+      London: (Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1')
+      '!Action_Pact!': (genre^='http://dbpedia.org/resource/Punk_rock')
+      William_Grantham: (relation^='http://dbpedia.org/resource/Alexander_Grantham')
+      Alexander_Grantham: (spouse^='1925')
+    relationships:
+      - Alexander_Grantham (dor:Alexander_Grantham) --doo:birthPlace--> London (dor:London)
+      - MV_Atheltemplar (dor:MV_Atheltemplar) --doo:operator--> London (dor:London)
+      - Alexander_Grantham (dor:Alexander_Grantham) --doo:relation--> William_Grantham (dor:William_Grantham)
+      - '!Action_Pact! (<http://dbpedia.org/resource/!Action_Pact!>) --doo:hometown--> London (dor:London)'
+  '2':
+    attributes:
+      London: (Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1')
+      William_Grantham: (relation^='http://dbpedia.org/resource/Alexander_Grantham')
+      Alexander_Grantham: (spouse^='1925')
+    relationships:
+      - Alexander_Grantham (dor:Alexander_Grantham) --doo:birthPlace--> London (dor:London)
+      - MV_Empire_MacDermott (dor:MV_Empire_MacDermott) --doo:operator--> London (dor:London)
+      - Alexander_Grantham (dor:Alexander_Grantham) --doo:relation--> William_Grantham (dor:William_Grantham)
+      - '!Action_Pact! (<http://dbpedia.org/resource/!Action_Pact!>) --doo:hometown--> London (dor:London)'
+  '3':
+    attributes:
+      London: (Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1')
+      '!Action_Pact!': (genre^='http://dbpedia.org/resource/Punk_rock')
+      William_Grantham: (relation^='http://dbpedia.org/resource/Alexander_Grantham')
+      Alexander_Grantham: (spouse^='1925')
+    relationships:
+      - Alexander_Grantham (dor:Alexander_Grantham) --doo:birthPlace--> London (dor:London)
+      - MV_Languedoc (dor:MV_Languedoc) --doo:operator--> London (dor:London)
+      - Alexander_Grantham (dor:Alexander_Grantham) --doo:relation--> William_Grantham (dor:William_Grantham)
+      - '!Action_Pact! (<http://dbpedia.org/resource/!Action_Pact!>) --doo:hometown--> London (dor:London)'
+  '4':
+    attributes:
+      1_Mile_North: (genre^='http://dbpedia.org/resource/Ambient_Music')
+      New_York_City: (Link from a Wikipage to an external page^='http://collections.mcny.org/')
+      Alexander_Stewart_Webb_(banker): (spouse^='1941')
+    relationships:
+      - Alexander_Stewart_Webb_(banker) (<http://dbpedia.org/resource/Alexander_Stewart_Webb_(banker)>) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - SS_Gulfamerica (dor:SS_Gulfamerica) --doo:operator--> New_York_City (dor:New_York_City)
+      - Alexander_Stewart_Webb_(banker) (<http://dbpedia.org/resource/Alexander_Stewart_Webb_(banker)>) --doo:relation--> James_Watson_Webb (dor:James_Watson_Webb)
+      - 1_Mile_North (dor:1_Mile_North) --doo:hometown--> New_York_City (dor:New_York_City)
+  '5':
+    attributes:
+      1_Mile_North: (genre^='http://dbpedia.org/resource/Ambient_Music')
+      New_York_City: (Link from a Wikipage to an external page^='http://collections.mcny.org/')
+      Alexander_Stewart_Webb_(banker): (spouse^='1941')
+    relationships:
+      - Alexander_Stewart_Webb_(banker) (<http://dbpedia.org/resource/Alexander_Stewart_Webb_(banker)>) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - SS_James_B._Stephens (dor:SS_James_B._Stephens) --doo:operator--> New_York_City (dor:New_York_City)
+      - Alexander_Stewart_Webb_(banker) (<http://dbpedia.org/resource/Alexander_Stewart_Webb_(banker)>) --doo:relation--> James_Watson_Webb (dor:James_Watson_Webb)
+      - 1_Mile_North (dor:1_Mile_North) --doo:hometown--> New_York_City (dor:New_York_City)
+  '6':
+    attributes:
+      1_Mile_North: (genre^='http://dbpedia.org/resource/Ambient_Music')
+      New_York_City: (Link from a Wikipage to an external page^='http://collections.mcny.org/')
+      Alexander_Stewart_Webb_(banker): (spouse^='1941')
+    relationships:
+      - Alexander_Stewart_Webb_(banker) (<http://dbpedia.org/resource/Alexander_Stewart_Webb_(banker)>) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - SS_James_Eagan_Layne (dor:SS_James_Eagan_Layne) --doo:operator--> New_York_City (dor:New_York_City)
+      - Alexander_Stewart_Webb_(banker) (<http://dbpedia.org/resource/Alexander_Stewart_Webb_(banker)>) --doo:relation--> James_Watson_Webb (dor:James_Watson_Webb)
+      - 1_Mile_North (dor:1_Mile_North) --doo:hometown--> New_York_City (dor:New_York_City)
+  '7':
+    attributes:
+      '5': (genre^='http://dbpedia.org/resource/Hip_hop_music')
+      Kathleen_Brown: (relation^='http://dbpedia.org/resource/Bernice_Layne_Brown')
+    relationships:
+      - Geoffrey_F._Brown (dor:Geoffrey_F._Brown) --doo:birthPlace--> San_Francisco,_California (<http://dbpedia.org/resource/San_Francisco,_California>)
+      - Francis_H._Leggett (dor:Francis_H._Leggett) --doo:operator--> San_Francisco,_California (<http://dbpedia.org/resource/San_Francisco,_California>)
+      - Geoffrey_F._Brown (dor:Geoffrey_F._Brown) --doo:relation--> Kathleen_Brown (dor:Kathleen_Brown)
+      - 5 (dor2:5) --doo:hometown--> San_Francisco,_California (<http://dbpedia.org/resource/San_Francisco,_California>)
+  '8':
+    attributes:
+      '5': (genre^='http://dbpedia.org/resource/Hip_hop_music')
+      Kathleen_Brown: (relation^='http://dbpedia.org/resource/Bernice_Layne_Brown')
+    relationships:
+      - Geoffrey_F._Brown (dor:Geoffrey_F._Brown) --doo:birthPlace--> San_Francisco,_California (<http://dbpedia.org/resource/San_Francisco,_California>)
+      - SS_Columbia_(1880) (<http://dbpedia.org/resource/SS_Columbia_(1880)>) --doo:operator--> San_Francisco,_California (<http://dbpedia.org/resource/San_Francisco,_California>)
+      - Geoffrey_F._Brown (dor:Geoffrey_F._Brown) --doo:relation--> Kathleen_Brown (dor:Kathleen_Brown)
+      - 5 (dor2:5) --doo:hometown--> San_Francisco,_California (<http://dbpedia.org/resource/San_Francisco,_California>)
+  '9':
+    attributes:
+      '5': (genre^='http://dbpedia.org/resource/Hip_hop_music')
+      Kathleen_Brown: (relation^='http://dbpedia.org/resource/Bernice_Layne_Brown')
+    relationships:
+      - Geoffrey_F._Brown (dor:Geoffrey_F._Brown) --doo:birthPlace--> San_Francisco,_California (<http://dbpedia.org/resource/San_Francisco,_California>)
+      - SS_Samuel_Huntington (dor:SS_Samuel_Huntington) --doo:operator--> San_Francisco,_California (<http://dbpedia.org/resource/San_Francisco,_California>)
+      - Geoffrey_F._Brown (dor:Geoffrey_F._Brown) --doo:relation--> Kathleen_Brown (dor:Kathleen_Brown)
+      - 5 (dor2:5) --doo:hometown--> San_Francisco,_California (<http://dbpedia.org/resource/San_Francisco,_California>)
+  '10':
+    attributes:
+      Melbourne: (Link from a Wikipage to an external page^='http://www.visitmelbourne.com/')
+      Alfred_Deakin: (relation^='http://dbpedia.org/resource/Alfred_Deakin_Brookes')
+      1200_Techniques: (genre^='')
+    relationships:
+      - Alfred_Deakin_Brookes (dor:Alfred_Deakin_Brookes) --doo:birthPlace--> Melbourne (dor:Melbourne)
+      - PS_Weeroona_(1910) (<http://dbpedia.org/resource/PS_Weeroona_(1910)>) --doo:operator--> Melbourne (dor:Melbourne)
+      - Alfred_Deakin_Brookes (dor:Alfred_Deakin_Brookes) --doo:relation--> Alfred_Deakin (dor:Alfred_Deakin)
+      - 1200_Techniques (dor:1200_Techniques) --doo:hometown--> Melbourne (dor:Melbourne)
+qa_result:
+  status: completed
+  cost_usd: 0.409092
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0394074
+        total_tokens: 3838
+        prompt_tokens: 2045
+        completion_tokens: 1793
+      generate:
+        cost_usd: 0.10037760000000001
+        total_tokens: 9161
+        prompt_tokens: 5043
+        completion_tokens: 4118
+      verify_1:
+        cost_usd: 0.07467200000000002
+        total_tokens: 8314
+        prompt_tokens: 6107
+        completion_tokens: 2207
+      verify_2:
+        cost_usd: 0.050552
+        total_tokens: 6865
+        prompt_tokens: 5783
+        completion_tokens: 1082
+      complexity:
+        cost_usd: 0.14408300000000002
+        total_tokens: 12140
+        prompt_tokens: 6009
+        completion_tokens: 6131
+    total_tokens: 40318
+    prompt_tokens: 24987
+    total_cost_usd: 0.409092
+    completion_tokens: 15331
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Band: --genre^ (dop:genre)--> langString
+  city: --Aug rain days^ (dop:augRainDays)--> double | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  ship: --cost ($)^ (doo:cost)--> usDollar
+  politician: --commons^ (dop:commons)--> langString | --image size^ (dop:imageSize)--> int | --spouse^ (dop:spouse)--> date | --residence^ (doo:residence)--> Resource | --c^ (dop:c)--> langString | --image upright^ (dop:imageUpright)--> double
+  office holder: --2p^ (dop:2p)--> int | --relation^ (doo:relation)--> Resource
+subgraph_id: 306
+relationships:
+  - politician --doo:birthPlace--> city
+  - ship --doo:operator--> city
+  - politician --doo:relation--> office holder
+  - Band --doo:hometown--> city

@@ -1,0 +1,96 @@
+types:
+  person: doo:Person
+  disease: doo:Disease
+  politician: doo:Politician
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Meriwether_Lewis: (birth place^='Locust Hill Plantation, Albemarle County, Colony of Virginia')
+    relationships:
+      - Lewis_County,_Washington (<http://dbpedia.org/resource/Lewis_County,_Washington>) --dop:namedFor--> Meriwether_Lewis (dor:Meriwether_Lewis)
+      - Meriwether_Lewis (dor:Meriwether_Lewis) --doo:deathCause--> Gunshot_wounds (dor:Gunshot_wounds)
+      - Abay_Tsehaye (dor:Abay_Tsehaye) --doo:deathCause--> Gunshot_wounds (dor:Gunshot_wounds)
+  '2':
+    attributes:
+      Meriwether_Lewis: (birth place^='Locust Hill Plantation, Albemarle County, Colony of Virginia')
+    relationships:
+      - Lewiston,_Idaho (<http://dbpedia.org/resource/Lewiston,_Idaho>) --dop:namedFor--> Meriwether_Lewis (dor:Meriwether_Lewis)
+      - Meriwether_Lewis (dor:Meriwether_Lewis) --doo:deathCause--> Gunshot_wounds (dor:Gunshot_wounds)
+      - Abay_Tsehaye (dor:Abay_Tsehaye) --doo:deathCause--> Gunshot_wounds (dor:Gunshot_wounds)
+  '3':
+    attributes:
+      José_Abad_Santos: (birth place^='http://dbpedia.org/resource/Captaincy_General_of_the_Philippines')
+      Abd_al-Karim_Qasim: (after^='http://dbpedia.org/resource/Ahmed_Hassan_al-Bakr')
+      Jose_Abad_Santos,_Davao_Occidental: (date^='2020-01-28')
+    relationships:
+      - Jose_Abad_Santos,_Davao_Occidental (<http://dbpedia.org/resource/Jose_Abad_Santos,_Davao_Occidental>) --dop:namedFor--> José_Abad_Santos (<http://dbpedia.org/resource/José_Abad_Santos>)
+      - José_Abad_Santos (<http://dbpedia.org/resource/José_Abad_Santos>) --doo:deathCause--> Execution_by_firing_squad (dor:Execution_by_firing_squad)
+      - Abd_al-Karim_Qasim (dor:Abd_al-Karim_Qasim) --doo:deathCause--> Execution_by_firing_squad (dor:Execution_by_firing_squad)
+  '4':
+    attributes:
+      Vicente_Guerrero: (birth place^='http://dbpedia.org/resource/Guerrero,_Mexico')
+      Abd_al-Karim_Qasim: (after^='http://dbpedia.org/resource/Ahmed_Hassan_al-Bakr')
+    relationships:
+      - Guerrero_Municipality,_Chihuahua (<http://dbpedia.org/resource/Guerrero_Municipality,_Chihuahua>) --dop:namedFor--> Vicente_Guerrero (dor:Vicente_Guerrero)
+      - Vicente_Guerrero (dor:Vicente_Guerrero) --doo:deathCause--> Execution_by_firing_squad (dor:Execution_by_firing_squad)
+      - Abd_al-Karim_Qasim (dor:Abd_al-Karim_Qasim) --doo:deathCause--> Execution_by_firing_squad (dor:Execution_by_firing_squad)
+  '5':
+    attributes:
+      Joseph_Warren: (birth place^='http://dbpedia.org/resource/Province_of_Massachusetts_Bay')
+    relationships:
+      - Warren_County,_Illinois (<http://dbpedia.org/resource/Warren_County,_Illinois>) --dop:namedFor--> Joseph_Warren (dor:Joseph_Warren)
+      - Joseph_Warren (dor:Joseph_Warren) --doo:deathCause--> Killed_in_action (dor:Killed_in_action)
+      - Abdikadir_Yusuf_Aar (dor:Abdikadir_Yusuf_Aar) --doo:deathCause--> Killed_in_action (dor:Killed_in_action)
+  '6':
+    attributes:
+      Joseph_Warren: (birth place^='http://dbpedia.org/resource/Province_of_Massachusetts_Bay')
+    relationships:
+      - Warren_County,_Indiana (<http://dbpedia.org/resource/Warren_County,_Indiana>) --dop:namedFor--> Joseph_Warren (dor:Joseph_Warren)
+      - Joseph_Warren (dor:Joseph_Warren) --doo:deathCause--> Killed_in_action (dor:Killed_in_action)
+      - Abdikadir_Yusuf_Aar (dor:Abdikadir_Yusuf_Aar) --doo:deathCause--> Killed_in_action (dor:Killed_in_action)
+  '7':
+    attributes:
+      Joseph_Warren: (birth place^='http://dbpedia.org/resource/Province_of_Massachusetts_Bay')
+    relationships:
+      - Warren_County,_Iowa (<http://dbpedia.org/resource/Warren_County,_Iowa>) --dop:namedFor--> Joseph_Warren (dor:Joseph_Warren)
+      - Joseph_Warren (dor:Joseph_Warren) --doo:deathCause--> Killed_in_action (dor:Killed_in_action)
+      - Abdikadir_Yusuf_Aar (dor:Abdikadir_Yusuf_Aar) --doo:deathCause--> Killed_in_action (dor:Killed_in_action)
+  '8':
+    attributes:
+      José_Abad_Santos: (birth place^='http://dbpedia.org/resource/Captaincy_General_of_the_Philippines')
+      Jose_Abad_Santos,_Davao_Occidental: (date^='2020-01-28')
+    relationships:
+      - Jose_Abad_Santos,_Davao_Occidental (<http://dbpedia.org/resource/Jose_Abad_Santos,_Davao_Occidental>) --dop:namedFor--> José_Abad_Santos (<http://dbpedia.org/resource/José_Abad_Santos>)
+      - José_Abad_Santos (<http://dbpedia.org/resource/José_Abad_Santos>) --doo:deathCause--> Execution_by_firing_squad (dor:Execution_by_firing_squad)
+      - Abdollah_Riazi (dor:Abdollah_Riazi) --doo:deathCause--> Execution_by_firing_squad (dor:Execution_by_firing_squad)
+  '9':
+    attributes:
+      Antonio_Luna: (birth place^='http://dbpedia.org/resource/Captaincy_General_of_the_Philippines')
+      General_Luna,_Quezon: (date^='2020-01-25')
+    relationships:
+      - General_Luna,_Quezon (<http://dbpedia.org/resource/General_Luna,_Quezon>) --dop:namedFor--> Antonio_Luna (dor:Antonio_Luna)
+      - Antonio_Luna (dor:Antonio_Luna) --doo:deathCause--> Assassination (dor:Assassination)
+      - Abdul_Ghani_Lone (dor:Abdul_Ghani_Lone) --doo:deathCause--> Assassination (dor:Assassination)
+  '10':
+    attributes:
+      Antonio_Luna: (birth place^='http://dbpedia.org/resource/Captaincy_General_of_the_Philippines')
+      Luna,_Isabela: (date^='November 2015')
+    relationships:
+      - Luna,_Isabela (<http://dbpedia.org/resource/Luna,_Isabela>) --dop:namedFor--> Antonio_Luna (dor:Antonio_Luna)
+      - Antonio_Luna (dor:Antonio_Luna) --doo:deathCause--> Assassination (dor:Assassination)
+      - Abdul_Ghani_Lone (dor:Abdul_Ghani_Lone) --doo:deathCause--> Assassination (dor:Assassination)
+attributes:
+  person: --after^ (dop:after)--> langString | --notable works^ (dop:notableWorks)--> Resource | --honorific suffix^ (dop:honorificSuffix)--> langString | --by^ (dop:by)--> langString | --known for^ (dop:knownFor)--> Resource
+  politician: --birth place^ (dop:birthPlace)--> langString | --active years end date^ (doo:activeYearsEndDate)--> date | --date^ (dop:date)--> langString
+  settlement: --reason^ (dop:reason)--> langString | --date^ (dop:date)--> langString | --anthem^ (doo:anthem)--> Resource
+subgraph_id: 440
+relationships:
+  - settlement --dop:namedFor--> politician
+  - politician --doo:deathCause--> disease
+  - person --doo:deathCause--> disease

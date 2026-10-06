@@ -1,0 +1,114 @@
+types:
+  town: doo:Town
+  volcano: doo:Volcano
+  mountain: doo:Mountain
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abira,_Hokkaido: (area total (m2)^='237130000.0')
+    relationships:
+      - Asahi-dake (dor:Asahi-dake) --doo:mountainRange--> Daisetsuzan_Volcanic_Group (dor:Daisetsuzan_Volcanic_Group)
+      - Asahi-dake (dor:Asahi-dake) --doo:locatedInArea--> Hokkaido (dor:Hokkaido)
+      - Abira,_Hokkaido (<http://dbpedia.org/resource/Abira,_Hokkaido>) --doo:subdivision--> Hokkaido (dor:Hokkaido)
+  '2':
+    attributes:
+      Abira,_Hokkaido: (area total (m2)^='237130000.0')
+    relationships:
+      - Mount_Chienbetsu (dor:Mount_Chienbetsu) --doo:mountainRange--> Shiretoko_Peninsula (dor:Shiretoko_Peninsula)
+      - Mount_Chienbetsu (dor:Mount_Chienbetsu) --doo:locatedInArea--> Hokkaido (dor:Hokkaido)
+      - Abira,_Hokkaido (<http://dbpedia.org/resource/Abira,_Hokkaido>) --doo:subdivision--> Hokkaido (dor:Hokkaido)
+  '3':
+    attributes:
+      Abira,_Hokkaido: (area total (m2)^='237130000.0')
+    relationships:
+      - Mount_Dokkarimui (dor:Mount_Dokkarimui) --doo:mountainRange--> Shiretoko_Peninsula (dor:Shiretoko_Peninsula)
+      - Mount_Dokkarimui (dor:Mount_Dokkarimui) --doo:locatedInArea--> Hokkaido (dor:Hokkaido)
+      - Abira,_Hokkaido (<http://dbpedia.org/resource/Abira,_Hokkaido>) --doo:subdivision--> Hokkaido (dor:Hokkaido)
+  '4':
+    attributes: {}
+    relationships:
+      - Antofalla (dor:Antofalla) --doo:mountainRange--> Andes (dor:Andes)
+      - Antofalla (dor:Antofalla) --doo:locatedInArea--> Catamarca_Province (dor:Catamarca_Province)
+      - Aconquija (dor:Aconquija) --doo:subdivision--> Catamarca_Province (dor:Catamarca_Province)
+  '5':
+    attributes: {}
+    relationships:
+      - Incahuasi (dor:Incahuasi) --doo:mountainRange--> Andes (dor:Andes)
+      - Incahuasi (dor:Incahuasi) --doo:locatedInArea--> Catamarca_Province (dor:Catamarca_Province)
+      - Aconquija (dor:Aconquija) --doo:subdivision--> Catamarca_Province (dor:Catamarca_Province)
+  '6':
+    attributes: {}
+    relationships:
+      - Monte_Pissis (dor:Monte_Pissis) --doo:mountainRange--> Andes (dor:Andes)
+      - Monte_Pissis (dor:Monte_Pissis) --doo:locatedInArea--> Catamarca_Province (dor:Catamarca_Province)
+      - Aconquija (dor:Aconquija) --doo:subdivision--> Catamarca_Province (dor:Catamarca_Province)
+  '7':
+    attributes: {}
+    relationships:
+      - Alagogshak (dor:Alagogshak) --doo:mountainRange--> Aleutian_Range (dor:Aleutian_Range)
+      - Alagogshak (dor:Alagogshak) --doo:locatedInArea--> Alaska (dor:Alaska)
+      - Agivavik,_Alaska (<http://dbpedia.org/resource/Agivavik,_Alaska>) --doo:subdivision--> Alaska (dor:Alaska)
+  '8':
+    attributes: {}
+    relationships:
+      - Fisher_Caldera (dor:Fisher_Caldera) --doo:mountainRange--> Aleutian_Range (dor:Aleutian_Range)
+      - Fisher_Caldera (dor:Fisher_Caldera) --doo:locatedInArea--> Alaska (dor:Alaska)
+      - Agivavik,_Alaska (<http://dbpedia.org/resource/Agivavik,_Alaska>) --doo:subdivision--> Alaska (dor:Alaska)
+  '9':
+    attributes: {}
+    relationships:
+      - Fourpeaked_Mountain (dor:Fourpeaked_Mountain) --doo:mountainRange--> Aleutian_Range (dor:Aleutian_Range)
+      - Fourpeaked_Mountain (dor:Fourpeaked_Mountain) --doo:locatedInArea--> Alaska (dor:Alaska)
+      - Agivavik,_Alaska (<http://dbpedia.org/resource/Agivavik,_Alaska>) --doo:subdivision--> Alaska (dor:Alaska)
+  '10':
+    attributes: {}
+    relationships:
+      - Mount_Shasta (dor:Mount_Shasta) --doo:mountainRange--> Cascade_Range (dor:Cascade_Range)
+      - Mount_Shasta (dor:Mount_Shasta) --doo:locatedInArea--> California (dor:California)
+      - Agua_Mansa,_California (<http://dbpedia.org/resource/Agua_Mansa,_California>) --doo:subdivision--> California (dor:California)
+qa_result:
+  status: completed
+  cost_usd: 0.27955
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0231674
+        total_tokens: 3200
+        prompt_tokens: 2277
+        completion_tokens: 923
+      generate:
+        cost_usd: 0.07704260000000002
+        total_tokens: 7095
+        prompt_tokens: 3844
+        completion_tokens: 3251
+      verify_1:
+        cost_usd: 0.029022000000000006
+        total_tokens: 4572
+        prompt_tokens: 4161
+        completion_tokens: 411
+      complexity:
+        cost_usd: 0.150318
+        total_tokens: 11722
+        prompt_tokens: 5036
+        completion_tokens: 6686
+    total_tokens: 26589
+    prompt_tokens: 15318
+    total_cost_usd: 0.27955
+    completion_tokens: 11271
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  town: --Apr high F^ (dop:aprHighF)--> int | --Apr high C^ (dop:aprHighC)--> int | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --Center^ (dop:center)--> langString | --area total (m2)^ (doo:areaTotal)--> double | --quote^ (dop:quote)--> langString | --Aug rain days^ (dop:augRainDays)--> int | --Apr sun^ (dop:aprSun)--> int
+  administrative region: --image upright^ (dop:imageUpright)--> double | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+subgraph_id: 295
+relationships:
+  - volcano --doo:mountainRange--> mountain
+  - volcano --doo:locatedInArea--> administrative region
+  - town --doo:subdivision--> administrative region

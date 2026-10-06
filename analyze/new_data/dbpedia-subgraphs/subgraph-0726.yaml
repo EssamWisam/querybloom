@@ -1,0 +1,99 @@
+types:
+  award: doo:Award
+  tenure: doo:Tenure
+  Location: doo:Location
+  politician: doo:Politician
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Fred_Chaney_Sr.: (honorific suffix^='http://dbpedia.org/resource/Air_Force_Cross_(United_Kingdom)', birth date^='1914-10-20')
+      Don_Chipp__Tenure__8: (successor^='http://dbpedia.org/resource/Bert_Kelly')
+    relationships:
+      - Fred_Chaney_Sr. (<http://dbpedia.org/resource/Fred_Chaney_Sr.>) --dop:honorificSuffix--> Air_Force_Cross_(United_Kingdom) (<http://dbpedia.org/resource/Air_Force_Cross_(United_Kingdom)>)
+      - Don_Chipp__Tenure__8 (dor:Don_Chipp__Tenure__8) --doo:predecessor--> Fred_Chaney_Sr. (<http://dbpedia.org/resource/Fred_Chaney_Sr.>)
+      - Air_Force_Cross_(United_Kingdom) (<http://dbpedia.org/resource/Air_Force_Cross_(United_Kingdom)>) --doo:presenter--> Commonwealth_of_Nations (dor:Commonwealth_of_Nations)
+  '2':
+    attributes:
+      Fred_Chaney_Sr.: (honorific suffix^='http://dbpedia.org/resource/Air_Force_Cross_(United_Kingdom)', birth date^='1914-10-20')
+      Jock_Nelson__Tenure__2: (successor^='http://dbpedia.org/resource/John_England_(politician)')
+    relationships:
+      - Fred_Chaney_Sr. (<http://dbpedia.org/resource/Fred_Chaney_Sr.>) --dop:honorificSuffix--> Air_Force_Cross_(United_Kingdom) (<http://dbpedia.org/resource/Air_Force_Cross_(United_Kingdom)>)
+      - Jock_Nelson__Tenure__2 (dor:Jock_Nelson__Tenure__2) --doo:predecessor--> Fred_Chaney_Sr. (<http://dbpedia.org/resource/Fred_Chaney_Sr.>)
+      - Air_Force_Cross_(United_Kingdom) (<http://dbpedia.org/resource/Air_Force_Cross_(United_Kingdom)>) --doo:presenter--> Commonwealth_of_Nations (dor:Commonwealth_of_Nations)
+  '3':
+    attributes:
+      Fred_Chaney_Sr.: (honorific suffix^='http://dbpedia.org/resource/Air_Force_Cross_(United_Kingdom)', birth date^='1914-10-20')
+      Joe_Berinson__Tenure__3: (successor^='http://dbpedia.org/resource/Ross_McLean_(politician)')
+    relationships:
+      - Fred_Chaney_Sr. (<http://dbpedia.org/resource/Fred_Chaney_Sr.>) --dop:honorificSuffix--> Air_Force_Cross_(United_Kingdom) (<http://dbpedia.org/resource/Air_Force_Cross_(United_Kingdom)>)
+      - Joe_Berinson__Tenure__3 (dor:Joe_Berinson__Tenure__3) --doo:predecessor--> Fred_Chaney_Sr. (<http://dbpedia.org/resource/Fred_Chaney_Sr.>)
+      - Air_Force_Cross_(United_Kingdom) (<http://dbpedia.org/resource/Air_Force_Cross_(United_Kingdom)>) --doo:presenter--> Commonwealth_of_Nations (dor:Commonwealth_of_Nations)
+  '4':
+    attributes:
+      Bob_Kucera: (honorific suffix^='http://dbpedia.org/resource/Australian_Police_Medal', birth date^='1944-11-06')
+      John_D'Orazio__Tenure__4: (successor^='http://dbpedia.org/resource/Norm_Marlborough')
+    relationships:
+      - Bob_Kucera (dor:Bob_Kucera) --dop:honorificSuffix--> Australian_Police_Medal (dor:Australian_Police_Medal)
+      - John_D'Orazio__Tenure__4 (<http://dbpedia.org/resource/John_D'Orazio__Tenure__4>) --doo:predecessor--> Bob_Kucera (dor:Bob_Kucera)
+      - Australian_Police_Medal (dor:Australian_Police_Medal) --doo:presenter--> Australia (dor:Australia)
+  '5':
+    attributes:
+      Bob_Kucera: (honorific suffix^='http://dbpedia.org/resource/Australian_Police_Medal', birth date^='1944-11-06')
+      Mark_McGowan__Tenure__9: (successor^='http://dbpedia.org/resource/Margaret_Quirk')
+    relationships:
+      - Bob_Kucera (dor:Bob_Kucera) --dop:honorificSuffix--> Australian_Police_Medal (dor:Australian_Police_Medal)
+      - Mark_McGowan__Tenure__9 (dor:Mark_McGowan__Tenure__9) --doo:predecessor--> Bob_Kucera (dor:Bob_Kucera)
+      - Australian_Police_Medal (dor:Australian_Police_Medal) --doo:presenter--> Australia (dor:Australia)
+  '6':
+    attributes:
+      Mick_Keelty: (honorific suffix^='http://dbpedia.org/resource/Australian_Police_Medal', birth date^='1954-07-13')
+      Tony_Negus__Tenure__2: (successor^='http://dbpedia.org/resource/Andrew_Colvin')
+    relationships:
+      - Mick_Keelty (dor:Mick_Keelty) --dop:honorificSuffix--> Australian_Police_Medal (dor:Australian_Police_Medal)
+      - Tony_Negus__Tenure__2 (dor:Tony_Negus__Tenure__2) --doo:predecessor--> Mick_Keelty (dor:Mick_Keelty)
+      - Australian_Police_Medal (dor:Australian_Police_Medal) --doo:presenter--> Australia (dor:Australia)
+  '7':
+    attributes:
+      M_Harun-Ar-Rashid__Tenure__1: (successor^='http://dbpedia.org/resource/Hasan_Mashhud_Chowdhury')
+    relationships:
+      - Mustafizur_Rahman_(general) (<http://dbpedia.org/resource/Mustafizur_Rahman_(general)>) --dop:honorificSuffix--> Bir_Bikrom (dor:Bir_Bikrom)
+      - M_Harun-Ar-Rashid__Tenure__1 (dor:M_Harun-Ar-Rashid__Tenure__1) --doo:predecessor--> Mustafizur_Rahman_(general) (<http://dbpedia.org/resource/Mustafizur_Rahman_(general)>)
+      - Bir_Bikrom (dor:Bir_Bikrom) --doo:presenter--> Bangladesh (dor:Bangladesh)
+  '8':
+    attributes:
+      Oli_Ahmad: (honorific suffix^='http://dbpedia.org/resource/Bir_Bikrom', birth date^='1939-03-13')
+      Afsar_Uddin_Ahmed__Tenure__1: (successor^='http://dbpedia.org/resource/Oli_Ahmad')
+    relationships:
+      - Oli_Ahmad (dor:Oli_Ahmad) --dop:honorificSuffix--> Bir_Bikrom (dor:Bir_Bikrom)
+      - Afsar_Uddin_Ahmed__Tenure__1 (dor:Afsar_Uddin_Ahmed__Tenure__1) --doo:predecessor--> Oli_Ahmad (dor:Oli_Ahmad)
+      - Bir_Bikrom (dor:Bir_Bikrom) --doo:presenter--> Bangladesh (dor:Bangladesh)
+  '9':
+    attributes:
+      Oli_Ahmad: (honorific suffix^='http://dbpedia.org/resource/Bir_Bikrom', birth date^='1939-03-13')
+      Mamtaz_Begum__Tenure__1: (successor^='http://dbpedia.org/resource/Oli_Ahmad')
+    relationships:
+      - Oli_Ahmad (dor:Oli_Ahmad) --dop:honorificSuffix--> Bir_Bikrom (dor:Bir_Bikrom)
+      - Mamtaz_Begum__Tenure__1 (dor:Mamtaz_Begum__Tenure__1) --doo:predecessor--> Oli_Ahmad (dor:Oli_Ahmad)
+      - Bir_Bikrom (dor:Bir_Bikrom) --doo:presenter--> Bangladesh (dor:Bangladesh)
+  '10':
+    attributes:
+      Henry_Pybus_Bell-Irving: (honorific suffix^='http://dbpedia.org/resource/Canadian_Efficiency_Decoration', birth date^='1913-01-21')
+      Robert_Gordon_Rogers__Tenure__1: (successor^='http://dbpedia.org/resource/David_Lam_(real_estate_entrepreneur)')
+    relationships:
+      - Henry_Pybus_Bell-Irving (dor:Henry_Pybus_Bell-Irving) --dop:honorificSuffix--> Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration)
+      - Robert_Gordon_Rogers__Tenure__1 (dor:Robert_Gordon_Rogers__Tenure__1) --doo:predecessor--> Henry_Pybus_Bell-Irving (dor:Henry_Pybus_Bell-Irving)
+      - Canadian_Efficiency_Decoration (dor:Canadian_Efficiency_Decoration) --doo:presenter--> Canada (dor:Canada)
+attributes:
+  tenure: --successor^ (doo:successor)--> Resource
+  Location: --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --area total km^ (dop:areaTotalKm)--> int | --arc-gapA^ (dop:arcGapa)--> double | --abolished^ (dop:abolished)--> date | --city^ (dop:city)--> langString | --border^ (dop:border)--> langString | --Apr high F^ (dop:aprHighF)--> double | --arc-gapB^ (dop:arcGapb)--> double | --arc-text-colorB^ (dop:arcTextColorb)--> langString | --canton^ (doo:canton)--> Resource
+  politician: --honorific suffix^ (dop:honorificSuffix)--> langString | --birth date^ (dop:birthDate)--> date
+subgraph_id: 726
+relationships:
+  - politician --dop:honorificSuffix--> award
+  - tenure --doo:predecessor--> politician
+  - award --doo:presenter--> Location

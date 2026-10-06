@@ -1,0 +1,86 @@
+types:
+  river: doo:River
+  artist: doo:Artist
+  country: doo:Country
+  language: doo:Language
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Indonesia: '(Link from a Wikipage to an external page^=''http://www.bps.go.id/'', footer^=''Indonesian Armed Forces. Clockwise from top: Indonesian Army during training session, Sukhoi Su-30, Pindad Anoa, and Indonesian naval vessel .'')'
+      Buletin_Siang: (country^='Indonesia')
+    relationships:
+      - A._Rafiq (dor:A._Rafiq) --doo:birthPlace--> Indonesia (dor:Indonesia)
+      - Mamberamo_River (dor:Mamberamo_River) --doo:mouthPlace--> Indonesia (dor:Indonesia)
+      - Buletin_Siang (dor:Buletin_Siang) --doo:language--> Indonesia (dor:Indonesia)
+      - Burmeso_language__Burmeso__1 (dor:Burmeso_language__Burmeso__1) --doo:spokenIn--> Mamberamo_River (dor:Mamberamo_River)
+  '2':
+    attributes:
+      Indonesia: '(Link from a Wikipage to an external page^=''http://www.bps.go.id/'', footer^=''Indonesian Armed Forces. Clockwise from top: Indonesian Army during training session, Sukhoi Su-30, Pindad Anoa, and Indonesian naval vessel .'')'
+      Layangan_Putus: (country^='Indonesia')
+    relationships:
+      - A._Rafiq (dor:A._Rafiq) --doo:birthPlace--> Indonesia (dor:Indonesia)
+      - Mamberamo_River (dor:Mamberamo_River) --doo:mouthPlace--> Indonesia (dor:Indonesia)
+      - Layangan_Putus (dor:Layangan_Putus) --doo:language--> Indonesia (dor:Indonesia)
+      - Burmeso_language__Burmeso__1 (dor:Burmeso_language__Burmeso__1) --doo:spokenIn--> Mamberamo_River (dor:Mamberamo_River)
+  '3':
+    attributes:
+      Indonesia: '(Link from a Wikipage to an external page^=''http://www.bps.go.id/'', footer^=''Indonesian Armed Forces. Clockwise from top: Indonesian Army during training session, Sukhoi Su-30, Pindad Anoa, and Indonesian naval vessel .'')'
+      Obama_Eksklusif_RCTI_Bersama_Putra_Nababan: (country^='Indonesia')
+    relationships:
+      - A._Rafiq (dor:A._Rafiq) --doo:birthPlace--> Indonesia (dor:Indonesia)
+      - Mamberamo_River (dor:Mamberamo_River) --doo:mouthPlace--> Indonesia (dor:Indonesia)
+      - Obama_Eksklusif_RCTI_Bersama_Putra_Nababan (dor:Obama_Eksklusif_RCTI_Bersama_Putra_Nababan) --doo:language--> Indonesia (dor:Indonesia)
+      - Burmeso_language__Burmeso__1 (dor:Burmeso_language__Burmeso__1) --doo:spokenIn--> Mamberamo_River (dor:Mamberamo_River)
+qa_result:
+  status: completed
+  cost_usd: 0.289557
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.026792400000000004
+        total_tokens: 3208
+        prompt_tokens: 2046
+        completion_tokens: 1162
+      generate:
+        cost_usd: 0.0846326
+        total_tokens: 7293
+        prompt_tokens: 3602
+        completion_tokens: 3691
+      verify_1:
+        cost_usd: 0.049917
+        total_tokens: 5166
+        prompt_tokens: 3560
+        completion_tokens: 1606
+      verify_2:
+        cost_usd: 0.026297000000000004
+        total_tokens: 4138
+        prompt_tokens: 3764
+        completion_tokens: 374
+      complexity:
+        cost_usd: 0.10191800000000001
+        total_tokens: 8927
+        prompt_tokens: 4536
+        completion_tokens: 4391
+    total_tokens: 28732
+    prompt_tokens: 17508
+    total_cost_usd: 0.289557
+    completion_tokens: 11224
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  artist: --spouse^ (dop:spouse)--> langString | --awards^ (dop:awards)--> langString | --field^ (doo:field)--> Resource
+  country: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --footer^ (dop:footer)--> langString
+  television show: --relatives^ (dop:relatives)--> langString | --RTitle^ (dop:rtitle)--> langString | --artist^ (dop:artist)--> langString | --c^ (dop:c)--> langString | --width^ (dop:width)--> int | --voice^ (doo:voice)--> Resource | --country^ (dop:country)--> langString | --music^ (dop:music)--> langString
+subgraph_id: 268
+relationships:
+  - artist --doo:birthPlace--> country
+  - river --doo:mouthPlace--> country
+  - television show --doo:language--> country
+  - language --doo:spokenIn--> river

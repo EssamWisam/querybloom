@@ -1,0 +1,123 @@
+types:
+  country: doo:Country
+  disease: doo:Disease
+  station: doo:Station
+  wrestler: doo:Wrestler
+  politician: doo:Politician
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      8-Pass_Charlie: (birth date^='1933-08-24')
+      Acton_Vale_station: (page length (characters) of wiki page^='2385')
+      Dino_Bravo__Dino_Bravo__1: (active years start year^='1970')
+    relationships:
+      - 8-Pass_Charlie (dor:8-Pass_Charlie) --doo:residence--> Canada (dor:Canada)
+      - Acton_Vale_station (dor:Acton_Vale_station) --dop:country--> Canada (dor:Canada)
+      - Dino_Bravo__Dino_Bravo__1 (dor:Dino_Bravo__Dino_Bravo__1) --doo:billed--> Canada (dor:Canada)
+      - Dino_Bravo__Dino_Bravo__1 (dor:Dino_Bravo__Dino_Bravo__1) --doo:deathCause--> Gunshot_wound (dor:Gunshot_wound)
+  '2':
+    attributes:
+      Smith_Hart: (active years start year^='1973')
+      8-Pass_Charlie: (birth date^='1933-08-24')
+      Acton_Vale_station: (page length (characters) of wiki page^='2385')
+    relationships:
+      - 8-Pass_Charlie (dor:8-Pass_Charlie) --doo:residence--> Canada (dor:Canada)
+      - Acton_Vale_station (dor:Acton_Vale_station) --dop:country--> Canada (dor:Canada)
+      - Smith_Hart (dor:Smith_Hart) --doo:billed--> Canada (dor:Canada)
+      - Smith_Hart (dor:Smith_Hart) --doo:deathCause--> Prostate_cancer (dor:Prostate_cancer)
+  '3':
+    attributes:
+      8-Pass_Charlie: (birth date^='1933-08-24')
+      Agincourt_GO_Station: (page length (characters) of wiki page^='9502')
+      Dino_Bravo__Dino_Bravo__1: (active years start year^='1970')
+    relationships:
+      - 8-Pass_Charlie (dor:8-Pass_Charlie) --doo:residence--> Canada (dor:Canada)
+      - Agincourt_GO_Station (dor:Agincourt_GO_Station) --dop:country--> Canada (dor:Canada)
+      - Dino_Bravo__Dino_Bravo__1 (dor:Dino_Bravo__Dino_Bravo__1) --doo:billed--> Canada (dor:Canada)
+      - Dino_Bravo__Dino_Bravo__1 (dor:Dino_Bravo__Dino_Bravo__1) --doo:deathCause--> Gunshot_wound (dor:Gunshot_wound)
+  '4':
+    attributes:
+      Nelson_Royal: (active years start year^='1955')
+      A._C._Grayling: (birth date^='1949-04-03')
+      Chester_Bus_Interchange: (page length (characters) of wiki page^='5750')
+    relationships:
+      - A._C._Grayling (dor:A._C._Grayling) --doo:residence--> England (dor:England)
+      - Chester_Bus_Interchange (dor:Chester_Bus_Interchange) --dop:country--> England (dor:England)
+      - Nelson_Royal (dor:Nelson_Royal) --doo:billed--> England (dor:England)
+      - Nelson_Royal (dor:Nelson_Royal) --doo:deathCause--> Myocardial_infarction (dor:Myocardial_infarction)
+  '5':
+    attributes:
+      Nelson_Royal: (active years start year^='1955')
+      A._C._Grayling: (birth date^='1949-04-03')
+      Greyfriars_bus_station: (page length (characters) of wiki page^='12220')
+    relationships:
+      - A._C._Grayling (dor:A._C._Grayling) --doo:residence--> England (dor:England)
+      - Greyfriars_bus_station (dor:Greyfriars_bus_station) --dop:country--> England (dor:England)
+      - Nelson_Royal (dor:Nelson_Royal) --doo:billed--> England (dor:England)
+      - Nelson_Royal (dor:Nelson_Royal) --doo:deathCause--> Myocardial_infarction (dor:Myocardial_infarction)
+  '6':
+    attributes:
+      Nelson_Royal: (active years start year^='1955')
+      A._C._Grayling: (birth date^='1949-04-03')
+      Hereford_railway_station: (page length (characters) of wiki page^='17016', next^='http://dbpedia.org/resource/Ledbury_railway_station')
+    relationships:
+      - A._C._Grayling (dor:A._C._Grayling) --doo:residence--> England (dor:England)
+      - Hereford_railway_station (dor:Hereford_railway_station) --dop:country--> England (dor:England)
+      - Nelson_Royal (dor:Nelson_Royal) --doo:billed--> England (dor:England)
+      - Nelson_Royal (dor:Nelson_Royal) --doo:deathCause--> Myocardial_infarction (dor:Myocardial_infarction)
+  '7':
+    attributes:
+      La_Parka_(wrestler): (active years start year^='1987')
+      Ahmed_Mulay_Ali_Hamadi: (birth date^='1954', predecessor^='Bachari Saleh')
+      Alameda_metro_station_(Monterrey): (page length (characters) of wiki page^='2808')
+    relationships:
+      - Ahmed_Mulay_Ali_Hamadi (dor:Ahmed_Mulay_Ali_Hamadi) --doo:residence--> Mexico (dor:Mexico)
+      - Alameda_metro_station_(Monterrey) (<http://dbpedia.org/resource/Alameda_metro_station_(Monterrey)>) --dop:country--> Mexico (dor:Mexico)
+      - La_Parka_(wrestler) (<http://dbpedia.org/resource/La_Parka_(wrestler)>) --doo:billed--> Mexico (dor:Mexico)
+      - La_Parka_(wrestler) (<http://dbpedia.org/resource/La_Parka_(wrestler)>) --doo:deathCause--> Kidney_failure (dor:Kidney_failure)
+  '8':
+    attributes:
+      La_Parka_(wrestler): (active years start year^='1987')
+      Ahmed_Mulay_Ali_Hamadi: (birth date^='1954', predecessor^='Bachari Saleh')
+      Alameda_metro_station_(Monterrey): (page length (characters) of wiki page^='2808')
+    relationships:
+      - Ahmed_Mulay_Ali_Hamadi (dor:Ahmed_Mulay_Ali_Hamadi) --doo:residence--> Mexico (dor:Mexico)
+      - Alameda_metro_station_(Monterrey) (<http://dbpedia.org/resource/Alameda_metro_station_(Monterrey)>) --dop:country--> Mexico (dor:Mexico)
+      - La_Parka_(wrestler) (<http://dbpedia.org/resource/La_Parka_(wrestler)>) --doo:billed--> Mexico (dor:Mexico)
+      - La_Parka_(wrestler) (<http://dbpedia.org/resource/La_Parka_(wrestler)>) --doo:deathCause--> Respiratory_failure (dor:Respiratory_failure)
+  '9':
+    attributes:
+      Perro_Aguayo_Jr.: (active years start year^='1995')
+      Ahmed_Mulay_Ali_Hamadi: (birth date^='1954', predecessor^='Bachari Saleh')
+      Alameda_metro_station_(Monterrey): (page length (characters) of wiki page^='2808')
+    relationships:
+      - Ahmed_Mulay_Ali_Hamadi (dor:Ahmed_Mulay_Ali_Hamadi) --doo:residence--> Mexico (dor:Mexico)
+      - Alameda_metro_station_(Monterrey) (<http://dbpedia.org/resource/Alameda_metro_station_(Monterrey)>) --dop:country--> Mexico (dor:Mexico)
+      - Perro_Aguayo_Jr. (<http://dbpedia.org/resource/Perro_Aguayo_Jr.>) --doo:billed--> Mexico (dor:Mexico)
+      - Perro_Aguayo_Jr. (<http://dbpedia.org/resource/Perro_Aguayo_Jr.>) --doo:deathCause--> Cardiac_arrest (dor:Cardiac_arrest)
+  '10':
+    attributes:
+      Emile_Czaja: (active years start year^='1937')
+      Andrew_Willcox: (predecessor^='http://dbpedia.org/resource/George_Christensen')
+      Abbotsford_ferry_wharf: (page length (characters) of wiki page^='3094')
+    relationships:
+      - Andrew_Willcox (dor:Andrew_Willcox) --doo:residence--> Australia (dor:Australia)
+      - Abbotsford_ferry_wharf (dor:Abbotsford_ferry_wharf) --dop:country--> Australia (dor:Australia)
+      - Emile_Czaja (dor:Emile_Czaja) --doo:billed--> Australia (dor:Australia)
+      - Emile_Czaja (dor:Emile_Czaja) --doo:deathCause--> Traffic_collision (dor:Traffic_collision)
+attributes:
+  country: --footer^ (dop:footer)--> langString
+  station: --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --operator^ (doo:operator)--> Resource | --b^ (dop:b)--> langString | --direction^ (dop:direction)--> langString | --next^ (dop:next)--> langString
+  wrestler: --active years start year^ (doo:activeYearsStartYear)--> gYear
+  politician: --death place^ (dop:deathPlace)--> langString | --mother^ (doo:mother)--> Resource | --birth date^ (dop:birthDate)--> int | --predecessor^ (dop:predecessor)--> Resource | --IMDB id^ (doo:imdbId)--> string
+subgraph_id: 877
+relationships:
+  - politician --doo:residence--> country
+  - station --dop:country--> country
+  - wrestler --doo:billed--> country
+  - wrestler --doo:deathCause--> disease

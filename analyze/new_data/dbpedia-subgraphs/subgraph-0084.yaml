@@ -1,0 +1,78 @@
+types:
+  movie: doo:Film
+  person: doo:Person
+  broadcast network: doo:BroadcastNetwork
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      10,000_km: (editing^='Juliana Montañés')
+    relationships:
+      - 10,000_km (<http://dbpedia.org/resource/10,000_km>) --doo:productionCompany--> Televisió_de_Catalunya (<http://dbpedia.org/resource/Televisió_de_Catalunya>)
+      - 10,000_km (<http://dbpedia.org/resource/10,000_km>) --doo:starring--> David_Verdaguer (dor:David_Verdaguer)
+  '2':
+    attributes:
+      10,000_km: (editing^='Juliana Montañés')
+    relationships:
+      - 10,000_km (<http://dbpedia.org/resource/10,000_km>) --doo:productionCompany--> Televisió_de_Catalunya (<http://dbpedia.org/resource/Televisió_de_Catalunya>)
+      - 10,000_km (<http://dbpedia.org/resource/10,000_km>) --doo:starring--> Natalia_Tena (dor:Natalia_Tena)
+  '3':
+    attributes:
+      10,000_km: (editing^='Juliana Montañés')
+    relationships:
+      - 10,000_km (<http://dbpedia.org/resource/10,000_km>) --doo:productionCompany--> Televisión_Española (<http://dbpedia.org/resource/Televisión_Española>)
+      - 10,000_km (<http://dbpedia.org/resource/10,000_km>) --doo:starring--> David_Verdaguer (dor:David_Verdaguer)
+  '4':
+    attributes:
+      1898,_Our_Last_Men_in_the_Philippines: (editing^='Jaime Colis')
+    relationships:
+      - 1898,_Our_Last_Men_in_the_Philippines (<http://dbpedia.org/resource/1898,_Our_Last_Men_in_the_Philippines>) --doo:productionCompany--> Televisión_Española (<http://dbpedia.org/resource/Televisión_Española>)
+      - 1898,_Our_Last_Men_in_the_Philippines (<http://dbpedia.org/resource/1898,_Our_Last_Men_in_the_Philippines>) --doo:starring--> Álvaro_Cervantes (<http://dbpedia.org/resource/Álvaro_Cervantes>)
+  '5':
+    attributes:
+      1898,_Our_Last_Men_in_the_Philippines: (editing^='Jaime Colis')
+    relationships:
+      - 1898,_Our_Last_Men_in_the_Philippines (<http://dbpedia.org/resource/1898,_Our_Last_Men_in_the_Philippines>) --doo:productionCompany--> Televisión_Española (<http://dbpedia.org/resource/Televisión_Española>)
+      - 1898,_Our_Last_Men_in_the_Philippines (<http://dbpedia.org/resource/1898,_Our_Last_Men_in_the_Philippines>) --doo:starring--> Carlos_Hipólito (<http://dbpedia.org/resource/Carlos_Hipólito>)
+  '6':
+    attributes:
+      Helena_Bergström: (spouse^='http://dbpedia.org/resource/Colin_Nutley')
+    relationships:
+      - 1939_(film) (<http://dbpedia.org/resource/1939_(film)>) --doo:productionCompany--> Sveriges_Television (dor:Sveriges_Television)
+      - 1939_(film) (<http://dbpedia.org/resource/1939_(film)>) --doo:starring--> Helena_Bergström (<http://dbpedia.org/resource/Helena_Bergström>)
+  '7':
+    attributes: {}
+    relationships:
+      - 1939_(film) (<http://dbpedia.org/resource/1939_(film)>) --doo:productionCompany--> Sveriges_Television (dor:Sveriges_Television)
+      - 1939_(film) (<http://dbpedia.org/resource/1939_(film)>) --doo:starring--> Helene_Egelund (dor:Helene_Egelund)
+  '8':
+    attributes:
+      Per_Morberg: (spouse^='1988')
+    relationships:
+      - 1939_(film) (<http://dbpedia.org/resource/1939_(film)>) --doo:productionCompany--> Sveriges_Television (dor:Sveriges_Television)
+      - 1939_(film) (<http://dbpedia.org/resource/1939_(film)>) --doo:starring--> Per_Morberg (dor:Per_Morberg)
+  '9':
+    attributes:
+      3_Storeys: (editing^='Arindam Ghatak')
+      Masumeh_Makhija: (IMDB id^='1280282')
+    relationships:
+      - 3_Storeys (dor:3_Storeys) --doo:productionCompany--> B4U_(network) (<http://dbpedia.org/resource/B4U_(network)>)
+      - 3_Storeys (dor:3_Storeys) --doo:starring--> Masumeh_Makhija (dor:Masumeh_Makhija)
+  '10':
+    attributes:
+      3_Storeys: (editing^='Arindam Ghatak')
+      Pulkit_Samrat: (spouse^='2014')
+    relationships:
+      - 3_Storeys (dor:3_Storeys) --doo:productionCompany--> B4U_(network) (<http://dbpedia.org/resource/B4U_(network)>)
+      - 3_Storeys (dor:3_Storeys) --doo:starring--> Pulkit_Samrat (dor:Pulkit_Samrat)
+attributes:
+  movie: --editing^ (dop:editing)--> Resource
+  person: --2a^ (dop:2a)--> langString | --IMDB id^ (doo:imdbId)--> string | --last^ (dop:last)--> langString | --c^ (dop:c)--> langString | --spouse^ (dop:spouse)--> langString | --quoted^ (dop:quoted)--> langString | --display^ (dop:display)--> langString | --awards^ (dop:awards)--> int
+subgraph_id: 84
+relationships:
+  - movie --doo:productionCompany--> broadcast network
+  - movie --doo:starring--> person

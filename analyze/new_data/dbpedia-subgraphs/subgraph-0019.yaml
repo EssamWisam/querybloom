@@ -1,0 +1,100 @@
+types:
+  road: doo:Road
+  station: doo:Station
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Belgrade: (area total (km2)^='359.9', Aug precipitation mm^='55.1', page length (characters) of wiki page^='198633', b^='no')
+      A1_motorway_(Serbia): (subject='http://dbpedia.org/resource/Category:Jablanica_District', route^='1')
+      Belgrade_Bus_Station: (opened^='1966-03-03')
+    relationships:
+      - A1_motorway_(Serbia) (<http://dbpedia.org/resource/A1_motorway_(Serbia)>) --doo:city--> Belgrade (dor:Belgrade)
+      - Belgrade_Bus_Station (dor:Belgrade_Bus_Station) --doo:owningOrganisation--> Belgrade (dor:Belgrade)
+  '2':
+    attributes:
+      Belgrade: (area total (km2)^='359.9', Aug precipitation mm^='55.1', page length (characters) of wiki page^='198633', b^='no')
+      A2_motorway_(Serbia): (subject='http://dbpedia.org/resource/Category:Kolubara_District', route^='2')
+      Belgrade_Bus_Station: (opened^='1966-03-03')
+    relationships:
+      - A2_motorway_(Serbia) (<http://dbpedia.org/resource/A2_motorway_(Serbia)>) --doo:city--> Belgrade (dor:Belgrade)
+      - Belgrade_Bus_Station (dor:Belgrade_Bus_Station) --doo:owningOrganisation--> Belgrade (dor:Belgrade)
+  '3':
+    attributes:
+      Belgrade: (area total (km2)^='359.9', Aug precipitation mm^='55.1', page length (characters) of wiki page^='198633', b^='no')
+      A3_motorway_(Serbia): (subject='http://dbpedia.org/resource/Category:Motorways_in_Serbia', route^='3')
+      Belgrade_Bus_Station: (opened^='1966-03-03')
+    relationships:
+      - A3_motorway_(Serbia) (<http://dbpedia.org/resource/A3_motorway_(Serbia)>) --doo:city--> Belgrade (dor:Belgrade)
+      - Belgrade_Bus_Station (dor:Belgrade_Bus_Station) --doo:owningOrganisation--> Belgrade (dor:Belgrade)
+  '4':
+    attributes:
+      Toronto: (area total (km2)^='630.2', page length (characters) of wiki page^='224665', b^='no')
+      Allen_Road: (subject='http://dbpedia.org/resource/Category:Expressways_in_Canada', route^='Allen Road')
+      Union_Station_(Toronto): (opened^='1927-08-06', platform^='1')
+    relationships:
+      - Allen_Road (dor:Allen_Road) --doo:city--> Toronto (dor:Toronto)
+      - Union_Station_(Toronto) (<http://dbpedia.org/resource/Union_Station_(Toronto)>) --doo:owningOrganisation--> Toronto (dor:Toronto)
+  '5':
+    attributes:
+      Toronto: (area total (km2)^='630.2', page length (characters) of wiki page^='224665', b^='no')
+      Avenue_Road: (subject='http://dbpedia.org/resource/Category:Roads_in_Toronto', route^='Avenue Road')
+      Union_Station_(Toronto): (opened^='1927-08-06', platform^='1')
+    relationships:
+      - Avenue_Road (dor:Avenue_Road) --doo:city--> Toronto (dor:Toronto)
+      - Union_Station_(Toronto) (<http://dbpedia.org/resource/Union_Station_(Toronto)>) --doo:owningOrganisation--> Toronto (dor:Toronto)
+  '6':
+    attributes:
+      Toronto: (area total (km2)^='630.2', page length (characters) of wiki page^='224665', b^='no')
+      Union_Station_(Toronto): (opened^='1927-08-06', platform^='1')
+      Bathurst_Street_(Toronto): (subject='http://dbpedia.org/resource/Category:Aurora,_Ontario', route^='Bathurst Street')
+    relationships:
+      - Bathurst_Street_(Toronto) (<http://dbpedia.org/resource/Bathurst_Street_(Toronto)>) --doo:city--> Toronto (dor:Toronto)
+      - Union_Station_(Toronto) (<http://dbpedia.org/resource/Union_Station_(Toronto)>) --doo:owningOrganisation--> Toronto (dor:Toronto)
+  '7':
+    attributes:
+      Kolkata: (area total (km2)^='205.00014892120475', page length (characters) of wiki page^='219239', b^='yes')
+      Biswa_Bangla_Sarani: (subject='http://dbpedia.org/resource/Category:Roads_in_Kolkata')
+      Mominpur_metro_station: (platform^='http://dbpedia.org/resource/Side_platforms')
+    relationships:
+      - Biswa_Bangla_Sarani (dor:Biswa_Bangla_Sarani) --doo:city--> Kolkata (dor:Kolkata)
+      - Mominpur_metro_station (dor:Mominpur_metro_station) --doo:owningOrganisation--> Kolkata (dor:Kolkata)
+  '8':
+    attributes:
+      Kolkata: (area total (km2)^='205.00014892120475', page length (characters) of wiki page^='219239', b^='yes')
+      Biswa_Bangla_Sarani: (subject='http://dbpedia.org/resource/Category:Roads_in_Kolkata')
+      Victoria_metro_station,_Kolkata: (platform^='Island platform')
+    relationships:
+      - Biswa_Bangla_Sarani (dor:Biswa_Bangla_Sarani) --doo:city--> Kolkata (dor:Kolkata)
+      - Victoria_metro_station,_Kolkata (<http://dbpedia.org/resource/Victoria_metro_station,_Kolkata>) --doo:owningOrganisation--> Kolkata (dor:Kolkata)
+  '9':
+    attributes:
+      Windsor,_Ontario: (area total (km2)^='146.32', Aug precipitation mm^='72.6', page length (characters) of wiki page^='107845', Apr rain days^='12.2')
+      E._C._Row_Expressway: (subject='http://dbpedia.org/resource/Category:Expressways_in_Canada')
+      Windsor_International_Transit_Terminal: (opened^='2007')
+    relationships:
+      - E._C._Row_Expressway (dor:E._C._Row_Expressway) --doo:city--> Windsor,_Ontario (<http://dbpedia.org/resource/Windsor,_Ontario>)
+      - Windsor_International_Transit_Terminal (dor:Windsor_International_Transit_Terminal) --doo:owningOrganisation--> Windsor,_Ontario (<http://dbpedia.org/resource/Windsor,_Ontario>)
+  '10':
+    attributes:
+      Sofia: (area total (km2)^='492.0', Aug precipitation mm^='53.1', page length (characters) of wiki page^='167353')
+      Europe_motorway: (subject='http://dbpedia.org/resource/Category:Motorways_in_Bulgaria', route^='6')
+      Akademik_Aleksandar_Teodorov_-_Balan_Metro_Station: (opened^='2015-05-08', platform^='side')
+    relationships:
+      - Europe_motorway (dor:Europe_motorway) --doo:city--> Sofia (dor:Sofia)
+      - Akademik_Aleksandar_Teodorov_-_Balan_Metro_Station (dor:Akademik_Aleksandar_Teodorov_-_Balan_Metro_Station) --doo:owningOrganisation--> Sofia (dor:Sofia)
+attributes:
+  road: --subject (podt:subject)--> Resource | --borough^ (dop:borough)--> langString | --route^ (dop:route)--> int
+  station: --opened^ (dop:opened)--> langString | --platform^ (dop:platform)--> langString
+  settlement: --area total (km2)^ (doop:areaTotal)--> squareKilometre | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --Apr rain days^ (dop:aprRainDays)--> double | --b^ (dop:b)--> langString
+subgraph_id: 19
+relationships:
+  - road --doo:city--> settlement
+  - station --doo:owningOrganisation--> settlement

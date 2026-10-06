@@ -1,0 +1,128 @@
+types:
+  college coach: doo:CollegeCoach
+  american football player: doo:AmericanFootballPlayer
+  national football league season: doo:NationalFootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bob_Trumpy: (birth date^='1945-03-06')
+      1979_Pittsburgh_Steelers_season: (TVAnnouncers^='http://dbpedia.org/resource/Bob_Trumpy', Player^='http://dbpedia.org/resource/Calvin_Sweeney')
+    relationships:
+      - 1979_Pittsburgh_Steelers_season (dor:1979_Pittsburgh_Steelers_season) --dop:tvannouncers--> Hank_Stram (dor:Hank_Stram)
+      - 1979_Pittsburgh_Steelers_season (dor:1979_Pittsburgh_Steelers_season) --dop:tvannouncers--> Bob_Trumpy (dor:Bob_Trumpy)
+  '2':
+    attributes:
+      Don_Meredith: (birth date^='1938-04-10', caption^='Meredith with the Dallas Cowboys')
+      1979_Pittsburgh_Steelers_season: (TVAnnouncers^='http://dbpedia.org/resource/Bob_Trumpy', Player^='http://dbpedia.org/resource/Calvin_Sweeney')
+    relationships:
+      - 1979_Pittsburgh_Steelers_season (dor:1979_Pittsburgh_Steelers_season) --dop:tvannouncers--> Hank_Stram (dor:Hank_Stram)
+      - 1979_Pittsburgh_Steelers_season (dor:1979_Pittsburgh_Steelers_season) --dop:tvannouncers--> Don_Meredith (dor:Don_Meredith)
+  '3':
+    attributes:
+      Fran_Tarkenton: (birth date^='1940-02-03', caption^='Tarkenton in January 2010', alt^='Tarkenton in January 2010 after a speech by General David Petraeus in Atlanta, Georgia')
+      1979_Pittsburgh_Steelers_season: (TVAnnouncers^='http://dbpedia.org/resource/Bob_Trumpy', Player^='http://dbpedia.org/resource/Calvin_Sweeney')
+    relationships:
+      - 1979_Pittsburgh_Steelers_season (dor:1979_Pittsburgh_Steelers_season) --dop:tvannouncers--> Hank_Stram (dor:Hank_Stram)
+      - 1979_Pittsburgh_Steelers_season (dor:1979_Pittsburgh_Steelers_season) --dop:tvannouncers--> Fran_Tarkenton (dor:Fran_Tarkenton)
+  '4':
+    attributes:
+      Bob_Trumpy: (birth date^='1945-03-06')
+      1981_San_Francisco_49ers_season: (TVAnnouncers^='http://dbpedia.org/resource/Bob_Costas')
+    relationships:
+      - 1981_San_Francisco_49ers_season (dor:1981_San_Francisco_49ers_season) --dop:tvannouncers--> John_Madden_(American_football) (<http://dbpedia.org/resource/John_Madden_(American_football)>)
+      - 1981_San_Francisco_49ers_season (dor:1981_San_Francisco_49ers_season) --dop:tvannouncers--> Bob_Trumpy (dor:Bob_Trumpy)
+  '5':
+    attributes:
+      1981_San_Francisco_49ers_season: (TVAnnouncers^='http://dbpedia.org/resource/Bob_Costas')
+      George_Allen_(American_football_coach): (birth date^='1918-04-29', caption^='Allen, c. Head coach')
+    relationships:
+      - 1981_San_Francisco_49ers_season (dor:1981_San_Francisco_49ers_season) --dop:tvannouncers--> John_Madden_(American_football) (<http://dbpedia.org/resource/John_Madden_(American_football)>)
+      - 1981_San_Francisco_49ers_season (dor:1981_San_Francisco_49ers_season) --dop:tvannouncers--> George_Allen_(American_football_coach) (<http://dbpedia.org/resource/George_Allen_(American_football_coach)>)
+  '6':
+    attributes:
+      Hank_Stram: (birth date^='1923-01-03', caption^='Stram from the 1955 Purdue yearbook')
+      1981_San_Francisco_49ers_season: (TVAnnouncers^='http://dbpedia.org/resource/Bob_Costas')
+    relationships:
+      - 1981_San_Francisco_49ers_season (dor:1981_San_Francisco_49ers_season) --dop:tvannouncers--> John_Madden_(American_football) (<http://dbpedia.org/resource/John_Madden_(American_football)>)
+      - 1981_San_Francisco_49ers_season (dor:1981_San_Francisco_49ers_season) --dop:tvannouncers--> Hank_Stram (dor:Hank_Stram)
+  '7':
+    attributes:
+      Bob_Griese: (birth date^='1945-02-03', caption^='Griese in 2011')
+      Sam_Rutigliano: (birth date^='1931-07-01', coach team^='http://dbpedia.org/resource/Barcelona_Dragons_(NFL_Europe)')
+      1985_Pittsburgh_Steelers_season: (TVAnnouncers^='Frank Gifford , Joe Namath and O. J. Simpson')
+    relationships:
+      - 1985_Pittsburgh_Steelers_season (dor:1985_Pittsburgh_Steelers_season) --dop:tvannouncers--> Sam_Rutigliano (dor:Sam_Rutigliano)
+      - 1985_Pittsburgh_Steelers_season (dor:1985_Pittsburgh_Steelers_season) --dop:tvannouncers--> Bob_Griese (dor:Bob_Griese)
+  '8':
+    attributes:
+      Bob_Trumpy: (birth date^='1945-03-06')
+      Sam_Rutigliano: (birth date^='1931-07-01', coach team^='http://dbpedia.org/resource/Barcelona_Dragons_(NFL_Europe)')
+      1985_Pittsburgh_Steelers_season: (TVAnnouncers^='Frank Gifford , Joe Namath and O. J. Simpson')
+    relationships:
+      - 1985_Pittsburgh_Steelers_season (dor:1985_Pittsburgh_Steelers_season) --dop:tvannouncers--> Sam_Rutigliano (dor:Sam_Rutigliano)
+      - 1985_Pittsburgh_Steelers_season (dor:1985_Pittsburgh_Steelers_season) --dop:tvannouncers--> Bob_Trumpy (dor:Bob_Trumpy)
+  '9':
+    attributes:
+      Frank_Gifford: (birth date^='1930-08-16', caption^='Gifford at USC, c. 1949')
+      Sam_Rutigliano: (birth date^='1931-07-01', coach team^='http://dbpedia.org/resource/Barcelona_Dragons_(NFL_Europe)')
+      1985_Pittsburgh_Steelers_season: (TVAnnouncers^='Frank Gifford , Joe Namath and O. J. Simpson')
+    relationships:
+      - 1985_Pittsburgh_Steelers_season (dor:1985_Pittsburgh_Steelers_season) --dop:tvannouncers--> Sam_Rutigliano (dor:Sam_Rutigliano)
+      - 1985_Pittsburgh_Steelers_season (dor:1985_Pittsburgh_Steelers_season) --dop:tvannouncers--> Frank_Gifford (dor:Frank_Gifford)
+  '10':
+    attributes:
+      Dave_Rowe_(American_football): (birth date^='1945-06-20')
+      1986_Pittsburgh_Steelers_season: (TVAnnouncers^='http://dbpedia.org/resource/Al_Michaels')
+    relationships:
+      - 1986_Pittsburgh_Steelers_season (dor:1986_Pittsburgh_Steelers_season) --dop:tvannouncers--> Dick_Vermeil (dor:Dick_Vermeil)
+      - 1986_Pittsburgh_Steelers_season (dor:1986_Pittsburgh_Steelers_season) --dop:tvannouncers--> Dave_Rowe_(American_football) (<http://dbpedia.org/resource/Dave_Rowe_(American_football)>)
+qa_result:
+  status: completed
+  cost_usd: 0.397212
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.030252400000000002
+        total_tokens: 3654
+        prompt_tokens: 2410
+        completion_tokens: 1244
+      generate:
+        cost_usd: 0.0862026
+        total_tokens: 7898
+        prompt_tokens: 4304
+        completion_tokens: 3594
+      verify_1:
+        cost_usd: 0.076202
+        total_tokens: 7774
+        prompt_tokens: 5285
+        completion_tokens: 2489
+      verify_2:
+        cost_usd: 0.04921700000000001
+        total_tokens: 6199
+        prompt_tokens: 4984
+        completion_tokens: 1215
+      complexity:
+        cost_usd: 0.155338
+        total_tokens: 12513
+        prompt_tokens: 5756
+        completion_tokens: 6757
+    total_tokens: 38038
+    prompt_tokens: 22739
+    total_cost_usd: 0.397212
+    completion_tokens: 15299
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  college coach: --birth date^ (doo:birthDate)--> date | --coach team^ (dop:coachTeam)--> Resource | --coach team^ (dop:coachTeam)--> langString | --current team^ (dop:currentTeam)--> Resource | --awards^ (dop:awards)--> int
+  american football player: --birth date^ (dop:birthDate)--> date | --caption^ (dop:caption)--> langString | --align^ (dop:align)--> langString | --alt^ (dop:alt)--> langString | --bot^ (dop:bot)--> langString
+  national football league season: --TVAnnouncers^ (dop:tvannouncers)--> Resource | --Player^ (dop:player)--> langString | --TVAnnouncers^ (dop:tvannouncers)--> langString
+subgraph_id: 191
+relationships:
+  - national football league season --dop:tvannouncers--> college coach
+  - national football league season --dop:tvannouncers--> american football player

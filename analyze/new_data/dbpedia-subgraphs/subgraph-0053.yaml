@@ -1,0 +1,79 @@
+types:
+  government agency: doo:GovernmentAgency
+  military structure: doo:MilitaryStructure
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Washington_(state): (subject='http://dbpedia.org/resource/Category:1889_establishments_in_the_United_States')
+    relationships:
+      - 4Culture (dor:4Culture) --doo:jurisdiction--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Naval_Air_Station_Whidbey_Island (dor:Naval_Air_Station_Whidbey_Island) --doo:location--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+  '2':
+    attributes:
+      Washington_(state): (subject='http://dbpedia.org/resource/Category:1889_establishments_in_the_United_States')
+    relationships:
+      - 4Culture (dor:4Culture) --doo:jurisdiction--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Puget_Sound_Naval_Shipyard__and_Intermediate_Mainte__1 (dor:Puget_Sound_Naval_Shipyard__and_Intermediate_Mainte__1) --doo:location--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+  '3':
+    attributes:
+      New_South_Wales: (width^='220', named for^='http://dbpedia.org/resource/Wales', Apr record low C^='-13', subject='http://dbpedia.org/resource/Category:1788_establishments_in_Australia')
+    relationships:
+      - Aboriginal_Housing_Office (dor:Aboriginal_Housing_Office) --doo:jurisdiction--> New_South_Wales (dor:New_South_Wales)
+      - Ben_Buckler_Gun_Battery (dor:Ben_Buckler_Gun_Battery) --doo:location--> New_South_Wales (dor:New_South_Wales)
+  '4':
+    attributes:
+      New_South_Wales: (width^='220', named for^='http://dbpedia.org/resource/Wales', Apr record low C^='-13', subject='http://dbpedia.org/resource/Category:1788_establishments_in_Australia')
+    relationships:
+      - Aboriginal_Housing_Office (dor:Aboriginal_Housing_Office) --doo:jurisdiction--> New_South_Wales (dor:New_South_Wales)
+      - Dawes_Point_Battery (dor:Dawes_Point_Battery) --doo:location--> New_South_Wales (dor:New_South_Wales)
+  '5':
+    attributes:
+      New_South_Wales: (width^='220', named for^='http://dbpedia.org/resource/Wales', Apr record low C^='-13', subject='http://dbpedia.org/resource/Category:1788_establishments_in_Australia')
+    relationships:
+      - Aboriginal_Housing_Office (dor:Aboriginal_Housing_Office) --doo:jurisdiction--> New_South_Wales (dor:New_South_Wales)
+      - Defence_Establishment_Myambat (dor:Defence_Establishment_Myambat) --doo:location--> New_South_Wales (dor:New_South_Wales)
+  '6':
+    attributes:
+      Adams_County,_Pennsylvania: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-county-noun-2', width^='auto', named for^='http://dbpedia.org/resource/John_Adams', subject='http://dbpedia.org/resource/Category:1800_establishments_in_Pennsylvania')
+    relationships:
+      - Adams_County_Industrial_Development_Authority (dor:Adams_County_Industrial_Development_Authority) --doo:jurisdiction--> Adams_County,_Pennsylvania (<http://dbpedia.org/resource/Adams_County,_Pennsylvania>)
+      - 1913_Gettysburg_reunion (dor:1913_Gettysburg_reunion) --doo:location--> Adams_County,_Pennsylvania (<http://dbpedia.org/resource/Adams_County,_Pennsylvania>)
+  '7':
+    attributes:
+      Adams_County,_Pennsylvania: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-county-noun-2', width^='auto', named for^='http://dbpedia.org/resource/John_Adams', subject='http://dbpedia.org/resource/Category:1800_establishments_in_Pennsylvania')
+    relationships:
+      - Adams_County_Industrial_Development_Authority (dor:Adams_County_Industrial_Development_Authority) --doo:jurisdiction--> Adams_County,_Pennsylvania (<http://dbpedia.org/resource/Adams_County,_Pennsylvania>)
+      - Camp_Colt,_Pennsylvania (<http://dbpedia.org/resource/Camp_Colt,_Pennsylvania>) --doo:location--> Adams_County,_Pennsylvania (<http://dbpedia.org/resource/Adams_County,_Pennsylvania>)
+  '8':
+    attributes:
+      Pennsylvania: (width^='129', subject='http://dbpedia.org/resource/Category:1787_establishments_in_the_United_States')
+      Biddle_Air_National_Guard_Base: (builder^='http://dbpedia.org/resource/United_States_Navy')
+    relationships:
+      - Adams_Township_Municipal_Authority (dor:Adams_Township_Municipal_Authority) --doo:jurisdiction--> Pennsylvania (dor:Pennsylvania)
+      - Biddle_Air_National_Guard_Base (dor:Biddle_Air_National_Guard_Base) --doo:location--> Pennsylvania (dor:Pennsylvania)
+  '9':
+    attributes:
+      Pennsylvania: (width^='129', subject='http://dbpedia.org/resource/Category:1787_establishments_in_the_United_States')
+    relationships:
+      - Adams_Township_Municipal_Authority (dor:Adams_Township_Municipal_Authority) --doo:jurisdiction--> Pennsylvania (dor:Pennsylvania)
+      - Fort_Deshler (dor:Fort_Deshler) --doo:location--> Pennsylvania (dor:Pennsylvania)
+  '10':
+    attributes:
+      Pennsylvania: (width^='129', subject='http://dbpedia.org/resource/Category:1787_establishments_in_the_United_States')
+    relationships:
+      - Adams_Township_Municipal_Authority (dor:Adams_Township_Municipal_Authority) --doo:jurisdiction--> Pennsylvania (dor:Pennsylvania)
+      - Fort_Le_Boeuf (dor:Fort_Le_Boeuf) --doo:location--> Pennsylvania (dor:Pennsylvania)
+attributes:
+  military structure: --builder^ (doo:builder)--> Resource
+  administrative region: --wordnet_type (dop:wordnet_type)--> Resource | --width^ (dop:width)--> int | --affiliation^ (dop:affiliation)--> Resource | --colwidth^ (dop:colwidth)--> int | --Aug rain days^ (dop:augRainDays)--> double | --named for^ (dop:namedFor)--> Resource | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --capital^ (doo:capital)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> int | --subject (podt:subject)--> Resource
+subgraph_id: 53
+relationships:
+  - government agency --doo:jurisdiction--> administrative region
+  - military structure --doo:location--> administrative region

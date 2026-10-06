@@ -1,0 +1,77 @@
+types:
+  person: doo:Person
+  country: doo:Country
+  politician: doo:Politician
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Berlenti_Abdul_Hamid: (death date^='2010-12-01')
+    relationships:
+      - Abdel_Hakim_Amer (dor:Abdel_Hakim_Amer) --dop:spouse--> Berlenti_Abdul_Hamid (dor:Berlenti_Abdul_Hamid)
+      - Abdel_Hakim_Amer (dor:Abdel_Hakim_Amer) --dop:deathPlace--> United_Arab_Republic (dor:United_Arab_Republic)
+  '2':
+    attributes:
+      Rahah_Noah: (death date^='2020-12-18')
+      Abdul_Razak_Hussein: (alma mater^='Lincoln''s Inn')
+    relationships:
+      - Abdul_Razak_Hussein (dor:Abdul_Razak_Hussein) --dop:spouse--> Rahah_Noah (dor:Rahah_Noah)
+      - Abdul_Razak_Hussein (dor:Abdul_Razak_Hussein) --dop:deathPlace--> United_Kingdom (dor:United_Kingdom)
+  '3':
+    attributes: {}
+    relationships:
+      - Abdul_Wali_Khan (dor:Abdul_Wali_Khan) --dop:spouse--> Nasim_Wali_Khan (dor:Nasim_Wali_Khan)
+      - Abdul_Wali_Khan (dor:Abdul_Wali_Khan) --dop:deathPlace--> Pakistan (dor:Pakistan)
+  '4':
+    attributes:
+      Hawa_Abdi_Samatar: (death date^='2022-05-10')
+      Abdullahi_Yusuf_Ahmed: (alma mater^='http://dbpedia.org/resource/M._V._Frunze_Military_Academy')
+    relationships:
+      - Abdullahi_Yusuf_Ahmed (dor:Abdullahi_Yusuf_Ahmed) --dop:spouse--> Hawa_Abdi_Samatar (dor:Hawa_Abdi_Samatar)
+      - Abdullahi_Yusuf_Ahmed (dor:Abdullahi_Yusuf_Ahmed) --dop:deathPlace--> United_Arab_Emirates (dor:United_Arab_Emirates)
+  '5':
+    attributes:
+      Princess_Tsehai: (death date^='1942-08-17')
+    relationships:
+      - Abiye_Abebe (dor:Abiye_Abebe) --dop:spouse--> Princess_Tsehai (dor:Princess_Tsehai)
+      - Abiye_Abebe (dor:Abiye_Abebe) --dop:deathPlace--> Derg (dor:Derg)
+  '6':
+    attributes:
+      Tom_Walsh_(trade_unionist): (death date^='1943-04-05')
+    relationships:
+      - Adela_Pankhurst (dor:Adela_Pankhurst) --dop:spouse--> Tom_Walsh_(trade_unionist) (<http://dbpedia.org/resource/Tom_Walsh_(trade_unionist)>)
+      - Adela_Pankhurst (dor:Adela_Pankhurst) --dop:deathPlace--> Australia (dor:Australia)
+  '7':
+    attributes: {}
+    relationships:
+      - Adela_Ruiz_de_Royo (dor:Adela_Ruiz_de_Royo) --dop:spouse--> Aristides_Royo (dor:Aristides_Royo)
+      - Adela_Ruiz_de_Royo (dor:Adela_Ruiz_de_Royo) --dop:deathPlace--> Panama (dor:Panama)
+  '8':
+    attributes: {}
+    relationships:
+      - Adesh_Kanwarjit_Singh_Brar (dor:Adesh_Kanwarjit_Singh_Brar) --dop:spouse--> Karan_Kaur_Brar (dor:Karan_Kaur_Brar)
+      - Adesh_Kanwarjit_Singh_Brar (dor:Adesh_Kanwarjit_Singh_Brar) --dop:deathPlace--> India (dor:India)
+  '9':
+    attributes:
+      Eva_Braun: (commons^='y', death date^='1945-04-30')
+      Adolf_Hitler: (direction^='horizontal')
+    relationships:
+      - Adolf_Hitler (dor:Adolf_Hitler) --dop:spouse--> Eva_Braun (dor:Eva_Braun)
+      - Adolf_Hitler (dor:Adolf_Hitler) --dop:deathPlace--> Nazi_Germany (dor:Nazi_Germany)
+  '10':
+    attributes:
+      Cyril_King: (death date^='1978-01-02')
+    relationships:
+      - Agnes_King (dor:Agnes_King) --dop:spouse--> Cyril_King (dor:Cyril_King)
+      - Agnes_King (dor:Agnes_King) --dop:deathPlace--> United_States_Virgin_Islands (dor:United_States_Virgin_Islands)
+attributes:
+  person: --commons^ (dop:commons)--> langString | --imdbId (doo:imdbId)--> string | --death date^ (dop:deathDate)--> int | --width^ (dop:width)--> int | --issue^ (dop:issue)--> langString | --partner^ (doo:partner)--> Resource
+  politician: --direction^ (dop:direction)--> langString | --bot^ (dop:bot)--> langString | --alma mater^ (dop:almaMater)--> Resource
+subgraph_id: 376
+relationships:
+  - politician --dop:spouse--> person
+  - politician --dop:deathPlace--> country

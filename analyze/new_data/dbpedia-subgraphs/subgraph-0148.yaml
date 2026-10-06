@@ -1,0 +1,116 @@
+types:
+  cleric: doo:Cleric
+  country: doo:Country
+  soccer club: doo:SoccerClub
+  soccer manager: doo:SoccerManager
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      India: (last^='Roger', url^='https://books.google.com/books%3Fid=Vr2qnK_QOuAC&pg=PA1140')
+      Aizawl_FC: (league^='http://dbpedia.org/resource/I-League')
+      2021–22_I-League: (league topscorer^='http://dbpedia.org/resource/Marcus_Joseph')
+    relationships:
+      - Stanley_Rozario (dor:Stanley_Rozario) --dop:birthPlace--> India (dor:India)
+      - Stanley_Rozario (dor:Stanley_Rozario) --dop:currentclub--> Aizawl_FC (dor:Aizawl_FC)
+      - Aizawl_FC (dor:Aizawl_FC) --doo:season--> 2021–22_I-League (<http://dbpedia.org/resource/2021–22_I-League>)
+      - A._B._Masilamani (dor:A._B._Masilamani) --doo:nationality--> India (dor:India)
+  '2':
+    attributes:
+      India: (last^='Roger', url^='https://books.google.com/books%3Fid=Vr2qnK_QOuAC&pg=PA1140')
+      2021–22_Kerala_Premier_League: (league topscorer^='12')
+      Kerala_Blasters_FC_Reserves_and_Academy: (league^='Ernakulam District Youth League , ,')
+    relationships:
+      - T._G._Purushothaman (dor:T._G._Purushothaman) --dop:birthPlace--> India (dor:India)
+      - T._G._Purushothaman (dor:T._G._Purushothaman) --dop:currentclub--> Kerala_Blasters_FC_Reserves_and_Academy (dor:Kerala_Blasters_FC_Reserves_and_Academy)
+      - Kerala_Blasters_FC_Reserves_and_Academy (dor:Kerala_Blasters_FC_Reserves_and_Academy) --doo:season--> 2021–22_Kerala_Premier_League (<http://dbpedia.org/resource/2021–22_Kerala_Premier_League>)
+      - A._B._Masilamani (dor:A._B._Masilamani) --doo:nationality--> India (dor:India)
+  '3':
+    attributes:
+      India: (last^='Roger', url^='https://books.google.com/books%3Fid=Vr2qnK_QOuAC&pg=PA1140')
+      Kerala_Blasters_FC_Reserves_and_Academy: (league^='Ernakulam District Youth League , ,')
+      2022_Reliance_Foundation_Development_League: (league topscorer^='Rahul Raju')
+    relationships:
+      - T._G._Purushothaman (dor:T._G._Purushothaman) --dop:birthPlace--> India (dor:India)
+      - T._G._Purushothaman (dor:T._G._Purushothaman) --dop:currentclub--> Kerala_Blasters_FC_Reserves_and_Academy (dor:Kerala_Blasters_FC_Reserves_and_Academy)
+      - Kerala_Blasters_FC_Reserves_and_Academy (dor:Kerala_Blasters_FC_Reserves_and_Academy) --doo:season--> 2022_Reliance_Foundation_Development_League (dor:2022_Reliance_Foundation_Development_League)
+      - A._B._Masilamani (dor:A._B._Masilamani) --doo:nationality--> India (dor:India)
+  '4':
+    attributes:
+      Asteras_Tripolis_F.C.: (league^='http://dbpedia.org/resource/Super_League_Greece')
+      2021–22_Super_League_Greece: (league topscorer^='')
+    relationships:
+      - Iraklis_Metaxas (dor:Iraklis_Metaxas) --dop:birthPlace--> Germany (dor:Germany)
+      - Iraklis_Metaxas (dor:Iraklis_Metaxas) --dop:currentclub--> Asteras_Tripolis_F.C. (<http://dbpedia.org/resource/Asteras_Tripolis_F.C.>)
+      - Asteras_Tripolis_F.C. (<http://dbpedia.org/resource/Asteras_Tripolis_F.C.>) --doo:season--> 2021–22_Super_League_Greece (<http://dbpedia.org/resource/2021–22_Super_League_Greece>)
+      - Abraham_a_Sancta_Clara__Abraham_a_Sancta_Clara__1 (dor:Abraham_a_Sancta_Clara__Abraham_a_Sancta_Clara__1) --doo:nationality--> Germany (dor:Germany)
+  '5':
+    attributes:
+      Bonner_SC: (league^='http://dbpedia.org/resource/Mittelrheinliga')
+    relationships:
+      - Andy_Hubert (dor:Andy_Hubert) --dop:birthPlace--> Germany (dor:Germany)
+      - Andy_Hubert (dor:Andy_Hubert) --dop:currentclub--> Bonner_SC (dor:Bonner_SC)
+      - Bonner_SC (dor:Bonner_SC) --doo:season--> 2021–22_Regionalliga (<http://dbpedia.org/resource/2021–22_Regionalliga>)
+      - Abraham_a_Sancta_Clara__Abraham_a_Sancta_Clara__1 (dor:Abraham_a_Sancta_Clara__Abraham_a_Sancta_Clara__1) --doo:nationality--> Germany (dor:Germany)
+  '6':
+    attributes:
+      Egypt: (url^='https://web.archive.org/web/20181128083438/https:/www.tahrirnews.com/')
+      Al_Ahly_SC: (league^='http://dbpedia.org/resource/Egyptian_Premier_League')
+      2021–22_Egyptian_Premier_League: (league topscorer^='http://dbpedia.org/resource/Ahmed_Sayed')
+    relationships:
+      - Mohsen_Saleh (dor:Mohsen_Saleh) --dop:birthPlace--> Egypt (dor:Egypt)
+      - Mohsen_Saleh (dor:Mohsen_Saleh) --dop:currentclub--> Al_Ahly_SC (dor:Al_Ahly_SC)
+      - Al_Ahly_SC (dor:Al_Ahly_SC) --doo:season--> 2021–22_Egyptian_Premier_League (<http://dbpedia.org/resource/2021–22_Egyptian_Premier_League>)
+      - Abraham_II_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Abraham_II_(Coptic_archbishop_of_Jerusalem)>) --doo:nationality--> Egypt (dor:Egypt)
+  '7':
+    attributes:
+      Egypt: (url^='https://web.archive.org/web/20181128083438/https:/www.tahrirnews.com/')
+      Al-Hussein_SC_(Irbid): (league^='http://dbpedia.org/resource/Jordanian_Pro_League')
+      2022_Jordanian_Pro_League: (league topscorer^='')
+    relationships:
+      - Ashraf_Kasem (dor:Ashraf_Kasem) --dop:birthPlace--> Egypt (dor:Egypt)
+      - Ashraf_Kasem (dor:Ashraf_Kasem) --dop:currentclub--> Al-Hussein_SC_(Irbid) (<http://dbpedia.org/resource/Al-Hussein_SC_(Irbid)>)
+      - Al-Hussein_SC_(Irbid) (<http://dbpedia.org/resource/Al-Hussein_SC_(Irbid)>) --doo:season--> 2022_Jordanian_Pro_League (dor:2022_Jordanian_Pro_League)
+      - Abraham_II_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Abraham_II_(Coptic_archbishop_of_Jerusalem)>) --doo:nationality--> Egypt (dor:Egypt)
+  '8':
+    attributes:
+      Egypt: (url^='https://web.archive.org/web/20181128083438/https:/www.tahrirnews.com/')
+      2021–22_Egyptian_Second_Division: (league topscorer^='')
+    relationships:
+      - Sami_El-Sheshini (dor:Sami_El-Sheshini) --dop:birthPlace--> Egypt (dor:Egypt)
+      - Sami_El-Sheshini (dor:Sami_El-Sheshini) --dop:currentclub--> Aswan_SC (dor:Aswan_SC)
+      - Aswan_SC (dor:Aswan_SC) --doo:season--> 2021–22_Egyptian_Second_Division (<http://dbpedia.org/resource/2021–22_Egyptian_Second_Division>)
+      - Abraham_II_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Abraham_II_(Coptic_archbishop_of_Jerusalem)>) --doo:nationality--> Egypt (dor:Egypt)
+  '9':
+    attributes:
+      Alebrijes_de_Oaxaca: (league^='http://dbpedia.org/resource/Liga_de_Expansión_MX')
+      2022–23_Liga_de_Expansión_MX_season: (league topscorer^='')
+    relationships:
+      - Carlos_Josafat_Ramos (dor:Carlos_Josafat_Ramos) --dop:birthPlace--> Mexico (dor:Mexico)
+      - Carlos_Josafat_Ramos (dor:Carlos_Josafat_Ramos) --dop:currentclub--> Alebrijes_de_Oaxaca (dor:Alebrijes_de_Oaxaca)
+      - Alebrijes_de_Oaxaca (dor:Alebrijes_de_Oaxaca) --doo:season--> 2022–23_Liga_de_Expansión_MX_season (<http://dbpedia.org/resource/2022–23_Liga_de_Expansión_MX_season>)
+      - Adalberto_Almeida_y_Merino (dor:Adalberto_Almeida_y_Merino) --doo:nationality--> Mexico (dor:Mexico)
+  '10':
+    attributes:
+      Atlas_F.C._(women): (league^='http://dbpedia.org/resource/Liga_MX_Femenil')
+      2021–22_Liga_MX_Femenil_season: (league topscorer^='')
+    relationships:
+      - Fabiola_Vargas (dor:Fabiola_Vargas) --dop:birthPlace--> Mexico (dor:Mexico)
+      - Fabiola_Vargas (dor:Fabiola_Vargas) --dop:currentclub--> Atlas_F.C._(women) (<http://dbpedia.org/resource/Atlas_F.C._(women)>)
+      - Atlas_F.C._(women) (<http://dbpedia.org/resource/Atlas_F.C._(women)>) --doo:season--> 2021–22_Liga_MX_Femenil_season (<http://dbpedia.org/resource/2021–22_Liga_MX_Femenil_season>)
+      - Adalberto_Almeida_y_Merino (dor:Adalberto_Almeida_y_Merino) --doo:nationality--> Mexico (dor:Mexico)
+attributes:
+  country: --last^ (dop:last)--> langString | --url^ (dop:url)--> Resource | --founding year^ (doo:foundingYear)--> gYear
+  soccer club: --lowestAttendance (dop:lowestAttendance)--> date | --league^ (dop:league)--> Resource | --d^ (dop:d)--> date | --al^ (dop:al)--> int | --colwidth^ (dop:colwidth)--> int
+  football league season: --league topscorer^ (dop:leagueTopscorer)--> Resource
+subgraph_id: 148
+relationships:
+  - soccer manager --dop:birthPlace--> country
+  - soccer manager --dop:currentclub--> soccer club
+  - soccer club --doo:season--> football league season
+  - cleric --doo:nationality--> country

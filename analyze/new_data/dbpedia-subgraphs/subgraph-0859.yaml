@@ -1,0 +1,77 @@
+types:
+  bank: doo:Bank
+  tenure: doo:Tenure
+  country: doo:Country
+  settlement: doo:Settlement
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Andhra_Pradesh: (anthem^='http://dbpedia.org/resource/Maa_Telugu_Thalliki', area total (km2)^='162975.0')
+      Aegon_Life_Insurance_Company: (industry^='http://dbpedia.org/resource/Financial_services')
+    relationships:
+      - Aegon_Life_Insurance_Company (dor:Aegon_Life_Insurance_Company) --dop:areaServed--> India (dor:India)
+      - Bonda_Umamaheswara_Rao__Tenure__1 (dor:Bonda_Umamaheswara_Rao__Tenure__1) --doo:constituencyDistrict--> India (dor:India)
+      - Bonda_Umamaheswara_Rao__Tenure__1 (dor:Bonda_Umamaheswara_Rao__Tenure__1) --doo:constituencyDistrict--> Andhra_Pradesh (dor:Andhra_Pradesh)
+      - Aegon_Life_Insurance_Company (dor:Aegon_Life_Insurance_Company) --doo:industry--> Financial_services (dor:Financial_services)
+  '2':
+    attributes:
+      Aegon_Life_Insurance_Company: (industry^='http://dbpedia.org/resource/Financial_services')
+    relationships:
+      - Aegon_Life_Insurance_Company (dor:Aegon_Life_Insurance_Company) --dop:areaServed--> India (dor:India)
+      - Dasari_Manohar_Reddy__Tenure__1 (dor:Dasari_Manohar_Reddy__Tenure__1) --doo:constituencyDistrict--> India (dor:India)
+      - Dasari_Manohar_Reddy__Tenure__1 (dor:Dasari_Manohar_Reddy__Tenure__1) --doo:constituencyDistrict--> Telangana_State (dor:Telangana_State)
+      - Aegon_Life_Insurance_Company (dor:Aegon_Life_Insurance_Company) --doo:industry--> Financial_services (dor:Financial_services)
+  '3':
+    attributes:
+      Punjab,_India: (area total (km2)^='50362.0')
+      Aegon_Life_Insurance_Company: (industry^='http://dbpedia.org/resource/Financial_services')
+    relationships:
+      - Aegon_Life_Insurance_Company (dor:Aegon_Life_Insurance_Company) --dop:areaServed--> India (dor:India)
+      - Dilraj_Singh_Bhunder__Tenure__1 (dor:Dilraj_Singh_Bhunder__Tenure__1) --doo:constituencyDistrict--> India (dor:India)
+      - Dilraj_Singh_Bhunder__Tenure__1 (dor:Dilraj_Singh_Bhunder__Tenure__1) --doo:constituencyDistrict--> Punjab,_India (<http://dbpedia.org/resource/Punjab,_India>)
+      - Aegon_Life_Insurance_Company (dor:Aegon_Life_Insurance_Company) --doo:industry--> Financial_services (dor:Financial_services)
+  '4':
+    attributes:
+      BHG_Financial: (industry^='http://dbpedia.org/resource/Financial_Services')
+      Augusta,_Maine: (Apr precipitation days^='11.9', area total (km2)^='150.31')
+    relationships:
+      - BHG_Financial (dor:BHG_Financial) --dop:areaServed--> United_States (dor:United_States)
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:constituencyDistrict--> United_States (dor:United_States)
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:constituencyDistrict--> Augusta,_Maine (<http://dbpedia.org/resource/Augusta,_Maine>)
+      - BHG_Financial (dor:BHG_Financial) --doo:industry--> Financial_Services (dor:Financial_Services)
+  '5':
+    attributes:
+      Maine: (area total (km2)^='35385.0')
+      BHG_Financial: (industry^='http://dbpedia.org/resource/Financial_Services')
+    relationships:
+      - BHG_Financial (dor:BHG_Financial) --dop:areaServed--> United_States (dor:United_States)
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:constituencyDistrict--> United_States (dor:United_States)
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:constituencyDistrict--> Maine (dor:Maine)
+      - BHG_Financial (dor:BHG_Financial) --doo:industry--> Financial_Services (dor:Financial_Services)
+  '6':
+    attributes:
+      HayPost: (industry^='Postal and Financial services')
+      Augusta,_Maine: (Apr precipitation days^='11.9', area total (km2)^='150.31')
+    relationships:
+      - HayPost (dor:HayPost) --dop:areaServed--> United_States (dor:United_States)
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:constituencyDistrict--> United_States (dor:United_States)
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:constituencyDistrict--> Augusta,_Maine (<http://dbpedia.org/resource/Augusta,_Maine>)
+      - HayPost (dor:HayPost) --doo:industry--> Mail (dor:Mail)
+attributes:
+  bank: --industry^ (dop:industry)--> langString | --former name^ (doo:formerName)--> langString
+  country: --alt (dop:alt)--> langString
+  settlement: --Aug high C^ (dop:augHighC)--> double | --differentFrom (wwoo:differentFrom)--> Resource | --original name^ (doo:originalName)--> langString | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --Apr rain mm^ (dop:aprRainMm)--> int | --anthem^ (doo:anthem)--> Resource | --line^ (dop:line)--> int | --area total (km2)^ (doop:areaTotal)--> squareKilometre
+subgraph_id: 859
+relationships:
+  - bank --dop:areaServed--> country
+  - tenure --doo:constituencyDistrict--> country
+  - tenure --doo:constituencyDistrict--> settlement
+  - bank --doo:industry--> music genre

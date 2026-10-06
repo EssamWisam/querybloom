@@ -1,0 +1,97 @@
+types:
+  airport: doo:Airport
+  university: doo:University
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Yogyakarta: (Aug low C^='20.6', area total (km2)^='32.5', Aug precipitation mm^='16')
+      Adisutjipto_Airport: (elevation (μ)^='115.5192', image width^='260')
+      Duta_Wacana_Christian_University: (city^='http://dbpedia.org/resource/Yogyakarta', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2')
+    relationships:
+      - Adisutjipto_Airport (dor:Adisutjipto_Airport) --doo:city--> Yogyakarta (dor:Yogyakarta)
+      - Duta_Wacana_Christian_University (dor:Duta_Wacana_Christian_University) --dop:city--> Yogyakarta (dor:Yogyakarta)
+  '2':
+    attributes:
+      Yogyakarta: (Aug low C^='20.6', area total (km2)^='32.5', Aug precipitation mm^='16')
+      Adisutjipto_Airport: (elevation (μ)^='115.5192', image width^='260')
+      Indonesian_Nuclear_Technology_Polytechnic: (city^='http://dbpedia.org/resource/Yogyakarta')
+    relationships:
+      - Adisutjipto_Airport (dor:Adisutjipto_Airport) --doo:city--> Yogyakarta (dor:Yogyakarta)
+      - Indonesian_Nuclear_Technology_Polytechnic (dor:Indonesian_Nuclear_Technology_Polytechnic) --dop:city--> Yogyakarta (dor:Yogyakarta)
+  '3':
+    attributes:
+      California: (area total (km2)^='163696.0', align^='left')
+      Agua_Caliente_Airport: (elevation (μ)^='371.856')
+      American_Academy_of_Dramatic_Arts: (city^='New York City, New York and')
+    relationships:
+      - Agua_Caliente_Airport (dor:Agua_Caliente_Airport) --doo:city--> California (dor:California)
+      - American_Academy_of_Dramatic_Arts (dor:American_Academy_of_Dramatic_Arts) --dop:city--> California (dor:California)
+  '4':
+    attributes:
+      California: (area total (km2)^='163696.0', align^='left')
+      Bay_Area_Medical_Academy: (city^='http://dbpedia.org/resource/California')
+    relationships:
+      - Agua_Caliente_Airport (dor:Agua_Caliente_Airport) --doo:city--> California (dor:California)
+      - Bay_Area_Medical_Academy (dor:Bay_Area_Medical_Academy) --dop:city--> California (dor:California)
+  '5':
+    attributes:
+      California: (area total (km2)^='163696.0', align^='left')
+      Cinema_Makeup_School: (city^='http://dbpedia.org/resource/California')
+      Agua_Caliente_Airport: (elevation (μ)^='371.856')
+    relationships:
+      - Agua_Caliente_Airport (dor:Agua_Caliente_Airport) --doo:city--> California (dor:California)
+      - Cinema_Makeup_School (dor:Cinema_Makeup_School) --dop:city--> California (dor:California)
+  '6':
+    attributes:
+      Texas: (area total (km2)^='268596.0')
+      Air_Park-Dallas_Airport: (elevation (μ)^='211.836')
+      Burnett_School_of_Medicine: (city^='http://dbpedia.org/resource/Fort_Worth,_Texas', affiliation^='Cook Children''s')
+    relationships:
+      - Air_Park-Dallas_Airport (dor:Air_Park-Dallas_Airport) --doo:city--> Texas (dor:Texas)
+      - Burnett_School_of_Medicine (dor:Burnett_School_of_Medicine) --dop:city--> Texas (dor:Texas)
+  '7':
+    attributes:
+      Texas: (area total (km2)^='268596.0')
+      Long_School_of_Medicine: (city^='http://dbpedia.org/resource/San_Antonio')
+    relationships:
+      - Air_Park-Dallas_Airport (dor:Air_Park-Dallas_Airport) --doo:city--> Texas (dor:Texas)
+      - Long_School_of_Medicine (dor:Long_School_of_Medicine) --dop:city--> Texas (dor:Texas)
+  '8':
+    attributes:
+      Texas: (area total (km2)^='268596.0')
+      Air_Park-Dallas_Airport: (elevation (μ)^='211.836')
+      McGovern_Medical_School: (city^='http://dbpedia.org/resource/Houston', affiliation^='Children''s Memorial Hermann Hospital')
+    relationships:
+      - Air_Park-Dallas_Airport (dor:Air_Park-Dallas_Airport) --doo:city--> Texas (dor:Texas)
+      - McGovern_Medical_School (dor:McGovern_Medical_School) --dop:city--> Texas (dor:Texas)
+  '9':
+    attributes:
+      Xinjiang: (area total (km2)^='1664897.0', align^='right')
+      Aksu_Hongqipo_Airport: (elevation (μ)^='1163.0')
+      Xinjiang_Medical_University: (city^='http://dbpedia.org/resource/Ürümqi')
+    relationships:
+      - Aksu_Hongqipo_Airport (dor:Aksu_Hongqipo_Airport) --doo:city--> Xinjiang (dor:Xinjiang)
+      - Xinjiang_Medical_University (dor:Xinjiang_Medical_University) --dop:city--> Xinjiang (dor:Xinjiang)
+  '10':
+    attributes:
+      Xinjiang: (area total (km2)^='1664897.0', align^='right')
+      Aksu_Hongqipo_Airport: (elevation (μ)^='1163.0')
+      Xinjiang_Normal_University: (city^='http://dbpedia.org/resource/Ürümqi')
+    relationships:
+      - Aksu_Hongqipo_Airport (dor:Aksu_Hongqipo_Airport) --doo:city--> Xinjiang (dor:Xinjiang)
+      - Xinjiang_Normal_University (dor:Xinjiang_Normal_University) --dop:city--> Xinjiang (dor:Xinjiang)
+attributes:
+  airport: --elevation (μ)^ (doo:elevation)--> double | --image width^ (dop:imageWidth)--> int
+  university: --city^ (dop:city)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource | --affiliation^ (dop:affiliation)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+  administrative region: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --Aug low C^ (dop:augLowC)--> int | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --align^ (dop:align)--> langString | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int
+subgraph_id: 143
+relationships:
+  - airport --doo:city--> administrative region
+  - university --dop:city--> administrative region

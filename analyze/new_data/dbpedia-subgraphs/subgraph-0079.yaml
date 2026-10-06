@@ -1,0 +1,82 @@
+types:
+  horse: doo:Horse
+  Location: doo:Location
+  RaceHorse: doo:RaceHorse
+  horse race: doo:HorseRace
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Affectionately (dor:Affectionately) --doo:race--> Astoria_Stakes (dor:Astoria_Stakes)
+      - Astoria_Stakes (dor:Astoria_Stakes) --doo:location--> Elmont,_New_York (<http://dbpedia.org/resource/Elmont,_New_York>)
+      - Personality_(horse) (<http://dbpedia.org/resource/Personality_(horse)>) --doo:dam--> Affectionately (dor:Affectionately)
+  '2':
+    attributes:
+      Queens: (width^='225', image^='--06-03')
+    relationships:
+      - Affectionately (dor:Affectionately) --doo:race--> Fashion_Stakes (dor:Fashion_Stakes)
+      - Fashion_Stakes (dor:Fashion_Stakes) --doo:location--> Queens (dor:Queens)
+      - Personality_(horse) (<http://dbpedia.org/resource/Personality_(horse)>) --doo:dam--> Affectionately (dor:Affectionately)
+  '3':
+    attributes: {}
+    relationships:
+      - Affectionately (dor:Affectionately) --doo:race--> National_Stallion_Stakes_(filly_division) (<http://dbpedia.org/resource/National_Stallion_Stakes_(filly_division)>)
+      - National_Stallion_Stakes_(filly_division) (<http://dbpedia.org/resource/National_Stallion_Stakes_(filly_division)>) --doo:location--> Elmont,_New_York (<http://dbpedia.org/resource/Elmont,_New_York>)
+      - Personality_(horse) (<http://dbpedia.org/resource/Personality_(horse)>) --doo:dam--> Affectionately (dor:Affectionately)
+  '4':
+    attributes: {}
+    relationships:
+      - Al_Bahathri (dor:Al_Bahathri) --doo:race--> Coronation_Stakes (dor:Coronation_Stakes)
+      - Coronation_Stakes (dor:Coronation_Stakes) --doo:location--> Ascot,_Berkshire (<http://dbpedia.org/resource/Ascot,_Berkshire>)
+      - Haafhd (dor:Haafhd) --doo:dam--> Al_Bahathri (dor:Al_Bahathri)
+  '5':
+    attributes: {}
+    relationships:
+      - Al_Bahathri (dor:Al_Bahathri) --doo:race--> Irish_1,000_Guineas (<http://dbpedia.org/resource/Irish_1,000_Guineas>)
+      - Irish_1,000_Guineas (<http://dbpedia.org/resource/Irish_1,000_Guineas>) --doo:location--> County_Kildare (dor:County_Kildare)
+      - Haafhd (dor:Haafhd) --doo:dam--> Al_Bahathri (dor:Al_Bahathri)
+  '6':
+    attributes:
+      York: (width^='140', image^='Inside York Minster.jpg')
+    relationships:
+      - Al_Bahathri (dor:Al_Bahathri) --doo:race--> Lowther_Stakes (dor:Lowther_Stakes)
+      - Lowther_Stakes (dor:Lowther_Stakes) --doo:location--> York (dor:York)
+      - Haafhd (dor:Haafhd) --doo:dam--> Al_Bahathri (dor:Al_Bahathri)
+  '7':
+    attributes: {}
+    relationships:
+      - Alanesian (dor:Alanesian) --doo:race--> Astarita_Stakes (dor:Astarita_Stakes)
+      - Astarita_Stakes (dor:Astarita_Stakes) --doo:location--> Elmont,_New_York (<http://dbpedia.org/resource/Elmont,_New_York>)
+      - Boldnesian (dor:Boldnesian) --doo:dam--> Alanesian (dor:Alanesian)
+  '8':
+    attributes:
+      New_York_(state): (image^='Map of New York Economic Regions.svg', title^='Religious affiliation')
+    relationships:
+      - Alanesian (dor:Alanesian) --doo:race--> Astarita_Stakes (dor:Astarita_Stakes)
+      - Astarita_Stakes (dor:Astarita_Stakes) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Boldnesian (dor:Boldnesian) --doo:dam--> Alanesian (dor:Alanesian)
+  '9':
+    attributes: {}
+    relationships:
+      - Alanesian (dor:Alanesian) --doo:race--> Astarita_Stakes (dor:Astarita_Stakes)
+      - Astarita_Stakes (dor:Astarita_Stakes) --doo:location--> South_Ozone_Park,_Queens (<http://dbpedia.org/resource/South_Ozone_Park,_Queens>)
+      - Boldnesian (dor:Boldnesian) --doo:dam--> Alanesian (dor:Alanesian)
+  '10':
+    attributes:
+      New_York_(state): (image^='Map of New York Economic Regions.svg', title^='Religious affiliation')
+    relationships:
+      - Alcibiades_(horse) (<http://dbpedia.org/resource/Alcibiades_(horse)>) --doo:race--> Arlington_Oaks (dor:Arlington_Oaks)
+      - Arlington_Oaks (dor:Arlington_Oaks) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Menow (dor:Menow) --doo:dam--> Alcibiades_(horse) (<http://dbpedia.org/resource/Alcibiades_(horse)>)
+attributes:
+  Location: --eponym^ (dop:eponym)--> Resource | --line^ (dop:line)--> langString | --width^ (dop:width)--> perCent | --founder^ (dop:founder)--> langString | --Apr rain days^ (dop:aprRainDays)--> double | --image^ (dop:image)--> langString | --title^ (dop:title)--> langString | --alt^ (dop:alt)--> langString | --opened^ (dop:opened)--> int | --year of construction^ (doo:yearOfConstruction)--> gYear
+subgraph_id: 79
+relationships:
+  - horse --doo:race--> horse race
+  - horse race --doo:location--> Location
+  - RaceHorse --doo:dam--> horse

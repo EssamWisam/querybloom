@@ -1,0 +1,97 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  locomotive: doo:Locomotive
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      '6029': (fleetnumbers^='6029')
+      Manchester: (subdivision^='http://dbpedia.org/resource/Cheshire')
+    relationships:
+      - Dick_Neilson (dor:Dick_Neilson) --dop:deathPlace--> Manchester (dor:Manchester)
+      - Dick_Neilson (dor:Dick_Neilson) --doo:deathPlace--> United_Kingdom (dor:United_Kingdom)
+      - 6029 (dor:6029) --dop:builder--> Manchester (dor:Manchester)
+  '2':
+    attributes:
+      Romania: (caption align^='center')
+      Bucharest: (subdivision^='http://dbpedia.org/resource/Counties_of_Romania', Apr rain days^='11')
+      BDŽ_class_76: (fleetnumbers^='76001')
+    relationships:
+      - Constantin_Stanciu (dor:Constantin_Stanciu) --dop:deathPlace--> Bucharest (dor:Bucharest)
+      - Constantin_Stanciu (dor:Constantin_Stanciu) --doo:deathPlace--> Romania (dor:Romania)
+      - BDŽ_class_76 (<http://dbpedia.org/resource/BDŽ_class_76>) --dop:builder--> Bucharest (dor:Bucharest)
+  '3':
+    attributes:
+      Romania: (caption align^='center')
+      Bucharest: (subdivision^='http://dbpedia.org/resource/Counties_of_Romania', Apr rain days^='11')
+      BDŽ_class_76: (fleetnumbers^='76001')
+    relationships:
+      - Dumitru_Antonescu (dor:Dumitru_Antonescu) --dop:deathPlace--> Bucharest (dor:Bucharest)
+      - Dumitru_Antonescu (dor:Dumitru_Antonescu) --doo:deathPlace--> Romania (dor:Romania)
+      - BDŽ_class_76 (<http://dbpedia.org/resource/BDŽ_class_76>) --dop:builder--> Bucharest (dor:Bucharest)
+  '4':
+    attributes:
+      Romania: (caption align^='center')
+      Bucharest: (subdivision^='http://dbpedia.org/resource/Counties_of_Romania', Apr rain days^='11')
+      BDŽ_class_76: (fleetnumbers^='76001')
+    relationships:
+      - Emerich_Vogl (dor:Emerich_Vogl) --dop:deathPlace--> Bucharest (dor:Bucharest)
+      - Emerich_Vogl (dor:Emerich_Vogl) --doo:deathPlace--> Romania (dor:Romania)
+      - BDŽ_class_76 (<http://dbpedia.org/resource/BDŽ_class_76>) --dop:builder--> Bucharest (dor:Bucharest)
+  '5':
+    attributes: {}
+    relationships:
+      - Antonín_Fivébr (<http://dbpedia.org/resource/Antonín_Fivébr>) --dop:deathPlace--> Prague (dor:Prague)
+      - Antonín_Fivébr (<http://dbpedia.org/resource/Antonín_Fivébr>) --doo:deathPlace--> Czechoslovakia (dor:Czechoslovakia)
+      - BNB_VIb (dor:BNB_VIb) --dop:builder--> Prague (dor:Prague)
+  '6':
+    attributes: {}
+    relationships:
+      - Antonín_Puč (<http://dbpedia.org/resource/Antonín_Puč>) --dop:deathPlace--> Prague (dor:Prague)
+      - Antonín_Puč (<http://dbpedia.org/resource/Antonín_Puč>) --doo:deathPlace--> Czechoslovakia (dor:Czechoslovakia)
+      - BNB_VIb (dor:BNB_VIb) --dop:builder--> Prague (dor:Prague)
+  '7':
+    attributes:
+      Czech_Republic: (caption align^='center')
+    relationships:
+      - Jaroslav_Vejvoda (dor:Jaroslav_Vejvoda) --dop:deathPlace--> Prague (dor:Prague)
+      - Jaroslav_Vejvoda (dor:Jaroslav_Vejvoda) --doo:deathPlace--> Czech_Republic (dor:Czech_Republic)
+      - BNB_VIb (dor:BNB_VIb) --dop:builder--> Prague (dor:Prague)
+  '8':
+    attributes:
+      Valencia: (subdivision^='http://dbpedia.org/resource/Benimaclet')
+      British_Rail_Class_67: (fleetnumbers^='67001')
+    relationships:
+      - Jacinto_Quincoces (dor:Jacinto_Quincoces) --dop:deathPlace--> Valencia (dor:Valencia)
+      - Jacinto_Quincoces (dor:Jacinto_Quincoces) --doo:deathPlace--> Spain (dor:Spain)
+      - British_Rail_Class_67 (dor:British_Rail_Class_67) --dop:builder--> Valencia (dor:Valencia)
+  '9':
+    attributes:
+      Valencia: (subdivision^='http://dbpedia.org/resource/Benimaclet')
+      British_Rail_Class_67: (fleetnumbers^='67001')
+    relationships:
+      - Vicente_Asensi (dor:Vicente_Asensi) --dop:deathPlace--> Valencia (dor:Valencia)
+      - Vicente_Asensi (dor:Vicente_Asensi) --doo:deathPlace--> Spain (dor:Spain)
+      - British_Rail_Class_67 (dor:British_Rail_Class_67) --dop:builder--> Valencia (dor:Valencia)
+  '10':
+    attributes:
+      Lima: (subdivision^='http://dbpedia.org/resource/Lima_Province')
+    relationships:
+      - Adelfo_Magallanes (dor:Adelfo_Magallanes) --dop:deathPlace--> Lima (dor:Lima)
+      - Adelfo_Magallanes (dor:Adelfo_Magallanes) --doo:deathPlace--> Peru (dor:Peru)
+      - China_Railways_KD7 (dor:China_Railways_KD7) --dop:builder--> Lima (dor:Lima)
+attributes:
+  country: --caption align^ (dop:captionAlign)--> langString
+  Location: --1y^ (dop:1y)--> int | --arc-textB^ (dop:arcTextb)--> langString | --Apr low F^ (dop:aprLowF)--> int | --image size^ (dop:imageSize)--> int | --subdivision^ (doo:subdivision)--> Resource | --named for^ (dop:namedFor)--> langString | --partof^ (dop:partof)--> langString | --altname^ (dop:altname)--> langString | --Apr rain days^ (dop:aprRainDays)--> double | --designated other1 name^ (dop:designatedOther1Name)--> langString
+  locomotive: --fleetnumbers^ (dop:fleetnumbers)--> int
+subgraph_id: 534
+relationships:
+  - soccer manager --dop:deathPlace--> Location
+  - soccer manager --doo:deathPlace--> country
+  - locomotive --dop:builder--> Location

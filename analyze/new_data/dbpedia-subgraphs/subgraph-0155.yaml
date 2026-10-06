@@ -1,0 +1,80 @@
+types:
+  Location: doo:Location
+  music genre: doo:MusicGenre
+  philosopher: doo:Philosopher
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._C._Ewing: (death date^='1973-05-14')
+    relationships:
+      - A._C._Ewing (dor:A._C._Ewing) --doo:mainInterest--> Epistemology (dor:Epistemology)
+      - A._C._Ewing (dor:A._C._Ewing) --doo:deathPlace--> Manchester (dor:Manchester)
+  '2':
+    attributes:
+      A._D._Gordon: (death date^='1922-02-22')
+      Degania_Alef: (country^='Israel')
+    relationships:
+      - A._D._Gordon (dor:A._D._Gordon) --doo:mainInterest--> Epistemology (dor:Epistemology)
+      - A._D._Gordon (dor:A._D._Gordon) --doo:deathPlace--> Degania_Alef (dor:Degania_Alef)
+  '3':
+    attributes:
+      A._D._Gordon: (death date^='1922-02-22')
+    relationships:
+      - A._D._Gordon (dor:A._D._Gordon) --doo:mainInterest--> Epistemology (dor:Epistemology)
+      - A._D._Gordon (dor:A._D._Gordon) --doo:deathPlace--> Mandatory_Palestine (dor:Mandatory_Palestine)
+  '4':
+    attributes:
+      A._D._Gordon: (death date^='1922-02-22')
+      Degania_Alef: (country^='Israel')
+    relationships:
+      - A._D._Gordon (dor:A._D._Gordon) --doo:mainInterest--> Ethics (dor:Ethics)
+      - A._D._Gordon (dor:A._D._Gordon) --doo:deathPlace--> Degania_Alef (dor:Degania_Alef)
+  '5':
+    attributes:
+      A._J._Ayer: (death date^='1989-06-27')
+    relationships:
+      - A._J._Ayer (dor:A._J._Ayer) --doo:mainInterest--> Ethics (dor:Ethics)
+      - A._J._Ayer (dor:A._J._Ayer) --doo:deathPlace--> London (dor:London)
+  '6':
+    attributes:
+      Abd_al-Hussein_al-Hilli: (death date^='1956-03-14')
+    relationships:
+      - Abd_al-Hussein_al-Hilli (dor:Abd_al-Hussein_al-Hilli) --doo:mainInterest--> Fiqh (dor:Fiqh)
+      - Abd_al-Hussein_al-Hilli (dor:Abd_al-Hussein_al-Hilli) --doo:deathPlace--> Bahrain (dor:Bahrain)
+  '7':
+    attributes:
+      Abd_al-Hussein_al-Hilli: (death date^='1956-03-14')
+    relationships:
+      - Abd_al-Hussein_al-Hilli (dor:Abd_al-Hussein_al-Hilli) --doo:mainInterest--> Fiqh (dor:Fiqh)
+      - Abd_al-Hussein_al-Hilli (dor:Abd_al-Hussein_al-Hilli) --doo:deathPlace--> Manama (dor:Manama)
+  '8':
+    attributes:
+      Adam_Ferguson: (death date^='1816-02-22')
+    relationships:
+      - Adam_Ferguson (dor:Adam_Ferguson) --doo:mainInterest--> Ethics (dor:Ethics)
+      - Adam_Ferguson (dor:Adam_Ferguson) --doo:deathPlace--> Fife (dor:Fife)
+  '9':
+    attributes:
+      Adam_Ferguson: (death date^='1816-02-22')
+    relationships:
+      - Adam_Ferguson (dor:Adam_Ferguson) --doo:mainInterest--> History (dor:History)
+      - Adam_Ferguson (dor:Adam_Ferguson) --doo:deathPlace--> Fife (dor:Fife)
+  '10':
+    attributes:
+      St_Andrews: (country^='Scotland')
+      Adam_Ferguson: (death date^='1816-02-22')
+    relationships:
+      - Adam_Ferguson (dor:Adam_Ferguson) --doo:mainInterest--> History (dor:History)
+      - Adam_Ferguson (dor:Adam_Ferguson) --doo:deathPlace--> St_Andrews (dor:St_Andrews)
+attributes:
+  Location: --image width^ (dop:imageWidth)--> int | --builder (dop:builder)--> Resource | --country^ (dop:country)--> langString | --territory^ (doo:territory)--> Resource | --location^ (doo:location)--> Resource | --alt name^ (dop:altName)--> langString | --named after^ (dop:namedAfter)--> Resource | --mouth place^ (doo:mouthPlace)--> Resource | --eponym^ (dop:eponym)--> Resource | --designated other1 abbr^ (dop:designatedOther1Abbr)--> langString | --display^ (dop:display)--> langString | --certain^ (dop:certain)--> langString
+  philosopher: --death date^ (doo:deathDate)--> date
+subgraph_id: 155
+relationships:
+  - philosopher --doo:mainInterest--> music genre
+  - philosopher --doo:deathPlace--> Location

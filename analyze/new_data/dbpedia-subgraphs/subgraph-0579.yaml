@@ -1,0 +1,122 @@
+types:
+  country: doo:Country
+  university: doo:University
+  sports league: doo:SportsLeague
+  basketball league: doo:BasketballLeague
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Indonesia: (motto^='"Unity in Diversity"National ideology:')
+      Abraham_Damar_Grahita: (caption^='Abraham Damar GRAHITA', league^='http://dbpedia.org/resource/Indonesian_Basketball_League')
+      Esa_Unggul_University: (affiliations^='http://dbpedia.org/resource/Accreditation_Service_for_International_Colleges')
+      Indonesian_Basketball_League: (participant^='16')
+    relationships:
+      - Abraham_Damar_Grahita (dor:Abraham_Damar_Grahita) --dop:league--> Indonesian_Basketball_League (dor:Indonesian_Basketball_League)
+      - Abraham_Damar_Grahita (dor:Abraham_Damar_Grahita) --dop:birthPlace--> Indonesia (dor:Indonesia)
+      - Abraham_Damar_Grahita (dor:Abraham_Damar_Grahita) --doo:league--> Indonesian_Basketball_League (dor:Indonesian_Basketball_League)
+      - Abraham_Damar_Grahita (dor:Abraham_Damar_Grahita) --doo:college--> Esa_Unggul_University (dor:Esa_Unggul_University)
+  '2':
+    attributes:
+      Philippines: (motto^='"For God, People, Nature and Country"')
+      Adonis_Santa_Maria: (caption^='Santa Maria in 2008', league^='http://dbpedia.org/resource/Philippine_Basketball_Association')
+      Philippine_Basketball_Association: (participant^='(28 titles)')
+    relationships:
+      - Adonis_Santa_Maria (dor:Adonis_Santa_Maria) --dop:league--> Philippine_Basketball_Association (dor:Philippine_Basketball_Association)
+      - Adonis_Santa_Maria (dor:Adonis_Santa_Maria) --dop:birthPlace--> Philippines (dor:Philippines)
+      - Adonis_Santa_Maria (dor:Adonis_Santa_Maria) --doo:league--> Philippine_Basketball_Association (dor:Philippine_Basketball_Association)
+      - Adonis_Santa_Maria (dor:Adonis_Santa_Maria) --doo:college--> De_La_Salle_University (dor:De_La_Salle_University)
+  '3':
+    attributes:
+      Adut_Bulgak: (league^='http://dbpedia.org/resource/Women''s_National_Basketball_Association')
+      South_Sudan: (motto^='"Justice, Liberty, Prosperity"')
+      Women's_National_Basketball_Association: (participant^='(4 titles each)', group^='award')
+    relationships:
+      - Adut_Bulgak (dor:Adut_Bulgak) --dop:league--> Women's_National_Basketball_Association (<http://dbpedia.org/resource/Women's_National_Basketball_Association>)
+      - Adut_Bulgak (dor:Adut_Bulgak) --dop:birthPlace--> South_Sudan (dor:South_Sudan)
+      - Adut_Bulgak (dor:Adut_Bulgak) --doo:league--> Women's_National_Basketball_Association (<http://dbpedia.org/resource/Women's_National_Basketball_Association>)
+      - Adut_Bulgak (dor:Adut_Bulgak) --doo:college--> Florida_State_Seminoles_women's_basketball (<http://dbpedia.org/resource/Florida_State_Seminoles_women's_basketball>)
+  '4':
+    attributes:
+      Aija_Putniņa: (league^='http://dbpedia.org/resource/EuroCup_Women')
+      EuroCup_Women: (participant^='(2nd title)')
+    relationships:
+      - Aija_Putniņa (<http://dbpedia.org/resource/Aija_Putniņa>) --dop:league--> EuroCup_Women (dor:EuroCup_Women)
+      - Aija_Putniņa (<http://dbpedia.org/resource/Aija_Putniņa>) --dop:birthPlace--> Latvia (dor:Latvia)
+      - Aija_Putniņa (<http://dbpedia.org/resource/Aija_Putniņa>) --doo:league--> EuroCup_Women (dor:EuroCup_Women)
+      - Aija_Putniņa (<http://dbpedia.org/resource/Aija_Putniņa>) --doo:college--> Colorado_Buffaloes_women's_basketball (<http://dbpedia.org/resource/Colorado_Buffaloes_women's_basketball>)
+  '5':
+    attributes:
+      Al_Vergara: (cteam^='http://dbpedia.org/resource/Rizal_Golden_Coolers', league^='http://dbpedia.org/resource/Maharlika_Pilipinas_Basketball_League')
+      Philippines: (motto^='"For God, People, Nature and Country"')
+      Maharlika_Pilipinas_Basketball_League: (participant^='22')
+    relationships:
+      - Al_Vergara (dor:Al_Vergara) --dop:league--> Maharlika_Pilipinas_Basketball_League (dor:Maharlika_Pilipinas_Basketball_League)
+      - Al_Vergara (dor:Al_Vergara) --dop:birthPlace--> Philippines (dor:Philippines)
+      - Al_Vergara (dor:Al_Vergara) --doo:league--> Maharlika_Pilipinas_Basketball_League (dor:Maharlika_Pilipinas_Basketball_League)
+      - Al_Vergara (dor:Al_Vergara) --doo:college--> Saint_Francis_of_Assisi_College_System (dor:Saint_Francis_of_Assisi_College_System)
+  '6':
+    attributes:
+      Alberto_Reynoso: (cteam^='Al Manama Sports Club', league^='http://dbpedia.org/resource/Philippine_Basketball_Association')
+      Philippine_Basketball_Association: (participant^='(28 titles)')
+    relationships:
+      - Alberto_Reynoso (dor:Alberto_Reynoso) --dop:league--> Philippine_Basketball_Association (dor:Philippine_Basketball_Association)
+      - Alberto_Reynoso (dor:Alberto_Reynoso) --dop:birthPlace--> Commonwealth_of_the_Philippines (dor:Commonwealth_of_the_Philippines)
+      - Alberto_Reynoso (dor:Alberto_Reynoso) --doo:league--> Philippine_Basketball_Association (dor:Philippine_Basketball_Association)
+      - Alberto_Reynoso (dor:Alberto_Reynoso) --doo:college--> San_Beda_College (dor:San_Beda_College)
+  '7':
+    attributes:
+      Artūrs_Štālbergs: (cteam^='http://dbpedia.org/resource/BC_Lietkabelis', caption^='Artūrs Štālbergs in 2009.', league^='http://dbpedia.org/resource/Baltic_League')
+      Latvijas_Basketbola_līga: (participant^='6')
+      Latvian_Soviet_Socialist_Republic: (motto^='"Visu zemju proletārieši, savienojieties!"')
+    relationships:
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --dop:league--> Latvijas_Basketbola_līga (<http://dbpedia.org/resource/Latvijas_Basketbola_līga>)
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --dop:birthPlace--> Latvian_Soviet_Socialist_Republic (dor:Latvian_Soviet_Socialist_Republic)
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --doo:league--> Baltic_League (dor:Baltic_League)
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --doo:college--> Cowley_College (dor:Cowley_College)
+  '8':
+    attributes:
+      Artūrs_Štālbergs: (cteam^='http://dbpedia.org/resource/BC_Lietkabelis', caption^='Artūrs Štālbergs in 2009.', league^='http://dbpedia.org/resource/Baltic_League')
+      Latvijas_Basketbola_līga: (participant^='6')
+      Latvian_Soviet_Socialist_Republic: (motto^='"Visu zemju proletārieši, savienojieties!"')
+    relationships:
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --dop:league--> Latvijas_Basketbola_līga (<http://dbpedia.org/resource/Latvijas_Basketbola_līga>)
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --dop:birthPlace--> Latvian_Soviet_Socialist_Republic (dor:Latvian_Soviet_Socialist_Republic)
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --doo:league--> Baltic_League (dor:Baltic_League)
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --doo:college--> Evansville_Purple_Aces_men's_basketball (<http://dbpedia.org/resource/Evansville_Purple_Aces_men's_basketball>)
+  '9':
+    attributes:
+      Artūrs_Štālbergs: (cteam^='http://dbpedia.org/resource/BC_Lietkabelis', caption^='Artūrs Štālbergs in 2009.', league^='http://dbpedia.org/resource/Baltic_League')
+      Latvijas_Basketbola_līga: (participant^='6')
+      Latvian_Soviet_Socialist_Republic: (motto^='"Visu zemju proletārieši, savienojieties!"')
+    relationships:
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --dop:league--> Latvijas_Basketbola_līga (<http://dbpedia.org/resource/Latvijas_Basketbola_līga>)
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --dop:birthPlace--> Latvian_Soviet_Socialist_Republic (dor:Latvian_Soviet_Socialist_Republic)
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --doo:league--> Latvijas_Basketbola_līga (<http://dbpedia.org/resource/Latvijas_Basketbola_līga>)
+      - Artūrs_Štālbergs (<http://dbpedia.org/resource/Artūrs_Štālbergs>) --doo:college--> Cowley_College (dor:Cowley_College)
+  '10':
+    attributes:
+      Borgie_Hermida: (cteam^='http://dbpedia.org/resource/NLEX_Road_Warriors', league^='http://dbpedia.org/resource/Philippine_Basketball_Association')
+      Philippine_Basketball_Association: (participant^='(28 titles)')
+    relationships:
+      - Borgie_Hermida (dor:Borgie_Hermida) --dop:league--> Philippine_Basketball_Association (dor:Philippine_Basketball_Association)
+      - Borgie_Hermida (dor:Borgie_Hermida) --dop:birthPlace--> Philippines (dor:Philippines)
+      - Borgie_Hermida (dor:Borgie_Hermida) --doo:league--> Philippine_Basketball_Association (dor:Philippine_Basketball_Association)
+      - Borgie_Hermida (dor:Borgie_Hermida) --doo:college--> San_Beda_College (dor:San_Beda_College)
+attributes:
+  country: --alt^ (dop:alt)--> langString | --motto^ (doo:motto)--> string
+  university: --affiliations^ (dop:affiliations)--> langString | --bot^ (dop:bot)--> langString | --affiliation^ (dop:affiliation)--> langString
+  sports league: --group^ (dop:group)--> langString
+  basketball league: --participant^ (doo:participant)--> string
+  basketball player: --cteam^ (dop:cteam)--> Resource | --caption^ (dop:caption)--> langString | --league^ (doo:league)--> Resource
+subgraph_id: 579
+relationships:
+  - basketball player --dop:league--> basketball league
+  - basketball player --dop:birthPlace--> country
+  - basketball player --doo:league--> sports league
+  - basketball player --doo:college--> university

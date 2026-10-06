@@ -1,0 +1,78 @@
+types:
+  university: doo:University
+  government agency: doo:GovernmentAgency
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      University_of_Massachusetts_Global: (Link from a Wikipage to an external page^='http://www.umassglobal.edu/')
+    relationships:
+      - University_of_Massachusetts_Global (dor:University_of_Massachusetts_Global) --doo:campus--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - 4Culture (dor:4Culture) --doo:jurisdiction--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+  '2':
+    attributes:
+      Walla_Walla_Community_College: (Link from a Wikipage to an external page^='https://www.wwcc.edu', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2')
+    relationships:
+      - Walla_Walla_Community_College (dor:Walla_Walla_Community_College) --doo:campus--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - 4Culture (dor:4Culture) --doo:jurisdiction--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+  '3':
+    attributes:
+      California_Pacific_University: (Link from a Wikipage to an external page^='https://calpacbusiness-law.education/LinkType=C', Closed^='2016', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2')
+    relationships:
+      - California_Pacific_University (dor:California_Pacific_University) --doo:campus--> California (dor:California)
+      - Alameda_County_Superior_Court (dor:Alameda_County_Superior_Court) --doo:jurisdiction--> California (dor:California)
+  '4':
+    attributes:
+      University_of_Massachusetts_Global: (Link from a Wikipage to an external page^='http://www.umassglobal.edu/')
+    relationships:
+      - University_of_Massachusetts_Global (dor:University_of_Massachusetts_Global) --doo:campus--> California (dor:California)
+      - Alameda_County_Superior_Court (dor:Alameda_County_Superior_Court) --doo:jurisdiction--> California (dor:California)
+  '5':
+    attributes:
+      Bryant_&_Stratton_College: (Link from a Wikipage to an external page^='http://www.bryantstratton.edu', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2')
+    relationships:
+      - Bryant_&_Stratton_College (<http://dbpedia.org/resource/Bryant_&_Stratton_College>) --doo:campus--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Alcohol_laws_of_New_York (dor:Alcohol_laws_of_New_York) --doo:jurisdiction--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '6':
+    attributes: {}
+    relationships:
+      - St._John's_University_(New_York_City) (<http://dbpedia.org/resource/St._John's_University_(New_York_City)>) --doo:campus--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Alcohol_laws_of_New_York (dor:Alcohol_laws_of_New_York) --doo:jurisdiction--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '7':
+    attributes:
+      Villa_Maria_College: (Link from a Wikipage to an external page^='http://villavikings.com')
+    relationships:
+      - Villa_Maria_College (dor:Villa_Maria_College) --doo:campus--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Alcohol_laws_of_New_York (dor:Alcohol_laws_of_New_York) --doo:jurisdiction--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '8':
+    attributes:
+      Victoria_(Australia): (Apr record high C^='39.3')
+      Presbyterian_Theological_College: (Link from a Wikipage to an external page^='http://pcau.org.au/')
+    relationships:
+      - Presbyterian_Theological_College (dor:Presbyterian_Theological_College) --doo:campus--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Ambulance_Victoria (dor:Ambulance_Victoria) --doo:jurisdiction--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+  '9':
+    attributes:
+      Bavaria: (UTC offset^='+1')
+      Paracelsus_Medical_University: (Link from a Wikipage to an external page^='http://www.pmu.ac.at/en/home.html')
+    relationships:
+      - Paracelsus_Medical_University (dor:Paracelsus_Medical_University) --doo:campus--> Bavaria (dor:Bavaria)
+      - Bavarian_State_Office_for_Survey_and_Geoinformation (dor:Bavarian_State_Office_for_Survey_and_Geoinformation) --doo:jurisdiction--> Bavaria (dor:Bavaria)
+  '10':
+    attributes:
+      Lincoln_Tech: (Link from a Wikipage to an external page^='https://www.lincolntech.edu/')
+    relationships:
+      - Lincoln_Tech (dor:Lincoln_Tech) --doo:campus--> Massachusetts (dor:Massachusetts)
+      - Boston_Housing_Authority (dor:Boston_Housing_Authority) --doo:jurisdiction--> Massachusetts (dor:Massachusetts)
+attributes:
+  university: --image upright^ (dop:imageUpright)--> double | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --reason^ (dop:reason)--> langString | --Closed^ (dop:closed)--> int | --wordnet_type (dop:wordnet_type)--> Resource
+  administrative region: --Aug rain days^ (dop:augRainDays)--> double | --Apr sun^ (dop:aprSun)--> double | --winner^ (dop:winner)--> langString | --abolished^ (dop:abolished)--> date | --UTC offset^ (doo:utcOffset)--> string | --Apr record high C^ (dop:aprRecordHighC)--> int
+subgraph_id: 67
+relationships:
+  - university --doo:campus--> administrative region
+  - government agency --doo:jurisdiction--> administrative region

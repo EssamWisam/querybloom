@@ -1,0 +1,86 @@
+types:
+  road: doo:Road
+  airline: doo:Airline
+  volcano: doo:Volcano
+  settlement: doo:Settlement
+  rugby player: doo:RugbyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Rome: (width^='277', subdivision^='http://dbpedia.org/resource/Lazio', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-monument-noun-2', Aug precipitation mm^='34.1')
+      Air_Bee: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-airline-noun-2')
+      Andrea_Pratichetti: (birth date^='1988-11-26')
+      Autostrada_A12_(Italy): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Autostrade')
+    relationships:
+      - Air_Bee (dor:Air_Bee) --doo:headquarter--> Rome (dor:Rome)
+      - Autostrada_A12_(Italy) (<http://dbpedia.org/resource/Autostrada_A12_(Italy)>) --doo:routeEnd--> Rome (dor:Rome)
+      - Alban_Hills__Alban_Hills__1 (dor:Alban_Hills__Alban_Hills__1) --doo:locatedInArea--> Rome (dor:Rome)
+      - Andrea_Pratichetti (dor:Andrea_Pratichetti) --dop:birthPlace--> Rome (dor:Rome)
+  '2':
+    attributes:
+      Rome: (width^='277', subdivision^='http://dbpedia.org/resource/Lazio', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-monument-noun-2', Aug precipitation mm^='34.1')
+      Air_Bee: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-airline-noun-2')
+      Edoardo_Iachizzi: (birth date^='1998-05-26')
+      Autostrada_A12_(Italy): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Autostrade')
+    relationships:
+      - Air_Bee (dor:Air_Bee) --doo:headquarter--> Rome (dor:Rome)
+      - Autostrada_A12_(Italy) (<http://dbpedia.org/resource/Autostrada_A12_(Italy)>) --doo:routeEnd--> Rome (dor:Rome)
+      - Alban_Hills__Alban_Hills__1 (dor:Alban_Hills__Alban_Hills__1) --doo:locatedInArea--> Rome (dor:Rome)
+      - Edoardo_Iachizzi (dor:Edoardo_Iachizzi) --dop:birthPlace--> Rome (dor:Rome)
+  '3':
+    attributes:
+      Rome: (width^='277', subdivision^='http://dbpedia.org/resource/Lazio', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-monument-noun-2', Aug precipitation mm^='34.1')
+      Air_Bee: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-airline-noun-2')
+      Giacomo_De_Santis: (birth date^='1995-03-15')
+      Autostrada_A12_(Italy): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Autostrade')
+    relationships:
+      - Air_Bee (dor:Air_Bee) --doo:headquarter--> Rome (dor:Rome)
+      - Autostrada_A12_(Italy) (<http://dbpedia.org/resource/Autostrada_A12_(Italy)>) --doo:routeEnd--> Rome (dor:Rome)
+      - Alban_Hills__Alban_Hills__1 (dor:Alban_Hills__Alban_Hills__1) --doo:locatedInArea--> Rome (dor:Rome)
+      - Giacomo_De_Santis (dor:Giacomo_De_Santis) --dop:birthPlace--> Rome (dor:Rome)
+  '4':
+    attributes:
+      California: (width^='150', direction^='vertical', footer^='The Constitution of California was written in both English and Spanish by both American and Californio delegates.')
+      Nevada_State_Route_28: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:AttachedKML')
+      Brendan_Daly_(rugby_union): (birth date^='1990-12-20')
+    relationships:
+      - Air21 (dor:Air21) --doo:headquarter--> California (dor:California)
+      - Nevada_State_Route_28 (dor:Nevada_State_Route_28) --doo:routeEnd--> California (dor:California)
+      - Clear_Lake_Volcanic_Field (dor:Clear_Lake_Volcanic_Field) --doo:locatedInArea--> California (dor:California)
+      - Brendan_Daly_(rugby_union) (<http://dbpedia.org/resource/Brendan_Daly_(rugby_union)>) --dop:birthPlace--> California (dor:California)
+  '5':
+    attributes:
+      California: (width^='150', direction^='vertical', footer^='The Constitution of California was written in both English and Spanish by both American and Californio delegates.')
+      Nevada_State_Route_28: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:AttachedKML')
+      Brendan_Daly_(rugby_union): (birth date^='1990-12-20')
+    relationships:
+      - Air21 (dor:Air21) --doo:headquarter--> California (dor:California)
+      - Nevada_State_Route_28 (dor:Nevada_State_Route_28) --doo:routeEnd--> California (dor:California)
+      - Mount_Shasta (dor:Mount_Shasta) --doo:locatedInArea--> California (dor:California)
+      - Brendan_Daly_(rugby_union) (<http://dbpedia.org/resource/Brendan_Daly_(rugby_union)>) --dop:birthPlace--> California (dor:California)
+  '6':
+    attributes:
+      California: (width^='150', direction^='vertical', footer^='The Constitution of California was written in both English and Spanish by both American and Californio delegates.')
+      Nevada_State_Route_28: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:AttachedKML')
+      Brendan_Daly_(rugby_union): (birth date^='1990-12-20')
+    relationships:
+      - Air21 (dor:Air21) --doo:headquarter--> California (dor:California)
+      - Nevada_State_Route_28 (dor:Nevada_State_Route_28) --doo:routeEnd--> California (dor:California)
+      - Mount_Tehama (dor:Mount_Tehama) --doo:locatedInArea--> California (dor:California)
+      - Brendan_Daly_(rugby_union) (<http://dbpedia.org/resource/Brendan_Daly_(rugby_union)>) --dop:birthPlace--> California (dor:California)
+attributes:
+  road: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+  airline: --wordnet_type (dop:wordnet_type)--> Resource
+  settlement: --district^ (doo:district)--> Resource | --Apr high F^ (dop:aprHighF)--> int | --width^ (dop:width)--> int | --Aug rain days^ (dop:augRainDays)--> int | --subdivision^ (doo:subdivision)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource | --direction^ (dop:direction)--> langString | --Aug high F^ (dop:augHighF)--> int | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --footer^ (dop:footer)--> langString
+  rugby player: --birth date^ (dop:birthDate)--> date
+subgraph_id: 857
+relationships:
+  - airline --doo:headquarter--> settlement
+  - road --doo:routeEnd--> settlement
+  - volcano --doo:locatedInArea--> settlement
+  - rugby player --dop:birthPlace--> settlement

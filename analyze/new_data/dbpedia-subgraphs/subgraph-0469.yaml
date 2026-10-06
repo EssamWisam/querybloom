@@ -1,0 +1,105 @@
+types:
+  company: doo:Company
+  Location: doo:Location
+  language: doo:Language
+  software: doo:Software
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Schleswig-Holstein: (float^='right')
+    relationships:
+      - Haxi__Apps__1 (dor:Haxi__Apps__1) --doo:genre--> Application_software (dor:Application_software)
+      - Haxi__Apps__1 (dor:Haxi__Apps__1) --doo:language--> Danish_language (dor:Danish_language)
+      - Abdul_Majid_Bhurgri_Institute_of_Language_Engineering (dor:Abdul_Majid_Bhurgri_Institute_of_Language_Engineering) --dop:products--> Application_software (dor:Application_software)
+      - Danish_language (dor:Danish_language) --doo:spokenIn--> Schleswig-Holstein (dor:Schleswig-Holstein)
+  '2':
+    attributes: {}
+    relationships:
+      - Haxi__Apps__1 (dor:Haxi__Apps__1) --doo:genre--> Application_software (dor:Application_software)
+      - Haxi__Apps__1 (dor:Haxi__Apps__1) --doo:language--> Norwegian_language (dor:Norwegian_language)
+      - Abdul_Majid_Bhurgri_Institute_of_Language_Engineering (dor:Abdul_Majid_Bhurgri_Institute_of_Language_Engineering) --dop:products--> Application_software (dor:Application_software)
+      - Norwegian_language (dor:Norwegian_language) --doo:spokenIn--> Norway (dor:Norway)
+  '3':
+    attributes:
+      Estonia: (float^='right', width^='113', url^='https://web.archive.org/web/20190220152012/https:/www.cia.gov/library/publications/world-leaders-1/EN.html')
+    relationships:
+      - Haxi__Apps__1 (dor:Haxi__Apps__1) --doo:genre--> Application_software (dor:Application_software)
+      - Haxi__Apps__1 (dor:Haxi__Apps__1) --doo:language--> Swedish_language (dor:Swedish_language)
+      - Abdul_Majid_Bhurgri_Institute_of_Language_Engineering (dor:Abdul_Majid_Bhurgri_Institute_of_Language_Engineering) --dop:products--> Application_software (dor:Application_software)
+      - Swedish_language (dor:Swedish_language) --doo:spokenIn--> Estonia (dor:Estonia)
+  '4':
+    attributes:
+      ShareChat: (author^='Ankush Sachdeva')
+      Arunachal_Pradesh: (width^='280')
+    relationships:
+      - ShareChat (dor:ShareChat) --doo:genre--> Internet (dor:Internet)
+      - ShareChat (dor:ShareChat) --doo:language--> Assamese_language (dor:Assamese_language)
+      - ABS-CBN_Corporation (dor:ABS-CBN_Corporation) --dop:products--> Internet (dor:Internet)
+      - Assamese_language (dor:Assamese_language) --doo:spokenIn--> Arunachal_Pradesh (dor:Arunachal_Pradesh)
+  '5':
+    attributes:
+      Assam: (width^='185')
+      ShareChat: (author^='Ankush Sachdeva')
+    relationships:
+      - ShareChat (dor:ShareChat) --doo:genre--> Internet (dor:Internet)
+      - ShareChat (dor:ShareChat) --doo:language--> Assamese_language (dor:Assamese_language)
+      - ABS-CBN_Corporation (dor:ABS-CBN_Corporation) --dop:products--> Internet (dor:Internet)
+      - Assamese_language (dor:Assamese_language) --doo:spokenIn--> Assam (dor:Assam)
+  '6':
+    attributes:
+      Nagaland: (float^='center', width^='146')
+      ShareChat: (author^='Ankush Sachdeva')
+    relationships:
+      - ShareChat (dor:ShareChat) --doo:genre--> Internet (dor:Internet)
+      - ShareChat (dor:ShareChat) --doo:language--> Assamese_language (dor:Assamese_language)
+      - ABS-CBN_Corporation (dor:ABS-CBN_Corporation) --dop:products--> Internet (dor:Internet)
+      - Assamese_language (dor:Assamese_language) --doo:spokenIn--> Nagaland (dor:Nagaland)
+  '7':
+    attributes:
+      Czech_Republic: (float^='right', width^='90')
+    relationships:
+      - XigmaNAS (dor:XigmaNAS) --doo:genre--> Computer_storage (dor:Computer_storage)
+      - XigmaNAS (dor:XigmaNAS) --doo:language--> Czech_language (dor:Czech_language)
+      - Acer_Inc. (<http://dbpedia.org/resource/Acer_Inc.>) --dop:products--> Computer_storage (dor:Computer_storage)
+      - Czech_language (dor:Czech_language) --doo:spokenIn--> Czech_Republic (dor:Czech_Republic)
+  '8':
+    attributes:
+      Belgium: (float^='right', width^='125')
+    relationships:
+      - XigmaNAS (dor:XigmaNAS) --doo:genre--> Computer_storage (dor:Computer_storage)
+      - XigmaNAS (dor:XigmaNAS) --doo:language--> Dutch_language (dor:Dutch_language)
+      - Acer_Inc. (<http://dbpedia.org/resource/Acer_Inc.>) --dop:products--> Computer_storage (dor:Computer_storage)
+      - Dutch_language (dor:Dutch_language) --doo:spokenIn--> Belgium (dor:Belgium)
+  '9':
+    attributes:
+      French_Flanders: (url^='https://web.archive.org/web/20070929134628/http:/home.scarlet.be/~tpm09245/lang/lg/fra/oe1.htm')
+    relationships:
+      - XigmaNAS (dor:XigmaNAS) --doo:genre--> Computer_storage (dor:Computer_storage)
+      - XigmaNAS (dor:XigmaNAS) --doo:language--> Dutch_language (dor:Dutch_language)
+      - Acer_Inc. (<http://dbpedia.org/resource/Acer_Inc.>) --dop:products--> Computer_storage (dor:Computer_storage)
+      - Dutch_language (dor:Dutch_language) --doo:spokenIn--> French_Flanders (dor:French_Flanders)
+  '10':
+    attributes:
+      WiMP: (author^='WiMP Music')
+      Schleswig-Holstein: (float^='right')
+    relationships:
+      - WiMP (dor:WiMP) --doo:genre--> Music (dor:Music)
+      - WiMP (dor:WiMP) --doo:language--> Danish_language (dor:Danish_language)
+      - Acer_Records (dor:Acer_Records) --dop:products--> Music (dor:Music)
+      - Danish_language (dor:Danish_language) --doo:spokenIn--> Schleswig-Holstein (dor:Schleswig-Holstein)
+attributes:
+  company: --1a^ (dop:1a)--> langString
+  Location: --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --float^ (dop:float)--> langString | --width^ (dop:width)--> langString | --coordinates^ (dop:coordinates)--> langString | --Apr low F^ (dop:aprLowF)--> double | --area^ (dop:area)--> acre | --url^ (dop:url)--> langString | --commons^ (dop:commons)--> langString
+  software: --author^ (dop:author)--> langString
+subgraph_id: 469
+relationships:
+  - software --doo:genre--> music genre
+  - software --doo:language--> language
+  - company --dop:products--> music genre
+  - language --doo:spokenIn--> Location

@@ -1,0 +1,79 @@
+types:
+  country: doo:Country
+  aircraft: doo:Aircraft
+  protected area: doo:ProtectedArea
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      14-X: (manufacturer^='http://dbpedia.org/resource/Department_of_Aerospace_Science_and_Technology')
+      Brazil: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Brazil')
+    relationships:
+      - Alto_Ribeira_Tourist_State_Park (dor:Alto_Ribeira_Tourist_State_Park) --doo:location--> Brazil (dor:Brazil)
+      - 14-X (dor:14-X) --doo:origin--> Brazil (dor:Brazil)
+  '2':
+    attributes:
+      14-X: (manufacturer^='http://dbpedia.org/resource/Department_of_Aerospace_Science_and_Technology')
+      Brazil: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Brazil')
+    relationships:
+      - Amazônia_National_Park (<http://dbpedia.org/resource/Amazônia_National_Park>) --doo:location--> Brazil (dor:Brazil)
+      - 14-X (dor:14-X) --doo:origin--> Brazil (dor:Brazil)
+  '3':
+    attributes:
+      14-X: (manufacturer^='http://dbpedia.org/resource/Department_of_Aerospace_Science_and_Technology')
+      Brazil: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Brazil')
+    relationships:
+      - Arvoredo_Marine_Biological_Reserve (dor:Arvoredo_Marine_Biological_Reserve) --doo:location--> Brazil (dor:Brazil)
+      - 14-X (dor:14-X) --doo:origin--> Brazil (dor:Brazil)
+  '4':
+    attributes:
+      747_Supertanker: (manufacturer^='http://dbpedia.org/resource/Boeing')
+    relationships:
+      - Above_All_State_Park (dor:Above_All_State_Park) --doo:location--> United_States (dor:United_States)
+      - 747_Supertanker (dor:747_Supertanker) --doo:origin--> United_States (dor:United_States)
+  '5':
+    attributes:
+      747_Supertanker: (manufacturer^='http://dbpedia.org/resource/Boeing')
+    relationships:
+      - Absaroka–Beartooth_Wilderness (<http://dbpedia.org/resource/Absaroka–Beartooth_Wilderness>) --doo:location--> United_States (dor:United_States)
+      - 747_Supertanker (dor:747_Supertanker) --doo:origin--> United_States (dor:United_States)
+  '6':
+    attributes:
+      747_Supertanker: (manufacturer^='http://dbpedia.org/resource/Boeing')
+    relationships:
+      - Acadia_Cliffs_State_Nature_Preserve (dor:Acadia_Cliffs_State_Nature_Preserve) --doo:location--> United_States (dor:United_States)
+      - 747_Supertanker (dor:747_Supertanker) --doo:origin--> United_States (dor:United_States)
+  '7':
+    attributes: {}
+    relationships:
+      - Ardennes (dor:Ardennes) --doo:location--> Germany (dor:Germany)
+      - A-I-R_Atos (dor:A-I-R_Atos) --doo:origin--> Germany (dor:Germany)
+  '8':
+    attributes:
+      A-I-R_Atos: (manufacturer^='http://dbpedia.org/resource/A-I-R_GmbH')
+    relationships:
+      - Augsburg_Western_Woods_Nature_Park (dor:Augsburg_Western_Woods_Nature_Park) --doo:location--> Germany (dor:Germany)
+      - A-I-R_Atos (dor:A-I-R_Atos) --doo:origin--> Germany (dor:Germany)
+  '9':
+    attributes:
+      A-I-R_Atos: (manufacturer^='http://dbpedia.org/resource/A-I-R_GmbH')
+    relationships:
+      - Berchtesgaden_National_Park (dor:Berchtesgaden_National_Park) --doo:location--> Germany (dor:Germany)
+      - A-I-R_Atos (dor:A-I-R_Atos) --doo:origin--> Germany (dor:Germany)
+  '10':
+    attributes: {}
+    relationships:
+      - Askania-Nova (dor:Askania-Nova) --doo:location--> Ukraine (dor:Ukraine)
+      - A1-CM_Furia (dor:A1-CM_Furia) --doo:origin--> Ukraine (dor:Ukraine)
+attributes:
+  country: --url^ (dop:url)--> Resource | --quote^ (dop:quote)--> langString | --2a^ (dop:2a)--> langString | --founding year^ (doo:foundingYear)--> gYear | --religion^ (doo:religion)--> Resource
+  aircraft: --height m^ (dop:heightM)--> int | --manufacturer^ (doo:manufacturer)--> Resource
+  protected area: --area^ (dop:area)--> squareKilometre | --operator^ (dop:operator)--> langString | --Aug high F^ (dop:augHighF)--> double
+subgraph_id: 69
+relationships:
+  - protected area --doo:location--> country
+  - aircraft --doo:origin--> country

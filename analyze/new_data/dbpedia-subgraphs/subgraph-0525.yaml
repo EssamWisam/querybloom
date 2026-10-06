@@ -1,0 +1,52 @@
+types:
+  company: doo:Company
+  country: doo:Country
+  Grand Prix: doo:GrandPrix
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Russia: (anthem^='http://dbpedia.org/resource/State_Anthem_of_the_Russian_Federation')
+      All-Russian_Institute_Of_Aviation_Materials: (logo^='VIAM RGB fin.png', area served^='Europe and Asia')
+    relationships:
+      - 2014_Russian_Grand_Prix (dor:2014_Russian_Grand_Prix) --dop:location--> Russia (dor:Russia)
+      - All-Russian_Institute_Of_Aviation_Materials (dor:All-Russian_Institute_Of_Aviation_Materials) --doo:owningCompany--> Russia (dor:Russia)
+  '2':
+    attributes:
+      Russia: (anthem^='http://dbpedia.org/resource/State_Anthem_of_the_Russian_Federation')
+      All-Russian_Institute_Of_Aviation_Materials: (logo^='VIAM RGB fin.png', area served^='Europe and Asia')
+    relationships:
+      - 2015_Moscow_ePrix (dor:2015_Moscow_ePrix) --dop:location--> Russia (dor:Russia)
+      - All-Russian_Institute_Of_Aviation_Materials (dor:All-Russian_Institute_Of_Aviation_Materials) --doo:owningCompany--> Russia (dor:Russia)
+  '3':
+    attributes:
+      Russia: (anthem^='http://dbpedia.org/resource/State_Anthem_of_the_Russian_Federation')
+      All-Russian_Institute_Of_Aviation_Materials: (logo^='VIAM RGB fin.png', area served^='Europe and Asia')
+    relationships:
+      - 2016_Russian_Grand_Prix (dor:2016_Russian_Grand_Prix) --dop:location--> Russia (dor:Russia)
+      - All-Russian_Institute_Of_Aviation_Materials (dor:All-Russian_Institute_Of_Aviation_Materials) --doo:owningCompany--> Russia (dor:Russia)
+  '4':
+    attributes:
+      Morocco: (anthem^='http://dbpedia.org/resource/Cherifian_Anthem', url^='https://web.archive.org/web/20120724191316/http:/www.lavieeco.com/documents_officiels/Recensement%20population.pdf')
+      Arab_Satellite_Communications_Organization: (logo^='Arabsat logo.jpg')
+    relationships:
+      - 1934_Moroccan_Grand_Prix (dor:1934_Moroccan_Grand_Prix) --dop:location--> Morocco (dor:Morocco)
+      - Arab_Satellite_Communications_Organization (dor:Arab_Satellite_Communications_Organization) --doo:owningCompany--> Morocco (dor:Morocco)
+  '5':
+    attributes:
+      Bahrain: (anthem^='http://dbpedia.org/resource/Bahrainona', Apr low C^='21.5')
+      Arab_Satellite_Communications_Organization: (logo^='Arabsat logo.jpg')
+    relationships:
+      - 2004_Bahrain_Grand_Prix (dor:2004_Bahrain_Grand_Prix) --dop:location--> Bahrain (dor:Bahrain)
+      - Arab_Satellite_Communications_Organization (dor:Arab_Satellite_Communications_Organization) --doo:owningCompany--> Bahrain (dor:Bahrain)
+attributes:
+  company: --logo^ (dop:logo)--> langString | --data^ (dop:data)--> langString | --logo width^ (dop:logoWidth)--> int | --align^ (dop:align)--> langString | --logo^ (dop:logo)--> Resource | --area served^ (dop:areaServed)--> int
+  country: --anthem^ (doo:anthem)--> Resource | --motto^ (doo:motto)--> string | --2a^ (dop:2a)--> langString | --Apr low C^ (dop:aprLowC)--> double | --age^ (dop:age)--> date | --url^ (dop:url)--> Resource
+subgraph_id: 525
+relationships:
+  - Grand Prix --dop:location--> country
+  - company --doo:owningCompany--> country

@@ -1,0 +1,51 @@
+types:
+  person: doo:Person
+  school: doo:School
+  writer: doo:Writer
+  convention: doo:Convention
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ben_Kinchlow: (death date^='2019-07-18')
+      Christianity: '(footer^=''Clockwise from top: Sistine chapel ceiling, Notre-Dame cathedral in Paris, Eastern Orthodox wedding, Christ the Redeemer statue, Nativity scene'')'
+    relationships:
+      - Benjamin_L._Corey (dor:Benjamin_L._Corey) --dop:genre--> Christianity (dor:Christianity)
+      - Ben_Kinchlow (dor:Ben_Kinchlow) --doo:occupation--> Christianity (dor:Christianity)
+      - Aberdeen_Baptist_Lui_Ming_Choi_College (dor:Aberdeen_Baptist_Lui_Ming_Choi_College) --doo:religion--> Christianity (dor:Christianity)
+      - Hillsong_Conference (dor:Hillsong_Conference) --doo:genre--> Christianity (dor:Christianity)
+  '2':
+    attributes:
+      Ben_Kinchlow: (death date^='2019-07-18')
+      Christianity: '(footer^=''Clockwise from top: Sistine chapel ceiling, Notre-Dame cathedral in Paris, Eastern Orthodox wedding, Christ the Redeemer statue, Nativity scene'')'
+    relationships:
+      - Bill_Pottle (dor:Bill_Pottle) --dop:genre--> Christianity (dor:Christianity)
+      - Ben_Kinchlow (dor:Ben_Kinchlow) --doo:occupation--> Christianity (dor:Christianity)
+      - Aberdeen_Baptist_Lui_Ming_Choi_College (dor:Aberdeen_Baptist_Lui_Ming_Choi_College) --doo:religion--> Christianity (dor:Christianity)
+      - Hillsong_Conference (dor:Hillsong_Conference) --doo:genre--> Christianity (dor:Christianity)
+  '3':
+    attributes:
+      Ben_Kinchlow: (death date^='2019-07-18')
+      Christianity: '(footer^=''Clockwise from top: Sistine chapel ceiling, Notre-Dame cathedral in Paris, Eastern Orthodox wedding, Christ the Redeemer statue, Nativity scene'')'
+    relationships:
+      - Eric_Ludy (dor:Eric_Ludy) --dop:genre--> Christianity (dor:Christianity)
+      - Ben_Kinchlow (dor:Ben_Kinchlow) --doo:occupation--> Christianity (dor:Christianity)
+      - Aberdeen_Baptist_Lui_Ming_Choi_College (dor:Aberdeen_Baptist_Lui_Ming_Choi_College) --doo:religion--> Christianity (dor:Christianity)
+      - Hillsong_Conference (dor:Hillsong_Conference) --doo:genre--> Christianity (dor:Christianity)
+attributes:
+  person: --known for^ (dop:knownFor)--> Resource | --title^ (dop:title)--> langString | --awards^ (dop:awards)--> int | --class^ (dop:class)--> langString | --death date^ (dop:deathDate)--> int
+  school: --city^ (doo:city)--> Resource | --founded by^ (doo:foundedBy)--> Resource
+  writer: --1pp^ (dop:1pp)--> int | --IMDB id^ (doo:imdbId)--> string
+  convention: --bronzeAut (dop:bronzeAut)--> int
+  music genre: --footer^ (dop:footer)--> langString | --1pp^ (dop:1pp)--> int
+subgraph_id: 725
+relationships:
+  - writer --dop:genre--> music genre
+  - person --doo:occupation--> music genre
+  - school --doo:religion--> music genre
+  - convention --doo:genre--> music genre

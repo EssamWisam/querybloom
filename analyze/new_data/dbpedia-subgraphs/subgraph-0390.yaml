@@ -1,0 +1,87 @@
+types:
+  airport: doo:Airport
+  settlement: doo:Settlement
+  government agency: doo:GovernmentAgency
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adampur: (subdivision^='http://dbpedia.org/resource/Jalandhar_district')
+      Ministry_of_Civil_Aviation_(India): (jurisdiction^='http://dbpedia.org/resource/Government_of_India')
+    relationships:
+      - Adampur_Airport (dor:Adampur_Airport) --doo:owner--> Ministry_of_Civil_Aviation_(India) (<http://dbpedia.org/resource/Ministry_of_Civil_Aviation_(India)>)
+      - Adampur_Airport (dor:Adampur_Airport) --doo:location--> Adampur (dor:Adampur)
+  '2':
+    attributes:
+      Hoedspruit: (subdivision^='http://dbpedia.org/resource/Limpopo')
+      Department_of_Defence_(South_Africa): (jurisdiction^='http://dbpedia.org/resource/Government_of_South_Africa')
+    relationships:
+      - Air_Force_Base_Hoedspruit (dor:Air_Force_Base_Hoedspruit) --doo:owner--> Department_of_Defence_(South_Africa) (<http://dbpedia.org/resource/Department_of_Defence_(South_Africa)>)
+      - Air_Force_Base_Hoedspruit (dor:Air_Force_Base_Hoedspruit) --doo:location--> Hoedspruit (dor:Hoedspruit)
+  '3':
+    attributes:
+      Limpopo: (subdivision^='http://dbpedia.org/resource/Capricorn_District_Municipality')
+      Department_of_Defence_(South_Africa): (jurisdiction^='http://dbpedia.org/resource/Government_of_South_Africa')
+    relationships:
+      - Air_Force_Base_Hoedspruit (dor:Air_Force_Base_Hoedspruit) --doo:owner--> Department_of_Defence_(South_Africa) (<http://dbpedia.org/resource/Department_of_Defence_(South_Africa)>)
+      - Air_Force_Base_Hoedspruit (dor:Air_Force_Base_Hoedspruit) --doo:location--> Limpopo (dor:Limpopo)
+  '4':
+    attributes:
+      Samarinda: (subdivision^='http://dbpedia.org/resource/East_Kalimantan', date^='2010-05-15', Apr high C^='30.5')
+      Ministry_of_Transportation_(Indonesia): (jurisdiction^='http://dbpedia.org/resource/Government_of_Indonesia')
+      Aji_Pangeran_Tumenggung_Pranoto_International_Airport: (image width^='200')
+    relationships:
+      - Aji_Pangeran_Tumenggung_Pranoto_International_Airport (dor:Aji_Pangeran_Tumenggung_Pranoto_International_Airport) --doo:owner--> Ministry_of_Transportation_(Indonesia) (<http://dbpedia.org/resource/Ministry_of_Transportation_(Indonesia)>)
+      - Aji_Pangeran_Tumenggung_Pranoto_International_Airport (dor:Aji_Pangeran_Tumenggung_Pranoto_International_Airport) --doo:location--> Samarinda (dor:Samarinda)
+  '5':
+    attributes:
+      Ministry_of_Defence_(Iraq): (jurisdiction^='http://dbpedia.org/resource/Government_of_Iraq')
+    relationships:
+      - Al_Asad_Airbase (dor:Al_Asad_Airbase) --doo:owner--> Ministry_of_Defence_(Iraq) (<http://dbpedia.org/resource/Ministry_of_Defence_(Iraq)>)
+      - Al_Asad_Airbase (dor:Al_Asad_Airbase) --doo:location--> Al_Anbar_Governorate (dor:Al_Anbar_Governorate)
+  '6':
+    attributes:
+      Ministry_of_Defense_(Kuwait): (jurisdiction^='http://dbpedia.org/resource/Government_of_Kuwait')
+    relationships:
+      - Ali_Al_Salem_Air_Base (dor:Ali_Al_Salem_Air_Base) --doo:owner--> Ministry_of_Defense_(Kuwait) (<http://dbpedia.org/resource/Ministry_of_Defense_(Kuwait)>)
+      - Ali_Al_Salem_Air_Base (dor:Ali_Al_Salem_Air_Base) --doo:location--> Jahra_Governorate (dor:Jahra_Governorate)
+  '7':
+    attributes:
+      Allah_Valley_Airport: (image width^='225')
+    relationships:
+      - Allah_Valley_Airport (dor:Allah_Valley_Airport) --doo:owner--> Civil_Aviation_Authority_of_the_Philippines (dor:Civil_Aviation_Authority_of_the_Philippines)
+      - Allah_Valley_Airport (dor:Allah_Valley_Airport) --doo:location--> South_Cotabato (dor:South_Cotabato)
+  '8':
+    attributes:
+      Pennsylvania: (date^='2010-06-29')
+      Allegheny_County_Airport: (image width^='200')
+    relationships:
+      - Allegheny_County_Airport (dor:Allegheny_County_Airport) --doo:owner--> Allegheny_County_Airport_Authority (dor:Allegheny_County_Airport_Authority)
+      - Allegheny_County_Airport (dor:Allegheny_County_Airport) --doo:location--> Pennsylvania (dor:Pennsylvania)
+  '9':
+    attributes:
+      Altenstadt_Air_Base: (image width^='250')
+      Altenstadt,_Upper_Bavaria: (district^='http://dbpedia.org/resource/Weilheim-Schongau')
+      Federal_Ministry_of_Defence_(Germany): (jurisdiction^='http://dbpedia.org/resource/Cabinet_of_Germany')
+    relationships:
+      - Altenstadt_Air_Base (dor:Altenstadt_Air_Base) --doo:owner--> Federal_Ministry_of_Defence_(Germany) (<http://dbpedia.org/resource/Federal_Ministry_of_Defence_(Germany)>)
+      - Altenstadt_Air_Base (dor:Altenstadt_Air_Base) --doo:location--> Altenstadt,_Upper_Bavaria (<http://dbpedia.org/resource/Altenstadt,_Upper_Bavaria>)
+  '10':
+    attributes:
+      Montferrer_i_Castellbò: (subdivision^='http://dbpedia.org/resource/Alt_Urgell')
+      Generalitat_de_Catalunya: (jurisdiction^='http://dbpedia.org/resource/Catalonia')
+    relationships:
+      - Andorra–La_Seu_d'Urgell_Airport (<http://dbpedia.org/resource/Andorra–La_Seu_d'Urgell_Airport>) --doo:owner--> Generalitat_de_Catalunya (dor:Generalitat_de_Catalunya)
+      - Andorra–La_Seu_d'Urgell_Airport (<http://dbpedia.org/resource/Andorra–La_Seu_d'Urgell_Airport>) --doo:location--> Montferrer_i_Castellbò (<http://dbpedia.org/resource/Montferrer_i_Castellbò>)
+attributes:
+  airport: --image width^ (dop:imageWidth)--> int
+  settlement: --colwidth^ (dop:colwidth)--> int | --district^ (doo:district)--> Resource | --subdivision^ (doo:subdivision)--> Resource | --date^ (dop:date)--> langString | --named for^ (dop:namedFor)--> Resource | --named for^ (dop:namedFor)--> langString | --Apr high C^ (dop:aprHighC)--> double | --Apr high F^ (dop:aprHighF)--> double | --borough^ (dop:borough)--> langString
+  government agency: --jurisdiction^ (doo:jurisdiction)--> Resource
+subgraph_id: 390
+relationships:
+  - airport --doo:owner--> government agency
+  - airport --doo:location--> settlement

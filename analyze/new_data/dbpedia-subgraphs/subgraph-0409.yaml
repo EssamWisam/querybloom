@@ -1,0 +1,94 @@
+types:
+  town: doo:Town
+  politician: doo:Politician
+  political function: doo:PoliticalFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ude_Oko_Chukwu: (alma mater^='http://dbpedia.org/resource/University_of_Lagos', birth place^='http://dbpedia.org/resource/Abia_State')
+      Abia_State__PoliticalFunction__2: (politician^='http://dbpedia.org/resource/Ude_Oko_Chukwu')
+    relationships:
+      - Ude_Oko_Chukwu (dor:Ude_Oko_Chukwu) --dop:birthPlace--> Nkporo (dor:Nkporo)
+      - Abia_State__PoliticalFunction__2 (dor:Abia_State__PoliticalFunction__2) --doo:politician--> Ude_Oko_Chukwu (dor:Ude_Oko_Chukwu)
+  '2':
+    attributes:
+      Gladson_Cameli: (birth place^='http://dbpedia.org/resource/Cruzeiro_do_Sul,_Acre')
+      Cruzeiro_do_Sul,_Acre: (Apr record high C^='38.5', area code^='+55 68')
+      Acre_(state)__PoliticalFunction__1: (politician^='http://dbpedia.org/resource/Gladson_Cameli')
+    relationships:
+      - Gladson_Cameli (dor:Gladson_Cameli) --dop:birthPlace--> Cruzeiro_do_Sul,_Acre (<http://dbpedia.org/resource/Cruzeiro_do_Sul,_Acre>)
+      - Acre_(state)__PoliticalFunction__1 (<http://dbpedia.org/resource/Acre_(state)__PoliticalFunction__1>) --doo:politician--> Gladson_Cameli (dor:Gladson_Cameli)
+  '3':
+    attributes:
+      Mailza_Gomes: (birth place^='http://dbpedia.org/resource/Brazil')
+      Acre_(state)__PoliticalFunction__3: (politician^='http://dbpedia.org/resource/Mailza_Gomes')
+    relationships:
+      - Mailza_Gomes (dor:Mailza_Gomes) --dop:birthPlace--> Mundo_Novo,_Mato_Grosso_do_Sul (<http://dbpedia.org/resource/Mundo_Novo,_Mato_Grosso_do_Sul>)
+      - Acre_(state)__PoliticalFunction__3 (<http://dbpedia.org/resource/Acre_(state)__PoliticalFunction__3>) --doo:politician--> Mailza_Gomes (dor:Mailza_Gomes)
+  '4':
+    attributes:
+      María_Teresa_Jiménez_Esquivel: (birth place^='http://dbpedia.org/resource/State_of_Mexico')
+      Aguascalientes__PoliticalFunction__1: (politician^='http://dbpedia.org/resource/María_Teresa_Jiménez_Esquivel')
+    relationships:
+      - María_Teresa_Jiménez_Esquivel (<http://dbpedia.org/resource/María_Teresa_Jiménez_Esquivel>) --dop:birthPlace--> Valle_de_Bravo (dor:Valle_de_Bravo)
+      - Aguascalientes__PoliticalFunction__1 (dor:Aguascalientes__PoliticalFunction__1) --doo:politician--> María_Teresa_Jiménez_Esquivel (<http://dbpedia.org/resource/María_Teresa_Jiménez_Esquivel>)
+  '5':
+    attributes:
+      María_Teresa_Jiménez_Esquivel: (birth place^='http://dbpedia.org/resource/State_of_Mexico')
+      Aguascalientes_Municipality__PoliticalFunction__1: (politician^='http://dbpedia.org/resource/María_Teresa_Jiménez_Esquivel')
+    relationships:
+      - María_Teresa_Jiménez_Esquivel (<http://dbpedia.org/resource/María_Teresa_Jiménez_Esquivel>) --dop:birthPlace--> Valle_de_Bravo (dor:Valle_de_Bravo)
+      - Aguascalientes_Municipality__PoliticalFunction__1 (dor:Aguascalientes_Municipality__PoliticalFunction__1) --doo:politician--> María_Teresa_Jiménez_Esquivel (<http://dbpedia.org/resource/María_Teresa_Jiménez_Esquivel>)
+  '6':
+    attributes:
+      Christine_St-Pierre: (birth place^='http://dbpedia.org/resource/Quebec')
+      Saint-Roch-des-Aulnaies: (area code^='418 and 581')
+      Ahuntsic-Cartierville__PoliticalFunction__3: (politician^='http://dbpedia.org/resource/Christine_St-Pierre')
+    relationships:
+      - Christine_St-Pierre (dor:Christine_St-Pierre) --dop:birthPlace--> Saint-Roch-des-Aulnaies (dor:Saint-Roch-des-Aulnaies)
+      - Ahuntsic-Cartierville__PoliticalFunction__3 (dor:Ahuntsic-Cartierville__PoliticalFunction__3) --doo:politician--> Christine_St-Pierre (dor:Christine_St-Pierre)
+  '7':
+    attributes:
+      Janis_Irwin: (alma mater^='University of Calgary', birth place^='http://dbpedia.org/resource/Barrhead,_Alberta')
+      Barrhead,_Alberta: (Apr record high C^='29.4', area code^='780')
+      Alberta_Avenue,_Edmonton__PoliticalFunction__3: (politician^='http://dbpedia.org/resource/Janis_Irwin')
+    relationships:
+      - Janis_Irwin (dor:Janis_Irwin) --dop:birthPlace--> Barrhead,_Alberta (<http://dbpedia.org/resource/Barrhead,_Alberta>)
+      - Alberta_Avenue,_Edmonton__PoliticalFunction__3 (<http://dbpedia.org/resource/Alberta_Avenue,_Edmonton__PoliticalFunction__3>) --doo:politician--> Janis_Irwin (dor:Janis_Irwin)
+  '8':
+    attributes:
+      Poole: (area code^='01202')
+      Robert_Kitchen: (birth place^='http://dbpedia.org/resource/Dorset')
+      Alida,_Saskatchewan__PoliticalFunction__4: (politician^='http://dbpedia.org/resource/Robert_Kitchen')
+    relationships:
+      - Robert_Kitchen (dor:Robert_Kitchen) --dop:birthPlace--> Poole (dor:Poole)
+      - Alida,_Saskatchewan__PoliticalFunction__4 (<http://dbpedia.org/resource/Alida,_Saskatchewan__PoliticalFunction__4>) --doo:politician--> Robert_Kitchen (dor:Robert_Kitchen)
+  '9':
+    attributes:
+      Pat_Browne: (alma mater^='http://dbpedia.org/resource/Temple_University_Beasley_School_of_Law', birth place^='http://dbpedia.org/resource/Allentown,_Pennsylvania')
+      Allentown,_Pennsylvania: (area code^='610 and 484')
+      Allentown,_Pennsylvania__PoliticalFunction__5: (politician^='http://dbpedia.org/resource/Pat_Browne')
+    relationships:
+      - Pat_Browne (dor:Pat_Browne) --dop:birthPlace--> Allentown,_Pennsylvania (<http://dbpedia.org/resource/Allentown,_Pennsylvania>)
+      - Allentown,_Pennsylvania__PoliticalFunction__5 (<http://dbpedia.org/resource/Allentown,_Pennsylvania__PoliticalFunction__5>) --doo:politician--> Pat_Browne (dor:Pat_Browne)
+  '10':
+    attributes:
+      IJsselmuiden: (area code^='038')
+      Ank_Bijleveld: (birth place^='http://dbpedia.org/resource/IJsselmuiden')
+      Almere__PoliticalFunction__1: (politician^='http://dbpedia.org/resource/Ank_Bijleveld')
+    relationships:
+      - Ank_Bijleveld (dor:Ank_Bijleveld) --dop:birthPlace--> IJsselmuiden (dor:IJsselmuiden)
+      - Almere__PoliticalFunction__1 (dor:Almere__PoliticalFunction__1) --doo:politician--> Ank_Bijleveld (dor:Ank_Bijleveld)
+attributes:
+  town: --Apr record low F^ (dop:aprRecordLowF)--> int | --Apr record high C^ (dop:aprRecordHighC)--> double | --arc-text-colorB^ (dop:arcTextColorb)--> langString | --area code^ (doo:areaCode)--> string | --Aug high F^ (dop:augHighF)--> int
+  politician: --alma mater^ (dop:almaMater)--> Resource | --url^ (dop:url)--> Resource | --mother^ (dop:mother)--> Resource | --data^ (dop:data)--> langString | --birth place^ (doo:birthPlace)--> Resource | --relations^ (dop:relations)--> langString
+  political function: --politician^ (doo:politician)--> Resource
+subgraph_id: 409
+relationships:
+  - politician --dop:birthPlace--> town
+  - political function --doo:politician--> politician

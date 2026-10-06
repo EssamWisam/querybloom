@@ -1,0 +1,116 @@
+types:
+  Band: doo:Band
+  album: doo:Album
+  country: doo:Country
+  musical artist: doo:MusicalArtist
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Brand_Nubian: (home town^='http://dbpedia.org/resource/New_Rochelle')
+      New_York_(state): (elevation (μ)^='300.0')
+    relationships:
+      - Brand_Nubian (dor:Brand_Nubian) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Brand_Nubian (dor:Brand_Nubian) --doo:associatedBand--> Prince_Paul_(producer) (<http://dbpedia.org/resource/Prince_Paul_(producer)>)
+      - Prince_Paul_(producer) (<http://dbpedia.org/resource/Prince_Paul_(producer)>) --doo:hometown--> United_States (dor:United_States)
+      - 3_Feet_High_and_Rising (dor:3_Feet_High_and_Rising) --dop:producer--> Prince_Paul_(producer) (<http://dbpedia.org/resource/Prince_Paul_(producer)>)
+  '2':
+    attributes:
+      California: (elevation (μ)^='880.0')
+      The_Rondo_Brothers: (home town^='http://dbpedia.org/resource/California')
+    relationships:
+      - The_Rondo_Brothers (dor:The_Rondo_Brothers) --doo:hometown--> California (dor:California)
+      - The_Rondo_Brothers (dor:The_Rondo_Brothers) --doo:associatedBand--> Prince_Paul_(producer) (<http://dbpedia.org/resource/Prince_Paul_(producer)>)
+      - Prince_Paul_(producer) (<http://dbpedia.org/resource/Prince_Paul_(producer)>) --doo:hometown--> United_States (dor:United_States)
+      - 3_Feet_High_and_Rising (dor:3_Feet_High_and_Rising) --dop:producer--> Prince_Paul_(producer) (<http://dbpedia.org/resource/Prince_Paul_(producer)>)
+  '3':
+    attributes:
+      New_York_(state): (elevation (μ)^='300.0')
+      Subatomic_Sound_System: (home town^='http://dbpedia.org/resource/Brooklyn')
+      Lee_%22Scratch%22_Perry: (associated acts^='', associatedBand='http://dbpedia.org/resource/Beastie_Boys', active years end year^='2021')
+    relationships:
+      - Subatomic_Sound_System (dor:Subatomic_Sound_System) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Subatomic_Sound_System (dor:Subatomic_Sound_System) --doo:associatedBand--> Lee_%22Scratch%22_Perry (<http://dbpedia.org/resource/Lee_%22Scratch%22_Perry>)
+      - Lee_%22Scratch%22_Perry (<http://dbpedia.org/resource/Lee_%22Scratch%22_Perry>) --doo:hometown--> Colony_of_Jamaica (dor:Colony_of_Jamaica)
+      - 5_Album_Studio_Set (dor:5_Album_Studio_Set) --dop:producer--> Lee_%22Scratch%22_Perry (<http://dbpedia.org/resource/Lee_%22Scratch%22_Perry>)
+  '4':
+    attributes:
+      Brand_Nubian: (home town^='http://dbpedia.org/resource/New_Rochelle')
+      New_York_(state): (elevation (μ)^='300.0')
+    relationships:
+      - Brand_Nubian (dor:Brand_Nubian) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Brand_Nubian (dor:Brand_Nubian) --doo:associatedBand--> Prince_Paul_(producer) (<http://dbpedia.org/resource/Prince_Paul_(producer)>)
+      - Prince_Paul_(producer) (<http://dbpedia.org/resource/Prince_Paul_(producer)>) --doo:hometown--> United_States (dor:United_States)
+      - 6_Feet_Deep (dor:6_Feet_Deep) --dop:producer--> Prince_Paul_(producer) (<http://dbpedia.org/resource/Prince_Paul_(producer)>)
+  '5':
+    attributes:
+      Kavala: (Aug precipitation days^='2.8', Aug high C^='30.2')
+      Despina_Vandi: (home town^='http://dbpedia.org/resource/Greece', birth name^='Despina Malea')
+    relationships:
+      - Despina_Vandi (dor:Despina_Vandi) --doo:hometown--> Kavala (dor:Kavala)
+      - Despina_Vandi (dor:Despina_Vandi) --doo:associatedBand--> Phoebus_(songwriter) (<http://dbpedia.org/resource/Phoebus_(songwriter)>)
+      - Phoebus_(songwriter) (<http://dbpedia.org/resource/Phoebus_(songwriter)>) --doo:hometown--> Greece (dor:Greece)
+      - Allaxa (dor:Allaxa) --dop:producer--> Phoebus_(songwriter) (<http://dbpedia.org/resource/Phoebus_(songwriter)>)
+  '6':
+    attributes:
+      California: (elevation (μ)^='880.0')
+      Grey_(duo): (home town^='http://dbpedia.org/resource/California')
+    relationships:
+      - Grey_(duo) (<http://dbpedia.org/resource/Grey_(duo)>) --doo:hometown--> California (dor:California)
+      - Grey_(duo) (<http://dbpedia.org/resource/Grey_(duo)>) --doo:associatedBand--> Zedd (dor:Zedd)
+      - Zedd (dor:Zedd) --doo:hometown--> Germany (dor:Germany)
+      - America_(Thirty_Seconds_to_Mars_album) (<http://dbpedia.org/resource/America_(Thirty_Seconds_to_Mars_album)>) --dop:producer--> Zedd (dor:Zedd)
+  '7':
+    attributes:
+      California: (elevation (μ)^='880.0')
+      Thirsty_Fish: (home town^='http://dbpedia.org/resource/California')
+      Loden_(musician): (associated acts^='http://dbpedia.org/resource/Busdriver', associatedBand='http://dbpedia.org/resource/Busdriver')
+    relationships:
+      - Thirsty_Fish (dor:Thirsty_Fish) --doo:hometown--> California (dor:California)
+      - Thirsty_Fish (dor:Thirsty_Fish) --doo:associatedBand--> Loden_(musician) (<http://dbpedia.org/resource/Loden_(musician)>)
+      - Loden_(musician) (<http://dbpedia.org/resource/Loden_(musician)>) --doo:hometown--> Belgium (dor:Belgium)
+      - Beaus$Eros (<http://dbpedia.org/resource/Beaus$Eros>) --dop:producer--> Loden_(musician) (<http://dbpedia.org/resource/Loden_(musician)>)
+  '8':
+    attributes:
+      PISCIDE: (home town^='http://dbpedia.org/resource/Germany')
+      Thuringia: (Aug precipitation days^='8.3', Aug high C^='22.7')
+    relationships:
+      - PISCIDE (dor:PISCIDE) --doo:hometown--> Thuringia (dor:Thuringia)
+      - PISCIDE (dor:PISCIDE) --doo:associatedBand--> Wumpscut (dor:Wumpscut)
+      - Wumpscut (dor:Wumpscut) --doo:hometown--> Germany (dor:Germany)
+      - Boeses_Junges_Fleisch (dor:Boeses_Junges_Fleisch) --dop:producer--> Wumpscut (dor:Wumpscut)
+  '9':
+    attributes:
+      PISCIDE: (home town^='http://dbpedia.org/resource/Germany')
+      Thuringia: (Aug precipitation days^='8.3', Aug high C^='22.7')
+    relationships:
+      - PISCIDE (dor:PISCIDE) --doo:hometown--> Thuringia (dor:Thuringia)
+      - PISCIDE (dor:PISCIDE) --doo:associatedBand--> Wumpscut (dor:Wumpscut)
+      - Wumpscut (dor:Wumpscut) --doo:hometown--> Germany (dor:Germany)
+      - Bunkertor_7 (dor:Bunkertor_7) --dop:producer--> Wumpscut (dor:Wumpscut)
+  '10':
+    attributes:
+      Kavala: (Aug precipitation days^='2.8', Aug high C^='30.2')
+      Despina_Vandi: (home town^='http://dbpedia.org/resource/Greece', birth name^='Despina Malea')
+    relationships:
+      - Despina_Vandi (dor:Despina_Vandi) --doo:hometown--> Kavala (dor:Kavala)
+      - Despina_Vandi (dor:Despina_Vandi) --doo:associatedBand--> Phoebus_(songwriter) (<http://dbpedia.org/resource/Phoebus_(songwriter)>)
+      - Phoebus_(songwriter) (<http://dbpedia.org/resource/Phoebus_(songwriter)>) --doo:hometown--> Greece (dor:Greece)
+      - C'est_la_Vie_(Despina_Vandi_album) (<http://dbpedia.org/resource/C'est_la_Vie_(Despina_Vandi_album)>) --dop:producer--> Phoebus_(songwriter) (<http://dbpedia.org/resource/Phoebus_(songwriter)>)
+attributes:
+  Band: --home town^ (doo:hometown)--> Resource | --birth name^ (dop:birthName)--> langString | --reason^ (dop:reason)--> langString
+  album: --quoted (dop:quoted)--> langString | --accessdate^ (dop:accessdate)--> gMonthDay
+  musical artist: --associated acts^ (dop:associatedActs)--> int | --associatedBand (doo:associatedBand)--> Resource | --active years end year^ (doo:activeYearsEndYear)--> gYear | --footer^ (dop:footer)--> langString
+  administrative region: --elevation (μ)^ (doo:elevation)--> double | --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --Aug high C^ (dop:augHighC)--> double | --differentFrom (wwoo:differentFrom)--> Resource
+subgraph_id: 483
+relationships:
+  - Band --doo:hometown--> administrative region
+  - Band --doo:associatedBand--> musical artist
+  - musical artist --doo:hometown--> country
+  - album --dop:producer--> musical artist

@@ -1,0 +1,95 @@
+types:
+  soccer club: doo:SoccerClub
+  soccer manager: doo:SoccerManager
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Joe_Schofield: (death place^='Hartshill, Stoke-on-Trent, England')
+      1891–92_Football_League: (continentalcup1 qualifiers^='http://dbpedia.org/resource/Darwen_F.C._(1870)')
+      1891–92_Stoke_F.C._season: (league topscorer^='', ground^='http://dbpedia.org/resource/Victoria_Ground', highest attendance^='7000')
+    relationships:
+      - 1891–92_Stoke_F.C._season (<http://dbpedia.org/resource/1891–92_Stoke_F.C._season>) --doo:league--> 1891–92_Football_League (<http://dbpedia.org/resource/1891–92_Football_League>)
+      - 1891–92_Stoke_F.C._season (<http://dbpedia.org/resource/1891–92_Stoke_F.C._season>) --dop:leagueTopscorer--> Joe_Schofield (dor:Joe_Schofield)
+  '2':
+    attributes:
+      Joe_Schofield: (death place^='Hartshill, Stoke-on-Trent, England')
+      1892–93_Football_League: (lowest attendance^='1000', continentalcup1 qualifiers^='http://dbpedia.org/resource/Accrington_F.C.', highest attendance^='27500')
+      1892–93_Stoke_F.C._season: (league topscorer^='', ground^='http://dbpedia.org/resource/Victoria_Ground', highest attendance^='12000')
+    relationships:
+      - 1892–93_Stoke_F.C._season (<http://dbpedia.org/resource/1892–93_Stoke_F.C._season>) --doo:league--> 1892–93_Football_League (<http://dbpedia.org/resource/1892–93_Football_League>)
+      - 1892–93_Stoke_F.C._season (<http://dbpedia.org/resource/1892–93_Stoke_F.C._season>) --dop:leagueTopscorer--> Joe_Schofield (dor:Joe_Schofield)
+  '3':
+    attributes:
+      Joe_Schofield: (death place^='Hartshill, Stoke-on-Trent, England')
+      1893–94_Football_League: (lowest attendance^='400', continentalcup1 qualifiers^='Notts County', highest attendance^='27500')
+      1893–94_Stoke_F.C._season: (league topscorer^='', ground^='http://dbpedia.org/resource/Victoria_Ground', highest attendance^='12000')
+    relationships:
+      - 1893–94_Stoke_F.C._season (<http://dbpedia.org/resource/1893–94_Stoke_F.C._season>) --doo:league--> 1893–94_Football_League (<http://dbpedia.org/resource/1893–94_Football_League>)
+      - 1893–94_Stoke_F.C._season (<http://dbpedia.org/resource/1893–94_Stoke_F.C._season>) --dop:leagueTopscorer--> Joe_Schofield (dor:Joe_Schofield)
+  '4':
+    attributes:
+      1896–97_Football_League: (lowest attendance^='1000', continentalcup1 qualifiers^='http://dbpedia.org/resource/Blackpool_F.C.', highest attendance^='40000')
+      1896–97_Stoke_F.C._season: (league topscorer^='', ground^='http://dbpedia.org/resource/Victoria_Ground', highest attendance^='8000')
+      William_Maxwell_(footballer): (death place^='Kirkcaldy, Scotland')
+    relationships:
+      - 1896–97_Stoke_F.C._season (<http://dbpedia.org/resource/1896–97_Stoke_F.C._season>) --doo:league--> 1896–97_Football_League (<http://dbpedia.org/resource/1896–97_Football_League>)
+      - 1896–97_Stoke_F.C._season (<http://dbpedia.org/resource/1896–97_Stoke_F.C._season>) --dop:leagueTopscorer--> William_Maxwell_(footballer) (<http://dbpedia.org/resource/William_Maxwell_(footballer)>)
+  '5':
+    attributes:
+      1897–98_Football_League: (lowest attendance^='1000', continentalcup1 qualifiers^='None', highest attendance^='50000')
+      1897–98_Stoke_F.C._season: (league topscorer^='', ground^='http://dbpedia.org/resource/Victoria_Ground', highest attendance^='15000')
+      William_Maxwell_(footballer): (death place^='Kirkcaldy, Scotland')
+    relationships:
+      - 1897–98_Stoke_F.C._season (<http://dbpedia.org/resource/1897–98_Stoke_F.C._season>) --doo:league--> 1897–98_Football_League (<http://dbpedia.org/resource/1897–98_Football_League>)
+      - 1897–98_Stoke_F.C._season (<http://dbpedia.org/resource/1897–98_Stoke_F.C._season>) --dop:leagueTopscorer--> William_Maxwell_(footballer) (<http://dbpedia.org/resource/William_Maxwell_(footballer)>)
+  '6':
+    attributes:
+      1898–99_Football_League: (lowest attendance^='1000', continentalcup1 qualifiers^='http://dbpedia.org/resource/Barnsley_F.C.', highest attendance^='41000')
+      1898–99_Stoke_F.C._season: (league topscorer^='', ground^='http://dbpedia.org/resource/Victoria_Ground', highest attendance^='14000')
+      William_Maxwell_(footballer): (death place^='Kirkcaldy, Scotland')
+    relationships:
+      - 1898–99_Stoke_F.C._season (<http://dbpedia.org/resource/1898–99_Stoke_F.C._season>) --doo:league--> 1898–99_Football_League (<http://dbpedia.org/resource/1898–99_Football_League>)
+      - 1898–99_Stoke_F.C._season (<http://dbpedia.org/resource/1898–99_Stoke_F.C._season>) --dop:leagueTopscorer--> William_Maxwell_(footballer) (<http://dbpedia.org/resource/William_Maxwell_(footballer)>)
+  '7':
+    attributes:
+      Edgar_Chadwick: (death place^='Blackburn, England')
+      1900–01_Southampton_F.C._season: (league topscorer^='http://dbpedia.org/resource/Edgar_Chadwick', ground^='http://dbpedia.org/resource/The_Dell_(Southampton)', highest attendance^='12000')
+    relationships:
+      - 1900–01_Southampton_F.C._season (<http://dbpedia.org/resource/1900–01_Southampton_F.C._season>) --doo:league--> 1900–01_Southern_Football_League (<http://dbpedia.org/resource/1900–01_Southern_Football_League>)
+      - 1900–01_Southampton_F.C._season (<http://dbpedia.org/resource/1900–01_Southampton_F.C._season>) --dop:leagueTopscorer--> Edgar_Chadwick (dor:Edgar_Chadwick)
+  '8':
+    attributes:
+      Tom_Holford: (death place^='Blurton, Stoke-on-Trent, England')
+      1907–08_Football_League: (continentalcup1 qualifiers^='Wolverhampton Wanderers')
+      1907–08_Stoke_F.C._season: (league topscorer^='', ground^='http://dbpedia.org/resource/Victoria_Ground', highest attendance^='12000')
+    relationships:
+      - 1907–08_Stoke_F.C._season (<http://dbpedia.org/resource/1907–08_Stoke_F.C._season>) --doo:league--> 1907–08_Football_League (<http://dbpedia.org/resource/1907–08_Football_League>)
+      - 1907–08_Stoke_F.C._season (<http://dbpedia.org/resource/1907–08_Stoke_F.C._season>) --dop:leagueTopscorer--> Tom_Holford (dor:Tom_Holford)
+  '9':
+    attributes:
+      1915–16_Rangers_F.C._season: (league topscorer^='http://dbpedia.org/resource/Willie_Reid_(footballer,_born_1884)', ground^='http://dbpedia.org/resource/Ibrox_Stadium')
+      Willie_Reid_(footballer,_born_1884): (death place^='Baillieston, Scotland')
+    relationships:
+      - 1915–16_Rangers_F.C._season (<http://dbpedia.org/resource/1915–16_Rangers_F.C._season>) --doo:league--> 1915–16_Scottish_Football_League (<http://dbpedia.org/resource/1915–16_Scottish_Football_League>)
+      - 1915–16_Rangers_F.C._season (<http://dbpedia.org/resource/1915–16_Rangers_F.C._season>) --dop:leagueTopscorer--> Willie_Reid_(footballer,_born_1884) (<http://dbpedia.org/resource/Willie_Reid_(footballer,_born_1884)>)
+  '10':
+    attributes:
+      Andy_Cunningham_(footballer): (death place^='Glasgow, Scotland')
+      1919–20_Rangers_F.C._season: (date^='June 2019', league topscorer^='http://dbpedia.org/resource/Andy_Cunningham_(footballer)', ground^='http://dbpedia.org/resource/Ibrox_Stadium')
+    relationships:
+      - 1919–20_Rangers_F.C._season (<http://dbpedia.org/resource/1919–20_Rangers_F.C._season>) --doo:league--> 1919–20_Scottish_Football_League (<http://dbpedia.org/resource/1919–20_Scottish_Football_League>)
+      - 1919–20_Rangers_F.C._season (<http://dbpedia.org/resource/1919–20_Rangers_F.C._season>) --dop:leagueTopscorer--> Andy_Cunningham_(footballer) (<http://dbpedia.org/resource/Andy_Cunningham_(footballer)>)
+attributes:
+  soccer club: --date^ (dop:date)--> gMonthDay | --league topscorer^ (dop:leagueTopscorer)--> langString | --ground^ (doo:ground)--> Resource | --highest attendance^ (dop:highestAttendance)--> date | --age^ (dop:age)--> date
+  soccer manager: --death place^ (dop:deathPlace)--> langString | --d^ (dop:d)--> date
+  football league season: --lowest attendance^ (dop:lowestAttendance)--> gMonthDay | --continentalcup1 qualifiers^ (dop:continentalcup1Qualifiers)--> langString | --highest attendance^ (dop:highestAttendance)--> int
+subgraph_id: 21
+relationships:
+  - soccer club --doo:league--> football league season
+  - soccer club --dop:leagueTopscorer--> soccer manager

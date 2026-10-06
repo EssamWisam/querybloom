@@ -1,0 +1,86 @@
+types:
+  Band: doo:Band
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+  person function: doo:PersonFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Al_Tinney: (associated acts^='http://dbpedia.org/resource/The_Jive_Bombers')
+    relationships:
+      - Al_Tinney (dor:Al_Tinney) --doo:instrument--> Piano (dor:Piano)
+      - Afro-Cuban_jazz (dor:Afro-Cuban_jazz) --doo:instrument--> Piano (dor:Piano)
+      - Afro-Cuban_jazz (dor:Afro-Cuban_jazz) --doo:instrument--> Bass_guitar (dor:Bass_guitar)
+  '2':
+    attributes:
+      Al_Tinney: (associated acts^='http://dbpedia.org/resource/The_Jive_Bombers')
+    relationships:
+      - Al_Tinney (dor:Al_Tinney) --doo:instrument--> Piano (dor:Piano)
+      - Afro-Cuban_jazz (dor:Afro-Cuban_jazz) --doo:instrument--> Piano (dor:Piano)
+      - Afro-Cuban_jazz (dor:Afro-Cuban_jazz) --doo:instrument--> Bongos (dor:Bongos)
+  '3':
+    attributes:
+      Al_Tinney: (associated acts^='http://dbpedia.org/resource/The_Jive_Bombers')
+    relationships:
+      - Al_Tinney (dor:Al_Tinney) --doo:instrument--> Piano (dor:Piano)
+      - Afro-Cuban_jazz (dor:Afro-Cuban_jazz) --doo:instrument--> Piano (dor:Piano)
+      - Afro-Cuban_jazz (dor:Afro-Cuban_jazz) --doo:instrument--> Conga (dor:Conga)
+  '4':
+    attributes: {}
+    relationships:
+      - Alan_Barnes_(musician) (<http://dbpedia.org/resource/Alan_Barnes_(musician)>) --doo:instrument--> Saxophone (dor:Saxophone)
+      - Afrobeat (dor:Afrobeat) --doo:instrument--> Saxophone (dor:Saxophone)
+      - Afrobeat (dor:Afrobeat) --doo:instrument--> Bass_guitar (dor:Bass_guitar)
+  '5':
+    attributes: {}
+    relationships:
+      - Alan_Barnes_(musician) (<http://dbpedia.org/resource/Alan_Barnes_(musician)>) --doo:instrument--> Saxophone (dor:Saxophone)
+      - Afrobeat (dor:Afrobeat) --doo:instrument--> Saxophone (dor:Saxophone)
+      - Afrobeat (dor:Afrobeat) --doo:instrument--> Drums (dor:Drums)
+  '6':
+    attributes: {}
+    relationships:
+      - Alan_Barnes_(musician) (<http://dbpedia.org/resource/Alan_Barnes_(musician)>) --doo:instrument--> Saxophone (dor:Saxophone)
+      - Afrobeat (dor:Afrobeat) --doo:instrument--> Saxophone (dor:Saxophone)
+      - Afrobeat (dor:Afrobeat) --doo:instrument--> Guitar (dor:Guitar)
+  '7':
+    attributes:
+      Almighty_Defenders: (associated acts^='http://dbpedia.org/resource/Black_Lips')
+    relationships:
+      - Almighty_Defenders (dor:Almighty_Defenders) --doo:instrument--> Singing (dor:Singing)
+      - Atlanta_blues (dor:Atlanta_blues) --doo:instrument--> Singing (dor:Singing)
+      - Atlanta_blues (dor:Atlanta_blues) --doo:instrument--> Drum_kit (dor:Drum_kit)
+  '8':
+    attributes:
+      Almighty_Defenders: (associated acts^='http://dbpedia.org/resource/Black_Lips')
+    relationships:
+      - Almighty_Defenders (dor:Almighty_Defenders) --doo:instrument--> Singing (dor:Singing)
+      - Atlanta_blues (dor:Atlanta_blues) --doo:instrument--> Singing (dor:Singing)
+      - Atlanta_blues (dor:Atlanta_blues) --doo:instrument--> Guitar (dor:Guitar)
+  '9':
+    attributes:
+      Almighty_Defenders: (associated acts^='http://dbpedia.org/resource/Black_Lips')
+    relationships:
+      - Almighty_Defenders (dor:Almighty_Defenders) --doo:instrument--> Singing (dor:Singing)
+      - Atlanta_blues (dor:Atlanta_blues) --doo:instrument--> Singing (dor:Singing)
+      - Atlanta_blues (dor:Atlanta_blues) --doo:instrument--> Synthesizers (dor:Synthesizers)
+  '10':
+    attributes: {}
+    relationships:
+      - Alphonse_Picou (dor:Alphonse_Picou) --doo:instrument--> Clarinet (dor:Clarinet)
+      - Balkan_ballad (dor:Balkan_ballad) --doo:instrument--> Clarinet (dor:Clarinet)
+      - Balkan_ballad (dor:Balkan_ballad) --doo:instrument--> Bass_guitar (dor:Bass_guitar)
+attributes:
+  Band: --associated acts^ (dop:associatedActs)--> Resource | --instruments^ (dop:instruments)--> langString | --title^ (dop:title)--> langString | --current members^ (dop:currentMembers)--> Resource | --id^ (dop:id)--> langString | --width^ (dop:width)--> int
+  musical artist: --active years end year^ (doo:activeYearsEndYear)--> gYear | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --audio (dop:audio)--> langString | --notable works^ (dop:notableWorks)--> langString
+  person function: --mother^ (dop:mother)--> langString | --url^ (dop:url)--> Resource
+subgraph_id: 738
+relationships:
+  - Band --doo:instrument--> person function
+  - music genre --doo:instrument--> person function
+  - music genre --doo:instrument--> musical artist

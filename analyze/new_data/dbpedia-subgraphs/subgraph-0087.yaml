@@ -1,0 +1,86 @@
+types:
+  village: doo:Village
+  Location: doo:Location
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Catalonia: (area total (km2)^='32113.86')
+      Pompeu_Fabra_University: (type^='http://dbpedia.org/resource/Public_University')
+    relationships:
+      - Pompeu_Fabra_University (dor:Pompeu_Fabra_University) --doo:city--> Catalonia (dor:Catalonia)
+      - Albera_Massif (dor:Albera_Massif) --doo:locatedInArea--> Catalonia (dor:Catalonia)
+  '2':
+    attributes:
+      Catalonia: (area total (km2)^='32113.86')
+    relationships:
+      - School_of_Engineering_of_Terrassa (dor:School_of_Engineering_of_Terrassa) --doo:city--> Catalonia (dor:Catalonia)
+      - Albera_Massif (dor:Albera_Massif) --doo:locatedInArea--> Catalonia (dor:Catalonia)
+  '3':
+    attributes:
+      Catalonia: (area total (km2)^='32113.86')
+      University_of_Barcelona: (type^='http://dbpedia.org/resource/Public_university')
+    relationships:
+      - University_of_Barcelona (dor:University_of_Barcelona) --doo:city--> Catalonia (dor:Catalonia)
+      - Albera_Massif (dor:Albera_Massif) --doo:locatedInArea--> Catalonia (dor:Catalonia)
+  '4':
+    attributes:
+      Navarre: (area total (km2)^='10391.11')
+      Public_University_of_Navarre__Universidad_Pública_de_NavarraNafarroako_Unibertsi__1: (type^='http://dbpedia.org/resource/Public_university')
+    relationships:
+      - Public_University_of_Navarre__Universidad_Pública_de_NavarraNafarroako_Unibertsi__1 (<http://dbpedia.org/resource/Public_University_of_Navarre__Universidad_Pública_de_NavarraNafarroako_Unibertsi__1>) --doo:city--> Navarre (dor:Navarre)
+      - Andia (dor:Andia) --doo:locatedInArea--> Navarre (dor:Navarre)
+  '5':
+    attributes:
+      Navarre: (area total (km2)^='10391.11')
+      Public_University_of_Navarre__Universidad_Pública_de_NavarraNafarroako_Unibertsi__1: (type^='http://dbpedia.org/resource/Public_university')
+    relationships:
+      - Public_University_of_Navarre__Universidad_Pública_de_NavarraNafarroako_Unibertsi__1 (<http://dbpedia.org/resource/Public_University_of_Navarre__Universidad_Pública_de_NavarraNafarroako_Unibertsi__1>) --doo:city--> Navarre (dor:Navarre)
+      - Balerdi (dor:Balerdi) --doo:locatedInArea--> Navarre (dor:Navarre)
+  '6':
+    attributes:
+      Navarre: (area total (km2)^='10391.11')
+      Public_University_of_Navarre__Universidad_Pública_de_NavarraNafarroako_Unibertsi__1: (type^='http://dbpedia.org/resource/Public_university')
+    relationships:
+      - Public_University_of_Navarre__Universidad_Pública_de_NavarraNafarroako_Unibertsi__1 (<http://dbpedia.org/resource/Public_University_of_Navarre__Universidad_Pública_de_NavarraNafarroako_Unibertsi__1>) --doo:city--> Navarre (dor:Navarre)
+      - Beriain (dor:Beriain) --doo:locatedInArea--> Navarre (dor:Navarre)
+  '7':
+    attributes:
+      Saltora_Netaji_Centenary_College: (type^='http://dbpedia.org/resource/Public_college')
+    relationships:
+      - Saltora_Netaji_Centenary_College (dor:Saltora_Netaji_Centenary_College) --doo:city--> Saltora (dor:Saltora)
+      - Biharinath (dor:Biharinath) --doo:locatedInArea--> Saltora (dor:Saltora)
+  '8':
+    attributes:
+      Hamilton_College: (type^='http://dbpedia.org/resource/Private_college')
+      Clinton,_Oneida_County,_New_York: (area total (km2)^='1.62')
+    relationships:
+      - Hamilton_College (dor:Hamilton_College) --doo:city--> Clinton,_Oneida_County,_New_York (<http://dbpedia.org/resource/Clinton,_Oneida_County,_New_York>)
+      - Christmas_Knob (dor:Christmas_Knob) --doo:locatedInArea--> Clinton,_Oneida_County,_New_York (<http://dbpedia.org/resource/Clinton,_Oneida_County,_New_York>)
+  '9':
+    attributes:
+      Clinton,_Oneida_County,_New_York: (area total (km2)^='1.62')
+    relationships:
+      - Kirkland_College (dor:Kirkland_College) --doo:city--> Clinton,_Oneida_County,_New_York (<http://dbpedia.org/resource/Clinton,_Oneida_County,_New_York>)
+      - Christmas_Knob (dor:Christmas_Knob) --doo:locatedInArea--> Clinton,_Oneida_County,_New_York (<http://dbpedia.org/resource/Clinton,_Oneida_County,_New_York>)
+  '10':
+    attributes:
+      Hamilton_College: (type^='http://dbpedia.org/resource/Private_college')
+      Clinton,_Oneida_County,_New_York: (area total (km2)^='1.62')
+    relationships:
+      - Hamilton_College (dor:Hamilton_College) --doo:city--> Clinton,_Oneida_County,_New_York (<http://dbpedia.org/resource/Clinton,_Oneida_County,_New_York>)
+      - College_Hill_(New_York) (<http://dbpedia.org/resource/College_Hill_(New_York)>) --doo:locatedInArea--> Clinton,_Oneida_County,_New_York (<http://dbpedia.org/resource/Clinton,_Oneida_County,_New_York>)
+attributes:
+  village: --area total (km2)^ (doop:areaTotal)--> squareKilometre | --arc-textB^ (dop:arcTextb)--> langString | --arc-gapA^ (dop:arcGapa)--> double | --arc-gapB^ (dop:arcGapb)--> double | --bot^ (dop:bot)--> langString
+  Location: --2y^ (dop:2y)--> int | --alt^ (dop:alt)--> langString | --Aug high C^ (dop:augHighC)--> int | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --discoverer^ (doo:discoverer)--> Resource | --Aug precipitation inch^ (dop:augPrecipitationInch)--> int | --subdivision^ (doo:subdivision)--> Resource
+  university: --type^ (doo:type)--> Resource
+subgraph_id: 87
+relationships:
+  - university --doo:city--> village
+  - Location --doo:locatedInArea--> village

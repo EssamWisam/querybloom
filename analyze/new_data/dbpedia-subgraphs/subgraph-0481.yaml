@@ -1,0 +1,89 @@
+types:
+  company: doo:Company
+  Location: doo:Location
+  bus company: doo:BusCompany
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Apatin_Brewery: (owning company^='http://dbpedia.org/resource/Molson_Coors')
+    relationships:
+      - Emisija_Koja_Ide_na_Televiziju_Poneđeljkom_oko_9_uveče (<http://dbpedia.org/resource/Emisija_Koja_Ide_na_Televiziju_Poneđeljkom_oko_9_uveče>) --dop:country--> Montenegro (dor:Montenegro)
+      - Apatin_Brewery (dor:Apatin_Brewery) --dop:areaServed--> Montenegro (dor:Montenegro)
+      - 4_Decembar_Nikšić (<http://dbpedia.org/resource/4_Decembar_Nikšić>) --doo:headquarter--> Montenegro (dor:Montenegro)
+  '2':
+    attributes:
+      Apatin_Brewery: (owning company^='http://dbpedia.org/resource/Molson_Coors')
+    relationships:
+      - Operacija_trijumf (dor:Operacija_trijumf) --dop:country--> Montenegro (dor:Montenegro)
+      - Apatin_Brewery (dor:Apatin_Brewery) --dop:areaServed--> Montenegro (dor:Montenegro)
+      - 4_Decembar_Nikšić (<http://dbpedia.org/resource/4_Decembar_Nikšić>) --doo:headquarter--> Montenegro (dor:Montenegro)
+  '3':
+    attributes:
+      Apatin_Brewery: (owning company^='http://dbpedia.org/resource/Molson_Coors')
+      X_Factor_Adria: (related^='http://dbpedia.org/resource/The_X_Factor_(UK_TV_series)')
+    relationships:
+      - X_Factor_Adria (dor:X_Factor_Adria) --dop:country--> Montenegro (dor:Montenegro)
+      - Apatin_Brewery (dor:Apatin_Brewery) --dop:areaServed--> Montenegro (dor:Montenegro)
+      - 4_Decembar_Nikšić (<http://dbpedia.org/resource/4_Decembar_Nikšić>) --doo:headquarter--> Montenegro (dor:Montenegro)
+  '4':
+    attributes:
+      1_Litre_no_Namida_(TV_series): (related^='http://dbpedia.org/resource/Buku_Harian_Nayla')
+    relationships:
+      - 1_Litre_no_Namida_(TV_series) (<http://dbpedia.org/resource/1_Litre_no_Namida_(TV_series)>) --dop:country--> Japan (dor:Japan)
+      - 2_Cheap_Cars (dor:2_Cheap_Cars) --dop:areaServed--> Japan (dor:Japan)
+      - Airport_Transport_Service (dor:Airport_Transport_Service) --doo:headquarter--> Japan (dor:Japan)
+  '5':
+    attributes: {}
+    relationships:
+      - 24_Japan (dor:24_Japan) --dop:country--> Japan (dor:Japan)
+      - 2_Cheap_Cars (dor:2_Cheap_Cars) --dop:areaServed--> Japan (dor:Japan)
+      - Airport_Transport_Service (dor:Airport_Transport_Service) --doo:headquarter--> Japan (dor:Japan)
+  '6':
+    attributes:
+      35-sai_no_Koukousei: (composer^='http://dbpedia.org/resource/Masaru_Yokoyama')
+    relationships:
+      - 35-sai_no_Koukousei (dor:35-sai_no_Koukousei) --dop:country--> Japan (dor:Japan)
+      - 2_Cheap_Cars (dor:2_Cheap_Cars) --dop:areaServed--> Japan (dor:Japan)
+      - Airport_Transport_Service (dor:Airport_Transport_Service) --doo:headquarter--> Japan (dor:Japan)
+  '7':
+    attributes:
+      ¡Mucha_Lucha!: (composer^='http://dbpedia.org/resource/Chicos_de_Barrio')
+    relationships:
+      - ¡Mucha_Lucha! (<http://dbpedia.org/resource/¡Mucha_Lucha!>) --dop:country--> United_States (dor:United_States)
+      - 21c_Museum_Hotels (dor:21c_Museum_Hotels) --dop:areaServed--> United_States (dor:United_States)
+      - Athens_Transit (dor:Athens_Transit) --doo:headquarter--> United_States (dor:United_States)
+  '8':
+    attributes:
+      ¿Qué_Pasa,_USA%3F: (composer^='http://dbpedia.org/resource/Luis_Santeiro')
+    relationships:
+      - ¿Qué_Pasa,_USA%3F (<http://dbpedia.org/resource/¿Qué_Pasa,_USA%3F>) --dop:country--> United_States (dor:United_States)
+      - 21c_Museum_Hotels (dor:21c_Museum_Hotels) --dop:areaServed--> United_States (dor:United_States)
+      - Athens_Transit (dor:Athens_Transit) --doo:headquarter--> United_States (dor:United_States)
+  '9':
+    attributes: {}
+    relationships:
+      - '''Til_Death_Do_Us_Part:_Carmen_and_Dave (<http://dbpedia.org/resource/''Til_Death_Do_Us_Part:_Carmen_and_Dave>) --dop:country--> United_States (dor:United_States)'
+      - 21c_Museum_Hotels (dor:21c_Museum_Hotels) --dop:areaServed--> United_States (dor:United_States)
+      - Athens_Transit (dor:Athens_Transit) --doo:headquarter--> United_States (dor:United_States)
+  '10':
+    attributes:
+      Philippines: (date^='2016-08-04')
+    relationships:
+      - '@ANCAlerts (<http://dbpedia.org/resource/@ANCAlerts>) --dop:country--> Philippines (dor:Philippines)'
+      - 2GO (dor:2GO) --dop:areaServed--> Philippines (dor:Philippines)
+      - Baliwag_Transit (dor:Baliwag_Transit) --doo:headquarter--> Philippines (dor:Philippines)
+attributes:
+  company: --owning company^ (doo:owningCompany)--> Resource | --headquarter^ (doo:headquarter)--> Resource
+  Location: --date^ (dop:date)--> date | --arc-textB^ (dop:arcTextb)--> langString | --certain^ (dop:certain)--> langString | --age^ (dop:age)--> langString | --arc-radiusB^ (dop:arcRadiusb)--> double
+  television show: --composer^ (doo:composer)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --related^ (doo:related)--> Resource | --footer^ (dop:footer)--> langString
+subgraph_id: 481
+relationships:
+  - television show --dop:country--> Location
+  - company --dop:areaServed--> Location
+  - bus company --doo:headquarter--> Location

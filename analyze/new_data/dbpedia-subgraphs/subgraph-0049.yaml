@@ -1,0 +1,93 @@
+types:
+  island: doo:Island
+  country: doo:Country
+  military unit: doo:MilitaryUnit
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Greenland: (image^='Drottning Margrethe av Danmark crop.jpg')
+      4083d_Strategic_Wing: (garrison^='http://dbpedia.org/resource/Greenland', active years start year^='1957')
+    relationships:
+      - 4083d_Strategic_Wing (dor:4083d_Strategic_Wing) --doo:garrison--> Greenland (dor:Greenland)
+      - Aappilattoq_Island_(Tasiusaq_Bay) (<http://dbpedia.org/resource/Aappilattoq_Island_(Tasiusaq_Bay)>) --doo:location--> Greenland (dor:Greenland)
+  '2':
+    attributes:
+      Greenland: (image^='Drottning Margrethe av Danmark crop.jpg')
+      Joint_Arctic_Command: (garrison^=', Greenland', active years start year^='0008', Link from a Wikipage to an external page^='http://www2.forsvaret.dk/eng/Organisation/ArcticCommand/Pages/ArcticCommand.aspx')
+    relationships:
+      - Joint_Arctic_Command (dor:Joint_Arctic_Command) --doo:garrison--> Greenland (dor:Greenland)
+      - Aappilattoq_Island_(Tasiusaq_Bay) (<http://dbpedia.org/resource/Aappilattoq_Island_(Tasiusaq_Bay)>) --doo:location--> Greenland (dor:Greenland)
+  '3':
+    attributes:
+      Greenland: (image^='Drottning Margrethe av Danmark crop.jpg')
+      4083d_Strategic_Wing: (garrison^='http://dbpedia.org/resource/Greenland', active years start year^='1957')
+    relationships:
+      - 4083d_Strategic_Wing (dor:4083d_Strategic_Wing) --doo:garrison--> Greenland (dor:Greenland)
+      - Aappilattoq_Island_(Upernavik_Icefjord) (<http://dbpedia.org/resource/Aappilattoq_Island_(Upernavik_Icefjord)>) --doo:location--> Greenland (dor:Greenland)
+  '4':
+    attributes:
+      Israel: (image^='Declaration of State of Israel 1948.jpg', width^='100')
+      Israeli_Air_Force: (garrison^='http://dbpedia.org/resource/HaKirya', Link from a Wikipage to an external page^='http://www.scramble.nl/il.htm')
+    relationships:
+      - Israeli_Air_Force (dor:Israeli_Air_Force) --doo:garrison--> Israel (dor:Israel)
+      - Adam's_Rock (<http://dbpedia.org/resource/Adam's_Rock>) --doo:location--> Israel (dor:Israel)
+  '5':
+    attributes:
+      Israel: (image^='Declaration of State of Israel 1948.jpg', width^='100')
+      Israeli_Navy: (garrison^='', Link from a Wikipage to an external page^='http://www.hazegray.org/worldnav/mideast/israel.htm%231')
+    relationships:
+      - Israeli_Navy (dor:Israeli_Navy) --doo:garrison--> Israel (dor:Israel)
+      - Adam's_Rock (<http://dbpedia.org/resource/Adam's_Rock>) --doo:location--> Israel (dor:Israel)
+  '6':
+    attributes:
+      Israel: (image^='Declaration of State of Israel 1948.jpg', width^='100')
+      Unit_101: (garrison^='http://dbpedia.org/resource/Israel', active years start year^='1953', Link from a Wikipage to an external page^='http://en.specwar.info/special_forces/Unit_101/')
+    relationships:
+      - Unit_101 (dor:Unit_101) --doo:garrison--> Israel (dor:Israel)
+      - Adam's_Rock (<http://dbpedia.org/resource/Adam's_Rock>) --doo:location--> Israel (dor:Israel)
+  '7':
+    attributes:
+      Norway: (image^='Le bateau viking dOseberg .jpg')
+      Ærøya: (length m^='600', populationTotal='0')
+      14th_U-boat_Flotilla: (garrison^='http://dbpedia.org/resource/Narvik', active years start year^='1944')
+    relationships:
+      - 14th_U-boat_Flotilla (dor:14th_U-boat_Flotilla) --doo:garrison--> Norway (dor:Norway)
+      - Ærøya (<http://dbpedia.org/resource/Ærøya>) --doo:location--> Norway (dor:Norway)
+  '8':
+    attributes:
+      Norway: (image^='Le bateau viking dOseberg .jpg')
+      Ærøya: (length m^='600', populationTotal='0')
+      6th_Division_(Norway): (garrison^='http://dbpedia.org/resource/Heggelia', active years start year^='1897', Link from a Wikipage to an external page^='https://archive.org/details/hitlersarcticwar00mann')
+    relationships:
+      - 6th_Division_(Norway) (<http://dbpedia.org/resource/6th_Division_(Norway)>) --doo:garrison--> Norway (dor:Norway)
+      - Ærøya (<http://dbpedia.org/resource/Ærøya>) --doo:location--> Norway (dor:Norway)
+  '9':
+    attributes:
+      Norway: (image^='Le bateau viking dOseberg .jpg')
+      Ærøya: (length m^='600', populationTotal='0')
+      Allied_Forces_North_Norway: (garrison^='http://dbpedia.org/resource/Bodø', active years start year^='1952', Link from a Wikipage to an external page^='http://www.fireandfury.com/orbats/modcwnorwegian.pdf')
+    relationships:
+      - Allied_Forces_North_Norway (dor:Allied_Forces_North_Norway) --doo:garrison--> Norway (dor:Norway)
+      - Ærøya (<http://dbpedia.org/resource/Ærøya>) --doo:location--> Norway (dor:Norway)
+  '10':
+    attributes:
+      Australia: (image^='Anthony Albanese portrait .jpg')
+      30th_Aircraft_Carrier_Squadron: |-
+        (garrison^='*BPF Fleet HQ: Sydney, Australia
+        *BPF forward base; Seeadler Harbor, Manus Island')
+    relationships:
+      - 30th_Aircraft_Carrier_Squadron (dor:30th_Aircraft_Carrier_Squadron) --doo:garrison--> Australia (dor:Australia)
+      - Agnes_Island (dor:Agnes_Island) --doo:location--> Australia (dor:Australia)
+attributes:
+  island: --length m^ (dop:lengthM)--> int | --populationTotal (doo:populationTotal)--> int
+  country: --last^ (dop:last)--> langString | --header^ (dop:header)--> langString | --image^ (dop:image)--> langString | --original name^ (doo:originalName)--> langString | --Apr low C^ (dop:aprLowC)--> double | --c^ (dop:c)--> langString | --width^ (dop:width)--> int
+  military unit: --garrison^ (dop:garrison)--> int | --2y^ (dop:2y)--> int | --active years start year^ (doo:activeYearsStartYear)--> gYear | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+subgraph_id: 49
+relationships:
+  - military unit --doo:garrison--> country
+  - island --doo:location--> country

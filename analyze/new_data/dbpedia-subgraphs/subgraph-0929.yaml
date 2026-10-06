@@ -1,0 +1,76 @@
+types:
+  movie: doo:Film
+  person: doo:Person
+  country: doo:Country
+  scientist: doo:Scientist
+  screenwriter: doo:ScreenWriter
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      John_Goldwyn: (alma mater^='http://dbpedia.org/resource/Stanford_University', relatives^='')
+      Baby_Mama_(film): (music composer^='http://dbpedia.org/resource/Jeff_Richmond', gross ($)^='6.44E7', music^='http://dbpedia.org/resource/Jeff_Richmond')
+    relationships:
+      - Baby_Mama_(film) (<http://dbpedia.org/resource/Baby_Mama_(film)>) --doo:producer--> John_Goldwyn (dor:John_Goldwyn)
+      - Baby_Mama_(film) (<http://dbpedia.org/resource/Baby_Mama_(film)>) --dop:country--> United_States (dor:United_States)
+      - Abbas_Eqbal_Kitabchi (dor:Abbas_Eqbal_Kitabchi) --dop:deathPlace--> United_States (dor:United_States)
+      - Baby_Mama_(film) (<http://dbpedia.org/resource/Baby_Mama_(film)>) --doo:director--> Michael_McCullers (dor:Michael_McCullers)
+  '2':
+    attributes:
+      Baby_Mama_(film): (music composer^='http://dbpedia.org/resource/Jeff_Richmond', gross ($)^='6.44E7', music^='http://dbpedia.org/resource/Jeff_Richmond')
+    relationships:
+      - Baby_Mama_(film) (<http://dbpedia.org/resource/Baby_Mama_(film)>) --doo:producer--> Lorne_Michaels (dor:Lorne_Michaels)
+      - Baby_Mama_(film) (<http://dbpedia.org/resource/Baby_Mama_(film)>) --dop:country--> United_States (dor:United_States)
+      - Abbas_Eqbal_Kitabchi (dor:Abbas_Eqbal_Kitabchi) --dop:deathPlace--> United_States (dor:United_States)
+      - Baby_Mama_(film) (<http://dbpedia.org/resource/Baby_Mama_(film)>) --doo:director--> Michael_McCullers (dor:Michael_McCullers)
+  '3':
+    attributes:
+      John_Goldwyn: (alma mater^='http://dbpedia.org/resource/Stanford_University', relatives^='')
+      Baby_Mama_(film): (music composer^='http://dbpedia.org/resource/Jeff_Richmond', gross ($)^='6.44E7', music^='http://dbpedia.org/resource/Jeff_Richmond')
+    relationships:
+      - Baby_Mama_(film) (<http://dbpedia.org/resource/Baby_Mama_(film)>) --doo:producer--> John_Goldwyn (dor:John_Goldwyn)
+      - Baby_Mama_(film) (<http://dbpedia.org/resource/Baby_Mama_(film)>) --dop:country--> United_States (dor:United_States)
+      - Abraham_Robinson (dor:Abraham_Robinson) --dop:deathPlace--> United_States (dor:United_States)
+      - Baby_Mama_(film) (<http://dbpedia.org/resource/Baby_Mama_(film)>) --doo:director--> Michael_McCullers (dor:Michael_McCullers)
+  '4':
+    attributes:
+      Austria: (alt^='Alexander Van der Bellen')
+      Episode_(film): (music composer^='http://dbpedia.org/resource/Willy_Schmidt-Gentner', music^='http://dbpedia.org/resource/Willy_Schmidt-Gentner')
+    relationships:
+      - Episode_(film) (<http://dbpedia.org/resource/Episode_(film)>) --doo:producer--> Walter_Reisch (dor:Walter_Reisch)
+      - Episode_(film) (<http://dbpedia.org/resource/Episode_(film)>) --dop:country--> Austria (dor:Austria)
+      - Albert_von_Ettingshausen (dor:Albert_von_Ettingshausen) --dop:deathPlace--> Austria (dor:Austria)
+      - Episode_(film) (<http://dbpedia.org/resource/Episode_(film)>) --doo:director--> Walter_Reisch (dor:Walter_Reisch)
+  '5':
+    attributes:
+      Austria: (alt^='Alexander Van der Bellen')
+      Episode_(film): (music composer^='http://dbpedia.org/resource/Willy_Schmidt-Gentner', music^='http://dbpedia.org/resource/Willy_Schmidt-Gentner')
+    relationships:
+      - Episode_(film) (<http://dbpedia.org/resource/Episode_(film)>) --doo:producer--> Walter_Reisch (dor:Walter_Reisch)
+      - Episode_(film) (<http://dbpedia.org/resource/Episode_(film)>) --dop:country--> Austria (dor:Austria)
+      - Anneliese_Hitzenberger (dor:Anneliese_Hitzenberger) --dop:deathPlace--> Austria (dor:Austria)
+      - Episode_(film) (<http://dbpedia.org/resource/Episode_(film)>) --doo:director--> Walter_Reisch (dor:Walter_Reisch)
+  '6':
+    attributes:
+      Austria: (alt^='Alexander Van der Bellen')
+      Episode_(film): (music composer^='http://dbpedia.org/resource/Willy_Schmidt-Gentner', music^='http://dbpedia.org/resource/Willy_Schmidt-Gentner')
+    relationships:
+      - Episode_(film) (<http://dbpedia.org/resource/Episode_(film)>) --doo:producer--> Walter_Reisch (dor:Walter_Reisch)
+      - Episode_(film) (<http://dbpedia.org/resource/Episode_(film)>) --dop:country--> Austria (dor:Austria)
+      - Antal_Ruprecht (dor:Antal_Ruprecht) --dop:deathPlace--> Austria (dor:Austria)
+      - Episode_(film) (<http://dbpedia.org/resource/Episode_(film)>) --doo:director--> Walter_Reisch (dor:Walter_Reisch)
+attributes:
+  movie: --music composer^ (doo:musicComposer)--> Resource | --gross ($)^ (doo:gross)--> usDollar | --all lyrics^ (dop:allLyrics)--> langString | --alt^ (dop:alt)--> langString | --music^ (dop:music)--> langString
+  person: --direction^ (dop:direction)--> langString | --alma mater^ (doo:almaMater)--> Resource | --relatives^ (dop:relatives)--> Resource
+  country: --alt^ (dop:alt)--> langString
+  scientist: --awards^ (dop:awards)--> int
+subgraph_id: 929
+relationships:
+  - movie --doo:producer--> person
+  - movie --dop:country--> country
+  - scientist --dop:deathPlace--> country
+  - movie --doo:director--> screenwriter

@@ -1,0 +1,82 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doow: http://dbpedia.org/ontology/Work/
+instances:
+  '1':
+    attributes:
+      '''Orrible': (runtime (m)^='30.0')
+    relationships:
+      - '''Orrible (<http://dbpedia.org/resource/''Orrible>) --doo:author--> Johnny_Vaughan (dor:Johnny_Vaughan)'
+      - '''Orrible (<http://dbpedia.org/resource/''Orrible>) --doo:location--> Acton,_London (<http://dbpedia.org/resource/Acton,_London>)'
+  '2':
+    attributes:
+      '''Way_Out': (runtime (m)^='25.0', caption^='Title card')
+    relationships:
+      - '''Way_Out (<http://dbpedia.org/resource/''Way_Out>) --doo:author--> Elliott_Baker (dor:Elliott_Baker)'
+      - '''Way_Out (<http://dbpedia.org/resource/''Way_Out>) --doo:location--> New_York_City (dor:New_York_City)'
+  '3':
+    attributes:
+      '''Way_Out': (runtime (m)^='25.0', caption^='Title card')
+      Larry_Cohen: (relatives^='http://dbpedia.org/resource/Ronni_Chasen')
+    relationships:
+      - '''Way_Out (<http://dbpedia.org/resource/''Way_Out>) --doo:author--> Larry_Cohen (dor:Larry_Cohen)'
+      - '''Way_Out (<http://dbpedia.org/resource/''Way_Out>) --doo:location--> New_York_City (dor:New_York_City)'
+  '4':
+    attributes:
+      '''Way_Out': (runtime (m)^='25.0', caption^='Title card')
+    relationships:
+      - '''Way_Out (<http://dbpedia.org/resource/''Way_Out>) --doo:author--> Nicholas_Pryor (dor:Nicholas_Pryor)'
+      - '''Way_Out (<http://dbpedia.org/resource/''Way_Out>) --doo:location--> New_York_City (dor:New_York_City)'
+  '5':
+    attributes:
+      1899_(TV_series): (runtime (m)^='-62.0', caption^='Promotional poster')
+    relationships:
+      - 1899_(TV_series) (<http://dbpedia.org/resource/1899_(TV_series)>) --doo:author--> Jantje_Friese (dor:Jantje_Friese)
+      - 1899_(TV_series) (<http://dbpedia.org/resource/1899_(TV_series)>) --doo:location--> Germany (dor:Germany)
+  '6':
+    attributes:
+      19-2_(2011_TV_series): (runtime (m)^='42.0')
+    relationships:
+      - 19-2_(2011_TV_series) (<http://dbpedia.org/resource/19-2_(2011_TV_series)>) --doo:author--> Réal_Bossé (<http://dbpedia.org/resource/Réal_Bossé>)
+      - 19-2_(2011_TV_series) (<http://dbpedia.org/resource/19-2_(2011_TV_series)>) --doo:location--> Montreal (dor:Montreal)
+  '7':
+    attributes:
+      24:_Redemption: (runtime (m)^='102.0', caption^='Film poster')
+    relationships:
+      - 24:_Redemption (<http://dbpedia.org/resource/24:_Redemption>) --doo:author--> Howard_Gordon (dor:Howard_Gordon)
+      - 24:_Redemption (<http://dbpedia.org/resource/24:_Redemption>) --doo:location--> Cape_Town (dor:Cape_Town)
+  '8':
+    attributes:
+      24:_Redemption: (runtime (m)^='102.0', caption^='Film poster')
+    relationships:
+      - 24:_Redemption (<http://dbpedia.org/resource/24:_Redemption>) --doo:author--> Howard_Gordon (dor:Howard_Gordon)
+      - 24:_Redemption (<http://dbpedia.org/resource/24:_Redemption>) --doo:location--> South_Africa (dor:South_Africa)
+  '9':
+    attributes:
+      3%25: (runtime (m)^='-74.0')
+      Juliana_Rojas: (active years end year^='0014', date^='March 2018')
+    relationships:
+      - 3%25 (<http://dbpedia.org/resource/3%25>) --doo:author--> Juliana_Rojas (dor:Juliana_Rojas)
+      - 3%25 (<http://dbpedia.org/resource/3%25>) --doo:location--> Brumadinho (dor:Brumadinho)
+  '10':
+    attributes:
+      3%25: (runtime (m)^='-74.0')
+      Juliana_Rojas: (active years end year^='0014', date^='March 2018')
+    relationships:
+      - 3%25 (<http://dbpedia.org/resource/3%25>) --doo:author--> Juliana_Rojas (dor:Juliana_Rojas)
+      - 3%25 (<http://dbpedia.org/resource/3%25>) --doo:location--> Minas_Gerais (dor:Minas_Gerais)
+attributes:
+  person: --2pp^ (dop:2pp)--> int | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --resting place^ (doo:restingPlace)--> Resource | --relatives^ (dop:relatives)--> Resource | --active years end year^ (doo:activeYearsEndYear)--> gYear | --date^ (dop:date)--> langString
+  Location: --Apr low F^ (dop:aprLowF)--> double
+  television show: --alt^ (dop:alt)--> langString | --runtime (m)^ (doow:runtime)--> minute | --caption^ (dop:caption)--> langString | --url^ (dop:url)--> Resource
+subgraph_id: 22
+relationships:
+  - television show --doo:author--> person
+  - television show --doo:location--> Location

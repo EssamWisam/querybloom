@@ -1,0 +1,122 @@
+types:
+  bridge: doo:Bridge
+  airline: doo:Airline
+  country: doo:Country
+  Location: doo:Location
+  office holder: doo:OfficeHolder
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Guangzhou: (url='https://web.archive.org/web/20080120060228/http:/www.guangzhou.gov.cn/')
+      Antonio_Ng: (birth place^='http://dbpedia.org/resource/China')
+    relationships:
+      - 9_Air (dor:9_Air) --doo:headquarter--> Guangdong (dor:Guangdong)
+      - Antonio_Ng (dor:Antonio_Ng) --doo:birthPlace--> Guangdong (dor:Guangdong)
+      - 9_Air (dor:9_Air) --doo:headquarter--> Guangzhou (dor:Guangzhou)
+      - 9_Air (dor:9_Air) --doo:headquarter--> China (dor:China)
+      - Dongpingshuidao_Bridge (dor:Dongpingshuidao_Bridge) --doo:locatedInArea--> Guangdong (dor:Guangdong)
+  '2':
+    attributes:
+      Ben_Chan: (birth place^='http://dbpedia.org/resource/China')
+      Guangzhou: (url='https://web.archive.org/web/20080120060228/http:/www.guangzhou.gov.cn/')
+    relationships:
+      - 9_Air (dor:9_Air) --doo:headquarter--> Guangdong (dor:Guangdong)
+      - Ben_Chan (dor:Ben_Chan) --doo:birthPlace--> Guangdong (dor:Guangdong)
+      - 9_Air (dor:9_Air) --doo:headquarter--> Guangzhou (dor:Guangzhou)
+      - 9_Air (dor:9_Air) --doo:headquarter--> China (dor:China)
+      - Dongpingshuidao_Bridge (dor:Dongpingshuidao_Bridge) --doo:locatedInArea--> Guangdong (dor:Guangdong)
+  '3':
+    attributes:
+      Guangzhou: (url='https://web.archive.org/web/20080120060228/http:/www.guangzhou.gov.cn/')
+      Chan_Kwok-keung: (birth place^='http://dbpedia.org/resource/China')
+    relationships:
+      - 9_Air (dor:9_Air) --doo:headquarter--> Guangdong (dor:Guangdong)
+      - Chan_Kwok-keung (dor:Chan_Kwok-keung) --doo:birthPlace--> Guangdong (dor:Guangdong)
+      - 9_Air (dor:9_Air) --doo:headquarter--> Guangzhou (dor:Guangzhou)
+      - 9_Air (dor:9_Air) --doo:headquarter--> China (dor:China)
+      - Dongpingshuidao_Bridge (dor:Dongpingshuidao_Bridge) --doo:locatedInArea--> Guangdong (dor:Guangdong)
+  '4':
+    attributes:
+      Wisconsin: (Apr precipitation inch^='2.63')
+      Arnold_Feusi: (birth place^='http://dbpedia.org/resource/Superior,_Wisconsin')
+    relationships:
+      - Air_Cargo_Carriers (dor:Air_Cargo_Carriers) --doo:headquarter--> Wisconsin (dor:Wisconsin)
+      - Arnold_Feusi (dor:Arnold_Feusi) --doo:birthPlace--> Wisconsin (dor:Wisconsin)
+      - Air_Cargo_Carriers (dor:Air_Cargo_Carriers) --doo:headquarter--> Milwaukee (dor:Milwaukee)
+      - Air_Cargo_Carriers (dor:Air_Cargo_Carriers) --doo:headquarter--> United_States (dor:United_States)
+      - Hoan_Bridge (dor:Hoan_Bridge) --doo:locatedInArea--> Wisconsin (dor:Wisconsin)
+  '5':
+    attributes:
+      Wisconsin: (Apr precipitation inch^='2.63')
+      Barbara_Brandriff_Crabb: (birth place^='http://dbpedia.org/resource/Green_Bay,_Wisconsin')
+    relationships:
+      - Air_Cargo_Carriers (dor:Air_Cargo_Carriers) --doo:headquarter--> Wisconsin (dor:Wisconsin)
+      - Barbara_Brandriff_Crabb (dor:Barbara_Brandriff_Crabb) --doo:birthPlace--> Wisconsin (dor:Wisconsin)
+      - Air_Cargo_Carriers (dor:Air_Cargo_Carriers) --doo:headquarter--> Milwaukee (dor:Milwaukee)
+      - Air_Cargo_Carriers (dor:Air_Cargo_Carriers) --doo:headquarter--> United_States (dor:United_States)
+      - Hoan_Bridge (dor:Hoan_Bridge) --doo:locatedInArea--> Wisconsin (dor:Wisconsin)
+  '6':
+    attributes:
+      Wisconsin: (Apr precipitation inch^='2.63')
+      Bart_Stupak: (birth place^='Milwaukee, Wisconsin, U.S.')
+    relationships:
+      - Air_Cargo_Carriers (dor:Air_Cargo_Carriers) --doo:headquarter--> Wisconsin (dor:Wisconsin)
+      - Bart_Stupak (dor:Bart_Stupak) --doo:birthPlace--> Wisconsin (dor:Wisconsin)
+      - Air_Cargo_Carriers (dor:Air_Cargo_Carriers) --doo:headquarter--> Milwaukee (dor:Milwaukee)
+      - Air_Cargo_Carriers (dor:Air_Cargo_Carriers) --doo:headquarter--> United_States (dor:United_States)
+      - Hoan_Bridge (dor:Hoan_Bridge) --doo:locatedInArea--> Wisconsin (dor:Wisconsin)
+  '7':
+    attributes:
+      Arthur_Cockfield,_Baron_Cockfield: (birth place^='http://dbpedia.org/resource/England')
+    relationships:
+      - Air_Europe (dor:Air_Europe) --doo:headquarter--> West_Sussex (dor:West_Sussex)
+      - Arthur_Cockfield,_Baron_Cockfield (<http://dbpedia.org/resource/Arthur_Cockfield,_Baron_Cockfield>) --doo:birthPlace--> West_Sussex (dor:West_Sussex)
+      - Air_Europe (dor:Air_Europe) --doo:headquarter--> Crawley (dor:Crawley)
+      - Air_Europe (dor:Air_Europe) --doo:headquarter--> England (dor:England)
+      - Imberhorne_Viaduct (dor:Imberhorne_Viaduct) --doo:locatedInArea--> West_Sussex (dor:West_Sussex)
+  '8':
+    attributes:
+      Arthur_Cockfield,_Baron_Cockfield: (birth place^='http://dbpedia.org/resource/England')
+    relationships:
+      - Air_Europe (dor:Air_Europe) --doo:headquarter--> West_Sussex (dor:West_Sussex)
+      - Arthur_Cockfield,_Baron_Cockfield (<http://dbpedia.org/resource/Arthur_Cockfield,_Baron_Cockfield>) --doo:birthPlace--> West_Sussex (dor:West_Sussex)
+      - Air_Europe (dor:Air_Europe) --doo:headquarter--> Crawley (dor:Crawley)
+      - Air_Europe (dor:Air_Europe) --doo:headquarter--> Surrey (dor:Surrey)
+      - Imberhorne_Viaduct (dor:Imberhorne_Viaduct) --doo:locatedInArea--> West_Sussex (dor:West_Sussex)
+  '9':
+    attributes:
+      Arthur_Cockfield,_Baron_Cockfield: (birth place^='http://dbpedia.org/resource/England')
+    relationships:
+      - Air_Europe (dor:Air_Europe) --doo:headquarter--> West_Sussex (dor:West_Sussex)
+      - Arthur_Cockfield,_Baron_Cockfield (<http://dbpedia.org/resource/Arthur_Cockfield,_Baron_Cockfield>) --doo:birthPlace--> West_Sussex (dor:West_Sussex)
+      - Air_Europe (dor:Air_Europe) --doo:headquarter--> Reigate (dor:Reigate)
+      - Air_Europe (dor:Air_Europe) --doo:headquarter--> England (dor:England)
+      - Imberhorne_Viaduct (dor:Imberhorne_Viaduct) --doo:locatedInArea--> West_Sussex (dor:West_Sussex)
+  '10':
+    attributes:
+      Metro_Manila: (Apr high C^='35')
+      Felix_William_Fuentebella: (birth place^='Quezon City, Rizal, Philippines')
+    relationships:
+      - Air_Link_International_Airways (dor:Air_Link_International_Airways) --doo:headquarter--> Metro_Manila (dor:Metro_Manila)
+      - Felix_William_Fuentebella (dor:Felix_William_Fuentebella) --doo:birthPlace--> Metro_Manila (dor:Metro_Manila)
+      - Air_Link_International_Airways (dor:Air_Link_International_Airways) --doo:headquarter--> Pasay (dor:Pasay)
+      - Air_Link_International_Airways (dor:Air_Link_International_Airways) --doo:headquarter--> Philippines (dor:Philippines)
+      - Estrella–Pantaleon_Bridge (<http://dbpedia.org/resource/Estrella–Pantaleon_Bridge>) --doo:locatedInArea--> Metro_Manila (dor:Metro_Manila)
+attributes:
+  country: --age^ (dop:age)--> date
+  Location: --url (dop:url)--> Resource | --city^ (dop:city)--> langString | --capital^ (doo:capital)--> Resource
+  office holder: --birth place^ (dop:birthPlace)--> langString | --parents^ (dop:parents)--> langString
+  administrative region: --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --data^ (dop:data)--> double | --Apr high C^ (dop:aprHighC)--> double
+subgraph_id: 363
+relationships:
+  - airline --doo:headquarter--> administrative region
+  - office holder --doo:birthPlace--> administrative region
+  - airline --doo:headquarter--> Location
+  - airline --doo:headquarter--> country
+  - bridge --doo:locatedInArea--> administrative region

@@ -1,0 +1,114 @@
+types:
+  venue: doo:Venue
+  soccer club: doo:SoccerClub
+  soccer player: doo:SoccerPlayer
+  soccer club season: doo:SoccerClubSeason
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Frane_Matošić: (clubs^='http://dbpedia.org/resource/Bologna_F.C._1909')
+      Omladinski_stadion: (tenants^='http://dbpedia.org/resource/FK_BSK_Borča', opened^='1957-08-10')
+    relationships:
+      - 1931–32_Yugoslav_Football_Championship (<http://dbpedia.org/resource/1931–32_Yugoslav_Football_Championship>) --dop:rd2Team--> OFK_Beograd (dor:OFK_Beograd)
+      - Omladinski_stadion (dor:Omladinski_stadion) --doo:operator--> OFK_Beograd (dor:OFK_Beograd)
+      - Frane_Matošić (<http://dbpedia.org/resource/Frane_Matošić>) --dop:clubs--> OFK_Beograd (dor:OFK_Beograd)
+      - 1950_NK_Hajduk_Split_season (dor:1950_NK_Hajduk_Split_season) --dop:leagueTopscorer--> Frane_Matošić (<http://dbpedia.org/resource/Frane_Matošić>)
+  '2':
+    attributes:
+      Josip_Skoblar: (clubs^='→ Marseille')
+      Omladinski_stadion: (tenants^='http://dbpedia.org/resource/FK_BSK_Borča', opened^='1957-08-10')
+    relationships:
+      - 1931–32_Yugoslav_Football_Championship (<http://dbpedia.org/resource/1931–32_Yugoslav_Football_Championship>) --dop:rd2Team--> OFK_Beograd (dor:OFK_Beograd)
+      - Omladinski_stadion (dor:Omladinski_stadion) --doo:operator--> OFK_Beograd (dor:OFK_Beograd)
+      - Josip_Skoblar (dor:Josip_Skoblar) --dop:clubs--> OFK_Beograd (dor:OFK_Beograd)
+      - 1974–75_NK_Rijeka_season (<http://dbpedia.org/resource/1974–75_NK_Rijeka_season>) --dop:leagueTopscorer--> Josip_Skoblar (dor:Josip_Skoblar)
+  '3':
+    attributes:
+      Josip_Skoblar: (clubs^='→ Marseille')
+      Omladinski_stadion: (tenants^='http://dbpedia.org/resource/FK_BSK_Borča', opened^='1957-08-10')
+    relationships:
+      - 1931–32_Yugoslav_Football_Championship (<http://dbpedia.org/resource/1931–32_Yugoslav_Football_Championship>) --dop:rd2Team--> OFK_Beograd (dor:OFK_Beograd)
+      - Omladinski_stadion (dor:Omladinski_stadion) --doo:operator--> OFK_Beograd (dor:OFK_Beograd)
+      - Josip_Skoblar (dor:Josip_Skoblar) --dop:clubs--> OFK_Beograd (dor:OFK_Beograd)
+      - 1975–76_NK_Rijeka_season (<http://dbpedia.org/resource/1975–76_NK_Rijeka_season>) --dop:leagueTopscorer--> Josip_Skoblar (dor:Josip_Skoblar)
+  '4':
+    attributes:
+      Paulo_Wanchope: (clubs^='http://dbpedia.org/resource/Al-Gharafa_Doha')
+      Estadio_Gigante_de_Arroyito: (tenants^='', opened^='1926-11-14')
+    relationships:
+      - 1970_Copa_Argentina (dor:1970_Copa_Argentina) --dop:rd2Team--> Rosario_Central (dor:Rosario_Central)
+      - Estadio_Gigante_de_Arroyito (dor:Estadio_Gigante_de_Arroyito) --doo:operator--> Rosario_Central (dor:Rosario_Central)
+      - Paulo_Wanchope (dor:Paulo_Wanchope) --dop:clubs--> Rosario_Central (dor:Rosario_Central)
+      - 1997–98_Derby_County_F.C._season (<http://dbpedia.org/resource/1997–98_Derby_County_F.C._season>) --dop:leagueTopscorer--> Paulo_Wanchope (dor:Paulo_Wanchope)
+  '5':
+    attributes:
+      Paulo_Wanchope: (clubs^='http://dbpedia.org/resource/Al-Gharafa_Doha')
+      Estadio_Gigante_de_Arroyito: (tenants^='', opened^='1926-11-14')
+    relationships:
+      - 1970_Copa_Argentina (dor:1970_Copa_Argentina) --dop:rd2Team--> Rosario_Central (dor:Rosario_Central)
+      - Estadio_Gigante_de_Arroyito (dor:Estadio_Gigante_de_Arroyito) --doo:operator--> Rosario_Central (dor:Rosario_Central)
+      - Paulo_Wanchope (dor:Paulo_Wanchope) --dop:clubs--> Rosario_Central (dor:Rosario_Central)
+      - 1998–99_Derby_County_F.C._season (<http://dbpedia.org/resource/1998–99_Derby_County_F.C._season>) --dop:leagueTopscorer--> Paulo_Wanchope (dor:Paulo_Wanchope)
+  '6':
+    attributes:
+      Paulo_Wanchope: (clubs^='http://dbpedia.org/resource/Al-Gharafa_Doha')
+      Estadio_Gigante_de_Arroyito: (tenants^='', opened^='1926-11-14')
+    relationships:
+      - 1970_Copa_Argentina (dor:1970_Copa_Argentina) --dop:rd2Team--> Rosario_Central (dor:Rosario_Central)
+      - Estadio_Gigante_de_Arroyito (dor:Estadio_Gigante_de_Arroyito) --doo:operator--> Rosario_Central (dor:Rosario_Central)
+      - Paulo_Wanchope (dor:Paulo_Wanchope) --dop:clubs--> Rosario_Central (dor:Rosario_Central)
+      - 2000–01_Manchester_City_F.C._season (<http://dbpedia.org/resource/2000–01_Manchester_City_F.C._season>) --dop:leagueTopscorer--> Paulo_Wanchope (dor:Paulo_Wanchope)
+  '7':
+    attributes:
+      Hugo_Sánchez: (clubs^='→ San Diego Sockers')
+      Estadio_Azteca: (tenants^='http://dbpedia.org/resource/Atlante_F.C.', opened^='1966-05-29')
+    relationships:
+      - 1971–72_Mexican_Primera_División_season (<http://dbpedia.org/resource/1971–72_Mexican_Primera_División_season>) --dop:rd2Team--> Club_América (<http://dbpedia.org/resource/Club_América>)
+      - Estadio_Azteca (dor:Estadio_Azteca) --doo:operator--> Club_América (<http://dbpedia.org/resource/Club_América>)
+      - Hugo_Sánchez (<http://dbpedia.org/resource/Hugo_Sánchez>) --dop:clubs--> Club_América (<http://dbpedia.org/resource/Club_América>)
+      - 1981–82_Atlético_Madrid_season (<http://dbpedia.org/resource/1981–82_Atlético_Madrid_season>) --dop:leagueTopscorer--> Hugo_Sánchez (<http://dbpedia.org/resource/Hugo_Sánchez>)
+  '8':
+    attributes:
+      Hugo_Sánchez: (clubs^='→ San Diego Sockers')
+      Estadio_Azteca: (tenants^='http://dbpedia.org/resource/Atlante_F.C.', opened^='1966-05-29')
+    relationships:
+      - 1971–72_Mexican_Primera_División_season (<http://dbpedia.org/resource/1971–72_Mexican_Primera_División_season>) --dop:rd2Team--> Club_América (<http://dbpedia.org/resource/Club_América>)
+      - Estadio_Azteca (dor:Estadio_Azteca) --doo:operator--> Club_América (<http://dbpedia.org/resource/Club_América>)
+      - Hugo_Sánchez (<http://dbpedia.org/resource/Hugo_Sánchez>) --dop:clubs--> Club_América (<http://dbpedia.org/resource/Club_América>)
+      - 1982–83_Atlético_Madrid_season (<http://dbpedia.org/resource/1982–83_Atlético_Madrid_season>) --dop:leagueTopscorer--> Hugo_Sánchez (<http://dbpedia.org/resource/Hugo_Sánchez>)
+  '9':
+    attributes:
+      Hugo_Sánchez: (clubs^='→ San Diego Sockers')
+      Estadio_Azteca: (tenants^='http://dbpedia.org/resource/Atlante_F.C.', opened^='1966-05-29')
+    relationships:
+      - 1971–72_Mexican_Primera_División_season (<http://dbpedia.org/resource/1971–72_Mexican_Primera_División_season>) --dop:rd2Team--> Club_América (<http://dbpedia.org/resource/Club_América>)
+      - Estadio_Azteca (dor:Estadio_Azteca) --doo:operator--> Club_América (<http://dbpedia.org/resource/Club_América>)
+      - Hugo_Sánchez (<http://dbpedia.org/resource/Hugo_Sánchez>) --dop:clubs--> Club_América (<http://dbpedia.org/resource/Club_América>)
+      - 1983–84_Atlético_Madrid_season (<http://dbpedia.org/resource/1983–84_Atlético_Madrid_season>) --dop:leagueTopscorer--> Hugo_Sánchez (<http://dbpedia.org/resource/Hugo_Sánchez>)
+  '10':
+    attributes:
+      Jared_Borgetti: (clubs^='http://dbpedia.org/resource/Al-Ittihad_Club_(Jeddah)')
+      Nuevo_Estadio_León: (tenants^='http://dbpedia.org/resource/Club_León', opened^='2023')
+    relationships:
+      - 1972–73_Mexican_Primera_División_season (<http://dbpedia.org/resource/1972–73_Mexican_Primera_División_season>) --dop:rd2Team--> Club_León (<http://dbpedia.org/resource/Club_León>)
+      - Nuevo_Estadio_León (<http://dbpedia.org/resource/Nuevo_Estadio_León>) --doo:operator--> Club_León (<http://dbpedia.org/resource/Club_León>)
+      - Jared_Borgetti (dor:Jared_Borgetti) --dop:clubs--> Club_León (<http://dbpedia.org/resource/Club_León>)
+      - 1994–95_Atlas_F.C._season (<http://dbpedia.org/resource/1994–95_Atlas_F.C._season>) --dop:leagueTopscorer--> Jared_Borgetti (dor:Jared_Borgetti)
+attributes:
+  venue: --tenants^ (dop:tenants)--> int | --opened^ (dop:opened)--> date | --number of suites^ (doo:numberOfSuites)--> int
+  soccer club: --aga^ (dop:aga)--> int | --lowest attendance^ (dop:lowestAttendance)--> gMonthDay
+  soccer player: --differentFrom (wwoo:differentFrom)--> Resource | --reason^ (dop:reason)--> langString | --clubs^ (dop:clubs)--> Resource
+  football league season: --continentalcup1 qualifiers^ (dop:continentalcup1Qualifiers)--> langString
+subgraph_id: 722
+relationships:
+  - football league season --dop:rd2Team--> soccer club
+  - venue --doo:operator--> soccer club
+  - soccer player --dop:clubs--> soccer club
+  - soccer club season --dop:leagueTopscorer--> soccer player

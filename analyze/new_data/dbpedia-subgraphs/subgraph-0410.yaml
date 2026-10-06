@@ -1,0 +1,95 @@
+types:
+  person: doo:Person
+  tenure: doo:Tenure
+  Location: doo:Location
+  time period: doo:TimePeriod
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      London: (population total^='8799800', Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1')
+      Mohammad-Ali_Abtahi: (after^='http://dbpedia.org/resource/Ali_Khatami')
+    relationships:
+      - Ata'ollah_Mohajerani (<http://dbpedia.org/resource/Ata'ollah_Mohajerani>) --doo:residence--> London (dor:London)
+      - Abdolvahed_Mousavi_Lari__Tenure__2 (dor:Abdolvahed_Mousavi_Lari__Tenure__2) --doo:predecessor--> Ata'ollah_Mohajerani (<http://dbpedia.org/resource/Ata'ollah_Mohajerani>)
+      - Abdolvahed_Mousavi_Lari__Tenure__2 (dor:Abdolvahed_Mousavi_Lari__Tenure__2) --doo:successor--> Mohammad-Ali_Abtahi (dor:Mohammad-Ali_Abtahi)
+  '2':
+    attributes:
+      Stuart_Ayres: (after^='himself')
+      Mulgoa,_New_South_Wales: (population total^='1898', Link from a Wikipage to an external page^='https://web.archive.org/web/20060819101600/http:/www.penrithcity.nsw.gov.au/index.asp%3Fid=969')
+    relationships:
+      - Stuart_Ayres (dor:Stuart_Ayres) --doo:residence--> Mulgoa,_New_South_Wales (<http://dbpedia.org/resource/Mulgoa,_New_South_Wales>)
+      - Adam_Marshall__Tenure__3 (dor:Adam_Marshall__Tenure__3) --doo:predecessor--> Stuart_Ayres (dor:Stuart_Ayres)
+      - Adam_Marshall__Tenure__3 (dor:Adam_Marshall__Tenure__3) --doo:successor--> Stuart_Ayres (dor:Stuart_Ayres)
+  '3':
+    attributes:
+      Adelaide: (population total^='1387290', Link from a Wikipage to an external page^='http://www.adelaidecitycouncil.com/')
+    relationships:
+      - Natasha_Stott_Despoja (dor:Natasha_Stott_Despoja) --doo:residence--> Adelaide (dor:Adelaide)
+      - Aden_Ridgeway__Tenure__1 (dor:Aden_Ridgeway__Tenure__1) --doo:predecessor--> Natasha_Stott_Despoja (dor:Natasha_Stott_Despoja)
+      - Aden_Ridgeway__Tenure__1 (dor:Aden_Ridgeway__Tenure__1) --doo:successor--> Lyn_Allison (dor:Lyn_Allison)
+  '4':
+    attributes:
+      Henley_Beach,_South_Australia: (population total^='5988', Link from a Wikipage to an external page^='http://www.charlessturt.sa.gov.au')
+    relationships:
+      - Natasha_Stott_Despoja (dor:Natasha_Stott_Despoja) --doo:residence--> Henley_Beach,_South_Australia (<http://dbpedia.org/resource/Henley_Beach,_South_Australia>)
+      - Aden_Ridgeway__Tenure__1 (dor:Aden_Ridgeway__Tenure__1) --doo:predecessor--> Natasha_Stott_Despoja (dor:Natasha_Stott_Despoja)
+      - Aden_Ridgeway__Tenure__1 (dor:Aden_Ridgeway__Tenure__1) --doo:successor--> Lyn_Allison (dor:Lyn_Allison)
+  '5':
+    attributes:
+      Cambridge,_Ohio: (population total^='10089', Link from a Wikipage to an external page^='http://www.cambridgeoh.org/')
+      Joseph_D._Taylor: (after^='http://dbpedia.org/resource/Adoniram_J._Warner')
+    relationships:
+      - Joseph_D._Taylor (dor:Joseph_D._Taylor) --doo:residence--> Cambridge,_Ohio (<http://dbpedia.org/resource/Cambridge,_Ohio>)
+      - Adoniram_J._Warner__Tenure__3 (dor:Adoniram_J._Warner__Tenure__3) --doo:predecessor--> Joseph_D._Taylor (dor:Joseph_D._Taylor)
+      - Adoniram_J._Warner__Tenure__3 (dor:Adoniram_J._Warner__Tenure__3) --doo:successor--> Joseph_D._Taylor (dor:Joseph_D._Taylor)
+  '6':
+    attributes:
+      Ohio: (Link from a Wikipage to an external page^='http://www.ers.usda.gov/data-products/state-fact-sheets/state-data.aspx%3FStateFIPS=39&StateName=Ohio%23.U85uE_ldVu0')
+      Joseph_D._Taylor: (after^='http://dbpedia.org/resource/Adoniram_J._Warner')
+    relationships:
+      - Joseph_D._Taylor (dor:Joseph_D._Taylor) --doo:residence--> Ohio (dor:Ohio)
+      - Adoniram_J._Warner__Tenure__3 (dor:Adoniram_J._Warner__Tenure__3) --doo:predecessor--> Joseph_D._Taylor (dor:Joseph_D._Taylor)
+      - Adoniram_J._Warner__Tenure__3 (dor:Adoniram_J._Warner__Tenure__3) --doo:successor--> Joseph_D._Taylor (dor:Joseph_D._Taylor)
+  '7':
+    attributes:
+      Lima: (Link from a Wikipage to an external page^='http://hahr.dukejournals.org/content/83/1/53')
+      Luis_Alberto_Sánchez: (after^='http://dbpedia.org/resource/Guillermo_Larco_Cox')
+    relationships:
+      - Armando_Villanueva (dor:Armando_Villanueva) --doo:residence--> Lima (dor:Lima)
+      - Agustín_Mantilla__Tenure__4 (<http://dbpedia.org/resource/Agustín_Mantilla__Tenure__4>) --doo:predecessor--> Armando_Villanueva (dor:Armando_Villanueva)
+      - Agustín_Mantilla__Tenure__4 (<http://dbpedia.org/resource/Agustín_Mantilla__Tenure__4>) --doo:successor--> Luis_Alberto_Sánchez (<http://dbpedia.org/resource/Luis_Alberto_Sánchez>)
+  '8':
+    attributes:
+      Peru: (population total^='32275736', Link from a Wikipage to an external page^='http://news.bbc.co.uk/1/hi/world/americas/country_profiles/1224656.stm')
+      Luis_Alberto_Sánchez: (after^='http://dbpedia.org/resource/Guillermo_Larco_Cox')
+    relationships:
+      - Armando_Villanueva (dor:Armando_Villanueva) --doo:residence--> Peru (dor:Peru)
+      - Agustín_Mantilla__Tenure__4 (<http://dbpedia.org/resource/Agustín_Mantilla__Tenure__4>) --doo:predecessor--> Armando_Villanueva (dor:Armando_Villanueva)
+      - Agustín_Mantilla__Tenure__4 (<http://dbpedia.org/resource/Agustín_Mantilla__Tenure__4>) --doo:successor--> Luis_Alberto_Sánchez (<http://dbpedia.org/resource/Luis_Alberto_Sánchez>)
+  '9':
+    attributes:
+      London: (population total^='8799800', Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1')
+      Hossein_Saffar_Harandi: (after^='http://dbpedia.org/resource/Mohammad_Hosseini_(politician)')
+    relationships:
+      - Ata'ollah_Mohajerani (<http://dbpedia.org/resource/Ata'ollah_Mohajerani>) --doo:residence--> London (dor:London)
+      - Ahmad_Masjed-Jamei__Tenure__1 (dor:Ahmad_Masjed-Jamei__Tenure__1) --doo:predecessor--> Ata'ollah_Mohajerani (<http://dbpedia.org/resource/Ata'ollah_Mohajerani>)
+      - Ahmad_Masjed-Jamei__Tenure__1 (dor:Ahmad_Masjed-Jamei__Tenure__1) --doo:successor--> Hossein_Saffar_Harandi (dor:Hossein_Saffar_Harandi)
+  '10':
+    attributes: {}
+    relationships:
+      - Michel_Samson (dor:Michel_Samson) --doo:residence--> Arichat,_Nova_Scotia (<http://dbpedia.org/resource/Arichat,_Nova_Scotia>)
+      - Alana_Paon__Tenure__1 (dor:Alana_Paon__Tenure__1) --doo:predecessor--> Michel_Samson (dor:Michel_Samson)
+      - Alana_Paon__Tenure__1 (dor:Alana_Paon__Tenure__1) --doo:successor--> Trevor_Boudreau (dor:Trevor_Boudreau)
+attributes:
+  person: --quoted^ (dop:quoted)--> langString | --after^ (dop:after)--> Resource | --employer^ (doo:employer)--> Resource | --father^ (dop:father)--> Resource
+  Location: --builder^ (dop:builder)--> langString | --number of wineries^ (doo:numberOfWineries)--> int | --accessdate^ (dop:accessdate)--> date | --population total^ (doo:populationTotal)--> int | --age^ (dop:age)--> Resource | --district^ (doo:district)--> Resource | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+subgraph_id: 410
+relationships:
+  - time period --doo:residence--> Location
+  - tenure --doo:predecessor--> time period
+  - tenure --doo:successor--> person

@@ -1,0 +1,106 @@
+types:
+  person: doo:Person
+  planet: doo:Planet
+  scientist: doo:Scientist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - (10302)_1989_ML (<http://dbpedia.org/resource/(10302)_1989_ML>) --doo:discoverer--> Eleanor_F._Helin (dor:Eleanor_F._Helin)
+      - (10302)_1989_ML (<http://dbpedia.org/resource/(10302)_1989_ML>) --doo:discoverer--> Jeff_T._Alu (dor:Jeff_T._Alu)
+  '2':
+    attributes:
+      David_C._Jewitt: (known for^='Discovery of the first body in the Kuiper belt')
+    relationships:
+      - (118228)_1996_TQ66 (<http://dbpedia.org/resource/(118228)_1996_TQ66>) --doo:discoverer--> Chad_Trujillo (dor:Chad_Trujillo)
+      - (118228)_1996_TQ66 (<http://dbpedia.org/resource/(118228)_1996_TQ66>) --doo:discoverer--> David_C._Jewitt (dor:David_C._Jewitt)
+  '3':
+    attributes:
+      Jane_Luu: (known for^='Discovery of the Kuiper belt')
+    relationships:
+      - (118228)_1996_TQ66 (<http://dbpedia.org/resource/(118228)_1996_TQ66>) --doo:discoverer--> Chad_Trujillo (dor:Chad_Trujillo)
+      - (118228)_1996_TQ66 (<http://dbpedia.org/resource/(118228)_1996_TQ66>) --doo:discoverer--> Jane_Luu (dor:Jane_Luu)
+  '4':
+    attributes:
+      Chad_Trujillo: (known for^='Discovery of Eris, Sedna and other trans-Neptunian objects')
+    relationships:
+      - (118228)_1996_TQ66 (<http://dbpedia.org/resource/(118228)_1996_TQ66>) --doo:discoverer--> David_C._Jewitt (dor:David_C._Jewitt)
+      - (118228)_1996_TQ66 (<http://dbpedia.org/resource/(118228)_1996_TQ66>) --doo:discoverer--> Chad_Trujillo (dor:Chad_Trujillo)
+  '5':
+    attributes:
+      Michael_E._Brown: (known for^='Discovery of Eris and other trans-Neptunian objects')
+    relationships:
+      - (119951)_2002_KX14 (<http://dbpedia.org/resource/(119951)_2002_KX14>) --doo:discoverer--> Chad_Trujillo (dor:Chad_Trujillo)
+      - (119951)_2002_KX14 (<http://dbpedia.org/resource/(119951)_2002_KX14>) --doo:discoverer--> Michael_E._Brown (dor:Michael_E._Brown)
+  '6':
+    attributes:
+      Chad_Trujillo: (known for^='Discovery of Eris, Sedna and other trans-Neptunian objects')
+    relationships:
+      - (119951)_2002_KX14 (<http://dbpedia.org/resource/(119951)_2002_KX14>) --doo:discoverer--> Michael_E._Brown (dor:Michael_E._Brown)
+      - (119951)_2002_KX14 (<http://dbpedia.org/resource/(119951)_2002_KX14>) --doo:discoverer--> Chad_Trujillo (dor:Chad_Trujillo)
+  '7':
+    attributes: {}
+    relationships:
+      - (120178)_2003_OP32 (<http://dbpedia.org/resource/(120178)_2003_OP32>) --doo:discoverer--> Michael_E._Brown (dor:Michael_E._Brown)
+      - (120178)_2003_OP32 (<http://dbpedia.org/resource/(120178)_2003_OP32>) --doo:discoverer--> Chadwick_A._Trujillo (dor:Chadwick_A._Trujillo)
+  '8':
+    attributes:
+      Chad_Trujillo: (known for^='Discovery of Eris, Sedna and other trans-Neptunian objects')
+    relationships:
+      - (120348)_2004_TY364 (<http://dbpedia.org/resource/(120348)_2004_TY364>) --doo:discoverer--> Michael_E._Brown (dor:Michael_E._Brown)
+      - (120348)_2004_TY364 (<http://dbpedia.org/resource/(120348)_2004_TY364>) --doo:discoverer--> Chad_Trujillo (dor:Chad_Trujillo)
+  '9':
+    attributes:
+      Michael_E._Brown: (known for^='Discovery of Eris and other trans-Neptunian objects')
+    relationships:
+      - (126155)_2001_YJ140 (<http://dbpedia.org/resource/(126155)_2001_YJ140>) --doo:discoverer--> Glenn_Smith (dor:Glenn_Smith)
+      - (126155)_2001_YJ140 (<http://dbpedia.org/resource/(126155)_2001_YJ140>) --doo:discoverer--> Michael_E._Brown (dor:Michael_E._Brown)
+  '10':
+    attributes: {}
+    relationships:
+      - (148975)_2001_XA255 (<http://dbpedia.org/resource/(148975)_2001_XA255>) --doo:discoverer--> David_C._Jewitt (dor:David_C._Jewitt)
+      - (148975)_2001_XA255 (<http://dbpedia.org/resource/(148975)_2001_XA255>) --doo:discoverer--> Jan_Kleyna (dor:Jan_Kleyna)
+qa_result:
+  status: completed
+  cost_usd: 0.34532
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.031597400000000005
+        total_tokens: 3809
+        prompt_tokens: 2527
+        completion_tokens: 1282
+      generate:
+        cost_usd: 0.0879926
+        total_tokens: 7407
+        prompt_tokens: 3530
+        completion_tokens: 3877
+      verify_1:
+        cost_usd: 0.078127
+        total_tokens: 7313
+        prompt_tokens: 4542
+        completion_tokens: 2771
+      complexity:
+        cost_usd: 0.147603
+        total_tokens: 11797
+        prompt_tokens: 5317
+        completion_tokens: 6480
+    total_tokens: 30326
+    prompt_tokens: 15916
+    total_cost_usd: 0.34532
+    completion_tokens: 14410
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --father^ (dop:father)--> langString | --spouse^ (doo:spouse)--> Resource | --float^ (dop:float)--> langString | --quote^ (dop:quote)--> langString
+  scientist: --known for^ (dop:knownFor)--> Resource | --original name^ (doo:originalName)--> langString | --child^ (doo:child)--> Resource | --align^ (dop:align)--> langString | --bot^ (dop:bot)--> langString
+subgraph_id: 279
+relationships:
+  - planet --doo:discoverer--> person
+  - planet --doo:discoverer--> scientist

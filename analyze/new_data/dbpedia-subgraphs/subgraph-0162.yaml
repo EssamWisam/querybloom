@@ -1,0 +1,148 @@
+types:
+  book: doo:Book
+  album: doo:Album
+  settlement: doo:Settlement
+  record label: doo:RecordLabel
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Gary,_Indiana: (Apr precipitation days^='12', page length (characters) of wiki page^='75216')
+    relationships:
+      - (I_Can't_Make_It)_Another_Day (<http://dbpedia.org/resource/(I_Can't_Make_It)_Another_Day>) --doo:recordLabel--> Epic_Records (dor:Epic_Records)
+      - (I_Can't_Make_It)_Another_Day (<http://dbpedia.org/resource/(I_Can't_Make_It)_Another_Day>) --doo:artist--> Michael_Jackson (dor:Michael_Jackson)
+      - Dancing_the_Dream (dor:Dancing_the_Dream) --doo:author--> Michael_Jackson (dor:Michael_Jackson)
+      - Michael_Jackson (dor:Michael_Jackson) --doo:birthPlace--> Gary,_Indiana (<http://dbpedia.org/resource/Gary,_Indiana>)
+  '2':
+    attributes:
+      Gary,_Indiana: (Apr precipitation days^='12', page length (characters) of wiki page^='75216')
+      Moonwalk_(book): (non-fiction subject^='http://dbpedia.org/resource/Michael_Jackson')
+    relationships:
+      - (I_Can't_Make_It)_Another_Day (<http://dbpedia.org/resource/(I_Can't_Make_It)_Another_Day>) --doo:recordLabel--> Epic_Records (dor:Epic_Records)
+      - (I_Can't_Make_It)_Another_Day (<http://dbpedia.org/resource/(I_Can't_Make_It)_Another_Day>) --doo:artist--> Michael_Jackson (dor:Michael_Jackson)
+      - Moonwalk_(book) (<http://dbpedia.org/resource/Moonwalk_(book)>) --doo:author--> Michael_Jackson (dor:Michael_Jackson)
+      - Michael_Jackson (dor:Michael_Jackson) --doo:birthPlace--> Gary,_Indiana (<http://dbpedia.org/resource/Gary,_Indiana>)
+  '3':
+    attributes:
+      Ayumi_Hamasaki: (spouse^='2011')
+      Fukuoka_Prefecture: (page length (characters) of wiki page^='23139')
+    relationships:
+      - '&_(Ayumi_Hamasaki_EP) (<http://dbpedia.org/resource/&_(Ayumi_Hamasaki_EP)>) --doo:recordLabel--> Avex_Trax (dor:Avex_Trax)'
+      - '&_(Ayumi_Hamasaki_EP) (<http://dbpedia.org/resource/&_(Ayumi_Hamasaki_EP)>) --doo:artist--> Ayumi_Hamasaki (dor:Ayumi_Hamasaki)'
+      - Ayu_no_Deji_Deji_Nikki (dor:Ayu_no_Deji_Deji_Nikki) --doo:author--> Ayumi_Hamasaki (dor:Ayumi_Hamasaki)
+      - Ayumi_Hamasaki (dor:Ayumi_Hamasaki) --doo:birthPlace--> Fukuoka_Prefecture (dor:Fukuoka_Prefecture)
+  '4':
+    attributes:
+      Ayumi_Hamasaki: (spouse^='2011')
+    relationships:
+      - '&_(Ayumi_Hamasaki_EP) (<http://dbpedia.org/resource/&_(Ayumi_Hamasaki_EP)>) --doo:recordLabel--> Avex_Trax (dor:Avex_Trax)'
+      - '&_(Ayumi_Hamasaki_EP) (<http://dbpedia.org/resource/&_(Ayumi_Hamasaki_EP)>) --doo:artist--> Ayumi_Hamasaki (dor:Ayumi_Hamasaki)'
+      - Ayu_no_Deji_Deji_Nikki (dor:Ayu_no_Deji_Deji_Nikki) --doo:author--> Ayumi_Hamasaki (dor:Ayumi_Hamasaki)
+      - Ayumi_Hamasaki (dor:Ayumi_Hamasaki) --doo:birthPlace--> Fukuoka (dor:Fukuoka)
+  '5':
+    attributes:
+      Toronto: (page length (characters) of wiki page^='224665')
+      Neil_Young: (alias^='Bernard Shakey', spouse^='1968', active years start year^='1963')
+    relationships:
+      - After_the_Gold_Rush_(song) (<http://dbpedia.org/resource/After_the_Gold_Rush_(song)>) --doo:recordLabel--> Reprise_Records (dor:Reprise_Records)
+      - After_the_Gold_Rush_(song) (<http://dbpedia.org/resource/After_the_Gold_Rush_(song)>) --doo:artist--> Neil_Young (dor:Neil_Young)
+      - Waging_Heavy_Peace (dor:Waging_Heavy_Peace) --doo:author--> Neil_Young (dor:Neil_Young)
+      - Neil_Young (dor:Neil_Young) --doo:birthPlace--> Toronto (dor:Toronto)
+  '6':
+    attributes:
+      Leonard_Cohen: (active years start year^='1954')
+      Westmount,_Quebec: (page length (characters) of wiki page^='26943')
+    relationships:
+      - Ain't_No_Cure_for_Love (<http://dbpedia.org/resource/Ain't_No_Cure_for_Love>) --doo:recordLabel--> Columbia_Records (dor:Columbia_Records)
+      - Ain't_No_Cure_for_Love (<http://dbpedia.org/resource/Ain't_No_Cure_for_Love>) --doo:artist--> Leonard_Cohen (dor:Leonard_Cohen)
+      - A_Ballet_of_Lepers (dor:A_Ballet_of_Lepers) --doo:author--> Leonard_Cohen (dor:Leonard_Cohen)
+      - Leonard_Cohen (dor:Leonard_Cohen) --doo:birthPlace--> Westmount,_Quebec (<http://dbpedia.org/resource/Westmount,_Quebec>)
+  '7':
+    attributes:
+      Leonard_Cohen: (active years start year^='1954')
+      Westmount,_Quebec: (page length (characters) of wiki page^='26943')
+    relationships:
+      - Ain't_No_Cure_for_Love (<http://dbpedia.org/resource/Ain't_No_Cure_for_Love>) --doo:recordLabel--> Columbia_Records (dor:Columbia_Records)
+      - Ain't_No_Cure_for_Love (<http://dbpedia.org/resource/Ain't_No_Cure_for_Love>) --doo:artist--> Leonard_Cohen (dor:Leonard_Cohen)
+      - Book_of_Longing (dor:Book_of_Longing) --doo:author--> Leonard_Cohen (dor:Leonard_Cohen)
+      - Leonard_Cohen (dor:Leonard_Cohen) --doo:birthPlace--> Westmount,_Quebec (<http://dbpedia.org/resource/Westmount,_Quebec>)
+  '8':
+    attributes:
+      Leonard_Cohen: (active years start year^='1954')
+      Westmount,_Quebec: (page length (characters) of wiki page^='26943')
+    relationships:
+      - Ain't_No_Cure_for_Love (<http://dbpedia.org/resource/Ain't_No_Cure_for_Love>) --doo:recordLabel--> Columbia_Records (dor:Columbia_Records)
+      - Ain't_No_Cure_for_Love (<http://dbpedia.org/resource/Ain't_No_Cure_for_Love>) --doo:artist--> Leonard_Cohen (dor:Leonard_Cohen)
+      - Book_of_Mercy (dor:Book_of_Mercy) --doo:author--> Leonard_Cohen (dor:Leonard_Cohen)
+      - Leonard_Cohen (dor:Leonard_Cohen) --doo:birthPlace--> Westmount,_Quebec (<http://dbpedia.org/resource/Westmount,_Quebec>)
+  '9':
+    attributes:
+      Mariah_Carey: (spouse^='1993', active years start year^='1988')
+      Huntington,_New_York: (page length (characters) of wiki page^='46286')
+      The_Meaning_of_Mariah_Carey: (non-fiction subject^='http://dbpedia.org/resource/Memoir')
+    relationships:
+      - Angels_Cry_(song) (<http://dbpedia.org/resource/Angels_Cry_(song)>) --doo:recordLabel--> The_Island_Def_Jam_Music_Group (dor:The_Island_Def_Jam_Music_Group)
+      - Angels_Cry_(song) (<http://dbpedia.org/resource/Angels_Cry_(song)>) --doo:artist--> Mariah_Carey (dor:Mariah_Carey)
+      - The_Meaning_of_Mariah_Carey (dor:The_Meaning_of_Mariah_Carey) --doo:author--> Mariah_Carey (dor:Mariah_Carey)
+      - Mariah_Carey (dor:Mariah_Carey) --doo:birthPlace--> Huntington,_New_York (<http://dbpedia.org/resource/Huntington,_New_York>)
+  '10':
+    attributes:
+      Toronto: (page length (characters) of wiki page^='224665')
+      Neil_Young: (alias^='Bernard Shakey', spouse^='1968', active years start year^='1963')
+    relationships:
+      - Are_You_Ready_for_the_Country_(song) (<http://dbpedia.org/resource/Are_You_Ready_for_the_Country_(song)>) --doo:recordLabel--> Reprise_Records (dor:Reprise_Records)
+      - Are_You_Ready_for_the_Country_(song) (<http://dbpedia.org/resource/Are_You_Ready_for_the_Country_(song)>) --doo:artist--> Neil_Young (dor:Neil_Young)
+      - Waging_Heavy_Peace (dor:Waging_Heavy_Peace) --doo:author--> Neil_Young (dor:Neil_Young)
+      - Neil_Young (dor:Neil_Young) --doo:birthPlace--> Toronto (dor:Toronto)
+qa_result:
+  status: completed
+  cost_usd: 0.395227
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.042122400000000004
+        total_tokens: 4060
+        prompt_tokens: 2160
+        completion_tokens: 1900
+      generate:
+        cost_usd: 0.07130260000000001
+        total_tokens: 7462
+        prompt_tokens: 4716
+        completion_tokens: 2746
+      verify_1:
+        cost_usd: 0.089782
+        total_tokens: 8384
+        prompt_tokens: 5193
+        completion_tokens: 3191
+      verify_2:
+        cost_usd: 0.06174700000000001
+        total_tokens: 7007
+        prompt_tokens: 5226
+        completion_tokens: 1781
+      complexity:
+        cost_usd: 0.130273
+        total_tokens: 11430
+        prompt_tokens: 5983
+        completion_tokens: 5447
+    total_tokens: 38343
+    prompt_tokens: 23278
+    total_cost_usd: 0.395227
+    completion_tokens: 15065
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  book: --non-fiction subject^ (doo:nonFictionSubject)--> Resource
+  settlement: --Apr sun^ (dop:aprSun)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --caption^ (dop:caption)--> langString
+  musical artist: --alias^ (doo:alias)--> langString | --spouse^ (dop:spouse)--> langString | --active years start year^ (doo:activeYearsStartYear)--> gYear | --reason^ (dop:reason)--> langString
+subgraph_id: 162
+relationships:
+  - album --doo:recordLabel--> record label
+  - album --doo:artist--> musical artist
+  - book --doo:author--> musical artist
+  - musical artist --doo:birthPlace--> settlement

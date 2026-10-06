@@ -1,0 +1,92 @@
+types:
+  manga: doo:Manga
+  company: doo:Company
+  comics creator: doo:ComicsCreator
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Futabasha: (Wikipage revision ID^='1113473302', url^='https://www.futabasha.co.jp/', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-company-noun-1', page length (characters) of wiki page^='4078')
+      2001_Nights: (last^='June 1986', title^='Space Fantasia 2001 Nights')
+      Yukinobu_Hoshino: (area^='http://dbpedia.org/resource/Manga_artist')
+    relationships:
+      - 2001_Nights (dor:2001_Nights) --doo:publisher--> Futabasha (dor:Futabasha)
+      - 2001_Nights (dor:2001_Nights) --dop:author--> Yukinobu_Hoshino (dor:Yukinobu_Hoshino)
+  '2':
+    attributes:
+      7_Seeds: (last^='2017-05-27')
+      Yumi_Tamura: (area^='http://dbpedia.org/resource/Mangaka')
+    relationships:
+      - 7_Seeds (dor:7_Seeds) --doo:publisher--> Shogakukan (dor:Shogakukan)
+      - 7_Seeds (dor:7_Seeds) --dop:author--> Yumi_Tamura (dor:Yumi_Tamura)
+  '3':
+    attributes:
+      Futabasha: (Wikipage revision ID^='1113473302', url^='https://www.futabasha.co.jp/', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-company-noun-1', page length (characters) of wiki page^='4078')
+      Makoto_Tateno: (alias^='Shinjuku Tango', area^='http://dbpedia.org/resource/Mangaka')
+    relationships:
+      - 9th_Sleep (dor:9th_Sleep) --doo:publisher--> Futabasha (dor:Futabasha)
+      - 9th_Sleep (dor:9th_Sleep) --dop:author--> Makoto_Tateno (dor:Makoto_Tateno)
+  '4':
+    attributes:
+      Makoto_Tateno: (alias^='Shinjuku Tango', area^='http://dbpedia.org/resource/Mangaka')
+      Libre_Publishing: (Wikipage revision ID^='942952509', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:R_from_move', page length (characters) of wiki page^='78')
+    relationships:
+      - 9th_Sleep (dor:9th_Sleep) --doo:publisher--> Libre_Publishing (dor:Libre_Publishing)
+      - 9th_Sleep (dor:9th_Sleep) --dop:author--> Makoto_Tateno (dor:Makoto_Tateno)
+  '5':
+    attributes:
+      Kodansha: (Wikipage revision ID^='1123800035', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''', page length (characters) of wiki page^='15266', products^='Books, light novels, magazines, manga, CDs and DVDs', logo^='Kōdansha logo.svg')
+      Miki_Yoshikawa: (area^='http://dbpedia.org/resource/Manga_artist')
+      A_Couple_of_Cuckoos: (last^='2022-10-02')
+    relationships:
+      - A_Couple_of_Cuckoos (dor:A_Couple_of_Cuckoos) --doo:publisher--> Kodansha (dor:Kodansha)
+      - A_Couple_of_Cuckoos (dor:A_Couple_of_Cuckoos) --dop:author--> Miki_Yoshikawa (dor:Miki_Yoshikawa)
+  '6':
+    attributes:
+      Ayano_Yamane: (area^='http://dbpedia.org/resource/Mangaka')
+      Core_Magazine: (Wikipage revision ID^='1109464028', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Anime-org-stub', page length (characters) of wiki page^='6043', products^='magazines, manga, light novels', logo^='Core-Magazine.png')
+      A_Foreign_Love_Affair: (last^='2008-10-24')
+    relationships:
+      - A_Foreign_Love_Affair (dor:A_Foreign_Love_Affair) --doo:publisher--> Core_Magazine (dor:Core_Magazine)
+      - A_Foreign_Love_Affair (dor:A_Foreign_Love_Affair) --dop:author--> Ayano_Yamane (dor:Ayano_Yamane)
+  '7':
+    attributes:
+      Inio_Asano: (area^='http://dbpedia.org/resource/Mangaka')
+      Ohta_Publishing: (Wikipage revision ID^='1117273186', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:As_of', page length (characters) of wiki page^='5144', products^='Books, magazines')
+      A_Girl_on_the_Shore: (last^='2013-01-07')
+    relationships:
+      - A_Girl_on_the_Shore (dor:A_Girl_on_the_Shore) --doo:publisher--> Ohta_Publishing (dor:Ohta_Publishing)
+      - A_Girl_on_the_Shore (dor:A_Girl_on_the_Shore) --dop:author--> Inio_Asano (dor:Inio_Asano)
+  '8':
+    attributes:
+      Kodansha: (Wikipage revision ID^='1123800035', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''', page length (characters) of wiki page^='15266', products^='Books, light novels, magazines, manga, CDs and DVDs', logo^='Kōdansha logo.svg')
+      George_Asakura: (area^='http://dbpedia.org/resource/Manga')
+      A_Perfect_Day_for_Love_Letters: (last^='2014-03-11')
+    relationships:
+      - A_Perfect_Day_for_Love_Letters (dor:A_Perfect_Day_for_Love_Letters) --doo:publisher--> Kodansha (dor:Kodansha)
+      - A_Perfect_Day_for_Love_Letters (dor:A_Perfect_Day_for_Love_Letters) --dop:author--> George_Asakura (dor:George_Asakura)
+  '9':
+    attributes:
+      Hakusensha: (Wikipage revision ID^='1102090645', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-company-noun-1', page length (characters) of wiki page^='13782', products^='Magazines, manga, picture books, light novels, other type of books and drama CDs', logo^='Hakusensha logo.png')
+      Asumiko_Nakamura: (area^='Manga Artist,  illustrator')
+    relationships:
+      - A_White_Rose_in_Bloom (dor:A_White_Rose_in_Bloom) --doo:publisher--> Hakusensha (dor:Hakusensha)
+      - A_White_Rose_in_Bloom (dor:A_White_Rose_in_Bloom) --dop:author--> Asumiko_Nakamura (dor:Asumiko_Nakamura)
+  '10':
+    attributes:
+      Drawn_&_Quarterly: (Wikipage revision ID^='1118839124', url^='https://www.drawnandquarterly.com/', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', page length (characters) of wiki page^='11572')
+    relationships:
+      - Abandon_the_Old_in_Tokyo (dor:Abandon_the_Old_in_Tokyo) --doo:publisher--> Drawn_&_Quarterly (<http://dbpedia.org/resource/Drawn_&_Quarterly>)
+      - Abandon_the_Old_in_Tokyo (dor:Abandon_the_Old_in_Tokyo) --dop:author--> Yoshihiro_Tatsumi (dor:Yoshihiro_Tatsumi)
+attributes:
+  manga: --last^ (dop:last)--> langString | --title^ (dop:title)--> langString
+  company: --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --url^ (dop:url)--> Resource | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --products^ (dop:products)--> langString | --logo^ (dop:logo)--> Resource
+  comics creator: --alias^ (dop:alias)--> langString | --birth name^ (dop:birthName)--> langString | --area^ (dop:area)--> langString
+subgraph_id: 126
+relationships:
+  - manga --doo:publisher--> company
+  - manga --dop:author--> comics creator

@@ -1,0 +1,118 @@
+types:
+  person: doo:Person
+  economist: doo:Economist
+  politician: doo:Politician
+  university: doo:University
+  philosopher: doo:Philosopher
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._C._Benson: (death place^='Cambridge, England', Wikipage page ID^='759549')
+      John_Stuart_Mill: (party^='http://dbpedia.org/resource/Liberal_Party_(UK)')
+    relationships:
+      - Arthur_Cecil_Pigou (dor:Arthur_Cecil_Pigou) --dop:almaMater--> King's_College,_Cambridge (<http://dbpedia.org/resource/King's_College,_Cambridge>)
+      - A._C._Benson (dor:A._C._Benson) --doo:almaMater--> King's_College,_Cambridge (<http://dbpedia.org/resource/King's_College,_Cambridge>)
+      - Arthur_Cecil_Pigou (dor:Arthur_Cecil_Pigou) --doo:influencedBy--> Henry_Sidgwick (dor:Henry_Sidgwick)
+      - Henry_Sidgwick (dor:Henry_Sidgwick) --doo:influencedBy--> John_Stuart_Mill (dor:John_Stuart_Mill)
+  '2':
+    attributes:
+      Abdulai_Conteh: (Wikipage page ID^='2959151')
+      John_Stuart_Mill: (party^='http://dbpedia.org/resource/Liberal_Party_(UK)')
+    relationships:
+      - Arthur_Cecil_Pigou (dor:Arthur_Cecil_Pigou) --dop:almaMater--> King's_College,_Cambridge (<http://dbpedia.org/resource/King's_College,_Cambridge>)
+      - Abdulai_Conteh (dor:Abdulai_Conteh) --doo:almaMater--> King's_College,_Cambridge (<http://dbpedia.org/resource/King's_College,_Cambridge>)
+      - Arthur_Cecil_Pigou (dor:Arthur_Cecil_Pigou) --doo:influencedBy--> Henry_Sidgwick (dor:Henry_Sidgwick)
+      - Henry_Sidgwick (dor:Henry_Sidgwick) --doo:influencedBy--> John_Stuart_Mill (dor:John_Stuart_Mill)
+  '3':
+    attributes:
+      John_Stuart_Mill: (party^='http://dbpedia.org/resource/Liberal_Party_(UK)')
+    relationships:
+      - Arthur_Cecil_Pigou (dor:Arthur_Cecil_Pigou) --dop:almaMater--> King's_College,_Cambridge (<http://dbpedia.org/resource/King's_College,_Cambridge>)
+      - Alan_Howarth,_Baron_Howarth_of_Newport__The_Lord_Howarth_of_Newport__1 (<http://dbpedia.org/resource/Alan_Howarth,_Baron_Howarth_of_Newport__The_Lord_Howarth_of_Newport__1>) --doo:almaMater--> King's_College,_Cambridge (<http://dbpedia.org/resource/King's_College,_Cambridge>)
+      - Arthur_Cecil_Pigou (dor:Arthur_Cecil_Pigou) --doo:influencedBy--> Henry_Sidgwick (dor:Henry_Sidgwick)
+      - Henry_Sidgwick (dor:Henry_Sidgwick) --doo:influencedBy--> John_Stuart_Mill (dor:John_Stuart_Mill)
+  '4':
+    attributes:
+      Aaron_Novick: (death place^='Eugene, Oregon, United States', Wikipage page ID^='30343428')
+      Edmund_Burke: (party^='http://dbpedia.org/resource/Whigs_(British_political_party)')
+      University_of_Chicago: (logo^='University of Chicago wordmark.svg')
+    relationships:
+      - Burton_C._Gray (dor:Burton_C._Gray) --dop:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Aaron_Novick (dor:Aaron_Novick) --doo:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Burton_C._Gray (dor:Burton_C._Gray) --doo:influencedBy--> Michael_Oakeshott (dor:Michael_Oakeshott)
+      - Michael_Oakeshott (dor:Michael_Oakeshott) --doo:influencedBy--> Edmund_Burke (dor:Edmund_Burke)
+  '5':
+    attributes:
+      Edmund_Burke: (party^='http://dbpedia.org/resource/Whigs_(British_political_party)')
+      Aaron_Sojourner: (Wikipage page ID^='65909775')
+      University_of_Chicago: (logo^='University of Chicago wordmark.svg')
+    relationships:
+      - Burton_C._Gray (dor:Burton_C._Gray) --dop:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Aaron_Sojourner (dor:Aaron_Sojourner) --doo:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Burton_C._Gray (dor:Burton_C._Gray) --doo:influencedBy--> Michael_Oakeshott (dor:Michael_Oakeshott)
+      - Michael_Oakeshott (dor:Michael_Oakeshott) --doo:influencedBy--> Edmund_Burke (dor:Edmund_Burke)
+  '6':
+    attributes:
+      Edmund_Burke: (party^='http://dbpedia.org/resource/Whigs_(British_political_party)')
+      Abdul_Alkalimat: (Wikipage page ID^='35214915', employer^='http://dbpedia.org/resource/University_of_Illinois_at_Urbana–Champaign')
+      University_of_Chicago: (logo^='University of Chicago wordmark.svg')
+    relationships:
+      - Burton_C._Gray (dor:Burton_C._Gray) --dop:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Abdul_Alkalimat (dor:Abdul_Alkalimat) --doo:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Burton_C._Gray (dor:Burton_C._Gray) --doo:influencedBy--> Michael_Oakeshott (dor:Michael_Oakeshott)
+      - Michael_Oakeshott (dor:Michael_Oakeshott) --doo:influencedBy--> Edmund_Burke (dor:Edmund_Burke)
+  '7':
+    attributes:
+      Andrea_Lindholz: (Wikipage page ID^='63452724')
+      Alexis_de_Tocqueville: (party^='http://dbpedia.org/resource/Movement_Party_(France)')
+      Goethe_University_Frankfurt: (logo^='HouseofFinance.jpg')
+    relationships:
+      - Hans-Hermann_Hoppe (dor:Hans-Hermann_Hoppe) --dop:almaMater--> Goethe_University_Frankfurt (dor:Goethe_University_Frankfurt)
+      - Andrea_Lindholz (dor:Andrea_Lindholz) --doo:almaMater--> Goethe_University_Frankfurt (dor:Goethe_University_Frankfurt)
+      - Hans-Hermann_Hoppe (dor:Hans-Hermann_Hoppe) --doo:influencedBy--> Bertrand_de_Jouvenel (dor:Bertrand_de_Jouvenel)
+      - Bertrand_de_Jouvenel (dor:Bertrand_de_Jouvenel) --doo:influencedBy--> Alexis_de_Tocqueville (dor:Alexis_de_Tocqueville)
+  '8':
+    attributes:
+      Annette_Winkler: (Wikipage page ID^='42290656')
+      Alexis_de_Tocqueville: (party^='http://dbpedia.org/resource/Movement_Party_(France)')
+      Goethe_University_Frankfurt: (logo^='HouseofFinance.jpg')
+    relationships:
+      - Hans-Hermann_Hoppe (dor:Hans-Hermann_Hoppe) --dop:almaMater--> Goethe_University_Frankfurt (dor:Goethe_University_Frankfurt)
+      - Annette_Winkler (dor:Annette_Winkler) --doo:almaMater--> Goethe_University_Frankfurt (dor:Goethe_University_Frankfurt)
+      - Hans-Hermann_Hoppe (dor:Hans-Hermann_Hoppe) --doo:influencedBy--> Bertrand_de_Jouvenel (dor:Bertrand_de_Jouvenel)
+      - Bertrand_de_Jouvenel (dor:Bertrand_de_Jouvenel) --doo:influencedBy--> Alexis_de_Tocqueville (dor:Alexis_de_Tocqueville)
+  '9':
+    attributes:
+      Bassam_Tibi: (Wikipage page ID^='366737')
+      Alexis_de_Tocqueville: (party^='http://dbpedia.org/resource/Movement_Party_(France)')
+      Goethe_University_Frankfurt: (logo^='HouseofFinance.jpg')
+    relationships:
+      - Hans-Hermann_Hoppe (dor:Hans-Hermann_Hoppe) --dop:almaMater--> Goethe_University_Frankfurt (dor:Goethe_University_Frankfurt)
+      - Bassam_Tibi (dor:Bassam_Tibi) --doo:almaMater--> Goethe_University_Frankfurt (dor:Goethe_University_Frankfurt)
+      - Hans-Hermann_Hoppe (dor:Hans-Hermann_Hoppe) --doo:influencedBy--> Bertrand_de_Jouvenel (dor:Bertrand_de_Jouvenel)
+      - Bertrand_de_Jouvenel (dor:Bertrand_de_Jouvenel) --doo:influencedBy--> Alexis_de_Tocqueville (dor:Alexis_de_Tocqueville)
+  '10':
+    attributes:
+      Luigi_Einaudi: (party^='http://dbpedia.org/resource/Italian_Liberal_Party')
+      Abdellah_Taïa: (Wikipage page ID^='30281881')
+      University_of_Geneva: (logo^='University of Geneva 2015.jpg')
+    relationships:
+      - Hernando_de_Soto_(economist) (<http://dbpedia.org/resource/Hernando_de_Soto_(economist)>) --dop:almaMater--> University_of_Geneva (dor:University_of_Geneva)
+      - Abdellah_Taïa (<http://dbpedia.org/resource/Abdellah_Taïa>) --doo:almaMater--> University_of_Geneva (dor:University_of_Geneva)
+      - Hernando_de_Soto_(economist) (<http://dbpedia.org/resource/Hernando_de_Soto_(economist)>) --doo:influencedBy--> Bruno_Leoni (dor:Bruno_Leoni)
+      - Bruno_Leoni (dor:Bruno_Leoni) --doo:influencedBy--> Luigi_Einaudi (dor:Luigi_Einaudi)
+attributes:
+  person: --death place^ (dop:deathPlace)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int | --image size^ (dop:imageSize)--> int | --relations^ (dop:relations)--> langString | --employer^ (doo:employer)--> Resource
+  politician: --party^ (doo:party)--> Resource | --relatives^ (dop:relatives)--> Resource | --relations^ (dop:relations)--> langString
+  university: --logo^ (dop:logo)--> langString
+subgraph_id: 432
+relationships:
+  - economist --dop:almaMater--> university
+  - person --doo:almaMater--> university
+  - economist --doo:influencedBy--> philosopher
+  - philosopher --doo:influencedBy--> politician

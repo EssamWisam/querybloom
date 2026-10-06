@@ -1,0 +1,121 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  soccer club: doo:SoccerClub
+  military unit: doo:MilitaryUnit
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Brooklyn_Bolts (dor:Brooklyn_Bolts) --doo:city--> Brooklyn (dor:Brooklyn)
+      - 115-119_Eighth_Avenue_(Brooklyn) (<http://dbpedia.org/resource/115-119_Eighth_Avenue_(Brooklyn)>) --doo:location--> Brooklyn (dor:Brooklyn)
+      - 302nd_Armored_Cavalry_Regiment (dor:302nd_Armored_Cavalry_Regiment) --dop:garrison--> Brooklyn (dor:Brooklyn)
+  '2':
+    attributes:
+      New_York_City: (width^='225')
+    relationships:
+      - Brooklyn_Bolts (dor:Brooklyn_Bolts) --doo:city--> New_York_City (dor:New_York_City)
+      - 115-119_Eighth_Avenue_(Brooklyn) (<http://dbpedia.org/resource/115-119_Eighth_Avenue_(Brooklyn)>) --doo:location--> New_York_City (dor:New_York_City)
+      - 303rd_Armored_Cavalry_Regiment (dor:303rd_Armored_Cavalry_Regiment) --dop:garrison--> New_York_City (dor:New_York_City)
+  '3':
+    attributes:
+      New_York_City: (width^='225')
+    relationships:
+      - Monroe_College (dor:Monroe_College) --doo:city--> New_York_City (dor:New_York_City)
+      - 115-119_Eighth_Avenue_(Brooklyn) (<http://dbpedia.org/resource/115-119_Eighth_Avenue_(Brooklyn)>) --doo:location--> New_York_City (dor:New_York_City)
+      - 303rd_Armored_Cavalry_Regiment (dor:303rd_Armored_Cavalry_Regiment) --dop:garrison--> New_York_City (dor:New_York_City)
+  '4':
+    attributes:
+      New_York_City: (width^='225')
+    relationships:
+      - Brooklyn_Bolts (dor:Brooklyn_Bolts) --doo:city--> New_York_City (dor:New_York_City)
+      - 116_John_Street (dor:116_John_Street) --doo:location--> New_York_City (dor:New_York_City)
+      - 303rd_Armored_Cavalry_Regiment (dor:303rd_Armored_Cavalry_Regiment) --dop:garrison--> New_York_City (dor:New_York_City)
+  '5':
+    attributes:
+      Seattle: (nickname^='The Emerald City, Jet City, Rain City')
+    relationships:
+      - Seattle_Reign_(basketball) (<http://dbpedia.org/resource/Seattle_Reign_(basketball)>) --doo:city--> Seattle (dor:Seattle)
+      - 1411_Fourth_Avenue_Building (dor:1411_Fourth_Avenue_Building) --doo:location--> Seattle (dor:Seattle)
+      - 81st_Stryker_Brigade_Combat_Team (dor:81st_Stryker_Brigade_Combat_Team) --dop:garrison--> Seattle (dor:Seattle)
+  '6':
+    attributes:
+      Seattle: (nickname^='The Emerald City, Jet City, Rain City')
+      Seattle_Seahawks: (owner^='http://dbpedia.org/resource/Paul_Allen')
+    relationships:
+      - Seattle_Seahawks (dor:Seattle_Seahawks) --doo:city--> Seattle (dor:Seattle)
+      - 1411_Fourth_Avenue_Building (dor:1411_Fourth_Avenue_Building) --doo:location--> Seattle (dor:Seattle)
+      - 81st_Stryker_Brigade_Combat_Team (dor:81st_Stryker_Brigade_Combat_Team) --dop:garrison--> Seattle (dor:Seattle)
+  '7':
+    attributes: {}
+    relationships:
+      - San_Jacinto_College (dor:San_Jacinto_College) --doo:city--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+      - 1879_Houston_Waterworks (dor:1879_Houston_Waterworks) --doo:location--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+      - 147th_Air_Support_Operations_Squadron (dor:147th_Air_Support_Operations_Squadron) --dop:garrison--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+  '8':
+    attributes: {}
+    relationships:
+      - San_Jacinto_College (dor:San_Jacinto_College) --doo:city--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+      - 1879_Houston_Waterworks (dor:1879_Houston_Waterworks) --doo:location--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+      - 1st_Battalion,_23rd_Marines (<http://dbpedia.org/resource/1st_Battalion,_23rd_Marines>) --dop:garrison--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+  '9':
+    attributes:
+      Kansas_City_Chiefs: (owner^='http://dbpedia.org/resource/Lamar_Hunt')
+    relationships:
+      - Kansas_City_Chiefs (dor:Kansas_City_Chiefs) --doo:city--> Kansas_City,_Missouri (<http://dbpedia.org/resource/Kansas_City,_Missouri>)
+      - 18th_and_Vine_–_Downtown_East,_Kansas_City (<http://dbpedia.org/resource/18th_and_Vine_–_Downtown_East,_Kansas_City>) --doo:location--> Kansas_City,_Missouri (<http://dbpedia.org/resource/Kansas_City,_Missouri>)
+      - 24th_Marine_Regiment_(United_States) (<http://dbpedia.org/resource/24th_Marine_Regiment_(United_States)>) --dop:garrison--> Kansas_City,_Missouri (<http://dbpedia.org/resource/Kansas_City,_Missouri>)
+  '10':
+    attributes:
+      Kansas_City_Chiefs: (owner^='http://dbpedia.org/resource/Lamar_Hunt')
+      Kansas_City,_Missouri: (nickname^='"KC", "KCMO", the "City of Fountains", "Paris of the Plains", and the "Heart of America"')
+    relationships:
+      - Kansas_City_Chiefs (dor:Kansas_City_Chiefs) --doo:city--> Kansas_City,_Missouri (<http://dbpedia.org/resource/Kansas_City,_Missouri>)
+      - 18th_and_Vine_–_Downtown_East,_Kansas_City (<http://dbpedia.org/resource/18th_and_Vine_–_Downtown_East,_Kansas_City>) --doo:location--> Kansas_City,_Missouri (<http://dbpedia.org/resource/Kansas_City,_Missouri>)
+      - 89th_Sustainment_Brigade (dor:89th_Sustainment_Brigade) --dop:garrison--> Kansas_City,_Missouri (<http://dbpedia.org/resource/Kansas_City,_Missouri>)
+qa_result:
+  status: completed
+  cost_usd: 0.25135
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.034857400000000004
+        total_tokens: 3645
+        prompt_tokens: 2091
+        completion_tokens: 1554
+      generate:
+        cost_usd: 0.0746576
+        total_tokens: 7179
+        prompt_tokens: 4115
+        completion_tokens: 3064
+      verify_1:
+        cost_usd: 0.030267000000000002
+        total_tokens: 4695
+        prompt_tokens: 4242
+        completion_tokens: 453
+      complexity:
+        cost_usd: 0.111568
+        total_tokens: 9819
+        prompt_tokens: 5082
+        completion_tokens: 4737
+    total_tokens: 25338
+    prompt_tokens: 15530
+    total_cost_usd: 0.25134999999999996
+    completion_tokens: 9808
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --nickname^ (dop:nickname)--> langString | --width^ (dop:width)--> int
+  Location: --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --title^ (dop:title)--> langString | --quote^ (dop:quote)--> langString | --founder^ (doo:founder)--> Resource | --government type^ (doo:governmentType)--> Resource | --Apr high F^ (dop:aprHighF)--> double
+  soccer club: --owner^ (doo:owner)--> Resource | --id^ (dop:id)--> langString | --date^ (dop:date)--> gMonthDay
+subgraph_id: 194
+relationships:
+  - soccer club --doo:city--> city
+  - Location --doo:location--> city
+  - military unit --dop:garrison--> city

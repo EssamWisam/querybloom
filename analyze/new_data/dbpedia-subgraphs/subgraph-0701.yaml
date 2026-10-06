@@ -1,0 +1,106 @@
+types:
+  company: doo:Company
+  country: doo:Country
+  radio station: doo:RadioStation
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Astro_Radio: (industry^='http://dbpedia.org/resource/Radio_broadcasting', headquarter^='http://dbpedia.org/resource/Bukit_Jalil', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-network-noun-2')
+      Era_(radio_station): (affiliations^='http://dbpedia.org/resource/Astro_Radio')
+    relationships:
+      - Era_(radio_station) (<http://dbpedia.org/resource/Era_(radio_station)>) --dop:affiliations--> Astro_Radio (dor:Astro_Radio)
+      - Astro_Radio (dor:Astro_Radio) --dop:areaServed--> Malaysia (dor:Malaysia)
+      - Adithya_TV (dor:Adithya_TV) --dop:country--> Malaysia (dor:Malaysia)
+  '2':
+    attributes:
+      Astro_AOD: (logo^='Astro AOD.jpeg')
+      Astro_Radio: (industry^='http://dbpedia.org/resource/Radio_broadcasting', headquarter^='http://dbpedia.org/resource/Bukit_Jalil', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-network-noun-2')
+      Era_(radio_station): (affiliations^='http://dbpedia.org/resource/Astro_Radio')
+    relationships:
+      - Era_(radio_station) (<http://dbpedia.org/resource/Era_(radio_station)>) --dop:affiliations--> Astro_Radio (dor:Astro_Radio)
+      - Astro_Radio (dor:Astro_Radio) --dop:areaServed--> Malaysia (dor:Malaysia)
+      - Astro_AOD (dor:Astro_AOD) --dop:country--> Malaysia (dor:Malaysia)
+  '3':
+    attributes:
+      Astro_Aruna: (logo^='Astro Aruna.png')
+      Astro_Radio: (industry^='http://dbpedia.org/resource/Radio_broadcasting', headquarter^='http://dbpedia.org/resource/Bukit_Jalil', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-network-noun-2')
+      Era_(radio_station): (affiliations^='http://dbpedia.org/resource/Astro_Radio')
+    relationships:
+      - Era_(radio_station) (<http://dbpedia.org/resource/Era_(radio_station)>) --dop:affiliations--> Astro_Radio (dor:Astro_Radio)
+      - Astro_Radio (dor:Astro_Radio) --dop:areaServed--> Brunei (dor:Brunei)
+      - Astro_Aruna (dor:Astro_Aruna) --dop:country--> Brunei (dor:Brunei)
+  '4':
+    attributes:
+      KCHI-FM: (affiliations^='http://dbpedia.org/resource/Citadel_Broadcasting')
+      Citadel_Broadcasting: (industry^='http://dbpedia.org/resource/Radio_broadcasting', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-company-noun-1')
+    relationships:
+      - KCHI-FM (dor:KCHI-FM) --dop:affiliations--> Citadel_Broadcasting (dor:Citadel_Broadcasting)
+      - Citadel_Broadcasting (dor:Citadel_Broadcasting) --dop:areaServed--> United_States (dor:United_States)
+      - 4Kids_TV (dor:4Kids_TV) --dop:country--> United_States (dor:United_States)
+  '5':
+    attributes:
+      KCHI-FM: (affiliations^='http://dbpedia.org/resource/Citadel_Broadcasting')
+      Citadel_Broadcasting: (industry^='http://dbpedia.org/resource/Radio_broadcasting', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-company-noun-1')
+    relationships:
+      - KCHI-FM (dor:KCHI-FM) --dop:affiliations--> Citadel_Broadcasting (dor:Citadel_Broadcasting)
+      - Citadel_Broadcasting (dor:Citadel_Broadcasting) --dop:areaServed--> United_States (dor:United_States)
+      - 6News_Lawrence (dor:6News_Lawrence) --dop:country--> United_States (dor:United_States)
+  '6':
+    attributes:
+      Citadel_Broadcasting: (industry^='http://dbpedia.org/resource/Radio_broadcasting', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-company-noun-1')
+    relationships:
+      - KCHI-FM (dor:KCHI-FM) --dop:affiliations--> Citadel_Broadcasting (dor:Citadel_Broadcasting)
+      - Citadel_Broadcasting (dor:Citadel_Broadcasting) --dop:areaServed--> United_States (dor:United_States)
+      - Aastha_International (dor:Aastha_International) --dop:country--> United_States (dor:United_States)
+  '7':
+    attributes:
+      France: (direction^='vertical')
+      Oüi_FM: (affiliations^='http://dbpedia.org/resource/Les_Indés_Radios')
+    relationships:
+      - Oüi_FM (<http://dbpedia.org/resource/Oüi_FM>) --dop:affiliations--> Les_Indés_Radios (<http://dbpedia.org/resource/Les_Indés_Radios>)
+      - Les_Indés_Radios (<http://dbpedia.org/resource/Les_Indés_Radios>) --dop:areaServed--> France (dor:France)
+      - AlloCiné_TV (<http://dbpedia.org/resource/AlloCiné_TV>) --dop:country--> France (dor:France)
+  '8':
+    attributes:
+      France: (direction^='vertical')
+      Oüi_FM: (affiliations^='http://dbpedia.org/resource/Les_Indés_Radios')
+      Automoto_La_chaîne: (logo^='Automoto_La_chaîne_2018_on_air.jpg')
+    relationships:
+      - Oüi_FM (<http://dbpedia.org/resource/Oüi_FM>) --dop:affiliations--> Les_Indés_Radios (<http://dbpedia.org/resource/Les_Indés_Radios>)
+      - Les_Indés_Radios (<http://dbpedia.org/resource/Les_Indés_Radios>) --dop:areaServed--> France (dor:France)
+      - Automoto_La_chaîne (<http://dbpedia.org/resource/Automoto_La_chaîne>) --dop:country--> France (dor:France)
+  '9':
+    attributes:
+      France: (direction^='vertical')
+      Oüi_FM: (affiliations^='http://dbpedia.org/resource/Les_Indés_Radios')
+      BeIN_Sports_(French_TV_channel): (logo^='BeIN Sports logo .png')
+    relationships:
+      - Oüi_FM (<http://dbpedia.org/resource/Oüi_FM>) --dop:affiliations--> Les_Indés_Radios (<http://dbpedia.org/resource/Les_Indés_Radios>)
+      - Les_Indés_Radios (<http://dbpedia.org/resource/Les_Indés_Radios>) --dop:areaServed--> France (dor:France)
+      - BeIN_Sports_(French_TV_channel) (<http://dbpedia.org/resource/BeIN_Sports_(French_TV_channel)>) --dop:country--> France (dor:France)
+  '10':
+    attributes:
+      Brazil: (width^='170', direction^='horizontal')
+      Band_Internacional: (logo^='File:Band Internacional logo 2019.png')
+      Rádio_Bandeirantes: (owner^='http://dbpedia.org/resource/Grupo_Bandeirantes_de_Comunicação')
+      Rádio_Clube_(Ponta_Grossa): (affiliations^='http://dbpedia.org/resource/Rádio_Bandeirantes')
+    relationships:
+      - Rádio_Clube_(Ponta_Grossa) (<http://dbpedia.org/resource/Rádio_Clube_(Ponta_Grossa)>) --dop:affiliations--> Rádio_Bandeirantes (<http://dbpedia.org/resource/Rádio_Bandeirantes>)
+      - Rádio_Bandeirantes (<http://dbpedia.org/resource/Rádio_Bandeirantes>) --dop:areaServed--> Brazil (dor:Brazil)
+      - Band_Internacional (dor:Band_Internacional) --dop:country--> Brazil (dor:Brazil)
+attributes:
+  company: --logo width^ (dop:logoWidth)--> int | --industry^ (doo:industry)--> Resource | --products^ (dop:products)--> Resource | --headquarter^ (doo:headquarter)--> Resource | --budget ($)^ (doo:budget)--> usDollar | --wordnet_type (dop:wordnet_type)--> Resource | --owner^ (dop:owner)--> langString | --1a^ (dop:1a)--> langString
+  country: --width^ (dop:width)--> int | --direction^ (dop:direction)--> langString
+  radio station: --affiliations^ (dop:affiliations)--> langString
+  television station: --logo^ (dop:logo)--> langString
+subgraph_id: 701
+relationships:
+  - radio station --dop:affiliations--> company
+  - company --dop:areaServed--> country
+  - television station --dop:country--> country

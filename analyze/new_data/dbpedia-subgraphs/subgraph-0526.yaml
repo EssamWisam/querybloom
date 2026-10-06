@@ -1,0 +1,98 @@
+types:
+  city: doo:City
+  country: doo:Country
+  squash player: doo:SquashPlayer
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Doha: (population total^='2382000', Aug precipitation days^='0')
+      Qatar: (religion^='http://dbpedia.org/resource/Buddhism_in_the_Middle_East', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About')
+    relationships:
+      - Abdulla_Al-Tamimi (dor:Abdulla_Al-Tamimi) --doo:residence--> Qatar (dor:Qatar)
+      - Abdulla_Al-Tamimi (dor:Abdulla_Al-Tamimi) --doo:residence--> Doha (dor:Doha)
+      - Al_Jazeera_Documentary_Channel__Al_Jazeera_Documentary_Channel__1 (dor:Al_Jazeera_Documentary_Channel__Al_Jazeera_Documentary_Channel__1) --doo:headquarter--> Doha (dor:Doha)
+  '2':
+    attributes:
+      Doha: (population total^='2382000', Aug precipitation days^='0')
+      Qatar: (religion^='http://dbpedia.org/resource/Buddhism_in_the_Middle_East', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About')
+    relationships:
+      - Abdulla_Al-Tamimi (dor:Abdulla_Al-Tamimi) --doo:residence--> Qatar (dor:Qatar)
+      - Abdulla_Al-Tamimi (dor:Abdulla_Al-Tamimi) --doo:residence--> Doha (dor:Doha)
+      - Al_Jazeera_English__Al_Jazeera_English__1 (dor:Al_Jazeera_English__Al_Jazeera_English__1) --doo:headquarter--> Doha (dor:Doha)
+  '3':
+    attributes:
+      Doha: (population total^='2382000', Aug precipitation days^='0')
+      Qatar: (religion^='http://dbpedia.org/resource/Buddhism_in_the_Middle_East', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About')
+    relationships:
+      - Abdulla_Al-Tamimi (dor:Abdulla_Al-Tamimi) --doo:residence--> Qatar (dor:Qatar)
+      - Abdulla_Al-Tamimi (dor:Abdulla_Al-Tamimi) --doo:residence--> Doha (dor:Doha)
+      - Al_Jazeera_Mubasher (dor:Al_Jazeera_Mubasher) --doo:headquarter--> Doha (dor:Doha)
+  '4':
+    attributes:
+      India: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr')
+      Mumbai: (population total^='12478447', b^='yes', width^='220', area code^='+91-22')
+    relationships:
+      - Aditya_Jagtap (dor:Aditya_Jagtap) --doo:residence--> India (dor:India)
+      - Aditya_Jagtap (dor:Aditya_Jagtap) --doo:residence--> Mumbai (dor:Mumbai)
+      - '&flix (<http://dbpedia.org/resource/&flix>) --doo:headquarter--> Mumbai (dor:Mumbai)'
+  '5':
+    attributes:
+      India: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr')
+      Mumbai: (population total^='12478447', b^='yes', width^='220', area code^='+91-22')
+    relationships:
+      - Aditya_Jagtap (dor:Aditya_Jagtap) --doo:residence--> India (dor:India)
+      - Aditya_Jagtap (dor:Aditya_Jagtap) --doo:residence--> Mumbai (dor:Mumbai)
+      - 9X_(TV_channel) (<http://dbpedia.org/resource/9X_(TV_channel)>) --doo:headquarter--> Mumbai (dor:Mumbai)
+  '6':
+    attributes:
+      India: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr')
+      Mumbai: (population total^='12478447', b^='yes', width^='220', area code^='+91-22')
+    relationships:
+      - Aditya_Jagtap (dor:Aditya_Jagtap) --doo:residence--> India (dor:India)
+      - Aditya_Jagtap (dor:Aditya_Jagtap) --doo:residence--> Mumbai (dor:Mumbai)
+      - 9X_Jhakaas (dor:9X_Jhakaas) --doo:headquarter--> Mumbai (dor:Mumbai)
+  '7':
+    attributes:
+      Leeds: (population total^='516298', Aug precipitation days^='13.2', area code^='0113')
+    relationships:
+      - Adrian_Grant_(squash_player) (<http://dbpedia.org/resource/Adrian_Grant_(squash_player)>) --doo:residence--> England (dor:England)
+      - Adrian_Grant_(squash_player) (<http://dbpedia.org/resource/Adrian_Grant_(squash_player)>) --doo:residence--> Leeds (dor:Leeds)
+      - Leeds_TV (dor:Leeds_TV) --doo:headquarter--> Leeds (dor:Leeds)
+  '8':
+    attributes:
+      Leeds: (population total^='516298', Aug precipitation days^='13.2', area code^='0113')
+      England: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - Adrian_Grant_(squash_player) (<http://dbpedia.org/resource/Adrian_Grant_(squash_player)>) --doo:residence--> England (dor:England)
+      - Adrian_Grant_(squash_player) (<http://dbpedia.org/resource/Adrian_Grant_(squash_player)>) --doo:residence--> Leeds (dor:Leeds)
+      - Local_TV_Limited (dor:Local_TV_Limited) --doo:headquarter--> Leeds (dor:Leeds)
+  '9':
+    attributes:
+      Leeds: (population total^='516298', Aug precipitation days^='13.2', area code^='0113')
+      England: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - Adrian_Grant_(squash_player) (<http://dbpedia.org/resource/Adrian_Grant_(squash_player)>) --doo:residence--> England (dor:England)
+      - Adrian_Grant_(squash_player) (<http://dbpedia.org/resource/Adrian_Grant_(squash_player)>) --doo:residence--> Leeds (dor:Leeds)
+      - Squash_TV (dor:Squash_TV) --doo:headquarter--> Leeds (dor:Leeds)
+  '10':
+    attributes:
+      Amman: (population total^='4061150', width^='175', Aug precipitation days^='0', area code^='+962(6)')
+      Jordan: (religion^='http://dbpedia.org/resource/Baháʼí_Faith', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About')
+    relationships:
+      - Ahmad_Al-Saraj (dor:Ahmad_Al-Saraj) --doo:residence--> Jordan (dor:Jordan)
+      - Ahmad_Al-Saraj (dor:Ahmad_Al-Saraj) --doo:residence--> Amman (dor:Amman)
+      - 218TV (dor:218TV) --doo:headquarter--> Amman (dor:Amman)
+attributes:
+  city: --population total^ (doo:populationTotal)--> int | --Aug rain days^ (dop:augRainDays)--> double | --b^ (dop:b)--> langString | --width^ (dop:width)--> int | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --Aug high F^ (dop:augHighF)--> double | --bot^ (dop:bot)--> langString | --c^ (dop:c)--> langString | --area code^ (doo:areaCode)--> string
+  country: --religion^ (doo:religion)--> Resource | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+subgraph_id: 526
+relationships:
+  - squash player --doo:residence--> country
+  - squash player --doo:residence--> city
+  - television station --doo:headquarter--> city

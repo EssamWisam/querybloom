@@ -1,0 +1,103 @@
+types:
+  city: doo:City
+  river: doo:River
+  person: doo:Person
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      100_Kila: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age')
+      Kamchiya: (mouth mountain^='http://dbpedia.org/resource/Black_Sea')
+      Varna,_Bulgaria: (Apr low C^='9')
+    relationships:
+      - Kamchiya (dor:Kamchiya) --doo:mouthMountain--> Varna,_Bulgaria (<http://dbpedia.org/resource/Varna,_Bulgaria>)
+      - 100_Kila (dor:100_Kila) --dop:birthPlace--> Varna,_Bulgaria (<http://dbpedia.org/resource/Varna,_Bulgaria>)
+      - Kamchiya (dor:Kamchiya) --doo:mouthPlace--> Black_Sea (dor:Black_Sea)
+  '2':
+    attributes:
+      100_Kila: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age')
+      Kamchiya: (mouth mountain^='http://dbpedia.org/resource/Black_Sea')
+      Varna,_Bulgaria: (Apr low C^='9')
+    relationships:
+      - Kamchiya (dor:Kamchiya) --doo:mouthMountain--> Varna,_Bulgaria (<http://dbpedia.org/resource/Varna,_Bulgaria>)
+      - 100_Kila (dor:100_Kila) --dop:birthPlace--> Varna,_Bulgaria (<http://dbpedia.org/resource/Varna,_Bulgaria>)
+      - Kamchiya (dor:Kamchiya) --doo:mouthPlace--> Varna,_Bulgaria (<http://dbpedia.org/resource/Varna,_Bulgaria>)
+  '3':
+    attributes:
+      2_Tuff_Tony: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age')
+      Beargrass_Creek_(Kentucky): (mouth mountain^='http://dbpedia.org/resource/Louisville,_Kentucky')
+    relationships:
+      - Beargrass_Creek_(Kentucky) (<http://dbpedia.org/resource/Beargrass_Creek_(Kentucky)>) --doo:mouthMountain--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 2_Tuff_Tony (dor:2_Tuff_Tony) --dop:birthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - Beargrass_Creek_(Kentucky) (<http://dbpedia.org/resource/Beargrass_Creek_(Kentucky)>) --doo:mouthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+  '4':
+    attributes:
+      2_Tuff_Tony: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age')
+      Beargrass_Creek_(Kentucky): (mouth mountain^='http://dbpedia.org/resource/Louisville,_Kentucky')
+    relationships:
+      - Beargrass_Creek_(Kentucky) (<http://dbpedia.org/resource/Beargrass_Creek_(Kentucky)>) --doo:mouthMountain--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 2_Tuff_Tony (dor:2_Tuff_Tony) --dop:birthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - Beargrass_Creek_(Kentucky) (<http://dbpedia.org/resource/Beargrass_Creek_(Kentucky)>) --doo:mouthPlace--> Ohio_River (dor:Ohio_River)
+  '5':
+    attributes:
+      38_Spesh: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Genesee_River: (mouth mountain^='http://dbpedia.org/resource/Charlotte,_Rochester,_New_York')
+    relationships:
+      - Genesee_River (dor:Genesee_River) --doo:mouthMountain--> Rochester,_New_York (<http://dbpedia.org/resource/Rochester,_New_York>)
+      - 38_Spesh (dor:38_Spesh) --dop:birthPlace--> Rochester,_New_York (<http://dbpedia.org/resource/Rochester,_New_York>)
+      - Genesee_River (dor:Genesee_River) --doo:mouthPlace--> Monroe_County,_New_York (<http://dbpedia.org/resource/Monroe_County,_New_York>)
+  '6':
+    attributes:
+      New_York_(state): (title^='Religious affiliation', image^='Map of New York Economic Regions.svg')
+    relationships:
+      - Genesee_River (dor:Genesee_River) --doo:mouthMountain--> Rochester,_New_York (<http://dbpedia.org/resource/Rochester,_New_York>)
+      - 38_Spesh (dor:38_Spesh) --dop:birthPlace--> Rochester,_New_York (<http://dbpedia.org/resource/Rochester,_New_York>)
+      - Genesee_River (dor:Genesee_River) --doo:mouthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '7':
+    attributes:
+      38_Spesh: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Genesee_River: (mouth mountain^='http://dbpedia.org/resource/Charlotte,_Rochester,_New_York')
+    relationships:
+      - Genesee_River (dor:Genesee_River) --doo:mouthMountain--> Rochester,_New_York (<http://dbpedia.org/resource/Rochester,_New_York>)
+      - 38_Spesh (dor:38_Spesh) --dop:birthPlace--> Rochester,_New_York (<http://dbpedia.org/resource/Rochester,_New_York>)
+      - Genesee_River (dor:Genesee_River) --doo:mouthPlace--> Rochester,_New_York (<http://dbpedia.org/resource/Rochester,_New_York>)
+  '8':
+    attributes:
+      Yangon: (Apr low C^='23.8')
+      Myanmar: (title^='', image^='--03-30')
+    relationships:
+      - Bago_River (dor:Bago_River) --doo:mouthMountain--> Yangon (dor:Yangon)
+      - A_Nyein_Phyu (dor:A_Nyein_Phyu) --dop:birthPlace--> Yangon (dor:Yangon)
+      - Bago_River (dor:Bago_River) --doo:mouthPlace--> Myanmar (dor:Myanmar)
+  '9':
+    attributes:
+      Yangon: (Apr low C^='23.8', title^='Articles related to Yangon')
+      Bago_River: (mouth mountain^='http://dbpedia.org/resource/Myanmar', source^='Dawe Dam and Reservoir, Letpadan Township, Bago, Myanmar')
+      A_Nyein_Phyu: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age')
+    relationships:
+      - Bago_River (dor:Bago_River) --doo:mouthMountain--> Yangon (dor:Yangon)
+      - A_Nyein_Phyu (dor:A_Nyein_Phyu) --dop:birthPlace--> Yangon (dor:Yangon)
+      - Bago_River (dor:Bago_River) --doo:mouthPlace--> Yangon (dor:Yangon)
+  '10':
+    attributes:
+      A._Bernard_Ackerman: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+      Elizabeth_River_(New_Jersey): (mouth mountain^='http://dbpedia.org/resource/Elizabeth,_New_Jersey', source^='http://dbpedia.org/resource/Watchung_Mountains')
+    relationships:
+      - Elizabeth_River_(New_Jersey) (<http://dbpedia.org/resource/Elizabeth_River_(New_Jersey)>) --doo:mouthMountain--> Elizabeth,_New_Jersey (<http://dbpedia.org/resource/Elizabeth,_New_Jersey>)
+      - A._Bernard_Ackerman (dor:A._Bernard_Ackerman) --dop:birthPlace--> Elizabeth,_New_Jersey (<http://dbpedia.org/resource/Elizabeth,_New_Jersey>)
+      - Elizabeth_River_(New_Jersey) (<http://dbpedia.org/resource/Elizabeth_River_(New_Jersey)>) --doo:mouthPlace--> Elizabeth,_New_Jersey (<http://dbpedia.org/resource/Elizabeth,_New_Jersey>)
+attributes:
+  city: --Apr low C^ (dop:aprLowC)--> double | --reason^ (dop:reason)--> langString | --aprRecordLowF (dop:aprRecordLowF)--> int
+  river: --mouth mountain^ (doo:mouthMountain)--> Resource | --source^ (dop:source)--> Resource
+  person: --spouse^ (dop:spouse)--> int | --quote^ (dop:quote)--> langString | --title^ (dop:title)--> langString | --employer^ (doo:employer)--> Resource | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+  Location: --former name^ (doo:formerName)--> langString | --title^ (dop:title)--> langString | --image^ (dop:image)--> langString
+subgraph_id: 684
+relationships:
+  - river --doo:mouthMountain--> city
+  - person --dop:birthPlace--> city
+  - river --doo:mouthPlace--> Location

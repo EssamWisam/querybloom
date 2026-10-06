@@ -1,0 +1,112 @@
+types:
+  school: doo:School
+  office holder: doo:OfficeHolder
+  military person: doo:MilitaryPerson
+  military conflict: doo:MilitaryConflict
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adam_Taliaferro: (party^='http://dbpedia.org/resource/Democratic_Party_(United_States)', before^='http://dbpedia.org/resource/Celeste_Riley')
+      Rutgers_Law_School: (type^='http://dbpedia.org/resource/Public_university')
+    relationships:
+      - Adam_Taliaferro (dor:Adam_Taliaferro) --doo:residence--> New_Jersey (dor:New_Jersey)
+      - Action_of_31_July_1793 (dor:Action_of_31_July_1793) --doo:place--> New_Jersey (dor:New_Jersey)
+      - Abraham_Krotoshinsky (dor:Abraham_Krotoshinsky) --doo:restingPlace--> New_Jersey (dor:New_Jersey)
+      - Adam_Taliaferro (dor:Adam_Taliaferro) --doo:education--> Rutgers_Law_School (dor:Rutgers_Law_School)
+  '2':
+    attributes:
+      Chris_Christie: (party^='http://dbpedia.org/resource/Republican_Party_(United_States)', before^='http://dbpedia.org/resource/Richard_Codey')
+      Seton_Hall_University_School_of_Law: (type^='http://dbpedia.org/resource/Private_school')
+    relationships:
+      - Chris_Christie (dor:Chris_Christie) --doo:residence--> New_Jersey (dor:New_Jersey)
+      - Action_of_31_July_1793 (dor:Action_of_31_July_1793) --doo:place--> New_Jersey (dor:New_Jersey)
+      - Abraham_Krotoshinsky (dor:Abraham_Krotoshinsky) --doo:restingPlace--> New_Jersey (dor:New_Jersey)
+      - Chris_Christie (dor:Chris_Christie) --doo:education--> Seton_Hall_University_School_of_Law (dor:Seton_Hall_University_School_of_Law)
+  '3':
+    attributes:
+      Seton_Hall_University_School_of_Law: (type^='http://dbpedia.org/resource/Private_school')
+    relationships:
+      - Madeline_Cox_Arleo (dor:Madeline_Cox_Arleo) --doo:residence--> New_Jersey (dor:New_Jersey)
+      - Action_of_31_July_1793 (dor:Action_of_31_July_1793) --doo:place--> New_Jersey (dor:New_Jersey)
+      - Abraham_Krotoshinsky (dor:Abraham_Krotoshinsky) --doo:restingPlace--> New_Jersey (dor:New_Jersey)
+      - Madeline_Cox_Arleo (dor:Madeline_Cox_Arleo) --doo:education--> Seton_Hall_University_School_of_Law (dor:Seton_Hall_University_School_of_Law)
+  '4':
+    attributes:
+      Texas: (url^='https://web.archive.org/web/20161209115548/https:/www2.usgs.gov/state/state.asp%3FState=TX')
+      Gregg_Costa: (party^='http://dbpedia.org/resource/Democratic_Party_(United_States)')
+      University_of_Texas_School_of_Law: (type^='http://dbpedia.org/resource/State_school')
+    relationships:
+      - Gregg_Costa (dor:Gregg_Costa) --doo:residence--> Texas (dor:Texas)
+      - Action_off_Galveston_Light (dor:Action_off_Galveston_Light) --doo:place--> Texas (dor:Texas)
+      - Beaumont_B._Buck (dor:Beaumont_B._Buck) --doo:restingPlace--> Texas (dor:Texas)
+      - Gregg_Costa (dor:Gregg_Costa) --doo:education--> University_of_Texas_School_of_Law (dor:University_of_Texas_School_of_Law)
+  '5':
+    attributes:
+      Texas: (url^='https://web.archive.org/web/20161209115548/https:/www2.usgs.gov/state/state.asp%3FState=TX')
+      James_Robertson_Nowlin: (party^='http://dbpedia.org/resource/Democratic_Party_(United_States)')
+      University_of_Texas_School_of_Law: (type^='http://dbpedia.org/resource/State_school')
+    relationships:
+      - James_Robertson_Nowlin (dor:James_Robertson_Nowlin) --doo:residence--> Texas (dor:Texas)
+      - Action_off_Galveston_Light (dor:Action_off_Galveston_Light) --doo:place--> Texas (dor:Texas)
+      - Beaumont_B._Buck (dor:Beaumont_B._Buck) --doo:restingPlace--> Texas (dor:Texas)
+      - James_Robertson_Nowlin (dor:James_Robertson_Nowlin) --doo:education--> University_of_Texas_School_of_Law (dor:University_of_Texas_School_of_Law)
+  '6':
+    attributes:
+      Gregg_Costa: (party^='http://dbpedia.org/resource/Democratic_Party_(United_States)')
+      University_of_Texas_School_of_Law: (type^='http://dbpedia.org/resource/State_school')
+    relationships:
+      - Gregg_Costa (dor:Gregg_Costa) --doo:residence--> Texas (dor:Texas)
+      - Action_off_Galveston_Light (dor:Action_off_Galveston_Light) --doo:place--> Texas (dor:Texas)
+      - Benjamin_Franklin_Bryant (dor:Benjamin_Franklin_Bryant) --doo:restingPlace--> Texas (dor:Texas)
+      - Gregg_Costa (dor:Gregg_Costa) --doo:education--> University_of_Texas_School_of_Law (dor:University_of_Texas_School_of_Law)
+  '7':
+    attributes:
+      Notre_Dame_Law_School: (type^='http://dbpedia.org/resource/Private_school')
+    relationships:
+      - John_Robert_Blakey (dor:John_Robert_Blakey) --doo:residence--> Illinois (dor:Illinois)
+      - Aldermen's_wars (<http://dbpedia.org/resource/Aldermen's_wars>) --doo:place--> Illinois (dor:Illinois)
+      - Abner_C._Harding (dor:Abner_C._Harding) --doo:restingPlace--> Illinois (dor:Illinois)
+      - John_Robert_Blakey (dor:John_Robert_Blakey) --doo:education--> Notre_Dame_Law_School (dor:Notre_Dame_Law_School)
+  '8':
+    attributes:
+      Southern_Illinois_University_School_of_Law: (type^='http://dbpedia.org/resource/Public_school_(government_funded)')
+    relationships:
+      - Nancy_J._Rosenstengel (dor:Nancy_J._Rosenstengel) --doo:residence--> Illinois (dor:Illinois)
+      - Aldermen's_wars (<http://dbpedia.org/resource/Aldermen's_wars>) --doo:place--> Illinois (dor:Illinois)
+      - Abner_C._Harding (dor:Abner_C._Harding) --doo:restingPlace--> Illinois (dor:Illinois)
+      - Nancy_J._Rosenstengel (dor:Nancy_J._Rosenstengel) --doo:education--> Southern_Illinois_University_School_of_Law (dor:Southern_Illinois_University_School_of_Law)
+  '9':
+    attributes:
+      Notre_Dame_Law_School: (type^='http://dbpedia.org/resource/Private_school')
+    relationships:
+      - John_Robert_Blakey (dor:John_Robert_Blakey) --doo:residence--> Illinois (dor:Illinois)
+      - Aldermen's_wars (<http://dbpedia.org/resource/Aldermen's_wars>) --doo:place--> Illinois (dor:Illinois)
+      - Andrew_Barclay_Spurling (dor:Andrew_Barclay_Spurling) --doo:restingPlace--> Illinois (dor:Illinois)
+      - John_Robert_Blakey (dor:John_Robert_Blakey) --doo:education--> Notre_Dame_Law_School (dor:Notre_Dame_Law_School)
+  '10':
+    attributes:
+      Chris_Minns: (party^='http://dbpedia.org/resource/Australian_Labor_Party_(New_South_Wales_Branch)')
+      Marist_College_Kogarah: (type^='http://dbpedia.org/resource/Independent_school')
+    relationships:
+      - Chris_Minns (dor:Chris_Minns) --doo:residence--> New_South_Wales (dor:New_South_Wales)
+      - Appin,_New_South_Wales__Appin_Massacre__1 (<http://dbpedia.org/resource/Appin,_New_South_Wales__Appin_Massacre__1>) --doo:place--> New_South_Wales (dor:New_South_Wales)
+      - Henry_Bachtold (dor:Henry_Bachtold) --doo:restingPlace--> New_South_Wales (dor:New_South_Wales)
+      - Chris_Minns (dor:Chris_Minns) --doo:education--> Marist_College_Kogarah (dor:Marist_College_Kogarah)
+attributes:
+  school: --type^ (doo:type)--> Resource | --opened^ (dop:opened)--> int
+  office holder: --url^ (dop:url)--> Resource | --party^ (doo:party)--> Resource | --before^ (dop:before)--> langString
+  military person: --source^ (dop:source)--> langString
+  military conflict: --footer^ (dop:footer)--> langString
+  administrative region: --administrator^ (dop:administrator)--> langString | --url^ (dop:url)--> Resource
+subgraph_id: 673
+relationships:
+  - office holder --doo:residence--> administrative region
+  - military conflict --doo:place--> administrative region
+  - military person --doo:restingPlace--> administrative region
+  - office holder --doo:education--> school

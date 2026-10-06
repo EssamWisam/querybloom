@@ -1,0 +1,120 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  figure skater: doo:FigureSkater
+  martial artist: doo:MartialArtist
+  soccer tournoment: doo:SoccerTournament
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Russia: (Link from a Wikipage to an external page^='http://www.gov.ru/index_en.html')
+      1936_Soviet_Cup: (champions^='http://dbpedia.org/resource/FC_Lokomotiv_Moscow')
+      Aleksandra_Albu: (weight (g)^='52164.0', birth date^='1990-07-14')
+    relationships:
+      - Adelina_Sotnikova (dor:Adelina_Sotnikova) --doo:residence--> Moscow (dor:Moscow)
+      - Adelina_Sotnikova (dor:Adelina_Sotnikova) --doo:residence--> Russia (dor:Russia)
+      - Aleksandra_Albu (dor:Aleksandra_Albu) --doo:residence--> Moscow (dor:Moscow)
+      - 1936_Soviet_Cup (dor:1936_Soviet_Cup) --dop:location--> Moscow (dor:Moscow)
+  '2':
+    attributes:
+      Russia: (Link from a Wikipage to an external page^='http://www.gov.ru/index_en.html')
+      Aleksandra_Albu: (weight (g)^='52164.0', birth date^='1990-07-14')
+      1991–92_Soviet_Cup: (champions^='http://dbpedia.org/resource/FC_Spartak_Moscow')
+    relationships:
+      - Adelina_Sotnikova (dor:Adelina_Sotnikova) --doo:residence--> Moscow (dor:Moscow)
+      - Adelina_Sotnikova (dor:Adelina_Sotnikova) --doo:residence--> Russia (dor:Russia)
+      - Aleksandra_Albu (dor:Aleksandra_Albu) --doo:residence--> Moscow (dor:Moscow)
+      - 1991–92_Soviet_Cup (<http://dbpedia.org/resource/1991–92_Soviet_Cup>) --dop:location--> Moscow (dor:Moscow)
+  '3':
+    attributes:
+      Russia: (Link from a Wikipage to an external page^='http://www.gov.ru/index_en.html')
+      Aleksandra_Albu: (weight (g)^='52164.0', birth date^='1990-07-14')
+      2006–07_Russian_Cup: (champions^='http://dbpedia.org/resource/FC_Lokomotiv_Moscow')
+    relationships:
+      - Adelina_Sotnikova (dor:Adelina_Sotnikova) --doo:residence--> Moscow (dor:Moscow)
+      - Adelina_Sotnikova (dor:Adelina_Sotnikova) --doo:residence--> Russia (dor:Russia)
+      - Aleksandra_Albu (dor:Aleksandra_Albu) --doo:residence--> Moscow (dor:Moscow)
+      - 2006–07_Russian_Cup (<http://dbpedia.org/resource/2006–07_Russian_Cup>) --dop:location--> Moscow (dor:Moscow)
+  '4':
+    attributes:
+      Belarus: (Link from a Wikipage to an external page^='http://belarus.by/')
+      Alexander_Ustinov: (birth date^='1976-12-07')
+      1991–92_Soviet_Cup: (champions^='http://dbpedia.org/resource/FC_Spartak_Moscow')
+    relationships:
+      - Alexander_Lebedev_(figure_skater) (<http://dbpedia.org/resource/Alexander_Lebedev_(figure_skater)>) --doo:residence--> Minsk (dor:Minsk)
+      - Alexander_Lebedev_(figure_skater) (<http://dbpedia.org/resource/Alexander_Lebedev_(figure_skater)>) --doo:residence--> Belarus (dor:Belarus)
+      - Alexander_Ustinov (dor:Alexander_Ustinov) --doo:residence--> Minsk (dor:Minsk)
+      - 1991–92_Soviet_Cup (<http://dbpedia.org/resource/1991–92_Soviet_Cup>) --dop:location--> Minsk (dor:Minsk)
+  '5':
+    attributes:
+      Belarus: (Link from a Wikipage to an external page^='http://belarus.by/')
+      Alexander_Ustinov: (birth date^='1976-12-07')
+      1999–2000_Belarusian_Cup: (champions^='')
+    relationships:
+      - Alexander_Lebedev_(figure_skater) (<http://dbpedia.org/resource/Alexander_Lebedev_(figure_skater)>) --doo:residence--> Minsk (dor:Minsk)
+      - Alexander_Lebedev_(figure_skater) (<http://dbpedia.org/resource/Alexander_Lebedev_(figure_skater)>) --doo:residence--> Belarus (dor:Belarus)
+      - Alexander_Ustinov (dor:Alexander_Ustinov) --doo:residence--> Minsk (dor:Minsk)
+      - 1999–2000_Belarusian_Cup (<http://dbpedia.org/resource/1999–2000_Belarusian_Cup>) --dop:location--> Minsk (dor:Minsk)
+  '6':
+    attributes:
+      Belarus: (Link from a Wikipage to an external page^='http://belarus.by/')
+      Alexander_Ustinov: (birth date^='1976-12-07')
+      2000–01_Belarusian_Cup: (champions^='')
+    relationships:
+      - Alexander_Lebedev_(figure_skater) (<http://dbpedia.org/resource/Alexander_Lebedev_(figure_skater)>) --doo:residence--> Minsk (dor:Minsk)
+      - Alexander_Lebedev_(figure_skater) (<http://dbpedia.org/resource/Alexander_Lebedev_(figure_skater)>) --doo:residence--> Belarus (dor:Belarus)
+      - Alexander_Ustinov (dor:Alexander_Ustinov) --doo:residence--> Minsk (dor:Minsk)
+      - 2000–01_Belarusian_Cup (<http://dbpedia.org/resource/2000–01_Belarusian_Cup>) --dop:location--> Minsk (dor:Minsk)
+  '7':
+    attributes:
+      Sweden: (Link from a Wikipage to an external page^='http://wits.worldbank.org/CountryProfile/Country/SWE/Year/2012/Summary')
+      Alexander_Gustafsson: (weight (g)^='92988.0', birth date^='1987-01-15')
+    relationships:
+      - Amanda_Nylander (dor:Amanda_Nylander) --doo:residence--> Stockholm (dor:Stockholm)
+      - Amanda_Nylander (dor:Amanda_Nylander) --doo:residence--> Sweden (dor:Sweden)
+      - Alexander_Gustafsson (dor:Alexander_Gustafsson) --doo:residence--> Stockholm (dor:Stockholm)
+      - 1933–36_Nordic_Football_Championship (<http://dbpedia.org/resource/1933–36_Nordic_Football_Championship>) --dop:location--> Stockholm (dor:Stockholm)
+  '8':
+    attributes:
+      Sweden: (Link from a Wikipage to an external page^='http://wits.worldbank.org/CountryProfile/Country/SWE/Year/2012/Summary')
+      Alexander_Gustafsson: (weight (g)^='92988.0', birth date^='1987-01-15')
+    relationships:
+      - Amanda_Nylander (dor:Amanda_Nylander) --doo:residence--> Stockholm (dor:Stockholm)
+      - Amanda_Nylander (dor:Amanda_Nylander) --doo:residence--> Sweden (dor:Sweden)
+      - Alexander_Gustafsson (dor:Alexander_Gustafsson) --doo:residence--> Stockholm (dor:Stockholm)
+      - 1934_FIFA_World_Cup_qualification (dor:1934_FIFA_World_Cup_qualification) --dop:location--> Stockholm (dor:Stockholm)
+  '9':
+    attributes:
+      Sweden: (Link from a Wikipage to an external page^='http://wits.worldbank.org/CountryProfile/Country/SWE/Year/2012/Summary')
+      Alexander_Gustafsson: (weight (g)^='92988.0', birth date^='1987-01-15')
+    relationships:
+      - Amanda_Nylander (dor:Amanda_Nylander) --doo:residence--> Stockholm (dor:Stockholm)
+      - Amanda_Nylander (dor:Amanda_Nylander) --doo:residence--> Sweden (dor:Sweden)
+      - Alexander_Gustafsson (dor:Alexander_Gustafsson) --doo:residence--> Stockholm (dor:Stockholm)
+      - 1950_FIFA_World_Cup_qualification (dor:1950_FIFA_World_Cup_qualification) --dop:location--> Stockholm (dor:Stockholm)
+  '10':
+    attributes:
+      Seoul: (government type^='http://dbpedia.org/resource/Mayor–council_government')
+      South_Korea: (Link from a Wikipage to an external page^='http://english.visitkorea.or.kr/enu/index.kto')
+      Dong_Hyun_Kim__Dong-hyun__1: (birth date^='1981-11-17')
+    relationships:
+      - An_Geon-hyeong (dor:An_Geon-hyeong) --doo:residence--> Seoul (dor:Seoul)
+      - An_Geon-hyeong (dor:An_Geon-hyeong) --doo:residence--> South_Korea (dor:South_Korea)
+      - Dong_Hyun_Kim__Dong-hyun__1 (dor:Dong_Hyun_Kim__Dong-hyun__1) --doo:residence--> Seoul (dor:Seoul)
+      - 1978_FIFA_World_Cup_qualification_(AFC_and_OFC) (<http://dbpedia.org/resource/1978_FIFA_World_Cup_qualification_(AFC_and_OFC)>) --dop:location--> Seoul (dor:Seoul)
+attributes:
+  city: --Apr record low F^ (dop:aprRecordLowF)--> int | --government type^ (doo:governmentType)--> Resource
+  Location: --abolished^ (dop:abolished)--> int | --1y^ (dop:1y)--> int | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --bgcolor^ (dop:bgcolor)--> langString
+  martial artist: --weight (g)^ (doo:weight)--> double | --birth date^ (doo:birthDate)--> date
+  soccer tournoment: --champions^ (dop:champions)--> int
+subgraph_id: 855
+relationships:
+  - figure skater --doo:residence--> city
+  - figure skater --doo:residence--> Location
+  - martial artist --doo:residence--> city
+  - soccer tournoment --dop:location--> city

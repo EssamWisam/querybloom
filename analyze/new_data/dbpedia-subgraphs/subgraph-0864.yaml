@@ -1,0 +1,48 @@
+types:
+  park: doo:Park
+  road: doo:Road
+  river: doo:River
+  artist: doo:Artist
+  country: doo:Country
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Adams_Lake_Provincial_Park__BritishColumbia-park-stub__1 (dor:Adams_Lake_Provincial_Park__BritishColumbia-park-stub__1) --doo:locatedInArea--> British_Columbia (dor:British_Columbia)
+      - Bell-Irving_River (dor:Bell-Irving_River) --doo:mouthMountain--> British_Columbia (dor:British_Columbia)
+      - Beau_Dick (dor:Beau_Dick) --doo:deathPlace--> British_Columbia (dor:British_Columbia)
+      - Alberta_Highway_1 (dor:Alberta_Highway_1) --doo:routeStart--> British_Columbia (dor:British_Columbia)
+      - Bell-Irving_River (dor:Bell-Irving_River) --dop:source--> Klappan_Range (dor:Klappan_Range)
+  '2':
+    attributes: {}
+    relationships:
+      - Adams_Lake_Provincial_Park__BritishColumbia-park-stub__1 (dor:Adams_Lake_Provincial_Park__BritishColumbia-park-stub__1) --doo:locatedInArea--> British_Columbia (dor:British_Columbia)
+      - Bell-Irving_River (dor:Bell-Irving_River) --doo:mouthMountain--> British_Columbia (dor:British_Columbia)
+      - Beau_Dick (dor:Beau_Dick) --doo:deathPlace--> British_Columbia (dor:British_Columbia)
+      - Alberta_Highway_16 (dor:Alberta_Highway_16) --doo:routeStart--> British_Columbia (dor:British_Columbia)
+      - Bell-Irving_River (dor:Bell-Irving_River) --dop:source--> Klappan_Range (dor:Klappan_Range)
+  '3':
+    attributes: {}
+    relationships:
+      - Adams_Lake_Provincial_Park__BritishColumbia-park-stub__1 (dor:Adams_Lake_Provincial_Park__BritishColumbia-park-stub__1) --doo:locatedInArea--> British_Columbia (dor:British_Columbia)
+      - Bell-Irving_River (dor:Bell-Irving_River) --doo:mouthMountain--> British_Columbia (dor:British_Columbia)
+      - Beau_Dick (dor:Beau_Dick) --doo:deathPlace--> British_Columbia (dor:British_Columbia)
+      - Alberta_Highway_3 (dor:Alberta_Highway_3) --doo:routeStart--> British_Columbia (dor:British_Columbia)
+      - Bell-Irving_River (dor:Bell-Irving_River) --dop:source--> Klappan_Range (dor:Klappan_Range)
+attributes:
+  road: --building end date^ (doo:buildingEndDate)--> string
+  artist: --known for^ (dop:knownFor)--> Resource | --alma mater^ (dop:almaMater)--> langString | --known for^ (dop:knownFor)--> langString | --spouse^ (dop:spouse)--> langString
+  Location: --area^ (dop:area)--> int | --number of wineries^ (doo:numberOfWineries)--> int | --bgcolor^ (dop:bgcolor)--> langString | --architecture^ (dop:architecture)--> langString | --width^ (dop:width)--> langString | --line^ (dop:line)--> int | --Aug precipitation inch^ (dop:augPrecipitationInch)--> int | --image upright^ (dop:imageUpright)--> double
+subgraph_id: 864
+relationships:
+  - park --doo:locatedInArea--> country
+  - river --doo:mouthMountain--> country
+  - artist --doo:deathPlace--> country
+  - road --doo:routeStart--> country
+  - river --dop:source--> Location

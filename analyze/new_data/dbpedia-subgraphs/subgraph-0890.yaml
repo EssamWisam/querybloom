@@ -1,0 +1,48 @@
+types:
+  album: doo:Album
+  person: doo:Person
+  country: doo:Country
+  cyclist: doo:Cyclist
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - A_Son_of_the_Sun_(album) (<http://dbpedia.org/resource/A_Son_of_the_Sun_(album)>) --dop:producer--> Nujabes (dor:Nujabes)
+      - Nujabes (dor:Nujabes) --doo:deathPlace--> Japan (dor:Japan)
+      - Akifumi_Sakamoto (dor:Akifumi_Sakamoto) --dop:birthPlace--> Japan (dor:Japan)
+      - Nujabes (dor:Nujabes) --dop:instruments--> Drum_machine (dor:Drum_machine)
+      - A_Son_of_the_Sun_(album) (<http://dbpedia.org/resource/A_Son_of_the_Sun_(album)>) --dop:producer--> Uyama_Hiroto (dor:Uyama_Hiroto)
+  '2':
+    attributes: {}
+    relationships:
+      - A_Son_of_the_Sun_(album) (<http://dbpedia.org/resource/A_Son_of_the_Sun_(album)>) --dop:producer--> Nujabes (dor:Nujabes)
+      - Nujabes (dor:Nujabes) --doo:deathPlace--> Japan (dor:Japan)
+      - Akifumi_Sakamoto (dor:Akifumi_Sakamoto) --dop:birthPlace--> Japan (dor:Japan)
+      - Nujabes (dor:Nujabes) --dop:instruments--> Sampler_(musical_instrument) (<http://dbpedia.org/resource/Sampler_(musical_instrument)>)
+      - A_Son_of_the_Sun_(album) (<http://dbpedia.org/resource/A_Son_of_the_Sun_(album)>) --dop:producer--> Uyama_Hiroto (dor:Uyama_Hiroto)
+  '3':
+    attributes: {}
+    relationships:
+      - A_Son_of_the_Sun_(album) (<http://dbpedia.org/resource/A_Son_of_the_Sun_(album)>) --dop:producer--> Nujabes (dor:Nujabes)
+      - Nujabes (dor:Nujabes) --doo:deathPlace--> Japan (dor:Japan)
+      - Akifumi_Sakamoto (dor:Akifumi_Sakamoto) --dop:birthPlace--> Japan (dor:Japan)
+      - Nujabes (dor:Nujabes) --dop:instruments--> Turntablism (dor:Turntablism)
+      - A_Son_of_the_Sun_(album) (<http://dbpedia.org/resource/A_Son_of_the_Sun_(album)>) --dop:producer--> Uyama_Hiroto (dor:Uyama_Hiroto)
+attributes:
+  person: --spouse^ (doo:spouse)--> Resource | --url^ (dop:url)--> Resource | --reason^ (dop:reason)--> langString | --differentFrom (wwoo:differentFrom)--> Resource | --bot^ (dop:bot)--> langString | --date (dop:date)--> langString | --quote^ (dop:quote)--> langString
+  musical artist: --d^ (dop:d)--> langString | --spouse^ (dop:spouse)--> int
+subgraph_id: 890
+relationships:
+  - album --dop:producer--> musical artist
+  - musical artist --doo:deathPlace--> country
+  - cyclist --dop:birthPlace--> country
+  - musical artist --dop:instruments--> music genre
+  - album --dop:producer--> person

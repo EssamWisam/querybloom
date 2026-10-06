@@ -1,0 +1,94 @@
+types:
+  person: doo:Person
+  politician: doo:Politician
+  philosopher: doo:Philosopher
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adam_Smith: (notable works^='', by^='yes')
+      Oliver_Cromwell: (predecessor^='Thomas Purchase')
+    relationships:
+      - Algernon_Sidney__Algernon_Sidney__1 (dor:Algernon_Sidney__Algernon_Sidney__1) --doo:region--> Western_philosophy (dor:Western_philosophy)
+      - Algernon_Sidney__Algernon_Sidney__1 (dor:Algernon_Sidney__Algernon_Sidney__1) --doo:influencedBy--> Oliver_Cromwell (dor:Oliver_Cromwell)
+      - Algernon_Sidney__Algernon_Sidney__1 (dor:Algernon_Sidney__Algernon_Sidney__1) --doo:influenced--> Adam_Smith (dor:Adam_Smith)
+  '2':
+    attributes:
+      Oliver_Cromwell: (predecessor^='Thomas Purchase')
+      Alexander_Hamilton: (by^='yes')
+    relationships:
+      - Algernon_Sidney__Algernon_Sidney__1 (dor:Algernon_Sidney__Algernon_Sidney__1) --doo:region--> Western_philosophy (dor:Western_philosophy)
+      - Algernon_Sidney__Algernon_Sidney__1 (dor:Algernon_Sidney__Algernon_Sidney__1) --doo:influencedBy--> Oliver_Cromwell (dor:Oliver_Cromwell)
+      - Algernon_Sidney__Algernon_Sidney__1 (dor:Algernon_Sidney__Algernon_Sidney__1) --doo:influenced--> Alexander_Hamilton (dor:Alexander_Hamilton)
+  '3':
+    attributes:
+      Charles_Darwin: (known for^='', by^='yes')
+      Oliver_Cromwell: (predecessor^='Thomas Purchase')
+    relationships:
+      - Algernon_Sidney__Algernon_Sidney__1 (dor:Algernon_Sidney__Algernon_Sidney__1) --doo:region--> Western_philosophy (dor:Western_philosophy)
+      - Algernon_Sidney__Algernon_Sidney__1 (dor:Algernon_Sidney__Algernon_Sidney__1) --doo:influencedBy--> Oliver_Cromwell (dor:Oliver_Cromwell)
+      - Algernon_Sidney__Algernon_Sidney__1 (dor:Algernon_Sidney__Algernon_Sidney__1) --doo:influenced--> Charles_Darwin (dor:Charles_Darwin)
+  '4':
+    attributes:
+      Thomas_Jefferson: (predecessor^='Office established')
+    relationships:
+      - Benjamin_Tucker (dor:Benjamin_Tucker) --doo:region--> American_philosophy (dor:American_philosophy)
+      - Benjamin_Tucker (dor:Benjamin_Tucker) --doo:influencedBy--> Thomas_Jefferson (dor:Thomas_Jefferson)
+      - Benjamin_Tucker (dor:Benjamin_Tucker) --doo:influenced--> Émile_Armand (<http://dbpedia.org/resource/Émile_Armand>)
+  '5':
+    attributes:
+      Thomas_Jefferson: (predecessor^='Office established')
+    relationships:
+      - Benjamin_Tucker (dor:Benjamin_Tucker) --doo:region--> American_philosophy (dor:American_philosophy)
+      - Benjamin_Tucker (dor:Benjamin_Tucker) --doo:influencedBy--> Thomas_Jefferson (dor:Thomas_Jefferson)
+      - Benjamin_Tucker (dor:Benjamin_Tucker) --doo:influenced--> John_Henry_Mackay (dor:John_Henry_Mackay)
+  '6':
+    attributes:
+      Lev_Chernyi: (known for^='Revolutionary anarchism')
+      Thomas_Jefferson: (predecessor^='Office established')
+    relationships:
+      - Benjamin_Tucker (dor:Benjamin_Tucker) --doo:region--> American_philosophy (dor:American_philosophy)
+      - Benjamin_Tucker (dor:Benjamin_Tucker) --doo:influencedBy--> Thomas_Jefferson (dor:Thomas_Jefferson)
+      - Benjamin_Tucker (dor:Benjamin_Tucker) --doo:influenced--> Lev_Chernyi (dor:Lev_Chernyi)
+  '7':
+    attributes:
+      Alexis_de_Tocqueville: (after^='http://dbpedia.org/resource/Alphonse_de_Rayneval', predecessor^='Jules Polydore Le Marois')
+    relationships:
+      - Bertrand_de_Jouvenel (dor:Bertrand_de_Jouvenel) --doo:region--> Western_Philosophy (dor:Western_Philosophy)
+      - Bertrand_de_Jouvenel (dor:Bertrand_de_Jouvenel) --doo:influencedBy--> Alexis_de_Tocqueville (dor:Alexis_de_Tocqueville)
+      - Bertrand_de_Jouvenel (dor:Bertrand_de_Jouvenel) --doo:influenced--> Raymond_Aron (dor:Raymond_Aron)
+  '8':
+    attributes:
+      Charles_Hodge: (after^='The Rev. James Henley Thornwell', predecessor^='http://dbpedia.org/resource/Archibald_Alexander')
+    relationships:
+      - Gordon_Clark (dor:Gordon_Clark) --doo:region--> Western_Philosophy (dor:Western_Philosophy)
+      - Gordon_Clark (dor:Gordon_Clark) --doo:influencedBy--> Charles_Hodge (dor:Charles_Hodge)
+      - Gordon_Clark (dor:Gordon_Clark) --doo:influenced--> Edward_John_Carnell (dor:Edward_John_Carnell)
+  '9':
+    attributes:
+      Charles_Hodge: (after^='The Rev. James Henley Thornwell', predecessor^='http://dbpedia.org/resource/Archibald_Alexander')
+    relationships:
+      - Gordon_Clark (dor:Gordon_Clark) --doo:region--> Western_Philosophy (dor:Western_Philosophy)
+      - Gordon_Clark (dor:Gordon_Clark) --doo:influencedBy--> Charles_Hodge (dor:Charles_Hodge)
+      - Gordon_Clark (dor:Gordon_Clark) --doo:influenced--> John_Gerstner (dor:John_Gerstner)
+  '10':
+    attributes:
+      David_Ricardo: (predecessor^='http://dbpedia.org/resource/Richard_Sharp_(politician)')
+    relationships:
+      - James_Mill (dor:James_Mill) --doo:region--> British_philosophy (dor:British_philosophy)
+      - James_Mill (dor:James_Mill) --doo:influencedBy--> David_Ricardo (dor:David_Ricardo)
+      - James_Mill (dor:James_Mill) --doo:influenced--> Franz_Brentano (dor:Franz_Brentano)
+attributes:
+  person: --notable works^ (dop:notableWorks)--> Resource | --employer^ (dop:employer)--> Resource | --known for^ (dop:knownFor)--> int | --by^ (dop:by)--> langString
+  politician: --after^ (dop:after)--> langString | --image upright^ (dop:imageUpright)--> double | --award^ (doo:award)--> Resource | --predecessor^ (dop:predecessor)--> Resource
+  administrative region: --Center^ (dop:center)--> langString
+subgraph_id: 105
+relationships:
+  - philosopher --doo:region--> administrative region
+  - philosopher --doo:influencedBy--> politician
+  - philosopher --doo:influenced--> person

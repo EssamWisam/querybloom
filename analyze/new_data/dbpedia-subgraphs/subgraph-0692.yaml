@@ -1,0 +1,120 @@
+types:
+  company: doo:Company
+  country: doo:Country
+  record label: doo:RecordLabel
+  musical artist: doo:MusicalArtist
+  ice hockey player: doo:IceHockeyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Finland: (caption^='12')
+      Isac_Elliot: (subject='http://dbpedia.org/resource/Category:2000_births')
+      Sony_Entertainment: (subject='http://dbpedia.org/resource/Category:2012_establishments_in_New_York_City')
+    relationships:
+      - Aatu_Hämäläinen (<http://dbpedia.org/resource/Aatu_Hämäläinen>) --dop:birthPlace--> Finland (dor:Finland)
+      - Isac_Elliot (dor:Isac_Elliot) --dop:birthPlace--> Finland (dor:Finland)
+      - Isac_Elliot (dor:Isac_Elliot) --doo:recordLabel--> Sony_Music (dor:Sony_Music)
+      - Sony_Music (dor:Sony_Music) --doo:parentCompany--> Sony_Entertainment (dor:Sony_Entertainment)
+  '2':
+    attributes:
+      Finland: (caption^='12')
+      Kari_Peitsamo: (subject='http://dbpedia.org/resource/Category:1957_births', instrument^='http://dbpedia.org/resource/Bass_guitar')
+      Universal_Music_Group: (subject='http://dbpedia.org/resource/Category:1934_establishments_in_California')
+    relationships:
+      - Aatu_Hämäläinen (<http://dbpedia.org/resource/Aatu_Hämäläinen>) --dop:birthPlace--> Finland (dor:Finland)
+      - Kari_Peitsamo (dor:Kari_Peitsamo) --dop:birthPlace--> Finland (dor:Finland)
+      - Kari_Peitsamo (dor:Kari_Peitsamo) --doo:recordLabel--> The_Rocket_Record_Company (dor:The_Rocket_Record_Company)
+      - The_Rocket_Record_Company (dor:The_Rocket_Record_Company) --doo:parentCompany--> Universal_Music_Group (dor:Universal_Music_Group)
+  '3':
+    attributes:
+      Finland: (caption^='12')
+      Kuningas_Pähkinä: (subject='http://dbpedia.org/resource/Category:Finnish_rappers')
+      Warner_Music_Group: (subject='http://dbpedia.org/resource/Category:1958_establishments_in_New_York_(state)')
+    relationships:
+      - Aatu_Hämäläinen (<http://dbpedia.org/resource/Aatu_Hämäläinen>) --dop:birthPlace--> Finland (dor:Finland)
+      - Kuningas_Pähkinä (<http://dbpedia.org/resource/Kuningas_Pähkinä>) --dop:birthPlace--> Finland (dor:Finland)
+      - Kuningas_Pähkinä (<http://dbpedia.org/resource/Kuningas_Pähkinä>) --doo:recordLabel--> Monsp_Records (dor:Monsp_Records)
+      - Monsp_Records (dor:Monsp_Records) --doo:parentCompany--> Warner_Music_Group (dor:Warner_Music_Group)
+  '4':
+    attributes:
+      Canada: (caption^='French version of the poster roughly translates as "They serve France–Everyone can serve; Buy Victory Bonds".')
+      Quebecor: (subject='http://dbpedia.org/resource/Category:1965_establishments_in_Quebec')
+      Jason_Bajada: (subject='http://dbpedia.org/resource/Category:21st-century_Canadian_male_singers', instrument^='Vocals, guitar, piano')
+    relationships:
+      - Adam_Bennett (dor:Adam_Bennett) --dop:birthPlace--> Canada (dor:Canada)
+      - Jason_Bajada (dor:Jason_Bajada) --dop:birthPlace--> Canada (dor:Canada)
+      - Jason_Bajada (dor:Jason_Bajada) --doo:recordLabel--> Audiogram_(label) (<http://dbpedia.org/resource/Audiogram_(label)>)
+      - Audiogram_(label) (<http://dbpedia.org/resource/Audiogram_(label)>) --doo:parentCompany--> Quebecor (dor:Quebecor)
+  '5':
+    attributes:
+      Canada: (caption^='French version of the poster roughly translates as "They serve France–Everyone can serve; Buy Victory Bonds".')
+      Jason_Bajada: (subject='http://dbpedia.org/resource/Category:21st-century_Canadian_male_singers', instrument^='Vocals, guitar, piano')
+      MapleCore_Ltd.: (subject='http://dbpedia.org/resource/Category:2002_establishments_in_Ontario')
+    relationships:
+      - Adam_Bennett (dor:Adam_Bennett) --dop:birthPlace--> Canada (dor:Canada)
+      - Jason_Bajada (dor:Jason_Bajada) --dop:birthPlace--> Canada (dor:Canada)
+      - Jason_Bajada (dor:Jason_Bajada) --doo:recordLabel--> MapleMusic_Recordings (dor:MapleMusic_Recordings)
+      - MapleMusic_Recordings (dor:MapleMusic_Recordings) --doo:parentCompany--> MapleCore_Ltd. (<http://dbpedia.org/resource/MapleCore_Ltd.>)
+  '6':
+    attributes:
+      Canada: (caption^='French version of the poster roughly translates as "They serve France–Everyone can serve; Buy Victory Bonds".')
+      Moe_Koffman: (subject='http://dbpedia.org/resource/Category:1928_births', instrument^='Saxophone, flute')
+      Disney_Music_Group: (subject='http://dbpedia.org/resource/Category:1956_establishments_in_California')
+    relationships:
+      - Adam_Bennett (dor:Adam_Bennett) --dop:birthPlace--> Canada (dor:Canada)
+      - Moe_Koffman (dor:Moe_Koffman) --dop:birthPlace--> Canada (dor:Canada)
+      - Moe_Koffman (dor:Moe_Koffman) --doo:recordLabel--> GRT_Records (dor:GRT_Records)
+      - GRT_Records (dor:GRT_Records) --doo:parentCompany--> Disney_Music_Group (dor:Disney_Music_Group)
+  '7':
+    attributes:
+      Albin_Johnsén: (subject='http://dbpedia.org/resource/Category:1989_births')
+      Universal_Music_Group: (subject='http://dbpedia.org/resource/Category:1934_establishments_in_California')
+    relationships:
+      - Adam_Bergendahl (dor:Adam_Bergendahl) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Albin_Johnsén (<http://dbpedia.org/resource/Albin_Johnsén>) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Albin_Johnsén (<http://dbpedia.org/resource/Albin_Johnsén>) --doo:recordLabel--> Capitol_Music_Group_Sweden (dor:Capitol_Music_Group_Sweden)
+      - Capitol_Music_Group_Sweden (dor:Capitol_Music_Group_Sweden) --doo:parentCompany--> Universal_Music_Group (dor:Universal_Music_Group)
+  '8':
+    attributes:
+      Amwin: (subject='http://dbpedia.org/resource/Category:1996_births')
+      Universal_Music_Group: (subject='http://dbpedia.org/resource/Category:1934_establishments_in_California')
+    relationships:
+      - Adam_Bergendahl (dor:Adam_Bergendahl) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Amwin (dor:Amwin) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Amwin (dor:Amwin) --doo:recordLabel--> Island_Records (dor:Island_Records)
+      - Island_Records (dor:Island_Records) --doo:parentCompany--> Universal_Music_Group (dor:Universal_Music_Group)
+  '9':
+    attributes:
+      Sony_Music: (subject='http://dbpedia.org/resource/Category:American_companies_established_in_1929', owner^='')
+      Beatrice_Eli: (subject='http://dbpedia.org/resource/Category:1987_births')
+    relationships:
+      - Adam_Bergendahl (dor:Adam_Bergendahl) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Beatrice_Eli (dor:Beatrice_Eli) --dop:birthPlace--> Sweden (dor:Sweden)
+      - Beatrice_Eli (dor:Beatrice_Eli) --doo:recordLabel--> Epic_Records (dor:Epic_Records)
+      - Epic_Records (dor:Epic_Records) --doo:parentCompany--> Sony_Music (dor:Sony_Music)
+  '10':
+    attributes:
+      Poland: (caption^='(President)')
+      Warner_Music_Group: (subject='http://dbpedia.org/resource/Category:1958_establishments_in_New_York_(state)')
+      Andrzej_Zaucha_(singer): (subject='http://dbpedia.org/resource/Category:1949_births', instrument^='http://dbpedia.org/resource/Drum_kit')
+    relationships:
+      - Adam_Borzecki (dor:Adam_Borzecki) --dop:birthPlace--> Poland (dor:Poland)
+      - Andrzej_Zaucha_(singer) (<http://dbpedia.org/resource/Andrzej_Zaucha_(singer)>) --dop:birthPlace--> Poland (dor:Poland)
+      - Andrzej_Zaucha_(singer) (<http://dbpedia.org/resource/Andrzej_Zaucha_(singer)>) --doo:recordLabel--> Polskie_Nagrania_Muza (dor:Polskie_Nagrania_Muza)
+      - Polskie_Nagrania_Muza (dor:Polskie_Nagrania_Muza) --doo:parentCompany--> Warner_Music_Group (dor:Warner_Music_Group)
+attributes:
+  company: --caption^ (dop:caption)--> langString | --subject (podt:subject)--> Resource | --owner^ (dop:owner)--> langString | --altname^ (dop:altname)--> langString
+  country: --founding year^ (doo:foundingYear)--> gYear | --caption^ (dop:caption)--> langString
+  musical artist: --footer^ (dop:footer)--> langString | --before^ (dop:before)--> langString | --subject (podt:subject)--> Resource | --instrument^ (dop:instrument)--> langString
+subgraph_id: 692
+relationships:
+  - ice hockey player --dop:birthPlace--> country
+  - musical artist --dop:birthPlace--> country
+  - musical artist --doo:recordLabel--> record label
+  - record label --doo:parentCompany--> company

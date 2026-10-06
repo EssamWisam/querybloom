@@ -1,0 +1,75 @@
+types:
+  Location: doo:Location
+  settlement: doo:Settlement
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Northampton: (Apr precipitation mm^='46.9')
+      Delia_Derbyshire: (url^='https://web.archive.org/web/20060517133312/http:/www.sonicartsnetwork.org/ARTICLES/ARTICLE2000JoHutton.html')
+    relationships:
+      - Abington_Vale (dor:Abington_Vale) --doo:district--> Northampton (dor:Northampton)
+      - Delia_Derbyshire (dor:Delia_Derbyshire) --doo:deathPlace--> Northampton (dor:Northampton)
+  '2':
+    attributes:
+      Northampton: (Apr precipitation mm^='46.9')
+      Delia_Derbyshire: (url^='https://web.archive.org/web/20060517133312/http:/www.sonicartsnetwork.org/ARTICLES/ARTICLE2000JoHutton.html')
+    relationships:
+      - Abington,_Northamptonshire (<http://dbpedia.org/resource/Abington,_Northamptonshire>) --doo:district--> Northampton (dor:Northampton)
+      - Delia_Derbyshire (dor:Delia_Derbyshire) --doo:deathPlace--> Northampton (dor:Northampton)
+  '3':
+    attributes:
+      Kassel: (Apr precipitation mm^='50', Apr record high C^='30.1')
+    relationships:
+      - Ahnatal (dor:Ahnatal) --doo:district--> Kassel (dor:Kassel)
+      - Yevgeny_Malinin (dor:Yevgeny_Malinin) --doo:deathPlace--> Kassel (dor:Kassel)
+  '4':
+    attributes: {}
+    relationships:
+      - Albaching (dor:Albaching) --doo:district--> Rosenheim (dor:Rosenheim)
+      - Ray_Manzarek (dor:Ray_Manzarek) --doo:deathPlace--> Rosenheim (dor:Rosenheim)
+  '5':
+    attributes:
+      Gosport: (Apr precipitation mm^='42.4', subdivision^='http://dbpedia.org/resource/Hampshire')
+    relationships:
+      - Alverstoke (dor:Alverstoke) --doo:district--> Gosport (dor:Gosport)
+      - Nat_Gonella (dor:Nat_Gonella) --doo:deathPlace--> Gosport (dor:Gosport)
+  '6':
+    attributes: {}
+    relationships:
+      - Alzenau (dor:Alzenau) --doo:district--> Aschaffenburg (dor:Aschaffenburg)
+      - Jörg_Mager (<http://dbpedia.org/resource/Jörg_Mager>) --doo:deathPlace--> Aschaffenburg (dor:Aschaffenburg)
+  '7':
+    attributes:
+      Lassen_County,_California: (named for^='http://dbpedia.org/resource/Peter_Lassen', subdivision^='http://dbpedia.org/resource/California')
+    relationships:
+      - Amedee_Mountains (dor:Amedee_Mountains) --doo:district--> Lassen_County,_California (<http://dbpedia.org/resource/Lassen_County,_California>)
+      - Freddy_Nagel (dor:Freddy_Nagel) --doo:deathPlace--> Lassen_County,_California (<http://dbpedia.org/resource/Lassen_County,_California>)
+  '8':
+    attributes: {}
+    relationships:
+      - Andechs (dor:Andechs) --doo:district--> Starnberg_(district) (<http://dbpedia.org/resource/Starnberg_(district)>)
+      - Heinz_Kiessling (dor:Heinz_Kiessling) --doo:deathPlace--> Starnberg_(district) (<http://dbpedia.org/resource/Starnberg_(district)>)
+  '9':
+    attributes: {}
+    relationships:
+      - Antelope_Hills,_Oklahoma (<http://dbpedia.org/resource/Antelope_Hills,_Oklahoma>) --doo:district--> Oklahoma (dor:Oklahoma)
+      - Clyde_Stacy (dor:Clyde_Stacy) --doo:deathPlace--> Oklahoma (dor:Oklahoma)
+  '10':
+    attributes: {}
+    relationships:
+      - Antelope_Hills,_Oklahoma (<http://dbpedia.org/resource/Antelope_Hills,_Oklahoma>) --doo:district--> Oklahoma (dor:Oklahoma)
+      - D.C._Minner (dor:D.C._Minner) --doo:deathPlace--> Oklahoma (dor:Oklahoma)
+attributes:
+  Location: --group^ (dop:group)--> Resource | --architecture^ (dop:architecture)--> Resource | --discoverer^ (doo:discoverer)--> Resource
+  settlement: --named for^ (dop:namedFor)--> Resource | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --subdivision^ (doo:subdivision)--> Resource | --Apr record high C^ (dop:aprRecordHighC)--> int
+  musical artist: --bot^ (dop:bot)--> langString | --before^ (dop:before)--> langString | --footer^ (dop:footer)--> langString | --url^ (dop:url)--> Resource
+subgraph_id: 151
+relationships:
+  - Location --doo:district--> settlement
+  - musical artist --doo:deathPlace--> settlement

@@ -1,0 +1,97 @@
+types:
+  single: doo:Single
+  musical artist: doo:MusicalArtist
+  television episode: doo:TelevisionEpisode
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dorm: http://dbpedia.org/resource/MIA/
+instances:
+  '1':
+    attributes:
+      NYC_NonStop: (writer^='http://dbpedia.org/resource/Ann_Donahue')
+      Clint_Mansell: (birth date^='1963-01-07')
+      3_Kings_(song): (genre^='http://dbpedia.org/resource/Crunk', release date^='2005-02-18')
+    relationships:
+      - 3_Kings_(song) (<http://dbpedia.org/resource/3_Kings_(song)>) --doo:writer--> Clint_Mansell (dor:Clint_Mansell)
+      - NYC_NonStop (dorm:NYC_NonStop) --dop:music--> Clint_Mansell (dor:Clint_Mansell)
+  '2':
+    attributes:
+      A_Boy_Like_That: (genre^='', release date^='1996-04-02')
+      Stephen_Sondheim: (birth place^='New York City, U.S.', birth date^='1930-03-22', active years end year^='2021')
+      Evening_Primrose_(ABC_Stage_67): (writer^='http://dbpedia.org/resource/James_Goldman')
+    relationships:
+      - A_Boy_Like_That (dor:A_Boy_Like_That) --doo:writer--> Stephen_Sondheim (dor:Stephen_Sondheim)
+      - Evening_Primrose_(ABC_Stage_67) (<http://dbpedia.org/resource/Evening_Primrose_(ABC_Stage_67)>) --dop:music--> Stephen_Sondheim (dor:Stephen_Sondheim)
+  '3':
+    attributes:
+      Sammy_Fain: (birth place^='New York City, New York, United States', birth date^='1902-06-17')
+      A_Certain_Smile_(song): (genre^='http://dbpedia.org/resource/Popular_music')
+    relationships:
+      - A_Certain_Smile_(song) (<http://dbpedia.org/resource/A_Certain_Smile_(song)>) --doo:writer--> Sammy_Fain (dor:Sammy_Fain)
+      - A_Disney_Christmas_Gift (dor:A_Disney_Christmas_Gift) --dop:music--> Sammy_Fain (dor:Sammy_Fain)
+  '4':
+    attributes:
+      Alex_North: (birth place^='Chester, Pennsylvania, U.S.', birth date^='1910-12-04')
+      Aishiteru_(Ken_Hirai_song): (genre^='http://dbpedia.org/resource/Contemporary_R&B', release date^='2010-11-10', lyrics^='Hirai')
+      Days_of_Wine_and_Roses_(Playhouse_90): (writer^='http://dbpedia.org/resource/JP_Miller')
+    relationships:
+      - Aishiteru_(Ken_Hirai_song) (<http://dbpedia.org/resource/Aishiteru_(Ken_Hirai_song)>) --doo:writer--> Alex_North (dor:Alex_North)
+      - Days_of_Wine_and_Roses_(Playhouse_90) (<http://dbpedia.org/resource/Days_of_Wine_and_Roses_(Playhouse_90)>) --dop:music--> Alex_North (dor:Alex_North)
+  '5':
+    attributes:
+      Bob_Dylan: (birth place^='Duluth, Minnesota, U.S.', birth date^='1941-05-24')
+      All_Along_the_Watchtower: (genre^='http://dbpedia.org/resource/Folk_rock', release date^='1967-12-27', recorded in^='http://dbpedia.org/resource/Quonset_Hut_Studio')
+      Made_in_America_(The_Sopranos): (writer^='David Chase')
+    relationships:
+      - All_Along_the_Watchtower (dor:All_Along_the_Watchtower) --doo:writer--> Bob_Dylan (dor:Bob_Dylan)
+      - Made_in_America_(The_Sopranos) (<http://dbpedia.org/resource/Made_in_America_(The_Sopranos)>) --dop:music--> Bob_Dylan (dor:Bob_Dylan)
+  '6':
+    attributes:
+      Sammy_Cahn: (birth place^='New York City, U.S.', birth date^='1913-06-18')
+      All_the_Way_(Frank_Sinatra_song): (genre^='http://dbpedia.org/resource/Pop_music', recorded in^='http://dbpedia.org/resource/Capitol_Studios')
+    relationships:
+      - All_the_Way_(Frank_Sinatra_song) (<http://dbpedia.org/resource/All_the_Way_(Frank_Sinatra_song)>) --doo:writer--> Sammy_Cahn (dor:Sammy_Cahn)
+      - A_Disney_Christmas_Gift (dor:A_Disney_Christmas_Gift) --dop:music--> Sammy_Cahn (dor:Sammy_Cahn)
+  '7':
+    attributes:
+      Sammy_Cahn: (birth place^='New York City, U.S.', birth date^='1913-06-18')
+      Our_Town_(Producers'_Showcase): (writer^='http://dbpedia.org/resource/David_Shaw_(screenwriter)')
+      All_the_Way_(Frank_Sinatra_song): (genre^='http://dbpedia.org/resource/Pop_music', recorded in^='http://dbpedia.org/resource/Capitol_Studios')
+    relationships:
+      - All_the_Way_(Frank_Sinatra_song) (<http://dbpedia.org/resource/All_the_Way_(Frank_Sinatra_song)>) --doo:writer--> Sammy_Cahn (dor:Sammy_Cahn)
+      - Our_Town_(Producers'_Showcase) (<http://dbpedia.org/resource/Our_Town_(Producers'_Showcase)>) --dop:music--> Sammy_Cahn (dor:Sammy_Cahn)
+  '8':
+    attributes:
+      Bob_Dylan: (birth place^='Duluth, Minnesota, U.S.', birth date^='1941-05-24')
+      Baby,_Stop_Crying: (genre^='http://dbpedia.org/resource/Rock_music', release date^='1978-07-31')
+      Made_in_America_(The_Sopranos): (writer^='David Chase')
+    relationships:
+      - Baby,_Stop_Crying (<http://dbpedia.org/resource/Baby,_Stop_Crying>) --doo:writer--> Bob_Dylan (dor:Bob_Dylan)
+      - Made_in_America_(The_Sopranos) (<http://dbpedia.org/resource/Made_in_America_(The_Sopranos)>) --dop:music--> Bob_Dylan (dor:Bob_Dylan)
+  '9':
+    attributes:
+      Gerry_Rafferty: (birth place^='Paisley, Renfrewshire, Scotland', birth date^='1947-04-16', active years end year^='2011')
+      Numb_(The_Killing): (writer^='http://dbpedia.org/resource/Eliza_Clark_(actress)')
+      Baker_Street_(song): (genre^='', release date^='1978-02-03', recorded in^='http://dbpedia.org/resource/Chipping_Norton_Recording_Studios')
+    relationships:
+      - Baker_Street_(song) (<http://dbpedia.org/resource/Baker_Street_(song)>) --doo:writer--> Gerry_Rafferty (dor:Gerry_Rafferty)
+      - Numb_(The_Killing) (<http://dbpedia.org/resource/Numb_(The_Killing)>) --dop:music--> Gerry_Rafferty (dor:Gerry_Rafferty)
+  '10':
+    attributes:
+      Ben_(song): (genre^='', release date^='1972-07-12')
+      Walter_Scharf: (birth place^='http://dbpedia.org/resource/Manhattan,_New_York_City', birth date^='1910-08-01')
+      Pippi_Longstocking_(Shirley_Temple's_Storybook): (writer^='William Crewson')
+    relationships:
+      - Ben_(song) (<http://dbpedia.org/resource/Ben_(song)>) --doo:writer--> Walter_Scharf (dor:Walter_Scharf)
+      - Pippi_Longstocking_(Shirley_Temple's_Storybook) (<http://dbpedia.org/resource/Pippi_Longstocking_(Shirley_Temple's_Storybook)>) --dop:music--> Walter_Scharf (dor:Walter_Scharf)
+attributes:
+  single: --genre^ (dop:genre)--> langString | --release date^ (doo:releaseDate)--> date | --lyrics^ (dop:lyrics)--> langString | --recorded in^ (doo:recordedIn)--> Resource
+  musical artist: --image upright^ (dop:imageUpright)--> double | --birth place^ (dop:birthPlace)--> langString | --cname^ (dop:cname)--> langString | --birth date^ (dop:birthDate)--> date | --width^ (dop:width)--> int | --active years end year^ (doo:activeYearsEndYear)--> gYear
+  television episode: --writer^ (dop:writer)--> langString
+subgraph_id: 9
+relationships:
+  - single --doo:writer--> musical artist
+  - television episode --dop:music--> musical artist

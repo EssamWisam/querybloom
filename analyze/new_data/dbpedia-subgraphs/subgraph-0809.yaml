@@ -1,0 +1,83 @@
+types:
+  Location: doo:Location
+  college coach: doo:CollegeCoach
+  figure skater: doo:FigureSkater
+  basketball team: doo:BasketballTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Bradley_Yaeger (dor:Bradley_Yaeger) --doo:country--> Greece (dor:Greece)
+      - 2013–14_Panionios_B.C._season (<http://dbpedia.org/resource/2013–14_Panionios_B.C._season>) --doo:location--> Greece (dor:Greece)
+      - Bradley_Yaeger (dor:Bradley_Yaeger) --doo:coach--> Igor_Tchiniaev (dor:Igor_Tchiniaev)
+  '2':
+    attributes:
+      Maria-Elena_Papasotiriou: (active years end year^='2010')
+    relationships:
+      - Maria-Elena_Papasotiriou (dor:Maria-Elena_Papasotiriou) --doo:country--> Greece (dor:Greece)
+      - 2013–14_Panionios_B.C._season (<http://dbpedia.org/resource/2013–14_Panionios_B.C._season>) --doo:location--> Greece (dor:Greece)
+      - Maria-Elena_Papasotiriou (dor:Maria-Elena_Papasotiriou) --doo:coach--> Alexander_Ouriashev (dor:Alexander_Ouriashev)
+  '3':
+    attributes: {}
+    relationships:
+      - Alexa_Knierim (dor:Alexa_Knierim) --doo:country--> United_States (dor:United_States)
+      - 3_Headed_Monsters (dor:3_Headed_Monsters) --doo:location--> United_States (dor:United_States)
+      - Alexa_Knierim (dor:Alexa_Knierim) --doo:coach--> Nina_Mozer (dor:Nina_Mozer)
+  '4':
+    attributes: {}
+    relationships:
+      - Andrew_Torgashev (dor:Andrew_Torgashev) --doo:country--> United_States (dor:United_States)
+      - 3_Headed_Monsters (dor:3_Headed_Monsters) --doo:location--> United_States (dor:United_States)
+      - Andrew_Torgashev (dor:Andrew_Torgashev) --doo:coach--> Rafael_Arutunian (dor:Rafael_Arutunian)
+  '5':
+    attributes: {}
+    relationships:
+      - Blake_Rosenthal (dor:Blake_Rosenthal) --doo:country--> United_States (dor:United_States)
+      - 3_Headed_Monsters (dor:3_Headed_Monsters) --doo:location--> United_States (dor:United_States)
+      - Blake_Rosenthal (dor:Blake_Rosenthal) --doo:coach--> Andrew_Newberry (dor:Andrew_Newberry)
+  '6':
+    attributes: {}
+    relationships:
+      - Bradley_Yaeger (dor:Bradley_Yaeger) --doo:country--> Greece (dor:Greece)
+      - A.C._Doukas_Basketball (dor:A.C._Doukas_Basketball) --doo:location--> Greece (dor:Greece)
+      - Bradley_Yaeger (dor:Bradley_Yaeger) --doo:coach--> Igor_Tchiniaev (dor:Igor_Tchiniaev)
+  '7':
+    attributes: {}
+    relationships:
+      - Filippo_Ambrosini (dor:Filippo_Ambrosini) --doo:country--> Italy (dor:Italy)
+      - A.S._Junior_Pallacanestro_Casale (dor:A.S._Junior_Pallacanestro_Casale) --doo:location--> Italy (dor:Italy)
+      - Filippo_Ambrosini (dor:Filippo_Ambrosini) --doo:coach--> Franca_Bianconi (dor:Franca_Bianconi)
+  '8':
+    attributes: {}
+    relationships:
+      - Gabriele_Frangipani (dor:Gabriele_Frangipani) --doo:country--> Italy (dor:Italy)
+      - A.S._Junior_Pallacanestro_Casale (dor:A.S._Junior_Pallacanestro_Casale) --doo:location--> Italy (dor:Italy)
+      - Gabriele_Frangipani (dor:Gabriele_Frangipani) --doo:coach--> Angelina_Turenko (dor:Angelina_Turenko)
+  '9':
+    attributes: {}
+    relationships:
+      - Lucrezia_Beccari (dor:Lucrezia_Beccari) --doo:country--> Italy (dor:Italy)
+      - A.S._Junior_Pallacanestro_Casale (dor:A.S._Junior_Pallacanestro_Casale) --doo:location--> Italy (dor:Italy)
+      - Lucrezia_Beccari (dor:Lucrezia_Beccari) --doo:coach--> Franca_Bianconi (dor:Franca_Bianconi)
+  '10':
+    attributes:
+      Israel: (religion^='http://dbpedia.org/resource/Christianity_in_Israel')
+      Alexei_Bychenko: (active years end year^='2022')
+    relationships:
+      - Alexei_Bychenko (dor:Alexei_Bychenko) --doo:country--> Israel (dor:Israel)
+      - A.S._Ramat_HaSharon (dor:A.S._Ramat_HaSharon) --doo:location--> Israel (dor:Israel)
+      - Alexei_Bychenko (dor:Alexei_Bychenko) --doo:coach--> Galit_Chait_Moracci (dor:Galit_Chait_Moracci)
+attributes:
+  Location: --Apr low F^ (dop:aprLowF)--> int | --builder^ (dop:builder)--> langString | --age^ (dop:age)--> Resource | --area (dop:area)--> hectare | --eponym^ (dop:eponym)--> langString | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --Apr rain days^ (dop:aprRainDays)--> int | --religion^ (doo:religion)--> Resource
+  college coach: --coach team^ (dop:coachTeam)--> langString
+  figure skater: --active years end year^ (doo:activeYearsEndYear)--> gYear
+subgraph_id: 809
+relationships:
+  - figure skater --doo:country--> Location
+  - basketball team --doo:location--> Location
+  - figure skater --doo:coach--> college coach

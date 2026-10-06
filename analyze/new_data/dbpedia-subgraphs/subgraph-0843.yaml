@@ -1,0 +1,139 @@
+types:
+  city: doo:City
+  song: doo:Song
+  album: doo:Album
+  airport: doo:Airport
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Madrid: (type^='http://dbpedia.org/resource/Capital_city', source^='http://dbpedia.org/resource/Agencia_Estatal_de_Meteorología')
+      Vivir_(album): (has abstract^='《Vivir》는 1997년 1월 21일에 발매된 엔리케 이글레시아스의 음반이다. 포노비사 레코드에 의해 발매되었다.')
+      Al_Despertar_(Enrique_Iglesias_song): (writer^='')
+    relationships:
+      - Adolfo_Suárez_Madrid–Barajas_Airport (<http://dbpedia.org/resource/Adolfo_Suárez_Madrid–Barajas_Airport>) --doo:location--> Madrid (dor:Madrid)
+      - Al_Despertar_(Enrique_Iglesias_song) (<http://dbpedia.org/resource/Al_Despertar_(Enrique_Iglesias_song)>) --doo:recordedIn--> Madrid (dor:Madrid)
+      - Adolfo_Suárez_Madrid–Barajas_Airport (<http://dbpedia.org/resource/Adolfo_Suárez_Madrid–Barajas_Airport>) --doo:city--> Madrid_metropolitan_area (dor:Madrid_metropolitan_area)
+      - Al_Despertar_(Enrique_Iglesias_song) (<http://dbpedia.org/resource/Al_Despertar_(Enrique_Iglesias_song)>) --doo:album--> Vivir_(album) (<http://dbpedia.org/resource/Vivir_(album)>)
+  '2':
+    attributes:
+      Madrid: (type^='http://dbpedia.org/resource/Capital_city', source^='http://dbpedia.org/resource/Agencia_Estatal_de_Meteorología')
+      A_Voluntad_del_Cielo: (has abstract^='A Voluntad del Cielo (Heaven''s Will) is 19th studio album recorded by Spanish singer-songwriter Camilo Sesto, It was released by RCA Ariola on October 15, 1991 (see 1991 in music). The album was produ...')
+      Amor_Mío,_¿Qué_Me_Has_Hecho%3F: (writer^='http://dbpedia.org/resource/Camilo_Sesto')
+    relationships:
+      - Adolfo_Suárez_Madrid–Barajas_Airport (<http://dbpedia.org/resource/Adolfo_Suárez_Madrid–Barajas_Airport>) --doo:location--> Madrid (dor:Madrid)
+      - Amor_Mío,_¿Qué_Me_Has_Hecho%3F (<http://dbpedia.org/resource/Amor_Mío,_¿Qué_Me_Has_Hecho%3F>) --doo:recordedIn--> Madrid (dor:Madrid)
+      - Adolfo_Suárez_Madrid–Barajas_Airport (<http://dbpedia.org/resource/Adolfo_Suárez_Madrid–Barajas_Airport>) --doo:city--> Madrid_metropolitan_area (dor:Madrid_metropolitan_area)
+      - Amor_Mío,_¿Qué_Me_Has_Hecho%3F (<http://dbpedia.org/resource/Amor_Mío,_¿Qué_Me_Has_Hecho%3F>) --doo:album--> A_Voluntad_del_Cielo (dor:A_Voluntad_del_Cielo)
+  '3':
+    attributes:
+      Madrid: (type^='http://dbpedia.org/resource/Capital_city', source^='http://dbpedia.org/resource/Agencia_Estatal_de_Meteorología')
+      Aquí_Estoy_Yo: (writer^='Luis Fonsi · Claudia Brant · Gen Rubin')
+      Palabras_del_Silencio: '(has abstract^=''Palabras del Silencio (English: Words from the Silence) is the seventh studio album, and sixth in Spanish recorded by Puerto Rican singer-songwriter Luis Fonsi. The album was released by Universal Mus...'')'
+    relationships:
+      - Adolfo_Suárez_Madrid–Barajas_Airport (<http://dbpedia.org/resource/Adolfo_Suárez_Madrid–Barajas_Airport>) --doo:location--> Madrid (dor:Madrid)
+      - Aquí_Estoy_Yo (<http://dbpedia.org/resource/Aquí_Estoy_Yo>) --doo:recordedIn--> Madrid (dor:Madrid)
+      - Adolfo_Suárez_Madrid–Barajas_Airport (<http://dbpedia.org/resource/Adolfo_Suárez_Madrid–Barajas_Airport>) --doo:city--> Madrid_metropolitan_area (dor:Madrid_metropolitan_area)
+      - Aquí_Estoy_Yo (<http://dbpedia.org/resource/Aquí_Estoy_Yo>) --doo:album--> Palabras_del_Silencio (dor:Palabras_del_Silencio)
+  '4':
+    attributes:
+      Græ: (has abstract^='Græ (stylized in all lowercase) is the second studio album by American singer-songwriter Moses Sumney. The double album was released in two parts by Jagjaguwar. The first part was released digitally o...')
+      Virile_(song): |-
+        (writer^='*Moses Sumney
+        *Yvette')
+      Asheville,_North_Carolina: (named after^='http://dbpedia.org/resource/Samuel_Ashe_(North_Carolina_governor)', type^='http://dbpedia.org/resource/City', source^='http://dbpedia.org/resource/NOAA')
+    relationships:
+      - Asheville_Regional_Airport (dor:Asheville_Regional_Airport) --doo:location--> Asheville,_North_Carolina (<http://dbpedia.org/resource/Asheville,_North_Carolina>)
+      - Virile_(song) (<http://dbpedia.org/resource/Virile_(song)>) --doo:recordedIn--> Asheville,_North_Carolina (<http://dbpedia.org/resource/Asheville,_North_Carolina>)
+      - Asheville_Regional_Airport (dor:Asheville_Regional_Airport) --doo:city--> Asheville,_North_Carolina (<http://dbpedia.org/resource/Asheville,_North_Carolina>)
+      - Virile_(song) (<http://dbpedia.org/resource/Virile_(song)>) --doo:album--> Græ (<http://dbpedia.org/resource/Græ>)
+  '5':
+    attributes:
+      Istanbul: (type^='http://dbpedia.org/resource/Metropolitan_municipalities_in_Turkey', Apr record low C^='-2', Aug precipitation mm^='26.1')
+      Hridayam_(soundtrack): (width^='20.0')
+    relationships:
+      - Atatürk_Airport (<http://dbpedia.org/resource/Atatürk_Airport>) --doo:location--> Istanbul (dor:Istanbul)
+      - Darshana_(song) (<http://dbpedia.org/resource/Darshana_(song)>) --doo:recordedIn--> Istanbul (dor:Istanbul)
+      - Atatürk_Airport (<http://dbpedia.org/resource/Atatürk_Airport>) --doo:city--> Istanbul (dor:Istanbul)
+      - Darshana_(song) (<http://dbpedia.org/resource/Darshana_(song)>) --doo:album--> Hridayam_(soundtrack) (<http://dbpedia.org/resource/Hridayam_(soundtrack)>)
+  '6':
+    attributes:
+      Auckland: (named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland', type^='http://dbpedia.org/resource/Urban_areas_of_New_Zealand', Apr record low C^='3.9', source^='MetService')
+      Lover_(album): (has abstract^='«Lover» (з англ. — «Коханий») — сьомий студійний альбом американської поп-співачки Тейлор Свіфт. Альбом вийшов 23 серпня 2019 року.')
+      Miss_Americana_&_the_Heartbreak_Prince: |-
+        (writer^='* Taylor Swift
+        * Joel Little')
+    relationships:
+      - Auckland_Airport (dor:Auckland_Airport) --doo:location--> Auckland (dor:Auckland)
+      - Miss_Americana_&_the_Heartbreak_Prince (<http://dbpedia.org/resource/Miss_Americana_&_the_Heartbreak_Prince>) --doo:recordedIn--> Auckland (dor:Auckland)
+      - Auckland_Airport (dor:Auckland_Airport) --doo:city--> Auckland (dor:Auckland)
+      - Miss_Americana_&_the_Heartbreak_Prince (<http://dbpedia.org/resource/Miss_Americana_&_the_Heartbreak_Prince>) --doo:album--> Lover_(album) (<http://dbpedia.org/resource/Lover_(album)>)
+  '7':
+    attributes:
+      Auckland: (named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland', type^='http://dbpedia.org/resource/Urban_areas_of_New_Zealand', Apr record low C^='3.9', source^='MetService')
+      Pink_Frost: (writer^='http://dbpedia.org/resource/Martin_Phillipps')
+      Kaleidoscope_World_(The_Chills_album): (has abstract^='Kaleidoscope World è una compilation del gruppo neozelandese The Chills, pubblicata nel 1986 in Nuova Zelanda dalla Flying Nun Records, nel Regno Unito dalla Creation Records e, con integrazione di al...')
+    relationships:
+      - Auckland_Airport (dor:Auckland_Airport) --doo:location--> Auckland (dor:Auckland)
+      - Pink_Frost (dor:Pink_Frost) --doo:recordedIn--> Auckland (dor:Auckland)
+      - Auckland_Airport (dor:Auckland_Airport) --doo:city--> Auckland (dor:Auckland)
+      - Pink_Frost (dor:Pink_Frost) --doo:album--> Kaleidoscope_World_(The_Chills_album) (<http://dbpedia.org/resource/Kaleidoscope_World_(The_Chills_album)>)
+  '8':
+    attributes:
+      Auckland: (named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland', type^='http://dbpedia.org/resource/Urban_areas_of_New_Zealand', Apr record low C^='3.9', source^='MetService')
+      Royals_(song): |-
+        (writer^='* Ella Yelich-O''Connor
+        * Joel Little')
+      The_Love_Club_EP: (has abstract^='《The Love Club EP》는 뉴질랜드의 가수 로드의 첫 익스텐디드 플레이(EP)이다. 12살이 되던 해에 유니버설 뮤직 그룹의 스콧 매클라클런에게 스카웃이 된 후 곡을 만들기 시작한 로드는 2011년 12월, 프로듀서인 조엘 리틀과 만나 약 3주간 함께 작업하며 EP에 수록할 5곡을 모두 작곡, 작사, 편곡하였다. 이후 EP에 수록한 노래를 사운드클...')
+    relationships:
+      - Auckland_Airport (dor:Auckland_Airport) --doo:location--> Auckland (dor:Auckland)
+      - Royals_(song) (<http://dbpedia.org/resource/Royals_(song)>) --doo:recordedIn--> Auckland (dor:Auckland)
+      - Auckland_Airport (dor:Auckland_Airport) --doo:city--> Auckland (dor:Auckland)
+      - Royals_(song) (<http://dbpedia.org/resource/Royals_(song)>) --doo:album--> The_Love_Club_EP (dor:The_Love_Club_EP)
+  '9':
+    attributes:
+      Austin,_Texas: (named after^='http://dbpedia.org/resource/Stephen_F._Austin', type^='http://dbpedia.org/resource/List_of_capitals_in_the_United_States')
+      Barbie_Dreams: |-
+        (writer^='* Rivelino Raoul Wouter
+        * Onika Tanya Maraj
+        * Christopher Smith
+        * James Brown
+        * Fred Wesley')
+      Queen_(Nicki_Minaj_album): (has abstract^='«Queen» (с англ. — «Королева») — четвёртый студийный альбом американской хип-хоп-исполнительницы Ники Минаж, который вышел 10 августа 2018 года. На альбоме присутствуют коллаборации с Эминемом, Labrin...')
+    relationships:
+      - Austin–Bergstrom_International_Airport (<http://dbpedia.org/resource/Austin–Bergstrom_International_Airport>) --doo:location--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - Barbie_Dreams (dor:Barbie_Dreams) --doo:recordedIn--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - Austin–Bergstrom_International_Airport (<http://dbpedia.org/resource/Austin–Bergstrom_International_Airport>) --doo:city--> Greater_Austin (dor:Greater_Austin)
+      - Barbie_Dreams (dor:Barbie_Dreams) --doo:album--> Queen_(Nicki_Minaj_album) (<http://dbpedia.org/resource/Queen_(Nicki_Minaj_album)>)
+  '10':
+    attributes:
+      Austin,_Texas: (named after^='http://dbpedia.org/resource/Stephen_F._Austin', type^='http://dbpedia.org/resource/List_of_capitals_in_the_United_States')
+      Bed_(Nicki_Minaj_song): |-
+        (writer^='* Onika Maraj
+        * Ben Diehl
+        * Gamal Lewis
+        * Brett Bailey
+        * Mescon David Asher
+        * Dwayne Chin-Quee')
+      Queen_(Nicki_Minaj_album): (has abstract^='«Queen» (с англ. — «Королева») — четвёртый студийный альбом американской хип-хоп-исполнительницы Ники Минаж, который вышел 10 августа 2018 года. На альбоме присутствуют коллаборации с Эминемом, Labrin...')
+    relationships:
+      - Austin–Bergstrom_International_Airport (<http://dbpedia.org/resource/Austin–Bergstrom_International_Airport>) --doo:location--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - Bed_(Nicki_Minaj_song) (<http://dbpedia.org/resource/Bed_(Nicki_Minaj_song)>) --doo:recordedIn--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - Austin–Bergstrom_International_Airport (<http://dbpedia.org/resource/Austin–Bergstrom_International_Airport>) --doo:city--> Greater_Austin (dor:Greater_Austin)
+      - Bed_(Nicki_Minaj_song) (<http://dbpedia.org/resource/Bed_(Nicki_Minaj_song)>) --doo:album--> Queen_(Nicki_Minaj_album) (<http://dbpedia.org/resource/Queen_(Nicki_Minaj_album)>)
+attributes:
+  city: --named after^ (doo:namedAfter)--> Resource | --type^ (doo:type)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> double | --source^ (dop:source)--> langString | --c^ (dop:c)--> langString
+  song: --writer^ (dop:writer)--> langString
+  album: --direction^ (dop:direction)--> langString | --has abstract^ (doo:abstract)--> langString | --music^ (dop:music)--> langString | --width^ (dop:width)--> perCent | --all writing^ (dop:allWriting)--> langString
+  settlement: --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --named after^ (doo:namedAfter)--> Resource
+subgraph_id: 843
+relationships:
+  - airport --doo:location--> city
+  - song --doo:recordedIn--> city
+  - airport --doo:city--> settlement
+  - song --doo:album--> album

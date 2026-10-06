@@ -1,0 +1,115 @@
+types:
+  town: doo:Town
+  Location: doo:Location
+  university: doo:University
+  baseball player: doo:BaseballPlayer
+  Christian Bishop: doo:ChristianBishop
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Emmitsburg,_Maryland: (type^='http://dbpedia.org/resource/Town', Apr precipitation days^='10.8')
+      Kansas_City,_Missouri: (date^='June 2019')
+      Mount_St._Mary's_University: (page length (characters) of wiki page^='43861')
+    relationships:
+      - James_D._Conley (dor:James_D._Conley) --doo:birthPlace--> Kansas_City,_Missouri (<http://dbpedia.org/resource/Kansas_City,_Missouri>)
+      - James_D._Conley (dor:James_D._Conley) --doo:almaMater--> Mount_St._Mary's_University (<http://dbpedia.org/resource/Mount_St._Mary's_University>)
+      - Mount_St._Mary's_University (<http://dbpedia.org/resource/Mount_St._Mary's_University>) --dop:city--> Emmitsburg,_Maryland (<http://dbpedia.org/resource/Emmitsburg,_Maryland>)
+      - Aaron_Ashby (dor:Aaron_Ashby) --dop:birthPlace--> Kansas_City,_Missouri (<http://dbpedia.org/resource/Kansas_City,_Missouri>)
+  '2':
+    attributes:
+      Trinity_Western_University: (page length (characters) of wiki page^='72831')
+      Langley,_British_Columbia_(district_municipality): (Apr record low C^='-3', type^='http://dbpedia.org/resource/List_of_district_municipalities_in_British_Columbia', Apr precipitation days^='15.3')
+    relationships:
+      - Mark_Hagemoen (dor:Mark_Hagemoen) --doo:birthPlace--> Vancouver (dor:Vancouver)
+      - Mark_Hagemoen (dor:Mark_Hagemoen) --doo:almaMater--> Trinity_Western_University (dor:Trinity_Western_University)
+      - Trinity_Western_University (dor:Trinity_Western_University) --dop:city--> Langley,_British_Columbia_(district_municipality) (<http://dbpedia.org/resource/Langley,_British_Columbia_(district_municipality)>)
+      - Aaron_Guiel (dor:Aaron_Guiel) --dop:birthPlace--> Vancouver (dor:Vancouver)
+  '3':
+    attributes:
+      Canada: "(quote^=':2.  Everyone has the following fundamental freedoms:\n::\tfreedom of conscience and religion;\n::\tfreedom of thought, belief, opinion and expression, including freedom of the press and other media of co...')"
+      Trinity_Western_University: (page length (characters) of wiki page^='72831')
+      Langley,_British_Columbia_(district_municipality): (Apr record low C^='-3', type^='http://dbpedia.org/resource/List_of_district_municipalities_in_British_Columbia', Apr precipitation days^='15.3')
+    relationships:
+      - Mark_Hagemoen (dor:Mark_Hagemoen) --doo:birthPlace--> Canada (dor:Canada)
+      - Mark_Hagemoen (dor:Mark_Hagemoen) --doo:almaMater--> Trinity_Western_University (dor:Trinity_Western_University)
+      - Trinity_Western_University (dor:Trinity_Western_University) --dop:city--> Langley,_British_Columbia_(district_municipality) (<http://dbpedia.org/resource/Langley,_British_Columbia_(district_municipality)>)
+      - Abraham_Toro (dor:Abraham_Toro) --dop:birthPlace--> Canada (dor:Canada)
+  '4':
+    attributes:
+      Amherst_College: (page length (characters) of wiki page^='79835')
+      Amherst,_Massachusetts: (type^='http://dbpedia.org/resource/New_England_town', Apr precipitation days^='10.9')
+    relationships:
+      - John_H._Burt (dor:John_H._Burt) --doo:birthPlace--> Marquette,_Michigan (<http://dbpedia.org/resource/Marquette,_Michigan>)
+      - John_H._Burt (dor:John_H._Burt) --doo:almaMater--> Amherst_College (dor:Amherst_College)
+      - Amherst_College (dor:Amherst_College) --dop:city--> Amherst,_Massachusetts (<http://dbpedia.org/resource/Amherst,_Massachusetts>)
+      - Adam_Hamari (dor:Adam_Hamari) --dop:birthPlace--> Marquette,_Michigan (<http://dbpedia.org/resource/Marquette,_Michigan>)
+  '5':
+    attributes:
+      Esopus,_New_York: (type^='http://dbpedia.org/resource/Administrative_divisions_of_New_York')
+      Mount_St._Alphonsus_Seminary: (page length (characters) of wiki page^='9489')
+    relationships:
+      - Edward_John_Harper (dor:Edward_John_Harper) --doo:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Edward_John_Harper (dor:Edward_John_Harper) --doo:almaMater--> Mount_St._Alphonsus_Seminary (dor:Mount_St._Alphonsus_Seminary)
+      - Mount_St._Alphonsus_Seminary (dor:Mount_St._Alphonsus_Seminary) --dop:city--> Esopus,_New_York (<http://dbpedia.org/resource/Esopus,_New_York>)
+      - Adam_Ottavino (dor:Adam_Ottavino) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '6':
+    attributes:
+      Chapel_Hill,_North_Carolina: (type^='http://dbpedia.org/resource/Town', Apr precipitation days^='9.9')
+    relationships:
+      - Edward_S._Little_II (dor:Edward_S._Little_II) --doo:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Edward_S._Little_II (dor:Edward_S._Little_II) --doo:almaMater--> University_of_North_Carolina (dor:University_of_North_Carolina)
+      - University_of_North_Carolina (dor:University_of_North_Carolina) --dop:city--> Chapel_Hill,_North_Carolina (<http://dbpedia.org/resource/Chapel_Hill,_North_Carolina>)
+      - Adam_Ottavino (dor:Adam_Ottavino) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '7':
+    attributes:
+      Fort_Collins,_Colorado: (type^='http://dbpedia.org/resource/List_of_municipalities_in_Colorado', Apr precipitation days^='9')
+      Colorado_State_University: (page length (characters) of wiki page^='139428')
+    relationships:
+      - Harry_S._Kennedy (dor:Harry_S._Kennedy) --doo:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Harry_S._Kennedy (dor:Harry_S._Kennedy) --doo:almaMater--> Colorado_State_University (dor:Colorado_State_University)
+      - Colorado_State_University (dor:Colorado_State_University) --dop:city--> Fort_Collins,_Colorado (<http://dbpedia.org/resource/Fort_Collins,_Colorado>)
+      - Adam_Ottavino (dor:Adam_Ottavino) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '8':
+    attributes:
+      South_Orange,_New_Jersey: (type^='http://dbpedia.org/resource/Township_(New_Jersey)')
+      Immaculate_Conception_Seminary_School_of_Theology: (page length (characters) of wiki page^='3175')
+    relationships:
+      - Manuel_Aurelio_Cruz (dor:Manuel_Aurelio_Cruz) --doo:birthPlace--> Cuba (dor:Cuba)
+      - Manuel_Aurelio_Cruz (dor:Manuel_Aurelio_Cruz) --doo:almaMater--> Immaculate_Conception_Seminary_School_of_Theology (dor:Immaculate_Conception_Seminary_School_of_Theology)
+      - Immaculate_Conception_Seminary_School_of_Theology (dor:Immaculate_Conception_Seminary_School_of_Theology) --dop:city--> South_Orange,_New_Jersey (<http://dbpedia.org/resource/South_Orange,_New_Jersey>)
+      - Adeiny_Hechavarria (dor:Adeiny_Hechavarria) --dop:birthPlace--> Cuba (dor:Cuba)
+  '9':
+    attributes:
+      South_Orange,_New_Jersey: (type^='http://dbpedia.org/resource/Township_(New_Jersey)')
+      Immaculate_Conception_Seminary_School_of_Theology: (page length (characters) of wiki page^='3175')
+    relationships:
+      - Manuel_Aurelio_Cruz (dor:Manuel_Aurelio_Cruz) --doo:birthPlace--> Cuba (dor:Cuba)
+      - Manuel_Aurelio_Cruz (dor:Manuel_Aurelio_Cruz) --doo:almaMater--> Immaculate_Conception_Seminary_School_of_Theology (dor:Immaculate_Conception_Seminary_School_of_Theology)
+      - Immaculate_Conception_Seminary_School_of_Theology (dor:Immaculate_Conception_Seminary_School_of_Theology) --dop:city--> South_Orange,_New_Jersey (<http://dbpedia.org/resource/South_Orange,_New_Jersey>)
+      - Adrián_Morejón (<http://dbpedia.org/resource/Adrián_Morejón>) --dop:birthPlace--> Cuba (dor:Cuba)
+  '10':
+    attributes:
+      Havana: (date^='August 2010', Apr rain days^='3')
+      South_Orange,_New_Jersey: (type^='http://dbpedia.org/resource/Township_(New_Jersey)')
+      Immaculate_Conception_Seminary_School_of_Theology: (page length (characters) of wiki page^='3175')
+    relationships:
+      - Manuel_Aurelio_Cruz (dor:Manuel_Aurelio_Cruz) --doo:birthPlace--> Havana (dor:Havana)
+      - Manuel_Aurelio_Cruz (dor:Manuel_Aurelio_Cruz) --doo:almaMater--> Immaculate_Conception_Seminary_School_of_Theology (dor:Immaculate_Conception_Seminary_School_of_Theology)
+      - Immaculate_Conception_Seminary_School_of_Theology (dor:Immaculate_Conception_Seminary_School_of_Theology) --dop:city--> South_Orange,_New_Jersey (<http://dbpedia.org/resource/South_Orange,_New_Jersey>)
+      - Adrián_Morejón (<http://dbpedia.org/resource/Adrián_Morejón>) --dop:birthPlace--> Havana (dor:Havana)
+attributes:
+  town: --Apr record low C^ (dop:aprRecordLowC)--> double | --type^ (doo:type)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int
+  Location: --date^ (dop:date)--> date | --Apr rain days^ (dop:aprRainDays)--> int | --partof^ (dop:partof)--> Resource | --quote^ (dop:quote)--> int | --built^ (dop:built)--> int | --area^ (dop:area)--> hectare
+  university: --founder^ (dop:founder)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int
+  baseball player: --quote^ (dop:quote)--> langString
+subgraph_id: 710
+relationships:
+  - Christian Bishop --doo:birthPlace--> Location
+  - Christian Bishop --doo:almaMater--> university
+  - university --dop:city--> town
+  - baseball player --dop:birthPlace--> Location

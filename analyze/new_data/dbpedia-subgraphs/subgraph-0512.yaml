@@ -1,0 +1,75 @@
+types:
+  venue: doo:Venue
+  rugby club: doo:RugbyClub
+  rugby league: doo:RugbyLeague
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Campo_de_Rugby_Las_Terrazas: (tenants^='http://dbpedia.org/resource/Alcobendas_Rugby', owner^='Alcobendas city hall')
+    relationships:
+      - Alcobendas_Rugby (dor:Alcobendas_Rugby) --dop:league--> División_de_Honor_de_Rugby (<http://dbpedia.org/resource/División_de_Honor_de_Rugby>)
+      - Campo_de_Rugby_Las_Terrazas (dor:Campo_de_Rugby_Las_Terrazas) --doo:tenant--> Alcobendas_Rugby (dor:Alcobendas_Rugby)
+  '2':
+    attributes:
+      Stade_Raoul-Barrière: (tenants^='Béziers', owner^='City of Béziers')
+    relationships:
+      - AS_Béziers_Hérault (<http://dbpedia.org/resource/AS_Béziers_Hérault>) --dop:league--> Rugby_Pro_D2 (dor:Rugby_Pro_D2)
+      - Stade_Raoul-Barrière (<http://dbpedia.org/resource/Stade_Raoul-Barrière>) --doo:tenant--> AS_Béziers_Hérault (<http://dbpedia.org/resource/AS_Béziers_Hérault>)
+  '3':
+    attributes:
+      Stade_Marcel-Michelin: (tenants^='http://dbpedia.org/resource/ASM_Clermont_Auvergne', nickname^='Le Michelin')
+    relationships:
+      - ASM_Clermont_Auvergne (dor:ASM_Clermont_Auvergne) --dop:league--> Top_14 (dor:Top_14)
+      - Stade_Marcel-Michelin (dor:Stade_Marcel-Michelin) --doo:tenant--> ASM_Clermont_Auvergne (dor:ASM_Clermont_Auvergne)
+  '4':
+    attributes: {}
+    relationships:
+      - Austin_Gilgronis (dor:Austin_Gilgronis) --dop:league--> Major_League_Rugby (dor:Major_League_Rugby)
+      - Circuit_of_the_Americas__Bold_Stadium__1 (dor:Circuit_of_the_Americas__Bold_Stadium__1) --doo:tenant--> Austin_Gilgronis (dor:Austin_Gilgronis)
+  '5':
+    attributes:
+      Dell_Diamond: (cost ($)^='2.5E7', operator^='http://dbpedia.org/resource/Round_Rock_Express', architect^='http://dbpedia.org/resource/HKS,_Inc.', tenants^='', owner^='http://dbpedia.org/resource/Round_Rock,_Texas', architect^='http://dbpedia.org/resource/HKS,_Inc.')
+    relationships:
+      - Austin_Gilgronis (dor:Austin_Gilgronis) --dop:league--> Major_League_Rugby (dor:Major_League_Rugby)
+      - Dell_Diamond (dor:Dell_Diamond) --doo:tenant--> Austin_Gilgronis (dor:Austin_Gilgronis)
+  '6':
+    attributes:
+      Round_Rock_Multipurpose_Complex: (tenants^='Austin Elite')
+    relationships:
+      - Austin_Gilgronis (dor:Austin_Gilgronis) --dop:league--> Major_League_Rugby (dor:Major_League_Rugby)
+      - Round_Rock_Multipurpose_Complex (dor:Round_Rock_Multipurpose_Complex) --doo:tenant--> Austin_Gilgronis (dor:Austin_Gilgronis)
+  '7':
+    attributes:
+      Stade_Jean-Dauger: (operator^='City of Bayonne', tenants^='http://dbpedia.org/resource/Aviron_Bayonnais', owner^='City of Bayonne', formerName='Parc des Sports de Saint Léon')
+    relationships:
+      - Aviron_Bayonnais (dor:Aviron_Bayonnais) --dop:league--> Top_14 (dor:Top_14)
+      - Stade_Jean-Dauger (dor:Stade_Jean-Dauger) --doo:tenant--> Aviron_Bayonnais (dor:Aviron_Bayonnais)
+  '8':
+    attributes:
+      Camp_Municipal_de_Rugby_La_Foixarda: (tenants^='Gòtics RC')
+    relationships:
+      - Barcelona_Universitari_Club (dor:Barcelona_Universitari_Club) --dop:league--> División_de_Honor_B_de_Rugby (<http://dbpedia.org/resource/División_de_Honor_B_de_Rugby>)
+      - Camp_Municipal_de_Rugby_La_Foixarda (dor:Camp_Municipal_de_Rugby_La_Foixarda) --doo:tenant--> Barcelona_Universitari_Club (dor:Barcelona_Universitari_Club)
+  '9':
+    attributes:
+      Goldington_Road: (tenants^='http://dbpedia.org/resource/Bedford_Blues')
+    relationships:
+      - Bedford_Blues (dor:Bedford_Blues) --dop:league--> RFU_Championship (dor:RFU_Championship)
+      - Goldington_Road (dor:Goldington_Road) --doo:tenant--> Bedford_Blues (dor:Bedford_Blues)
+  '10':
+    attributes:
+      Stadio_Comunale_di_Monigo: (tenants^='http://dbpedia.org/resource/Benetton_Rugby', owner^='http://dbpedia.org/resource/Treviso')
+    relationships:
+      - Benetton_Rugby (dor:Benetton_Rugby) --dop:league--> United_Rugby_Championship (dor:United_Rugby_Championship)
+      - Stadio_Comunale_di_Monigo (dor:Stadio_Comunale_di_Monigo) --doo:tenant--> Benetton_Rugby (dor:Benetton_Rugby)
+attributes:
+  venue: --cost ($)^ (doo:cost)--> usDollar | --operator^ (dop:operator)--> Resource | --architect^ (dop:architect)--> Resource | --tenants^ (dop:tenants)--> Resource | --closing date^ (doo:closingDate)--> date | --Closed^ (dop:closed)--> date | --nickname^ (dop:nickname)--> langString | --owner^ (dop:owner)--> Resource | --architect^ (doo:architect)--> Resource | --formerName (doo:formerName)--> langString
+subgraph_id: 512
+relationships:
+  - rugby club --dop:league--> rugby league
+  - venue --doo:tenant--> rugby club

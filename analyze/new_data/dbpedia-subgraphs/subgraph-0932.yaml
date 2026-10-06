@@ -1,0 +1,112 @@
+types:
+  artist: doo:Artist
+  writer: doo:Writer
+  university: doo:University
+  music genre: doo:MusicGenre
+  historic place: doo:HistoricPlace
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Anthony_Caro: (birth name^='Anthony Alfred Caro')
+      Michigan_State_Medical_Society_Building: (architect^='http://dbpedia.org/resource/Minoru_Yamasaki', architect^='http://dbpedia.org/resource/Minoru_Yamasaki')
+    relationships:
+      - Anthony_Caro (dor:Anthony_Caro) --doo:movement--> Modernism (dor:Modernism)
+      - Michigan_State_Medical_Society_Building (dor:Michigan_State_Medical_Society_Building) --doo:architecturalStyle--> Modernism (dor:Modernism)
+      - Antanas_Škėma (<http://dbpedia.org/resource/Antanas_Škėma>) --doo:genre--> Modernism (dor:Modernism)
+      - Anthony_Caro (dor:Anthony_Caro) --dop:almaMater--> Christ's_College,_Cambridge (<http://dbpedia.org/resource/Christ's_College,_Cambridge>)
+  '2':
+    attributes:
+      Anthony_Caro: (birth name^='Anthony Alfred Caro')
+      Michigan_State_Medical_Society_Building: (architect^='http://dbpedia.org/resource/Minoru_Yamasaki', architect^='http://dbpedia.org/resource/Minoru_Yamasaki')
+    relationships:
+      - Anthony_Caro (dor:Anthony_Caro) --doo:movement--> Modernism (dor:Modernism)
+      - Michigan_State_Medical_Society_Building (dor:Michigan_State_Medical_Society_Building) --doo:architecturalStyle--> Modernism (dor:Modernism)
+      - D._H._Lawrence__D._H._Lawrence__1 (dor:D._H._Lawrence__D._H._Lawrence__1) --doo:genre--> Modernism (dor:Modernism)
+      - Anthony_Caro (dor:Anthony_Caro) --dop:almaMater--> Christ's_College,_Cambridge (<http://dbpedia.org/resource/Christ's_College,_Cambridge>)
+  '3':
+    attributes:
+      Anthony_Caro: (birth name^='Anthony Alfred Caro')
+      Michigan_State_Medical_Society_Building: (architect^='http://dbpedia.org/resource/Minoru_Yamasaki', architect^='http://dbpedia.org/resource/Minoru_Yamasaki')
+    relationships:
+      - Anthony_Caro (dor:Anthony_Caro) --doo:movement--> Modernism (dor:Modernism)
+      - Michigan_State_Medical_Society_Building (dor:Michigan_State_Medical_Society_Building) --doo:architecturalStyle--> Modernism (dor:Modernism)
+      - E._M._Forster__E._M._Forster__1 (dor:E._M._Forster__E._M._Forster__1) --doo:genre--> Modernism (dor:Modernism)
+      - Anthony_Caro (dor:Anthony_Caro) --dop:almaMater--> Christ's_College,_Cambridge (<http://dbpedia.org/resource/Christ's_College,_Cambridge>)
+  '4':
+    attributes:
+      Lake_Park,_Milwaukee: (architect^='http://dbpedia.org/resource/Frederick_Law_Olmsted', architect^='http://dbpedia.org/resource/Frederick_Law_Olmsted')
+      Birmingham_School_of_Art: (country^='England, United Kingdom')
+    relationships:
+      - Bernard_Walter_Evans (dor:Bernard_Walter_Evans) --doo:movement--> Romanticism (dor:Romanticism)
+      - Lake_Park,_Milwaukee (<http://dbpedia.org/resource/Lake_Park,_Milwaukee>) --doo:architecturalStyle--> Romanticism (dor:Romanticism)
+      - Adam_Mickiewicz (dor:Adam_Mickiewicz) --doo:genre--> Romanticism (dor:Romanticism)
+      - Bernard_Walter_Evans (dor:Bernard_Walter_Evans) --dop:almaMater--> Birmingham_School_of_Art (dor:Birmingham_School_of_Art)
+  '5':
+    attributes:
+      Lake_Park,_Milwaukee: (architect^='http://dbpedia.org/resource/Frederick_Law_Olmsted', architect^='http://dbpedia.org/resource/Frederick_Law_Olmsted')
+      Birmingham_School_of_Art: (country^='England, United Kingdom')
+    relationships:
+      - Bernard_Walter_Evans (dor:Bernard_Walter_Evans) --doo:movement--> Romanticism (dor:Romanticism)
+      - Lake_Park,_Milwaukee (<http://dbpedia.org/resource/Lake_Park,_Milwaukee>) --doo:architecturalStyle--> Romanticism (dor:Romanticism)
+      - Aleksandër_Stavre_Drenova (<http://dbpedia.org/resource/Aleksandër_Stavre_Drenova>) --doo:genre--> Romanticism (dor:Romanticism)
+      - Bernard_Walter_Evans (dor:Bernard_Walter_Evans) --dop:almaMater--> Birmingham_School_of_Art (dor:Birmingham_School_of_Art)
+  '6':
+    attributes:
+      Lake_Park,_Milwaukee: (architect^='http://dbpedia.org/resource/Frederick_Law_Olmsted', architect^='http://dbpedia.org/resource/Frederick_Law_Olmsted')
+      Birmingham_School_of_Art: (country^='England, United Kingdom')
+    relationships:
+      - Bernard_Walter_Evans (dor:Bernard_Walter_Evans) --doo:movement--> Romanticism (dor:Romanticism)
+      - Lake_Park,_Milwaukee (<http://dbpedia.org/resource/Lake_Park,_Milwaukee>) --doo:architecturalStyle--> Romanticism (dor:Romanticism)
+      - Antanas_Baranauskas (dor:Antanas_Baranauskas) --doo:genre--> Romanticism (dor:Romanticism)
+      - Bernard_Walter_Evans (dor:Bernard_Walter_Evans) --dop:almaMater--> Birmingham_School_of_Art (dor:Birmingham_School_of_Art)
+  '7':
+    attributes:
+      University_of_Bucharest: (country^='Romania')
+    relationships:
+      - Duiliu_Zamfirescu (dor:Duiliu_Zamfirescu) --doo:movement--> Neoclassicism (dor:Neoclassicism)
+      - Allen_Memorial_Medical_Library (dor:Allen_Memorial_Medical_Library) --doo:architecturalStyle--> Neoclassicism (dor:Neoclassicism)
+      - Maksym_Rylsky (dor:Maksym_Rylsky) --doo:genre--> Neoclassicism (dor:Neoclassicism)
+      - Duiliu_Zamfirescu (dor:Duiliu_Zamfirescu) --dop:almaMater--> University_of_Bucharest (dor:University_of_Bucharest)
+  '8':
+    attributes:
+      University_of_Bucharest: (country^='Romania')
+    relationships:
+      - Duiliu_Zamfirescu (dor:Duiliu_Zamfirescu) --doo:movement--> Neoclassicism (dor:Neoclassicism)
+      - Arcadia_Historic_District (dor:Arcadia_Historic_District) --doo:architecturalStyle--> Neoclassicism (dor:Neoclassicism)
+      - Maksym_Rylsky (dor:Maksym_Rylsky) --doo:genre--> Neoclassicism (dor:Neoclassicism)
+      - Duiliu_Zamfirescu (dor:Duiliu_Zamfirescu) --dop:almaMater--> University_of_Bucharest (dor:University_of_Bucharest)
+  '9':
+    attributes:
+      University_of_Bucharest: (country^='Romania')
+      Ashland_County_Courthouse_(Ohio): (architect^='Vernon Redding', architect^='http://dbpedia.org/resource/Vernon_Redding')
+    relationships:
+      - Duiliu_Zamfirescu (dor:Duiliu_Zamfirescu) --doo:movement--> Neoclassicism (dor:Neoclassicism)
+      - Ashland_County_Courthouse_(Ohio) (<http://dbpedia.org/resource/Ashland_County_Courthouse_(Ohio)>) --doo:architecturalStyle--> Neoclassicism (dor:Neoclassicism)
+      - Maksym_Rylsky (dor:Maksym_Rylsky) --doo:genre--> Neoclassicism (dor:Neoclassicism)
+      - Duiliu_Zamfirescu (dor:Duiliu_Zamfirescu) --dop:almaMater--> University_of_Bucharest (dor:University_of_Bucharest)
+  '10':
+    attributes:
+      Georg_Jensen: (birth name^='Georg Arthur Jensen')
+      223_Main_Street: (architect^='Schlotter, Frank J.')
+      Royal_Danish_Academy_of_Fine_Arts: (country^='Denmark')
+    relationships:
+      - Georg_Jensen (dor:Georg_Jensen) --doo:movement--> Art_Nouveau (dor:Art_Nouveau)
+      - 223_Main_Street (dor:223_Main_Street) --doo:architecturalStyle--> Art_Nouveau (dor:Art_Nouveau)
+      - Adolfo_de_Carolis (dor:Adolfo_de_Carolis) --doo:genre--> Art_Nouveau (dor:Art_Nouveau)
+      - Georg_Jensen (dor:Georg_Jensen) --dop:almaMater--> Royal_Danish_Academy_of_Fine_Arts (dor:Royal_Danish_Academy_of_Fine_Arts)
+attributes:
+  artist: --birth name^ (doo:birthName)--> langString
+  university: --direction^ (dop:direction)--> langString | --header^ (dop:header)--> langString | --country^ (dop:country)--> langString | --align^ (dop:align)--> langString
+  music genre: --instruments^ (dop:instruments)--> Resource
+  historic place: --built^ (dop:built)--> int | --architect^ (dop:architect)--> Resource | --architect^ (doo:architect)--> Resource | --designated other1 date^ (dop:designatedOther1Date)--> int
+subgraph_id: 932
+relationships:
+  - artist --doo:movement--> music genre
+  - historic place --doo:architecturalStyle--> music genre
+  - writer --doo:genre--> music genre
+  - artist --dop:almaMater--> university

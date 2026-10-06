@@ -1,0 +1,92 @@
+types:
+  town: doo:Town
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  railway line: doo:RailwayLine
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      KL_Monorail: (route start^='http://dbpedia.org/resource/KL_Sentral')
+    relationships:
+      - KL_Monorail (dor:KL_Monorail) --doo:owner--> Prasarana_Malaysia (dor:Prasarana_Malaysia)
+      - Prasarana_Malaysia (dor:Prasarana_Malaysia) --doo:headquarter--> Kuala_Lumpur (dor:Kuala_Lumpur)
+      - Bandar_Sri_Permaisuri (dor:Bandar_Sri_Permaisuri) --doo:subdivision--> Kuala_Lumpur (dor:Kuala_Lumpur)
+      - KL_Monorail (dor:KL_Monorail) --doo:railwayRollingStock--> Scomi_SUTRA (dor:Scomi_SUTRA)
+  '2':
+    attributes:
+      KL_Monorail: (route start^='http://dbpedia.org/resource/KL_Sentral')
+    relationships:
+      - KL_Monorail (dor:KL_Monorail) --doo:owner--> Prasarana_Malaysia (dor:Prasarana_Malaysia)
+      - Prasarana_Malaysia (dor:Prasarana_Malaysia) --doo:headquarter--> Kuala_Lumpur (dor:Kuala_Lumpur)
+      - Kepong (dor:Kepong) --doo:subdivision--> Kuala_Lumpur (dor:Kuala_Lumpur)
+      - KL_Monorail (dor:KL_Monorail) --doo:railwayRollingStock--> Scomi_SUTRA (dor:Scomi_SUTRA)
+  '3':
+    attributes:
+      KL_Monorail: (route start^='http://dbpedia.org/resource/KL_Sentral')
+    relationships:
+      - KL_Monorail (dor:KL_Monorail) --doo:owner--> Prasarana_Malaysia (dor:Prasarana_Malaysia)
+      - Prasarana_Malaysia (dor:Prasarana_Malaysia) --doo:headquarter--> Kuala_Lumpur (dor:Kuala_Lumpur)
+      - Sri_Hartamas (dor:Sri_Hartamas) --doo:subdivision--> Kuala_Lumpur (dor:Kuala_Lumpur)
+      - KL_Monorail (dor:KL_Monorail) --doo:railwayRollingStock--> Scomi_SUTRA (dor:Scomi_SUTRA)
+  '4':
+    attributes:
+      Washington_(state): (Apr low F^='34.2')
+    relationships:
+      - Line_T_(Sound_Transit) (<http://dbpedia.org/resource/Line_T_(Sound_Transit)>) --doo:owner--> Sound_Transit (dor:Sound_Transit)
+      - Sound_Transit (dor:Sound_Transit) --doo:headquarter--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Albion,_Washington (<http://dbpedia.org/resource/Albion,_Washington>) --doo:subdivision--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Line_T_(Sound_Transit) (<http://dbpedia.org/resource/Line_T_(Sound_Transit)>) --doo:railwayRollingStock--> Škoda_10_T (<http://dbpedia.org/resource/Škoda_10_T>)
+  '5':
+    attributes:
+      Washington_(state): (Apr low F^='34.2')
+    relationships:
+      - Line_T_(Sound_Transit) (<http://dbpedia.org/resource/Line_T_(Sound_Transit)>) --doo:owner--> Sound_Transit (dor:Sound_Transit)
+      - Sound_Transit (dor:Sound_Transit) --doo:headquarter--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Almira,_Washington (<http://dbpedia.org/resource/Almira,_Washington>) --doo:subdivision--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Line_T_(Sound_Transit) (<http://dbpedia.org/resource/Line_T_(Sound_Transit)>) --doo:railwayRollingStock--> Škoda_10_T (<http://dbpedia.org/resource/Škoda_10_T>)
+  '6':
+    attributes:
+      Washington_(state): (Apr low F^='34.2')
+    relationships:
+      - Line_T_(Sound_Transit) (<http://dbpedia.org/resource/Line_T_(Sound_Transit)>) --doo:owner--> Sound_Transit (dor:Sound_Transit)
+      - Sound_Transit (dor:Sound_Transit) --doo:headquarter--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Beaux_Arts_Village,_Washington (<http://dbpedia.org/resource/Beaux_Arts_Village,_Washington>) --doo:subdivision--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Line_T_(Sound_Transit) (<http://dbpedia.org/resource/Line_T_(Sound_Transit)>) --doo:railwayRollingStock--> Škoda_10_T (<http://dbpedia.org/resource/Škoda_10_T>)
+  '7':
+    attributes: {}
+    relationships:
+      - Line_1_Yonge–University (<http://dbpedia.org/resource/Line_1_Yonge–University>) --doo:owner--> Toronto_Transit_Commission (dor:Toronto_Transit_Commission)
+      - Toronto_Transit_Commission (dor:Toronto_Transit_Commission) --doo:headquarter--> Ontario (dor:Ontario)
+      - Addington_Highlands (dor:Addington_Highlands) --doo:subdivision--> Ontario (dor:Ontario)
+      - Line_1_Yonge–University (<http://dbpedia.org/resource/Line_1_Yonge–University>) --doo:railwayRollingStock--> Toronto_Rocket (dor:Toronto_Rocket)
+  '8':
+    attributes: {}
+    relationships:
+      - Line_1_Yonge–University (<http://dbpedia.org/resource/Line_1_Yonge–University>) --doo:owner--> Toronto_Transit_Commission (dor:Toronto_Transit_Commission)
+      - Toronto_Transit_Commission (dor:Toronto_Transit_Commission) --doo:headquarter--> Ontario (dor:Ontario)
+      - Ajax,_Ontario (<http://dbpedia.org/resource/Ajax,_Ontario>) --doo:subdivision--> Ontario (dor:Ontario)
+      - Line_1_Yonge–University (<http://dbpedia.org/resource/Line_1_Yonge–University>) --doo:railwayRollingStock--> Toronto_Rocket (dor:Toronto_Rocket)
+  '9':
+    attributes: {}
+    relationships:
+      - Line_1_Yonge–University (<http://dbpedia.org/resource/Line_1_Yonge–University>) --doo:owner--> Toronto_Transit_Commission (dor:Toronto_Transit_Commission)
+      - Toronto_Transit_Commission (dor:Toronto_Transit_Commission) --doo:headquarter--> Ontario (dor:Ontario)
+      - Alberton,_Ontario (<http://dbpedia.org/resource/Alberton,_Ontario>) --doo:subdivision--> Ontario (dor:Ontario)
+      - Line_1_Yonge–University (<http://dbpedia.org/resource/Line_1_Yonge–University>) --doo:railwayRollingStock--> Toronto_Rocket (dor:Toronto_Rocket)
+attributes:
+  town: --founder^ (dop:founder)--> langString
+  settlement: --Apr low F^ (dop:aprLowF)--> double | --Apr record high C^ (dop:aprRecordHighC)--> int
+  soccer club: --American^ (dop:american)--> langString | --manager title^ (doo:managerTitle)--> string | --logo^ (dop:logo)--> langString | --ground^ (dop:ground)--> langString
+  railway line: --route start^ (doo:routeStart)--> Resource
+subgraph_id: 888
+relationships:
+  - railway line --doo:owner--> public transit system
+  - public transit system --doo:headquarter--> settlement
+  - town --doo:subdivision--> settlement
+  - railway line --doo:railwayRollingStock--> soccer club

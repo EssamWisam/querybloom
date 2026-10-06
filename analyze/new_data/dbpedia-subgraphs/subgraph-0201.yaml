@@ -1,0 +1,123 @@
+types:
+  building: doo:Building
+  settlement: doo:Settlement
+  government agency: doo:GovernmentAgency
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      New_York_City: (area code^='212/646/332,718/347/929,917', direction^='vertical')
+    relationships:
+      - Civilian_Complaint_Review_Board (dor:Civilian_Complaint_Review_Board) --doo:jurisdiction--> New_York_City (dor:New_York_City)
+      - New_York_City (dor:New_York_City) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - (Le)_Poisson_Rouge (<http://dbpedia.org/resource/(Le)_Poisson_Rouge>) --doo:location--> New_York_City (dor:New_York_City)
+  '2':
+    attributes:
+      New_York_City: (area code^='212/646/332,718/347/929,917', direction^='vertical')
+    relationships:
+      - Mayor's_Office_of_Immigrant_Affairs (<http://dbpedia.org/resource/Mayor's_Office_of_Immigrant_Affairs>) --doo:jurisdiction--> New_York_City (dor:New_York_City)
+      - New_York_City (dor:New_York_City) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - (Le)_Poisson_Rouge (<http://dbpedia.org/resource/(Le)_Poisson_Rouge>) --doo:location--> New_York_City (dor:New_York_City)
+  '3':
+    attributes:
+      New_York_City: (area code^='212/646/332,718/347/929,917', direction^='vertical')
+    relationships:
+      - New_York_City_Administration_for_Children's_Services (<http://dbpedia.org/resource/New_York_City_Administration_for_Children's_Services>) --doo:jurisdiction--> New_York_City (dor:New_York_City)
+      - New_York_City (dor:New_York_City) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - (Le)_Poisson_Rouge (<http://dbpedia.org/resource/(Le)_Poisson_Rouge>) --doo:location--> New_York_City (dor:New_York_City)
+  '4':
+    attributes:
+      Patna: (area code^='+91-(0)612', Apr sun^='264', Apr record low C^='13.3', direction^='vertical')
+      Patna_district: (UTC offset^='+05:30', Aug low C^='26.1')
+    relationships:
+      - Patna_Regional_Development_Authority (dor:Patna_Regional_Development_Authority) --doo:jurisdiction--> Patna (dor:Patna)
+      - Patna (dor:Patna) --doo:subdivision--> Patna_district (dor:Patna_district)
+      - 1,_Aney_Marg (<http://dbpedia.org/resource/1,_Aney_Marg>) --doo:location--> Patna (dor:Patna)
+  '5':
+    attributes:
+      Chicago: (area code^='312/872,773/872', direction^='vertical')
+      Cook_County,_Illinois: (UTC offset^='−5')
+    relationships:
+      - Chicago_Housing_Authority (dor:Chicago_Housing_Authority) --doo:jurisdiction--> Chicago (dor:Chicago)
+      - Chicago (dor:Chicago) --doo:subdivision--> Cook_County,_Illinois (<http://dbpedia.org/resource/Cook_County,_Illinois>)
+      - 10_South_LaSalle (dor:10_South_LaSalle) --doo:location--> Chicago (dor:Chicago)
+  '6':
+    attributes:
+      Chicago: (area code^='312/872,773/872', direction^='vertical')
+    relationships:
+      - Chicago_Housing_Authority (dor:Chicago_Housing_Authority) --doo:jurisdiction--> Chicago (dor:Chicago)
+      - Chicago (dor:Chicago) --doo:subdivision--> DuPage_County,_Illinois (<http://dbpedia.org/resource/DuPage_County,_Illinois>)
+      - 10_South_LaSalle (dor:10_South_LaSalle) --doo:location--> Chicago (dor:Chicago)
+  '7':
+    attributes:
+      Chicago: (area code^='312/872,773/872', direction^='vertical')
+    relationships:
+      - Chicago_Housing_Authority (dor:Chicago_Housing_Authority) --doo:jurisdiction--> Chicago (dor:Chicago)
+      - Chicago (dor:Chicago) --doo:subdivision--> Illinois (dor:Illinois)
+      - 10_South_LaSalle (dor:10_South_LaSalle) --doo:location--> Chicago (dor:Chicago)
+  '8':
+    attributes:
+      Boston: (area code^='617 and 857')
+    relationships:
+      - Boston_Housing_Authority (dor:Boston_Housing_Authority) --doo:jurisdiction--> Boston (dor:Boston)
+      - Boston (dor:Boston) --doo:subdivision--> Massachusetts (dor:Massachusetts)
+      - 100_Federal_Street (dor:100_Federal_Street) --doo:location--> Boston (dor:Boston)
+  '9':
+    attributes:
+      Boston: (area code^='617 and 857')
+    relationships:
+      - Boston_Housing_Authority (dor:Boston_Housing_Authority) --doo:jurisdiction--> Boston (dor:Boston)
+      - Boston (dor:Boston) --doo:subdivision--> Suffolk_County,_Massachusetts (<http://dbpedia.org/resource/Suffolk_County,_Massachusetts>)
+      - 100_Federal_Street (dor:100_Federal_Street) --doo:location--> Boston (dor:Boston)
+  '10':
+    attributes:
+      Boston: (area code^='617 and 857')
+    relationships:
+      - Boston_Public_Health_Commission (dor:Boston_Public_Health_Commission) --doo:jurisdiction--> Boston (dor:Boston)
+      - Boston (dor:Boston) --doo:subdivision--> Massachusetts (dor:Massachusetts)
+      - 100_Federal_Street (dor:100_Federal_Street) --doo:location--> Boston (dor:Boston)
+qa_result:
+  status: completed
+  cost_usd: 0.26425
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0457224
+        total_tokens: 4252
+        prompt_tokens: 2176
+        completion_tokens: 2076
+      generate:
+        cost_usd: 0.07374760000000001
+        total_tokens: 6988
+        prompt_tokens: 3921
+        completion_tokens: 3067
+      verify_1:
+        cost_usd: 0.035062
+        total_tokens: 4967
+        prompt_tokens: 4285
+        completion_tokens: 682
+      complexity:
+        cost_usd: 0.10971800000000001
+        total_tokens: 9932
+        prompt_tokens: 5356
+        completion_tokens: 4576
+    total_tokens: 26139
+    prompt_tokens: 15738
+    total_cost_usd: 0.26425000000000004
+    completion_tokens: 10401
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  settlement: --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --area code^ (doo:areaCode)--> string | --Apr sun^ (dop:aprSun)--> double | --Apr record low C^ (dop:aprRecordLowC)--> langString | --direction^ (dop:direction)--> langString
+  administrative region: --data^ (dop:data)--> double | --UTC offset^ (doo:utcOffset)--> string | --Center^ (dop:center)--> langString | --c^ (dop:c)--> langString | --Aug low C^ (dop:augLowC)--> double
+subgraph_id: 201
+relationships:
+  - government agency --doo:jurisdiction--> settlement
+  - settlement --doo:subdivision--> administrative region
+  - building --doo:location--> settlement

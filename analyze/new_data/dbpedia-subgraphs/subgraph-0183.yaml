@@ -1,0 +1,184 @@
+types:
+  venue: doo:Venue
+  country: doo:Country
+  economist: doo:Economist
+  university: doo:University
+  person function: doo:PersonFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_States: (caption^='Racial and ethnic groups in the United States', footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+      Alfred_H._Conrad: (influenced by^='http://dbpedia.org/resource/Alexander_Gerschenkron')
+      Economic_history: |-
+        (quote^='Have a very healthy respect for the study of economic history, because that''s the raw material out of which any of your conjectures or testings will come.
+
+        – Paul Samuelson')
+      Harvard_University: (president^='http://dbpedia.org/resource/Lawrence_Bacow')
+      Bright-Landry_Hockey_Center: (tenants^='Boston Pride')
+    relationships:
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --doo:almaMater--> Harvard_University (dor:Harvard_University)
+      - Bright-Landry_Hockey_Center (dor:Bright-Landry_Hockey_Center) --doo:operator--> Harvard_University (dor:Harvard_University)
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --doo:field--> Economic_history (dor:Economic_history)
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --doo:nationality--> United_States (dor:United_States)
+  '2':
+    attributes:
+      United_States: (caption^='Racial and ethnic groups in the United States', footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+      Harvard_Stadium: (tenants^='')
+      Alfred_H._Conrad: (influenced by^='http://dbpedia.org/resource/Alexander_Gerschenkron')
+      Economic_history: |-
+        (quote^='Have a very healthy respect for the study of economic history, because that''s the raw material out of which any of your conjectures or testings will come.
+
+        – Paul Samuelson')
+      Harvard_University: (president^='http://dbpedia.org/resource/Lawrence_Bacow')
+    relationships:
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --doo:almaMater--> Harvard_University (dor:Harvard_University)
+      - Harvard_Stadium (dor:Harvard_Stadium) --doo:operator--> Harvard_University (dor:Harvard_University)
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --doo:field--> Economic_history (dor:Economic_history)
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --doo:nationality--> United_States (dor:United_States)
+  '3':
+    attributes:
+      United_States: (caption^='Racial and ethnic groups in the United States', footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+      Alfred_H._Conrad: (influenced by^='http://dbpedia.org/resource/Alexander_Gerschenkron')
+      Economic_history: |-
+        (quote^='Have a very healthy respect for the study of economic history, because that''s the raw material out of which any of your conjectures or testings will come.
+
+        – Paul Samuelson')
+      Harvard_University: (president^='http://dbpedia.org/resource/Lawrence_Bacow')
+      Joseph_J._O'Donnell_Field: (capacity^='1600', tenants^='Harvard Crimson baseball')
+    relationships:
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --doo:almaMater--> Harvard_University (dor:Harvard_University)
+      - Joseph_J._O'Donnell_Field (<http://dbpedia.org/resource/Joseph_J._O'Donnell_Field>) --doo:operator--> Harvard_University (dor:Harvard_University)
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --doo:field--> Economic_history (dor:Economic_history)
+      - Alfred_H._Conrad (dor:Alfred_H._Conrad) --doo:nationality--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Israel: (caption^='--03-10', footer^='Satellite images of Israel and neighboring territories during the day and night')
+      Bartlett_Gymnasium: (tenants^='campus dining hall', architect^='http://dbpedia.org/resource/Bruner/Cott')
+      University_of_Chicago: (president^='http://dbpedia.org/resource/A._Paul_Alivisatos')
+    relationships:
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --doo:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Bartlett_Gymnasium (dor:Bartlett_Gymnasium) --doo:operator--> University_of_Chicago (dor:University_of_Chicago)
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --dop:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --doo:field--> Non-profit (dor:Non-profit)
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --doo:nationality--> Israel (dor:Israel)
+  '5':
+    attributes:
+      Israel: (caption^='--03-10', footer^='Satellite images of Israel and neighboring territories during the day and night')
+      University_of_Chicago: (president^='http://dbpedia.org/resource/A._Paul_Alivisatos')
+      Henry_Crown_Fieldhouse: (tenants^='campus recreation center for students', architect^='http://dbpedia.org/resource/Holabird_&_Root')
+    relationships:
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --doo:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Henry_Crown_Fieldhouse (dor:Henry_Crown_Fieldhouse) --doo:operator--> University_of_Chicago (dor:University_of_Chicago)
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --dop:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --doo:field--> Non-profit (dor:Non-profit)
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --doo:nationality--> Israel (dor:Israel)
+  '6':
+    attributes:
+      Israel: (caption^='--03-10', footer^='Satellite images of Israel and neighboring territories during the day and night')
+      University_of_Chicago: (president^='http://dbpedia.org/resource/A._Paul_Alivisatos')
+      Men's_Gymnasium_(University_of_Chicago): (tenants^='University Physical Education')
+    relationships:
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --doo:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Men's_Gymnasium_(University_of_Chicago) (<http://dbpedia.org/resource/Men's_Gymnasium_(University_of_Chicago)>) --doo:operator--> University_of_Chicago (dor:University_of_Chicago)
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --dop:almaMater--> University_of_Chicago (dor:University_of_Chicago)
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --doo:field--> Non-profit (dor:Non-profit)
+      - Ayelet_Gneezy (dor:Ayelet_Gneezy) --doo:nationality--> Israel (dor:Israel)
+  '7':
+    attributes:
+      Canadians: (caption^='Religion in Canada', group^='Canadians')
+      California_Memorial_Stadium: (tenants^='', architect^='http://dbpedia.org/resource/John_Galen_Howard')
+    relationships:
+      - Colin_Carter (dor:Colin_Carter) --doo:almaMater--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - California_Memorial_Stadium (dor:California_Memorial_Stadium) --doo:operator--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Colin_Carter (dor:Colin_Carter) --dop:almaMater--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Colin_Carter (dor:Colin_Carter) --doo:field--> Agricultural_economics (dor:Agricultural_economics)
+      - Colin_Carter (dor:Colin_Carter) --doo:nationality--> Canadians (dor:Canadians)
+  '8':
+    attributes:
+      Canadians: (caption^='Religion in Canada', group^='Canadians')
+      Evans_Diamond: (tenants^='California Golden Bears  1933–present')
+    relationships:
+      - Colin_Carter (dor:Colin_Carter) --doo:almaMater--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Evans_Diamond (dor:Evans_Diamond) --doo:operator--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Colin_Carter (dor:Colin_Carter) --dop:almaMater--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Colin_Carter (dor:Colin_Carter) --doo:field--> Agricultural_economics (dor:Agricultural_economics)
+      - Colin_Carter (dor:Colin_Carter) --doo:nationality--> Canadians (dor:Canadians)
+  '9':
+    attributes:
+      Canadians: (caption^='Religion in Canada', group^='Canadians')
+      Haas_Pavilion: (capacity^='6578', tenants^='California Golden Bears', architect^='http://dbpedia.org/resource/Ellerbe_Becket')
+    relationships:
+      - Colin_Carter (dor:Colin_Carter) --doo:almaMater--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Haas_Pavilion (dor:Haas_Pavilion) --doo:operator--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Colin_Carter (dor:Colin_Carter) --dop:almaMater--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Colin_Carter (dor:Colin_Carter) --doo:field--> Agricultural_economics (dor:Agricultural_economics)
+      - Colin_Carter (dor:Colin_Carter) --doo:nationality--> Canadians (dor:Canadians)
+  '10':
+    attributes:
+      Peru: (caption^='Manú National Park in the Amazon, the mountain peak Alpamayo and Paracas National Reserve.')
+      University_of_Western_Ontario: (president^='http://dbpedia.org/resource/Alan_Shepard_(academic)')
+      Thompson_Recreation_and_Athletic_Centre: (tenants^='http://dbpedia.org/resource/Western_Mustangs')
+    relationships:
+      - Liliana_Rojas-Suarez (dor:Liliana_Rojas-Suarez) --doo:almaMater--> University_of_Western_Ontario (dor:University_of_Western_Ontario)
+      - Thompson_Recreation_and_Athletic_Centre (dor:Thompson_Recreation_and_Athletic_Centre) --doo:operator--> University_of_Western_Ontario (dor:University_of_Western_Ontario)
+      - Liliana_Rojas-Suarez (dor:Liliana_Rojas-Suarez) --dop:almaMater--> University_of_Western_Ontario (dor:University_of_Western_Ontario)
+      - Liliana_Rojas-Suarez (dor:Liliana_Rojas-Suarez) --doo:field--> International_development (dor:International_development)
+      - Liliana_Rojas-Suarez (dor:Liliana_Rojas-Suarez) --doo:nationality--> Peru (dor:Peru)
+qa_result:
+  status: completed
+  cost_usd: 0.417501
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.040292400000000006
+        total_tokens: 3997
+        prompt_tokens: 2198
+        completion_tokens: 1799
+      generate:
+        cost_usd: 0.10384700000000001
+        total_tokens: 9475
+        prompt_tokens: 5710
+        completion_tokens: 3765
+      verify_1:
+        cost_usd: 0.08604700000000001
+        total_tokens: 8924
+        prompt_tokens: 6162
+        completion_tokens: 2762
+      verify_2:
+        cost_usd: 0.04347700000000001
+        total_tokens: 6779
+        prompt_tokens: 6140
+        completion_tokens: 639
+      complexity:
+        cost_usd: 0.14383800000000002
+        total_tokens: 13108
+        prompt_tokens: 7316
+        completion_tokens: 5792
+    total_tokens: 42283
+    prompt_tokens: 27526
+    total_cost_usd: 0.4175014
+    completion_tokens: 14757
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  venue: --capacity^ (dop:capacity)--> int | --tenants^ (dop:tenants)--> int | --architect^ (doo:architect)--> Resource
+  country: --caption^ (dop:caption)--> langString | --group^ (dop:group)--> langString | --footer^ (dop:footer)--> langString
+  economist: --influenced by^ (doo:influencedBy)--> Resource
+  university: --president^ (doo:president)--> Resource | --Closed^ (dop:closed)--> int | --dean^ (doo:dean)--> Resource | --affiliation^ (dop:affiliation)--> Resource
+  person function: --quote^ (dop:quote)--> langString
+subgraph_id: 183
+relationships:
+  - economist --doo:almaMater--> university
+  - venue --doo:operator--> university
+  - economist --dop:almaMater--> university
+  - economist --doo:field--> person function
+  - economist --doo:nationality--> country

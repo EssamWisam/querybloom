@@ -1,0 +1,118 @@
+types:
+  company: doo:Company
+  Location: doo:Location
+  settlement: doo:Settlement
+  music genre: doo:MusicGenre
+  historic building: doo:HistoricBuilding
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      County_Galway: (area total (m2)^='6151000000.0')
+      Aer_Arann_Islands: (logo^='Aer Arann Islands logo.png')
+      St._John's_Church,_Ballinasloe: (subject='http://dbpedia.org/resource/Category:Ballinasloe', location^='http://dbpedia.org/resource/Ballinasloe')
+    relationships:
+      - St._John's_Church,_Ballinasloe (<http://dbpedia.org/resource/St._John's_Church,_Ballinasloe>) --doo:architecturalStyle--> Evangelicalism (dor:Evangelicalism)
+      - St._John's_Church,_Ballinasloe (<http://dbpedia.org/resource/St._John's_Church,_Ballinasloe>) --doo:location--> County_Galway (dor:County_Galway)
+      - Benbaun (dor:Benbaun) --doo:locatedInArea--> County_Galway (dor:County_Galway)
+      - Aer_Arann_Islands (dor:Aer_Arann_Islands) --doo:headquarter--> County_Galway (dor:County_Galway)
+  '2':
+    attributes:
+      County_Galway: (area total (m2)^='6151000000.0')
+      Aer_Arann_Islands: (logo^='Aer Arann Islands logo.png')
+    relationships:
+      - St._John's_Church,_Ballinasloe (<http://dbpedia.org/resource/St._John's_Church,_Ballinasloe>) --doo:architecturalStyle--> Evangelicalism (dor:Evangelicalism)
+      - St._John's_Church,_Ballinasloe (<http://dbpedia.org/resource/St._John's_Church,_Ballinasloe>) --doo:location--> County_Galway (dor:County_Galway)
+      - Benbrack (dor:Benbrack) --doo:locatedInArea--> County_Galway (dor:County_Galway)
+      - Aer_Arann_Islands (dor:Aer_Arann_Islands) --doo:headquarter--> County_Galway (dor:County_Galway)
+  '3':
+    attributes:
+      County_Galway: (area total (m2)^='6151000000.0')
+      Aer_Arann_Islands: (logo^='Aer Arann Islands logo.png')
+      St._John's_Church,_Ballinasloe: (subject='http://dbpedia.org/resource/Category:Ballinasloe', location^='http://dbpedia.org/resource/Ballinasloe')
+    relationships:
+      - St._John's_Church,_Ballinasloe (<http://dbpedia.org/resource/St._John's_Church,_Ballinasloe>) --doo:architecturalStyle--> Evangelicalism (dor:Evangelicalism)
+      - St._John's_Church,_Ballinasloe (<http://dbpedia.org/resource/St._John's_Church,_Ballinasloe>) --doo:location--> County_Galway (dor:County_Galway)
+      - Benbreen (dor:Benbreen) --doo:locatedInArea--> County_Galway (dor:County_Galway)
+      - Aer_Arann_Islands (dor:Aer_Arann_Islands) --doo:headquarter--> County_Galway (dor:County_Galway)
+  '4':
+    attributes:
+      Rome: (area total (m2)^='1285411099.16')
+      San_Bartolomeo_all'Isola: (subject='http://dbpedia.org/resource/Category:10th-century_churches_in_Italy', location^='http://dbpedia.org/resource/Rome')
+    relationships:
+      - San_Bartolomeo_all'Isola (<http://dbpedia.org/resource/San_Bartolomeo_all'Isola>) --doo:architecturalStyle--> Baroque (dor:Baroque)
+      - San_Bartolomeo_all'Isola (<http://dbpedia.org/resource/San_Bartolomeo_all'Isola>) --doo:location--> Rome (dor:Rome)
+      - Alban_Hills__Alban_Hills__1 (dor:Alban_Hills__Alban_Hills__1) --doo:locatedInArea--> Rome (dor:Rome)
+      - Air_Bee (dor:Air_Bee) --doo:headquarter--> Rome (dor:Rome)
+  '5':
+    attributes:
+      Rome: (area total (m2)^='1285411099.16')
+      San_Bartolomeo_all'Isola: (subject='http://dbpedia.org/resource/Category:10th-century_churches_in_Italy', location^='http://dbpedia.org/resource/Rome')
+    relationships:
+      - San_Bartolomeo_all'Isola (<http://dbpedia.org/resource/San_Bartolomeo_all'Isola>) --doo:architecturalStyle--> Baroque (dor:Baroque)
+      - San_Bartolomeo_all'Isola (<http://dbpedia.org/resource/San_Bartolomeo_all'Isola>) --doo:location--> Rome (dor:Rome)
+      - Monte_Cavo (dor:Monte_Cavo) --doo:locatedInArea--> Rome (dor:Rome)
+      - Air_Bee (dor:Air_Bee) --doo:headquarter--> Rome (dor:Rome)
+  '6':
+    attributes:
+      Rome: (area total (m2)^='1285411099.16')
+      San_Bartolomeo_all'Isola: (subject='http://dbpedia.org/resource/Category:10th-century_churches_in_Italy', location^='http://dbpedia.org/resource/Rome')
+    relationships:
+      - San_Bartolomeo_all'Isola (<http://dbpedia.org/resource/San_Bartolomeo_all'Isola>) --doo:architecturalStyle--> Baroque (dor:Baroque)
+      - San_Bartolomeo_all'Isola (<http://dbpedia.org/resource/San_Bartolomeo_all'Isola>) --doo:location--> Rome (dor:Rome)
+      - Monte_San_Valentino_(Rome) (<http://dbpedia.org/resource/Monte_San_Valentino_(Rome)>) --doo:locatedInArea--> Rome (dor:Rome)
+      - Air_Bee (dor:Air_Bee) --doo:headquarter--> Rome (dor:Rome)
+  '7':
+    attributes:
+      Oslo: (area total (m2)^='480000000.0')
+      Holmlia_Church: (subject='http://dbpedia.org/resource/Category:1993_establishments_in_Norway', location^='http://dbpedia.org/resource/Holmlia')
+    relationships:
+      - Holmlia_Church (dor:Holmlia_Church) --doo:architecturalStyle--> Postmodernism (dor:Postmodernism)
+      - Holmlia_Church (dor:Holmlia_Church) --doo:location--> Oslo (dor:Oslo)
+      - Kjerkeberget (dor:Kjerkeberget) --doo:locatedInArea--> Oslo (dor:Oslo)
+      - Air_Leap (dor:Air_Leap) --doo:headquarter--> Oslo (dor:Oslo)
+  '8':
+    attributes:
+      Oslo: (area total (m2)^='480000000.0')
+      Mortensrud_Church: (subject='http://dbpedia.org/resource/Category:2002_establishments_in_Norway', location^='http://dbpedia.org/resource/Mortensrud')
+    relationships:
+      - Mortensrud_Church (dor:Mortensrud_Church) --doo:architecturalStyle--> Postmodernism (dor:Postmodernism)
+      - Mortensrud_Church (dor:Mortensrud_Church) --doo:location--> Oslo (dor:Oslo)
+      - Kjerkeberget (dor:Kjerkeberget) --doo:locatedInArea--> Oslo (dor:Oslo)
+      - Air_Leap (dor:Air_Leap) --doo:headquarter--> Oslo (dor:Oslo)
+  '9':
+    attributes:
+      Oslo: (area total (m2)^='480000000.0')
+      Romsås_Church: (subject='http://dbpedia.org/resource/Category:1995_establishments_in_Norway', location^='http://dbpedia.org/resource/Oslo')
+    relationships:
+      - Romsås_Church (<http://dbpedia.org/resource/Romsås_Church>) --doo:architecturalStyle--> Postmodernism (dor:Postmodernism)
+      - Romsås_Church (<http://dbpedia.org/resource/Romsås_Church>) --doo:location--> Oslo (dor:Oslo)
+      - Kjerkeberget (dor:Kjerkeberget) --doo:locatedInArea--> Oslo (dor:Oslo)
+      - Air_Leap (dor:Air_Leap) --doo:headquarter--> Oslo (dor:Oslo)
+  '10':
+    attributes:
+      Bratislava: (area total (m2)^='367584000.0')
+      Blue_Church: (subject='http://dbpedia.org/resource/Category:1908_establishments_in_Austria-Hungary', location^='http://dbpedia.org/resource/Bratislava')
+      Air_Slovakia: (logo^='Air Slovakia Logo.png')
+    relationships:
+      - Blue_Church (dor:Blue_Church) --doo:architecturalStyle--> Art_Nouveau (dor:Art_Nouveau)
+      - Blue_Church (dor:Blue_Church) --doo:location--> Bratislava (dor:Bratislava)
+      - Devínska_Kobyla (<http://dbpedia.org/resource/Devínska_Kobyla>) --doo:locatedInArea--> Bratislava (dor:Bratislava)
+      - Air_Slovakia (dor:Air_Slovakia) --doo:headquarter--> Bratislava (dor:Bratislava)
+attributes:
+  company: --founder^ (dop:founder)--> langString | --logo^ (dop:logo)--> langString
+  Location: --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --administrator^ (dop:administrator)--> Resource | --region^ (doo:region)--> Resource | --Apr rain days^ (dop:aprRainDays)--> int | --arc-gapB^ (dop:arcGapb)--> double | --arc-radiusA^ (dop:arcRadiusa)--> double
+  settlement: --Apr rain mm^ (dop:aprRainMm)--> double | --area total (m2)^ (doo:areaTotal)--> double
+  music genre: --instruments^ (dop:instruments)--> langString
+  historic building: --subject (podt:subject)--> Resource | --location^ (doo:location)--> Resource
+subgraph_id: 107
+relationships:
+  - historic building --doo:architecturalStyle--> music genre
+  - historic building --doo:location--> settlement
+  - Location --doo:locatedInArea--> settlement
+  - company --doo:headquarter--> settlement

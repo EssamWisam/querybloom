@@ -1,0 +1,81 @@
+types:
+  college coach: doo:CollegeCoach
+  american football player: doo:AmericanFootballPlayer
+  national football league season: doo:NationalFootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      George_Halas: (birth date^='1895-02-02', death date^='1983-10-31')
+      1963_Chicago_Bears_season: (TVAnnouncers^='http://dbpedia.org/resource/Chris_Schenkel', location^='Wrigley Field', Player^='Bob Dentel')
+    relationships:
+      - 1963_Chicago_Bears_season (dor:1963_Chicago_Bears_season) --dop:tvannouncers--> George_Connor_(American_football) (<http://dbpedia.org/resource/George_Connor_(American_football)>)
+      - 1963_Chicago_Bears_season (dor:1963_Chicago_Bears_season) --doo:coach--> George_Halas (dor:George_Halas)
+  '2':
+    attributes:
+      Blanton_Collier: (birth date^='1906-07-02', death date^='1983-03-22')
+      1964_Cleveland_Browns_season: (TVAnnouncers^='Chris Schenkel   and Ken Coleman   , Pat Summerall   and Warren Lahr', location^='http://dbpedia.org/resource/Bronx,_New_York')
+    relationships:
+      - 1964_Cleveland_Browns_season (dor:1964_Cleveland_Browns_season) --dop:tvannouncers--> Warren_Lahr (dor:Warren_Lahr)
+      - 1964_Cleveland_Browns_season (dor:1964_Cleveland_Browns_season) --doo:coach--> Blanton_Collier (dor:Blanton_Collier)
+  '3':
+    attributes:
+      1964_Pittsburgh_Steelers_season: (TVAnnouncers^='Ken Coleman   and Joe Tucker   , Warren Lahr   and Johnny Sauer')
+    relationships:
+      - 1964_Pittsburgh_Steelers_season (dor:1964_Pittsburgh_Steelers_season) --dop:tvannouncers--> Warren_Lahr (dor:Warren_Lahr)
+      - 1964_Pittsburgh_Steelers_season (dor:1964_Pittsburgh_Steelers_season) --doo:coach--> Buddy_Parker (dor:Buddy_Parker)
+  '4':
+    attributes:
+      1964_San_Diego_Chargers_season: (TVAnnouncers^='http://dbpedia.org/resource/Curt_Gowdy')
+    relationships:
+      - 1964_San_Diego_Chargers_season (dor:1964_San_Diego_Chargers_season) --dop:tvannouncers--> Paul_Christman (dor:Paul_Christman)
+      - 1964_San_Diego_Chargers_season (dor:1964_San_Diego_Chargers_season) --doo:coach--> Sid_Gillman (dor:Sid_Gillman)
+  '5':
+    attributes:
+      1970_Kansas_City_Chiefs_season: (TVAnnouncers^='http://dbpedia.org/resource/Don_Meredith', location^='http://dbpedia.org/resource/Baltimore')
+    relationships:
+      - 1970_Kansas_City_Chiefs_season (dor:1970_Kansas_City_Chiefs_season) --dop:tvannouncers--> Don_Meredith (dor:Don_Meredith)
+      - 1970_Kansas_City_Chiefs_season (dor:1970_Kansas_City_Chiefs_season) --doo:coach--> Hank_Stram (dor:Hank_Stram)
+  '6':
+    attributes:
+      1974_Buffalo_Bills_season: (TVAnnouncers^='Jim Simpson and John Brodie', location^='http://dbpedia.org/resource/Foxboro,_Massachusetts', Player^='Art Cameron')
+    relationships:
+      - 1974_Buffalo_Bills_season (dor:1974_Buffalo_Bills_season) --dop:tvannouncers--> Alex_Karras (dor:Alex_Karras)
+      - 1974_Buffalo_Bills_season (dor:1974_Buffalo_Bills_season) --doo:coach--> Lou_Saban (dor:Lou_Saban)
+  '7':
+    attributes:
+      1974_Buffalo_Bills_season: (TVAnnouncers^='Jim Simpson and John Brodie', location^='http://dbpedia.org/resource/Foxboro,_Massachusetts', Player^='Art Cameron')
+    relationships:
+      - 1974_Buffalo_Bills_season (dor:1974_Buffalo_Bills_season) --dop:tvannouncers--> Frank_Gifford (dor:Frank_Gifford)
+      - 1974_Buffalo_Bills_season (dor:1974_Buffalo_Bills_season) --doo:coach--> Lou_Saban (dor:Lou_Saban)
+  '8':
+    attributes:
+      1975_Dallas_Cowboys_season: (TVAnnouncers^='Pat Summerall, Tom Brookshier and Hank Stram', Player^='Charles Bland')
+    relationships:
+      - 1975_Dallas_Cowboys_season (dor:1975_Dallas_Cowboys_season) --dop:tvannouncers--> Johnny_Unitas (dor:Johnny_Unitas)
+      - 1975_Dallas_Cowboys_season (dor:1975_Dallas_Cowboys_season) --doo:coach--> Tom_Landry (dor:Tom_Landry)
+  '9':
+    attributes:
+      Sonny_Jurgensen: (quote^='''''"All I ask of my blockers is four seconds.  I try to', align^='left')
+      1975_Dallas_Cowboys_season: (TVAnnouncers^='Pat Summerall, Tom Brookshier and Hank Stram', Player^='Charles Bland')
+    relationships:
+      - 1975_Dallas_Cowboys_season (dor:1975_Dallas_Cowboys_season) --dop:tvannouncers--> Sonny_Jurgensen (dor:Sonny_Jurgensen)
+      - 1975_Dallas_Cowboys_season (dor:1975_Dallas_Cowboys_season) --doo:coach--> Tom_Landry (dor:Tom_Landry)
+  '10':
+    attributes:
+      1975_Minnesota_Vikings_season: (TVAnnouncers^='http://dbpedia.org/resource/Gary_Bender')
+    relationships:
+      - 1975_Minnesota_Vikings_season (dor:1975_Minnesota_Vikings_season) --dop:tvannouncers--> Johnny_Unitas (dor:Johnny_Unitas)
+      - 1975_Minnesota_Vikings_season (dor:1975_Minnesota_Vikings_season) --doo:coach--> Bud_Grant (dor:Bud_Grant)
+attributes:
+  college coach: --birth date^ (doo:birthDate)--> date | --cteam^ (dop:cteam)--> Resource | --coach team^ (dop:coachTeam)--> langString | --death date^ (doo:deathDate)--> date
+  american football player: --weight (g)^ (doo:weight)--> double | --status^ (doo:status)--> string | --quote^ (dop:quote)--> langString | --align^ (dop:align)--> langString
+  national football league season: --TVAnnouncers^ (dop:tvannouncers)--> Resource | --location^ (dop:location)--> Resource | --Player^ (dop:player)--> langString
+subgraph_id: 339
+relationships:
+  - national football league season --dop:tvannouncers--> american football player
+  - national football league season --doo:coach--> college coach

@@ -1,0 +1,85 @@
+types:
+  place: doo:Place
+  school: doo:School
+  country: doo:Country
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      India: (last^='Roger')
+    relationships:
+      - Akalapuzha_Lake (dor:Akalapuzha_Lake) --doo:country--> India (dor:India)
+      - Akalapuzha_Lake (dor:Akalapuzha_Lake) --doo:location--> India (dor:India)
+      - Beacon_English_School (dor:Beacon_English_School) --doo:district--> India (dor:India)
+  '2':
+    attributes:
+      India: (last^='Roger')
+    relationships:
+      - Akalapuzha_Lake (dor:Akalapuzha_Lake) --doo:country--> India (dor:India)
+      - Akalapuzha_Lake (dor:Akalapuzha_Lake) --doo:location--> India (dor:India)
+      - St_Fidelis_College_(Lucknow,_India) (<http://dbpedia.org/resource/St_Fidelis_College_(Lucknow,_India)>) --doo:district--> India (dor:India)
+  '3':
+    attributes:
+      India: (last^='Roger')
+      Kerala: (subdivision^='http://dbpedia.org/resource/List_of_districts_in_Kerala')
+    relationships:
+      - Akalapuzha_Lake (dor:Akalapuzha_Lake) --doo:country--> India (dor:India)
+      - Akalapuzha_Lake (dor:Akalapuzha_Lake) --doo:location--> Kerala (dor:Kerala)
+      - St._Aloysius_Higher_Secondary_School (dor:St._Aloysius_Higher_Secondary_School) --doo:district--> Kerala (dor:Kerala)
+  '4':
+    attributes: {}
+    relationships:
+      - Alice_Lake_(Sawtooth_Wilderness) (<http://dbpedia.org/resource/Alice_Lake_(Sawtooth_Wilderness)>) --doo:country--> United_States (dor:United_States)
+      - Alice_Lake_(Sawtooth_Wilderness) (<http://dbpedia.org/resource/Alice_Lake_(Sawtooth_Wilderness)>) --doo:location--> Blaine_County,_Idaho (<http://dbpedia.org/resource/Blaine_County,_Idaho>)
+      - Wood_River_High_School_(Idaho) (<http://dbpedia.org/resource/Wood_River_High_School_(Idaho)>) --doo:district--> Blaine_County,_Idaho (<http://dbpedia.org/resource/Blaine_County,_Idaho>)
+  '5':
+    attributes: {}
+    relationships:
+      - Alturas_Lake (dor:Alturas_Lake) --doo:country--> United_States (dor:United_States)
+      - Alturas_Lake (dor:Alturas_Lake) --doo:location--> Blaine_County,_Idaho (<http://dbpedia.org/resource/Blaine_County,_Idaho>)
+      - Wood_River_High_School_(Idaho) (<http://dbpedia.org/resource/Wood_River_High_School_(Idaho)>) --doo:district--> Blaine_County,_Idaho (<http://dbpedia.org/resource/Blaine_County,_Idaho>)
+  '6':
+    attributes: {}
+    relationships:
+      - Ang_Laren_Lake (dor:Ang_Laren_Lake) --doo:country--> China (dor:China)
+      - Ang_Laren_Lake (dor:Ang_Laren_Lake) --doo:location--> China (dor:China)
+      - Binzhou_Medical_University (dor:Binzhou_Medical_University) --doo:district--> China (dor:China)
+  '7':
+    attributes: {}
+    relationships:
+      - Ang_Laren_Lake (dor:Ang_Laren_Lake) --doo:country--> China (dor:China)
+      - Ang_Laren_Lake (dor:Ang_Laren_Lake) --doo:location--> China (dor:China)
+      - Xuhui_High_School (dor:Xuhui_High_School) --doo:district--> China (dor:China)
+  '8':
+    attributes:
+      Zhuhai_No.3_High_School: (address^='No.2, Meihua Dong Rd, Xiangzhou, Zhuhai')
+    relationships:
+      - Ang_Laren_Lake (dor:Ang_Laren_Lake) --doo:country--> China (dor:China)
+      - Ang_Laren_Lake (dor:Ang_Laren_Lake) --doo:location--> China (dor:China)
+      - Zhuhai_No.3_High_School (dor:Zhuhai_No.3_High_School) --doo:district--> China (dor:China)
+  '9':
+    attributes: {}
+    relationships:
+      - Ap_Lei_Chau (dor:Ap_Lei_Chau) --doo:country--> Hong_Kong (dor:Hong_Kong)
+      - Ap_Lei_Chau (dor:Ap_Lei_Chau) --doo:location--> Hong_Kong_Island (dor:Hong_Kong_Island)
+      - Aberdeen_Baptist_Lui_Ming_Choi_College (dor:Aberdeen_Baptist_Lui_Ming_Choi_College) --doo:district--> Hong_Kong_Island (dor:Hong_Kong_Island)
+  '10':
+    attributes: {}
+    relationships:
+      - Ap_Lei_Chau (dor:Ap_Lei_Chau) --doo:country--> Hong_Kong (dor:Hong_Kong)
+      - Ap_Lei_Chau (dor:Ap_Lei_Chau) --doo:location--> Hong_Kong_Island (dor:Hong_Kong_Island)
+      - Hong_Kong_True_Light_College (dor:Hong_Kong_True_Light_College) --doo:district--> Hong_Kong_Island (dor:Hong_Kong_Island)
+attributes:
+  school: --address^ (doo:address)--> langString
+  country: --last^ (dop:last)--> langString | --age^ (dop:age)--> date
+  Location: --city^ (dop:city)--> langString | --age^ (dop:age)--> second | --data^ (dop:data)--> double | --source^ (dop:source)--> langString | --Apr high F^ (dop:aprHighF)--> double | --access-date^ (dop:accessDate)--> date | --chapter^ (dop:chapter)--> langString | --subdivision^ (doo:subdivision)--> Resource | --reason^ (dop:reason)--> langString | --footer^ (dop:footer)--> langString
+subgraph_id: 767
+relationships:
+  - place --doo:country--> country
+  - place --doo:location--> Location
+  - school --doo:district--> Location

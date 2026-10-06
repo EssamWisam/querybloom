@@ -1,0 +1,88 @@
+types:
+  school: doo:School
+  city district: doo:CityDistrict
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Albion,_Pennsylvania: (UTC offset^='-4')
+      Northwestern_Senior_High_School_(Pennsylvania): (district^='http://dbpedia.org/resource/Northwestern_School_District')
+    relationships:
+      - Northwestern_Senior_High_School_(Pennsylvania) (<http://dbpedia.org/resource/Northwestern_Senior_High_School_(Pennsylvania)>) --doo:city--> Albion,_Pennsylvania (<http://dbpedia.org/resource/Albion,_Pennsylvania>)
+      - Albion,_Pennsylvania (<http://dbpedia.org/resource/Albion,_Pennsylvania>) --doo:subdivision--> Erie_County,_Pennsylvania (<http://dbpedia.org/resource/Erie_County,_Pennsylvania>)
+  '2':
+    attributes:
+      Pennsylvania: (date^='2010-06-29')
+      Albion,_Pennsylvania: (UTC offset^='-4')
+      Northwestern_Senior_High_School_(Pennsylvania): (district^='http://dbpedia.org/resource/Northwestern_School_District')
+    relationships:
+      - Northwestern_Senior_High_School_(Pennsylvania) (<http://dbpedia.org/resource/Northwestern_Senior_High_School_(Pennsylvania)>) --doo:city--> Albion,_Pennsylvania (<http://dbpedia.org/resource/Albion,_Pennsylvania>)
+      - Albion,_Pennsylvania (<http://dbpedia.org/resource/Albion,_Pennsylvania>) --doo:subdivision--> Pennsylvania (dor:Pennsylvania)
+  '3':
+    attributes:
+      California: (date^='2020-10-13')
+      Alisal_High_School: (district^='http://dbpedia.org/resource/Salinas_Union_High_School_District')
+    relationships:
+      - Alisal_High_School (dor:Alisal_High_School) --doo:city--> Alisal,_Salinas,_California (<http://dbpedia.org/resource/Alisal,_Salinas,_California>)
+      - Alisal,_Salinas,_California (<http://dbpedia.org/resource/Alisal,_Salinas,_California>) --doo:subdivision--> California (dor:California)
+  '4':
+    attributes:
+      Alisal_High_School: (district^='http://dbpedia.org/resource/Salinas_Union_High_School_District')
+    relationships:
+      - Alisal_High_School (dor:Alisal_High_School) --doo:city--> Alisal,_Salinas,_California (<http://dbpedia.org/resource/Alisal,_Salinas,_California>)
+      - Alisal,_Salinas,_California (<http://dbpedia.org/resource/Alisal,_Salinas,_California>) --doo:subdivision--> Monterey_County,_California (<http://dbpedia.org/resource/Monterey_County,_California>)
+  '5':
+    attributes:
+      Allentown,_New_Jersey: (UTC offset^='−04:00')
+      Allentown_High_School: (district^='http://dbpedia.org/resource/Upper_Freehold_Regional_School_District')
+      Monmouth_County,_New_Jersey: (id^='Q502424')
+    relationships:
+      - Allentown_High_School (dor:Allentown_High_School) --doo:city--> Allentown,_New_Jersey (<http://dbpedia.org/resource/Allentown,_New_Jersey>)
+      - Allentown,_New_Jersey (<http://dbpedia.org/resource/Allentown,_New_Jersey>) --doo:subdivision--> Monmouth_County,_New_Jersey (<http://dbpedia.org/resource/Monmouth_County,_New_Jersey>)
+  '6':
+    attributes:
+      New_Jersey: (id^='Q1408')
+      Allentown,_New_Jersey: (UTC offset^='−04:00')
+      Allentown_High_School: (district^='http://dbpedia.org/resource/Upper_Freehold_Regional_School_District')
+    relationships:
+      - Allentown_High_School (dor:Allentown_High_School) --doo:city--> Allentown,_New_Jersey (<http://dbpedia.org/resource/Allentown,_New_Jersey>)
+      - Allentown,_New_Jersey (<http://dbpedia.org/resource/Allentown,_New_Jersey>) --doo:subdivision--> New_Jersey (dor:New_Jersey)
+  '7':
+    attributes: {}
+    relationships:
+      - Oostvaarders_College (dor:Oostvaarders_College) --doo:city--> Almere_Buiten (dor:Almere_Buiten)
+      - Almere_Buiten (dor:Almere_Buiten) --doo:subdivision--> Flevoland (dor:Flevoland)
+  '8':
+    attributes:
+      Ambler,_Pennsylvania: (UTC offset^='-4')
+      Wissahickon_High_School: (district^='http://dbpedia.org/resource/Wissahickon_School_District')
+      Montgomery_County,_Pennsylvania: (differentFrom='http://dbpedia.org/resource/Lycoming_County', id^='Q378527')
+    relationships:
+      - Wissahickon_High_School (dor:Wissahickon_High_School) --doo:city--> Ambler,_Pennsylvania (<http://dbpedia.org/resource/Ambler,_Pennsylvania>)
+      - Ambler,_Pennsylvania (<http://dbpedia.org/resource/Ambler,_Pennsylvania>) --doo:subdivision--> Montgomery_County,_Pennsylvania (<http://dbpedia.org/resource/Montgomery_County,_Pennsylvania>)
+  '9':
+    attributes: {}
+    relationships:
+      - Ryan_International_Group_of_Institutions (dor:Ryan_International_Group_of_Institutions) --doo:city--> Andheri (dor:Andheri)
+      - Andheri (dor:Andheri) --doo:subdivision--> Mumbai_Suburban_district (dor:Mumbai_Suburban_district)
+  '10':
+    attributes:
+      Archbald,_Pennsylvania: (UTC offset^='-4')
+      Valley_View_High_School_(Pennsylvania): (district^='http://dbpedia.org/resource/Valley_View_School_District_(Pennsylvania)')
+    relationships:
+      - Valley_View_High_School_(Pennsylvania) (<http://dbpedia.org/resource/Valley_View_High_School_(Pennsylvania)>) --doo:city--> Archbald,_Pennsylvania (<http://dbpedia.org/resource/Archbald,_Pennsylvania>)
+      - Archbald,_Pennsylvania (<http://dbpedia.org/resource/Archbald,_Pennsylvania>) --doo:subdivision--> Lackawanna_County,_Pennsylvania (<http://dbpedia.org/resource/Lackawanna_County,_Pennsylvania>)
+attributes:
+  school: --closing date^ (doo:closingDate)--> date | --district^ (doo:district)--> Resource
+  city district: --UTC offset^ (doo:utcOffset)--> string
+  administrative region: --differentFrom (wwoo:differentFrom)--> Resource | --date^ (dop:date)--> langString | --data^ (dop:data)--> double | --id^ (dop:id)--> langString | --Apr low C^ (dop:aprLowC)--> double | --area^ (dop:area)--> double
+subgraph_id: 460
+relationships:
+  - school --doo:city--> city district
+  - city district --doo:subdivision--> administrative region

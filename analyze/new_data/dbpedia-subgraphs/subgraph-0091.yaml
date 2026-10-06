@@ -1,0 +1,79 @@
+types:
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  soccer club season: doo:SoccerClubSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - 1879–80_Dumbarton_F.C._season (<http://dbpedia.org/resource/1879–80_Dumbarton_F.C._season>) --doo:homeStadium--> Dumbarton (dor:Dumbarton)
+      - 1879–80_Dumbarton_F.C._season (<http://dbpedia.org/resource/1879–80_Dumbarton_F.C._season>) --dop:club--> Dumbarton_F.C. (<http://dbpedia.org/resource/Dumbarton_F.C.>)
+  '2':
+    attributes: {}
+    relationships:
+      - 1880–81_Dumbarton_F.C._season (<http://dbpedia.org/resource/1880–81_Dumbarton_F.C._season>) --doo:homeStadium--> Dumbarton (dor:Dumbarton)
+      - 1880–81_Dumbarton_F.C._season (<http://dbpedia.org/resource/1880–81_Dumbarton_F.C._season>) --dop:club--> Dumbarton_F.C. (<http://dbpedia.org/resource/Dumbarton_F.C.>)
+  '3':
+    attributes: {}
+    relationships:
+      - 1881–82_Dumbarton_F.C._season (<http://dbpedia.org/resource/1881–82_Dumbarton_F.C._season>) --doo:homeStadium--> Dumbarton (dor:Dumbarton)
+      - 1881–82_Dumbarton_F.C._season (<http://dbpedia.org/resource/1881–82_Dumbarton_F.C._season>) --dop:club--> Dumbarton_F.C. (<http://dbpedia.org/resource/Dumbarton_F.C.>)
+  '4':
+    attributes:
+      Basel: (area total (m2)^='22750000.0')
+    relationships:
+      - 1893–94_FC_Basel_season (<http://dbpedia.org/resource/1893–94_FC_Basel_season>) --doo:homeStadium--> Basel (dor:Basel)
+      - 1893–94_FC_Basel_season (<http://dbpedia.org/resource/1893–94_FC_Basel_season>) --dop:club--> FC_Basel (dor:FC_Basel)
+  '5':
+    attributes:
+      Basel: (area total (m2)^='22750000.0')
+    relationships:
+      - 1894–95_FC_Basel_season (<http://dbpedia.org/resource/1894–95_FC_Basel_season>) --doo:homeStadium--> Basel (dor:Basel)
+      - 1894–95_FC_Basel_season (<http://dbpedia.org/resource/1894–95_FC_Basel_season>) --dop:club--> FC_Basel (dor:FC_Basel)
+  '6':
+    attributes:
+      Basel: (area total (m2)^='22750000.0')
+    relationships:
+      - 1895–96_FC_Basel_season (<http://dbpedia.org/resource/1895–96_FC_Basel_season>) --doo:homeStadium--> Basel (dor:Basel)
+      - 1895–96_FC_Basel_season (<http://dbpedia.org/resource/1895–96_FC_Basel_season>) --dop:club--> FC_Basel (dor:FC_Basel)
+  '7':
+    attributes:
+      Vienna: (Aug precipitation days^='8.5')
+      SK_Rapid_Wien: (colwidth^='35')
+    relationships:
+      - 1911–12_SK_Rapid_Wien_season (<http://dbpedia.org/resource/1911–12_SK_Rapid_Wien_season>) --doo:homeStadium--> Vienna (dor:Vienna)
+      - 1911–12_SK_Rapid_Wien_season (<http://dbpedia.org/resource/1911–12_SK_Rapid_Wien_season>) --dop:club--> SK_Rapid_Wien (dor:SK_Rapid_Wien)
+  '8':
+    attributes:
+      Vienna: (Aug precipitation days^='8.5')
+      SK_Rapid_Wien: (colwidth^='35')
+    relationships:
+      - 1912–13_SK_Rapid_Wien_season (<http://dbpedia.org/resource/1912–13_SK_Rapid_Wien_season>) --doo:homeStadium--> Vienna (dor:Vienna)
+      - 1912–13_SK_Rapid_Wien_season (<http://dbpedia.org/resource/1912–13_SK_Rapid_Wien_season>) --dop:club--> SK_Rapid_Wien (dor:SK_Rapid_Wien)
+  '9':
+    attributes:
+      Vienna: (Aug precipitation days^='8.5')
+      SK_Rapid_Wien: (colwidth^='35')
+    relationships:
+      - 1913–14_SK_Rapid_Wien_season (<http://dbpedia.org/resource/1913–14_SK_Rapid_Wien_season>) --doo:homeStadium--> Vienna (dor:Vienna)
+      - 1913–14_SK_Rapid_Wien_season (<http://dbpedia.org/resource/1913–14_SK_Rapid_Wien_season>) --dop:club--> SK_Rapid_Wien (dor:SK_Rapid_Wien)
+  '10':
+    attributes:
+      Alessandria: (area total (m2)^='203570000.0', Apr low F^='46.4', area total km^='203.57')
+      1929–30_Alessandria_U.S._season: (location^='http://dbpedia.org/resource/Alessandria', ad^='5')
+    relationships:
+      - 1929–30_Alessandria_U.S._season (<http://dbpedia.org/resource/1929–30_Alessandria_U.S._season>) --doo:homeStadium--> Alessandria (dor:Alessandria)
+      - 1929–30_Alessandria_U.S._season (<http://dbpedia.org/resource/1929–30_Alessandria_U.S._season>) --dop:club--> U.S._Alessandria_Calcio_1912 (dor:U.S._Alessandria_Calcio_1912)
+attributes:
+  settlement: --area total (m2)^ (doo:areaTotal)--> double | --Apr low F^ (dop:aprLowF)--> double | --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --Apr rain mm^ (dop:aprRainMm)--> int | --area total km^ (dop:areaTotalKm)--> double
+  soccer club: --American^ (dop:american)--> langString | --align^ (dop:align)--> langString | --colwidth^ (dop:colwidth)--> int
+  soccer club season: --location^ (dop:location)--> langString | --highest attendance^ (dop:highestAttendance)--> gMonthDay | --highest attendance^ (dop:highestAttendance)--> langString | --ad^ (dop:ad)--> int
+subgraph_id: 91
+relationships:
+  - soccer club season --doo:homeStadium--> settlement
+  - soccer club season --dop:club--> soccer club

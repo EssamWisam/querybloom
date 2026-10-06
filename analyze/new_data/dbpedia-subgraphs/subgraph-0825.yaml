@@ -1,0 +1,111 @@
+types:
+  book: doo:Book
+  Sailor: doo:Sailor
+  country: doo:Country
+  office holder: doo:OfficeHolder
+  Christian Bishop: doo:ChristianBishop
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      George_W._Bush: (birth date^='1946-07-06')
+      41:_A_Portrait_of_My_Father: (author^='http://dbpedia.org/resource/George_W._Bush')
+    relationships:
+      - 41:_A_Portrait_of_My_Father (<http://dbpedia.org/resource/41:_A_Portrait_of_My_Father>) --dop:country--> United_States (dor:United_States)
+      - 41:_A_Portrait_of_My_Father (<http://dbpedia.org/resource/41:_A_Portrait_of_My_Father>) --doo:author--> George_W._Bush (dor:George_W._Bush)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --dop:deathPlace--> United_States (dor:United_States)
+      - Allison_Jolly (dor:Allison_Jolly) --doo:nationality--> United_States (dor:United_States)
+  '2':
+    attributes:
+      George_W._Bush: (birth date^='1946-07-06')
+      41:_A_Portrait_of_My_Father: (author^='http://dbpedia.org/resource/George_W._Bush')
+    relationships:
+      - 41:_A_Portrait_of_My_Father (<http://dbpedia.org/resource/41:_A_Portrait_of_My_Father>) --dop:country--> United_States (dor:United_States)
+      - 41:_A_Portrait_of_My_Father (<http://dbpedia.org/resource/41:_A_Portrait_of_My_Father>) --doo:author--> George_W._Bush (dor:George_W._Bush)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --dop:deathPlace--> United_States (dor:United_States)
+      - Andrew_Campbell_(sailor) (<http://dbpedia.org/resource/Andrew_Campbell_(sailor)>) --doo:nationality--> United_States (dor:United_States)
+  '3':
+    attributes:
+      George_W._Bush: (birth date^='1946-07-06')
+      41:_A_Portrait_of_My_Father: (author^='http://dbpedia.org/resource/George_W._Bush')
+    relationships:
+      - 41:_A_Portrait_of_My_Father (<http://dbpedia.org/resource/41:_A_Portrait_of_My_Father>) --dop:country--> United_States (dor:United_States)
+      - 41:_A_Portrait_of_My_Father (<http://dbpedia.org/resource/41:_A_Portrait_of_My_Father>) --doo:author--> George_W._Bush (dor:George_W._Bush)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --dop:deathPlace--> United_States (dor:United_States)
+      - Andy_Pimental (dor:Andy_Pimental) --doo:nationality--> United_States (dor:United_States)
+  '4':
+    attributes:
+      A_Mão_e_a_Luva: (author^='http://dbpedia.org/resource/Machado_de_Assis')
+      Machado_de_Assis: (birth date^='1839-06-21')
+    relationships:
+      - A_Mão_e_a_Luva (<http://dbpedia.org/resource/A_Mão_e_a_Luva>) --dop:country--> Brazil (dor:Brazil)
+      - A_Mão_e_a_Luva (<http://dbpedia.org/resource/A_Mão_e_a_Luva>) --doo:author--> Machado_de_Assis (dor:Machado_de_Assis)
+      - Arnaldo_Ribeiro (dor:Arnaldo_Ribeiro) --dop:deathPlace--> Brazil (dor:Brazil)
+      - Alexandre_do_Amaral (dor:Alexandre_do_Amaral) --doo:nationality--> Brazil (dor:Brazil)
+  '5':
+    attributes:
+      A_Mão_e_a_Luva: (author^='http://dbpedia.org/resource/Machado_de_Assis')
+      Machado_de_Assis: (birth date^='1839-06-21')
+    relationships:
+      - A_Mão_e_a_Luva (<http://dbpedia.org/resource/A_Mão_e_a_Luva>) --dop:country--> Brazil (dor:Brazil)
+      - A_Mão_e_a_Luva (<http://dbpedia.org/resource/A_Mão_e_a_Luva>) --doo:author--> Machado_de_Assis (dor:Machado_de_Assis)
+      - Arnaldo_Ribeiro (dor:Arnaldo_Ribeiro) --dop:deathPlace--> Brazil (dor:Brazil)
+      - Alexandre_Paradeda (dor:Alexandre_Paradeda) --doo:nationality--> Brazil (dor:Brazil)
+  '6':
+    attributes:
+      A_Mão_e_a_Luva: (author^='http://dbpedia.org/resource/Machado_de_Assis')
+      Machado_de_Assis: (birth date^='1839-06-21')
+    relationships:
+      - A_Mão_e_a_Luva (<http://dbpedia.org/resource/A_Mão_e_a_Luva>) --dop:country--> Brazil (dor:Brazil)
+      - A_Mão_e_a_Luva (<http://dbpedia.org/resource/A_Mão_e_a_Luva>) --doo:author--> Machado_de_Assis (dor:Machado_de_Assis)
+      - Arnaldo_Ribeiro (dor:Arnaldo_Ribeiro) --dop:deathPlace--> Brazil (dor:Brazil)
+      - Bruno_Amorim_(sailor) (<http://dbpedia.org/resource/Bruno_Amorim_(sailor)>) --doo:nationality--> Brazil (dor:Brazil)
+  '7':
+    attributes:
+      Joseph_Stalin: (1pp^='1', d^='y', birth date^='--12-18')
+      Anarchism_or_Socialism%3F: (author^='http://dbpedia.org/resource/Joseph_Stalin')
+    relationships:
+      - Anarchism_or_Socialism%3F (<http://dbpedia.org/resource/Anarchism_or_Socialism%3F>) --dop:country--> Soviet_Union (dor:Soviet_Union)
+      - Anarchism_or_Socialism%3F (<http://dbpedia.org/resource/Anarchism_or_Socialism%3F>) --doo:author--> Joseph_Stalin (dor:Joseph_Stalin)
+      - Andrey_Sheptytsky (dor:Andrey_Sheptytsky) --dop:deathPlace--> Soviet_Union (dor:Soviet_Union)
+      - Rais_Galimov (dor:Rais_Galimov) --doo:nationality--> Soviet_Union (dor:Soviet_Union)
+  '8':
+    attributes:
+      Joseph_Stalin: (1pp^='1', d^='y', birth date^='--12-18')
+      Anarchism_or_Socialism%3F: (author^='http://dbpedia.org/resource/Joseph_Stalin')
+    relationships:
+      - Anarchism_or_Socialism%3F (<http://dbpedia.org/resource/Anarchism_or_Socialism%3F>) --dop:country--> Soviet_Union (dor:Soviet_Union)
+      - Anarchism_or_Socialism%3F (<http://dbpedia.org/resource/Anarchism_or_Socialism%3F>) --doo:author--> Joseph_Stalin (dor:Joseph_Stalin)
+      - Andrey_Sheptytsky (dor:Andrey_Sheptytsky) --dop:deathPlace--> Soviet_Union (dor:Soviet_Union)
+      - Valentin_Zamotaykin (dor:Valentin_Zamotaykin) --doo:nationality--> Soviet_Union (dor:Soviet_Union)
+  '9':
+    attributes:
+      Anarchism_or_Socialism%3F: (author^='http://dbpedia.org/resource/Joseph_Stalin')
+    relationships:
+      - Anarchism_or_Socialism%3F (<http://dbpedia.org/resource/Anarchism_or_Socialism%3F>) --dop:country--> Soviet_Union (dor:Soviet_Union)
+      - Anarchism_or_Socialism%3F (<http://dbpedia.org/resource/Anarchism_or_Socialism%3F>) --doo:author--> Joseph_Stalin (dor:Joseph_Stalin)
+      - Andrey_Sheptytsky (dor:Andrey_Sheptytsky) --dop:deathPlace--> Soviet_Union (dor:Soviet_Union)
+      - Viktor_Potapov (dor:Viktor_Potapov) --doo:nationality--> Soviet_Union (dor:Soviet_Union)
+  '10':
+    attributes:
+      P._V._Narasimha_Rao: (birth date^='1921-06-28')
+      Ayodhya_6_December_1992: (author^='http://dbpedia.org/resource/P._V._Narasimha_Rao')
+    relationships:
+      - Ayodhya_6_December_1992 (dor:Ayodhya_6_December_1992) --dop:country--> India (dor:India)
+      - Ayodhya_6_December_1992 (dor:Ayodhya_6_December_1992) --doo:author--> P._V._Narasimha_Rao (dor:P._V._Narasimha_Rao)
+      - Alphonsus_F._D'Souza (<http://dbpedia.org/resource/Alphonsus_F._D'Souza>) --dop:deathPlace--> India (dor:India)
+      - Aishwarya_Nedunchezhiyan (dor:Aishwarya_Nedunchezhiyan) --doo:nationality--> India (dor:India)
+attributes:
+  book: --author^ (dop:author)--> langString | --1y^ (dop:1y)--> int
+  office holder: --honorific suffix^ (dop:honorificSuffix)--> Resource | --ad^ (dop:ad)--> int | --1pp^ (dop:1pp)--> int | --d^ (dop:d)--> langString | --chairman^ (doo:chairman)--> Resource | --birth date^ (dop:birthDate)--> date
+  Christian Bishop: --motto^ (doo:motto)--> string
+subgraph_id: 825
+relationships:
+  - book --dop:country--> country
+  - book --doo:author--> office holder
+  - Christian Bishop --dop:deathPlace--> country
+  - Sailor --doo:nationality--> country

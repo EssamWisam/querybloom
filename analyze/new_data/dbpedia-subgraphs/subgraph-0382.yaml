@@ -1,0 +1,116 @@
+types:
+  city: doo:City
+  school: doo:School
+  Election: doo:Election
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Charlottesville,_Virginia: (area code^='434')
+      1804_United_States_presidential_election_in_Connecticut: (image^='http://dbpedia.org/resource/File:CharlesCPinckney_(cropped).png')
+    relationships:
+      - Thomas_Jefferson (dor:Thomas_Jefferson) --doo:deathPlace--> Charlottesville,_Virginia (<http://dbpedia.org/resource/Charlottesville,_Virginia>)
+      - Albemarle_High_School_(Virginia) (<http://dbpedia.org/resource/Albemarle_High_School_(Virginia)>) --doo:city--> Charlottesville,_Virginia (<http://dbpedia.org/resource/Charlottesville,_Virginia>)
+      - 1804_United_States_presidential_election_in_Connecticut (dor:1804_United_States_presidential_election_in_Connecticut) --dop:beforeElection--> Thomas_Jefferson (dor:Thomas_Jefferson)
+      - Peter_Jefferson (dor:Peter_Jefferson) --doo:father--> Thomas_Jefferson (dor:Thomas_Jefferson)
+  '2':
+    attributes:
+      Charlottesville,_Virginia: (area code^='434')
+      1804_United_States_presidential_election_in_Connecticut: (image^='http://dbpedia.org/resource/File:CharlesCPinckney_(cropped).png')
+    relationships:
+      - Thomas_Jefferson (dor:Thomas_Jefferson) --doo:deathPlace--> Charlottesville,_Virginia (<http://dbpedia.org/resource/Charlottesville,_Virginia>)
+      - Charlottesville_Catholic_School (dor:Charlottesville_Catholic_School) --doo:city--> Charlottesville,_Virginia (<http://dbpedia.org/resource/Charlottesville,_Virginia>)
+      - 1804_United_States_presidential_election_in_Connecticut (dor:1804_United_States_presidential_election_in_Connecticut) --dop:beforeElection--> Thomas_Jefferson (dor:Thomas_Jefferson)
+      - Peter_Jefferson (dor:Peter_Jefferson) --doo:father--> Thomas_Jefferson (dor:Thomas_Jefferson)
+  '3':
+    attributes:
+      Charlottesville,_Virginia: (area code^='434')
+      1804_United_States_presidential_election_in_Connecticut: (image^='http://dbpedia.org/resource/File:CharlesCPinckney_(cropped).png')
+    relationships:
+      - Thomas_Jefferson (dor:Thomas_Jefferson) --doo:deathPlace--> Charlottesville,_Virginia (<http://dbpedia.org/resource/Charlottesville,_Virginia>)
+      - Charlottesville_High_School (dor:Charlottesville_High_School) --doo:city--> Charlottesville,_Virginia (<http://dbpedia.org/resource/Charlottesville,_Virginia>)
+      - 1804_United_States_presidential_election_in_Connecticut (dor:1804_United_States_presidential_election_in_Connecticut) --dop:beforeElection--> Thomas_Jefferson (dor:Thomas_Jefferson)
+      - Peter_Jefferson (dor:Peter_Jefferson) --doo:father--> Thomas_Jefferson (dor:Thomas_Jefferson)
+  '4':
+    attributes:
+      Washington,_D.C.: (area code^='202, 771 (overlay)')
+      George_Washington_Adams: (education^='http://dbpedia.org/resource/Harvard_University')
+      1808_United_States_Senate_election_in_Massachusetts: (image^='JamesLloyd .jpg')
+    relationships:
+      - John_Quincy_Adams (dor:John_Quincy_Adams) --doo:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Beauvoir_School (dor:Beauvoir_School) --doo:city--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - 1808_United_States_Senate_election_in_Massachusetts (dor:1808_United_States_Senate_election_in_Massachusetts) --dop:beforeElection--> John_Quincy_Adams (dor:John_Quincy_Adams)
+      - George_Washington_Adams (dor:George_Washington_Adams) --doo:father--> John_Quincy_Adams (dor:John_Quincy_Adams)
+  '5':
+    attributes:
+      Washington,_D.C.: (area code^='202, 771 (overlay)')
+      George_Washington_Adams: (education^='http://dbpedia.org/resource/Harvard_University')
+      1808_United_States_Senate_election_in_Massachusetts: (image^='JamesLloyd .jpg')
+    relationships:
+      - John_Quincy_Adams (dor:John_Quincy_Adams) --doo:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Booker_T._Washington_Public_Charter_School (dor:Booker_T._Washington_Public_Charter_School) --doo:city--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - 1808_United_States_Senate_election_in_Massachusetts (dor:1808_United_States_Senate_election_in_Massachusetts) --dop:beforeElection--> John_Quincy_Adams (dor:John_Quincy_Adams)
+      - George_Washington_Adams (dor:George_Washington_Adams) --doo:father--> John_Quincy_Adams (dor:John_Quincy_Adams)
+  '6':
+    attributes:
+      Washington,_D.C.: (area code^='202, 771 (overlay)')
+      George_Washington_Adams: (education^='http://dbpedia.org/resource/Harvard_University')
+      1808_United_States_Senate_election_in_Massachusetts: (image^='JamesLloyd .jpg')
+    relationships:
+      - John_Quincy_Adams (dor:John_Quincy_Adams) --doo:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Brightwood_Education_Campus (dor:Brightwood_Education_Campus) --doo:city--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - 1808_United_States_Senate_election_in_Massachusetts (dor:1808_United_States_Senate_election_in_Massachusetts) --dop:beforeElection--> John_Quincy_Adams (dor:John_Quincy_Adams)
+      - George_Washington_Adams (dor:George_Washington_Adams) --doo:father--> John_Quincy_Adams (dor:John_Quincy_Adams)
+  '7':
+    attributes:
+      Abby_Kelley_Foster_Charter_Public_School: (nickname^='Abby Kelley, AKF')
+      1826_Massachusetts_gubernatorial_election: (image^='File:3x4.svg')
+    relationships:
+      - Levi_Lincoln_Jr. (<http://dbpedia.org/resource/Levi_Lincoln_Jr.>) --doo:deathPlace--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Abby_Kelley_Foster_Charter_Public_School (dor:Abby_Kelley_Foster_Charter_Public_School) --doo:city--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - 1826_Massachusetts_gubernatorial_election (dor:1826_Massachusetts_gubernatorial_election) --dop:beforeElection--> Levi_Lincoln_Jr. (<http://dbpedia.org/resource/Levi_Lincoln_Jr.>)
+      - Daniel_Waldo_Lincoln (dor:Daniel_Waldo_Lincoln) --doo:father--> Levi_Lincoln_Jr. (<http://dbpedia.org/resource/Levi_Lincoln_Jr.>)
+  '8':
+    attributes:
+      Worcester,_Massachusetts: (area code^='508/774')
+      1826_Massachusetts_gubernatorial_election: (image^='File:3x4.svg')
+    relationships:
+      - Levi_Lincoln_Jr. (<http://dbpedia.org/resource/Levi_Lincoln_Jr.>) --doo:deathPlace--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Notre_Dame_Academy_(Worcester,_Massachusetts) (<http://dbpedia.org/resource/Notre_Dame_Academy_(Worcester,_Massachusetts)>) --doo:city--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - 1826_Massachusetts_gubernatorial_election (dor:1826_Massachusetts_gubernatorial_election) --dop:beforeElection--> Levi_Lincoln_Jr. (<http://dbpedia.org/resource/Levi_Lincoln_Jr.>)
+      - Daniel_Waldo_Lincoln (dor:Daniel_Waldo_Lincoln) --doo:father--> Levi_Lincoln_Jr. (<http://dbpedia.org/resource/Levi_Lincoln_Jr.>)
+  '9':
+    attributes:
+      Worcester,_Massachusetts: (area code^='508/774')
+      1826_Massachusetts_gubernatorial_election: (image^='File:3x4.svg')
+    relationships:
+      - Levi_Lincoln_Jr. (<http://dbpedia.org/resource/Levi_Lincoln_Jr.>) --doo:deathPlace--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Saint_Peter-Marian_High_School (dor:Saint_Peter-Marian_High_School) --doo:city--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - 1826_Massachusetts_gubernatorial_election (dor:1826_Massachusetts_gubernatorial_election) --dop:beforeElection--> Levi_Lincoln_Jr. (<http://dbpedia.org/resource/Levi_Lincoln_Jr.>)
+      - Daniel_Waldo_Lincoln (dor:Daniel_Waldo_Lincoln) --doo:father--> Levi_Lincoln_Jr. (<http://dbpedia.org/resource/Levi_Lincoln_Jr.>)
+  '10':
+    attributes:
+      Belleville,_Illinois: (area code^='618')
+      1830_Illinois_gubernatorial_election: (image^='3')
+    relationships:
+      - Ninian_Edwards (dor:Ninian_Edwards) --doo:deathPlace--> Belleville,_Illinois (<http://dbpedia.org/resource/Belleville,_Illinois>)
+      - Althoff_Catholic_High_School (dor:Althoff_Catholic_High_School) --doo:city--> Belleville,_Illinois (<http://dbpedia.org/resource/Belleville,_Illinois>)
+      - 1830_Illinois_gubernatorial_election (dor:1830_Illinois_gubernatorial_election) --dop:beforeElection--> Ninian_Edwards (dor:Ninian_Edwards)
+      - Ninian_Wirt_Edwards (dor:Ninian_Wirt_Edwards) --doo:father--> Ninian_Edwards (dor:Ninian_Edwards)
+attributes:
+  city: --area code^ (doo:areaCode)--> string
+  school: --nickname^ (dop:nickname)--> langString
+  Election: --3data^ (dop:3data)--> langString | --image^ (dop:image)--> gMonthDay | --2pp chg^ (dop:2ppChg)--> langString
+  politician: --assembly^ (dop:assembly)--> langString | --region^ (doo:region)--> Resource | --honorific suffix^ (dop:honorificSuffix)--> langString | --education^ (doo:education)--> Resource
+subgraph_id: 382
+relationships:
+  - office holder --doo:deathPlace--> city
+  - school --doo:city--> city
+  - Election --dop:beforeElection--> office holder
+  - politician --doo:father--> office holder

@@ -1,0 +1,135 @@
+types:
+  person: doo:Person
+  video game: doo:VideoGame
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+  information appliance: doo:InformationAppliance
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      007_Legends: (title^='7')
+      David_Arnold: (birth date^='1962-01-23')
+    relationships:
+      - 007_Legends (dor:007_Legends) --doo:composer--> David_Arnold (dor:David_Arnold)
+      - 007_Legends (dor:007_Legends) --doo:composer--> Kevin_Kiner (dor:Kevin_Kiner)
+      - 007_Legends (dor:007_Legends) --dop:composer--> David_Arnold (dor:David_Arnold)
+      - 007_Legends (dor:007_Legends) --dop:genre--> First-person_shooter (dor:First-person_shooter)
+      - 007_Legends (dor:007_Legends) --dop:composer--> Kevin_Kiner (dor:Kevin_Kiner)
+      - 007_Legends (dor:007_Legends) --doo:computingPlatform--> PlayStation_3 (dor:PlayStation_3)
+  '2':
+    attributes:
+      007_Legends: (title^='7')
+      David_Arnold: (birth date^='1962-01-23')
+    relationships:
+      - 007_Legends (dor:007_Legends) --doo:composer--> David_Arnold (dor:David_Arnold)
+      - 007_Legends (dor:007_Legends) --doo:composer--> Kevin_Kiner (dor:Kevin_Kiner)
+      - 007_Legends (dor:007_Legends) --dop:composer--> David_Arnold (dor:David_Arnold)
+      - 007_Legends (dor:007_Legends) --dop:genre--> First-person_shooter (dor:First-person_shooter)
+      - 007_Legends (dor:007_Legends) --dop:composer--> Kevin_Kiner (dor:Kevin_Kiner)
+      - 007_Legends (dor:007_Legends) --doo:computingPlatform--> Wii_U (dor:Wii_U)
+  '3':
+    attributes:
+      007_Legends: (title^='7')
+      David_Arnold: (birth date^='1962-01-23')
+    relationships:
+      - 007_Legends (dor:007_Legends) --doo:composer--> David_Arnold (dor:David_Arnold)
+      - 007_Legends (dor:007_Legends) --doo:composer--> Kevin_Kiner (dor:Kevin_Kiner)
+      - 007_Legends (dor:007_Legends) --dop:composer--> David_Arnold (dor:David_Arnold)
+      - 007_Legends (dor:007_Legends) --dop:genre--> First-person_shooter (dor:First-person_shooter)
+      - 007_Legends (dor:007_Legends) --dop:composer--> Kevin_Kiner (dor:Kevin_Kiner)
+      - 007_Legends (dor:007_Legends) --doo:computingPlatform--> Xbox_360 (dor:Xbox_360)
+  '4':
+    attributes:
+      10,000_Bullets: (title^='An Illegal Messenger')
+      Miki_Higashino: (birth date^='1968-01-01')
+    relationships:
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --doo:composer--> Miki_Higashino (dor:Miki_Higashino)
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --doo:composer--> Yasunori_Mitsuda (dor:Yasunori_Mitsuda)
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --dop:composer--> Miki_Higashino (dor:Miki_Higashino)
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --dop:genre--> Shooter_game (dor:Shooter_game)
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --dop:composer--> Yasunori_Mitsuda (dor:Yasunori_Mitsuda)
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --doo:computingPlatform--> PlayStation_2 (dor:PlayStation_2)
+  '5':
+    attributes:
+      10,000_Bullets: (title^='An Illegal Messenger')
+      Yasunori_Mitsuda: (birth date^='1972-01-21')
+    relationships:
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --doo:composer--> Yasunori_Mitsuda (dor:Yasunori_Mitsuda)
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --doo:composer--> Miki_Higashino (dor:Miki_Higashino)
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --dop:composer--> Yasunori_Mitsuda (dor:Yasunori_Mitsuda)
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --dop:genre--> Shooter_game (dor:Shooter_game)
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --dop:composer--> Miki_Higashino (dor:Miki_Higashino)
+      - 10,000_Bullets (<http://dbpedia.org/resource/10,000_Bullets>) --doo:computingPlatform--> PlayStation_2 (dor:PlayStation_2)
+  '6':
+    attributes:
+      Advent_Rising: (title^='Advent Rising')
+      Michael_Richard_Plowman: (birth date^='1965-07-20')
+    relationships:
+      - Advent_Rising (dor:Advent_Rising) --doo:composer--> Michael_Richard_Plowman (dor:Michael_Richard_Plowman)
+      - Advent_Rising (dor:Advent_Rising) --doo:composer--> Tommy_Tallarico (dor:Tommy_Tallarico)
+      - Advent_Rising (dor:Advent_Rising) --dop:composer--> Michael_Richard_Plowman (dor:Michael_Richard_Plowman)
+      - Advent_Rising (dor:Advent_Rising) --dop:genre--> Action-adventure_game (dor:Action-adventure_game)
+      - Advent_Rising (dor:Advent_Rising) --dop:composer--> Tommy_Tallarico (dor:Tommy_Tallarico)
+      - Advent_Rising (dor:Advent_Rising) --doo:computingPlatform--> PlayStation_Portable (dor:PlayStation_Portable)
+  '7':
+    attributes:
+      Advent_Rising: (title^='Advent Rising')
+      Michael_Richard_Plowman: (birth date^='1965-07-20')
+    relationships:
+      - Advent_Rising (dor:Advent_Rising) --doo:composer--> Michael_Richard_Plowman (dor:Michael_Richard_Plowman)
+      - Advent_Rising (dor:Advent_Rising) --doo:composer--> Tommy_Tallarico (dor:Tommy_Tallarico)
+      - Advent_Rising (dor:Advent_Rising) --dop:composer--> Michael_Richard_Plowman (dor:Michael_Richard_Plowman)
+      - Advent_Rising (dor:Advent_Rising) --dop:genre--> Action-adventure_game (dor:Action-adventure_game)
+      - Advent_Rising (dor:Advent_Rising) --dop:composer--> Tommy_Tallarico (dor:Tommy_Tallarico)
+      - Advent_Rising (dor:Advent_Rising) --doo:computingPlatform--> Xbox_(console) (<http://dbpedia.org/resource/Xbox_(console)>)
+  '8':
+    attributes:
+      Advent_Rising: (title^='Advent Rising')
+      Michael_Richard_Plowman: (birth date^='1965-07-20')
+    relationships:
+      - Advent_Rising (dor:Advent_Rising) --doo:composer--> Michael_Richard_Plowman (dor:Michael_Richard_Plowman)
+      - Advent_Rising (dor:Advent_Rising) --doo:composer--> Tommy_Tallarico (dor:Tommy_Tallarico)
+      - Advent_Rising (dor:Advent_Rising) --dop:composer--> Michael_Richard_Plowman (dor:Michael_Richard_Plowman)
+      - Advent_Rising (dor:Advent_Rising) --dop:genre--> Third-person_shooter (dor:Third-person_shooter)
+      - Advent_Rising (dor:Advent_Rising) --dop:composer--> Tommy_Tallarico (dor:Tommy_Tallarico)
+      - Advent_Rising (dor:Advent_Rising) --doo:computingPlatform--> PlayStation_Portable (dor:PlayStation_Portable)
+  '9':
+    attributes:
+      Chipzel: (birth date^='1991-09-23')
+      Adventure_Time:_The_Secret_of_the_Nameless_Kingdom: (title^='Adventure Time:')
+    relationships:
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --doo:composer--> Chipzel (dor:Chipzel)
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --doo:composer--> Keiji_Yamagishi (dor:Keiji_Yamagishi)
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --dop:composer--> Chipzel (dor:Chipzel)
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --dop:genre--> Action-adventure_game (dor:Action-adventure_game)
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --dop:composer--> Keiji_Yamagishi (dor:Keiji_Yamagishi)
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --doo:computingPlatform--> Nintendo_3DS (dor:Nintendo_3DS)
+  '10':
+    attributes:
+      Chipzel: (birth date^='1991-09-23')
+      Adventure_Time:_The_Secret_of_the_Nameless_Kingdom: (title^='Adventure Time:')
+    relationships:
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --doo:composer--> Chipzel (dor:Chipzel)
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --doo:composer--> Keiji_Yamagishi (dor:Keiji_Yamagishi)
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --dop:composer--> Chipzel (dor:Chipzel)
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --dop:genre--> Role-playing_video_game (dor:Role-playing_video_game)
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --dop:composer--> Keiji_Yamagishi (dor:Keiji_Yamagishi)
+      - Adventure_Time:_The_Secret_of_the_Nameless_Kingdom (<http://dbpedia.org/resource/Adventure_Time:_The_Secret_of_the_Nameless_Kingdom>) --doo:computingPlatform--> Nintendo_3DS (dor:Nintendo_3DS)
+attributes:
+  person: --after^ (dop:after)--> langString | --education^ (doo:education)--> Resource | --employer^ (doo:employer)--> Resource | --birth name^ (doo:birthName)--> langString | --child^ (doo:child)--> Resource | --death date^ (dop:deathDate)--> gMonthDay | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --2pp^ (dop:2pp)--> int
+  video game: --title^ (dop:title)--> langString
+  music genre: --1a^ (dop:1a)--> langString
+  musical artist: --birth date^ (dop:birthDate)--> date | --honorific suffix^ (dop:honorificSuffix)--> Resource
+subgraph_id: 967
+relationships:
+  - video game --doo:composer--> musical artist
+  - video game --doo:composer--> person
+  - video game --dop:composer--> musical artist
+  - video game --dop:genre--> music genre
+  - video game --dop:composer--> person
+  - video game --doo:computingPlatform--> information appliance

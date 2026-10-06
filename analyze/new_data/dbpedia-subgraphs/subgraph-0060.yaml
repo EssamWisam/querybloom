@@ -1,0 +1,108 @@
+types:
+  venue: doo:Venue
+  swimmer: doo:Swimmer
+  Location: doo:Location
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Colombia: (Wikipage page ID^='5222', caption^='Amerindian population of Colombia by municipality in 2005.')
+      Estadio_Alfonso_López_Pumarejo: (architect^='http://dbpedia.org/resource/Leopold_Rother')
+      National_University_of_Colombia: (city^='http://dbpedia.org/resource/Bogotá')
+    relationships:
+      - Alejandro_Bermúdez (<http://dbpedia.org/resource/Alejandro_Bermúdez>) --doo:nationality--> Colombia (dor:Colombia)
+      - National_University_of_Colombia (dor:National_University_of_Colombia) --dop:country--> Colombia (dor:Colombia)
+      - Estadio_Alfonso_López_Pumarejo (<http://dbpedia.org/resource/Estadio_Alfonso_López_Pumarejo>) --dop:tenants--> National_University_of_Colombia (dor:National_University_of_Colombia)
+  '2':
+    attributes:
+      Malaysia: (Wikipage page ID^='3607937', caption^='Nasi lemak')
+      University_of_Malaya: (city^='http://dbpedia.org/resource/Kuala_Lumpur')
+    relationships:
+      - Alex_Lim (dor:Alex_Lim) --doo:nationality--> Malaysia (dor:Malaysia)
+      - University_of_Malaya (dor:University_of_Malaya) --dop:country--> Malaysia (dor:Malaysia)
+      - UM_Arena_Stadium (dor:UM_Arena_Stadium) --dop:tenants--> University_of_Malaya (dor:University_of_Malaya)
+  '3':
+    attributes:
+      South_Africa: (Wikipage page ID^='17416221')
+      North-West_University: (city^='http://dbpedia.org/resource/Mahikeng')
+    relationships:
+      - Amanda_Taylor (dor:Amanda_Taylor) --doo:nationality--> South_Africa (dor:South_Africa)
+      - North-West_University (dor:North-West_University) --dop:country--> South_Africa (dor:South_Africa)
+      - NWU_Astro (dor:NWU_Astro) --dop:tenants--> North-West_University (dor:North-West_University)
+  '4':
+    attributes:
+      United_Kingdom: (Wikipage page ID^='31717', caption^='--09-08')
+      Alexander_Stadium: (caption^='Alexander Stadium during Birmingham 2022')
+      Birmingham_City_University: (city^='http://dbpedia.org/resource/Birmingham')
+    relationships:
+      - Anthony_Stephens (dor:Anthony_Stephens) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Birmingham_City_University (dor:Birmingham_City_University) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - Alexander_Stadium (dor:Alexander_Stadium) --dop:tenants--> Birmingham_City_University (dor:Birmingham_City_University)
+  '5':
+    attributes:
+      United_Kingdom: (Wikipage page ID^='31717', caption^='--09-08')
+      Alexander_Stadium: (caption^='Alexander Stadium during Birmingham 2022')
+      Birmingham_City_University: (city^='http://dbpedia.org/resource/Birmingham')
+    relationships:
+      - Asha_Randall (dor:Asha_Randall) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Birmingham_City_University (dor:Birmingham_City_University) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - Alexander_Stadium (dor:Alexander_Stadium) --dop:tenants--> Birmingham_City_University (dor:Birmingham_City_University)
+  '6':
+    attributes:
+      Colombia: (Wikipage page ID^='5222', caption^='Amerindian population of Colombia by municipality in 2005.')
+      Estadio_Alfonso_López_Pumarejo: (architect^='http://dbpedia.org/resource/Leopold_Rother')
+      National_University_of_Colombia: (city^='http://dbpedia.org/resource/Bogotá')
+    relationships:
+      - Carolina_Colorado_Henao (dor:Carolina_Colorado_Henao) --doo:nationality--> Colombia (dor:Colombia)
+      - National_University_of_Colombia (dor:National_University_of_Colombia) --dop:country--> Colombia (dor:Colombia)
+      - Estadio_Alfonso_López_Pumarejo (<http://dbpedia.org/resource/Estadio_Alfonso_López_Pumarejo>) --dop:tenants--> National_University_of_Colombia (dor:National_University_of_Colombia)
+  '7':
+    attributes:
+      United_Kingdom: (Wikipage page ID^='31717', caption^='--09-08')
+      Alexander_Stadium: (caption^='Alexander Stadium during Birmingham 2022')
+      Birmingham_City_University: (city^='http://dbpedia.org/resource/Birmingham')
+    relationships:
+      - Caroline_Holmyard (dor:Caroline_Holmyard) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Birmingham_City_University (dor:Birmingham_City_University) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - Alexander_Stadium (dor:Alexander_Stadium) --dop:tenants--> Birmingham_City_University (dor:Birmingham_City_University)
+  '8':
+    attributes:
+      China: (Wikipage page ID^='5405', caption^='(Congress Chairman)')
+      Dom_Sportova: (opened^='1972-06-17', caption^='Dom sportova in March 2008')
+      Beijing_Sport_University: (city^='http://dbpedia.org/resource/Beijing')
+    relationships:
+      - Chen_Hua (dor:Chen_Hua) --doo:nationality--> China (dor:China)
+      - Beijing_Sport_University (dor:Beijing_Sport_University) --dop:country--> China (dor:China)
+      - Dom_Sportova (dor:Dom_Sportova) --dop:tenants--> Beijing_Sport_University (dor:Beijing_Sport_University)
+  '9':
+    attributes:
+      China: (Wikipage page ID^='5405', caption^='(Congress Chairman)')
+      Dom_Sportova: (opened^='1972-06-17', caption^='Dom sportova in March 2008')
+      Beijing_Sport_University: (city^='http://dbpedia.org/resource/Beijing')
+    relationships:
+      - Chen_Qian_(swimmer) (<http://dbpedia.org/resource/Chen_Qian_(swimmer)>) --doo:nationality--> China (dor:China)
+      - Beijing_Sport_University (dor:Beijing_Sport_University) --dop:country--> China (dor:China)
+      - Dom_Sportova (dor:Dom_Sportova) --dop:tenants--> Beijing_Sport_University (dor:Beijing_Sport_University)
+  '10':
+    attributes:
+      China: (Wikipage page ID^='5405', caption^='(Congress Chairman)')
+      Dom_Sportova: (opened^='1972-06-17', caption^='Dom sportova in March 2008')
+      Beijing_Sport_University: (city^='http://dbpedia.org/resource/Beijing')
+    relationships:
+      - Chen_Xinyi (dor:Chen_Xinyi) --doo:nationality--> China (dor:China)
+      - Beijing_Sport_University (dor:Beijing_Sport_University) --dop:country--> China (dor:China)
+      - Dom_Sportova (dor:Dom_Sportova) --dop:tenants--> Beijing_Sport_University (dor:Beijing_Sport_University)
+attributes:
+  venue: --opened^ (dop:opened)--> int | --architect^ (doo:architect)--> Resource | --caption^ (dop:caption)--> langString
+  Location: --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --Wikipage page ID^ (doo:wikiPageID)--> int | --arc-gapB^ (dop:arcGapb)--> double | --caption^ (dop:caption)--> langString | --age^ (dop:age)--> langString | --url^ (dop:url)--> langString | --mouth place^ (doo:mouthPlace)--> Resource
+  university: --city^ (dop:city)--> langString
+subgraph_id: 60
+relationships:
+  - swimmer --doo:nationality--> Location
+  - university --dop:country--> Location
+  - venue --dop:tenants--> university

@@ -1,0 +1,49 @@
+types:
+  athlete: doo:Athlete
+  Location: doo:Location
+  university: doo:University
+  trade union: doo:TradeUnion
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Johor: (align^='right', UTC offset^='+8')
+      Abdul_Ghani_Othman: (predecessor^='Hashim Ismail')
+    relationships:
+      - University_of_Queensland_Union (dor:University_of_Queensland_Union) --dop:affiliation--> University_of_Queensland (dor:University_of_Queensland)
+      - Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman) --doo:almaMater--> University_of_Queensland (dor:University_of_Queensland)
+      - Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman) --doo:birthPlace--> Johor (dor:Johor)
+      - Caitlin_Sargent-Jones (dor:Caitlin_Sargent-Jones) --doo:club--> University_of_Queensland (dor:University_of_Queensland)
+  '2':
+    attributes:
+      Malayan_Union: (capital^='http://dbpedia.org/resource/Kuala_Lumpur')
+      Abdul_Ghani_Othman: (predecessor^='Hashim Ismail')
+    relationships:
+      - University_of_Queensland_Union (dor:University_of_Queensland_Union) --dop:affiliation--> University_of_Queensland (dor:University_of_Queensland)
+      - Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman) --doo:almaMater--> University_of_Queensland (dor:University_of_Queensland)
+      - Abdul_Ghani_Othman (dor:Abdul_Ghani_Othman) --doo:birthPlace--> Malayan_Union (dor:Malayan_Union)
+      - Caitlin_Sargent-Jones (dor:Caitlin_Sargent-Jones) --doo:club--> University_of_Queensland (dor:University_of_Queensland)
+  '3':
+    attributes:
+      Australia: (UTC offset^='+8; +9.5; +10', capital^='http://dbpedia.org/resource/Canberra')
+      Alan_Sherlock: (predecessor^='http://dbpedia.org/resource/Tom_Veivers')
+    relationships:
+      - University_of_Queensland_Union (dor:University_of_Queensland_Union) --dop:affiliation--> University_of_Queensland (dor:University_of_Queensland)
+      - Alan_Sherlock (dor:Alan_Sherlock) --doo:almaMater--> University_of_Queensland (dor:University_of_Queensland)
+      - Alan_Sherlock (dor:Alan_Sherlock) --doo:birthPlace--> Australia (dor:Australia)
+      - Caitlin_Sargent-Jones (dor:Caitlin_Sargent-Jones) --doo:club--> University_of_Queensland (dor:University_of_Queensland)
+attributes:
+  athlete: --before^ (dop:before)--> langString | --country^ (dop:country)--> langString
+  Location: --align^ (dop:align)--> langString | --UTC offset^ (doo:utcOffset)--> string | --Apr low C^ (dop:aprLowC)--> int | --built^ (dop:built)--> langString | --capital^ (doo:capital)--> Resource | --last^ (dop:last)--> langString
+  office holder: --predecessor^ (dop:predecessor)--> Resource | --agf^ (dop:agf)--> int | --float^ (dop:float)--> langString | --d^ (dop:d)--> gMonthDay
+subgraph_id: 617
+relationships:
+  - trade union --dop:affiliation--> university
+  - office holder --doo:almaMater--> university
+  - office holder --doo:birthPlace--> Location
+  - athlete --doo:club--> university

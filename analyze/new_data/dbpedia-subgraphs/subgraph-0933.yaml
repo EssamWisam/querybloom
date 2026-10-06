@@ -1,0 +1,119 @@
+types:
+  movie: doo:Film
+  company: doo:Company
+  country: doo:Country
+  Location: doo:Location
+  politician: doo:Politician
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abdulahat_Nur: (children^='7')
+      Trevor_Morris_(musician): (genre^='http://dbpedia.org/resource/Film_score')
+    relationships:
+      - Trevor_Morris_(musician) (<http://dbpedia.org/resource/Trevor_Morris_(musician)>) --dop:birthPlace--> Canada (dor:Canada)
+      - 3_Needles (dor:3_Needles) --doo:musicComposer--> Trevor_Morris_(musician) (<http://dbpedia.org/resource/Trevor_Morris_(musician)>)
+      - Trevor_Morris_(musician) (<http://dbpedia.org/resource/Trevor_Morris_(musician)>) --doo:recordLabel--> Remote_Control_Productions_(American_company) (<http://dbpedia.org/resource/Remote_Control_Productions_(American_company)>)
+      - 3_Needles (dor:3_Needles) --doo:country--> Canada (dor:Canada)
+      - Abdulahat_Nur (dor:Abdulahat_Nur) --doo:nationality--> Canada (dor:Canada)
+  '2':
+    attributes:
+      Trevor_Morris_(musician): (genre^='http://dbpedia.org/resource/Film_score')
+    relationships:
+      - Trevor_Morris_(musician) (<http://dbpedia.org/resource/Trevor_Morris_(musician)>) --dop:birthPlace--> Canada (dor:Canada)
+      - 3_Needles (dor:3_Needles) --doo:musicComposer--> Trevor_Morris_(musician) (<http://dbpedia.org/resource/Trevor_Morris_(musician)>)
+      - Trevor_Morris_(musician) (<http://dbpedia.org/resource/Trevor_Morris_(musician)>) --doo:recordLabel--> Remote_Control_Productions_(American_company) (<http://dbpedia.org/resource/Remote_Control_Productions_(American_company)>)
+      - 3_Needles (dor:3_Needles) --doo:country--> Canada (dor:Canada)
+      - Albert_Cheng_(politician) (<http://dbpedia.org/resource/Albert_Cheng_(politician)>) --doo:nationality--> Canada (dor:Canada)
+  '3':
+    attributes:
+      Trevor_Morris_(musician): (genre^='http://dbpedia.org/resource/Film_score')
+    relationships:
+      - Trevor_Morris_(musician) (<http://dbpedia.org/resource/Trevor_Morris_(musician)>) --dop:birthPlace--> Canada (dor:Canada)
+      - 3_Needles (dor:3_Needles) --doo:musicComposer--> Trevor_Morris_(musician) (<http://dbpedia.org/resource/Trevor_Morris_(musician)>)
+      - Trevor_Morris_(musician) (<http://dbpedia.org/resource/Trevor_Morris_(musician)>) --doo:recordLabel--> Remote_Control_Productions_(American_company) (<http://dbpedia.org/resource/Remote_Control_Productions_(American_company)>)
+      - 3_Needles (dor:3_Needles) --doo:country--> Canada (dor:Canada)
+      - Alvin_Yeung (dor:Alvin_Yeung) --doo:nationality--> Canada (dor:Canada)
+  '4':
+    attributes:
+      5_Sundarikal: (Link from a Wikipage to an external page^='http://guftugu.in/index.php/2015/07/15/malayalam-fiction-special/', lyrics^='Black Letters')
+    relationships:
+      - Gopi_Sundar (dor:Gopi_Sundar) --dop:birthPlace--> India (dor:India)
+      - 5_Sundarikal (dor:5_Sundarikal) --doo:musicComposer--> Gopi_Sundar (dor:Gopi_Sundar)
+      - Gopi_Sundar (dor:Gopi_Sundar) --doo:recordLabel--> Aditya_Music (dor:Aditya_Music)
+      - 5_Sundarikal (dor:5_Sundarikal) --doo:country--> India (dor:India)
+      - A_P_Singh (dor:A_P_Singh) --doo:nationality--> India (dor:India)
+  '5':
+    attributes:
+      5_Sundarikal: (Link from a Wikipage to an external page^='http://guftugu.in/index.php/2015/07/15/malayalam-fiction-special/', lyrics^='Black Letters')
+    relationships:
+      - Gopi_Sundar (dor:Gopi_Sundar) --dop:birthPlace--> India (dor:India)
+      - 5_Sundarikal (dor:5_Sundarikal) --doo:musicComposer--> Gopi_Sundar (dor:Gopi_Sundar)
+      - Gopi_Sundar (dor:Gopi_Sundar) --doo:recordLabel--> T-Series_(company) (<http://dbpedia.org/resource/T-Series_(company)>)
+      - 5_Sundarikal (dor:5_Sundarikal) --doo:country--> India (dor:India)
+      - A_P_Singh (dor:A_P_Singh) --doo:nationality--> India (dor:India)
+  '6':
+    attributes:
+      5_Sundarikal: (Link from a Wikipage to an external page^='http://guftugu.in/index.php/2015/07/15/malayalam-fiction-special/', lyrics^='Black Letters')
+    relationships:
+      - Gopi_Sundar (dor:Gopi_Sundar) --dop:birthPlace--> India (dor:India)
+      - 5_Sundarikal (dor:5_Sundarikal) --doo:musicComposer--> Gopi_Sundar (dor:Gopi_Sundar)
+      - Gopi_Sundar (dor:Gopi_Sundar) --doo:recordLabel--> Aditya_Music (dor:Aditya_Music)
+      - 5_Sundarikal (dor:5_Sundarikal) --doo:country--> India (dor:India)
+      - A._A._Aziz (dor:A._A._Aziz) --doo:nationality--> India (dor:India)
+  '7':
+    attributes:
+      Jan_Garbarek: (home town^='http://dbpedia.org/resource/Norway', genre^='http://dbpedia.org/resource/Classical_music')
+      A_Year_Along_the_Abandoned_Road: (Link from a Wikipage to an external page^='http://www.cameramagica.no/About_Year.htm')
+    relationships:
+      - Jan_Garbarek (dor:Jan_Garbarek) --dop:birthPlace--> Norway (dor:Norway)
+      - A_Year_Along_the_Abandoned_Road (dor:A_Year_Along_the_Abandoned_Road) --doo:musicComposer--> Jan_Garbarek (dor:Jan_Garbarek)
+      - Jan_Garbarek (dor:Jan_Garbarek) --doo:recordLabel--> ECM_Records (dor:ECM_Records)
+      - A_Year_Along_the_Abandoned_Road (dor:A_Year_Along_the_Abandoned_Road) --doo:country--> Norway (dor:Norway)
+      - Aadel_Lampe (dor:Aadel_Lampe) --doo:nationality--> Norway (dor:Norway)
+  '8':
+    attributes:
+      Jan_Garbarek: (home town^='http://dbpedia.org/resource/Norway', genre^='http://dbpedia.org/resource/Classical_music')
+      A_Year_Along_the_Abandoned_Road: (Link from a Wikipage to an external page^='http://www.cameramagica.no/About_Year.htm')
+    relationships:
+      - Jan_Garbarek (dor:Jan_Garbarek) --dop:birthPlace--> Norway (dor:Norway)
+      - A_Year_Along_the_Abandoned_Road (dor:A_Year_Along_the_Abandoned_Road) --doo:musicComposer--> Jan_Garbarek (dor:Jan_Garbarek)
+      - Jan_Garbarek (dor:Jan_Garbarek) --doo:recordLabel--> Flying_Dutchman_Records (dor:Flying_Dutchman_Records)
+      - A_Year_Along_the_Abandoned_Road (dor:A_Year_Along_the_Abandoned_Road) --doo:country--> Norway (dor:Norway)
+      - Aadel_Lampe (dor:Aadel_Lampe) --doo:nationality--> Norway (dor:Norway)
+  '9':
+    attributes:
+      Jan_Garbarek: (home town^='http://dbpedia.org/resource/Norway', genre^='http://dbpedia.org/resource/Classical_music')
+      A_Year_Along_the_Abandoned_Road: (Link from a Wikipage to an external page^='http://www.cameramagica.no/About_Year.htm')
+    relationships:
+      - Jan_Garbarek (dor:Jan_Garbarek) --dop:birthPlace--> Norway (dor:Norway)
+      - A_Year_Along_the_Abandoned_Road (dor:A_Year_Along_the_Abandoned_Road) --doo:musicComposer--> Jan_Garbarek (dor:Jan_Garbarek)
+      - Jan_Garbarek (dor:Jan_Garbarek) --doo:recordLabel--> ECM_Records (dor:ECM_Records)
+      - A_Year_Along_the_Abandoned_Road (dor:A_Year_Along_the_Abandoned_Road) --doo:country--> Norway (dor:Norway)
+      - Abraham_Berge (dor:Abraham_Berge) --doo:nationality--> Norway (dor:Norway)
+  '10':
+    attributes:
+      Adanggaman: (Link from a Wikipage to an external page^='http://www.africine.org/entretien/une-reflexion-sur-le-pouvoir/957.')
+    relationships:
+      - Lokua_Kanza (dor:Lokua_Kanza) --dop:birthPlace--> Belgian_Congo (dor:Belgian_Congo)
+      - Adanggaman (dor:Adanggaman) --doo:musicComposer--> Lokua_Kanza (dor:Lokua_Kanza)
+      - Lokua_Kanza (dor:Lokua_Kanza) --doo:recordLabel--> Bertelsmann_Music_Group (dor:Bertelsmann_Music_Group)
+      - Adanggaman (dor:Adanggaman) --doo:country--> Burkina_Faso (dor:Burkina_Faso)
+      - Honoré_Ngbanda (<http://dbpedia.org/resource/Honoré_Ngbanda>) --doo:nationality--> Belgian_Congo (dor:Belgian_Congo)
+attributes:
+  movie: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --lyrics^ (dop:lyrics)--> langString | --number of episodes^ (doo:numberOfEpisodes)--> int
+  Location: --builder^ (dop:builder)--> langString
+  politician: --1pp^ (dop:1pp)--> int | --bot^ (dop:bot)--> langString | --children^ (dop:children)--> int
+  musical artist: --reason^ (dop:reason)--> langString | --home town^ (doo:hometown)--> Resource | --genre^ (doo:genre)--> Resource
+subgraph_id: 933
+relationships:
+  - musical artist --dop:birthPlace--> country
+  - movie --doo:musicComposer--> musical artist
+  - musical artist --doo:recordLabel--> company
+  - movie --doo:country--> Location
+  - politician --doo:nationality--> country

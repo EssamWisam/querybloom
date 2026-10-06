@@ -1,0 +1,96 @@
+types:
+  ship: doo:Ship
+  company: doo:Company
+  Location: doo:Location
+  body of water: doo:BodyOfWater
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Canada: (populationTotal='38929902', government type^='http://dbpedia.org/resource/Constitutional_monarchy')
+    relationships:
+      - SS_Eaglescliffe_Hall (dor:SS_Eaglescliffe_Hall) --doo:operator--> Canada (dor:Canada)
+      - 108_Mile_Lake (dor:108_Mile_Lake) --doo:country--> Canada (dor:Canada)
+      - SS_Eaglescliffe_Hall (dor:SS_Eaglescliffe_Hall) --doo:builder--> Smiths_Dock_Company (dor:Smiths_Dock_Company)
+  '2':
+    attributes:
+      Germany: (populationTotal='83695430', government type^='http://dbpedia.org/resource/Federal_parliamentary_republic')
+      Lürssen: (products^='Naval ships', logo^='Lürssen logo.png')
+    relationships:
+      - Dilbar_(yacht) (<http://dbpedia.org/resource/Dilbar_(yacht)>) --doo:operator--> Germany (dor:Germany)
+      - Aalkistensee (dor:Aalkistensee) --doo:country--> Germany (dor:Germany)
+      - Dilbar_(yacht) (<http://dbpedia.org/resource/Dilbar_(yacht)>) --doo:builder--> Lürssen (<http://dbpedia.org/resource/Lürssen>)
+  '3':
+    attributes:
+      Germany: (populationTotal='83695430', government type^='http://dbpedia.org/resource/Federal_parliamentary_republic')
+      Schichau-Werke: (logo^='Fabrikschild Schichau.JPG')
+    relationships:
+      - SS_Columbus_(1922) (<http://dbpedia.org/resource/SS_Columbus_(1922)>) --doo:operator--> Germany (dor:Germany)
+      - Aalkistensee (dor:Aalkistensee) --doo:country--> Germany (dor:Germany)
+      - SS_Columbus_(1922) (<http://dbpedia.org/resource/SS_Columbus_(1922)>) --doo:builder--> Schichau-Werke (dor:Schichau-Werke)
+  '4':
+    attributes:
+      Canada: (populationTotal='38929902', government type^='http://dbpedia.org/resource/Constitutional_monarchy')
+    relationships:
+      - SS_Eaglescliffe_Hall (dor:SS_Eaglescliffe_Hall) --doo:operator--> Canada (dor:Canada)
+      - Aberdeen_Lake_(La_Tuque) (<http://dbpedia.org/resource/Aberdeen_Lake_(La_Tuque)>) --doo:country--> Canada (dor:Canada)
+      - SS_Eaglescliffe_Hall (dor:SS_Eaglescliffe_Hall) --doo:builder--> Smiths_Dock_Company (dor:Smiths_Dock_Company)
+  '5':
+    attributes:
+      Canada: (populationTotal='38929902', government type^='http://dbpedia.org/resource/Constitutional_monarchy')
+    relationships:
+      - SS_Eaglescliffe_Hall (dor:SS_Eaglescliffe_Hall) --doo:operator--> Canada (dor:Canada)
+      - Aberdeen_Lake_(Nunavut) (<http://dbpedia.org/resource/Aberdeen_Lake_(Nunavut)>) --doo:country--> Canada (dor:Canada)
+      - SS_Eaglescliffe_Hall (dor:SS_Eaglescliffe_Hall) --doo:builder--> Smiths_Dock_Company (dor:Smiths_Dock_Company)
+  '6':
+    attributes:
+      Norway: (populationTotal='5425270', government type^='http://dbpedia.org/resource/Unitary_state')
+      J.A._Jones_Construction: (logo^='JAJoneslogo.png')
+    relationships:
+      - SS_William_E._Dodd (dor:SS_William_E._Dodd) --doo:operator--> Norway (dor:Norway)
+      - Åbjørvatnet (<http://dbpedia.org/resource/Åbjørvatnet>) --doo:country--> Norway (dor:Norway)
+      - SS_William_E._Dodd (dor:SS_William_E._Dodd) --doo:builder--> J.A._Jones_Construction (dor:J.A._Jones_Construction)
+  '7':
+    attributes:
+      Germany: (populationTotal='83695430', government type^='http://dbpedia.org/resource/Federal_parliamentary_republic')
+      Lürssen: (products^='Naval ships', logo^='Lürssen logo.png')
+    relationships:
+      - Dilbar_(yacht) (<http://dbpedia.org/resource/Dilbar_(yacht)>) --doo:operator--> Germany (dor:Germany)
+      - Abtsdorfer_See (dor:Abtsdorfer_See) --doo:country--> Germany (dor:Germany)
+      - Dilbar_(yacht) (<http://dbpedia.org/resource/Dilbar_(yacht)>) --doo:builder--> Lürssen (<http://dbpedia.org/resource/Lürssen>)
+  '8':
+    attributes:
+      Greece: (government type^='http://dbpedia.org/resource/Unitary_parliamentary_republic')
+      Hyundai_Heavy_Industries: (logo^='Hyundai Heavy Industries logo .svg')
+    relationships:
+      - MV_Irene_SL (dor:MV_Irene_SL) --doo:operator--> Greece (dor:Greece)
+      - Adriatic_Sea (dor:Adriatic_Sea) --doo:country--> Greece (dor:Greece)
+      - MV_Irene_SL (dor:MV_Irene_SL) --doo:builder--> Hyundai_Heavy_Industries (dor:Hyundai_Heavy_Industries)
+  '9':
+    attributes:
+      Greece: (government type^='http://dbpedia.org/resource/Unitary_parliamentary_republic')
+      Hyundai_Heavy_Industries: (logo^='Hyundai Heavy Industries logo .svg')
+    relationships:
+      - MV_Irene_SL (dor:MV_Irene_SL) --doo:operator--> Greece (dor:Greece)
+      - Aegean_Sea (dor:Aegean_Sea) --doo:country--> Greece (dor:Greece)
+      - MV_Irene_SL (dor:MV_Irene_SL) --doo:builder--> Hyundai_Heavy_Industries (dor:Hyundai_Heavy_Industries)
+  '10':
+    attributes:
+      Norway: (populationTotal='5425270', government type^='http://dbpedia.org/resource/Unitary_state')
+      J.A._Jones_Construction: (logo^='JAJoneslogo.png')
+    relationships:
+      - SS_William_E._Dodd (dor:SS_William_E._Dodd) --doo:operator--> Norway (dor:Norway)
+      - Åfjorden (<http://dbpedia.org/resource/Åfjorden>) --doo:country--> Norway (dor:Norway)
+      - SS_William_E._Dodd (dor:SS_William_E._Dodd) --doo:builder--> J.A._Jones_Construction (dor:J.A._Jones_Construction)
+attributes:
+  company: --align^ (dop:align)--> langString | --products^ (dop:products)--> Resource | --logo^ (dop:logo)--> int | --formation date^ (doo:formationDate)--> date
+  Location: --Aug low C^ (dop:augLowC)--> double | --subdivision^ (doo:subdivision)--> Resource | --coordinates^ (dop:coordinates)--> double | --area total km^ (dop:areaTotalKm)--> int | --populationTotal (doo:populationTotal)--> int | --government type^ (doo:governmentType)--> Resource | --built^ (dop:built)--> langString
+subgraph_id: 115
+relationships:
+  - ship --doo:operator--> Location
+  - body of water --doo:country--> Location
+  - ship --doo:builder--> company

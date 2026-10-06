@@ -1,0 +1,69 @@
+types:
+  city: doo:City
+  american football player: doo:AmericanFootballPlayer
+  national football league season: doo:NationalFootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - 1964_Cleveland_Browns_season (dor:1964_Cleveland_Browns_season) --dop:location--> Cleveland,_Ohio (<http://dbpedia.org/resource/Cleveland,_Ohio>)
+      - 1964_Cleveland_Browns_season (dor:1964_Cleveland_Browns_season) --dop:tvannouncers--> Warren_Lahr (dor:Warren_Lahr)
+  '2':
+    attributes: {}
+    relationships:
+      - 1964_Cleveland_Browns_season (dor:1964_Cleveland_Browns_season) --dop:location--> Dallas,_Texas (<http://dbpedia.org/resource/Dallas,_Texas>)
+      - 1964_Cleveland_Browns_season (dor:1964_Cleveland_Browns_season) --dop:tvannouncers--> Warren_Lahr (dor:Warren_Lahr)
+  '3':
+    attributes: {}
+    relationships:
+      - 1964_Cleveland_Browns_season (dor:1964_Cleveland_Browns_season) --dop:location--> Milwaukee,_Wisconsin (<http://dbpedia.org/resource/Milwaukee,_Wisconsin>)
+      - 1964_Cleveland_Browns_season (dor:1964_Cleveland_Browns_season) --dop:tvannouncers--> Warren_Lahr (dor:Warren_Lahr)
+  '4':
+    attributes:
+      Baltimore: (Apr sun^='230.7', has abstract^='( 다른 뜻에 대해서는 볼티모어 (동음이의) 문서를 참고하십시오.) 볼티모어(Baltimore)는 미국 메릴랜드주의 독립시이며, 패텁스코 강 하류에 위치해 있다. 2020년 현재 인구는 약 73만여 명이다. 메릴랜드주에서 가장 큰 도시로 문화와 산업의 중심지이다. 1729년에 도시가 창설되었는데, 초기에는 상업도시였고 조선(造船)으로도 알려진 체서피크만 깊...', Aug low F^='71', Aug precipitation days^='9.5', Apr low F^='43.6')
+    relationships:
+      - 1970_Kansas_City_Chiefs_season (dor:1970_Kansas_City_Chiefs_season) --dop:location--> Baltimore (dor:Baltimore)
+      - 1970_Kansas_City_Chiefs_season (dor:1970_Kansas_City_Chiefs_season) --dop:tvannouncers--> Don_Meredith (dor:Don_Meredith)
+  '5':
+    attributes: {}
+    relationships:
+      - 1976_Oakland_Raiders_season (dor:1976_Oakland_Raiders_season) --dop:location--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - 1976_Oakland_Raiders_season (dor:1976_Oakland_Raiders_season) --dop:tvannouncers--> Don_Meredith (dor:Don_Meredith)
+  '6':
+    attributes: {}
+    relationships:
+      - 1976_Oakland_Raiders_season (dor:1976_Oakland_Raiders_season) --dop:location--> Houston,_Texas (<http://dbpedia.org/resource/Houston,_Texas>)
+      - 1976_Oakland_Raiders_season (dor:1976_Oakland_Raiders_season) --dop:tvannouncers--> Don_Meredith (dor:Don_Meredith)
+  '7':
+    attributes:
+      Seattle: (has abstract^='Is í Seattle an chathair is mó i Washington, SAM agus príomhbhaile Chontae King í. Tá daonra 3.98 milliún ag Mhórcheantar Seattle, an cúigiú mhórcheantar déag is mó sa tír. Tá sí suite ar chuing idir ...')
+    relationships:
+      - 1977_Baltimore_Colts_season (dor:1977_Baltimore_Colts_season) --dop:location--> Seattle (dor:Seattle)
+      - 1977_Baltimore_Colts_season (dor:1977_Baltimore_Colts_season) --dop:tvannouncers--> Johnny_Unitas (dor:Johnny_Unitas)
+  '8':
+    attributes: {}
+    relationships:
+      - 1977_Buffalo_Bills_season (dor:1977_Buffalo_Bills_season) --dop:location--> Flushing,_New_York (<http://dbpedia.org/resource/Flushing,_New_York>)
+      - 1977_Buffalo_Bills_season (dor:1977_Buffalo_Bills_season) --dop:tvannouncers--> Frank_Gifford (dor:Frank_Gifford)
+  '9':
+    attributes: {}
+    relationships:
+      - 1977_Buffalo_Bills_season (dor:1977_Buffalo_Bills_season) --dop:location--> Flushing,_New_York (<http://dbpedia.org/resource/Flushing,_New_York>)
+      - 1977_Buffalo_Bills_season (dor:1977_Buffalo_Bills_season) --dop:tvannouncers--> Nick_Buoniconti (dor:Nick_Buoniconti)
+  '10':
+    attributes:
+      Oakland,_California: (has abstract^='Die Stadt Oakland [ˈoʊklənd] im US-Bundesstaat Kalifornien, am östlichen Ufer der Bucht von San Francisco gelegen, ist Sitz der Bezirksverwaltung des Alameda County. Laut der letzten Volkszählung im J...', Aug low F^='57.6', Aug precipitation days^='0.3', Apr low F^='50.3')
+    relationships:
+      - 1977_Buffalo_Bills_season (dor:1977_Buffalo_Bills_season) --dop:location--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - 1977_Buffalo_Bills_season (dor:1977_Buffalo_Bills_season) --dop:tvannouncers--> Frank_Gifford (dor:Frank_Gifford)
+attributes:
+  city: --Apr sun^ (dop:aprSun)--> int | --has abstract^ (doo:abstract)--> langString | --Aug low F^ (dop:augLowF)--> int | --Apr record low C^ (dop:aprRecordLowC)--> langString | --Apr high C^ (dop:aprHighC)--> int | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --Aug low C^ (dop:augLowC)--> int | --Apr rain days^ (dop:aprRainDays)--> int | --Apr low F^ (dop:aprLowF)--> int | --Aug rain days^ (dop:augRainDays)--> int
+subgraph_id: 85
+relationships:
+  - national football league season --dop:location--> city
+  - national football league season --dop:tvannouncers--> american football player

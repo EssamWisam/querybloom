@@ -1,0 +1,87 @@
+types:
+  book: doo:Book
+  place: doo:Place
+  country: doo:Country
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Colombia: (image^='AdamandEve-FernandoBotero-20100414.jpg', align^='right')
+      ¡Que_viva_la_música!: (Wikipage page ID^='3611536')
+    relationships:
+      - Alto_de_Nique (dor:Alto_de_Nique) --doo:locatedInArea--> Colombia (dor:Colombia)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --doo:country--> Colombia (dor:Colombia)
+  '2':
+    attributes:
+      Colombia: (image^='AdamandEve-FernandoBotero-20100414.jpg', align^='right')
+      ¡Que_viva_la_música!: (Wikipage page ID^='3611536')
+    relationships:
+      - Azufral (dor:Azufral) --doo:locatedInArea--> Colombia (dor:Colombia)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --doo:country--> Colombia (dor:Colombia)
+  '3':
+    attributes:
+      Colombia: (image^='AdamandEve-FernandoBotero-20100414.jpg', align^='right')
+      ¡Que_viva_la_música!: (Wikipage page ID^='3611536')
+    relationships:
+      - Cerro_Bravo (dor:Cerro_Bravo) --doo:locatedInArea--> Colombia (dor:Colombia)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --doo:country--> Colombia (dor:Colombia)
+  '4':
+    attributes:
+      '''48_(novel)': (Wikipage page ID^='12249923', literary genre^='http://dbpedia.org/resource/Alternative_history')
+      United_Kingdom: (image^='--08-17', align^='left', anthem^='http://dbpedia.org/resource/God_Save_the_King')
+    relationships:
+      - Bangor_Mountain (dor:Bangor_Mountain) --doo:locatedInArea--> United_Kingdom (dor:United_Kingdom)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --doo:country--> United_Kingdom (dor:United_Kingdom)'
+  '5':
+    attributes:
+      '''48_(novel)': (Wikipage page ID^='12249923', literary genre^='http://dbpedia.org/resource/Alternative_history')
+      United_Kingdom: (image^='--08-17', align^='left', anthem^='http://dbpedia.org/resource/God_Save_the_King')
+    relationships:
+      - Carn_Kenidjack (dor:Carn_Kenidjack) --doo:locatedInArea--> United_Kingdom (dor:United_Kingdom)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --doo:country--> United_Kingdom (dor:United_Kingdom)'
+  '6':
+    attributes:
+      '''48_(novel)': (Wikipage page ID^='12249923', literary genre^='http://dbpedia.org/resource/Alternative_history')
+      United_Kingdom: (image^='--08-17', align^='left', anthem^='http://dbpedia.org/resource/God_Save_the_King')
+    relationships:
+      - Carn_Menyn (dor:Carn_Menyn) --doo:locatedInArea--> United_Kingdom (dor:United_Kingdom)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --doo:country--> United_Kingdom (dor:United_Kingdom)'
+  '7':
+    attributes:
+      '''GAPÔ': (Wikipage page ID^='26535358', literary genre^='http://dbpedia.org/resource/Fiction')
+      Philippines: (image^='Ferdinand R. Marcos Jr .jpg')
+    relationships:
+      - Balut_Island (dor:Balut_Island) --doo:locatedInArea--> Philippines (dor:Philippines)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --doo:country--> Philippines (dor:Philippines)'
+  '8':
+    attributes:
+      '''GAPÔ': (Wikipage page ID^='26535358', literary genre^='http://dbpedia.org/resource/Fiction')
+      Philippines: (image^='Ferdinand R. Marcos Jr .jpg')
+    relationships:
+      - Batorampon_Point (dor:Batorampon_Point) --doo:locatedInArea--> Philippines (dor:Philippines)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --doo:country--> Philippines (dor:Philippines)'
+  '9':
+    attributes:
+      '''GAPÔ': (Wikipage page ID^='26535358', literary genre^='http://dbpedia.org/resource/Fiction')
+      Philippines: (image^='Ferdinand R. Marcos Jr .jpg')
+    relationships:
+      - Biliran_(volcano) (<http://dbpedia.org/resource/Biliran_(volcano)>) --doo:locatedInArea--> Philippines (dor:Philippines)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --doo:country--> Philippines (dor:Philippines)'
+  '10':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg', anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+      '%22Repent,_Harlequin!%22_Said_the_Ticktockman': (Wikipage page ID^='1478845', literary genre^='http://dbpedia.org/resource/Science_fiction')
+    relationships:
+      - 8517_Peak (dor:8517_Peak) --doo:locatedInArea--> United_States (dor:United_States)
+      - '%22Repent,_Harlequin!%22_Said_the_Ticktockman (<http://dbpedia.org/resource/%22Repent,_Harlequin!%22_Said_the_Ticktockman>) --doo:country--> United_States (dor:United_States)'
+attributes:
+  book: --2a^ (dop:2a)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int | --c^ (dop:c)--> langString | --width^ (dop:width)--> int | --literary genre^ (doo:literaryGenre)--> Resource | --source^ (dop:source)--> langString | --non-fiction subject^ (doo:nonFictionSubject)--> Resource
+  country: --1a^ (dop:1a)--> langString | --image^ (dop:image)--> langString | --align^ (dop:align)--> langString | --anthem^ (doo:anthem)--> Resource | --float^ (dop:float)--> langString
+subgraph_id: 2
+relationships:
+  - place --doo:locatedInArea--> country
+  - book --doo:country--> country

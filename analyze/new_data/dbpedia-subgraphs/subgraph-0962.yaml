@@ -1,0 +1,108 @@
+types:
+  island: doo:Island
+  country: doo:Country
+  Location: doo:Location
+  military unit: doo:MilitaryUnit
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Allison_Abbate: (birth date^='1965-07-23')
+      49th_Armored_Division: (Link from a Wikipage to an external page^='http://www.history.army.mil/html/books/060/60-14-1/cmhPub_60-14-1.pdf%7Ctitle=Maneuver')
+    relationships:
+      - Camp_Mabry (dor:Camp_Mabry) --doo:location--> United_States (dor:United_States)
+      - Allison_Abbate (dor:Allison_Abbate) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - 49th_Armored_Division (dor:49th_Armored_Division) --doo:garrison--> Camp_Mabry (dor:Camp_Mabry)
+      - Aagumchiidalix (dor:Aagumchiidalix) --doo:country--> United_States (dor:United_States)
+  '2':
+    attributes:
+      Candy_Johnson: (birth date^='1944-02-08')
+      49th_Armored_Division: (Link from a Wikipage to an external page^='http://www.history.army.mil/html/books/060/60-14-1/cmhPub_60-14-1.pdf%7Ctitle=Maneuver')
+    relationships:
+      - Camp_Mabry (dor:Camp_Mabry) --doo:location--> United_States (dor:United_States)
+      - Candy_Johnson (dor:Candy_Johnson) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - 49th_Armored_Division (dor:49th_Armored_Division) --doo:garrison--> Camp_Mabry (dor:Camp_Mabry)
+      - Aagumchiidalix (dor:Aagumchiidalix) --doo:country--> United_States (dor:United_States)
+  '3':
+    attributes:
+      Carlos_de_la_Garza: (birth date^='1807-11-04')
+      49th_Armored_Division: (Link from a Wikipage to an external page^='http://www.history.army.mil/html/books/060/60-14-1/cmhPub_60-14-1.pdf%7Ctitle=Maneuver')
+    relationships:
+      - Camp_Mabry (dor:Camp_Mabry) --doo:location--> United_States (dor:United_States)
+      - Carlos_de_la_Garza (dor:Carlos_de_la_Garza) --doo:stateOfOrigin--> United_States (dor:United_States)
+      - 49th_Armored_Division (dor:49th_Armored_Division) --doo:garrison--> Camp_Mabry (dor:Camp_Mabry)
+      - Aagumchiidalix (dor:Aagumchiidalix) --doo:country--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Per_Lindholm: (birth date^='1953-06-13')
+      Södertörn_Marine_Regiment: (Link from a Wikipage to an external page^='https://www.riksdagen.se/sv/dokument-lagar/dokument/proposition/totalforsvar-i-fornyelse---etapp-2_GK034/html')
+    relationships:
+      - Järflotta (<http://dbpedia.org/resource/Järflotta>) --doo:location--> Sweden (dor:Sweden)
+      - Per_Lindholm (dor:Per_Lindholm) --doo:stateOfOrigin--> Sweden (dor:Sweden)
+      - Södertörn_Marine_Regiment (<http://dbpedia.org/resource/Södertörn_Marine_Regiment>) --doo:garrison--> Järflotta (<http://dbpedia.org/resource/Järflotta>)
+      - Adelsö (<http://dbpedia.org/resource/Adelsö>) --doo:country--> Sweden (dor:Sweden)
+  '5':
+    attributes:
+      Pinkan_Mambo: (birth date^='1980-11-11')
+    relationships:
+      - Sulawesi (dor:Sulawesi) --doo:location--> Indonesia (dor:Indonesia)
+      - Pinkan_Mambo (dor:Pinkan_Mambo) --doo:stateOfOrigin--> Indonesia (dor:Indonesia)
+      - Kanoya_Air_Group (dor:Kanoya_Air_Group) --doo:garrison--> Sulawesi (dor:Sulawesi)
+      - Adonara (dor:Adonara) --doo:country--> Indonesia (dor:Indonesia)
+  '6':
+    attributes:
+      Antonino_Buenaventura: (birth date^='1904-10-14')
+    relationships:
+      - Fort_Bonifacio (dor:Fort_Bonifacio) --doo:location--> Philippines (dor:Philippines)
+      - Antonino_Buenaventura (dor:Antonino_Buenaventura) --doo:stateOfOrigin--> Philippines (dor:Philippines)
+      - 15th_Infantry_Division_(Philippines) (<http://dbpedia.org/resource/15th_Infantry_Division_(Philippines)>) --doo:garrison--> Fort_Bonifacio (dor:Fort_Bonifacio)
+      - Agho_Island (dor:Agho_Island) --doo:country--> Philippines (dor:Philippines)
+  '7':
+    attributes:
+      Antonino_Buenaventura: (birth date^='1904-10-14')
+    relationships:
+      - Fort_Bonifacio (dor:Fort_Bonifacio) --doo:location--> Philippines (dor:Philippines)
+      - Antonino_Buenaventura (dor:Antonino_Buenaventura) --doo:stateOfOrigin--> Philippines (dor:Philippines)
+      - Marine_Special_Operations_Group (dor:Marine_Special_Operations_Group) --doo:garrison--> Fort_Bonifacio (dor:Fort_Bonifacio)
+      - Agho_Island (dor:Agho_Island) --doo:country--> Philippines (dor:Philippines)
+  '8':
+    attributes:
+      Antonino_Buenaventura: (birth date^='1904-10-14')
+      Philippine_Marine_Corps: (Link from a Wikipage to an external page^='https://web.archive.org/web/20130127160029/http:/pmc.navy.mil.ph/')
+    relationships:
+      - Fort_Bonifacio (dor:Fort_Bonifacio) --doo:location--> Philippines (dor:Philippines)
+      - Antonino_Buenaventura (dor:Antonino_Buenaventura) --doo:stateOfOrigin--> Philippines (dor:Philippines)
+      - Philippine_Marine_Corps (dor:Philippine_Marine_Corps) --doo:garrison--> Fort_Bonifacio (dor:Fort_Bonifacio)
+      - Agho_Island (dor:Agho_Island) --doo:country--> Philippines (dor:Philippines)
+  '9':
+    attributes:
+      Fortress_of_Louisbourg: (Apr rain mm^='127.9', date^='August 2010', Apr sun^='150.7')
+    relationships:
+      - Fortress_of_Louisbourg (dor:Fortress_of_Louisbourg) --doo:location--> Canada (dor:Canada)
+      - Bob_Hallett (dor:Bob_Hallett) --doo:stateOfOrigin--> Canada (dor:Canada)
+      - Karrer_Regiment (dor:Karrer_Regiment) --doo:garrison--> Fortress_of_Louisbourg (dor:Fortress_of_Louisbourg)
+      - Aiyohok_Islands (dor:Aiyohok_Islands) --doo:country--> Canada (dor:Canada)
+  '10':
+    attributes:
+      Ellen_Joyce_Loo: (birth date^='1986-03-27')
+      Fortress_of_Louisbourg: (Apr rain mm^='127.9', date^='August 2010', Apr sun^='150.7')
+    relationships:
+      - Fortress_of_Louisbourg (dor:Fortress_of_Louisbourg) --doo:location--> Canada (dor:Canada)
+      - Ellen_Joyce_Loo (dor:Ellen_Joyce_Loo) --doo:stateOfOrigin--> Canada (dor:Canada)
+      - Karrer_Regiment (dor:Karrer_Regiment) --doo:garrison--> Fortress_of_Louisbourg (dor:Fortress_of_Louisbourg)
+      - Aiyohok_Islands (dor:Aiyohok_Islands) --doo:country--> Canada (dor:Canada)
+attributes:
+  Location: --length (doo:length)--> double | --leader^ (dop:leader)--> Resource | --arc-radiusA^ (dop:arcRadiusa)--> double | --Apr rain mm^ (dop:aprRainMm)--> double | --date^ (dop:date)--> date | --operator^ (dop:operator)--> langString | --Apr sun^ (dop:aprSun)--> int | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> int
+  military unit: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --1a^ (dop:1a)--> langString
+  musical artist: --id^ (dop:id)--> int | --birth date^ (doo:birthDate)--> date | --past members^ (dop:pastMembers)--> langString
+subgraph_id: 962
+relationships:
+  - Location --doo:location--> country
+  - musical artist --doo:stateOfOrigin--> country
+  - military unit --doo:garrison--> Location
+  - island --doo:country--> country

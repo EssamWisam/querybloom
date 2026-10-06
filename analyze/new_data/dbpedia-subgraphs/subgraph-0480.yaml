@@ -1,0 +1,115 @@
+types:
+  language: doo:Language
+  continent: doo:Continent
+  newspaper: doo:Newspaper
+  city district: doo:CityDistrict
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      California: (date^='2020-10-13')
+      English_language: (date^='2006')
+    relationships:
+      - Anglo-America (dor:Anglo-America) --doo:language--> English_language (dor:English_language)
+      - Mission_Local (dor:Mission_Local) --doo:language--> English_language (dor:English_language)
+      - Mission_Local (dor:Mission_Local) --doo:headquarter--> California (dor:California)
+      - 4th_Street_Corridor (dor:4th_Street_Corridor) --doo:subdivision--> California (dor:California)
+  '2':
+    attributes:
+      California: (date^='2020-10-13')
+      English_language: (date^='2006')
+    relationships:
+      - Anglo-America (dor:Anglo-America) --doo:language--> English_language (dor:English_language)
+      - Modern_Fix (dor:Modern_Fix) --doo:language--> English_language (dor:English_language)
+      - Modern_Fix (dor:Modern_Fix) --doo:headquarter--> California (dor:California)
+      - 4th_Street_Corridor (dor:4th_Street_Corridor) --doo:subdivision--> California (dor:California)
+  '3':
+    attributes:
+      California: (date^='2020-10-13')
+      English_language: (date^='2006')
+    relationships:
+      - Anglo-America (dor:Anglo-America) --doo:language--> English_language (dor:English_language)
+      - Rafu_Shimpo (dor:Rafu_Shimpo) --doo:language--> English_language (dor:English_language)
+      - Rafu_Shimpo (dor:Rafu_Shimpo) --doo:headquarter--> California (dor:California)
+      - 4th_Street_Corridor (dor:4th_Street_Corridor) --doo:subdivision--> California (dor:California)
+  '4':
+    attributes:
+      Vojvodina: (date^='July 2018')
+      Hungarian_language: (date^='2003')
+      Adamovićevo_Naselje: (area code^='+381(0)21')
+    relationships:
+      - Middle_East (dor:Middle_East) --doo:language--> Hungarian_language (dor:Hungarian_language)
+      - Magyar_Szó (<http://dbpedia.org/resource/Magyar_Szó>) --doo:language--> Hungarian_language (dor:Hungarian_language)
+      - Magyar_Szó (<http://dbpedia.org/resource/Magyar_Szó>) --doo:headquarter--> Vojvodina (dor:Vojvodina)
+      - Adamovićevo_Naselje (<http://dbpedia.org/resource/Adamovićevo_Naselje>) --doo:subdivision--> Vojvodina (dor:Vojvodina)
+  '5':
+    attributes:
+      Adice: (area code^='+381(0)21')
+      Vojvodina: (date^='July 2018')
+      Hungarian_language: (date^='2003')
+    relationships:
+      - Middle_East (dor:Middle_East) --doo:language--> Hungarian_language (dor:Hungarian_language)
+      - Magyar_Szó (<http://dbpedia.org/resource/Magyar_Szó>) --doo:language--> Hungarian_language (dor:Hungarian_language)
+      - Magyar_Szó (<http://dbpedia.org/resource/Magyar_Szó>) --doo:headquarter--> Vojvodina (dor:Vojvodina)
+      - Adice (dor:Adice) --doo:subdivision--> Vojvodina (dor:Vojvodina)
+  '6':
+    attributes:
+      Aksaray,_Fatih: (area code^='0-212')
+      Turkish_language: (date^='August 2018')
+    relationships:
+      - Europe (dor:Europe) --doo:language--> Turkish_language (dor:Turkish_language)
+      - İstanbul_(newspaper) (<http://dbpedia.org/resource/İstanbul_(newspaper)>) --doo:language--> Turkish_language (dor:Turkish_language)
+      - İstanbul_(newspaper) (<http://dbpedia.org/resource/İstanbul_(newspaper)>) --doo:headquarter--> Fatih (dor:Fatih)
+      - Aksaray,_Fatih (<http://dbpedia.org/resource/Aksaray,_Fatih>) --doo:subdivision--> Fatih (dor:Fatih)
+  '7':
+    attributes:
+      Aksaray,_Fatih: (area code^='0-212')
+      Turkish_language: (date^='August 2018')
+    relationships:
+      - Middle_East (dor:Middle_East) --doo:language--> Turkish_language (dor:Turkish_language)
+      - İstanbul_(newspaper) (<http://dbpedia.org/resource/İstanbul_(newspaper)>) --doo:language--> Turkish_language (dor:Turkish_language)
+      - İstanbul_(newspaper) (<http://dbpedia.org/resource/İstanbul_(newspaper)>) --doo:headquarter--> Fatih (dor:Fatih)
+      - Aksaray,_Fatih (<http://dbpedia.org/resource/Aksaray,_Fatih>) --doo:subdivision--> Fatih (dor:Fatih)
+  '8':
+    attributes:
+      Aksaray,_Fatih: (area code^='0-212')
+      Turkish_language: (date^='August 2018')
+    relationships:
+      - Western_Asia (dor:Western_Asia) --doo:language--> Turkish_language (dor:Turkish_language)
+      - İstanbul_(newspaper) (<http://dbpedia.org/resource/İstanbul_(newspaper)>) --doo:language--> Turkish_language (dor:Turkish_language)
+      - İstanbul_(newspaper) (<http://dbpedia.org/resource/İstanbul_(newspaper)>) --doo:headquarter--> Fatih (dor:Fatih)
+      - Aksaray,_Fatih (<http://dbpedia.org/resource/Aksaray,_Fatih>) --doo:subdivision--> Fatih (dor:Fatih)
+  '9':
+    attributes:
+      Texas: (date^='2016-12-09')
+      Spanish_language: (date^='2021')
+    relationships:
+      - Communication_for_social_change (dor:Communication_for_social_change) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Al_Día_(Dallas) (<http://dbpedia.org/resource/Al_Día_(Dallas)>) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Al_Día_(Dallas) (<http://dbpedia.org/resource/Al_Día_(Dallas)>) --doo:headquarter--> Texas (dor:Texas)
+      - Aliana,_Texas (<http://dbpedia.org/resource/Aliana,_Texas>) --doo:subdivision--> Texas (dor:Texas)
+  '10':
+    attributes:
+      Texas: (date^='2016-12-09')
+      Spanish_language: (date^='2021')
+    relationships:
+      - Demographics_of_Oceania (dor:Demographics_of_Oceania) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Al_Día_(Dallas) (<http://dbpedia.org/resource/Al_Día_(Dallas)>) --doo:language--> Spanish_language (dor:Spanish_language)
+      - Al_Día_(Dallas) (<http://dbpedia.org/resource/Al_Día_(Dallas)>) --doo:headquarter--> Texas (dor:Texas)
+      - Aliana,_Texas (<http://dbpedia.org/resource/Aliana,_Texas>) --doo:subdivision--> Texas (dor:Texas)
+attributes:
+  language: --date^ (dop:date)--> int
+  newspaper: --publisher^ (doo:publisher)--> Resource
+  city district: --area code^ (doo:areaCode)--> string | --Apr high F^ (dop:aprHighF)--> double
+  administrative region: --government type^ (doo:governmentType)--> Resource | --Apr record high C^ (dop:aprRecordHighC)--> double | --date^ (dop:date)--> langString | --Apr sun^ (dop:aprSun)--> int | --Aug precipitation days^ (dop:augPrecipitationDays)--> int
+subgraph_id: 480
+relationships:
+  - continent --doo:language--> language
+  - newspaper --doo:language--> language
+  - newspaper --doo:headquarter--> administrative region
+  - city district --doo:subdivision--> administrative region

@@ -1,0 +1,128 @@
+types:
+  Food: doo:Food
+  island: doo:Island
+  station: doo:Station
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Indonesia: (capital^='http://dbpedia.org/resource/Jakarta', url^='https://web.archive.org/web/20141012020339/https:/www.cia.gov/library/publications/world-leaders-1/ID.html')
+      Adisoemarmo_International_Airport_railway_station: (owned^='http://dbpedia.org/resource/Kereta_Api_Indonesia')
+    relationships:
+      - Lombok (dor:Lombok) --doo:location--> Indonesia (dor:Indonesia)
+      - Ayam_Taliwang (dor:Ayam_Taliwang) --doo:region--> Lombok (dor:Lombok)
+      - Adisoemarmo_International_Airport_railway_station (dor:Adisoemarmo_International_Airport_railway_station) --dop:country--> Indonesia (dor:Indonesia)
+  '2':
+    attributes:
+      Indonesia: (capital^='http://dbpedia.org/resource/Jakarta', url^='https://web.archive.org/web/20141012020339/https:/www.cia.gov/library/publications/world-leaders-1/ID.html')
+      Alastua_railway_station: (owned^='http://dbpedia.org/resource/Kereta_Api_Indonesia')
+    relationships:
+      - Lombok (dor:Lombok) --doo:location--> Indonesia (dor:Indonesia)
+      - Ayam_Taliwang (dor:Ayam_Taliwang) --doo:region--> Lombok (dor:Lombok)
+      - Alastua_railway_station (dor:Alastua_railway_station) --dop:country--> Indonesia (dor:Indonesia)
+  '3':
+    attributes:
+      Indonesia: (capital^='http://dbpedia.org/resource/Jakarta', url^='https://web.archive.org/web/20141012020339/https:/www.cia.gov/library/publications/world-leaders-1/ID.html')
+      Ambarawa_Railway_Museum: (owned^='http://dbpedia.org/resource/Kereta_Api_Indonesia')
+    relationships:
+      - Lombok (dor:Lombok) --doo:location--> Indonesia (dor:Indonesia)
+      - Ayam_Taliwang (dor:Ayam_Taliwang) --doo:region--> Lombok (dor:Lombok)
+      - Ambarawa_Railway_Museum (dor:Ambarawa_Railway_Museum) --dop:country--> Indonesia (dor:Indonesia)
+  '4':
+    attributes:
+      Balbacua: (ingredient^='http://dbpedia.org/resource/Beef')
+      Philippines: (capital^='http://dbpedia.org/resource/Manila', url^='--05-21')
+      5th_Avenue_station_(LRT): (owned^='http://dbpedia.org/resource/Department_of_Transportation_(Philippines)')
+    relationships:
+      - Mindanao (dor:Mindanao) --doo:location--> Philippines (dor:Philippines)
+      - Balbacua (dor:Balbacua) --doo:region--> Mindanao (dor:Mindanao)
+      - 5th_Avenue_station_(LRT) (<http://dbpedia.org/resource/5th_Avenue_station_(LRT)>) --dop:country--> Philippines (dor:Philippines)
+  '5':
+    attributes:
+      Balbacua: (ingredient^='http://dbpedia.org/resource/Beef')
+      Philippines: (capital^='http://dbpedia.org/resource/Manila', url^='--05-21')
+      Abad_Santos_station: (owned^='http://dbpedia.org/resource/Department_of_Transportation_(Philippines)')
+    relationships:
+      - Mindanao (dor:Mindanao) --doo:location--> Philippines (dor:Philippines)
+      - Balbacua (dor:Balbacua) --doo:region--> Mindanao (dor:Mindanao)
+      - Abad_Santos_station (dor:Abad_Santos_station) --dop:country--> Philippines (dor:Philippines)
+  '6':
+    attributes:
+      Balbacua: (ingredient^='http://dbpedia.org/resource/Beef')
+      Philippines: (capital^='http://dbpedia.org/resource/Manila', url^='--05-21')
+      Alabang_station: (owned^='http://dbpedia.org/resource/Philippine_National_Railways')
+    relationships:
+      - Mindanao (dor:Mindanao) --doo:location--> Philippines (dor:Philippines)
+      - Balbacua (dor:Balbacua) --doo:region--> Mindanao (dor:Mindanao)
+      - Alabang_station (dor:Alabang_station) --dop:country--> Philippines (dor:Philippines)
+  '7':
+    attributes:
+      Japan: (capital^='http://dbpedia.org/resource/Tokyo')
+      Wasanbon: (ingredient^='http://dbpedia.org/resource/Sugarcane')
+    relationships:
+      - Shikoku (dor:Shikoku) --doo:location--> Japan (dor:Japan)
+      - Wasanbon (dor:Wasanbon) --doo:region--> Shikoku (dor:Shikoku)
+      - Aibetsu_Station (dor:Aibetsu_Station) --dop:country--> Japan (dor:Japan)
+  '8':
+    attributes:
+      Japan: (capital^='http://dbpedia.org/resource/Tokyo')
+      Ainoura_Station: (distance^='79.7')
+    relationships:
+      - Shikoku (dor:Shikoku) --doo:location--> Japan (dor:Japan)
+      - Wasanbon (dor:Wasanbon) --doo:region--> Shikoku (dor:Shikoku)
+      - Ainoura_Station (dor:Ainoura_Station) --dop:country--> Japan (dor:Japan)
+  '9':
+    attributes:
+      Japan: (capital^='http://dbpedia.org/resource/Tokyo')
+      Wasanbon: (ingredient^='http://dbpedia.org/resource/Sugarcane')
+    relationships:
+      - Shikoku (dor:Shikoku) --doo:location--> Japan (dor:Japan)
+      - Wasanbon (dor:Wasanbon) --doo:region--> Shikoku (dor:Shikoku)
+      - Ajina_Station (dor:Ajina_Station) --dop:country--> Japan (dor:Japan)
+qa_result:
+  status: completed
+  cost_usd: 0.23142
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0327924
+        total_tokens: 3481
+        prompt_tokens: 2010
+        completion_tokens: 1471
+      generate:
+        cost_usd: 0.0862776
+        total_tokens: 7559
+        prompt_tokens: 3847
+        completion_tokens: 3712
+      verify_1:
+        cost_usd: 0.027102000000000005
+        total_tokens: 4338
+        prompt_tokens: 3977
+        completion_tokens: 361
+      complexity:
+        cost_usd: 0.08524800000000002
+        total_tokens: 8263
+        prompt_tokens: 4762
+        completion_tokens: 3501
+    total_tokens: 23641
+    prompt_tokens: 14596
+    total_cost_usd: 0.23142000000000001
+    completion_tokens: 9045
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Food: --ingredient^ (doo:ingredient)--> Resource
+  station: --owned^ (dop:owned)--> int | --distance^ (dop:distance)--> langString | --distance^ (dop:distance)--> double
+  Location: --commons^ (dop:commons)--> langString | --designated other1 date^ (dop:designatedOther1Date)--> date | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --capital^ (doo:capital)--> Resource | --url^ (dop:url)--> langString | --coordinates^ (dop:coordinates)--> langString
+subgraph_id: 283
+relationships:
+  - island --doo:location--> Location
+  - Food --doo:region--> island
+  - station --dop:country--> Location

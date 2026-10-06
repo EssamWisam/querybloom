@@ -1,0 +1,58 @@
+types:
+  Location: doo:Location
+  politician: doo:Politician
+  hockey team: doo:HockeyTeam
+  soccer player: doo:SoccerPlayer
+  government agency: doo:GovernmentAgency
+  military structure: doo:MilitaryStructure
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ahmet_Robenson: (death date^='1968-01-01')
+      New_York_(state): (area total (m2)^='54555000000.0')
+    relationships:
+      - Abraham_Dowdney (dor:Abraham_Dowdney) --doo:restingPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Ahmet_Robenson (dor:Ahmet_Robenson) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Fort_Totten_(Queens) (<http://dbpedia.org/resource/Fort_Totten_(Queens)>) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Fort_Totten_(Queens) (<http://dbpedia.org/resource/Fort_Totten_(Queens)>) --doo:owner--> New_York_City_Department_of_Parks_and_Recreation (dor:New_York_City_Department_of_Parks_and_Recreation)
+      - New_York_City_Department_of_Parks_and_Recreation (dor:New_York_City_Department_of_Parks_and_Recreation) --doo:jurisdiction--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Albany_River_Rats (dor:Albany_River_Rats) --dop:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '2':
+    attributes:
+      New_York_(state): (area total (m2)^='54555000000.0')
+      Bill_Dwyer_(mobster): (death date^='1946-12-10', reason^='3.15576E8')
+    relationships:
+      - Abraham_Dowdney (dor:Abraham_Dowdney) --doo:restingPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Bill_Dwyer_(mobster) (<http://dbpedia.org/resource/Bill_Dwyer_(mobster)>) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Fort_Totten_(Queens) (<http://dbpedia.org/resource/Fort_Totten_(Queens)>) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Fort_Totten_(Queens) (<http://dbpedia.org/resource/Fort_Totten_(Queens)>) --doo:owner--> New_York_City_Department_of_Parks_and_Recreation (dor:New_York_City_Department_of_Parks_and_Recreation)
+      - New_York_City_Department_of_Parks_and_Recreation (dor:New_York_City_Department_of_Parks_and_Recreation) --doo:jurisdiction--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Albany_River_Rats (dor:Albany_River_Rats) --dop:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '3':
+    attributes:
+      Charlie_Gallogly: (death date^='1993-01-12')
+      New_York_(state): (area total (m2)^='54555000000.0')
+    relationships:
+      - Abraham_Dowdney (dor:Abraham_Dowdney) --doo:restingPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Charlie_Gallogly (dor:Charlie_Gallogly) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Fort_Totten_(Queens) (<http://dbpedia.org/resource/Fort_Totten_(Queens)>) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Fort_Totten_(Queens) (<http://dbpedia.org/resource/Fort_Totten_(Queens)>) --doo:owner--> New_York_City_Department_of_Parks_and_Recreation (dor:New_York_City_Department_of_Parks_and_Recreation)
+      - New_York_City_Department_of_Parks_and_Recreation (dor:New_York_City_Department_of_Parks_and_Recreation) --doo:jurisdiction--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Albany_River_Rats (dor:Albany_River_Rats) --dop:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+attributes:
+  Location: --operator^ (dop:operator)--> Resource | --area total (m2)^ (doo:areaTotal)--> double | --built^ (dop:built)--> second | --architect^ (doo:architect)--> Resource | --group^ (dop:group)--> langString
+  politician: --relatives^ (dop:relatives)--> Resource
+  soccer player: --death date^ (dop:deathDate)--> date | --align^ (dop:align)--> langString | --source^ (dop:source)--> langString | --reason^ (dop:reason)--> langString
+subgraph_id: 934
+relationships:
+  - politician --doo:restingPlace--> Location
+  - soccer player --doo:deathPlace--> Location
+  - military structure --doo:location--> Location
+  - military structure --doo:owner--> government agency
+  - government agency --doo:jurisdiction--> Location
+  - hockey team --dop:city--> Location

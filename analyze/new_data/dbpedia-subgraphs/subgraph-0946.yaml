@@ -1,0 +1,124 @@
+types:
+  city: doo:City
+  person: doo:Person
+  sports team: doo:SportsTeam
+  musical artist: doo:MusicalArtist
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Kitty_White: (id^='p11961')
+      A._C._Bilbrew: (death date^='1972-06-04', birth date^='1891-03-12')
+    relationships:
+      - Los_Angeles_Amazons (dor:Los_Angeles_Amazons) --doo:city--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - A._C._Bilbrew (dor:A._C._Bilbrew) --doo:deathPlace--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Los_Angeles_Amazons (dor:Los_Angeles_Amazons) --dop:city--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - A._C._Bilbrew (dor:A._C._Bilbrew) --dop:relatives--> Kitty_White (dor:Kitty_White)
+      - Daniel_Farrar (dor:Daniel_Farrar) --doo:birthPlace--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+  '2':
+    attributes:
+      Kitty_White: (id^='p11961')
+      A._C._Bilbrew: (death date^='1972-06-04', birth date^='1891-03-12')
+    relationships:
+      - Los_Angeles_Gladiators (dor:Los_Angeles_Gladiators) --doo:city--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - A._C._Bilbrew (dor:A._C._Bilbrew) --doo:deathPlace--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Los_Angeles_Gladiators (dor:Los_Angeles_Gladiators) --dop:city--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - A._C._Bilbrew (dor:A._C._Bilbrew) --dop:relatives--> Kitty_White (dor:Kitty_White)
+      - Daniel_Farrar (dor:Daniel_Farrar) --doo:birthPlace--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+  '3':
+    attributes:
+      Kitty_White: (id^='p11961')
+      A._C._Bilbrew: (death date^='1972-06-04', birth date^='1891-03-12')
+    relationships:
+      - Los_Angeles_Guerrillas (dor:Los_Angeles_Guerrillas) --doo:city--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - A._C._Bilbrew (dor:A._C._Bilbrew) --doo:deathPlace--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Los_Angeles_Guerrillas (dor:Los_Angeles_Guerrillas) --dop:city--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - A._C._Bilbrew (dor:A._C._Bilbrew) --dop:relatives--> Kitty_White (dor:Kitty_White)
+      - Daniel_Farrar (dor:Daniel_Farrar) --doo:birthPlace--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+  '4':
+    attributes:
+      Al_Dubin: (children^='Simon Joseph , Patricia Dubin McGuire', death date^='1945-02-11', birth date^='1891-06-10')
+      New_York_City: (area total (km2)^='1223.5880829660366')
+    relationships:
+      - Brooklyn_Bolts (dor:Brooklyn_Bolts) --doo:city--> New_York_City (dor:New_York_City)
+      - Al_Dubin (dor:Al_Dubin) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Brooklyn_Bolts (dor:Brooklyn_Bolts) --dop:city--> New_York_City (dor:New_York_City)
+      - Al_Dubin (dor:Al_Dubin) --dop:relatives--> Joseph_Dubin (dor:Joseph_Dubin)
+      - Bruce_Arena (dor:Bruce_Arena) --doo:birthPlace--> New_York_City (dor:New_York_City)
+  '5':
+    attributes:
+      Al_Dubin: (children^='Simon Joseph , Patricia Dubin McGuire', death date^='1945-02-11', birth date^='1891-06-10')
+      New_York_City: (area total (km2)^='1223.5880829660366')
+    relationships:
+      - New_York_Apples (dor:New_York_Apples) --doo:city--> New_York_City (dor:New_York_City)
+      - Al_Dubin (dor:Al_Dubin) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - New_York_Apples (dor:New_York_Apples) --dop:city--> New_York_City (dor:New_York_City)
+      - Al_Dubin (dor:Al_Dubin) --dop:relatives--> Joseph_Dubin (dor:Joseph_Dubin)
+      - Bruce_Arena (dor:Bruce_Arena) --doo:birthPlace--> New_York_City (dor:New_York_City)
+  '6':
+    attributes:
+      Al_Dubin: (children^='Simon Joseph , Patricia Dubin McGuire', death date^='1945-02-11', birth date^='1891-06-10')
+      New_York_City: (area total (km2)^='1223.5880829660366')
+    relationships:
+      - New_York_Empire_(AUDL) (<http://dbpedia.org/resource/New_York_Empire_(AUDL)>) --doo:city--> New_York_City (dor:New_York_City)
+      - Al_Dubin (dor:Al_Dubin) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - New_York_Empire_(AUDL) (<http://dbpedia.org/resource/New_York_Empire_(AUDL)>) --dop:city--> New_York_City (dor:New_York_City)
+      - Al_Dubin (dor:Al_Dubin) --dop:relatives--> Joseph_Dubin (dor:Joseph_Dubin)
+      - Bruce_Arena (dor:Bruce_Arena) --doo:birthPlace--> New_York_City (dor:New_York_City)
+  '7':
+    attributes:
+      Dhaka: (date^='2017-04-29')
+      Alauddin_Ali: (children^='5', death date^='2020-08-09', birth date^='1952-12-24')
+    relationships:
+      - Dhaka_Dominators (dor:Dhaka_Dominators) --doo:city--> Dhaka (dor:Dhaka)
+      - Alauddin_Ali (dor:Alauddin_Ali) --doo:deathPlace--> Dhaka (dor:Dhaka)
+      - Dhaka_Dominators (dor:Dhaka_Dominators) --dop:city--> Dhaka (dor:Dhaka)
+      - Alauddin_Ali (dor:Alauddin_Ali) --dop:relatives--> Ali_Akbar_Rupu (dor:Ali_Akbar_Rupu)
+      - Abu_Ahmed_Faysal (dor:Abu_Ahmed_Faysal) --doo:birthPlace--> Dhaka (dor:Dhaka)
+  '8':
+    attributes:
+      Dhaka: (date^='2017-04-29')
+      Alauddin_Ali: (children^='5', death date^='2020-08-09', birth date^='1952-12-24')
+    relationships:
+      - Walton_Dhaka (dor:Walton_Dhaka) --doo:city--> Dhaka (dor:Dhaka)
+      - Alauddin_Ali (dor:Alauddin_Ali) --doo:deathPlace--> Dhaka (dor:Dhaka)
+      - Walton_Dhaka (dor:Walton_Dhaka) --dop:city--> Dhaka (dor:Dhaka)
+      - Alauddin_Ali (dor:Alauddin_Ali) --dop:relatives--> Ali_Akbar_Rupu (dor:Ali_Akbar_Rupu)
+      - Abu_Ahmed_Faysal (dor:Abu_Ahmed_Faysal) --doo:birthPlace--> Dhaka (dor:Dhaka)
+  '9':
+    attributes:
+      Dhaka: (date^='2017-04-29')
+      Alauddin_Ali: (children^='5', death date^='2020-08-09', birth date^='1952-12-24')
+    relationships:
+      - Dhaka_Dominators (dor:Dhaka_Dominators) --doo:city--> Dhaka (dor:Dhaka)
+      - Alauddin_Ali (dor:Alauddin_Ali) --doo:deathPlace--> Dhaka (dor:Dhaka)
+      - Dhaka_Dominators (dor:Dhaka_Dominators) --dop:city--> Dhaka (dor:Dhaka)
+      - Alauddin_Ali (dor:Alauddin_Ali) --dop:relatives--> Ali_Akbar_Rupu (dor:Ali_Akbar_Rupu)
+      - Khandoker_Wasim_Iqbal (dor:Khandoker_Wasim_Iqbal) --doo:birthPlace--> Dhaka (dor:Dhaka)
+  '10':
+    attributes:
+      London: (area total (km2)^='1572.03')
+      Alice_Verne-Bredt: (death date^='1958', birth date^='1864')
+    relationships:
+      - Excel_Esports (dor:Excel_Esports) --doo:city--> London (dor:London)
+      - Alice_Verne-Bredt (dor:Alice_Verne-Bredt) --doo:deathPlace--> London (dor:London)
+      - Excel_Esports (dor:Excel_Esports) --dop:city--> London (dor:London)
+      - Alice_Verne-Bredt (dor:Alice_Verne-Bredt) --dop:relatives--> Mary_Wurm (dor:Mary_Wurm)
+      - Alan_Gane (dor:Alan_Gane) --doo:birthPlace--> London (dor:London)
+attributes:
+  city: --area total (km2)^ (doop:areaTotal)--> squareKilometre | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --date^ (dop:date)--> langString
+  person: --children^ (dop:children)--> int | --death date^ (dop:deathDate)--> gMonthDay | --birth date^ (dop:birthDate)--> date
+  musical artist: --bot^ (dop:bot)--> langString | --associated acts^ (dop:associatedActs)--> Resource | --id^ (dop:id)--> int
+subgraph_id: 946
+relationships:
+  - sports team --doo:city--> city
+  - person --doo:deathPlace--> city
+  - sports team --dop:city--> city
+  - person --dop:relatives--> musical artist
+  - soccer manager --doo:birthPlace--> city

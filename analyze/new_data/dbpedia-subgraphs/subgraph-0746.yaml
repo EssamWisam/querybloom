@@ -1,0 +1,95 @@
+types:
+  Band: doo:Band
+  movie: doo:Film
+  person: doo:Person
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Roope_Latvala: (instrument^='Guitar')
+    relationships:
+      - Amon_Amarth (dor:Amon_Amarth) --dop:pastMembers--> Martin_Lopez (dor:Martin_Lopez)
+      - Amon_Amarth (dor:Amon_Amarth) --doo:associatedBand--> Roope_Latvala (dor:Roope_Latvala)
+      - Namaste_England (dor:Namaste_England) --dop:music--> Amon_Amarth (dor:Amon_Amarth)
+  '2':
+    attributes: {}
+    relationships:
+      - Amon_Amarth (dor:Amon_Amarth) --dop:pastMembers--> Martin_Lopez (dor:Martin_Lopez)
+      - Amon_Amarth (dor:Amon_Amarth) --doo:associatedBand--> This_Ending (dor:This_Ending)
+      - Namaste_England (dor:Namaste_England) --dop:music--> Amon_Amarth (dor:Amon_Amarth)
+  '3':
+    attributes:
+      Evie_Sands: (instrument^='')
+    relationships:
+      - Belle_and_Sebastian (dor:Belle_and_Sebastian) --dop:pastMembers--> Isobel_Campbell (dor:Isobel_Campbell)
+      - Belle_and_Sebastian (dor:Belle_and_Sebastian) --doo:associatedBand--> Evie_Sands (dor:Evie_Sands)
+      - Believe_Me_(film) (<http://dbpedia.org/resource/Believe_Me_(film)>) --dop:music--> Belle_and_Sebastian (dor:Belle_and_Sebastian)
+  '4':
+    attributes:
+      Norah_Jones: (instrument^='')
+    relationships:
+      - Belle_and_Sebastian (dor:Belle_and_Sebastian) --dop:pastMembers--> Isobel_Campbell (dor:Isobel_Campbell)
+      - Belle_and_Sebastian (dor:Belle_and_Sebastian) --doo:associatedBand--> Norah_Jones (dor:Norah_Jones)
+      - Believe_Me_(film) (<http://dbpedia.org/resource/Believe_Me_(film)>) --dop:music--> Belle_and_Sebastian (dor:Belle_and_Sebastian)
+  '5':
+    attributes:
+      Evie_Sands: (instrument^='')
+    relationships:
+      - Belle_and_Sebastian (dor:Belle_and_Sebastian) --dop:pastMembers--> Mick_Cooke (dor:Mick_Cooke)
+      - Belle_and_Sebastian (dor:Belle_and_Sebastian) --doo:associatedBand--> Evie_Sands (dor:Evie_Sands)
+      - Believe_Me_(film) (<http://dbpedia.org/resource/Believe_Me_(film)>) --dop:music--> Belle_and_Sebastian (dor:Belle_and_Sebastian)
+  '6':
+    attributes:
+      Odd_Nosdam: (instrument^='http://dbpedia.org/resource/Sampler_(musical_instrument)')
+    relationships:
+      - Boards_of_Canada (dor:Boards_of_Canada) --dop:pastMembers--> Christ._(musician) (<http://dbpedia.org/resource/Christ._(musician)>)
+      - Boards_of_Canada (dor:Boards_of_Canada) --doo:associatedBand--> Odd_Nosdam (dor:Odd_Nosdam)
+      - The_Consequences_of_Love (dor:The_Consequences_of_Love) --dop:music--> Boards_of_Canada (dor:Boards_of_Canada)
+  '7':
+    attributes:
+      Califone: (active years end year^='1997', class^='artist')
+      Brian_Deck: (occupation^='http://dbpedia.org/resource/Audio_engineering')
+    relationships:
+      - Califone (dor:Califone) --dop:pastMembers--> Brian_Deck (dor:Brian_Deck)
+      - Califone (dor:Califone) --doo:associatedBand--> Freakwater (dor:Freakwater)
+      - All_My_Friends_Are_Funeral_Singers_(film) (<http://dbpedia.org/resource/All_My_Friends_Are_Funeral_Singers_(film)>) --dop:music--> Califone (dor:Califone)
+  '8':
+    attributes:
+      Califone: (active years end year^='1997', class^='artist')
+      Brian_Deck: (occupation^='http://dbpedia.org/resource/Audio_engineering')
+      Tim_Kinsella: (instrument^='Vocals')
+    relationships:
+      - Califone (dor:Califone) --dop:pastMembers--> Brian_Deck (dor:Brian_Deck)
+      - Califone (dor:Califone) --doo:associatedBand--> Tim_Kinsella (dor:Tim_Kinsella)
+      - All_My_Friends_Are_Funeral_Singers_(film) (<http://dbpedia.org/resource/All_My_Friends_Are_Funeral_Singers_(film)>) --dop:music--> Califone (dor:Califone)
+  '9':
+    attributes:
+      Califone: (active years end year^='1997', class^='artist')
+    relationships:
+      - Califone (dor:Califone) --dop:pastMembers--> Joe_Adamik (dor:Joe_Adamik)
+      - Califone (dor:Califone) --doo:associatedBand--> Freakwater (dor:Freakwater)
+      - All_My_Friends_Are_Funeral_Singers_(film) (<http://dbpedia.org/resource/All_My_Friends_Are_Funeral_Singers_(film)>) --dop:music--> Califone (dor:Califone)
+  '10':
+    attributes:
+      Can_(band): (class^='artist')
+      Phew_(singer): (instrument^='Vocals, electronics, synthesizer')
+      Alice_in_the_Cities: (width^='210')
+    relationships:
+      - Can_(band) (<http://dbpedia.org/resource/Can_(band)>) --dop:pastMembers--> Damo_Suzuki (dor:Damo_Suzuki)
+      - Can_(band) (<http://dbpedia.org/resource/Can_(band)>) --doo:associatedBand--> Phew_(singer) (<http://dbpedia.org/resource/Phew_(singer)>)
+      - Alice_in_the_Cities (dor:Alice_in_the_Cities) --dop:music--> Can_(band) (<http://dbpedia.org/resource/Can_(band)>)
+attributes:
+  Band: --active years end year^ (doo:activeYearsEndYear)--> gYear | --class^ (dop:class)--> langString
+  movie: --image^ (dop:image)--> langString | --width^ (dop:width)--> int
+  person: --spouse (doo:spouse)--> Resource | --death place^ (dop:deathPlace)--> Resource | --occupation^ (doo:occupation)--> Resource | --death date^ (doo:deathDate)--> date | --alma mater^ (dop:almaMater)--> langString
+  musical artist: --instrument^ (dop:instrument)--> Resource
+subgraph_id: 746
+relationships:
+  - Band --dop:pastMembers--> person
+  - Band --doo:associatedBand--> musical artist
+  - movie --dop:music--> Band

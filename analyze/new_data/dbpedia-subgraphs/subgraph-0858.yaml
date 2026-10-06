@@ -1,0 +1,107 @@
+types:
+  writer: doo:Writer
+  country: doo:Country
+  music genre: doo:MusicGenre
+  ethnic group: doo:EthnicGroup
+  fictional character: doo:FictionalCharacter
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Blanka: (name^='Blanka')
+      Buddhism: (footer^='Buddhas of Bamiyan, Afghanistan in 1896  and after destruction in 2001 by the Taliban Islamists.')
+      Brazilians: (direction^='vertical')
+    relationships:
+      - Blanka (dor:Blanka) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Clarice_Lispector (dor:Clarice_Lispector) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Brazilians (dor:Brazilians) --doo:religion--> Candomblé (<http://dbpedia.org/resource/Candomblé>)
+      - Brazilians (dor:Brazilians) --doo:religion--> Buddhism (dor:Buddhism)
+  '2':
+    attributes:
+      Blanka: (name^='Blanka')
+      Brazilians: (direction^='vertical')
+      Catholic_Church: (footer^='Martin Luther , originally an Augustinian monk, posted the Ninety-five Theses  in 1517.')
+    relationships:
+      - Blanka (dor:Blanka) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Clarice_Lispector (dor:Clarice_Lispector) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Brazilians (dor:Brazilians) --doo:religion--> Candomblé (<http://dbpedia.org/resource/Candomblé>)
+      - Brazilians (dor:Brazilians) --doo:religion--> Catholic_Church (dor:Catholic_Church)
+  '3':
+    attributes:
+      Blanka: (name^='Blanka')
+      Hinduism: (footer^='A home shrine with offerings at a regional Vishu festival ; a priest in a temple .')
+      Brazilians: (direction^='vertical')
+    relationships:
+      - Blanka (dor:Blanka) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Clarice_Lispector (dor:Clarice_Lispector) --doo:nationality--> Brazilians (dor:Brazilians)
+      - Brazilians (dor:Brazilians) --doo:religion--> Candomblé (<http://dbpedia.org/resource/Candomblé>)
+      - Brazilians (dor:Brazilians) --doo:religion--> Hinduism (dor:Hinduism)
+  '4':
+    attributes:
+      Herbie: (name^='Herbie')
+      Catholic_Church: (footer^='Martin Luther , originally an Augustinian monk, posted the Ninety-five Theses  in 1517.')
+    relationships:
+      - Herbie (dor:Herbie) --doo:nationality--> German_Americans (dor:German_Americans)
+      - Bettina_Gilois (dor:Bettina_Gilois) --doo:nationality--> German_Americans (dor:German_Americans)
+      - German_Americans (dor:German_Americans) --doo:religion--> Atheism (dor:Atheism)
+      - German_Americans (dor:German_Americans) --doo:religion--> Catholic_Church (dor:Catholic_Church)
+  '5':
+    attributes:
+      Herbie: (name^='Herbie')
+    relationships:
+      - Herbie (dor:Herbie) --doo:nationality--> German_Americans (dor:German_Americans)
+      - Bettina_Gilois (dor:Bettina_Gilois) --doo:nationality--> German_Americans (dor:German_Americans)
+      - German_Americans (dor:German_Americans) --doo:religion--> Atheism (dor:Atheism)
+      - German_Americans (dor:German_Americans) --doo:religion--> Judaism (dor:Judaism)
+  '6':
+    attributes:
+      Herbie: (name^='Herbie')
+    relationships:
+      - Herbie (dor:Herbie) --doo:nationality--> German_Americans (dor:German_Americans)
+      - Bettina_Gilois (dor:Bettina_Gilois) --doo:nationality--> German_Americans (dor:German_Americans)
+      - German_Americans (dor:German_Americans) --doo:religion--> Atheism (dor:Atheism)
+      - German_Americans (dor:German_Americans) --doo:religion--> Lutheranism (dor:Lutheranism)
+  '7':
+    attributes:
+      Buddhism: (footer^='Buddhas of Bamiyan, Afghanistan in 1896  and after destruction in 2001 by the Taliban Islamists.')
+      Indian_people: (direction^='vertical')
+      Arjun_(character): (name^='Arjun')
+    relationships:
+      - Arjun_(character) (<http://dbpedia.org/resource/Arjun_(character)>) --doo:nationality--> Indian_people (dor:Indian_people)
+      - A._Ayyappan (dor:A._Ayyappan) --doo:nationality--> Indian_people (dor:Indian_people)
+      - Indian_people (dor:Indian_people) --doo:religion--> Christianity (dor:Christianity)
+      - Indian_people (dor:Indian_people) --doo:religion--> Buddhism (dor:Buddhism)
+  '8':
+    attributes:
+      Hinduism: (footer^='A home shrine with offerings at a regional Vishu festival ; a priest in a temple .')
+      Indian_people: (direction^='vertical')
+      Arjun_(character): (name^='Arjun')
+    relationships:
+      - Arjun_(character) (<http://dbpedia.org/resource/Arjun_(character)>) --doo:nationality--> Indian_people (dor:Indian_people)
+      - A._Ayyappan (dor:A._Ayyappan) --doo:nationality--> Indian_people (dor:Indian_people)
+      - Indian_people (dor:Indian_people) --doo:religion--> Christianity (dor:Christianity)
+      - Indian_people (dor:Indian_people) --doo:religion--> Hinduism (dor:Hinduism)
+  '9':
+    attributes:
+      Jainism: '(footer^=''Left: Jain nuns meditating, Right: 10th-century Gommateshwara statue depicting standing meditation'')'
+      Indian_people: (direction^='vertical')
+    relationships:
+      - Arjun_(character) (<http://dbpedia.org/resource/Arjun_(character)>) --doo:nationality--> Indian_people (dor:Indian_people)
+      - A._Ayyappan (dor:A._Ayyappan) --doo:nationality--> Indian_people (dor:Indian_people)
+      - Indian_people (dor:Indian_people) --doo:religion--> Christianity (dor:Christianity)
+      - Indian_people (dor:Indian_people) --doo:religion--> Jainism (dor:Jainism)
+attributes:
+  writer: --death year^ (doo:deathYear)--> gYear | --notable works^ (dop:notableWorks)--> langString | --IMDB id^ (doo:imdbId)--> string | --active years start year^ (doo:activeYearsStartYear)--> gYear | --c^ (dop:c)--> langString
+  country: --footer^ (dop:footer)--> langString
+  ethnic group: --direction^ (dop:direction)--> langString | --c^ (dop:c)--> langString
+  fictional character: --nickname^ (dop:nickname)--> langString | --aliases^ (dop:aliases)--> langString | --name^ (dop:name)--> langString | --spouse^ (doo:spouse)--> Resource
+subgraph_id: 858
+relationships:
+  - fictional character --doo:nationality--> ethnic group
+  - writer --doo:nationality--> ethnic group
+  - ethnic group --doo:religion--> music genre
+  - ethnic group --doo:religion--> country

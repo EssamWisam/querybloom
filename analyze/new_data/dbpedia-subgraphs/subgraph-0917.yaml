@@ -1,0 +1,125 @@
+types:
+  city: doo:City
+  person: doo:Person
+  country: doo:Country
+  settlement: doo:Settlement
+  soccer player: doo:SoccerPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Peter_Ogaba: (subject='http://dbpedia.org/resource/Category:1974_births')
+      Ayoka_Olufunmilayo_Adebambo: (subject='http://dbpedia.org/resource/Category:Living_people')
+    relationships:
+      - Peter_Ogaba (dor:Peter_Ogaba) --doo:deathPlace--> Nigeria (dor:Nigeria)
+      - Peter_Ogaba (dor:Peter_Ogaba) --doo:deathPlace--> Abuja (dor:Abuja)
+      - Ayoka_Olufunmilayo_Adebambo (dor:Ayoka_Olufunmilayo_Adebambo) --doo:employer--> Nigeria (dor:Nigeria)
+      - Abuja (dor:Abuja) --doo:subdivision--> Federal_Capital_Territory_(Nigeria) (<http://dbpedia.org/resource/Federal_Capital_Territory_(Nigeria)>)
+  '2':
+    attributes:
+      Martha_Brill_Olcott: (subject='http://dbpedia.org/resource/Category:1949_births')
+      Yury_Ivanov_(footballer,_born_1972): (subject='http://dbpedia.org/resource/Category:1972_births')
+    relationships:
+      - Yury_Ivanov_(footballer,_born_1972) (<http://dbpedia.org/resource/Yury_Ivanov_(footballer,_born_1972)>) --doo:deathPlace--> Kazakhstan (dor:Kazakhstan)
+      - Yury_Ivanov_(footballer,_born_1972) (<http://dbpedia.org/resource/Yury_Ivanov_(footballer,_born_1972)>) --doo:deathPlace--> Aktobe (dor:Aktobe)
+      - Martha_Brill_Olcott (dor:Martha_Brill_Olcott) --doo:employer--> Kazakhstan (dor:Kazakhstan)
+      - Aktobe (dor:Aktobe) --doo:subdivision--> Aktobe_Region (dor:Aktobe_Region)
+  '3':
+    attributes:
+      Juan_Mauricio_Renold: (subject='http://dbpedia.org/resource/Category:1953_births')
+      Buenos_Aires_Province: (subdivision^='http://dbpedia.org/resource/Partidos_of_Buenos_Aires')
+      Miguel_Ángel_Juárez: (subject='http://dbpedia.org/resource/Category:1844_births')
+    relationships:
+      - Miguel_Ángel_Juárez (<http://dbpedia.org/resource/Miguel_Ángel_Juárez>) --doo:deathPlace--> Argentina (dor:Argentina)
+      - Miguel_Ángel_Juárez (<http://dbpedia.org/resource/Miguel_Ángel_Juárez>) --doo:deathPlace--> Arrecifes (dor:Arrecifes)
+      - Juan_Mauricio_Renold (dor:Juan_Mauricio_Renold) --doo:employer--> Argentina (dor:Argentina)
+      - Arrecifes (dor:Arrecifes) --doo:subdivision--> Buenos_Aires_Province (dor:Buenos_Aires_Province)
+  '4':
+    attributes:
+      Doug_Dye: (subject='http://dbpedia.org/resource/Category:1921_births')
+      Duncan_Cole: (subject='http://dbpedia.org/resource/Category:1958_births')
+      Albert-Eden_Local_Board: (subdivision^='http://dbpedia.org/resource/Albert-Eden-Puketāpapa_ward')
+    relationships:
+      - Duncan_Cole (dor:Duncan_Cole) --doo:deathPlace--> New_Zealand (dor:New_Zealand)
+      - Duncan_Cole (dor:Duncan_Cole) --doo:deathPlace--> Auckland (dor:Auckland)
+      - Doug_Dye (dor:Doug_Dye) --doo:employer--> New_Zealand (dor:New_Zealand)
+      - Auckland (dor:Auckland) --doo:subdivision--> Albert-Eden_Local_Board (dor:Albert-Eden_Local_Board)
+  '5':
+    attributes:
+      Doug_Dye: (subject='http://dbpedia.org/resource/Category:1921_births')
+      Duncan_Cole: (subject='http://dbpedia.org/resource/Category:1958_births')
+    relationships:
+      - Duncan_Cole (dor:Duncan_Cole) --doo:deathPlace--> New_Zealand (dor:New_Zealand)
+      - Duncan_Cole (dor:Duncan_Cole) --doo:deathPlace--> Auckland (dor:Auckland)
+      - Doug_Dye (dor:Doug_Dye) --doo:employer--> New_Zealand (dor:New_Zealand)
+      - Auckland (dor:Auckland) --doo:subdivision--> Auckland_Region (dor:Auckland_Region)
+  '6':
+    attributes:
+      Doug_Dye: (subject='http://dbpedia.org/resource/Category:1921_births')
+      Duncan_Cole: (subject='http://dbpedia.org/resource/Category:1958_births')
+      Devonport-Takapuna_Local_Board: (subdivision^='http://dbpedia.org/resource/Auckland_Council')
+    relationships:
+      - Duncan_Cole (dor:Duncan_Cole) --doo:deathPlace--> New_Zealand (dor:New_Zealand)
+      - Duncan_Cole (dor:Duncan_Cole) --doo:deathPlace--> Auckland (dor:Auckland)
+      - Doug_Dye (dor:Doug_Dye) --doo:employer--> New_Zealand (dor:New_Zealand)
+      - Auckland (dor:Auckland) --doo:subdivision--> Devonport-Takapuna_Local_Board (dor:Devonport-Takapuna_Local_Board)
+  '7':
+    attributes:
+      Ángel_Bossio: (subject='http://dbpedia.org/resource/Category:1905_births')
+      Avellaneda_Partido: (subdivision^='http://dbpedia.org/resource/Buenos_Aires_Province')
+      Juan_Mauricio_Renold: (subject='http://dbpedia.org/resource/Category:1953_births')
+    relationships:
+      - Ángel_Bossio (<http://dbpedia.org/resource/Ángel_Bossio>) --doo:deathPlace--> Argentina (dor:Argentina)
+      - Ángel_Bossio (<http://dbpedia.org/resource/Ángel_Bossio>) --doo:deathPlace--> Avellaneda (dor:Avellaneda)
+      - Juan_Mauricio_Renold (dor:Juan_Mauricio_Renold) --doo:employer--> Argentina (dor:Argentina)
+      - Avellaneda (dor:Avellaneda) --doo:subdivision--> Avellaneda_Partido (dor:Avellaneda_Partido)
+  '8':
+    attributes:
+      Ángel_Bossio: (subject='http://dbpedia.org/resource/Category:1905_births')
+      Juan_Mauricio_Renold: (subject='http://dbpedia.org/resource/Category:1953_births')
+      Buenos_Aires_Province: (subdivision^='http://dbpedia.org/resource/Partidos_of_Buenos_Aires')
+    relationships:
+      - Ángel_Bossio (<http://dbpedia.org/resource/Ángel_Bossio>) --doo:deathPlace--> Argentina (dor:Argentina)
+      - Ángel_Bossio (<http://dbpedia.org/resource/Ángel_Bossio>) --doo:deathPlace--> Avellaneda (dor:Avellaneda)
+      - Juan_Mauricio_Renold (dor:Juan_Mauricio_Renold) --doo:employer--> Argentina (dor:Argentina)
+      - Avellaneda (dor:Avellaneda) --doo:subdivision--> Buenos_Aires_Province (dor:Buenos_Aires_Province)
+  '9':
+    attributes:
+      Bangalore: (founder^='http://dbpedia.org/resource/Kempe_Gowda_I')
+      Man_Singh_Tyagi: (subject='http://dbpedia.org/resource/Category:1934_births')
+      Cristiano_Júnior: (subject='http://dbpedia.org/resource/Category:1979_births')
+      Bangalore_Rural_district: (subdivision^='http://dbpedia.org/resource/Bangalore')
+    relationships:
+      - Cristiano_Júnior (<http://dbpedia.org/resource/Cristiano_Júnior>) --doo:deathPlace--> India (dor:India)
+      - Cristiano_Júnior (<http://dbpedia.org/resource/Cristiano_Júnior>) --doo:deathPlace--> Bangalore (dor:Bangalore)
+      - Man_Singh_Tyagi (dor:Man_Singh_Tyagi) --doo:employer--> India (dor:India)
+      - Bangalore (dor:Bangalore) --doo:subdivision--> Bangalore_Rural_district (dor:Bangalore_Rural_district)
+  '10':
+    attributes:
+      Bangalore: (founder^='http://dbpedia.org/resource/Kempe_Gowda_I')
+      Man_Singh_Tyagi: (subject='http://dbpedia.org/resource/Category:1934_births')
+      Cristiano_Júnior: (subject='http://dbpedia.org/resource/Category:1979_births')
+      Bangalore_Urban_district: (subdivision^='http://dbpedia.org/resource/Karnataka', Apr low C^='21.5')
+    relationships:
+      - Cristiano_Júnior (<http://dbpedia.org/resource/Cristiano_Júnior>) --doo:deathPlace--> India (dor:India)
+      - Cristiano_Júnior (<http://dbpedia.org/resource/Cristiano_Júnior>) --doo:deathPlace--> Bangalore (dor:Bangalore)
+      - Man_Singh_Tyagi (dor:Man_Singh_Tyagi) --doo:employer--> India (dor:India)
+      - Bangalore (dor:Bangalore) --doo:subdivision--> Bangalore_Urban_district (dor:Bangalore_Urban_district)
+attributes:
+  city: --founder^ (dop:founder)--> langString
+  person: --reason^ (dop:reason)--> langString | --2y^ (dop:2y)--> int | --subject (podt:subject)--> Resource | --before^ (dop:before)--> langString
+  country: --leader^ (dop:leader)--> langString
+  settlement: --differentFrom (wwoo:differentFrom)--> Resource | --subdivision^ (doo:subdivision)--> Resource | --Apr low C^ (dop:aprLowC)--> int
+  soccer player: --subject (podt:subject)--> Resource | --manager club^ (doo:managerClub)--> Resource | --width^ (dop:width)--> perCent
+subgraph_id: 917
+relationships:
+  - soccer player --doo:deathPlace--> country
+  - soccer player --doo:deathPlace--> city
+  - person --doo:employer--> country
+  - city --doo:subdivision--> settlement

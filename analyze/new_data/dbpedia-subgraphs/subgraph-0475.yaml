@@ -1,0 +1,93 @@
+types:
+  town: doo:Town
+  newspaper: doo:Newspaper
+  politician: doo:Politician
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Fowler,_Indiana: (differentFrom='http://dbpedia.org/resource/Fowlerton')
+      Abram_W._Hendricks: (Wikipage page ID^='63514880')
+    relationships:
+      - Abram_W._Hendricks (dor:Abram_W._Hendricks) --doo:residence--> Indiana (dor:Indiana)
+      - Fowler,_Indiana (<http://dbpedia.org/resource/Fowler,_Indiana>) --wwoo:differentFrom--> Indiana (dor:Indiana)
+      - The_Benton_Review (dor:The_Benton_Review) --doo:headquarter--> Fowler,_Indiana (<http://dbpedia.org/resource/Fowler,_Indiana>)
+  '2':
+    attributes:
+      Fowler,_Indiana: (differentFrom='http://dbpedia.org/resource/Fowlerton')
+      Addison_C._Harris: (Wikipage page ID^='58764136')
+    relationships:
+      - Addison_C._Harris (dor:Addison_C._Harris) --doo:residence--> Indiana (dor:Indiana)
+      - Fowler,_Indiana (<http://dbpedia.org/resource/Fowler,_Indiana>) --wwoo:differentFrom--> Indiana (dor:Indiana)
+      - The_Benton_Review (dor:The_Benton_Review) --doo:headquarter--> Fowler,_Indiana (<http://dbpedia.org/resource/Fowler,_Indiana>)
+  '3':
+    attributes:
+      Albert_Gall: (Wikipage page ID^='63598395')
+      Fowler,_Indiana: (differentFrom='http://dbpedia.org/resource/Fowlerton')
+    relationships:
+      - Albert_Gall (dor:Albert_Gall) --doo:residence--> Indiana (dor:Indiana)
+      - Fowler,_Indiana (<http://dbpedia.org/resource/Fowler,_Indiana>) --wwoo:differentFrom--> Indiana (dor:Indiana)
+      - The_Benton_Review (dor:The_Benton_Review) --doo:headquarter--> Fowler,_Indiana (<http://dbpedia.org/resource/Fowler,_Indiana>)
+  '4':
+    attributes:
+      Wolfville: (differentFrom='http://dbpedia.org/resource/Maryland')
+      Andrew_J._Duck: (Wikipage page ID^='4606638')
+    relationships:
+      - Andrew_J._Duck (dor:Andrew_J._Duck) --doo:residence--> Maryland (dor:Maryland)
+      - Wolfville (dor:Wolfville) --wwoo:differentFrom--> Maryland (dor:Maryland)
+      - The_Grapevine_(newspaper) (<http://dbpedia.org/resource/The_Grapevine_(newspaper)>) --doo:headquarter--> Wolfville (dor:Wolfville)
+  '5':
+    attributes:
+      Wolfville: (differentFrom='http://dbpedia.org/resource/Maryland')
+      Andrew_Motion: (Wikipage page ID^='251950')
+    relationships:
+      - Andrew_Motion (dor:Andrew_Motion) --doo:residence--> Maryland (dor:Maryland)
+      - Wolfville (dor:Wolfville) --wwoo:differentFrom--> Maryland (dor:Maryland)
+      - The_Grapevine_(newspaper) (<http://dbpedia.org/resource/The_Grapevine_(newspaper)>) --doo:headquarter--> Wolfville (dor:Wolfville)
+  '6':
+    attributes:
+      Wolfville: (differentFrom='http://dbpedia.org/resource/Maryland')
+      Ann_Marie_Doory: (Wikipage page ID^='11776136')
+    relationships:
+      - Ann_Marie_Doory (dor:Ann_Marie_Doory) --doo:residence--> Maryland (dor:Maryland)
+      - Wolfville (dor:Wolfville) --wwoo:differentFrom--> Maryland (dor:Maryland)
+      - The_Grapevine_(newspaper) (<http://dbpedia.org/resource/The_Grapevine_(newspaper)>) --doo:headquarter--> Wolfville (dor:Wolfville)
+  '7':
+    attributes:
+      Aaron_Vega: (Wikipage page ID^='39161315')
+      Middletown,_Rhode_Island: (differentFrom='http://dbpedia.org/resource/Massachusetts')
+    relationships:
+      - Aaron_Vega (dor:Aaron_Vega) --doo:residence--> Massachusetts (dor:Massachusetts)
+      - Middletown,_Rhode_Island (<http://dbpedia.org/resource/Middletown,_Rhode_Island>) --wwoo:differentFrom--> Massachusetts (dor:Massachusetts)
+      - The_Newport_Daily_News (dor:The_Newport_Daily_News) --doo:headquarter--> Middletown,_Rhode_Island (<http://dbpedia.org/resource/Middletown,_Rhode_Island>)
+  '8':
+    attributes:
+      Alan_Jara: (Wikipage page ID^='21390033')
+      Middletown,_Rhode_Island: (differentFrom='http://dbpedia.org/resource/Massachusetts')
+    relationships:
+      - Alan_Jara (dor:Alan_Jara) --doo:residence--> Massachusetts (dor:Massachusetts)
+      - Middletown,_Rhode_Island (<http://dbpedia.org/resource/Middletown,_Rhode_Island>) --wwoo:differentFrom--> Massachusetts (dor:Massachusetts)
+      - The_Newport_Daily_News (dor:The_Newport_Daily_News) --doo:headquarter--> Middletown,_Rhode_Island (<http://dbpedia.org/resource/Middletown,_Rhode_Island>)
+  '9':
+    attributes:
+      Allison_D._Burroughs: (Wikipage page ID^='43444468')
+      Middletown,_Rhode_Island: (differentFrom='http://dbpedia.org/resource/Massachusetts')
+    relationships:
+      - Allison_D._Burroughs (dor:Allison_D._Burroughs) --doo:residence--> Massachusetts (dor:Massachusetts)
+      - Middletown,_Rhode_Island (<http://dbpedia.org/resource/Middletown,_Rhode_Island>) --wwoo:differentFrom--> Massachusetts (dor:Massachusetts)
+      - The_Newport_Daily_News (dor:The_Newport_Daily_News) --doo:headquarter--> Middletown,_Rhode_Island (<http://dbpedia.org/resource/Middletown,_Rhode_Island>)
+attributes:
+  town: --differentFrom (wwoo:differentFrom)--> Resource | --Apr sun^ (dop:aprSun)--> int
+  politician: --data^ (dop:data)--> langString | --active years end date^ (doo:activeYearsEndDate)--> date | --commons^ (dop:commons)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int | --image size^ (dop:imageSize)--> int
+  administrative region: --winner^ (dop:winner)--> langString | --Aug high C^ (dop:augHighC)--> int | --Apr low C^ (dop:aprLowC)--> double | --area^ (dop:area)--> double
+subgraph_id: 475
+relationships:
+  - politician --doo:residence--> administrative region
+  - town --wwoo:differentFrom--> administrative region
+  - newspaper --doo:headquarter--> town

@@ -1,0 +1,102 @@
+types:
+  book: doo:Book
+  country: doo:Country
+  economist: doo:Economist
+  university: doo:University
+  philosopher: doo:Philosopher
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - A_Contribution_to_the_Critique_of_Political_Economy (dor:A_Contribution_to_the_Critique_of_Political_Economy) --dop:author--> Karl_Marx (dor:Karl_Marx)
+      - C._H._Douglas (dor:C._H._Douglas) --doo:influencedBy--> Karl_Marx (dor:Karl_Marx)
+      - C._H._Douglas (dor:C._H._Douglas) --doo:institution--> Institution_of_Electrical_Engineers (dor:Institution_of_Electrical_Engineers)
+      - C._H._Douglas (dor:C._H._Douglas) --doo:nationality--> British_people (dor:British_people)
+  '2':
+    attributes:
+      Science_Policy_Research_Unit: (founder^='http://dbpedia.org/resource/Christopher_Freeman')
+    relationships:
+      - A_Contribution_to_the_Critique_of_Political_Economy (dor:A_Contribution_to_the_Critique_of_Political_Economy) --dop:author--> Karl_Marx (dor:Karl_Marx)
+      - Christopher_Freeman (dor:Christopher_Freeman) --doo:influencedBy--> Karl_Marx (dor:Karl_Marx)
+      - Christopher_Freeman (dor:Christopher_Freeman) --doo:institution--> Science_Policy_Research_Unit (dor:Science_Policy_Research_Unit)
+      - Christopher_Freeman (dor:Christopher_Freeman) --doo:nationality--> British_people (dor:British_people)
+  '3':
+    attributes:
+      United_States: (motto^='"In God We Trust"')
+    relationships:
+      - A_Contribution_to_the_Critique_of_Political_Economy (dor:A_Contribution_to_the_Critique_of_Political_Economy) --dop:author--> Karl_Marx (dor:Karl_Marx)
+      - David_Gordon_(economist)__David_Gordon__1 (<http://dbpedia.org/resource/David_Gordon_(economist)__David_Gordon__1>) --doo:influencedBy--> Karl_Marx (dor:Karl_Marx)
+      - David_Gordon_(economist)__David_Gordon__1 (<http://dbpedia.org/resource/David_Gordon_(economist)__David_Gordon__1>) --doo:institution--> New_School_for_Social_Research (dor:New_School_for_Social_Research)
+      - David_Gordon_(economist)__David_Gordon__1 (<http://dbpedia.org/resource/David_Gordon_(economist)__David_Gordon__1>) --doo:nationality--> United_States (dor:United_States)
+  '4':
+    attributes: {}
+    relationships:
+      - A_Philosophical_Enquiry_into_the_Origin_of_Our_Ideas_of_the_Sublime_and_Beautiful (dor:A_Philosophical_Enquiry_into_the_Origin_of_Our_Ideas_of_the_Sublime_and_Beautiful) --dop:author--> Edmund_Burke (dor:Edmund_Burke)
+      - C._H._Douglas (dor:C._H._Douglas) --doo:influencedBy--> Edmund_Burke (dor:Edmund_Burke)
+      - C._H._Douglas (dor:C._H._Douglas) --doo:institution--> Institution_of_Electrical_Engineers (dor:Institution_of_Electrical_Engineers)
+      - C._H._Douglas (dor:C._H._Douglas) --doo:nationality--> British_people (dor:British_people)
+  '5':
+    attributes:
+      Americans: (align^='right')
+    relationships:
+      - A_Philosophical_Enquiry_into_the_Origin_of_Our_Ideas_of_the_Sublime_and_Beautiful (dor:A_Philosophical_Enquiry_into_the_Origin_of_Our_Ideas_of_the_Sublime_and_Beautiful) --dop:author--> Edmund_Burke (dor:Edmund_Burke)
+      - Larry_J._Sechrest (dor:Larry_J._Sechrest) --doo:influencedBy--> Edmund_Burke (dor:Edmund_Burke)
+      - Larry_J._Sechrest (dor:Larry_J._Sechrest) --doo:institution--> Sul_Ross_State_University (dor:Sul_Ross_State_University)
+      - Larry_J._Sechrest (dor:Larry_J._Sechrest) --doo:nationality--> Americans (dor:Americans)
+  '6':
+    attributes:
+      United_States: (motto^='"In God We Trust"')
+    relationships:
+      - A_Theory_of_Justice (dor:A_Theory_of_Justice) --dop:author--> John_Rawls (dor:John_Rawls)
+      - Edmund_Phelps (dor:Edmund_Phelps) --doo:influencedBy--> John_Rawls (dor:John_Rawls)
+      - Edmund_Phelps (dor:Edmund_Phelps) --doo:institution--> Columbia_University (dor:Columbia_University)
+      - Edmund_Phelps (dor:Edmund_Phelps) --doo:nationality--> United_States (dor:United_States)
+  '7':
+    attributes:
+      United_States: (motto^='"In God We Trust"')
+      University_of_Pennsylvania: (founder^='http://dbpedia.org/resource/Benjamin_Franklin')
+    relationships:
+      - A_Theory_of_Justice (dor:A_Theory_of_Justice) --dop:author--> John_Rawls (dor:John_Rawls)
+      - Edmund_Phelps (dor:Edmund_Phelps) --doo:influencedBy--> John_Rawls (dor:John_Rawls)
+      - Edmund_Phelps (dor:Edmund_Phelps) --doo:institution--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+      - Edmund_Phelps (dor:Edmund_Phelps) --doo:nationality--> United_States (dor:United_States)
+  '8':
+    attributes:
+      Americans: (align^='right')
+    relationships:
+      - A_Vindication_of_Natural_Society (dor:A_Vindication_of_Natural_Society) --dop:author--> Edmund_Burke (dor:Edmund_Burke)
+      - Larry_J._Sechrest (dor:Larry_J._Sechrest) --doo:influencedBy--> Edmund_Burke (dor:Edmund_Burke)
+      - Larry_J._Sechrest (dor:Larry_J._Sechrest) --doo:institution--> Sul_Ross_State_University (dor:Sul_Ross_State_University)
+      - Larry_J._Sechrest (dor:Larry_J._Sechrest) --doo:nationality--> Americans (dor:Americans)
+  '9':
+    attributes:
+      Americans: (align^='right')
+    relationships:
+      - An_Essay_Concerning_Human_Understanding (dor:An_Essay_Concerning_Human_Understanding) --dop:author--> John_Locke (dor:John_Locke)
+      - Butler_D._Shaffer (dor:Butler_D._Shaffer) --doo:influencedBy--> John_Locke (dor:John_Locke)
+      - Butler_D._Shaffer (dor:Butler_D._Shaffer) --doo:institution--> Southwestern_Law_School (dor:Southwestern_Law_School)
+      - Butler_D._Shaffer (dor:Butler_D._Shaffer) --doo:nationality--> Americans (dor:Americans)
+  '10':
+    attributes:
+      Canada: "(align^='right', quote^=':2.  Everyone has the following fundamental freedoms:\n::\tfreedom of conscience and religion;\n::\tfreedom of thought, belief, opinion and expression, including freedom of the press and other media of co...', motto^='\"From Sea to Sea\"')"
+    relationships:
+      - Progress_and_Poverty (dor:Progress_and_Poverty) --dop:author--> Henry_George (dor:Henry_George)
+      - William_Vickrey (dor:William_Vickrey) --doo:influencedBy--> Henry_George (dor:Henry_George)
+      - William_Vickrey (dor:William_Vickrey) --doo:institution--> Columbia_University (dor:Columbia_University)
+      - William_Vickrey (dor:William_Vickrey) --doo:nationality--> Canada (dor:Canada)
+attributes:
+  book: --previous work^ (doo:previousWork)--> Resource | --cover artist^ (doo:coverArtist)--> Resource
+  country: --align^ (dop:align)--> langString | --quote^ (dop:quote)--> langString | --reason^ (dop:reason)--> langString | --motto^ (doo:motto)--> string | --2p^ (dop:2p)--> int | --last^ (dop:last)--> langString
+  university: --founder^ (dop:founder)--> langString | --align^ (dop:align)--> langString
+  philosopher: --2p^ (dop:2p)--> int
+subgraph_id: 882
+relationships:
+  - book --dop:author--> philosopher
+  - economist --doo:influencedBy--> philosopher
+  - economist --doo:institution--> university
+  - economist --doo:nationality--> country

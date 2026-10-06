@@ -1,0 +1,47 @@
+types:
+  horse: doo:Horse
+  school: doo:School
+  Location: doo:Location
+  RaceHorse: doo:RaceHorse
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ack_Ack_(horse): (breeder^='http://dbpedia.org/resource/Harry_F._Guggenheim')
+    relationships:
+      - Holly_Grove_Christian_School (dor:Holly_Grove_Christian_School) --dop:country--> United_States (dor:United_States)
+      - Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>) --dop:country--> United_States (dor:United_States)
+      - Holly_Grove_Christian_School (dor:Holly_Grove_Christian_School) --doo:region--> Eastern_Shore_of_Maryland (dor:Eastern_Shore_of_Maryland)
+      - Manuel_Ycaza (dor:Manuel_Ycaza) --doo:raceHorse--> Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>)
+  '2':
+    attributes:
+      Ack_Ack_(horse): (breeder^='http://dbpedia.org/resource/Harry_F._Guggenheim')
+    relationships:
+      - MacDuffie_School (dor:MacDuffie_School) --dop:country--> United_States (dor:United_States)
+      - Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>) --dop:country--> United_States (dor:United_States)
+      - MacDuffie_School (dor:MacDuffie_School) --doo:region--> Hampshire_County,_Massachusetts (<http://dbpedia.org/resource/Hampshire_County,_Massachusetts>)
+      - Manuel_Ycaza (dor:Manuel_Ycaza) --doo:raceHorse--> Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>)
+  '3':
+    attributes:
+      Ack_Ack_(horse): (breeder^='http://dbpedia.org/resource/Harry_F._Guggenheim')
+    relationships:
+      - Thornton_Township_High_School (dor:Thornton_Township_High_School) --dop:country--> United_States (dor:United_States)
+      - Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>) --dop:country--> United_States (dor:United_States)
+      - Thornton_Township_High_School (dor:Thornton_Township_High_School) --doo:region--> Chicago_Southland (dor:Chicago_Southland)
+      - Manuel_Ycaza (dor:Manuel_Ycaza) --doo:raceHorse--> Ack_Ack_(horse) (<http://dbpedia.org/resource/Ack_Ack_(horse)>)
+attributes:
+  horse: --breeder^ (doo:breeder)--> Resource
+  school: --affiliation^ (doo:affiliation)--> Resource | --affiliation^ (dop:affiliation)--> langString
+  Location: --founder^ (doo:founder)--> Resource | --Apr record high F^ (dop:aprRecordHighF)--> double | --builder^ (dop:builder)--> Resource | --Apr low C^ (dop:aprLowC)--> langString | --arc-text-colorA^ (dop:arcTextColora)--> langString
+  administrative region: --nickname^ (dop:nickname)--> langString
+subgraph_id: 895
+relationships:
+  - school --dop:country--> Location
+  - horse --dop:country--> Location
+  - school --doo:region--> administrative region
+  - RaceHorse --doo:raceHorse--> horse

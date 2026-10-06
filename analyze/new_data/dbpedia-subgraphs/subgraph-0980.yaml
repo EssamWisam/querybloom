@@ -1,0 +1,105 @@
+types:
+  school: doo:School
+  economist: doo:Economist
+  politician: doo:Politician
+  university: doo:University
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Miro_Cerar: (birth date^='1963-08-25')
+    relationships:
+      - Richmond_Field_Station (dor:Richmond_Field_Station) --dop:affiliation--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Aaron_Edlin (dor:Aaron_Edlin) --doo:institution--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Miro_Cerar (dor:Miro_Cerar) --dop:almaMater--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Modern_Centre_Party (dor:Modern_Centre_Party) --dop:founder--> Miro_Cerar (dor:Miro_Cerar)
+  '2':
+    attributes:
+      Francisco_I._Madero: (birth date^='1873-10-30')
+    relationships:
+      - Richmond_Field_Station (dor:Richmond_Field_Station) --dop:affiliation--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Aaron_Edlin (dor:Aaron_Edlin) --doo:institution--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Francisco_I._Madero (dor:Francisco_I._Madero) --dop:almaMater--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Progressive_Constitutionalist_Party_(Mexico) (<http://dbpedia.org/resource/Progressive_Constitutionalist_Party_(Mexico)>) --dop:founder--> Francisco_I._Madero (dor:Francisco_I._Madero)
+  '3':
+    attributes:
+      Blake_R._Van_Leer: (birth date^='1893-08-16')
+    relationships:
+      - Richmond_Field_Station (dor:Richmond_Field_Station) --dop:affiliation--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Aaron_Edlin (dor:Aaron_Edlin) --doo:institution--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Blake_R._Van_Leer (dor:Blake_R._Van_Leer) --dop:almaMater--> University_of_California,_Berkeley (<http://dbpedia.org/resource/University_of_California,_Berkeley>)
+      - Southern_Polytechnic_State_University (dor:Southern_Polytechnic_State_University) --dop:founder--> Blake_R._Van_Leer (dor:Blake_R._Van_Leer)
+  '4':
+    attributes:
+      G._Raymond_Chang: (birth date^='1948-11-23')
+      University_of_Toronto_Schools: (address^='371 Bloor Street West')
+    relationships:
+      - University_of_Toronto_Schools (dor:University_of_Toronto_Schools) --dop:affiliation--> University_of_Toronto (dor:University_of_Toronto)
+      - Abraham_Rotstein (dor:Abraham_Rotstein) --doo:institution--> University_of_Toronto (dor:University_of_Toronto)
+      - G._Raymond_Chang (dor:G._Raymond_Chang) --dop:almaMater--> University_of_Toronto (dor:University_of_Toronto)
+      - CI_Financial (dor:CI_Financial) --dop:founder--> G._Raymond_Chang (dor:G._Raymond_Chang)
+  '5':
+    attributes:
+      David_Naylor: (birth date^='1954-10-26')
+      University_of_Toronto_Schools: (address^='371 Bloor Street West')
+    relationships:
+      - University_of_Toronto_Schools (dor:University_of_Toronto_Schools) --dop:affiliation--> University_of_Toronto (dor:University_of_Toronto)
+      - Abraham_Rotstein (dor:Abraham_Rotstein) --doo:institution--> University_of_Toronto (dor:University_of_Toronto)
+      - David_Naylor (dor:David_Naylor) --dop:almaMater--> University_of_Toronto (dor:University_of_Toronto)
+      - ICES (dor:ICES) --dop:founder--> David_Naylor (dor:David_Naylor)
+  '6':
+    attributes:
+      D._R._Wijewardena: (birth date^='1886-02-23')
+    relationships:
+      - Prudence_International_School (dor:Prudence_International_School) --dop:affiliation--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Ajit_Singh_(economist) (<http://dbpedia.org/resource/Ajit_Singh_(economist)>) --doo:institution--> University_of_Cambridge (dor:University_of_Cambridge)
+      - D._R._Wijewardena (dor:D._R._Wijewardena) --dop:almaMater--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Associated_Newspapers_of_Ceylon_Limited (dor:Associated_Newspapers_of_Ceylon_Limited) --dop:founder--> D._R._Wijewardena (dor:D._R._Wijewardena)
+  '7':
+    attributes:
+      D._R._Wijewardena: (birth date^='1886-02-23')
+    relationships:
+      - The_Universal_School (dor:The_Universal_School) --dop:affiliation--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Ajit_Singh_(economist) (<http://dbpedia.org/resource/Ajit_Singh_(economist)>) --doo:institution--> University_of_Cambridge (dor:University_of_Cambridge)
+      - D._R._Wijewardena (dor:D._R._Wijewardena) --dop:almaMater--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Associated_Newspapers_of_Ceylon_Limited (dor:Associated_Newspapers_of_Ceylon_Limited) --dop:founder--> D._R._Wijewardena (dor:D._R._Wijewardena)
+  '8':
+    attributes:
+      Edmond_Fitzmaurice,_1st_Baron_Fitzmaurice: (birth date^='1846-06-19')
+    relationships:
+      - Prudence_International_School (dor:Prudence_International_School) --dop:affiliation--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Ajit_Singh_(economist) (<http://dbpedia.org/resource/Ajit_Singh_(economist)>) --doo:institution--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Edmond_Fitzmaurice,_1st_Baron_Fitzmaurice (<http://dbpedia.org/resource/Edmond_Fitzmaurice,_1st_Baron_Fitzmaurice>) --dop:almaMater--> University_of_Cambridge (dor:University_of_Cambridge)
+      - Fitzmaurice_Grammar_School (dor:Fitzmaurice_Grammar_School) --dop:founder--> Edmond_Fitzmaurice,_1st_Baron_Fitzmaurice (<http://dbpedia.org/resource/Edmond_Fitzmaurice,_1st_Baron_Fitzmaurice>)
+  '9':
+    attributes:
+      Robert_Taft_Jr.: (birth date^='1917-02-26')
+    relationships:
+      - Yale_School_of_Public_Health (dor:Yale_School_of_Public_Health) --dop:affiliation--> Yale_University (dor:Yale_University)
+      - Aleh_Tsyvinski (dor:Aleh_Tsyvinski) --doo:institution--> Yale_University (dor:Yale_University)
+      - Robert_Taft_Jr. (<http://dbpedia.org/resource/Robert_Taft_Jr.>) --dop:almaMater--> Yale_University (dor:Yale_University)
+      - Jefferson_Awards_for_Public_Service (dor:Jefferson_Awards_for_Public_Service) --dop:founder--> Robert_Taft_Jr. (<http://dbpedia.org/resource/Robert_Taft_Jr.>)
+  '10':
+    attributes:
+      Homer_Sprague: (width^='180', birth date^='1829-10-19')
+    relationships:
+      - Yale_School_of_Public_Health (dor:Yale_School_of_Public_Health) --dop:affiliation--> Yale_University (dor:Yale_University)
+      - Aleh_Tsyvinski (dor:Aleh_Tsyvinski) --doo:institution--> Yale_University (dor:Yale_University)
+      - Homer_Sprague (dor:Homer_Sprague) --dop:almaMater--> Yale_University (dor:Yale_University)
+      - Martha's_Vineyard_Summer_Institute (<http://dbpedia.org/resource/Martha's_Vineyard_Summer_Institute>) --dop:founder--> Homer_Sprague (dor:Homer_Sprague)
+attributes:
+  school: --address^ (doo:address)--> langString | --class^ (dop:class)--> int
+  economist: --influenced^ (doo:influenced)--> Resource
+  politician: --nickname^ (dop:nickname)--> langString | --url^ (dop:url)--> Resource | --width^ (dop:width)--> int | --birth date^ (dop:birthDate)--> date | --reason^ (dop:reason)--> langString
+  university: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+subgraph_id: 980
+relationships:
+  - school --dop:affiliation--> university
+  - economist --doo:institution--> university
+  - politician --dop:almaMater--> university
+  - organisation --dop:founder--> politician

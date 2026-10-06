@@ -1,0 +1,117 @@
+types:
+  movie: doo:Film
+  person: doo:Person
+  writer: doo:Writer
+  musical: doo:Musical
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Arthur_Laurents: (active years end year^='2011')
+      Stephen_Sondheim: (subject='http://dbpedia.org/resource/Category:1930_births')
+      A_Little_Night_Music_(film): (producer^='http://dbpedia.org/resource/Elliott_Kastner')
+    relationships:
+      - Anyone_Can_Whistle (dor:Anyone_Can_Whistle) --doo:author--> Arthur_Laurents (dor:Arthur_Laurents)
+      - Anyone_Can_Whistle (dor:Anyone_Can_Whistle) --dop:book--> Arthur_Laurents (dor:Arthur_Laurents)
+      - Anyone_Can_Whistle (dor:Anyone_Can_Whistle) --dop:music--> Stephen_Sondheim (dor:Stephen_Sondheim)
+      - A_Little_Night_Music_(film) (<http://dbpedia.org/resource/A_Little_Night_Music_(film)>) --dop:artist--> Stephen_Sondheim (dor:Stephen_Sondheim)
+  '2':
+    attributes:
+      Stephen_Sondheim: (subject='http://dbpedia.org/resource/Category:1930_births')
+      A_Little_Night_Music_(film): (producer^='http://dbpedia.org/resource/Elliott_Kastner')
+    relationships:
+      - Assassins_(musical) (<http://dbpedia.org/resource/Assassins_(musical)>) --doo:author--> John_Weidman (dor:John_Weidman)
+      - Assassins_(musical) (<http://dbpedia.org/resource/Assassins_(musical)>) --dop:book--> John_Weidman (dor:John_Weidman)
+      - Assassins_(musical) (<http://dbpedia.org/resource/Assassins_(musical)>) --dop:music--> Stephen_Sondheim (dor:Stephen_Sondheim)
+      - A_Little_Night_Music_(film) (<http://dbpedia.org/resource/A_Little_Night_Music_(film)>) --dop:artist--> Stephen_Sondheim (dor:Stephen_Sondheim)
+  '3':
+    attributes:
+      Stephen_Sondheim: (subject='http://dbpedia.org/resource/Category:1930_births')
+      A_Little_Night_Music_(film): (producer^='http://dbpedia.org/resource/Elliott_Kastner')
+    relationships:
+      - Follies (dor:Follies) --doo:author--> James_Goldman (dor:James_Goldman)
+      - Follies (dor:Follies) --dop:book--> James_Goldman (dor:James_Goldman)
+      - Follies (dor:Follies) --dop:music--> Stephen_Sondheim (dor:Stephen_Sondheim)
+      - A_Little_Night_Music_(film) (<http://dbpedia.org/resource/A_Little_Night_Music_(film)>) --dop:artist--> Stephen_Sondheim (dor:Stephen_Sondheim)
+  '4':
+    attributes:
+      A._R._Rahman: (subject='http://dbpedia.org/resource/Category:1967_births')
+      Aayutha_Ezhuthu: (producer^='Mani Ratnam')
+    relationships:
+      - Bombay_Dreams (dor:Bombay_Dreams) --doo:author--> Meera_Syal (dor:Meera_Syal)
+      - Bombay_Dreams (dor:Bombay_Dreams) --dop:book--> Thomas_Meehan_(writer) (<http://dbpedia.org/resource/Thomas_Meehan_(writer)>)
+      - Bombay_Dreams (dor:Bombay_Dreams) --dop:music--> A._R._Rahman (dor:A._R._Rahman)
+      - Aayutha_Ezhuthu (dor:Aayutha_Ezhuthu) --dop:artist--> A._R._Rahman (dor:A._R._Rahman)
+  '5':
+    attributes:
+      A._R._Rahman: (subject='http://dbpedia.org/resource/Category:1967_births')
+      Aayutha_Ezhuthu: (producer^='Mani Ratnam')
+    relationships:
+      - Bombay_Dreams (dor:Bombay_Dreams) --doo:author--> Thomas_Meehan_(writer) (<http://dbpedia.org/resource/Thomas_Meehan_(writer)>)
+      - Bombay_Dreams (dor:Bombay_Dreams) --dop:book--> Thomas_Meehan_(writer) (<http://dbpedia.org/resource/Thomas_Meehan_(writer)>)
+      - Bombay_Dreams (dor:Bombay_Dreams) --dop:music--> A._R._Rahman (dor:A._R._Rahman)
+      - Aayutha_Ezhuthu (dor:Aayutha_Ezhuthu) --dop:artist--> A._R._Rahman (dor:A._R._Rahman)
+  '6':
+    attributes:
+      A._R._Rahman: (subject='http://dbpedia.org/resource/Category:1967_births')
+      Ada..._A_Way_of_Life: (producer^='A. R. Rahman')
+    relationships:
+      - Bombay_Dreams (dor:Bombay_Dreams) --doo:author--> Meera_Syal (dor:Meera_Syal)
+      - Bombay_Dreams (dor:Bombay_Dreams) --dop:book--> Thomas_Meehan_(writer) (<http://dbpedia.org/resource/Thomas_Meehan_(writer)>)
+      - Bombay_Dreams (dor:Bombay_Dreams) --dop:music--> A._R._Rahman (dor:A._R._Rahman)
+      - Ada..._A_Way_of_Life (dor:Ada..._A_Way_of_Life) --dop:artist--> A._R._Rahman (dor:A._R._Rahman)
+  '7':
+    attributes:
+      Pet_Shop_Boys: (subject='http://dbpedia.org/resource/Category:1981_establishments_in_England')
+      Always_on_My_Mind: |-
+        (producer^='* Julian Mendelsohn
+        * Pet Shop Boys')
+    relationships:
+      - Closer_to_Heaven_(musical) (<http://dbpedia.org/resource/Closer_to_Heaven_(musical)>) --doo:author--> Jonathan_Harvey_(playwright) (<http://dbpedia.org/resource/Jonathan_Harvey_(playwright)>)
+      - Closer_to_Heaven_(musical) (<http://dbpedia.org/resource/Closer_to_Heaven_(musical)>) --dop:book--> Jonathan_Harvey_(playwright) (<http://dbpedia.org/resource/Jonathan_Harvey_(playwright)>)
+      - Closer_to_Heaven_(musical) (<http://dbpedia.org/resource/Closer_to_Heaven_(musical)>) --dop:music--> Pet_Shop_Boys (dor:Pet_Shop_Boys)
+      - Always_on_My_Mind (dor:Always_on_My_Mind) --dop:artist--> Pet_Shop_Boys (dor:Pet_Shop_Boys)
+  '8':
+    attributes:
+      David_Bowie: (subject='http://dbpedia.org/resource/Category:1947_births')
+      David_Bowie:_Black_Tie_White_Noise_(film): (producer^='Lana Topham & Paul Flattery')
+    relationships:
+      - Lazarus_(musical) (<http://dbpedia.org/resource/Lazarus_(musical)>) --doo:author--> Enda_Walsh (dor:Enda_Walsh)
+      - Lazarus_(musical) (<http://dbpedia.org/resource/Lazarus_(musical)>) --dop:book--> Enda_Walsh (dor:Enda_Walsh)
+      - Lazarus_(musical) (<http://dbpedia.org/resource/Lazarus_(musical)>) --dop:music--> David_Bowie (dor:David_Bowie)
+      - David_Bowie:_Black_Tie_White_Noise_(film) (<http://dbpedia.org/resource/David_Bowie:_Black_Tie_White_Noise_(film)>) --dop:artist--> David_Bowie (dor:David_Bowie)
+  '9':
+    attributes:
+      David_Arnold: (subject='http://dbpedia.org/resource/Category:1962_births')
+      Enough_(film): (producer^='Rob Cowan')
+    relationships:
+      - Made_in_Dagenham_(musical) (<http://dbpedia.org/resource/Made_in_Dagenham_(musical)>) --doo:author--> Richard_Bean (dor:Richard_Bean)
+      - Made_in_Dagenham_(musical) (<http://dbpedia.org/resource/Made_in_Dagenham_(musical)>) --dop:book--> Richard_Bean (dor:Richard_Bean)
+      - Made_in_Dagenham_(musical) (<http://dbpedia.org/resource/Made_in_Dagenham_(musical)>) --dop:music--> David_Arnold (dor:David_Arnold)
+      - Enough_(film) (<http://dbpedia.org/resource/Enough_(film)>) --dop:artist--> David_Arnold (dor:David_Arnold)
+  '10':
+    attributes:
+      Elton_John: (subject='http://dbpedia.org/resource/Category:1947_births')
+      Gnomeo_&_Juliet: (producer^='')
+    relationships:
+      - Aida_(musical) (<http://dbpedia.org/resource/Aida_(musical)>) --doo:author--> Linda_Woolverton (dor:Linda_Woolverton)
+      - Aida_(musical) (<http://dbpedia.org/resource/Aida_(musical)>) --dop:book--> David_Henry_Hwang (dor:David_Henry_Hwang)
+      - Aida_(musical) (<http://dbpedia.org/resource/Aida_(musical)>) --dop:music--> Elton_John (dor:Elton_John)
+      - Gnomeo_&_Juliet (<http://dbpedia.org/resource/Gnomeo_&_Juliet>) --dop:artist--> Elton_John (dor:Elton_John)
+attributes:
+  movie: --producer^ (dop:producer)--> langString | --c^ (dop:c)--> langString
+  person: --mother^ (dop:mother)--> langString | --parents^ (dop:parents)--> Resource | --active years end year^ (doo:activeYearsEndYear)--> gYear
+  writer: --notable works^ (dop:notableWorks)--> langString | --1a^ (dop:1a)--> langString | --quote^ (dop:quote)--> langString
+  musical artist: --subject (podt:subject)--> Resource | --associated acts^ (dop:associatedActs)--> Resource
+subgraph_id: 588
+relationships:
+  - musical --doo:author--> person
+  - musical --dop:book--> writer
+  - musical --dop:music--> musical artist
+  - movie --dop:artist--> musical artist

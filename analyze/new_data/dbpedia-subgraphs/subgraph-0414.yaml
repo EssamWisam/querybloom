@@ -1,0 +1,92 @@
+types:
+  city: doo:City
+  colour: doo:Colour
+  sports team: doo:SportsTeam
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      50PLUS: (logo^='50')
+      Barrie: (Aug high C^='25.1', augPrecipitationMm='89.9')
+    relationships:
+      - Barrie_Blizzard (dor:Barrie_Blizzard) --dop:city--> Barrie (dor:Barrie)
+      - Barrie_Blizzard (dor:Barrie_Blizzard) --doo:colour--> Purple (dor:Purple)
+      - 50PLUS (dor:50PLUS) --doo:colour--> Purple (dor:Purple)
+  '2':
+    attributes:
+      50PLUS: (logo^='50')
+    relationships:
+      - Springfield_Lasers (dor:Springfield_Lasers) --dop:city--> Springfield,_Missouri (<http://dbpedia.org/resource/Springfield,_Missouri>)
+      - Springfield_Lasers (dor:Springfield_Lasers) --doo:colour--> Purple (dor:Purple)
+      - 50PLUS (dor:50PLUS) --doo:colour--> Purple (dor:Purple)
+  '3':
+    attributes:
+      50PLUS: (logo^='50')
+      Budapest: (Apr sun^='177', Aug high C^='28.6', augPrecipitationMm='49')
+    relationships:
+      - Újpesti_TE_(canoeing) (<http://dbpedia.org/resource/Újpesti_TE_(canoeing)>) --dop:city--> Budapest (dor:Budapest)
+      - Újpesti_TE_(canoeing) (<http://dbpedia.org/resource/Újpesti_TE_(canoeing)>) --doo:colour--> Purple (dor:Purple)
+      - 50PLUS (dor:50PLUS) --doo:colour--> Purple (dor:Purple)
+  '4':
+    attributes:
+      Barrie: (Aug high C^='25.1', augPrecipitationMm='89.9')
+      5th_of_December_Party: (logo^='200')
+    relationships:
+      - Barrie_Blizzard (dor:Barrie_Blizzard) --dop:city--> Barrie (dor:Barrie)
+      - Barrie_Blizzard (dor:Barrie_Blizzard) --doo:colour--> White (dor:White)
+      - 5th_of_December_Party (dor:5th_of_December_Party) --doo:colour--> White (dor:White)
+  '5':
+    attributes:
+      5th_of_December_Party: (logo^='200')
+    relationships:
+      - Barrie_Lakeshores (dor:Barrie_Lakeshores) --dop:city--> Barrie,_Ontario (<http://dbpedia.org/resource/Barrie,_Ontario>)
+      - Barrie_Lakeshores (dor:Barrie_Lakeshores) --doo:colour--> Blue (dor:Blue)
+      - 5th_of_December_Party (dor:5th_of_December_Party) --doo:colour--> Blue (dor:Blue)
+  '6':
+    attributes:
+      5th_of_December_Party: (logo^='200')
+    relationships:
+      - Barrie_Lakeshores (dor:Barrie_Lakeshores) --dop:city--> Barrie,_Ontario (<http://dbpedia.org/resource/Barrie,_Ontario>)
+      - Barrie_Lakeshores (dor:Barrie_Lakeshores) --doo:colour--> White (dor:White)
+      - 5th_of_December_Party (dor:5th_of_December_Party) --doo:colour--> White (dor:White)
+  '7':
+    attributes: {}
+    relationships:
+      - Barrie_Lakeshores (dor:Barrie_Lakeshores) --dop:city--> Barrie,_Ontario (<http://dbpedia.org/resource/Barrie,_Ontario>)
+      - Barrie_Lakeshores (dor:Barrie_Lakeshores) --doo:colour--> Red (dor:Red)
+      - À_gauche_toute!_Genève (<http://dbpedia.org/resource/À_gauche_toute!_Genève>) --doo:colour--> Red (dor:Red)
+  '8':
+    attributes:
+      Budapest: (Apr sun^='177', Aug high C^='28.6', augPrecipitationMm='49')
+    relationships:
+      - Budapesti_Honvéd_SE_(fencing) (<http://dbpedia.org/resource/Budapesti_Honvéd_SE_(fencing)>) --dop:city--> Budapest (dor:Budapest)
+      - Budapesti_Honvéd_SE_(fencing) (<http://dbpedia.org/resource/Budapesti_Honvéd_SE_(fencing)>) --doo:colour--> Red (dor:Red)
+      - À_gauche_toute!_Genève (<http://dbpedia.org/resource/À_gauche_toute!_Genève>) --doo:colour--> Red (dor:Red)
+  '9':
+    attributes:
+      Budapest: (Apr sun^='177', Aug high C^='28.6', augPrecipitationMm='49')
+    relationships:
+      - Budapesti_Honvéd_SE_(men's_water_polo) (<http://dbpedia.org/resource/Budapesti_Honvéd_SE_(men's_water_polo)>) --dop:city--> Budapest (dor:Budapest)
+      - Budapesti_Honvéd_SE_(men's_water_polo) (<http://dbpedia.org/resource/Budapesti_Honvéd_SE_(men's_water_polo)>) --doo:colour--> Red (dor:Red)
+      - À_gauche_toute!_Genève (<http://dbpedia.org/resource/À_gauche_toute!_Genève>) --doo:colour--> Red (dor:Red)
+  '10':
+    attributes:
+      Athens: (Apr sun^='231', Aug high C^='32.2', augPrecipitationMm='6.7')
+      A_here_ia_Porinetia: (logo^='Logo of the A here ia Porinetia.png')
+    relationships:
+      - AONS_Milon (dor:AONS_Milon) --dop:city--> Athens (dor:Athens)
+      - AONS_Milon (dor:AONS_Milon) --doo:colour--> Green (dor:Green)
+      - A_here_ia_Porinetia (dor:A_here_ia_Porinetia) --doo:colour--> Green (dor:Green)
+attributes:
+  city: --Apr sun^ (dop:aprSun)--> double | --c^ (dop:c)--> langString | --Aug high C^ (dop:augHighC)--> double | --augPrecipitationMm (dop:augPrecipitationMm)--> double | --d^ (dop:d)--> langString
+  political party: --logo^ (dop:logo)--> langString | --2p^ (dop:2p)--> int | --religion^ (doo:religion)--> Resource
+subgraph_id: 414
+relationships:
+  - sports team --dop:city--> city
+  - sports team --doo:colour--> colour
+  - political party --doo:colour--> colour

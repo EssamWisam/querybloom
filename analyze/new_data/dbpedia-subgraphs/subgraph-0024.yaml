@@ -1,0 +1,44 @@
+types:
+  single: doo:Single
+  Location: doo:Location
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Beautiful_Thieves: (previous work^='http://dbpedia.org/resource/Medicate')
+    relationships:
+      - Beautiful_Thieves (dor:Beautiful_Thieves) --dop:writer--> Adam_Carson (dor:Adam_Carson)
+      - Beautiful_Thieves (dor:Beautiful_Thieves) --doo:type--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+      - Adam_Carson (dor:Adam_Carson) --doo:hometown--> Ukiah,_California (<http://dbpedia.org/resource/Ukiah,_California>)
+  '2':
+    attributes:
+      Come_and_Talk_to_Me: (previous work^='http://dbpedia.org/resource/Stay_(Jodeci_song)')
+      Mount_Vernon,_New_York: (date^='July 2019')
+    relationships:
+      - Come_and_Talk_to_Me (dor:Come_and_Talk_to_Me) --dop:writer--> Al_B._Sure! (<http://dbpedia.org/resource/Al_B._Sure!>)
+      - Come_and_Talk_to_Me (dor:Come_and_Talk_to_Me) --doo:type--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+      - Al_B._Sure! (<http://dbpedia.org/resource/Al_B._Sure!>) --doo:hometown--> Mount_Vernon,_New_York (<http://dbpedia.org/resource/Mount_Vernon,_New_York>)
+  '3':
+    attributes:
+      Forever_My_Lady_(song): (previous work^='http://dbpedia.org/resource/Gotta_Love')
+      Mount_Vernon,_New_York: (date^='July 2019')
+    relationships:
+      - Forever_My_Lady_(song) (<http://dbpedia.org/resource/Forever_My_Lady_(song)>) --dop:writer--> Al_B._Sure! (<http://dbpedia.org/resource/Al_B._Sure!>)
+      - Forever_My_Lady_(song) (<http://dbpedia.org/resource/Forever_My_Lady_(song)>) --doo:type--> Single_(music) (<http://dbpedia.org/resource/Single_(music)>)
+      - Al_B._Sure! (<http://dbpedia.org/resource/Al_B._Sure!>) --doo:hometown--> Mount_Vernon,_New_York (<http://dbpedia.org/resource/Mount_Vernon,_New_York>)
+attributes:
+  single: --previous work^ (doo:previousWork)--> Resource
+  Location: --territory^ (doo:territory)--> Resource | --named after^ (doo:namedAfter)--> Resource | --quote^ (dop:quote)--> langString | --date^ (dop:date)--> date | --arc-text-colorB^ (dop:arcTextColorb)--> langString | --arc-gapB^ (dop:arcGapb)--> double | --frazioni^ (doo:frazioni)--> Resource | --partof^ (dop:partof)--> langString
+  music genre: --quote^ (dop:quote)--> langString
+  musical artist: --image size^ (dop:imageSize)--> int | --class^ (dop:class)--> langString | --alias^ (dop:alias)--> langString
+subgraph_id: 24
+relationships:
+  - single --dop:writer--> musical artist
+  - single --doo:type--> music genre
+  - musical artist --doo:hometown--> Location

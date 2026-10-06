@@ -1,0 +1,85 @@
+types:
+  movie: doo:Film
+  person: doo:Person
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ho_Chi_Minh_City: (UTC offset^='+07:00', source^='Vietnam Institute for Building Science and Technology, Asian Development Bank')
+      Marguerite_Duras: (birth date^='1914-04-04')
+    relationships:
+      - Marguerite_Duras (dor:Marguerite_Duras) --doo:education--> Ho_Chi_Minh_City (dor:Ho_Chi_Minh_City)
+      - 10:30_P.M._Summer (<http://dbpedia.org/resource/10:30_P.M._Summer>) --doo:writer--> Marguerite_Duras (dor:Marguerite_Duras)
+  '2':
+    attributes:
+      Horana: (UTC offset^='+5:30')
+      Prasanna_Jayakody: (birth date^='1968-08-25')
+    relationships:
+      - Prasanna_Jayakody (dor:Prasanna_Jayakody) --doo:education--> Horana (dor:Horana)
+      - 28_(2014_film) (<http://dbpedia.org/resource/28_(2014_film)>) --doo:writer--> Prasanna_Jayakody (dor:Prasanna_Jayakody)
+  '3':
+    attributes:
+      Łódź: (Apr precipitation mm^='35.2', UTC offset^='+1', source^='Institute of Meteorology and Water Management')
+      Roman_Polanski: (birth date^='1933-08-18')
+    relationships:
+      - Roman_Polanski (dor:Roman_Polanski) --doo:education--> Łódź (<http://dbpedia.org/resource/Łódź>)
+      - A_Day_at_the_Beach (dor:A_Day_at_the_Beach) --doo:writer--> Roman_Polanski (dor:Roman_Polanski)
+  '4':
+    attributes:
+      Eric_Aghimien: (birth date^='1982-01-21')
+    relationships:
+      - Eric_Aghimien (dor:Eric_Aghimien) --doo:education--> Auchi (dor:Auchi)
+      - A_Mile_from_Home (dor:A_Mile_from_Home) --doo:writer--> Eric_Aghimien (dor:Eric_Aghimien)
+  '5':
+    attributes:
+      Jamaica: (UTC offset^='-5')
+    relationships:
+      - Evan_Jones_(writer) (<http://dbpedia.org/resource/Evan_Jones_(writer)>) --doo:education--> Jamaica (dor:Jamaica)
+      - A_Show_of_Force (dor:A_Show_of_Force) --doo:writer--> Evan_Jones_(writer) (<http://dbpedia.org/resource/Evan_Jones_(writer)>)
+  '6':
+    attributes:
+      Evan_Jones_(writer): (birth date^='1927-12-29')
+    relationships:
+      - Evan_Jones_(writer) (<http://dbpedia.org/resource/Evan_Jones_(writer)>) --doo:education--> Pennsylvania (dor:Pennsylvania)
+      - A_Show_of_Force (dor:A_Show_of_Force) --doo:writer--> Evan_Jones_(writer) (<http://dbpedia.org/resource/Evan_Jones_(writer)>)
+  '7':
+    attributes:
+      Łódź: (Apr precipitation mm^='35.2', UTC offset^='+1', source^='Institute of Meteorology and Water Management')
+      A_Therapy: (release date^='2012-05-20')
+      Roman_Polanski: (birth date^='1933-08-18')
+    relationships:
+      - Roman_Polanski (dor:Roman_Polanski) --doo:education--> Łódź (<http://dbpedia.org/resource/Łódź>)
+      - A_Therapy (dor:A_Therapy) --doo:writer--> Roman_Polanski (dor:Roman_Polanski)
+  '8':
+    attributes:
+      Łódź: (Apr precipitation mm^='35.2', UTC offset^='+1', source^='Institute of Meteorology and Water Management')
+      Roman_Polanski: (birth date^='1933-08-18')
+    relationships:
+      - Roman_Polanski (dor:Roman_Polanski) --doo:education--> Łódź (<http://dbpedia.org/resource/Łódź>)
+      - A_Toothy_Smile (dor:A_Toothy_Smile) --doo:writer--> Roman_Polanski (dor:Roman_Polanski)
+  '9':
+    attributes:
+      Ian_La_Frenais: (birth date^='1937-01-07')
+      Newcastle_upon_Tyne: (UTC offset^='+1', source^='Met Office')
+    relationships:
+      - Ian_La_Frenais (dor:Ian_La_Frenais) --doo:education--> Newcastle_upon_Tyne (dor:Newcastle_upon_Tyne)
+      - Across_the_Universe_(film)__Across_the_Universe__1 (<http://dbpedia.org/resource/Across_the_Universe_(film)__Across_the_Universe__1>) --doo:writer--> Ian_La_Frenais (dor:Ian_La_Frenais)
+  '10':
+    attributes:
+      Choi_Ji-woo: (birth date^='1975-06-11')
+    relationships:
+      - Choi_Ji-woo (dor:Choi_Ji-woo) --doo:education--> Busan (dor:Busan)
+      - Actresses_(film) (<http://dbpedia.org/resource/Actresses_(film)>) --doo:writer--> Choi_Ji-woo (dor:Choi_Ji-woo)
+attributes:
+  movie: --bot^ (dop:bot)--> langString | --release date^ (doo:releaseDate)--> date
+  person: --before^ (dop:before)--> langString | --relative^ (doo:relative)--> Resource | --birth date^ (doo:birthDate)--> date
+  Location: --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --UTC offset^ (doo:utcOffset)--> string | --frazioni^ (doo:frazioni)--> Resource | --built^ (dop:built)--> int | --number of vineyards^ (doo:numberOfVineyards)--> int | --source^ (dop:source)--> langString
+subgraph_id: 146
+relationships:
+  - person --doo:education--> Location
+  - movie --doo:writer--> person

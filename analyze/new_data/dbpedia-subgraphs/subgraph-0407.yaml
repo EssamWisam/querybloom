@@ -1,0 +1,131 @@
+types:
+  city: doo:City
+  country: doo:Country
+  stadium: doo:Stadium
+  Location: doo:Location
+  cricketer: doo:Cricketer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Chennai: (area total km^='1189')
+      A_I_Harrsha: (date='--07-05')
+      Andhra_Pradesh: (anthem^='http://dbpedia.org/resource/Maa_Telugu_Thalliki', area total (km2)^='162975.0', Link from a Wikipage to an external page^='https://en.wikipedia.org/wiki/File:Sunset_at_Godavri.JPG')
+    relationships:
+      - A_I_Harrsha (dor:A_I_Harrsha) --dop:birthPlace--> India (dor:India)
+      - Andhra_Pradesh (dor:Andhra_Pradesh) --doo:country--> India (dor:India)
+      - A_I_Harrsha (dor:A_I_Harrsha) --doo:birthPlace--> India (dor:India)
+      - A_I_Harrsha (dor:A_I_Harrsha) --doo:birthPlace--> Chennai (dor:Chennai)
+      - YS_Raja_Reddy_Stadium (dor:YS_Raja_Reddy_Stadium) --doo:location--> Andhra_Pradesh (dor:Andhra_Pradesh)
+  '2':
+    attributes:
+      Assam: (anthem^='http://dbpedia.org/resource/O_Mur_Apunar_Desh', area total (km2)^='78438.0', Link from a Wikipage to an external page^='http://janasanyogassam.nic.in/assamataglance.htm')
+      Chennai: (area total km^='1189')
+      A_I_Harrsha: (date='--07-05')
+    relationships:
+      - A_I_Harrsha (dor:A_I_Harrsha) --dop:birthPlace--> India (dor:India)
+      - Assam (dor:Assam) --doo:country--> India (dor:India)
+      - A_I_Harrsha (dor:A_I_Harrsha) --doo:birthPlace--> India (dor:India)
+      - A_I_Harrsha (dor:A_I_Harrsha) --doo:birthPlace--> Chennai (dor:Chennai)
+      - Indira_Gandhi_Athletic_Stadium (dor:Indira_Gandhi_Athletic_Stadium) --doo:location--> Assam (dor:Assam)
+  '3':
+    attributes:
+      Assam: (anthem^='http://dbpedia.org/resource/O_Mur_Apunar_Desh', area total (km2)^='78438.0', Link from a Wikipage to an external page^='http://janasanyogassam.nic.in/assamataglance.htm')
+      Chennai: (area total km^='1189')
+      A_I_Harrsha: (date='--07-05')
+    relationships:
+      - A_I_Harrsha (dor:A_I_Harrsha) --dop:birthPlace--> India (dor:India)
+      - Assam (dor:Assam) --doo:country--> India (dor:India)
+      - A_I_Harrsha (dor:A_I_Harrsha) --doo:birthPlace--> India (dor:India)
+      - A_I_Harrsha (dor:A_I_Harrsha) --doo:birthPlace--> Chennai (dor:Chennai)
+      - Judges_Field (dor:Judges_Field) --doo:location--> Assam (dor:Assam)
+  '4':
+    attributes:
+      Dhaka: (Link from a Wikipage to an external page^='http://dhakasouthcity.gov.bd/', caption align^='center')
+      Rajshahi: (original name^='রাজশাহী', area total km^='120.98')
+      A._F._M._Akhtaruddin: (date='--07-01')
+    relationships:
+      - A._F._M._Akhtaruddin (dor:A._F._M._Akhtaruddin) --dop:birthPlace--> Bangladesh (dor:Bangladesh)
+      - Dhaka (dor:Dhaka) --doo:country--> Bangladesh (dor:Bangladesh)
+      - A._F._M._Akhtaruddin (dor:A._F._M._Akhtaruddin) --doo:birthPlace--> Bangladesh (dor:Bangladesh)
+      - A._F._M._Akhtaruddin (dor:A._F._M._Akhtaruddin) --doo:birthPlace--> Rajshahi (dor:Rajshahi)
+      - Bangabandhu_National_Stadium (dor:Bangabandhu_National_Stadium) --doo:location--> Dhaka (dor:Dhaka)
+  '5':
+    attributes:
+      Dhaka: (Link from a Wikipage to an external page^='http://dhakasouthcity.gov.bd/', caption align^='center')
+      Rajshahi: (original name^='রাজশাহী', area total km^='120.98')
+      A._F._M._Akhtaruddin: (date='--07-01')
+    relationships:
+      - A._F._M._Akhtaruddin (dor:A._F._M._Akhtaruddin) --dop:birthPlace--> Bangladesh (dor:Bangladesh)
+      - Dhaka (dor:Dhaka) --doo:country--> Bangladesh (dor:Bangladesh)
+      - A._F._M._Akhtaruddin (dor:A._F._M._Akhtaruddin) --doo:birthPlace--> Bangladesh (dor:Bangladesh)
+      - A._F._M._Akhtaruddin (dor:A._F._M._Akhtaruddin) --doo:birthPlace--> Rajshahi (dor:Rajshahi)
+      - Bir_Sherestha_Shaheed_Shipahi_Mostafa_Kamal_Stadium (dor:Bir_Sherestha_Shaheed_Shipahi_Mostafa_Kamal_Stadium) --doo:location--> Dhaka (dor:Dhaka)
+  '6':
+    attributes:
+      Rajshahi: (original name^='রাজশাহী', area total km^='120.98')
+      A._F._M._Akhtaruddin: (date='--07-01')
+      Gopalganj_District,_Bangladesh: (area total (km2)^='1468.74', Link from a Wikipage to an external page^='http://www.bangla2000.com/Bangladesh/districts.shtm')
+    relationships:
+      - A._F._M._Akhtaruddin (dor:A._F._M._Akhtaruddin) --dop:birthPlace--> Bangladesh (dor:Bangladesh)
+      - Gopalganj_District,_Bangladesh (<http://dbpedia.org/resource/Gopalganj_District,_Bangladesh>) --doo:country--> Bangladesh (dor:Bangladesh)
+      - A._F._M._Akhtaruddin (dor:A._F._M._Akhtaruddin) --doo:birthPlace--> Bangladesh (dor:Bangladesh)
+      - A._F._M._Akhtaruddin (dor:A._F._M._Akhtaruddin) --doo:birthPlace--> Rajshahi (dor:Rajshahi)
+      - Sheikh_Fazlul_Haque_Mani_Stadium (dor:Sheikh_Fazlul_Haque_Mani_Stadium) --doo:location--> Gopalganj_District,_Bangladesh (<http://dbpedia.org/resource/Gopalganj_District,_Bangladesh>)
+  '7':
+    attributes:
+      Lahore: (area total km^='1772')
+      Faisalabad: (area total (km2)^='1326.073912492032', Link from a Wikipage to an external page^='http://www.fda.gov.pk/')
+    relationships:
+      - Aamer_Hayat (dor:Aamer_Hayat) --dop:birthPlace--> Pakistan (dor:Pakistan)
+      - Faisalabad (dor:Faisalabad) --doo:country--> Pakistan (dor:Pakistan)
+      - Aamer_Hayat (dor:Aamer_Hayat) --doo:birthPlace--> Pakistan (dor:Pakistan)
+      - Aamer_Hayat (dor:Aamer_Hayat) --doo:birthPlace--> Lahore (dor:Lahore)
+      - Railways_Ground (dor:Railways_Ground) --doo:location--> Faisalabad (dor:Faisalabad)
+  '8':
+    attributes:
+      Lahore: (area total km^='1772')
+      Hyderabad,_Sindh: (area total (km2)^='292.0', Link from a Wikipage to an external page^='http://www.apnahyderabad.pk')
+    relationships:
+      - Aamer_Hayat (dor:Aamer_Hayat) --dop:birthPlace--> Pakistan (dor:Pakistan)
+      - Hyderabad,_Sindh (<http://dbpedia.org/resource/Hyderabad,_Sindh>) --doo:country--> Pakistan (dor:Pakistan)
+      - Aamer_Hayat (dor:Aamer_Hayat) --doo:birthPlace--> Pakistan (dor:Pakistan)
+      - Aamer_Hayat (dor:Aamer_Hayat) --doo:birthPlace--> Lahore (dor:Lahore)
+      - Hyderabad_Expo_Center (dor:Hyderabad_Expo_Center) --doo:location--> Hyderabad,_Sindh (<http://dbpedia.org/resource/Hyderabad,_Sindh>)
+  '9':
+    attributes:
+      Lahore: (area total km^='1772')
+      Islamabad: (area total (km2)^='220.0', Link from a Wikipage to an external page^='http://mci.gov.pk/')
+    relationships:
+      - Aamer_Hayat (dor:Aamer_Hayat) --dop:birthPlace--> Pakistan (dor:Pakistan)
+      - Islamabad (dor:Islamabad) --doo:country--> Pakistan (dor:Pakistan)
+      - Aamer_Hayat (dor:Aamer_Hayat) --doo:birthPlace--> Pakistan (dor:Pakistan)
+      - Aamer_Hayat (dor:Aamer_Hayat) --doo:birthPlace--> Lahore (dor:Lahore)
+      - Jinnah_Sports_Stadium (dor:Jinnah_Sports_Stadium) --doo:location--> Islamabad (dor:Islamabad)
+  '10':
+    attributes:
+      Perth: '(source^=''Dew point: 1985-2015'')'
+      Abbotsford,_Victoria: (Link from a Wikipage to an external page^='http://abbotsfordblog.com')
+      Aaron_Summers_(cricketer): (date='2021-01-31')
+    relationships:
+      - Aaron_Summers_(cricketer) (<http://dbpedia.org/resource/Aaron_Summers_(cricketer)>) --dop:birthPlace--> Australia (dor:Australia)
+      - Abbotsford,_Victoria (<http://dbpedia.org/resource/Abbotsford,_Victoria>) --doo:country--> Australia (dor:Australia)
+      - Aaron_Summers_(cricketer) (<http://dbpedia.org/resource/Aaron_Summers_(cricketer)>) --doo:birthPlace--> Australia (dor:Australia)
+      - Aaron_Summers_(cricketer) (<http://dbpedia.org/resource/Aaron_Summers_(cricketer)>) --doo:birthPlace--> Perth (dor:Perth)
+      - Victoria_Park,_Melbourne (<http://dbpedia.org/resource/Victoria_Park,_Melbourne>) --doo:location--> Abbotsford,_Victoria (<http://dbpedia.org/resource/Abbotsford,_Victoria>)
+attributes:
+  city: --source^ (dop:source)--> Resource | --original name^ (doo:originalName)--> langString | --area total km^ (dop:areaTotalKm)--> int
+  Location: --anthem^ (doo:anthem)--> Resource | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --owner^ (dop:owner)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --Center^ (dop:center)--> langString | --eponym^ (dop:eponym)--> langString | --eponym^ (dop:eponym)--> Resource | --caption align^ (dop:captionAlign)--> langString
+  cricketer: --date (dop:date)--> gMonthDay
+subgraph_id: 407
+relationships:
+  - cricketer --dop:birthPlace--> country
+  - Location --doo:country--> country
+  - cricketer --doo:birthPlace--> country
+  - cricketer --doo:birthPlace--> city
+  - stadium --doo:location--> Location

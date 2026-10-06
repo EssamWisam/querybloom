@@ -1,0 +1,79 @@
+types:
+  settlement: doo:Settlement
+  broadcast network: doo:BroadcastNetwork
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dor2: http://dbpedia.org/resource/3/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Sant_Joan_Despí: (area total (m2)^='6200000.0', subject='http://dbpedia.org/resource/Category:Municipalities_in_Baix_Llobregat')
+    relationships:
+      - 24 (dor2:24) --doo:owningCompany--> Televisió_de_Catalunya (<http://dbpedia.org/resource/Televisió_de_Catalunya>)
+      - 24 (dor2:24) --doo:headquarter--> Sant_Joan_Despí (<http://dbpedia.org/resource/Sant_Joan_Despí>)
+  '2':
+    attributes:
+      Maharashtra: (area total (m2)^='307713000000.0', subject='http://dbpedia.org/resource/Category:1960_establishments_in_India')
+    relationships:
+      - 9X_(TV_channel) (<http://dbpedia.org/resource/9X_(TV_channel)>) --doo:owningCompany--> 9X_Media (dor:9X_Media)
+      - 9X_(TV_channel) (<http://dbpedia.org/resource/9X_(TV_channel)>) --doo:headquarter--> Maharashtra (dor:Maharashtra)
+  '3':
+    attributes:
+      Mumbai: (area total (m2)^='603400000.0', subject='http://dbpedia.org/resource/Category:1507_establishments_in_India')
+    relationships:
+      - 9X_(TV_channel) (<http://dbpedia.org/resource/9X_(TV_channel)>) --doo:owningCompany--> 9X_Media (dor:9X_Media)
+      - 9X_(TV_channel) (<http://dbpedia.org/resource/9X_(TV_channel)>) --doo:headquarter--> Mumbai (dor:Mumbai)
+  '4':
+    attributes:
+      Maharashtra: (area total (m2)^='307713000000.0', subject='http://dbpedia.org/resource/Category:1960_establishments_in_India')
+    relationships:
+      - 9X_Jhakaas (dor:9X_Jhakaas) --doo:owningCompany--> 9X_Media (dor:9X_Media)
+      - 9X_Jhakaas (dor:9X_Jhakaas) --doo:headquarter--> Maharashtra (dor:Maharashtra)
+  '5':
+    attributes:
+      Brussels: (Apr high C^='15', area total (m2)^='162400000.0', Apr record low C^='-5.7', subject='http://dbpedia.org/resource/Category:Autonomous_regions')
+    relationships:
+      - ABXplore (dor:ABXplore) --doo:owningCompany--> Mediawan_Thematics (dor:Mediawan_Thematics)
+      - ABXplore (dor:ABXplore) --doo:headquarter--> Brussels (dor:Brussels)
+  '6':
+    attributes:
+      Kabul: (Apr high C^='19.2', area total (m2)^='1028240000.0', Apr record low C^='-2.1', subject='http://dbpedia.org/resource/Category:2nd-millennium_BC_establishments')
+    relationships:
+      - Afghanistan_National_Television (dor:Afghanistan_National_Television) --doo:owningCompany--> Radio_Television_Afghanistan (dor:Radio_Television_Afghanistan)
+      - Afghanistan_National_Television (dor:Afghanistan_National_Television) --doo:headquarter--> Kabul (dor:Kabul)
+  '7':
+    attributes:
+      Tehran: (Apr high C^='20', Apr record low C^='-4', subject='http://dbpedia.org/resource/Category:Articles_containing_video_clips')
+    relationships:
+      - Al-Alam_News_Network (dor:Al-Alam_News_Network) --doo:owningCompany--> Islamic_Republic_of_Iran_Broadcasting (dor:Islamic_Republic_of_Iran_Broadcasting)
+      - Al-Alam_News_Network (dor:Al-Alam_News_Network) --doo:headquarter--> Tehran (dor:Tehran)
+  '8':
+    attributes:
+      Sukhumi: (Apr high C^='16.8', area total (m2)^='372000000.0', subject='http://dbpedia.org/resource/Category:Capitals_in_Asia')
+    relationships:
+      - Apsua_TV (dor:Apsua_TV) --doo:owningCompany--> Abkhazian_State_Television_and_Radio_Broadcasting_Company (dor:Abkhazian_State_Television_and_Radio_Broadcasting_Company)
+      - Apsua_TV (dor:Apsua_TV) --doo:headquarter--> Sukhumi (dor:Sukhumi)
+  '9':
+    attributes:
+      Strasbourg: (Apr high C^='17', Apr record low C^='-5.6', subject='http://dbpedia.org/resource/Category:Cities_in_France')
+    relationships:
+      - Arte (dor:Arte) --doo:owningCompany--> ARD_(broadcaster) (<http://dbpedia.org/resource/ARD_(broadcaster)>)
+      - Arte (dor:Arte) --doo:headquarter--> Strasbourg (dor:Strasbourg)
+  '10':
+    attributes:
+      Kuala_Lumpur: (area total (m2)^='243000000.0', subject='http://dbpedia.org/resource/Category:1857_establishments_in_Asia')
+    relationships:
+      - Astro_Arena_(TV_channel) (<http://dbpedia.org/resource/Astro_Arena_(TV_channel)>) --doo:owningCompany--> Radio_Televisyen_Malaysia (dor:Radio_Televisyen_Malaysia)
+      - Astro_Arena_(TV_channel) (<http://dbpedia.org/resource/Astro_Arena_(TV_channel)>) --doo:headquarter--> Kuala_Lumpur (dor:Kuala_Lumpur)
+attributes:
+  settlement: --Apr high C^ (dop:aprHighC)--> double | --area total (m2)^ (doo:areaTotal)--> double | --Apr rain mm^ (dop:aprRainMm)--> double | --Aug precipitation inch^ (dop:augPrecipitationInch)--> double | --district^ (doo:district)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> langString | --subject (podt:subject)--> Resource
+  television station: --airdate^ (dop:airdate)--> date
+subgraph_id: 64
+relationships:
+  - television station --doo:owningCompany--> broadcast network
+  - television station --doo:headquarter--> settlement

@@ -1,0 +1,88 @@
+types:
+  venue: doo:Venue
+  Location: doo:Location
+  automobile: doo:Automobile
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Michigan: (date^='February 2013')
+    relationships:
+      - Calihan_Hall (dor:Calihan_Hall) --doo:location--> Michigan (dor:Michigan)
+      - Au_Gres_River (dor:Au_Gres_River) --doo:mouthMountain--> Michigan (dor:Michigan)
+      - Allstate_(automobile) (<http://dbpedia.org/resource/Allstate_(automobile)>) --dop:assembly--> Michigan (dor:Michigan)
+  '2':
+    attributes:
+      Michigan: (date^='February 2013')
+    relationships:
+      - Century_Theatre_(Detroit) (<http://dbpedia.org/resource/Century_Theatre_(Detroit)>) --doo:location--> Michigan (dor:Michigan)
+      - Au_Gres_River (dor:Au_Gres_River) --doo:mouthMountain--> Michigan (dor:Michigan)
+      - Allstate_(automobile) (<http://dbpedia.org/resource/Allstate_(automobile)>) --dop:assembly--> Michigan (dor:Michigan)
+  '3':
+    attributes:
+      Michigan: (date^='February 2013')
+    relationships:
+      - City_Theatre_(Detroit) (<http://dbpedia.org/resource/City_Theatre_(Detroit)>) --doo:location--> Michigan (dor:Michigan)
+      - Au_Gres_River (dor:Au_Gres_River) --doo:mouthMountain--> Michigan (dor:Michigan)
+      - Allstate_(automobile) (<http://dbpedia.org/resource/Allstate_(automobile)>) --dop:assembly--> Michigan (dor:Michigan)
+  '4':
+    attributes: {}
+    relationships:
+      - American_Legion_Field_(Florence) (<http://dbpedia.org/resource/American_Legion_Field_(Florence)>) --doo:location--> South_Carolina (dor:South_Carolina)
+      - Broad_River_(Carolinas) (<http://dbpedia.org/resource/Broad_River_(Carolinas)>) --doo:mouthMountain--> South_Carolina (dor:South_Carolina)
+      - Arrival_Bus (dor:Arrival_Bus) --dop:assembly--> South_Carolina (dor:South_Carolina)
+  '5':
+    attributes: {}
+    relationships:
+      - Cleveland_S._Harley_Baseball_Park (dor:Cleveland_S._Harley_Baseball_Park) --doo:location--> South_Carolina (dor:South_Carolina)
+      - Broad_River_(Carolinas) (<http://dbpedia.org/resource/Broad_River_(Carolinas)>) --doo:mouthMountain--> South_Carolina (dor:South_Carolina)
+      - Arrival_Bus (dor:Arrival_Bus) --dop:assembly--> South_Carolina (dor:South_Carolina)
+  '6':
+    attributes: {}
+    relationships:
+      - CofC_Baseball_Stadium_at_Patriots_Point (dor:CofC_Baseball_Stadium_at_Patriots_Point) --doo:location--> South_Carolina (dor:South_Carolina)
+      - Broad_River_(Carolinas) (<http://dbpedia.org/resource/Broad_River_(Carolinas)>) --doo:mouthMountain--> South_Carolina (dor:South_Carolina)
+      - Arrival_Bus (dor:Arrival_Bus) --dop:assembly--> South_Carolina (dor:South_Carolina)
+  '7':
+    attributes:
+      Bedfordshire: (date^='July 2019')
+    relationships:
+      - Dallow_Lane (dor:Dallow_Lane) --doo:location--> Bedfordshire (dor:Bedfordshire)
+      - Potton_Brook (dor:Potton_Brook) --doo:mouthMountain--> Bedfordshire (dor:Bedfordshire)
+      - Bedford_TJ (dor:Bedford_TJ) --dop:assembly--> Bedfordshire (dor:Bedfordshire)
+  '8':
+    attributes:
+      Bedfordshire: (date^='July 2019')
+    relationships:
+      - Kenilworth_Road (dor:Kenilworth_Road) --doo:location--> Bedfordshire (dor:Bedfordshire)
+      - Potton_Brook (dor:Potton_Brook) --doo:mouthMountain--> Bedfordshire (dor:Bedfordshire)
+      - Bedford_TJ (dor:Bedford_TJ) --dop:assembly--> Bedfordshire (dor:Bedfordshire)
+  '9':
+    attributes:
+      Cheshire: (date^='November 2022')
+    relationships:
+      - Barton_Stadium_(Winsford) (<http://dbpedia.org/resource/Barton_Stadium_(Winsford)>) --doo:location--> Cheshire (dor:Cheshire)
+      - River_Weaver (dor:River_Weaver) --doo:mouthMountain--> Cheshire (dor:Cheshire)
+      - Bentley_S2 (dor:Bentley_S2) --dop:assembly--> Cheshire (dor:Cheshire)
+  '10':
+    attributes:
+      Cheshire: (date^='November 2022')
+    relationships:
+      - Bower_Fold (dor:Bower_Fold) --doo:location--> Cheshire (dor:Cheshire)
+      - River_Weaver (dor:River_Weaver) --doo:mouthMountain--> Cheshire (dor:Cheshire)
+      - Bentley_S2 (dor:Bentley_S2) --dop:assembly--> Cheshire (dor:Cheshire)
+attributes:
+  Location: --Apr record low C^ (dop:aprRecordLowC)--> langString | --differentFrom (wwoo:differentFrom)--> Resource | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double | --Apr sun^ (dop:aprSun)--> double | --borough^ (dop:borough)--> langString | --anthem^ (doo:anthem)--> Resource | --2y^ (dop:2y)--> int | --coordinates^ (dop:coordinates)--> double
+  automobile: --length ft^ (dop:lengthFt)--> int
+  administrative region: --Center^ (dop:center)--> langString | --date^ (dop:date)--> langString | --wordnet_type (dop:wordnet_type)--> Resource
+subgraph_id: 657
+relationships:
+  - venue --doo:location--> administrative region
+  - Location --doo:mouthMountain--> administrative region
+  - automobile --dop:assembly--> administrative region

@@ -1,0 +1,141 @@
+types:
+  city: doo:City
+  song: doo:Song
+  single: doo:Single
+  radio station: doo:RadioStation
+  national football league season: doo:NationalFootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dorbs: http://dbpedia.org/resource/Brain_Stew_/
+instances:
+  '1':
+    attributes:
+      KALC: (class^='C', airdate^='1965-06-21')
+      Bitch_I'm_Madonna: |-
+        (genre^='* EDM
+        * trap
+        * electro
+        * dubstep
+        * electropop')
+    relationships:
+      - KALC (dor:KALC) --dop:city--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Hold_Tight_(Madonna_song) (<http://dbpedia.org/resource/Hold_Tight_(Madonna_song)>) --doo:recordedIn--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - 1935_Detroit_Lions_season (dor:1935_Detroit_Lions_season) --dop:location--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Bitch_I'm_Madonna (<http://dbpedia.org/resource/Bitch_I'm_Madonna>) --doo:subsequentWork--> Hold_Tight_(Madonna_song) (<http://dbpedia.org/resource/Hold_Tight_(Madonna_song)>)
+  '2':
+    attributes:
+      KBNO_(AM): (class^='B', airdate^='1948-05-16')
+      Bitch_I'm_Madonna: |-
+        (genre^='* EDM
+        * trap
+        * electro
+        * dubstep
+        * electropop')
+    relationships:
+      - KBNO_(AM) (<http://dbpedia.org/resource/KBNO_(AM)>) --dop:city--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Hold_Tight_(Madonna_song) (<http://dbpedia.org/resource/Hold_Tight_(Madonna_song)>) --doo:recordedIn--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - 1935_Detroit_Lions_season (dor:1935_Detroit_Lions_season) --dop:location--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Bitch_I'm_Madonna (<http://dbpedia.org/resource/Bitch_I'm_Madonna>) --doo:subsequentWork--> Hold_Tight_(Madonna_song) (<http://dbpedia.org/resource/Hold_Tight_(Madonna_song)>)
+  '3':
+    attributes:
+      KPOF: (class^='B', airdate^='1927-01-12')
+      Bitch_I'm_Madonna: |-
+        (genre^='* EDM
+        * trap
+        * electro
+        * dubstep
+        * electropop')
+    relationships:
+      - KPOF (dor:KPOF) --dop:city--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Hold_Tight_(Madonna_song) (<http://dbpedia.org/resource/Hold_Tight_(Madonna_song)>) --doo:recordedIn--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - 1935_Detroit_Lions_season (dor:1935_Detroit_Lions_season) --dop:location--> Denver,_Colorado (<http://dbpedia.org/resource/Denver,_Colorado>)
+      - Bitch_I'm_Madonna (<http://dbpedia.org/resource/Bitch_I'm_Madonna>) --doo:subsequentWork--> Hold_Tight_(Madonna_song) (<http://dbpedia.org/resource/Hold_Tight_(Madonna_song)>)
+  '4':
+    attributes:
+      Amazing_Radio: (airdate^='2009-06-01')
+      New_York_City: (named after^='http://dbpedia.org/resource/James_II_of_England', width^='225')
+      Act_a_Fool_(Ludacris_song): (genre^='http://dbpedia.org/resource/Hip_hop_music')
+    relationships:
+      - Amazing_Radio (dor:Amazing_Radio) --dop:city--> New_York_City (dor:New_York_City)
+      - P-Poppin (dor:P-Poppin) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - 1946_Cleveland_Browns_season (dor:1946_Cleveland_Browns_season) --dop:location--> New_York_City (dor:New_York_City)
+      - Act_a_Fool_(Ludacris_song) (<http://dbpedia.org/resource/Act_a_Fool_(Ludacris_song)>) --doo:subsequentWork--> P-Poppin (dor:P-Poppin)
+  '5':
+    attributes:
+      Amazing_Radio: (airdate^='2009-06-01')
+      New_York_City: (named after^='http://dbpedia.org/resource/James_II_of_England', width^='225')
+      Area_Codes_(song): (genre^='http://dbpedia.org/resource/Hip_hop_music')
+    relationships:
+      - Amazing_Radio (dor:Amazing_Radio) --dop:city--> New_York_City (dor:New_York_City)
+      - Rollout_(My_Business) (<http://dbpedia.org/resource/Rollout_(My_Business)>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - 1946_Cleveland_Browns_season (dor:1946_Cleveland_Browns_season) --dop:location--> New_York_City (dor:New_York_City)
+      - Area_Codes_(song) (<http://dbpedia.org/resource/Area_Codes_(song)>) --doo:subsequentWork--> Rollout_(My_Business) (<http://dbpedia.org/resource/Rollout_(My_Business)>)
+  '6':
+    attributes:
+      Amazing_Radio: (airdate^='2009-06-01')
+      New_York_City: (named after^='http://dbpedia.org/resource/James_II_of_England', width^='225')
+      Automatic_Systematic_Habit: (genre^='http://dbpedia.org/resource/Alternative_rock')
+    relationships:
+      - Amazing_Radio (dor:Amazing_Radio) --dop:city--> New_York_City (dor:New_York_City)
+      - Because_the_Night (dor:Because_the_Night) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - 1946_Cleveland_Browns_season (dor:1946_Cleveland_Browns_season) --dop:location--> New_York_City (dor:New_York_City)
+      - Automatic_Systematic_Habit (dor:Automatic_Systematic_Habit) --doo:subsequentWork--> Because_the_Night (dor:Because_the_Night)
+  '7':
+    attributes:
+      Los_Angeles: (named after^='http://dbpedia.org/resource/Queen_of_Heaven', width^='210')
+      Apple_Music_1: (airdate^='2015-06-30')
+      (I_Like)_The_Way_You_Love_Me: (genre^='')
+    relationships:
+      - Apple_Music_1 (dor:Apple_Music_1) --dop:city--> Los_Angeles (dor:Los_Angeles)
+      - Don't_Stop_'Til_You_Get_Enough (<http://dbpedia.org/resource/Don't_Stop_'Til_You_Get_Enough>) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+      - 1947_Cleveland_Browns_season (dor:1947_Cleveland_Browns_season) --dop:location--> Los_Angeles (dor:Los_Angeles)
+      - (I_Like)_The_Way_You_Love_Me (<http://dbpedia.org/resource/(I_Like)_The_Way_You_Love_Me>) --doo:subsequentWork--> Don't_Stop_'Til_You_Get_Enough (<http://dbpedia.org/resource/Don't_Stop_'Til_You_Get_Enough>)
+  '8':
+    attributes:
+      Los_Angeles: (named after^='http://dbpedia.org/resource/Queen_of_Heaven', width^='210')
+      Apple_Music_1: (airdate^='2015-06-30')
+      19th_Nervous_Breakdown: (genre^='http://dbpedia.org/resource/Rock_music')
+    relationships:
+      - Apple_Music_1 (dor:Apple_Music_1) --dop:city--> Los_Angeles (dor:Los_Angeles)
+      - Paint_It_Black (dor:Paint_It_Black) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+      - 1947_Cleveland_Browns_season (dor:1947_Cleveland_Browns_season) --dop:location--> Los_Angeles (dor:Los_Angeles)
+      - 19th_Nervous_Breakdown (dor:19th_Nervous_Breakdown) --doo:subsequentWork--> Paint_It_Black (dor:Paint_It_Black)
+  '9':
+    attributes:
+      Los_Angeles: (named after^='http://dbpedia.org/resource/Queen_of_Heaven', width^='210')
+      Apple_Music_1: (airdate^='2015-06-30')
+      2_of_Amerikaz_Most_Wanted: |-
+        (genre^='* Gangsta rap
+        * G-funk')
+    relationships:
+      - Apple_Music_1 (dor:Apple_Music_1) --dop:city--> Los_Angeles (dor:Los_Angeles)
+      - How_Do_U_Want_It (dor:How_Do_U_Want_It) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+      - 1947_Cleveland_Browns_season (dor:1947_Cleveland_Browns_season) --dop:location--> Los_Angeles (dor:Los_Angeles)
+      - 2_of_Amerikaz_Most_Wanted (dor:2_of_Amerikaz_Most_Wanted) --doo:subsequentWork--> How_Do_U_Want_It (dor:How_Do_U_Want_It)
+  '10':
+    attributes:
+      KALW: (class^='B1', airdate^='1941-03-10')
+      _Jaded: |-
+        (genre^='* Punk rock
+        * hardcore punk
+        * alternative rock
+        * grunge')
+      San_Francisco: (named after^='http://dbpedia.org/resource/St._Francis_of_Assisi', width^='22')
+    relationships:
+      - KALW (dor:KALW) --dop:city--> San_Francisco (dor:San_Francisco)
+      - Walking_Contradiction (dor:Walking_Contradiction) --doo:recordedIn--> San_Francisco (dor:San_Francisco)
+      - 1948_Cleveland_Browns_season (dor:1948_Cleveland_Browns_season) --dop:location--> San_Francisco (dor:San_Francisco)
+      - _Jaded (dorbs:_Jaded) --doo:subsequentWork--> Walking_Contradiction (dor:Walking_Contradiction)
+attributes:
+  city: --named after^ (doo:namedAfter)--> Resource | --augLowF (dop:augLowF)--> double | --width^ (dop:width)--> int | --source^ (dop:source)--> Resource | --original name^ (doo:originalName)--> langString | --Apr record low C^ (dop:aprRecordLowC)--> langString | --bot^ (dop:bot)--> langString
+  single: --genre^ (dop:genre)--> langString
+  radio station: --affiliations^ (dop:affiliations)--> langString | --class^ (dop:class)--> nicaraguanCÃ³rdoba | --airdate^ (dop:airdate)--> gMonthDay
+subgraph_id: 949
+relationships:
+  - radio station --dop:city--> city
+  - song --doo:recordedIn--> city
+  - national football league season --dop:location--> city
+  - single --doo:subsequentWork--> song

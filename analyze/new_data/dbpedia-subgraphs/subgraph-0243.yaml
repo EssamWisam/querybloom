@@ -1,0 +1,80 @@
+types:
+  city: doo:City
+  country: doo:Country
+  settlement: doo:Settlement
+  office holder: doo:OfficeHolder
+  Christian Bishop: doo:ChristianBishop
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Perth: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-location-noun-1')
+    relationships:
+      - Launcelot_Goody (dor:Launcelot_Goody) --doo:diocese--> Perth (dor:Perth)
+      - 2005_Australia_national_soccer_team_season (dor:2005_Australia_national_soccer_team_season) --dop:location--> Perth (dor:Perth)
+      - Alfred_Cove,_Western_Australia (<http://dbpedia.org/resource/Alfred_Cove,_Western_Australia>) --dop:city--> Perth (dor:Perth)
+      - Launcelot_Goody (dor:Launcelot_Goody) --doo:nationality--> Australians (dor:Australians)
+  '2':
+    attributes:
+      Perth: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-location-noun-1')
+      England: (image='After Hans Holbein the Younger  - Henry VIII  - RCIN 404438 - Royal Collection.jpg')
+    relationships:
+      - Launcelot_Goody (dor:Launcelot_Goody) --doo:diocese--> Perth (dor:Perth)
+      - 2005_Australia_national_soccer_team_season (dor:2005_Australia_national_soccer_team_season) --dop:location--> Perth (dor:Perth)
+      - Alfred_Cove,_Western_Australia (<http://dbpedia.org/resource/Alfred_Cove,_Western_Australia>) --dop:city--> Perth (dor:Perth)
+      - Launcelot_Goody (dor:Launcelot_Goody) --doo:nationality--> England (dor:England)
+  '3':
+    attributes:
+      Perth: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-location-noun-1')
+    relationships:
+      - Launcelot_Goody (dor:Launcelot_Goody) --doo:diocese--> Perth (dor:Perth)
+      - 2005_Australia_national_soccer_team_season (dor:2005_Australia_national_soccer_team_season) --dop:location--> Perth (dor:Perth)
+      - Applecross,_Western_Australia (<http://dbpedia.org/resource/Applecross,_Western_Australia>) --dop:city--> Perth (dor:Perth)
+      - Launcelot_Goody (dor:Launcelot_Goody) --doo:nationality--> Australians (dor:Australians)
+qa_result:
+  status: completed
+  cost_usd: 0.314585
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0528824
+        total_tokens: 4466
+        prompt_tokens: 1984
+        completion_tokens: 2482
+      generate:
+        cost_usd: 0.0598976
+        total_tokens: 5988
+        prompt_tokens: 3511
+        completion_tokens: 2477
+      verify_1:
+        cost_usd: 0.09212200000000001
+        total_tokens: 7238
+        prompt_tokens: 3509
+        completion_tokens: 3729
+      complexity:
+        cost_usd: 0.109683
+        total_tokens: 9388
+        prompt_tokens: 4633
+        completion_tokens: 4755
+    total_tokens: 27080
+    prompt_tokens: 13637
+    total_cost_usd: 0.314585
+    completion_tokens: 13443
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --nickname^ (dop:nickname)--> langString | --wordnet_type (dop:wordnet_type)--> Resource
+  country: --alt^ (dop:alt)--> langString | --image (dop:image)--> langString
+  settlement: --colwidth^ (dop:colwidth)--> int | --date^ (dop:date)--> langString
+  office holder: --quote^ (dop:quote)--> langString | --1p^ (dop:1p)--> int
+subgraph_id: 243
+relationships:
+  - Christian Bishop --doo:diocese--> city
+  - office holder --dop:location--> city
+  - settlement --dop:city--> city
+  - Christian Bishop --doo:nationality--> country

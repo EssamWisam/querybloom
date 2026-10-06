@@ -1,0 +1,77 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  language: doo:Language
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Abzhywa: (Wikipage revision ID^='1081863445')
+    relationships:
+      - Abzhywa (dor:Abzhywa) --doo:subdivision--> Abkhazia (dor:Abkhazia)
+      - Abkhazia (dor:Abkhazia) --doo:language--> Abkhaz_language (dor:Abkhaz_language)
+  '2':
+    attributes:
+      Abzhywa: (Wikipage revision ID^='1081863445')
+    relationships:
+      - Abzhywa (dor:Abzhywa) --doo:subdivision--> Abkhazia (dor:Abkhazia)
+      - Abkhazia (dor:Abkhazia) --doo:language--> Armenian_language (dor:Armenian_language)
+  '3':
+    attributes:
+      Abzhywa: (Wikipage revision ID^='1081863445')
+    relationships:
+      - Abzhywa (dor:Abzhywa) --doo:subdivision--> Abkhazia (dor:Abkhazia)
+      - Abkhazia (dor:Abkhazia) --doo:language--> Georgian_language (dor:Georgian_language)
+  '4':
+    attributes:
+      Ahl_El_Koudia: (elevation (μ)^='320.0', Wikipage revision ID^='1019149735')
+    relationships:
+      - Ahl_El_Koudia (dor:Ahl_El_Koudia) --doo:subdivision--> Algeria (dor:Algeria)
+      - Algeria (dor:Algeria) --doo:language--> Algerian_Arabic (dor:Algerian_Arabic)
+  '5':
+    attributes:
+      Ahl_El_Koudia: (elevation (μ)^='320.0', Wikipage revision ID^='1019149735')
+    relationships:
+      - Ahl_El_Koudia (dor:Ahl_El_Koudia) --doo:subdivision--> Algeria (dor:Algeria)
+      - Algeria (dor:Algeria) --doo:language--> French_language (dor:French_language)
+  '6':
+    attributes:
+      Ahl_El_Oued: (elevation (μ)^='240.0', Wikipage revision ID^='1040514337')
+    relationships:
+      - Ahl_El_Oued (dor:Ahl_El_Oued) --doo:subdivision--> Algeria (dor:Algeria)
+      - Algeria (dor:Algeria) --doo:language--> Algerian_Arabic (dor:Algerian_Arabic)
+  '7':
+    attributes:
+      Anloga_District: (Wikipage revision ID^='1107181040')
+    relationships:
+      - Anloga_District (dor:Anloga_District) --doo:subdivision--> Angola (dor:Angola)
+      - Angola (dor:Angola) --doo:language--> Chokwe_language (dor:Chokwe_language)
+  '8':
+    attributes:
+      Anloga_District: (Wikipage revision ID^='1107181040')
+    relationships:
+      - Anloga_District (dor:Anloga_District) --doo:subdivision--> Angola (dor:Angola)
+      - Angola (dor:Angola) --doo:language--> Kimbundu (dor:Kimbundu)
+  '9':
+    attributes:
+      Anloga_District: (Wikipage revision ID^='1107181040')
+    relationships:
+      - Anloga_District (dor:Anloga_District) --doo:subdivision--> Angola (dor:Angola)
+      - Angola (dor:Angola) --doo:language--> Kongo_language (dor:Kongo_language)
+  '10':
+    attributes:
+      Lesser_Antilles: (Wikipage revision ID^='1123458905')
+    relationships:
+      - Lesser_Antilles (dor:Lesser_Antilles) --doo:subdivision--> Antigua_and_Barbuda (dor:Antigua_and_Barbuda)
+      - Antigua_and_Barbuda (dor:Antigua_and_Barbuda) --doo:language--> Antiguan_and_Barbudan_Creole (dor:Antiguan_and_Barbudan_Creole)
+attributes:
+  Location: --url^ (dop:url)--> Resource | --1a^ (dop:1a)--> langString | --arc-textA^ (dop:arcTexta)--> langString | --Apr sun^ (dop:aprSun)--> int | --architecture^ (dop:architecture)--> langString | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --coordinates^ (dop:coordinates)--> langString | --Apr high F^ (dop:aprHighF)--> double | --quote^ (dop:quote)--> langString | --elevation (μ)^ (doo:elevation)--> double | --differentFrom (wwoo:differentFrom)--> Resource | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int
+subgraph_id: 18
+relationships:
+  - Location --doo:subdivision--> country
+  - country --doo:language--> language

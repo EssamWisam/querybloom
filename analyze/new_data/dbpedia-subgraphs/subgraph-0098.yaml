@@ -1,0 +1,64 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  government agency: doo:GovernmentAgency
+  historic building: doo:HistoricBuilding
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      India: (direction^='vertical')
+      Kerala: (Apr rain mm^='109.5', Wikipage revision ID^='1124104630', Aug high C^='29')
+    relationships:
+      - Agency_for_Non-conventional_Energy_and_Rural_Technology (dor:Agency_for_Non-conventional_Energy_and_Rural_Technology) --doo:jurisdiction--> Kerala (dor:Kerala)
+      - Agency_for_Non-conventional_Energy_and_Rural_Technology (dor:Agency_for_Non-conventional_Energy_and_Rural_Technology) --doo:jurisdiction--> India (dor:India)
+      - Bethel_Assembly_of_God_Church (dor:Bethel_Assembly_of_God_Church) --doo:location--> India (dor:India)
+  '2':
+    attributes:
+      India: (direction^='vertical')
+      Kerala: (Apr rain mm^='109.5', Wikipage revision ID^='1124104630', Aug high C^='29')
+    relationships:
+      - Agency_for_Non-conventional_Energy_and_Rural_Technology (dor:Agency_for_Non-conventional_Energy_and_Rural_Technology) --doo:jurisdiction--> Kerala (dor:Kerala)
+      - Agency_for_Non-conventional_Energy_and_Rural_Technology (dor:Agency_for_Non-conventional_Energy_and_Rural_Technology) --doo:jurisdiction--> India (dor:India)
+      - Kudassanad__St_Stephens_orthodox_Cathedral_Kudassanad__1 (dor:Kudassanad__St_Stephens_orthodox_Cathedral_Kudassanad__1) --doo:location--> India (dor:India)
+  '3':
+    attributes:
+      India: (direction^='vertical')
+      Kerala: (Apr rain mm^='109.5', Wikipage revision ID^='1124104630', Aug high C^='29')
+    relationships:
+      - Agency_for_Non-conventional_Energy_and_Rural_Technology (dor:Agency_for_Non-conventional_Energy_and_Rural_Technology) --doo:jurisdiction--> Kerala (dor:Kerala)
+      - Agency_for_Non-conventional_Energy_and_Rural_Technology (dor:Agency_for_Non-conventional_Energy_and_Rural_Technology) --doo:jurisdiction--> India (dor:India)
+      - Marthoman_Cheriyapally,_Kothamangalam (<http://dbpedia.org/resource/Marthoman_Cheriyapally,_Kothamangalam>) --doo:location--> India (dor:India)
+  '4':
+    attributes:
+      Arizona: (Wikipage revision ID^='1124811375')
+    relationships:
+      - Arizona_Game_and_Fish_Department (dor:Arizona_Game_and_Fish_Department) --doo:jurisdiction--> Arizona (dor:Arizona)
+      - Arizona_Game_and_Fish_Department (dor:Arizona_Game_and_Fish_Department) --doo:jurisdiction--> United_States (dor:United_States)
+      - All_Saints_Catholic_Church_(Cincinnati,_Ohio) (<http://dbpedia.org/resource/All_Saints_Catholic_Church_(Cincinnati,_Ohio)>) --doo:location--> United_States (dor:United_States)
+  '5':
+    attributes:
+      Arizona: (Wikipage revision ID^='1124811375')
+    relationships:
+      - Arizona_Game_and_Fish_Department (dor:Arizona_Game_and_Fish_Department) --doo:jurisdiction--> Arizona (dor:Arizona)
+      - Arizona_Game_and_Fish_Department (dor:Arizona_Game_and_Fish_Department) --doo:jurisdiction--> United_States (dor:United_States)
+      - Cathedral_of_the_Holy_Family_(Tafuna,_American_Samoa) (<http://dbpedia.org/resource/Cathedral_of_the_Holy_Family_(Tafuna,_American_Samoa)>) --doo:location--> United_States (dor:United_States)
+  '6':
+    attributes:
+      Arizona: (Wikipage revision ID^='1124811375')
+    relationships:
+      - Arizona_Game_and_Fish_Department (dor:Arizona_Game_and_Fish_Department) --doo:jurisdiction--> Arizona (dor:Arizona)
+      - Arizona_Game_and_Fish_Department (dor:Arizona_Game_and_Fish_Department) --doo:jurisdiction--> United_States (dor:United_States)
+      - Christ_Church_Cathedral_(Mobile,_Alabama) (<http://dbpedia.org/resource/Christ_Church_Cathedral_(Mobile,_Alabama)>) --doo:location--> United_States (dor:United_States)
+attributes:
+  country: --2a^ (dop:2a)--> langString | --direction^ (dop:direction)--> langString
+  Location: --Apr rain mm^ (dop:aprRainMm)--> int | --coordinates^ (dop:coordinates)--> langString | --last^ (dop:last)--> langString | --class^ (dop:class)--> langString | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --Aug high C^ (dop:augHighC)--> double
+subgraph_id: 98
+relationships:
+  - government agency --doo:jurisdiction--> Location
+  - government agency --doo:jurisdiction--> country
+  - historic building --doo:location--> country

@@ -1,0 +1,135 @@
+types:
+  city: doo:City
+  school: doo:School
+  cricketer: doo:Cricketer
+  politician: doo:Politician
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Aaron_Redmond: (source^='http://www.espncricinfo.com/ci/content/player/38264.html Cricinfo', family^='http://dbpedia.org/resource/Rodney_Redmond', batting side^='Right-handed')
+      Aorere_College: (type^='http://dbpedia.org/resource/State_school')
+    relationships:
+      - Auckland (dor:Auckland) --dop:namedFor--> George_Eden,_1st_Earl_of_Auckland (<http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland>)
+      - Aaron_Redmond (dor:Aaron_Redmond) --doo:birthPlace--> Auckland (dor:Auckland)
+      - Aorere_College (dor:Aorere_College) --doo:city--> Auckland (dor:Auckland)
+  '2':
+    attributes:
+      Aaron_Redmond: (source^='http://www.espncricinfo.com/ci/content/player/38264.html Cricinfo', family^='http://dbpedia.org/resource/Rodney_Redmond', batting side^='Right-handed')
+      Auckland_Grammar_School: (type^='http://dbpedia.org/resource/Boarding_school')
+    relationships:
+      - Auckland (dor:Auckland) --dop:namedFor--> George_Eden,_1st_Earl_of_Auckland (<http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland>)
+      - Aaron_Redmond (dor:Aaron_Redmond) --doo:birthPlace--> Auckland (dor:Auckland)
+      - Auckland_Grammar_School (dor:Auckland_Grammar_School) --doo:city--> Auckland (dor:Auckland)
+  '3':
+    attributes:
+      Aaron_Redmond: (source^='http://www.espncricinfo.com/ci/content/player/38264.html Cricinfo', family^='http://dbpedia.org/resource/Rodney_Redmond', batting side^='Right-handed')
+      Balmoral_School: (type^='http://dbpedia.org/resource/State_school')
+    relationships:
+      - Auckland (dor:Auckland) --dop:namedFor--> George_Eden,_1st_Earl_of_Auckland (<http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland>)
+      - Aaron_Redmond (dor:Aaron_Redmond) --doo:birthPlace--> Auckland (dor:Auckland)
+      - Balmoral_School (dor:Balmoral_School) --doo:city--> Auckland (dor:Auckland)
+  '4':
+    attributes:
+      Jason_Pawley: (source^='http://www.espncricinfo.com/ci/content/player/38147.html Cricinfo')
+      Amigos_Por_Vida_Friends_For_Life_Charter_School: (type^='http://dbpedia.org/resource/Public_school_(government_funded)')
+    relationships:
+      - Houston (dor:Houston) --dop:namedFor--> Sam_Houston (dor:Sam_Houston)
+      - Jason_Pawley (dor:Jason_Pawley) --doo:birthPlace--> Houston (dor:Houston)
+      - Amigos_Por_Vida_Friends_For_Life_Charter_School (dor:Amigos_Por_Vida_Friends_For_Life_Charter_School) --doo:city--> Houston (dor:Houston)
+  '5':
+    attributes:
+      Jason_Pawley: (source^='http://www.espncricinfo.com/ci/content/player/38147.html Cricinfo')
+      Awty_International_School: (type^='http://dbpedia.org/resource/Independent_school')
+    relationships:
+      - Houston (dor:Houston) --dop:namedFor--> Sam_Houston (dor:Sam_Houston)
+      - Jason_Pawley (dor:Jason_Pawley) --doo:birthPlace--> Houston (dor:Houston)
+      - Awty_International_School (dor:Awty_International_School) --doo:city--> Houston (dor:Houston)
+  '6':
+    attributes:
+      Jason_Pawley: (source^='http://www.espncricinfo.com/ci/content/player/38147.html Cricinfo')
+    relationships:
+      - Houston (dor:Houston) --dop:namedFor--> Sam_Houston (dor:Sam_Houston)
+      - Jason_Pawley (dor:Jason_Pawley) --doo:birthPlace--> Houston (dor:Houston)
+      - Contemporary_Learning_Center (dor:Contemporary_Learning_Center) --doo:city--> Houston (dor:Houston)
+  '7':
+    attributes:
+      Aman_Kumar: (source^='http://www.espncricinfo.com/ci/content/player/1135774.html Cricinfo', batting side^='Right-handed')
+    relationships:
+      - Patiala (dor:Patiala) --dop:namedFor--> Ala_Singh (dor:Ala_Singh)
+      - Aman_Kumar (dor:Aman_Kumar) --doo:birthPlace--> Patiala (dor:Patiala)
+      - Our_Lady_of_Fatima_Convent_High_School (dor:Our_Lady_of_Fatima_Convent_High_School) --doo:city--> Patiala (dor:Patiala)
+  '8':
+    attributes:
+      Aman_Kumar: (source^='http://www.espncricinfo.com/ci/content/player/1135774.html Cricinfo', batting side^='Right-handed')
+      Patiala_School_for_the_Blind: (type^='http://dbpedia.org/resource/Special_education')
+    relationships:
+      - Patiala (dor:Patiala) --dop:namedFor--> Ala_Singh (dor:Ala_Singh)
+      - Aman_Kumar (dor:Aman_Kumar) --doo:birthPlace--> Patiala (dor:Patiala)
+      - Patiala_School_for_the_Blind (dor:Patiala_School_for_the_Blind) --doo:city--> Patiala (dor:Patiala)
+  '9':
+    attributes:
+      Aman_Kumar: (source^='http://www.espncricinfo.com/ci/content/player/1135774.html Cricinfo', batting side^='Right-handed')
+      Patiala_School_for_the_Deaf-blind: (type^='http://dbpedia.org/resource/Special_education')
+    relationships:
+      - Patiala (dor:Patiala) --dop:namedFor--> Ala_Singh (dor:Ala_Singh)
+      - Aman_Kumar (dor:Aman_Kumar) --doo:birthPlace--> Patiala (dor:Patiala)
+      - Patiala_School_for_the_Deaf-blind (dor:Patiala_School_for_the_Deaf-blind) --doo:city--> Patiala (dor:Patiala)
+  '10':
+    attributes:
+      Albert_Heffer: (source^='http://www.espncricinfo.com/ci/content/player/45509.html')
+    relationships:
+      - Pretoria (dor:Pretoria) --dop:namedFor--> Andries_Pretorius (dor:Andries_Pretorius)
+      - Albert_Heffer (dor:Albert_Heffer) --doo:birthPlace--> Pretoria (dor:Pretoria)
+      - Afrikaanse_Hoër_Seunskool (<http://dbpedia.org/resource/Afrikaanse_Hoër_Seunskool>) --doo:city--> Pretoria (dor:Pretoria)
+qa_result:
+  status: completed
+  cost_usd: 0.446332
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0624524
+        total_tokens: 5219
+        prompt_tokens: 2350
+        completion_tokens: 2869
+      generate:
+        cost_usd: 0.08912260000000001
+        total_tokens: 7912
+        prompt_tokens: 4128
+        completion_tokens: 3784
+      verify_1:
+        cost_usd: 0.08451700000000001
+        total_tokens: 8075
+        prompt_tokens: 5132
+        completion_tokens: 2943
+      verify_2:
+        cost_usd: 0.03963200000000001
+        total_tokens: 5842
+        prompt_tokens: 5147
+        completion_tokens: 695
+      complexity:
+        cost_usd: 0.170608
+        total_tokens: 13239
+        prompt_tokens: 5706
+        completion_tokens: 7533
+    total_tokens: 40287
+    prompt_tokens: 22463
+    total_cost_usd: 0.44633200000000006
+    completion_tokens: 17824
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --original name^ (doo:originalName)--> langString
+  school: --type^ (doo:type)--> Resource | --closing date^ (doo:closingDate)--> date
+  cricketer: --source^ (dop:source)--> Resource | --family^ (dop:family)--> Resource | --batting side^ (doo:battingSide)--> string
+  politician: --assembly^ (dop:assembly)--> langString | --data^ (dop:data)--> langString | --nickname^ (dop:nickname)--> langString
+subgraph_id: 307
+relationships:
+  - city --dop:namedFor--> politician
+  - cricketer --doo:birthPlace--> city
+  - school --doo:city--> city

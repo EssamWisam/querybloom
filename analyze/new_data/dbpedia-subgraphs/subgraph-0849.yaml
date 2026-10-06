@@ -1,0 +1,46 @@
+types:
+  tenure: doo:Tenure
+  country: doo:Country
+  historian: doo:Historian
+  politician: doo:Politician
+  radio station: doo:RadioStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ephraim_K._Smart: (party^='http://dbpedia.org/resource/Democratic_Party_(United_States)', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:constituencyDistrict--> United_States (dor:United_States)
+      - A._Walton_Litz (dor:A._Walton_Litz) --doo:nationality--> United_States (dor:United_States)
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:predecessor--> Ephraim_K._Smart (dor:Ephraim_K._Smart)
+      - '''40s_Junction (<http://dbpedia.org/resource/''40s_Junction>) --dop:area--> United_States (dor:United_States)'
+  '2':
+    attributes:
+      Ephraim_K._Smart: (party^='http://dbpedia.org/resource/Democratic_Party_(United_States)', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:constituencyDistrict--> United_States (dor:United_States)
+      - A._Walton_Litz (dor:A._Walton_Litz) --doo:nationality--> United_States (dor:United_States)
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:predecessor--> Ephraim_K._Smart (dor:Ephraim_K._Smart)
+      - '''50s_Gold (<http://dbpedia.org/resource/''50s_Gold>) --dop:area--> United_States (dor:United_States)'
+  '3':
+    attributes:
+      Ephraim_K._Smart: (party^='http://dbpedia.org/resource/Democratic_Party_(United_States)', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:constituencyDistrict--> United_States (dor:United_States)
+      - A._Walton_Litz (dor:A._Walton_Litz) --doo:nationality--> United_States (dor:United_States)
+      - Oren_Burbank_Cheney__Tenure__2 (dor:Oren_Burbank_Cheney__Tenure__2) --doo:predecessor--> Ephraim_K._Smart (dor:Ephraim_K._Smart)
+      - '''60s_Gold (<http://dbpedia.org/resource/''60s_Gold>) --dop:area--> United_States (dor:United_States)'
+attributes:
+  tenure: --deputy^ (doo:deputy)--> Resource | --president^ (doo:president)--> Resource
+  country: --align^ (dop:align)--> langString | --1p^ (dop:1p)--> int
+  politician: --original name^ (doo:originalName)--> langString | --known for^ (dop:knownFor)--> langString | --party^ (doo:party)--> Resource | --children^ (dop:children)--> int | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+subgraph_id: 849
+relationships:
+  - tenure --doo:constituencyDistrict--> country
+  - historian --doo:nationality--> country
+  - tenure --doo:predecessor--> politician
+  - radio station --dop:area--> country

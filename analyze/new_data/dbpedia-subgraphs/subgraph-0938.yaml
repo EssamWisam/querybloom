@@ -1,0 +1,50 @@
+types:
+  person: doo:Person
+  soccer club: doo:SoccerClub
+  radio station: doo:RadioStation
+  television show: doo:TelevisionShow
+  broadcast network: doo:BroadcastNetwork
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Mike_&_Mike: (starring^='http://dbpedia.org/resource/Mike_Golic')
+      Dave_Rothenberg: (occupation^='http://dbpedia.org/resource/Dave_Rothenberg__PersonFunction__1')
+    relationships:
+      - KAZM (dor:KAZM) --dop:affiliations--> ESPN_Radio (dor:ESPN_Radio)
+      - Mike_&_Mike (<http://dbpedia.org/resource/Mike_&_Mike>) --doo:network--> ESPN_Radio (dor:ESPN_Radio)
+      - Dave_Rothenberg (dor:Dave_Rothenberg) --dop:employer--> ESPN_Radio (dor:ESPN_Radio)
+      - KAZM (dor:KAZM) --doo:broadcastNetwork--> Arizona_Cardinals (dor:Arizona_Cardinals)
+  '2':
+    attributes:
+      Mike_&_Mike: (starring^='http://dbpedia.org/resource/Mike_Golic')
+      Dave_Rothenberg: (occupation^='http://dbpedia.org/resource/Dave_Rothenberg__PersonFunction__1')
+    relationships:
+      - KAZM (dor:KAZM) --dop:affiliations--> ESPN_Radio (dor:ESPN_Radio)
+      - Mike_&_Mike (<http://dbpedia.org/resource/Mike_&_Mike>) --doo:network--> ESPN_Radio (dor:ESPN_Radio)
+      - Dave_Rothenberg (dor:Dave_Rothenberg) --dop:employer--> ESPN_Radio (dor:ESPN_Radio)
+      - KAZM (dor:KAZM) --doo:broadcastNetwork--> Arizona_Coyotes (dor:Arizona_Coyotes)
+  '3':
+    attributes:
+      Mike_&_Mike: (starring^='http://dbpedia.org/resource/Mike_Golic')
+      Dave_Rothenberg: (occupation^='http://dbpedia.org/resource/Dave_Rothenberg__PersonFunction__1')
+      Arizona_Diamondbacks: (league^='NL')
+    relationships:
+      - KAZM (dor:KAZM) --dop:affiliations--> ESPN_Radio (dor:ESPN_Radio)
+      - Mike_&_Mike (<http://dbpedia.org/resource/Mike_&_Mike>) --doo:network--> ESPN_Radio (dor:ESPN_Radio)
+      - Dave_Rothenberg (dor:Dave_Rothenberg) --dop:employer--> ESPN_Radio (dor:ESPN_Radio)
+      - KAZM (dor:KAZM) --doo:broadcastNetwork--> Arizona_Diamondbacks (dor:Arizona_Diamondbacks)
+attributes:
+  person: --known for^ (dop:knownFor)--> langString | --cname^ (dop:cname)--> langString | --last^ (dop:last)--> langString | --occupation^ (doo:occupation)--> Resource
+  soccer club: --league^ (dop:league)--> int | --2ndRegional cup best^ (dop:2ndregionalCupBest)--> langString | --footer^ (dop:footer)--> langString
+  television show: --aux^ (dop:aux)--> langString | --starring^ (dop:starring)--> Resource
+subgraph_id: 938
+relationships:
+  - radio station --dop:affiliations--> broadcast network
+  - television show --doo:network--> broadcast network
+  - person --dop:employer--> broadcast network
+  - radio station --doo:broadcastNetwork--> soccer club

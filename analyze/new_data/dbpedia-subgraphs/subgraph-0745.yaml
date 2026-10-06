@@ -1,0 +1,88 @@
+types:
+  comic: doo:Comic
+  company: doo:Company
+  publisher: doo:Publisher
+  comics creator: doo:ComicsCreator
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Rebellion_Developments: (type^='http://dbpedia.org/resource/Privately_held_company', founded by^='http://dbpedia.org/resource/Jason_Kingsley_(businessman)', area served^='Worldwide', Link from a Wikipage to an external page^='https://rebellion.com/%7Crebellion.com')
+    relationships:
+      - 2000_AD_(comics) (<http://dbpedia.org/resource/2000_AD_(comics)>) --doo:publisher--> Rebellion_Developments (dor:Rebellion_Developments)
+      - 2000_AD_(comics) (<http://dbpedia.org/resource/2000_AD_(comics)>) --doo:publisher--> Fleetway (dor:Fleetway)
+      - 2000_AD_(comics) (<http://dbpedia.org/resource/2000_AD_(comics)>) --doo:writer--> Alan_Grant_(writer) (<http://dbpedia.org/resource/Alan_Grant_(writer)>)
+  '2':
+    attributes:
+      Rebellion_Developments: (type^='http://dbpedia.org/resource/Privately_held_company', founded by^='http://dbpedia.org/resource/Jason_Kingsley_(businessman)', area served^='Worldwide', Link from a Wikipage to an external page^='https://rebellion.com/%7Crebellion.com')
+    relationships:
+      - 2000_AD_(comics) (<http://dbpedia.org/resource/2000_AD_(comics)>) --doo:publisher--> Rebellion_Developments (dor:Rebellion_Developments)
+      - 2000_AD_(comics) (<http://dbpedia.org/resource/2000_AD_(comics)>) --doo:publisher--> Fleetway (dor:Fleetway)
+      - 2000_AD_(comics) (<http://dbpedia.org/resource/2000_AD_(comics)>) --doo:writer--> Grant_Morrison (dor:Grant_Morrison)
+  '3':
+    attributes:
+      Rebellion_Developments: (type^='http://dbpedia.org/resource/Privately_held_company', founded by^='http://dbpedia.org/resource/Jason_Kingsley_(businessman)', area served^='Worldwide', Link from a Wikipage to an external page^='https://rebellion.com/%7Crebellion.com')
+    relationships:
+      - 2000_AD_(comics) (<http://dbpedia.org/resource/2000_AD_(comics)>) --doo:publisher--> Rebellion_Developments (dor:Rebellion_Developments)
+      - 2000_AD_(comics) (<http://dbpedia.org/resource/2000_AD_(comics)>) --doo:publisher--> Fleetway (dor:Fleetway)
+      - 2000_AD_(comics) (<http://dbpedia.org/resource/2000_AD_(comics)>) --doo:writer--> Ian_Edginton (dor:Ian_Edginton)
+  '4':
+    attributes:
+      Starblaze_Graphics: (owner^='http://dbpedia.org/resource/The_Donning_Company')
+    relationships:
+      - A_Distant_Soil (dor:A_Distant_Soil) --doo:publisher--> Starblaze_Graphics (dor:Starblaze_Graphics)
+      - A_Distant_Soil (dor:A_Distant_Soil) --doo:publisher--> Image_Comics (dor:Image_Comics)
+      - A_Distant_Soil (dor:A_Distant_Soil) --doo:writer--> Colleen_Doran (dor:Colleen_Doran)
+  '5':
+    attributes:
+      WaRP_Graphics: (founded by^='http://dbpedia.org/resource/Richard_Pini', Link from a Wikipage to an external page^='http://www.elfquest.com')
+    relationships:
+      - A_Distant_Soil (dor:A_Distant_Soil) --doo:publisher--> WaRP_Graphics (dor:WaRP_Graphics)
+      - A_Distant_Soil (dor:A_Distant_Soil) --doo:publisher--> Image_Comics (dor:Image_Comics)
+      - A_Distant_Soil (dor:A_Distant_Soil) --doo:writer--> Colleen_Doran (dor:Colleen_Doran)
+  '6':
+    attributes:
+      Image_Comics: (Link from a Wikipage to an external page^='http://comicbookresources.com/news/newsitem.cgi%3Fid=10833')
+    relationships:
+      - After_the_Cape (dor:After_the_Cape) --doo:publisher--> Image_Comics (dor:Image_Comics)
+      - After_the_Cape (dor:After_the_Cape) --doo:publisher--> Shadowline (dor:Shadowline)
+      - After_the_Cape (dor:After_the_Cape) --doo:writer--> Jim_Valentino (dor:Jim_Valentino)
+  '7':
+    attributes:
+      Shadowline: (Link from a Wikipage to an external page^='http://shadowlinecomics.tumblr.com')
+    relationships:
+      - After_the_Cape (dor:After_the_Cape) --doo:publisher--> Shadowline (dor:Shadowline)
+      - After_the_Cape (dor:After_the_Cape) --doo:publisher--> Image_Comics (dor:Image_Comics)
+      - After_the_Cape (dor:After_the_Cape) --doo:writer--> Jim_Valentino (dor:Jim_Valentino)
+  '8':
+    attributes:
+      Pacific_Comics: (founded by^='http://dbpedia.org/resource/Bill_Schanes', Link from a Wikipage to an external page^='http://www.internationalhero.co.uk/p/pacific.htm', owner^='Blue Dolphin Enterprises')
+    relationships:
+      - Alien_Worlds (dor:Alien_Worlds) --doo:publisher--> Pacific_Comics (dor:Pacific_Comics)
+      - Alien_Worlds (dor:Alien_Worlds) --doo:publisher--> Eclipse_Comics (dor:Eclipse_Comics)
+      - Alien_Worlds (dor:Alien_Worlds) --doo:writer--> Bruce_Jones_(comics) (<http://dbpedia.org/resource/Bruce_Jones_(comics)>)
+  '9':
+    attributes:
+      DC_Comics: (width^='200', Link from a Wikipage to an external page^='http://www.mikesamazingworld.com/mikes/')
+    relationships:
+      - Angel_and_the_Ape (dor:Angel_and_the_Ape) --doo:publisher--> DC_Comics (dor:DC_Comics)
+      - Angel_and_the_Ape (dor:Angel_and_the_Ape) --doo:publisher--> Vertigo_Comics (dor:Vertigo_Comics)
+      - Angel_and_the_Ape (dor:Angel_and_the_Ape) --doo:writer--> David_Tischman (dor:David_Tischman)
+  '10':
+    attributes:
+      DC_Comics: (width^='200', Link from a Wikipage to an external page^='http://www.mikesamazingworld.com/mikes/')
+    relationships:
+      - Angel_and_the_Ape (dor:Angel_and_the_Ape) --doo:publisher--> DC_Comics (dor:DC_Comics)
+      - Angel_and_the_Ape (dor:Angel_and_the_Ape) --doo:publisher--> Vertigo_Comics (dor:Vertigo_Comics)
+      - Angel_and_the_Ape (dor:Angel_and_the_Ape) --doo:writer--> E._Nelson_Bridwell (dor:E._Nelson_Bridwell)
+attributes:
+  company: --headquarter^ (doo:headquarter)--> Resource | --quote (dop:quote)--> langString | --width^ (dop:width)--> int | --1a^ (dop:1a)--> langString | --type^ (doo:type)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --logo width^ (dop:logoWidth)--> int | --founded by^ (doo:foundedBy)--> Resource | --altname^ (dop:altname)--> langString | --area served^ (dop:areaServed)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --owner^ (dop:owner)--> Resource
+subgraph_id: 745
+relationships:
+  - comic --doo:publisher--> company
+  - comic --doo:publisher--> publisher
+  - comic --doo:writer--> comics creator

@@ -1,0 +1,85 @@
+types:
+  athlete: doo:Athlete
+  stadium: doo:Stadium
+  Location: doo:Location
+  soccer club: doo:SoccerClub
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Aaron_Brooks_(wrestler) (<http://dbpedia.org/resource/Aaron_Brooks_(wrestler)>) --dop:collegeteam--> Penn_State_Nittany_Lions (dor:Penn_State_Nittany_Lions)
+      - Bryce_Jordan_Center (dor:Bryce_Jordan_Center) --doo:tenant--> Penn_State_Nittany_Lions (dor:Penn_State_Nittany_Lions)
+      - Bryce_Jordan_Center (dor:Bryce_Jordan_Center) --doo:location--> Pennsylvania (dor:Pennsylvania)
+  '2':
+    attributes:
+      Lexington,_Kentucky: (Apr record high F^='91', Apr high F^='67.2', Apr precipitation days^='12.8')
+    relationships:
+      - Abby_Steiner (dor:Abby_Steiner) --dop:collegeteam--> Kentucky_Wildcats (dor:Kentucky_Wildcats)
+      - Rupp_Arena (dor:Rupp_Arena) --doo:tenant--> Kentucky_Wildcats (dor:Kentucky_Wildcats)
+      - Rupp_Arena (dor:Rupp_Arena) --doo:location--> Lexington,_Kentucky (<http://dbpedia.org/resource/Lexington,_Kentucky>)
+  '3':
+    attributes:
+      El_Paso,_Texas: (Apr record high F^='98', Apr high F^='80', Apr precipitation days^='1')
+    relationships:
+      - Abiola_Onakoya (dor:Abiola_Onakoya) --dop:collegeteam--> UTEP_Miners (dor:UTEP_Miners)
+      - El_Paso_County_Coliseum (dor:El_Paso_County_Coliseum) --doo:tenant--> UTEP_Miners (dor:UTEP_Miners)
+      - El_Paso_County_Coliseum (dor:El_Paso_County_Coliseum) --doo:location--> El_Paso,_Texas (<http://dbpedia.org/resource/El_Paso,_Texas>)
+  '4':
+    attributes:
+      Louisville,_Kentucky: (country^='http://dbpedia.org/resource/United_States')
+    relationships:
+      - Ádám_Madarassy (<http://dbpedia.org/resource/Ádám_Madarassy>) --dop:collegeteam--> Louisville_Cardinals (dor:Louisville_Cardinals)
+      - KFC_Yum!_Center (<http://dbpedia.org/resource/KFC_Yum!_Center>) --doo:tenant--> Louisville_Cardinals (dor:Louisville_Cardinals)
+      - KFC_Yum!_Center (<http://dbpedia.org/resource/KFC_Yum!_Center>) --doo:location--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+  '5':
+    attributes: {}
+    relationships:
+      - Adam_Sioui (dor:Adam_Sioui) --dop:collegeteam--> Calgary_Dinos (dor:Calgary_Dinos)
+      - McMahon_Stadium (dor:McMahon_Stadium) --doo:tenant--> Calgary_Dinos (dor:Calgary_Dinos)
+      - McMahon_Stadium (dor:McMahon_Stadium) --doo:location--> Calgary (dor:Calgary)
+  '6':
+    attributes:
+      Ithaca,_New_York: (Apr record high F^='91', Apr high F^='54.5', Apr precipitation days^='13.6')
+    relationships:
+      - Adrian_Woodley (dor:Adrian_Woodley) --dop:collegeteam--> Syracuse_Orange (dor:Syracuse_Orange)
+      - Schoellkopf_Field (dor:Schoellkopf_Field) --doo:tenant--> Syracuse_Orange (dor:Syracuse_Orange)
+      - Schoellkopf_Field (dor:Schoellkopf_Field) --doo:location--> Ithaca,_New_York (<http://dbpedia.org/resource/Ithaca,_New_York>)
+  '7':
+    attributes: {}
+    relationships:
+      - Aina_Cid (dor:Aina_Cid) --dop:collegeteam--> Ohio_State_Buckeyes (dor:Ohio_State_Buckeyes)
+      - Covelli_Center__Covelli_Center__1 (dor:Covelli_Center__Covelli_Center__1) --doo:tenant--> Ohio_State_Buckeyes (dor:Ohio_State_Buckeyes)
+      - Covelli_Center__Covelli_Center__1 (dor:Covelli_Center__Covelli_Center__1) --doo:location--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+  '8':
+    attributes:
+      California: (country^='http://dbpedia.org/resource/United_States', auto^='1')
+    relationships:
+      - Aisling_Cuffe (dor:Aisling_Cuffe) --dop:collegeteam--> Stanford_Cardinal (dor:Stanford_Cardinal)
+      - Kaiser_Permanente_Arena (dor:Kaiser_Permanente_Arena) --doo:tenant--> Stanford_Cardinal (dor:Stanford_Cardinal)
+      - Kaiser_Permanente_Arena (dor:Kaiser_Permanente_Arena) --doo:location--> California (dor:California)
+  '9':
+    attributes:
+      Santa_Cruz,_California: (Apr record high F^='97', Apr high F^='69.3', Apr precipitation days^='6')
+    relationships:
+      - Aisling_Cuffe (dor:Aisling_Cuffe) --dop:collegeteam--> Stanford_Cardinal (dor:Stanford_Cardinal)
+      - Kaiser_Permanente_Arena (dor:Kaiser_Permanente_Arena) --doo:tenant--> Stanford_Cardinal (dor:Stanford_Cardinal)
+      - Kaiser_Permanente_Arena (dor:Kaiser_Permanente_Arena) --doo:location--> Santa_Cruz,_California (<http://dbpedia.org/resource/Santa_Cruz,_California>)
+  '10':
+    attributes: {}
+    relationships:
+      - Aisling_Cuffe (dor:Aisling_Cuffe) --dop:collegeteam--> Stanford_Cardinal (dor:Stanford_Cardinal)
+      - Kaiser_Permanente_Arena (dor:Kaiser_Permanente_Arena) --doo:tenant--> Stanford_Cardinal (dor:Stanford_Cardinal)
+      - Kaiser_Permanente_Arena (dor:Kaiser_Permanente_Arena) --doo:location--> United_States (dor:United_States)
+attributes:
+  Location: --footer align^ (dop:footerAlign)--> langString | --country^ (doo:country)--> Resource | --Aug high C^ (dop:augHighC)--> double | --Apr record high F^ (dop:aprRecordHighF)--> double | --mouth mountain^ (doo:mouthMountain)--> Resource | --Apr high F^ (dop:aprHighF)--> int | --auto^ (dop:auto)--> langString | --original name^ (doo:originalName)--> langString | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int
+  soccer club: --d^ (dop:d)--> int | --image size^ (dop:imageSize)--> int
+subgraph_id: 608
+relationships:
+  - athlete --dop:collegeteam--> soccer club
+  - stadium --doo:tenant--> soccer club
+  - stadium --doo:location--> Location

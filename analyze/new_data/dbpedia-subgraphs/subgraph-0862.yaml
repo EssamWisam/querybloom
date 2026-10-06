@@ -1,0 +1,44 @@
+types:
+  town: doo:Town
+  village: doo:Village
+  Location: doo:Location
+  bus company: doo:BusCompany
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Stockholm,_New_Jersey (<http://dbpedia.org/resource/Stockholm,_New_Jersey>) --doo:namedAfter--> Sweden (dor:Sweden)
+      - 3H_Biomedical (dor:3H_Biomedical) --doo:location--> Sweden (dor:Sweden)
+      - UL_(Sweden) (<http://dbpedia.org/resource/UL_(Sweden)>) --doo:headquarter--> Sweden (dor:Sweden)
+      - Sweden (dor:Sweden) --doo:capital--> Stockholm (dor:Stockholm)
+  '2':
+    attributes: {}
+    relationships:
+      - Stockholm,_New_Jersey (<http://dbpedia.org/resource/Stockholm,_New_Jersey>) --doo:namedAfter--> Sweden (dor:Sweden)
+      - A_Side_Productions (dor:A_Side_Productions) --doo:location--> Sweden (dor:Sweden)
+      - UL_(Sweden) (<http://dbpedia.org/resource/UL_(Sweden)>) --doo:headquarter--> Sweden (dor:Sweden)
+      - Sweden (dor:Sweden) --doo:capital--> Stockholm (dor:Stockholm)
+  '3':
+    attributes: {}
+    relationships:
+      - Stockholm,_New_Jersey (<http://dbpedia.org/resource/Stockholm,_New_Jersey>) --doo:namedAfter--> Sweden (dor:Sweden)
+      - A3_Basket (dor:A3_Basket) --doo:location--> Sweden (dor:Sweden)
+      - UL_(Sweden) (<http://dbpedia.org/resource/UL_(Sweden)>) --doo:headquarter--> Sweden (dor:Sweden)
+      - Sweden (dor:Sweden) --doo:capital--> Stockholm (dor:Stockholm)
+attributes:
+  town: --Aug precipitation days^ (dop:augPrecipitationDays)--> double
+  village: --differentFrom (wwoo:differentFrom)--> Resource | --Apr low F^ (dop:aprLowF)--> double | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --source^ (dop:source)--> Resource | --Apr high C^ (dop:aprHighC)--> int | --arc-radiusA^ (dop:arcRadiusa)--> double
+  Location: --bgcolor^ (dop:bgcolor)--> langString | --designated other1 date^ (dop:designatedOther1Date)--> date | --width^ (dop:width)--> perCent | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double
+subgraph_id: 862
+relationships:
+  - village --doo:namedAfter--> Location
+  - organisation --doo:location--> Location
+  - bus company --doo:headquarter--> Location
+  - Location --doo:capital--> town

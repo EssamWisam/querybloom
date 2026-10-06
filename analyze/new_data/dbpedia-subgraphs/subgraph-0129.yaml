@@ -1,0 +1,98 @@
+types:
+  Band: doo:Band
+  album: doo:Album
+  movie: doo:Film
+  single: doo:Single
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      ¡Volaré!_The_Very_Best_of_the_Gipsy_Kings: (id^='11548')
+    relationships:
+      - Taxi_(1996_film) (<http://dbpedia.org/resource/Taxi_(1996_film)>) --dop:music--> Gipsy_Kings (dor:Gipsy_Kings)
+      - Djobi_Djoba (dor:Djobi_Djoba) --doo:writer--> Gipsy_Kings (dor:Gipsy_Kings)
+      - ¡Volaré!_The_Very_Best_of_the_Gipsy_Kings (<http://dbpedia.org/resource/¡Volaré!_The_Very_Best_of_the_Gipsy_Kings>) --dop:title--> Djobi_Djoba (dor:Djobi_Djoba)
+  '2':
+    attributes:
+      Julio_Iglesias: (Link from a Wikipage to an external page^='http://www.julioiglesias.com/')
+      Totalmente_Demais: (completion date^='2016-05-30', release date^='2015-11-09')
+      1100_Bel_Air_Place: (id^='56', date^='1984-10-09')
+    relationships:
+      - Totalmente_Demais (dor:Totalmente_Demais) --dop:music--> Julio_Iglesias (dor:Julio_Iglesias)
+      - All_of_You_(Julio_Iglesias_and_Diana_Ross_song) (<http://dbpedia.org/resource/All_of_You_(Julio_Iglesias_and_Diana_Ross_song)>) --doo:writer--> Julio_Iglesias (dor:Julio_Iglesias)
+      - 1100_Bel_Air_Place (dor:1100_Bel_Air_Place) --dop:title--> All_of_You_(Julio_Iglesias_and_Diana_Ross_song) (<http://dbpedia.org/resource/All_of_You_(Julio_Iglesias_and_Diana_Ross_song)>)
+  '3':
+    attributes:
+      Aretha_Franklin: (Link from a Wikipage to an external page^='http://repertoire.bmi.com/Catalog.aspx%3Fdetail=writerid&keyid=118328&subid=0&page=3&fromrow=51&torow=75')
+    relationships:
+      - Black_Joy_(film) (<http://dbpedia.org/resource/Black_Joy_(film)>) --dop:music--> Aretha_Franklin (dor:Aretha_Franklin)
+      - (Sweet_Sweet_Baby)_Since_You've_Been_Gone (<http://dbpedia.org/resource/(Sweet_Sweet_Baby)_Since_You've_Been_Gone>) --doo:writer--> Aretha_Franklin (dor:Aretha_Franklin)
+      - 1157_(album) (<http://dbpedia.org/resource/1157_(album)>) --dop:title--> (Sweet_Sweet_Baby)_Since_You've_Been_Gone (<http://dbpedia.org/resource/(Sweet_Sweet_Baby)_Since_You've_Been_Gone>)
+  '4':
+    attributes:
+      James_Taylor: (Link from a Wikipage to an external page^='https://archive.org/details/jamestaylor00timo')
+    relationships:
+      - Badlands_(film) (<http://dbpedia.org/resource/Badlands_(film)>) --dop:music--> James_Taylor (dor:James_Taylor)
+      - Fire_and_Rain_(song) (<http://dbpedia.org/resource/Fire_and_Rain_(song)>) --doo:writer--> James_Taylor (dor:James_Taylor)
+      - 12_(American_Song_Book) (<http://dbpedia.org/resource/12_(American_Song_Book)>) --dop:title--> Fire_and_Rain_(song) (<http://dbpedia.org/resource/Fire_and_Rain_(song)>)
+  '5':
+    attributes:
+      The_Doors: (Link from a Wikipage to an external page^='https://archive.org/details/27sgreatestmytho0000sega')
+      R-Evolution_(film): (release date^='2013-11-25')
+    relationships:
+      - R-Evolution_(film) (<http://dbpedia.org/resource/R-Evolution_(film)>) --dop:music--> The_Doors (dor:The_Doors)
+      - Hello,_I_Love_You (<http://dbpedia.org/resource/Hello,_I_Love_You>) --doo:writer--> The_Doors (dor:The_Doors)
+      - 13_(The_Doors_album) (<http://dbpedia.org/resource/13_(The_Doors_album)>) --dop:title--> Hello,_I_Love_You (<http://dbpedia.org/resource/Hello,_I_Love_You>)
+  '6':
+    attributes:
+      The_Doors: (Link from a Wikipage to an external page^='https://archive.org/details/27sgreatestmytho0000sega')
+      R-Evolution_(film): (release date^='2013-11-25')
+    relationships:
+      - R-Evolution_(film) (<http://dbpedia.org/resource/R-Evolution_(film)>) --dop:music--> The_Doors (dor:The_Doors)
+      - Love_Me_Two_Times (dor:Love_Me_Two_Times) --doo:writer--> The_Doors (dor:The_Doors)
+      - 13_(The_Doors_album) (<http://dbpedia.org/resource/13_(The_Doors_album)>) --dop:title--> Love_Me_Two_Times (dor:Love_Me_Two_Times)
+  '7':
+    attributes:
+      The_Doors: (Link from a Wikipage to an external page^='https://archive.org/details/27sgreatestmytho0000sega')
+      R-Evolution_(film): (release date^='2013-11-25')
+    relationships:
+      - R-Evolution_(film) (<http://dbpedia.org/resource/R-Evolution_(film)>) --dop:music--> The_Doors (dor:The_Doors)
+      - Moonlight_Drive (dor:Moonlight_Drive) --doo:writer--> The_Doors (dor:The_Doors)
+      - 13_(The_Doors_album) (<http://dbpedia.org/resource/13_(The_Doors_album)>) --dop:title--> Moonlight_Drive (dor:Moonlight_Drive)
+  '8':
+    attributes:
+      Snoop_Dogg: (Link from a Wikipage to an external page^='https://archive.org/details/thadoggfathertim00snoo')
+      15_Years_on_Death_Row: (date^='June 2019')
+    relationships:
+      - Boss'n_Up (<http://dbpedia.org/resource/Boss'n_Up>) --dop:music--> Snoop_Dogg (dor:Snoop_Dogg)
+      - Gin_and_Juice (dor:Gin_and_Juice) --doo:writer--> Snoop_Dogg (dor:Snoop_Dogg)
+      - 15_Years_on_Death_Row (dor:15_Years_on_Death_Row) --dop:title--> Gin_and_Juice (dor:Gin_and_Juice)
+  '9':
+    attributes:
+      Snoop_Dogg: (Link from a Wikipage to an external page^='https://archive.org/details/thadoggfathertim00snoo')
+      15_Years_on_Death_Row: (date^='June 2019')
+    relationships:
+      - Boss'n_Up (<http://dbpedia.org/resource/Boss'n_Up>) --dop:music--> Snoop_Dogg (dor:Snoop_Dogg)
+      - Let_Me_Ride (dor:Let_Me_Ride) --doo:writer--> Snoop_Dogg (dor:Snoop_Dogg)
+      - 15_Years_on_Death_Row (dor:15_Years_on_Death_Row) --dop:title--> Let_Me_Ride (dor:Let_Me_Ride)
+  '10':
+    attributes:
+      Snoop_Dogg: (Link from a Wikipage to an external page^='https://archive.org/details/thadoggfathertim00snoo')
+      15_Years_on_Death_Row: (date^='June 2019')
+    relationships:
+      - Boss'n_Up (<http://dbpedia.org/resource/Boss'n_Up>) --dop:music--> Snoop_Dogg (dor:Snoop_Dogg)
+      - New_York,_New_York_(Tha_Dogg_Pound_song) (<http://dbpedia.org/resource/New_York,_New_York_(Tha_Dogg_Pound_song)>) --doo:writer--> Snoop_Dogg (dor:Snoop_Dogg)
+      - 15_Years_on_Death_Row (dor:15_Years_on_Death_Row) --dop:title--> New_York,_New_York_(Tha_Dogg_Pound_song) (<http://dbpedia.org/resource/New_York,_New_York_(Tha_Dogg_Pound_song)>)
+attributes:
+  Band: --alt^ (dop:alt)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --artist^ (dop:artist)--> langString
+  album: --id^ (dop:id)--> langString | --date^ (dop:date)--> langString
+  movie: --completion date^ (doo:completionDate)--> date | --2a^ (dop:2a)--> langString | --release date^ (doo:releaseDate)--> date | --gross ($)^ (doo:gross)--> usDollar
+subgraph_id: 129
+relationships:
+  - movie --dop:music--> Band
+  - single --doo:writer--> Band
+  - album --dop:title--> single

@@ -1,0 +1,127 @@
+types:
+  record label: doo:RecordLabel
+  musical artist: doo:MusicalArtist
+  artist discography: doo:ArtistDiscography
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Capitol_Records: (founder^='http://dbpedia.org/resource/Buddy_DeSylva')
+      '%22Weird_Al%22_Yankovic': (has abstract^='"Weird Al" Yankovic, pseudonimo di Alfred Matthew Yankovic (Downey, 23 ottobre 1959), è un cantautore, fisarmonicista, attore e comico statunitense. Ha registrato la sua prima parodia nel 1976, ha ven...')
+      '%22Weird_Al%22_Yankovic_discography': (id^='7746')
+    relationships:
+      - '%22Weird_Al%22_Yankovic_discography (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic_discography>) --doo:artist--> %22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>)'
+      - '%22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>) --doo:recordLabel--> Capitol_Records (dor:Capitol_Records)'
+  '2':
+    attributes:
+      RCA_Records: (founder^='')
+      '%22Weird_Al%22_Yankovic': (has abstract^='"Weird Al" Yankovic, pseudonimo di Alfred Matthew Yankovic (Downey, 23 ottobre 1959), è un cantautore, fisarmonicista, attore e comico statunitense. Ha registrato la sua prima parodia nel 1976, ha ven...')
+      '%22Weird_Al%22_Yankovic_discography': (id^='7746')
+    relationships:
+      - '%22Weird_Al%22_Yankovic_discography (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic_discography>) --doo:artist--> %22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>)'
+      - '%22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>) --doo:recordLabel--> RCA_Records (dor:RCA_Records)'
+  '3':
+    attributes:
+      '%22Weird_Al%22_Yankovic': (has abstract^='"Weird Al" Yankovic, pseudonimo di Alfred Matthew Yankovic (Downey, 23 ottobre 1959), è un cantautore, fisarmonicista, attore e comico statunitense. Ha registrato la sua prima parodia nel 1976, ha ven...')
+      '%22Weird_Al%22_Yankovic_discography': (id^='7746')
+    relationships:
+      - '%22Weird_Al%22_Yankovic_discography (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic_discography>) --doo:artist--> %22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>)'
+      - '%22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>) --doo:recordLabel--> Rock_''n_Roll_Records (<http://dbpedia.org/resource/Rock_''n_Roll_Records>)'
+  '4':
+    attributes:
+      21_Savage: (has abstract^='21 Savage (* 22. Oktober 1992 in Newham, London; bürgerlich Sha Yaa Bin Abraham-Joseph oder auch Shayaa Bin Abraham-Joseph) ist ein in Atlanta im US-Bundesstaat Georgia ansässiger britischer Rapper.')
+      Epic_Records: (founder^='http://dbpedia.org/resource/Columbia_Records')
+    relationships:
+      - 21_Savage_discography (dor:21_Savage_discography) --doo:artist--> 21_Savage (dor:21_Savage)
+      - 21_Savage (dor:21_Savage) --doo:recordLabel--> Epic_Records (dor:Epic_Records)
+  '5':
+    attributes:
+      6ix9ine: '(has abstract^=''6ix9ine (ausgesprochen: six-nine), gelegentlich auch Tekashi69, bürgerlich Daniel Hernandez (* 8. Mai 1996 in Brooklyn, New York City), ist ein US-amerikanischer Rapper.'')'
+      10K_Projects: (founder^='Elliot Grainge')
+    relationships:
+      - 6ix9ine_discography (dor:6ix9ine_discography) --doo:artist--> 6ix9ine (dor:6ix9ine)
+      - 6ix9ine (dor:6ix9ine) --doo:recordLabel--> 10K_Projects (dor:10K_Projects)
+  '6':
+    attributes:
+      6ix9ine: '(has abstract^=''6ix9ine (ausgesprochen: six-nine), gelegentlich auch Tekashi69, bürgerlich Daniel Hernandez (* 8. Mai 1996 in Brooklyn, New York City), ist ein US-amerikanischer Rapper.'')'
+      Virgin_Music_Label_&_Artist_Services: (founder^='http://dbpedia.org/resource/Virgin_Records')
+    relationships:
+      - 6ix9ine_discography (dor:6ix9ine_discography) --doo:artist--> 6ix9ine (dor:6ix9ine)
+      - 6ix9ine (dor:6ix9ine) --doo:recordLabel--> Virgin_Music_Label_&_Artist_Services (<http://dbpedia.org/resource/Virgin_Music_Label_&_Artist_Services>)
+  '7':
+    attributes:
+      6lack: (has abstract^='6lack (reso graficamente 6LACK), pseudonimo di Ricardo Valdez Valentine, Jr. (Baltimora, 24 giugno 1992), è un rapper e cantante statunitense. Conosciuto principalmente per il suo singolo Prblms, che ...')
+      Interscope_Records: (founder^='http://dbpedia.org/resource/Jimmy_Iovine')
+    relationships:
+      - 6lack_discography (dor:6lack_discography) --doo:artist--> 6lack (dor:6lack)
+      - 6lack (dor:6lack) --doo:recordLabel--> Interscope_Records (dor:Interscope_Records)
+  '8':
+    attributes:
+      6lack: (has abstract^='6lack (reso graficamente 6LACK), pseudonimo di Ricardo Valdez Valentine, Jr. (Baltimora, 24 giugno 1992), è un rapper e cantante statunitense. Conosciuto principalmente per il suo singolo Prblms, che ...')
+      Love_Renaissance: (founder^='Carlon Ramong')
+    relationships:
+      - 6lack_discography (dor:6lack_discography) --doo:artist--> 6lack (dor:6lack)
+      - 6lack (dor:6lack) --doo:recordLabel--> Love_Renaissance (dor:Love_Renaissance)
+  '9':
+    attributes:
+      8Ball_&_MJG: (has abstract^='8Ball & MJG – amerykański duet hip-hopowy. Obaj członkowie poznali się w szkole „Ridgeway Middle School” w 1984 r. W 1993 zadebiutowali z albumem „Comin'' Out Hard”. Ich pierwszym większym sukcesem był...', associated musical artist^='http://dbpedia.org/resource/Al_Kapone', associated acts^='')
+      Atlantic_Records: (founder^='http://dbpedia.org/resource/Ahmet_Ertegun')
+    relationships:
+      - 8Ball_&_MJG_discography (<http://dbpedia.org/resource/8Ball_&_MJG_discography>) --doo:artist--> 8Ball_&_MJG (<http://dbpedia.org/resource/8Ball_&_MJG>)
+      - 8Ball_&_MJG (<http://dbpedia.org/resource/8Ball_&_MJG>) --doo:recordLabel--> Atlantic_Records (dor:Atlantic_Records)
+  '10':
+    attributes:
+      8Ball_&_MJG: (has abstract^='8Ball & MJG – amerykański duet hip-hopowy. Obaj członkowie poznali się w szkole „Ridgeway Middle School” w 1984 r. W 1993 zadebiutowali z albumem „Comin'' Out Hard”. Ich pierwszym większym sukcesem był...', associated musical artist^='http://dbpedia.org/resource/Al_Kapone', associated acts^='')
+      Bad_Boy_South: (founder^='http://dbpedia.org/resource/Sean_Combs')
+    relationships:
+      - 8Ball_&_MJG_discography (<http://dbpedia.org/resource/8Ball_&_MJG_discography>) --doo:artist--> 8Ball_&_MJG (<http://dbpedia.org/resource/8Ball_&_MJG>)
+      - 8Ball_&_MJG (<http://dbpedia.org/resource/8Ball_&_MJG>) --doo:recordLabel--> Bad_Boy_South (dor:Bad_Boy_South)
+qa_result:
+  status: completed
+  cost_usd: 0.289572
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.029652400000000002
+        total_tokens: 3423
+        prompt_tokens: 2142
+        completion_tokens: 1281
+      generate:
+        cost_usd: 0.0721326
+        total_tokens: 7193
+        prompt_tokens: 4302
+        completion_tokens: 2891
+      verify_1:
+        cost_usd: 0.05042200000000001
+        total_tokens: 6065
+        prompt_tokens: 4725
+        completion_tokens: 1340
+      verify_2:
+        cost_usd: 0.036917000000000005
+        total_tokens: 5191
+        prompt_tokens: 4460
+        completion_tokens: 731
+      complexity:
+        cost_usd: 0.10044800000000001
+        total_tokens: 9746
+        prompt_tokens: 5726
+        completion_tokens: 4020
+    total_tokens: 31618
+    prompt_tokens: 21355
+    total_cost_usd: 0.28957200000000005
+    completion_tokens: 10263
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  record label: --founder^ (dop:founder)--> langString
+  musical artist: --children (dop:children)--> int | --has abstract^ (doo:abstract)--> langString | --associated musical artist^ (doo:associatedMusicalArtist)--> Resource | --bgcolor^ (dop:bgcolor)--> langString | --d^ (dop:d)--> langString | --spouse^ (dop:spouse)--> int | --associated acts^ (dop:associatedActs)--> langString
+  artist discography: --group^ (dop:group)--> langString | --id^ (dop:id)--> langString | --class^ (dop:class)--> langString
+subgraph_id: 245
+relationships:
+  - artist discography --doo:artist--> musical artist
+  - musical artist --doo:recordLabel--> record label

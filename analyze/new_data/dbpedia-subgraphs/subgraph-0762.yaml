@@ -1,0 +1,117 @@
+types:
+  city: doo:City
+  award: doo:Award
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Glasgow: (width^='250')
+      Edinburgh: (area code^='0131', Apr precipitation days^='8.6')
+      1996–97_Celtic_F.C._season: (manager^='http://dbpedia.org/resource/Billy_Stark', league^='http://dbpedia.org/resource/1996–97_Scottish_Premier_Division')
+    relationships:
+      - 1996–97_Celtic_F.C._season (<http://dbpedia.org/resource/1996–97_Celtic_F.C._season>) --dop:location--> Edinburgh (dor:Edinburgh)
+      - 1996–97_Celtic_F.C._season (<http://dbpedia.org/resource/1996–97_Celtic_F.C._season>) --doo:homeStadium--> Glasgow (dor:Glasgow)
+      - Adam_Archibald (dor:Adam_Archibald) --doo:restingPlace--> Edinburgh (dor:Edinburgh)
+      - Adam_Archibald (dor:Adam_Archibald) --doo:award--> Victoria_Cross (dor:Victoria_Cross)
+  '2':
+    attributes:
+      Glasgow: (width^='250')
+      Edinburgh: (area code^='0131', Apr precipitation days^='8.6')
+      2013–14_Rangers_F.C._season: (manager^='http://dbpedia.org/resource/Ally_McCoist', league^='http://dbpedia.org/resource/2013–14_Scottish_League_One', highest attendance^='46093')
+    relationships:
+      - 2013–14_Rangers_F.C._season (<http://dbpedia.org/resource/2013–14_Rangers_F.C._season>) --dop:location--> Edinburgh (dor:Edinburgh)
+      - 2013–14_Rangers_F.C._season (<http://dbpedia.org/resource/2013–14_Rangers_F.C._season>) --doo:homeStadium--> Glasgow (dor:Glasgow)
+      - Adam_Archibald (dor:Adam_Archibald) --doo:restingPlace--> Edinburgh (dor:Edinburgh)
+      - Adam_Archibald (dor:Adam_Archibald) --doo:award--> Victoria_Cross (dor:Victoria_Cross)
+  '3':
+    attributes:
+      Edinburgh: (area code^='0131', Apr precipitation days^='8.6', Aug precipitation mm^='71.6', Apr sun^='147.7')
+      2014–15_Celtic_F.C._season: (manager^='http://dbpedia.org/resource/Ronny_Deila', league^='http://dbpedia.org/resource/2014–15_Scottish_Premiership', highest attendance^='58500')
+    relationships:
+      - 2014–15_Celtic_F.C._season (<http://dbpedia.org/resource/2014–15_Celtic_F.C._season>) --dop:location--> Edinburgh (dor:Edinburgh)
+      - 2014–15_Celtic_F.C._season (<http://dbpedia.org/resource/2014–15_Celtic_F.C._season>) --doo:homeStadium--> Edinburgh (dor:Edinburgh)
+      - Adam_Archibald (dor:Adam_Archibald) --doo:restingPlace--> Edinburgh (dor:Edinburgh)
+      - Adam_Archibald (dor:Adam_Archibald) --doo:award--> Victoria_Cross (dor:Victoria_Cross)
+  '4':
+    attributes:
+      Bayamón,_Puerto_Rico: (area code^='787/939')
+      2010_FC_Tampa_Bay_season: (manager^='http://dbpedia.org/resource/Paul_Dalglish', league^='http://dbpedia.org/resource/USSF_D2_Pro_League', highest attendance^='8082')
+    relationships:
+      - 2010_FC_Tampa_Bay_season (dor:2010_FC_Tampa_Bay_season) --dop:location--> Bayamón,_Puerto_Rico (<http://dbpedia.org/resource/Bayamón,_Puerto_Rico>)
+      - 2010_FC_Tampa_Bay_season (dor:2010_FC_Tampa_Bay_season) --doo:homeStadium--> Tampa,_Florida (<http://dbpedia.org/resource/Tampa,_Florida>)
+      - Agustín_Ramos_Calero (<http://dbpedia.org/resource/Agustín_Ramos_Calero>) --doo:restingPlace--> Bayamón,_Puerto_Rico (<http://dbpedia.org/resource/Bayamón,_Puerto_Rico>)
+      - Agustín_Ramos_Calero (<http://dbpedia.org/resource/Agustín_Ramos_Calero>) --doo:award--> Purple_Heart (dor:Purple_Heart)
+  '5':
+    attributes:
+      Bayamón,_Puerto_Rico: (area code^='787/939')
+      2010_FC_Tampa_Bay_season: (manager^='http://dbpedia.org/resource/Paul_Dalglish', league^='http://dbpedia.org/resource/USSF_D2_Pro_League', highest attendance^='8082')
+    relationships:
+      - 2010_FC_Tampa_Bay_season (dor:2010_FC_Tampa_Bay_season) --dop:location--> Bayamón,_Puerto_Rico (<http://dbpedia.org/resource/Bayamón,_Puerto_Rico>)
+      - 2010_FC_Tampa_Bay_season (dor:2010_FC_Tampa_Bay_season) --doo:homeStadium--> Tampa,_Florida (<http://dbpedia.org/resource/Tampa,_Florida>)
+      - Agustín_Ramos_Calero (<http://dbpedia.org/resource/Agustín_Ramos_Calero>) --doo:restingPlace--> Bayamón,_Puerto_Rico (<http://dbpedia.org/resource/Bayamón,_Puerto_Rico>)
+      - Agustín_Ramos_Calero (<http://dbpedia.org/resource/Agustín_Ramos_Calero>) --doo:award--> Silver_Star (dor:Silver_Star)
+  '6':
+    attributes:
+      Florida: (width^='210')
+      Bayamón,_Puerto_Rico: (area code^='787/939')
+      2011_FC_Tampa_Bay_season: (manager^='http://dbpedia.org/resource/Ricky_Hill', league^='http://dbpedia.org/resource/North_American_Soccer_League_(2011)', highest attendance^='4248')
+    relationships:
+      - 2011_FC_Tampa_Bay_season (dor:2011_FC_Tampa_Bay_season) --dop:location--> Bayamón,_Puerto_Rico (<http://dbpedia.org/resource/Bayamón,_Puerto_Rico>)
+      - 2011_FC_Tampa_Bay_season (dor:2011_FC_Tampa_Bay_season) --doo:homeStadium--> Florida (dor:Florida)
+      - Agustín_Ramos_Calero (<http://dbpedia.org/resource/Agustín_Ramos_Calero>) --doo:restingPlace--> Bayamón,_Puerto_Rico (<http://dbpedia.org/resource/Bayamón,_Puerto_Rico>)
+      - Agustín_Ramos_Calero (<http://dbpedia.org/resource/Agustín_Ramos_Calero>) --doo:award--> Purple_Heart (dor:Purple_Heart)
+  '7':
+    attributes:
+      Portland,_Oregon: (Apr precipitation days^='17.2')
+      2010_FC_Tampa_Bay_season: (manager^='http://dbpedia.org/resource/Paul_Dalglish', league^='http://dbpedia.org/resource/USSF_D2_Pro_League', highest attendance^='8082')
+    relationships:
+      - 2010_FC_Tampa_Bay_season (dor:2010_FC_Tampa_Bay_season) --dop:location--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - 2010_FC_Tampa_Bay_season (dor:2010_FC_Tampa_Bay_season) --doo:homeStadium--> Tampa,_Florida (<http://dbpedia.org/resource/Tampa,_Florida>)
+      - Alaric_B._Chapin (dor:Alaric_B._Chapin) --doo:restingPlace--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - Alaric_B._Chapin (dor:Alaric_B._Chapin) --doo:award--> Medal_of_Honor (dor:Medal_of_Honor)
+  '8':
+    attributes:
+      Portland,_Oregon: (Apr precipitation days^='17.2')
+      2013_Boston_Breakers_season: (manager^='http://dbpedia.org/resource/Lisa_Cole', league^='http://dbpedia.org/resource/2013_National_Women''s_Soccer_League_season', highest attendance^='3012', id^='General Manager')
+    relationships:
+      - 2013_Boston_Breakers_season (dor:2013_Boston_Breakers_season) --dop:location--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - 2013_Boston_Breakers_season (dor:2013_Boston_Breakers_season) --doo:homeStadium--> Somerville,_Massachusetts (<http://dbpedia.org/resource/Somerville,_Massachusetts>)
+      - Alaric_B._Chapin (dor:Alaric_B._Chapin) --doo:restingPlace--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - Alaric_B._Chapin (dor:Alaric_B._Chapin) --doo:award--> Medal_of_Honor (dor:Medal_of_Honor)
+  '9':
+    attributes:
+      Boston: (named for^='Boston, Lincolnshire', width^='30.0')
+      Portland,_Oregon: (Apr precipitation days^='17.2')
+      2014_Boston_Breakers_season: (manager^='http://dbpedia.org/resource/Tom_Durkin_(soccer)', league^='http://dbpedia.org/resource/2014_National_Women''s_Soccer_League_season', highest attendance^='4191', id^='General Manager')
+    relationships:
+      - 2014_Boston_Breakers_season (dor:2014_Boston_Breakers_season) --dop:location--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - 2014_Boston_Breakers_season (dor:2014_Boston_Breakers_season) --doo:homeStadium--> Boston (dor:Boston)
+      - Alaric_B._Chapin (dor:Alaric_B._Chapin) --doo:restingPlace--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - Alaric_B._Chapin (dor:Alaric_B._Chapin) --doo:award--> Medal_of_Honor (dor:Medal_of_Honor)
+  '10':
+    attributes:
+      Leeds: (area code^='0113', Apr precipitation days^='13.5')
+      Blackpool: (Aug precipitation mm^='79.9', Apr sun^='175.5', width^='220')
+      2013–14_Blackpool_F.C._season: (manager^='http://dbpedia.org/resource/Barry_Ferguson', league^='http://dbpedia.org/resource/2012–13_Football_League_Championship')
+    relationships:
+      - 2013–14_Blackpool_F.C._season (<http://dbpedia.org/resource/2013–14_Blackpool_F.C._season>) --dop:location--> Leeds (dor:Leeds)
+      - 2013–14_Blackpool_F.C._season (<http://dbpedia.org/resource/2013–14_Blackpool_F.C._season>) --doo:homeStadium--> Blackpool (dor:Blackpool)
+      - Albert_Mountain (dor:Albert_Mountain) --doo:restingPlace--> Leeds (dor:Leeds)
+      - Albert_Mountain (dor:Albert_Mountain) --doo:award--> Croix_de_guerre_1914–1918_(France) (<http://dbpedia.org/resource/Croix_de_guerre_1914–1918_(France)>)
+attributes:
+  city: --area code^ (doo:areaCode)--> string | --Aug rain days^ (dop:augRainDays)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int
+  settlement: --c^ (dop:c)--> langString | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --Aug precipitation inch^ (dop:augPrecipitationInch)--> double | --named for^ (dop:namedFor)--> langString | --Apr sun^ (dop:aprSun)--> int | --width^ (dop:width)--> int
+  soccer club: --manager^ (doo:manager)--> Resource | --league^ (dop:league)--> Resource | --highest attendance^ (dop:highestAttendance)--> date | --id^ (dop:id)--> langString
+subgraph_id: 762
+relationships:
+  - soccer club --dop:location--> city
+  - soccer club --doo:homeStadium--> settlement
+  - military person --doo:restingPlace--> city
+  - military person --doo:award--> award

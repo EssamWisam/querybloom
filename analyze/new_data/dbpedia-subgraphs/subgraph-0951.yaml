@@ -1,0 +1,100 @@
+types:
+  bank: doo:Bank
+  station: doo:Station
+  Location: doo:Location
+  scientist: doo:Scientist
+  government agency: doo:GovernmentAgency
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Stephen_Szabo: (academic discipline^='http://dbpedia.org/resource/Foreign_policy_of_the_United_States')
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - Allen_&_Company (<http://dbpedia.org/resource/Allen_&_Company>) --dop:areaServed--> United_States (dor:United_States)
+      - Foreign_Service_Institute (dor:Foreign_Service_Institute) --doo:headquarter--> United_States (dor:United_States)
+      - Stephen_Szabo (dor:Stephen_Szabo) --doo:institution--> Foreign_Service_Institute (dor:Foreign_Service_Institute)
+      - Gettysburg_Battlefield (dor:Gettysburg_Battlefield) --doo:location--> United_States (dor:United_States)
+  '2':
+    attributes:
+      Stephen_Szabo: (academic discipline^='http://dbpedia.org/resource/Foreign_policy_of_the_United_States')
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+      Sand_Hollow_State_Park: (operator^='Utah State Parks')
+    relationships:
+      - Allen_&_Company (<http://dbpedia.org/resource/Allen_&_Company>) --dop:areaServed--> United_States (dor:United_States)
+      - Foreign_Service_Institute (dor:Foreign_Service_Institute) --doo:headquarter--> United_States (dor:United_States)
+      - Stephen_Szabo (dor:Stephen_Szabo) --doo:institution--> Foreign_Service_Institute (dor:Foreign_Service_Institute)
+      - Sand_Hollow_State_Park (dor:Sand_Hollow_State_Park) --doo:location--> United_States (dor:United_States)
+  '3':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.')
+      Christina_Neal: (academic discipline^='http://dbpedia.org/resource/Volcanology')
+    relationships:
+      - Allen_&_Company (<http://dbpedia.org/resource/Allen_&_Company>) --dop:areaServed--> United_States (dor:United_States)
+      - Hawaiian_Volcano_Observatory (dor:Hawaiian_Volcano_Observatory) --doo:headquarter--> United_States (dor:United_States)
+      - Christina_Neal (dor:Christina_Neal) --doo:institution--> Hawaiian_Volcano_Observatory (dor:Hawaiian_Volcano_Observatory)
+      - Gettysburg_Battlefield (dor:Gettysburg_Battlefield) --doo:location--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Richard_A._Anthes: (academic discipline^='http://dbpedia.org/resource/Meteorology')
+    relationships:
+      - Ameris_Bancorp (dor:Ameris_Bancorp) --dop:areaServed--> Maryland (dor:Maryland)
+      - Environmental_Science_Services_Administration (dor:Environmental_Science_Services_Administration) --doo:headquarter--> Maryland (dor:Maryland)
+      - Richard_A._Anthes (dor:Richard_A._Anthes) --doo:institution--> Environmental_Science_Services_Administration (dor:Environmental_Science_Services_Administration)
+      - Green_Ridge_State_Forest (dor:Green_Ridge_State_Forest) --doo:location--> Maryland (dor:Maryland)
+  '5':
+    attributes:
+      Aimée_R._Kreimer: (academic discipline^='http://dbpedia.org/resource/Cancer_prevention')
+    relationships:
+      - Ameris_Bancorp (dor:Ameris_Bancorp) --dop:areaServed--> Maryland (dor:Maryland)
+      - National_Cancer_Institute (dor:National_Cancer_Institute) --doo:headquarter--> Maryland (dor:Maryland)
+      - Aimée_R._Kreimer (<http://dbpedia.org/resource/Aimée_R._Kreimer>) --doo:institution--> National_Cancer_Institute (dor:National_Cancer_Institute)
+      - Green_Ridge_State_Forest (dor:Green_Ridge_State_Forest) --doo:location--> Maryland (dor:Maryland)
+  '6':
+    attributes: {}
+    relationships:
+      - Ameris_Bancorp (dor:Ameris_Bancorp) --dop:areaServed--> Maryland (dor:Maryland)
+      - National_Cancer_Institute (dor:National_Cancer_Institute) --doo:headquarter--> Maryland (dor:Maryland)
+      - Alisa_M._Goldstein (dor:Alisa_M._Goldstein) --doo:institution--> National_Cancer_Institute (dor:National_Cancer_Institute)
+      - Green_Ridge_State_Forest (dor:Green_Ridge_State_Forest) --doo:location--> Maryland (dor:Maryland)
+  '7':
+    attributes:
+      Illinois: (city^='Aurora, IllinoisAurora')
+      Julie_Morita: (academic discipline^='http://dbpedia.org/resource/Public_health')
+    relationships:
+      - Citizens_Equity_First_Credit_Union (dor:Citizens_Equity_First_Credit_Union) --dop:areaServed--> Illinois (dor:Illinois)
+      - Chicago_Department_of_Public_Health (dor:Chicago_Department_of_Public_Health) --doo:headquarter--> Illinois (dor:Illinois)
+      - Julie_Morita (dor:Julie_Morita) --doo:institution--> Chicago_Department_of_Public_Health (dor:Chicago_Department_of_Public_Health)
+      - Indian_Trails (dor:Indian_Trails) --doo:location--> Illinois (dor:Illinois)
+  '8':
+    attributes:
+      Illinois: (city^='Aurora, IllinoisAurora')
+      Julie_Morita: (academic discipline^='http://dbpedia.org/resource/Public_health')
+    relationships:
+      - Credit_Union_1_(Illinois) (<http://dbpedia.org/resource/Credit_Union_1_(Illinois)>) --dop:areaServed--> Illinois (dor:Illinois)
+      - Chicago_Department_of_Public_Health (dor:Chicago_Department_of_Public_Health) --doo:headquarter--> Illinois (dor:Illinois)
+      - Julie_Morita (dor:Julie_Morita) --doo:institution--> Chicago_Department_of_Public_Health (dor:Chicago_Department_of_Public_Health)
+      - Indian_Trails (dor:Indian_Trails) --doo:location--> Illinois (dor:Illinois)
+  '9':
+    attributes:
+      Illinois: (city^='Aurora, IllinoisAurora')
+      Julie_Morita: (academic discipline^='http://dbpedia.org/resource/Public_health')
+    relationships:
+      - First_Midwest_Bancorp (dor:First_Midwest_Bancorp) --dop:areaServed--> Illinois (dor:Illinois)
+      - Chicago_Department_of_Public_Health (dor:Chicago_Department_of_Public_Health) --doo:headquarter--> Illinois (dor:Illinois)
+      - Julie_Morita (dor:Julie_Morita) --doo:institution--> Chicago_Department_of_Public_Health (dor:Chicago_Department_of_Public_Health)
+      - Indian_Trails (dor:Indian_Trails) --doo:location--> Illinois (dor:Illinois)
+attributes:
+  station: --operator^ (dop:operator)--> int | --address^ (doo:address)--> langString
+  Location: --data^ (dop:data)--> int | --city^ (dop:city)--> langString | --arc-text-colorA^ (dop:arcTextColora)--> langString | --alt name^ (dop:altName)--> langString | --coordinates^ (dop:coordinates)--> int | --source^ (dop:source)--> Resource | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --Aug low F^ (dop:augLowF)--> double | --capital^ (doo:capital)--> Resource
+  scientist: --academic discipline^ (doo:academicDiscipline)--> Resource | --honorific suffix^ (dop:honorificSuffix)--> Resource
+subgraph_id: 951
+relationships:
+  - bank --dop:areaServed--> Location
+  - government agency --doo:headquarter--> Location
+  - scientist --doo:institution--> government agency
+  - station --doo:location--> Location

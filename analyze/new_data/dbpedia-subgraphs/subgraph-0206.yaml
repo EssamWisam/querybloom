@@ -1,0 +1,102 @@
+types:
+  place: doo:Place
+  settlement: doo:Settlement
+  body of water: doo:BodyOfWater
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Argolic_Gulf (dor:Argolic_Gulf) --doo:isPartOf--> Aegean_Sea (dor:Aegean_Sea)
+      - Nisyros__Nisyros__1 (dor:Nisyros__Nisyros__1) --doo:locatedInArea--> Aegean_Sea (dor:Aegean_Sea)
+  '2':
+    attributes: {}
+    relationships:
+      - Argolic_Gulf (dor:Argolic_Gulf) --doo:isPartOf--> Aegean_Sea (dor:Aegean_Sea)
+      - Santorini_caldera (dor:Santorini_caldera) --doo:locatedInArea--> Aegean_Sea (dor:Aegean_Sea)
+  '3':
+    attributes: {}
+    relationships:
+      - Balintang_Channel (dor:Balintang_Channel) --doo:isPartOf--> Luzon_Strait (dor:Luzon_Strait)
+      - Unnamed_volcano_(Ibugos) (<http://dbpedia.org/resource/Unnamed_volcano_(Ibugos)>) --doo:locatedInArea--> Luzon_Strait (dor:Luzon_Strait)
+  '4':
+    attributes:
+      Wisconsin: (Apr low F^='31.6', area total (km2)^='65498.37')
+    relationships:
+      - Glacial_Lake_Wisconsin (dor:Glacial_Lake_Wisconsin) --doo:isPartOf--> Wisconsin (dor:Wisconsin)
+      - Rib_Mountain (dor:Rib_Mountain) --doo:locatedInArea--> Wisconsin (dor:Wisconsin)
+  '5':
+    attributes:
+      Wisconsin: (Apr low F^='31.6', area total (km2)^='65498.37')
+    relationships:
+      - Glacial_Lake_Wisconsin (dor:Glacial_Lake_Wisconsin) --doo:isPartOf--> Wisconsin (dor:Wisconsin)
+      - Timms_Hill (dor:Timms_Hill) --doo:locatedInArea--> Wisconsin (dor:Wisconsin)
+  '6':
+    attributes: {}
+    relationships:
+      - Harald_Bay (dor:Harald_Bay) --doo:isPartOf--> Oates_Land (dor:Oates_Land)
+      - Abus_Valley (dor:Abus_Valley) --doo:locatedInArea--> Oates_Land (dor:Oates_Land)
+  '7':
+    attributes: {}
+    relationships:
+      - Harald_Bay (dor:Harald_Bay) --doo:isPartOf--> Oates_Land (dor:Oates_Land)
+      - Access_Slope (dor:Access_Slope) --doo:locatedInArea--> Oates_Land (dor:Oates_Land)
+  '8':
+    attributes: {}
+    relationships:
+      - Harald_Bay (dor:Harald_Bay) --doo:isPartOf--> Oates_Land (dor:Oates_Land)
+      - Adams_Bluff (dor:Adams_Bluff) --doo:locatedInArea--> Oates_Land (dor:Oates_Land)
+  '9':
+    attributes: {}
+    relationships:
+      - Pagasetic_Gulf (dor:Pagasetic_Gulf) --doo:isPartOf--> Aegean_Sea (dor:Aegean_Sea)
+      - Nisyros__Nisyros__1 (dor:Nisyros__Nisyros__1) --doo:locatedInArea--> Aegean_Sea (dor:Aegean_Sea)
+qa_result:
+  status: completed
+  cost_usd: 0.211192
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0150024
+        total_tokens: 2557
+        prompt_tokens: 1964
+        completion_tokens: 593
+      generate:
+        cost_usd: 0.048727599999999996
+        total_tokens: 5176
+        prompt_tokens: 3173
+        completion_tokens: 2003
+      verify_1:
+        cost_usd: 0.05425200000000001
+        total_tokens: 5106
+        prompt_tokens: 3191
+        completion_tokens: 1915
+      verify_2:
+        cost_usd: 0.026957000000000002
+        total_tokens: 3685
+        prompt_tokens: 3116
+        completion_tokens: 569
+      complexity:
+        cost_usd: 0.066253
+        total_tokens: 6867
+        prompt_tokens: 4167
+        completion_tokens: 2700
+    total_tokens: 23391
+    prompt_tokens: 15611
+    total_cost_usd: 0.21119200000000002
+    completion_tokens: 7780
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  place: --built^ (dop:built)--> int | --location^ (doo:location)--> Resource
+  settlement: --url^ (dop:url)--> Resource | --Apr low F^ (dop:aprLowF)--> double | --winner^ (dop:winner)--> langString | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --align^ (dop:align)--> langString | --population total^ (doo:populationTotal)--> int | --original name^ (doo:originalName)--> langString
+subgraph_id: 206
+relationships:
+  - body of water --doo:isPartOf--> settlement
+  - place --doo:locatedInArea--> settlement

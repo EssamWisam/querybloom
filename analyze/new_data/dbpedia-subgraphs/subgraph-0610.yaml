@@ -1,0 +1,102 @@
+types:
+  athlete: doo:Athlete
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  olympic event: doo:OlympicEvent
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Budapest: (area total (km2)^='525.2', width^='550')
+      Ágnes_Keleti: (birth date^='1921-01-09')
+      Budapesti_Postás_SE: (capacity^='5500')
+    relationships:
+      - Ágnes_Keleti (<http://dbpedia.org/resource/Ágnes_Keleti>) --doo:birthPlace--> Budapest (dor:Budapest)
+      - Ágnes_Keleti (<http://dbpedia.org/resource/Ágnes_Keleti>) --doo:club--> Budapesti_Postás_SE (<http://dbpedia.org/resource/Budapesti_Postás_SE>)
+      - Gymnastics_at_the_1952_Summer_Olympics_–_Women's_team_portable_apparatus (<http://dbpedia.org/resource/Gymnastics_at_the_1952_Summer_Olympics_–_Women's_team_portable_apparatus>) --dop:bronze--> Ágnes_Keleti (<http://dbpedia.org/resource/Ágnes_Keleti>)
+  '2':
+    attributes:
+      Budapest: (area total (km2)^='525.2', width^='550')
+    relationships:
+      - Ágnes_Keleti (<http://dbpedia.org/resource/Ágnes_Keleti>) --doo:birthPlace--> Budapest (dor:Budapest)
+      - Ágnes_Keleti (<http://dbpedia.org/resource/Ágnes_Keleti>) --doo:club--> Újpesti_TE (<http://dbpedia.org/resource/Újpesti_TE>)
+      - Gymnastics_at_the_1952_Summer_Olympics_–_Women's_team_portable_apparatus (<http://dbpedia.org/resource/Gymnastics_at_the_1952_Summer_Olympics_–_Women's_team_portable_apparatus>) --dop:bronze--> Ágnes_Keleti (<http://dbpedia.org/resource/Ágnes_Keleti>)
+  '3':
+    attributes:
+      Budapest: (area total (km2)^='525.2', width^='550')
+      Ágnes_Keleti: (birth date^='1921-01-09')
+      Budapesti_Postás_SE: (capacity^='5500')
+    relationships:
+      - Ágnes_Keleti (<http://dbpedia.org/resource/Ágnes_Keleti>) --doo:birthPlace--> Budapest (dor:Budapest)
+      - Ágnes_Keleti (<http://dbpedia.org/resource/Ágnes_Keleti>) --doo:club--> Budapesti_Postás_SE (<http://dbpedia.org/resource/Budapesti_Postás_SE>)
+      - Gymnastics_at_the_1952_Summer_Olympics_–_Women's_uneven_bars (<http://dbpedia.org/resource/Gymnastics_at_the_1952_Summer_Olympics_–_Women's_uneven_bars>) --dop:bronze--> Ágnes_Keleti (<http://dbpedia.org/resource/Ágnes_Keleti>)
+  '4':
+    attributes:
+      Magyar_AC: (capacity^='1637')
+      Jászberény: (area total (km2)^='221.35')
+      Aladár_Gerevich: (birth date^='1910-03-16')
+    relationships:
+      - Aladár_Gerevich (<http://dbpedia.org/resource/Aladár_Gerevich>) --doo:birthPlace--> Jászberény (<http://dbpedia.org/resource/Jászberény>)
+      - Aladár_Gerevich (<http://dbpedia.org/resource/Aladár_Gerevich>) --doo:club--> Magyar_AC (dor:Magyar_AC)
+      - Fencing_at_the_1936_Summer_Olympics_–_Men's_sabre (<http://dbpedia.org/resource/Fencing_at_the_1936_Summer_Olympics_–_Men's_sabre>) --dop:bronze--> Aladár_Gerevich (<http://dbpedia.org/resource/Aladár_Gerevich>)
+  '5':
+    attributes:
+      Jászberény: (area total (km2)^='221.35')
+      Aladár_Gerevich: (birth date^='1910-03-16')
+    relationships:
+      - Aladár_Gerevich (<http://dbpedia.org/resource/Aladár_Gerevich>) --doo:birthPlace--> Jászberény (<http://dbpedia.org/resource/Jászberény>)
+      - Aladár_Gerevich (<http://dbpedia.org/resource/Aladár_Gerevich>) --doo:club--> MTK_Budapest (dor:MTK_Budapest)
+      - Fencing_at_the_1936_Summer_Olympics_–_Men's_sabre (<http://dbpedia.org/resource/Fencing_at_the_1936_Summer_Olympics_–_Men's_sabre>) --dop:bronze--> Aladár_Gerevich (<http://dbpedia.org/resource/Aladár_Gerevich>)
+  '6':
+    attributes:
+      Aladár_Gerevich: (birth date^='1910-03-16')
+    relationships:
+      - Aladár_Gerevich (<http://dbpedia.org/resource/Aladár_Gerevich>) --doo:birthPlace--> Jászberény (<http://dbpedia.org/resource/Jászberény>)
+      - Aladár_Gerevich (<http://dbpedia.org/resource/Aladár_Gerevich>) --doo:club--> Vörös_Meteor_Egyetértés_SK (<http://dbpedia.org/resource/Vörös_Meteor_Egyetértés_SK>)
+      - Fencing_at_the_1936_Summer_Olympics_–_Men's_sabre (<http://dbpedia.org/resource/Fencing_at_the_1936_Summer_Olympics_–_Men's_sabre>) --dop:bronze--> Aladár_Gerevich (<http://dbpedia.org/resource/Aladár_Gerevich>)
+  '7':
+    attributes:
+      Hronec: (area total (km2)^='35.14613865725952')
+      Magyar_AC: (capacity^='1637')
+      Alajos_Szokolyi: (birth date^='1871-06-19')
+    relationships:
+      - Alajos_Szokolyi (dor:Alajos_Szokolyi) --doo:birthPlace--> Hronec (dor:Hronec)
+      - Alajos_Szokolyi (dor:Alajos_Szokolyi) --doo:club--> Magyar_AC (dor:Magyar_AC)
+      - Athletics_at_the_1896_Summer_Olympics_–_Men's_100_metres (<http://dbpedia.org/resource/Athletics_at_the_1896_Summer_Olympics_–_Men's_100_metres>) --dop:bronze--> Alajos_Szokolyi (dor:Alajos_Szokolyi)
+  '8':
+    attributes:
+      Tashkent: (area total (km2)^='334.8')
+      Alina_Kabaeva: (birth date^='1983-05-12')
+    relationships:
+      - Alina_Kabaeva (dor:Alina_Kabaeva) --doo:birthPlace--> Tashkent (dor:Tashkent)
+      - Alina_Kabaeva (dor:Alina_Kabaeva) --doo:club--> Dynamo_Moscow (dor:Dynamo_Moscow)
+      - Gymnastics_at_the_2000_Summer_Olympics_–_Women's_rhythmic_individual_all-around (<http://dbpedia.org/resource/Gymnastics_at_the_2000_Summer_Olympics_–_Women's_rhythmic_individual_all-around>) --dop:bronze--> Alina_Kabaeva (dor:Alina_Kabaeva)
+  '9':
+    attributes:
+      Aliya_Mustafina: (birth date^='1994-09-30')
+    relationships:
+      - Aliya_Mustafina (dor:Aliya_Mustafina) --doo:birthPlace--> Yegoryevsk (dor:Yegoryevsk)
+      - Aliya_Mustafina (dor:Aliya_Mustafina) --doo:club--> CSKA_Moscow (dor:CSKA_Moscow)
+      - Gymnastics_at_the_2012_Summer_Olympics_–_Women's_artistic_individual_all-around (<http://dbpedia.org/resource/Gymnastics_at_the_2012_Summer_Olympics_–_Women's_artistic_individual_all-around>) --dop:bronze--> Aliya_Mustafina (dor:Aliya_Mustafina)
+  '10':
+    attributes:
+      Aliya_Mustafina: (birth date^='1994-09-30')
+    relationships:
+      - Aliya_Mustafina (dor:Aliya_Mustafina) --doo:birthPlace--> Yegoryevsk (dor:Yegoryevsk)
+      - Aliya_Mustafina (dor:Aliya_Mustafina) --doo:club--> CSKA_Moscow (dor:CSKA_Moscow)
+      - Gymnastics_at_the_2012_Summer_Olympics_–_Women's_floor (<http://dbpedia.org/resource/Gymnastics_at_the_2012_Summer_Olympics_–_Women's_floor>) --dop:bronze--> Aliya_Mustafina (dor:Aliya_Mustafina)
+attributes:
+  athlete: --birth date^ (dop:birthDate)--> date
+  settlement: --caption align^ (dop:captionAlign)--> langString | --Aug rain days^ (dop:augRainDays)--> double | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --government type^ (doo:governmentType)--> Resource | --width^ (dop:width)--> int
+  soccer club: --capacity^ (dop:capacity)--> int | --owner^ (dop:owner)--> langString | --league^ (dop:league)--> int | --date^ (dop:date)--> date
+  olympic event: --duration^ (dop:duration)--> second
+subgraph_id: 610
+relationships:
+  - athlete --doo:birthPlace--> settlement
+  - athlete --doo:club--> soccer club
+  - olympic event --dop:bronze--> athlete

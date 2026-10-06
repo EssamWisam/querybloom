@@ -1,0 +1,101 @@
+types:
+  Band: doo:Band
+  village: doo:Village
+  Location: doo:Location
+  record label: doo:RecordLabel
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Kensington,_New_York: (type^='http://dbpedia.org/resource/Village_(New_York)')
+    relationships:
+      - .O.rang (<http://dbpedia.org/resource/.O.rang>) --doo:recordLabel--> The_Echo_Label (dor:The_Echo_Label)
+      - .O.rang (<http://dbpedia.org/resource/.O.rang>) --doo:hometown--> London (dor:London)
+      - Kensington,_New_York (<http://dbpedia.org/resource/Kensington,_New_York>) --doo:namedAfter--> London (dor:London)
+      - Admiral_Schofield (dor:Admiral_Schofield) --doo:birthPlace--> London (dor:London)
+  '2':
+    attributes:
+      Twickenham,_Oregon: (type^='http://dbpedia.org/resource/Unincorporated_area')
+    relationships:
+      - .O.rang (<http://dbpedia.org/resource/.O.rang>) --doo:recordLabel--> The_Echo_Label (dor:The_Echo_Label)
+      - .O.rang (<http://dbpedia.org/resource/.O.rang>) --doo:hometown--> London (dor:London)
+      - Twickenham,_Oregon (<http://dbpedia.org/resource/Twickenham,_Oregon>) --doo:namedAfter--> London (dor:London)
+      - Admiral_Schofield (dor:Admiral_Schofield) --doo:birthPlace--> London (dor:London)
+  '3':
+    attributes:
+      Kensington,_New_York: (type^='http://dbpedia.org/resource/Village_(New_York)')
+    relationships:
+      - .O.rang (<http://dbpedia.org/resource/.O.rang>) --doo:recordLabel--> The_Echo_Label (dor:The_Echo_Label)
+      - .O.rang (<http://dbpedia.org/resource/.O.rang>) --doo:hometown--> London (dor:London)
+      - Kensington,_New_York (<http://dbpedia.org/resource/Kensington,_New_York>) --doo:namedAfter--> London (dor:London)
+      - Albert_Margai_(basketball) (<http://dbpedia.org/resource/Albert_Margai_(basketball)>) --doo:birthPlace--> London (dor:London)
+  '4':
+    attributes:
+      Richmond,_Oregon: (type^='http://dbpedia.org/resource/Unincorporated_area')
+    relationships:
+      - (Young)_Pioneers (<http://dbpedia.org/resource/(Young)_Pioneers>) --doo:recordLabel--> Lookout!_Records (<http://dbpedia.org/resource/Lookout!_Records>)
+      - (Young)_Pioneers (<http://dbpedia.org/resource/(Young)_Pioneers>) --doo:hometown--> Richmond,_Virginia (<http://dbpedia.org/resource/Richmond,_Virginia>)
+      - Richmond,_Oregon (<http://dbpedia.org/resource/Richmond,_Oregon>) --doo:namedAfter--> Richmond,_Virginia (<http://dbpedia.org/resource/Richmond,_Virginia>)
+      - Allan_Bristow (dor:Allan_Bristow) --doo:birthPlace--> Richmond,_Virginia (<http://dbpedia.org/resource/Richmond,_Virginia>)
+  '5':
+    attributes:
+      Richmond,_Oregon: (type^='http://dbpedia.org/resource/Unincorporated_area')
+    relationships:
+      - (Young)_Pioneers (<http://dbpedia.org/resource/(Young)_Pioneers>) --doo:recordLabel--> Vermiform_Records (dor:Vermiform_Records)
+      - (Young)_Pioneers (<http://dbpedia.org/resource/(Young)_Pioneers>) --doo:hometown--> Richmond,_Virginia (<http://dbpedia.org/resource/Richmond,_Virginia>)
+      - Richmond,_Oregon (<http://dbpedia.org/resource/Richmond,_Oregon>) --doo:namedAfter--> Richmond,_Virginia (<http://dbpedia.org/resource/Richmond,_Virginia>)
+      - Allan_Bristow (dor:Allan_Bristow) --doo:birthPlace--> Richmond,_Virginia (<http://dbpedia.org/resource/Richmond,_Virginia>)
+  '6':
+    attributes:
+      Richmond,_Oregon: (type^='http://dbpedia.org/resource/Unincorporated_area')
+    relationships:
+      - (Young)_Pioneers (<http://dbpedia.org/resource/(Young)_Pioneers>) --doo:recordLabel--> Lookout!_Records (<http://dbpedia.org/resource/Lookout!_Records>)
+      - (Young)_Pioneers (<http://dbpedia.org/resource/(Young)_Pioneers>) --doo:hometown--> Richmond,_Virginia (<http://dbpedia.org/resource/Richmond,_Virginia>)
+      - Richmond,_Oregon (<http://dbpedia.org/resource/Richmond,_Oregon>) --doo:namedAfter--> Richmond,_Virginia (<http://dbpedia.org/resource/Richmond,_Virginia>)
+      - Andre_Ingram (dor:Andre_Ingram) --doo:birthPlace--> Richmond,_Virginia (<http://dbpedia.org/resource/Richmond,_Virginia>)
+  '7':
+    attributes:
+      Chicago_Park,_California: (type^='http://dbpedia.org/resource/Unincorporated_area')
+    relationships:
+      - 1000_Homo_DJs (dor:1000_Homo_DJs) --doo:recordLabel--> Wax_Trax!_Records (<http://dbpedia.org/resource/Wax_Trax!_Records>)
+      - 1000_Homo_DJs (dor:1000_Homo_DJs) --doo:hometown--> Chicago (dor:Chicago)
+      - Chicago_Park,_California (<http://dbpedia.org/resource/Chicago_Park,_California>) --doo:namedAfter--> Chicago (dor:Chicago)
+      - Ace_Gruenig (dor:Ace_Gruenig) --doo:birthPlace--> Chicago (dor:Chicago)
+  '8':
+    attributes:
+      Chicago_Park,_California: (type^='http://dbpedia.org/resource/Unincorporated_area')
+    relationships:
+      - 1000_Homo_DJs (dor:1000_Homo_DJs) --doo:recordLabel--> Wax_Trax!_Records (<http://dbpedia.org/resource/Wax_Trax!_Records>)
+      - 1000_Homo_DJs (dor:1000_Homo_DJs) --doo:hometown--> Chicago (dor:Chicago)
+      - Chicago_Park,_California (<http://dbpedia.org/resource/Chicago_Park,_California>) --doo:namedAfter--> Chicago (dor:Chicago)
+      - Al_Stewart_(basketball) (<http://dbpedia.org/resource/Al_Stewart_(basketball)>) --doo:birthPlace--> Chicago (dor:Chicago)
+  '9':
+    attributes:
+      Chicago_Park,_California: (type^='http://dbpedia.org/resource/Unincorporated_area')
+    relationships:
+      - 1000_Homo_DJs (dor:1000_Homo_DJs) --doo:recordLabel--> Wax_Trax!_Records (<http://dbpedia.org/resource/Wax_Trax!_Records>)
+      - 1000_Homo_DJs (dor:1000_Homo_DJs) --doo:hometown--> Chicago (dor:Chicago)
+      - Chicago_Park,_California (<http://dbpedia.org/resource/Chicago_Park,_California>) --doo:namedAfter--> Chicago (dor:Chicago)
+      - Alfonzo_McKinnie (dor:Alfonzo_McKinnie) --doo:birthPlace--> Chicago (dor:Chicago)
+  '10':
+    attributes:
+      Atlanta,_Idaho: (type^='http://dbpedia.org/resource/Unincorporated_area')
+    relationships:
+      - 112_(band) (<http://dbpedia.org/resource/112_(band)>) --doo:recordLabel--> Arista_Records (dor:Arista_Records)
+      - 112_(band) (<http://dbpedia.org/resource/112_(band)>) --doo:hometown--> Atlanta (dor:Atlanta)
+      - Atlanta,_Idaho (<http://dbpedia.org/resource/Atlanta,_Idaho>) --doo:namedAfter--> Atlanta (dor:Atlanta)
+      - Ahmad_Caver (dor:Ahmad_Caver) --doo:birthPlace--> Atlanta (dor:Atlanta)
+attributes:
+  village: --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --Apr record low F^ (dop:aprRecordLowF)--> int | --type^ (doo:type)--> Resource | --Apr high C^ (dop:aprHighC)--> double
+  Location: --year of construction^ (doo:yearOfConstruction)--> gYear | --leader^ (dop:leader)--> langString | --arc-textB^ (dop:arcTextb)--> langString | --1y^ (dop:1y)--> int | --outflow^ (doo:outflow)--> Resource | --Apr low C^ (dop:aprLowC)--> double | --age^ (dop:age)--> second | --opened^ (dop:opened)--> int
+subgraph_id: 452
+relationships:
+  - Band --doo:recordLabel--> record label
+  - Band --doo:hometown--> Location
+  - village --doo:namedAfter--> Location
+  - basketball player --doo:birthPlace--> Location

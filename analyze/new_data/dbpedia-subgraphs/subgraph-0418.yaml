@@ -1,0 +1,113 @@
+types:
+  event: doo:Event
+  soccer club: doo:SoccerClub
+  soccer player: doo:SoccerPlayer
+  soccer club season: doo:SoccerClubSeason
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+  wwors: http://www.w3.org/2000/01/rdf-schema#
+instances:
+  '1':
+    attributes:
+      2007–08_Football_League_One: (league topscorer^='http://dbpedia.org/resource/Jason_Scotland')
+      2007–08_in_English_football: (Link from a Wikipage to an external page^='http://news.bbc.co.uk/sport2/hi/football/internationals/6954720.stm')
+    relationships:
+      - 2007–08_Leeds_United_F.C._season (<http://dbpedia.org/resource/2007–08_Leeds_United_F.C._season>) --dop:c--> 2007–08_Football_League_One (<http://dbpedia.org/resource/2007–08_Football_League_One>)
+      - 2007–08_Football_League_One (<http://dbpedia.org/resource/2007–08_Football_League_One>) --dop:rd2Team--> Leeds_United_F.C. (<http://dbpedia.org/resource/Leeds_United_F.C.>)
+      - 2007–08_Leeds_United_F.C._season (<http://dbpedia.org/resource/2007–08_Leeds_United_F.C._season>) --doo:manager--> Dennis_Wise (dor:Dennis_Wise)
+      - 2007–08_Leeds_United_F.C._season (<http://dbpedia.org/resource/2007–08_Leeds_United_F.C._season>) --doo:season--> 2007–08_in_English_football (<http://dbpedia.org/resource/2007–08_in_English_football>)
+  '2':
+    attributes:
+      2007–08_Football_League_One: (league topscorer^='http://dbpedia.org/resource/Jason_Scotland')
+      2007–08_in_English_football: (Link from a Wikipage to an external page^='http://news.bbc.co.uk/sport2/hi/football/internationals/6954720.stm')
+    relationships:
+      - 2007–08_Leeds_United_F.C._season (<http://dbpedia.org/resource/2007–08_Leeds_United_F.C._season>) --dop:c--> 2007–08_Football_League_One (<http://dbpedia.org/resource/2007–08_Football_League_One>)
+      - 2007–08_Football_League_One (<http://dbpedia.org/resource/2007–08_Football_League_One>) --dop:rd2Team--> Leeds_United_F.C. (<http://dbpedia.org/resource/Leeds_United_F.C.>)
+      - 2007–08_Leeds_United_F.C._season (<http://dbpedia.org/resource/2007–08_Leeds_United_F.C._season>) --doo:manager--> Gary_McAllister (dor:Gary_McAllister)
+      - 2007–08_Leeds_United_F.C._season (<http://dbpedia.org/resource/2007–08_Leeds_United_F.C._season>) --doo:season--> 2007–08_in_English_football (<http://dbpedia.org/resource/2007–08_in_English_football>)
+  '3':
+    attributes:
+      2010_in_Brazilian_football: (Link from a Wikipage to an external page^='http://soccernet.espn.go.com/report%3Fid=287625&league=FIFA.FRIENDLY&cc=5901')
+    relationships:
+      - 2010_Cruzeiro_Esporte_Clube_season (dor:2010_Cruzeiro_Esporte_Clube_season) --dop:c--> 2010_Campeonato_Mineiro (dor:2010_Campeonato_Mineiro)
+      - 2010_Campeonato_Mineiro (dor:2010_Campeonato_Mineiro) --dop:rd2Team--> Cruzeiro_Esporte_Clube (dor:Cruzeiro_Esporte_Clube)
+      - 2010_Cruzeiro_Esporte_Clube_season (dor:2010_Cruzeiro_Esporte_Clube_season) --doo:manager--> Cuca_(footballer) (<http://dbpedia.org/resource/Cuca_(footballer)>)
+      - 2010_Cruzeiro_Esporte_Clube_season (dor:2010_Cruzeiro_Esporte_Clube_season) --doo:season--> 2010_in_Brazilian_football (dor:2010_in_Brazilian_football)
+  '4':
+    attributes:
+      2010_in_Brazilian_football: (Link from a Wikipage to an external page^='http://soccernet.espn.go.com/report%3Fid=287625&league=FIFA.FRIENDLY&cc=5901')
+    relationships:
+      - 2010_Cruzeiro_Esporte_Clube_season (dor:2010_Cruzeiro_Esporte_Clube_season) --dop:c--> 2010_Campeonato_Mineiro (dor:2010_Campeonato_Mineiro)
+      - 2010_Campeonato_Mineiro (dor:2010_Campeonato_Mineiro) --dop:rd2Team--> Esporte_Clube_Democrata (dor:Esporte_Clube_Democrata)
+      - 2010_Cruzeiro_Esporte_Clube_season (dor:2010_Cruzeiro_Esporte_Clube_season) --doo:manager--> Cuca_(footballer) (<http://dbpedia.org/resource/Cuca_(footballer)>)
+      - 2010_Cruzeiro_Esporte_Clube_season (dor:2010_Cruzeiro_Esporte_Clube_season) --doo:season--> 2010_in_Brazilian_football (dor:2010_in_Brazilian_football)
+  '5':
+    attributes:
+      2010_Campeonato_Paulista: (league topscorer^='http://dbpedia.org/resource/Ricardo_Bueno')
+      2010_in_Brazilian_football: (Link from a Wikipage to an external page^='http://soccernet.espn.go.com/report%3Fid=287625&league=FIFA.FRIENDLY&cc=5901')
+    relationships:
+      - 2010_Santos_FC_season (dor:2010_Santos_FC_season) --dop:c--> 2010_Campeonato_Paulista (dor:2010_Campeonato_Paulista)
+      - 2010_Campeonato_Paulista (dor:2010_Campeonato_Paulista) --dop:rd2Team--> Associação_Desportiva_São_Caetano (<http://dbpedia.org/resource/Associação_Desportiva_São_Caetano>)
+      - 2010_Santos_FC_season (dor:2010_Santos_FC_season) --doo:manager--> Dorival_Júnior (<http://dbpedia.org/resource/Dorival_Júnior>)
+      - 2010_Santos_FC_season (dor:2010_Santos_FC_season) --doo:season--> 2010_in_Brazilian_football (dor:2010_in_Brazilian_football)
+  '6':
+    attributes:
+      2012–13_Serie_B: (league topscorer^='')
+      2012–13_in_Italian_football: (Link from a Wikipage to an external page^='http://cdn.legaseriea.it/c/document_library/get_file%3Fuuid=79198c53-6898-4018-bea6-56dbc6c85d81&groupId=10192')
+    relationships:
+      - 2012–13_U.S._Grosseto_F.C._season (<http://dbpedia.org/resource/2012–13_U.S._Grosseto_F.C._season>) --dop:c--> 2012–13_Serie_B (<http://dbpedia.org/resource/2012–13_Serie_B>)
+      - 2012–13_Serie_B (<http://dbpedia.org/resource/2012–13_Serie_B>) --dop:rd2Team--> Empoli_F.C. (<http://dbpedia.org/resource/Empoli_F.C.>)
+      - 2012–13_U.S._Grosseto_F.C._season (<http://dbpedia.org/resource/2012–13_U.S._Grosseto_F.C._season>) --doo:manager--> Francesco_Moriero (dor:Francesco_Moriero)
+      - 2012–13_U.S._Grosseto_F.C._season (<http://dbpedia.org/resource/2012–13_U.S._Grosseto_F.C._season>) --doo:season--> 2012–13_in_Italian_football (<http://dbpedia.org/resource/2012–13_in_Italian_football>)
+  '7':
+    attributes:
+      2012–13_Serie_B: (league topscorer^='')
+      2012–13_in_Italian_football: (Link from a Wikipage to an external page^='http://cdn.legaseriea.it/c/document_library/get_file%3Fuuid=79198c53-6898-4018-bea6-56dbc6c85d81&groupId=10192')
+    relationships:
+      - 2012–13_U.S._Grosseto_F.C._season (<http://dbpedia.org/resource/2012–13_U.S._Grosseto_F.C._season>) --dop:c--> 2012–13_Serie_B (<http://dbpedia.org/resource/2012–13_Serie_B>)
+      - 2012–13_Serie_B (<http://dbpedia.org/resource/2012–13_Serie_B>) --dop:rd2Team--> Empoli_F.C. (<http://dbpedia.org/resource/Empoli_F.C.>)
+      - 2012–13_U.S._Grosseto_F.C._season (<http://dbpedia.org/resource/2012–13_U.S._Grosseto_F.C._season>) --doo:manager--> Leonardo_Menichini (dor:Leonardo_Menichini)
+      - 2012–13_U.S._Grosseto_F.C._season (<http://dbpedia.org/resource/2012–13_U.S._Grosseto_F.C._season>) --doo:season--> 2012–13_in_Italian_football (<http://dbpedia.org/resource/2012–13_in_Italian_football>)
+  '8':
+    attributes:
+      2012–13_Serie_B: (league topscorer^='')
+      2012–13_in_Italian_football: (Link from a Wikipage to an external page^='http://cdn.legaseriea.it/c/document_library/get_file%3Fuuid=79198c53-6898-4018-bea6-56dbc6c85d81&groupId=10192')
+    relationships:
+      - 2012–13_U.S._Grosseto_F.C._season (<http://dbpedia.org/resource/2012–13_U.S._Grosseto_F.C._season>) --dop:c--> 2012–13_Serie_B (<http://dbpedia.org/resource/2012–13_Serie_B>)
+      - 2012–13_Serie_B (<http://dbpedia.org/resource/2012–13_Serie_B>) --dop:rd2Team--> Empoli_F.C. (<http://dbpedia.org/resource/Empoli_F.C.>)
+      - 2012–13_U.S._Grosseto_F.C._season (<http://dbpedia.org/resource/2012–13_U.S._Grosseto_F.C._season>) --doo:manager--> Luigi_Consonni (dor:Luigi_Consonni)
+      - 2012–13_U.S._Grosseto_F.C._season (<http://dbpedia.org/resource/2012–13_U.S._Grosseto_F.C._season>) --doo:season--> 2012–13_in_Italian_football (<http://dbpedia.org/resource/2012–13_in_Italian_football>)
+  '9':
+    attributes:
+      2014–15_Segunda_División: (league topscorer^='')
+      2014–15_in_Spanish_football: (Link from a Wikipage to an external page^='http://www.goal.com/en-gb/match/athletic-club-vs-barcelona/1995031/report%3FICID=MP_MS_5')
+    relationships:
+      - 2014–15_Real_Zaragoza_season (<http://dbpedia.org/resource/2014–15_Real_Zaragoza_season>) --dop:c--> 2014–15_Segunda_División (<http://dbpedia.org/resource/2014–15_Segunda_División>)
+      - 2014–15_Segunda_División (<http://dbpedia.org/resource/2014–15_Segunda_División>) --dop:rd2Team--> Real_Zaragoza (dor:Real_Zaragoza)
+      - 2014–15_Real_Zaragoza_season (<http://dbpedia.org/resource/2014–15_Real_Zaragoza_season>) --doo:manager--> Ranko_Popović (<http://dbpedia.org/resource/Ranko_Popović>)
+      - 2014–15_Real_Zaragoza_season (<http://dbpedia.org/resource/2014–15_Real_Zaragoza_season>) --doo:season--> 2014–15_in_Spanish_football (<http://dbpedia.org/resource/2014–15_in_Spanish_football>)
+  '10':
+    attributes:
+      2014–15_Segunda_División: (league topscorer^='')
+      2014–15_in_Spanish_football: (Link from a Wikipage to an external page^='http://www.goal.com/en-gb/match/athletic-club-vs-barcelona/1995031/report%3FICID=MP_MS_5')
+    relationships:
+      - 2014–15_UD_Las_Palmas_season (<http://dbpedia.org/resource/2014–15_UD_Las_Palmas_season>) --dop:c--> 2014–15_Segunda_División (<http://dbpedia.org/resource/2014–15_Segunda_División>)
+      - 2014–15_Segunda_División (<http://dbpedia.org/resource/2014–15_Segunda_División>) --dop:rd2Team--> Real_Zaragoza (dor:Real_Zaragoza)
+      - 2014–15_UD_Las_Palmas_season (<http://dbpedia.org/resource/2014–15_UD_Las_Palmas_season>) --doo:manager--> Paco_Herrera (dor:Paco_Herrera)
+      - 2014–15_UD_Las_Palmas_season (<http://dbpedia.org/resource/2014–15_UD_Las_Palmas_season>) --doo:season--> 2014–15_in_Spanish_football (<http://dbpedia.org/resource/2014–15_in_Spanish_football>)
+attributes:
+  event: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  soccer club: --2ndRegional cup best^ (dop:2ndregionalCupBest)--> langString | --league topscorer^ (dop:leagueTopscorer)--> Resource | --ad^ (dop:ad)--> int | --alt^ (dop:alt)--> langString | --aggregatescore^ (dop:aggregatescore)--> int
+  soccer player: --differentFrom (wwoo:differentFrom)--> Resource
+  football league season: --seeAlso (wwors:seeAlso)--> Resource | --league topscorer^ (dop:leagueTopscorer)--> langString | --league topscorer^ (dop:leagueTopscorer)--> int
+subgraph_id: 418
+relationships:
+  - soccer club season --dop:c--> football league season
+  - football league season --dop:rd2Team--> soccer club
+  - soccer club season --doo:manager--> soccer player
+  - soccer club season --doo:season--> event

@@ -1,0 +1,100 @@
+types:
+  award: doo:Award
+  person: doo:Person
+  Location: doo:Location
+  economist: doo:Economist
+  scientist: doo:Scientist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Boston: (align^='right')
+      Merton_Miller: (awards^='http://dbpedia.org/resource/Nobel_Memorial_Prize_in_Economic_Sciences')
+    relationships:
+      - Merton_Miller (dor:Merton_Miller) --dop:awards--> Nobel_Memorial_Prize_in_Economic_Sciences (dor:Nobel_Memorial_Prize_in_Economic_Sciences)
+      - Abhijit_Banerjee (dor:Abhijit_Banerjee) --doo:award--> Nobel_Memorial_Prize_in_Economic_Sciences (dor:Nobel_Memorial_Prize_in_Economic_Sciences)
+      - Campbell_Harvey (dor:Campbell_Harvey) --doo:influencedBy--> Merton_Miller (dor:Merton_Miller)
+      - Merton_Miller (dor:Merton_Miller) --dop:birthPlace--> Boston (dor:Boston)
+  '2':
+    attributes:
+      Massachusetts: (align^='right')
+      Merton_Miller: (awards^='http://dbpedia.org/resource/Nobel_Memorial_Prize_in_Economic_Sciences')
+    relationships:
+      - Merton_Miller (dor:Merton_Miller) --dop:awards--> Nobel_Memorial_Prize_in_Economic_Sciences (dor:Nobel_Memorial_Prize_in_Economic_Sciences)
+      - Abhijit_Banerjee (dor:Abhijit_Banerjee) --doo:award--> Nobel_Memorial_Prize_in_Economic_Sciences (dor:Nobel_Memorial_Prize_in_Economic_Sciences)
+      - Campbell_Harvey (dor:Campbell_Harvey) --doo:influencedBy--> Merton_Miller (dor:Merton_Miller)
+      - Merton_Miller (dor:Merton_Miller) --dop:birthPlace--> Massachusetts (dor:Massachusetts)
+  '3':
+    attributes:
+      Boston: (align^='right')
+      Merton_Miller: (awards^='http://dbpedia.org/resource/Nobel_Memorial_Prize_in_Economic_Sciences')
+    relationships:
+      - Merton_Miller (dor:Merton_Miller) --dop:awards--> Nobel_Memorial_Prize_in_Economic_Sciences (dor:Nobel_Memorial_Prize_in_Economic_Sciences)
+      - Alvin_E._Roth (dor:Alvin_E._Roth) --doo:award--> Nobel_Memorial_Prize_in_Economic_Sciences (dor:Nobel_Memorial_Prize_in_Economic_Sciences)
+      - Campbell_Harvey (dor:Campbell_Harvey) --doo:influencedBy--> Merton_Miller (dor:Merton_Miller)
+      - Merton_Miller (dor:Merton_Miller) --dop:birthPlace--> Boston (dor:Boston)
+  '4':
+    attributes:
+      Sigmund_Freud: (awards^='')
+    relationships:
+      - Sigmund_Freud (dor:Sigmund_Freud) --dop:awards--> Goethe_Prize (dor:Goethe_Prize)
+      - Albert_Schweitzer (dor:Albert_Schweitzer) --doo:award--> Goethe_Prize (dor:Goethe_Prize)
+      - Éric_Pichet (<http://dbpedia.org/resource/Éric_Pichet>) --doo:influencedBy--> Sigmund_Freud (dor:Sigmund_Freud)
+      - Sigmund_Freud (dor:Sigmund_Freud) --dop:birthPlace--> Austrian_Empire (dor:Austrian_Empire)
+  '5':
+    attributes:
+      Sigmund_Freud: (awards^='')
+    relationships:
+      - Sigmund_Freud (dor:Sigmund_Freud) --dop:awards--> Goethe_Prize (dor:Goethe_Prize)
+      - Albert_Schweitzer (dor:Albert_Schweitzer) --doo:award--> Goethe_Prize (dor:Goethe_Prize)
+      - Éric_Pichet (<http://dbpedia.org/resource/Éric_Pichet>) --doo:influencedBy--> Sigmund_Freud (dor:Sigmund_Freud)
+      - Sigmund_Freud (dor:Sigmund_Freud) --dop:birthPlace--> Margraviate_of_Moravia (dor:Margraviate_of_Moravia)
+  '6':
+    attributes:
+      Sigmund_Freud: (awards^='')
+    relationships:
+      - Sigmund_Freud (dor:Sigmund_Freud) --dop:awards--> Goethe_Prize (dor:Goethe_Prize)
+      - Amos_Oz (dor:Amos_Oz) --doo:award--> Goethe_Prize (dor:Goethe_Prize)
+      - Éric_Pichet (<http://dbpedia.org/resource/Éric_Pichet>) --doo:influencedBy--> Sigmund_Freud (dor:Sigmund_Freud)
+      - Sigmund_Freud (dor:Sigmund_Freud) --dop:birthPlace--> Austrian_Empire (dor:Austrian_Empire)
+  '7':
+    attributes:
+      Moscow: (align^='left')
+      Leonid_Hurwicz: (awards^='Nobel Memorial Prize')
+    relationships:
+      - Leonid_Hurwicz (dor:Leonid_Hurwicz) --dop:awards--> National_Medal_of_Science (dor:National_Medal_of_Science)
+      - Abel_Wolman (dor:Abel_Wolman) --doo:award--> National_Medal_of_Science (dor:National_Medal_of_Science)
+      - Masahiko_Aoki (dor:Masahiko_Aoki) --doo:influencedBy--> Leonid_Hurwicz (dor:Leonid_Hurwicz)
+      - Leonid_Hurwicz (dor:Leonid_Hurwicz) --dop:birthPlace--> Moscow (dor:Moscow)
+  '8':
+    attributes:
+      Moscow: (align^='left')
+      Leonid_Hurwicz: (awards^='Nobel Memorial Prize')
+    relationships:
+      - Leonid_Hurwicz (dor:Leonid_Hurwicz) --dop:awards--> National_Medal_of_Science (dor:National_Medal_of_Science)
+      - Albert_Sabin (dor:Albert_Sabin) --doo:award--> National_Medal_of_Science (dor:National_Medal_of_Science)
+      - Masahiko_Aoki (dor:Masahiko_Aoki) --doo:influencedBy--> Leonid_Hurwicz (dor:Leonid_Hurwicz)
+      - Leonid_Hurwicz (dor:Leonid_Hurwicz) --dop:birthPlace--> Moscow (dor:Moscow)
+  '9':
+    attributes:
+      Moscow: (align^='left')
+      Leonid_Hurwicz: (awards^='Nobel Memorial Prize')
+    relationships:
+      - Leonid_Hurwicz (dor:Leonid_Hurwicz) --dop:awards--> National_Medal_of_Science (dor:National_Medal_of_Science)
+      - Alberto_Calderón (<http://dbpedia.org/resource/Alberto_Calderón>) --doo:award--> National_Medal_of_Science (dor:National_Medal_of_Science)
+      - Masahiko_Aoki (dor:Masahiko_Aoki) --doo:influencedBy--> Leonid_Hurwicz (dor:Leonid_Hurwicz)
+      - Leonid_Hurwicz (dor:Leonid_Hurwicz) --dop:birthPlace--> Moscow (dor:Moscow)
+attributes:
+  person: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --honorific suffix^ (dop:honorificSuffix)--> langString
+  Location: --length (μ)^ (doo:length)--> double | --align^ (dop:align)--> langString | --area^ (dop:area)--> double | --owner^ (dop:owner)--> langString | --logo^ (dop:logo)--> langString | --area^ (dop:area)--> langString | --designated other1 link^ (dop:designatedOther1Link)--> langString | --length m^ (dop:lengthM)--> int
+  scientist: --awards^ (dop:awards)--> int
+subgraph_id: 404
+relationships:
+  - scientist --dop:awards--> award
+  - person --doo:award--> award
+  - economist --doo:influencedBy--> scientist
+  - scientist --dop:birthPlace--> Location

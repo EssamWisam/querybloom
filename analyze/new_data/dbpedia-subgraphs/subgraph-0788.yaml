@@ -1,0 +1,89 @@
+types:
+  company: doo:Company
+  station: doo:Station
+  building: doo:Building
+  architect: doo:Architect
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Alta_Córdoba_railway_station: (line^='http://dbpedia.org/resource/General_Manuel_Belgrano_Railway')
+    relationships:
+      - 12_West_56th_Street (dor:12_West_56th_Street) --dop:owner--> Government_of_Argentina (dor:Government_of_Argentina)
+      - 12_West_56th_Street (dor:12_West_56th_Street) --dop:architect--> McKim,_Mead_&_White (<http://dbpedia.org/resource/McKim,_Mead_&_White>)
+      - Alta_Córdoba_railway_station (<http://dbpedia.org/resource/Alta_Córdoba_railway_station>) --doo:owningOrganisation--> Government_of_Argentina (dor:Government_of_Argentina)
+  '2':
+    attributes:
+      Antártida_Argentina_railway_station: (Closed^='', line^='http://dbpedia.org/resource/General_Bartolomé_Mitre_Railway')
+    relationships:
+      - 12_West_56th_Street (dor:12_West_56th_Street) --dop:owner--> Government_of_Argentina (dor:Government_of_Argentina)
+      - 12_West_56th_Street (dor:12_West_56th_Street) --dop:architect--> McKim,_Mead_&_White (<http://dbpedia.org/resource/McKim,_Mead_&_White>)
+      - Antártida_Argentina_railway_station (<http://dbpedia.org/resource/Antártida_Argentina_railway_station>) --doo:owningOrganisation--> Government_of_Argentina (dor:Government_of_Argentina)
+  '3':
+    attributes:
+      Bahía_Blanca_Sud_railway_station: (line^='http://dbpedia.org/resource/General_Roca_Railway')
+    relationships:
+      - 12_West_56th_Street (dor:12_West_56th_Street) --dop:owner--> Government_of_Argentina (dor:Government_of_Argentina)
+      - 12_West_56th_Street (dor:12_West_56th_Street) --dop:architect--> McKim,_Mead_&_White (<http://dbpedia.org/resource/McKim,_Mead_&_White>)
+      - Bahía_Blanca_Sud_railway_station (<http://dbpedia.org/resource/Bahía_Blanca_Sud_railway_station>) --doo:owningOrganisation--> Government_of_Argentina (dor:Government_of_Argentina)
+  '4':
+    attributes:
+      14th_Street_station_(PATH): (line^='http://dbpedia.org/resource/Uptown_Hudson_Tubes')
+    relationships:
+      - 2_World_Trade_Center (dor:2_World_Trade_Center) --dop:owner--> Port_Authority_of_New_York_and_New_Jersey (dor:Port_Authority_of_New_York_and_New_Jersey)
+      - 2_World_Trade_Center (dor:2_World_Trade_Center) --dop:architect--> Foster_and_Partners (dor:Foster_and_Partners)
+      - 14th_Street_station_(PATH) (<http://dbpedia.org/resource/14th_Street_station_(PATH)>) --doo:owningOrganisation--> Port_Authority_of_New_York_and_New_Jersey (dor:Port_Authority_of_New_York_and_New_Jersey)
+  '5':
+    attributes:
+      23rd_Street_station_(PATH): (line^='http://dbpedia.org/resource/Uptown_Hudson_Tubes')
+    relationships:
+      - 2_World_Trade_Center (dor:2_World_Trade_Center) --dop:owner--> Port_Authority_of_New_York_and_New_Jersey (dor:Port_Authority_of_New_York_and_New_Jersey)
+      - 2_World_Trade_Center (dor:2_World_Trade_Center) --dop:architect--> Foster_and_Partners (dor:Foster_and_Partners)
+      - 23rd_Street_station_(PATH) (<http://dbpedia.org/resource/23rd_Street_station_(PATH)>) --doo:owningOrganisation--> Port_Authority_of_New_York_and_New_Jersey (dor:Port_Authority_of_New_York_and_New_Jersey)
+  '6':
+    attributes:
+      33rd_Street_station_(PATH): (line^='JSQ-33')
+    relationships:
+      - 2_World_Trade_Center (dor:2_World_Trade_Center) --dop:owner--> Port_Authority_of_New_York_and_New_Jersey (dor:Port_Authority_of_New_York_and_New_Jersey)
+      - 2_World_Trade_Center (dor:2_World_Trade_Center) --dop:architect--> Foster_and_Partners (dor:Foster_and_Partners)
+      - 33rd_Street_station_(PATH) (<http://dbpedia.org/resource/33rd_Street_station_(PATH)>) --doo:owningOrganisation--> Port_Authority_of_New_York_and_New_Jersey (dor:Port_Authority_of_New_York_and_New_Jersey)
+  '7':
+    attributes:
+      Transnet: (logo^='Transnet logo.svg')
+    relationships:
+      - Carlton_Centre (dor:Carlton_Centre) --dop:owner--> Transnet (dor:Transnet)
+      - Carlton_Centre (dor:Carlton_Centre) --dop:architect--> Skidmore,_Owings_and_Merrill (<http://dbpedia.org/resource/Skidmore,_Owings_and_Merrill>)
+      - Mafikeng_railway_station (dor:Mafikeng_railway_station) --doo:owningOrganisation--> Transnet (dor:Transnet)
+  '8':
+    attributes:
+      Transnet: (logo^='Transnet logo.svg')
+    relationships:
+      - Carlton_Hotel_(Johannesburg) (<http://dbpedia.org/resource/Carlton_Hotel_(Johannesburg)>) --dop:owner--> Transnet (dor:Transnet)
+      - Carlton_Hotel_(Johannesburg) (<http://dbpedia.org/resource/Carlton_Hotel_(Johannesburg)>) --dop:architect--> Gordon_Bunshaft (dor:Gordon_Bunshaft)
+      - Mafikeng_railway_station (dor:Mafikeng_railway_station) --doo:owningOrganisation--> Transnet (dor:Transnet)
+  '9':
+    attributes: {}
+    relationships:
+      - Fisht_Olympic_Stadium (dor:Fisht_Olympic_Stadium) --dop:owner--> Government_of_Russia (dor:Government_of_Russia)
+      - Fisht_Olympic_Stadium (dor:Fisht_Olympic_Stadium) --dop:architect--> Buro_Happold (dor:Buro_Happold)
+      - Baranovsky_railway_station (dor:Baranovsky_railway_station) --doo:owningOrganisation--> Government_of_Russia (dor:Government_of_Russia)
+  '10':
+    attributes:
+      Khasan_railway_station: (line^='Vladivostok branch')
+    relationships:
+      - Fisht_Olympic_Stadium (dor:Fisht_Olympic_Stadium) --dop:owner--> Government_of_Russia (dor:Government_of_Russia)
+      - Fisht_Olympic_Stadium (dor:Fisht_Olympic_Stadium) --dop:architect--> Buro_Happold (dor:Buro_Happold)
+      - Khasan_railway_station (dor:Khasan_railway_station) --doo:owningOrganisation--> Government_of_Russia (dor:Government_of_Russia)
+attributes:
+  company: --logo^ (dop:logo)--> langString | --former name^ (doo:formerName)--> langString | --owner^ (doo:owner)--> Resource | --founder^ (dop:founder)--> langString
+  station: --Closed^ (dop:closed)--> gMonthDay | --line^ (dop:line)--> Resource | --b^ (dop:b)--> langString
+  building: --header^ (dop:header)--> langString | --designated other1 date^ (dop:designatedOther1Date)--> date | --accessdate^ (dop:accessdate)--> date | --footer^ (dop:footer)--> langString
+subgraph_id: 788
+relationships:
+  - building --dop:owner--> company
+  - building --dop:architect--> architect
+  - station --doo:owningOrganisation--> company

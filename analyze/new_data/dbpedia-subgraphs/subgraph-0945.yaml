@@ -1,0 +1,47 @@
+types:
+  movie: doo:Film
+  company: doo:Company
+  country: doo:Country
+  television show: doo:TelevisionShow
+  broadcast network: doo:BroadcastNetwork
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      BBC: (founded by^='http://dbpedia.org/resource/Government_of_the_United_Kingdom')
+    relationships:
+      - BBC_Cymru_Wales (dor:BBC_Cymru_Wales) --doo:owningCompany--> BBC (dor:BBC)
+      - African_Hunting_Holiday (dor:African_Hunting_Holiday) --doo:distributor--> BBC (dor:BBC)
+      - BBC (dor:BBC) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - Bargain_Hunt (dor:Bargain_Hunt) --doo:company--> BBC_Cymru_Wales (dor:BBC_Cymru_Wales)
+  '2':
+    attributes:
+      BBC: (founded by^='http://dbpedia.org/resource/Government_of_the_United_Kingdom')
+    relationships:
+      - BBC_Cymru_Wales (dor:BBC_Cymru_Wales) --doo:owningCompany--> BBC (dor:BBC)
+      - African_Hunting_Holiday (dor:African_Hunting_Holiday) --doo:distributor--> BBC (dor:BBC)
+      - BBC (dor:BBC) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - BBC_Wales_Today (dor:BBC_Wales_Today) --doo:company--> BBC_Cymru_Wales (dor:BBC_Cymru_Wales)
+  '3':
+    attributes:
+      BBC: (founded by^='http://dbpedia.org/resource/Government_of_the_United_Kingdom')
+    relationships:
+      - BBC_Cymru_Wales (dor:BBC_Cymru_Wales) --doo:owningCompany--> BBC (dor:BBC)
+      - African_Hunting_Holiday (dor:African_Hunting_Holiday) --doo:distributor--> BBC (dor:BBC)
+      - BBC (dor:BBC) --doo:location--> United_Kingdom (dor:United_Kingdom)
+      - Bobinogs (dor:Bobinogs) --doo:company--> BBC_Cymru_Wales (dor:BBC_Cymru_Wales)
+attributes:
+  movie: --gross ($)^ (doo:gross)--> poundSterling | --width^ (dop:width)--> perCent | --reason^ (dop:reason)--> langString
+  company: --founded by^ (doo:foundedBy)--> Resource | --width^ (dop:width)--> int
+  country: --float^ (dop:float)--> langString
+  television show: --date^ (dop:date)--> date | --writer^ (dop:writer)--> langString | --aux^ (dop:aux)--> second
+subgraph_id: 945
+relationships:
+  - broadcast network --doo:owningCompany--> company
+  - movie --doo:distributor--> company
+  - company --doo:location--> country
+  - television show --doo:company--> broadcast network

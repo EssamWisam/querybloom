@@ -1,0 +1,81 @@
+types:
+  book: doo:Book
+  Location: doo:Location
+  language: doo:Language
+  newspaper: doo:Newspaper
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Colombia: (Link from a Wikipage to an external page^='http://www.colombia.travel/')
+    relationships:
+      - Colombian_Spanish (dor:Colombian_Spanish) --doo:spokenIn--> Colombia (dor:Colombia)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --dop:country--> Colombia (dor:Colombia)
+      - Diario_Oficial_(Colombia) (<http://dbpedia.org/resource/Diario_Oficial_(Colombia)>) --doo:language--> Colombian_Spanish (dor:Colombian_Spanish)
+  '2':
+    attributes:
+      Colombia: (Link from a Wikipage to an external page^='http://www.colombia.travel/')
+    relationships:
+      - Colombian_Spanish (dor:Colombian_Spanish) --doo:spokenIn--> Colombia (dor:Colombia)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --dop:country--> Colombia (dor:Colombia)
+      - El_Bogotano (dor:El_Bogotano) --doo:language--> Colombian_Spanish (dor:Colombian_Spanish)
+  '3':
+    attributes:
+      Colombia: (Link from a Wikipage to an external page^='http://www.colombia.travel/')
+    relationships:
+      - Colombian_Spanish (dor:Colombian_Spanish) --doo:spokenIn--> Colombia (dor:Colombia)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --dop:country--> Colombia (dor:Colombia)
+      - El_Espacio (dor:El_Espacio) --doo:language--> Colombian_Spanish (dor:Colombian_Spanish)
+  '4':
+    attributes:
+      United_Kingdom: (Link from a Wikipage to an external page^='http://www.churchofscotland.org.uk/about_us/how_we_are_organised')
+    relationships:
+      - British_English (dor:British_English) --doo:spokenIn--> United_Kingdom (dor:United_Kingdom)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --dop:country--> United_Kingdom (dor:United_Kingdom)'
+      - New_Light_of_Myanmar (dor:New_Light_of_Myanmar) --doo:language--> British_English (dor:British_English)
+  '5':
+    attributes:
+      United_Kingdom: (Link from a Wikipage to an external page^='http://www.churchofscotland.org.uk/about_us/how_we_are_organised')
+    relationships:
+      - English_language_in_England (dor:English_language_in_England) --doo:spokenIn--> United_Kingdom (dor:United_Kingdom)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --dop:country--> United_Kingdom (dor:United_Kingdom)'
+      - SCAN_(newspaper) (<http://dbpedia.org/resource/SCAN_(newspaper)>) --doo:language--> English_language_in_England (dor:English_language_in_England)
+  '6':
+    attributes:
+      United_Kingdom: (Link from a Wikipage to an external page^='http://www.churchofscotland.org.uk/about_us/how_we_are_organised')
+    relationships:
+      - Scots_language (dor:Scots_language) --doo:spokenIn--> United_Kingdom (dor:United_Kingdom)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --dop:country--> United_Kingdom (dor:United_Kingdom)'
+      - The_National_(Scotland) (<http://dbpedia.org/resource/The_National_(Scotland)>) --doo:language--> Scots_language (dor:Scots_language)
+  '7':
+    attributes:
+      Philippines: (Link from a Wikipage to an external page^='http://countrystudies.us/')
+    relationships:
+      - Cebuano_language (dor:Cebuano_language) --doo:spokenIn--> Philippines (dor:Philippines)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --dop:country--> Philippines (dor:Philippines)'
+      - Ang_Bayan (dor:Ang_Bayan) --doo:language--> Cebuano_language (dor:Cebuano_language)
+  '8':
+    attributes:
+      Philippines: (Link from a Wikipage to an external page^='http://countrystudies.us/')
+    relationships:
+      - Cebuano_language (dor:Cebuano_language) --doo:spokenIn--> Philippines (dor:Philippines)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --dop:country--> Philippines (dor:Philippines)'
+      - Bag-ong_Kusog (dor:Bag-ong_Kusog) --doo:language--> Cebuano_language (dor:Cebuano_language)
+  '9':
+    attributes:
+      Philippines: (Link from a Wikipage to an external page^='http://countrystudies.us/')
+    relationships:
+      - Cebuano_language (dor:Cebuano_language) --doo:spokenIn--> Philippines (dor:Philippines)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --dop:country--> Philippines (dor:Philippines)'
+      - Mindanao_Journal (dor:Mindanao_Journal) --doo:language--> Cebuano_language (dor:Cebuano_language)
+attributes:
+  Location: --Center^ (dop:center)--> langString | --designated other1 link^ (dop:designatedOther1Link)--> langString | --area^ (dop:area)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --Aug low C^ (dop:augLowC)--> int | --builder^ (dop:builder)--> Resource | --location^ (doo:location)--> Resource | --architect^ (dop:architect)--> Resource | --operator^ (dop:operator)--> langString | --area^ (dop:area)--> hectare | --named for^ (dop:namedFor)--> Resource
+subgraph_id: 661
+relationships:
+  - language --doo:spokenIn--> Location
+  - book --dop:country--> Location
+  - newspaper --doo:language--> language

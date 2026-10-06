@@ -1,0 +1,93 @@
+types:
+  museum: doo:Museum
+  artwork: doo:Artwork
+  building: doo:Building
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Glenstone (dor:Glenstone) --doo:location--> Maryland (dor:Maryland)
+      - '%22Untitled%22_(Perfect_Lovers) (<http://dbpedia.org/resource/%22Untitled%22_(Perfect_Lovers)>) --doo:museum--> Glenstone (dor:Glenstone)'
+      - '%22Untitled%22_(Perfect_Lovers) (<http://dbpedia.org/resource/%22Untitled%22_(Perfect_Lovers)>) --doo:museum--> Dallas_Museum_of_Art (dor:Dallas_Museum_of_Art)'
+  '2':
+    attributes:
+      Wadsworth_Atheneum: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-location-noun-1')
+    relationships:
+      - Glenstone (dor:Glenstone) --doo:location--> Maryland (dor:Maryland)
+      - '%22Untitled%22_(Perfect_Lovers) (<http://dbpedia.org/resource/%22Untitled%22_(Perfect_Lovers)>) --doo:museum--> Glenstone (dor:Glenstone)'
+      - '%22Untitled%22_(Perfect_Lovers) (<http://dbpedia.org/resource/%22Untitled%22_(Perfect_Lovers)>) --doo:museum--> Wadsworth_Atheneum (dor:Wadsworth_Atheneum)'
+  '3':
+    attributes: {}
+    relationships:
+      - Glenstone (dor:Glenstone) --doo:location--> Potomac,_Maryland (<http://dbpedia.org/resource/Potomac,_Maryland>)
+      - '%22Untitled%22_(Perfect_Lovers) (<http://dbpedia.org/resource/%22Untitled%22_(Perfect_Lovers)>) --doo:museum--> Glenstone (dor:Glenstone)'
+      - '%22Untitled%22_(Perfect_Lovers) (<http://dbpedia.org/resource/%22Untitled%22_(Perfect_Lovers)>) --doo:museum--> Dallas_Museum_of_Art (dor:Dallas_Museum_of_Art)'
+  '4':
+    attributes:
+      Museum_of_Modern_Art: (logo^='Museum of Modern Art logo.svg')
+    relationships:
+      - Museum_of_Modern_Art (dor:Museum_of_Modern_Art) --doo:location--> Manhattan (dor:Manhattan)
+      - African-American_Flag (dor:African-American_Flag) --doo:museum--> Museum_of_Modern_Art (dor:Museum_of_Modern_Art)
+      - African-American_Flag (dor:African-American_Flag) --doo:museum--> National_Museum_of_African_American_History_and_Culture (dor:National_Museum_of_African_American_History_and_Culture)
+  '5':
+    attributes:
+      Museum_of_Modern_Art: (logo^='Museum of Modern Art logo.svg')
+    relationships:
+      - Museum_of_Modern_Art (dor:Museum_of_Modern_Art) --doo:location--> Manhattan (dor:Manhattan)
+      - African-American_Flag (dor:African-American_Flag) --doo:museum--> Museum_of_Modern_Art (dor:Museum_of_Modern_Art)
+      - African-American_Flag (dor:African-American_Flag) --doo:museum--> Studio_Museum_in_Harlem (dor:Studio_Museum_in_Harlem)
+  '6':
+    attributes:
+      Studio_Museum_in_Harlem: (logo^='StudioMuseumHarlem.png')
+    relationships:
+      - Studio_Museum_in_Harlem (dor:Studio_Museum_in_Harlem) --doo:location--> Manhattan (dor:Manhattan)
+      - African-American_Flag (dor:African-American_Flag) --doo:museum--> Studio_Museum_in_Harlem (dor:Studio_Museum_in_Harlem)
+      - African-American_Flag (dor:African-American_Flag) --doo:museum--> Museum_of_Modern_Art (dor:Museum_of_Modern_Art)
+  '7':
+    attributes:
+      Rome: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-monument-noun-2', Aug precipitation mm^='34.1')
+      Allegory_of_Divine_Providence_and_Barberini_Power_(Cortona): (image size^='300')
+    relationships:
+      - Galleria_Nazionale_d'Arte_Antica (<http://dbpedia.org/resource/Galleria_Nazionale_d'Arte_Antica>) --doo:location--> Rome (dor:Rome)
+      - Allegory_of_Divine_Providence_and_Barberini_Power_(Cortona) (<http://dbpedia.org/resource/Allegory_of_Divine_Providence_and_Barberini_Power_(Cortona)>) --doo:museum--> Galleria_Nazionale_d'Arte_Antica (<http://dbpedia.org/resource/Galleria_Nazionale_d'Arte_Antica>)
+      - Allegory_of_Divine_Providence_and_Barberini_Power_(Cortona) (<http://dbpedia.org/resource/Allegory_of_Divine_Providence_and_Barberini_Power_(Cortona)>) --doo:museum--> Palazzo_Barberini (dor:Palazzo_Barberini)
+  '8':
+    attributes:
+      Rome: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-monument-noun-2', Aug precipitation mm^='34.1')
+      Allegory_of_Divine_Providence_and_Barberini_Power_(Cortona): (image size^='300')
+    relationships:
+      - Palazzo_Barberini (dor:Palazzo_Barberini) --doo:location--> Rome (dor:Rome)
+      - Allegory_of_Divine_Providence_and_Barberini_Power_(Cortona) (<http://dbpedia.org/resource/Allegory_of_Divine_Providence_and_Barberini_Power_(Cortona)>) --doo:museum--> Palazzo_Barberini (dor:Palazzo_Barberini)
+      - Allegory_of_Divine_Providence_and_Barberini_Power_(Cortona) (<http://dbpedia.org/resource/Allegory_of_Divine_Providence_and_Barberini_Power_(Cortona)>) --doo:museum--> Galleria_Nazionale_d'Arte_Antica (<http://dbpedia.org/resource/Galleria_Nazionale_d'Arte_Antica>)
+  '9':
+    attributes:
+      Chicago: (footer align^='left/right/center')
+      Beata_Beatrix: (image size^='250')
+      Art_Institute_of_Chicago: (logo^='200')
+    relationships:
+      - Art_Institute_of_Chicago (dor:Art_Institute_of_Chicago) --doo:location--> Chicago (dor:Chicago)
+      - Beata_Beatrix (dor:Beata_Beatrix) --doo:museum--> Art_Institute_of_Chicago (dor:Art_Institute_of_Chicago)
+      - Beata_Beatrix (dor:Beata_Beatrix) --doo:museum--> Tate_Britain (dor:Tate_Britain)
+  '10':
+    attributes:
+      Beata_Beatrix: (image size^='250')
+    relationships:
+      - Tate_Britain (dor:Tate_Britain) --doo:location--> London (dor:London)
+      - Beata_Beatrix (dor:Beata_Beatrix) --doo:museum--> Tate_Britain (dor:Tate_Britain)
+      - Beata_Beatrix (dor:Beata_Beatrix) --doo:museum--> Art_Institute_of_Chicago (dor:Art_Institute_of_Chicago)
+attributes:
+  museum: --logo^ (dop:logo)--> langString
+  artwork: --image size^ (dop:imageSize)--> int
+  building: --builder^ (dop:builder)--> Resource | --built^ (dop:built)--> langString | --added^ (dop:added)--> date | --wordnet_type (dop:wordnet_type)--> Resource | --id^ (dop:id)--> langString
+  settlement: --Aug low F^ (dop:augLowF)--> double | --footer align^ (dop:footerAlign)--> langString | --wordnet_type (dop:wordnet_type)--> Resource | --Center^ (dop:center)--> langString | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int
+subgraph_id: 719
+relationships:
+  - museum --doo:location--> settlement
+  - artwork --doo:museum--> museum
+  - artwork --doo:museum--> building

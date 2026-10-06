@@ -1,0 +1,89 @@
+types:
+  person: doo:Person
+  writer: doo:Writer
+  soap character: doo:SoapCharacter
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Over_Here_(TV_series): (Wikipage page ID^='7354693')
+      John_Sullivan_(writer): (active years start year^='1977', birth name^='')
+    relationships:
+      - Boycie (dor:Boycie) --doo:creator--> John_Sullivan_(writer) (<http://dbpedia.org/resource/John_Sullivan_(writer)>)
+      - Over_Here_(TV_series) (<http://dbpedia.org/resource/Over_Here_(TV_series)>) --doo:executiveProducer--> John_Sullivan_(writer) (<http://dbpedia.org/resource/John_Sullivan_(writer)>)
+      - Over_Here_(TV_series) (<http://dbpedia.org/resource/Over_Here_(TV_series)>) --dop:writer--> John_Sullivan_(writer) (<http://dbpedia.org/resource/John_Sullivan_(writer)>)
+  '2':
+    attributes:
+      Over_Here_(TV_series): (Wikipage page ID^='7354693')
+      John_Sullivan_(writer): (active years start year^='1977', birth name^='')
+    relationships:
+      - Cassandra_Trotter (dor:Cassandra_Trotter) --doo:creator--> John_Sullivan_(writer) (<http://dbpedia.org/resource/John_Sullivan_(writer)>)
+      - Over_Here_(TV_series) (<http://dbpedia.org/resource/Over_Here_(TV_series)>) --doo:executiveProducer--> John_Sullivan_(writer) (<http://dbpedia.org/resource/John_Sullivan_(writer)>)
+      - Over_Here_(TV_series) (<http://dbpedia.org/resource/Over_Here_(TV_series)>) --dop:writer--> John_Sullivan_(writer) (<http://dbpedia.org/resource/John_Sullivan_(writer)>)
+  '3':
+    attributes:
+      Over_Here_(TV_series): (Wikipage page ID^='7354693')
+      John_Sullivan_(writer): (active years start year^='1977', birth name^='')
+    relationships:
+      - Damien_Trotter (dor:Damien_Trotter) --doo:creator--> John_Sullivan_(writer) (<http://dbpedia.org/resource/John_Sullivan_(writer)>)
+      - Over_Here_(TV_series) (<http://dbpedia.org/resource/Over_Here_(TV_series)>) --doo:executiveProducer--> John_Sullivan_(writer) (<http://dbpedia.org/resource/John_Sullivan_(writer)>)
+      - Over_Here_(TV_series) (<http://dbpedia.org/resource/Over_Here_(TV_series)>) --dop:writer--> John_Sullivan_(writer) (<http://dbpedia.org/resource/John_Sullivan_(writer)>)
+  '4':
+    attributes:
+      Exile_(TV_series): (Wikipage page ID^='31649379')
+    relationships:
+      - Ian_Gallagher__Ian_Gallagher__1 (dor:Ian_Gallagher__Ian_Gallagher__1) --doo:creator--> Paul_Abbott (dor:Paul_Abbott)
+      - Exile_(TV_series) (<http://dbpedia.org/resource/Exile_(TV_series)>) --doo:executiveProducer--> Paul_Abbott (dor:Paul_Abbott)
+      - Exile_(TV_series) (<http://dbpedia.org/resource/Exile_(TV_series)>) --dop:writer--> Danny_Brocklehurst (dor:Danny_Brocklehurst)
+  '5':
+    attributes:
+      Instinct_(TV_serial): (Wikipage page ID^='26422739')
+    relationships:
+      - Ian_Gallagher__Ian_Gallagher__1 (dor:Ian_Gallagher__Ian_Gallagher__1) --doo:creator--> Paul_Abbott (dor:Paul_Abbott)
+      - Instinct_(TV_serial) (<http://dbpedia.org/resource/Instinct_(TV_serial)>) --doo:executiveProducer--> Paul_Abbott (dor:Paul_Abbott)
+      - Instinct_(TV_serial) (<http://dbpedia.org/resource/Instinct_(TV_serial)>) --dop:writer--> Lizzie_Mickery (dor:Lizzie_Mickery)
+  '6':
+    attributes:
+      Exile_(TV_series): (Wikipage page ID^='31649379')
+    relationships:
+      - Ian_Gallagher (dor:Ian_Gallagher) --doo:creator--> Paul_Abbott (dor:Paul_Abbott)
+      - Exile_(TV_series) (<http://dbpedia.org/resource/Exile_(TV_series)>) --doo:executiveProducer--> Paul_Abbott (dor:Paul_Abbott)
+      - Exile_(TV_series) (<http://dbpedia.org/resource/Exile_(TV_series)>) --dop:writer--> Danny_Brocklehurst (dor:Danny_Brocklehurst)
+  '7':
+    attributes:
+      Dudley_Moore: (active years start year^='1961', birth name^='Dudley Stuart John Moore')
+      Not_Only..._But_Also: (Wikipage page ID^='761206')
+    relationships:
+      - Norman_Stanley_Fletcher (dor:Norman_Stanley_Fletcher) --doo:creator--> Dick_Clement (dor:Dick_Clement)
+      - Not_Only..._But_Also (dor:Not_Only..._But_Also) --doo:executiveProducer--> Dick_Clement (dor:Dick_Clement)
+      - Not_Only..._But_Also (dor:Not_Only..._But_Also) --dop:writer--> Dudley_Moore (dor:Dudley_Moore)
+  '8':
+    attributes:
+      Peter_Cook: (active years start year^='1958', birth name^='Peter Edward Cook')
+      Not_Only..._But_Also: (Wikipage page ID^='761206')
+    relationships:
+      - Norman_Stanley_Fletcher (dor:Norman_Stanley_Fletcher) --doo:creator--> Dick_Clement (dor:Dick_Clement)
+      - Not_Only..._But_Also (dor:Not_Only..._But_Also) --doo:executiveProducer--> Dick_Clement (dor:Dick_Clement)
+      - Not_Only..._But_Also (dor:Not_Only..._But_Also) --dop:writer--> Peter_Cook (dor:Peter_Cook)
+  '9':
+    attributes:
+      Love_Soup: (Wikipage page ID^='2783133')
+      David_Renwick: (active years start year^='1974', birth name^='David Peter Renwick')
+    relationships:
+      - Victor_Meldrew (dor:Victor_Meldrew) --doo:creator--> David_Renwick (dor:David_Renwick)
+      - Love_Soup (dor:Love_Soup) --doo:executiveProducer--> David_Renwick (dor:David_Renwick)
+      - Love_Soup (dor:Love_Soup) --dop:writer--> David_Renwick (dor:David_Renwick)
+attributes:
+  person: --first appearance^ (doo:firstAppearance)--> string | --b^ (dop:b)--> langString | --active years start year^ (doo:activeYearsStartYear)--> gYear | --relatives^ (dop:relatives)--> Resource | --after^ (dop:after)--> Resource | --certain^ (dop:certain)--> langString | --birth name^ (dop:birthName)--> langString | --audio^ (dop:audio)--> langString | --footer^ (dop:footer)--> langString
+  writer: --awards^ (dop:awards)--> Resource
+  television show: --Wikipage page ID^ (doo:wikiPageID)--> int | --header^ (dop:header)--> langString
+subgraph_id: 311
+relationships:
+  - soap character --doo:creator--> writer
+  - television show --doo:executiveProducer--> writer
+  - television show --dop:writer--> person

@@ -1,0 +1,116 @@
+types:
+  venue: doo:Venue
+  station: doo:Station
+  settlement: doo:Settlement
+  soap character: doo:SoapCharacter
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dorcp: http://dbpedia.org/resource/City_Park/
+instances:
+  '1':
+    attributes:
+      Buffalo–Depew_station: (owned^='http://dbpedia.org/resource/New_York_(state)', line^='Empire Corridor')
+    relationships:
+      - Buffalo–Depew_station (<http://dbpedia.org/resource/Buffalo–Depew_station>) --doo:owningOrganisation--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Andre_Lyon (dor:Andre_Lyon) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Alice_Tully_Hall (dor:Alice_Tully_Hall) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Abel_Streight (dor:Abel_Streight) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '2':
+    attributes:
+      Amherst_Audubon_Field: (tenant^='http://dbpedia.org/resource/Buffalo_Bulls_baseball')
+      Buffalo–Depew_station: (owned^='http://dbpedia.org/resource/New_York_(state)', line^='Empire Corridor')
+    relationships:
+      - Buffalo–Depew_station (<http://dbpedia.org/resource/Buffalo–Depew_station>) --doo:owningOrganisation--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Andre_Lyon (dor:Andre_Lyon) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Amherst_Audubon_Field (dor:Amherst_Audubon_Field) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Abel_Streight (dor:Abel_Streight) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '3':
+    attributes:
+      Buffalo–Depew_station: (owned^='http://dbpedia.org/resource/New_York_(state)', line^='Empire Corridor')
+      Aviator_Sports_and_Events_Center: (tenant^='http://dbpedia.org/resource/Aviator_Sports_&_Events_Center')
+    relationships:
+      - Buffalo–Depew_station (<http://dbpedia.org/resource/Buffalo–Depew_station>) --doo:owningOrganisation--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Andre_Lyon (dor:Andre_Lyon) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Aviator_Sports_and_Events_Center (dor:Aviator_Sports_and_Events_Center) --doo:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Abel_Streight (dor:Abel_Streight) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '4':
+    attributes:
+      New_York_City: (subdivision^='http://dbpedia.org/resource/Brooklyn')
+    relationships:
+      - Williamsburg_Bridge_Trolley_Terminal__Williamsburg_Bridge_Trolley_Terminal__1 (dor:Williamsburg_Bridge_Trolley_Terminal__Williamsburg_Bridge_Trolley_Terminal__1) --doo:owningOrganisation--> New_York_City (dor:New_York_City)
+      - Angie_Bolen (dor:Angie_Bolen) --doo:residence--> New_York_City (dor:New_York_City)
+      - (Le)_Poisson_Rouge (<http://dbpedia.org/resource/(Le)_Poisson_Rouge>) --doo:location--> New_York_City (dor:New_York_City)
+      - Abimael_Youngs_Nicoll (dor:Abimael_Youngs_Nicoll) --dop:birthPlace--> New_York_City (dor:New_York_City)
+  '5':
+    attributes:
+      New_York_City: (subdivision^='http://dbpedia.org/resource/Brooklyn')
+    relationships:
+      - Williamsburg_Bridge_Trolley_Terminal__Williamsburg_Bridge_Trolley_Terminal__1 (dor:Williamsburg_Bridge_Trolley_Terminal__Williamsburg_Bridge_Trolley_Terminal__1) --doo:owningOrganisation--> New_York_City (dor:New_York_City)
+      - Angie_Bolen (dor:Angie_Bolen) --doo:residence--> New_York_City (dor:New_York_City)
+      - 124_Ridge_Street_Gallery (dor:124_Ridge_Street_Gallery) --doo:location--> New_York_City (dor:New_York_City)
+      - Abimael_Youngs_Nicoll (dor:Abimael_Youngs_Nicoll) --dop:birthPlace--> New_York_City (dor:New_York_City)
+  '6':
+    attributes:
+      New_York_City: (subdivision^='http://dbpedia.org/resource/Brooklyn')
+    relationships:
+      - Williamsburg_Bridge_Trolley_Terminal__Williamsburg_Bridge_Trolley_Terminal__1 (dor:Williamsburg_Bridge_Trolley_Terminal__Williamsburg_Bridge_Trolley_Terminal__1) --doo:owningOrganisation--> New_York_City (dor:New_York_City)
+      - Angie_Bolen (dor:Angie_Bolen) --doo:residence--> New_York_City (dor:New_York_City)
+      - 44th_Street_Theatre (dor:44th_Street_Theatre) --doo:location--> New_York_City (dor:New_York_City)
+      - Abimael_Youngs_Nicoll (dor:Abimael_Youngs_Nicoll) --dop:birthPlace--> New_York_City (dor:New_York_City)
+  '7':
+    attributes:
+      New_Orleans: (Aug precipitation days^='13.3', Apr sun^='251.9', subdivision^='http://dbpedia.org/resource/Louisiana')
+      Andrew_Hero_Jr.: (spouse^='Fanny Caroline Davis')
+      Caesars_Superdome: (tenant^='http://dbpedia.org/resource/New_Orleans_Bowl')
+      New_Orleans_Union_Passenger_Terminal: (owned^='http://dbpedia.org/resource/New_Orleans')
+    relationships:
+      - New_Orleans_Union_Passenger_Terminal (dor:New_Orleans_Union_Passenger_Terminal) --doo:owningOrganisation--> New_Orleans (dor:New_Orleans)
+      - List_of_The_Young_and_the_Restless_characters_(1970s)__Brock_Reynolds__1 (<http://dbpedia.org/resource/List_of_The_Young_and_the_Restless_characters_(1970s)__Brock_Reynolds__1>) --doo:residence--> New_Orleans (dor:New_Orleans)
+      - Caesars_Superdome (dor:Caesars_Superdome) --doo:location--> New_Orleans (dor:New_Orleans)
+      - Andrew_Hero_Jr. (<http://dbpedia.org/resource/Andrew_Hero_Jr.>) --dop:birthPlace--> New_Orleans (dor:New_Orleans)
+  '8':
+    attributes:
+      New_Orleans: (Aug precipitation days^='13.3', Apr sun^='251.9', subdivision^='http://dbpedia.org/resource/Louisiana')
+      Andrew_Hero_Jr.: (spouse^='Fanny Caroline Davis')
+      New_Orleans_Union_Passenger_Terminal: (owned^='http://dbpedia.org/resource/New_Orleans')
+    relationships:
+      - New_Orleans_Union_Passenger_Terminal (dor:New_Orleans_Union_Passenger_Terminal) --doo:owningOrganisation--> New_Orleans (dor:New_Orleans)
+      - List_of_The_Young_and_the_Restless_characters_(1970s)__Brock_Reynolds__1 (<http://dbpedia.org/resource/List_of_The_Young_and_the_Restless_characters_(1970s)__Brock_Reynolds__1>) --doo:residence--> New_Orleans (dor:New_Orleans)
+      - City_Park_Practice_Track (dor:City_Park_Practice_Track) --doo:location--> New_Orleans (dor:New_Orleans)
+      - Andrew_Hero_Jr. (<http://dbpedia.org/resource/Andrew_Hero_Jr.>) --dop:birthPlace--> New_Orleans (dor:New_Orleans)
+  '9':
+    attributes:
+      New_Orleans: (Aug precipitation days^='13.3', Apr sun^='251.9', subdivision^='http://dbpedia.org/resource/Louisiana')
+      Andrew_Hero_Jr.: (spouse^='Fanny Caroline Davis')
+      Pepsi_Tennis_Center: (tenant^='http://dbpedia.org/resource/Loyola_Wolf_Pack')
+      New_Orleans_Union_Passenger_Terminal: (owned^='http://dbpedia.org/resource/New_Orleans')
+    relationships:
+      - New_Orleans_Union_Passenger_Terminal (dor:New_Orleans_Union_Passenger_Terminal) --doo:owningOrganisation--> New_Orleans (dor:New_Orleans)
+      - List_of_The_Young_and_the_Restless_characters_(1970s)__Brock_Reynolds__1 (<http://dbpedia.org/resource/List_of_The_Young_and_the_Restless_characters_(1970s)__Brock_Reynolds__1>) --doo:residence--> New_Orleans (dor:New_Orleans)
+      - Pepsi_Tennis_Center (dorcp:Pepsi_Tennis_Center) --doo:location--> New_Orleans (dor:New_Orleans)
+      - Andrew_Hero_Jr. (<http://dbpedia.org/resource/Andrew_Hero_Jr.>) --dop:birthPlace--> New_Orleans (dor:New_Orleans)
+  '10':
+    attributes:
+      Chicago: (subdivision^='http://dbpedia.org/resource/Cook_County,_Illinois')
+      23rd_Street_Grounds: (tenant^='http://dbpedia.org/resource/Chicago_White_Stockings_(1870–89)')
+      Chicago_station_(CTA_Blue_Line): (owned^='http://dbpedia.org/resource/Chicago', line^='http://dbpedia.org/resource/Milwaukee-Dearborn_Subway')
+    relationships:
+      - Chicago_station_(CTA_Blue_Line) (<http://dbpedia.org/resource/Chicago_station_(CTA_Blue_Line)>) --doo:owningOrganisation--> Chicago (dor:Chicago)
+      - Betty_Applewhite (dor:Betty_Applewhite) --doo:residence--> Chicago (dor:Chicago)
+      - 23rd_Street_Grounds (dor:23rd_Street_Grounds) --doo:location--> Chicago (dor:Chicago)
+      - Arthur_W._Wermuth (dor:Arthur_W._Wermuth) --dop:birthPlace--> Chicago (dor:Chicago)
+attributes:
+  venue: --tenant^ (doo:tenant)--> Resource
+  station: --alt^ (dop:alt)--> langString | --owned^ (dop:owned)--> Resource | --line^ (dop:line)--> int | --next^ (dop:next)--> Resource
+  settlement: --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --anthem^ (doo:anthem)--> Resource | --Apr sun^ (dop:aprSun)--> int | --line^ (dop:line)--> int | --subdivision^ (doo:subdivision)--> Resource
+  military person: --spouse^ (dop:spouse)--> langString
+subgraph_id: 848
+relationships:
+  - station --doo:owningOrganisation--> settlement
+  - soap character --doo:residence--> settlement
+  - venue --doo:location--> settlement
+  - military person --dop:birthPlace--> settlement

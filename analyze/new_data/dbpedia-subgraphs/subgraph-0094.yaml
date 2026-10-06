@@ -1,0 +1,87 @@
+types:
+  country: doo:Country
+  darts player: doo:DartsPlayer
+  Christian Bishop: doo:ChristianBishop
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg', capital^='http://dbpedia.org/resource/Washington,_D.C.')
+      A._Theodore_Eastman: (death date^='2018-04-26')
+    relationships:
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --doo:deathPlace--> United_States (dor:United_States)
+      - Conrad_Daniels (dor:Conrad_Daniels) --doo:hometown--> United_States (dor:United_States)
+  '2':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg', capital^='http://dbpedia.org/resource/Washington,_D.C.')
+      A._Theodore_Eastman: (death date^='2018-04-26')
+    relationships:
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --doo:deathPlace--> United_States (dor:United_States)
+      - Danny_Lauby_Jr. (<http://dbpedia.org/resource/Danny_Lauby_Jr.>) --doo:hometown--> United_States (dor:United_States)
+  '3':
+    attributes:
+      United_States: (image^='Howard Pyle  - Landing Negroes at Jamestown from Dutch Man-of-War, 1619 - 1901.jpg', capital^='http://dbpedia.org/resource/Washington,_D.C.')
+      A._Theodore_Eastman: (death date^='2018-04-26')
+    relationships:
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --doo:deathPlace--> United_States (dor:United_States)
+      - Darin_Young (dor:Darin_Young) --doo:hometown--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Sweden: (capital^='http://dbpedia.org/resource/Stockholm')
+      Abraham_Angermannus: (death date^='December 1607')
+    relationships:
+      - Abraham_Angermannus (dor:Abraham_Angermannus) --doo:deathPlace--> Sweden (dor:Sweden)
+      - Johan_Engström (<http://dbpedia.org/resource/Johan_Engström>) --doo:hometown--> Sweden (dor:Sweden)
+  '5':
+    attributes:
+      India: (image^='--07-14', c^='The Middle East and South Asia', capital^='http://dbpedia.org/resource/New_Delhi')
+      Abraham_Viruthakulangara: (death date^='2018-04-19', after^='Elias Joseph Gonsalves', before^='Leobard D’Souza')
+    relationships:
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:deathPlace--> India (dor:India)
+      - Ashfaque_Sayed (dor:Ashfaque_Sayed) --doo:hometown--> India (dor:India)
+  '6':
+    attributes:
+      India: (image^='--07-14', c^='The Middle East and South Asia', capital^='http://dbpedia.org/resource/New_Delhi')
+      Abraham_Viruthakulangara: (death date^='2018-04-19', after^='Elias Joseph Gonsalves', before^='Leobard D’Souza')
+    relationships:
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:deathPlace--> India (dor:India)
+      - Nitin_Kumar (dor:Nitin_Kumar) --doo:hometown--> India (dor:India)
+  '7':
+    attributes:
+      Italy: (image^='Canal Grande Chiesa della Salute e Dogana dal ponte dell Accademia.jpg', capital^='http://dbpedia.org/resource/Rome')
+      Achille_Caracciolo: (death date^='1623', after^='http://dbpedia.org/resource/Diego_Vargas_(bishop)', before^='http://dbpedia.org/resource/Gaspare_Cardoso')
+    relationships:
+      - Achille_Caracciolo (dor:Achille_Caracciolo) --doo:deathPlace--> Italy (dor:Italy)
+      - Aurora_Fochesato (dor:Aurora_Fochesato) --doo:hometown--> Italy (dor:Italy)
+  '8':
+    attributes:
+      Italy: (image^='Canal Grande Chiesa della Salute e Dogana dal ponte dell Accademia.jpg', capital^='http://dbpedia.org/resource/Rome')
+      Achille_Caracciolo: (death date^='1623', after^='http://dbpedia.org/resource/Diego_Vargas_(bishop)', before^='http://dbpedia.org/resource/Gaspare_Cardoso')
+    relationships:
+      - Achille_Caracciolo (dor:Achille_Caracciolo) --doo:deathPlace--> Italy (dor:Italy)
+      - Francesco_Raschini (dor:Francesco_Raschini) --doo:hometown--> Italy (dor:Italy)
+  '9':
+    attributes:
+      Italy: (image^='Canal Grande Chiesa della Salute e Dogana dal ponte dell Accademia.jpg', capital^='http://dbpedia.org/resource/Rome')
+      Adam_de_Darlington: (death date^='--04-29', after^='Andrew', before^='http://dbpedia.org/resource/Alan_de_St_Edmund')
+    relationships:
+      - Adam_de_Darlington (dor:Adam_de_Darlington) --doo:deathPlace--> Italy (dor:Italy)
+      - Aurora_Fochesato (dor:Aurora_Fochesato) --doo:hometown--> Italy (dor:Italy)
+  '10':
+    attributes:
+      Poland: (image^='Ayuntamiento, Poznan, Polonia, 2014-09-18, DD 67-72 HDR.jpg', capital^='http://dbpedia.org/resource/Warsaw', float^='left')
+      Adam_Odzimek: (death date^='2022-03-13', after^='Sede vacante', before^='http://dbpedia.org/resource/Paride_Taban')
+    relationships:
+      - Adam_Odzimek (dor:Adam_Odzimek) --doo:deathPlace--> Poland (dor:Poland)
+      - Karolina_Ratajska (dor:Karolina_Ratajska) --doo:hometown--> Poland (dor:Poland)
+attributes:
+  country: --image^ (dop:image)--> langString | --Aug high C^ (dop:augHighC)--> double | --c^ (dop:c)--> langString | --Aug low C^ (dop:augLowC)--> double | --leader^ (dop:leader)--> langString | --capital^ (doo:capital)--> Resource | --float^ (dop:float)--> langString
+  Christian Bishop: --death date^ (dop:deathDate)--> int | --birth name^ (doo:birthName)--> langString | --after^ (dop:after)--> Resource | --before^ (dop:before)--> Resource
+subgraph_id: 94
+relationships:
+  - Christian Bishop --doo:deathPlace--> country
+  - darts player --doo:hometown--> country

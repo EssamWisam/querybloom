@@ -1,0 +1,89 @@
+types:
+  person: doo:Person
+  organisation: doo:Organisation
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      AAPI_Victory_Fund: (key person^='http://dbpedia.org/resource/Bel_Leong-Hong')
+      Jack_Martin_(executive): (birth place^='http://dbpedia.org/resource/Taylor,_Texas')
+      Democratic_Party_(United_States): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:As_of')
+    relationships:
+      - AAPI_Victory_Fund (dor:AAPI_Victory_Fund) --dop:affiliations--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Jack_Martin_(executive) (<http://dbpedia.org/resource/Jack_Martin_(executive)>) --doo:knownFor--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+  '2':
+    attributes:
+      Mary_Crane_Hone: (birth place^='http://dbpedia.org/resource/Louisville,_Kentucky', birth date^='1904-11-21', death year^='1990')
+      Democratic_Party_(United_States): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:As_of')
+    relationships:
+      - AAPI_Victory_Fund (dor:AAPI_Victory_Fund) --dop:affiliations--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Mary_Crane_Hone (dor:Mary_Crane_Hone) --doo:knownFor--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+  '3':
+    attributes:
+      Thomas_S._Pettit: (spouse^='1870', birth place^='http://dbpedia.org/resource/Frankfort,_Kentucky', birth date^='1843-12-21', alt^='A man with dark hair and a mustache wearing a high-collared white shirt and a black jacket', death year^='1931')
+      AAPI_Victory_Fund: (key person^='http://dbpedia.org/resource/Bel_Leong-Hong')
+      Democratic_Party_(United_States): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:As_of')
+    relationships:
+      - AAPI_Victory_Fund (dor:AAPI_Victory_Fund) --dop:affiliations--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Thomas_S._Pettit (dor:Thomas_S._Pettit) --doo:knownFor--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+  '4':
+    attributes:
+      Michael_Carritt: (birth date^='1906-01-03', death year^='1990')
+      Communist_Party_of_India: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - All_India_Kisan_Sabha (dor:All_India_Kisan_Sabha) --dop:affiliations--> Communist_Party_of_India (dor:Communist_Party_of_India)
+      - Michael_Carritt (dor:Michael_Carritt) --doo:knownFor--> Communist_Party_of_India (dor:Communist_Party_of_India)
+  '5':
+    attributes:
+      Romesh_Chandra: (birth place^='', birth date^='1919-03-30', death year^='2016')
+      Communist_Party_of_India: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - All_India_Kisan_Sabha (dor:All_India_Kisan_Sabha) --dop:affiliations--> Communist_Party_of_India (dor:Communist_Party_of_India)
+      - Romesh_Chandra (dor:Romesh_Chandra) --doo:knownFor--> Communist_Party_of_India (dor:Communist_Party_of_India)
+  '6':
+    attributes:
+      Huang_Mulan: (birth place^='http://dbpedia.org/resource/Hunan', image size^='250', birth date^='1906-07-09', death year^='2017')
+      Chinese_Communist_Party: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - Association_for_Relations_Across_the_Taiwan_Straits (dor:Association_for_Relations_Across_the_Taiwan_Straits) --dop:affiliations--> Chinese_Communist_Party (dor:Chinese_Communist_Party)
+      - Huang_Mulan (dor:Huang_Mulan) --doo:knownFor--> Chinese_Communist_Party (dor:Chinese_Communist_Party)
+  '7':
+    attributes:
+      Ilham_Tohti: (spouse^='Guzelnur', birth place^='Atush, Xinjiang, China', birth date^='1969-10-25', awards^='')
+      Chinese_Communist_Party: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - Association_for_Relations_Across_the_Taiwan_Straits (dor:Association_for_Relations_Across_the_Taiwan_Straits) --dop:affiliations--> Chinese_Communist_Party (dor:Chinese_Communist_Party)
+      - Ilham_Tohti (dor:Ilham_Tohti) --doo:knownFor--> Chinese_Communist_Party (dor:Chinese_Communist_Party)
+  '8':
+    attributes:
+      Ada_Broughton: (birth place^='West Derby', death year^='1934')
+      Labour_Party_(UK): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Age')
+    relationships:
+      - BAME_Labour (dor:BAME_Labour) --dop:affiliations--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Ada_Broughton (dor:Ada_Broughton) --doo:knownFor--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+  '9':
+    attributes:
+      Ann_Black: (birth date^='1950-11-20')
+      Labour_Party_(UK): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Age')
+    relationships:
+      - BAME_Labour (dor:BAME_Labour) --dop:affiliations--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Ann_Black (dor:Ann_Black) --doo:knownFor--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+  '10':
+    attributes:
+      Ada_Broughton: (birth place^='West Derby', death year^='1934')
+    relationships:
+      - Black_Socialist_Society (dor:Black_Socialist_Society) --dop:affiliations--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+      - Ada_Broughton (dor:Ada_Broughton) --doo:knownFor--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+attributes:
+  person: --spouse^ (dop:spouse)--> int | --birth place^ (dop:birthPlace)--> langString | --image size^ (dop:imageSize)--> int | --birth date^ (doo:birthDate)--> date | --alt^ (dop:alt)--> langString | --death year^ (doo:deathYear)--> gYear | --awards^ (dop:awards)--> langString
+  organisation: --key person^ (doo:keyPerson)--> Resource
+  political party: --leader^ (doo:leader)--> Resource | --leader^ (dop:leader)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+subgraph_id: 373
+relationships:
+  - organisation --dop:affiliations--> political party
+  - person --doo:knownFor--> political party

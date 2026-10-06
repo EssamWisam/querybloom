@@ -1,0 +1,108 @@
+types:
+  scientist: doo:Scientist
+  politician: doo:Politician
+  university: doo:University
+  ethnic group: doo:EthnicGroup
+  Christian Bishop: doo:ChristianBishop
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Philip_J._Hanlon: (data^='http://dbpedia.org/resource/Dartmouth_College')
+      A._Robert_Hirschfeld: (predecessor^='http://dbpedia.org/resource/Gene_Robinson')
+    relationships:
+      - A._Robert_Hirschfeld (dor:A._Robert_Hirschfeld) --doo:almaMater--> Dartmouth_College (dor:Dartmouth_College)
+      - A._Robert_Hirschfeld (dor:A._Robert_Hirschfeld) --doo:nationality--> Americans (dor:Americans)
+      - Dartmouth_College (dor:Dartmouth_College) --doo:president--> Philip_J._Hanlon (dor:Philip_J._Hanlon)
+      - Alexander_Wendt (dor:Alexander_Wendt) --doo:institution--> Dartmouth_College (dor:Dartmouth_College)
+  '2':
+    attributes:
+      Philip_J._Hanlon: (data^='http://dbpedia.org/resource/Dartmouth_College')
+      A._Robert_Hirschfeld: (predecessor^='http://dbpedia.org/resource/Gene_Robinson')
+    relationships:
+      - A._Robert_Hirschfeld (dor:A._Robert_Hirschfeld) --doo:almaMater--> Dartmouth_College (dor:Dartmouth_College)
+      - A._Robert_Hirschfeld (dor:A._Robert_Hirschfeld) --doo:nationality--> Americans (dor:Americans)
+      - Dartmouth_College (dor:Dartmouth_College) --doo:president--> Philip_J._Hanlon (dor:Philip_J._Hanlon)
+      - Andrew_Campbell_(academic) (<http://dbpedia.org/resource/Andrew_Campbell_(academic)>) --doo:institution--> Dartmouth_College (dor:Dartmouth_College)
+  '3':
+    attributes:
+      Philip_J._Hanlon: (data^='http://dbpedia.org/resource/Dartmouth_College')
+      A._Robert_Hirschfeld: (predecessor^='http://dbpedia.org/resource/Gene_Robinson')
+    relationships:
+      - A._Robert_Hirschfeld (dor:A._Robert_Hirschfeld) --doo:almaMater--> Dartmouth_College (dor:Dartmouth_College)
+      - A._Robert_Hirschfeld (dor:A._Robert_Hirschfeld) --doo:nationality--> Americans (dor:Americans)
+      - Dartmouth_College (dor:Dartmouth_College) --doo:president--> Philip_J._Hanlon (dor:Philip_J._Hanlon)
+      - Arthur_Kantrowitz (dor:Arthur_Kantrowitz) --doo:institution--> Dartmouth_College (dor:Dartmouth_College)
+  '4':
+    attributes:
+      Andrew_J_Scott: (children^='3')
+    relationships:
+      - Charles_Cobbe (dor:Charles_Cobbe) --doo:almaMater--> Trinity_College,_Oxford (<http://dbpedia.org/resource/Trinity_College,_Oxford>)
+      - Charles_Cobbe (dor:Charles_Cobbe) --doo:nationality--> Irish_people (dor:Irish_people)
+      - Trinity_College,_Oxford (<http://dbpedia.org/resource/Trinity_College,_Oxford>) --doo:president--> Hilary_Boulding (dor:Hilary_Boulding)
+      - Andrew_J_Scott (dor:Andrew_J_Scott) --doo:institution--> Trinity_College,_Oxford (<http://dbpedia.org/resource/Trinity_College,_Oxford>)
+  '5':
+    attributes:
+      Charles_Cobbe: (predecessor^='http://dbpedia.org/resource/John_Hoadly')
+    relationships:
+      - Charles_Cobbe (dor:Charles_Cobbe) --doo:almaMater--> Trinity_College,_Oxford (<http://dbpedia.org/resource/Trinity_College,_Oxford>)
+      - Charles_Cobbe (dor:Charles_Cobbe) --doo:nationality--> Irish_people (dor:Irish_people)
+      - Trinity_College,_Oxford (<http://dbpedia.org/resource/Trinity_College,_Oxford>) --doo:president--> Hilary_Boulding (dor:Hilary_Boulding)
+      - Frances_Ashcroft (dor:Frances_Ashcroft) --doo:institution--> Trinity_College,_Oxford (<http://dbpedia.org/resource/Trinity_College,_Oxford>)
+  '6':
+    attributes:
+      I._J._Good: (death place^='http://dbpedia.org/resource/Radford,_Virginia')
+    relationships:
+      - Charles_Cobbe (dor:Charles_Cobbe) --doo:almaMater--> Trinity_College,_Oxford (<http://dbpedia.org/resource/Trinity_College,_Oxford>)
+      - Charles_Cobbe (dor:Charles_Cobbe) --doo:nationality--> Irish_people (dor:Irish_people)
+      - Trinity_College,_Oxford (<http://dbpedia.org/resource/Trinity_College,_Oxford>) --doo:president--> Hilary_Boulding (dor:Hilary_Boulding)
+      - I._J._Good (dor:I._J._Good) --doo:institution--> Trinity_College,_Oxford (<http://dbpedia.org/resource/Trinity_College,_Oxford>)
+  '7':
+    attributes:
+      Alfred_Lodge: (death place^='http://dbpedia.org/resource/Oxford')
+    relationships:
+      - Christopher_Butler (dor:Christopher_Butler) --doo:almaMater--> St_John's_College,_Oxford (<http://dbpedia.org/resource/St_John's_College,_Oxford>)
+      - Christopher_Butler (dor:Christopher_Butler) --doo:nationality--> English_people (dor:English_people)
+      - St_John's_College,_Oxford (<http://dbpedia.org/resource/St_John's_College,_Oxford>) --doo:president--> Sue_Black,_Baroness_Black_of_Strome (<http://dbpedia.org/resource/Sue_Black,_Baroness_Black_of_Strome>)
+      - Alfred_Lodge (dor:Alfred_Lodge) --doo:institution--> St_John's_College,_Oxford (<http://dbpedia.org/resource/St_John's_College,_Oxford>)
+  '8':
+    attributes:
+      Alex_Jadad: (children^='2')
+      David_Hamid: (predecessor^='http://dbpedia.org/resource/Henry_Scriven')
+    relationships:
+      - David_Hamid (dor:David_Hamid) --doo:almaMater--> McMaster_University (dor:McMaster_University)
+      - David_Hamid (dor:David_Hamid) --doo:nationality--> British_people (dor:British_people)
+      - McMaster_University (dor:McMaster_University) --doo:president--> David_H._Farrar (dor:David_H._Farrar)
+      - Alex_Jadad (dor:Alex_Jadad) --doo:institution--> McMaster_University (dor:McMaster_University)
+  '9':
+    attributes:
+      Alex_Jadad: (children^='2')
+      David_Hamid: (predecessor^='http://dbpedia.org/resource/Henry_Scriven')
+    relationships:
+      - David_Hamid (dor:David_Hamid) --doo:almaMater--> McMaster_University (dor:McMaster_University)
+      - David_Hamid (dor:David_Hamid) --doo:nationality--> Canadians (dor:Canadians)
+      - McMaster_University (dor:McMaster_University) --doo:president--> David_H._Farrar (dor:David_H._Farrar)
+      - Alex_Jadad (dor:Alex_Jadad) --doo:institution--> McMaster_University (dor:McMaster_University)
+  '10':
+    attributes:
+      David_Hamid: (predecessor^='http://dbpedia.org/resource/Henry_Scriven')
+    relationships:
+      - David_Hamid (dor:David_Hamid) --doo:almaMater--> McMaster_University (dor:McMaster_University)
+      - David_Hamid (dor:David_Hamid) --doo:nationality--> British_people (dor:British_people)
+      - McMaster_University (dor:McMaster_University) --doo:president--> David_H._Farrar (dor:David_H._Farrar)
+      - Andy_Brass (dor:Andy_Brass) --doo:institution--> McMaster_University (dor:McMaster_University)
+attributes:
+  scientist: --death place^ (dop:deathPlace)--> langString | --by^ (dop:by)--> langString | --children^ (dop:children)--> int
+  politician: --spouse^ (dop:spouse)--> langString | --wordnet_type (dop:wordnet_type)--> Resource | --class^ (dop:class)--> int | --data^ (dop:data)--> langString | --death place^ (dop:deathPlace)--> Resource
+  university: --chairman^ (doo:chairman)--> Resource
+  Christian Bishop: --predecessor^ (dop:predecessor)--> Resource
+subgraph_id: 860
+relationships:
+  - Christian Bishop --doo:almaMater--> university
+  - Christian Bishop --doo:nationality--> ethnic group
+  - university --doo:president--> politician
+  - scientist --doo:institution--> university

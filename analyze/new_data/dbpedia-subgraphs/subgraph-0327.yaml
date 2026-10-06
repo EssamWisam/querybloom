@@ -1,0 +1,110 @@
+types:
+  book: doo:Book
+  company: doo:Company
+  scientist: doo:Scientist
+  politician: doo:Politician
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abdul_Shafee: (birth place^='Bhandara,')
+      David_K._Jordan: (doctoral advisor^='http://dbpedia.org/resource/Nur_Yalman')
+    relationships:
+      - 50_Reasons_People_Give_for_Believing_in_a_God (dor:50_Reasons_People_Give_for_Believing_in_a_God) --doo:nonFictionSubject--> Religion (dor:Religion)
+      - Abdul_Shafee (dor:Abdul_Shafee) --doo:profession--> Religion (dor:Religion)
+      - Greater_Ministries_International (dor:Greater_Ministries_International) --doo:industry--> Religion (dor:Religion)
+      - David_K._Jordan (dor:David_K._Jordan) --dop:knownFor--> Religion (dor:Religion)
+  '2':
+    attributes:
+      Alfredo_Pires: (birth place^='http://dbpedia.org/resource/Portuguese_Timor')
+      John_W._Farley: (doctoral advisor^='http://dbpedia.org/resource/William_Happer')
+    relationships:
+      - A_Blueprint_for_Survival (dor:A_Blueprint_for_Survival) --doo:nonFictionSubject--> Environmentalism (dor:Environmentalism)
+      - Alfredo_Pires (dor:Alfredo_Pires) --doo:profession--> Environmentalism (dor:Environmentalism)
+      - Bellona_–_St._Petersburg (<http://dbpedia.org/resource/Bellona_–_St._Petersburg>) --doo:industry--> Environmentalism (dor:Environmentalism)
+      - John_W._Farley (dor:John_W._Farley) --dop:knownFor--> Environmentalism (dor:Environmentalism)
+  '3':
+    attributes:
+      Alfredo_Pires: (birth place^='http://dbpedia.org/resource/Portuguese_Timor')
+      John_W._Farley: (doctoral advisor^='http://dbpedia.org/resource/William_Happer')
+    relationships:
+      - A_Blueprint_for_Survival (dor:A_Blueprint_for_Survival) --doo:nonFictionSubject--> Environmentalism (dor:Environmentalism)
+      - Alfredo_Pires (dor:Alfredo_Pires) --doo:profession--> Environmentalism (dor:Environmentalism)
+      - Bellona_Foundation (dor:Bellona_Foundation) --doo:industry--> Environmentalism (dor:Environmentalism)
+      - John_W._Farley (dor:John_W._Farley) --dop:knownFor--> Environmentalism (dor:Environmentalism)
+  '4':
+    attributes:
+      Alfredo_Pires: (birth place^='http://dbpedia.org/resource/Portuguese_Timor')
+      John_W._Farley: (doctoral advisor^='http://dbpedia.org/resource/William_Happer')
+    relationships:
+      - A_Blueprint_for_Survival (dor:A_Blueprint_for_Survival) --doo:nonFictionSubject--> Environmentalism (dor:Environmentalism)
+      - Alfredo_Pires (dor:Alfredo_Pires) --doo:profession--> Environmentalism (dor:Environmentalism)
+      - Environmental_Foundation_for_Africa (dor:Environmental_Foundation_for_Africa) --doo:industry--> Environmentalism (dor:Environmentalism)
+      - John_W._Farley (dor:John_W._Farley) --dop:knownFor--> Environmentalism (dor:Environmentalism)
+  '5':
+    attributes:
+      Babs_Fafunwa: (death date^='2010-10-11')
+      Martin_David_Jenkins: (birth place^='http://dbpedia.org/resource/Terre_Haute,_Indiana')
+    relationships:
+      - A_Chance_to_Make_History (dor:A_Chance_to_Make_History) --doo:nonFictionSubject--> Education (dor:Education)
+      - Martin_David_Jenkins (dor:Martin_David_Jenkins) --doo:profession--> Education (dor:Education)
+      - 1C_Company (dor:1C_Company) --doo:industry--> Education (dor:Education)
+      - Babs_Fafunwa (dor:Babs_Fafunwa) --dop:knownFor--> Education (dor:Education)
+  '6':
+    attributes:
+      Martin_David_Jenkins: (birth place^='http://dbpedia.org/resource/Terre_Haute,_Indiana')
+    relationships:
+      - A_Chance_to_Make_History (dor:A_Chance_to_Make_History) --doo:nonFictionSubject--> Education (dor:Education)
+      - Martin_David_Jenkins (dor:Martin_David_Jenkins) --doo:profession--> Education (dor:Education)
+      - 1C_Company (dor:1C_Company) --doo:industry--> Education (dor:Education)
+      - Daniel_Dickey (dor:Daniel_Dickey) --dop:knownFor--> Education (dor:Education)
+  '7':
+    attributes:
+      Hans_Eysenck: (doctoral advisor^='http://dbpedia.org/resource/Cyril_Burt')
+      Martin_David_Jenkins: (birth place^='http://dbpedia.org/resource/Terre_Haute,_Indiana')
+    relationships:
+      - A_Chance_to_Make_History (dor:A_Chance_to_Make_History) --doo:nonFictionSubject--> Education (dor:Education)
+      - Martin_David_Jenkins (dor:Martin_David_Jenkins) --doo:profession--> Education (dor:Education)
+      - 1C_Company (dor:1C_Company) --doo:industry--> Education (dor:Education)
+      - Hans_Eysenck (dor:Hans_Eysenck) --dop:knownFor--> Education (dor:Education)
+  '8':
+    attributes:
+      Alexander_Bessmertnykh_(politician): (birth place^='http://dbpedia.org/resource/Altai_Krai')
+    relationships:
+      - A_Foreign_Policy_of_Freedom (dor:A_Foreign_Policy_of_Freedom) --doo:nonFictionSubject--> Politics (dor:Politics)
+      - Alexander_Bessmertnykh_(politician) (<http://dbpedia.org/resource/Alexander_Bessmertnykh_(politician)>) --doo:profession--> Politics (dor:Politics)
+      - Votecastr (dor:Votecastr) --doo:industry--> Politics (dor:Politics)
+      - Stephen_Soldz (dor:Stephen_Soldz) --dop:knownFor--> Politics (dor:Politics)
+  '9':
+    attributes:
+      Alice_Koroma: (birth place^='http://dbpedia.org/resource/Biriwa')
+    relationships:
+      - A_Foreign_Policy_of_Freedom (dor:A_Foreign_Policy_of_Freedom) --doo:nonFictionSubject--> Politics (dor:Politics)
+      - Alice_Koroma (dor:Alice_Koroma) --doo:profession--> Politics (dor:Politics)
+      - Votecastr (dor:Votecastr) --doo:industry--> Politics (dor:Politics)
+      - Stephen_Soldz (dor:Stephen_Soldz) --dop:knownFor--> Politics (dor:Politics)
+  '10':
+    attributes:
+      Bob_Katter_Sr.: (birth place^='South Brisbane, Queensland, Australia')
+    relationships:
+      - A_Foreign_Policy_of_Freedom (dor:A_Foreign_Policy_of_Freedom) --doo:nonFictionSubject--> Politics (dor:Politics)
+      - Bob_Katter_Sr. (<http://dbpedia.org/resource/Bob_Katter_Sr.>) --doo:profession--> Politics (dor:Politics)
+      - Votecastr (dor:Votecastr) --doo:industry--> Politics (dor:Politics)
+      - Stephen_Soldz (dor:Stephen_Soldz) --dop:knownFor--> Politics (dor:Politics)
+attributes:
+  book: --IMDB id^ (doo:imdbId)--> string | --publication date^ (doo:publicationDate)--> date
+  company: --products^ (dop:products)--> Resource
+  scientist: --death date^ (dop:deathDate)--> date | --doctoral advisor^ (doo:doctoralAdvisor)--> Resource
+  politician: --bgcolor^ (dop:bgcolor)--> langString | --birth place^ (dop:birthPlace)--> Resource | --width^ (dop:width)--> int
+  music genre: --align^ (dop:align)--> langString
+subgraph_id: 327
+relationships:
+  - book --doo:nonFictionSubject--> music genre
+  - politician --doo:profession--> music genre
+  - company --doo:industry--> music genre
+  - scientist --dop:knownFor--> music genre

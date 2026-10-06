@@ -1,0 +1,93 @@
+types:
+  artist: doo:Artist
+  country: doo:Country
+  Location: doo:Location
+  snooker player: doo:SnookerPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      2moro: (caption^='2')
+      Taiwan: (Wikipage revision ID^='1124244734', Wikipage page ID^='25734')
+    relationships:
+      - 2moro (dor:2moro) --dop:birthPlace--> Taiwan (dor:Taiwan)
+      - 2moro (dor:2moro) --doo:birthPlace--> Taiwan (dor:Taiwan)
+      - Jennifer_Chen (dor:Jennifer_Chen) --doo:sportCountry--> Taiwan (dor:Taiwan)
+  '2':
+    attributes:
+      2moro: (caption^='2')
+      Taiwan: (Wikipage revision ID^='1124244734', Wikipage page ID^='25734')
+    relationships:
+      - 2moro (dor:2moro) --dop:birthPlace--> Taiwan (dor:Taiwan)
+      - 2moro (dor:2moro) --doo:birthPlace--> Taiwan (dor:Taiwan)
+      - Zhiting_Wu (dor:Zhiting_Wu) --doo:sportCountry--> Taiwan (dor:Taiwan)
+  '3':
+    attributes:
+      United_States: (Wikipage revision ID^='1124529724', Wikipage page ID^='3434750')
+    relationships:
+      - A-Plus_(rapper) (<http://dbpedia.org/resource/A-Plus_(rapper)>) --dop:birthPlace--> United_States (dor:United_States)
+      - A-Plus_(rapper) (<http://dbpedia.org/resource/A-Plus_(rapper)>) --doo:birthPlace--> United_States (dor:United_States)
+      - Ahmed_Aly (dor:Ahmed_Aly) --doo:sportCountry--> United_States (dor:United_States)
+  '4':
+    attributes:
+      India: (Wikipage revision ID^='1124947935', Wikipage page ID^='14533')
+    relationships:
+      - A._K._C._Natarajan (dor:A._K._C._Natarajan) --dop:birthPlace--> India (dor:India)
+      - A._K._C._Natarajan (dor:A._K._C._Natarajan) --doo:birthPlace--> India (dor:India)
+      - Aditya_Mehta (dor:Aditya_Mehta) --doo:sportCountry--> India (dor:India)
+  '5':
+    attributes:
+      India: (Wikipage revision ID^='1124947935', Wikipage page ID^='14533')
+    relationships:
+      - A._K._C._Natarajan (dor:A._K._C._Natarajan) --dop:birthPlace--> India (dor:India)
+      - A._K._C._Natarajan (dor:A._K._C._Natarajan) --doo:birthPlace--> India (dor:India)
+      - Amee_Kamani (dor:Amee_Kamani) --doo:sportCountry--> India (dor:India)
+  '6':
+    attributes:
+      India: (Wikipage revision ID^='1124947935', Wikipage page ID^='14533')
+    relationships:
+      - A._K._C._Natarajan (dor:A._K._C._Natarajan) --dop:birthPlace--> India (dor:India)
+      - A._K._C._Natarajan (dor:A._K._C._Natarajan) --doo:birthPlace--> India (dor:India)
+      - Anuja_Chandra-Thakur (dor:Anuja_Chandra-Thakur) --doo:sportCountry--> India (dor:India)
+  '7':
+    attributes:
+      A.C._Reed: (caption^='Reed in 1980')
+      United_States: (Wikipage revision ID^='1124529724', Wikipage page ID^='3434750')
+    relationships:
+      - A.C._Reed (dor:A.C._Reed) --dop:birthPlace--> United_States (dor:United_States)
+      - A.C._Reed (dor:A.C._Reed) --doo:birthPlace--> United_States (dor:United_States)
+      - Ahmed_Aly (dor:Ahmed_Aly) --doo:sportCountry--> United_States (dor:United_States)
+  '8':
+    attributes:
+      China: (Wikipage revision ID^='1124923547', Wikipage page ID^='5405')
+    relationships:
+      - Aaajiao (dor:Aaajiao) --dop:birthPlace--> China (dor:China)
+      - Aaajiao (dor:Aaajiao) --doo:birthPlace--> China (dor:China)
+      - Bai_Langning (dor:Bai_Langning) --doo:sportCountry--> China (dor:China)
+  '9':
+    attributes:
+      China: (Wikipage revision ID^='1124923547', Wikipage page ID^='5405')
+    relationships:
+      - Aaajiao (dor:Aaajiao) --dop:birthPlace--> China (dor:China)
+      - Aaajiao (dor:Aaajiao) --doo:birthPlace--> China (dor:China)
+      - Bai_Yulu (dor:Bai_Yulu) --doo:sportCountry--> China (dor:China)
+  '10':
+    attributes:
+      China: (Wikipage revision ID^='1124923547', Wikipage page ID^='5405')
+    relationships:
+      - Aaajiao (dor:Aaajiao) --dop:birthPlace--> China (dor:China)
+      - Aaajiao (dor:Aaajiao) --doo:birthPlace--> China (dor:China)
+      - Cao_Xinlong (dor:Cao_Xinlong) --doo:sportCountry--> China (dor:China)
+attributes:
+  artist: --notable works^ (dop:notableWorks)--> langString | --caption^ (dop:caption)--> langString
+  country: --1p^ (dop:1p)--> int
+  Location: --founding year^ (doo:foundingYear)--> gYear | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --length m^ (dop:lengthM)--> int | --altname^ (dop:altname)--> langString | --area^ (dop:area)--> double | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --Wikipage page ID^ (doo:wikiPageID)--> int
+subgraph_id: 589
+relationships:
+  - artist --dop:birthPlace--> country
+  - artist --doo:birthPlace--> Location
+  - snooker player --doo:sportCountry--> Location

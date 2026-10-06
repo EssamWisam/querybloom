@@ -1,0 +1,101 @@
+types:
+  song: doo:Song
+  record label: doo:RecordLabel
+  musical artist: doo:MusicalArtist
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Atco_Records: (url^='https://www.atcorecords.com/', country^='United States')
+    relationships:
+      - Stranger_on_the_Shore (dor:Stranger_on_the_Shore) --dop:writer--> Acker_Bilk (dor:Acker_Bilk)
+      - Acker_Bilk (dor:Acker_Bilk) --doo:deathPlace--> Somerset (dor:Somerset)
+      - Stranger_on_the_Shore (dor:Stranger_on_the_Shore) --doo:recordLabel--> Atco_Records (dor:Atco_Records)
+  '2':
+    attributes:
+      Columbia_Graphophone_Company: (founding year^='1917', country^='http://dbpedia.org/resource/United_Kingdom')
+    relationships:
+      - Stranger_on_the_Shore (dor:Stranger_on_the_Shore) --dop:writer--> Acker_Bilk (dor:Acker_Bilk)
+      - Acker_Bilk (dor:Acker_Bilk) --doo:deathPlace--> Somerset (dor:Somerset)
+      - Stranger_on_the_Shore (dor:Stranger_on_the_Shore) --doo:recordLabel--> Columbia_Graphophone_Company (dor:Columbia_Graphophone_Company)
+  '3':
+    attributes:
+      Michigan: (align^='left', nickname^='"The Great Lake State", "The Wolverine State", "The Mitten State", "Water  Wonderland"')
+    relationships:
+      - Half-Breed_(song) (<http://dbpedia.org/resource/Half-Breed_(song)>) --dop:writer--> Al_Capps (dor:Al_Capps)
+      - Al_Capps (dor:Al_Capps) --doo:deathPlace--> Michigan (dor:Michigan)
+      - Half-Breed_(song) (<http://dbpedia.org/resource/Half-Breed_(song)>) --doo:recordLabel--> Music_Corporation_of_America (dor:Music_Corporation_of_America)
+  '4':
+    attributes:
+      Michigan: (align^='left', nickname^='"The Great Lake State", "The Wolverine State", "The Mitten State", "Water  Wonderland"')
+      Liberty_Records: (founding year^='1955', country^='U.S., UK')
+    relationships:
+      - She's_Just_My_Style (<http://dbpedia.org/resource/She's_Just_My_Style>) --dop:writer--> Al_Capps (dor:Al_Capps)
+      - Al_Capps (dor:Al_Capps) --doo:deathPlace--> Michigan (dor:Michigan)
+      - She's_Just_My_Style (<http://dbpedia.org/resource/She's_Just_My_Style>) --doo:recordLabel--> Liberty_Records (dor:Liberty_Records)
+  '5':
+    attributes:
+      Al_Sherman: (alias^='Albert Sherman')
+      California: (align^='left', nickname^='The Golden State')
+      Capitol_Records: (founding year^='1942', country^='http://dbpedia.org/resource/United_States')
+    relationships:
+      - Comes_A-Long_A-Love (dor:Comes_A-Long_A-Love) --dop:writer--> Al_Sherman (dor:Al_Sherman)
+      - Al_Sherman (dor:Al_Sherman) --doo:deathPlace--> California (dor:California)
+      - Comes_A-Long_A-Love (dor:Comes_A-Long_A-Love) --doo:recordLabel--> Capitol_Records (dor:Capitol_Records)
+  '6':
+    attributes:
+      Al_Sherman: (alias^='Albert Sherman')
+      California: (align^='left', nickname^='The Golden State')
+    relationships:
+      - He's_So_Unusual (<http://dbpedia.org/resource/He's_So_Unusual>) --dop:writer--> Al_Sherman (dor:Al_Sherman)
+      - Al_Sherman (dor:Al_Sherman) --doo:deathPlace--> California (dor:California)
+      - He's_So_Unusual (<http://dbpedia.org/resource/He's_So_Unusual>) --doo:recordLabel--> Shapiro,_Bernstein_&_Co._Inc. (<http://dbpedia.org/resource/Shapiro,_Bernstein_&_Co._Inc.>)
+  '7':
+    attributes:
+      Al_Sherman: (alias^='Albert Sherman')
+      California: (align^='left', nickname^='The Golden State')
+      Decca_Records: (url^='', country^='United Kingdom')
+    relationships:
+      - Idle_Chatter (dor:Idle_Chatter) --dop:writer--> Al_Sherman (dor:Al_Sherman)
+      - Al_Sherman (dor:Al_Sherman) --doo:deathPlace--> California (dor:California)
+      - Idle_Chatter (dor:Idle_Chatter) --doo:recordLabel--> Decca_Records (dor:Decca_Records)
+  '8':
+    attributes:
+      Alan_Lancaster: (associated acts^='Status Quo, The Party Boys, The Bombers')
+      New_South_Wales: (align^='right', nickname^='')
+    relationships:
+      - Roll_Over_Lay_Down (dor:Roll_Over_Lay_Down) --dop:writer--> Alan_Lancaster (dor:Alan_Lancaster)
+      - Alan_Lancaster (dor:Alan_Lancaster) --doo:deathPlace--> New_South_Wales (dor:New_South_Wales)
+      - Roll_Over_Lay_Down (dor:Roll_Over_Lay_Down) --doo:recordLabel--> Vertigo_Records (dor:Vertigo_Records)
+  '9':
+    attributes:
+      Louisiana: (nickname^='')
+      Alex_Chilton: (associated acts^='http://dbpedia.org/resource/Big_Star')
+      Ardent_Records: (founding year^='1959', country^='U.S.')
+    relationships:
+      - In_the_Street_(song) (<http://dbpedia.org/resource/In_the_Street_(song)>) --dop:writer--> Alex_Chilton (dor:Alex_Chilton)
+      - Alex_Chilton (dor:Alex_Chilton) --doo:deathPlace--> Louisiana (dor:Louisiana)
+      - In_the_Street_(song) (<http://dbpedia.org/resource/In_the_Street_(song)>) --doo:recordLabel--> Ardent_Records (dor:Ardent_Records)
+  '10':
+    attributes:
+      Louisiana: (nickname^='')
+      Alex_Chilton: (associated acts^='http://dbpedia.org/resource/Big_Star')
+      Ardent_Records: (founding year^='1959', country^='U.S.')
+    relationships:
+      - September_Gurls (dor:September_Gurls) --dop:writer--> Alex_Chilton (dor:Alex_Chilton)
+      - Alex_Chilton (dor:Alex_Chilton) --doo:deathPlace--> Louisiana (dor:Louisiana)
+      - September_Gurls (dor:September_Gurls) --doo:recordLabel--> Ardent_Records (dor:Ardent_Records)
+attributes:
+  record label: --founding year^ (doo:foundingYear)--> gYear | --url^ (dop:url)--> Resource | --country^ (dop:country)--> langString
+  musical artist: --c^ (dop:c)--> langString | --alias^ (dop:alias)--> langString | --group^ (dop:group)--> langString | --associated acts^ (dop:associatedActs)--> langString | --associated acts^ (dop:associatedActs)--> int
+  administrative region: --align^ (dop:align)--> langString | --government type^ (doo:governmentType)--> Resource | --nickname^ (dop:nickname)--> langString
+subgraph_id: 641
+relationships:
+  - song --dop:writer--> musical artist
+  - musical artist --doo:deathPlace--> administrative region
+  - song --doo:recordLabel--> record label

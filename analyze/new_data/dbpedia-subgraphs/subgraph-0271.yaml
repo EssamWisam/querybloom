@@ -1,0 +1,110 @@
+types:
+  person: doo:Person
+  company: doo:Company
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Flavor_Flav: (alias^='Flava Flav')
+      51_Minds_Entertainment: (owner^='http://dbpedia.org/resource/Banijay')
+    relationships:
+      - Flavor_of_Love (dor:Flavor_of_Love) --dop:starring--> Flavor_Flav (dor:Flavor_Flav)
+      - 51_Minds_Entertainment (dor:51_Minds_Entertainment) --doo:product--> Flavor_of_Love (dor:Flavor_of_Love)
+  '2':
+    attributes:
+      The_Brothers_Grunt: (bot^='InternetArchiveBot')
+    relationships:
+      - The_Brothers_Grunt (dor:The_Brothers_Grunt) --dop:starring--> Danny_Antonucci (dor:Danny_Antonucci)
+      - A.k.a._Cartoon (dor:A.k.a._Cartoon) --doo:product--> The_Brothers_Grunt (dor:The_Brothers_Grunt)
+  '3':
+    attributes:
+      The_Brothers_Grunt: (bot^='InternetArchiveBot')
+    relationships:
+      - The_Brothers_Grunt (dor:The_Brothers_Grunt) --dop:starring--> Doug_Parker_(voice_actor) (<http://dbpedia.org/resource/Doug_Parker_(voice_actor)>)
+      - A.k.a._Cartoon (dor:A.k.a._Cartoon) --doo:product--> The_Brothers_Grunt (dor:The_Brothers_Grunt)
+  '4':
+    attributes:
+      The_Brothers_Grunt: (bot^='InternetArchiveBot')
+    relationships:
+      - The_Brothers_Grunt (dor:The_Brothers_Grunt) --dop:starring--> Lee_Tockar (dor:Lee_Tockar)
+      - A.k.a._Cartoon (dor:A.k.a._Cartoon) --doo:product--> The_Brothers_Grunt (dor:The_Brothers_Grunt)
+  '5':
+    attributes:
+      Joe_Estevez: (parents^='Francisco Estevez')
+    relationships:
+      - On_Cinema (dor:On_Cinema) --dop:starring--> Joe_Estevez (dor:Joe_Estevez)
+      - Abso_Lutely_Productions (dor:Abso_Lutely_Productions) --doo:product--> On_Cinema (dor:On_Cinema)
+  '6':
+    attributes: {}
+    relationships:
+      - On_Cinema (dor:On_Cinema) --dop:starring--> Mark_Proksch (dor:Mark_Proksch)
+      - Abso_Lutely_Productions (dor:Abso_Lutely_Productions) --doo:product--> On_Cinema (dor:On_Cinema)
+  '7':
+    attributes:
+      '%22Weird_Al%22_Yankovic': (width^='210')
+    relationships:
+      - Tim_and_Eric_Awesome_Show,_Great_Job! (<http://dbpedia.org/resource/Tim_and_Eric_Awesome_Show,_Great_Job!>) --dop:starring--> %22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>)
+      - Abso_Lutely_Productions (dor:Abso_Lutely_Productions) --doo:product--> Tim_and_Eric_Awesome_Show,_Great_Job! (<http://dbpedia.org/resource/Tim_and_Eric_Awesome_Show,_Great_Job!>)
+  '8':
+    attributes:
+      Animation_Collective: (owner^='http://dbpedia.org/resource/Larry_Schwarz')
+    relationships:
+      - Ellen's_Acres (<http://dbpedia.org/resource/Ellen's_Acres>) --dop:starring--> Marc_Thompson_(voice_actor) (<http://dbpedia.org/resource/Marc_Thompson_(voice_actor)>)
+      - Animation_Collective (dor:Animation_Collective) --doo:product--> Ellen's_Acres (<http://dbpedia.org/resource/Ellen's_Acres>)
+  '9':
+    attributes:
+      Animation_Collective: (owner^='http://dbpedia.org/resource/Larry_Schwarz')
+    relationships:
+      - Ellen's_Acres (<http://dbpedia.org/resource/Ellen's_Acres>) --dop:starring--> Shannon_Conley (dor:Shannon_Conley)
+      - Animation_Collective (dor:Animation_Collective) --doo:product--> Ellen's_Acres (<http://dbpedia.org/resource/Ellen's_Acres>)
+  '10':
+    attributes:
+      Astley_Baker_Davies: (owner^='http://dbpedia.org/resource/Hasbro')
+    relationships:
+      - Crapston_Villas (dor:Crapston_Villas) --dop:starring--> Alison_Steadman (dor:Alison_Steadman)
+      - Astley_Baker_Davies (dor:Astley_Baker_Davies) --doo:product--> Crapston_Villas (dor:Crapston_Villas)
+qa_result:
+  status: completed
+  cost_usd: 0.263145
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.036192400000000007
+        total_tokens: 3711
+        prompt_tokens: 2090
+        completion_tokens: 1621
+      generate:
+        cost_usd: 0.07798260000000001
+        total_tokens: 6854
+        prompt_tokens: 3460
+        completion_tokens: 3394
+      verify_1:
+        cost_usd: 0.028152000000000003
+        total_tokens: 4170
+        prompt_tokens: 3683
+        completion_tokens: 487
+      complexity:
+        cost_usd: 0.12081800000000001
+        total_tokens: 9869
+        prompt_tokens: 4532
+        completion_tokens: 5337
+    total_tokens: 24604
+    prompt_tokens: 13765
+    total_cost_usd: 0.263145
+    completion_tokens: 10839
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --footer^ (dop:footer)--> langString | --alias^ (dop:alias)--> langString | --width^ (dop:width)--> int | --display^ (dop:display)--> langString | --parents^ (dop:parents)--> langString
+  company: --owner^ (dop:owner)--> langString
+  television show: --bot^ (dop:bot)--> langString | --lyrics^ (dop:lyrics)--> langString | --RTitle^ (dop:rtitle)--> date | --aux^ (dop:aux)--> Resource
+subgraph_id: 271
+relationships:
+  - television show --dop:starring--> person
+  - company --doo:product--> television show

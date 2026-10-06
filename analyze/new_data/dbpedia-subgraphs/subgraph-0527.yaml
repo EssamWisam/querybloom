@@ -1,0 +1,85 @@
+types:
+  ship: doo:Ship
+  railway line: doo:RailwayLine
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adams_Subdivision: (route start^='http://dbpedia.org/resource/Wyeville,_Wisconsin', owner^='http://dbpedia.org/resource/Union_Pacific_Railroad')
+      SS_Columbia_(1880): (status^='Sunk, 21 July 1907,Shelter Cove, California', operator^='http://dbpedia.org/resource/San_Francisco,_California')
+    relationships:
+      - SS_Columbia_(1880) (<http://dbpedia.org/resource/SS_Columbia_(1880)>) --doo:owner--> Union_Pacific_Railroad (dor:Union_Pacific_Railroad)
+      - Adams_Subdivision (dor:Adams_Subdivision) --dop:operator--> Union_Pacific_Railroad (dor:Union_Pacific_Railroad)
+  '2':
+    attributes:
+      Agen–Vic-en-Bigorre_railway: (route start^='http://dbpedia.org/resource/Agen_station', box width^='auto', owner^='http://dbpedia.org/resource/Réseau_Ferré_de_France', number of stations^='22')
+    relationships:
+      - MS_Al_Andalus_Express (dor:MS_Al_Andalus_Express) --doo:owner--> SNCF (dor:SNCF)
+      - Agen–Vic-en-Bigorre_railway (<http://dbpedia.org/resource/Agen–Vic-en-Bigorre_railway>) --dop:operator--> SNCF (dor:SNCF)
+  '3':
+    attributes:
+      Alameda_Corridor: (opening date^='2002-04-15', owner^='Alameda Corridor Transportation Authority')
+      SS_Columbia_(1880): (status^='Sunk, 21 July 1907,Shelter Cove, California', operator^='http://dbpedia.org/resource/San_Francisco,_California')
+    relationships:
+      - SS_Columbia_(1880) (<http://dbpedia.org/resource/SS_Columbia_(1880)>) --doo:owner--> Union_Pacific_Railroad (dor:Union_Pacific_Railroad)
+      - Alameda_Corridor (dor:Alameda_Corridor) --dop:operator--> Union_Pacific_Railroad (dor:Union_Pacific_Railroad)
+  '4':
+    attributes:
+      SS_Columbia_(1880): (status^='Sunk, 21 July 1907,Shelter Cove, California', operator^='http://dbpedia.org/resource/San_Francisco,_California')
+    relationships:
+      - SS_Columbia_(1880) (<http://dbpedia.org/resource/SS_Columbia_(1880)>) --doo:owner--> Union_Pacific_Railroad (dor:Union_Pacific_Railroad)
+      - Albina_Yard (dor:Albina_Yard) --dop:operator--> Union_Pacific_Railroad (dor:Union_Pacific_Railroad)
+  '5':
+    attributes:
+      MS_Al_Andalus_Express: (status^='Active')
+      Amiens–Rouen_railway: (route start^='http://dbpedia.org/resource/Amiens_station', box width^='auto', owner^='http://dbpedia.org/resource/Réseau_Ferré_de_France')
+    relationships:
+      - MS_Al_Andalus_Express (dor:MS_Al_Andalus_Express) --doo:owner--> SNCF (dor:SNCF)
+      - Amiens–Rouen_railway (<http://dbpedia.org/resource/Amiens–Rouen_railway>) --dop:operator--> SNCF (dor:SNCF)
+  '6':
+    attributes:
+      MS_Al_Andalus_Express: (status^='Active')
+      Arras–Dunkirk_railway: (route start^='http://dbpedia.org/resource/Gare_d''Arras', box width^='auto', owner^='http://dbpedia.org/resource/Réseau_Ferré_de_France')
+    relationships:
+      - MS_Al_Andalus_Express (dor:MS_Al_Andalus_Express) --doo:owner--> SNCF (dor:SNCF)
+      - Arras–Dunkirk_railway (<http://dbpedia.org/resource/Arras–Dunkirk_railway>) --dop:operator--> SNCF (dor:SNCF)
+  '7':
+    attributes:
+      SS_Frederica_(1890): (status^='Sunk by mine, 1914', operator^='http://dbpedia.org/resource/Ottoman_Navy')
+      Basingstoke_and_Alton_Light_Railway: (owner^='http://dbpedia.org/resource/London_and_South_Western_Railway')
+    relationships:
+      - SS_Frederica_(1890) (<http://dbpedia.org/resource/SS_Frederica_(1890)>) --doo:owner--> London_and_South_Western_Railway (dor:London_and_South_Western_Railway)
+      - Basingstoke_and_Alton_Light_Railway (dor:Basingstoke_and_Alton_Light_Railway) --dop:operator--> London_and_South_Western_Railway (dor:London_and_South_Western_Railway)
+  '8':
+    attributes:
+      SS_Lydia_(1890): (status^='Scrapped 1933')
+      Basingstoke_and_Alton_Light_Railway: (owner^='http://dbpedia.org/resource/London_and_South_Western_Railway')
+    relationships:
+      - SS_Lydia_(1890) (<http://dbpedia.org/resource/SS_Lydia_(1890)>) --doo:owner--> London_and_South_Western_Railway (dor:London_and_South_Western_Railway)
+      - Basingstoke_and_Alton_Light_Railway (dor:Basingstoke_and_Alton_Light_Railway) --dop:operator--> London_and_South_Western_Railway (dor:London_and_South_Western_Railway)
+  '9':
+    attributes:
+      SS_Stella_(1890): (status^='Wrecked, 30 March 1899')
+      Basingstoke_and_Alton_Light_Railway: (owner^='http://dbpedia.org/resource/London_and_South_Western_Railway')
+    relationships:
+      - SS_Stella_(1890) (<http://dbpedia.org/resource/SS_Stella_(1890)>) --doo:owner--> London_and_South_Western_Railway (dor:London_and_South_Western_Railway)
+      - Basingstoke_and_Alton_Light_Railway (dor:Basingstoke_and_Alton_Light_Railway) --dop:operator--> London_and_South_Western_Railway (dor:London_and_South_Western_Railway)
+  '10':
+    attributes:
+      USS_Fort_Henry: (status^='Destroyed by fire atHunter''s Point, 22 February 1868')
+      Bethpage_Branch: (route start^='http://dbpedia.org/resource/Bethpage,_New_York', number of stations^='2')
+    relationships:
+      - USS_Fort_Henry (dor:USS_Fort_Henry) --doo:owner--> Long_Island_Rail_Road (dor:Long_Island_Rail_Road)
+      - Bethpage_Branch (dor:Bethpage_Branch) --dop:operator--> Long_Island_Rail_Road (dor:Long_Island_Rail_Road)
+attributes:
+  ship: --motto^ (doo:motto)--> string | --status^ (doo:status)--> string | --designated nrhp type^ (dop:designatedNrhpType)--> date | --operator^ (doo:operator)--> Resource
+  railway line: --route start^ (doo:routeStart)--> Resource | --opening date^ (doo:openingDate)--> date | --box width^ (dop:boxWidth)--> langString | --owner^ (dop:owner)--> langString | --number of stations^ (doo:numberOfStations)--> int
+subgraph_id: 527
+relationships:
+  - ship --doo:owner--> public transit system
+  - railway line --dop:operator--> public transit system

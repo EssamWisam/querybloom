@@ -1,0 +1,99 @@
+types:
+  city: doo:City
+  person: doo:Person
+  broadcast network: doo:BroadcastNetwork
+  historic building: doo:HistoricBuilding
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      A._G._Stephen: (birth date^='1862-09-14')
+    relationships:
+      - BBC_News_Arabic (dor:BBC_News_Arabic) --doo:headquarter--> London (dor:London)
+      - All_Hallows_Lombard_Street (dor:All_Hallows_Lombard_Street) --doo:location--> London (dor:London)
+      - A._G._Stephen (dor:A._G._Stephen) --dop:deathPlace--> London (dor:London)
+      - BBC_News_Arabic (dor:BBC_News_Arabic) --doo:broadcastNetwork--> BBC_World_Service (dor:BBC_World_Service)
+  '2':
+    attributes:
+      A._J._Mundella: (birth date^='1825-03-28')
+    relationships:
+      - BBC_News_Arabic (dor:BBC_News_Arabic) --doo:headquarter--> London (dor:London)
+      - All_Hallows_Lombard_Street (dor:All_Hallows_Lombard_Street) --doo:location--> London (dor:London)
+      - A._J._Mundella (dor:A._J._Mundella) --dop:deathPlace--> London (dor:London)
+      - BBC_News_Arabic (dor:BBC_News_Arabic) --doo:broadcastNetwork--> BBC_World_Service (dor:BBC_World_Service)
+  '3':
+    attributes: {}
+    relationships:
+      - BBC_News_Arabic (dor:BBC_News_Arabic) --doo:headquarter--> London (dor:London)
+      - All_Hallows_Lombard_Street (dor:All_Hallows_Lombard_Street) --doo:location--> London (dor:London)
+      - A._K._Brohi (dor:A._K._Brohi) --dop:deathPlace--> London (dor:London)
+      - BBC_News_Arabic (dor:BBC_News_Arabic) --doo:broadcastNetwork--> BBC_World_Service (dor:BBC_World_Service)
+  '4':
+    attributes:
+      A._C._Tirulokchandar: (birth date^='1930-06-11')
+    relationships:
+      - Star_Vijay (dor:Star_Vijay) --doo:headquarter--> Chennai (dor:Chennai)
+      - Anderson_Church,_Chennai (<http://dbpedia.org/resource/Anderson_Church,_Chennai>) --doo:location--> Chennai (dor:Chennai)
+      - A._C._Tirulokchandar (dor:A._C._Tirulokchandar) --dop:deathPlace--> Chennai (dor:Chennai)
+      - Star_Vijay (dor:Star_Vijay) --doo:broadcastNetwork--> Asianet_Star_Communications (dor:Asianet_Star_Communications)
+  '5':
+    attributes:
+      A._G._Milkha_Singh: (birth date^='1941-12-31', date^='--03-16')
+    relationships:
+      - Star_Vijay (dor:Star_Vijay) --doo:headquarter--> Chennai (dor:Chennai)
+      - Anderson_Church,_Chennai (<http://dbpedia.org/resource/Anderson_Church,_Chennai>) --doo:location--> Chennai (dor:Chennai)
+      - A._G._Milkha_Singh (dor:A._G._Milkha_Singh) --dop:deathPlace--> Chennai (dor:Chennai)
+      - Star_Vijay (dor:Star_Vijay) --doo:broadcastNetwork--> Asianet_Star_Communications (dor:Asianet_Star_Communications)
+  '6':
+    attributes: {}
+    relationships:
+      - Star_Vijay (dor:Star_Vijay) --doo:headquarter--> Chennai (dor:Chennai)
+      - Anderson_Church,_Chennai (<http://dbpedia.org/resource/Anderson_Church,_Chennai>) --doo:location--> Chennai (dor:Chennai)
+      - A._K._Veerasami (dor:A._K._Veerasami) --dop:deathPlace--> Chennai (dor:Chennai)
+      - Star_Vijay (dor:Star_Vijay) --doo:broadcastNetwork--> Asianet_Star_Communications (dor:Asianet_Star_Communications)
+  '7':
+    attributes: {}
+    relationships:
+      - The_CW_Plus (dor:The_CW_Plus) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - Angelus_Temple (dor:Angelus_Temple) --doo:location--> Los_Angeles (dor:Los_Angeles)
+      - '%22Steeplejack%22_Charles_Miller (<http://dbpedia.org/resource/%22Steeplejack%22_Charles_Miller>) --dop:deathPlace--> Los_Angeles (dor:Los_Angeles)'
+      - The_CW_Plus (dor:The_CW_Plus) --doo:broadcastNetwork--> The_CW (dor:The_CW)
+  '8':
+    attributes:
+      A._I._Bezzerides: (birth date^='1908-08-09', date^='September 2016')
+    relationships:
+      - The_CW_Plus (dor:The_CW_Plus) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - Angelus_Temple (dor:Angelus_Temple) --doo:location--> Los_Angeles (dor:Los_Angeles)
+      - A._I._Bezzerides (dor:A._I._Bezzerides) --dop:deathPlace--> Los_Angeles (dor:Los_Angeles)
+      - The_CW_Plus (dor:The_CW_Plus) --doo:broadcastNetwork--> The_CW (dor:The_CW)
+  '9':
+    attributes:
+      A._S._%22Doc%22_Young: (birth date^='1919-10-29')
+    relationships:
+      - The_CW_Plus (dor:The_CW_Plus) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - Angelus_Temple (dor:Angelus_Temple) --doo:location--> Los_Angeles (dor:Los_Angeles)
+      - A._S._%22Doc%22_Young (<http://dbpedia.org/resource/A._S._%22Doc%22_Young>) --dop:deathPlace--> Los_Angeles (dor:Los_Angeles)
+      - The_CW_Plus (dor:The_CW_Plus) --doo:broadcastNetwork--> The_CW (dor:The_CW)
+  '10':
+    attributes: {}
+    relationships:
+      - Rotana_Cinema (dor:Rotana_Cinema) --doo:headquarter--> Cairo (dor:Cairo)
+      - Annunciation_Cathedral,_Cairo (<http://dbpedia.org/resource/Annunciation_Cathedral,_Cairo>) --doo:location--> Cairo (dor:Cairo)
+      - Aayon_Ibn_Aayon (dor:Aayon_Ibn_Aayon) --dop:deathPlace--> Cairo (dor:Cairo)
+      - Rotana_Cinema (dor:Rotana_Cinema) --doo:broadcastNetwork--> Rotana_(television) (<http://dbpedia.org/resource/Rotana_(television)>)
+attributes:
+  city: --differentFrom (wwoo:differentFrom)--> Resource
+  person: --awards^ (dop:awards)--> int | --display^ (dop:display)--> langString | --birth date^ (doo:birthDate)--> date | --date^ (dop:date)--> langString | --relation (doo:relation)--> Resource | --alias^ (dop:alias)--> langString
+  television station: --airdate^ (dop:airdate)--> date
+subgraph_id: 616
+relationships:
+  - television station --doo:headquarter--> city
+  - historic building --doo:location--> city
+  - person --dop:deathPlace--> city
+  - television station --doo:broadcastNetwork--> broadcast network

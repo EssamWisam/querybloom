@@ -1,0 +1,89 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  record label: doo:RecordLabel
+  ice hockey player: doo:IceHockeyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Aaron_Lewicki (dor:Aaron_Lewicki) --doo:birthPlace--> Livonia,_Michigan (<http://dbpedia.org/resource/Livonia,_Michigan>)
+      - Suburban_Sprawl_Music (dor:Suburban_Sprawl_Music) --doo:location--> Livonia,_Michigan (<http://dbpedia.org/resource/Livonia,_Michigan>)
+      - Aaron_Lewicki (dor:Aaron_Lewicki) --doo:birthPlace--> Michigan (dor:Michigan)
+  '2':
+    attributes:
+      New_York_(state): (d^='yes')
+    relationships:
+      - Aaron_Miller_(ice_hockey) (<http://dbpedia.org/resource/Aaron_Miller_(ice_hockey)>) --doo:birthPlace--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+      - Amherst_Records (dor:Amherst_Records) --doo:location--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+      - Aaron_Miller_(ice_hockey) (<http://dbpedia.org/resource/Aaron_Miller_(ice_hockey)>) --doo:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '3':
+    attributes:
+      New_York_(state): (d^='yes')
+    relationships:
+      - Aaron_Miller_(ice_hockey) (<http://dbpedia.org/resource/Aaron_Miller_(ice_hockey)>) --doo:birthPlace--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+      - Good_Charamel_Records (dor:Good_Charamel_Records) --doo:location--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+      - Aaron_Miller_(ice_hockey) (<http://dbpedia.org/resource/Aaron_Miller_(ice_hockey)>) --doo:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '4':
+    attributes:
+      Cleveland: (Apr sun^='216')
+    relationships:
+      - Ab_DeMarco_Jr. (<http://dbpedia.org/resource/Ab_DeMarco_Jr.>) --doo:birthPlace--> Cleveland (dor:Cleveland)
+      - BTNH_Worldwide (dor:BTNH_Worldwide) --doo:location--> Cleveland (dor:Cleveland)
+      - Ab_DeMarco_Jr. (<http://dbpedia.org/resource/Ab_DeMarco_Jr.>) --doo:birthPlace--> Ohio (dor:Ohio)
+  '5':
+    attributes: {}
+    relationships:
+      - Ab_DeMarco_Jr. (<http://dbpedia.org/resource/Ab_DeMarco_Jr.>) --doo:birthPlace--> Cleveland (dor:Cleveland)
+      - Telarc_International_Corporation (dor:Telarc_International_Corporation) --doo:location--> Cleveland (dor:Cleveland)
+      - Ab_DeMarco_Jr. (<http://dbpedia.org/resource/Ab_DeMarco_Jr.>) --doo:birthPlace--> Ohio (dor:Ohio)
+  '6':
+    attributes:
+      Sweden: (population total^='10481937')
+      Stockholm: (Apr sun^='217')
+    relationships:
+      - Adam_Brodecki_(ice_hockey) (<http://dbpedia.org/resource/Adam_Brodecki_(ice_hockey)>) --doo:birthPlace--> Stockholm (dor:Stockholm)
+      - Black_Lodge_Records (dor:Black_Lodge_Records) --doo:location--> Stockholm (dor:Stockholm)
+      - Adam_Brodecki_(ice_hockey) (<http://dbpedia.org/resource/Adam_Brodecki_(ice_hockey)>) --doo:birthPlace--> Sweden (dor:Sweden)
+  '7':
+    attributes:
+      Sweden: (population total^='10481937')
+      Stockholm: (Apr sun^='217')
+    relationships:
+      - Adam_Brodecki_(ice_hockey) (<http://dbpedia.org/resource/Adam_Brodecki_(ice_hockey)>) --doo:birthPlace--> Stockholm (dor:Stockholm)
+      - Capitol_Music_Group_Sweden (dor:Capitol_Music_Group_Sweden) --doo:location--> Stockholm (dor:Stockholm)
+      - Adam_Brodecki_(ice_hockey) (<http://dbpedia.org/resource/Adam_Brodecki_(ice_hockey)>) --doo:birthPlace--> Sweden (dor:Sweden)
+  '8':
+    attributes:
+      Sweden: (population total^='10481937')
+      Stockholm: (Apr sun^='217')
+    relationships:
+      - Adam_Brodecki_(ice_hockey) (<http://dbpedia.org/resource/Adam_Brodecki_(ice_hockey)>) --doo:birthPlace--> Stockholm (dor:Stockholm)
+      - Despotz_Records (dor:Despotz_Records) --doo:location--> Stockholm (dor:Stockholm)
+      - Adam_Brodecki_(ice_hockey) (<http://dbpedia.org/resource/Adam_Brodecki_(ice_hockey)>) --doo:birthPlace--> Sweden (dor:Sweden)
+  '9':
+    attributes: {}
+    relationships:
+      - Adam_Burt (dor:Adam_Burt) --doo:birthPlace--> Detroit (dor:Detroit)
+      - Eastlawn_Records (dor:Eastlawn_Records) --doo:location--> Detroit (dor:Detroit)
+      - Adam_Burt (dor:Adam_Burt) --doo:birthPlace--> Michigan (dor:Michigan)
+  '10':
+    attributes: {}
+    relationships:
+      - Adam_Burt (dor:Adam_Burt) --doo:birthPlace--> Detroit (dor:Detroit)
+      - Iron_Fist_Records (dor:Iron_Fist_Records) --doo:location--> Detroit (dor:Detroit)
+      - Adam_Burt (dor:Adam_Burt) --doo:birthPlace--> Michigan (dor:Michigan)
+attributes:
+  city: --reason^ (dop:reason)--> langString | --Apr sun^ (dop:aprSun)--> double
+  Location: --width^ (dop:width)--> perCent | --arc-gapA^ (dop:arcGapa)--> int | --d^ (dop:d)--> langString | --quote^ (dop:quote)--> int | --population total^ (doo:populationTotal)--> int | --width^ (dop:width)--> int
+  ice hockey player: --height m^ (dop:heightM)--> double
+subgraph_id: 378
+relationships:
+  - ice hockey player --doo:birthPlace--> city
+  - record label --doo:location--> city
+  - ice hockey player --doo:birthPlace--> Location

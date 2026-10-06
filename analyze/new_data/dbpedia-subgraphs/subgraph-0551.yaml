@@ -1,0 +1,77 @@
+types:
+  Location: doo:Location
+  cricketer: doo:Cricketer
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Chennai: (d^='yes', page length (characters) of wiki page^='284523')
+    relationships:
+      - Academy_of_Maritime_Education_and_Training (dor:Academy_of_Maritime_Education_and_Training) --doo:city--> Chennai (dor:Chennai)
+      - A._G._Milkha_Singh (dor:A._G._Milkha_Singh) --dop:deathPlace--> Chennai (dor:Chennai)
+  '2':
+    attributes:
+      Chennai: (d^='yes', page length (characters) of wiki page^='284523')
+    relationships:
+      - Adhi_College_of_Engineering_and_Technology (dor:Adhi_College_of_Engineering_and_Technology) --doo:city--> Chennai (dor:Chennai)
+      - A._G._Milkha_Singh (dor:A._G._Milkha_Singh) --dop:deathPlace--> Chennai (dor:Chennai)
+  '3':
+    attributes: {}
+    relationships:
+      - Agni_College_of_Technology (dor:Agni_College_of_Technology) --doo:city--> Chennai (dor:Chennai)
+      - A._G._Milkha_Singh (dor:A._G._Milkha_Singh) --dop:deathPlace--> Chennai (dor:Chennai)
+  '4':
+    attributes:
+      Colombo: (Aug precipitation mm^='119.5', page length (characters) of wiki page^='82969')
+    relationships:
+      - Ananda_College (dor:Ananda_College) --doo:city--> Colombo (dor:Colombo)
+      - Abu_Fuard (dor:Abu_Fuard) --dop:deathPlace--> Colombo (dor:Colombo)
+  '5':
+    attributes:
+      Sri_Lanka: (page length (characters) of wiki page^='218581')
+    relationships:
+      - Buddhasravaka_Bhiksu_University (dor:Buddhasravaka_Bhiksu_University) --doo:city--> Sri_Lanka (dor:Sri_Lanka)
+      - Abu_Fuard (dor:Abu_Fuard) --dop:deathPlace--> Sri_Lanka (dor:Sri_Lanka)
+  '6':
+    attributes:
+      Colombo: (Aug precipitation mm^='119.5', page length (characters) of wiki page^='82969')
+    relationships:
+      - Ceylon_Medical_College (dor:Ceylon_Medical_College) --doo:city--> Colombo (dor:Colombo)
+      - Abu_Fuard (dor:Abu_Fuard) --dop:deathPlace--> Colombo (dor:Colombo)
+  '7':
+    attributes:
+      Kerala: (page length (characters) of wiki page^='364037')
+    relationships:
+      - Clusters_School_of_Digital_Arts (dor:Clusters_School_of_Digital_Arts) --doo:city--> Kerala (dor:Kerala)
+      - Acharath_Babu (dor:Acharath_Babu) --dop:deathPlace--> Kerala (dor:Kerala)
+  '8':
+    attributes:
+      Kerala: (page length (characters) of wiki page^='364037')
+    relationships:
+      - College_of_Engineering,_Adoor (<http://dbpedia.org/resource/College_of_Engineering,_Adoor>) --doo:city--> Kerala (dor:Kerala)
+      - Acharath_Babu (dor:Acharath_Babu) --dop:deathPlace--> Kerala (dor:Kerala)
+  '9':
+    attributes:
+      Kerala: (page length (characters) of wiki page^='364037')
+    relationships:
+      - Guild_of_Indian_English_Writers_Editors_and_Critics (dor:Guild_of_Indian_English_Writers_Editors_and_Critics) --doo:city--> Kerala (dor:Kerala)
+      - Acharath_Babu (dor:Acharath_Babu) --dop:deathPlace--> Kerala (dor:Kerala)
+  '10':
+    attributes:
+      Karachi: (Aug precipitation mm^='60.9', page length (characters) of wiki page^='220321')
+    relationships:
+      - Adamjee_Government_Science_College (dor:Adamjee_Government_Science_College) --doo:city--> Karachi (dor:Karachi)
+      - Afaq_Hussain (dor:Afaq_Hussain) --dop:deathPlace--> Karachi (dor:Karachi)
+attributes:
+  Location: --Apr high F^ (dop:aprHighF)--> int | --chapter^ (dop:chapter)--> langString | --operator^ (dop:operator)--> Resource | --accessdate^ (dop:accessdate)--> date | --line^ (dop:line)--> int | --building start date^ (doo:buildingStartDate)--> string | --coordinates^ (dop:coordinates)--> double | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --d^ (dop:d)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int
+  cricketer: --family^ (dop:family)--> langString
+  university: --align^ (dop:align)--> langString
+subgraph_id: 551
+relationships:
+  - university --doo:city--> Location
+  - cricketer --dop:deathPlace--> Location

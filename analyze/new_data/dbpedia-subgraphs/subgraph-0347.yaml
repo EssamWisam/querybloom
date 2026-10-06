@@ -1,0 +1,100 @@
+types:
+  venue: doo:Venue
+  person: doo:Person
+  single: doo:Single
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Tony_Visconti: (birth date^='1944-04-24')
+      '%22Heroes%22_(David_Bowie_song)': (release date^='1977-09-23')
+    relationships:
+      - '%22Heroes%22_(David_Bowie_song) (<http://dbpedia.org/resource/%22Heroes%22_(David_Bowie_song)>) --doo:producer--> Tony_Visconti (dor:Tony_Visconti)'
+      - '%22Heroes%22_(David_Bowie_song) (<http://dbpedia.org/resource/%22Heroes%22_(David_Bowie_song)>) --doo:genre--> Art_rock (dor:Art_rock)'
+      - '%22Heroes%22_(David_Bowie_song) (<http://dbpedia.org/resource/%22Heroes%22_(David_Bowie_song)>) --doo:recordedIn--> Hansa_Tonstudio (dor:Hansa_Tonstudio)'
+  '2':
+    attributes:
+      Martin_Hannett: (birth date^='1948-05-31')
+      11_O'Clock_Tick_Tock: (release date^='1980-05-16')
+    relationships:
+      - 11_O'Clock_Tick_Tock (<http://dbpedia.org/resource/11_O'Clock_Tick_Tock>) --doo:producer--> Martin_Hannett (dor:Martin_Hannett)
+      - 11_O'Clock_Tick_Tock (<http://dbpedia.org/resource/11_O'Clock_Tick_Tock>) --doo:genre--> Post-punk (dor:Post-punk)
+      - 11_O'Clock_Tick_Tock (<http://dbpedia.org/resource/11_O'Clock_Tick_Tock>) --doo:recordedIn--> Windmill_Lane_Studios (dor:Windmill_Lane_Studios)
+  '3':
+    attributes:
+      Martin_Hannett: (birth date^='1948-05-31')
+      11_O'Clock_Tick_Tock: (release date^='1980-05-16')
+    relationships:
+      - 11_O'Clock_Tick_Tock (<http://dbpedia.org/resource/11_O'Clock_Tick_Tock>) --doo:producer--> Martin_Hannett (dor:Martin_Hannett)
+      - 11_O'Clock_Tick_Tock (<http://dbpedia.org/resource/11_O'Clock_Tick_Tock>) --doo:genre--> Rock_music (dor:Rock_music)
+      - 11_O'Clock_Tick_Tock (<http://dbpedia.org/resource/11_O'Clock_Tick_Tock>) --doo:recordedIn--> Windmill_Lane_Studios (dor:Windmill_Lane_Studios)
+  '4':
+    attributes:
+      Spike_Stent: (birth date^='1965-08-03')
+      4_in_the_Morning: (release date^='2007-05-08')
+    relationships:
+      - 4_in_the_Morning (dor:4_in_the_Morning) --doo:producer--> Spike_Stent (dor:Spike_Stent)
+      - 4_in_the_Morning (dor:4_in_the_Morning) --doo:genre--> Synth-pop (dor:Synth-pop)
+      - 4_in_the_Morning (dor:4_in_the_Morning) --doo:recordedIn--> Electric_Lady_Studios (dor:Electric_Lady_Studios)
+  '5':
+    attributes:
+      Tony_Kanal: (birth date^='1970-08-27')
+      4_in_the_Morning: (release date^='2007-05-08')
+    relationships:
+      - 4_in_the_Morning (dor:4_in_the_Morning) --doo:producer--> Tony_Kanal (dor:Tony_Kanal)
+      - 4_in_the_Morning (dor:4_in_the_Morning) --doo:genre--> Synth-pop (dor:Synth-pop)
+      - 4_in_the_Morning (dor:4_in_the_Morning) --doo:recordedIn--> Electric_Lady_Studios (dor:Electric_Lady_Studios)
+  '6':
+    attributes:
+      Beyoncé: (birth date^='1981-09-04', relative^='http://dbpedia.org/resource/Solange_Knowles', image^='Michael Jackson Dangerous World Tour 1993.jpg')
+      11_(song): (release date^='2014-11-25')
+    relationships:
+      - 11_(song) (<http://dbpedia.org/resource/7/11_(song)>) --doo:producer--> Beyoncé (<http://dbpedia.org/resource/Beyoncé>)
+      - 11_(song) (<http://dbpedia.org/resource/7/11_(song)>) --doo:genre--> Hip_hop_music (dor:Hip_hop_music)
+      - 11_(song) (<http://dbpedia.org/resource/7/11_(song)>) --doo:recordedIn--> Record_Plant (dor:Record_Plant)
+  '7':
+    attributes:
+      11_(song): (release date^='2014-11-25')
+      Sidney_Swift: (birth date^='1988-10-04')
+    relationships:
+      - 11_(song) (<http://dbpedia.org/resource/7/11_(song)>) --doo:producer--> Sidney_Swift (dor:Sidney_Swift)
+      - 11_(song) (<http://dbpedia.org/resource/7/11_(song)>) --doo:genre--> Hip_hop_music (dor:Hip_hop_music)
+      - 11_(song) (<http://dbpedia.org/resource/7/11_(song)>) --doo:recordedIn--> Record_Plant (dor:Record_Plant)
+  '8':
+    attributes:
+      A_Day_Without_Me: (release date^='1980-08-18')
+      Steve_Lillywhite: (birth date^='1955-03-15')
+    relationships:
+      - A_Day_Without_Me (dor:A_Day_Without_Me) --doo:producer--> Steve_Lillywhite (dor:Steve_Lillywhite)
+      - A_Day_Without_Me (dor:A_Day_Without_Me) --doo:genre--> Post-punk (dor:Post-punk)
+      - A_Day_Without_Me (dor:A_Day_Without_Me) --doo:recordedIn--> Windmill_Lane_Studios (dor:Windmill_Lane_Studios)
+  '9':
+    attributes:
+      Bob_Ezrin: (birth date^='1949-03-25')
+    relationships:
+      - A_World_Without_Heroes (dor:A_World_Without_Heroes) --doo:producer--> Bob_Ezrin (dor:Bob_Ezrin)
+      - A_World_Without_Heroes (dor:A_World_Without_Heroes) --doo:genre--> Progressive_rock (dor:Progressive_rock)
+      - A_World_Without_Heroes (dor:A_World_Without_Heroes) --doo:recordedIn--> Record_Plant (dor:Record_Plant)
+  '10':
+    attributes:
+      Arnthor_Birgisson: (birth date^='1976-02-12')
+      All_Nite_(Don't_Stop): (release date^='2004-05-17')
+    relationships:
+      - All_Nite_(Don't_Stop) (<http://dbpedia.org/resource/All_Nite_(Don't_Stop)>) --doo:producer--> Arnthor_Birgisson (dor:Arnthor_Birgisson)
+      - All_Nite_(Don't_Stop) (<http://dbpedia.org/resource/All_Nite_(Don't_Stop)>) --doo:genre--> Electro-funk (dor:Electro-funk)
+      - All_Nite_(Don't_Stop) (<http://dbpedia.org/resource/All_Nite_(Don't_Stop)>) --doo:recordedIn--> The_Village_(studio) (<http://dbpedia.org/resource/The_Village_(studio)>)
+attributes:
+  venue: --closing date^ (doo:closingDate)--> date | --Closed^ (dop:closed)--> date | --former name^ (doo:formerName)--> langString
+  person: --before^ (dop:before)--> langString | --alt^ (dop:alt)--> langString | --birth date^ (dop:birthDate)--> date | --active years end year^ (doo:activeYearsEndYear)--> gYear | --relative^ (doo:relative)--> Resource | --image^ (dop:image)--> langString | --after^ (dop:after)--> Resource | --nickname^ (dop:nickname)--> langString
+  single: --release date^ (doo:releaseDate)--> date
+  music genre: --1y^ (dop:1y)--> int
+subgraph_id: 347
+relationships:
+  - single --doo:producer--> person
+  - single --doo:genre--> music genre
+  - single --doo:recordedIn--> venue

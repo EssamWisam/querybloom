@@ -1,0 +1,73 @@
+types:
+  school: doo:School
+  Location: doo:Location
+  speedway team: doo:SpeedwayTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Glasgow: (area total km^='175', header^='Protestant/Catholic affiliation in Glasgow', caption align^='center')
+    relationships:
+      - Allan_Glen's_School (<http://dbpedia.org/resource/Allan_Glen's_School>) --doo:location--> Glasgow (dor:Glasgow)
+      - Ashfield_Giants (dor:Ashfield_Giants) --dop:track--> Glasgow (dor:Glasgow)
+  '2':
+    attributes:
+      Glasgow: (area total km^='175', header^='Protestant/Catholic affiliation in Glasgow', caption align^='center')
+    relationships:
+      - Allan_Glen's_School (<http://dbpedia.org/resource/Allan_Glen's_School>) --doo:location--> Glasgow (dor:Glasgow)
+      - Glasgow_Tigers_(speedway) (<http://dbpedia.org/resource/Glasgow_Tigers_(speedway)>) --dop:track--> Glasgow (dor:Glasgow)
+  '3':
+    attributes: {}
+    relationships:
+      - Ark_Academy (dor:Ark_Academy) --doo:location--> Wembley (dor:Wembley)
+      - Wembley_Lions_(speedway) (<http://dbpedia.org/resource/Wembley_Lions_(speedway)>) --dop:track--> Wembley (dor:Wembley)
+  '4':
+    attributes:
+      Essex: (area total km^='3670')
+    relationships:
+      - Arthur_Findlay_College (dor:Arthur_Findlay_College) --doo:location--> Essex (dor:Essex)
+      - Rayleigh_Rockets (dor:Rayleigh_Rockets) --dop:track--> Essex (dor:Essex)
+  '5':
+    attributes:
+      Essex: (area total km^='3670')
+    relationships:
+      - Arthur_Findlay_College (dor:Arthur_Findlay_College) --doo:location--> Essex (dor:Essex)
+      - Romford_Bombers (dor:Romford_Bombers) --dop:track--> Essex (dor:Essex)
+  '6':
+    attributes:
+      Glasgow: (area total km^='175', header^='Protestant/Catholic affiliation in Glasgow', caption align^='center')
+    relationships:
+      - Bellahouston_Academy (dor:Bellahouston_Academy) --doo:location--> Glasgow (dor:Glasgow)
+      - Ashfield_Giants (dor:Ashfield_Giants) --dop:track--> Glasgow (dor:Glasgow)
+  '7':
+    attributes: {}
+    relationships:
+      - Big_Creative_Academy (dor:Big_Creative_Academy) --doo:location--> Walthamstow (dor:Walthamstow)
+      - Lea_Bridge_(speedway) (<http://dbpedia.org/resource/Lea_Bridge_(speedway)>) --dop:track--> Walthamstow (dor:Walthamstow)
+  '8':
+    attributes: {}
+    relationships:
+      - Big_Creative_Academy (dor:Big_Creative_Academy) --doo:location--> Walthamstow (dor:Walthamstow)
+      - Walthamstow_Wolves (dor:Walthamstow_Wolves) --dop:track--> Walthamstow (dor:Walthamstow)
+  '9':
+    attributes:
+      Poland: (header^='Fryderyk Chopin', caption align^='center')
+    relationships:
+      - Bolesław_I_the_Brave_High_School_in_Piotrków_Trybunalski (<http://dbpedia.org/resource/Bolesław_I_the_Brave_High_School_in_Piotrków_Trybunalski>) --doo:location--> Poland (dor:Poland)
+      - Unia_Leszno (dor:Unia_Leszno) --dop:track--> Poland (dor:Poland)
+  '10':
+    attributes:
+      Poland: (header^='Fryderyk Chopin', caption align^='center')
+    relationships:
+      - Bolesław_I_the_Brave_High_School_in_Piotrków_Trybunalski (<http://dbpedia.org/resource/Bolesław_I_the_Brave_High_School_in_Piotrków_Trybunalski>) --doo:location--> Poland (dor:Poland)
+      - Włókniarz_Częstochowa (<http://dbpedia.org/resource/Włókniarz_Częstochowa>) --dop:track--> Poland (dor:Poland)
+attributes:
+  Location: --Apr record high C^ (dop:aprRecordHighC)--> int | --affiliation^ (dop:affiliation)--> Resource | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --area total km^ (dop:areaTotalKm)--> double | --architecture^ (dop:architecture)--> Resource | --age^ (dop:age)--> langString | --header^ (dop:header)--> langString | --Aug rain days^ (dop:augRainDays)--> double | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --caption align^ (dop:captionAlign)--> langString
+subgraph_id: 417
+relationships:
+  - school --doo:location--> Location
+  - speedway team --dop:track--> Location

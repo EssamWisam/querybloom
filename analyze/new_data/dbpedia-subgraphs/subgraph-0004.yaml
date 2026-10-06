@@ -1,0 +1,79 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Iran: (UTC offset^='+3:30')
+      Abbas_Ranjbar: (children^='2')
+    relationships:
+      - Abbas_Ranjbar (dor:Abbas_Ranjbar) --doo:nationality--> Iran (dor:Iran)
+      - Abbas_Ranjbar (dor:Abbas_Ranjbar) --doo:knownFor--> Photography (dor:Photography)
+  '2':
+    attributes:
+      Uganda: (UTC offset^='+3')
+    relationships:
+      - Abel_Kandiho (dor:Abel_Kandiho) --doo:nationality--> Uganda (dor:Uganda)
+      - Abel_Kandiho (dor:Abel_Kandiho) --doo:knownFor--> Military (dor:Military)
+  '3':
+    attributes:
+      India: (UTC offset^='+05:30')
+      Abhik_Ghosh: (children^='Avroneel Ghosh')
+    relationships:
+      - Abhik_Ghosh (dor:Abhik_Ghosh) --doo:nationality--> India (dor:India)
+      - Abhik_Ghosh (dor:Abhik_Ghosh) --doo:knownFor--> LGBT_history (dor:LGBT_history)
+  '4':
+    attributes:
+      Germany: (UTC offset^='+1')
+    relationships:
+      - Ada_Isensee (dor:Ada_Isensee) --doo:nationality--> Germany (dor:Germany)
+      - Ada_Isensee (dor:Ada_Isensee) --doo:knownFor--> Stained_glass (dor:Stained_glass)
+  '5':
+    attributes:
+      France: (UTC offset^='+1')
+    relationships:
+      - Adlène_Hicheur (<http://dbpedia.org/resource/Adlène_Hicheur>) --doo:nationality--> France (dor:France)
+      - Adlène_Hicheur (<http://dbpedia.org/resource/Adlène_Hicheur>) --doo:knownFor--> Terrorism (dor:Terrorism)
+  '6':
+    attributes:
+      Argentina: (UTC offset^='−3')
+    relationships:
+      - Agustina_Vivero (dor:Agustina_Vivero) --doo:nationality--> Argentina (dor:Argentina)
+      - Agustina_Vivero (dor:Agustina_Vivero) --doo:knownFor--> Flogger_(fashion) (<http://dbpedia.org/resource/Flogger_(fashion)>)
+  '7':
+    attributes:
+      Nigeria: (UTC offset^='+01:00')
+    relationships:
+      - Ahmad_Salihijo_Ahmad (dor:Ahmad_Salihijo_Ahmad) --doo:nationality--> Nigeria (dor:Nigeria)
+      - Ahmad_Salihijo_Ahmad (dor:Ahmad_Salihijo_Ahmad) --doo:knownFor--> Renewable_energy (dor:Renewable_energy)
+  '8':
+    attributes:
+      France: (UTC offset^='+1')
+    relationships:
+      - Alain_Bombard (dor:Alain_Bombard) --doo:nationality--> France (dor:France)
+      - Alain_Bombard (dor:Alain_Bombard) --doo:knownFor--> Survival_skills (dor:Survival_skills)
+  '9':
+    attributes:
+      United_States: (UTC offset^='−4 to −12, +10, +11')
+    relationships:
+      - Alex_Bogusky (dor:Alex_Bogusky) --doo:nationality--> United_States (dor:United_States)
+      - Alex_Bogusky (dor:Alex_Bogusky) --doo:knownFor--> Design (dor:Design)
+  '10':
+    attributes:
+      Germany: (UTC offset^='+1')
+    relationships:
+      - Alfons_Kemper (dor:Alfons_Kemper) --doo:nationality--> Germany (dor:Germany)
+      - Alfons_Kemper (dor:Alfons_Kemper) --doo:knownFor--> In-memory_database (dor:In-memory_database)
+attributes:
+  person: --before^ (dop:before)--> Resource | --employer^ (dop:employer)--> langString | --1p^ (dop:1p)--> int | --reason^ (dop:reason)--> langString | --children^ (dop:children)--> int
+  Location: --area^ (dop:area)--> hectare | --number of wineries^ (doo:numberOfWineries)--> int | --coroner^ (dop:coroner)--> langString | --UTC offset^ (doo:utcOffset)--> string | --Apr low C^ (dop:aprLowC)--> langString | --arc-radiusA^ (dop:arcRadiusa)--> double | --partof^ (dop:partof)--> langString | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double
+subgraph_id: 4
+relationships:
+  - person --doo:nationality--> Location
+  - person --doo:knownFor--> music genre

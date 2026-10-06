@@ -1,0 +1,97 @@
+types:
+  book: doo:Book
+  person: doo:Person
+  disease: doo:Disease
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Alfred_François_Donné: (death date^='--03-07', birth date^='1801-09-13')
+      Achtste-groepers_huilen_niet: (non-fiction subject^='http://dbpedia.org/resource/Leukemia')
+    relationships:
+      - Guido_Westerwelle (dor:Guido_Westerwelle) --doo:deathCause--> Leukemia (dor:Leukemia)
+      - Alfred_François_Donné (<http://dbpedia.org/resource/Alfred_François_Donné>) --doo:knownFor--> Leukemia (dor:Leukemia)
+      - Achtste-groepers_huilen_niet (dor:Achtste-groepers_huilen_niet) --doo:nonFictionSubject--> Leukemia (dor:Leukemia)
+  '2':
+    attributes:
+      John_Hughes_Bennett: (death date^='1875-09-25', birth date^='1812-08-31')
+      Achtste-groepers_huilen_niet: (non-fiction subject^='http://dbpedia.org/resource/Leukemia')
+    relationships:
+      - Guido_Westerwelle (dor:Guido_Westerwelle) --doo:deathCause--> Leukemia (dor:Leukemia)
+      - John_Hughes_Bennett (dor:John_Hughes_Bennett) --doo:knownFor--> Leukemia (dor:Leukemia)
+      - Achtste-groepers_huilen_niet (dor:Achtste-groepers_huilen_niet) --doo:nonFictionSubject--> Leukemia (dor:Leukemia)
+  '3':
+    attributes:
+      Alfred_François_Donné: (death date^='--03-07', birth date^='1801-09-13')
+      Achtste-groepers_huilen_niet: (non-fiction subject^='http://dbpedia.org/resource/Leukemia')
+    relationships:
+      - Louis_Beel (dor:Louis_Beel) --doo:deathCause--> Leukemia (dor:Leukemia)
+      - Alfred_François_Donné (<http://dbpedia.org/resource/Alfred_François_Donné>) --doo:knownFor--> Leukemia (dor:Leukemia)
+      - Achtste-groepers_huilen_niet (dor:Achtste-groepers_huilen_niet) --doo:nonFictionSubject--> Leukemia (dor:Leukemia)
+  '4':
+    attributes:
+      Aaron_Beck: (death date^='2021-11-01', birth date^='1921-07-18')
+      After_(book): (non-fiction subject^='http://dbpedia.org/resource/Suicide')
+    relationships:
+      - Boris_Pugo (dor:Boris_Pugo) --doo:deathCause--> Suicide (dor:Suicide)
+      - Aaron_Beck (dor:Aaron_Beck) --doo:knownFor--> Suicide (dor:Suicide)
+      - After_(book) (<http://dbpedia.org/resource/After_(book)>) --doo:nonFictionSubject--> Suicide (dor:Suicide)
+  '5':
+    attributes:
+      After_(book): (non-fiction subject^='http://dbpedia.org/resource/Suicide')
+    relationships:
+      - Boris_Pugo (dor:Boris_Pugo) --doo:deathCause--> Suicide (dor:Suicide)
+      - Ann_John (dor:Ann_John) --doo:knownFor--> Suicide (dor:Suicide)
+      - After_(book) (<http://dbpedia.org/resource/After_(book)>) --doo:nonFictionSubject--> Suicide (dor:Suicide)
+  '6':
+    attributes:
+      After_(book): (non-fiction subject^='http://dbpedia.org/resource/Suicide')
+      Michael_Anestis: (birth date^='1979-11-18')
+    relationships:
+      - Boris_Pugo (dor:Boris_Pugo) --doo:deathCause--> Suicide (dor:Suicide)
+      - Michael_Anestis (dor:Michael_Anestis) --doo:knownFor--> Suicide (dor:Suicide)
+      - After_(book) (<http://dbpedia.org/resource/After_(book)>) --doo:nonFictionSubject--> Suicide (dor:Suicide)
+  '7':
+    attributes:
+      André_Gernez: (death date^='2014-01-08', birth date^='1923-01-25')
+      Illness_as_Metaphor: (non-fiction subject^='http://dbpedia.org/resource/Cancer')
+    relationships:
+      - Clay_Ford (dor:Clay_Ford) --doo:deathCause--> Cancer (dor:Cancer)
+      - André_Gernez (<http://dbpedia.org/resource/André_Gernez>) --doo:knownFor--> Cancer (dor:Cancer)
+      - Illness_as_Metaphor (dor:Illness_as_Metaphor) --doo:nonFictionSubject--> Cancer (dor:Cancer)
+  '8':
+    attributes:
+      Carlo_La_Vecchia: (birth date^='1955-02-27')
+      Illness_as_Metaphor: (non-fiction subject^='http://dbpedia.org/resource/Cancer')
+    relationships:
+      - Clay_Ford (dor:Clay_Ford) --doo:deathCause--> Cancer (dor:Cancer)
+      - Carlo_La_Vecchia (dor:Carlo_La_Vecchia) --doo:knownFor--> Cancer (dor:Cancer)
+      - Illness_as_Metaphor (dor:Illness_as_Metaphor) --doo:nonFictionSubject--> Cancer (dor:Cancer)
+  '9':
+    attributes:
+      Illness_as_Metaphor: (non-fiction subject^='http://dbpedia.org/resource/Cancer')
+    relationships:
+      - Clay_Ford (dor:Clay_Ford) --doo:deathCause--> Cancer (dor:Cancer)
+      - Daniel_Haber (dor:Daniel_Haber) --doo:knownFor--> Cancer (dor:Cancer)
+      - Illness_as_Metaphor (dor:Illness_as_Metaphor) --doo:nonFictionSubject--> Cancer (dor:Cancer)
+  '10':
+    attributes:
+      My_Hero_Is_You: (non-fiction subject^='http://dbpedia.org/resource/COVID-19')
+    relationships:
+      - Aeneas_Chigwedere (dor:Aeneas_Chigwedere) --doo:deathCause--> COVID-19 (dor:COVID-19)
+      - Awang_Bulgiba_Awang_Mahmud (dor:Awang_Bulgiba_Awang_Mahmud) --doo:knownFor--> COVID-19 (dor:COVID-19)
+      - My_Hero_Is_You (dor:My_Hero_Is_You) --doo:nonFictionSubject--> COVID-19 (dor:COVID-19)
+attributes:
+  book: --non-fiction subject^ (doo:nonFictionSubject)--> Resource
+  person: --2a^ (dop:2a)--> langString | --quoted^ (dop:quoted)--> langString | --death date^ (dop:deathDate)--> date | --birth date^ (dop:birthDate)--> langString | --family^ (dop:family)--> langString | --before^ (dop:before)--> Resource | --cname^ (dop:cname)--> langString
+  office holder: --relation^ (doo:relation)--> Resource
+subgraph_id: 659
+relationships:
+  - office holder --doo:deathCause--> disease
+  - person --doo:knownFor--> disease
+  - book --doo:nonFictionSubject--> disease

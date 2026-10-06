@@ -1,0 +1,78 @@
+types:
+  person: doo:Person
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adam_Malima: (parents^='http://dbpedia.org/resource/Kighoma_Malima')
+    relationships:
+      - Adam_Malima (dor:Adam_Malima) --doo:relation--> Asanterabi_Malima (dor:Asanterabi_Malima)
+      - Adam_Malima (dor:Adam_Malima) --doo:parent--> Kighoma_Malima (dor:Kighoma_Malima)
+  '2':
+    attributes:
+      Alan_Peter_Cayetano: (parents^='Sandra Schramm')
+    relationships:
+      - Alan_Peter_Cayetano (dor:Alan_Peter_Cayetano) --doo:relation--> Lino_Cayetano (dor:Lino_Cayetano)
+      - Alan_Peter_Cayetano (dor:Alan_Peter_Cayetano) --doo:parent--> Rene_Cayetano (dor:Rene_Cayetano)
+  '3':
+    attributes:
+      Alan_Peter_Cayetano: (parents^='Sandra Schramm')
+    relationships:
+      - Alan_Peter_Cayetano (dor:Alan_Peter_Cayetano) --doo:relation--> Pia_Cayetano (dor:Pia_Cayetano)
+      - Alan_Peter_Cayetano (dor:Alan_Peter_Cayetano) --doo:parent--> Rene_Cayetano (dor:Rene_Cayetano)
+  '4':
+    attributes:
+      Ali_Motahari: (parents^='Azam "Aliyeh" Rouhani')
+    relationships:
+      - Ali_Motahari (dor:Ali_Motahari) --doo:relation--> Ali_Larijani (dor:Ali_Larijani)
+      - Ali_Motahari (dor:Ali_Motahari) --doo:parent--> Morteza_Motahhari (dor:Morteza_Motahhari)
+  '5':
+    attributes:
+      Alistair_Fraser_(parliamentary_official): (parents^='Jane Ross', death place^='http://dbpedia.org/resource/Ontario')
+    relationships:
+      - Alistair_Fraser_(parliamentary_official) (<http://dbpedia.org/resource/Alistair_Fraser_(parliamentary_official)>) --doo:relation--> Duncan_Cameron_Fraser (dor:Duncan_Cameron_Fraser)
+      - Alistair_Fraser_(parliamentary_official) (<http://dbpedia.org/resource/Alistair_Fraser_(parliamentary_official)>) --doo:parent--> Alistair_Fraser (dor:Alistair_Fraser)
+  '6':
+    attributes:
+      Alistair_Fraser_(parliamentary_official): (parents^='Jane Ross', death place^='http://dbpedia.org/resource/Ontario')
+    relationships:
+      - Alistair_Fraser_(parliamentary_official) (<http://dbpedia.org/resource/Alistair_Fraser_(parliamentary_official)>) --doo:relation--> James_Hamilton_Ross (dor:James_Hamilton_Ross)
+      - Alistair_Fraser_(parliamentary_official) (<http://dbpedia.org/resource/Alistair_Fraser_(parliamentary_official)>) --doo:parent--> Alistair_Fraser (dor:Alistair_Fraser)
+  '7':
+    attributes:
+      Andrew_Refshauge: (parents^='and Helen Allwright')
+    relationships:
+      - Andrew_Refshauge (dor:Andrew_Refshauge) --doo:relation--> William_Refshauge (dor:William_Refshauge)
+      - Andrew_Refshauge (dor:Andrew_Refshauge) --doo:parent--> William_Refshauge (dor:William_Refshauge)
+  '8':
+    attributes:
+      Armand_Lavergne: (parents^='http://dbpedia.org/resource/Émilie_Barthe', death place^='Ottawa, Ontario')
+    relationships:
+      - Armand_Lavergne (dor:Armand_Lavergne) --doo:relation--> Louis_Lavergne (dor:Louis_Lavergne)
+      - Armand_Lavergne (dor:Armand_Lavergne) --doo:parent--> Joseph_Lavergne (dor:Joseph_Lavergne)
+  '9':
+    attributes:
+      Arthur_Kent_White: (parents^='http://dbpedia.org/resource/Alma_Bridwell_White', death place^='http://dbpedia.org/resource/Zarephath,_New_Jersey')
+    relationships:
+      - Arthur_Kent_White (dor:Arthur_Kent_White) --doo:relation--> Ray_Bridwell_White (dor:Ray_Bridwell_White)
+      - Arthur_Kent_White (dor:Arthur_Kent_White) --doo:parent--> Alma_Bridwell_White (dor:Alma_Bridwell_White)
+  '10':
+    attributes:
+      Augustus_Seymour_Porter: (parents^='Lavinia Steele', death place^='http://dbpedia.org/resource/Niagara_Falls,_New_York')
+    relationships:
+      - Augustus_Seymour_Porter (dor:Augustus_Seymour_Porter) --doo:relation--> Peter_A._Porter_(colonel) (<http://dbpedia.org/resource/Peter_A._Porter_(colonel)>)
+      - Augustus_Seymour_Porter (dor:Augustus_Seymour_Porter) --doo:parent--> Augustus_Porter (dor:Augustus_Porter)
+attributes:
+  person: --domesticpartner^ (dop:domesticpartner)--> langString | --image upright^ (dop:imageUpright)--> double
+  politician: --source^ (dop:source)--> Resource
+  office holder: --agf^ (dop:agf)--> int | --parents^ (dop:parents)--> Resource | --width^ (dop:width)--> int | --1a^ (dop:1a)--> langString | --award^ (doo:award)--> Resource | --death place^ (dop:deathPlace)--> langString
+subgraph_id: 354
+relationships:
+  - office holder --doo:relation--> person
+  - office holder --doo:parent--> politician

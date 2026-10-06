@@ -1,0 +1,133 @@
+types:
+  stadium: doo:Stadium
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  radio station: doo:RadioStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Centennial_Park_Stadium: (operator^='http://dbpedia.org/resource/Toronto_Parks,_Forestry_and_Recreation_Division')
+    relationships:
+      - Centennial_Park_Stadium (dor:Centennial_Park_Stadium) --doo:tenant--> FC_Ukraine_United (dor:FC_Ukraine_United)
+      - Centennial_Park_Stadium (dor:Centennial_Park_Stadium) --doo:owner--> Toronto (dor:Toronto)
+      - Aboriginal_Voices_Radio_Network (dor:Aboriginal_Voices_Radio_Network) --dop:city--> Toronto (dor:Toronto)
+  '2':
+    attributes:
+      Centennial_Park_Stadium: (operator^='http://dbpedia.org/resource/Toronto_Parks,_Forestry_and_Recreation_Division')
+    relationships:
+      - Centennial_Park_Stadium (dor:Centennial_Park_Stadium) --doo:tenant--> Serbian_White_Eagles_FC (dor:Serbian_White_Eagles_FC)
+      - Centennial_Park_Stadium (dor:Centennial_Park_Stadium) --doo:owner--> Toronto (dor:Toronto)
+      - Aboriginal_Voices_Radio_Network (dor:Aboriginal_Voices_Radio_Network) --dop:city--> Toronto (dor:Toronto)
+  '3':
+    attributes:
+      Centennial_Park_Stadium: (operator^='http://dbpedia.org/resource/Toronto_Parks,_Forestry_and_Recreation_Division')
+    relationships:
+      - Centennial_Park_Stadium (dor:Centennial_Park_Stadium) --doo:tenant--> Toronto_Atomic_FC (dor:Toronto_Atomic_FC)
+      - Centennial_Park_Stadium (dor:Centennial_Park_Stadium) --doo:owner--> Toronto (dor:Toronto)
+      - Aboriginal_Voices_Radio_Network (dor:Aboriginal_Voices_Radio_Network) --dop:city--> Toronto (dor:Toronto)
+  '4':
+    attributes:
+      Eddy_Blackman_Stadion: (operator^='Livorno Sport Organisatie')
+    relationships:
+      - Eddy_Blackman_Stadion (dor:Eddy_Blackman_Stadion) --doo:tenant--> SCSV_Takdier_Boys (dor:SCSV_Takdier_Boys)
+      - Eddy_Blackman_Stadion (dor:Eddy_Blackman_Stadion) --doo:owner--> Paramaribo (dor:Paramaribo)
+      - Ampie's_Broadcasting_Corporation (<http://dbpedia.org/resource/Ampie's_Broadcasting_Corporation>) --dop:city--> Paramaribo (dor:Paramaribo)
+  '5':
+    attributes:
+      Eddy_Blackman_Stadion: (operator^='Livorno Sport Organisatie')
+    relationships:
+      - Eddy_Blackman_Stadion (dor:Eddy_Blackman_Stadion) --doo:tenant--> SV_Jai_Hanuman (dor:SV_Jai_Hanuman)
+      - Eddy_Blackman_Stadion (dor:Eddy_Blackman_Stadion) --doo:owner--> Paramaribo (dor:Paramaribo)
+      - Ampie's_Broadcasting_Corporation (<http://dbpedia.org/resource/Ampie's_Broadcasting_Corporation>) --dop:city--> Paramaribo (dor:Paramaribo)
+  '6':
+    attributes:
+      V.V._Ajax: (formation date^='1921-06-03')
+    relationships:
+      - Mr._Bronsplein (dor:Mr._Bronsplein) --doo:tenant--> V.V._Ajax (dor:V.V._Ajax)
+      - Mr._Bronsplein (dor:Mr._Bronsplein) --doo:owner--> Paramaribo (dor:Paramaribo)
+      - Ampie's_Broadcasting_Corporation (<http://dbpedia.org/resource/Ampie's_Broadcasting_Corporation>) --dop:city--> Paramaribo (dor:Paramaribo)
+  '7':
+    attributes:
+      FK_Borac_Banja_Luka: (formation date^='1926-07-04')
+      Banja_Luka_City_Stadium: (operator^='http://dbpedia.org/resource/FK_Borac_Banja_Luka')
+    relationships:
+      - Banja_Luka_City_Stadium (dor:Banja_Luka_City_Stadium) --doo:tenant--> FK_Borac_Banja_Luka (dor:FK_Borac_Banja_Luka)
+      - Banja_Luka_City_Stadium (dor:Banja_Luka_City_Stadium) --doo:owner--> Banja_Luka (dor:Banja_Luka)
+      - Big_Radio_1 (dor:Big_Radio_1) --dop:city--> Banja_Luka (dor:Banja_Luka)
+  '8':
+    attributes:
+      FK_Borac_Banja_Luka: (formation date^='1926-07-04')
+      Banja_Luka_City_Stadium: (operator^='http://dbpedia.org/resource/FK_Borac_Banja_Luka')
+    relationships:
+      - Banja_Luka_City_Stadium (dor:Banja_Luka_City_Stadium) --doo:tenant--> FK_Borac_Banja_Luka (dor:FK_Borac_Banja_Luka)
+      - Banja_Luka_City_Stadium (dor:Banja_Luka_City_Stadium) --doo:owner--> Banja_Luka (dor:Banja_Luka)
+      - Big_Radio_2 (dor:Big_Radio_2) --dop:city--> Banja_Luka (dor:Banja_Luka)
+  '9':
+    attributes:
+      FK_Borac_Banja_Luka: (formation date^='1926-07-04')
+      Banja_Luka_City_Stadium: (operator^='http://dbpedia.org/resource/FK_Borac_Banja_Luka')
+    relationships:
+      - Banja_Luka_City_Stadium (dor:Banja_Luka_City_Stadium) --doo:tenant--> FK_Borac_Banja_Luka (dor:FK_Borac_Banja_Luka)
+      - Banja_Luka_City_Stadium (dor:Banja_Luka_City_Stadium) --doo:owner--> Banja_Luka (dor:Banja_Luka)
+      - Big_Radio_3 (dor:Big_Radio_3) --dop:city--> Banja_Luka (dor:Banja_Luka)
+  '10':
+    attributes:
+      Bordeaux: (align^='right', quote^='987')
+      FC_Girondins_de_Bordeaux: (formation date^='1881-10-01')
+      Nouveau_Stade_de_Bordeaux: (operator^='Stade Bordeaux-Atlantique')
+    relationships:
+      - Nouveau_Stade_de_Bordeaux (dor:Nouveau_Stade_de_Bordeaux) --doo:tenant--> FC_Girondins_de_Bordeaux (dor:FC_Girondins_de_Bordeaux)
+      - Nouveau_Stade_de_Bordeaux (dor:Nouveau_Stade_de_Bordeaux) --doo:owner--> Bordeaux (dor:Bordeaux)
+      - BlackBox_(radio_station) (<http://dbpedia.org/resource/BlackBox_(radio_station)>) --dop:city--> Bordeaux (dor:Bordeaux)
+qa_result:
+  status: completed
+  cost_usd: 0.331202
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0481974
+        total_tokens: 4480
+        prompt_tokens: 2315
+        completion_tokens: 2165
+      generate:
+        cost_usd: 0.08300760000000001
+        total_tokens: 7697
+        prompt_tokens: 4249
+        completion_tokens: 3448
+      verify_1:
+        cost_usd: 0.08476700000000001
+        total_tokens: 7828
+        prompt_tokens: 4786
+        completion_tokens: 3042
+      verify_2:
+        cost_usd: 0.033957
+        total_tokens: 5184
+        prompt_tokens: 4648
+        completion_tokens: 536
+      complexity:
+        cost_usd: 0.081273
+        total_tokens: 8677
+        prompt_tokens: 5579
+        completion_tokens: 3098
+    total_tokens: 33866
+    prompt_tokens: 21577
+    total_cost_usd: 0.331202
+    completion_tokens: 12289
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  stadium: --operator^ (dop:operator)--> langString
+  settlement: --align^ (dop:align)--> langString | --named for^ (dop:namedFor)--> Resource | --quote^ (dop:quote)--> int | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --Apr high F^ (dop:aprHighF)--> double | --Aug high F^ (dop:augHighF)--> double
+  soccer club: --formation date^ (doo:formationDate)--> date | --squad number^ (doo:squadNumber)--> int | --league topscorer^ (dop:leagueTopscorer)--> Resource | --logo^ (dop:logo)--> langString
+  radio station: --bot^ (dop:bot)--> langString
+subgraph_id: 240
+relationships:
+  - stadium --doo:tenant--> soccer club
+  - stadium --doo:owner--> settlement
+  - radio station --dop:city--> settlement

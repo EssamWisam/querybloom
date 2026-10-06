@@ -1,0 +1,90 @@
+types:
+  city: doo:City
+  hospital: doo:Hospital
+  medician: doo:Medician
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Aberdeen: (Apr precipitation mm^='57.6', area total (km2)^='186.0')
+    relationships:
+      - Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary) --doo:region--> Aberdeen (dor:Aberdeen)
+      - Ian_Fraser_Muir (dor:Ian_Fraser_Muir) --doo:institution--> Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary)
+      - Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary) --doo:affiliation--> Robert_Gordon_University (dor:Robert_Gordon_University)
+  '2':
+    attributes:
+      Aberdeen: (Apr precipitation mm^='57.6', area total (km2)^='186.0')
+    relationships:
+      - Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary) --doo:region--> Aberdeen (dor:Aberdeen)
+      - Ian_Fraser_Muir (dor:Ian_Fraser_Muir) --doo:institution--> Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary)
+      - Aberdeen_Royal_Infirmary (dor:Aberdeen_Royal_Infirmary) --doo:affiliation--> University_of_Aberdeen (dor:University_of_Aberdeen)
+  '3':
+    attributes:
+      Boston: (elevation (μ)^='42.9768', area total (km2)^='232.08883456720895')
+    relationships:
+      - Boston_Children's_Hospital (<http://dbpedia.org/resource/Boston_Children's_Hospital>) --doo:region--> Boston (dor:Boston)
+      - John_Menkes (dor:John_Menkes) --doo:institution--> Boston_Children's_Hospital (<http://dbpedia.org/resource/Boston_Children's_Hospital>)
+      - Boston_Children's_Hospital (<http://dbpedia.org/resource/Boston_Children's_Hospital>) --doo:affiliation--> Harvard_Medical_School (dor:Harvard_Medical_School)
+  '4':
+    attributes:
+      Boston: (elevation (μ)^='42.9768', area total (km2)^='232.08883456720895')
+    relationships:
+      - Boston_Children's_Hospital (<http://dbpedia.org/resource/Boston_Children's_Hospital>) --doo:region--> Boston (dor:Boston)
+      - Melvin_Tefft (dor:Melvin_Tefft) --doo:institution--> Boston_Children's_Hospital (<http://dbpedia.org/resource/Boston_Children's_Hospital>)
+      - Boston_Children's_Hospital (<http://dbpedia.org/resource/Boston_Children's_Hospital>) --doo:affiliation--> Harvard_Medical_School (dor:Harvard_Medical_School)
+  '5':
+    attributes:
+      Boston: (elevation (μ)^='42.9768', area total (km2)^='232.08883456720895')
+    relationships:
+      - Boston_Children's_Hospital (<http://dbpedia.org/resource/Boston_Children's_Hospital>) --doo:region--> Boston (dor:Boston)
+      - Orvar_Swenson (dor:Orvar_Swenson) --doo:institution--> Boston_Children's_Hospital (<http://dbpedia.org/resource/Boston_Children's_Hospital>)
+      - Boston_Children's_Hospital (<http://dbpedia.org/resource/Boston_Children's_Hospital>) --doo:affiliation--> Harvard_Medical_School (dor:Harvard_Medical_School)
+  '6':
+    attributes:
+      San_Francisco: (date^='March 2022', elevation (μ)^='15.8496', area total (km2)^='600.59')
+    relationships:
+      - California_Pacific_Medical_Center (dor:California_Pacific_Medical_Center) --doo:region--> San_Francisco (dor:San_Francisco)
+      - Kenneth_Binmoeller (dor:Kenneth_Binmoeller) --doo:institution--> California_Pacific_Medical_Center (dor:California_Pacific_Medical_Center)
+      - California_Pacific_Medical_Center (dor:California_Pacific_Medical_Center) --doo:affiliation--> Dartmouth_Medical_School (dor:Dartmouth_Medical_School)
+  '7':
+    attributes:
+      San_Francisco: (date^='March 2022', elevation (μ)^='15.8496', area total (km2)^='600.59')
+    relationships:
+      - California_Pacific_Medical_Center (dor:California_Pacific_Medical_Center) --doo:region--> San_Francisco (dor:San_Francisco)
+      - Kenneth_Binmoeller (dor:Kenneth_Binmoeller) --doo:institution--> California_Pacific_Medical_Center (dor:California_Pacific_Medical_Center)
+      - California_Pacific_Medical_Center (dor:California_Pacific_Medical_Center) --doo:affiliation--> University_of_California,_San_Francisco (<http://dbpedia.org/resource/University_of_California,_San_Francisco>)
+  '8':
+    attributes:
+      New_Orleans: (date^='*', elevation (μ)^='-1.9812', Apr record high F^='92', area total (km2)^='906.1')
+    relationships:
+      - Charity_Hospital_(New_Orleans) (<http://dbpedia.org/resource/Charity_Hospital_(New_Orleans)>) --doo:region--> New_Orleans (dor:New_Orleans)
+      - John_Adriani (dor:John_Adriani) --doo:institution--> Charity_Hospital_(New_Orleans) (<http://dbpedia.org/resource/Charity_Hospital_(New_Orleans)>)
+      - Charity_Hospital_(New_Orleans) (<http://dbpedia.org/resource/Charity_Hospital_(New_Orleans)>) --doo:affiliation--> Louisiana_State_University_School_of_Medicine (dor:Louisiana_State_University_School_of_Medicine)
+  '9':
+    attributes:
+      New_Orleans: (date^='*', elevation (μ)^='-1.9812', Apr record high F^='92', area total (km2)^='906.1')
+    relationships:
+      - Charity_Hospital_(New_Orleans) (<http://dbpedia.org/resource/Charity_Hospital_(New_Orleans)>) --doo:region--> New_Orleans (dor:New_Orleans)
+      - John_Adriani (dor:John_Adriani) --doo:institution--> Charity_Hospital_(New_Orleans) (<http://dbpedia.org/resource/Charity_Hospital_(New_Orleans)>)
+      - Charity_Hospital_(New_Orleans) (<http://dbpedia.org/resource/Charity_Hospital_(New_Orleans)>) --doo:affiliation--> Tulane_University_School_of_Medicine (dor:Tulane_University_School_of_Medicine)
+  '10':
+    attributes:
+      London: (elevation (μ)^='11.0', area total (km2)^='1572.03')
+    relationships:
+      - Chelsea_and_Westminster_Hospital (dor:Chelsea_and_Westminster_Hospital) --doo:region--> London (dor:London)
+      - David_Nott (dor:David_Nott) --doo:institution--> Chelsea_and_Westminster_Hospital (dor:Chelsea_and_Westminster_Hospital)
+      - Chelsea_and_Westminster_Hospital (dor:Chelsea_and_Westminster_Hospital) --doo:affiliation--> Imperial_College_London (dor:Imperial_College_London)
+attributes:
+  city: --date^ (dop:date)--> langString | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --elevation (μ)^ (doo:elevation)--> double | --Apr rain days^ (dop:aprRainDays)--> double | --Apr record high F^ (dop:aprRecordHighF)--> int | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --float^ (dop:float)--> langString | --Aug rain days^ (dop:augRainDays)--> double
+  medician: --honorific suffix^ (dop:honorificSuffix)--> Resource
+subgraph_id: 808
+relationships:
+  - hospital --doo:region--> city
+  - medician --doo:institution--> hospital
+  - hospital --doo:affiliation--> university

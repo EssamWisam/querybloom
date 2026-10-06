@@ -1,0 +1,78 @@
+types:
+  park: doo:Park
+  country: doo:Country
+  golf player: doo:GolfPlayer
+  military conflict: doo:MilitaryConflict
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      India: (direction^='vertical')
+      Operation_Puttur: (commander^='OCTOPUS')
+      Darjeeling_district: (Apr high C^='17')
+    relationships:
+      - Operation_Puttur (dor:Operation_Puttur) --doo:isPartOfMilitaryConflict--> India (dor:India)
+      - Arya_Tea_Estate (dor:Arya_Tea_Estate) --doo:location--> India (dor:India)
+      - A.S._Lehal (dor:A.S._Lehal) --doo:nationality--> India (dor:India)
+      - Arya_Tea_Estate (dor:Arya_Tea_Estate) --doo:location--> Darjeeling_district (dor:Darjeeling_district)
+  '2':
+    attributes:
+      India: (direction^='vertical')
+      Operation_Puttur: (commander^='OCTOPUS')
+    relationships:
+      - Operation_Puttur (dor:Operation_Puttur) --doo:isPartOfMilitaryConflict--> India (dor:India)
+      - Aryaman_Tea_Estate (dor:Aryaman_Tea_Estate) --doo:location--> India (dor:India)
+      - A.S._Lehal (dor:A.S._Lehal) --doo:nationality--> India (dor:India)
+      - Aryaman_Tea_Estate (dor:Aryaman_Tea_Estate) --doo:location--> Alipurduar_district (dor:Alipurduar_district)
+  '3':
+    attributes:
+      India: (direction^='vertical')
+      Operation_Puttur: (commander^='OCTOPUS')
+      Darjeeling_district: (Apr high C^='17')
+    relationships:
+      - Operation_Puttur (dor:Operation_Puttur) --doo:isPartOfMilitaryConflict--> India (dor:India)
+      - Avongrove_Tea_Estate (dor:Avongrove_Tea_Estate) --doo:location--> India (dor:India)
+      - A.S._Lehal (dor:A.S._Lehal) --doo:nationality--> India (dor:India)
+      - Avongrove_Tea_Estate (dor:Avongrove_Tea_Estate) --doo:location--> Darjeeling_district (dor:Darjeeling_district)
+  '4':
+    attributes:
+      France: (header^='Bastille Day in Paris', direction^='vertical')
+      Battle_of_Dormans: (commander^='http://dbpedia.org/resource/Henry_I,_Duke_of_Guise')
+    relationships:
+      - Battle_of_Dormans (dor:Battle_of_Dormans) --doo:isPartOfMilitaryConflict--> France (dor:France)
+      - Jardin_botanique_d'Èze (<http://dbpedia.org/resource/Jardin_botanique_d'Èze>) --doo:location--> France (dor:France)
+      - Adrien_Mörk (<http://dbpedia.org/resource/Adrien_Mörk>) --doo:nationality--> France (dor:France)
+      - Jardin_botanique_d'Èze (<http://dbpedia.org/resource/Jardin_botanique_d'Èze>) --doo:location--> Provence-Alpes-Côte_d'Azur (<http://dbpedia.org/resource/Provence-Alpes-Côte_d'Azur>)
+  '5':
+    attributes:
+      France: (header^='Bastille Day in Paris', direction^='vertical')
+      Battle_of_Dormans: (commander^='http://dbpedia.org/resource/Henry_I,_Duke_of_Guise')
+    relationships:
+      - Battle_of_Dormans (dor:Battle_of_Dormans) --doo:isPartOfMilitaryConflict--> France (dor:France)
+      - Jardins_des_Martels (dor:Jardins_des_Martels) --doo:location--> France (dor:France)
+      - Adrien_Mörk (<http://dbpedia.org/resource/Adrien_Mörk>) --doo:nationality--> France (dor:France)
+      - Jardins_des_Martels (dor:Jardins_des_Martels) --doo:location--> Midi-Pyrénées (<http://dbpedia.org/resource/Midi-Pyrénées>)
+  '6':
+    attributes:
+      France: (header^='Bastille Day in Paris', direction^='vertical')
+      Battle_of_Dormans: (commander^='http://dbpedia.org/resource/Henry_I,_Duke_of_Guise')
+    relationships:
+      - Battle_of_Dormans (dor:Battle_of_Dormans) --doo:isPartOfMilitaryConflict--> France (dor:France)
+      - Paul_Mistral_Park (dor:Paul_Mistral_Park) --doo:location--> France (dor:France)
+      - Adrien_Mörk (<http://dbpedia.org/resource/Adrien_Mörk>) --doo:nationality--> France (dor:France)
+      - Paul_Mistral_Park (dor:Paul_Mistral_Park) --doo:location--> Auvergne-Rhône-Alpes (<http://dbpedia.org/resource/Auvergne-Rhône-Alpes>)
+attributes:
+  country: --header^ (dop:header)--> langString | --direction^ (dop:direction)--> langString
+  military conflict: --image size^ (dop:imageSize)--> int | --commander^ (dop:commander)--> langString | --commander^ (dop:commander)--> Resource | --source^ (dop:source)--> langString
+  administrative region: --data^ (dop:data)--> int | --Apr sun^ (dop:aprSun)--> double | --named for^ (dop:namedFor)--> Resource | --affiliation^ (dop:affiliation)--> Resource | --Apr high C^ (dop:aprHighC)--> double
+subgraph_id: 593
+relationships:
+  - military conflict --doo:isPartOfMilitaryConflict--> country
+  - park --doo:location--> country
+  - golf player --doo:nationality--> country
+  - park --doo:location--> administrative region

@@ -1,0 +1,72 @@
+types:
+  city: doo:City
+  diocese: doo:Diocese
+  record label: doo:RecordLabel
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Edinburgh: (Apr sun^='147.7', Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=cfaW7pkoPioC&q=edinburgh+northumbria&pg=PA5')
+      Falkirk_(council_area): (Link from a Wikipage to an external page^='https://www.falkirk.gov.uk')
+    relationships:
+      - Diocese_of_Edinburgh (dor:Diocese_of_Edinburgh) --doo:territory--> Edinburgh (dor:Edinburgh)
+      - Benbecula_Records (dor:Benbecula_Records) --doo:location--> Edinburgh (dor:Edinburgh)
+      - Diocese_of_Edinburgh (dor:Diocese_of_Edinburgh) --doo:territory--> Falkirk_(council_area) (<http://dbpedia.org/resource/Falkirk_(council_area)>)
+  '2':
+    attributes:
+      Edinburgh: (Apr sun^='147.7', Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=cfaW7pkoPioC&q=edinburgh+northumbria&pg=PA5')
+      Scottish_Borders: (Link from a Wikipage to an external page^='http://www.borders.co.uk')
+    relationships:
+      - Diocese_of_Edinburgh (dor:Diocese_of_Edinburgh) --doo:territory--> Edinburgh (dor:Edinburgh)
+      - Benbecula_Records (dor:Benbecula_Records) --doo:location--> Edinburgh (dor:Edinburgh)
+      - Diocese_of_Edinburgh (dor:Diocese_of_Edinburgh) --doo:territory--> Scottish_Borders (dor:Scottish_Borders)
+  '3':
+    attributes:
+      Edinburgh: (Apr sun^='147.7', Link from a Wikipage to an external page^='https://books.google.com/books%3Fid=cfaW7pkoPioC&q=edinburgh+northumbria&pg=PA5')
+      Falkirk_(council_area): (Link from a Wikipage to an external page^='https://www.falkirk.gov.uk')
+    relationships:
+      - Diocese_of_Edinburgh (dor:Diocese_of_Edinburgh) --doo:territory--> Edinburgh (dor:Edinburgh)
+      - Hep_Records (dor:Hep_Records) --doo:location--> Edinburgh (dor:Edinburgh)
+      - Diocese_of_Edinburgh (dor:Diocese_of_Edinburgh) --doo:territory--> Falkirk_(council_area) (<http://dbpedia.org/resource/Falkirk_(council_area)>)
+  '4':
+    attributes:
+      Oslo: (Apr sun^='182', Link from a Wikipage to an external page^='http://insecam.org/en/view/839027/')
+      Asker: (Link from a Wikipage to an external page^='http://www.asker-skiklubb.no/')
+      Diocese_of_Oslo__Oslo__1: (numberOfMembers='454924')
+    relationships:
+      - Diocese_of_Oslo__Oslo__1 (dor:Diocese_of_Oslo__Oslo__1) --doo:territory--> Oslo (dor:Oslo)
+      - Curling_Legs (dor:Curling_Legs) --doo:location--> Oslo (dor:Oslo)
+      - Diocese_of_Oslo__Oslo__1 (dor:Diocese_of_Oslo__Oslo__1) --doo:territory--> Asker (dor:Asker)
+  '5':
+    attributes:
+      Oslo: (Apr sun^='182', Link from a Wikipage to an external page^='http://insecam.org/en/view/839027/')
+      Bærum: (Link from a Wikipage to an external page^='http://www.baerum.kommune.no/')
+      Diocese_of_Oslo__Oslo__1: (numberOfMembers='454924')
+    relationships:
+      - Diocese_of_Oslo__Oslo__1 (dor:Diocese_of_Oslo__Oslo__1) --doo:territory--> Oslo (dor:Oslo)
+      - Curling_Legs (dor:Curling_Legs) --doo:location--> Oslo (dor:Oslo)
+      - Diocese_of_Oslo__Oslo__1 (dor:Diocese_of_Oslo__Oslo__1) --doo:territory--> Bærum (<http://dbpedia.org/resource/Bærum>)
+  '6':
+    attributes:
+      Oslo: (Apr sun^='182', Link from a Wikipage to an external page^='http://insecam.org/en/view/839027/')
+      Asker: (Link from a Wikipage to an external page^='http://www.asker-skiklubb.no/')
+      Diocese_of_Oslo__Oslo__1: (numberOfMembers='454924')
+    relationships:
+      - Diocese_of_Oslo__Oslo__1 (dor:Diocese_of_Oslo__Oslo__1) --doo:territory--> Oslo (dor:Oslo)
+      - Deathlike_Silence_Productions (dor:Deathlike_Silence_Productions) --doo:location--> Oslo (dor:Oslo)
+      - Diocese_of_Oslo__Oslo__1 (dor:Diocese_of_Oslo__Oslo__1) --doo:territory--> Asker (dor:Asker)
+attributes:
+  city: --Apr sun^ (dop:aprSun)--> int | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --differentFrom (wwoo:differentFrom)--> Resource
+  diocese: --numberOfMembers (doo:numberOfMembers)--> int | --border^ (dop:border)--> langString
+  administrative region: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --image width^ (dop:imageWidth)--> int | --differentFrom (wwoo:differentFrom)--> Resource | --named for^ (dop:namedFor)--> Resource
+subgraph_id: 780
+relationships:
+  - diocese --doo:territory--> city
+  - record label --doo:location--> city
+  - diocese --doo:territory--> administrative region

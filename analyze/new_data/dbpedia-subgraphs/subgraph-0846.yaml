@@ -1,0 +1,116 @@
+types:
+  priest: doo:Priest
+  diocese: doo:Diocese
+  musical artist: doo:MusicalArtist
+  government agency: doo:GovernmentAgency
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Bradley_Grace: (associated acts^='http://dbpedia.org/resource/Poison_the_Well_(band)')
+      County_Dublin: (area total (km2)^='922.0')
+      Bord_Iascaigh_Mhara: (jurisdiction^='http://dbpedia.org/resource/Republic_of_Ireland')
+    relationships:
+      - Roman_Catholic_Archdiocese_of_Dublin (dor:Roman_Catholic_Archdiocese_of_Dublin) --doo:territory--> County_Dublin (dor:County_Dublin)
+      - Thomas_Ambrose_Butler (dor:Thomas_Ambrose_Butler) --doo:diocese--> Roman_Catholic_Archdiocese_of_Dublin (dor:Roman_Catholic_Archdiocese_of_Dublin)
+      - Bord_Iascaigh_Mhara (dor:Bord_Iascaigh_Mhara) --doo:headquarter--> County_Dublin (dor:County_Dublin)
+      - Bradley_Grace (dor:Bradley_Grace) --doo:hometown--> County_Dublin (dor:County_Dublin)
+  '2':
+    attributes:
+      Delorentos: (Link from a Wikipage to an external page^='http://www.delorentos.net', associated acts^='http://dbpedia.org/resource/Director_(band)')
+      County_Dublin: (area total (km2)^='922.0')
+      Bord_Iascaigh_Mhara: (jurisdiction^='http://dbpedia.org/resource/Republic_of_Ireland')
+    relationships:
+      - Roman_Catholic_Archdiocese_of_Dublin (dor:Roman_Catholic_Archdiocese_of_Dublin) --doo:territory--> County_Dublin (dor:County_Dublin)
+      - Thomas_Ambrose_Butler (dor:Thomas_Ambrose_Butler) --doo:diocese--> Roman_Catholic_Archdiocese_of_Dublin (dor:Roman_Catholic_Archdiocese_of_Dublin)
+      - Bord_Iascaigh_Mhara (dor:Bord_Iascaigh_Mhara) --doo:headquarter--> County_Dublin (dor:County_Dublin)
+      - Delorentos (dor:Delorentos) --doo:hometown--> County_Dublin (dor:County_Dublin)
+  '3':
+    attributes:
+      Dik_Evans: (Link from a Wikipage to an external page^='https://archive.org/details/u2byu200u2ne%7Curl-access=registration%7Cpublisher=HarperCollins%7Clocation=London%7Cyear=2006%7Cisbn=0-00-719668-7', associated acts^='Virgin Prunes, the Screech Owls, U2')
+      County_Dublin: (area total (km2)^='922.0')
+      Bord_Iascaigh_Mhara: (jurisdiction^='http://dbpedia.org/resource/Republic_of_Ireland')
+    relationships:
+      - Roman_Catholic_Archdiocese_of_Dublin (dor:Roman_Catholic_Archdiocese_of_Dublin) --doo:territory--> County_Dublin (dor:County_Dublin)
+      - Thomas_Ambrose_Butler (dor:Thomas_Ambrose_Butler) --doo:diocese--> Roman_Catholic_Archdiocese_of_Dublin (dor:Roman_Catholic_Archdiocese_of_Dublin)
+      - Bord_Iascaigh_Mhara (dor:Bord_Iascaigh_Mhara) --doo:headquarter--> County_Dublin (dor:County_Dublin)
+      - Dik_Evans (dor:Dik_Evans) --doo:hometown--> County_Dublin (dor:County_Dublin)
+  '4':
+    attributes:
+      Brussels: (Apr precipitation days^='9.9', area total (km2)^='162.4')
+      Bartosz_Brenes: (Link from a Wikipage to an external page^='http://www.beatport.com/artist/bartosz-brenes/66070', associated acts^='Barjo, BOOTIK, BETABOM, Bartouze')
+    relationships:
+      - Roman_Catholic_Archdiocese_of_Mechelen–Brussels (<http://dbpedia.org/resource/Roman_Catholic_Archdiocese_of_Mechelen–Brussels>) --doo:territory--> Brussels (dor:Brussels)
+      - Joseph_André (<http://dbpedia.org/resource/Joseph_André>) --doo:diocese--> Roman_Catholic_Archdiocese_of_Mechelen–Brussels (<http://dbpedia.org/resource/Roman_Catholic_Archdiocese_of_Mechelen–Brussels>)
+      - Banking,_Finance_and_Insurance_Commission_(Belgium) (<http://dbpedia.org/resource/Banking,_Finance_and_Insurance_Commission_(Belgium)>) --doo:headquarter--> Brussels (dor:Brussels)
+      - Bartosz_Brenes (dor:Bartosz_Brenes) --doo:hometown--> Brussels (dor:Brussels)
+  '5':
+    attributes:
+      Brussels: (Apr precipitation days^='9.9', area total (km2)^='162.4')
+      Brice_Catherin: (Link from a Wikipage to an external page^='http://www.bricecatherin.org')
+      Banking,_Finance_and_Insurance_Commission_(Belgium): (jurisdiction^='http://dbpedia.org/resource/Belgium')
+    relationships:
+      - Roman_Catholic_Archdiocese_of_Mechelen–Brussels (<http://dbpedia.org/resource/Roman_Catholic_Archdiocese_of_Mechelen–Brussels>) --doo:territory--> Brussels (dor:Brussels)
+      - Joseph_André (<http://dbpedia.org/resource/Joseph_André>) --doo:diocese--> Roman_Catholic_Archdiocese_of_Mechelen–Brussels (<http://dbpedia.org/resource/Roman_Catholic_Archdiocese_of_Mechelen–Brussels>)
+      - Banking,_Finance_and_Insurance_Commission_(Belgium) (<http://dbpedia.org/resource/Banking,_Finance_and_Insurance_Commission_(Belgium)>) --doo:headquarter--> Brussels (dor:Brussels)
+      - Brice_Catherin (dor:Brice_Catherin) --doo:hometown--> Brussels (dor:Brussels)
+  '6':
+    attributes:
+      Brussels: (Apr precipitation days^='9.9', area total (km2)^='162.4')
+      Banking,_Finance_and_Insurance_Commission_(Belgium): (jurisdiction^='http://dbpedia.org/resource/Belgium')
+    relationships:
+      - Roman_Catholic_Archdiocese_of_Mechelen–Brussels (<http://dbpedia.org/resource/Roman_Catholic_Archdiocese_of_Mechelen–Brussels>) --doo:territory--> Brussels (dor:Brussels)
+      - Joseph_André (<http://dbpedia.org/resource/Joseph_André>) --doo:diocese--> Roman_Catholic_Archdiocese_of_Mechelen–Brussels (<http://dbpedia.org/resource/Roman_Catholic_Archdiocese_of_Mechelen–Brussels>)
+      - Banking,_Finance_and_Insurance_Commission_(Belgium) (<http://dbpedia.org/resource/Banking,_Finance_and_Insurance_Commission_(Belgium)>) --doo:headquarter--> Brussels (dor:Brussels)
+      - Claude_Lombard (dor:Claude_Lombard) --doo:hometown--> Brussels (dor:Brussels)
+  '7':
+    attributes:
+      4th_Disciple: (Link from a Wikipage to an external page^='http://www.tha4thdisciple.com', associated acts^='Wu-Elements')
+      New_York_(state): (area total (km2)^='141297.0')
+    relationships:
+      - Roman_Catholic_Archdiocese_of_New_York (dor:Roman_Catholic_Archdiocese_of_New_York) --doo:territory--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Isaac_Hecker (dor:Isaac_Hecker) --doo:diocese--> Roman_Catholic_Archdiocese_of_New_York (dor:Roman_Catholic_Archdiocese_of_New_York)
+      - Belgrave_Sewer_District (dor:Belgrave_Sewer_District) --doo:headquarter--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - 4th_Disciple (dor:4th_Disciple) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '8':
+    attributes:
+      New_York_(state): (area total (km2)^='141297.0')
+    relationships:
+      - Roman_Catholic_Archdiocese_of_New_York (dor:Roman_Catholic_Archdiocese_of_New_York) --doo:territory--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Isaac_Hecker (dor:Isaac_Hecker) --doo:diocese--> Roman_Catholic_Archdiocese_of_New_York (dor:Roman_Catholic_Archdiocese_of_New_York)
+      - Belgrave_Sewer_District (dor:Belgrave_Sewer_District) --doo:headquarter--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - 60_Second_Assassin_(rapper) (<http://dbpedia.org/resource/60_Second_Assassin_(rapper)>) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '9':
+    attributes:
+      New_York_(state): (area total (km2)^='141297.0')
+      Aaron_Cohen_(rapper): (Link from a Wikipage to an external page^='http://www.aaroncohenmusic.com', associated acts^='Inner City Kids')
+    relationships:
+      - Roman_Catholic_Archdiocese_of_New_York (dor:Roman_Catholic_Archdiocese_of_New_York) --doo:territory--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Isaac_Hecker (dor:Isaac_Hecker) --doo:diocese--> Roman_Catholic_Archdiocese_of_New_York (dor:Roman_Catholic_Archdiocese_of_New_York)
+      - Belgrave_Sewer_District (dor:Belgrave_Sewer_District) --doo:headquarter--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Aaron_Cohen_(rapper) (<http://dbpedia.org/resource/Aaron_Cohen_(rapper)>) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '10':
+    attributes:
+      Maryland: (area total (km2)^='12407.0')
+    relationships:
+      - Roman_Catholic_Archdiocese_of_Washington (dor:Roman_Catholic_Archdiocese_of_Washington) --doo:territory--> Maryland (dor:Maryland)
+      - Francis_Martin_(biblical_scholar) (<http://dbpedia.org/resource/Francis_Martin_(biblical_scholar)>) --doo:diocese--> Roman_Catholic_Archdiocese_of_Washington (dor:Roman_Catholic_Archdiocese_of_Washington)
+      - Centers_for_Medicare_&_Medicaid_Services (<http://dbpedia.org/resource/Centers_for_Medicare_&_Medicaid_Services>) --doo:headquarter--> Maryland (dor:Maryland)
+      - Abby_Portner__Drawlings__1 (dor:Abby_Portner__Drawlings__1) --doo:hometown--> Maryland (dor:Maryland)
+attributes:
+  diocese: --number of members^ (doo:numberOfMembers)--> int
+  musical artist: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --associated acts^ (dop:associatedActs)--> int | --bot^ (dop:bot)--> langString
+  government agency: --jurisdiction^ (doo:jurisdiction)--> Resource
+  administrative region: --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --named for^ (dop:namedFor)--> langString | --Apr rain mm^ (dop:aprRainMm)--> int | --founding year^ (doo:foundingYear)--> gYear | --area total (km2)^ (doop:areaTotal)--> squareKilometre
+subgraph_id: 846
+relationships:
+  - diocese --doo:territory--> administrative region
+  - priest --doo:diocese--> diocese
+  - government agency --doo:headquarter--> administrative region
+  - musical artist --doo:hometown--> administrative region

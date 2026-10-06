@@ -1,0 +1,123 @@
+types:
+  city: doo:City
+  company: doo:Company
+  politician: doo:Politician
+  organisation: doo:Organisation
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Caswell-Massey: (subject='http://dbpedia.org/resource/Category:1752_establishments_in_New_Jersey')
+      Newport,_Rhode_Island: (area code^='401')
+      Benedict_Arnold_(governor): (spouse^='Damaris Westcott', birth date^='1615-12-21')
+    relationships:
+      - Benedict_Arnold_(governor) (<http://dbpedia.org/resource/Benedict_Arnold_(governor)>) --doo:restingPlace--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+      - Caswell-Massey (dor:Caswell-Massey) --doo:location--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+      - Edward_Julius_Berwind (dor:Edward_Julius_Berwind) --dop:deathPlace--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+      - Berwind_Corporation (dor:Berwind_Corporation) --doo:keyPerson--> Edward_Julius_Berwind (dor:Edward_Julius_Berwind)
+  '2':
+    attributes:
+      Newport,_Rhode_Island: (area code^='401')
+      Benedict_Arnold_(governor): (spouse^='Damaris Westcott', birth date^='1615-12-21')
+      Coastal_Extreme_Brewing_Company: (subject='http://dbpedia.org/resource/Category:American_companies_established_in_1999')
+    relationships:
+      - Benedict_Arnold_(governor) (<http://dbpedia.org/resource/Benedict_Arnold_(governor)>) --doo:restingPlace--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+      - Coastal_Extreme_Brewing_Company (dor:Coastal_Extreme_Brewing_Company) --doo:location--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+      - Edward_Julius_Berwind (dor:Edward_Julius_Berwind) --dop:deathPlace--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+      - Berwind_Corporation (dor:Berwind_Corporation) --doo:keyPerson--> Edward_Julius_Berwind (dor:Edward_Julius_Berwind)
+  '3':
+    attributes:
+      Olive_Oil_Times: (subject='http://dbpedia.org/resource/Category:Business_magazines_published_in_the_United_States')
+      Newport,_Rhode_Island: (area code^='401')
+      Benedict_Arnold_(governor): (spouse^='Damaris Westcott', birth date^='1615-12-21')
+    relationships:
+      - Benedict_Arnold_(governor) (<http://dbpedia.org/resource/Benedict_Arnold_(governor)>) --doo:restingPlace--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+      - Olive_Oil_Times (dor:Olive_Oil_Times) --doo:location--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+      - Edward_Julius_Berwind (dor:Edward_Julius_Berwind) --dop:deathPlace--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+      - Berwind_Corporation (dor:Berwind_Corporation) --doo:keyPerson--> Edward_Julius_Berwind (dor:Edward_Julius_Berwind)
+  '4':
+    attributes:
+      Arthur_E._Chase: (spouse^='Wynne L. Chase and later Elaine Kaufman Chase', birth date^='1930-02-04')
+      Bancroft_School: (subject='http://dbpedia.org/resource/Category:1900_establishments_in_Massachusetts')
+      Coes_Wrench_Company: (products^='Screw wrenches')
+      Worcester,_Massachusetts: (area code^='508/774', named for^='http://dbpedia.org/resource/Worcester,_England')
+    relationships:
+      - Arthur_E._Chase (dor:Arthur_E._Chase) --doo:restingPlace--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Bancroft_School (dor:Bancroft_School) --doo:location--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Loring_Coes (dor:Loring_Coes) --dop:deathPlace--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Coes_Wrench_Company (dor:Coes_Wrench_Company) --doo:keyPerson--> Loring_Coes (dor:Loring_Coes)
+  '5':
+    attributes:
+      Arthur_E._Chase: (spouse^='Wynne L. Chase and later Elaine Kaufman Chase', birth date^='1930-02-04')
+      Coes_Wrench_Company: (products^='Screw wrenches')
+      Burncoat_High_School: (subject='http://dbpedia.org/resource/Category:1960s_establishments_in_Massachusetts')
+      Worcester,_Massachusetts: (area code^='508/774', named for^='http://dbpedia.org/resource/Worcester,_England')
+    relationships:
+      - Arthur_E._Chase (dor:Arthur_E._Chase) --doo:restingPlace--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Burncoat_High_School (dor:Burncoat_High_School) --doo:location--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Loring_Coes (dor:Loring_Coes) --dop:deathPlace--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Coes_Wrench_Company (dor:Coes_Wrench_Company) --doo:keyPerson--> Loring_Coes (dor:Loring_Coes)
+  '6':
+    attributes:
+      Arthur_E._Chase: (spouse^='Wynne L. Chase and later Elaine Kaufman Chase', birth date^='1930-02-04')
+      Coes_Wrench_Company: (products^='Screw wrenches', subject='http://dbpedia.org/resource/Category:1888_establishments_in_Massachusetts')
+      Worcester,_Massachusetts: (area code^='508/774', named for^='http://dbpedia.org/resource/Worcester,_England')
+    relationships:
+      - Arthur_E._Chase (dor:Arthur_E._Chase) --doo:restingPlace--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Coes_Wrench_Company (dor:Coes_Wrench_Company) --doo:location--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Loring_Coes (dor:Loring_Coes) --dop:deathPlace--> Worcester,_Massachusetts (<http://dbpedia.org/resource/Worcester,_Massachusetts>)
+      - Coes_Wrench_Company (dor:Coes_Wrench_Company) --doo:keyPerson--> Loring_Coes (dor:Loring_Coes)
+  '7':
+    attributes:
+      192.com: (subject='http://dbpedia.org/resource/Category:British_websites')
+      Donald_Smith,_1st_Baron_Strathcona_and_Mount_Royal: (spouse^='1853', birth date^='1820-08-06')
+    relationships:
+      - Donald_Smith,_1st_Baron_Strathcona_and_Mount_Royal (<http://dbpedia.org/resource/Donald_Smith,_1st_Baron_Strathcona_and_Mount_Royal>) --doo:restingPlace--> London (dor:London)
+      - 192.com (dor:192.com) --doo:location--> London (dor:London)
+      - William_Lever,_1st_Viscount_Leverhulme (<http://dbpedia.org/resource/William_Lever,_1st_Viscount_Leverhulme>) --dop:deathPlace--> London (dor:London)
+      - Mac_Fisheries (dor:Mac_Fisheries) --doo:keyPerson--> William_Lever,_1st_Viscount_Leverhulme (<http://dbpedia.org/resource/William_Lever,_1st_Viscount_Leverhulme>)
+  '8':
+    attributes:
+      Donald_Smith,_1st_Baron_Strathcona_and_Mount_Royal: (spouse^='1853', birth date^='1820-08-06')
+    relationships:
+      - Donald_Smith,_1st_Baron_Strathcona_and_Mount_Royal (<http://dbpedia.org/resource/Donald_Smith,_1st_Baron_Strathcona_and_Mount_Royal>) --doo:restingPlace--> London (dor:London)
+      - 1965_Records__1965_Records__1 (dor:1965_Records__1965_Records__1) --doo:location--> London (dor:London)
+      - William_Lever,_1st_Viscount_Leverhulme (<http://dbpedia.org/resource/William_Lever,_1st_Viscount_Leverhulme>) --dop:deathPlace--> London (dor:London)
+      - Mac_Fisheries (dor:Mac_Fisheries) --doo:keyPerson--> William_Lever,_1st_Viscount_Leverhulme (<http://dbpedia.org/resource/William_Lever,_1st_Viscount_Leverhulme>)
+  '9':
+    attributes:
+      3D_Entertainment: (subject='http://dbpedia.org/resource/Category:3D_imaging')
+      Donald_Smith,_1st_Baron_Strathcona_and_Mount_Royal: (spouse^='1853', birth date^='1820-08-06')
+    relationships:
+      - Donald_Smith,_1st_Baron_Strathcona_and_Mount_Royal (<http://dbpedia.org/resource/Donald_Smith,_1st_Baron_Strathcona_and_Mount_Royal>) --doo:restingPlace--> London (dor:London)
+      - 3D_Entertainment (dor:3D_Entertainment) --doo:location--> London (dor:London)
+      - William_Lever,_1st_Viscount_Leverhulme (<http://dbpedia.org/resource/William_Lever,_1st_Viscount_Leverhulme>) --dop:deathPlace--> London (dor:London)
+      - Mac_Fisheries (dor:Mac_Fisheries) --doo:keyPerson--> William_Lever,_1st_Viscount_Leverhulme (<http://dbpedia.org/resource/William_Lever,_1st_Viscount_Leverhulme>)
+  '10':
+    attributes:
+      Eugene_Sawyer: (spouse^='1955', birth date^='1934-09-03')
+      McAvoy_Brewing_Company: (products^='http://dbpedia.org/resource/Beer')
+      8th_Day_Center_for_Justice: (subject='http://dbpedia.org/resource/Category:1974_establishments_in_Illinois')
+    relationships:
+      - Eugene_Sawyer (dor:Eugene_Sawyer) --doo:restingPlace--> Chicago,_Illinois (<http://dbpedia.org/resource/Chicago,_Illinois>)
+      - 8th_Day_Center_for_Justice (dor:8th_Day_Center_for_Justice) --doo:location--> Chicago,_Illinois (<http://dbpedia.org/resource/Chicago,_Illinois>)
+      - John_H._McAvoy (dor:John_H._McAvoy) --dop:deathPlace--> Chicago,_Illinois (<http://dbpedia.org/resource/Chicago,_Illinois>)
+      - McAvoy_Brewing_Company (dor:McAvoy_Brewing_Company) --doo:keyPerson--> John_H._McAvoy (dor:John_H._McAvoy)
+attributes:
+  city: --area code^ (doo:areaCode)--> string | --named for^ (dop:namedFor)--> langString | --footer^ (dop:footer)--> langString
+  company: --footer^ (dop:footer)--> langString | --products^ (dop:products)--> Resource
+  politician: --alma mater^ (dop:almaMater)--> langString | --parent^ (doo:parent)--> Resource | --2a (dop:2a)--> langString
+  organisation: --subject (podt:subject)--> Resource
+  office holder: --spouse^ (dop:spouse)--> int | --birth date^ (doo:birthDate)--> date | --spouse^ (doo:spouse)--> Resource
+subgraph_id: 388
+relationships:
+  - office holder --doo:restingPlace--> city
+  - organisation --doo:location--> city
+  - politician --dop:deathPlace--> city
+  - company --doo:keyPerson--> politician

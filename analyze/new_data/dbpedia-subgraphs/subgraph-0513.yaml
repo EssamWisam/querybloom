@@ -1,0 +1,111 @@
+types:
+  city: doo:City
+  airline: doo:Airline
+  Location: doo:Location
+  settlement: doo:Settlement
+  sports team: doo:SportsTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      China: (direction^='horizontal')
+      Guangdong: (caption^='Religion in Guangdong')
+      Guangzhou: (area total km^='7434.4')
+    relationships:
+      - 9_Air (dor:9_Air) --doo:headquarter--> Guangzhou (dor:Guangzhou)
+      - 9_Air (dor:9_Air) --doo:headquarter--> Guangdong (dor:Guangdong)
+      - Guangzhou_Charge (dor:Guangzhou_Charge) --doo:city--> Guangzhou (dor:Guangzhou)
+      - Guangzhou_Charge (dor:Guangzhou_Charge) --doo:city--> China (dor:China)
+  '2':
+    attributes:
+      Sindh: (caption^='Languages of Sindh')
+      Karachi: (area total km^='3780')
+      Pakistan: (direction^='vertical', country^='Pakistan')
+    relationships:
+      - Aero_Asia_International (dor:Aero_Asia_International) --doo:headquarter--> Karachi (dor:Karachi)
+      - Aero_Asia_International (dor:Aero_Asia_International) --doo:headquarter--> Sindh (dor:Sindh)
+      - Karachi_Kings (dor:Karachi_Kings) --doo:city--> Karachi (dor:Karachi)
+      - Karachi_Kings (dor:Karachi_Kings) --doo:city--> Pakistan (dor:Pakistan)
+  '3':
+    attributes:
+      Sindh: (area total (km2)^='140914.0', caption^='Languages of Sindh')
+      Karachi: (area total km^='3780')
+    relationships:
+      - Aero_Asia_International (dor:Aero_Asia_International) --doo:headquarter--> Karachi (dor:Karachi)
+      - Aero_Asia_International (dor:Aero_Asia_International) --doo:headquarter--> Sindh (dor:Sindh)
+      - Karachi_Kings (dor:Karachi_Kings) --doo:city--> Karachi (dor:Karachi)
+      - Karachi_Kings (dor:Karachi_Kings) --doo:city--> Sindh (dor:Sindh)
+  '4':
+    attributes:
+      Accra: (Apr record high C^='35', caption^='KIA Main entrance')
+      Dubai: (area total km^='1610')
+      United_Arab_Emirates: (direction^='horizontal', country^='the United Arab Emirates')
+    relationships:
+      - Aerogem_Aviation (dor:Aerogem_Aviation) --doo:headquarter--> Dubai (dor:Dubai)
+      - Aerogem_Aviation (dor:Aerogem_Aviation) --doo:headquarter--> Accra (dor:Accra)
+      - UAE_Royals (dor:UAE_Royals) --doo:city--> Dubai (dor:Dubai)
+      - UAE_Royals (dor:UAE_Royals) --doo:city--> United_Arab_Emirates (dor:United_Arab_Emirates)
+  '5':
+    attributes:
+      Dubai: (area total km^='1610')
+      United_Arab_Emirates: (direction^='horizontal', country^='the United Arab Emirates')
+    relationships:
+      - Aerogem_Aviation (dor:Aerogem_Aviation) --doo:headquarter--> Dubai (dor:Dubai)
+      - Aerogem_Aviation (dor:Aerogem_Aviation) --doo:headquarter--> Greater_Accra_Region (dor:Greater_Accra_Region)
+      - UAE_Royals (dor:UAE_Royals) --doo:city--> Dubai (dor:Dubai)
+      - UAE_Royals (dor:UAE_Royals) --doo:city--> United_Arab_Emirates (dor:United_Arab_Emirates)
+  '6':
+    attributes:
+      Berlin: (area total km^='891.3')
+    relationships:
+      - Air_Berlin (dor:Air_Berlin) --doo:headquarter--> Berlin (dor:Berlin)
+      - Air_Berlin (dor:Air_Berlin) --doo:headquarter--> Charlottenburg-Wilmersdorf (dor:Charlottenburg-Wilmersdorf)
+      - Berlin_Adler (dor:Berlin_Adler) --doo:city--> Berlin (dor:Berlin)
+      - Berlin_Adler (dor:Berlin_Adler) --doo:city--> Germany (dor:Germany)
+  '7':
+    attributes:
+      Berlin: (area total km^='891.3')
+    relationships:
+      - Air_Berlin (dor:Air_Berlin) --doo:headquarter--> Berlin (dor:Berlin)
+      - Air_Berlin (dor:Air_Berlin) --doo:headquarter--> Charlottenburg-Wilmersdorf (dor:Charlottenburg-Wilmersdorf)
+      - Berlin_Rebels (dor:Berlin_Rebels) --doo:city--> Berlin (dor:Berlin)
+      - Berlin_Rebels (dor:Berlin_Rebels) --doo:city--> Germany (dor:Germany)
+  '8':
+    attributes:
+      Berlin: (area total km^='891.3')
+    relationships:
+      - Air_Berlin (dor:Air_Berlin) --doo:headquarter--> Berlin (dor:Berlin)
+      - Air_Berlin (dor:Air_Berlin) --doo:headquarter--> Charlottenburg-Wilmersdorf (dor:Charlottenburg-Wilmersdorf)
+      - Berliner_Schlittschuhclub (dor:Berliner_Schlittschuhclub) --doo:city--> Berlin (dor:Berlin)
+      - Berliner_Schlittschuhclub (dor:Berliner_Schlittschuhclub) --doo:city--> Germany (dor:Germany)
+  '9':
+    attributes:
+      Montreal: (area total km^='431.5')
+    relationships:
+      - Air_Canada_Jetz (dor:Air_Canada_Jetz) --doo:headquarter--> Montreal (dor:Montreal)
+      - Air_Canada_Jetz (dor:Air_Canada_Jetz) --doo:headquarter--> Quebec (dor:Quebec)
+      - Montreal_Beavers (dor:Montreal_Beavers) --doo:city--> Montreal (dor:Montreal)
+      - Montreal_Beavers (dor:Montreal_Beavers) --doo:city--> Canada (dor:Canada)
+  '10':
+    attributes:
+      Montreal: (area total km^='431.5')
+    relationships:
+      - Air_Canada_Jetz (dor:Air_Canada_Jetz) --doo:headquarter--> Montreal (dor:Montreal)
+      - Air_Canada_Jetz (dor:Air_Canada_Jetz) --doo:headquarter--> Quebec (dor:Quebec)
+      - Montreal_Matrix (dor:Montreal_Matrix) --doo:city--> Montreal (dor:Montreal)
+      - Montreal_Matrix (dor:Montreal_Matrix) --doo:city--> Canada (dor:Canada)
+attributes:
+  city: --Aug rain days^ (dop:augRainDays)--> int | --Apr record low F^ (dop:aprRecordLowF)--> int | --area total km^ (dop:areaTotalKm)--> double
+  Location: --group^ (dop:group)--> Resource | --abolished^ (dop:abolished)--> date | --direction^ (dop:direction)--> langString | --country^ (dop:country)--> langString | --area total (km2)^ (doop:areaTotal)--> squareKilometre
+  settlement: --region^ (doo:region)--> Resource | --Apr record high C^ (dop:aprRecordHighC)--> int | --caption^ (dop:caption)--> langString
+subgraph_id: 513
+relationships:
+  - airline --doo:headquarter--> city
+  - airline --doo:headquarter--> settlement
+  - sports team --doo:city--> city
+  - sports team --doo:city--> Location

@@ -1,0 +1,123 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      California: (caption^='An ad to sail to California,', elevation (μ)^='880.0', footer^='The Constitution of California was written in both English and Spanish by both American and Californio delegates.')
+      Joseph_Barton_Elam: (children^='Ida')
+      Charles_Wheaton_Elam: (parents^='Mary Elizabeth Stewart Elam')
+    relationships:
+      - Albert_S._McLemore (dor:Albert_S._McLemore) --dop:deathPlace--> California (dor:California)
+      - California (dor:California) --dop:country--> United_States (dor:United_States)
+      - Charles_Wheaton_Elam (dor:Charles_Wheaton_Elam) --doo:nationality--> United_States (dor:United_States)
+      - Charles_Wheaton_Elam (dor:Charles_Wheaton_Elam) --dop:parents--> Joseph_Barton_Elam (dor:Joseph_Barton_Elam)
+  '2':
+    attributes:
+      California: (caption^='An ad to sail to California,', elevation (μ)^='880.0', footer^='The Constitution of California was written in both English and Spanish by both American and Californio delegates.')
+      Christopher_H._Phillips: (parents^='Caroline Astor Drayton')
+      William_Phillips_(diplomat): (children^='5')
+    relationships:
+      - Albert_S._McLemore (dor:Albert_S._McLemore) --dop:deathPlace--> California (dor:California)
+      - California (dor:California) --dop:country--> United_States (dor:United_States)
+      - Christopher_H._Phillips (dor:Christopher_H._Phillips) --doo:nationality--> United_States (dor:United_States)
+      - Christopher_H._Phillips (dor:Christopher_H._Phillips) --dop:parents--> William_Phillips_(diplomat) (<http://dbpedia.org/resource/William_Phillips_(diplomat)>)
+  '3':
+    attributes:
+      California: (caption^='An ad to sail to California,', elevation (μ)^='880.0', footer^='The Constitution of California was written in both English and Spanish by both American and Californio delegates.')
+      Rutherford_B._Hayes: (children^='8')
+      Rutherford_P._Hayes: (parents^='')
+    relationships:
+      - Albert_S._McLemore (dor:Albert_S._McLemore) --dop:deathPlace--> California (dor:California)
+      - California (dor:California) --dop:country--> United_States (dor:United_States)
+      - Rutherford_P._Hayes (dor:Rutherford_P._Hayes) --doo:nationality--> United_States (dor:United_States)
+      - Rutherford_P._Hayes (dor:Rutherford_P._Hayes) --dop:parents--> Rutherford_B._Hayes (dor:Rutherford_B._Hayes)
+  '4':
+    attributes:
+      Winnie_Ewing: (children^='Terry Ewing')
+      Great_Britain: (elevation (μ)^='1345.0')
+      Annabelle_Ewing: (parents^='Stewart Ewing', honorific suffix^='http://dbpedia.org/resource/Member_of_the_Scottish_Parliament')
+    relationships:
+      - François_Claude_Amour,_marquis_de_Bouillé (<http://dbpedia.org/resource/François_Claude_Amour,_marquis_de_Bouillé>) --dop:deathPlace--> Great_Britain (dor:Great_Britain)
+      - Great_Britain (dor:Great_Britain) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - Annabelle_Ewing (dor:Annabelle_Ewing) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Annabelle_Ewing (dor:Annabelle_Ewing) --dop:parents--> Winnie_Ewing (dor:Winnie_Ewing)
+  '5':
+    attributes:
+      Great_Britain: (elevation (μ)^='1345.0')
+      Charles_Grey,_2nd_Earl_Grey: (children^='16')
+      Charles_Grey_(British_Army_officer): (parents^='The Hon. Mary Ponsonby')
+    relationships:
+      - François_Claude_Amour,_marquis_de_Bouillé (<http://dbpedia.org/resource/François_Claude_Amour,_marquis_de_Bouillé>) --dop:deathPlace--> Great_Britain (dor:Great_Britain)
+      - Great_Britain (dor:Great_Britain) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - Charles_Grey_(British_Army_officer) (<http://dbpedia.org/resource/Charles_Grey_(British_Army_officer)>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Charles_Grey_(British_Army_officer) (<http://dbpedia.org/resource/Charles_Grey_(British_Army_officer)>) --dop:parents--> Charles_Grey,_2nd_Earl_Grey (<http://dbpedia.org/resource/Charles_Grey,_2nd_Earl_Grey>)
+  '6':
+    attributes:
+      Great_Britain: (elevation (μ)^='1345.0')
+      Elizabeth_Balfour,_Countess_of_Balfour: (parents^='http://dbpedia.org/resource/Edith_Bulwer-Lytton,_Countess_of_Lytton')
+      Robert_Bulwer-Lytton,_1st_Earl_of_Lytton: (children^='7')
+    relationships:
+      - François_Claude_Amour,_marquis_de_Bouillé (<http://dbpedia.org/resource/François_Claude_Amour,_marquis_de_Bouillé>) --dop:deathPlace--> Great_Britain (dor:Great_Britain)
+      - Great_Britain (dor:Great_Britain) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - Elizabeth_Balfour,_Countess_of_Balfour (<http://dbpedia.org/resource/Elizabeth_Balfour,_Countess_of_Balfour>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Elizabeth_Balfour,_Countess_of_Balfour (<http://dbpedia.org/resource/Elizabeth_Balfour,_Countess_of_Balfour>) --dop:parents--> Robert_Bulwer-Lytton,_1st_Earl_of_Lytton (<http://dbpedia.org/resource/Robert_Bulwer-Lytton,_1st_Earl_of_Lytton>)
+  '7':
+    attributes:
+      HMNB_Devonport: (caption^='An aerial photograph of the core of HMNB Devonport in 2005 with several ships alongside.')
+      Charles_Fane,_3rd_Earl_of_Westmorland: (parents^='Grace Thornhurst')
+      Mildmay_Fane,_2nd_Earl_of_Westmorland: (children^='Catherine Fane')
+    relationships:
+      - Sir_John_Duckworth,_1st_Baronet (<http://dbpedia.org/resource/Sir_John_Duckworth,_1st_Baronet>) --dop:deathPlace--> HMNB_Devonport (dor:HMNB_Devonport)
+      - HMNB_Devonport (dor:HMNB_Devonport) --dop:country--> England (dor:England)
+      - Charles_Fane,_3rd_Earl_of_Westmorland (<http://dbpedia.org/resource/Charles_Fane,_3rd_Earl_of_Westmorland>) --doo:nationality--> England (dor:England)
+      - Charles_Fane,_3rd_Earl_of_Westmorland (<http://dbpedia.org/resource/Charles_Fane,_3rd_Earl_of_Westmorland>) --dop:parents--> Mildmay_Fane,_2nd_Earl_of_Westmorland (<http://dbpedia.org/resource/Mildmay_Fane,_2nd_Earl_of_Westmorland>)
+  '8':
+    attributes:
+      HMNB_Devonport: (caption^='An aerial photograph of the core of HMNB Devonport in 2005 with several ships alongside.')
+      William_Cecil,_1st_Baron_Burghley: (children^='')
+      Robert_Cecil,_1st_Earl_of_Salisbury: (parents^='http://dbpedia.org/resource/Mildred_Cooke', honorific suffix^='http://dbpedia.org/resource/Knight_of_the_Order_of_the_Garter')
+    relationships:
+      - Sir_John_Duckworth,_1st_Baronet (<http://dbpedia.org/resource/Sir_John_Duckworth,_1st_Baronet>) --dop:deathPlace--> HMNB_Devonport (dor:HMNB_Devonport)
+      - HMNB_Devonport (dor:HMNB_Devonport) --dop:country--> England (dor:England)
+      - Robert_Cecil,_1st_Earl_of_Salisbury (<http://dbpedia.org/resource/Robert_Cecil,_1st_Earl_of_Salisbury>) --doo:nationality--> England (dor:England)
+      - Robert_Cecil,_1st_Earl_of_Salisbury (<http://dbpedia.org/resource/Robert_Cecil,_1st_Earl_of_Salisbury>) --dop:parents--> William_Cecil,_1st_Baron_Burghley (<http://dbpedia.org/resource/William_Cecil,_1st_Baron_Burghley>)
+  '9':
+    attributes:
+      HMNB_Devonport: (caption^='An aerial photograph of the core of HMNB Devonport in 2005 with several ships alongside.')
+      Vere_Fane,_4th_Earl_of_Westmorland: (parents^='Grace Thornhurst')
+      Mildmay_Fane,_2nd_Earl_of_Westmorland: (children^='Catherine Fane')
+    relationships:
+      - Sir_John_Duckworth,_1st_Baronet (<http://dbpedia.org/resource/Sir_John_Duckworth,_1st_Baronet>) --dop:deathPlace--> HMNB_Devonport (dor:HMNB_Devonport)
+      - HMNB_Devonport (dor:HMNB_Devonport) --dop:country--> England (dor:England)
+      - Vere_Fane,_4th_Earl_of_Westmorland (<http://dbpedia.org/resource/Vere_Fane,_4th_Earl_of_Westmorland>) --doo:nationality--> England (dor:England)
+      - Vere_Fane,_4th_Earl_of_Westmorland (<http://dbpedia.org/resource/Vere_Fane,_4th_Earl_of_Westmorland>) --dop:parents--> Mildmay_Fane,_2nd_Earl_of_Westmorland (<http://dbpedia.org/resource/Mildmay_Fane,_2nd_Earl_of_Westmorland>)
+  '10':
+    attributes:
+      Leyte: (elevation (μ)^='1332.0')
+      Ayao_Shirane: (allegiance^='Empire of Japan')
+      Amelita_Ramos: (children^='')
+    relationships:
+      - Ayao_Shirane (dor:Ayao_Shirane) --dop:deathPlace--> Leyte (dor:Leyte)
+      - Leyte (dor:Leyte) --dop:country--> Philippines (dor:Philippines)
+      - Cristina_Ramos-Jalasco (dor:Cristina_Ramos-Jalasco) --doo:nationality--> Philippines (dor:Philippines)
+      - Cristina_Ramos-Jalasco (dor:Cristina_Ramos-Jalasco) --dop:parents--> Amelita_Ramos (dor:Amelita_Ramos)
+attributes:
+  Location: --arc-text-colorA^ (dop:arcTextColora)--> langString | --caption^ (dop:caption)--> langString | --designated other1 name^ (dop:designatedOther1Name)--> langString | --elevation (μ)^ (doo:elevation)--> double | --Aug rain days^ (dop:augRainDays)--> double | --commons^ (dop:commons)--> langString | --footer^ (dop:footer)--> langString | --architectural style^ (doo:architecturalStyle)--> Resource
+  politician: --parents^ (dop:parents)--> Resource | --honorific suffix^ (dop:honorificSuffix)--> langString
+  office holder: --children^ (dop:children)--> int | --winner^ (dop:winner)--> langString
+  military person: --allegiance^ (doo:allegiance)--> string
+subgraph_id: 854
+relationships:
+  - military person --dop:deathPlace--> Location
+  - Location --dop:country--> country
+  - politician --doo:nationality--> country
+  - politician --dop:parents--> office holder

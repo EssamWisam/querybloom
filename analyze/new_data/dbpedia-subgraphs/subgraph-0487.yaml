@@ -1,0 +1,123 @@
+types:
+  city: doo:City
+  person: doo:Person
+  Location: doo:Location
+  restaurant: doo:Restaurant
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Manhattan: (Wikipage revision ID^='1123781067')
+      New_York_City: (type^='http://dbpedia.org/resource/City_(New_York)')
+      Peter_Pan_Live!: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', genre^='http://dbpedia.org/resource/Drama')
+    relationships:
+      - Adolph_Green (dor:Adolph_Green) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Peter_Pan_Live! (<http://dbpedia.org/resource/Peter_Pan_Live!>) --doo:composer--> Adolph_Green (dor:Adolph_Green)
+      - Bâtard_(restaurant) (<http://dbpedia.org/resource/Bâtard_(restaurant)>) --dop:city--> New_York_City (dor:New_York_City)
+      - Bâtard_(restaurant) (<http://dbpedia.org/resource/Bâtard_(restaurant)>) --dop:city--> Manhattan (dor:Manhattan)
+  '2':
+    attributes:
+      Manhattan: (Wikipage revision ID^='1123781067')
+      New_York_City: (type^='http://dbpedia.org/resource/City_(New_York)')
+      Peter_Pan_Live!: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', genre^='http://dbpedia.org/resource/Drama')
+    relationships:
+      - Adolph_Green (dor:Adolph_Green) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Peter_Pan_Live! (<http://dbpedia.org/resource/Peter_Pan_Live!>) --doo:composer--> Adolph_Green (dor:Adolph_Green)
+      - Dhamaka_(restaurant) (<http://dbpedia.org/resource/Dhamaka_(restaurant)>) --dop:city--> New_York_City (dor:New_York_City)
+      - Dhamaka_(restaurant) (<http://dbpedia.org/resource/Dhamaka_(restaurant)>) --dop:city--> Manhattan (dor:Manhattan)
+  '3':
+    attributes:
+      Manhattan: (Wikipage revision ID^='1123781067')
+      New_York_City: (type^='http://dbpedia.org/resource/City_(New_York)')
+      Peter_Pan_Live!: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', genre^='http://dbpedia.org/resource/Drama')
+    relationships:
+      - Adolph_Green (dor:Adolph_Green) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Peter_Pan_Live! (<http://dbpedia.org/resource/Peter_Pan_Live!>) --doo:composer--> Adolph_Green (dor:Adolph_Green)
+      - Le_Coucou_(restaurant) (<http://dbpedia.org/resource/Le_Coucou_(restaurant)>) --dop:city--> New_York_City (dor:New_York_City)
+      - Le_Coucou_(restaurant) (<http://dbpedia.org/resource/Le_Coucou_(restaurant)>) --dop:city--> Manhattan (dor:Manhattan)
+  '4':
+    attributes:
+      Tokyo: (type^='http://dbpedia.org/resource/Prefectures_of_Japan')
+      Shibuya: (Wikipage revision ID^='1120466245')
+      Haru_no_Sakamichi_(TV_series): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:End_date', genre^='http://dbpedia.org/resource/Taiga_drama')
+    relationships:
+      - Akira_Miyoshi (dor:Akira_Miyoshi) --doo:deathPlace--> Tokyo (dor:Tokyo)
+      - Haru_no_Sakamichi_(TV_series) (<http://dbpedia.org/resource/Haru_no_Sakamichi_(TV_series)>) --doo:composer--> Akira_Miyoshi (dor:Akira_Miyoshi)
+      - Esaki_(restaurant) (<http://dbpedia.org/resource/Esaki_(restaurant)>) --dop:city--> Tokyo (dor:Tokyo)
+      - Esaki_(restaurant) (<http://dbpedia.org/resource/Esaki_(restaurant)>) --dop:city--> Shibuya (dor:Shibuya)
+  '5':
+    attributes:
+      Tokyo: (type^='http://dbpedia.org/resource/Prefectures_of_Japan')
+      Shinjuku: (Wikipage revision ID^='1121021892')
+      Haru_no_Sakamichi_(TV_series): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:End_date', genre^='http://dbpedia.org/resource/Taiga_drama')
+    relationships:
+      - Akira_Miyoshi (dor:Akira_Miyoshi) --doo:deathPlace--> Tokyo (dor:Tokyo)
+      - Haru_no_Sakamichi_(TV_series) (<http://dbpedia.org/resource/Haru_no_Sakamichi_(TV_series)>) --doo:composer--> Akira_Miyoshi (dor:Akira_Miyoshi)
+      - Ishikawa_(restaurant) (<http://dbpedia.org/resource/Ishikawa_(restaurant)>) --dop:city--> Tokyo (dor:Tokyo)
+      - Ishikawa_(restaurant) (<http://dbpedia.org/resource/Ishikawa_(restaurant)>) --dop:city--> Shinjuku (dor:Shinjuku)
+  '6':
+    attributes:
+      Tokyo: (type^='http://dbpedia.org/resource/Prefectures_of_Japan')
+      Sumida,_Tokyo: (Wikipage revision ID^='1124255133')
+      Haru_no_Sakamichi_(TV_series): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:End_date', genre^='http://dbpedia.org/resource/Taiga_drama')
+    relationships:
+      - Akira_Miyoshi (dor:Akira_Miyoshi) --doo:deathPlace--> Tokyo (dor:Tokyo)
+      - Haru_no_Sakamichi_(TV_series) (<http://dbpedia.org/resource/Haru_no_Sakamichi_(TV_series)>) --doo:composer--> Akira_Miyoshi (dor:Akira_Miyoshi)
+      - Kirby_Café (<http://dbpedia.org/resource/Kirby_Café>) --dop:city--> Tokyo (dor:Tokyo)
+      - Kirby_Café (<http://dbpedia.org/resource/Kirby_Café>) --dop:city--> Sumida,_Tokyo (<http://dbpedia.org/resource/Sumida,_Tokyo>)
+  '7':
+    attributes:
+      Soho: (Wikipage revision ID^='1123069345')
+      London: (type^='http://dbpedia.org/resource/Capital_city')
+      Billie_and_the_Real_Belle_Bare_All: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Infobox_television')
+    relationships:
+      - Amy_Winehouse (dor:Amy_Winehouse) --doo:deathPlace--> London (dor:London)
+      - Billie_and_the_Real_Belle_Bare_All (dor:Billie_and_the_Real_Belle_Bare_All) --doo:composer--> Amy_Winehouse (dor:Amy_Winehouse)
+      - Bar_Italia (dor:Bar_Italia) --dop:city--> London (dor:London)
+      - Bar_Italia (dor:Bar_Italia) --dop:city--> Soho (dor:Soho)
+  '8':
+    attributes:
+      London: (type^='http://dbpedia.org/resource/Capital_city')
+      EC_postcode_area: (Wikipage revision ID^='1096485797')
+      Billie_and_the_Real_Belle_Bare_All: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Infobox_television')
+    relationships:
+      - Amy_Winehouse (dor:Amy_Winehouse) --doo:deathPlace--> London (dor:London)
+      - Billie_and_the_Real_Belle_Bare_All (dor:Billie_and_the_Real_Belle_Bare_All) --doo:composer--> Amy_Winehouse (dor:Amy_Winehouse)
+      - Club_Gascon (dor:Club_Gascon) --dop:city--> London (dor:London)
+      - Club_Gascon (dor:Club_Gascon) --dop:city--> EC_postcode_area (dor:EC_postcode_area)
+  '9':
+    attributes:
+      London: (type^='http://dbpedia.org/resource/Capital_city')
+      SW_postcode_area: (Wikipage revision ID^='1105729110')
+      Billie_and_the_Real_Belle_Bare_All: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Infobox_television')
+    relationships:
+      - Amy_Winehouse (dor:Amy_Winehouse) --doo:deathPlace--> London (dor:London)
+      - Billie_and_the_Real_Belle_Bare_All (dor:Billie_and_the_Real_Belle_Bare_All) --doo:composer--> Amy_Winehouse (dor:Amy_Winehouse)
+      - Dinner_by_Heston_Blumenthal (dor:Dinner_by_Heston_Blumenthal) --dop:city--> London (dor:London)
+      - Dinner_by_Heston_Blumenthal (dor:Dinner_by_Heston_Blumenthal) --dop:city--> SW_postcode_area (dor:SW_postcode_area)
+  '10':
+    attributes:
+      Los_Angeles: (type^='http://dbpedia.org/resource/List_of_municipalities_in_California')
+      Amen_(TV_series): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:End_date', genre^='http://dbpedia.org/resource/Sitcom')
+      Northridge,_Los_Angeles: (Wikipage revision ID^='1123527749')
+    relationships:
+      - Andraé_Crouch (<http://dbpedia.org/resource/Andraé_Crouch>) --doo:deathPlace--> Los_Angeles (dor:Los_Angeles)
+      - Amen_(TV_series) (<http://dbpedia.org/resource/Amen_(TV_series)>) --doo:composer--> Andraé_Crouch (<http://dbpedia.org/resource/Andraé_Crouch>)
+      - Brent's_Deli (<http://dbpedia.org/resource/Brent's_Deli>) --dop:city--> Los_Angeles (dor:Los_Angeles)
+      - Brent's_Deli (<http://dbpedia.org/resource/Brent's_Deli>) --dop:city--> Northridge,_Los_Angeles (<http://dbpedia.org/resource/Northridge,_Los_Angeles>)
+attributes:
+  city: --type^ (doo:type)--> Resource
+  person: --reason^ (dop:reason)--> langString | --awards^ (dop:awards)--> int
+  Location: --group^ (dop:group)--> langString | --former name^ (doo:formerName)--> langString | --accessdate^ (dop:accessdate)--> date | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --last^ (dop:last)--> langString | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int
+  television show: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --genre^ (dop:genre)--> langString
+subgraph_id: 487
+relationships:
+  - person --doo:deathPlace--> city
+  - television show --doo:composer--> person
+  - restaurant --dop:city--> city
+  - restaurant --dop:city--> Location

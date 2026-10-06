@@ -1,0 +1,70 @@
+types:
+  nerve: doo:Nerve
+  artery: doo:Artery
+  anatomical structure: doo:AnatomicalStructure
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Acute_haemorrhagic_conjunctivitis_in_Ghana (dor:Acute_haemorrhagic_conjunctivitis_in_Ghana) --doo:nerve--> Supratrochlear_nerve (dor:Supratrochlear_nerve)
+      - Acute_haemorrhagic_conjunctivitis_in_Ghana (dor:Acute_haemorrhagic_conjunctivitis_in_Ghana) --doo:artery--> Anterior_ciliary_arteries (dor:Anterior_ciliary_arteries)
+  '2':
+    attributes: {}
+    relationships:
+      - Acute_haemorrhagic_conjunctivitis_in_Ghana (dor:Acute_haemorrhagic_conjunctivitis_in_Ghana) --doo:nerve--> Supratrochlear_nerve (dor:Supratrochlear_nerve)
+      - Acute_haemorrhagic_conjunctivitis_in_Ghana (dor:Acute_haemorrhagic_conjunctivitis_in_Ghana) --doo:artery--> Lacrimal_artery (dor:Lacrimal_artery)
+  '3':
+    attributes:
+      Adrenal_gland: (name in latin^='Glandula suprarenalis')
+    relationships:
+      - Adrenal_gland (dor:Adrenal_gland) --doo:nerve--> Celiac_plexus (dor:Celiac_plexus)
+      - Adrenal_gland (dor:Adrenal_gland) --doo:artery--> Inferior_suprarenal_artery (dor:Inferior_suprarenal_artery)
+  '4':
+    attributes:
+      Adrenal_gland: (name in latin^='Glandula suprarenalis')
+    relationships:
+      - Adrenal_gland (dor:Adrenal_gland) --doo:nerve--> Celiac_plexus (dor:Celiac_plexus)
+      - Adrenal_gland (dor:Adrenal_gland) --doo:artery--> Middle_suprarenal_artery (dor:Middle_suprarenal_artery)
+  '5':
+    attributes:
+      Adrenal_gland: (name in latin^='Glandula suprarenalis')
+    relationships:
+      - Adrenal_gland (dor:Adrenal_gland) --doo:nerve--> Celiac_plexus (dor:Celiac_plexus)
+      - Adrenal_gland (dor:Adrenal_gland) --doo:artery--> Superior_suprarenal_artery (dor:Superior_suprarenal_artery)
+  '6':
+    attributes: {}
+    relationships:
+      - Adrenal_medulla (dor:Adrenal_medulla) --doo:nerve--> Renal_plexus (dor:Renal_plexus)
+      - Adrenal_medulla (dor:Adrenal_medulla) --doo:artery--> Inferior_suprarenal_artery (dor:Inferior_suprarenal_artery)
+  '7':
+    attributes: {}
+    relationships:
+      - Adrenal_medulla (dor:Adrenal_medulla) --doo:nerve--> Renal_plexus (dor:Renal_plexus)
+      - Adrenal_medulla (dor:Adrenal_medulla) --doo:artery--> Middle_suprarenal_artery (dor:Middle_suprarenal_artery)
+  '8':
+    attributes: {}
+    relationships:
+      - Adrenal_medulla (dor:Adrenal_medulla) --doo:nerve--> Renal_plexus (dor:Renal_plexus)
+      - Adrenal_medulla (dor:Adrenal_medulla) --doo:artery--> Superior_suprarenal_artery (dor:Superior_suprarenal_artery)
+  '9':
+    attributes:
+      Anal_canal: (name in latin^='Canalis analis')
+    relationships:
+      - Anal_canal (dor:Anal_canal) --doo:nerve--> Autonomic_nervous_system (dor:Autonomic_nervous_system)
+      - Anal_canal (dor:Anal_canal) --doo:artery--> Inferior_rectal_artery (dor:Inferior_rectal_artery)
+  '10':
+    attributes:
+      Anal_canal: (name in latin^='Canalis analis')
+    relationships:
+      - Anal_canal (dor:Anal_canal) --doo:nerve--> Autonomic_nervous_system (dor:Autonomic_nervous_system)
+      - Anal_canal (dor:Anal_canal) --doo:artery--> Superior_rectal_artery (dor:Superior_rectal_artery)
+attributes:
+  anatomical structure: --name in latin^ (doo:latinName)--> string
+subgraph_id: 43
+relationships:
+  - anatomical structure --doo:nerve--> nerve
+  - anatomical structure --doo:artery--> artery

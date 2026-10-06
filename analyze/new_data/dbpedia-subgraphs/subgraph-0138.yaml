@@ -1,0 +1,81 @@
+types:
+  Food: doo:Food
+  mountain: doo:Mountain
+  continent: doo:Continent
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Akara: (has abstract^='Acarajé – popularne danie kuchni brazylijskiej, czasem zaliczane do miejscowych fast foodów. Jest to ciasto z rozgniecionym fasolnikiem "czarne oczko" (Vigna unguiculata), które jest wypełnione tzw. v...', alias^='Acara, Àkàrà, Kosai', course^='Street-food')
+      Agua_Poca: (age^='Pleistocene')
+    relationships:
+      - Akara (dor:Akara) --doo:region--> South_America (dor:South_America)
+      - Agua_Poca (dor:Agua_Poca) --doo:locatedInArea--> South_America (dor:South_America)
+  '2':
+    attributes:
+      Bagel: '(has abstract^=''A bagel (Yiddish: בײגל‎ beygl; Polish: bajgiel), also historically spelled beigel, is a bread product originating in the Jewish communities of Poland.It is traditionally shaped by hand into the form o...'', alias^=''Bajgiel, beigel, beygl'')'
+    relationships:
+      - Bagel (dor:Bagel) --doo:region--> North_America (dor:North_America)
+      - Grays_Peak (dor:Grays_Peak) --doo:locatedInArea--> North_America (dor:North_America)
+  '3':
+    attributes:
+      Barfi: '(has abstract^=''( 이 문서는 요리에 관한 것입니다. 인도 영화에 대해서는 바르피! 문서를 참고하십시오.) 바르피(힌디어: बर्फ़ी)는 인도 요리 중 하나로, 단 맛이 나는 일종의 고체 응축우유이다. 같이 넣는 재료에 따라 다양한 종류로 구분된다.'', alias^=''Burfi, burfee, borfee, borfi'', course^=''Dessert'')'
+    relationships:
+      - Barfi (dor:Barfi) --doo:region--> Caribbean (dor:Caribbean)
+      - Mount_Hillaby (dor:Mount_Hillaby) --doo:locatedInArea--> Caribbean (dor:Caribbean)
+  '4':
+    attributes:
+      Barfi: '(has abstract^=''( 이 문서는 요리에 관한 것입니다. 인도 영화에 대해서는 바르피! 문서를 참고하십시오.) 바르피(힌디어: बर्फ़ी)는 인도 요리 중 하나로, 단 맛이 나는 일종의 고체 응축우유이다. 같이 넣는 재료에 따라 다양한 종류로 구분된다.'', alias^=''Burfi, burfee, borfee, borfi'', course^=''Dessert'')'
+      Qualibou: (age^='-1.2307464E12')
+    relationships:
+      - Barfi (dor:Barfi) --doo:region--> Caribbean (dor:Caribbean)
+      - Qualibou (dor:Qualibou) --doo:locatedInArea--> Caribbean (dor:Caribbean)
+  '5':
+    attributes:
+      Bhendi_fry: (has abstract^='Bhendi Fry (alternately called Okra fry, Bhindi fry, Bhindi masala or Bharwan bhindi) is stir fried okra (ladies'' finger) that is slit and stuffed with spice mix such as garam masala and other locally...')
+    relationships:
+      - Bhendi_fry (dor:Bhendi_fry) --doo:region--> Caribbean (dor:Caribbean)
+      - Mount_Hillaby (dor:Mount_Hillaby) --doo:locatedInArea--> Caribbean (dor:Caribbean)
+  '6':
+    attributes:
+      Biryani: '(has abstract^=''Biriani, biryani (urdu: بریانی, dewanagari: बिरयानी) – klasyczne danie kuchni indyjskiej, a ściślej mówiąc tzw. , typowej zwłaszcza dla północnych terenów Indii. Nazwa pochodzi od perskiego słowa bery...'', alias^=''Biriyani, Biriani, Beriani, Briyani, Breyani, Briani, Birani, Buriyani, Bariania, Beriani'', course^=''Main dish'')'
+    relationships:
+      - Biryani (dor:Biryani) --doo:region--> Western_Asia (dor:Western_Asia)
+      - Hilly_Flanks (dor:Hilly_Flanks) --doo:locatedInArea--> Western_Asia (dor:Western_Asia)
+  '7':
+    attributes:
+      Bratwurst: (has abstract^='Als Bratwurst werden verschiedene Wurstsorten aus Fleisch bezeichnet. Man versteht darunter Würste, die zum Braten bestimmt sind oder gebraten wurden.', course^='Main')
+      Mount_Athos: (region^='http://dbpedia.org/resource/Monastic_community_of_Mount_Athos')
+    relationships:
+      - Bratwurst (dor:Bratwurst) --doo:region--> Europe (dor:Europe)
+      - Mount_Athos (dor:Mount_Athos) --doo:locatedInArea--> Europe (dor:Europe)
+  '8':
+    attributes:
+      Bratwurst: (has abstract^='Als Bratwurst werden verschiedene Wurstsorten aus Fleisch bezeichnet. Man versteht darunter Würste, die zum Braten bestimmt sind oder gebraten wurden.', course^='Main')
+    relationships:
+      - Bratwurst (dor:Bratwurst) --doo:region--> Europe (dor:Europe)
+      - Pashallora (dor:Pashallora) --doo:locatedInArea--> Europe (dor:Europe)
+  '9':
+    attributes:
+      Buñuelo: (has abstract^='Bolinhos são iguarias feitas de massa à base de farinha, arroz, batatas ou pão, podendo conter como recheio carne, peixe, legumes ou doces. Geralmente têm a forma de pequenas bolas, podendo ser alonga...', alias^='Bunyol, bimuelo, birmuelo, bermuelo, bumuelo, burmuelo, bonuelo', course^='http://dbpedia.org/resource/Bread')
+    relationships:
+      - Buñuelo (<http://dbpedia.org/resource/Buñuelo>) --doo:region--> Asia (dor:Asia)
+      - Mount_Sinai (dor:Mount_Sinai) --doo:locatedInArea--> Asia (dor:Asia)
+  '10':
+    attributes:
+      Agua_Poca: (age^='Pleistocene')
+      Butifarra_Soledeñas: (has abstract^='Butifarra Soledeña (sausage of Soledad, Atlántico) is a type of botifarra that has developed into a regional specialty in Colombian cuisine. They are made from ground beef and pork with spices (especi...', course^='Main')
+    relationships:
+      - Butifarra_Soledeñas (<http://dbpedia.org/resource/Butifarra_Soledeñas>) --doo:region--> South_America (dor:South_America)
+      - Agua_Poca (dor:Agua_Poca) --doo:locatedInArea--> South_America (dor:South_America)
+attributes:
+  Food: --has abstract^ (doo:abstract)--> langString | --alias^ (doo:alias)--> langString | --course^ (dop:course)--> langString
+  mountain: --Aug low C^ (dop:augLowC)--> double | --Apr low C^ (dop:aprLowC)--> double | --region^ (doo:region)--> Resource | --district^ (doo:district)--> Resource | --Apr high C^ (dop:aprHighC)--> double | --length (μ)^ (doo:length)--> double | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --age^ (dop:age)--> langString | --coordinates^ (dop:coordinates)--> langString
+subgraph_id: 138
+relationships:
+  - Food --doo:region--> continent
+  - mountain --doo:locatedInArea--> continent

@@ -1,0 +1,112 @@
+types:
+  album: doo:Album
+  person: doo:Person
+  newspaper: doo:Newspaper
+  settlement: doo:Settlement
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Alex_Lifeson: (instrument^='', current member of^='http://dbpedia.org/resource/Envy_of_None')
+      The_Globe_and_Mail: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-newspaper-noun-2')
+    relationships:
+      - The_Globe_and_Mail (dor:The_Globe_and_Mail) --doo:headquarter--> Ontario (dor:Ontario)
+      - Alex_Lifeson (dor:Alex_Lifeson) --doo:hometown--> Ontario (dor:Ontario)
+      - 2112_(song) (<http://dbpedia.org/resource/2112_(song)>) --doo:writer--> Alex_Lifeson (dor:Alex_Lifeson)
+      - David_Oancia (dor:David_Oancia) --dop:employer--> The_Globe_and_Mail (dor:The_Globe_and_Mail)
+  '2':
+    attributes:
+      Toronto: (motto^='Diversity Our Strength')
+      Alex_Lifeson: (instrument^='', current member of^='http://dbpedia.org/resource/Envy_of_None')
+      The_Globe_and_Mail: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-newspaper-noun-2')
+    relationships:
+      - The_Globe_and_Mail (dor:The_Globe_and_Mail) --doo:headquarter--> Toronto (dor:Toronto)
+      - Alex_Lifeson (dor:Alex_Lifeson) --doo:hometown--> Toronto (dor:Toronto)
+      - 2112_(song) (<http://dbpedia.org/resource/2112_(song)>) --doo:writer--> Alex_Lifeson (dor:Alex_Lifeson)
+      - David_Oancia (dor:David_Oancia) --dop:employer--> The_Globe_and_Mail (dor:The_Globe_and_Mail)
+  '3':
+    attributes:
+      Alex_Lifeson: (instrument^='', current member of^='http://dbpedia.org/resource/Envy_of_None')
+      Toronto_Star: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-newspaper-noun-2')
+    relationships:
+      - Toronto_Star (dor:Toronto_Star) --doo:headquarter--> Ontario (dor:Ontario)
+      - Alex_Lifeson (dor:Alex_Lifeson) --doo:hometown--> Ontario (dor:Ontario)
+      - 2112_(song) (<http://dbpedia.org/resource/2112_(song)>) --doo:writer--> Alex_Lifeson (dor:Alex_Lifeson)
+      - Gordon_Sinclair (dor:Gordon_Sinclair) --dop:employer--> Toronto_Star (dor:Toronto_Star)
+  '4':
+    attributes: {}
+    relationships:
+      - Daily_Worker (dor:Daily_Worker) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - Mase (dor:Mase) --doo:hometown--> New_York_City (dor:New_York_City)
+      - 24_Hrs._to_Live (dor:24_Hrs._to_Live) --doo:writer--> Mase (dor:Mase)
+      - Sender_Garlin (dor:Sender_Garlin) --dop:employer--> Daily_Worker (dor:Daily_Worker)
+  '5':
+    attributes: {}
+    relationships:
+      - PM_(newspaper) (<http://dbpedia.org/resource/PM_(newspaper)>) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - Mase (dor:Mase) --doo:hometown--> New_York_City (dor:New_York_City)
+      - 24_Hrs._to_Live (dor:24_Hrs._to_Live) --doo:writer--> Mase (dor:Mase)
+      - Kenneth_G._Crawford (dor:Kenneth_G._Crawford) --dop:employer--> PM_(newspaper) (<http://dbpedia.org/resource/PM_(newspaper)>)
+  '6':
+    attributes:
+      The_New_York_Times: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-newspaper-noun-2')
+    relationships:
+      - The_New_York_Times (dor:The_New_York_Times) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - Mase (dor:Mase) --doo:hometown--> New_York_City (dor:New_York_City)
+      - 24_Hrs._to_Live (dor:24_Hrs._to_Live) --doo:writer--> Mase (dor:Mase)
+      - Alan_Rappeport (dor:Alan_Rappeport) --dop:employer--> The_New_York_Times (dor:The_New_York_Times)
+  '7':
+    attributes:
+      Rich_Harrison: (instrument^='', associated musical artist^='http://dbpedia.org/resource/Amerie')
+      Washington,_D.C.: (motto^='(')
+      The_Washington_Post: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-newspaper-noun-2')
+    relationships:
+      - The_Washington_Post (dor:The_Washington_Post) --doo:headquarter--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Rich_Harrison (dor:Rich_Harrison) --doo:hometown--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - 24's_(RichGirl_song) (<http://dbpedia.org/resource/24's_(RichGirl_song)>) --doo:writer--> Rich_Harrison (dor:Rich_Harrison)
+      - Abby_Phillip (dor:Abby_Phillip) --dop:employer--> The_Washington_Post (dor:The_Washington_Post)
+  '8':
+    attributes:
+      Rich_Harrison: (instrument^='', associated musical artist^='http://dbpedia.org/resource/Amerie')
+      Washington,_D.C.: (motto^='(')
+      The_Washington_Post: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-newspaper-noun-2')
+    relationships:
+      - The_Washington_Post (dor:The_Washington_Post) --doo:headquarter--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Rich_Harrison (dor:Rich_Harrison) --doo:hometown--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - 24's_(RichGirl_song) (<http://dbpedia.org/resource/24's_(RichGirl_song)>) --doo:writer--> Rich_Harrison (dor:Rich_Harrison)
+      - Antonia_Farzan (dor:Antonia_Farzan) --dop:employer--> The_Washington_Post (dor:The_Washington_Post)
+  '9':
+    attributes:
+      Rich_Harrison: (instrument^='', associated musical artist^='http://dbpedia.org/resource/Amerie')
+      Washington,_D.C.: (motto^='(')
+      The_Washington_Post: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-newspaper-noun-2')
+    relationships:
+      - The_Washington_Post (dor:The_Washington_Post) --doo:headquarter--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Rich_Harrison (dor:Rich_Harrison) --doo:hometown--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - 24's_(RichGirl_song) (<http://dbpedia.org/resource/24's_(RichGirl_song)>) --doo:writer--> Rich_Harrison (dor:Rich_Harrison)
+      - Damian_Paletta (dor:Damian_Paletta) --dop:employer--> The_Washington_Post (dor:The_Washington_Post)
+  '10':
+    attributes:
+      Amir_Amor: (instrument^='', associated musical artist^='http://dbpedia.org/resource/Rudimental')
+    relationships:
+      - I_(newspaper) (<http://dbpedia.org/resource/I_(newspaper)>) --doo:headquarter--> London (dor:London)
+      - Amir_Amor (dor:Amir_Amor) --doo:hometown--> London (dor:London)
+      - Bloodstream_(song) (<http://dbpedia.org/resource/Bloodstream_(song)>) --doo:writer--> Amir_Amor (dor:Amir_Amor)
+      - Jane_Merrick (dor:Jane_Merrick) --dop:employer--> I_(newspaper) (<http://dbpedia.org/resource/I_(newspaper)>)
+attributes:
+  album: --reason^ (dop:reason)--> langString | --aux^ (dop:aux)--> int
+  person: --float^ (dop:float)--> langString | --border^ (dop:border)--> int | --header^ (dop:header)--> langString | --notable works^ (dop:notableWorks)--> Resource
+  newspaper: --wordnet_type (dop:wordnet_type)--> Resource
+  settlement: --region^ (doo:region)--> Resource | --motto^ (doo:motto)--> string | --original name^ (doo:originalName)--> langString
+  musical artist: --instrument^ (dop:instrument)--> langString | --associated musical artist^ (doo:associatedMusicalArtist)--> Resource | --current member of^ (dop:currentMemberOf)--> langString
+subgraph_id: 921
+relationships:
+  - newspaper --doo:headquarter--> settlement
+  - musical artist --doo:hometown--> settlement
+  - album --doo:writer--> musical artist
+  - person --dop:employer--> newspaper

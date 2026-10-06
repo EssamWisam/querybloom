@@ -1,0 +1,96 @@
+types:
+  river: doo:River
+  colour: doo:Colour
+  settlement: doo:Settlement
+  military unit: doo:MilitaryUnit
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Karachi: (Aug precipitation mm^='60.9', area code^='021')
+      10th_Baluch_Regiment: (garrison^='http://dbpedia.org/resource/Karachi')
+    relationships:
+      - 10th_Baluch_Regiment (dor:10th_Baluch_Regiment) --doo:garrison--> Karachi (dor:Karachi)
+      - Lyari_River (dor:Lyari_River) --doo:mouthPlace--> Karachi (dor:Karachi)
+      - 10th_Baluch_Regiment (dor:10th_Baluch_Regiment) --doo:colour--> Rifle_green (dor:Rifle_green)
+  '2':
+    attributes:
+      Louisville,_Kentucky: (area code^='502')
+      149th_Infantry_Regiment_(United_States): (garrison^='http://dbpedia.org/resource/Louisville,_Kentucky')
+    relationships:
+      - 149th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/149th_Infantry_Regiment_(United_States)>) --doo:garrison--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - Beargrass_Creek_(Kentucky) (<http://dbpedia.org/resource/Beargrass_Creek_(Kentucky)>) --doo:mouthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 149th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/149th_Infantry_Regiment_(United_States)>) --doo:colour--> Gold_(color) (<http://dbpedia.org/resource/Gold_(color)>)
+  '3':
+    attributes:
+      Louisville,_Kentucky: (area code^='502')
+      149th_Infantry_Regiment_(United_States): (garrison^='http://dbpedia.org/resource/Louisville,_Kentucky')
+    relationships:
+      - 149th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/149th_Infantry_Regiment_(United_States)>) --doo:garrison--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - Beargrass_Creek_(Kentucky) (<http://dbpedia.org/resource/Beargrass_Creek_(Kentucky)>) --doo:mouthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 149th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/149th_Infantry_Regiment_(United_States)>) --doo:colour--> Red (dor:Red)
+  '4':
+    attributes:
+      26th_Infantry_Regiment_(United_States): (garrison^='http://dbpedia.org/resource/Fort_Campbell', nickname^='"Blue Spaders"')
+    relationships:
+      - 26th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/26th_Infantry_Regiment_(United_States)>) --doo:garrison--> Kentucky (dor:Kentucky)
+      - Big_Sandy_River_(Ohio_River_tributary) (<http://dbpedia.org/resource/Big_Sandy_River_(Ohio_River_tributary)>) --doo:mouthPlace--> Kentucky (dor:Kentucky)
+      - 26th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/26th_Infantry_Regiment_(United_States)>) --doo:colour--> Light_blue (dor:Light_blue)
+  '5':
+    attributes:
+      26th_Infantry_Regiment_(United_States): (garrison^='http://dbpedia.org/resource/Fort_Campbell', nickname^='"Blue Spaders"')
+    relationships:
+      - 26th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/26th_Infantry_Regiment_(United_States)>) --doo:garrison--> Kentucky (dor:Kentucky)
+      - Cumberland_River (dor:Cumberland_River) --doo:mouthPlace--> Kentucky (dor:Kentucky)
+      - 26th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/26th_Infantry_Regiment_(United_States)>) --doo:colour--> Light_blue (dor:Light_blue)
+  '6':
+    attributes:
+      26th_Infantry_Regiment_(United_States): (garrison^='http://dbpedia.org/resource/Fort_Campbell', nickname^='"Blue Spaders"')
+    relationships:
+      - 26th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/26th_Infantry_Regiment_(United_States)>) --doo:garrison--> Kentucky (dor:Kentucky)
+      - Levisa_Fork (dor:Levisa_Fork) --doo:mouthPlace--> Kentucky (dor:Kentucky)
+      - 26th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/26th_Infantry_Regiment_(United_States)>) --doo:colour--> Light_blue (dor:Light_blue)
+  '7':
+    attributes:
+      County_Louth: (Aug precipitation mm^='70.3', area code^='041, 042 (primarily)')
+      27_Infantry_Battalion_(Ireland): (garrison^='http://dbpedia.org/resource/Aiken_Barracks', nickname^='Border Bunnies')
+    relationships:
+      - 27_Infantry_Battalion_(Ireland) (<http://dbpedia.org/resource/27_Infantry_Battalion_(Ireland)>) --doo:garrison--> County_Louth (dor:County_Louth)
+      - River_Boyne (dor:River_Boyne) --doo:mouthPlace--> County_Louth (dor:County_Louth)
+      - 27_Infantry_Battalion_(Ireland) (<http://dbpedia.org/resource/27_Infantry_Battalion_(Ireland)>) --doo:colour--> Saffron_(color) (<http://dbpedia.org/resource/Saffron_(color)>)
+  '8':
+    attributes:
+      Washington_(state): (Apr low F^='34.2', Aug low F^='50')
+      2nd_Infantry_Division_(United_States): (garrison^='Joint Base Lewis-McChord, Washington, U.S.', nickname^='"Indianhead"')
+    relationships:
+      - 2nd_Infantry_Division_(United_States) (<http://dbpedia.org/resource/2nd_Infantry_Division_(United_States)>) --doo:garrison--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Ahtanum_Creek (dor:Ahtanum_Creek) --doo:mouthPlace--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - 2nd_Infantry_Division_(United_States) (<http://dbpedia.org/resource/2nd_Infantry_Division_(United_States)>) --doo:colour--> Blue (dor:Blue)
+  '9':
+    attributes:
+      Washington_(state): (Apr low F^='34.2', Aug low F^='50')
+      2nd_Infantry_Division_(United_States): (garrison^='Joint Base Lewis-McChord, Washington, U.S.', nickname^='"Indianhead"')
+    relationships:
+      - 2nd_Infantry_Division_(United_States) (<http://dbpedia.org/resource/2nd_Infantry_Division_(United_States)>) --doo:garrison--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Ahtanum_Creek (dor:Ahtanum_Creek) --doo:mouthPlace--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - 2nd_Infantry_Division_(United_States) (<http://dbpedia.org/resource/2nd_Infantry_Division_(United_States)>) --doo:colour--> Red (dor:Red)
+  '10':
+    attributes:
+      Washington_(state): (Apr low F^='34.2', Aug low F^='50')
+      2nd_Infantry_Division_(United_States): (garrison^='Joint Base Lewis-McChord, Washington, U.S.', nickname^='"Indianhead"')
+    relationships:
+      - 2nd_Infantry_Division_(United_States) (<http://dbpedia.org/resource/2nd_Infantry_Division_(United_States)>) --doo:garrison--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Amon_Creek (dor:Amon_Creek) --doo:mouthPlace--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - 2nd_Infantry_Division_(United_States) (<http://dbpedia.org/resource/2nd_Infantry_Division_(United_States)>) --doo:colour--> Blue (dor:Blue)
+attributes:
+  settlement: --Apr low F^ (dop:aprLowF)--> double | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --area code^ (doo:areaCode)--> string | --Aug low F^ (dop:augLowF)--> int | --bgcolor^ (dop:bgcolor)--> langString | --Aug rain days^ (dop:augRainDays)--> int
+  military unit: --garrison^ (dop:garrison)--> langString | --direction^ (dop:direction)--> langString | --nickname^ (dop:nickname)--> langString
+subgraph_id: 109
+relationships:
+  - military unit --doo:garrison--> settlement
+  - river --doo:mouthPlace--> settlement
+  - military unit --doo:colour--> colour

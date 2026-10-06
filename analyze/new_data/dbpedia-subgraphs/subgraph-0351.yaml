@@ -1,0 +1,95 @@
+types:
+  Location: doo:Location
+  university: doo:University
+  beauty queen: doo:BeautyQueen
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      São_Paulo: (bgcolor^='#B0C4DE')
+      Fundação_Getulio_Vargas: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Advert')
+    relationships:
+      - Adriane_Galisteu (dor:Adriane_Galisteu) --doo:birthPlace--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - A_Fazenda (dor:A_Fazenda) --doo:presenter--> Adriane_Galisteu (dor:Adriane_Galisteu)
+      - Fundação_Getulio_Vargas (<http://dbpedia.org/resource/Fundação_Getulio_Vargas>) --doo:campus--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+  '2':
+    attributes:
+      São_Paulo: (bgcolor^='#B0C4DE')
+    relationships:
+      - Adriane_Galisteu (dor:Adriane_Galisteu) --doo:birthPlace--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - A_Fazenda (dor:A_Fazenda) --doo:presenter--> Adriane_Galisteu (dor:Adriane_Galisteu)
+      - University_of_São_Paulo__University_of_São_Paulo__1 (<http://dbpedia.org/resource/University_of_São_Paulo__University_of_São_Paulo__1>) --doo:campus--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+  '3':
+    attributes:
+      São_Paulo: (bgcolor^='#B0C4DE')
+      Fundação_Getulio_Vargas: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Advert')
+    relationships:
+      - Adriane_Galisteu (dor:Adriane_Galisteu) --doo:birthPlace--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - Power_Couple_(Brazilian_TV_series) (<http://dbpedia.org/resource/Power_Couple_(Brazilian_TV_series)>) --doo:presenter--> Adriane_Galisteu (dor:Adriane_Galisteu)
+      - Fundação_Getulio_Vargas (<http://dbpedia.org/resource/Fundação_Getulio_Vargas>) --doo:campus--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+  '4':
+    attributes:
+      Centro_de_Enseñanza_Técnica_y_Superior: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Alejandra_Espinoza (dor:Alejandra_Espinoza) --doo:birthPlace--> Baja_California (dor:Baja_California)
+      - La_Banda_(TV_series) (<http://dbpedia.org/resource/La_Banda_(TV_series)>) --doo:presenter--> Alejandra_Espinoza (dor:Alejandra_Espinoza)
+      - Centro_de_Enseñanza_Técnica_y_Superior (<http://dbpedia.org/resource/Centro_de_Enseñanza_Técnica_y_Superior>) --doo:campus--> Baja_California (dor:Baja_California)
+  '5':
+    attributes:
+      CINVESTAV: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Alejandra_Espinoza (dor:Alejandra_Espinoza) --doo:birthPlace--> Mexico (dor:Mexico)
+      - La_Banda_(TV_series) (<http://dbpedia.org/resource/La_Banda_(TV_series)>) --doo:presenter--> Alejandra_Espinoza (dor:Alejandra_Espinoza)
+      - CINVESTAV (dor:CINVESTAV) --doo:campus--> Mexico (dor:Mexico)
+  '6':
+    attributes:
+      Monterrey_Institute_of_Technology_and_Higher_Education: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:APRU')
+    relationships:
+      - Alejandra_Espinoza (dor:Alejandra_Espinoza) --doo:birthPlace--> Mexico (dor:Mexico)
+      - La_Banda_(TV_series) (<http://dbpedia.org/resource/La_Banda_(TV_series)>) --doo:presenter--> Alejandra_Espinoza (dor:Alejandra_Espinoza)
+      - Monterrey_Institute_of_Technology_and_Higher_Education (dor:Monterrey_Institute_of_Technology_and_Higher_Education) --doo:campus--> Mexico (dor:Mexico)
+  '7':
+    attributes:
+      Chihuahua_(state): (url^='https://web.archive.org/web/20080513201312/http:/www.esmexico.com/fotografias/estados.php%3Flen=en&seccion=estados&Estado=Chihuahua')
+      Universidad_La_Salle_México: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Andrea_Meza (dor:Andrea_Meza) --doo:birthPlace--> Chihuahua_(state) (<http://dbpedia.org/resource/Chihuahua_(state)>)
+      - Hoy_Día (<http://dbpedia.org/resource/Hoy_Día>) --doo:presenter--> Andrea_Meza (dor:Andrea_Meza)
+      - Universidad_La_Salle_México (<http://dbpedia.org/resource/Universidad_La_Salle_México>) --doo:campus--> Chihuahua_(state) (<http://dbpedia.org/resource/Chihuahua_(state)>)
+  '8':
+    attributes:
+      Chile: (url^='https://web.archive.org/web/20191220035214/https:/www.thisischile.cl/')
+      Information_Sciences_University: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Cecilia_Bolocco (dor:Cecilia_Bolocco) --doo:birthPlace--> Chile (dor:Chile)
+      - Viva_el_lunes (dor:Viva_el_lunes) --doo:presenter--> Cecilia_Bolocco (dor:Cecilia_Bolocco)
+      - Information_Sciences_University (dor:Information_Sciences_University) --doo:campus--> Chile (dor:Chile)
+  '9':
+    attributes:
+      Asian_College: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About')
+    relationships:
+      - Charlene_Gonzales (dor:Charlene_Gonzales) --doo:birthPlace--> Quezon_City (dor:Quezon_City)
+      - At_Home_Ka_Dito (dor:At_Home_Ka_Dito) --doo:presenter--> Charlene_Gonzales (dor:Charlene_Gonzales)
+      - Asian_College (dor:Asian_College) --doo:campus--> Quezon_City (dor:Quezon_City)
+  '10':
+    attributes:
+      Quezon_City: (Aug low C^='24.6')
+      Colegio_de_San_Lorenzo: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Charlene_Gonzales (dor:Charlene_Gonzales) --doo:birthPlace--> Quezon_City (dor:Quezon_City)
+      - At_Home_Ka_Dito (dor:At_Home_Ka_Dito) --doo:presenter--> Charlene_Gonzales (dor:Charlene_Gonzales)
+      - Colegio_de_San_Lorenzo (dor:Colegio_de_San_Lorenzo) --doo:campus--> Quezon_City (dor:Quezon_City)
+attributes:
+  Location: --class^ (dop:class)--> langString | --mouth place^ (doo:mouthPlace)--> Resource | --arc-radiusA^ (dop:arcRadiusa)--> double | --Apr low F^ (dop:aprLowF)--> double | --bgcolor^ (dop:bgcolor)--> langString | --url^ (dop:url)--> langString | --Aug low C^ (dop:augLowC)--> int
+  university: --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+  television show: --narrator^ (doo:narrator)--> Resource
+subgraph_id: 351
+relationships:
+  - beauty queen --doo:birthPlace--> Location
+  - television show --doo:presenter--> beauty queen
+  - university --doo:campus--> Location

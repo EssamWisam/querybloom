@@ -1,0 +1,89 @@
+types:
+  lake: doo:Lake
+  river: doo:River
+  Location: doo:Location
+  settlement: doo:Settlement
+  bus company: doo:BusCompany
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      California: (area code^='209 213 310 323 408 415 510 530 559 562 619 626 650 661 707 714 760 805 818 831 858 909 916 925 949')
+      Oakland,_California: (Apr record high F^='97', date^='August 2018', Apr high F^='66.8', Apr low F^='50.3')
+    relationships:
+      - Diamond_Valley_Lake (dor:Diamond_Valley_Lake) --doo:location--> California (dor:California)
+      - Diamond_Valley_Lake (dor:Diamond_Valley_Lake) --doo:type--> Reservoir (dor:Reservoir)
+      - AC_Transit (dor:AC_Transit) --doo:headquarter--> California (dor:California)
+      - AC_Transit (dor:AC_Transit) --doo:headquarter--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+  '2':
+    attributes:
+      California: (area code^='209 213 310 323 408 415 510 530 559 562 619 626 650 661 707 714 760 805 818 831 858 909 916 925 949')
+    relationships:
+      - Lake_Havasu (dor:Lake_Havasu) --doo:location--> California (dor:California)
+      - Lake_Havasu (dor:Lake_Havasu) --doo:type--> Reservoir (dor:Reservoir)
+      - AC_Transit (dor:AC_Transit) --doo:headquarter--> California (dor:California)
+      - AC_Transit (dor:AC_Transit) --doo:headquarter--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+  '3':
+    attributes:
+      California: (area code^='209 213 310 323 408 415 510 530 559 562 619 626 650 661 707 714 760 805 818 831 858 909 916 925 949')
+      Oakland,_California: (Apr record high F^='97', date^='August 2018', Apr high F^='66.8', Apr low F^='50.3')
+    relationships:
+      - Lake_Oroville (dor:Lake_Oroville) --doo:location--> California (dor:California)
+      - Lake_Oroville (dor:Lake_Oroville) --doo:type--> Reservoir (dor:Reservoir)
+      - AC_Transit (dor:AC_Transit) --doo:headquarter--> California (dor:California)
+      - AC_Transit (dor:AC_Transit) --doo:headquarter--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+  '4':
+    attributes: {}
+    relationships:
+      - Canoe_Lake_(Lennox_and_Addington_County) (<http://dbpedia.org/resource/Canoe_Lake_(Lennox_and_Addington_County)>) --doo:location--> Ontario (dor:Ontario)
+      - Canoe_Lake_(Lennox_and_Addington_County) (<http://dbpedia.org/resource/Canoe_Lake_(Lennox_and_Addington_County)>) --doo:type--> Endorheic_basin (dor:Endorheic_basin)
+      - Brampton_Transit (dor:Brampton_Transit) --doo:headquarter--> Ontario (dor:Ontario)
+      - Brampton_Transit (dor:Brampton_Transit) --doo:headquarter--> Brampton (dor:Brampton)
+  '5':
+    attributes: {}
+    relationships:
+      - Pick_Lake_(Cochrane_District,_Ontario) (<http://dbpedia.org/resource/Pick_Lake_(Cochrane_District,_Ontario)>) --doo:location--> Ontario (dor:Ontario)
+      - Pick_Lake_(Cochrane_District,_Ontario) (<http://dbpedia.org/resource/Pick_Lake_(Cochrane_District,_Ontario)>) --doo:type--> Endorheic_basin (dor:Endorheic_basin)
+      - Brampton_Transit (dor:Brampton_Transit) --doo:headquarter--> Ontario (dor:Ontario)
+      - Brampton_Transit (dor:Brampton_Transit) --doo:headquarter--> Brampton (dor:Brampton)
+  '6':
+    attributes: {}
+    relationships:
+      - Devils_Lake_(North_Dakota) (<http://dbpedia.org/resource/Devils_Lake_(North_Dakota)>) --doo:location--> North_Dakota (dor:North_Dakota)
+      - Devils_Lake_(North_Dakota) (<http://dbpedia.org/resource/Devils_Lake_(North_Dakota)>) --doo:type--> Endorheic_basin (dor:Endorheic_basin)
+      - Cities_Area_Transit (dor:Cities_Area_Transit) --doo:headquarter--> North_Dakota (dor:North_Dakota)
+      - Cities_Area_Transit (dor:Cities_Area_Transit) --doo:headquarter--> Grand_Forks,_North_Dakota (<http://dbpedia.org/resource/Grand_Forks,_North_Dakota>)
+  '7':
+    attributes: {}
+    relationships:
+      - Little_Salt_Lake (dor:Little_Salt_Lake) --doo:location--> Utah (dor:Utah)
+      - Little_Salt_Lake (dor:Little_Salt_Lake) --doo:type--> Endorheic (dor:Endorheic)
+      - Elevated_Transit (dor:Elevated_Transit) --doo:headquarter--> Utah (dor:Utah)
+      - Elevated_Transit (dor:Elevated_Transit) --doo:headquarter--> American_Fork,_Utah (<http://dbpedia.org/resource/American_Fork,_Utah>)
+  '8':
+    attributes: {}
+    relationships:
+      - Little_Salt_Lake (dor:Little_Salt_Lake) --doo:location--> Utah (dor:Utah)
+      - Little_Salt_Lake (dor:Little_Salt_Lake) --doo:type--> Endorheic (dor:Endorheic)
+      - Elevated_Transit (dor:Elevated_Transit) --doo:headquarter--> Utah (dor:Utah)
+      - Elevated_Transit (dor:Elevated_Transit) --doo:headquarter--> United_States (dor:United_States)
+  '9':
+    attributes: {}
+    relationships:
+      - Pakowki_Lake (dor:Pakowki_Lake) --doo:location--> Alberta (dor:Alberta)
+      - Pakowki_Lake (dor:Pakowki_Lake) --doo:type--> Endorheic (dor:Endorheic)
+      - Fort_Sask_Transit (dor:Fort_Sask_Transit) --doo:headquarter--> Alberta (dor:Alberta)
+      - Fort_Sask_Transit (dor:Fort_Sask_Transit) --doo:headquarter--> Fort_Saskatchewan (dor:Fort_Saskatchewan)
+attributes:
+  Location: --abolished^ (dop:abolished)--> int | --Apr record high F^ (dop:aprRecordHighF)--> int | --date^ (dop:date)--> date | --Apr high F^ (dop:aprHighF)--> int | --mouth mountain^ (doo:mouthMountain)--> Resource | --operator^ (dop:operator)--> langString | --number of members^ (doo:numberOfMembers)--> int | --c^ (dop:c)--> langString | --affiliation^ (dop:affiliation)--> Resource | --Apr low F^ (dop:aprLowF)--> int
+  settlement: --area code^ (doo:areaCode)--> string
+subgraph_id: 465
+relationships:
+  - lake --doo:location--> settlement
+  - lake --doo:type--> river
+  - bus company --doo:headquarter--> settlement
+  - bus company --doo:headquarter--> Location

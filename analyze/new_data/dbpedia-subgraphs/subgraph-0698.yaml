@@ -1,0 +1,90 @@
+types:
+  venue: doo:Venue
+  Location: doo:Location
+  baseball team: doo:BaseballTeam
+  baseball player: doo:BaseballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Minneapolis: (float^='left', Apr high F^='56.6', source^='Weather Atlas', caption^='http://dbpedia.org/resource/Target_Center', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About')
+    relationships:
+      - Metropolitan_Stadium (dor:Metropolitan_Stadium) --doo:tenant--> Minnesota_Twins (dor:Minnesota_Twins)
+      - A._J._Achter (dor:A._J._Achter) --doo:debutTeam--> Minnesota_Twins (dor:Minnesota_Twins)
+      - Metropolitan_Stadium (dor:Metropolitan_Stadium) --doo:owner--> Minneapolis (dor:Minneapolis)
+  '2':
+    attributes:
+      Arlington,_Texas: (Apr high F^='73.9', source^='NWS Dallas/Fort Worth', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Arlington_Independent_School_District')
+      Arlington_Stadium: (closing date^='1993-10-03')
+    relationships:
+      - Arlington_Stadium (dor:Arlington_Stadium) --doo:tenant--> Texas_Rangers_(baseball) (<http://dbpedia.org/resource/Texas_Rangers_(baseball)>)
+      - A._J._Alexy (dor:A._J._Alexy) --doo:debutTeam--> Texas_Rangers_(baseball) (<http://dbpedia.org/resource/Texas_Rangers_(baseball)>)
+      - Arlington_Stadium (dor:Arlington_Stadium) --doo:owner--> Arlington,_Texas (<http://dbpedia.org/resource/Arlington,_Texas>)
+  '3':
+    attributes:
+      Charlotte_County,_Florida: (founding year^='1921', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Charlotte_Sports_Park (dor:Charlotte_Sports_Park) --doo:tenant--> Texas_Rangers_(baseball) (<http://dbpedia.org/resource/Texas_Rangers_(baseball)>)
+      - A._J._Alexy (dor:A._J._Alexy) --doo:debutTeam--> Texas_Rangers_(baseball) (<http://dbpedia.org/resource/Texas_Rangers_(baseball)>)
+      - Charlotte_Sports_Park (dor:Charlotte_Sports_Park) --doo:owner--> Charlotte_County,_Florida (<http://dbpedia.org/resource/Charlotte_County,_Florida>)
+  '4':
+    attributes:
+      Brevard_County,_Florida: (founding year^='1844', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1 (dor:United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1) --doo:tenant--> Florida_Marlins (dor:Florida_Marlins)
+      - A._J._Burnett (dor:A._J._Burnett) --doo:debutTeam--> Florida_Marlins (dor:Florida_Marlins)
+      - United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1 (dor:United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1) --doo:owner--> Brevard_County,_Florida (<http://dbpedia.org/resource/Brevard_County,_Florida>)
+  '5':
+    attributes:
+      Florida: (caption^='1840', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1 (dor:United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1) --doo:tenant--> Florida_Marlins (dor:Florida_Marlins)
+      - A._J._Burnett (dor:A._J._Burnett) --doo:debutTeam--> Florida_Marlins (dor:Florida_Marlins)
+      - United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1 (dor:United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1) --doo:owner--> Florida (dor:Florida)
+  '6':
+    attributes:
+      Brevard_County,_Florida: (founding year^='1844', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - USSSA_Space_Coast_Complex (dor:USSSA_Space_Coast_Complex) --doo:tenant--> Florida_Marlins (dor:Florida_Marlins)
+      - A._J._Burnett (dor:A._J._Burnett) --doo:debutTeam--> Florida_Marlins (dor:Florida_Marlins)
+      - USSSA_Space_Coast_Complex (dor:USSSA_Space_Coast_Complex) --doo:owner--> Brevard_County,_Florida (<http://dbpedia.org/resource/Brevard_County,_Florida>)
+  '7':
+    attributes:
+      Brevard_County,_Florida: (founding year^='1844', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1 (dor:United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1) --doo:tenant--> Washington_Nationals (dor:Washington_Nationals)
+      - A._J._Cole__A._J._Cole__1 (dor:A._J._Cole__A._J._Cole__1) --doo:debutTeam--> Washington_Nationals (dor:Washington_Nationals)
+      - United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1 (dor:United_States_Specialty_Sports_Association__USSSA_Space_Coast_Stadium_and_Complex__1) --doo:owner--> Brevard_County,_Florida (<http://dbpedia.org/resource/Brevard_County,_Florida>)
+  '8':
+    attributes:
+      Florida: (caption^='1840', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - USSSA_Space_Coast_Complex (dor:USSSA_Space_Coast_Complex) --doo:tenant--> Washington_Nationals (dor:Washington_Nationals)
+      - A._J._Cole__A._J._Cole__1 (dor:A._J._Cole__A._J._Cole__1) --doo:debutTeam--> Washington_Nationals (dor:Washington_Nationals)
+      - USSSA_Space_Coast_Complex (dor:USSSA_Space_Coast_Complex) --doo:owner--> Florida (dor:Florida)
+  '9':
+    attributes:
+      California: (float^='right', caption^='An ad to sail to California,', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - Los_Angeles_Memorial_Coliseum (dor:Los_Angeles_Memorial_Coliseum) --doo:tenant--> Los_Angeles_Dodgers (dor:Los_Angeles_Dodgers)
+      - A._J._Ellis (dor:A._J._Ellis) --doo:debutTeam--> Los_Angeles_Dodgers (dor:Los_Angeles_Dodgers)
+      - Los_Angeles_Memorial_Coliseum (dor:Los_Angeles_Memorial_Coliseum) --doo:owner--> California (dor:California)
+  '10':
+    attributes:
+      Los_Angeles_County,_California: (float^='right', caption^='Los Angeles and adjacent counties', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - Los_Angeles_Memorial_Coliseum (dor:Los_Angeles_Memorial_Coliseum) --doo:tenant--> Los_Angeles_Dodgers (dor:Los_Angeles_Dodgers)
+      - A._J._Ellis (dor:A._J._Ellis) --doo:debutTeam--> Los_Angeles_Dodgers (dor:Los_Angeles_Dodgers)
+      - Los_Angeles_Memorial_Coliseum (dor:Los_Angeles_Memorial_Coliseum) --doo:owner--> Los_Angeles_County,_California (<http://dbpedia.org/resource/Los_Angeles_County,_California>)
+attributes:
+  venue: --closing date^ (doo:closingDate)--> date | --capacity^ (dop:capacity)--> langString
+  Location: --founding year^ (doo:foundingYear)--> gYear | --float^ (dop:float)--> langString | --Apr high F^ (dop:aprHighF)--> int | --source^ (dop:source)--> langString | --designated nrhp type^ (dop:designatedNrhpType)--> date | --coroner^ (dop:coroner)--> langString | --frazioni^ (doo:frazioni)--> Resource | --age^ (dop:age)--> langString | --caption^ (dop:caption)--> langString | --line^ (dop:line)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+subgraph_id: 698
+relationships:
+  - venue --doo:tenant--> baseball team
+  - baseball player --doo:debutTeam--> baseball team
+  - venue --doo:owner--> Location

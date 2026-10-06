@@ -1,0 +1,79 @@
+types:
+  city: doo:City
+  artist: doo:Artist
+  writer: doo:Writer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      '%22King%22_Bennie_Nawahi': (birth date^='1899-07-03', death date^='1985-01-29')
+    relationships:
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --dop:birthPlace--> Honolulu (dor:Honolulu)'
+      - Potenciano_Gregorio (dor:Potenciano_Gregorio) --dop:deathPlace--> Honolulu (dor:Honolulu)
+  '2':
+    attributes:
+      '%22King%22_Bennie_Nawahi': (birth date^='1899-07-03', death date^='1985-01-29')
+    relationships:
+      - '%22King%22_Bennie_Nawahi (<http://dbpedia.org/resource/%22King%22_Bennie_Nawahi>) --dop:birthPlace--> Honolulu (dor:Honolulu)'
+      - Walter_Edwards_(director) (<http://dbpedia.org/resource/Walter_Edwards_(director)>) --dop:deathPlace--> Honolulu (dor:Honolulu)
+  '3':
+    attributes:
+      03_Greedo: (birth date^='1987-07-26')
+    relationships:
+      - 03_Greedo (dor:03_Greedo) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - A._I._Bezzerides (dor:A._I._Bezzerides) --dop:deathPlace--> Los_Angeles (dor:Los_Angeles)
+  '4':
+    attributes:
+      03_Greedo: (birth date^='1987-07-26')
+      Albert_DeMond: (active years start year^='1927')
+    relationships:
+      - 03_Greedo (dor:03_Greedo) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - Albert_DeMond (dor:Albert_DeMond) --dop:deathPlace--> Los_Angeles (dor:Los_Angeles)
+  '5':
+    attributes:
+      03_Greedo: (birth date^='1987-07-26')
+    relationships:
+      - 03_Greedo (dor:03_Greedo) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - Alicia_Ghiragossian (dor:Alicia_Ghiragossian) --dop:deathPlace--> Los_Angeles (dor:Los_Angeles)
+  '6':
+    attributes:
+      100_Kila: (birth date^='1983-05-16')
+    relationships:
+      - 100_Kila (dor:100_Kila) --dop:birthPlace--> Varna,_Bulgaria (<http://dbpedia.org/resource/Varna,_Bulgaria>)
+      - Fatma_Nudiye_Yalçı (<http://dbpedia.org/resource/Fatma_Nudiye_Yalçı>) --dop:deathPlace--> Varna,_Bulgaria (<http://dbpedia.org/resource/Varna,_Bulgaria>)
+  '7':
+    attributes:
+      3_Steps_Ahead: (birth date^='1961-01-31', death date^='2003-08-27')
+    relationships:
+      - 3_Steps_Ahead (dor:3_Steps_Ahead) --dop:birthPlace--> Rotterdam (dor:Rotterdam)
+      - Michaël_Zeeman (<http://dbpedia.org/resource/Michaël_Zeeman>) --dop:deathPlace--> Rotterdam (dor:Rotterdam)
+  '8':
+    attributes:
+      38_Spesh: (birth date^='1984-12-29')
+    relationships:
+      - 38_Spesh (dor:38_Spesh) --dop:birthPlace--> Rochester,_New_York (<http://dbpedia.org/resource/Rochester,_New_York>)
+      - Blanche_Jennings_Thompson (dor:Blanche_Jennings_Thompson) --dop:deathPlace--> Rochester,_New_York (<http://dbpedia.org/resource/Rochester,_New_York>)
+  '9':
+    attributes:
+      88-Keys: (birth date^='1976-03-05')
+    relationships:
+      - 88-Keys (dor:88-Keys) --dop:birthPlace--> New_York_City (dor:New_York_City)
+      - Alcinous_Burton_Jamison (dor:Alcinous_Burton_Jamison) --dop:deathPlace--> New_York_City (dor:New_York_City)
+  '10':
+    attributes:
+      88-Keys: (birth date^='1976-03-05')
+    relationships:
+      - 88-Keys (dor:88-Keys) --dop:birthPlace--> New_York_City (dor:New_York_City)
+      - Alfred_Grossman (dor:Alfred_Grossman) --dop:deathPlace--> New_York_City (dor:New_York_City)
+attributes:
+  city: --Apr rain days^ (dop:aprRainDays)--> double | --Aug rain days^ (dop:augRainDays)--> double | --Aug rain days^ (dop:augRainDays)--> int
+  artist: --movement^ (doo:movement)--> Resource | --birth date^ (dop:birthDate)--> int | --death date^ (dop:deathDate)--> date | --notable works^ (dop:notableWorks)--> langString | --reason^ (dop:reason)--> langString
+  writer: --active years start year^ (doo:activeYearsStartYear)--> gYear | --children^ (dop:children)--> langString | --2p^ (dop:2p)--> int | --relative^ (doo:relative)--> Resource
+subgraph_id: 11
+relationships:
+  - artist --dop:birthPlace--> city
+  - writer --dop:deathPlace--> city

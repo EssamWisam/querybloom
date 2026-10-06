@@ -1,0 +1,144 @@
+types:
+  airline: doo:Airline
+  country: doo:Country
+  Location: doo:Location
+  military unit: doo:MilitaryUnit
+  military structure: doo:MilitaryStructure
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Philippines: (image^='Ferdinand R. Marcos Jr .jpg')
+      United_States: (Wikipage revision ID^='1124529724')
+    relationships:
+      - 4th_Composite_Group (dor:4th_Composite_Group) --doo:country--> United_States (dor:United_States)
+      - 4th_Composite_Group (dor:4th_Composite_Group) --dop:garrison--> Nichols_Field (dor:Nichols_Field)
+      - Nichols_Field (dor:Nichols_Field) --doo:location--> Philippines (dor:Philippines)
+      - 2GO_(cargo_airline) (<http://dbpedia.org/resource/2GO_(cargo_airline)>) --doo:headquarter--> Philippines (dor:Philippines)
+  '2':
+    attributes:
+      United_Kingdom: (Wikipage revision ID^='1124864494')
+    relationships:
+      - No._133_Wing_RAF (dor:No._133_Wing_RAF) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - No._133_Wing_RAF (dor:No._133_Wing_RAF) --dop:garrison--> RAF_Andrews_Field (dor:RAF_Andrews_Field)
+      - RAF_Andrews_Field (dor:RAF_Andrews_Field) --doo:location--> Essex (dor:Essex)
+      - AB_Airlines (dor:AB_Airlines) --doo:headquarter--> Essex (dor:Essex)
+  '3':
+    attributes:
+      United_States: (Wikipage revision ID^='1124529724')
+    relationships:
+      - 4th_Fighter_Group (dor:4th_Fighter_Group) --doo:country--> United_States (dor:United_States)
+      - 4th_Fighter_Group (dor:4th_Fighter_Group) --dop:garrison--> RAF_Debden (dor:RAF_Debden)
+      - RAF_Debden (dor:RAF_Debden) --doo:location--> Essex (dor:Essex)
+      - AB_Airlines (dor:AB_Airlines) --doo:headquarter--> Essex (dor:Essex)
+  '4':
+    attributes:
+      United_Kingdom: (Wikipage revision ID^='1124864494')
+    relationships:
+      - 6th_Anti-Aircraft_Brigade_(United_Kingdom) (<http://dbpedia.org/resource/6th_Anti-Aircraft_Brigade_(United_Kingdom)>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - 6th_Anti-Aircraft_Brigade_(United_Kingdom) (<http://dbpedia.org/resource/6th_Anti-Aircraft_Brigade_(United_Kingdom)>) --dop:garrison--> RAF_Debden (dor:RAF_Debden)
+      - RAF_Debden (dor:RAF_Debden) --doo:location--> Essex (dor:Essex)
+      - AB_Airlines (dor:AB_Airlines) --doo:headquarter--> Essex (dor:Essex)
+  '5':
+    attributes:
+      Australia: (image^='Anthony Albanese portrait .jpg', coordinates^='', Wikipage revision ID^='1122728853')
+    relationships:
+      - Australian_Army_Band_Sydney (dor:Australian_Army_Band_Sydney) --doo:country--> Australia (dor:Australia)
+      - Australian_Army_Band_Sydney (dor:Australian_Army_Band_Sydney) --dop:garrison--> Victoria_Barracks,_Sydney (<http://dbpedia.org/resource/Victoria_Barracks,_Sydney>)
+      - Victoria_Barracks,_Sydney (<http://dbpedia.org/resource/Victoria_Barracks,_Sydney>) --doo:location--> Australia (dor:Australia)
+      - Aboriginal_Air_Services (dor:Aboriginal_Air_Services) --doo:headquarter--> Australia (dor:Australia)
+  '6':
+    attributes:
+      Ireland: (Wikipage revision ID^='1124802777')
+      Republic_of_Ireland: (image^='Fumio Kishida and Micheál Martin at the Prime Minister''s Office in 2022  .jpg')
+    relationships:
+      - 2nd_Brigade_(Ireland) (<http://dbpedia.org/resource/2nd_Brigade_(Ireland)>) --doo:country--> Ireland (dor:Ireland)
+      - 2nd_Brigade_(Ireland) (<http://dbpedia.org/resource/2nd_Brigade_(Ireland)>) --dop:garrison--> Cathal_Brugha_Barracks (dor:Cathal_Brugha_Barracks)
+      - Cathal_Brugha_Barracks (dor:Cathal_Brugha_Barracks) --doo:location--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - Aer_Lingus_Regional (dor:Aer_Lingus_Regional) --doo:headquarter--> Republic_of_Ireland (dor:Republic_of_Ireland)
+  '7':
+    attributes:
+      Ireland: (Wikipage revision ID^='1124802777')
+      Republic_of_Ireland: (image^='Fumio Kishida and Micheál Martin at the Prime Minister''s Office in 2022  .jpg')
+    relationships:
+      - 62_Res_CIS_Company (dor:62_Res_CIS_Company) --doo:country--> Ireland (dor:Ireland)
+      - 62_Res_CIS_Company (dor:62_Res_CIS_Company) --dop:garrison--> Cathal_Brugha_Barracks (dor:Cathal_Brugha_Barracks)
+      - Cathal_Brugha_Barracks (dor:Cathal_Brugha_Barracks) --doo:location--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - Aer_Lingus_Regional (dor:Aer_Lingus_Regional) --doo:headquarter--> Republic_of_Ireland (dor:Republic_of_Ireland)
+  '8':
+    attributes:
+      Ireland: (Wikipage revision ID^='1124802777')
+      Republic_of_Ireland: (image^='Fumio Kishida and Micheál Martin at the Prime Minister''s Office in 2022  .jpg')
+    relationships:
+      - 62_Reserve_Cavalry_Squadron (dor:62_Reserve_Cavalry_Squadron) --doo:country--> Ireland (dor:Ireland)
+      - 62_Reserve_Cavalry_Squadron (dor:62_Reserve_Cavalry_Squadron) --dop:garrison--> Cathal_Brugha_Barracks (dor:Cathal_Brugha_Barracks)
+      - Cathal_Brugha_Barracks (dor:Cathal_Brugha_Barracks) --doo:location--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - Aer_Lingus_Regional (dor:Aer_Lingus_Regional) --doo:headquarter--> Republic_of_Ireland (dor:Republic_of_Ireland)
+  '9':
+    attributes:
+      United_Kingdom: (Wikipage revision ID^='1124864494')
+    relationships:
+      - 3rd_Infantry_Brigade_(United_Kingdom) (<http://dbpedia.org/resource/3rd_Infantry_Brigade_(United_Kingdom)>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - 3rd_Infantry_Brigade_(United_Kingdom) (<http://dbpedia.org/resource/3rd_Infantry_Brigade_(United_Kingdom)>) --dop:garrison--> Drumadd_Barracks (dor:Drumadd_Barracks)
+      - Drumadd_Barracks (dor:Drumadd_Barracks) --doo:location--> Northern_Ireland (dor:Northern_Ireland)
+      - Aer_Lingus_UK (dor:Aer_Lingus_UK) --doo:headquarter--> Northern_Ireland (dor:Northern_Ireland)
+  '10':
+    attributes:
+      France: (image^='EMIA Bastille Day 2007.jpg', Wikipage revision ID^='1124585815')
+    relationships:
+      - Foreign_Legion_Recruiting_Group (dor:Foreign_Legion_Recruiting_Group) --doo:country--> France (dor:France)
+      - Foreign_Legion_Recruiting_Group (dor:Foreign_Legion_Recruiting_Group) --dop:garrison--> Fort_de_Nogent (dor:Fort_de_Nogent)
+      - Fort_de_Nogent (dor:Fort_de_Nogent) --doo:location--> France (dor:France)
+      - Aeris_(airline) (<http://dbpedia.org/resource/Aeris_(airline)>) --doo:headquarter--> France (dor:France)
+qa_result:
+  status: completed
+  cost_usd: 0.415242
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.05499240000000001
+        total_tokens: 4750
+        prompt_tokens: 2222
+        completion_tokens: 2528
+      generate:
+        cost_usd: 0.09754760000000001
+        total_tokens: 8781
+        prompt_tokens: 4725
+        completion_tokens: 4056
+      verify_1:
+        cost_usd: 0.05830700000000001
+        total_tokens: 6934
+        prompt_tokens: 5358
+        completion_tokens: 1576
+      verify_2:
+        cost_usd: 0.033127000000000004
+        total_tokens: 5489
+        prompt_tokens: 5110
+        completion_tokens: 379
+      complexity:
+        cost_usd: 0.171268
+        total_tokens: 13542
+        prompt_tokens: 6066
+        completion_tokens: 7476
+    total_tokens: 39496
+    prompt_tokens: 23481
+    total_cost_usd: 0.41524200000000006
+    completion_tokens: 16015
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  country: --image^ (dop:image)--> langString
+  Location: --coordinates^ (dop:coordinates)--> int | --bot^ (dop:bot)--> langString | --certain^ (dop:certain)--> langString | --data^ (dop:data)--> double | --area^ (dop:area)--> squareKilometre | --leader^ (dop:leader)--> Resource | --group^ (dop:group)--> langString | --Apr record high F^ (dop:aprRecordHighF)--> int | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int
+  military unit: --anniversaries^ (dop:anniversaries)--> gMonthDay | --1a^ (dop:1a)--> langString
+  military structure: --builder^ (doo:builder)--> Resource
+subgraph_id: 284
+relationships:
+  - military unit --doo:country--> Location
+  - military unit --dop:garrison--> military structure
+  - military structure --doo:location--> country
+  - airline --doo:headquarter--> country

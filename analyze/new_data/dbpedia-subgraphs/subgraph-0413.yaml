@@ -1,0 +1,111 @@
+types:
+  colour: doo:Colour
+  school: doo:School
+  country: doo:Country
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Jamaica: (capital^='http://dbpedia.org/resource/Kingston,_Jamaica', url^='https://web.archive.org/web/20110429223121/http:/www.cabinet.gov.jm/')
+      Oberlin_High_School,_Jamaica: (address^='Lawrence Tavern')
+      Anglo-Spanish_War_(1654–1660): (commander^='----Caribbean:')
+    relationships:
+      - Oberlin_High_School,_Jamaica (<http://dbpedia.org/resource/Oberlin_High_School,_Jamaica>) --dop:country--> Jamaica (dor:Jamaica)
+      - Oberlin_High_School,_Jamaica (<http://dbpedia.org/resource/Oberlin_High_School,_Jamaica>) --doo:colour--> Burgundy_(color) (<http://dbpedia.org/resource/Burgundy_(color)>)
+      - Anglo-Spanish_War_(1654–1660) (<http://dbpedia.org/resource/Anglo-Spanish_War_(1654–1660)>) --doo:territory--> Jamaica (dor:Jamaica)
+  '2':
+    attributes:
+      Jamaica: (capital^='http://dbpedia.org/resource/Kingston,_Jamaica', url^='https://web.archive.org/web/20110429223121/http:/www.cabinet.gov.jm/')
+      Oberlin_High_School,_Jamaica: (address^='Lawrence Tavern')
+      Anglo-Spanish_War_(1654–1660): (commander^='----Caribbean:')
+    relationships:
+      - Oberlin_High_School,_Jamaica (<http://dbpedia.org/resource/Oberlin_High_School,_Jamaica>) --dop:country--> Jamaica (dor:Jamaica)
+      - Oberlin_High_School,_Jamaica (<http://dbpedia.org/resource/Oberlin_High_School,_Jamaica>) --doo:colour--> Green (dor:Green)
+      - Anglo-Spanish_War_(1654–1660) (<http://dbpedia.org/resource/Anglo-Spanish_War_(1654–1660)>) --doo:territory--> Jamaica (dor:Jamaica)
+  '3':
+    attributes:
+      Jamaica: (capital^='http://dbpedia.org/resource/Kingston,_Jamaica', url^='https://web.archive.org/web/20110429223121/http:/www.cabinet.gov.jm/')
+      Queen's_School,_Jamaica: (address^='4 - 10 Central Avenue')
+      Anglo-Spanish_War_(1654–1660): (commander^='----Caribbean:')
+    relationships:
+      - Queen's_School,_Jamaica (<http://dbpedia.org/resource/Queen's_School,_Jamaica>) --dop:country--> Jamaica (dor:Jamaica)
+      - Queen's_School,_Jamaica (<http://dbpedia.org/resource/Queen's_School,_Jamaica>) --doo:colour--> Gray (dor:Gray)
+      - Anglo-Spanish_War_(1654–1660) (<http://dbpedia.org/resource/Anglo-Spanish_War_(1654–1660)>) --doo:territory--> Jamaica (dor:Jamaica)
+  '4':
+    attributes:
+      Pakistan: (capital^='http://dbpedia.org/resource/Islamabad')
+      Battle_of_Chamb: |-
+        (commander^='Maj. Gen. Iftikhar Janjua †
+         Wing Commander S A Changezi')
+      Divisional_Public_School_Faisalabad: (area^='51.0')
+    relationships:
+      - Divisional_Public_School_Faisalabad (dor:Divisional_Public_School_Faisalabad) --dop:country--> Pakistan (dor:Pakistan)
+      - Divisional_Public_School_Faisalabad (dor:Divisional_Public_School_Faisalabad) --doo:colour--> Navy_blue (dor:Navy_blue)
+      - Battle_of_Chamb (dor:Battle_of_Chamb) --doo:territory--> Pakistan (dor:Pakistan)
+  '5':
+    attributes:
+      Pakistan: (capital^='http://dbpedia.org/resource/Islamabad')
+      Battle_of_Chamb: |-
+        (commander^='Maj. Gen. Iftikhar Janjua †
+         Wing Commander S A Changezi')
+      Divisional_Public_School_Faisalabad: (area^='51.0')
+    relationships:
+      - Divisional_Public_School_Faisalabad (dor:Divisional_Public_School_Faisalabad) --dop:country--> Pakistan (dor:Pakistan)
+      - Divisional_Public_School_Faisalabad (dor:Divisional_Public_School_Faisalabad) --doo:colour--> White (dor:White)
+      - Battle_of_Chamb (dor:Battle_of_Chamb) --doo:territory--> Pakistan (dor:Pakistan)
+  '6':
+    attributes:
+      Pakistan: (capital^='http://dbpedia.org/resource/Islamabad')
+      Battle_of_Chamb: |-
+        (commander^='Maj. Gen. Iftikhar Janjua †
+         Wing Commander S A Changezi')
+    relationships:
+      - Hira_Schools_&_Colleges (<http://dbpedia.org/resource/Hira_Schools_&_Colleges>) --dop:country--> Pakistan (dor:Pakistan)
+      - Hira_Schools_&_Colleges (<http://dbpedia.org/resource/Hira_Schools_&_Colleges>) --doo:colour--> Maroon_(color) (<http://dbpedia.org/resource/Maroon_(color)>)
+      - Battle_of_Chamb (dor:Battle_of_Chamb) --doo:territory--> Pakistan (dor:Pakistan)
+  '7':
+    attributes:
+      Oman: (capital^='http://dbpedia.org/resource/Muscat,_Oman')
+      Buraimi_dispute: (commander^='23')
+    relationships:
+      - Pakistan_School_Salalah (dor:Pakistan_School_Salalah) --dop:country--> Oman (dor:Oman)
+      - Pakistan_School_Salalah (dor:Pakistan_School_Salalah) --doo:colour--> Blue (dor:Blue)
+      - Buraimi_dispute (dor:Buraimi_dispute) --doo:territory--> Oman (dor:Oman)
+  '8':
+    attributes:
+      Oman: (capital^='http://dbpedia.org/resource/Muscat,_Oman')
+      Buraimi_dispute: (commander^='23')
+    relationships:
+      - Pakistan_School_Salalah (dor:Pakistan_School_Salalah) --dop:country--> Oman (dor:Oman)
+      - Pakistan_School_Salalah (dor:Pakistan_School_Salalah) --doo:colour--> Green (dor:Green)
+      - Buraimi_dispute (dor:Buraimi_dispute) --doo:territory--> Oman (dor:Oman)
+  '9':
+    attributes:
+      Oman: (capital^='http://dbpedia.org/resource/Muscat,_Oman')
+      Buraimi_dispute: (commander^='23')
+    relationships:
+      - Pakistan_School_Salalah (dor:Pakistan_School_Salalah) --dop:country--> Oman (dor:Oman)
+      - Pakistan_School_Salalah (dor:Pakistan_School_Salalah) --doo:colour--> Red (dor:Red)
+      - Buraimi_dispute (dor:Buraimi_dispute) --doo:territory--> Oman (dor:Oman)
+  '10':
+    attributes:
+      China: (capital^='http://dbpedia.org/resource/Beijing')
+      Chinese_Civil_War: (commander^='')
+    relationships:
+      - Affiliated_High_School_of_Peking_University (dor:Affiliated_High_School_of_Peking_University) --dop:country--> China (dor:China)
+      - Affiliated_High_School_of_Peking_University (dor:Affiliated_High_School_of_Peking_University) --doo:colour--> Blue (dor:Blue)
+      - Chinese_Civil_War (dor:Chinese_Civil_War) --doo:territory--> China (dor:China)
+attributes:
+  school: --address^ (doo:address)--> langString | --area^ (dop:area)--> langString | --closed (dop:closed)--> langString | --wordnet_type (dop:wordnet_type)--> Resource
+  country: --capital^ (doo:capital)--> Resource | --url^ (dop:url)--> Resource | --c^ (dop:c)--> langString
+  military conflict: --source^ (dop:source)--> langString | --commander^ (dop:commander)--> int
+subgraph_id: 413
+relationships:
+  - school --dop:country--> country
+  - school --doo:colour--> colour
+  - military conflict --doo:territory--> country

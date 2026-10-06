@@ -1,0 +1,101 @@
+types:
+  dam: doo:Dam
+  country: doo:Country
+  Election: doo:Election
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Henry_Massey_Rector: (resting place^='http://dbpedia.org/resource/Little_Rock,_Arkansas')
+    relationships:
+      - 1862_Arkansas_gubernatorial_election (dor:1862_Arkansas_gubernatorial_election) --dop:beforeElection--> Henry_Massey_Rector (dor:Henry_Massey_Rector)
+      - Henry_Massey_Rector (dor:Henry_Massey_Rector) --doo:restingPlace--> United_States (dor:United_States)
+      - Aberdeen_Lake_(Mississippi) (<http://dbpedia.org/resource/Aberdeen_Lake_(Mississippi)>) --doo:location--> United_States (dor:United_States)
+      - Elias_W._Rector (dor:Elias_W._Rector) --dop:father--> Henry_Massey_Rector (dor:Henry_Massey_Rector)
+  '2':
+    attributes:
+      Henry_Massey_Rector: (resting place^='http://dbpedia.org/resource/Little_Rock,_Arkansas')
+    relationships:
+      - 1862_Arkansas_gubernatorial_election (dor:1862_Arkansas_gubernatorial_election) --dop:beforeElection--> Henry_Massey_Rector (dor:Henry_Massey_Rector)
+      - Henry_Massey_Rector (dor:Henry_Massey_Rector) --doo:restingPlace--> United_States (dor:United_States)
+      - Addicks_Reservoir (dor:Addicks_Reservoir) --doo:location--> United_States (dor:United_States)
+      - Elias_W._Rector (dor:Elias_W._Rector) --dop:father--> Henry_Massey_Rector (dor:Henry_Massey_Rector)
+  '3':
+    attributes:
+      Hafez_al-Assad: (father^='http://dbpedia.org/resource/Ali_Sulayman_al-Assad', width^='25', resting place^='http://dbpedia.org/resource/Qardaha')
+      Bashar_al-Assad: (title^='Secretary of the Syrian Regional Command of the Arab Socialist Ba''ath Party')
+    relationships:
+      - 1978_Syrian_presidential_election (dor:1978_Syrian_presidential_election) --dop:beforeElection--> Hafez_al-Assad (dor:Hafez_al-Assad)
+      - Hafez_al-Assad (dor:Hafez_al-Assad) --doo:restingPlace--> Syria (dor:Syria)
+      - Al-Wehda_Dam (dor:Al-Wehda_Dam) --doo:location--> Syria (dor:Syria)
+      - Bashar_al-Assad (dor:Bashar_al-Assad) --dop:father--> Hafez_al-Assad (dor:Hafez_al-Assad)
+  '4':
+    attributes:
+      Hafez_al-Assad: (father^='http://dbpedia.org/resource/Ali_Sulayman_al-Assad', width^='25', resting place^='http://dbpedia.org/resource/Qardaha')
+      Bashar_al-Assad: (title^='Secretary of the Syrian Regional Command of the Arab Socialist Ba''ath Party')
+    relationships:
+      - 1985_Syrian_presidential_election (dor:1985_Syrian_presidential_election) --dop:beforeElection--> Hafez_al-Assad (dor:Hafez_al-Assad)
+      - Hafez_al-Assad (dor:Hafez_al-Assad) --doo:restingPlace--> Syria (dor:Syria)
+      - Al-Wehda_Dam (dor:Al-Wehda_Dam) --doo:location--> Syria (dor:Syria)
+      - Bashar_al-Assad (dor:Bashar_al-Assad) --dop:father--> Hafez_al-Assad (dor:Hafez_al-Assad)
+  '5':
+    attributes:
+      Hafez_al-Assad: (father^='http://dbpedia.org/resource/Ali_Sulayman_al-Assad', width^='25', resting place^='http://dbpedia.org/resource/Qardaha')
+      Bashar_al-Assad: (title^='Secretary of the Syrian Regional Command of the Arab Socialist Ba''ath Party')
+    relationships:
+      - 1991_Syrian_presidential_election (dor:1991_Syrian_presidential_election) --dop:beforeElection--> Hafez_al-Assad (dor:Hafez_al-Assad)
+      - Hafez_al-Assad (dor:Hafez_al-Assad) --doo:restingPlace--> Syria (dor:Syria)
+      - Al-Wehda_Dam (dor:Al-Wehda_Dam) --doo:location--> Syria (dor:Syria)
+      - Bashar_al-Assad (dor:Bashar_al-Assad) --dop:father--> Hafez_al-Assad (dor:Hafez_al-Assad)
+  '6':
+    attributes:
+      Henry_Massey_Rector: (resting place^='http://dbpedia.org/resource/Little_Rock,_Arkansas')
+    relationships:
+      - 1862_Arkansas_gubernatorial_election (dor:1862_Arkansas_gubernatorial_election) --dop:beforeElection--> Henry_Massey_Rector (dor:Henry_Massey_Rector)
+      - Henry_Massey_Rector (dor:Henry_Massey_Rector) --doo:restingPlace--> United_States (dor:United_States)
+      - Alder_Lake_(Washington) (<http://dbpedia.org/resource/Alder_Lake_(Washington)>) --doo:location--> United_States (dor:United_States)
+      - Elias_W._Rector (dor:Elias_W._Rector) --dop:father--> Henry_Massey_Rector (dor:Henry_Massey_Rector)
+  '7':
+    attributes:
+      Taiwan: (alt^='A circular logo representing a white sun on a blue background. The sun is a circle surrounded by twelve triangles.')
+      Chiang_Ching-kuo: (resting place^='http://dbpedia.org/resource/Daxi_District')
+    relationships:
+      - 1984_Taiwanese_presidential_election (dor:1984_Taiwanese_presidential_election) --dop:beforeElection--> Chiang_Ching-kuo (dor:Chiang_Ching-kuo)
+      - Chiang_Ching-kuo (dor:Chiang_Ching-kuo) --doo:restingPlace--> Taiwan (dor:Taiwan)
+      - Baihe_Reservoir (dor:Baihe_Reservoir) --doo:location--> Taiwan (dor:Taiwan)
+      - Winston_Chang (dor:Winston_Chang) --dop:father--> Chiang_Ching-kuo (dor:Chiang_Ching-kuo)
+  '8':
+    attributes:
+      Taiwan: (alt^='A circular logo representing a white sun on a blue background. The sun is a circle surrounded by twelve triangles.')
+      Chiang_Ching-kuo: (resting place^='http://dbpedia.org/resource/Daxi_District')
+    relationships:
+      - 1984_Taiwanese_presidential_election (dor:1984_Taiwanese_presidential_election) --dop:beforeElection--> Chiang_Ching-kuo (dor:Chiang_Ching-kuo)
+      - Chiang_Ching-kuo (dor:Chiang_Ching-kuo) --doo:restingPlace--> Taiwan (dor:Taiwan)
+      - Baoshan_Dam (dor:Baoshan_Dam) --doo:location--> Taiwan (dor:Taiwan)
+      - Winston_Chang (dor:Winston_Chang) --dop:father--> Chiang_Ching-kuo (dor:Chiang_Ching-kuo)
+  '9':
+    attributes:
+      Taiwan: (alt^='A circular logo representing a white sun on a blue background. The sun is a circle surrounded by twelve triangles.')
+      Chiang_Ching-kuo: (resting place^='http://dbpedia.org/resource/Daxi_District')
+    relationships:
+      - 1984_Taiwanese_presidential_election (dor:1984_Taiwanese_presidential_election) --dop:beforeElection--> Chiang_Ching-kuo (dor:Chiang_Ching-kuo)
+      - Chiang_Ching-kuo (dor:Chiang_Ching-kuo) --doo:restingPlace--> Taiwan (dor:Taiwan)
+      - Baoshan_Second_Dam (dor:Baoshan_Second_Dam) --doo:location--> Taiwan (dor:Taiwan)
+      - Winston_Chang (dor:Winston_Chang) --dop:father--> Chiang_Ching-kuo (dor:Chiang_Ching-kuo)
+attributes:
+  country: --group^ (dop:group)--> langString | --Aug high C^ (dop:augHighC)--> double | --alt^ (dop:alt)--> langString
+  Election: --5blank^ (dop:5blank)--> langString | --4data^ (dop:4data)--> perCent
+  politician: --after^ (dop:after)--> Resource | --father^ (dop:father)--> Resource | --width^ (dop:width)--> int | --resting place^ (doo:restingPlace)--> Resource | --1p^ (dop:1p)--> int
+  office holder: --title^ (dop:title)--> Resource | --2pp^ (dop:2pp)--> int | --quote^ (dop:quote)--> langString
+subgraph_id: 104
+relationships:
+  - Election --dop:beforeElection--> politician
+  - politician --doo:restingPlace--> country
+  - dam --doo:location--> country
+  - office holder --dop:father--> politician

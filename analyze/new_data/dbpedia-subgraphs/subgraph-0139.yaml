@@ -1,0 +1,83 @@
+types:
+  country: doo:Country
+  person function: doo:PersonFunction
+  military service: doo:MilitaryService
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Jordanian_annexation_of_the_West_Bank: (religion^='http://dbpedia.org/resource/Christians')
+    relationships:
+      - Abdul_Jabbar_Shanshal__MilitaryService__1 (dor:Abdul_Jabbar_Shanshal__MilitaryService__1) --doo:militaryRank--> General_officer (dor:General_officer)
+      - Abdul_Jabbar_Shanshal__MilitaryService__1 (dor:Abdul_Jabbar_Shanshal__MilitaryService__1) --doo:battle--> 1948_Arab–Israeli_War (<http://dbpedia.org/resource/1948_Arab–Israeli_War>)
+      - 1948_Arab–Israeli_War (<http://dbpedia.org/resource/1948_Arab–Israeli_War>) --doo:territory--> Jordanian_annexation_of_the_West_Bank (dor:Jordanian_annexation_of_the_West_Bank)
+  '2':
+    attributes: {}
+    relationships:
+      - Abdul_Jabbar_Shanshal__MilitaryService__1 (dor:Abdul_Jabbar_Shanshal__MilitaryService__1) --doo:militaryRank--> General_officer (dor:General_officer)
+      - Abdul_Jabbar_Shanshal__MilitaryService__1 (dor:Abdul_Jabbar_Shanshal__MilitaryService__1) --doo:battle--> 1948_Arab–Israeli_War (<http://dbpedia.org/resource/1948_Arab–Israeli_War>)
+      - 1948_Arab–Israeli_War (<http://dbpedia.org/resource/1948_Arab–Israeli_War>) --doo:territory--> Occupation_of_the_Gaza_Strip_by_Egypt (dor:Occupation_of_the_Gaza_Strip_by_Egypt)
+  '3':
+    attributes:
+      Jordanian_annexation_of_the_West_Bank: (religion^='http://dbpedia.org/resource/Christians')
+    relationships:
+      - Gamal_Abdel_Nasser__MilitaryService__1 (dor:Gamal_Abdel_Nasser__MilitaryService__1) --doo:militaryRank--> Lieutenant_colonel (dor:Lieutenant_colonel)
+      - Gamal_Abdel_Nasser__MilitaryService__1 (dor:Gamal_Abdel_Nasser__MilitaryService__1) --doo:battle--> 1948_Arab–Israeli_War (<http://dbpedia.org/resource/1948_Arab–Israeli_War>)
+      - 1948_Arab–Israeli_War (<http://dbpedia.org/resource/1948_Arab–Israeli_War>) --doo:territory--> Jordanian_annexation_of_the_West_Bank (dor:Jordanian_annexation_of_the_West_Bank)
+  '4':
+    attributes: {}
+    relationships:
+      - A._A._Ames__MilitaryService__1 (dor:A._A._Ames__MilitaryService__1) --doo:militaryRank--> Major_(United_States) (<http://dbpedia.org/resource/Major_(United_States)>)
+      - A._A._Ames__MilitaryService__1 (dor:A._A._Ames__MilitaryService__1) --doo:battle--> American_Civil_War (dor:American_Civil_War)
+      - American_Civil_War (dor:American_Civil_War) --doo:territory--> Confederate_States_of_America (dor:Confederate_States_of_America)
+  '5':
+    attributes: {}
+    relationships:
+      - Absalom_Koiner__MilitaryService__1 (dor:Absalom_Koiner__MilitaryService__1) --doo:militaryRank--> Lieutenant_colonel (dor:Lieutenant_colonel)
+      - Absalom_Koiner__MilitaryService__1 (dor:Absalom_Koiner__MilitaryService__1) --doo:battle--> American_Civil_War (dor:American_Civil_War)
+      - American_Civil_War (dor:American_Civil_War) --doo:territory--> Confederate_States_of_America (dor:Confederate_States_of_America)
+  '6':
+    attributes:
+      Confederate_States_of_America: (alt^='CSA G. Washington stamp')
+    relationships:
+      - Albert_C._Thompson__MilitaryService__1 (dor:Albert_C._Thompson__MilitaryService__1) --doo:militaryRank--> Captain_(Union_Army) (<http://dbpedia.org/resource/Captain_(Union_Army)>)
+      - Albert_C._Thompson__MilitaryService__1 (dor:Albert_C._Thompson__MilitaryService__1) --doo:battle--> American_Civil_War (dor:American_Civil_War)
+      - American_Civil_War (dor:American_Civil_War) --doo:territory--> Confederate_States_of_America (dor:Confederate_States_of_America)
+  '7':
+    attributes: {}
+    relationships:
+      - Josiah_Martin__MilitaryService__1 (dor:Josiah_Martin__MilitaryService__1) --doo:militaryRank--> Lieutenant_colonel (dor:Lieutenant_colonel)
+      - Josiah_Martin__MilitaryService__1 (dor:Josiah_Martin__MilitaryService__1) --doo:battle--> Anglo-Spanish_War_(1762–1763) (<http://dbpedia.org/resource/Anglo-Spanish_War_(1762–1763)>)
+      - Anglo-Spanish_War_(1762–1763) (<http://dbpedia.org/resource/Anglo-Spanish_War_(1762–1763)>) --doo:territory--> Louisiana_(New_France) (<http://dbpedia.org/resource/Louisiana_(New_France)>)
+  '8':
+    attributes: {}
+    relationships:
+      - Mohammad_Abdul_Jalil__MilitaryService__1 (dor:Mohammad_Abdul_Jalil__MilitaryService__1) --doo:militaryRank--> Major (dor:Major)
+      - Mohammad_Abdul_Jalil__MilitaryService__1 (dor:Mohammad_Abdul_Jalil__MilitaryService__1) --doo:battle--> Bangladesh_Liberation_War (dor:Bangladesh_Liberation_War)
+      - Bangladesh_Liberation_War (dor:Bangladesh_Liberation_War) --doo:territory--> East_Pakistan (dor:East_Pakistan)
+  '9':
+    attributes: {}
+    relationships:
+      - Yahya_Khan__MilitaryService__1 (dor:Yahya_Khan__MilitaryService__1) --doo:militaryRank--> General_officer (dor:General_officer)
+      - Yahya_Khan__MilitaryService__1 (dor:Yahya_Khan__MilitaryService__1) --doo:battle--> Bangladesh_Liberation_War (dor:Bangladesh_Liberation_War)
+      - Bangladesh_Liberation_War (dor:Bangladesh_Liberation_War) --doo:territory--> East_Pakistan (dor:East_Pakistan)
+  '10':
+    attributes: {}
+    relationships:
+      - Imagawa_Yoshimoto__MilitaryService__1 (dor:Imagawa_Yoshimoto__MilitaryService__1) --doo:militaryRank--> Daimyo (dor:Daimyo)
+      - Imagawa_Yoshimoto__MilitaryService__1 (dor:Imagawa_Yoshimoto__MilitaryService__1) --doo:battle--> Battle_of_Muraki_Castle (dor:Battle_of_Muraki_Castle)
+      - Battle_of_Muraki_Castle (dor:Battle_of_Muraki_Castle) --doo:territory--> Owari_Province (dor:Owari_Province)
+attributes:
+  country: --religion^ (doo:religion)--> Resource | --alt^ (dop:alt)--> langString | --2a^ (dop:2a)--> langString | --city^ (dop:city)--> langString
+  person function: --2p^ (dop:2p)--> int | --footer^ (dop:footer)--> langString | --last^ (dop:last)--> langString
+  military conflict: --1p^ (dop:1p)--> int | --border^ (dop:border)--> langString | --float^ (dop:float)--> langString | --1y (dop:1y)--> int
+subgraph_id: 139
+relationships:
+  - military service --doo:militaryRank--> person function
+  - military service --doo:battle--> military conflict
+  - military conflict --doo:territory--> country

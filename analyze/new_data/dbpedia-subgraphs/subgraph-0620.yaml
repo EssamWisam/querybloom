@@ -1,0 +1,102 @@
+types:
+  actor: doo:Actor
+  athlete: doo:Athlete
+  country: doo:Country
+  person function: doo:PersonFunction
+  fictional character: doo:FictionalCharacter
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_Kingdom: (government type^='http://dbpedia.org/resource/Constitutional_monarchy', capital^='http://dbpedia.org/resource/London')
+      Horatio_Hornblower: (nickname^='Horny')
+    relationships:
+      - David_Buck (dor:David_Buck) --doo:stateOfOrigin--> United_Kingdom (dor:United_Kingdom)
+      - Abdi_Jama (dor:Abdi_Jama) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - David_Buck (dor:David_Buck) --doo:occupation--> Actor (dor:Actor)
+      - Horatio_Hornblower (dor:Horatio_Hornblower) --doo:portrayer--> David_Buck (dor:David_Buck)
+  '2':
+    attributes:
+      United_Kingdom: (government type^='http://dbpedia.org/resource/Constitutional_monarchy', capital^='http://dbpedia.org/resource/London')
+      Horatio_Hornblower: (nickname^='Horny')
+    relationships:
+      - David_Buck (dor:David_Buck) --doo:stateOfOrigin--> United_Kingdom (dor:United_Kingdom)
+      - Abdi_Jama (dor:Abdi_Jama) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - David_Buck (dor:David_Buck) --doo:occupation--> David_Buck__PersonFunction__1 (dor:David_Buck__PersonFunction__1)
+      - Horatio_Hornblower (dor:Horatio_Hornblower) --doo:portrayer--> David_Buck (dor:David_Buck)
+  '3':
+    attributes:
+      United_Kingdom: (government type^='http://dbpedia.org/resource/Constitutional_monarchy', capital^='http://dbpedia.org/resource/London')
+      Horatio_Hornblower: (nickname^='Horny')
+    relationships:
+      - David_Buck (dor:David_Buck) --doo:stateOfOrigin--> United_Kingdom (dor:United_Kingdom)
+      - Ada_Smith_(gymnast) (<http://dbpedia.org/resource/Ada_Smith_(gymnast)>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - David_Buck (dor:David_Buck) --doo:occupation--> Actor (dor:Actor)
+      - Horatio_Hornblower (dor:Horatio_Hornblower) --doo:portrayer--> David_Buck (dor:David_Buck)
+  '4':
+    attributes: {}
+    relationships:
+      - Élizabeth_Bourgine (<http://dbpedia.org/resource/Élizabeth_Bourgine>) --doo:stateOfOrigin--> French_people (dor:French_people)
+      - Adrien_Morillas (dor:Adrien_Morillas) --doo:nationality--> French_people (dor:French_people)
+      - Élizabeth_Bourgine (<http://dbpedia.org/resource/Élizabeth_Bourgine>) --doo:occupation--> Élizabeth_Bourgine__PersonFunction__1 (<http://dbpedia.org/resource/Élizabeth_Bourgine__PersonFunction__1>)
+      - List_of_Death_in_Paradise_characters__Catherine_Bordey__1 (dor:List_of_Death_in_Paradise_characters__Catherine_Bordey__1) --doo:portrayer--> Élizabeth_Bourgine (<http://dbpedia.org/resource/Élizabeth_Bourgine>)
+  '5':
+    attributes: {}
+    relationships:
+      - Élizabeth_Bourgine (<http://dbpedia.org/resource/Élizabeth_Bourgine>) --doo:stateOfOrigin--> French_people (dor:French_people)
+      - Alain_Mosqueron (dor:Alain_Mosqueron) --doo:nationality--> French_people (dor:French_people)
+      - Élizabeth_Bourgine (<http://dbpedia.org/resource/Élizabeth_Bourgine>) --doo:occupation--> Élizabeth_Bourgine__PersonFunction__1 (<http://dbpedia.org/resource/Élizabeth_Bourgine__PersonFunction__1>)
+      - List_of_Death_in_Paradise_characters__Catherine_Bordey__1 (dor:List_of_Death_in_Paradise_characters__Catherine_Bordey__1) --doo:portrayer--> Élizabeth_Bourgine (<http://dbpedia.org/resource/Élizabeth_Bourgine>)
+  '6':
+    attributes: {}
+    relationships:
+      - Élizabeth_Bourgine (<http://dbpedia.org/resource/Élizabeth_Bourgine>) --doo:stateOfOrigin--> French_people (dor:French_people)
+      - Ali_Chebah (dor:Ali_Chebah) --doo:nationality--> French_people (dor:French_people)
+      - Élizabeth_Bourgine (<http://dbpedia.org/resource/Élizabeth_Bourgine>) --doo:occupation--> Élizabeth_Bourgine__PersonFunction__1 (<http://dbpedia.org/resource/Élizabeth_Bourgine__PersonFunction__1>)
+      - List_of_Death_in_Paradise_characters__Catherine_Bordey__1 (dor:List_of_Death_in_Paradise_characters__Catherine_Bordey__1) --doo:portrayer--> Élizabeth_Bourgine (<http://dbpedia.org/resource/Élizabeth_Bourgine>)
+  '7':
+    attributes:
+      List_of_Let_the_Right_One_In_characters__Virginia__1: (species^='http://dbpedia.org/resource/Vampire')
+    relationships:
+      - Ika_Nord (dor:Ika_Nord) --doo:stateOfOrigin--> Swedish_people (dor:Swedish_people)
+      - Åke_Svenson (<http://dbpedia.org/resource/Åke_Svenson>) --doo:nationality--> Swedish_people (dor:Swedish_people)
+      - Ika_Nord (dor:Ika_Nord) --doo:occupation--> Acting (dor:Acting)
+      - List_of_Let_the_Right_One_In_characters__Virginia__1 (dor:List_of_Let_the_Right_One_In_characters__Virginia__1) --doo:portrayer--> Ika_Nord (dor:Ika_Nord)
+  '8':
+    attributes:
+      List_of_Let_the_Right_One_In_characters__Virginia__1: (species^='http://dbpedia.org/resource/Vampire')
+    relationships:
+      - Ika_Nord (dor:Ika_Nord) --doo:stateOfOrigin--> Swedish_people (dor:Swedish_people)
+      - Åke_Svenson (<http://dbpedia.org/resource/Åke_Svenson>) --doo:nationality--> Swedish_people (dor:Swedish_people)
+      - Ika_Nord (dor:Ika_Nord) --doo:occupation--> Ika_Nord__PersonFunction__1 (dor:Ika_Nord__PersonFunction__1)
+      - List_of_Let_the_Right_One_In_characters__Virginia__1 (dor:List_of_Let_the_Right_One_In_characters__Virginia__1) --doo:portrayer--> Ika_Nord (dor:Ika_Nord)
+  '9':
+    attributes:
+      List_of_Let_the_Right_One_In_characters__Virginia__1: (species^='http://dbpedia.org/resource/Vampire')
+    relationships:
+      - Ika_Nord (dor:Ika_Nord) --doo:stateOfOrigin--> Swedish_people (dor:Swedish_people)
+      - Alex_Edberg (dor:Alex_Edberg) --doo:nationality--> Swedish_people (dor:Swedish_people)
+      - Ika_Nord (dor:Ika_Nord) --doo:occupation--> Acting (dor:Acting)
+      - List_of_Let_the_Right_One_In_characters__Virginia__1 (dor:List_of_Let_the_Right_One_In_characters__Virginia__1) --doo:portrayer--> Ika_Nord (dor:Ika_Nord)
+  '10':
+    attributes: {}
+    relationships:
+      - Mary_Woodvine (dor:Mary_Woodvine) --doo:stateOfOrigin--> British_people (dor:British_people)
+      - Abbi_Pulling (dor:Abbi_Pulling) --doo:nationality--> British_people (dor:British_people)
+      - Mary_Woodvine (dor:Mary_Woodvine) --doo:occupation--> Mary_Woodvine__PersonFunction__1 (dor:Mary_Woodvine__PersonFunction__1)
+      - List_of_EastEnders_characters_(2003)__Mary_Harkinson__1 (<http://dbpedia.org/resource/List_of_EastEnders_characters_(2003)__Mary_Harkinson__1>) --doo:portrayer--> Mary_Woodvine (dor:Mary_Woodvine)
+attributes:
+  athlete: --before^ (dop:before)--> langString
+  country: --2p^ (dop:2p)--> int | --motto^ (doo:motto)--> string | --government type^ (doo:governmentType)--> Resource | --capital^ (doo:capital)--> Resource
+  person function: --mother^ (dop:mother)--> langString | --direction^ (dop:direction)--> langString | --2p^ (dop:2p)--> int
+  fictional character: --species^ (doo:species)--> Resource | --gender^ (doo:gender)--> Resource | --nickname^ (dop:nickname)--> langString
+subgraph_id: 620
+relationships:
+  - actor --doo:stateOfOrigin--> country
+  - athlete --doo:nationality--> country
+  - actor --doo:occupation--> person function
+  - fictional character --doo:portrayer--> actor

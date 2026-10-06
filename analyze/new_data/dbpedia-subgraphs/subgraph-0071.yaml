@@ -1,0 +1,118 @@
+types:
+  Band: doo:Band
+  song: doo:Song
+  single: doo:Single
+  company: doo:Company
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Dubway_Studios: (founding year^='1981')
+      They_Might_Be_Giants: (home town^='http://dbpedia.org/resource/Brooklyn', associated acts^='', title^='"Birdhouse In Your Soul"', genre^='')
+    relationships:
+      - Ana_Ng (dor:Ana_Ng) --doo:previousWork--> (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:recordedIn--> Dubway_Studios (dor:Dubway_Studios)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:recordedIn--> Charlotte,_Vermont (<http://dbpedia.org/resource/Charlotte,_Vermont>)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:artist--> They_Might_Be_Giants (dor:They_Might_Be_Giants)
+  '2':
+    attributes:
+      Dubway_Studios: (founding year^='1981')
+      They_Might_Be_Giants: (home town^='http://dbpedia.org/resource/Brooklyn', associated acts^='', title^='"Birdhouse In Your Soul"', genre^='')
+    relationships:
+      - Ana_Ng (dor:Ana_Ng) --doo:previousWork--> (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:recordedIn--> Dubway_Studios (dor:Dubway_Studios)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:artist--> They_Might_Be_Giants (dor:They_Might_Be_Giants)
+  '3':
+    attributes:
+      RCA_Records: (founding year^='1900')
+      The_Monkees: (home town^='http://dbpedia.org/resource/California', associated acts^='', genre^='')
+    relationships:
+      - I_Wanna_Be_Free_(The_Monkees_song) (<http://dbpedia.org/resource/I_Wanna_Be_Free_(The_Monkees_song)>) --doo:previousWork--> A_Little_Bit_Me,_a_Little_Bit_You (<http://dbpedia.org/resource/A_Little_Bit_Me,_a_Little_Bit_You>)
+      - A_Little_Bit_Me,_a_Little_Bit_You (<http://dbpedia.org/resource/A_Little_Bit_Me,_a_Little_Bit_You>) --doo:recordedIn--> RCA_Records (dor:RCA_Records)
+      - A_Little_Bit_Me,_a_Little_Bit_You (<http://dbpedia.org/resource/A_Little_Bit_Me,_a_Little_Bit_You>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - A_Little_Bit_Me,_a_Little_Bit_You (<http://dbpedia.org/resource/A_Little_Bit_Me,_a_Little_Bit_You>) --doo:artist--> The_Monkees (dor:The_Monkees)
+  '4':
+    attributes:
+      RCA_Records: (founding year^='1900')
+      The_Monkees: (home town^='http://dbpedia.org/resource/California', associated acts^='', genre^='')
+    relationships:
+      - Pleasant_Valley_Sunday (dor:Pleasant_Valley_Sunday) --doo:previousWork--> A_Little_Bit_Me,_a_Little_Bit_You (<http://dbpedia.org/resource/A_Little_Bit_Me,_a_Little_Bit_You>)
+      - A_Little_Bit_Me,_a_Little_Bit_You (<http://dbpedia.org/resource/A_Little_Bit_Me,_a_Little_Bit_You>) --doo:recordedIn--> RCA_Records (dor:RCA_Records)
+      - A_Little_Bit_Me,_a_Little_Bit_You (<http://dbpedia.org/resource/A_Little_Bit_Me,_a_Little_Bit_You>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - A_Little_Bit_Me,_a_Little_Bit_You (<http://dbpedia.org/resource/A_Little_Bit_Me,_a_Little_Bit_You>) --doo:artist--> The_Monkees (dor:The_Monkees)
+  '5':
+    attributes:
+      California: (date^='2020-10-13')
+      Lostprophets: (home town^='http://dbpedia.org/resource/Pontypridd', associated acts^='', genre^='')
+      The_Sound_Factory: (founding year^='1969')
+    relationships:
+      - Can't_Catch_Tomorrow_(Good_Shoes_Won't_Save_You_This_Time) (<http://dbpedia.org/resource/Can't_Catch_Tomorrow_(Good_Shoes_Won't_Save_You_This_Time)>) --doo:previousWork--> A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy)
+      - A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy) --doo:recordedIn--> The_Sound_Factory (dor:The_Sound_Factory)
+      - A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy) --doo:recordedIn--> California (dor:California)
+      - A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy) --doo:artist--> Lostprophets (dor:Lostprophets)
+  '6':
+    attributes:
+      Hawaii: (date^='December 2020')
+      Lostprophets: (home town^='http://dbpedia.org/resource/Pontypridd', associated acts^='', genre^='')
+      The_Sound_Factory: (founding year^='1969')
+    relationships:
+      - Can't_Catch_Tomorrow_(Good_Shoes_Won't_Save_You_This_Time) (<http://dbpedia.org/resource/Can't_Catch_Tomorrow_(Good_Shoes_Won't_Save_You_This_Time)>) --doo:previousWork--> A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy)
+      - A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy) --doo:recordedIn--> The_Sound_Factory (dor:The_Sound_Factory)
+      - A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy) --doo:recordedIn--> Hawaii (dor:Hawaii)
+      - A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy) --doo:artist--> Lostprophets (dor:Lostprophets)
+  '7':
+    attributes:
+      Lostprophets: (home town^='http://dbpedia.org/resource/Pontypridd', associated acts^='', genre^='')
+      The_Sound_Factory: (founding year^='1969')
+      Hollywood,_Los_Angeles: (Apr high F^='74', date^='May 2021')
+    relationships:
+      - Can't_Catch_Tomorrow_(Good_Shoes_Won't_Save_You_This_Time) (<http://dbpedia.org/resource/Can't_Catch_Tomorrow_(Good_Shoes_Won't_Save_You_This_Time)>) --doo:previousWork--> A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy)
+      - A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy) --doo:recordedIn--> The_Sound_Factory (dor:The_Sound_Factory)
+      - A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy) --doo:recordedIn--> Hollywood,_Los_Angeles (<http://dbpedia.org/resource/Hollywood,_Los_Angeles>)
+      - A_Town_Called_Hypocrisy (dor:A_Town_Called_Hypocrisy) --doo:artist--> Lostprophets (dor:Lostprophets)
+  '8':
+    attributes:
+      The_Buckaroos: (home town^='http://dbpedia.org/resource/Bakersfield,_California', associated acts^='http://dbpedia.org/resource/Buck_Owens', genre^='http://dbpedia.org/resource/Bakersfield_sound')
+      Hollywood,_Los_Angeles: (Apr high F^='74', date^='May 2021')
+    relationships:
+      - Love's_Gonna_Live_Here (<http://dbpedia.org/resource/Love's_Gonna_Live_Here>) --doo:previousWork--> Act_Naturally (dor:Act_Naturally)
+      - Act_Naturally (dor:Act_Naturally) --doo:recordedIn--> Capitol_Studios (dor:Capitol_Studios)
+      - Act_Naturally (dor:Act_Naturally) --doo:recordedIn--> Hollywood,_Los_Angeles (<http://dbpedia.org/resource/Hollywood,_Los_Angeles>)
+      - Act_Naturally (dor:Act_Naturally) --doo:artist--> The_Buckaroos (dor:The_Buckaroos)
+  '9':
+    attributes:
+      Blink-182: (home town^='http://dbpedia.org/resource/Poway,_California', title^='"I Miss You"', genre^='')
+      Encinitas,_California: (Apr high F^='69', date^='April 2021')
+      Conway_Recording_Studios: (founding year^='1972')
+    relationships:
+      - Man_Overboard_(Blink-182_song) (<http://dbpedia.org/resource/Man_Overboard_(Blink-182_song)>) --doo:previousWork--> Adam's_Song (<http://dbpedia.org/resource/Adam's_Song>)
+      - Adam's_Song (<http://dbpedia.org/resource/Adam's_Song>) --doo:recordedIn--> Conway_Recording_Studios (dor:Conway_Recording_Studios)
+      - Adam's_Song (<http://dbpedia.org/resource/Adam's_Song>) --doo:recordedIn--> Encinitas,_California (<http://dbpedia.org/resource/Encinitas,_California>)
+      - Adam's_Song (<http://dbpedia.org/resource/Adam's_Song>) --doo:artist--> Blink-182 (dor:Blink-182)
+  '10':
+    attributes:
+      Pearl_Jam: (home town^='http://dbpedia.org/resource/Seattle', associated acts^='', title^='"Given to Fly"', genre^='')
+      Washington_(state): (Apr high F^='55.9', date^='July 2016')
+      London_Bridge_Studio: (founding year^='1985')
+    relationships:
+      - Even_Flow__Even_Flow__1 (dor:Even_Flow__Even_Flow__1) --doo:previousWork--> Alive_(Pearl_Jam_song) (<http://dbpedia.org/resource/Alive_(Pearl_Jam_song)>)
+      - Alive_(Pearl_Jam_song) (<http://dbpedia.org/resource/Alive_(Pearl_Jam_song)>) --doo:recordedIn--> London_Bridge_Studio (dor:London_Bridge_Studio)
+      - Alive_(Pearl_Jam_song) (<http://dbpedia.org/resource/Alive_(Pearl_Jam_song)>) --doo:recordedIn--> Washington_(state) (<http://dbpedia.org/resource/Washington_(state)>)
+      - Alive_(Pearl_Jam_song) (<http://dbpedia.org/resource/Alive_(Pearl_Jam_song)>) --doo:artist--> Pearl_Jam (dor:Pearl_Jam)
+attributes:
+  Band: --home town^ (doo:hometown)--> Resource | --associated acts^ (dop:associatedActs)--> Resource | --title^ (dop:title)--> langString | --genre^ (dop:genre)--> langString
+  single: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource
+  company: --founding year^ (doo:foundingYear)--> gYear | --reason^ (dop:reason)--> langString
+  Location: --Apr high F^ (dop:aprHighF)--> double | --date^ (dop:date)--> date | --area^ (dop:area)--> double | --line^ (dop:line)--> int
+subgraph_id: 71
+relationships:
+  - song --doo:previousWork--> single
+  - single --doo:recordedIn--> company
+  - single --doo:recordedIn--> Location
+  - single --doo:artist--> Band

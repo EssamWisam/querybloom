@@ -1,0 +1,104 @@
+types:
+  city: doo:City
+  song: doo:Song
+  single: doo:Single
+  company: doo:Company
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Baby,_We're_Really_in_Love: (page length (characters) of wiki page^='2625')
+      Castle_Recording_Laboratory: (industry^='http://dbpedia.org/resource/Recording_studio')
+    relationships:
+      - (I_Heard_That)_Lonesome_Whistle (<http://dbpedia.org/resource/(I_Heard_That)_Lonesome_Whistle>) --doo:subsequentWork--> Baby,_We're_Really_in_Love (<http://dbpedia.org/resource/Baby,_We're_Really_in_Love>)
+      - Baby,_We're_Really_in_Love (<http://dbpedia.org/resource/Baby,_We're_Really_in_Love>) --doo:recordedIn--> Castle_Recording_Laboratory (dor:Castle_Recording_Laboratory)
+      - Baby,_We're_Really_in_Love (<http://dbpedia.org/resource/Baby,_We're_Really_in_Love>) --doo:recordedIn--> Nashville (dor:Nashville)
+  '2':
+    attributes:
+      Los_Angeles: (nickname^='L.A., City of Angels, The Entertainment Capital of the World, La-la-land, Tinseltown')
+      Cherokee_Studios: (industry^='http://dbpedia.org/resource/Recording_studio', has abstract^='I Cherokee Studios sono stati dei famosi studi di registrazione inaugurati a Hollywood nel 1972. Hanno chiuso i battenti dopo 35 anni di attività, nel 2007, per far spazio ad una nuova struttura denom...')
+      Don't_Stop_'Til_You_Get_Enough: (page length (characters) of wiki page^='47436')
+    relationships:
+      - (I_Like)_The_Way_You_Love_Me (<http://dbpedia.org/resource/(I_Like)_The_Way_You_Love_Me>) --doo:subsequentWork--> Don't_Stop_'Til_You_Get_Enough (<http://dbpedia.org/resource/Don't_Stop_'Til_You_Get_Enough>)
+      - Don't_Stop_'Til_You_Get_Enough (<http://dbpedia.org/resource/Don't_Stop_'Til_You_Get_Enough>) --doo:recordedIn--> Cherokee_Studios (dor:Cherokee_Studios)
+      - Don't_Stop_'Til_You_Get_Enough (<http://dbpedia.org/resource/Don't_Stop_'Til_You_Get_Enough>) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+  '3':
+    attributes:
+      Los_Angeles: (nickname^='L.A., City of Angels, The Entertainment Capital of the World, La-la-land, Tinseltown')
+      Westlake_Recording_Studios: (industry^='http://dbpedia.org/resource/Music_industry', has abstract^='Westlake Recording Studios é um reconhecido estúdio de gravação em West Hollywood, na Califórnia.', logo^='File:Westlake Studios logo.jpg')
+      Don't_Stop_'Til_You_Get_Enough: (page length (characters) of wiki page^='47436')
+    relationships:
+      - (I_Like)_The_Way_You_Love_Me (<http://dbpedia.org/resource/(I_Like)_The_Way_You_Love_Me>) --doo:subsequentWork--> Don't_Stop_'Til_You_Get_Enough (<http://dbpedia.org/resource/Don't_Stop_'Til_You_Get_Enough>)
+      - Don't_Stop_'Til_You_Get_Enough (<http://dbpedia.org/resource/Don't_Stop_'Til_You_Get_Enough>) --doo:recordedIn--> Westlake_Recording_Studios (dor:Westlake_Recording_Studios)
+      - Don't_Stop_'Til_You_Get_Enough (<http://dbpedia.org/resource/Don't_Stop_'Til_You_Get_Enough>) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+  '4':
+    attributes:
+      RCA_Records: (has abstract^='Is lipéad ceirníní Meiriceánach é RCA Records.', parent company^='http://dbpedia.org/resource/Bertelsmann_Music_Group')
+      Pleasant_Valley_Sunday: (page length (characters) of wiki page^='17939')
+    relationships:
+      - A_Little_Bit_Me,_a_Little_Bit_You (<http://dbpedia.org/resource/A_Little_Bit_Me,_a_Little_Bit_You>) --doo:subsequentWork--> Pleasant_Valley_Sunday (dor:Pleasant_Valley_Sunday)
+      - Pleasant_Valley_Sunday (dor:Pleasant_Valley_Sunday) --doo:recordedIn--> RCA_Records (dor:RCA_Records)
+      - Pleasant_Valley_Sunday (dor:Pleasant_Valley_Sunday) --doo:recordedIn--> Hollywood,_Los_Angeles (<http://dbpedia.org/resource/Hollywood,_Los_Angeles>)
+  '5':
+    attributes:
+      P-Poppin: (page length (characters) of wiki page^='4858')
+      Chicago_Recording_Company: (has abstract^='Chicago Recording Company, or CRC, is a recording studio in Chicago, Illinois, founded in 1975. Boasting twelve studios, CRC is the largest recording company in the Midwest, and the largest independen...', logo^='Chicagorecordingcompanylogo.png')
+    relationships:
+      - Act_a_Fool_(Ludacris_song) (<http://dbpedia.org/resource/Act_a_Fool_(Ludacris_song)>) --doo:subsequentWork--> P-Poppin (dor:P-Poppin)
+      - P-Poppin (dor:P-Poppin) --doo:recordedIn--> Chicago_Recording_Company (dor:Chicago_Recording_Company)
+      - P-Poppin (dor:P-Poppin) --doo:recordedIn--> New_York_City (dor:New_York_City)
+  '6':
+    attributes:
+      P-Poppin: (page length (characters) of wiki page^='4858')
+      Chicago_Recording_Company: (has abstract^='Chicago Recording Company, or CRC, is a recording studio in Chicago, Illinois, founded in 1975. Boasting twelve studios, CRC is the largest recording company in the Midwest, and the largest independen...', logo^='Chicagorecordingcompanylogo.png')
+    relationships:
+      - Act_a_Fool_(Ludacris_song) (<http://dbpedia.org/resource/Act_a_Fool_(Ludacris_song)>) --doo:subsequentWork--> P-Poppin (dor:P-Poppin)
+      - P-Poppin (dor:P-Poppin) --doo:recordedIn--> Chicago_Recording_Company (dor:Chicago_Recording_Company)
+      - P-Poppin (dor:P-Poppin) --doo:recordedIn--> Norcross,_Georgia (<http://dbpedia.org/resource/Norcross,_Georgia>)
+  '7':
+    attributes:
+      Adam's_Song: (page length (characters) of wiki page^='39709', source^='—Mark Hoppus, reflecting on writing "Adam''s Song"')
+      Conway_Recording_Studios: (industry^='http://dbpedia.org/resource/Music_industry', has abstract^='Conway Recording Studios är en inspelningsstudio i Hollywood, Kalifornien. I studion har en mängd olika producenter, ljudtekniker och artister arbetat, såsom Alicia Keys, Barbra Streisand, Black Eyed ...')
+    relationships:
+      - All_the_Small_Things (dor:All_the_Small_Things) --doo:subsequentWork--> Adam's_Song (<http://dbpedia.org/resource/Adam's_Song>)
+      - Adam's_Song (<http://dbpedia.org/resource/Adam's_Song>) --doo:recordedIn--> Conway_Recording_Studios (dor:Conway_Recording_Studios)
+      - Adam's_Song (<http://dbpedia.org/resource/Adam's_Song>) --doo:recordedIn--> Encinitas,_California (<http://dbpedia.org/resource/Encinitas,_California>)
+  '8':
+    attributes:
+      Toronto: (nickname^='See Name of Toronto')
+      Work_(Rihanna_song): (page length (characters) of wiki page^='68834', source^='artist')
+      Westlake_Recording_Studios: (industry^='http://dbpedia.org/resource/Music_industry', has abstract^='Westlake Recording Studios é um reconhecido estúdio de gravação em West Hollywood, na Califórnia.', logo^='File:Westlake Studios logo.jpg')
+    relationships:
+      - American_Oxygen (dor:American_Oxygen) --doo:subsequentWork--> Work_(Rihanna_song) (<http://dbpedia.org/resource/Work_(Rihanna_song)>)
+      - Work_(Rihanna_song) (<http://dbpedia.org/resource/Work_(Rihanna_song)>) --doo:recordedIn--> Westlake_Recording_Studios (dor:Westlake_Recording_Studios)
+      - Work_(Rihanna_song) (<http://dbpedia.org/resource/Work_(Rihanna_song)>) --doo:recordedIn--> Toronto (dor:Toronto)
+  '9':
+    attributes:
+      Sugar_(Maroon_5_song): (page length (characters) of wiki page^='76171')
+      Conway_Recording_Studios: (industry^='http://dbpedia.org/resource/Music_industry', has abstract^='Conway Recording Studios är en inspelningsstudio i Hollywood, Kalifornien. I studion har en mängd olika producenter, ljudtekniker och artister arbetat, såsom Alicia Keys, Barbra Streisand, Black Eyed ...')
+    relationships:
+      - Animals_(Maroon_5_song) (<http://dbpedia.org/resource/Animals_(Maroon_5_song)>) --doo:subsequentWork--> Sugar_(Maroon_5_song) (<http://dbpedia.org/resource/Sugar_(Maroon_5_song)>)
+      - Sugar_(Maroon_5_song) (<http://dbpedia.org/resource/Sugar_(Maroon_5_song)>) --doo:recordedIn--> Conway_Recording_Studios (dor:Conway_Recording_Studios)
+      - Sugar_(Maroon_5_song) (<http://dbpedia.org/resource/Sugar_(Maroon_5_song)>) --doo:recordedIn--> Hollywood,_Los_Angeles (<http://dbpedia.org/resource/Hollywood,_Los_Angeles>)
+  '10':
+    attributes:
+      Malibu,_California: (nickname^='The ''Bu')
+      Sugar_(Maroon_5_song): (page length (characters) of wiki page^='76171')
+      Conway_Recording_Studios: (industry^='http://dbpedia.org/resource/Music_industry', has abstract^='Conway Recording Studios är en inspelningsstudio i Hollywood, Kalifornien. I studion har en mängd olika producenter, ljudtekniker och artister arbetat, såsom Alicia Keys, Barbra Streisand, Black Eyed ...')
+    relationships:
+      - Animals_(Maroon_5_song) (<http://dbpedia.org/resource/Animals_(Maroon_5_song)>) --doo:subsequentWork--> Sugar_(Maroon_5_song) (<http://dbpedia.org/resource/Sugar_(Maroon_5_song)>)
+      - Sugar_(Maroon_5_song) (<http://dbpedia.org/resource/Sugar_(Maroon_5_song)>) --doo:recordedIn--> Conway_Recording_Studios (dor:Conway_Recording_Studios)
+      - Sugar_(Maroon_5_song) (<http://dbpedia.org/resource/Sugar_(Maroon_5_song)>) --doo:recordedIn--> Malibu,_California (<http://dbpedia.org/resource/Malibu,_California>)
+attributes:
+  city: --Aug rain days^ (dop:augRainDays)--> double | --nickname^ (dop:nickname)--> langString | --original name^ (doo:originalName)--> langString | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --Apr record low C^ (dop:aprRecordLowC)--> langString
+  song: --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --source^ (dop:source)--> langString
+  company: --industry^ (dop:industry)--> Resource | --has abstract^ (doo:abstract)--> langString | --parent company^ (doo:parentCompany)--> Resource | --logo^ (dop:logo)--> Resource | --area served^ (dop:areaServed)--> Resource
+subgraph_id: 503
+relationships:
+  - single --doo:subsequentWork--> song
+  - song --doo:recordedIn--> company
+  - song --doo:recordedIn--> city

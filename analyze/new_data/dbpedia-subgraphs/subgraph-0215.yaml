@@ -1,0 +1,136 @@
+types:
+  city: doo:City
+  artist: doo:Artist
+  company: doo:Company
+  Location: doo:Location
+  railway line: doo:RailwayLine
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      San_Francisco: (reason^='30')
+    relationships:
+      - J_Church (dor:J_Church) --doo:location--> San_Francisco (dor:San_Francisco)
+      - Adelia_Sarah_Gates (dor:Adelia_Sarah_Gates) --dop:deathPlace--> San_Francisco (dor:San_Francisco)
+      - J_Church (dor:J_Church) --doo:railwayRollingStock--> AnsaldoBreda (dor:AnsaldoBreda)
+      - Adelia_Sarah_Gates (dor:Adelia_Sarah_Gates) --doo:nationality--> United_States (dor:United_States)
+  '2':
+    attributes: {}
+    relationships:
+      - K_Ingleside (dor:K_Ingleside) --doo:location--> San_Francisco (dor:San_Francisco)
+      - Adelia_Sarah_Gates (dor:Adelia_Sarah_Gates) --dop:deathPlace--> San_Francisco (dor:San_Francisco)
+      - K_Ingleside (dor:K_Ingleside) --doo:railwayRollingStock--> AnsaldoBreda (dor:AnsaldoBreda)
+      - Adelia_Sarah_Gates (dor:Adelia_Sarah_Gates) --doo:nationality--> United_States (dor:United_States)
+  '3':
+    attributes:
+      San_Francisco: (reason^='30')
+    relationships:
+      - L_Taraval (dor:L_Taraval) --doo:location--> San_Francisco (dor:San_Francisco)
+      - Adelia_Sarah_Gates (dor:Adelia_Sarah_Gates) --dop:deathPlace--> San_Francisco (dor:San_Francisco)
+      - L_Taraval (dor:L_Taraval) --doo:railwayRollingStock--> AnsaldoBreda (dor:AnsaldoBreda)
+      - Adelia_Sarah_Gates (dor:Adelia_Sarah_Gates) --doo:nationality--> United_States (dor:United_States)
+  '4':
+    attributes: {}
+    relationships:
+      - Line_1_(Madrid_Metro) (<http://dbpedia.org/resource/Line_1_(Madrid_Metro)>) --doo:location--> Madrid (dor:Madrid)
+      - Alejandro_Carnicero (dor:Alejandro_Carnicero) --dop:deathPlace--> Madrid (dor:Madrid)
+      - Line_1_(Madrid_Metro) (<http://dbpedia.org/resource/Line_1_(Madrid_Metro)>) --doo:railwayRollingStock--> Construcciones_y_Auxiliar_de_Ferrocarriles (dor:Construcciones_y_Auxiliar_de_Ferrocarriles)
+      - Alejandro_Carnicero (dor:Alejandro_Carnicero) --doo:nationality--> Spain (dor:Spain)
+  '5':
+    attributes: {}
+    relationships:
+      - Line_11_(Madrid_Metro) (<http://dbpedia.org/resource/Line_11_(Madrid_Metro)>) --doo:location--> Madrid (dor:Madrid)
+      - Alejandro_Carnicero (dor:Alejandro_Carnicero) --dop:deathPlace--> Madrid (dor:Madrid)
+      - Line_11_(Madrid_Metro) (<http://dbpedia.org/resource/Line_11_(Madrid_Metro)>) --doo:railwayRollingStock--> Construcciones_y_Auxiliar_de_Ferrocarriles (dor:Construcciones_y_Auxiliar_de_Ferrocarriles)
+      - Alejandro_Carnicero (dor:Alejandro_Carnicero) --doo:nationality--> Spain (dor:Spain)
+  '6':
+    attributes: {}
+    relationships:
+      - Line_2_(Madrid_Metro) (<http://dbpedia.org/resource/Line_2_(Madrid_Metro)>) --doo:location--> Madrid (dor:Madrid)
+      - Alejandro_Carnicero (dor:Alejandro_Carnicero) --dop:deathPlace--> Madrid (dor:Madrid)
+      - Line_2_(Madrid_Metro) (<http://dbpedia.org/resource/Line_2_(Madrid_Metro)>) --doo:railwayRollingStock--> Construcciones_y_Auxiliar_de_Ferrocarriles (dor:Construcciones_y_Auxiliar_de_Ferrocarriles)
+      - Alejandro_Carnicero (dor:Alejandro_Carnicero) --doo:nationality--> Spain (dor:Spain)
+  '7':
+    attributes:
+      Siemens: (service^='http://dbpedia.org/resource/Construction')
+    relationships:
+      - Moscow_Central_Circle (dor:Moscow_Central_Circle) --doo:location--> Moscow (dor:Moscow)
+      - Aleksandr_Gerasimov_(painter) (<http://dbpedia.org/resource/Aleksandr_Gerasimov_(painter)>) --dop:deathPlace--> Moscow (dor:Moscow)
+      - Moscow_Central_Circle (dor:Moscow_Central_Circle) --doo:railwayRollingStock--> Siemens (dor:Siemens)
+      - Aleksandr_Gerasimov_(painter) (<http://dbpedia.org/resource/Aleksandr_Gerasimov_(painter)>) --doo:nationality--> Russia (dor:Russia)
+  '8':
+    attributes:
+      Siemens: (service^='http://dbpedia.org/resource/Construction')
+    relationships:
+      - Moscow_Central_Circle (dor:Moscow_Central_Circle) --doo:location--> Moscow (dor:Moscow)
+      - Aleksei_Kruchyonykh (dor:Aleksei_Kruchyonykh) --dop:deathPlace--> Moscow (dor:Moscow)
+      - Moscow_Central_Circle (dor:Moscow_Central_Circle) --doo:railwayRollingStock--> Siemens (dor:Siemens)
+      - Aleksei_Kruchyonykh (dor:Aleksei_Kruchyonykh) --doo:nationality--> Russia (dor:Russia)
+  '9':
+    attributes:
+      Siemens: (service^='http://dbpedia.org/resource/Construction')
+    relationships:
+      - Moscow_Central_Circle (dor:Moscow_Central_Circle) --doo:location--> Moscow (dor:Moscow)
+      - Alexander_Bubnov (dor:Alexander_Bubnov) --dop:deathPlace--> Moscow (dor:Moscow)
+      - Moscow_Central_Circle (dor:Moscow_Central_Circle) --doo:railwayRollingStock--> Siemens (dor:Siemens)
+      - Alexander_Bubnov (dor:Alexander_Bubnov) --doo:nationality--> Russia (dor:Russia)
+  '10':
+    attributes:
+      Israel: '(quote^=''"Therefore I believe that a wonderous generation of Jews will spring into existence. The Maccabaeans will rise again. Let me repeat once more my opening words: The Jews wish to have a State, and they ...'')'
+    relationships:
+      - Red_Line_(Jerusalem_Light_Rail) (<http://dbpedia.org/resource/Red_Line_(Jerusalem_Light_Rail)>) --doo:location--> Jerusalem (dor:Jerusalem)
+      - Arie_Aroch (dor:Arie_Aroch) --dop:deathPlace--> Jerusalem (dor:Jerusalem)
+      - Red_Line_(Jerusalem_Light_Rail) (<http://dbpedia.org/resource/Red_Line_(Jerusalem_Light_Rail)>) --doo:railwayRollingStock--> Alstom (dor:Alstom)
+      - Arie_Aroch (dor:Arie_Aroch) --doo:nationality--> Israel (dor:Israel)
+qa_result:
+  status: completed
+  cost_usd: 0.308377
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0157324
+        total_tokens: 2568
+        prompt_tokens: 1930
+        completion_tokens: 638
+      generate:
+        cost_usd: 0.05649760000000001
+        total_tokens: 6550
+        prompt_tokens: 4487
+        completion_tokens: 2063
+      verify_1:
+        cost_usd: 0.064412
+        total_tokens: 6730
+        prompt_tokens: 4679
+        completion_tokens: 2051
+      verify_2:
+        cost_usd: 0.04778700000000001
+        total_tokens: 5847
+        prompt_tokens: 4610
+        completion_tokens: 1237
+      complexity:
+        cost_usd: 0.123948
+        total_tokens: 10828
+        prompt_tokens: 5602
+        completion_tokens: 5226
+    total_tokens: 32523
+    prompt_tokens: 21308
+    total_cost_usd: 0.308377
+    completion_tokens: 11215
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --reason^ (dop:reason)--> langString
+  artist: --alt^ (dop:alt)--> langString
+  company: --budget ($)^ (doo:budget)--> usDollar | --service^ (doo:service)--> Resource
+  Location: --arc-text-colorB^ (dop:arcTextColorb)--> langString | --quote^ (dop:quote)--> langString | --mouth mountain^ (doo:mouthMountain)--> Resource | --building start date^ (doo:buildingStartDate)--> string | --designated other1 color^ (dop:designatedOther1Color)--> langString
+subgraph_id: 215
+relationships:
+  - railway line --doo:location--> city
+  - artist --dop:deathPlace--> city
+  - railway line --doo:railwayRollingStock--> company
+  - artist --doo:nationality--> Location

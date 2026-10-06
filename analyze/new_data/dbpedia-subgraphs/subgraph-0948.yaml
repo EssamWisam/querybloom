@@ -1,0 +1,105 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  language: doo:Language
+  settlement: doo:Settlement
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      India: (caption^='1909', motto^='"Truth Alone Triumphs"')
+    relationships:
+      - Assam_Talks (dor:Assam_Talks) --doo:language--> Assamese_language (dor:Assamese_language)
+      - Assamese_language (dor:Assamese_language) --doo:spokenIn--> Arunachal_Pradesh (dor:Arunachal_Pradesh)
+      - India (dor:India) --doo:language--> Assamese_language (dor:Assamese_language)
+      - Assam_Talks (dor:Assam_Talks) --dop:country--> India (dor:India)
+  '2':
+    attributes:
+      Assam: (reason^='too long')
+      India: (caption^='1909', motto^='"Truth Alone Triumphs"')
+    relationships:
+      - Assam_Talks (dor:Assam_Talks) --doo:language--> Assamese_language (dor:Assamese_language)
+      - Assamese_language (dor:Assamese_language) --doo:spokenIn--> Assam (dor:Assam)
+      - India (dor:India) --doo:language--> Assamese_language (dor:Assamese_language)
+      - Assam_Talks (dor:Assam_Talks) --dop:country--> India (dor:India)
+  '3':
+    attributes:
+      India: (caption^='1909', motto^='"Truth Alone Triumphs"')
+    relationships:
+      - Assam_Talks (dor:Assam_Talks) --doo:language--> Assamese_language (dor:Assamese_language)
+      - Assamese_language (dor:Assamese_language) --doo:spokenIn--> Nagaland (dor:Nagaland)
+      - India (dor:India) --doo:language--> Assamese_language (dor:Assamese_language)
+      - Assam_Talks (dor:Assam_Talks) --dop:country--> India (dor:India)
+  '4':
+    attributes:
+      Pakistan: (caption^='Abdus Salam won the 1979 Nobel Prize in Physics for his contribution to electroweak interaction. He was the first Muslim to win a Nobel prize in science.', motto^='"Faith, Unity, Discipline"')
+    relationships:
+      - PTV_Bolan (dor:PTV_Bolan) --doo:language--> Balochi_language (dor:Balochi_language)
+      - Balochi_language (dor:Balochi_language) --doo:spokenIn--> Balochistan,_Pakistan (<http://dbpedia.org/resource/Balochistan,_Pakistan>)
+      - Emirate_of_Afghanistan (dor:Emirate_of_Afghanistan) --doo:language--> Balochi_language (dor:Balochi_language)
+      - PTV_Bolan (dor:PTV_Bolan) --dop:country--> Pakistan (dor:Pakistan)
+  '5':
+    attributes:
+      Pakistan: (caption^='Abdus Salam won the 1979 Nobel Prize in Physics for his contribution to electroweak interaction. He was the first Muslim to win a Nobel prize in science.', motto^='"Faith, Unity, Discipline"')
+    relationships:
+      - PTV_National (dor:PTV_National) --doo:language--> Balochi_language (dor:Balochi_language)
+      - Balochi_language (dor:Balochi_language) --doo:spokenIn--> Balochistan,_Pakistan (<http://dbpedia.org/resource/Balochistan,_Pakistan>)
+      - Emirate_of_Afghanistan (dor:Emirate_of_Afghanistan) --doo:language--> Balochi_language (dor:Balochi_language)
+      - PTV_National (dor:PTV_National) --dop:country--> Pakistan (dor:Pakistan)
+  '6':
+    attributes:
+      Pakistan: (caption^='Abdus Salam won the 1979 Nobel Prize in Physics for his contribution to electroweak interaction. He was the first Muslim to win a Nobel prize in science.', motto^='"Faith, Unity, Discipline"')
+    relationships:
+      - VSH_News (dor:VSH_News) --doo:language--> Balochi_language (dor:Balochi_language)
+      - Balochi_language (dor:Balochi_language) --doo:spokenIn--> Balochistan,_Pakistan (<http://dbpedia.org/resource/Balochistan,_Pakistan>)
+      - Emirate_of_Afghanistan (dor:Emirate_of_Afghanistan) --doo:language--> Balochi_language (dor:Balochi_language)
+      - VSH_News (dor:VSH_News) --dop:country--> Pakistan (dor:Pakistan)
+  '7':
+    attributes:
+      Canada: (caption^='French version of the poster roughly translates as "They serve France–Everyone can serve; Buy Victory Bonds".', motto^='"From Sea to Sea"')
+    relationships:
+      - Canal_D (dor:Canal_D) --doo:language--> Canadian_French (dor:Canadian_French)
+      - Canadian_French (dor:Canadian_French) --doo:spokenIn--> Eastern_Ontario (dor:Eastern_Ontario)
+      - Northern_America (dor:Northern_America) --doo:language--> Canadian_French (dor:Canadian_French)
+      - Canal_D (dor:Canal_D) --dop:country--> Canada (dor:Canada)
+  '8':
+    attributes:
+      Canada: (caption^='French version of the poster roughly translates as "They serve France–Everyone can serve; Buy Victory Bonds".', motto^='"From Sea to Sea"')
+    relationships:
+      - Canal_D (dor:Canal_D) --doo:language--> Canadian_French (dor:Canadian_French)
+      - Canadian_French (dor:Canadian_French) --doo:spokenIn--> New_Brunswick (dor:New_Brunswick)
+      - Northern_America (dor:Northern_America) --doo:language--> Canadian_French (dor:Canadian_French)
+      - Canal_D (dor:Canal_D) --dop:country--> Canada (dor:Canada)
+  '9':
+    attributes:
+      Canada: (caption^='French version of the poster roughly translates as "They serve France–Everyone can serve; Buy Victory Bonds".', motto^='"From Sea to Sea"')
+    relationships:
+      - Canal_D (dor:Canal_D) --doo:language--> Canadian_French (dor:Canadian_French)
+      - Canadian_French (dor:Canadian_French) --doo:spokenIn--> New_England (dor:New_England)
+      - Northern_America (dor:Northern_America) --doo:language--> Canadian_French (dor:Canadian_French)
+      - Canal_D (dor:Canal_D) --dop:country--> Canada (dor:Canada)
+  '10':
+    attributes:
+      Malaysia: (caption^='Nasi lemak', motto^='"Unity is Strength"')
+    relationships:
+      - Astro_AOD (dor:Astro_AOD) --doo:language--> Cantonese (dor:Cantonese)
+      - Cantonese (dor:Cantonese) --doo:spokenIn--> Guangdong (dor:Guangdong)
+      - Brunei (dor:Brunei) --doo:language--> Cantonese (dor:Cantonese)
+      - Astro_AOD (dor:Astro_AOD) --dop:country--> Malaysia (dor:Malaysia)
+attributes:
+  country: --caption^ (dop:caption)--> langString | --motto^ (doo:motto)--> string | --original name^ (doo:originalName)--> langString
+  Location: --founder^ (dop:founder)--> langString | --arc-gapA^ (dop:arcGapa)--> int | --length (μ)^ (doo:length)--> double | --accessdate^ (dop:accessdate)--> date | --alt^ (dop:alt)--> langString
+  language: --reason^ (dop:reason)--> langString
+  settlement: --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --reason^ (dop:reason)--> langString
+  television station: --airdate^ (dop:airdate)--> date
+subgraph_id: 948
+relationships:
+  - television station --doo:language--> language
+  - language --doo:spokenIn--> settlement
+  - Location --doo:language--> language
+  - television station --dop:country--> country

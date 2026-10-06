@@ -1,0 +1,122 @@
+types:
+  saint: doo:Saint
+  country: doo:Country
+  cardinal: doo:Cardinal
+  organisation: doo:Organisation
+  historic building: doo:HistoricBuilding
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Zambia: (caption^='African fish eagle, the national bird of Zambia')
+      Edmund_Arrowsmith: (title^='Martyr', canonized date^='1970-10-25', death date^='1628-08-28')
+      Catholic_Church_of_St_Oswald_and_St_Edmund_Arrowsmith: (country^='United Kingdom')
+    relationships:
+      - Adam_Kozłowiecki (<http://dbpedia.org/resource/Adam_Kozłowiecki>) --doo:deathPlace--> Zambia (dor:Zambia)
+      - Adam_Kozłowiecki (<http://dbpedia.org/resource/Adam_Kozłowiecki>) --dop:honorificSuffix--> Society_of_Jesus (dor:Society_of_Jesus)
+      - Edmund_Arrowsmith (dor:Edmund_Arrowsmith) --dop:honorificSuffix--> Society_of_Jesus (dor:Society_of_Jesus)
+      - Edmund_Arrowsmith (dor:Edmund_Arrowsmith) --doo:majorShrine--> Catholic_Church_of_St_Oswald_and_St_Edmund_Arrowsmith (dor:Catholic_Church_of_St_Oswald_and_St_Edmund_Arrowsmith)
+  '2':
+    attributes:
+      Zambia: (caption^='African fish eagle, the national bird of Zambia')
+      Jean_de_Brébeuf: (title^='Martyr; Apostle of the Hurons', canonized date^='1930-06-29', death date^='1649-03-16')
+    relationships:
+      - Adam_Kozłowiecki (<http://dbpedia.org/resource/Adam_Kozłowiecki>) --doo:deathPlace--> Zambia (dor:Zambia)
+      - Adam_Kozłowiecki (<http://dbpedia.org/resource/Adam_Kozłowiecki>) --dop:honorificSuffix--> Society_of_Jesus (dor:Society_of_Jesus)
+      - Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>) --dop:honorificSuffix--> Society_of_Jesus (dor:Society_of_Jesus)
+      - Jean_de_Brébeuf (<http://dbpedia.org/resource/Jean_de_Brébeuf>) --doo:majorShrine--> Martyrs'_Shrine (<http://dbpedia.org/resource/Martyrs'_Shrine>)
+  '3':
+    attributes:
+      Zambia: (caption^='African fish eagle, the national bird of Zambia')
+      Joseph_Pignatelli: (title^='Restorer of the Society of Jesus', canonized date^='1954-06-12', death date^='1811-11-15')
+      Church_of_the_Gesù: (country^='Italy')
+    relationships:
+      - Adam_Kozłowiecki (<http://dbpedia.org/resource/Adam_Kozłowiecki>) --doo:deathPlace--> Zambia (dor:Zambia)
+      - Adam_Kozłowiecki (<http://dbpedia.org/resource/Adam_Kozłowiecki>) --dop:honorificSuffix--> Society_of_Jesus (dor:Society_of_Jesus)
+      - Joseph_Pignatelli (dor:Joseph_Pignatelli) --dop:honorificSuffix--> Society_of_Jesus (dor:Society_of_Jesus)
+      - Joseph_Pignatelli (dor:Joseph_Pignatelli) --doo:majorShrine--> Church_of_the_Gesù (<http://dbpedia.org/resource/Church_of_the_Gesù>)
+  '4':
+    attributes:
+      Albertus_Magnus: (title^='Bishop of Regensburg', canonized date^='1931-12-16', death date^='1280-11-15')
+      Dominican_Order: (formation^='1206')
+      St._Andrew's_Church,_Cologne: (country^='http://dbpedia.org/resource/Germany')
+    relationships:
+      - Agostino_Bausa (dor:Agostino_Bausa) --doo:deathPlace--> Florence (dor:Florence)
+      - Agostino_Bausa (dor:Agostino_Bausa) --dop:honorificSuffix--> Dominican_Order (dor:Dominican_Order)
+      - Albertus_Magnus (dor:Albertus_Magnus) --dop:honorificSuffix--> Dominican_Order (dor:Dominican_Order)
+      - Albertus_Magnus (dor:Albertus_Magnus) --doo:majorShrine--> St._Andrew's_Church,_Cologne (<http://dbpedia.org/resource/St._Andrew's_Church,_Cologne>)
+  '5':
+    attributes:
+      Albertus_Magnus: (title^='Bishop of Regensburg', canonized date^='1931-12-16', death date^='1280-11-15')
+      Dominican_Order: (formation^='1206')
+      St._Andrew's_Church,_Cologne: (country^='http://dbpedia.org/resource/Germany')
+    relationships:
+      - Agostino_Bausa (dor:Agostino_Bausa) --doo:deathPlace--> Kingdom_of_Italy (dor:Kingdom_of_Italy)
+      - Agostino_Bausa (dor:Agostino_Bausa) --dop:honorificSuffix--> Dominican_Order (dor:Dominican_Order)
+      - Albertus_Magnus (dor:Albertus_Magnus) --dop:honorificSuffix--> Dominican_Order (dor:Dominican_Order)
+      - Albertus_Magnus (dor:Albertus_Magnus) --doo:majorShrine--> St._Andrew's_Church,_Cologne (<http://dbpedia.org/resource/St._Andrew's_Church,_Cologne>)
+  '6':
+    attributes:
+      Binondo_Church: (country^='Philippines')
+      Dominican_Order: (formation^='1206')
+      Domingo_Ibáñez_de_Erquicia: (canonized date^='1987-10-18', death date^='1633-08-14')
+    relationships:
+      - Agostino_Bausa (dor:Agostino_Bausa) --doo:deathPlace--> Florence (dor:Florence)
+      - Agostino_Bausa (dor:Agostino_Bausa) --dop:honorificSuffix--> Dominican_Order (dor:Dominican_Order)
+      - Domingo_Ibáñez_de_Erquicia (<http://dbpedia.org/resource/Domingo_Ibáñez_de_Erquicia>) --dop:honorificSuffix--> Dominican_Order (dor:Dominican_Order)
+      - Domingo_Ibáñez_de_Erquicia (<http://dbpedia.org/resource/Domingo_Ibáñez_de_Erquicia>) --doo:majorShrine--> Binondo_Church (dor:Binondo_Church)
+  '7':
+    attributes:
+      Anthony_of_Padua: (title^='Doctor of the Church', canonized date^='1232-05-30', death date^='1231-06-13')
+      Order_of_Friars_Minor: (formation^='1209-02-24')
+    relationships:
+      - Alexandre_José_Maria_dos_Santos (<http://dbpedia.org/resource/Alexandre_José_Maria_dos_Santos>) --doo:deathPlace--> Portuguese_Mozambique (dor:Portuguese_Mozambique)
+      - Alexandre_José_Maria_dos_Santos (<http://dbpedia.org/resource/Alexandre_José_Maria_dos_Santos>) --dop:honorificSuffix--> Order_of_Friars_Minor (dor:Order_of_Friars_Minor)
+      - Anthony_of_Padua (dor:Anthony_of_Padua) --dop:honorificSuffix--> Order_of_Friars_Minor (dor:Order_of_Friars_Minor)
+      - Anthony_of_Padua (dor:Anthony_of_Padua) --doo:majorShrine--> Basilica_of_Saint_Anthony_of_Padua (dor:Basilica_of_Saint_Anthony_of_Padua)
+  '8':
+    attributes:
+      Charles_of_Sezze: (title^='Religious', canonized date^='1959-04-12', death date^='1670-01-06')
+      San_Francesco_a_Ripa: (country^='http://dbpedia.org/resource/Italy')
+      Order_of_Friars_Minor: (formation^='1209-02-24')
+    relationships:
+      - Alexandre_José_Maria_dos_Santos (<http://dbpedia.org/resource/Alexandre_José_Maria_dos_Santos>) --doo:deathPlace--> Portuguese_Mozambique (dor:Portuguese_Mozambique)
+      - Alexandre_José_Maria_dos_Santos (<http://dbpedia.org/resource/Alexandre_José_Maria_dos_Santos>) --dop:honorificSuffix--> Order_of_Friars_Minor (dor:Order_of_Friars_Minor)
+      - Charles_of_Sezze (dor:Charles_of_Sezze) --dop:honorificSuffix--> Order_of_Friars_Minor (dor:Order_of_Friars_Minor)
+      - Charles_of_Sezze (dor:Charles_of_Sezze) --doo:majorShrine--> San_Francesco_a_Ripa (dor:San_Francesco_a_Ripa)
+  '9':
+    attributes:
+      John_Bosco: (title^='"Father and Teacher of Youth"', canonized date^='1934-04-01', death date^='1888-01-31')
+      Vatican_City: (caption^='Vatican City')
+      Basilica_of_Our_Lady_Help_of_Christians,_Turin: (country^='http://dbpedia.org/resource/Italy')
+    relationships:
+      - Alfons_Maria_Stickler (dor:Alfons_Maria_Stickler) --doo:deathPlace--> Vatican_City (dor:Vatican_City)
+      - Alfons_Maria_Stickler (dor:Alfons_Maria_Stickler) --dop:honorificSuffix--> Salesians_of_Don_Bosco (dor:Salesians_of_Don_Bosco)
+      - John_Bosco (dor:John_Bosco) --dop:honorificSuffix--> Salesians_of_Don_Bosco (dor:Salesians_of_Don_Bosco)
+      - John_Bosco (dor:John_Bosco) --doo:majorShrine--> Basilica_of_Our_Lady_Help_of_Christians,_Turin (<http://dbpedia.org/resource/Basilica_of_Our_Lady_Help_of_Christians,_Turin>)
+  '10':
+    attributes:
+      Piarists: '(motto^=''English: Piety and Learning'', formation^=''--03-25'')'
+      Joseph_Calasanz: (canonized date^='1767-07-16', death date^='1648-08-25')
+      San_Pantaleo,_Rome: (country^='http://dbpedia.org/resource/Italy')
+    relationships:
+      - Alfonso_Mistrangelo (dor:Alfonso_Mistrangelo) --doo:deathPlace--> Florence (dor:Florence)
+      - Alfonso_Mistrangelo (dor:Alfonso_Mistrangelo) --dop:honorificSuffix--> Piarists (dor:Piarists)
+      - Joseph_Calasanz (dor:Joseph_Calasanz) --dop:honorificSuffix--> Piarists (dor:Piarists)
+      - Joseph_Calasanz (dor:Joseph_Calasanz) --doo:majorShrine--> San_Pantaleo,_Rome (<http://dbpedia.org/resource/San_Pantaleo,_Rome>)
+attributes:
+  saint: --title^ (doo:title)--> langString | --canonized date^ (doo:canonizedDate)--> date | --death date^ (dop:deathDate)--> date
+  country: --caption^ (dop:caption)--> langString
+  cardinal: --religion^ (doo:religion)--> Resource
+  organisation: --logo^ (dop:logo)--> langString | --motto^ (doo:motto)--> string | --formation^ (dop:formation)--> int
+  historic building: --country^ (dop:country)--> langString
+subgraph_id: 711
+relationships:
+  - cardinal --doo:deathPlace--> country
+  - cardinal --dop:honorificSuffix--> organisation
+  - saint --dop:honorificSuffix--> organisation
+  - saint --doo:majorShrine--> historic building

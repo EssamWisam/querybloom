@@ -1,0 +1,42 @@
+types:
+  train: doo:Train
+  railway line: doo:RailwayLine
+  train station: doo:RailwayStation
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      RABe_520: (year of construction^='2002', manufacturer^='http://dbpedia.org/resource/Stadler_Rail')
+    relationships:
+      - Aathal_railway_station (dor:Aathal_railway_station) --dop:owned--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Aathal_railway_station (dor:Aathal_railway_station) --dop:line--> Wallisellen–Uster–Rapperswil_railway_line (<http://dbpedia.org/resource/Wallisellen–Uster–Rapperswil_railway_line>)
+      - RABe_520 (dor:RABe_520) --dop:operator--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+  '2':
+    attributes:
+      SBB_Bem_550: (year of construction^='1994', manufacturer^='Ateliers de Construction Mécaniques de Vevey', fleetnumbers^='0')
+    relationships:
+      - Aathal_railway_station (dor:Aathal_railway_station) --dop:owned--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Aathal_railway_station (dor:Aathal_railway_station) --dop:line--> Wallisellen–Uster–Rapperswil_railway_line (<http://dbpedia.org/resource/Wallisellen–Uster–Rapperswil_railway_line>)
+      - SBB_Bem_550 (dor:SBB_Bem_550) --dop:operator--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+  '3':
+    attributes:
+      SBB_RABe_501: (year of construction^='2017', manufacturer^='http://dbpedia.org/resource/Stadler_Rail')
+    relationships:
+      - Aathal_railway_station (dor:Aathal_railway_station) --dop:owned--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Aathal_railway_station (dor:Aathal_railway_station) --dop:line--> Wallisellen–Uster–Rapperswil_railway_line (<http://dbpedia.org/resource/Wallisellen–Uster–Rapperswil_railway_line>)
+      - SBB_RABe_501 (dor:SBB_RABe_501) --dop:operator--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+attributes:
+  train: --family^ (dop:family)--> langString | --year of construction^ (doo:yearOfConstruction)--> gYear | --manufacturer^ (dop:manufacturer)--> langString | --fleetnumbers^ (dop:fleetnumbers)--> int
+  railway line: --status^ (doo:status)--> string | --operator^ (dop:operator)--> langString | --speed limit (kmh)^ (doo:speedLimit)--> double | --operator^ (doo:operator)--> Resource | --box width^ (dop:boxWidth)--> langString | --opening date^ (doo:openingDate)--> date
+  train station: --opening date^ (doo:openingDate)--> date
+  public transit system: --closingDate (doo:closingDate)--> date
+subgraph_id: 648
+relationships:
+  - train station --dop:owned--> public transit system
+  - train station --dop:line--> railway line
+  - train --dop:operator--> public transit system

@@ -1,0 +1,89 @@
+types:
+  artist: doo:Artist
+  person: doo:Person
+  country: doo:Country
+  scientist: doo:Scientist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Dorothy_Van_Doren: (children^='2')
+    relationships:
+      - Dorothy_Van_Doren (dor:Dorothy_Van_Doren) --dop:relatives--> Adam_Van_Doren (dor:Adam_Van_Doren)
+      - Adam_Van_Doren (dor:Adam_Van_Doren) --doo:nationality--> United_States (dor:United_States)
+      - Abby_Howe_Turner (dor:Abby_Howe_Turner) --doo:citizenship--> United_States (dor:United_States)
+  '2':
+    attributes:
+      Dorothy_Van_Doren: (children^='2')
+    relationships:
+      - Dorothy_Van_Doren (dor:Dorothy_Van_Doren) --dop:relatives--> Adam_Van_Doren (dor:Adam_Van_Doren)
+      - Adam_Van_Doren (dor:Adam_Van_Doren) --doo:nationality--> United_States (dor:United_States)
+      - Alan_S._Kaufman (dor:Alan_S._Kaufman) --doo:citizenship--> United_States (dor:United_States)
+  '3':
+    attributes:
+      Dorothy_Van_Doren: (children^='2')
+    relationships:
+      - Dorothy_Van_Doren (dor:Dorothy_Van_Doren) --dop:relatives--> Adam_Van_Doren (dor:Adam_Van_Doren)
+      - Adam_Van_Doren (dor:Adam_Van_Doren) --doo:nationality--> United_States (dor:United_States)
+      - Alan_V._Oppenheim (dor:Alan_V._Oppenheim) --doo:citizenship--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Hushang_Ebtehaj: (resting place^='http://dbpedia.org/resource/Pahlavi_Iran', children^='4')
+    relationships:
+      - Hushang_Ebtehaj (dor:Hushang_Ebtehaj) --dop:relatives--> Ala_Ebtekar (dor:Ala_Ebtekar)
+      - Ala_Ebtekar (dor:Ala_Ebtekar) --doo:nationality--> Iranian_peoples (dor:Iranian_peoples)
+      - Ali_Khademhosseini (dor:Ali_Khademhosseini) --doo:citizenship--> Iranian_peoples (dor:Iranian_peoples)
+  '5':
+    attributes:
+      Ben_Miller: (children^='3', id^='587950')
+    relationships:
+      - Ben_Miller (dor:Ben_Miller) --dop:relatives--> Alan_Parker_(musician) (<http://dbpedia.org/resource/Alan_Parker_(musician)>)
+      - Alan_Parker_(musician) (<http://dbpedia.org/resource/Alan_Parker_(musician)>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Adrian_Furnham (dor:Adrian_Furnham) --doo:citizenship--> United_Kingdom (dor:United_Kingdom)
+  '6':
+    attributes:
+      Ben_Miller: (children^='3', id^='587950')
+    relationships:
+      - Ben_Miller (dor:Ben_Miller) --dop:relatives--> Alan_Parker_(musician) (<http://dbpedia.org/resource/Alan_Parker_(musician)>)
+      - Alan_Parker_(musician) (<http://dbpedia.org/resource/Alan_Parker_(musician)>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Alwynne_Cooper_Wheeler (dor:Alwynne_Cooper_Wheeler) --doo:citizenship--> United_Kingdom (dor:United_Kingdom)
+  '7':
+    attributes:
+      Ben_Miller: (children^='3', id^='587950')
+    relationships:
+      - Ben_Miller (dor:Ben_Miller) --dop:relatives--> Alan_Parker_(musician) (<http://dbpedia.org/resource/Alan_Parker_(musician)>)
+      - Alan_Parker_(musician) (<http://dbpedia.org/resource/Alan_Parker_(musician)>) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Andrew_Keller (dor:Andrew_Keller) --doo:citizenship--> United_Kingdom (dor:United_Kingdom)
+  '8':
+    attributes:
+      Elin_Klinga: (children^='1')
+    relationships:
+      - Elin_Klinga (dor:Elin_Klinga) --dop:relatives--> Anders_Ek (dor:Anders_Ek)
+      - Anders_Ek (dor:Anders_Ek) --doo:nationality--> Sweden (dor:Sweden)
+      - Åke_W._Sjöberg (<http://dbpedia.org/resource/Åke_W._Sjöberg>) --doo:citizenship--> Sweden (dor:Sweden)
+  '9':
+    attributes:
+      Elin_Klinga: (children^='1')
+    relationships:
+      - Elin_Klinga (dor:Elin_Klinga) --dop:relatives--> Anders_Ek (dor:Anders_Ek)
+      - Anders_Ek (dor:Anders_Ek) --doo:nationality--> Sweden (dor:Sweden)
+      - Arne_Öhman (<http://dbpedia.org/resource/Arne_Öhman>) --doo:citizenship--> Sweden (dor:Sweden)
+  '10':
+    attributes:
+      Elin_Klinga: (children^='1')
+    relationships:
+      - Elin_Klinga (dor:Elin_Klinga) --dop:relatives--> Anders_Ek (dor:Anders_Ek)
+      - Anders_Ek (dor:Anders_Ek) --doo:nationality--> Sweden (dor:Sweden)
+      - Astrid_Cleve (dor:Astrid_Cleve) --doo:citizenship--> Sweden (dor:Sweden)
+attributes:
+  person: --resting place^ (doo:restingPlace)--> Resource | --2y^ (dop:2y)--> int | --father^ (dop:father)--> langString | --known for^ (dop:knownFor)--> Resource | --reason^ (dop:reason)--> langString | --children^ (dop:children)--> langString | --father^ (dop:father)--> Resource | --display^ (dop:display)--> langString | --before^ (dop:before)--> Resource | --id^ (dop:id)--> int
+  country: --1p^ (dop:1p)--> int
+subgraph_id: 401
+relationships:
+  - person --dop:relatives--> artist
+  - artist --doo:nationality--> country
+  - scientist --doo:citizenship--> country

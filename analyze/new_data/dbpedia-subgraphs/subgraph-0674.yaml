@@ -1,0 +1,89 @@
+types:
+  crater: doo:Crater
+  country: doo:Country
+  Location: doo:Location
+  scientist: doo:Scientist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ernst_Abbe: (birth date^='1840-01-23')
+    relationships:
+      - Abbe_(crater) (<http://dbpedia.org/resource/Abbe_(crater)>) --dop:eponym--> Ernst_Abbe (dor:Ernst_Abbe)
+      - Abbe_(crater) (<http://dbpedia.org/resource/Abbe_(crater)>) --dop:eponym--> Ernst_Abbe (dor:Ernst_Abbe)
+      - Ernst_Abbe (dor:Ernst_Abbe) --doo:deathPlace--> German_Empire (dor:German_Empire)
+  '2':
+    attributes:
+      Niels_Henrik_Abel: (birth date^='1802-08-05')
+    relationships:
+      - Abel_(crater) (<http://dbpedia.org/resource/Abel_(crater)>) --dop:eponym--> Niels_Henrik_Abel (dor:Niels_Henrik_Abel)
+      - Abel_(crater) (<http://dbpedia.org/resource/Abel_(crater)>) --dop:eponym--> Niels_Henrik_Abel (dor:Niels_Henrik_Abel)
+      - Niels_Henrik_Abel (dor:Niels_Henrik_Abel) --doo:deathPlace--> Union_between_Sweden_and_Norway (dor:Union_between_Sweden_and_Norway)
+  '3':
+    attributes:
+      Antonio_Abetti: (birth date^='1846-06-19')
+    relationships:
+      - Abetti_(crater) (<http://dbpedia.org/resource/Abetti_(crater)>) --dop:eponym--> Antonio_Abetti (dor:Antonio_Abetti)
+      - Abetti_(crater) (<http://dbpedia.org/resource/Abetti_(crater)>) --dop:eponym--> Antonio_Abetti (dor:Antonio_Abetti)
+      - Antonio_Abetti (dor:Antonio_Abetti) --doo:deathPlace--> Kingdom_of_Italy (dor:Kingdom_of_Italy)
+  '4':
+    attributes:
+      John_Couch_Adams: (birth date^='1819-06-05')
+    relationships:
+      - Adams_(lunar_crater) (<http://dbpedia.org/resource/Adams_(lunar_crater)>) --dop:eponym--> John_Couch_Adams (dor:John_Couch_Adams)
+      - Adams_(lunar_crater) (<http://dbpedia.org/resource/Adams_(lunar_crater)>) --dop:eponym--> John_Couch_Adams (dor:John_Couch_Adams)
+      - John_Couch_Adams (dor:John_Couch_Adams) --doo:deathPlace--> Cambridgeshire (dor:Cambridgeshire)
+  '5':
+    attributes:
+      Walter_Sydney_Adams: (birth date^='1876-12-20')
+    relationships:
+      - Adams_(lunar_crater) (<http://dbpedia.org/resource/Adams_(lunar_crater)>) --dop:eponym--> Walter_Sydney_Adams (dor:Walter_Sydney_Adams)
+      - Adams_(lunar_crater) (<http://dbpedia.org/resource/Adams_(lunar_crater)>) --dop:eponym--> Walter_Sydney_Adams (dor:Walter_Sydney_Adams)
+      - Walter_Sydney_Adams (dor:Walter_Sydney_Adams) --doo:deathPlace--> United_States (dor:United_States)
+  '6':
+    attributes:
+      Florentino_Ameghino: (birth date^='1853-09-19')
+    relationships:
+      - Ameghino_(crater) (<http://dbpedia.org/resource/Ameghino_(crater)>) --dop:eponym--> Florentino_Ameghino (dor:Florentino_Ameghino)
+      - Ameghino_(crater) (<http://dbpedia.org/resource/Ameghino_(crater)>) --dop:eponym--> Florentino_Ameghino (dor:Florentino_Ameghino)
+      - Florentino_Ameghino (dor:Florentino_Ameghino) --doo:deathPlace--> Argentina (dor:Argentina)
+  '7':
+    attributes:
+      Guillaume_Amontons: (birth date^='1663-08-31')
+    relationships:
+      - Amontons_(crater) (<http://dbpedia.org/resource/Amontons_(crater)>) --dop:eponym--> Guillaume_Amontons (dor:Guillaume_Amontons)
+      - Amontons_(crater) (<http://dbpedia.org/resource/Amontons_(crater)>) --dop:eponym--> Guillaume_Amontons (dor:Guillaume_Amontons)
+      - Guillaume_Amontons (dor:Guillaume_Amontons) --doo:deathPlace--> France (dor:France)
+  '8':
+    attributes: {}
+    relationships:
+      - Archimedes_(crater) (<http://dbpedia.org/resource/Archimedes_(crater)>) --dop:eponym--> Archimedes (dor:Archimedes)
+      - Archimedes_(crater) (<http://dbpedia.org/resource/Archimedes_(crater)>) --dop:eponym--> Archimedes (dor:Archimedes)
+      - Archimedes (dor:Archimedes) --doo:deathPlace--> Sicily (dor:Sicily)
+  '9':
+    attributes:
+      Amedeo_Avogadro: (birth date^='1776-08-09')
+    relationships:
+      - Avogadro_(crater) (<http://dbpedia.org/resource/Avogadro_(crater)>) --dop:eponym--> Amedeo_Avogadro (dor:Amedeo_Avogadro)
+      - Avogadro_(crater) (<http://dbpedia.org/resource/Avogadro_(crater)>) --dop:eponym--> Amedeo_Avogadro (dor:Amedeo_Avogadro)
+      - Amedeo_Avogadro (dor:Amedeo_Avogadro) --doo:deathPlace--> Kingdom_of_Sardinia (dor:Kingdom_of_Sardinia)
+  '10':
+    attributes:
+      Walter_Baade: (birth date^='1893-03-24')
+    relationships:
+      - Baade_(crater) (<http://dbpedia.org/resource/Baade_(crater)>) --dop:eponym--> Walter_Baade (dor:Walter_Baade)
+      - Baade_(crater) (<http://dbpedia.org/resource/Baade_(crater)>) --dop:eponym--> Walter_Baade (dor:Walter_Baade)
+      - Walter_Baade (dor:Walter_Baade) --doo:deathPlace--> West_Germany (dor:West_Germany)
+attributes:
+  country: --quote^ (dop:quote)--> langString | --alt^ (dop:alt)--> langString
+  Location: --outflow^ (doo:outflow)--> Resource | --country^ (dop:country)--> langString | --title (dop:title)--> langString | --designated nrhp type^ (dop:designatedNrhpType)--> date | --arc-textA^ (dop:arcTexta)--> langString | --accessdate^ (dop:accessdate)--> date | --area^ (dop:area)--> squareKilometre
+  scientist: --align^ (dop:align)--> langString | --birth date^ (doo:birthDate)--> date
+subgraph_id: 674
+relationships:
+  - crater --dop:eponym--> scientist
+  - Location --dop:eponym--> scientist
+  - scientist --doo:deathPlace--> country

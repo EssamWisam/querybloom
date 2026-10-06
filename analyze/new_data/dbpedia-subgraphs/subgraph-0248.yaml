@@ -1,0 +1,126 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  settlement: doo:Settlement
+  american football player: doo:AmericanFootballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Baltimore: (Wikipage page ID^='26997138')
+    relationships:
+      - Baltimore (dor:Baltimore) --doo:type--> Independent_city_(United_States) (<http://dbpedia.org/resource/Independent_city_(United_States)>)
+      - A._J._Dillon (dor:A._J._Dillon) --dop:birthPlace--> Baltimore (dor:Baltimore)
+      - Baltimore (dor:Baltimore) --doo:country--> United_States (dor:United_States)
+  '2':
+    attributes:
+      Belleville,_Illinois: (Wikipage page ID^='111913')
+    relationships:
+      - Belleville,_Illinois (<http://dbpedia.org/resource/Belleville,_Illinois>) --doo:type--> List_of_cities_in_Illinois (dor:List_of_cities_in_Illinois)
+      - Adoree'_Jackson (<http://dbpedia.org/resource/Adoree'_Jackson>) --dop:birthPlace--> Belleville,_Illinois (<http://dbpedia.org/resource/Belleville,_Illinois>)
+      - Belleville,_Illinois (<http://dbpedia.org/resource/Belleville,_Illinois>) --doo:country--> United_States (dor:United_States)
+  '3':
+    attributes:
+      Fairfax,_Virginia: (Wikipage page ID^='91328')
+    relationships:
+      - Fairfax,_Virginia (<http://dbpedia.org/resource/Fairfax,_Virginia>) --doo:type--> Independent_city_(United_States) (<http://dbpedia.org/resource/Independent_city_(United_States)>)
+      - Adrian_Tracy (dor:Adrian_Tracy) --dop:birthPlace--> Fairfax,_Virginia (<http://dbpedia.org/resource/Fairfax,_Virginia>)
+      - Fairfax,_Virginia (<http://dbpedia.org/resource/Fairfax,_Virginia>) --doo:country--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Harare: (Wikipage page ID^='56680')
+      Zimbabwe: (url^='https://web.archive.org/web/20171223174502/http:/www.zim.gov.zw/')
+      Harare_Province: (area total (km2)^='940.0', Apr record high C^='32')
+    relationships:
+      - Harare (dor:Harare) --doo:type--> Harare_Province (dor:Harare_Province)
+      - Andrew_Mukuba (dor:Andrew_Mukuba) --dop:birthPlace--> Harare (dor:Harare)
+      - Harare (dor:Harare) --doo:country--> Zimbabwe (dor:Zimbabwe)
+  '5':
+    attributes:
+      Capitol_Heights,_Maryland: (Wikipage page ID^='116510')
+    relationships:
+      - Capitol_Heights,_Maryland (<http://dbpedia.org/resource/Capitol_Heights,_Maryland>) --doo:type--> Town (dor:Town)
+      - Chad_Scott (dor:Chad_Scott) --dop:birthPlace--> Capitol_Heights,_Maryland (<http://dbpedia.org/resource/Capitol_Heights,_Maryland>)
+      - Capitol_Heights,_Maryland (<http://dbpedia.org/resource/Capitol_Heights,_Maryland>) --doo:country--> United_States_of_America (dor:United_States_of_America)
+  '6':
+    attributes:
+      Ceiba,_Puerto_Rico: (Wikipage page ID^='405406')
+      Ceiba_barrio-pueblo: (area total (km2)^='1.4244934606848')
+    relationships:
+      - Ceiba,_Puerto_Rico (<http://dbpedia.org/resource/Ceiba,_Puerto_Rico>) --doo:type--> Ceiba_barrio-pueblo (dor:Ceiba_barrio-pueblo)
+      - Jaron_Brown (dor:Jaron_Brown) --dop:birthPlace--> Ceiba,_Puerto_Rico (<http://dbpedia.org/resource/Ceiba,_Puerto_Rico>)
+      - Ceiba,_Puerto_Rico (<http://dbpedia.org/resource/Ceiba,_Puerto_Rico>) --doo:country--> Puerto_Rico (dor:Puerto_Rico)
+  '7':
+    attributes: {}
+    relationships:
+      - Riverdale_Park,_Maryland (<http://dbpedia.org/resource/Riverdale_Park,_Maryland>) --doo:type--> Town (dor:Town)
+      - Leon_Brown_(American_football) (<http://dbpedia.org/resource/Leon_Brown_(American_football)>) --dop:birthPlace--> Riverdale_Park,_Maryland (<http://dbpedia.org/resource/Riverdale_Park,_Maryland>)
+      - Riverdale_Park,_Maryland (<http://dbpedia.org/resource/Riverdale_Park,_Maryland>) --doo:country--> United_States_of_America (dor:United_States_of_America)
+  '8':
+    attributes:
+      Birmingham: (Wikipage page ID^='13882056')
+    relationships:
+      - Birmingham (dor:Birmingham) --doo:type--> Metropolitan_borough (dor:Metropolitan_borough)
+      - Mark_Cohen_(American_footballer) (<http://dbpedia.org/resource/Mark_Cohen_(American_footballer)>) --dop:birthPlace--> Birmingham (dor:Birmingham)
+      - Birmingham (dor:Birmingham) --doo:country--> United_Kingdom (dor:United_Kingdom)
+  '9':
+    attributes:
+      Birmingham: (Wikipage page ID^='13882056')
+    relationships:
+      - Birmingham (dor:Birmingham) --doo:type--> Metropolitan_borough (dor:Metropolitan_borough)
+      - Mark_Webb_(placekicker) (<http://dbpedia.org/resource/Mark_Webb_(placekicker)>) --dop:birthPlace--> Birmingham (dor:Birmingham)
+      - Birmingham (dor:Birmingham) --doo:country--> United_Kingdom (dor:United_Kingdom)
+  '10':
+    attributes:
+      Manchester: (Wikipage page ID^='20206')
+    relationships:
+      - Manchester (dor:Manchester) --doo:type--> Metropolitan_borough (dor:Metropolitan_borough)
+      - Michael_Okwo (dor:Michael_Okwo) --dop:birthPlace--> Manchester (dor:Manchester)
+      - Manchester (dor:Manchester) --doo:country--> United_Kingdom (dor:United_Kingdom)
+qa_result:
+  status: completed
+  cost_usd: 0.238955
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.027467400000000003
+        total_tokens: 3286
+        prompt_tokens: 2105
+        completion_tokens: 1181
+      generate:
+        cost_usd: 0.07222260000000001
+        total_tokens: 6965
+        prompt_tokens: 3992
+        completion_tokens: 2973
+      verify_1:
+        cost_usd: 0.035827000000000005
+        total_tokens: 5039
+        prompt_tokens: 4330
+        completion_tokens: 709
+      complexity:
+        cost_usd: 0.103438
+        total_tokens: 9552
+        prompt_tokens: 5268
+        completion_tokens: 4284
+    total_tokens: 24842
+    prompt_tokens: 15695
+    total_cost_usd: 0.238955
+    completion_tokens: 9147
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  country: --url^ (dop:url)--> Resource
+  Location: --wordnet_type (dop:wordnet_type)--> Resource | --founder^ (dop:founder)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int
+  settlement: --align^ (dop:align)--> langString | --Apr rain days^ (dop:aprRainDays)--> int | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --Apr record high C^ (dop:aprRecordHighC)--> double
+  american football player: --alt^ (dop:alt)--> langString
+subgraph_id: 248
+relationships:
+  - Location --doo:type--> settlement
+  - american football player --dop:birthPlace--> Location
+  - Location --doo:country--> country

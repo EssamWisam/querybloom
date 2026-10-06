@@ -1,0 +1,109 @@
+types:
+  Food: doo:Food
+  plant: doo:Plant
+  single: doo:Single
+  country: doo:Country
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Giorgio_Moroder: (caption^='Moroder at First Avenue, Minneapolis, in 2018')
+      Together_in_Electric_Dreams: (genre^='', writer^='', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-phonograph_record-noun-1')
+    relationships:
+      - Together_in_Electric_Dreams (dor:Together_in_Electric_Dreams) --doo:recordedIn--> Germany (dor:Germany)
+      - Aachener_Printen (dor:Aachener_Printen) --doo:country--> Germany (dor:Germany)
+      - Aachener_Printen (dor:Aachener_Printen) --doo:ingredient--> Cardamom (dor:Cardamom)
+      - Together_in_Electric_Dreams (dor:Together_in_Electric_Dreams) --doo:artist--> Giorgio_Moroder (dor:Giorgio_Moroder)
+  '2':
+    attributes:
+      Philip_Oakey: (caption^='Oakey performing with The Human League in 2014')
+      Together_in_Electric_Dreams: (genre^='', writer^='', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-phonograph_record-noun-1')
+    relationships:
+      - Together_in_Electric_Dreams (dor:Together_in_Electric_Dreams) --doo:recordedIn--> Germany (dor:Germany)
+      - Aachener_Printen (dor:Aachener_Printen) --doo:country--> Germany (dor:Germany)
+      - Aachener_Printen (dor:Aachener_Printen) --doo:ingredient--> Cardamom (dor:Cardamom)
+      - Together_in_Electric_Dreams (dor:Together_in_Electric_Dreams) --doo:artist--> Philip_Oakey (dor:Philip_Oakey)
+  '3':
+    attributes:
+      Giorgio_Moroder: (caption^='Moroder at First Avenue, Minneapolis, in 2018')
+      Together_in_Electric_Dreams: (genre^='', writer^='', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-phonograph_record-noun-1')
+    relationships:
+      - Together_in_Electric_Dreams (dor:Together_in_Electric_Dreams) --doo:recordedIn--> Germany (dor:Germany)
+      - Aachener_Printen (dor:Aachener_Printen) --doo:country--> Germany (dor:Germany)
+      - Aachener_Printen (dor:Aachener_Printen) --doo:ingredient--> Clove (dor:Clove)
+      - Together_in_Electric_Dreams (dor:Together_in_Electric_Dreams) --doo:artist--> Giorgio_Moroder (dor:Giorgio_Moroder)
+  '4':
+    attributes:
+      David_Guetta: (caption^='Guetta at the 2018 MTV Europe Music Awards')
+    relationships:
+      - Without_You_(David_Guetta_song) (<http://dbpedia.org/resource/Without_You_(David_Guetta_song)>) --doo:recordedIn--> Italy (dor:Italy)
+      - Agnolini (dor:Agnolini) --doo:country--> Italy (dor:Italy)
+      - Agnolini (dor:Agnolini) --doo:ingredient--> Nutmeg (dor:Nutmeg)
+      - Without_You_(David_Guetta_song) (<http://dbpedia.org/resource/Without_You_(David_Guetta_song)>) --doo:artist--> David_Guetta (dor:David_Guetta)
+  '5':
+    attributes:
+      David_Guetta: (caption^='Guetta at the 2018 MTV Europe Music Awards')
+    relationships:
+      - Without_You_(David_Guetta_song) (<http://dbpedia.org/resource/Without_You_(David_Guetta_song)>) --doo:recordedIn--> Italy (dor:Italy)
+      - Amatriciana_sauce (dor:Amatriciana_sauce) --doo:country--> Italy (dor:Italy)
+      - Amatriciana_sauce (dor:Amatriciana_sauce) --doo:ingredient--> Tomato (dor:Tomato)
+      - Without_You_(David_Guetta_song) (<http://dbpedia.org/resource/Without_You_(David_Guetta_song)>) --doo:artist--> David_Guetta (dor:David_Guetta)
+  '6':
+    attributes:
+      Skeeter_Davis: (caption^='1960.0')
+      (I_Can't_Help_You)_I'm_Falling_Too: (genre^='http://dbpedia.org/resource/Country_music', writer^='Hal Blair, Skeeter Davis, Don Robertson')
+    relationships:
+      - (I_Can't_Help_You)_I'm_Falling_Too (<http://dbpedia.org/resource/(I_Can't_Help_You)_I'm_Falling_Too>) --doo:recordedIn--> United_States (dor:United_States)
+      - Ambrosia_(fruit_salad) (<http://dbpedia.org/resource/Ambrosia_(fruit_salad)>) --doo:country--> United_States (dor:United_States)
+      - Ambrosia_(fruit_salad) (<http://dbpedia.org/resource/Ambrosia_(fruit_salad)>) --doo:ingredient--> Coconut (dor:Coconut)
+      - (I_Can't_Help_You)_I'm_Falling_Too (<http://dbpedia.org/resource/(I_Can't_Help_You)_I'm_Falling_Too>) --doo:artist--> Skeeter_Davis (dor:Skeeter_Davis)
+  '7':
+    attributes:
+      (I_Can't_Help_You)_I'm_Falling_Too: (genre^='http://dbpedia.org/resource/Country_music', writer^='Hal Blair, Skeeter Davis, Don Robertson')
+    relationships:
+      - (I_Can't_Help_You)_I'm_Falling_Too (<http://dbpedia.org/resource/(I_Can't_Help_You)_I'm_Falling_Too>) --doo:recordedIn--> United_States (dor:United_States)
+      - Ambrosia_(fruit_salad) (<http://dbpedia.org/resource/Ambrosia_(fruit_salad)>) --doo:country--> United_States (dor:United_States)
+      - Ambrosia_(fruit_salad) (<http://dbpedia.org/resource/Ambrosia_(fruit_salad)>) --doo:ingredient--> Mandarin_orange (dor:Mandarin_orange)
+      - (I_Can't_Help_You)_I'm_Falling_Too (<http://dbpedia.org/resource/(I_Can't_Help_You)_I'm_Falling_Too>) --doo:artist--> Skeeter_Davis (dor:Skeeter_Davis)
+  '8':
+    attributes:
+      Skeeter_Davis: (caption^='1960.0')
+      (I_Can't_Help_You)_I'm_Falling_Too: (genre^='http://dbpedia.org/resource/Country_music', writer^='Hal Blair, Skeeter Davis, Don Robertson')
+    relationships:
+      - (I_Can't_Help_You)_I'm_Falling_Too (<http://dbpedia.org/resource/(I_Can't_Help_You)_I'm_Falling_Too>) --doo:recordedIn--> United_States (dor:United_States)
+      - Ambrosia_(fruit_salad) (<http://dbpedia.org/resource/Ambrosia_(fruit_salad)>) --doo:country--> United_States (dor:United_States)
+      - Ambrosia_(fruit_salad) (<http://dbpedia.org/resource/Ambrosia_(fruit_salad)>) --doo:ingredient--> Pineapple (dor:Pineapple)
+      - (I_Can't_Help_You)_I'm_Falling_Too (<http://dbpedia.org/resource/(I_Can't_Help_You)_I'm_Falling_Too>) --doo:artist--> Skeeter_Davis (dor:Skeeter_Davis)
+  '9':
+    attributes:
+      Michel_Delpech: (caption^='Michel Delpech in 2012')
+      Wight_Is_Wight: (genre^='http://dbpedia.org/resource/Chanson_française', writer^='Michel Delpech, Roland Vincent', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-phonograph_record-noun-1')
+    relationships:
+      - Wight_Is_Wight (dor:Wight_Is_Wight) --doo:recordedIn--> France (dor:France)
+      - Andouille (dor:Andouille) --doo:country--> France (dor:France)
+      - Andouille (dor:Andouille) --doo:ingredient--> Black_pepper (dor:Black_pepper)
+      - Wight_Is_Wight (dor:Wight_Is_Wight) --doo:artist--> Michel_Delpech (dor:Michel_Delpech)
+  '10':
+    attributes:
+      Michel_Delpech: (caption^='Michel Delpech in 2012')
+      Wight_Is_Wight: (genre^='http://dbpedia.org/resource/Chanson_française', writer^='Michel Delpech, Roland Vincent', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-phonograph_record-noun-1')
+    relationships:
+      - Wight_Is_Wight (dor:Wight_Is_Wight) --doo:recordedIn--> France (dor:France)
+      - Anise_of_Flavigny (dor:Anise_of_Flavigny) --doo:country--> France (dor:France)
+      - Anise_of_Flavigny (dor:Anise_of_Flavigny) --doo:ingredient--> Anise (dor:Anise)
+      - Wight_Is_Wight (dor:Wight_Is_Wight) --doo:artist--> Michel_Delpech (dor:Michel_Delpech)
+attributes:
+  single: --genre^ (dop:genre)--> langString | --footer^ (dop:footer)--> langString | --writer^ (dop:writer)--> langString | --wordnet_type (dop:wordnet_type)--> Resource
+  country: --Aug low C^ (dop:augLowC)--> double | --group^ (dop:group)--> langString | --Aug high C^ (dop:augHighC)--> double | --url^ (dop:url)--> Resource
+  musical artist: --footer^ (dop:footer)--> langString | --2a^ (dop:2a)--> langString | --caption^ (dop:caption)--> langString
+subgraph_id: 106
+relationships:
+  - single --doo:recordedIn--> country
+  - Food --doo:country--> country
+  - Food --doo:ingredient--> plant
+  - single --doo:artist--> musical artist

@@ -1,0 +1,48 @@
+types:
+  artist: doo:Artist
+  country: doo:Country
+  royalty: doo:Royalty
+  language: doo:Language
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Mahmud_of_Terengganu: (predecessor='http://dbpedia.org/resource/Sultan_Ismail_Nasiruddin_Shah')
+    relationships:
+      - Mahmud_of_Terengganu (dor:Mahmud_of_Terengganu) --dop:deathPlace--> Singapore (dor:Singapore)
+      - Abdul_Ghani_Hamid (dor:Abdul_Ghani_Hamid) --dop:deathPlace--> Singapore (dor:Singapore)
+      - Abdul_Ghani_Hamid (dor:Abdul_Ghani_Hamid) --doo:field--> Poetry (dor:Poetry)
+      - Fuzhou_dialect (dor:Fuzhou_dialect) --doo:spokenIn--> Singapore (dor:Singapore)
+  '2':
+    attributes:
+      Temenggong_Abdul_Rahman: (predecessor='Engku Muda Muhammad')
+    relationships:
+      - Temenggong_Abdul_Rahman (dor:Temenggong_Abdul_Rahman) --dop:deathPlace--> Singapore (dor:Singapore)
+      - Abdul_Ghani_Hamid (dor:Abdul_Ghani_Hamid) --dop:deathPlace--> Singapore (dor:Singapore)
+      - Abdul_Ghani_Hamid (dor:Abdul_Ghani_Hamid) --doo:field--> Poetry (dor:Poetry)
+      - Fuzhou_dialect (dor:Fuzhou_dialect) --doo:spokenIn--> Singapore (dor:Singapore)
+  '3':
+    attributes:
+      Temenggong_Daeng_Ibrahim: (predecessor='Himself')
+    relationships:
+      - Temenggong_Daeng_Ibrahim (dor:Temenggong_Daeng_Ibrahim) --dop:deathPlace--> Singapore (dor:Singapore)
+      - Abdul_Ghani_Hamid (dor:Abdul_Ghani_Hamid) --dop:deathPlace--> Singapore (dor:Singapore)
+      - Abdul_Ghani_Hamid (dor:Abdul_Ghani_Hamid) --doo:field--> Poetry (dor:Poetry)
+      - Fuzhou_dialect (dor:Fuzhou_dialect) --doo:spokenIn--> Singapore (dor:Singapore)
+attributes:
+  artist: --awards^ (dop:awards)--> langString | --imageSize (dop:imageSize)--> int
+  country: --Aug low C^ (dop:augLowC)--> double | --Apr high C^ (dop:aprHighC)--> double
+  royalty: --predecessor (dop:predecessor)--> langString | --imageSize (dop:imageSize)--> int
+  language: --family^ (dop:family)--> langString
+  music genre: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --quote^ (dop:quote)--> langString
+subgraph_id: 687
+relationships:
+  - royalty --dop:deathPlace--> country
+  - artist --dop:deathPlace--> country
+  - artist --doo:field--> music genre
+  - language --doo:spokenIn--> country

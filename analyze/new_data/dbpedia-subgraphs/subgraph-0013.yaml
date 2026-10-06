@@ -1,0 +1,72 @@
+types:
+  book: doo:Book
+  Location: doo:Location
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - 78-87_London_Youth (dor:78-87_London_Youth) --doo:nonFictionSubject--> London (dor:London)
+      - Charles_Kensington_Salaman (dor:Charles_Kensington_Salaman) --dop:deathPlace--> London (dor:London)
+  '2':
+    attributes: {}
+    relationships:
+      - 78-87_London_Youth (dor:78-87_London_Youth) --doo:nonFictionSubject--> London (dor:London)
+      - Christie_Hennessy (dor:Christie_Hennessy) --dop:deathPlace--> London (dor:London)
+  '3':
+    attributes: {}
+    relationships:
+      - 78-87_London_Youth (dor:78-87_London_Youth) --doo:nonFictionSubject--> London (dor:London)
+      - Clarence_Myerscough (dor:Clarence_Myerscough) --dop:deathPlace--> London (dor:London)
+  '4':
+    attributes: {}
+    relationships:
+      - A_Classical_Adventure:_The_Architectural_History_of_Downing_College,_Cambridge (<http://dbpedia.org/resource/A_Classical_Adventure:_The_Architectural_History_of_Downing_College,_Cambridge>) --doo:nonFictionSubject--> Cambridge (dor:Cambridge)
+      - Bob_Spalding (dor:Bob_Spalding) --dop:deathPlace--> Cambridge (dor:Cambridge)
+  '5':
+    attributes: {}
+    relationships:
+      - A_Classical_Adventure:_The_Architectural_History_of_Downing_College,_Cambridge (<http://dbpedia.org/resource/A_Classical_Adventure:_The_Architectural_History_of_Downing_College,_Cambridge>) --doo:nonFictionSubject--> Cambridge (dor:Cambridge)
+      - Boris_Ord (dor:Boris_Ord) --dop:deathPlace--> Cambridge (dor:Cambridge)
+  '6':
+    attributes:
+      Charles_Wood_(composer): (background^='person', instruments^='Organ', id^='Wood, Charles')
+    relationships:
+      - A_Classical_Adventure:_The_Architectural_History_of_Downing_College,_Cambridge (<http://dbpedia.org/resource/A_Classical_Adventure:_The_Architectural_History_of_Downing_College,_Cambridge>) --doo:nonFictionSubject--> Cambridge (dor:Cambridge)
+      - Charles_Wood_(composer) (<http://dbpedia.org/resource/Charles_Wood_(composer)>) --dop:deathPlace--> Cambridge (dor:Cambridge)
+  '7':
+    attributes:
+      A_Death_in_Belmont: (followed by^='Fire')
+    relationships:
+      - A_Death_in_Belmont (dor:A_Death_in_Belmont) --doo:nonFictionSubject--> Belmont,_Massachusetts (<http://dbpedia.org/resource/Belmont,_Massachusetts>)
+      - Minuetta_Kessler (dor:Minuetta_Kessler) --dop:deathPlace--> Belmont,_Massachusetts (<http://dbpedia.org/resource/Belmont,_Massachusetts>)
+  '8':
+    attributes:
+      Pen_Ran: (background^='solo_singer')
+    relationships:
+      - A_History_of_Democratic_Kampuchea_(1975–1979) (<http://dbpedia.org/resource/A_History_of_Democratic_Kampuchea_(1975–1979)>) --doo:nonFictionSubject--> Democratic_Kampuchea (dor:Democratic_Kampuchea)
+      - Pen_Ran (dor:Pen_Ran) --dop:deathPlace--> Democratic_Kampuchea (dor:Democratic_Kampuchea)
+  '9':
+    attributes:
+      Liu_Dehai: (background^='non_vocal_instrumentalist')
+    relationships:
+      - Age_of_Ambition (dor:Age_of_Ambition) --doo:nonFictionSubject--> China (dor:China)
+      - Liu_Dehai (dor:Liu_Dehai) --dop:deathPlace--> China (dor:China)
+  '10':
+    attributes: {}
+    relationships:
+      - Age_of_Science (dor:Age_of_Science) --doo:nonFictionSubject--> Egypt (dor:Egypt)
+      - Abdel_Aziz_El_Mubarak (dor:Abdel_Aziz_El_Mubarak) --dop:deathPlace--> Egypt (dor:Egypt)
+attributes:
+  book: --bot^ (dop:bot)--> langString | --followed by^ (dop:followedBy)--> langString
+  Location: --Center^ (dop:center)--> langString | --image upright^ (dop:imageUpright)--> double | --designated other1 name^ (dop:designatedOther1Name)--> langString | --line^ (dop:line)--> int | --line^ (dop:line)--> langString | --Apr record high F^ (dop:aprRecordHighF)--> double | --Aug low F^ (dop:augLowF)--> int | --Aug high C^ (dop:augHighC)--> int
+  musical artist: --background^ (doo:background)--> string | --instruments^ (dop:instruments)--> Resource | --id^ (dop:id)--> int
+subgraph_id: 13
+relationships:
+  - book --doo:nonFictionSubject--> Location
+  - musical artist --dop:deathPlace--> Location

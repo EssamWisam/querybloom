@@ -1,0 +1,137 @@
+types:
+  award: doo:Award
+  country: doo:Country
+  politician: doo:Politician
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Victoria_Cross: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:-%22', presenter^='http://dbpedia.org/resource/Monarch_of_the_United_Kingdom')
+      Adrian_Carton_de_Wiart: (caption^='Lieutenant Colonel Carton de Wiart during the First World War')
+      Alexander_Hore-Ruthven,_1st_Earl_of_Gowrie: (honours^='http://dbpedia.org/resource/Companion_of_the_Order_of_the_Bath')
+    relationships:
+      - Adrian_Carton_de_Wiart (dor:Adrian_Carton_de_Wiart) --dop:awards--> Victoria_Cross (dor:Victoria_Cross)
+      - Adrian_Carton_de_Wiart (dor:Adrian_Carton_de_Wiart) --doo:restingPlace--> Ireland (dor:Ireland)
+      - Alexander_Hore-Ruthven,_1st_Earl_of_Gowrie (<http://dbpedia.org/resource/Alexander_Hore-Ruthven,_1st_Earl_of_Gowrie>) --doo:honours--> Victoria_Cross (dor:Victoria_Cross)
+  '2':
+    attributes:
+      Croix_de_Guerre: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', presenter^='http://dbpedia.org/resource/France')
+      Alfred_D._Barksdale: (honours^='http://dbpedia.org/resource/Croix_de_Guerre')
+      Adrian_Carton_de_Wiart: (caption^='Lieutenant Colonel Carton de Wiart during the First World War')
+    relationships:
+      - Adrian_Carton_de_Wiart (dor:Adrian_Carton_de_Wiart) --dop:awards--> Croix_de_Guerre (dor:Croix_de_Guerre)
+      - Adrian_Carton_de_Wiart (dor:Adrian_Carton_de_Wiart) --doo:restingPlace--> Ireland (dor:Ireland)
+      - Alfred_D._Barksdale (dor:Alfred_D._Barksdale) --doo:honours--> Croix_de_Guerre (dor:Croix_de_Guerre)
+  '3':
+    attributes:
+      Virtuti_Militari: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Center', presenter^='http://dbpedia.org/resource/President_of_Poland')
+      Adrian_Carton_de_Wiart: (caption^='Lieutenant Colonel Carton de Wiart during the First World War')
+      Archibald_Wavell,_1st_Earl_Wavell: (honours^='http://dbpedia.org/resource/Companion_of_the_Order_of_St_Michael_and_St_George')
+    relationships:
+      - Adrian_Carton_de_Wiart (dor:Adrian_Carton_de_Wiart) --dop:awards--> Virtuti_Militari (dor:Virtuti_Militari)
+      - Adrian_Carton_de_Wiart (dor:Adrian_Carton_de_Wiart) --doo:restingPlace--> Ireland (dor:Ireland)
+      - Archibald_Wavell,_1st_Earl_Wavell (<http://dbpedia.org/resource/Archibald_Wavell,_1st_Earl_Wavell>) --doo:honours--> Virtuti_Militari (dor:Virtuti_Militari)
+  '4':
+    attributes:
+      Victoria_Cross: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:-%22', presenter^='http://dbpedia.org/resource/Monarch_of_the_United_Kingdom')
+      Alexander_Hore-Ruthven,_1st_Earl_of_Gowrie: (honours^='http://dbpedia.org/resource/Companion_of_the_Order_of_the_Bath')
+    relationships:
+      - Alexander_Roberts_Dunn (dor:Alexander_Roberts_Dunn) --dop:awards--> Victoria_Cross (dor:Victoria_Cross)
+      - Alexander_Roberts_Dunn (dor:Alexander_Roberts_Dunn) --doo:restingPlace--> Eritrea (dor:Eritrea)
+      - Alexander_Hore-Ruthven,_1st_Earl_of_Gowrie (<http://dbpedia.org/resource/Alexander_Hore-Ruthven,_1st_Earl_of_Gowrie>) --doo:honours--> Victoria_Cross (dor:Victoria_Cross)
+  '5':
+    attributes:
+      Victoria_Cross: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:-%22', presenter^='http://dbpedia.org/resource/Monarch_of_the_United_Kingdom')
+      Bernard_Freyberg,_1st_Baron_Freyberg: (honours^='http://dbpedia.org/resource/Croix_de_guerre_1914–1918_(France)')
+    relationships:
+      - Alexander_Roberts_Dunn (dor:Alexander_Roberts_Dunn) --dop:awards--> Victoria_Cross (dor:Victoria_Cross)
+      - Alexander_Roberts_Dunn (dor:Alexander_Roberts_Dunn) --doo:restingPlace--> Eritrea (dor:Eritrea)
+      - Bernard_Freyberg,_1st_Baron_Freyberg (<http://dbpedia.org/resource/Bernard_Freyberg,_1st_Baron_Freyberg>) --doo:honours--> Victoria_Cross (dor:Victoria_Cross)
+  '6':
+    attributes:
+      Crimea_Medal: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:About', presenter^='http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland')
+      Richard_Francis_Burton: (honours^='http://dbpedia.org/resource/Crimea_Medal')
+    relationships:
+      - Alexander_Roberts_Dunn (dor:Alexander_Roberts_Dunn) --dop:awards--> Crimea_Medal (dor:Crimea_Medal)
+      - Alexander_Roberts_Dunn (dor:Alexander_Roberts_Dunn) --doo:restingPlace--> Eritrea (dor:Eritrea)
+      - Richard_Francis_Burton (dor:Richard_Francis_Burton) --doo:honours--> Crimea_Medal (dor:Crimea_Medal)
+  '7':
+    attributes:
+      Abdel_Hakim_Amer: (honours^='http://dbpedia.org/resource/Hero_of_the_Soviet_Union')
+      Hero_of_the_Soviet_Union: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', presenter^='http://dbpedia.org/resource/Soviet_Union')
+    relationships:
+      - Alexander_Vologin (dor:Alexander_Vologin) --dop:awards--> Hero_of_the_Soviet_Union (dor:Hero_of_the_Soviet_Union)
+      - Alexander_Vologin (dor:Alexander_Vologin) --doo:restingPlace--> Belarus (dor:Belarus)
+      - Abdel_Hakim_Amer (dor:Abdel_Hakim_Amer) --doo:honours--> Hero_of_the_Soviet_Union (dor:Hero_of_the_Soviet_Union)
+  '8':
+    attributes:
+      Aleksey_Kleshchev: (honours^='http://dbpedia.org/resource/Hero_of_the_Soviet_Union')
+      Hero_of_the_Soviet_Union: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', presenter^='http://dbpedia.org/resource/Soviet_Union')
+    relationships:
+      - Alexander_Vologin (dor:Alexander_Vologin) --dop:awards--> Hero_of_the_Soviet_Union (dor:Hero_of_the_Soviet_Union)
+      - Alexander_Vologin (dor:Alexander_Vologin) --doo:restingPlace--> Belarus (dor:Belarus)
+      - Aleksey_Kleshchev (dor:Aleksey_Kleshchev) --doo:honours--> Hero_of_the_Soviet_Union (dor:Hero_of_the_Soviet_Union)
+  '9':
+    attributes:
+      Order_of_Lenin: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', presenter^='http://dbpedia.org/resource/Soviet_Union')
+      Aleksey_Kleshchev: (honours^='http://dbpedia.org/resource/Hero_of_the_Soviet_Union')
+    relationships:
+      - Alexander_Vologin (dor:Alexander_Vologin) --dop:awards--> Order_of_Lenin (dor:Order_of_Lenin)
+      - Alexander_Vologin (dor:Alexander_Vologin) --doo:restingPlace--> Belarus (dor:Belarus)
+      - Aleksey_Kleshchev (dor:Aleksey_Kleshchev) --doo:honours--> Order_of_Lenin (dor:Order_of_Lenin)
+  '10':
+    attributes:
+      Rhodesia: (width^='180')
+      Ronald_Waterhouse_(civil_servant): (honours^='http://dbpedia.org/resource/1914_Star')
+      British_South_Africa_Company_Medal: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:British_campaign_medals', presenter^='http://dbpedia.org/resource/British_South_Africa_Company')
+    relationships:
+      - Allan_Wilson_(army_officer) (<http://dbpedia.org/resource/Allan_Wilson_(army_officer)>) --dop:awards--> British_South_Africa_Company_Medal (dor:British_South_Africa_Company_Medal)
+      - Allan_Wilson_(army_officer) (<http://dbpedia.org/resource/Allan_Wilson_(army_officer)>) --doo:restingPlace--> Rhodesia (dor:Rhodesia)
+      - Ronald_Waterhouse_(civil_servant) (<http://dbpedia.org/resource/Ronald_Waterhouse_(civil_servant)>) --doo:honours--> British_South_Africa_Company_Medal (dor:British_South_Africa_Company_Medal)
+qa_result:
+  status: completed
+  cost_usd: 0.3276
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.06682240000000002
+        total_tokens: 5367
+        prompt_tokens: 2256
+        completion_tokens: 3111
+      generate:
+        cost_usd: 0.08566760000000001
+        total_tokens: 8139
+        prompt_tokens: 4661
+        completion_tokens: 3478
+      verify_1:
+        cost_usd: 0.037872
+        total_tokens: 5808
+        prompt_tokens: 5219
+        completion_tokens: 589
+      complexity:
+        cost_usd: 0.13723800000000003
+        total_tokens: 11836
+        prompt_tokens: 6060
+        completion_tokens: 5776
+    total_tokens: 31150
+    prompt_tokens: 18196
+    total_cost_usd: 0.32760000000000006
+    completion_tokens: 12954
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  award: --holder^ (dop:holder)--> int | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --presenter^ (doo:presenter)--> Resource
+  country: --width^ (dop:width)--> int
+  politician: --honours^ (doo:honours)--> Resource | --alt^ (dop:alt)--> langString | --url^ (dop:url)--> Resource
+  military person: --1p^ (dop:1p)--> int | --caption^ (dop:caption)--> langString | --spouse^ (dop:spouse)--> langString
+subgraph_id: 292
+relationships:
+  - military person --dop:awards--> award
+  - military person --doo:restingPlace--> country
+  - politician --doo:honours--> award

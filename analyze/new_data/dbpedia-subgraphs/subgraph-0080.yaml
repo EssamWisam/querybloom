@@ -1,0 +1,77 @@
+types:
+  Location: doo:Location
+  architect: doo:Architect
+  historic place: doo:HistoricPlace
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Hamilton,_Montana: (elevation (μ)^='1088.136')
+    relationships:
+      - A._J._Gibson (dor:A._J._Gibson) --doo:significantBuilding--> Hamilton,_Montana (<http://dbpedia.org/resource/Hamilton,_Montana>)
+      - A._J._Gibson (dor:A._J._Gibson) --doo:significantBuilding--> Missoula_County_Courthouse (dor:Missoula_County_Courthouse)
+  '2':
+    attributes:
+      Missoula,_Montana: (elevation (μ)^='978.0')
+    relationships:
+      - A._J._Gibson (dor:A._J._Gibson) --doo:significantBuilding--> Missoula,_Montana (<http://dbpedia.org/resource/Missoula,_Montana>)
+      - A._J._Gibson (dor:A._J._Gibson) --doo:significantBuilding--> Missoula_County_Courthouse (dor:Missoula_County_Courthouse)
+  '3':
+    attributes:
+      Stevensville,_Montana: (elevation (μ)^='1012.8504')
+    relationships:
+      - A._J._Gibson (dor:A._J._Gibson) --doo:significantBuilding--> Stevensville,_Montana (<http://dbpedia.org/resource/Stevensville,_Montana>)
+      - A._J._Gibson (dor:A._J._Gibson) --doo:significantBuilding--> Missoula_County_Courthouse (dor:Missoula_County_Courthouse)
+  '4':
+    attributes: {}
+    relationships:
+      - Ambrose_J._Russell (dor:Ambrose_J._Russell) --doo:significantBuilding--> Washington_Governor's_Mansion (<http://dbpedia.org/resource/Washington_Governor's_Mansion>)
+      - Ambrose_J._Russell (dor:Ambrose_J._Russell) --doo:significantBuilding--> William_Ross_Rust_House (dor:William_Ross_Rust_House)
+  '5':
+    attributes:
+      Washington_Governor's_Mansion: (caption^='Exterior of the mansion')
+    relationships:
+      - Ambrose_J._Russell (dor:Ambrose_J._Russell) --doo:significantBuilding--> William_Ross_Rust_House (dor:William_Ross_Rust_House)
+      - Ambrose_J._Russell (dor:Ambrose_J._Russell) --doo:significantBuilding--> Washington_Governor's_Mansion (<http://dbpedia.org/resource/Washington_Governor's_Mansion>)
+  '6':
+    attributes:
+      Western_Pavilion: (caption^='The building from the southwest')
+    relationships:
+      - Amon_Henry_Wilds (dor:Amon_Henry_Wilds) --doo:significantBuilding--> Park_Crescent,_Brighton (<http://dbpedia.org/resource/Park_Crescent,_Brighton>)
+      - Amon_Henry_Wilds (dor:Amon_Henry_Wilds) --doo:significantBuilding--> Western_Pavilion (dor:Western_Pavilion)
+  '7':
+    attributes:
+      Wykeham_Terrace,_Brighton: (caption^='The terrace from the northwest')
+    relationships:
+      - Amon_Henry_Wilds (dor:Amon_Henry_Wilds) --doo:significantBuilding--> Park_Crescent,_Brighton (<http://dbpedia.org/resource/Park_Crescent,_Brighton>)
+      - Amon_Henry_Wilds (dor:Amon_Henry_Wilds) --doo:significantBuilding--> Wykeham_Terrace,_Brighton (<http://dbpedia.org/resource/Wykeham_Terrace,_Brighton>)
+  '8':
+    attributes:
+      Park_Crescent,_Brighton: (caption^='The rear elevation of 1–16 Park Crescent')
+    relationships:
+      - Amon_Henry_Wilds (dor:Amon_Henry_Wilds) --doo:significantBuilding--> Western_Pavilion (dor:Western_Pavilion)
+      - Amon_Henry_Wilds (dor:Amon_Henry_Wilds) --doo:significantBuilding--> Park_Crescent,_Brighton (<http://dbpedia.org/resource/Park_Crescent,_Brighton>)
+  '9':
+    attributes:
+      Union_Chapel,_Brighton: (caption^='The façade viewed from the southwest')
+    relationships:
+      - Amon_Wilds (dor:Amon_Wilds) --doo:significantBuilding--> Brighton (dor:Brighton)
+      - Amon_Wilds (dor:Amon_Wilds) --doo:significantBuilding--> Union_Chapel,_Brighton (<http://dbpedia.org/resource/Union_Chapel,_Brighton>)
+  '10':
+    attributes:
+      Union_Chapel,_Brighton: (caption^='The façade viewed from the southwest')
+    relationships:
+      - Amon_Wilds (dor:Amon_Wilds) --doo:significantBuilding--> Lewes (dor:Lewes)
+      - Amon_Wilds (dor:Amon_Wilds) --doo:significantBuilding--> Union_Chapel,_Brighton (<http://dbpedia.org/resource/Union_Chapel,_Brighton>)
+attributes:
+  Location: --length (μ)^ (doo:length)--> double | --canton^ (doo:canton)--> Resource | --elevation (μ)^ (doo:elevation)--> double | --coroner^ (dop:coroner)--> langString | --url^ (dop:url)--> langString | --original name^ (doo:originalName)--> langString | --reason^ (dop:reason)--> langString | --arc-radiusB^ (dop:arcRadiusb)--> double
+  architect: --awards^ (dop:awards)--> langString
+  historic place: --caption^ (dop:caption)--> langString | --id^ (dop:id)--> langString
+subgraph_id: 80
+relationships:
+  - architect --doo:significantBuilding--> Location
+  - architect --doo:significantBuilding--> historic place

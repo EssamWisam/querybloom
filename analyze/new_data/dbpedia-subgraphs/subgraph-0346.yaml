@@ -1,0 +1,81 @@
+types:
+  athlete: doo:Athlete
+  settlement: doo:Settlement
+  olympic event: doo:OlympicEvent
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Genoa: (Apr record low C^='3.4', Apr sun^='192', Apr rain days^='8.1', page length (characters) of wiki page^='129621', Aug precipitation mm^='47.6')
+      Abdon_Pamich: (country^='Italy')
+    relationships:
+      - Abdon_Pamich (dor:Abdon_Pamich) --doo:residence--> Genoa (dor:Genoa)
+      - Athletics_at_the_1960_Summer_Olympics_–_Men's_50_kilometres_walk (<http://dbpedia.org/resource/Athletics_at_the_1960_Summer_Olympics_–_Men's_50_kilometres_walk>) --doo:bronzeMedalist--> Abdon_Pamich (dor:Abdon_Pamich)
+  '2':
+    attributes:
+      Aja_Evans: (collegeteam^='http://dbpedia.org/resource/Illinois_Fighting_Illini')
+      Homewood,_Illinois: (page length (characters) of wiki page^='26689')
+    relationships:
+      - Aja_Evans (dor:Aja_Evans) --doo:residence--> Homewood,_Illinois (<http://dbpedia.org/resource/Homewood,_Illinois>)
+      - Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman (<http://dbpedia.org/resource/Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman>) --doo:bronzeMedalist--> Aja_Evans (dor:Aja_Evans)
+  '3':
+    attributes:
+      Barcelona: (Apr sun^='220', page length (characters) of wiki page^='157840', Aug precipitation mm^='62')
+    relationships:
+      - Albert_Costa (dor:Albert_Costa) --doo:residence--> Barcelona (dor:Barcelona)
+      - Tennis_at_the_2000_Summer_Olympics_–_Men's_doubles (<http://dbpedia.org/resource/Tennis_at_the_2000_Summer_Olympics_–_Men's_doubles>) --doo:bronzeMedalist--> Albert_Costa (dor:Albert_Costa)
+  '4':
+    attributes:
+      Moscow: (Apr sun^='213', page length (characters) of wiki page^='213139')
+    relationships:
+      - Alena_Zavarzina (dor:Alena_Zavarzina) --doo:residence--> Moscow (dor:Moscow)
+      - Snowboarding_at_the_2014_Winter_Olympics_–_Women's_parallel_giant_slalom (<http://dbpedia.org/resource/Snowboarding_at_the_2014_Winter_Olympics_–_Women's_parallel_giant_slalom>) --doo:bronzeMedalist--> Alena_Zavarzina (dor:Alena_Zavarzina)
+  '5':
+    attributes:
+      Quebec_City: (page length (characters) of wiki page^='110251')
+      Alex_Beaulieu-Marchand: (country^='Canada')
+    relationships:
+      - Alex_Beaulieu-Marchand (dor:Alex_Beaulieu-Marchand) --doo:residence--> Quebec_City (dor:Quebec_City)
+      - Freestyle_skiing_at_the_2018_Winter_Olympics_–_Men's_slopestyle (<http://dbpedia.org/resource/Freestyle_skiing_at_the_2018_Winter_Olympics_–_Men's_slopestyle>) --doo:bronzeMedalist--> Alex_Beaulieu-Marchand (dor:Alex_Beaulieu-Marchand)
+  '6':
+    attributes:
+      Quebec: (page length (characters) of wiki page^='238566')
+      Alex_Beaulieu-Marchand: (country^='Canada')
+    relationships:
+      - Alex_Beaulieu-Marchand (dor:Alex_Beaulieu-Marchand) --doo:residence--> Quebec (dor:Quebec)
+      - Freestyle_skiing_at_the_2018_Winter_Olympics_–_Men's_slopestyle (<http://dbpedia.org/resource/Freestyle_skiing_at_the_2018_Winter_Olympics_–_Men's_slopestyle>) --doo:bronzeMedalist--> Alex_Beaulieu-Marchand (dor:Alex_Beaulieu-Marchand)
+  '7':
+    attributes:
+      Barcelona: (Apr sun^='220', page length (characters) of wiki page^='157840', Aug precipitation mm^='62')
+    relationships:
+      - Àlex_Corretja (<http://dbpedia.org/resource/Àlex_Corretja>) --doo:residence--> Barcelona (dor:Barcelona)
+      - Tennis_at_the_2000_Summer_Olympics_–_Men's_doubles (<http://dbpedia.org/resource/Tennis_at_the_2000_Summer_Olympics_–_Men's_doubles>) --doo:bronzeMedalist--> Àlex_Corretja (<http://dbpedia.org/resource/Àlex_Corretja>)
+  '8':
+    attributes: {}
+    relationships:
+      - Alex_Deibold (dor:Alex_Deibold) --doo:residence--> Boulder,_Colorado (<http://dbpedia.org/resource/Boulder,_Colorado>)
+      - Snowboarding_at_the_2014_Winter_Olympics_–_Men's_snowboard_cross (<http://dbpedia.org/resource/Snowboarding_at_the_2014_Winter_Olympics_–_Men's_snowboard_cross>) --doo:bronzeMedalist--> Alex_Deibold (dor:Alex_Deibold)
+  '9':
+    attributes:
+      Ann_Arbor,_Michigan: (page length (characters) of wiki page^='127577', Aug low F^='58.8')
+    relationships:
+      - Alex_Shibutani (dor:Alex_Shibutani) --doo:residence--> Ann_Arbor,_Michigan (<http://dbpedia.org/resource/Ann_Arbor,_Michigan>)
+      - Figure_skating_at_the_2018_Winter_Olympics_–_Ice_dance (<http://dbpedia.org/resource/Figure_skating_at_the_2018_Winter_Olympics_–_Ice_dance>) --doo:bronzeMedalist--> Alex_Shibutani (dor:Alex_Shibutani)
+  '10':
+    attributes:
+      Ann_Arbor,_Michigan: (page length (characters) of wiki page^='127577', Aug low F^='58.8')
+    relationships:
+      - Alex_Shibutani (dor:Alex_Shibutani) --doo:residence--> Ann_Arbor,_Michigan (<http://dbpedia.org/resource/Ann_Arbor,_Michigan>)
+      - Figure_skating_at_the_2018_Winter_Olympics_–_Team_event (<http://dbpedia.org/resource/Figure_skating_at_the_2018_Winter_Olympics_–_Team_event>) --doo:bronzeMedalist--> Alex_Shibutani (dor:Alex_Shibutani)
+attributes:
+  athlete: --collegeteam^ (dop:collegeteam)--> Resource | --country^ (dop:country)--> langString
+  settlement: --bgcolor^ (dop:bgcolor)--> langString | --Apr record low C^ (dop:aprRecordLowC)--> langString | --area^ (dop:area)--> int | --Apr sun^ (dop:aprSun)--> int | --Apr rain days^ (dop:aprRainDays)--> int | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --Aug low F^ (dop:augLowF)--> double | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int
+  olympic event: --bronze UKR^ (dop:bronzeUkr)--> int | --bronze FRA^ (dop:bronzeFra)--> int | --bronze JPN^ (dop:bronzeJpn)--> int
+subgraph_id: 346
+relationships:
+  - athlete --doo:residence--> settlement
+  - olympic event --doo:bronzeMedalist--> athlete

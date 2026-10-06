@@ -1,0 +1,101 @@
+types:
+  city: doo:City
+  company: doo:Company
+  royalty: doo:Royalty
+  Location: doo:Location
+  squash player: doo:SquashPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Stefan_Casteleyn (dor:Stefan_Casteleyn) --doo:residence--> United_States (dor:United_States)
+      - Stefan_Casteleyn (dor:Stefan_Casteleyn) --doo:residence--> Los_Angeles (dor:Los_Angeles)
+      - 100_Thieves (dor:100_Thieves) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - Mahmoud_Reza_Pahlavi (dor:Mahmoud_Reza_Pahlavi) --dop:deathPlace--> Los_Angeles (dor:Los_Angeles)
+  '2':
+    attributes:
+      Nazli_Sabri: (title^='Queen consort of Egypt')
+    relationships:
+      - Stefan_Casteleyn (dor:Stefan_Casteleyn) --doo:residence--> United_States (dor:United_States)
+      - Stefan_Casteleyn (dor:Stefan_Casteleyn) --doo:residence--> Los_Angeles (dor:Los_Angeles)
+      - 100_Thieves (dor:100_Thieves) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - Nazli_Sabri (dor:Nazli_Sabri) --dop:deathPlace--> Los_Angeles (dor:Los_Angeles)
+  '3':
+    attributes:
+      Saud_bin_Faisal_Al_Saud_(1940–2015): (title^='Saudi Arabian Special Envoy')
+    relationships:
+      - Stefan_Casteleyn (dor:Stefan_Casteleyn) --doo:residence--> United_States (dor:United_States)
+      - Stefan_Casteleyn (dor:Stefan_Casteleyn) --doo:residence--> Los_Angeles (dor:Los_Angeles)
+      - 100_Thieves (dor:100_Thieves) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - Saud_bin_Faisal_Al_Saud_(1940–2015) (<http://dbpedia.org/resource/Saud_bin_Faisal_Al_Saud_(1940–2015)>) --dop:deathPlace--> Los_Angeles (dor:Los_Angeles)
+  '4':
+    attributes: {}
+    relationships:
+      - Lauren_Briggs (dor:Lauren_Briggs) --doo:residence--> Chingford (dor:Chingford)
+      - Lauren_Briggs (dor:Lauren_Briggs) --doo:residence--> London (dor:London)
+      - 39_Essex_Chambers (dor:39_Essex_Chambers) --doo:headquarter--> London (dor:London)
+      - Abdullah_bin_Khaz'al (<http://dbpedia.org/resource/Abdullah_bin_Khaz'al>) --dop:deathPlace--> London (dor:London)
+  '5':
+    attributes:
+      Abdullah_bin_Khaz'al: (title^='Emir of Mohammerah And Dependencies')
+    relationships:
+      - Robbie_Temple (dor:Robbie_Temple) --doo:residence--> Fulham (dor:Fulham)
+      - Robbie_Temple (dor:Robbie_Temple) --doo:residence--> London (dor:London)
+      - 39_Essex_Chambers (dor:39_Essex_Chambers) --doo:headquarter--> London (dor:London)
+      - Abdullah_bin_Khaz'al (<http://dbpedia.org/resource/Abdullah_bin_Khaz'al>) --dop:deathPlace--> London (dor:London)
+  '6':
+    attributes: {}
+    relationships:
+      - Lauren_Briggs (dor:Lauren_Briggs) --doo:residence--> Chingford (dor:Chingford)
+      - Lauren_Briggs (dor:Lauren_Briggs) --doo:residence--> London (dor:London)
+      - 39_Essex_Chambers (dor:39_Essex_Chambers) --doo:headquarter--> London (dor:London)
+      - Abdullah_Mubarak_Al-Sabah (dor:Abdullah_Mubarak_Al-Sabah) --dop:deathPlace--> London (dor:London)
+  '7':
+    attributes:
+      Nairobi: (Apr record low C^='7.8')
+      Jigme_Dorji_Wangchuck: (title^='http://dbpedia.org/resource/List_of_rulers_of_Bhutan')
+    relationships:
+      - Hardeep_Reel (dor:Hardeep_Reel) --doo:residence--> Kenya (dor:Kenya)
+      - Hardeep_Reel (dor:Hardeep_Reel) --doo:residence--> Nairobi (dor:Nairobi)
+      - 748_Air_Services (dor:748_Air_Services) --doo:headquarter--> Nairobi (dor:Nairobi)
+      - Jigme_Dorji_Wangchuck (dor:Jigme_Dorji_Wangchuck) --dop:deathPlace--> Nairobi (dor:Nairobi)
+  '8':
+    attributes:
+      Nairobi: (Apr record low C^='7.8')
+      Prince_Amedeo,_Duke_of_Aosta: (title^='Duke of Aosta and Apulia')
+    relationships:
+      - Hardeep_Reel (dor:Hardeep_Reel) --doo:residence--> Kenya (dor:Kenya)
+      - Hardeep_Reel (dor:Hardeep_Reel) --doo:residence--> Nairobi (dor:Nairobi)
+      - 748_Air_Services (dor:748_Air_Services) --doo:headquarter--> Nairobi (dor:Nairobi)
+      - Prince_Amedeo,_Duke_of_Aosta (<http://dbpedia.org/resource/Prince_Amedeo,_Duke_of_Aosta>) --dop:deathPlace--> Nairobi (dor:Nairobi)
+  '9':
+    attributes:
+      Agustín_Jerónimo_de_Iturbide_y_Huarte: (before^='http://dbpedia.org/resource/Agustín_de_Iturbide', reason^='Empire abolished in 1823', title^='http://dbpedia.org/resource/List_of_Emperors_of_Mexico')
+    relationships:
+      - Campbell_Grayson (dor:Campbell_Grayson) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Campbell_Grayson (dor:Campbell_Grayson) --doo:residence--> New_York_City (dor:New_York_City)
+      - Above_Average_Productions (dor:Above_Average_Productions) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - Agustín_Jerónimo_de_Iturbide_y_Huarte (<http://dbpedia.org/resource/Agustín_Jerónimo_de_Iturbide_y_Huarte>) --dop:deathPlace--> New_York_City (dor:New_York_City)
+  '10':
+    attributes:
+      Agustín_Jerónimo_de_Iturbide_y_Huarte: (before^='http://dbpedia.org/resource/Agustín_de_Iturbide', reason^='Empire abolished in 1823', title^='http://dbpedia.org/resource/List_of_Emperors_of_Mexico')
+    relationships:
+      - Christopher_Gordon_(squash_player) (<http://dbpedia.org/resource/Christopher_Gordon_(squash_player)>) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Christopher_Gordon_(squash_player) (<http://dbpedia.org/resource/Christopher_Gordon_(squash_player)>) --doo:residence--> New_York_City (dor:New_York_City)
+      - Above_Average_Productions (dor:Above_Average_Productions) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - Agustín_Jerónimo_de_Iturbide_y_Huarte (<http://dbpedia.org/resource/Agustín_Jerónimo_de_Iturbide_y_Huarte>) --dop:deathPlace--> New_York_City (dor:New_York_City)
+attributes:
+  city: --Center^ (dop:center)--> langString | --Apr record low C^ (dop:aprRecordLowC)--> double | --Apr record low F^ (dop:aprRecordLowF)--> langString
+  royalty: --before^ (dop:before)--> Resource | --reason^ (dop:reason)--> Resource | --title^ (dop:title)--> langString
+  Location: --designated nrhp type^ (dop:designatedNrhpType)--> date | --arc-gapB^ (dop:arcGapb)--> double | --named after^ (dop:namedAfter)--> Resource | --Apr record low F^ (dop:aprRecordLowF)--> double
+subgraph_id: 939
+relationships:
+  - squash player --doo:residence--> Location
+  - squash player --doo:residence--> city
+  - company --doo:headquarter--> city
+  - royalty --dop:deathPlace--> city

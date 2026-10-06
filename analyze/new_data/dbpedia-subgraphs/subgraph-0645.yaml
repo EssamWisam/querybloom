@@ -1,0 +1,91 @@
+types:
+  song: doo:Song
+  person: doo:Person
+  single: doo:Single
+  musical: doo:Musical
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A_Fine_Romance_(song): (previous work^='http://dbpedia.org/resource/I''m_Putting_All_My_Eggs_in_One_Basket')
+    relationships:
+      - After_Midnight_(musical) (<http://dbpedia.org/resource/After_Midnight_(musical)>) --doo:basedOn--> Dorothy_Fields (dor:Dorothy_Fields)
+      - A_Fine_Romance_(song) (<http://dbpedia.org/resource/A_Fine_Romance_(song)>) --doo:writer--> Dorothy_Fields (dor:Dorothy_Fields)
+      - The_Way_You_Look_Tonight (dor:The_Way_You_Look_Tonight) --doo:previousWork--> A_Fine_Romance_(song) (<http://dbpedia.org/resource/A_Fine_Romance_(song)>)
+  '2':
+    attributes: {}
+    relationships:
+      - After_Midnight_(musical) (<http://dbpedia.org/resource/After_Midnight_(musical)>) --doo:basedOn--> Dorothy_Fields (dor:Dorothy_Fields)
+      - I_Can't_Give_You_Anything_but_Love,_Baby (<http://dbpedia.org/resource/I_Can't_Give_You_Anything_but_Love,_Baby>) --doo:writer--> Dorothy_Fields (dor:Dorothy_Fields)
+      - Til_It_Happens_to_You (dor:Til_It_Happens_to_You) --doo:previousWork--> I_Can't_Give_You_Anything_but_Love,_Baby (<http://dbpedia.org/resource/I_Can't_Give_You_Anything_but_Love,_Baby>)
+  '3':
+    attributes:
+      The_Rhythm_of_Life: (previous work^='http://dbpedia.org/resource/Up_the_Ladder_to_the_Roof')
+    relationships:
+      - After_Midnight_(musical) (<http://dbpedia.org/resource/After_Midnight_(musical)>) --doo:basedOn--> Dorothy_Fields (dor:Dorothy_Fields)
+      - The_Rhythm_of_Life (dor:The_Rhythm_of_Life) --doo:writer--> Dorothy_Fields (dor:Dorothy_Fields)
+      - Why_(Must_We_Fall_in_Love) (<http://dbpedia.org/resource/Why_(Must_We_Fall_in_Love)>) --doo:previousWork--> The_Rhythm_of_Life (dor:The_Rhythm_of_Life)
+  '4':
+    attributes:
+      All_Shook_Up: (previous work^='http://dbpedia.org/resource/Too_Much_(Elvis_Presley_song)')
+      Elvis_Presley: (awards^='http://dbpedia.org/resource/Presidential_Medal_of_Freedom')
+    relationships:
+      - All_Shook_Up_(musical) (<http://dbpedia.org/resource/All_Shook_Up_(musical)>) --doo:basedOn--> Elvis_Presley (dor:Elvis_Presley)
+      - All_Shook_Up (dor:All_Shook_Up) --doo:writer--> Elvis_Presley (dor:Elvis_Presley)
+      - (Let_Me_Be_Your)_Teddy_Bear (<http://dbpedia.org/resource/(Let_Me_Be_Your)_Teddy_Bear>) --doo:previousWork--> All_Shook_Up (dor:All_Shook_Up)
+  '5':
+    attributes:
+      Elvis_Presley: (awards^='http://dbpedia.org/resource/Presidential_Medal_of_Freedom')
+      Heartbreak_Hotel: (previous work^='http://dbpedia.org/resource/Baby_Let''s_Play_House')
+    relationships:
+      - All_Shook_Up_(musical) (<http://dbpedia.org/resource/All_Shook_Up_(musical)>) --doo:basedOn--> Elvis_Presley (dor:Elvis_Presley)
+      - Heartbreak_Hotel (dor:Heartbreak_Hotel) --doo:writer--> Elvis_Presley (dor:Elvis_Presley)
+      - I_Want_You,_I_Need_You,_I_Love_You (<http://dbpedia.org/resource/I_Want_You,_I_Need_You,_I_Love_You>) --doo:previousWork--> Heartbreak_Hotel (dor:Heartbreak_Hotel)
+  '6':
+    attributes:
+      All_Shook_Up: (previous work^='http://dbpedia.org/resource/Too_Much_(Elvis_Presley_song)')
+      Elvis_Presley: (awards^='http://dbpedia.org/resource/Presidential_Medal_of_Freedom')
+    relationships:
+      - All_Shook_Up_(musical) (<http://dbpedia.org/resource/All_Shook_Up_(musical)>) --doo:basedOn--> Elvis_Presley (dor:Elvis_Presley)
+      - All_Shook_Up (dor:All_Shook_Up) --doo:writer--> Elvis_Presley (dor:Elvis_Presley)
+      - The_River_of_Dreams (dor:The_River_of_Dreams) --doo:previousWork--> All_Shook_Up (dor:All_Shook_Up)
+  '7':
+    attributes: {}
+    relationships:
+      - An_American_in_Paris_(musical) (<http://dbpedia.org/resource/An_American_in_Paris_(musical)>) --doo:basedOn--> Alan_Jay_Lerner (dor:Alan_Jay_Lerner)
+      - On_the_Street_Where_You_Live (dor:On_the_Street_Where_You_Live) --doo:writer--> Alan_Jay_Lerner (dor:Alan_Jay_Lerner)
+      - Almost_There_(Andy_Williams_song) (<http://dbpedia.org/resource/Almost_There_(Andy_Williams_song)>) --doo:previousWork--> On_the_Street_Where_You_Live (dor:On_the_Street_Where_You_Live)
+  '8':
+    attributes: {}
+    relationships:
+      - Bat_Out_of_Hell:_The_Musical (<http://dbpedia.org/resource/Bat_Out_of_Hell:_The_Musical>) --doo:basedOn--> Meat_Loaf (dor:Meat_Loaf)
+      - Midnight_at_the_Lost_and_Found_(song) (<http://dbpedia.org/resource/Midnight_at_the_Lost_and_Found_(song)>) --doo:writer--> Meat_Loaf (dor:Meat_Loaf)
+      - If_You_Really_Want_To (dor:If_You_Really_Want_To) --doo:previousWork--> Midnight_at_the_Lost_and_Found_(song) (<http://dbpedia.org/resource/Midnight_at_the_Lost_and_Found_(song)>)
+  '9':
+    attributes:
+      Magical_(song): (previous work^='http://dbpedia.org/resource/You_and_Your_Heart_So_Blue')
+    relationships:
+      - Bat_Out_of_Hell:_The_Musical (<http://dbpedia.org/resource/Bat_Out_of_Hell:_The_Musical>) --doo:basedOn--> Meat_Loaf (dor:Meat_Loaf)
+      - Magical_(song) (<http://dbpedia.org/resource/Magical_(song)>) --doo:writer--> Meat_Loaf (dor:Meat_Loaf)
+      - St._Elmo's_Fire_(Man_in_Motion) (<http://dbpedia.org/resource/St._Elmo's_Fire_(Man_in_Motion)>) --doo:previousWork--> Magical_(song) (<http://dbpedia.org/resource/Magical_(song)>)
+  '10':
+    attributes:
+      Carole_King: (bgcolor^='Cornsilk')
+      Pleasant_Valley_Sunday: (previous work^='http://dbpedia.org/resource/A_Little_Bit_Me,_a_Little_Bit_You')
+    relationships:
+      - Beautiful:_The_Carole_King_Musical (<http://dbpedia.org/resource/Beautiful:_The_Carole_King_Musical>) --doo:basedOn--> Carole_King (dor:Carole_King)
+      - Pleasant_Valley_Sunday (dor:Pleasant_Valley_Sunday) --doo:writer--> Carole_King (dor:Carole_King)
+      - Daydream_Believer (dor:Daydream_Believer) --doo:previousWork--> Pleasant_Valley_Sunday (dor:Pleasant_Valley_Sunday)
+attributes:
+  song: --previous work^ (doo:previousWork)--> Resource
+  person: --bgcolor^ (dop:bgcolor)--> langString | --1a^ (dop:1a)--> langString | --mother^ (dop:mother)--> langString | --2y^ (dop:2y)--> int | --awards^ (dop:awards)--> int
+  single: --width^ (dop:width)--> perCent | --reason^ (dop:reason)--> langString
+subgraph_id: 645
+relationships:
+  - musical --doo:basedOn--> person
+  - song --doo:writer--> person
+  - single --doo:previousWork--> song

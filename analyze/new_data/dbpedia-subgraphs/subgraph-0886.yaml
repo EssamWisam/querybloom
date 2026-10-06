@@ -1,0 +1,119 @@
+types:
+  horse: doo:Horse
+  RaceHorse: doo:RaceHorse
+  horse race: doo:HorseRace
+  horse trainer: doo:HorseTrainer
+  jockey (horse racer): doo:Jockey
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bering_(horse): '(owner=''http://dbpedia.org/resource/Alec_Head'', race^=''http://dbpedia.org/resource/Prix_du_Jockey_Club'', awards=''Timeform rating: 136'')'
+      Al_Nasr_(horse): (owner^='Moufid F. Dabaghi')
+    relationships:
+      - Al_Nasr_(horse) (<http://dbpedia.org/resource/Al_Nasr_(horse)>) --doo:race--> Prix_d'Ispahan (<http://dbpedia.org/resource/Prix_d'Ispahan>)
+      - Freddy_Head (dor:Freddy_Head) --doo:race--> Prix_d'Ispahan (<http://dbpedia.org/resource/Prix_d'Ispahan>)
+      - Bering_(horse) (<http://dbpedia.org/resource/Bering_(horse)>) --doo:jockey--> Freddy_Head (dor:Freddy_Head)
+      - Angel_Penna_Sr. (<http://dbpedia.org/resource/Angel_Penna_Sr.>) --doo:race--> Prix_d'Ispahan (<http://dbpedia.org/resource/Prix_d'Ispahan>)
+  '2':
+    attributes:
+      All_Along: '(owner^=''Daniel Wildenstein. Racing colors: Dark blue, light blue cap.'')'
+      Bering_(horse): '(owner=''http://dbpedia.org/resource/Alec_Head'', race^=''http://dbpedia.org/resource/Prix_du_Jockey_Club'', awards=''Timeform rating: 136'')'
+      Prix_de_l'Arc_de_Triomphe: (distance^='2400.0', track^='Right-handed', class^='Group 1', alt^='Beige')
+    relationships:
+      - All_Along (dor:All_Along) --doo:race--> Prix_de_l'Arc_de_Triomphe (<http://dbpedia.org/resource/Prix_de_l'Arc_de_Triomphe>)
+      - Freddy_Head (dor:Freddy_Head) --doo:race--> Prix_de_l'Arc_de_Triomphe (<http://dbpedia.org/resource/Prix_de_l'Arc_de_Triomphe>)
+      - Bering_(horse) (<http://dbpedia.org/resource/Bering_(horse)>) --doo:jockey--> Freddy_Head (dor:Freddy_Head)
+      - Angel_Penna_Sr. (<http://dbpedia.org/resource/Angel_Penna_Sr.>) --doo:race--> Prix_de_l'Arc_de_Triomphe (<http://dbpedia.org/resource/Prix_de_l'Arc_de_Triomphe>)
+  '3':
+    attributes:
+      Bering_(horse): '(owner=''http://dbpedia.org/resource/Alec_Head'', race^=''http://dbpedia.org/resource/Prix_du_Jockey_Club'', awards=''Timeform rating: 136'')'
+      Alleged_(horse): (owner^='J. R. Fluor & Robert Sangster')
+      Prix_de_l'Arc_de_Triomphe: (distance^='2400.0', track^='Right-handed', class^='Group 1', alt^='Beige')
+    relationships:
+      - Alleged_(horse) (<http://dbpedia.org/resource/Alleged_(horse)>) --doo:race--> Prix_de_l'Arc_de_Triomphe (<http://dbpedia.org/resource/Prix_de_l'Arc_de_Triomphe>)
+      - Freddy_Head (dor:Freddy_Head) --doo:race--> Prix_de_l'Arc_de_Triomphe (<http://dbpedia.org/resource/Prix_de_l'Arc_de_Triomphe>)
+      - Bering_(horse) (<http://dbpedia.org/resource/Bering_(horse)>) --doo:jockey--> Freddy_Head (dor:Freddy_Head)
+      - Angel_Penna_Sr. (<http://dbpedia.org/resource/Angel_Penna_Sr.>) --doo:race--> Prix_de_l'Arc_de_Triomphe (<http://dbpedia.org/resource/Prix_de_l'Arc_de_Triomphe>)
+  '4':
+    attributes:
+      A.P._Indy: (owner^='Farish, Goodman, Kilroy and Tsurumaki')
+      Belmont_Stakes: (track^='Left-handed', class^='Grade I')
+      Bricks_and_Mortar: (owner='Klaravich Stables & William H. Lawrence', awards='http://dbpedia.org/resource/American_Champion_Male_Turf_Horse')
+    relationships:
+      - A.P._Indy (dor:A.P._Indy) --doo:race--> Belmont_Stakes (dor:Belmont_Stakes)
+      - Irad_Ortiz_Jr. (<http://dbpedia.org/resource/Irad_Ortiz_Jr.>) --doo:race--> Belmont_Stakes (dor:Belmont_Stakes)
+      - Bricks_and_Mortar (dor:Bricks_and_Mortar) --doo:jockey--> Irad_Ortiz_Jr. (<http://dbpedia.org/resource/Irad_Ortiz_Jr.>)
+      - A._Thomas_Doyle (dor:A._Thomas_Doyle) --doo:race--> Belmont_Stakes (dor:Belmont_Stakes)
+  '5':
+    attributes:
+      Affirmed: '(owner^=''Harbor View Farm. Colors: Flamingo, white bars on black sleeves, black cap'')'
+      Belmont_Stakes: (track^='Left-handed', class^='Grade I')
+      Bricks_and_Mortar: (owner='Klaravich Stables & William H. Lawrence', awards='http://dbpedia.org/resource/American_Champion_Male_Turf_Horse')
+    relationships:
+      - Affirmed (dor:Affirmed) --doo:race--> Belmont_Stakes (dor:Belmont_Stakes)
+      - Irad_Ortiz_Jr. (<http://dbpedia.org/resource/Irad_Ortiz_Jr.>) --doo:race--> Belmont_Stakes (dor:Belmont_Stakes)
+      - Bricks_and_Mortar (dor:Bricks_and_Mortar) --doo:jockey--> Irad_Ortiz_Jr. (<http://dbpedia.org/resource/Irad_Ortiz_Jr.>)
+      - A._Thomas_Doyle (dor:A._Thomas_Doyle) --doo:race--> Belmont_Stakes (dor:Belmont_Stakes)
+  '6':
+    attributes:
+      Afleet_Alex: (owner^='Cash Is King Stable')
+      Belmont_Stakes: (track^='Left-handed', class^='Grade I')
+      Bricks_and_Mortar: (owner='Klaravich Stables & William H. Lawrence', awards='http://dbpedia.org/resource/American_Champion_Male_Turf_Horse')
+    relationships:
+      - Afleet_Alex (dor:Afleet_Alex) --doo:race--> Belmont_Stakes (dor:Belmont_Stakes)
+      - Irad_Ortiz_Jr. (<http://dbpedia.org/resource/Irad_Ortiz_Jr.>) --doo:race--> Belmont_Stakes (dor:Belmont_Stakes)
+      - Bricks_and_Mortar (dor:Bricks_and_Mortar) --doo:jockey--> Irad_Ortiz_Jr. (<http://dbpedia.org/resource/Irad_Ortiz_Jr.>)
+      - A._Thomas_Doyle (dor:A._Thomas_Doyle) --doo:race--> Belmont_Stakes (dor:Belmont_Stakes)
+  '7':
+    attributes:
+      Melbourne_Cup: (track^='Left-handed', class^='Group I')
+      Acrasia_(horse): (owner^='Humphrey Oxenham')
+      Classique_Legend: (owner='Bon Ho', race^='http://dbpedia.org/resource/Arrowfield_3YO_Sprint')
+    relationships:
+      - Acrasia_(horse) (<http://dbpedia.org/resource/Acrasia_(horse)>) --doo:race--> Melbourne_Cup (dor:Melbourne_Cup)
+      - Kerrin_McEvoy (dor:Kerrin_McEvoy) --doo:race--> Melbourne_Cup (dor:Melbourne_Cup)
+      - Classique_Legend (dor:Classique_Legend) --doo:jockey--> Kerrin_McEvoy (dor:Kerrin_McEvoy)
+      - Dermot_Weld (dor:Dermot_Weld) --doo:race--> Melbourne_Cup (dor:Melbourne_Cup)
+  '8':
+    attributes:
+      Arwon: (owner^='Jack Watson')
+      Melbourne_Cup: (track^='Left-handed', class^='Group I')
+      Classique_Legend: (owner='Bon Ho', race^='http://dbpedia.org/resource/Arrowfield_3YO_Sprint')
+    relationships:
+      - Arwon (dor:Arwon) --doo:race--> Melbourne_Cup (dor:Melbourne_Cup)
+      - Kerrin_McEvoy (dor:Kerrin_McEvoy) --doo:race--> Melbourne_Cup (dor:Melbourne_Cup)
+      - Classique_Legend (dor:Classique_Legend) --doo:jockey--> Kerrin_McEvoy (dor:Kerrin_McEvoy)
+      - Dermot_Weld (dor:Dermot_Weld) --doo:race--> Melbourne_Cup (dor:Melbourne_Cup)
+  '9':
+    attributes:
+      Melbourne_Cup: (track^='Left-handed', class^='Group I')
+      Classique_Legend: (owner='Bon Ho', race^='http://dbpedia.org/resource/Arrowfield_3YO_Sprint')
+    relationships:
+      - Carbine_(horse) (<http://dbpedia.org/resource/Carbine_(horse)>) --doo:race--> Melbourne_Cup (dor:Melbourne_Cup)
+      - Kerrin_McEvoy (dor:Kerrin_McEvoy) --doo:race--> Melbourne_Cup (dor:Melbourne_Cup)
+      - Classique_Legend (dor:Classique_Legend) --doo:jockey--> Kerrin_McEvoy (dor:Kerrin_McEvoy)
+      - Dermot_Weld (dor:Dermot_Weld) --doo:race--> Melbourne_Cup (dor:Melbourne_Cup)
+  '10':
+    attributes:
+      Abermaid: (owner^='Roderic More O''Ferrall')
+      Danehill_Dancer: (owner='http://dbpedia.org/resource/Michael_Tabor', race^='http://dbpedia.org/resource/Greenham_Stakes', awards='Champion 2-year-old colt in Ireland')
+    relationships:
+      - Abermaid (dor:Abermaid) --doo:race--> 1000_Guineas (dor:1000_Guineas)
+      - Pat_Eddery (dor:Pat_Eddery) --doo:race--> 1000_Guineas (dor:1000_Guineas)
+      - Danehill_Dancer (dor:Danehill_Dancer) --doo:jockey--> Pat_Eddery (dor:Pat_Eddery)
+      - Alec_Taylor_Jr. (<http://dbpedia.org/resource/Alec_Taylor_Jr.>) --doo:race--> 1000_Guineas (dor:1000_Guineas)
+attributes:
+  horse: --owner (dop:owner)--> int | --race^ (doo:race)--> Resource | --awards (dop:awards)--> Resource | --honours^ (doo:honours)--> Resource
+  RaceHorse: --owner^ (dop:owner)--> Resource
+  horse race: --distance^ (dop:distance)--> int | --track^ (dop:track)--> langString | --class^ (dop:class)--> langString | --alt^ (dop:alt)--> langString
+subgraph_id: 886
+relationships:
+  - RaceHorse --doo:race--> horse race
+  - jockey (horse racer) --doo:race--> horse race
+  - horse --doo:jockey--> jockey (horse racer)
+  - horse trainer --doo:race--> horse race

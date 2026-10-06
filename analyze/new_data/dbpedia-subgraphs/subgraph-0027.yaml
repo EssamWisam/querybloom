@@ -1,0 +1,70 @@
+types:
+  book: doo:Book
+  scientist: doo:Scientist
+  Academic Person: doo:Academic
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Lawrence_Rosen_(anthropologist): (birth name^='Lawrence Rosen')
+    relationships:
+      - Agricultural_Involution (dor:Agricultural_Involution) --doo:author--> Clifford_Geertz (dor:Clifford_Geertz)
+      - Lawrence_Rosen_(anthropologist) (<http://dbpedia.org/resource/Lawrence_Rosen_(anthropologist)>) --doo:doctoralAdvisor--> Clifford_Geertz (dor:Clifford_Geertz)
+  '2':
+    attributes: {}
+    relationships:
+      - Agricultural_Involution (dor:Agricultural_Involution) --doo:author--> Clifford_Geertz (dor:Clifford_Geertz)
+      - Paul_Rabinow (dor:Paul_Rabinow) --doo:doctoralAdvisor--> Clifford_Geertz (dor:Clifford_Geertz)
+  '3':
+    attributes: {}
+    relationships:
+      - American_Power_and_the_New_Mandarins (dor:American_Power_and_the_New_Mandarins) --doo:author--> Noam_Chomsky (dor:Noam_Chomsky)
+      - David_Pesetsky (dor:David_Pesetsky) --doo:doctoralAdvisor--> Noam_Chomsky (dor:Noam_Chomsky)
+  '4':
+    attributes: {}
+    relationships:
+      - American_Power_and_the_New_Mandarins (dor:American_Power_and_the_New_Mandarins) --doo:author--> Noam_Chomsky (dor:Noam_Chomsky)
+      - Edwin_S._Williams (dor:Edwin_S._Williams) --doo:doctoralAdvisor--> Noam_Chomsky (dor:Noam_Chomsky)
+  '5':
+    attributes: {}
+    relationships:
+      - American_Power_and_the_New_Mandarins (dor:American_Power_and_the_New_Mandarins) --doo:author--> Noam_Chomsky (dor:Noam_Chomsky)
+      - Howard_Lasnik (dor:Howard_Lasnik) --doo:doctoralAdvisor--> Noam_Chomsky (dor:Noam_Chomsky)
+  '6':
+    attributes:
+      Francesca_Happé: (birth name^='Francesca Gabrielle Elizabeth Happé')
+    relationships:
+      - Autism:_Explaining_the_Enigma (<http://dbpedia.org/resource/Autism:_Explaining_the_Enigma>) --doo:author--> Uta_Frith (dor:Uta_Frith)
+      - Francesca_Happé (<http://dbpedia.org/resource/Francesca_Happé>) --doo:doctoralAdvisor--> Uta_Frith (dor:Uta_Frith)
+  '7':
+    attributes:
+      Simon_Baron-Cohen: (birth name^='Simon Philip Baron-Cohen')
+    relationships:
+      - Autism:_Explaining_the_Enigma (<http://dbpedia.org/resource/Autism:_Explaining_the_Enigma>) --doo:author--> Uta_Frith (dor:Uta_Frith)
+      - Simon_Baron-Cohen (dor:Simon_Baron-Cohen) --doo:doctoralAdvisor--> Uta_Frith (dor:Uta_Frith)
+  '8':
+    attributes: {}
+    relationships:
+      - Compilers:_Principles,_Techniques,_and_Tools (<http://dbpedia.org/resource/Compilers:_Principles,_Techniques,_and_Tools>) --doo:author--> Monica_S._Lam (dor:Monica_S._Lam)
+      - Jason_Nieh (dor:Jason_Nieh) --doo:doctoralAdvisor--> Monica_S._Lam (dor:Monica_S._Lam)
+  '9':
+    attributes: {}
+    relationships:
+      - Dictionary_of_New_Zealand_Biography (dor:Dictionary_of_New_Zealand_Biography) --doo:author--> W._H._Oliver (dor:W._H._Oliver)
+      - Margaret_Tennant (dor:Margaret_Tennant) --doo:doctoralAdvisor--> W._H._Oliver (dor:W._H._Oliver)
+  '10':
+    attributes: {}
+    relationships:
+      - Émile_Durkheim_(Lukes_biography) (<http://dbpedia.org/resource/Émile_Durkheim_(Lukes_biography)>) --doo:author--> Steven_Lukes (dor:Steven_Lukes)
+      - Reiner_Grundmann (dor:Reiner_Grundmann) --doo:doctoralAdvisor--> Steven_Lukes (dor:Steven_Lukes)
+attributes:
+  book: --image size^ (dop:imageSize)--> int | --1y^ (dop:1y)--> int | --bot^ (dop:bot)--> langString
+  scientist: --children^ (dop:children)--> int | --birth name^ (doo:birthName)--> langString | --image size^ (dop:imageSize)--> int | --original name^ (doo:originalName)--> langString | --c^ (dop:c)--> langString | --honorific suffix^ (dop:honorificSuffix)--> langString
+subgraph_id: 27
+relationships:
+  - book --doo:author--> Academic Person
+  - scientist --doo:doctoralAdvisor--> Academic Person

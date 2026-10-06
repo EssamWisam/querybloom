@@ -1,0 +1,87 @@
+types:
+  person: doo:Person
+  politician: doo:Politician
+  time period: doo:TimePeriod
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Aaron_Ogden: (alma mater^='http://dbpedia.org/resource/Princeton_University', Wikipage page ID^='2278945', birth place^='http://dbpedia.org/resource/British_America')
+      Frederick_B._Ogden: (death place^='http://dbpedia.org/resource/Hoboken,_New_Jersey')
+    relationships:
+      - Aaron_Ogden (dor:Aaron_Ogden) --dop:relations--> Frederick_B._Ogden (dor:Frederick_B._Ogden)
+      - Aaron_Ogden (dor:Aaron_Ogden) --dop:predecessor--> Joseph_Bloomfield (dor:Joseph_Bloomfield)
+  '2':
+    attributes:
+      Aaron_Ogden: (alma mater^='http://dbpedia.org/resource/Princeton_University', Wikipage page ID^='2278945', birth place^='http://dbpedia.org/resource/British_America')
+      Matthias_Ogden: (death place^='http://dbpedia.org/resource/Elizabethtown,_New_Jersey')
+    relationships:
+      - Aaron_Ogden (dor:Aaron_Ogden) --dop:relations--> Matthias_Ogden (dor:Matthias_Ogden)
+      - Aaron_Ogden (dor:Aaron_Ogden) --dop:predecessor--> Joseph_Bloomfield (dor:Joseph_Bloomfield)
+  '3':
+    attributes:
+      Aaron_Ogden: (alma mater^='http://dbpedia.org/resource/Princeton_University', Wikipage page ID^='2278945', birth place^='http://dbpedia.org/resource/British_America')
+      William_Chetwood: (death place^='Elizabeth, New Jersey, U.S.')
+    relationships:
+      - Aaron_Ogden (dor:Aaron_Ogden) --dop:relations--> William_Chetwood (dor:William_Chetwood)
+      - Aaron_Ogden (dor:Aaron_Ogden) --dop:predecessor--> Joseph_Bloomfield (dor:Joseph_Bloomfield)
+  '4':
+    attributes:
+      Amos_Lawrence: (known for^='Helping to establish the city of Lawrence, Massachusetts and charitable donations', death place^='Boston, Massachusetts, U.S.')
+      Abbott_Lawrence: (Wikipage page ID^='813324', birth place^='http://dbpedia.org/resource/Groton,_Massachusetts')
+    relationships:
+      - Abbott_Lawrence (dor:Abbott_Lawrence) --dop:relations--> Amos_Lawrence (dor:Amos_Lawrence)
+      - Abbott_Lawrence (dor:Abbott_Lawrence) --dop:predecessor--> Benjamin_Gorham (dor:Benjamin_Gorham)
+  '5':
+    attributes:
+      Alfred_Conkling: (death place^='Utica, New York, U.S.')
+      Alfred_Conkling_Coxe_Sr.: (Wikipage page ID^='9782117', birth place^='http://dbpedia.org/resource/Auburn,_New_York')
+    relationships:
+      - Alfred_Conkling_Coxe_Sr. (<http://dbpedia.org/resource/Alfred_Conkling_Coxe_Sr.>) --dop:relations--> Alfred_Conkling (dor:Alfred_Conkling)
+      - Alfred_Conkling_Coxe_Sr. (<http://dbpedia.org/resource/Alfred_Conkling_Coxe_Sr.>) --dop:predecessor--> William_James_Wallace (dor:William_James_Wallace)
+  '6':
+    attributes:
+      Arthur_Cleveland_Coxe: (death place^='Clifton Springs, New York, United States')
+      Alfred_Conkling_Coxe_Sr.: (Wikipage page ID^='9782117', birth place^='http://dbpedia.org/resource/Auburn,_New_York')
+    relationships:
+      - Alfred_Conkling_Coxe_Sr. (<http://dbpedia.org/resource/Alfred_Conkling_Coxe_Sr.>) --dop:relations--> Arthur_Cleveland_Coxe (dor:Arthur_Cleveland_Coxe)
+      - Alfred_Conkling_Coxe_Sr. (<http://dbpedia.org/resource/Alfred_Conkling_Coxe_Sr.>) --dop:predecessor--> William_James_Wallace (dor:William_James_Wallace)
+  '7':
+    attributes:
+      Roscoe_Conkling: (death place^='New York, New York, U.S.')
+      Alfred_Conkling_Coxe_Sr.: (Wikipage page ID^='9782117', birth place^='http://dbpedia.org/resource/Auburn,_New_York')
+    relationships:
+      - Alfred_Conkling_Coxe_Sr. (<http://dbpedia.org/resource/Alfred_Conkling_Coxe_Sr.>) --dop:relations--> Roscoe_Conkling (dor:Roscoe_Conkling)
+      - Alfred_Conkling_Coxe_Sr. (<http://dbpedia.org/resource/Alfred_Conkling_Coxe_Sr.>) --dop:predecessor--> William_James_Wallace (dor:William_James_Wallace)
+  '8':
+    attributes:
+      Jim_Fraser_(politician): (death place^='Canberra, Australia')
+      Allan_Fraser_(Australian_politician): (Wikipage page ID^='12835414', birth place^='Carlton, Melbourne, Victoria, Australia')
+    relationships:
+      - Allan_Fraser_(Australian_politician) (<http://dbpedia.org/resource/Allan_Fraser_(Australian_politician)>) --dop:relations--> Jim_Fraser_(politician) (<http://dbpedia.org/resource/Jim_Fraser_(politician)>)
+      - Allan_Fraser_(Australian_politician) (<http://dbpedia.org/resource/Allan_Fraser_(Australian_politician)>) --dop:predecessor--> John_Perkins_(Australian_politician) (<http://dbpedia.org/resource/John_Perkins_(Australian_politician)>)
+  '9':
+    attributes:
+      Bill_Kaus: (death place^='Brisbane, Queensland, Australia')
+      Andrea_West: (alma mater^='http://dbpedia.org/resource/University_of_Queensland', Wikipage page ID^='5086208', birth place^='Brisbane, Queensland, Australia')
+    relationships:
+      - Andrea_West (dor:Andrea_West) --dop:relations--> Bill_Kaus (dor:Bill_Kaus)
+      - Andrea_West (dor:Andrea_West) --dop:predecessor--> Con_Sciacca (dor:Con_Sciacca)
+  '10':
+    attributes:
+      Peter_Thomson_(golfer): (death place^='Melbourne, Victoria, Australia')
+      Andrew_Thomson_(Australian_politician): (alma mater^='http://dbpedia.org/resource/Georgetown_University_Law_Center', Wikipage page ID^='10251615', birth place^='Melbourne, Victoria, Australia')
+    relationships:
+      - Andrew_Thomson_(Australian_politician) (<http://dbpedia.org/resource/Andrew_Thomson_(Australian_politician)>) --dop:relations--> Peter_Thomson_(golfer) (<http://dbpedia.org/resource/Peter_Thomson_(golfer)>)
+      - Andrew_Thomson_(Australian_politician) (<http://dbpedia.org/resource/Andrew_Thomson_(Australian_politician)>) --dop:predecessor--> Warwick_Smith_(politician) (<http://dbpedia.org/resource/Warwick_Smith_(politician)>)
+attributes:
+  person: --quoted^ (dop:quoted)--> langString | --1a^ (dop:1a)--> langString | --employer^ (dop:employer)--> Resource | --bot^ (dop:bot)--> langString | --known for^ (dop:knownFor)--> Resource | --source^ (dop:source)--> langString | --death place^ (dop:deathPlace)--> Resource | --date^ (dop:date)--> langString | --colwidth^ (dop:colwidth)--> int
+  politician: --alma mater^ (dop:almaMater)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int | --birth place^ (dop:birthPlace)--> Resource | --1p^ (dop:1p)--> int
+subgraph_id: 454
+relationships:
+  - politician --dop:relations--> person
+  - politician --dop:predecessor--> time period

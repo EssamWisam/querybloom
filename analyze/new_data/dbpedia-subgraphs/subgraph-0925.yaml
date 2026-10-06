@@ -1,0 +1,50 @@
+types:
+  person: doo:Person
+  single: doo:Single
+  magazine: doo:Magazine
+  mountain: doo:Mountain
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Lauren_Shakely: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', Wikipage page ID^='19878186')
+      New_York_(state): (area total km^='141297')
+    relationships:
+      - 4_in_the_Morning (dor:4_in_the_Morning) --doo:recordedIn--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Adirondack_Mountains (dor:Adirondack_Mountains) --doo:region--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Aperture_(magazine) (<http://dbpedia.org/resource/Aperture_(magazine)>) --doo:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Lauren_Shakely (dor:Lauren_Shakely) --doo:employer--> Aperture_(magazine) (<http://dbpedia.org/resource/Aperture_(magazine)>)
+  '2':
+    attributes:
+      Lauren_Shakely: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', Wikipage page ID^='19878186')
+      New_York_(state): (area total km^='141297')
+    relationships:
+      - Beautiful_Monster (dor:Beautiful_Monster) --doo:recordedIn--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Adirondack_Mountains (dor:Adirondack_Mountains) --doo:region--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Aperture_(magazine) (<http://dbpedia.org/resource/Aperture_(magazine)>) --doo:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Lauren_Shakely (dor:Lauren_Shakely) --doo:employer--> Aperture_(magazine) (<http://dbpedia.org/resource/Aperture_(magazine)>)
+  '3':
+    attributes:
+      Lauren_Shakely: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control', Wikipage page ID^='19878186')
+      New_York_(state): (area total km^='141297')
+    relationships:
+      - Bossy_(Kelis_song) (<http://dbpedia.org/resource/Bossy_(Kelis_song)>) --doo:recordedIn--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Adirondack_Mountains (dor:Adirondack_Mountains) --doo:region--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Aperture_(magazine) (<http://dbpedia.org/resource/Aperture_(magazine)>) --doo:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Lauren_Shakely (dor:Lauren_Shakely) --doo:employer--> Aperture_(magazine) (<http://dbpedia.org/resource/Aperture_(magazine)>)
+attributes:
+  person: --width^ (dop:width)--> int | --authorlink (dop:authorlink)--> langString | --mother^ (dop:mother)--> Resource | --after^ (dop:after)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --source (dop:source)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int | --2a^ (dop:2a)--> langString | --image upright^ (dop:imageUpright)--> double
+  single: --extra^ (dop:extra)--> langString
+  mountain: --mountain range^ (doo:mountainRange)--> Resource
+  settlement: --area total km^ (dop:areaTotalKm)--> double | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int
+subgraph_id: 925
+relationships:
+  - single --doo:recordedIn--> settlement
+  - mountain --doo:region--> settlement
+  - magazine --doo:city--> settlement
+  - person --doo:employer--> magazine

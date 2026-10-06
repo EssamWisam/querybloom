@@ -1,0 +1,83 @@
+types:
+  book: doo:Book
+  school: doo:School
+  country: doo:Country
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      ¡Que_viva_la_música!: (subject='http://dbpedia.org/resource/Category:1977_novels', Wikipage page ID^='3611536')
+    relationships:
+      - Aspaen_Gimnasio_Iragua (dor:Aspaen_Gimnasio_Iragua) --doo:country--> Colombia (dor:Colombia)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --dop:country--> Colombia (dor:Colombia)
+  '2':
+    attributes:
+      Colombia: (city^='Armenia, ColombiaArmenia', width^='150')
+      ¡Que_viva_la_música!: (subject='http://dbpedia.org/resource/Category:1977_novels', Wikipage page ID^='3611536')
+    relationships:
+      - Berchmans_College (dor:Berchmans_College) --doo:country--> Colombia (dor:Colombia)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --dop:country--> Colombia (dor:Colombia)
+  '3':
+    attributes:
+      Colombia: (city^='Armenia, ColombiaArmenia', width^='150')
+      ¡Que_viva_la_música!: (subject='http://dbpedia.org/resource/Category:1977_novels', Wikipage page ID^='3611536')
+    relationships:
+      - Colegio_Agustiniano_Norte (dor:Colegio_Agustiniano_Norte) --doo:country--> Colombia (dor:Colombia)
+      - ¡Que_viva_la_música! (<http://dbpedia.org/resource/¡Que_viva_la_música!>) --dop:country--> Colombia (dor:Colombia)
+  '4':
+    attributes:
+      '''48_(novel)': (subject='http://dbpedia.org/resource/Category:1996_British_novels', Wikipage page ID^='12249923')
+      United_Kingdom: (width^='225')
+    relationships:
+      - Alderwasley_Hall_Sixth_Form_Centre (dor:Alderwasley_Hall_Sixth_Form_Centre) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --dop:country--> United_Kingdom (dor:United_Kingdom)'
+  '5':
+    attributes:
+      '''48_(novel)': (subject='http://dbpedia.org/resource/Category:1996_British_novels', Wikipage page ID^='12249923')
+    relationships:
+      - Arden_Academy (dor:Arden_Academy) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --dop:country--> United_Kingdom (dor:United_Kingdom)'
+  '6':
+    attributes:
+      '''48_(novel)': (subject='http://dbpedia.org/resource/Category:1996_British_novels', Wikipage page ID^='12249923')
+      United_Kingdom: (width^='225')
+    relationships:
+      - Ashdown_House,_East_Sussex (<http://dbpedia.org/resource/Ashdown_House,_East_Sussex>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - '''48_(novel) (<http://dbpedia.org/resource/''48_(novel)>) --dop:country--> United_Kingdom (dor:United_Kingdom)'
+  '7':
+    attributes:
+      '''GAPÔ': (subject='http://dbpedia.org/resource/Category:1988_novels', Wikipage page ID^='26535358')
+    relationships:
+      - A._B._Simpson_Alliance_School (dor:A._B._Simpson_Alliance_School) --doo:country--> Philippines (dor:Philippines)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --dop:country--> Philippines (dor:Philippines)'
+  '8':
+    attributes:
+      '''GAPÔ': (subject='http://dbpedia.org/resource/Category:1988_novels', Wikipage page ID^='26535358')
+    relationships:
+      - Amaya_School_of_Home_Industries (dor:Amaya_School_of_Home_Industries) --doo:country--> Philippines (dor:Philippines)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --dop:country--> Philippines (dor:Philippines)'
+  '9':
+    attributes:
+      '''GAPÔ': (subject='http://dbpedia.org/resource/Category:1988_novels', Wikipage page ID^='26535358')
+    relationships:
+      - Amparo_High_School (dor:Amparo_High_School) --doo:country--> Philippines (dor:Philippines)
+      - '''GAPÔ (<http://dbpedia.org/resource/''GAPÔ>) --dop:country--> Philippines (dor:Philippines)'
+  '10':
+    attributes:
+      '%22Repent,_Harlequin!%22_Said_the_Ticktockman': (subject='http://dbpedia.org/resource/Category:1960s_science_fiction_works', Wikipage page ID^='1478845', cname^='"''Repent, Harlequin!'' Said the Ticktockman"')
+    relationships:
+      - 47_The_American_Sign_Language_and_English_Secondary_School (dor:47_The_American_Sign_Language_and_English_Secondary_School) --doo:country--> United_States (dor:United_States)
+      - '%22Repent,_Harlequin!%22_Said_the_Ticktockman (<http://dbpedia.org/resource/%22Repent,_Harlequin!%22_Said_the_Ticktockman>) --dop:country--> United_States (dor:United_States)'
+attributes:
+  book: --followed by^ (dop:followedBy)--> langString | --image size^ (dop:imageSize)--> int | --width^ (dop:width)--> int | --subject (podt:subject)--> Resource | --Wikipage page ID^ (doo:wikiPageID)--> int | --cname^ (dop:cname)--> langString | --IMDB id^ (doo:imdbId)--> string
+  school: --url^ (dop:url)--> Resource
+  country: --Apr high C^ (dop:aprHighC)--> double | --leader^ (dop:leader)--> langString | --city^ (dop:city)--> langString | --width^ (dop:width)--> int
+subgraph_id: 132
+relationships:
+  - school --doo:country--> country
+  - book --dop:country--> country

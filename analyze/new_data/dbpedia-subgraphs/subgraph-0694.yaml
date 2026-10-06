@@ -1,0 +1,91 @@
+types:
+  book: doo:Book
+  movie: doo:Film
+  writer: doo:Writer
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dor2: http://dbpedia.org/resource/11/22/
+instances:
+  '1':
+    attributes:
+      Stephen_King: (spouse^='http://dbpedia.org/resource/Tabitha_King', children^='3')
+      Silver_Bullet_(film): (distributor^='http://dbpedia.org/resource/Paramount_Pictures')
+    relationships:
+      - Silver_Bullet_(film) (<http://dbpedia.org/resource/Silver_Bullet_(film)>) --dop:writer--> Stephen_King (dor:Stephen_King)
+      - Silver_Bullet_(film) (<http://dbpedia.org/resource/Silver_Bullet_(film)>) --doo:country--> United_States (dor:United_States)
+      - '''Salem''s_Lot (<http://dbpedia.org/resource/''Salem''s_Lot>) --doo:author--> Stephen_King (dor:Stephen_King)'
+  '2':
+    attributes:
+      Stephen_King: (spouse^='http://dbpedia.org/resource/Tabitha_King', children^='3')
+      Silver_Bullet_(film): (distributor^='http://dbpedia.org/resource/Paramount_Pictures')
+    relationships:
+      - Silver_Bullet_(film) (<http://dbpedia.org/resource/Silver_Bullet_(film)>) --dop:writer--> Stephen_King (dor:Stephen_King)
+      - Silver_Bullet_(film) (<http://dbpedia.org/resource/Silver_Bullet_(film)>) --doo:country--> United_States (dor:United_States)
+      - 63 (dor2:63) --doo:author--> Stephen_King (dor:Stephen_King)
+  '3':
+    attributes: {}
+    relationships:
+      - Sharpe's_Enemy_(TV_programme) (<http://dbpedia.org/resource/Sharpe's_Enemy_(TV_programme)>) --dop:writer--> Bernard_Cornwell (dor:Bernard_Cornwell)
+      - Sharpe's_Enemy_(TV_programme) (<http://dbpedia.org/resource/Sharpe's_Enemy_(TV_programme)>) --doo:country--> United_Kingdom (dor:United_Kingdom)
+      - 1356_(novel) (<http://dbpedia.org/resource/1356_(novel)>) --doo:author--> Bernard_Cornwell (dor:Bernard_Cornwell)
+  '4':
+    attributes:
+      Hell_Hunters: (distributor^='http://dbpedia.org/resource/New_World_Video')
+    relationships:
+      - Hell_Hunters (dor:Hell_Hunters) --dop:writer--> James_Dalessandro (dor:James_Dalessandro)
+      - Hell_Hunters (dor:Hell_Hunters) --doo:country--> West_Germany (dor:West_Germany)
+      - 1906_(novel) (<http://dbpedia.org/resource/1906_(novel)>) --doo:author--> James_Dalessandro (dor:James_Dalessandro)
+  '5':
+    attributes:
+      Christian_Kracht: (spouse^='http://dbpedia.org/resource/Frauke_Finsterwalder')
+    relationships:
+      - Finsterworld (dor:Finsterworld) --dop:writer--> Christian_Kracht (dor:Christian_Kracht)
+      - Finsterworld (dor:Finsterworld) --doo:country--> Germany (dor:Germany)
+      - 1979_(novel) (<http://dbpedia.org/resource/1979_(novel)>) --doo:author--> Christian_Kracht (dor:Christian_Kracht)
+  '6':
+    attributes:
+      2_States_(2014_film): (distributor^='http://dbpedia.org/resource/UTV_Motion_Pictures')
+    relationships:
+      - 2_States_(2014_film) (<http://dbpedia.org/resource/2_States_(2014_film)>) --dop:writer--> Chetan_Bhagat (dor:Chetan_Bhagat)
+      - 2_States_(2014_film) (<http://dbpedia.org/resource/2_States_(2014_film)>) --doo:country--> India (dor:India)
+      - 2_States:_The_Story_of_My_Marriage (<http://dbpedia.org/resource/2_States:_The_Story_of_My_Marriage>) --doo:author--> Chetan_Bhagat (dor:Chetan_Bhagat)
+  '7':
+    attributes:
+      Agatha_Christie: (children^='http://dbpedia.org/resource/Rosalind_Hicks', source^='—Joan Acocella writing in The New Yorker.')
+    relationships:
+      - Shubho_Mahurat (dor:Shubho_Mahurat) --dop:writer--> Agatha_Christie (dor:Agatha_Christie)
+      - Shubho_Mahurat (dor:Shubho_Mahurat) --doo:country--> India (dor:India)
+      - 4.50_from_Paddington (dor:4.50_from_Paddington) --doo:author--> Agatha_Christie (dor:Agatha_Christie)
+  '8':
+    attributes:
+      2_States_(2014_film): (distributor^='http://dbpedia.org/resource/UTV_Motion_Pictures')
+    relationships:
+      - 2_States_(2014_film) (<http://dbpedia.org/resource/2_States_(2014_film)>) --dop:writer--> Chetan_Bhagat (dor:Chetan_Bhagat)
+      - 2_States_(2014_film) (<http://dbpedia.org/resource/2_States_(2014_film)>) --doo:country--> India (dor:India)
+      - 400_Days_(novel) (<http://dbpedia.org/resource/400_Days_(novel)>) --doo:author--> Chetan_Bhagat (dor:Chetan_Bhagat)
+  '9':
+    attributes: {}
+    relationships:
+      - Équateur_(film) (<http://dbpedia.org/resource/Équateur_(film)>) --dop:writer--> Georges_Simenon (dor:Georges_Simenon)
+      - Équateur_(film) (<http://dbpedia.org/resource/Équateur_(film)>) --doo:country--> Gabon (dor:Gabon)
+      - A_Battle_of_Nerves (dor:A_Battle_of_Nerves) --doo:author--> Georges_Simenon (dor:Georges_Simenon)
+  '10':
+    attributes: {}
+    relationships:
+      - To_Kill_a_Child_(1953_film) (<http://dbpedia.org/resource/To_Kill_a_Child_(1953_film)>) --dop:writer--> Stig_Dagerman (dor:Stig_Dagerman)
+      - To_Kill_a_Child_(1953_film) (<http://dbpedia.org/resource/To_Kill_a_Child_(1953_film)>) --doo:country--> Sweden (dor:Sweden)
+      - A_Burnt_Child (dor:A_Burnt_Child) --doo:author--> Stig_Dagerman (dor:Stig_Dagerman)
+attributes:
+  book: --reason^ (dop:reason)--> langString
+  movie: --distributor^ (doo:distributor)--> Resource
+  writer: --spouse^ (doo:spouse)--> Resource | --children^ (dop:children)--> langString | --source^ (dop:source)--> langString
+  Location: --logo^ (dop:logo)--> langString | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --Apr record high F^ (dop:aprRecordHighF)--> int | --borough^ (dop:borough)--> langString
+subgraph_id: 694
+relationships:
+  - movie --dop:writer--> writer
+  - movie --doo:country--> Location
+  - book --doo:author--> writer

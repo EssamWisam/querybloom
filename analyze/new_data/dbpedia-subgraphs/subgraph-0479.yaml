@@ -1,0 +1,58 @@
+types:
+  island: doo:Island
+  person: doo:Person
+  tenure: doo:Tenure
+  writer: doo:Writer
+  ethnic group: doo:EthnicGroup
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ireland: (area total (m2)^='84421000000.0')
+      Alexander_McCarthy: (after^='http://dbpedia.org/resource/Daniel_Callaghan_(politician)')
+      Adam_Roberts_(British_writer): (birth date^='1965-06-30')
+    relationships:
+      - Alexander_McCarthy (dor:Alexander_McCarthy) --doo:nationality--> Ireland (dor:Ireland)
+      - Vincent_Scully_(MP)__Tenure__2 (<http://dbpedia.org/resource/Vincent_Scully_(MP)__Tenure__2>) --doo:successor--> Alexander_McCarthy (dor:Alexander_McCarthy)
+      - British_people (dor:British_people) --doo:populationPlace--> Ireland (dor:Ireland)
+      - Battle_of_Áth_an_Chip (<http://dbpedia.org/resource/Battle_of_Áth_an_Chip>) --doo:place--> Ireland (dor:Ireland)
+      - Adam_Roberts_(British_writer) (<http://dbpedia.org/resource/Adam_Roberts_(British_writer)>) --doo:nationality--> British_people (dor:British_people)
+  '2':
+    attributes:
+      Ireland: (area total (m2)^='84421000000.0')
+      Adam_Thorpe: (birth date^='1956-12-05')
+      Alexander_McCarthy: (after^='http://dbpedia.org/resource/Daniel_Callaghan_(politician)')
+    relationships:
+      - Alexander_McCarthy (dor:Alexander_McCarthy) --doo:nationality--> Ireland (dor:Ireland)
+      - Vincent_Scully_(MP)__Tenure__2 (<http://dbpedia.org/resource/Vincent_Scully_(MP)__Tenure__2>) --doo:successor--> Alexander_McCarthy (dor:Alexander_McCarthy)
+      - British_people (dor:British_people) --doo:populationPlace--> Ireland (dor:Ireland)
+      - Battle_of_Áth_an_Chip (<http://dbpedia.org/resource/Battle_of_Áth_an_Chip>) --doo:place--> Ireland (dor:Ireland)
+      - Adam_Thorpe (dor:Adam_Thorpe) --doo:nationality--> British_people (dor:British_people)
+  '3':
+    attributes:
+      Ireland: (area total (m2)^='84421000000.0')
+      Alain_de_Botton: (birth date^='1969-12-20')
+      Alexander_McCarthy: (after^='http://dbpedia.org/resource/Daniel_Callaghan_(politician)')
+    relationships:
+      - Alexander_McCarthy (dor:Alexander_McCarthy) --doo:nationality--> Ireland (dor:Ireland)
+      - Vincent_Scully_(MP)__Tenure__2 (<http://dbpedia.org/resource/Vincent_Scully_(MP)__Tenure__2>) --doo:successor--> Alexander_McCarthy (dor:Alexander_McCarthy)
+      - British_people (dor:British_people) --doo:populationPlace--> Ireland (dor:Ireland)
+      - Battle_of_Áth_an_Chip (<http://dbpedia.org/resource/Battle_of_Áth_an_Chip>) --doo:place--> Ireland (dor:Ireland)
+      - Alain_de_Botton (dor:Alain_de_Botton) --doo:nationality--> British_people (dor:British_people)
+attributes:
+  island: --area total (m2)^ (doo:areaTotal)--> double | --length (μ)^ (doo:length)--> double | --Aug high C^ (dop:augHighC)--> double
+  person: --1pp^ (dop:1pp)--> int | --footer^ (dop:footer)--> langString | --after^ (dop:after)--> langString | --alma mater^ (doo:almaMater)--> Resource
+  writer: --birth date^ (doo:birthDate)--> date
+  ethnic group: --width^ (dop:width)--> int | --align^ (dop:align)--> langString
+subgraph_id: 479
+relationships:
+  - person --doo:nationality--> island
+  - tenure --doo:successor--> person
+  - ethnic group --doo:populationPlace--> island
+  - military conflict --doo:place--> island
+  - writer --doo:nationality--> ethnic group

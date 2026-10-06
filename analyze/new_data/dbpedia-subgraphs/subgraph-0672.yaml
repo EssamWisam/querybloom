@@ -1,0 +1,52 @@
+types:
+  river: doo:River
+  athlete: doo:Athlete
+  company: doo:Company
+  Location: doo:Location
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      1HDTV: (industry^='http://dbpedia.org/resource/Telecommunications')
+      Izhora: (mouth place^='http://dbpedia.org/resource/Saint_Petersburg')
+    relationships:
+      - 1HDTV (dor:1HDTV) --doo:location--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Izhora (dor:Izhora) --doo:mouthPlace--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Aleksandr_Shchegolev__Aleksandr_Shchegolev__1 (dor:Aleksandr_Shchegolev__Aleksandr_Shchegolev__1) --doo:birthPlace--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Aleksandr_Shchegolev__Aleksandr_Shchegolev__1 (dor:Aleksandr_Shchegolev__Aleksandr_Shchegolev__1) --doo:stateOfOrigin--> Russia (dor:Russia)
+  '2':
+    attributes:
+      Izhora: (mouth place^='http://dbpedia.org/resource/Saint_Petersburg')
+      Baltika_Breweries: (industry^='http://dbpedia.org/resource/Beverages')
+    relationships:
+      - Baltika_Breweries (dor:Baltika_Breweries) --doo:location--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Izhora (dor:Izhora) --doo:mouthPlace--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Aleksandr_Shchegolev__Aleksandr_Shchegolev__1 (dor:Aleksandr_Shchegolev__Aleksandr_Shchegolev__1) --doo:birthPlace--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Aleksandr_Shchegolev__Aleksandr_Shchegolev__1 (dor:Aleksandr_Shchegolev__Aleksandr_Shchegolev__1) --doo:stateOfOrigin--> Russia (dor:Russia)
+  '3':
+    attributes:
+      Izhora: (mouth place^='http://dbpedia.org/resource/Saint_Petersburg')
+      Bank_Saint_Petersburg: (industry^='http://dbpedia.org/resource/Financial_services')
+    relationships:
+      - Bank_Saint_Petersburg (dor:Bank_Saint_Petersburg) --doo:location--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Izhora (dor:Izhora) --doo:mouthPlace--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Aleksandr_Shchegolev__Aleksandr_Shchegolev__1 (dor:Aleksandr_Shchegolev__Aleksandr_Shchegolev__1) --doo:birthPlace--> Saint_Petersburg (dor:Saint_Petersburg)
+      - Aleksandr_Shchegolev__Aleksandr_Shchegolev__1 (dor:Aleksandr_Shchegolev__Aleksandr_Shchegolev__1) --doo:stateOfOrigin--> Russia (dor:Russia)
+attributes:
+  river: --mouth place^ (doo:mouthPlace)--> Resource
+  athlete: --club^ (doo:club)--> Resource
+  company: --area served^ (dop:areaServed)--> langString | --width^ (dop:width)--> int | --industry^ (doo:industry)--> Resource
+  Location: --line^ (dop:line)--> langString | --accessdate^ (dop:accessdate)--> date | --age^ (dop:age)--> langString | --named after^ (dop:namedAfter)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> langString | --Aug high F^ (dop:augHighF)--> int | --outflow^ (doo:outflow)--> Resource
+  administrative region: --differentFrom (wwoo:differentFrom)--> Resource
+subgraph_id: 672
+relationships:
+  - company --doo:location--> administrative region
+  - river --doo:mouthPlace--> administrative region
+  - athlete --doo:birthPlace--> administrative region
+  - athlete --doo:stateOfOrigin--> Location

@@ -1,0 +1,91 @@
+types:
+  person: doo:Person
+  writer: doo:Writer
+  person function: doo:PersonFunction
+  fictional character: doo:FictionalCharacter
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Alex_Rider_(character): (creator (agent)^='http://dbpedia.org/resource/Anthony_Horowitz')
+    relationships:
+      - Alex_Rider_(character) (<http://dbpedia.org/resource/Alex_Rider_(character)>) --doo:occupation--> MI6_Operations (dor:MI6_Operations)
+      - Alex_Rider_(character) (<http://dbpedia.org/resource/Alex_Rider_(character)>) --dop:family--> Ian_Rider (dor:Ian_Rider)
+      - Alex_Rider_(character) (<http://dbpedia.org/resource/Alex_Rider_(character)>) --doo:creator--> Anthony_Horowitz (dor:Anthony_Horowitz)
+  '2':
+    attributes:
+      Alex_Rider_(character): (creator (agent)^='http://dbpedia.org/resource/Anthony_Horowitz')
+    relationships:
+      - Alex_Rider_(character) (<http://dbpedia.org/resource/Alex_Rider_(character)>) --doo:occupation--> MI6_Operations (dor:MI6_Operations)
+      - Alex_Rider_(character) (<http://dbpedia.org/resource/Alex_Rider_(character)>) --dop:family--> Jack_Starbright (dor:Jack_Starbright)
+      - Alex_Rider_(character) (<http://dbpedia.org/resource/Alex_Rider_(character)>) --doo:creator--> Anthony_Horowitz (dor:Anthony_Horowitz)
+  '3':
+    attributes:
+      Alex_Rider_(character): (creator (agent)^='http://dbpedia.org/resource/Anthony_Horowitz')
+    relationships:
+      - Alex_Rider_(character) (<http://dbpedia.org/resource/Alex_Rider_(character)>) --doo:occupation--> MI6_Operations (dor:MI6_Operations)
+      - Alex_Rider_(character) (<http://dbpedia.org/resource/Alex_Rider_(character)>) --dop:family--> John_Rider_(Alex_Rider) (<http://dbpedia.org/resource/John_Rider_(Alex_Rider)>)
+      - Alex_Rider_(character) (<http://dbpedia.org/resource/Alex_Rider_(character)>) --doo:creator--> Anthony_Horowitz (dor:Anthony_Horowitz)
+  '4':
+    attributes:
+      Alia_Atreides: (creator (agent)^='http://dbpedia.org/resource/Frank_Herbert')
+    relationships:
+      - Alia_Atreides (dor:Alia_Atreides) --doo:occupation--> Reverend_Mother_(Dune) (<http://dbpedia.org/resource/Reverend_Mother_(Dune)>)
+      - Alia_Atreides (dor:Alia_Atreides) --dop:family--> House_Atreides (dor:House_Atreides)
+      - Alia_Atreides (dor:Alia_Atreides) --doo:creator--> Frank_Herbert (dor:Frank_Herbert)
+  '5':
+    attributes:
+      Aria_Montgomery: (creator (agent)^='http://dbpedia.org/resource/Sara_Shepard', children^='Baby')
+    relationships:
+      - Aria_Montgomery (dor:Aria_Montgomery) --doo:occupation--> Author (dor:Author)
+      - Aria_Montgomery (dor:Aria_Montgomery) --dop:family--> List_of_Pretty_Little_Liars_characters (dor:List_of_Pretty_Little_Liars_characters)
+      - Aria_Montgomery (dor:Aria_Montgomery) --doo:creator--> Sara_Shepard (dor:Sara_Shepard)
+  '6':
+    attributes:
+      Aria_Montgomery: (creator (agent)^='http://dbpedia.org/resource/Sara_Shepard', children^='Baby')
+    relationships:
+      - Aria_Montgomery (dor:Aria_Montgomery) --doo:occupation--> Publisher (dor:Publisher)
+      - Aria_Montgomery (dor:Aria_Montgomery) --dop:family--> List_of_Pretty_Little_Liars_characters (dor:List_of_Pretty_Little_Liars_characters)
+      - Aria_Montgomery (dor:Aria_Montgomery) --doo:creator--> Sara_Shepard (dor:Sara_Shepard)
+  '7':
+    attributes:
+      Arya_Stark: (creator (agent)^='http://dbpedia.org/resource/George_R._R._Martin')
+    relationships:
+      - Arya_Stark (dor:Arya_Stark) --doo:occupation--> Assassin (dor:Assassin)
+      - Arya_Stark (dor:Arya_Stark) --dop:family--> House_Stark (dor:House_Stark)
+      - Arya_Stark (dor:Arya_Stark) --doo:creator--> George_R._R._Martin (dor:George_R._R._Martin)
+  '8':
+    attributes: {}
+    relationships:
+      - Chuck_Bass (dor:Chuck_Bass) --doo:occupation--> Entrepreneur (dor:Entrepreneur)
+      - Chuck_Bass (dor:Chuck_Bass) --dop:family--> List_of_Gossip_Girl_characters (dor:List_of_Gossip_Girl_characters)
+      - Chuck_Bass (dor:Chuck_Bass) --doo:creator--> Cecily_von_Ziegesar (dor:Cecily_von_Ziegesar)
+  '9':
+    attributes:
+      Chuck_Bass: (creator (agent)^='http://dbpedia.org/resource/Cecily_von_Ziegesar', children^='')
+    relationships:
+      - Chuck_Bass (dor:Chuck_Bass) --doo:occupation--> Entrepreneur (dor:Entrepreneur)
+      - Chuck_Bass (dor:Chuck_Bass) --dop:family--> List_of_Gossip_Girl_characters (dor:List_of_Gossip_Girl_characters)
+      - Chuck_Bass (dor:Chuck_Bass) --doo:creator--> Josh_Schwartz (dor:Josh_Schwartz)
+  '10':
+    attributes:
+      Chuck_Bass: (creator (agent)^='http://dbpedia.org/resource/Cecily_von_Ziegesar', children^='')
+    relationships:
+      - Chuck_Bass (dor:Chuck_Bass) --doo:occupation--> Entrepreneur (dor:Entrepreneur)
+      - Chuck_Bass (dor:Chuck_Bass) --dop:family--> List_of_Gossip_Girl_characters (dor:List_of_Gossip_Girl_characters)
+      - Chuck_Bass (dor:Chuck_Bass) --doo:creator--> Stephanie_Savage (dor:Stephanie_Savage)
+attributes:
+  person: --mother^ (dop:mother)--> langString | --employer^ (dop:employer)--> langString | --1y^ (dop:1y)--> int | --father^ (dop:father)--> langString | --award^ (doo:award)--> Resource | --differentFrom (wwoo:differentFrom)--> Resource | --active years end year^ (doo:activeYearsEndYear)--> gYear
+  writer: --2pp^ (dop:2pp)--> int | --bot^ (dop:bot)--> langString | --2p^ (dop:2p)--> int
+  person function: --url^ (dop:url)--> Resource
+  fictional character: --creator (agent)^ (doo:creator)--> Resource | --children^ (dop:children)--> langString
+subgraph_id: 161
+relationships:
+  - fictional character --doo:occupation--> person function
+  - fictional character --dop:family--> person
+  - fictional character --doo:creator--> writer

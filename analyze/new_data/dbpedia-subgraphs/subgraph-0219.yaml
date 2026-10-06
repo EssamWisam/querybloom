@@ -1,0 +1,126 @@
+types:
+  city: doo:City
+  ship: doo:Ship
+  Location: doo:Location
+  ice hockey player: doo:IceHockeyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Ādolfs_Petrovskis (<http://dbpedia.org/resource/Ādolfs_Petrovskis>) --doo:deathPlace--> Milwaukee (dor:Milwaukee)
+      - Manistee_(shipwreck) (<http://dbpedia.org/resource/Manistee_(shipwreck)>) --doo:owner--> Milwaukee (dor:Milwaukee)
+      - Ādolfs_Petrovskis (<http://dbpedia.org/resource/Ādolfs_Petrovskis>) --doo:deathPlace--> Wisconsin (dor:Wisconsin)
+  '2':
+    attributes: {}
+    relationships:
+      - Ādolfs_Petrovskis (<http://dbpedia.org/resource/Ādolfs_Petrovskis>) --doo:deathPlace--> Milwaukee (dor:Milwaukee)
+      - SS_Milwaukee_(1902) (<http://dbpedia.org/resource/SS_Milwaukee_(1902)>) --doo:owner--> Milwaukee (dor:Milwaukee)
+      - Ādolfs_Petrovskis (<http://dbpedia.org/resource/Ādolfs_Petrovskis>) --doo:deathPlace--> Wisconsin (dor:Wisconsin)
+  '3':
+    attributes:
+      SS_Ashkhabad: (operator^='http://dbpedia.org/resource/Anglo-Saxon_Petroleum')
+    relationships:
+      - Alexander_Galimov (dor:Alexander_Galimov) --doo:deathPlace--> Moscow (dor:Moscow)
+      - SS_Ashkhabad (dor:SS_Ashkhabad) --doo:owner--> Moscow (dor:Moscow)
+      - Alexander_Galimov (dor:Alexander_Galimov) --doo:deathPlace--> Russia (dor:Russia)
+  '4':
+    attributes:
+      SS_Ashkhabad: (operator^='http://dbpedia.org/resource/Anglo-Saxon_Petroleum')
+    relationships:
+      - Alexander_Skvortsov_(ice_hockey) (<http://dbpedia.org/resource/Alexander_Skvortsov_(ice_hockey)>) --doo:deathPlace--> Moscow (dor:Moscow)
+      - SS_Ashkhabad (dor:SS_Ashkhabad) --doo:owner--> Moscow (dor:Moscow)
+      - Alexander_Skvortsov_(ice_hockey) (<http://dbpedia.org/resource/Alexander_Skvortsov_(ice_hockey)>) --doo:deathPlace--> Russia (dor:Russia)
+  '5':
+    attributes:
+      SS_Ashkhabad: (operator^='http://dbpedia.org/resource/Anglo-Saxon_Petroleum')
+      Soviet_Union: (2y^='1969')
+    relationships:
+      - Alexander_Vinogradov_(ice_hockey)__Alexander_Vinogradov__1 (<http://dbpedia.org/resource/Alexander_Vinogradov_(ice_hockey)__Alexander_Vinogradov__1>) --doo:deathPlace--> Moscow (dor:Moscow)
+      - SS_Ashkhabad (dor:SS_Ashkhabad) --doo:owner--> Moscow (dor:Moscow)
+      - Alexander_Vinogradov_(ice_hockey)__Alexander_Vinogradov__1 (<http://dbpedia.org/resource/Alexander_Vinogradov_(ice_hockey)__Alexander_Vinogradov__1>) --doo:deathPlace--> Soviet_Union (dor:Soviet_Union)
+  '6':
+    attributes:
+      New_York_City: (b^='yes')
+    relationships:
+      - Allan_Wilson_(ice_hockey) (<http://dbpedia.org/resource/Allan_Wilson_(ice_hockey)>) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Celestial_Empire_(clipper) (<http://dbpedia.org/resource/Celestial_Empire_(clipper)>) --doo:owner--> New_York_City (dor:New_York_City)
+      - Allan_Wilson_(ice_hockey) (<http://dbpedia.org/resource/Allan_Wilson_(ice_hockey)>) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '7':
+    attributes:
+      New_York_City: (b^='yes')
+      Comet_(clipper): (operator^='http://dbpedia.org/resource/Liverpool')
+    relationships:
+      - Allan_Wilson_(ice_hockey) (<http://dbpedia.org/resource/Allan_Wilson_(ice_hockey)>) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Comet_(clipper) (<http://dbpedia.org/resource/Comet_(clipper)>) --doo:owner--> New_York_City (dor:New_York_City)
+      - Allan_Wilson_(ice_hockey) (<http://dbpedia.org/resource/Allan_Wilson_(ice_hockey)>) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '8':
+    attributes:
+      New_York_City: (b^='yes')
+    relationships:
+      - Allan_Wilson_(ice_hockey) (<http://dbpedia.org/resource/Allan_Wilson_(ice_hockey)>) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Flying_Cloud_(clipper) (<http://dbpedia.org/resource/Flying_Cloud_(clipper)>) --doo:owner--> New_York_City (dor:New_York_City)
+      - Allan_Wilson_(ice_hockey) (<http://dbpedia.org/resource/Allan_Wilson_(ice_hockey)>) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '9':
+    attributes: {}
+    relationships:
+      - Andrei_Lomakin (dor:Andrei_Lomakin) --doo:deathPlace--> Detroit (dor:Detroit)
+      - Atlantic_(1848) (<http://dbpedia.org/resource/Atlantic_(1848)>) --doo:owner--> Detroit (dor:Detroit)
+      - Andrei_Lomakin (dor:Andrei_Lomakin) --doo:deathPlace--> Michigan (dor:Michigan)
+  '10':
+    attributes: {}
+    relationships:
+      - Andrei_Lomakin (dor:Andrei_Lomakin) --doo:deathPlace--> Detroit (dor:Detroit)
+      - Atlantic_(1848) (<http://dbpedia.org/resource/Atlantic_(1848)>) --doo:owner--> Detroit (dor:Detroit)
+      - Andrei_Lomakin (dor:Andrei_Lomakin) --doo:deathPlace--> United_States (dor:United_States)
+qa_result:
+  status: completed
+  cost_usd: 0.345022
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0235274
+        total_tokens: 3095
+        prompt_tokens: 2113
+        completion_tokens: 982
+      generate:
+        cost_usd: 0.1056876
+        total_tokens: 8708
+        prompt_tokens: 4085
+        completion_tokens: 4623
+      verify_1:
+        cost_usd: 0.10659700000000003
+        total_tokens: 8321
+        prompt_tokens: 3988
+        completion_tokens: 4333
+      verify_2:
+        cost_usd: 0.026167000000000003
+        total_tokens: 4400
+        prompt_tokens: 4122
+        completion_tokens: 278
+      complexity:
+        cost_usd: 0.083043
+        total_tokens: 8284
+        prompt_tokens: 4937
+        completion_tokens: 3347
+    total_tokens: 32808
+    prompt_tokens: 19245
+    total_cost_usd: 0.345022
+    completion_tokens: 13563
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --Apr record low C^ (dop:aprRecordLowC)--> int | --Apr record low C^ (dop:aprRecordLowC)--> double | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --Aug low F^ (dop:augLowF)--> double | --b^ (dop:b)--> langString
+  ship: --operator^ (doo:operator)--> Resource
+  Location: --building start date^ (doo:buildingStartDate)--> string | --built^ (dop:built)--> langString | --abolished^ (dop:abolished)--> int | --2y^ (dop:2y)--> int | --Apr record low C^ (dop:aprRecordLowC)--> double
+  ice hockey player: --league^ (doo:league)--> Resource
+subgraph_id: 219
+relationships:
+  - ice hockey player --doo:deathPlace--> city
+  - ship --doo:owner--> city
+  - ice hockey player --doo:deathPlace--> Location

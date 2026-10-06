@@ -1,0 +1,122 @@
+types:
+  movie: doo:Film
+  person: doo:Person
+  single: doo:Single
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Frank_Zappa: (birth name^='Frank Vincent Zappa', children^='', spouse='1960')
+    relationships:
+      - Cosmik_Debris (dor:Cosmik_Debris) --doo:producer--> Frank_Zappa (dor:Frank_Zappa)
+      - 200_Motels (dor:200_Motels) --doo:writer--> Frank_Zappa (dor:Frank_Zappa)
+      - Cosmik_Debris (dor:Cosmik_Debris) --dop:genre--> Blues_rock (dor:Blues_rock)
+      - Cosmik_Debris (dor:Cosmik_Debris) --dop:producer--> Frank_Zappa (dor:Frank_Zappa)
+      - 200_Motels (dor:200_Motels) --doo:musicComposer--> Frank_Zappa (dor:Frank_Zappa)
+  '2':
+    attributes:
+      200_Motels: (producer^='Jerry D. Good')
+      Frank_Zappa: (birth name^='Frank Vincent Zappa', children^='', spouse='1960')
+    relationships:
+      - Cosmik_Debris (dor:Cosmik_Debris) --doo:producer--> Frank_Zappa (dor:Frank_Zappa)
+      - 200_Motels (dor:200_Motels) --doo:writer--> Frank_Zappa (dor:Frank_Zappa)
+      - Cosmik_Debris (dor:Cosmik_Debris) --dop:genre--> Comedy_rock (dor:Comedy_rock)
+      - Cosmik_Debris (dor:Cosmik_Debris) --dop:producer--> Frank_Zappa (dor:Frank_Zappa)
+      - 200_Motels (dor:200_Motels) --doo:musicComposer--> Frank_Zappa (dor:Frank_Zappa)
+  '3':
+    attributes:
+      200_Motels: (producer^='Jerry D. Good')
+      Frank_Zappa: (birth name^='Frank Vincent Zappa', children^='', spouse='1960')
+    relationships:
+      - Cosmik_Debris (dor:Cosmik_Debris) --doo:producer--> Frank_Zappa (dor:Frank_Zappa)
+      - 200_Motels (dor:200_Motels) --doo:writer--> Frank_Zappa (dor:Frank_Zappa)
+      - Cosmik_Debris (dor:Cosmik_Debris) --dop:genre--> Jazz_rock (dor:Jazz_rock)
+      - Cosmik_Debris (dor:Cosmik_Debris) --dop:producer--> Frank_Zappa (dor:Frank_Zappa)
+      - 200_Motels (dor:200_Motels) --doo:musicComposer--> Frank_Zappa (dor:Frank_Zappa)
+  '4':
+    attributes:
+      Rob_Zombie: (birth name^='Robert Bartleh Cummings')
+      3_from_Hell: (producer^='')
+    relationships:
+      - American_Witch (dor:American_Witch) --doo:producer--> Rob_Zombie (dor:Rob_Zombie)
+      - 3_from_Hell (dor:3_from_Hell) --doo:writer--> Rob_Zombie (dor:Rob_Zombie)
+      - American_Witch (dor:American_Witch) --dop:genre--> Heavy_metal_music (dor:Heavy_metal_music)
+      - American_Witch (dor:American_Witch) --dop:producer--> Rob_Zombie (dor:Rob_Zombie)
+      - 3_from_Hell (dor:3_from_Hell) --doo:musicComposer--> Zeuss (dor:Zeuss)
+  '5':
+    attributes:
+      Rob_Zombie: (birth name^='Robert Bartleh Cummings')
+      3_from_Hell: (producer^='')
+    relationships:
+      - American_Witch (dor:American_Witch) --doo:producer--> Rob_Zombie (dor:Rob_Zombie)
+      - 3_from_Hell (dor:3_from_Hell) --doo:writer--> Rob_Zombie (dor:Rob_Zombie)
+      - American_Witch (dor:American_Witch) --dop:genre--> Shock_rock (dor:Shock_rock)
+      - American_Witch (dor:American_Witch) --dop:producer--> Rob_Zombie (dor:Rob_Zombie)
+      - 3_from_Hell (dor:3_from_Hell) --doo:musicComposer--> Zeuss (dor:Zeuss)
+  '6':
+    attributes:
+      Rob_Zombie: (birth name^='Robert Bartleh Cummings')
+      3_from_Hell: (producer^='')
+    relationships:
+      - Dead_Girl_Superstar (dor:Dead_Girl_Superstar) --doo:producer--> Rob_Zombie (dor:Rob_Zombie)
+      - 3_from_Hell (dor:3_from_Hell) --doo:writer--> Rob_Zombie (dor:Rob_Zombie)
+      - Dead_Girl_Superstar (dor:Dead_Girl_Superstar) --dop:genre--> Groove_metal (dor:Groove_metal)
+      - Dead_Girl_Superstar (dor:Dead_Girl_Superstar) --dop:producer--> Rob_Zombie (dor:Rob_Zombie)
+      - 3_from_Hell (dor:3_from_Hell) --doo:musicComposer--> Zeuss (dor:Zeuss)
+  '7':
+    attributes:
+      3_Strikes_(film): (producer^='Marcus Morton')
+    relationships:
+      - It_Was_a_Good_Day (dor:It_Was_a_Good_Day) --doo:producer--> DJ_Pooh (dor:DJ_Pooh)
+      - 3_Strikes_(film) (<http://dbpedia.org/resource/3_Strikes_(film)>) --doo:writer--> DJ_Pooh (dor:DJ_Pooh)
+      - It_Was_a_Good_Day (dor:It_Was_a_Good_Day) --dop:genre--> G-funk (dor:G-funk)
+      - It_Was_a_Good_Day (dor:It_Was_a_Good_Day) --dop:producer--> DJ_Pooh (dor:DJ_Pooh)
+      - 3_Strikes_(film) (<http://dbpedia.org/resource/3_Strikes_(film)>) --doo:musicComposer--> Stewart_Copeland (dor:Stewart_Copeland)
+  '8':
+    attributes:
+      DJ_Pooh: (birth name^='Mark Jordan')
+      3_Strikes_(film): (producer^='Marcus Morton')
+    relationships:
+      - It_Was_a_Good_Day (dor:It_Was_a_Good_Day) --doo:producer--> DJ_Pooh (dor:DJ_Pooh)
+      - 3_Strikes_(film) (<http://dbpedia.org/resource/3_Strikes_(film)>) --doo:writer--> DJ_Pooh (dor:DJ_Pooh)
+      - It_Was_a_Good_Day (dor:It_Was_a_Good_Day) --dop:genre--> Hip_hop_music (dor:Hip_hop_music)
+      - It_Was_a_Good_Day (dor:It_Was_a_Good_Day) --dop:producer--> DJ_Pooh (dor:DJ_Pooh)
+      - 3_Strikes_(film) (<http://dbpedia.org/resource/3_Strikes_(film)>) --doo:musicComposer--> Stewart_Copeland (dor:Stewart_Copeland)
+  '9':
+    attributes:
+      DJ_Pooh: (birth name^='Mark Jordan')
+      3_Strikes_(film): (producer^='Marcus Morton')
+    relationships:
+      - New_York,_New_York_(Tha_Dogg_Pound_song) (<http://dbpedia.org/resource/New_York,_New_York_(Tha_Dogg_Pound_song)>) --doo:producer--> DJ_Pooh (dor:DJ_Pooh)
+      - 3_Strikes_(film) (<http://dbpedia.org/resource/3_Strikes_(film)>) --doo:writer--> DJ_Pooh (dor:DJ_Pooh)
+      - New_York,_New_York_(Tha_Dogg_Pound_song) (<http://dbpedia.org/resource/New_York,_New_York_(Tha_Dogg_Pound_song)>) --dop:genre--> G-funk (dor:G-funk)
+      - New_York,_New_York_(Tha_Dogg_Pound_song) (<http://dbpedia.org/resource/New_York,_New_York_(Tha_Dogg_Pound_song)>) --dop:producer--> DJ_Pooh (dor:DJ_Pooh)
+      - 3_Strikes_(film) (<http://dbpedia.org/resource/3_Strikes_(film)>) --doo:musicComposer--> Stewart_Copeland (dor:Stewart_Copeland)
+  '10':
+    attributes:
+      99_Songs: (producer^='http://dbpedia.org/resource/A._R._Rahman')
+      A._R._Rahman: (birth name^='A. S. Dileep Kumar')
+    relationships:
+      - One_Love_(A._R._Rahman_song) (<http://dbpedia.org/resource/One_Love_(A._R._Rahman_song)>) --doo:producer--> A._R._Rahman (dor:A._R._Rahman)
+      - 99_Songs (dor:99_Songs) --doo:writer--> A._R._Rahman (dor:A._R._Rahman)
+      - One_Love_(A._R._Rahman_song) (<http://dbpedia.org/resource/One_Love_(A._R._Rahman_song)>) --dop:genre--> World_Music (dor:World_Music)
+      - One_Love_(A._R._Rahman_song) (<http://dbpedia.org/resource/One_Love_(A._R._Rahman_song)>) --dop:producer--> A._R._Rahman (dor:A._R._Rahman)
+      - 99_Songs (dor:99_Songs) --doo:musicComposer--> A._R._Rahman (dor:A._R._Rahman)
+attributes:
+  movie: --url^ (dop:url)--> Resource | --release date^ (doo:releaseDate)--> date | --producer^ (dop:producer)--> langString
+  person: --spouse (dop:spouse)--> langString | --nickname^ (dop:nickname)--> langString | --quoted^ (dop:quoted)--> langString
+  single: --footer^ (dop:footer)--> langString
+  musical artist: --url^ (dop:url)--> Resource | --instrument (dop:instrument)--> Resource | --b^ (dop:b)--> langString | --birth name^ (dop:birthName)--> langString | --children^ (dop:children)--> int | --past members^ (dop:pastMembers)--> langString
+subgraph_id: 897
+relationships:
+  - single --doo:producer--> musical artist
+  - movie --doo:writer--> musical artist
+  - single --dop:genre--> music genre
+  - single --dop:producer--> musical artist
+  - movie --doo:musicComposer--> person

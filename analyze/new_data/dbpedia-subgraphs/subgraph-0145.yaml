@@ -1,0 +1,97 @@
+types:
+  city: doo:City
+  person: doo:Person
+  video game: doo:VideoGame
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Anaheim,_California: (Apr record high F^='106')
+      Dream_Chronicles_(video_game): (publisher^='http://dbpedia.org/resource/PlayFirst', composer^='http://dbpedia.org/resource/Adam_Gubman')
+    relationships:
+      - Dream_Chronicles_(video_game) (<http://dbpedia.org/resource/Dream_Chronicles_(video_game)>) --dop:composer--> Adam_Gubman (dor:Adam_Gubman)
+      - Dream_Chronicles_(video_game) (<http://dbpedia.org/resource/Dream_Chronicles_(video_game)>) --doo:composer--> Adam_Gubman (dor:Adam_Gubman)
+      - Adam_Gubman (dor:Adam_Gubman) --doo:birthPlace--> Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>)
+  '2':
+    attributes:
+      Anaheim,_California: (Apr record high F^='106')
+      Dream_Chronicles_2:_The_Eternal_Maze: (publisher^='http://dbpedia.org/resource/PlayFirst', composer^='http://dbpedia.org/resource/Adam_Gubman')
+    relationships:
+      - Dream_Chronicles_2:_The_Eternal_Maze (<http://dbpedia.org/resource/Dream_Chronicles_2:_The_Eternal_Maze>) --dop:composer--> Adam_Gubman (dor:Adam_Gubman)
+      - Dream_Chronicles_2:_The_Eternal_Maze (<http://dbpedia.org/resource/Dream_Chronicles_2:_The_Eternal_Maze>) --doo:composer--> Adam_Gubman (dor:Adam_Gubman)
+      - Adam_Gubman (dor:Adam_Gubman) --doo:birthPlace--> Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>)
+  '3':
+    attributes:
+      Anaheim,_California: (Apr record high F^='106')
+      Dream_Chronicles:_The_Book_of_Air: (publisher^='http://dbpedia.org/resource/PlayFirst', composer^='http://dbpedia.org/resource/Adam_Gubman')
+    relationships:
+      - Dream_Chronicles:_The_Book_of_Air (<http://dbpedia.org/resource/Dream_Chronicles:_The_Book_of_Air>) --dop:composer--> Adam_Gubman (dor:Adam_Gubman)
+      - Dream_Chronicles:_The_Book_of_Air (<http://dbpedia.org/resource/Dream_Chronicles:_The_Book_of_Air>) --doo:composer--> Adam_Gubman (dor:Adam_Gubman)
+      - Adam_Gubman (dor:Adam_Gubman) --doo:birthPlace--> Anaheim,_California (<http://dbpedia.org/resource/Anaheim,_California>)
+  '4':
+    attributes:
+      Tokyo: (Apr record high C^='28.4')
+      Dynamite_Headdy: (publisher^='http://dbpedia.org/resource/Sega', composer^='http://dbpedia.org/resource/Aki_Hata')
+    relationships:
+      - Dynamite_Headdy (dor:Dynamite_Headdy) --dop:composer--> Aki_Hata (dor:Aki_Hata)
+      - Dynamite_Headdy (dor:Dynamite_Headdy) --doo:composer--> Aki_Hata (dor:Aki_Hata)
+      - Aki_Hata (dor:Aki_Hata) --doo:birthPlace--> Tokyo (dor:Tokyo)
+  '5':
+    attributes:
+      Tokyo: (Apr record high C^='28.4')
+    relationships:
+      - Light_Crusader (dor:Light_Crusader) --dop:composer--> Aki_Hata (dor:Aki_Hata)
+      - Light_Crusader (dor:Light_Crusader) --doo:composer--> Aki_Hata (dor:Aki_Hata)
+      - Aki_Hata (dor:Aki_Hata) --doo:birthPlace--> Tokyo (dor:Tokyo)
+  '6':
+    attributes:
+      Tokyo: (Apr record high C^='28.4')
+      Rocket_Knight_Adventures: (publisher^='http://dbpedia.org/resource/Konami', composer^='http://dbpedia.org/resource/Aki_Hata')
+    relationships:
+      - Rocket_Knight_Adventures (dor:Rocket_Knight_Adventures) --dop:composer--> Aki_Hata (dor:Aki_Hata)
+      - Rocket_Knight_Adventures (dor:Rocket_Knight_Adventures) --doo:composer--> Aki_Hata (dor:Aki_Hata)
+      - Aki_Hata (dor:Aki_Hata) --doo:birthPlace--> Tokyo (dor:Tokyo)
+  '7':
+    attributes:
+      Tom_Clancy's_Ghost_Recon_Wildlands: (publisher^='http://dbpedia.org/resource/Ubisoft', composer^='http://dbpedia.org/resource/Alain_Johannes')
+    relationships:
+      - Tom_Clancy's_Ghost_Recon_Wildlands (<http://dbpedia.org/resource/Tom_Clancy's_Ghost_Recon_Wildlands>) --dop:composer--> Alain_Johannes (dor:Alain_Johannes)
+      - Tom_Clancy's_Ghost_Recon_Wildlands (<http://dbpedia.org/resource/Tom_Clancy's_Ghost_Recon_Wildlands>) --doo:composer--> Alain_Johannes (dor:Alain_Johannes)
+      - Alain_Johannes (dor:Alain_Johannes) --doo:birthPlace--> Santiago_de_Chile (dor:Santiago_de_Chile)
+  '8':
+    attributes:
+      Beauty_and_the_Beast_(1994_video_game): (publisher^='http://dbpedia.org/resource/Hudson_Soft', composer^='http://dbpedia.org/resource/Alan_Menken')
+    relationships:
+      - Beauty_and_the_Beast_(1994_video_game) (<http://dbpedia.org/resource/Beauty_and_the_Beast_(1994_video_game)>) --dop:composer--> Alan_Menken (dor:Alan_Menken)
+      - Beauty_and_the_Beast_(1994_video_game) (<http://dbpedia.org/resource/Beauty_and_the_Beast_(1994_video_game)>) --doo:composer--> Alan_Menken (dor:Alan_Menken)
+      - Alan_Menken (dor:Alan_Menken) --doo:birthPlace--> Manhattan (dor:Manhattan)
+  '9':
+    attributes:
+      Beauty_and_the_Beast_(1994_video_game): (publisher^='http://dbpedia.org/resource/Hudson_Soft', composer^='http://dbpedia.org/resource/Alan_Menken')
+    relationships:
+      - Beauty_and_the_Beast_(1994_video_game) (<http://dbpedia.org/resource/Beauty_and_the_Beast_(1994_video_game)>) --dop:composer--> Jeroen_Tel (dor:Jeroen_Tel)
+      - Beauty_and_the_Beast_(1994_video_game) (<http://dbpedia.org/resource/Beauty_and_the_Beast_(1994_video_game)>) --doo:composer--> Alan_Menken (dor:Alan_Menken)
+      - Alan_Menken (dor:Alan_Menken) --doo:birthPlace--> Manhattan (dor:Manhattan)
+  '10':
+    attributes:
+      Alec_Holowka: (death date^='2019-08-31', deathPlace='http://dbpedia.org/resource/Manitoba')
+      I'm_O.K_–_A_Murder_Simulator: (composer^='http://dbpedia.org/resource/Alec_Holowka')
+    relationships:
+      - I'm_O.K_–_A_Murder_Simulator (<http://dbpedia.org/resource/I'm_O.K_–_A_Murder_Simulator>) --dop:composer--> Alec_Holowka (dor:Alec_Holowka)
+      - I'm_O.K_–_A_Murder_Simulator (<http://dbpedia.org/resource/I'm_O.K_–_A_Murder_Simulator>) --doo:composer--> Alec_Holowka (dor:Alec_Holowka)
+      - Alec_Holowka (dor:Alec_Holowka) --doo:birthPlace--> Winnipeg (dor:Winnipeg)
+attributes:
+  city: --Apr record high C^ (dop:aprRecordHighC)--> double | --Apr record high F^ (dop:aprRecordHighF)--> int
+  person: --image^ (dop:image)--> langString | --certain^ (dop:certain)--> langString | --alt^ (dop:alt)--> langString | --known for^ (dop:knownFor)--> int | --deathPlace (doo:deathPlace)--> Resource
+  video game: --publisher^ (doo:publisher)--> Resource | --composer^ (doo:composer)--> Resource
+  musical artist: --death date^ (dop:deathDate)--> date | --2a^ (dop:2a)--> langString
+subgraph_id: 145
+relationships:
+  - video game --dop:composer--> person
+  - video game --doo:composer--> musical artist
+  - musical artist --doo:birthPlace--> city

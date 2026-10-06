@@ -1,0 +1,77 @@
+types:
+  town: doo:Town
+  Location: doo:Location
+  university: doo:University
+  soccer club: doo:SoccerClub
+  soccer tournoment: doo:SoccerTournament
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Alsenborn: (area total (km2)^='11.6')
+      2014–15_DFB-Pokal: (RD1-team^='1')
+    relationships:
+      - Alsenborn (dor:Alsenborn) --doo:district--> Kaiserslautern (dor:Kaiserslautern)
+      - Technical_University_of_Kaiserslautern (dor:Technical_University_of_Kaiserslautern) --doo:city--> Kaiserslautern (dor:Kaiserslautern)
+      - 2014–15_DFB-Pokal (<http://dbpedia.org/resource/2014–15_DFB-Pokal>) --dop:location--> Kaiserslautern (dor:Kaiserslautern)
+      - 2014–15_DFB-Pokal (<http://dbpedia.org/resource/2014–15_DFB-Pokal>) --dop:rd3Team--> Dynamo_Dresden (dor:Dynamo_Dresden)
+  '2':
+    attributes:
+      Alsenborn: (area total (km2)^='11.6')
+      2014–15_DFB-Pokal: (RD1-team^='1')
+    relationships:
+      - Alsenborn (dor:Alsenborn) --doo:district--> Kaiserslautern (dor:Kaiserslautern)
+      - Technical_University_of_Kaiserslautern (dor:Technical_University_of_Kaiserslautern) --doo:city--> Kaiserslautern (dor:Kaiserslautern)
+      - 2014–15_DFB-Pokal (<http://dbpedia.org/resource/2014–15_DFB-Pokal>) --dop:location--> Kaiserslautern (dor:Kaiserslautern)
+      - 2014–15_DFB-Pokal (<http://dbpedia.org/resource/2014–15_DFB-Pokal>) --dop:rd3Team--> Eintracht_Braunschweig (dor:Eintracht_Braunschweig)
+  '3':
+    attributes:
+      Alsenborn: (area total (km2)^='11.6')
+      2014–15_DFB-Pokal: (RD1-team^='1')
+    relationships:
+      - Alsenborn (dor:Alsenborn) --doo:district--> Kaiserslautern (dor:Kaiserslautern)
+      - Technical_University_of_Kaiserslautern (dor:Technical_University_of_Kaiserslautern) --doo:city--> Kaiserslautern (dor:Kaiserslautern)
+      - 2014–15_DFB-Pokal (<http://dbpedia.org/resource/2014–15_DFB-Pokal>) --dop:location--> Kaiserslautern (dor:Kaiserslautern)
+      - 2014–15_DFB-Pokal (<http://dbpedia.org/resource/2014–15_DFB-Pokal>) --dop:rd3Team--> Kickers_Offenbach (dor:Kickers_Offenbach)
+  '4':
+    attributes:
+      Bad_Urach: (area total (km2)^='55.5')
+      2015–16_DFB-Pokal: (RD1-team^='1')
+    relationships:
+      - Bad_Urach (dor:Bad_Urach) --doo:district--> Reutlingen (dor:Reutlingen)
+      - ESB_Business_School (dor:ESB_Business_School) --doo:city--> Reutlingen (dor:Reutlingen)
+      - 2015–16_DFB-Pokal (<http://dbpedia.org/resource/2015–16_DFB-Pokal>) --dop:location--> Reutlingen (dor:Reutlingen)
+      - 2015–16_DFB-Pokal (<http://dbpedia.org/resource/2015–16_DFB-Pokal>) --dop:rd3Team--> Borussia_Mönchengladbach (<http://dbpedia.org/resource/Borussia_Mönchengladbach>)
+  '5':
+    attributes:
+      Bad_Urach: (area total (km2)^='55.5')
+      2015–16_DFB-Pokal: (RD1-team^='1')
+    relationships:
+      - Bad_Urach (dor:Bad_Urach) --doo:district--> Reutlingen (dor:Reutlingen)
+      - ESB_Business_School (dor:ESB_Business_School) --doo:city--> Reutlingen (dor:Reutlingen)
+      - 2015–16_DFB-Pokal (<http://dbpedia.org/resource/2015–16_DFB-Pokal>) --dop:location--> Reutlingen (dor:Reutlingen)
+      - 2015–16_DFB-Pokal (<http://dbpedia.org/resource/2015–16_DFB-Pokal>) --dop:rd3Team--> Eintracht_Braunschweig (dor:Eintracht_Braunschweig)
+  '6':
+    attributes:
+      Bad_Urach: (area total (km2)^='55.5')
+      2015–16_DFB-Pokal: (RD1-team^='1')
+    relationships:
+      - Bad_Urach (dor:Bad_Urach) --doo:district--> Reutlingen (dor:Reutlingen)
+      - ESB_Business_School (dor:ESB_Business_School) --doo:city--> Reutlingen (dor:Reutlingen)
+      - 2015–16_DFB-Pokal (<http://dbpedia.org/resource/2015–16_DFB-Pokal>) --dop:location--> Reutlingen (dor:Reutlingen)
+      - 2015–16_DFB-Pokal (<http://dbpedia.org/resource/2015–16_DFB-Pokal>) --dop:rd3Team--> FC_Augsburg (dor:FC_Augsburg)
+attributes:
+  Location: --direction^ (dop:direction)--> langString | --Aug low C^ (dop:augLowC)--> int | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --image width^ (dop:imageWidth)--> int | --url^ (dop:url)--> langString | --Apr sun^ (dop:aprSun)--> double | --1p^ (dop:1p)--> int | --designated nrhp type^ (dop:designatedNrhpType)--> date
+  university: --image upright^ (dop:imageUpright)--> double
+  soccer tournoment: --RD1-team^ (dop:rd1Team)--> langString
+subgraph_id: 960
+relationships:
+  - Location --doo:district--> town
+  - university --doo:city--> town
+  - soccer tournoment --dop:location--> town
+  - soccer tournoment --dop:rd3Team--> soccer club

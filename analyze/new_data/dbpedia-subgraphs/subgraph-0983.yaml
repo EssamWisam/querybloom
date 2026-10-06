@@ -1,0 +1,139 @@
+types:
+  city: doo:City
+  settlement: doo:Settlement
+  university: doo:University
+  musical artist: doo:MusicalArtist
+  soap character: doo:SoapCharacter
+  government agency: doo:GovernmentAgency
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Boston: (area total km^='232.1')
+      Emma_Swan: (last appearance^='http://dbpedia.org/resource/Leaving_Storybrooke')
+      Bahçeşehir_University: (Link from a Wikipage to an external page^='http://library.bahcesehir.edu.tr/')
+      Boston_Housing_Authority: (formation date^='1935-10-01', budget ($)^='1.8E8')
+    relationships:
+      - James_Reese_Europe (dor:James_Reese_Europe) --dop:deathPlace--> Boston (dor:Boston)
+      - Bahçeşehir_University (<http://dbpedia.org/resource/Bahçeşehir_University>) --doo:campus--> Boston (dor:Boston)
+      - James_Reese_Europe (dor:James_Reese_Europe) --doo:deathPlace--> Boston (dor:Boston)
+      - Boston_Housing_Authority (dor:Boston_Housing_Authority) --doo:jurisdiction--> Boston (dor:Boston)
+      - James_Reese_Europe (dor:James_Reese_Europe) --doo:birthPlace--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - Emma_Swan (dor:Emma_Swan) --doo:residence--> Boston (dor:Boston)
+  '2':
+    attributes:
+      Boston: (area total km^='232.1')
+      Emma_Swan: (last appearance^='http://dbpedia.org/resource/Leaving_Storybrooke')
+      Boston_Housing_Authority: (formation date^='1935-10-01', budget ($)^='1.8E8')
+      Campuses_of_Hult_International_Business_School: (Link from a Wikipage to an external page^='http://www.hult.edu/')
+    relationships:
+      - James_Reese_Europe (dor:James_Reese_Europe) --dop:deathPlace--> Boston (dor:Boston)
+      - Campuses_of_Hult_International_Business_School (dor:Campuses_of_Hult_International_Business_School) --doo:campus--> Boston (dor:Boston)
+      - James_Reese_Europe (dor:James_Reese_Europe) --doo:deathPlace--> Boston (dor:Boston)
+      - Boston_Housing_Authority (dor:Boston_Housing_Authority) --doo:jurisdiction--> Boston (dor:Boston)
+      - James_Reese_Europe (dor:James_Reese_Europe) --doo:birthPlace--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - Emma_Swan (dor:Emma_Swan) --doo:residence--> Boston (dor:Boston)
+  '3':
+    attributes:
+      Boston: (area total km^='232.1')
+      Bahçeşehir_University: (Link from a Wikipage to an external page^='http://library.bahcesehir.edu.tr/')
+      Boston_Housing_Authority: (formation date^='1935-10-01', budget ($)^='1.8E8')
+    relationships:
+      - James_Reese_Europe (dor:James_Reese_Europe) --dop:deathPlace--> Boston (dor:Boston)
+      - Bahçeşehir_University (<http://dbpedia.org/resource/Bahçeşehir_University>) --doo:campus--> Boston (dor:Boston)
+      - James_Reese_Europe (dor:James_Reese_Europe) --doo:deathPlace--> Boston (dor:Boston)
+      - Boston_Housing_Authority (dor:Boston_Housing_Authority) --doo:jurisdiction--> Boston (dor:Boston)
+      - James_Reese_Europe (dor:James_Reese_Europe) --doo:birthPlace--> Mobile,_Alabama (<http://dbpedia.org/resource/Mobile,_Alabama>)
+      - Leonard_von_Lahnstein (dor:Leonard_von_Lahnstein) --doo:residence--> Boston (dor:Boston)
+  '4':
+    attributes:
+      New_York_City: (area total km^='1223.59')
+      Hult_International_Business_School: (Link from a Wikipage to an external page^='http://www.hult.edu/')
+    relationships:
+      - A._H._Woods (dor:A._H._Woods) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - Hult_International_Business_School (dor:Hult_International_Business_School) --doo:campus--> New_York_City (dor:New_York_City)
+      - A._H._Woods (dor:A._H._Woods) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Civilian_Complaint_Review_Board (dor:Civilian_Complaint_Review_Board) --doo:jurisdiction--> New_York_City (dor:New_York_City)
+      - A._H._Woods (dor:A._H._Woods) --doo:birthPlace--> Budapest (dor:Budapest)
+      - Andre_Lyon (dor:Andre_Lyon) --doo:residence--> New_York_City (dor:New_York_City)
+  '5':
+    attributes:
+      New_York_City: (area total km^='1223.59')
+    relationships:
+      - A._H._Woods (dor:A._H._Woods) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - Touro_University_System (dor:Touro_University_System) --doo:campus--> New_York_City (dor:New_York_City)
+      - A._H._Woods (dor:A._H._Woods) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Civilian_Complaint_Review_Board (dor:Civilian_Complaint_Review_Board) --doo:jurisdiction--> New_York_City (dor:New_York_City)
+      - A._H._Woods (dor:A._H._Woods) --doo:birthPlace--> Budapest (dor:Budapest)
+      - Andre_Lyon (dor:Andre_Lyon) --doo:residence--> New_York_City (dor:New_York_City)
+  '6':
+    attributes:
+      Angie_Bolen: (last appearance^='http://dbpedia.org/resource/I_Guess_This_Is_Goodbye_(Desperate_Housewives)')
+      New_York_City: (area total km^='1223.59')
+    relationships:
+      - A._H._Woods (dor:A._H._Woods) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - Hult_International_Business_School (dor:Hult_International_Business_School) --doo:campus--> New_York_City (dor:New_York_City)
+      - A._H._Woods (dor:A._H._Woods) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Civilian_Complaint_Review_Board (dor:Civilian_Complaint_Review_Board) --doo:jurisdiction--> New_York_City (dor:New_York_City)
+      - A._H._Woods (dor:A._H._Woods) --doo:birthPlace--> Budapest (dor:Budapest)
+      - Angie_Bolen (dor:Angie_Bolen) --doo:residence--> New_York_City (dor:New_York_City)
+  '7':
+    attributes:
+      The_Chicago_School_of_Professional_Psychology: (Link from a Wikipage to an external page^='https://www.thechicagoschool.edu/')
+    relationships:
+      - Joseph_Moskowitz (dor:Joseph_Moskowitz) --dop:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - The_Chicago_School_of_Professional_Psychology (dor:The_Chicago_School_of_Professional_Psychology) --doo:campus--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Joseph_Moskowitz (dor:Joseph_Moskowitz) --doo:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - District_of_Columbia_Housing_Authority (dor:District_of_Columbia_Housing_Authority) --doo:jurisdiction--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Joseph_Moskowitz (dor:Joseph_Moskowitz) --doo:birthPlace--> Galați (<http://dbpedia.org/resource/Galați>)
+      - Chance_Chancellor (dor:Chance_Chancellor) --doo:residence--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '8':
+    attributes:
+      The_Chicago_School_of_Professional_Psychology: (Link from a Wikipage to an external page^='https://www.thechicagoschool.edu/')
+    relationships:
+      - Joseph_Moskowitz (dor:Joseph_Moskowitz) --dop:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - The_Chicago_School_of_Professional_Psychology (dor:The_Chicago_School_of_Professional_Psychology) --doo:campus--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Joseph_Moskowitz (dor:Joseph_Moskowitz) --doo:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - District_of_Columbia_Housing_Authority (dor:District_of_Columbia_Housing_Authority) --doo:jurisdiction--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Joseph_Moskowitz (dor:Joseph_Moskowitz) --doo:birthPlace--> Galați (<http://dbpedia.org/resource/Galați>)
+      - Frankie_Brady (dor:Frankie_Brady) --doo:residence--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '9':
+    attributes:
+      The_Chicago_School_of_Professional_Psychology: (Link from a Wikipage to an external page^='https://www.thechicagoschool.edu/')
+    relationships:
+      - Joseph_Moskowitz (dor:Joseph_Moskowitz) --dop:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - The_Chicago_School_of_Professional_Psychology (dor:The_Chicago_School_of_Professional_Psychology) --doo:campus--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Joseph_Moskowitz (dor:Joseph_Moskowitz) --doo:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - District_of_Columbia_Housing_Authority (dor:District_of_Columbia_Housing_Authority) --doo:jurisdiction--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Joseph_Moskowitz (dor:Joseph_Moskowitz) --doo:birthPlace--> Galați (<http://dbpedia.org/resource/Galați>)
+      - Meg_Snyder (dor:Meg_Snyder) --doo:residence--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '10':
+    attributes:
+      San_Francisco: (area total km^='600.59')
+      Campuses_of_Hult_International_Business_School: (Link from a Wikipage to an external page^='http://www.hult.edu/')
+    relationships:
+      - Curtis_Mosby (dor:Curtis_Mosby) --dop:deathPlace--> San_Francisco (dor:San_Francisco)
+      - Campuses_of_Hult_International_Business_School (dor:Campuses_of_Hult_International_Business_School) --doo:campus--> San_Francisco (dor:San_Francisco)
+      - Curtis_Mosby (dor:Curtis_Mosby) --doo:deathPlace--> San_Francisco (dor:San_Francisco)
+      - Port_of_San_Francisco (dor:Port_of_San_Francisco) --doo:jurisdiction--> San_Francisco (dor:San_Francisco)
+      - Curtis_Mosby (dor:Curtis_Mosby) --doo:birthPlace--> Missouri (dor:Missouri)
+      - List_of_One_Life_to_Live_characters_(1968–1979)__Dorothy_Randolph__1 (<http://dbpedia.org/resource/List_of_One_Life_to_Live_characters_(1968–1979)__Dorothy_Randolph__1>) --doo:residence--> San_Francisco (dor:San_Francisco)
+attributes:
+  city: --Apr high F^ (dop:aprHighF)--> double | --Aug high C^ (dop:augHighC)--> double | --url^ (dop:url)--> Resource | --area total km^ (dop:areaTotalKm)--> double
+  settlement: --canton^ (doo:canton)--> Resource
+  university: --head^ (doo:head)--> Resource | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  musical artist: --1p^ (dop:1p)--> int
+  soap character: --last appearance^ (doo:lastAppearance)--> Resource
+  government agency: --formation date^ (doo:formationDate)--> date | --budget ($)^ (doo:budget)--> euro
+subgraph_id: 983
+relationships:
+  - musical artist --dop:deathPlace--> city
+  - university --doo:campus--> city
+  - musical artist --doo:deathPlace--> city
+  - government agency --doo:jurisdiction--> city
+  - musical artist --doo:birthPlace--> settlement
+  - soap character --doo:residence--> city

@@ -1,0 +1,137 @@
+types:
+  city: doo:City
+  airport: doo:Airport
+  country: doo:Country
+  settlement: doo:Settlement
+  military unit: doo:MilitaryUnit
+  historic building: doo:HistoricBuilding
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Ankara: (Aug low C^='17.4', area total (km2)^='24521.0')
+      Turkey: (width^='160')
+      Isparta: (Apr sun^='204', has abstract^='Isparta (gr. Σπάρτη, także Baris/Βάρις) – miasto w południowo-zachodniej Turcji, w górach Taurus, na południowy zachód od jeziora . Ośrodek administracyjny prowincji Isparta, przemysł (spożywczy, chem...')
+    relationships:
+      - Church_of_Saint_Mary_of_the_Mongols (dor:Church_of_Saint_Mary_of_the_Mongols) --dop:country--> Turkey (dor:Turkey)
+      - Ankara_Güvercinlik_Army_Air_Base (<http://dbpedia.org/resource/Ankara_Güvercinlik_Army_Air_Base>) --doo:city--> Turkey (dor:Turkey)
+      - Ankara_Güvercinlik_Army_Air_Base (<http://dbpedia.org/resource/Ankara_Güvercinlik_Army_Air_Base>) --doo:location--> Ankara (dor:Ankara)
+      - School_of_Army_Aviation_(Turkey) (<http://dbpedia.org/resource/School_of_Army_Aviation_(Turkey)>) --doo:garrison--> Ankara (dor:Ankara)
+      - School_of_Army_Aviation_(Turkey) (<http://dbpedia.org/resource/School_of_Army_Aviation_(Turkey)>) --doo:garrison--> Isparta (dor:Isparta)
+  '2':
+    attributes:
+      Ankara: (Aug low C^='17.4', area total (km2)^='24521.0')
+      Turkey: (width^='160')
+      Thessaloniki: '(Apr sun^=''202.6'', has abstract^=''Is í Teasaloinicé (Gréigis: Θεσσαλονίκη [θesalonici] (éisteacht) an dara chathair is mó sa Ghréig agus príomhchathair na Macadóine Gréagaigh, réigiún riaracháin Lár na Macadóine, agus riarachán dílára...'')'
+    relationships:
+      - Church_of_Saint_Mary_of_the_Mongols (dor:Church_of_Saint_Mary_of_the_Mongols) --dop:country--> Turkey (dor:Turkey)
+      - Ankara_Güvercinlik_Army_Air_Base (<http://dbpedia.org/resource/Ankara_Güvercinlik_Army_Air_Base>) --doo:city--> Turkey (dor:Turkey)
+      - Ankara_Güvercinlik_Army_Air_Base (<http://dbpedia.org/resource/Ankara_Güvercinlik_Army_Air_Base>) --doo:location--> Ankara (dor:Ankara)
+      - V_Corps_(Ottoman_Empire) (<http://dbpedia.org/resource/V_Corps_(Ottoman_Empire)>) --doo:garrison--> Ankara (dor:Ankara)
+      - V_Corps_(Ottoman_Empire) (<http://dbpedia.org/resource/V_Corps_(Ottoman_Empire)>) --doo:garrison--> Thessaloniki (dor:Thessaloniki)
+  '3':
+    attributes:
+      Ankara: (Aug low C^='17.4', area total (km2)^='24521.0')
+      Turkey: (width^='160')
+      Isparta: (Apr sun^='204', has abstract^='Isparta (gr. Σπάρτη, także Baris/Βάρις) – miasto w południowo-zachodniej Turcji, w górach Taurus, na południowy zachód od jeziora . Ośrodek administracyjny prowincji Isparta, przemysł (spożywczy, chem...')
+    relationships:
+      - Church_of_Saint_Menas_of_Samatya (dor:Church_of_Saint_Menas_of_Samatya) --dop:country--> Turkey (dor:Turkey)
+      - Ankara_Güvercinlik_Army_Air_Base (<http://dbpedia.org/resource/Ankara_Güvercinlik_Army_Air_Base>) --doo:city--> Turkey (dor:Turkey)
+      - Ankara_Güvercinlik_Army_Air_Base (<http://dbpedia.org/resource/Ankara_Güvercinlik_Army_Air_Base>) --doo:location--> Ankara (dor:Ankara)
+      - School_of_Army_Aviation_(Turkey) (<http://dbpedia.org/resource/School_of_Army_Aviation_(Turkey)>) --doo:garrison--> Ankara (dor:Ankara)
+      - School_of_Army_Aviation_(Turkey) (<http://dbpedia.org/resource/School_of_Army_Aviation_(Turkey)>) --doo:garrison--> Isparta (dor:Isparta)
+  '4':
+    attributes:
+      Serbia: (width^='230')
+      Kraljevo: (Aug low C^='15.6', width^='auto')
+      Novi_Sad: (Apr sun^='205.8', has abstract^='Is í Novi Sad (Нови Сад) an dara chathair is mó sa tSeirbia, agus príomhchathair na Vóvaidíne. Tá daonra 231,798, aici (2011). Tá sí súite ar an Machaire Panónach ó dheas, ar teoireann na réigiúin Bač...')
+    relationships:
+      - Cathedral_of_St._John_of_Nepomuk,_Zrenjanin (<http://dbpedia.org/resource/Cathedral_of_St._John_of_Nepomuk,_Zrenjanin>) --dop:country--> Serbia (dor:Serbia)
+      - Brege_Airport (dor:Brege_Airport) --doo:city--> Serbia (dor:Serbia)
+      - Brege_Airport (dor:Brege_Airport) --doo:location--> Kraljevo (dor:Kraljevo)
+      - Chetnik_Command (dor:Chetnik_Command) --doo:garrison--> Kraljevo (dor:Kraljevo)
+      - Chetnik_Command (dor:Chetnik_Command) --doo:garrison--> Novi_Sad (dor:Novi_Sad)
+  '5':
+    attributes:
+      Serbia: (width^='230')
+      Kraljevo: (Aug low C^='15.6', width^='auto')
+      Kragujevac: '(Apr sun^=''184.7'', has abstract^=''(Aussprache: [ˈkrǎɡujɛvats]; serbisch-kyrillisch Крагујевац) ist die viertgrößte Stadt in Serbien. Die Stadt selbst hat knapp 150.835 Einwohner, die gleichnamige etwa 180.000 Einwohner. Sie ist der Ve...'')'
+    relationships:
+      - Cathedral_of_St._John_of_Nepomuk,_Zrenjanin (<http://dbpedia.org/resource/Cathedral_of_St._John_of_Nepomuk,_Zrenjanin>) --dop:country--> Serbia (dor:Serbia)
+      - Brege_Airport (dor:Brege_Airport) --doo:city--> Serbia (dor:Serbia)
+      - Brege_Airport (dor:Brege_Airport) --doo:location--> Kraljevo (dor:Kraljevo)
+      - Serbian_Volunteer_Corps_(World_War_II) (<http://dbpedia.org/resource/Serbian_Volunteer_Corps_(World_War_II)>) --doo:garrison--> Kraljevo (dor:Kraljevo)
+      - Serbian_Volunteer_Corps_(World_War_II) (<http://dbpedia.org/resource/Serbian_Volunteer_Corps_(World_War_II)>) --doo:garrison--> Kragujevac (dor:Kragujevac)
+  '6':
+    attributes:
+      Serbia: (width^='230')
+      Kraljevo: (Aug low C^='15.6', width^='auto')
+      Kruševac: '(Apr sun^=''171.3'', has abstract^=''De stad Kruševac (Servisch: Крушевац, gelezen als Kroesjewats) is het centrum van het district Rasina in Centraal-Servië. In de stadskern wonen 60.000 mensen, terwijl de gemeente met dorpen 130.000 me...'')'
+    relationships:
+      - Cathedral_of_St._John_of_Nepomuk,_Zrenjanin (<http://dbpedia.org/resource/Cathedral_of_St._John_of_Nepomuk,_Zrenjanin>) --dop:country--> Serbia (dor:Serbia)
+      - Brege_Airport (dor:Brege_Airport) --doo:city--> Serbia (dor:Serbia)
+      - Brege_Airport (dor:Brege_Airport) --doo:location--> Kraljevo (dor:Kraljevo)
+      - Serbian_Volunteer_Corps_(World_War_II) (<http://dbpedia.org/resource/Serbian_Volunteer_Corps_(World_War_II)>) --doo:garrison--> Kraljevo (dor:Kraljevo)
+      - Serbian_Volunteer_Corps_(World_War_II) (<http://dbpedia.org/resource/Serbian_Volunteer_Corps_(World_War_II)>) --doo:garrison--> Kruševac (<http://dbpedia.org/resource/Kruševac>)
+  '7':
+    attributes:
+      Lisbon: (Aug low C^='18.6', area total (km2)^='100.05', width^='1012')
+      Amadora: (has abstract^='A Amadora é uma cidade e um município português, localizada na Área Metropolitana de Lisboa. Tem uma área urbana de 23,79 km2 e 171.500 habitantes em 2021, donde uma densidade populacional de 7.195 ha...')
+      Portugal: (width^='138')
+    relationships:
+      - Basílica_Real_de_Castro_Verde (<http://dbpedia.org/resource/Basílica_Real_de_Castro_Verde>) --dop:country--> Portugal (dor:Portugal)
+      - Cabo_Ruivo_Seaplane_Base (dor:Cabo_Ruivo_Seaplane_Base) --doo:city--> Portugal (dor:Portugal)
+      - Cabo_Ruivo_Seaplane_Base (dor:Cabo_Ruivo_Seaplane_Base) --doo:location--> Lisbon (dor:Lisbon)
+      - 2nd_Lancers_Regiment_(Portugal) (<http://dbpedia.org/resource/2nd_Lancers_Regiment_(Portugal)>) --doo:garrison--> Lisbon (dor:Lisbon)
+      - 2nd_Lancers_Regiment_(Portugal) (<http://dbpedia.org/resource/2nd_Lancers_Regiment_(Portugal)>) --doo:garrison--> Amadora (dor:Amadora)
+  '8':
+    attributes:
+      Lisbon: (Aug low C^='18.6', area total (km2)^='100.05', width^='1012')
+      Portugal: (width^='138')
+      Acre,_Israel: (has abstract^='Ace était un groupe de pub rock britannique formé en 1972 et ayant connu le succès dans les années 1970. Le groupe est à l''origine de la carrière de Paul Carrack et est connu notamment, pour le tube H...')
+    relationships:
+      - Basílica_Real_de_Castro_Verde (<http://dbpedia.org/resource/Basílica_Real_de_Castro_Verde>) --dop:country--> Portugal (dor:Portugal)
+      - Cabo_Ruivo_Seaplane_Base (dor:Cabo_Ruivo_Seaplane_Base) --doo:city--> Portugal (dor:Portugal)
+      - Cabo_Ruivo_Seaplane_Base (dor:Cabo_Ruivo_Seaplane_Base) --doo:location--> Lisbon (dor:Lisbon)
+      - Early_Caliphate_navy (dor:Early_Caliphate_navy) --doo:garrison--> Lisbon (dor:Lisbon)
+      - Early_Caliphate_navy (dor:Early_Caliphate_navy) --doo:garrison--> Acre,_Israel (<http://dbpedia.org/resource/Acre,_Israel>)
+  '9':
+    attributes:
+      Lisbon: (Aug low C^='18.6', area total (km2)^='100.05', width^='1012')
+      Portugal: (width^='138')
+      Alexandria: '(Apr sun^=''273'', has abstract^=''( 다른 뜻에 대해서는 알렉산드리아 (동음이의) 문서를 참고하십시오.) 알렉산드리아(아랍어: الإسكندرية 알이스칸다리야[*], 그리스어: Αλεξάνδρεια, 이집트 아랍어: اسكندريه 에스켄데레이야, 문화어: 엘이스칸다리아, 콥트어: ⲁⲗⲉⲝⲁⲛⲇⲣⲓⲁ, 영어: Alexandria)는 이집트 북부 알렉산드리아 주의 지중해에 면한 항구도시로 ...'')'
+    relationships:
+      - Basílica_Real_de_Castro_Verde (<http://dbpedia.org/resource/Basílica_Real_de_Castro_Verde>) --dop:country--> Portugal (dor:Portugal)
+      - Cabo_Ruivo_Seaplane_Base (dor:Cabo_Ruivo_Seaplane_Base) --doo:city--> Portugal (dor:Portugal)
+      - Cabo_Ruivo_Seaplane_Base (dor:Cabo_Ruivo_Seaplane_Base) --doo:location--> Lisbon (dor:Lisbon)
+      - Early_Caliphate_navy (dor:Early_Caliphate_navy) --doo:garrison--> Lisbon (dor:Lisbon)
+      - Early_Caliphate_navy (dor:Early_Caliphate_navy) --doo:garrison--> Alexandria (dor:Alexandria)
+  '10':
+    attributes:
+      Rathmines: '(has abstract^=''Ceann de bhruachbhailte Bhaile Átha Cliath é Ráth Maonais (Béarla: Rathmines), ar thaobh theas na cathrach, timpeall ar thrí chiliméadar ó lár na cathrach. Ar taobh amháin an Chanáil Mhór, agus é ag s...'')'
+      Cork_(city): (Aug low C^='11.8', area total (km2)^='187.0', width^='150')
+      Cork_Airport: (operator^='http://dbpedia.org/resource/DAA_(Irish_company)')
+      Republic_of_Ireland: (width^='124')
+    relationships:
+      - Abbey_Presbyterian_Church,_Dublin (<http://dbpedia.org/resource/Abbey_Presbyterian_Church,_Dublin>) --dop:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - Cork_Airport (dor:Cork_Airport) --doo:city--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - Cork_Airport (dor:Cork_Airport) --doo:location--> Cork_(city) (<http://dbpedia.org/resource/Cork_(city)>)
+      - Cavalry_Corps_(Ireland) (<http://dbpedia.org/resource/Cavalry_Corps_(Ireland)>) --doo:garrison--> Cork_(city) (<http://dbpedia.org/resource/Cork_(city)>)
+      - Cavalry_Corps_(Ireland) (<http://dbpedia.org/resource/Cavalry_Corps_(Ireland)>) --doo:garrison--> Rathmines (dor:Rathmines)
+attributes:
+  city: --Aug low C^ (dop:augLowC)--> double | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --area^ (dop:area)--> double | --width^ (dop:width)--> langString
+  airport: --caption^ (dop:caption)--> langString | --operator^ (dop:operator)--> langString
+  country: --leader^ (dop:leader)--> langString | --width^ (dop:width)--> int | --founding year^ (doo:foundingYear)--> gYear
+  settlement: --Apr sun^ (dop:aprSun)--> double | --has abstract^ (doo:abstract)--> langString
+subgraph_id: 753
+relationships:
+  - historic building --dop:country--> country
+  - airport --doo:city--> country
+  - airport --doo:location--> city
+  - military unit --doo:garrison--> city
+  - military unit --doo:garrison--> settlement

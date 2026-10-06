@@ -1,0 +1,118 @@
+types:
+  country: doo:Country
+  automobile: doo:Automobile
+  politician: doo:Politician
+  ethnic group: doo:EthnicGroup
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      China: (direction^='horizontal')
+      Bao_Zheng: (known for^='Chinese cultural personification of justice', father^='Bao Lingyi')
+      Abaga_Mongols: (religion^='http://dbpedia.org/resource/Mongolian_Shamanism')
+    relationships:
+      - Aiways_U6 (dor:Aiways_U6) --dop:assembly--> Jiangxi (dor:Jiangxi)
+      - Aiways_U6 (dor:Aiways_U6) --dop:assembly--> China (dor:China)
+      - Abaga_Mongols (dor:Abaga_Mongols) --doo:populationPlace--> China (dor:China)
+      - Bao_Zheng (dor:Bao_Zheng) --doo:restingPlace--> China (dor:China)
+  '2':
+    attributes:
+      China: (direction^='horizontal')
+      Eugene_Chen: (father^='Chen Guangquan')
+      Abaga_Mongols: (religion^='http://dbpedia.org/resource/Mongolian_Shamanism')
+    relationships:
+      - Aiways_U6 (dor:Aiways_U6) --dop:assembly--> Jiangxi (dor:Jiangxi)
+      - Aiways_U6 (dor:Aiways_U6) --dop:assembly--> China (dor:China)
+      - Abaga_Mongols (dor:Abaga_Mongols) --doo:populationPlace--> China (dor:China)
+      - Eugene_Chen (dor:Eugene_Chen) --doo:restingPlace--> China (dor:China)
+  '3':
+    attributes:
+      China: (direction^='horizontal')
+      Fan_Zhongyan: (father^='')
+      Abaga_Mongols: (religion^='http://dbpedia.org/resource/Mongolian_Shamanism')
+    relationships:
+      - Aiways_U6 (dor:Aiways_U6) --dop:assembly--> Jiangxi (dor:Jiangxi)
+      - Aiways_U6 (dor:Aiways_U6) --dop:assembly--> China (dor:China)
+      - Abaga_Mongols (dor:Abaga_Mongols) --doo:populationPlace--> China (dor:China)
+      - Fan_Zhongyan (dor:Fan_Zhongyan) --doo:restingPlace--> China (dor:China)
+  '4':
+    attributes:
+      France: (direction^='vertical')
+      African_diaspora: (religion^='http://dbpedia.org/resource/African_diaspora_religions')
+    relationships:
+      - Bugatti_16C_Galibier (dor:Bugatti_16C_Galibier) --dop:assembly--> Alsace (dor:Alsace)
+      - Bugatti_16C_Galibier (dor:Bugatti_16C_Galibier) --dop:assembly--> France (dor:France)
+      - African_diaspora (dor:African_diaspora) --doo:populationPlace--> France (dor:France)
+      - Bellamy_Storer_(ambassador) (<http://dbpedia.org/resource/Bellamy_Storer_(ambassador)>) --doo:restingPlace--> France (dor:France)
+  '5':
+    attributes:
+      France: (direction^='vertical')
+      African_diaspora: (religion^='http://dbpedia.org/resource/African_diaspora_religions')
+    relationships:
+      - Bugatti_16C_Galibier (dor:Bugatti_16C_Galibier) --dop:assembly--> Alsace (dor:Alsace)
+      - Bugatti_16C_Galibier (dor:Bugatti_16C_Galibier) --dop:assembly--> France (dor:France)
+      - African_diaspora (dor:African_diaspora) --doo:populationPlace--> France (dor:France)
+      - Charles_de_Gaulle (dor:Charles_de_Gaulle) --doo:restingPlace--> France (dor:France)
+  '6':
+    attributes:
+      France: (direction^='vertical')
+      African_diaspora: (religion^='http://dbpedia.org/resource/African_diaspora_religions')
+    relationships:
+      - Bugatti_16C_Galibier (dor:Bugatti_16C_Galibier) --dop:assembly--> Alsace (dor:Alsace)
+      - Bugatti_16C_Galibier (dor:Bugatti_16C_Galibier) --dop:assembly--> France (dor:France)
+      - African_diaspora (dor:African_diaspora) --doo:populationPlace--> France (dor:France)
+      - Félix_Éboué (<http://dbpedia.org/resource/Félix_Éboué>) --doo:restingPlace--> France (dor:France)
+  '7':
+    attributes:
+      Abazins: (religion^='http://dbpedia.org/resource/Sunni_Islam')
+      Ukraine: (direction^='vertical', float^='right')
+      Grigory_Potemkin: (father^='http://dbpedia.org/resource/Alexander_Potemkin')
+    relationships:
+      - Chery_A13 (dor:Chery_A13) --dop:assembly--> Anhui (dor:Anhui)
+      - Chery_A13 (dor:Chery_A13) --dop:assembly--> Ukraine (dor:Ukraine)
+      - Abazins (dor:Abazins) --doo:populationPlace--> Ukraine (dor:Ukraine)
+      - Grigory_Potemkin (dor:Grigory_Potemkin) --doo:restingPlace--> Ukraine (dor:Ukraine)
+  '8':
+    attributes:
+      Abazins: (religion^='http://dbpedia.org/resource/Sunni_Islam')
+      Ukraine: (direction^='vertical', float^='right')
+    relationships:
+      - Chery_A13 (dor:Chery_A13) --dop:assembly--> Anhui (dor:Anhui)
+      - Chery_A13 (dor:Chery_A13) --dop:assembly--> Ukraine (dor:Ukraine)
+      - Abazins (dor:Abazins) --doo:populationPlace--> Ukraine (dor:Ukraine)
+      - Kirill_Stremousov (dor:Kirill_Stremousov) --doo:restingPlace--> Ukraine (dor:Ukraine)
+  '9':
+    attributes:
+      Abazins: (religion^='http://dbpedia.org/resource/Sunni_Islam')
+      Ukraine: (direction^='vertical', float^='right')
+    relationships:
+      - Chery_A13 (dor:Chery_A13) --dop:assembly--> Anhui (dor:Anhui)
+      - Chery_A13 (dor:Chery_A13) --dop:assembly--> Ukraine (dor:Ukraine)
+      - Abazins (dor:Abazins) --doo:populationPlace--> Ukraine (dor:Ukraine)
+      - Leonid_Kravchuk (dor:Leonid_Kravchuk) --doo:restingPlace--> Ukraine (dor:Ukraine)
+  '10':
+    attributes:
+      Russia: (direction^='vertical')
+      Jakarta: (Apr record low C^='20.6', Apr low C^='23.9')
+    relationships:
+      - Chery_Tiggo_3 (dor:Chery_Tiggo_3) --dop:assembly--> Jakarta (dor:Jakarta)
+      - Chery_Tiggo_3 (dor:Chery_Tiggo_3) --dop:assembly--> Russia (dor:Russia)
+      - Abkhazians_of_African_descent (dor:Abkhazians_of_African_descent) --doo:populationPlace--> Russia (dor:Russia)
+      - Anatoly_Sobchak (dor:Anatoly_Sobchak) --doo:restingPlace--> Russia (dor:Russia)
+attributes:
+  country: --founding year^ (doo:foundingYear)--> gYear | --direction^ (dop:direction)--> langString | --float^ (dop:float)--> langString
+  politician: --known for^ (dop:knownFor)--> langString | --1y^ (dop:1y)--> int | --father^ (dop:father)--> Resource
+  ethnic group: --religion^ (doo:religion)--> Resource
+  administrative region: --differentFrom (wwoo:differentFrom)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> int | --Apr low C^ (dop:aprLowC)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int
+subgraph_id: 845
+relationships:
+  - automobile --dop:assembly--> administrative region
+  - automobile --dop:assembly--> country
+  - ethnic group --doo:populationPlace--> country
+  - politician --doo:restingPlace--> country

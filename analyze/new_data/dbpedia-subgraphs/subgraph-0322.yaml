@@ -1,0 +1,109 @@
+types:
+  Location: doo:Location
+  settlement: doo:Settlement
+  university: doo:University
+  office holder: doo:OfficeHolder
+  academic journal: doo:AcademicJournal
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Beata_Szydło: (birth date^='1963-04-15')
+      Jagiellonian_University: (former name^='')
+    relationships:
+      - Beata_Szydło (<http://dbpedia.org/resource/Beata_Szydło>) --dop:birthPlace--> Oświęcim (<http://dbpedia.org/resource/Oświęcim>)
+      - Beata_Szydło (<http://dbpedia.org/resource/Beata_Szydło>) --doo:education--> Jagiellonian_University (dor:Jagiellonian_University)
+      - Acta_Physica_Polonica (dor:Acta_Physica_Polonica) --doo:publisher--> Jagiellonian_University (dor:Jagiellonian_University)
+      - Beata_Szydło (<http://dbpedia.org/resource/Beata_Szydło>) --doo:birthPlace--> Oświęcim (<http://dbpedia.org/resource/Oświęcim>)
+  '2':
+    attributes:
+      Beata_Szydło: (birth date^='1963-04-15')
+      Jagiellonian_University: (former name^='')
+    relationships:
+      - Beata_Szydło (<http://dbpedia.org/resource/Beata_Szydło>) --dop:birthPlace--> Poland (dor:Poland)
+      - Beata_Szydło (<http://dbpedia.org/resource/Beata_Szydło>) --doo:education--> Jagiellonian_University (dor:Jagiellonian_University)
+      - Acta_Physica_Polonica (dor:Acta_Physica_Polonica) --doo:publisher--> Jagiellonian_University (dor:Jagiellonian_University)
+      - Beata_Szydło (<http://dbpedia.org/resource/Beata_Szydło>) --doo:birthPlace--> Oświęcim (<http://dbpedia.org/resource/Oświęcim>)
+  '3':
+    attributes:
+      Katowice: (Apr precipitation mm^='44.9', Apr record low C^='-8.2')
+      Elżbieta_Bieńkowska: (birth date^='1964-02-04')
+      Jagiellonian_University: (former name^='')
+    relationships:
+      - Elżbieta_Bieńkowska (<http://dbpedia.org/resource/Elżbieta_Bieńkowska>) --dop:birthPlace--> Katowice (dor:Katowice)
+      - Elżbieta_Bieńkowska (<http://dbpedia.org/resource/Elżbieta_Bieńkowska>) --doo:education--> Jagiellonian_University (dor:Jagiellonian_University)
+      - Acta_Physica_Polonica (dor:Acta_Physica_Polonica) --doo:publisher--> Jagiellonian_University (dor:Jagiellonian_University)
+      - Elżbieta_Bieńkowska (<http://dbpedia.org/resource/Elżbieta_Bieńkowska>) --doo:birthPlace--> Katowice (dor:Katowice)
+  '4':
+    attributes:
+      Robert_W._Schroeder_III: (birth date^='1966-06-01')
+    relationships:
+      - Robert_W._Schroeder_III (dor:Robert_W._Schroeder_III) --dop:birthPlace--> Texarkana,_Texas (<http://dbpedia.org/resource/Texarkana,_Texas>)
+      - Robert_W._Schroeder_III (dor:Robert_W._Schroeder_III) --doo:education--> Washington_College_of_Law (dor:Washington_College_of_Law)
+      - Administrative_Law_Review (dor:Administrative_Law_Review) --doo:publisher--> Washington_College_of_Law (dor:Washington_College_of_Law)
+      - Robert_W._Schroeder_III (dor:Robert_W._Schroeder_III) --doo:birthPlace--> Texarkana,_Texas (<http://dbpedia.org/resource/Texarkana,_Texas>)
+  '5':
+    attributes:
+      Robert_W._Schroeder_III: (birth date^='1966-06-01')
+    relationships:
+      - Robert_W._Schroeder_III (dor:Robert_W._Schroeder_III) --dop:birthPlace--> Texas (dor:Texas)
+      - Robert_W._Schroeder_III (dor:Robert_W._Schroeder_III) --doo:education--> Washington_College_of_Law (dor:Washington_College_of_Law)
+      - Administrative_Law_Review (dor:Administrative_Law_Review) --doo:publisher--> Washington_College_of_Law (dor:Washington_College_of_Law)
+      - Robert_W._Schroeder_III (dor:Robert_W._Schroeder_III) --doo:birthPlace--> Texarkana,_Texas (<http://dbpedia.org/resource/Texarkana,_Texas>)
+  '6':
+    attributes:
+      Akhlaqur_Rahman_Kidwai: (birth date^='1921-07-01')
+    relationships:
+      - Akhlaqur_Rahman_Kidwai (dor:Akhlaqur_Rahman_Kidwai) --dop:birthPlace--> Barabanki_district (dor:Barabanki_district)
+      - Akhlaqur_Rahman_Kidwai (dor:Akhlaqur_Rahman_Kidwai) --doo:education--> Cornell_University (dor:Cornell_University)
+      - Administrative_Science_Quarterly (dor:Administrative_Science_Quarterly) --doo:publisher--> Cornell_University (dor:Cornell_University)
+      - Akhlaqur_Rahman_Kidwai (dor:Akhlaqur_Rahman_Kidwai) --doo:birthPlace--> Barabanki_district (dor:Barabanki_district)
+  '7':
+    attributes:
+      Akhlaqur_Rahman_Kidwai: (birth date^='1921-07-01')
+    relationships:
+      - Akhlaqur_Rahman_Kidwai (dor:Akhlaqur_Rahman_Kidwai) --dop:birthPlace--> Barabanki_district (dor:Barabanki_district)
+      - Akhlaqur_Rahman_Kidwai (dor:Akhlaqur_Rahman_Kidwai) --doo:education--> Cornell_University (dor:Cornell_University)
+      - Administrative_Science_Quarterly (dor:Administrative_Science_Quarterly) --doo:publisher--> Cornell_University (dor:Cornell_University)
+      - Akhlaqur_Rahman_Kidwai (dor:Akhlaqur_Rahman_Kidwai) --doo:birthPlace--> Baragaon,_Barabanki (<http://dbpedia.org/resource/Baragaon,_Barabanki>)
+  '8':
+    attributes:
+      Akhlaqur_Rahman_Kidwai: (birth date^='1921-07-01')
+    relationships:
+      - Akhlaqur_Rahman_Kidwai (dor:Akhlaqur_Rahman_Kidwai) --dop:birthPlace--> Barabanki_district (dor:Barabanki_district)
+      - Akhlaqur_Rahman_Kidwai (dor:Akhlaqur_Rahman_Kidwai) --doo:education--> Cornell_University (dor:Cornell_University)
+      - Administrative_Science_Quarterly (dor:Administrative_Science_Quarterly) --doo:publisher--> Cornell_University (dor:Cornell_University)
+      - Akhlaqur_Rahman_Kidwai (dor:Akhlaqur_Rahman_Kidwai) --doo:birthPlace--> Uttar_Pradesh (dor:Uttar_Pradesh)
+  '9':
+    attributes:
+      Mmusi_Maimane: (birth date^='1980-06-06')
+      University_of_South_Africa: (former name^='University of the Cape of Good Hope')
+    relationships:
+      - Mmusi_Maimane (dor:Mmusi_Maimane) --dop:birthPlace--> Krugersdorp (dor:Krugersdorp)
+      - Mmusi_Maimane (dor:Mmusi_Maimane) --doo:education--> University_of_South_Africa (dor:University_of_South_Africa)
+      - Africa_Education_Review (dor:Africa_Education_Review) --doo:publisher--> University_of_South_Africa (dor:University_of_South_Africa)
+      - Mmusi_Maimane (dor:Mmusi_Maimane) --doo:birthPlace--> Krugersdorp (dor:Krugersdorp)
+  '10':
+    attributes:
+      Mmusi_Maimane: (birth date^='1980-06-06')
+      University_of_South_Africa: (former name^='University of the Cape of Good Hope')
+    relationships:
+      - Mmusi_Maimane (dor:Mmusi_Maimane) --dop:birthPlace--> South_Africa (dor:South_Africa)
+      - Mmusi_Maimane (dor:Mmusi_Maimane) --doo:education--> University_of_South_Africa (dor:University_of_South_Africa)
+      - Africa_Education_Review (dor:Africa_Education_Review) --doo:publisher--> University_of_South_Africa (dor:University_of_South_Africa)
+      - Mmusi_Maimane (dor:Mmusi_Maimane) --doo:birthPlace--> Krugersdorp (dor:Krugersdorp)
+attributes:
+  Location: --architectural style^ (doo:architecturalStyle)--> Resource | --length m^ (dop:lengthM)--> int | --coroner^ (dop:coroner)--> langString | --built^ (dop:built)--> int | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int
+  settlement: --Apr rain mm^ (dop:aprRainMm)--> int | --founder^ (dop:founder)--> langString | --Apr record low C^ (dop:aprRecordLowC)--> double | --Apr record low C^ (dop:aprRecordLowC)--> int
+  university: --former name^ (doo:formerName)--> langString
+  office holder: --height ft^ (dop:heightFt)--> int | --birth date^ (dop:birthDate)--> date
+subgraph_id: 322
+relationships:
+  - office holder --dop:birthPlace--> Location
+  - office holder --doo:education--> university
+  - academic journal --doo:publisher--> university
+  - office holder --doo:birthPlace--> settlement

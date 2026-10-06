@@ -1,0 +1,107 @@
+types:
+  venue: doo:Venue
+  country: doo:Country
+  rugby club: doo:RugbyClub
+  body of water: doo:BodyOfWater
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Germany: (government type^='http://dbpedia.org/resource/Federal_parliamentary_republic')
+      RG_Heidelberg: (url^='www.rgh-rugby.com/', capacity^='3500')
+      Fritz-Grunebaum-Sportpark: (opened^='1996', tenant^='http://dbpedia.org/resource/Germany_national_rugby_union_team', tenants^='http://dbpedia.org/resource/Germany_national_rugby_union_team')
+    relationships:
+      - Fritz-Grunebaum-Sportpark (dor:Fritz-Grunebaum-Sportpark) --doo:location--> Germany (dor:Germany)
+      - Fritz-Grunebaum-Sportpark (dor:Fritz-Grunebaum-Sportpark) --dop:tenants--> RG_Heidelberg (dor:RG_Heidelberg)
+      - Aalkistensee (dor:Aalkistensee) --doo:country--> Germany (dor:Germany)
+  '2':
+    attributes:
+      Germany: (government type^='http://dbpedia.org/resource/Federal_parliamentary_republic')
+      SC_1880_Frankfurt: (url^='www.sc1880.de/')
+      Sportanlage_an_der_Feldgerichtstrasse: (opened^='1924', tenant^='http://dbpedia.org/resource/Germany_national_rugby_union_team', tenants^='http://dbpedia.org/resource/Germany_national_rugby_union_team')
+    relationships:
+      - Sportanlage_an_der_Feldgerichtstrasse (dor:Sportanlage_an_der_Feldgerichtstrasse) --doo:location--> Germany (dor:Germany)
+      - Sportanlage_an_der_Feldgerichtstrasse (dor:Sportanlage_an_der_Feldgerichtstrasse) --dop:tenants--> SC_1880_Frankfurt (dor:SC_1880_Frankfurt)
+      - Aalkistensee (dor:Aalkistensee) --doo:country--> Germany (dor:Germany)
+  '3':
+    attributes:
+      Estonia: (government type^='http://dbpedia.org/resource/Unitary_parliamentary_republic')
+      Viimsi_Stadium: (opened^='?', tenant^='http://dbpedia.org/resource/Estonia_national_rugby_union_team', tenants^='http://dbpedia.org/resource/Estonia_national_rugby_union_team')
+    relationships:
+      - Viimsi_Stadium (dor:Viimsi_Stadium) --doo:location--> Estonia (dor:Estonia)
+      - Viimsi_Stadium (dor:Viimsi_Stadium) --dop:tenants--> Estonia_national_rugby_union_team (dor:Estonia_national_rugby_union_team)
+      - Aalupi_Lake (dor:Aalupi_Lake) --doo:country--> Estonia (dor:Estonia)
+  '4':
+    attributes:
+      Estonia: (government type^='http://dbpedia.org/resource/Unitary_parliamentary_republic')
+      Viimsi_Stadium: (opened^='?', tenant^='http://dbpedia.org/resource/Estonia_national_rugby_union_team', tenants^='http://dbpedia.org/resource/Estonia_national_rugby_union_team')
+    relationships:
+      - Viimsi_Stadium (dor:Viimsi_Stadium) --doo:location--> Estonia (dor:Estonia)
+      - Viimsi_Stadium (dor:Viimsi_Stadium) --dop:tenants--> Estonia_national_rugby_union_team (dor:Estonia_national_rugby_union_team)
+      - Aastejärv (<http://dbpedia.org/resource/Aastejärv>) --doo:country--> Estonia (dor:Estonia)
+  '5':
+    attributes:
+      New_Zealand: (government type^='http://dbpedia.org/resource/Unitary_state')
+      Manawatu_Rugby_Union: (url^='www.manawaturugby.co.nz', capacity^='18000')
+      Central_Energy_Trust_Arena: (opened^='July 1886', tenant^='http://dbpedia.org/resource/Hurricanes_(Super_Rugby)', tenants^='Robertson Holden International Speedway')
+    relationships:
+      - Central_Energy_Trust_Arena (dor:Central_Energy_Trust_Arena) --doo:location--> New_Zealand (dor:New_Zealand)
+      - Central_Energy_Trust_Arena (dor:Central_Energy_Trust_Arena) --dop:tenants--> Manawatu_Rugby_Union (dor:Manawatu_Rugby_Union)
+      - Abel_Lake (dor:Abel_Lake) --doo:country--> New_Zealand (dor:New_Zealand)
+  '6':
+    attributes:
+      New_Zealand: (government type^='http://dbpedia.org/resource/Unitary_state')
+      Hurricanes_(rugby_union): (url^='http://www.hurricanes.co.nz', capacity^='34500')
+      Memorial_Park,_Masterton: (tenant^='http://dbpedia.org/resource/Hurricanes_(rugby_union)', tenants^='http://dbpedia.org/resource/Hurricanes_(rugby_union)')
+    relationships:
+      - Memorial_Park,_Masterton (<http://dbpedia.org/resource/Memorial_Park,_Masterton>) --doo:location--> New_Zealand (dor:New_Zealand)
+      - Memorial_Park,_Masterton (<http://dbpedia.org/resource/Memorial_Park,_Masterton>) --dop:tenants--> Hurricanes_(rugby_union) (<http://dbpedia.org/resource/Hurricanes_(rugby_union)>)
+      - Abel_Lake (dor:Abel_Lake) --doo:country--> New_Zealand (dor:New_Zealand)
+  '7':
+    attributes:
+      New_Zealand: (government type^='http://dbpedia.org/resource/Unitary_state')
+      Owen_Delany_Park: (opened^='1983', tenant^='http://dbpedia.org/resource/King_Country_Rugby_Football_Union', tenants^='http://dbpedia.org/resource/King_Country_Rugby_Football_Union')
+      King_Country_Rugby_Football_Union: (url^='www.kingcountryrugby.co.nz')
+    relationships:
+      - Owen_Delany_Park (dor:Owen_Delany_Park) --doo:location--> New_Zealand (dor:New_Zealand)
+      - Owen_Delany_Park (dor:Owen_Delany_Park) --dop:tenants--> King_Country_Rugby_Football_Union (dor:King_Country_Rugby_Football_Union)
+      - Abel_Lake (dor:Abel_Lake) --doo:country--> New_Zealand (dor:New_Zealand)
+  '8':
+    attributes:
+      Norway: (government type^='http://dbpedia.org/resource/Unitary_state')
+      Fana_Stadion: (opened^='1969', tenant^='http://dbpedia.org/resource/2010_European_Team_Championships', tenants^='2010')
+    relationships:
+      - Fana_Stadion (dor:Fana_Stadion) --doo:location--> Norway (dor:Norway)
+      - Fana_Stadion (dor:Fana_Stadion) --dop:tenants--> Bergen_Rugbyklubb (dor:Bergen_Rugbyklubb)
+      - Åbjørvatnet (<http://dbpedia.org/resource/Åbjørvatnet>) --doo:country--> Norway (dor:Norway)
+  '9':
+    attributes:
+      Germany: (government type^='http://dbpedia.org/resource/Federal_parliamentary_republic')
+      RG_Heidelberg: (url^='www.rgh-rugby.com/', capacity^='3500')
+      Fritz-Grunebaum-Sportpark: (opened^='1996', tenant^='http://dbpedia.org/resource/Germany_national_rugby_union_team', tenants^='http://dbpedia.org/resource/Germany_national_rugby_union_team')
+    relationships:
+      - Fritz-Grunebaum-Sportpark (dor:Fritz-Grunebaum-Sportpark) --doo:location--> Germany (dor:Germany)
+      - Fritz-Grunebaum-Sportpark (dor:Fritz-Grunebaum-Sportpark) --dop:tenants--> RG_Heidelberg (dor:RG_Heidelberg)
+      - Abtsdorfer_See (dor:Abtsdorfer_See) --doo:country--> Germany (dor:Germany)
+  '10':
+    attributes:
+      Italy: (government type^='http://dbpedia.org/resource/Unitary_parliamentary_republic')
+      Aironi: (url^='www.aironirugby.eu', capacity^='6000')
+      Stadio_Luigi_Zaffanella: (opened^='1993', tenant^='http://dbpedia.org/resource/Aironi', tenants^='http://dbpedia.org/resource/Aironi')
+    relationships:
+      - Stadio_Luigi_Zaffanella (dor:Stadio_Luigi_Zaffanella) --doo:location--> Italy (dor:Italy)
+      - Stadio_Luigi_Zaffanella (dor:Stadio_Luigi_Zaffanella) --dop:tenants--> Aironi (dor:Aironi)
+      - Acquato_Lake (dor:Acquato_Lake) --doo:country--> Italy (dor:Italy)
+attributes:
+  venue: --opened^ (dop:opened)--> date | --operator^ (doo:operator)--> Resource | --tenant^ (doo:tenant)--> Resource | --tenants^ (dop:tenants)--> int | --Closed^ (dop:closed)--> int
+  country: --Apr high C^ (dop:aprHighC)--> double | --1a^ (dop:1a)--> langString | --founding year^ (doo:foundingYear)--> gYear | --government type^ (doo:governmentType)--> Resource
+  rugby club: --url^ (dop:url)--> langString | --capacity^ (dop:capacity)--> int
+subgraph_id: 5
+relationships:
+  - venue --doo:location--> country
+  - venue --dop:tenants--> rugby club
+  - body of water --doo:country--> country

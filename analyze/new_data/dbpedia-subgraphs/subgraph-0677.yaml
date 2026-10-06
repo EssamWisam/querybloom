@@ -1,0 +1,104 @@
+types:
+  venue: doo:Venue
+  settlement: doo:Settlement
+  university: doo:University
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      California: (b^='y', Wikipage revision ID^='1124854404')
+      A._Joe_Fish: (birth name^='Allen Joe Fish')
+      Ingalls_Rink: (architect^='http://dbpedia.org/resource/Eero_Saarinen')
+    relationships:
+      - A._Joe_Fish (dor:A._Joe_Fish) --doo:education--> Yale_University (dor:Yale_University)
+      - A._Joe_Fish (dor:A._Joe_Fish) --dop:birthPlace--> California (dor:California)
+      - Ingalls_Rink (dor:Ingalls_Rink) --doo:operator--> Yale_University (dor:Yale_University)
+  '2':
+    attributes:
+      A._Joe_Fish: (birth name^='Allen Joe Fish')
+      Los_Angeles: (Wikipage revision ID^='1124735028')
+      Ingalls_Rink: (architect^='http://dbpedia.org/resource/Eero_Saarinen')
+    relationships:
+      - A._Joe_Fish (dor:A._Joe_Fish) --doo:education--> Yale_University (dor:Yale_University)
+      - A._Joe_Fish (dor:A._Joe_Fish) --dop:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - Ingalls_Rink (dor:Ingalls_Rink) --doo:operator--> Yale_University (dor:Yale_University)
+  '3':
+    attributes:
+      California: (b^='y', Wikipage revision ID^='1124854404')
+      A._Joe_Fish: (birth name^='Allen Joe Fish')
+      Payne_Whitney_Gymnasium: (architect^='http://dbpedia.org/resource/John_Russell_Pope')
+    relationships:
+      - A._Joe_Fish (dor:A._Joe_Fish) --doo:education--> Yale_University (dor:Yale_University)
+      - A._Joe_Fish (dor:A._Joe_Fish) --dop:birthPlace--> California (dor:California)
+      - Payne_Whitney_Gymnasium (dor:Payne_Whitney_Gymnasium) --doo:operator--> Yale_University (dor:Yale_University)
+  '4':
+    attributes:
+      Marvel_Gymnasium: (former name^='Brown Gymnasium, 1927-38', architect^='http://dbpedia.org/resource/Clarke_&_Howe')
+      New_York_(state): (b^='yes', Wikipage revision ID^='1124381996')
+    relationships:
+      - A._Richard_Caputo (dor:A._Richard_Caputo) --doo:education--> Brown_University (dor:Brown_University)
+      - A._Richard_Caputo (dor:A._Richard_Caputo) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Marvel_Gymnasium (dor:Marvel_Gymnasium) --doo:operator--> Brown_University (dor:Brown_University)
+  '5':
+    attributes:
+      Marvel_Gymnasium: (former name^='Brown Gymnasium, 1927-38', architect^='http://dbpedia.org/resource/Clarke_&_Howe')
+      Port_Chester,_New_York: (Wikipage revision ID^='1120240206')
+    relationships:
+      - A._Richard_Caputo (dor:A._Richard_Caputo) --doo:education--> Brown_University (dor:Brown_University)
+      - A._Richard_Caputo (dor:A._Richard_Caputo) --dop:birthPlace--> Port_Chester,_New_York (<http://dbpedia.org/resource/Port_Chester,_New_York>)
+      - Marvel_Gymnasium (dor:Marvel_Gymnasium) --doo:operator--> Brown_University (dor:Brown_University)
+  '6':
+    attributes:
+      New_York_(state): (b^='yes', Wikipage revision ID^='1124381996')
+    relationships:
+      - A._Richard_Caputo (dor:A._Richard_Caputo) --doo:education--> Brown_University (dor:Brown_University)
+      - A._Richard_Caputo (dor:A._Richard_Caputo) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Meehan_Auditorium (dor:Meehan_Auditorium) --doo:operator--> Brown_University (dor:Brown_University)
+  '7':
+    attributes:
+      Florida: (Wikipage revision ID^='1124709374')
+      A._Vernon_Weaver: (birth name^='Arthur Vernon Weaver Jr.')
+    relationships:
+      - A._Vernon_Weaver (dor:A._Vernon_Weaver) --doo:education--> United_States_Naval_Academy (dor:United_States_Naval_Academy)
+      - A._Vernon_Weaver (dor:A._Vernon_Weaver) --dop:birthPlace--> Florida (dor:Florida)
+      - Halsey_Field_House (dor:Halsey_Field_House) --doo:operator--> United_States_Naval_Academy (dor:United_States_Naval_Academy)
+  '8':
+    attributes:
+      Miami: (Wikipage revision ID^='1124925785')
+      A._Vernon_Weaver: (birth name^='Arthur Vernon Weaver Jr.')
+    relationships:
+      - A._Vernon_Weaver (dor:A._Vernon_Weaver) --doo:education--> United_States_Naval_Academy (dor:United_States_Naval_Academy)
+      - A._Vernon_Weaver (dor:A._Vernon_Weaver) --dop:birthPlace--> Miami (dor:Miami)
+      - Halsey_Field_House (dor:Halsey_Field_House) --doo:operator--> United_States_Naval_Academy (dor:United_States_Naval_Academy)
+  '9':
+    attributes:
+      Florida: (Wikipage revision ID^='1124709374')
+      A._Vernon_Weaver: (birth name^='Arthur Vernon Weaver Jr.')
+      Navy–Marine_Corps_Memorial_Stadium: (architect^='http://dbpedia.org/resource/360_Architecture')
+    relationships:
+      - A._Vernon_Weaver (dor:A._Vernon_Weaver) --doo:education--> United_States_Naval_Academy (dor:United_States_Naval_Academy)
+      - A._Vernon_Weaver (dor:A._Vernon_Weaver) --dop:birthPlace--> Florida (dor:Florida)
+      - Navy–Marine_Corps_Memorial_Stadium (<http://dbpedia.org/resource/Navy–Marine_Corps_Memorial_Stadium>) --doo:operator--> United_States_Naval_Academy (dor:United_States_Naval_Academy)
+  '10':
+    attributes:
+      Aaron_Burr: (birth name^='Aaron Burr Jr.')
+      Newark,_New_Jersey: (Wikipage revision ID^='1124524857')
+    relationships:
+      - Aaron_Burr (dor:Aaron_Burr) --doo:education--> Princeton_University (dor:Princeton_University)
+      - Aaron_Burr (dor:Aaron_Burr) --dop:birthPlace--> Newark,_New_Jersey (<http://dbpedia.org/resource/Newark,_New_Jersey>)
+      - Bill_Clarke_Field (dor:Bill_Clarke_Field) --doo:operator--> Princeton_University (dor:Princeton_University)
+attributes:
+  venue: --former name^ (doo:formerName)--> langString | --architect^ (doo:architect)--> Resource
+  settlement: --Aug precipitation inch^ (dop:augPrecipitationInch)--> double | --b^ (dop:b)--> langString | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --Apr record high C^ (dop:aprRecordHighC)--> double
+  university: --affiliation^ (dop:affiliation)--> Resource | --bot^ (dop:bot)--> langString
+  office holder: --birth name^ (doo:birthName)--> langString
+subgraph_id: 677
+relationships:
+  - office holder --doo:education--> university
+  - office holder --dop:birthPlace--> settlement
+  - venue --doo:operator--> university

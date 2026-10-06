@@ -1,0 +1,98 @@
+types:
+  actor: doo:Actor
+  country: doo:Country
+  music genre: doo:MusicGenre
+  ethnic group: doo:EthnicGroup
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      France: (caption^='http://dbpedia.org/resource/École_militaire_interarmes', city^='Bordeaux')
+      African_diaspora: (population place^='http://dbpedia.org/resource/Brazil')
+    relationships:
+      - African_diaspora (dor:African_diaspora) --doo:religion--> Christianity (dor:Christianity)
+      - African_diaspora (dor:African_diaspora) --doo:populationPlace--> France (dor:France)
+      - Alice_Tissot (dor:Alice_Tissot) --doo:stateOfOrigin--> France (dor:France)
+  '2':
+    attributes:
+      France: (caption^='http://dbpedia.org/resource/École_militaire_interarmes', city^='Bordeaux')
+      Afro-Caribbean_people: (population place^='http://dbpedia.org/resource/Bahamas')
+    relationships:
+      - Afro-Caribbean_people (dor:Afro-Caribbean_people) --doo:religion--> Christianity (dor:Christianity)
+      - Afro-Caribbean_people (dor:Afro-Caribbean_people) --doo:populationPlace--> France (dor:France)
+      - Alice_Tissot (dor:Alice_Tissot) --doo:stateOfOrigin--> France (dor:France)
+  '3':
+    attributes:
+      France: (caption^='http://dbpedia.org/resource/École_militaire_interarmes', city^='Bordeaux')
+      Afro-Caribbean_people: (population place^='http://dbpedia.org/resource/Bahamas')
+    relationships:
+      - Afro-Caribbean_people (dor:Afro-Caribbean_people) --doo:religion--> Orisha (dor:Orisha)
+      - Afro-Caribbean_people (dor:Afro-Caribbean_people) --doo:populationPlace--> France (dor:France)
+      - Alice_Tissot (dor:Alice_Tissot) --doo:stateOfOrigin--> France (dor:France)
+  '4':
+    attributes:
+      Albanians_in_the_Nordic_countries: (population place^='http://dbpedia.org/resource/Denmark')
+    relationships:
+      - Albanians_in_the_Nordic_countries (dor:Albanians_in_the_Nordic_countries) --doo:religion--> Christianity (dor:Christianity)
+      - Albanians_in_the_Nordic_countries (dor:Albanians_in_the_Nordic_countries) --doo:populationPlace--> Sweden (dor:Sweden)
+      - Anders_de_Wahl (dor:Anders_de_Wahl) --doo:stateOfOrigin--> Sweden (dor:Sweden)
+  '5':
+    attributes:
+      Bosnians: (population place^='http://dbpedia.org/resource/Australia')
+    relationships:
+      - Bosnians (dor:Bosnians) --doo:religion--> Atheism (dor:Atheism)
+      - Bosnians (dor:Bosnians) --doo:populationPlace--> Sweden (dor:Sweden)
+      - Anders_de_Wahl (dor:Anders_de_Wahl) --doo:stateOfOrigin--> Sweden (dor:Sweden)
+  '6':
+    attributes:
+      Finnish_Kale: (population place^='http://dbpedia.org/resource/Finland')
+    relationships:
+      - Finnish_Kale (dor:Finnish_Kale) --doo:religion--> Pentecostalism (dor:Pentecostalism)
+      - Finnish_Kale (dor:Finnish_Kale) --doo:populationPlace--> Sweden (dor:Sweden)
+      - Anders_de_Wahl (dor:Anders_de_Wahl) --doo:stateOfOrigin--> Sweden (dor:Sweden)
+  '7':
+    attributes:
+      England: (caption^='The Beatles are the most commercially successful and critically acclaimed band in popular music.', city^='Birmingham')
+      White_British: (population place^='http://dbpedia.org/resource/Countries_of_the_United_Kingdom')
+    relationships:
+      - White_British (dor:White_British) --doo:religion--> Sufism (dor:Sufism)
+      - White_British (dor:White_British) --doo:populationPlace--> England (dor:England)
+      - Christopher_Milburn (dor:Christopher_Milburn) --doo:stateOfOrigin--> England (dor:England)
+  '8':
+    attributes:
+      United_Kingdom: (caption^='--09-08')
+      Afro-Caribbean_people: (population place^='http://dbpedia.org/resource/Bahamas')
+    relationships:
+      - Afro-Caribbean_people (dor:Afro-Caribbean_people) --doo:religion--> Orisha (dor:Orisha)
+      - Afro-Caribbean_people (dor:Afro-Caribbean_people) --doo:populationPlace--> United_Kingdom (dor:United_Kingdom)
+      - David_Buck (dor:David_Buck) --doo:stateOfOrigin--> United_Kingdom (dor:United_Kingdom)
+  '9':
+    attributes:
+      Bangladeshis: (width^='250', population place^='http://dbpedia.org/resource/Kuwait')
+      United_Kingdom: (caption^='--09-08')
+    relationships:
+      - Bangladeshis (dor:Bangladeshis) --doo:religion--> Atheism (dor:Atheism)
+      - Bangladeshis (dor:Bangladeshis) --doo:populationPlace--> United_Kingdom (dor:United_Kingdom)
+      - David_Buck (dor:David_Buck) --doo:stateOfOrigin--> United_Kingdom (dor:United_Kingdom)
+  '10':
+    attributes:
+      Candomblé: (2a^='Allen')
+      United_Kingdom: (caption^='--09-08')
+      Brazilian_diaspora: (population place^='http://dbpedia.org/resource/Argentina')
+    relationships:
+      - Brazilian_diaspora (dor:Brazilian_diaspora) --doo:religion--> Candomblé (<http://dbpedia.org/resource/Candomblé>)
+      - Brazilian_diaspora (dor:Brazilian_diaspora) --doo:populationPlace--> United_Kingdom (dor:United_Kingdom)
+      - David_Buck (dor:David_Buck) --doo:stateOfOrigin--> United_Kingdom (dor:United_Kingdom)
+attributes:
+  country: --caption^ (dop:caption)--> langString | --c^ (dop:c)--> langString | --age^ (dop:age)--> date | --city^ (dop:city)--> langString
+  music genre: --instruments^ (dop:instruments)--> langString | --2a^ (dop:2a)--> langString
+  ethnic group: --align^ (dop:align)--> langString | --width^ (dop:width)--> int | --population place^ (doo:populationPlace)--> Resource
+subgraph_id: 531
+relationships:
+  - ethnic group --doo:religion--> music genre
+  - ethnic group --doo:populationPlace--> country
+  - actor --doo:stateOfOrigin--> country

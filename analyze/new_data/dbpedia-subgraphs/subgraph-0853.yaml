@@ -1,0 +1,106 @@
+types:
+  city: doo:City
+  venue: doo:Venue
+  athlete: doo:Athlete
+  settlement: doo:Settlement
+  record label: doo:RecordLabel
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Oslo: (source^='Météo Climat  and Weather Atlas', page length (characters) of wiki page^='152749')
+    relationships:
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --dop:birthPlace--> Oslo (dor:Oslo)
+      - Curling_Legs (dor:Curling_Legs) --doo:location--> Oslo (dor:Oslo)
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --doo:deathPlace--> Oslo (dor:Oslo)
+      - Bislett_Stadium (dor:Bislett_Stadium) --dop:owner--> Oslo (dor:Oslo)
+  '2':
+    attributes:
+      Oslo: (source^='Météo Climat  and Weather Atlas', page length (characters) of wiki page^='152749')
+    relationships:
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --dop:birthPlace--> Oslo (dor:Oslo)
+      - Curling_Legs (dor:Curling_Legs) --doo:location--> Oslo (dor:Oslo)
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --doo:deathPlace--> Oslo (dor:Oslo)
+      - Dælenenga_idrettspark (<http://dbpedia.org/resource/Dælenenga_idrettspark>) --dop:owner--> Oslo (dor:Oslo)
+  '3':
+    attributes:
+      Oslo: (source^='Météo Climat  and Weather Atlas', page length (characters) of wiki page^='152749')
+    relationships:
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --dop:birthPlace--> Oslo (dor:Oslo)
+      - Deathlike_Silence_Productions (dor:Deathlike_Silence_Productions) --doo:location--> Oslo (dor:Oslo)
+      - Aage_Myhrvold (dor:Aage_Myhrvold) --doo:deathPlace--> Oslo (dor:Oslo)
+      - Bislett_Stadium (dor:Bislett_Stadium) --dop:owner--> Oslo (dor:Oslo)
+  '4':
+    attributes:
+      Chattanooga,_Tennessee: (source^='http://dbpedia.org/resource/NOAA', Aug high F^='89.8')
+      Grove_City,_Pennsylvania: (page length (characters) of wiki page^='10283')
+    relationships:
+      - Aaron_Russell_(baseball) (<http://dbpedia.org/resource/Aaron_Russell_(baseball)>) --dop:birthPlace--> Chattanooga,_Tennessee (<http://dbpedia.org/resource/Chattanooga,_Tennessee>)
+      - Stamps-Baxter_Music_Company (dor:Stamps-Baxter_Music_Company) --doo:location--> Chattanooga,_Tennessee (<http://dbpedia.org/resource/Chattanooga,_Tennessee>)
+      - Aaron_Russell_(baseball) (<http://dbpedia.org/resource/Aaron_Russell_(baseball)>) --doo:deathPlace--> Grove_City,_Pennsylvania (<http://dbpedia.org/resource/Grove_City,_Pennsylvania>)
+      - Finley_Stadium (dor:Finley_Stadium) --dop:owner--> Chattanooga,_Tennessee (<http://dbpedia.org/resource/Chattanooga,_Tennessee>)
+  '5':
+    attributes:
+      Hermes_Records: (url^='http://www.hermesrecords.com')
+    relationships:
+      - Abbas_Zandi (dor:Abbas_Zandi) --dop:birthPlace--> Tehran (dor:Tehran)
+      - Hermes_Records (dor:Hermes_Records) --doo:location--> Tehran (dor:Tehran)
+      - Abbas_Zandi (dor:Abbas_Zandi) --doo:deathPlace--> Tehran (dor:Tehran)
+      - Shahr-e_Qods_Stadium (dor:Shahr-e_Qods_Stadium) --dop:owner--> Tehran (dor:Tehran)
+  '6':
+    attributes:
+      Tehran: (source^='Iran Meteorological Organization', page length (characters) of wiki page^='129631')
+    relationships:
+      - Abbas_Zandi (dor:Abbas_Zandi) --dop:birthPlace--> Tehran (dor:Tehran)
+      - Irangaam (dor:Irangaam) --doo:location--> Tehran (dor:Tehran)
+      - Abbas_Zandi (dor:Abbas_Zandi) --doo:deathPlace--> Tehran (dor:Tehran)
+      - Shahr-e_Qods_Stadium (dor:Shahr-e_Qods_Stadium) --dop:owner--> Tehran (dor:Tehran)
+  '7':
+    attributes:
+      New_York_(state): (page length (characters) of wiki page^='214958')
+      157_Shelter_Records: (url^='https://web.archive.org/web/20190330045751/http:/testpressing.org/2011/06/gimme-shelter-shelter-nyc/')
+    relationships:
+      - Abe_Turner (dor:Abe_Turner) --dop:birthPlace--> New_York_City (dor:New_York_City)
+      - 157_Shelter_Records (dor:157_Shelter_Records) --doo:location--> New_York_City (dor:New_York_City)
+      - Abe_Turner (dor:Abe_Turner) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - David_H._Koch_Theater (dor:David_H._Koch_Theater) --dop:owner--> New_York_City (dor:New_York_City)
+  '8':
+    attributes:
+      New_York_City: (page length (characters) of wiki page^='398600')
+      157_Shelter_Records: (url^='https://web.archive.org/web/20190330045751/http:/testpressing.org/2011/06/gimme-shelter-shelter-nyc/')
+    relationships:
+      - Abe_Turner (dor:Abe_Turner) --dop:birthPlace--> New_York_City (dor:New_York_City)
+      - 157_Shelter_Records (dor:157_Shelter_Records) --doo:location--> New_York_City (dor:New_York_City)
+      - Abe_Turner (dor:Abe_Turner) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - David_H._Koch_Theater (dor:David_H._Koch_Theater) --dop:owner--> New_York_City (dor:New_York_City)
+  '9':
+    attributes:
+      New_York_(state): (page length (characters) of wiki page^='214958')
+      157_Shelter_Records: (url^='https://web.archive.org/web/20190330045751/http:/testpressing.org/2011/06/gimme-shelter-shelter-nyc/')
+    relationships:
+      - Abe_Turner (dor:Abe_Turner) --dop:birthPlace--> New_York_City (dor:New_York_City)
+      - 157_Shelter_Records (dor:157_Shelter_Records) --doo:location--> New_York_City (dor:New_York_City)
+      - Abe_Turner (dor:Abe_Turner) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Delacorte_Theater (dor:Delacorte_Theater) --dop:owner--> New_York_City (dor:New_York_City)
+  '10':
+    attributes:
+      Philadelphia: (page length (characters) of wiki page^='253148')
+    relationships:
+      - Abe_Wolstenholme (dor:Abe_Wolstenholme) --dop:birthPlace--> Philadelphia (dor:Philadelphia)
+      - Burnt_Toast_Vinyl (dor:Burnt_Toast_Vinyl) --doo:location--> Philadelphia (dor:Philadelphia)
+      - Abe_Wolstenholme (dor:Abe_Wolstenholme) --doo:deathPlace--> Philadelphia (dor:Philadelphia)
+      - Citizens_Bank_Park (dor:Citizens_Bank_Park) --dop:owner--> Philadelphia (dor:Philadelphia)
+attributes:
+  city: --source^ (dop:source)--> langString | --Aug high F^ (dop:augHighF)--> double
+  settlement: --data^ (dop:data)--> int | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --Apr record high F^ (dop:aprRecordHighF)--> int | --Apr rain days^ (dop:aprRainDays)--> double | --Aug high F^ (dop:augHighF)--> double
+  record label: --url^ (dop:url)--> Resource
+subgraph_id: 853
+relationships:
+  - athlete --dop:birthPlace--> city
+  - record label --doo:location--> city
+  - athlete --doo:deathPlace--> settlement
+  - venue --dop:owner--> city

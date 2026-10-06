@@ -1,0 +1,101 @@
+types:
+  company: doo:Company
+  scientist: doo:Scientist
+  settlement: doo:Settlement
+  university: doo:University
+  railway line: doo:RailwayLine
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Oakland,_California: (government type^='http://dbpedia.org/resource/Mayor-council_government', area total km^='202.1', Aug precipitation days^='0.3')
+    relationships:
+      - Shipyard_Railway (dor:Shipyard_Railway) --doo:routeEnd--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - 1-2-3-4_Go!_Records (<http://dbpedia.org/resource/1-2-3-4_Go!_Records>) --doo:location--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - Charles_H._Townes (dor:Charles_H._Townes) --doo:deathPlace--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - Charles_H._Townes (dor:Charles_H._Townes) --doo:academicDiscipline--> Physics (dor:Physics)
+  '2':
+    attributes:
+      Oakland,_California: (government type^='http://dbpedia.org/resource/Mayor-council_government', area total km^='202.1', Aug precipitation days^='0.3')
+    relationships:
+      - Shipyard_Railway (dor:Shipyard_Railway) --doo:routeEnd--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - 1-2-3-4_Go!_Records (<http://dbpedia.org/resource/1-2-3-4_Go!_Records>) --doo:location--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - Herbert_G._Baker (dor:Herbert_G._Baker) --doo:deathPlace--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - Herbert_G._Baker (dor:Herbert_G._Baker) --doo:academicDiscipline--> Ecology (dor:Ecology)
+  '3':
+    attributes:
+      Oakland,_California: (government type^='http://dbpedia.org/resource/Mayor-council_government', area total km^='202.1', Aug precipitation days^='0.3')
+    relationships:
+      - Shipyard_Railway (dor:Shipyard_Railway) --doo:routeEnd--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - 1-2-3-4_Go!_Records (<http://dbpedia.org/resource/1-2-3-4_Go!_Records>) --doo:location--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - Jerzy_Neyman (dor:Jerzy_Neyman) --doo:deathPlace--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - Jerzy_Neyman (dor:Jerzy_Neyman) --doo:academicDiscipline--> Mathematics (dor:Mathematics)
+  '4':
+    attributes:
+      New_York_City: (government type^='http://dbpedia.org/resource/Strong_Mayor', area total km^='1223.59', width^='225')
+    relationships:
+      - Gateway_Program_(Northeast_Corridor) (<http://dbpedia.org/resource/Gateway_Program_(Northeast_Corridor)>) --doo:routeEnd--> New_York_City (dor:New_York_City)
+      - 100_Women_in_Finance (dor:100_Women_in_Finance) --doo:location--> New_York_City (dor:New_York_City)
+      - Arthur_C._Keller (dor:Arthur_C._Keller) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Arthur_C._Keller (dor:Arthur_C._Keller) --doo:academicDiscipline--> Electrical_Engineering (dor:Electrical_Engineering)
+  '5':
+    attributes:
+      New_York_City: (government type^='http://dbpedia.org/resource/Strong_Mayor', area total km^='1223.59', width^='225')
+    relationships:
+      - Gateway_Program_(Northeast_Corridor) (<http://dbpedia.org/resource/Gateway_Program_(Northeast_Corridor)>) --doo:routeEnd--> New_York_City (dor:New_York_City)
+      - 100_Women_in_Finance (dor:100_Women_in_Finance) --doo:location--> New_York_City (dor:New_York_City)
+      - Benjamin_M._Bloch (dor:Benjamin_M._Bloch) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Benjamin_M._Bloch (dor:Benjamin_M._Bloch) --doo:academicDiscipline--> Physics (dor:Physics)
+  '6':
+    attributes:
+      New_York_City: (government type^='http://dbpedia.org/resource/Strong_Mayor', area total km^='1223.59', width^='225')
+    relationships:
+      - Gateway_Program_(Northeast_Corridor) (<http://dbpedia.org/resource/Gateway_Program_(Northeast_Corridor)>) --doo:routeEnd--> New_York_City (dor:New_York_City)
+      - 100_Women_in_Finance (dor:100_Women_in_Finance) --doo:location--> New_York_City (dor:New_York_City)
+      - Cassius_Jackson_Keyser (dor:Cassius_Jackson_Keyser) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Cassius_Jackson_Keyser (dor:Cassius_Jackson_Keyser) --doo:academicDiscipline--> Mathematics (dor:Mathematics)
+  '7':
+    attributes:
+      Auckland: (width^='220', Apr low C^='12.1')
+    relationships:
+      - North_Island_Main_Trunk (dor:North_Island_Main_Trunk) --doo:routeEnd--> Auckland (dor:Auckland)
+      - 2degrees (dor:2degrees) --doo:location--> Auckland (dor:Auckland)
+      - Robert_Chapman_(academic) (<http://dbpedia.org/resource/Robert_Chapman_(academic)>) --doo:deathPlace--> Auckland (dor:Auckland)
+      - Robert_Chapman_(academic) (<http://dbpedia.org/resource/Robert_Chapman_(academic)>) --doo:academicDiscipline--> Political_science (dor:Political_science)
+  '8':
+    attributes:
+      Auckland: (width^='220', Apr low C^='12.1')
+    relationships:
+      - North_Island_Main_Trunk (dor:North_Island_Main_Trunk) --doo:routeEnd--> Auckland (dor:Auckland)
+      - 2degrees (dor:2degrees) --doo:location--> Auckland (dor:Auckland)
+      - Robert_W._Doran (dor:Robert_W._Doran) --doo:deathPlace--> Auckland (dor:Auckland)
+      - Robert_W._Doran (dor:Robert_W._Doran) --doo:academicDiscipline--> Computer_science (dor:Computer_science)
+  '9':
+    attributes:
+      California: (area total km^='423970', header^='http://dbpedia.org/resource/California_Gold_Rush', width^='150', country^='California')
+    relationships:
+      - Owensmouth_Line (dor:Owensmouth_Line) --doo:routeEnd--> California (dor:California)
+      - 3D_Entertainment (dor:3D_Entertainment) --doo:location--> California (dor:California)
+      - Alexei_Abrikosov_(physicist) (<http://dbpedia.org/resource/Alexei_Abrikosov_(physicist)>) --doo:deathPlace--> California (dor:California)
+      - Alexei_Abrikosov_(physicist) (<http://dbpedia.org/resource/Alexei_Abrikosov_(physicist)>) --doo:academicDiscipline--> Physics (dor:Physics)
+  '10':
+    attributes:
+      California: (area total km^='423970', header^='http://dbpedia.org/resource/California_Gold_Rush', width^='150', country^='California')
+    relationships:
+      - Owensmouth_Line (dor:Owensmouth_Line) --doo:routeEnd--> California (dor:California)
+      - 3D_Entertainment (dor:3D_Entertainment) --doo:location--> California (dor:California)
+      - Arthur_Amos_Noyes (dor:Arthur_Amos_Noyes) --doo:deathPlace--> California (dor:California)
+      - Arthur_Amos_Noyes (dor:Arthur_Amos_Noyes) --doo:academicDiscipline--> Chemistry (dor:Chemistry)
+attributes:
+  company: --headquarter^ (doo:headquarter)--> Resource
+  settlement: --government type^ (doo:governmentType)--> Resource | --area total km^ (dop:areaTotalKm)--> double | --bgcolor^ (dop:bgcolor)--> langString | --header^ (dop:header)--> langString | --region^ (doo:region)--> Resource | --bot^ (dop:bot)--> langString | --width^ (dop:width)--> langString | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --country^ (dop:country)--> langString | --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --Apr low C^ (dop:aprLowC)--> double
+subgraph_id: 801
+relationships:
+  - railway line --doo:routeEnd--> settlement
+  - company --doo:location--> settlement
+  - scientist --doo:deathPlace--> settlement
+  - scientist --doo:academicDiscipline--> university

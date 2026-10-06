@@ -1,0 +1,94 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  politician: doo:Politician
+  city district: doo:CityDistrict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Brooklyn: (Aug precipitation inch^='3.68', Aug precipitation days^='8.7')
+    relationships:
+      - Thomas_Chatfield (dor:Thomas_Chatfield) --doo:residence--> Brooklyn (dor:Brooklyn)
+      - Thomas_Chatfield (dor:Thomas_Chatfield) --doo:deathPlace--> Brooklyn (dor:Brooklyn)
+      - Aaron_Ward_(sailor) (<http://dbpedia.org/resource/Aaron_Ward_(sailor)>) --doo:restingPlace--> Brooklyn (dor:Brooklyn)
+  '2':
+    attributes:
+      Brooklyn: (Aug precipitation inch^='3.68')
+      Aaron_Ward_(sailor): (birth date^='1851-10-10')
+    relationships:
+      - Thomas_Chatfield (dor:Thomas_Chatfield) --doo:residence--> Brooklyn (dor:Brooklyn)
+      - Thomas_Chatfield (dor:Thomas_Chatfield) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Aaron_Ward_(sailor) (<http://dbpedia.org/resource/Aaron_Ward_(sailor)>) --doo:restingPlace--> Brooklyn (dor:Brooklyn)
+  '3':
+    attributes:
+      Brooklyn: (Aug precipitation inch^='3.68', Aug precipitation days^='8.7')
+      Abraham_Schermerhorn: (birth date^='1783-04-09')
+    relationships:
+      - Thomas_Chatfield (dor:Thomas_Chatfield) --doo:residence--> Brooklyn (dor:Brooklyn)
+      - Thomas_Chatfield (dor:Thomas_Chatfield) --doo:deathPlace--> Brooklyn (dor:Brooklyn)
+      - Abraham_Schermerhorn (dor:Abraham_Schermerhorn) --doo:restingPlace--> Brooklyn (dor:Brooklyn)
+  '4':
+    attributes:
+      Albert_Magnin: (birth date^='1846-04-13')
+    relationships:
+      - Frank_J._Lynch (dor:Frank_J._Lynch) --doo:residence--> Drexel_Hill,_Pennsylvania (<http://dbpedia.org/resource/Drexel_Hill,_Pennsylvania>)
+      - Frank_J._Lynch (dor:Frank_J._Lynch) --doo:deathPlace--> Drexel_Hill,_Pennsylvania (<http://dbpedia.org/resource/Drexel_Hill,_Pennsylvania>)
+      - Albert_Magnin (dor:Albert_Magnin) --doo:restingPlace--> Drexel_Hill,_Pennsylvania (<http://dbpedia.org/resource/Drexel_Hill,_Pennsylvania>)
+  '5':
+    attributes:
+      Clarence_G._Galston: (birth date^='1876-04-18')
+    relationships:
+      - Murray_Schwartz_(Queens_politician) (<http://dbpedia.org/resource/Murray_Schwartz_(Queens_politician)>) --doo:residence--> Queens (dor:Queens)
+      - Murray_Schwartz_(Queens_politician) (<http://dbpedia.org/resource/Murray_Schwartz_(Queens_politician)>) --doo:deathPlace--> Roslyn,_New_York (<http://dbpedia.org/resource/Roslyn,_New_York>)
+      - Clarence_G._Galston (dor:Clarence_G._Galston) --doo:restingPlace--> Queens (dor:Queens)
+  '6':
+    attributes:
+      David_M._Buchanan: (birth date^='1862-01-28')
+    relationships:
+      - Frank_J._Lynch (dor:Frank_J._Lynch) --doo:residence--> Drexel_Hill,_Pennsylvania (<http://dbpedia.org/resource/Drexel_Hill,_Pennsylvania>)
+      - Frank_J._Lynch (dor:Frank_J._Lynch) --doo:deathPlace--> Drexel_Hill,_Pennsylvania (<http://dbpedia.org/resource/Drexel_Hill,_Pennsylvania>)
+      - David_M._Buchanan (dor:David_M._Buchanan) --doo:restingPlace--> Drexel_Hill,_Pennsylvania (<http://dbpedia.org/resource/Drexel_Hill,_Pennsylvania>)
+  '7':
+    attributes:
+      David_Wilmot: (birth date^='1814-01-20')
+      Towanda,_Pennsylvania: (Aug precipitation inch^='3.86')
+      Harrisburg,_Pennsylvania: (Aug precipitation days^='11.1')
+    relationships:
+      - Roger_A._Madigan (dor:Roger_A._Madigan) --doo:residence--> Towanda,_Pennsylvania (<http://dbpedia.org/resource/Towanda,_Pennsylvania>)
+      - Roger_A._Madigan (dor:Roger_A._Madigan) --doo:deathPlace--> Harrisburg,_Pennsylvania (<http://dbpedia.org/resource/Harrisburg,_Pennsylvania>)
+      - David_Wilmot (dor:David_Wilmot) --doo:restingPlace--> Towanda,_Pennsylvania (<http://dbpedia.org/resource/Towanda,_Pennsylvania>)
+  '8':
+    attributes: {}
+    relationships:
+      - Christopher_D._Sullivan (dor:Christopher_D._Sullivan) --doo:residence--> Manhattan (dor:Manhattan)
+      - Christopher_D._Sullivan (dor:Christopher_D._Sullivan) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Early_life_and_career_of_Ulysses_S._Grant (dor:Early_life_and_career_of_Ulysses_S._Grant) --doo:restingPlace--> Manhattan (dor:Manhattan)
+  '9':
+    attributes:
+      Early_life_and_career_of_Ulysses_S._Grant: (birth date^='1822-04-27')
+    relationships:
+      - Felix_Rohatyn (dor:Felix_Rohatyn) --doo:residence--> Manhattan (dor:Manhattan)
+      - Felix_Rohatyn (dor:Felix_Rohatyn) --doo:deathPlace--> Manhattan (dor:Manhattan)
+      - Early_life_and_career_of_Ulysses_S._Grant (dor:Early_life_and_career_of_Ulysses_S._Grant) --doo:restingPlace--> Manhattan (dor:Manhattan)
+  '10':
+    attributes:
+      Early_life_and_career_of_Ulysses_S._Grant: (birth date^='1822-04-27')
+    relationships:
+      - Miriam_Goldman_Cedarbaum (dor:Miriam_Goldman_Cedarbaum) --doo:residence--> Manhattan (dor:Manhattan)
+      - Miriam_Goldman_Cedarbaum (dor:Miriam_Goldman_Cedarbaum) --doo:deathPlace--> Manhattan (dor:Manhattan)
+      - Early_life_and_career_of_Ulysses_S._Grant (dor:Early_life_and_career_of_Ulysses_S._Grant) --doo:restingPlace--> Manhattan (dor:Manhattan)
+attributes:
+  person: --bgcolor^ (dop:bgcolor)--> langString | --1y^ (dop:1y)--> int | --width^ (dop:width)--> int | --birth date^ (dop:birthDate)--> langString
+  Location: --Aug rain days^ (dop:augRainDays)--> int | --data^ (dop:data)--> double | --Aug precipitation days^ (dop:augPrecipitationDays)--> double
+  politician: --original name^ (doo:originalName)--> langString
+  city district: --Aug precipitation inch^ (dop:augPrecipitationInch)--> double
+subgraph_id: 360
+relationships:
+  - politician --doo:residence--> city district
+  - politician --doo:deathPlace--> Location
+  - person --doo:restingPlace--> city district

@@ -1,0 +1,114 @@
+types:
+  country: doo:Country
+  Location: doo:Location
+  politician: doo:Politician
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Armagh: '(Apr high C^=''12.6'', Aug rain days^=''13'', has abstract^=''Armagh ( ar-MAH; Irish: Ard Mhacha, IPA: [ˌaɾd̪ˠ ˈwaxə], "Macha''''s height") is the county town of County Armagh and a city in Northern Ireland, as well as a civil parish. It is the ecclesiastical capit...'')'
+      A._J._W._McNeilly: (death place^='http://dbpedia.org/resource/St._John''s,_Newfoundland_and_Labrador')
+    relationships:
+      - A._J._W._McNeilly (dor:A._J._W._McNeilly) --dop:birthPlace--> Armagh (dor:Armagh)
+      - A._J._W._McNeilly (dor:A._J._W._McNeilly) --doo:nationality--> Colony_of_Newfoundland (dor:Colony_of_Newfoundland)
+      - A._J._W._McNeilly (dor:A._J._W._McNeilly) --doo:birthPlace--> Armagh (dor:Armagh)
+  '2':
+    attributes:
+      Armagh: '(Apr high C^=''12.6'', Aug rain days^=''13'', has abstract^=''Armagh ( ar-MAH; Irish: Ard Mhacha, IPA: [ˌaɾd̪ˠ ˈwaxə], "Macha''''s height") is the county town of County Armagh and a city in Northern Ireland, as well as a civil parish. It is the ecclesiastical capit...'')'
+      A._J._W._McNeilly: (death place^='http://dbpedia.org/resource/St._John''s,_Newfoundland_and_Labrador')
+    relationships:
+      - A._J._W._McNeilly (dor:A._J._W._McNeilly) --dop:birthPlace--> Armagh (dor:Armagh)
+      - A._J._W._McNeilly (dor:A._J._W._McNeilly) --doo:nationality--> Irish_people (dor:Irish_people)
+      - A._J._W._McNeilly (dor:A._J._W._McNeilly) --doo:birthPlace--> Armagh (dor:Armagh)
+  '3':
+    attributes:
+      India: |-
+        (align^='left', has abstract^='( 다른 뜻에 대해서는 인도 (동음이의) 문서를 참고하십시오.)( 인디아는 여기로 연결됩니다. 다른 뜻에 대해서는 인디아 (동음이의) 문서를 참고하십시오.)
+        ( 바라트는 여기로 연결됩니다. 다른 뜻에 대해서는 바라트 (동음이의) 문서를 참고하십시오.)
+        인도 공화국(힌디어: भारत गणराज्य 바라트 가느라지야, 영어: Republic of India 리...')
+      A._K._Balan: (parents^='Kelappan')
+      Kozhikode_district: (Apr high C^='33.1', type^='http://dbpedia.org/resource/List_of_districts_of_Kerala')
+    relationships:
+      - A._K._Balan (dor:A._K._Balan) --dop:birthPlace--> Kozhikode_district (dor:Kozhikode_district)
+      - A._K._Balan (dor:A._K._Balan) --doo:nationality--> India (dor:India)
+      - A._K._Balan (dor:A._K._Balan) --doo:birthPlace--> India (dor:India)
+  '4':
+    attributes:
+      India: (align^='left')
+      Kerala: (subdivision^='http://dbpedia.org/resource/List_of_districts_in_Kerala', has abstract^='Il Kèrala o Keralam (malayalam കേരളം, Kēraḷaṁ) è uno Stato dell''India meridionale, che occupa una stretta striscia della costa sud-occidentale del Paese. Chiamato Keralam dai suoi abitanti, il Kèrala ...')
+      A._K._Balan: (parents^='Kelappan')
+      Kozhikode_district: (Apr high C^='33.1', type^='http://dbpedia.org/resource/List_of_districts_of_Kerala')
+    relationships:
+      - A._K._Balan (dor:A._K._Balan) --dop:birthPlace--> Kozhikode_district (dor:Kozhikode_district)
+      - A._K._Balan (dor:A._K._Balan) --doo:nationality--> India (dor:India)
+      - A._K._Balan (dor:A._K._Balan) --doo:birthPlace--> Kerala (dor:Kerala)
+  '5':
+    attributes:
+      India: (align^='left')
+      A._K._Balan: (parents^='Kelappan')
+      Kozhikode_district: '(Apr high C^=''33.1'', type^=''http://dbpedia.org/resource/List_of_districts_of_Kerala'', subdivision^=''http://dbpedia.org/resource/Kerala'', has abstract^=''Der Distrikt Kozhikode (Malayalam: കോഴിക്കോട് ജില്ല, früher Calicut) ist ein Distrikt im südindischen Bundesstaat Kerala. Verwaltungssitz ist das namensgebende Kozhikode, die drittgrößte Stadt Keralas...'')'
+    relationships:
+      - A._K._Balan (dor:A._K._Balan) --dop:birthPlace--> Kozhikode_district (dor:Kozhikode_district)
+      - A._K._Balan (dor:A._K._Balan) --doo:nationality--> India (dor:India)
+      - A._K._Balan (dor:A._K._Balan) --doo:birthPlace--> Kozhikode_district (dor:Kozhikode_district)
+  '6':
+    attributes:
+      British_Raj: (align^='right')
+      A._K._Fazlul_Huq: (death place^='Dacca, East Pakistan, Pakistan')
+      Backergunge_District: (has abstract^='Backergunge, Backergunje, Bakarganj, or Bakerganj was a former district of British India. It was the southernmost district of the Dacca Division. The district was located in the swampy lowlands of the...')
+    relationships:
+      - A._K._Fazlul_Huq (dor:A._K._Fazlul_Huq) --dop:birthPlace--> Backergunge_District (dor:Backergunge_District)
+      - A._K._Fazlul_Huq (dor:A._K._Fazlul_Huq) --doo:nationality--> British_Raj (dor:British_Raj)
+      - A._K._Fazlul_Huq (dor:A._K._Fazlul_Huq) --doo:birthPlace--> Backergunge_District (dor:Backergunge_District)
+  '7':
+    attributes:
+      British_Raj: (align^='right')
+      A._K._Fazlul_Huq: (death place^='Dacca, East Pakistan, Pakistan')
+      Bengal_Presidency: '(has abstract^=''Die Präsidentschaft Bengalen (englisch: Bengal Presidency) war neben der Präsidentschaft Bombay und der Präsidentschaft Madras eine der drei Verwaltungseinheiten Britisch-Indiens.'')'
+    relationships:
+      - A._K._Fazlul_Huq (dor:A._K._Fazlul_Huq) --dop:birthPlace--> Backergunge_District (dor:Backergunge_District)
+      - A._K._Fazlul_Huq (dor:A._K._Fazlul_Huq) --doo:nationality--> British_Raj (dor:British_Raj)
+      - A._K._Fazlul_Huq (dor:A._K._Fazlul_Huq) --doo:birthPlace--> Bengal_Presidency (dor:Bengal_Presidency)
+  '8':
+    attributes:
+      British_Raj: (align^='right')
+      Rajapur_Upazila: '(subdivision^=''http://dbpedia.org/resource/Barisal_Division'', has abstract^=''Rajapur (Bengali: রাজাপুর) is an Upazila of Jhalokati District in the Division of Barisal, Bangladesh.'')'
+      A._K._Fazlul_Huq: (death place^='Dacca, East Pakistan, Pakistan')
+    relationships:
+      - A._K._Fazlul_Huq (dor:A._K._Fazlul_Huq) --dop:birthPlace--> Backergunge_District (dor:Backergunge_District)
+      - A._K._Fazlul_Huq (dor:A._K._Fazlul_Huq) --doo:nationality--> British_Raj (dor:British_Raj)
+      - A._K._Fazlul_Huq (dor:A._K._Fazlul_Huq) --doo:birthPlace--> Rajapur_Upazila (dor:Rajapur_Upazila)
+  '9':
+    attributes:
+      Indian_people: (align^='left')
+      Kannur_district: '(type^=''http://dbpedia.org/resource/List_of_districts_of_Kerala'', subdivision^=''http://dbpedia.org/resource/Iritty_taluk'', has abstract^=''Der Distrikt Kannur (Malayalam: കണ്ണൂർ ജില്ല, früher Cannanore) ist ein Distrikt im südindischen Bundesstaat Kerala. Verwaltungssitz ist die namensgebende Stadt Kannur.'')'
+      A._K._Saseendran: (parents^='')
+    relationships:
+      - A._K._Saseendran (dor:A._K._Saseendran) --dop:birthPlace--> Kannur_district (dor:Kannur_district)
+      - A._K._Saseendran (dor:A._K._Saseendran) --doo:nationality--> Indian_people (dor:Indian_people)
+      - A._K._Saseendran (dor:A._K._Saseendran) --doo:birthPlace--> Kannur_district (dor:Kannur_district)
+  '10':
+    attributes:
+      Indian_people: (align^='left')
+      Kannur_district: (type^='http://dbpedia.org/resource/List_of_districts_of_Kerala')
+      A._K._Saseendran: (parents^='')
+      Madras_Presidency: (has abstract^='De Madras Presidency, Presidency of Fort St. George, of (na de Indiase onafhankelijkheid in 1947) Madras Province was een bestuurlijk gebied in Brits-Indië rondom de Britse kolonie Madras en (het huid...')
+    relationships:
+      - A._K._Saseendran (dor:A._K._Saseendran) --dop:birthPlace--> Kannur_district (dor:Kannur_district)
+      - A._K._Saseendran (dor:A._K._Saseendran) --doo:nationality--> Indian_people (dor:Indian_people)
+      - A._K._Saseendran (dor:A._K._Saseendran) --doo:birthPlace--> Madras_Presidency (dor:Madras_Presidency)
+attributes:
+  country: --align^ (dop:align)--> langString
+  Location: --subdivision^ (doo:subdivision)--> Resource | --building end date^ (doo:buildingEndDate)--> string | --colwidth^ (dop:colwidth)--> int | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --has abstract^ (doo:abstract)--> langString
+  politician: --death place^ (dop:deathPlace)--> Resource | --parents^ (dop:parents)--> Resource
+  administrative region: --Apr high C^ (dop:aprHighC)--> double | --type^ (doo:type)--> Resource | --abolished^ (dop:abolished)--> date | --Aug rain days^ (dop:augRainDays)--> double | --id^ (dop:id)--> langString
+subgraph_id: 395
+relationships:
+  - politician --dop:birthPlace--> administrative region
+  - politician --doo:nationality--> country
+  - politician --doo:birthPlace--> Location

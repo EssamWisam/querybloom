@@ -1,0 +1,87 @@
+types:
+  Anime: doo:Anime
+  company: doo:Company
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Animax: (logo^='Animax.svg')
+      Bandai_Namco_Filmworks: (Wikipage page ID^='61045', type^='http://dbpedia.org/resource/Subsidiary', Wikipage revision ID^='1123686958')
+    relationships:
+      - 009-1__tv_series__1 (dor:009-1__tv_series__1) --doo:network--> Animax (dor:Animax)
+      - Animax (dor:Animax) --doo:owningCompany--> Bandai_Namco_Filmworks (dor:Bandai_Namco_Filmworks)
+  '2':
+    attributes:
+      Animax: (logo^='Animax.svg')
+      Nihon_Ad_Systems: (founding year^='1975', Wikipage page ID^='1279257', type^='http://dbpedia.org/resource/Kabushiki_gaisha', Wikipage revision ID^='1057265042')
+    relationships:
+      - 009-1__tv_series__1 (dor:009-1__tv_series__1) --doo:network--> Animax (dor:Animax)
+      - Animax (dor:Animax) --doo:owningCompany--> Nihon_Ad_Systems (dor:Nihon_Ad_Systems)
+  '3':
+    attributes:
+      Animax: (logo^='Animax.svg')
+      Sony_Pictures_Entertainment_Japan: (founding year^='1984', Wikipage page ID^='36587636', type^='http://dbpedia.org/resource/Subsidiary', Wikipage revision ID^='1109324594')
+    relationships:
+      - 009-1__tv_series__1 (dor:009-1__tv_series__1) --doo:network--> Animax (dor:Animax)
+      - Animax (dor:Animax) --doo:owningCompany--> Sony_Pictures_Entertainment_Japan (dor:Sony_Pictures_Entertainment_Japan)
+  '4':
+    attributes:
+      Bic_Camera: (founding year^='1968', Wikipage page ID^='30770238', type^='http://dbpedia.org/resource/Public_company', Wikipage revision ID^='1118136585')
+      Nippon_BS_Broadcasting: (area^='Nationwide', logo^='BS11 logo.svg')
+    relationships:
+      - 100_Sleeping_Princes_and_the_Kingdom_of_Dreams__TV_series__1 (dor:100_Sleeping_Princes_and_the_Kingdom_of_Dreams__TV_series__1) --doo:network--> Nippon_BS_Broadcasting (dor:Nippon_BS_Broadcasting)
+      - Nippon_BS_Broadcasting (dor:Nippon_BS_Broadcasting) --doo:owningCompany--> Bic_Camera (dor:Bic_Camera)
+  '5':
+    attributes:
+      Dai-ichi_Life: (founding year^='1902', Wikipage page ID^='2809623', type^='http://dbpedia.org/resource/Kabushiki_gaisha', Wikipage revision ID^='1123842756')
+      Mainichi_Broadcasting_System: (logo^='Mainichi Broadcasting System logo.svg')
+    relationships:
+      - 100%25_Pascal-sensei__tv_series__1 (<http://dbpedia.org/resource/100%25_Pascal-sensei__tv_series__1>) --doo:network--> Mainichi_Broadcasting_System (dor:Mainichi_Broadcasting_System)
+      - Mainichi_Broadcasting_System (dor:Mainichi_Broadcasting_System) --doo:owningCompany--> Dai-ichi_Life (dor:Dai-ichi_Life)
+  '6':
+    attributes:
+      Dentsu: (founding year^='1901', Wikipage page ID^='3469435', type^='http://dbpedia.org/resource/Public_Company', Wikipage revision ID^='1124849661')
+      Mainichi_Broadcasting_System: (logo^='Mainichi Broadcasting System logo.svg')
+    relationships:
+      - 100%25_Pascal-sensei__tv_series__1 (<http://dbpedia.org/resource/100%25_Pascal-sensei__tv_series__1>) --doo:network--> Mainichi_Broadcasting_System (dor:Mainichi_Broadcasting_System)
+      - Mainichi_Broadcasting_System (dor:Mainichi_Broadcasting_System) --doo:owningCompany--> Dentsu (dor:Dentsu)
+  '7':
+    attributes:
+      MUFG_Bank: (founding year^='1919', Wikipage page ID^='2823064', Wikipage revision ID^='1120546977')
+      Mainichi_Broadcasting_System: (logo^='Mainichi Broadcasting System logo.svg')
+    relationships:
+      - 100%25_Pascal-sensei__tv_series__1 (<http://dbpedia.org/resource/100%25_Pascal-sensei__tv_series__1>) --doo:network--> Mainichi_Broadcasting_System (dor:Mainichi_Broadcasting_System)
+      - Mainichi_Broadcasting_System (dor:Mainichi_Broadcasting_System) --doo:owningCompany--> MUFG_Bank (dor:MUFG_Bank)
+  '8':
+    attributes:
+      TV_Asahi: (logo^='TV Asahi Logo.svg')
+      ANA_Holdings: (Wikipage page ID^='56411157', Wikipage revision ID^='822419981')
+    relationships:
+      - 21_Emon__tv_series__1 (dor:21_Emon__tv_series__1) --doo:network--> TV_Asahi (dor:TV_Asahi)
+      - TV_Asahi (dor:TV_Asahi) --doo:owningCompany--> ANA_Holdings (dor:ANA_Holdings)
+  '9':
+    attributes:
+      TV_Asahi: (logo^='TV Asahi Logo.svg')
+      Asahi_Broadcasting_Corporation: (Wikipage page ID^='1316266', type^='http://dbpedia.org/resource/Public_company', Wikipage revision ID^='1123197895')
+    relationships:
+      - 21_Emon__tv_series__1 (dor:21_Emon__tv_series__1) --doo:network--> TV_Asahi (dor:TV_Asahi)
+      - TV_Asahi (dor:TV_Asahi) --doo:owningCompany--> Asahi_Broadcasting_Corporation (dor:Asahi_Broadcasting_Corporation)
+  '10':
+    attributes:
+      Dentsu: (founding year^='1901', Wikipage page ID^='3469435', type^='http://dbpedia.org/resource/Public_Company', Wikipage revision ID^='1124849661')
+      TV_Asahi: (logo^='TV Asahi Logo.svg')
+    relationships:
+      - 21_Emon__tv_series__1 (dor:21_Emon__tv_series__1) --doo:network--> TV_Asahi (dor:TV_Asahi)
+      - TV_Asahi (dor:TV_Asahi) --doo:owningCompany--> Dentsu (dor:Dentsu)
+attributes:
+  company: --founding year^ (doo:foundingYear)--> gYear | --caption^ (dop:caption)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int | --type^ (doo:type)--> Resource | --budget ($)^ (doo:budget)--> usDollar | --logo width^ (dop:logoWidth)--> int | --c^ (dop:c)--> langString | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int
+  television station: --area^ (dop:area)--> langString | --logo^ (dop:logo)--> int
+subgraph_id: 40
+relationships:
+  - Anime --doo:network--> television station
+  - television station --doo:owningCompany--> company

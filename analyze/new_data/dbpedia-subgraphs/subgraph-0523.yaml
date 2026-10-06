@@ -1,0 +1,115 @@
+types:
+  Location: doo:Location
+  soccer club: doo:SoccerClub
+  radio station: doo:RadioStation
+  american football Team: doo:AmericanFootballTeam
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      CFTE: (airdate^='1922-04-10', area^='http://dbpedia.org/resource/Greater_Vancouver')
+      Vancouver: (Wikipage revision ID^='1124434731', population total^='662248')
+      Charleston_Battery: (league^='http://dbpedia.org/resource/USL_Championship')
+    relationships:
+      - 2012_in_American_soccer (dor:2012_in_American_soccer) --dop:location--> Vancouver (dor:Vancouver)
+      - CFTE (dor:CFTE) --doo:city--> Vancouver (dor:Vancouver)
+      - 2012_in_American_soccer (dor:2012_in_American_soccer) --dop:champions--> Charleston_Battery (dor:Charleston_Battery)
+      - CFTE (dor:CFTE) --doo:broadcastNetwork--> Seattle_Seahawks (dor:Seattle_Seahawks)
+  '2':
+    attributes:
+      CFTE: (airdate^='1922-04-10', area^='http://dbpedia.org/resource/Greater_Vancouver')
+      Vancouver: (Wikipage revision ID^='1124434731', population total^='662248')
+    relationships:
+      - 2012_in_American_soccer (dor:2012_in_American_soccer) --dop:location--> Vancouver (dor:Vancouver)
+      - CFTE (dor:CFTE) --doo:city--> Vancouver (dor:Vancouver)
+      - 2012_in_American_soccer (dor:2012_in_American_soccer) --dop:champions--> Forest_City_London (dor:Forest_City_London)
+      - CFTE (dor:CFTE) --doo:broadcastNetwork--> Seattle_Seahawks (dor:Seattle_Seahawks)
+  '3':
+    attributes:
+      CFTE: (airdate^='1922-04-10', area^='http://dbpedia.org/resource/Greater_Vancouver')
+      Vancouver: (Wikipage revision ID^='1124434731', population total^='662248')
+    relationships:
+      - 2012_in_American_soccer (dor:2012_in_American_soccer) --dop:location--> Vancouver (dor:Vancouver)
+      - CFTE (dor:CFTE) --doo:city--> Vancouver (dor:Vancouver)
+      - 2012_in_American_soccer (dor:2012_in_American_soccer) --dop:champions--> Lehigh_Valley_United_Sonic (dor:Lehigh_Valley_United_Sonic)
+      - CFTE (dor:CFTE) --doo:broadcastNetwork--> Seattle_Seahawks (dor:Seattle_Seahawks)
+  '4':
+    attributes:
+      KLOL: (airdate^='1947-06-30', area^='http://dbpedia.org/resource/Template:Houston_Radio')
+      Houston: (Wikipage revision ID^='1122408186', population total^='2304580')
+      Austin_Aztex: (league^='http://dbpedia.org/resource/Premier_Development_League')
+    relationships:
+      - 2013_in_American_soccer (dor:2013_in_American_soccer) --dop:location--> Houston (dor:Houston)
+      - KLOL (dor:KLOL) --doo:city--> Houston (dor:Houston)
+      - 2013_in_American_soccer (dor:2013_in_American_soccer) --dop:champions--> Austin_Aztex (dor:Austin_Aztex)
+      - KLOL (dor:KLOL) --doo:broadcastNetwork--> Houston_Texans (dor:Houston_Texans)
+  '5':
+    attributes:
+      Houston: (Wikipage revision ID^='1122408186', population total^='2304580')
+      New_York_Cosmos_(2010): (league^='http://dbpedia.org/resource/National_Independent_Soccer_Association')
+    relationships:
+      - 2013_in_American_soccer (dor:2013_in_American_soccer) --dop:location--> Houston (dor:Houston)
+      - KLOL (dor:KLOL) --doo:city--> Houston (dor:Houston)
+      - 2013_in_American_soccer (dor:2013_in_American_soccer) --dop:champions--> New_York_Cosmos_(2010) (<http://dbpedia.org/resource/New_York_Cosmos_(2010)>)
+      - KLOL (dor:KLOL) --doo:broadcastNetwork--> Houston_Texans (dor:Houston_Texans)
+  '6':
+    attributes:
+      KLOL: (airdate^='1947-06-30', area^='http://dbpedia.org/resource/Template:Houston_Radio')
+      Houston: (Wikipage revision ID^='1122408186', population total^='2304580')
+      New_York_Red_Bulls: (league^='http://dbpedia.org/resource/Major_League_Soccer')
+    relationships:
+      - 2013_in_American_soccer (dor:2013_in_American_soccer) --dop:location--> Houston (dor:Houston)
+      - KLOL (dor:KLOL) --doo:city--> Houston (dor:Houston)
+      - 2013_in_American_soccer (dor:2013_in_American_soccer) --dop:champions--> New_York_Red_Bulls (dor:New_York_Red_Bulls)
+      - KLOL (dor:KLOL) --doo:broadcastNetwork--> Houston_Texans (dor:Houston_Texans)
+  '7':
+    attributes:
+      WJNO: (airdate^='1947-07-01', area^='http://dbpedia.org/resource/Miami_metropolitan_area')
+      Florida: (Wikipage revision ID^='1124709374')
+    relationships:
+      - 2013_in_Ecuadorian_football (dor:2013_in_Ecuadorian_football) --dop:location--> Florida (dor:Florida)
+      - WJNO (dor:WJNO) --doo:city--> Florida (dor:Florida)
+      - 2013_in_Ecuadorian_football (dor:2013_in_Ecuadorian_football) --dop:champions--> Club_Sport_Emelec (dor:Club_Sport_Emelec)
+      - WJNO (dor:WJNO) --doo:broadcastNetwork--> Miami_Dolphins (dor:Miami_Dolphins)
+  '8':
+    attributes:
+      WXTB: (airdate^='December 1967', area^='http://dbpedia.org/resource/Tampa_Bay_Area')
+      Florida: (Wikipage revision ID^='1124709374')
+    relationships:
+      - 2013_in_Ecuadorian_football (dor:2013_in_Ecuadorian_football) --dop:location--> Florida (dor:Florida)
+      - WXTB (dor:WXTB) --doo:city--> Florida (dor:Florida)
+      - 2013_in_Ecuadorian_football (dor:2013_in_Ecuadorian_football) --dop:champions--> Club_Sport_Emelec (dor:Club_Sport_Emelec)
+      - WXTB (dor:WXTB) --doo:broadcastNetwork--> Tampa_Bay_Buccaneers (dor:Tampa_Bay_Buccaneers)
+  '9':
+    attributes:
+      WQAM: (area^='http://dbpedia.org/resource/South_Florida')
+      Miami: (Wikipage revision ID^='1124925785', population total^='442241')
+    relationships:
+      - 2014–15_in_English_football (<http://dbpedia.org/resource/2014–15_in_English_football>) --dop:location--> Miami (dor:Miami)
+      - WQAM (dor:WQAM) --doo:city--> Miami (dor:Miami)
+      - 2014–15_in_English_football (<http://dbpedia.org/resource/2014–15_in_English_football>) --dop:champions--> A.F.C._Bournemouth (dor:A.F.C._Bournemouth)
+      - WQAM (dor:WQAM) --doo:broadcastNetwork--> Miami_Dolphins (dor:Miami_Dolphins)
+  '10':
+    attributes:
+      WQAM: (area^='http://dbpedia.org/resource/South_Florida')
+      Miami: (Wikipage revision ID^='1124925785', population total^='442241')
+    relationships:
+      - 2014–15_in_English_football (<http://dbpedia.org/resource/2014–15_in_English_football>) --dop:location--> Miami (dor:Miami)
+      - WQAM (dor:WQAM) --doo:city--> Miami (dor:Miami)
+      - 2014–15_in_English_football (<http://dbpedia.org/resource/2014–15_in_English_football>) --dop:champions--> Barnet_F.C. (<http://dbpedia.org/resource/Barnet_F.C.>)
+      - WQAM (dor:WQAM) --doo:broadcastNetwork--> Miami_Dolphins (dor:Miami_Dolphins)
+attributes:
+  Location: --anthem^ (doo:anthem)--> Resource | --certain^ (dop:certain)--> langString | --c^ (dop:c)--> langString | --Apr rain mm^ (dop:aprRainMm)--> int | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --population total^ (doo:populationTotal)--> int | --length m^ (dop:lengthM)--> int
+  soccer club: --league^ (dop:league)--> Resource | --league^ (dop:league)--> int
+  radio station: --airdate^ (dop:airdate)--> langString | --area^ (dop:area)--> Resource
+subgraph_id: 523
+relationships:
+  - football league season --dop:location--> Location
+  - radio station --doo:city--> Location
+  - football league season --dop:champions--> soccer club
+  - radio station --doo:broadcastNetwork--> american football Team

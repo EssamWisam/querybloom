@@ -1,0 +1,116 @@
+types:
+  colour: doo:Colour
+  person: doo:Person
+  school: doo:School
+  political party: doo:PoliticalParty
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Accion_21: (leader^='http://dbpedia.org/resource/Miguel_Mansur')
+      Miguel_Mansur: (birth date^='1977-07-15')
+      Al_Alvarez_(basketball): (birth date^='1912-10-05')
+    relationships:
+      - Accion_21 (dor:Accion_21) --doo:colour--> Blue (dor:Blue)
+      - Accion_21 (dor:Accion_21) --doo:leader--> Miguel_Mansur (dor:Miguel_Mansur)
+      - Whitmer_High_School (dor:Whitmer_High_School) --doo:colour--> Blue (dor:Blue)
+      - Al_Alvarez_(basketball) (<http://dbpedia.org/resource/Al_Alvarez_(basketball)>) --dop:cteam--> Whitmer_High_School (dor:Whitmer_High_School)
+  '2':
+    attributes:
+      Anek_Laothamatas: (birth date^='1954-01-20')
+      Action_Coalition_Party: (leader^='http://dbpedia.org/resource/Anek_Laothamatas')
+      Al_Alvarez_(basketball): (birth date^='1912-10-05')
+    relationships:
+      - Action_Coalition_Party (dor:Action_Coalition_Party) --doo:colour--> Blue (dor:Blue)
+      - Action_Coalition_Party (dor:Action_Coalition_Party) --doo:leader--> Anek_Laothamatas (dor:Anek_Laothamatas)
+      - Whitmer_High_School (dor:Whitmer_High_School) --doo:colour--> Blue (dor:Blue)
+      - Al_Alvarez_(basketball) (<http://dbpedia.org/resource/Al_Alvarez_(basketball)>) --dop:cteam--> Whitmer_High_School (dor:Whitmer_High_School)
+  '3':
+    attributes:
+      Alberta_Alliance_Party: (leader^='http://dbpedia.org/resource/Paul_Hinman')
+    relationships:
+      - Alberta_Alliance_Party (dor:Alberta_Alliance_Party) --doo:colour--> Blue (dor:Blue)
+      - Alberta_Alliance_Party (dor:Alberta_Alliance_Party) --doo:leader--> Paul_Hinman (dor:Paul_Hinman)
+      - Whitmer_High_School (dor:Whitmer_High_School) --doo:colour--> Blue (dor:Blue)
+      - Al_Alvarez_(basketball) (<http://dbpedia.org/resource/Al_Alvarez_(basketball)>) --dop:cteam--> Whitmer_High_School (dor:Whitmer_High_School)
+  '4':
+    attributes:
+      Al_Moschetti: (birth date^='1920-01-01', active years end year^='1947')
+      Alberta_Party: (leader^='http://dbpedia.org/resource/Barry_Morishita')
+      Barry_Morishita: (birth date^='1966')
+    relationships:
+      - Alberta_Party (dor:Alberta_Party) --doo:colour--> Gold_(color) (<http://dbpedia.org/resource/Gold_(color)>)
+      - Alberta_Party (dor:Alberta_Party) --doo:leader--> Barry_Morishita (dor:Barry_Morishita)
+      - Notre_Dame_High_School_(Elmira,_New_York) (<http://dbpedia.org/resource/Notre_Dame_High_School_(Elmira,_New_York)>) --doo:colour--> Gold_(color) (<http://dbpedia.org/resource/Gold_(color)>)
+      - Al_Moschetti (dor:Al_Moschetti) --dop:cteam--> Notre_Dame_High_School_(Elmira,_New_York) (<http://dbpedia.org/resource/Notre_Dame_High_School_(Elmira,_New_York)>)
+  '5':
+    attributes:
+      Mia_Mottley: (birth date^='1965-10-01')
+      Al_Moschetti: (birth date^='1920-01-01', active years end year^='1947')
+      Barbados_Labour_Party: (leader^='http://dbpedia.org/resource/Mia_Mottley')
+    relationships:
+      - Barbados_Labour_Party (dor:Barbados_Labour_Party) --doo:colour--> Gold_(color) (<http://dbpedia.org/resource/Gold_(color)>)
+      - Barbados_Labour_Party (dor:Barbados_Labour_Party) --doo:leader--> Mia_Mottley (dor:Mia_Mottley)
+      - Notre_Dame_High_School_(Elmira,_New_York) (<http://dbpedia.org/resource/Notre_Dame_High_School_(Elmira,_New_York)>) --doo:colour--> Gold_(color) (<http://dbpedia.org/resource/Gold_(color)>)
+      - Al_Moschetti (dor:Al_Moschetti) --dop:cteam--> Notre_Dame_High_School_(Elmira,_New_York) (<http://dbpedia.org/resource/Notre_Dame_High_School_(Elmira,_New_York)>)
+  '6':
+    attributes:
+      Al_Moschetti: (birth date^='1920-01-01', active years end year^='1947')
+      Democratic_Party_of_Turkmenistan: (leader^='http://dbpedia.org/resource/Ata_Serdarov')
+    relationships:
+      - Democratic_Party_of_Turkmenistan (dor:Democratic_Party_of_Turkmenistan) --doo:colour--> Gold_(color) (<http://dbpedia.org/resource/Gold_(color)>)
+      - Democratic_Party_of_Turkmenistan (dor:Democratic_Party_of_Turkmenistan) --doo:leader--> Ata_Serdarov (dor:Ata_Serdarov)
+      - Notre_Dame_High_School_(Elmira,_New_York) (<http://dbpedia.org/resource/Notre_Dame_High_School_(Elmira,_New_York)>) --doo:colour--> Gold_(color) (<http://dbpedia.org/resource/Gold_(color)>)
+      - Al_Moschetti (dor:Al_Moschetti) --dop:cteam--> Notre_Dame_High_School_(Elmira,_New_York) (<http://dbpedia.org/resource/Notre_Dame_High_School_(Elmira,_New_York)>)
+  '7':
+    attributes:
+      Igor_Chudinov: (birth date^='1961-08-21')
+      Ak_Jol__White_Path_People's_Party__1: (leader^='http://dbpedia.org/resource/Igor_Chudinov')
+    relationships:
+      - Ak_Jol__White_Path_People's_Party__1 (<http://dbpedia.org/resource/Ak_Jol__White_Path_People's_Party__1>) --doo:colour--> White (dor:White)
+      - Ak_Jol__White_Path_People's_Party__1 (<http://dbpedia.org/resource/Ak_Jol__White_Path_People's_Party__1>) --doo:leader--> Igor_Chudinov (dor:Igor_Chudinov)
+      - Grandview_Heights_High_School (dor:Grandview_Heights_High_School) --doo:colour--> White (dor:White)
+      - Bill_Wall (dor:Bill_Wall) --dop:cteam--> Grandview_Heights_High_School (dor:Grandview_Heights_High_School)
+  '8':
+    attributes:
+      Hassan_Ayariga: (birth date^='1972-09-04', occupation^='http://dbpedia.org/resource/Accountant')
+      All_People's_Congress_(Ghana): (leader^='http://dbpedia.org/resource/Hassan_Ayariga')
+    relationships:
+      - All_People's_Congress_(Ghana) (<http://dbpedia.org/resource/All_People's_Congress_(Ghana)>) --doo:colour--> White (dor:White)
+      - All_People's_Congress_(Ghana) (<http://dbpedia.org/resource/All_People's_Congress_(Ghana)>) --doo:leader--> Hassan_Ayariga (dor:Hassan_Ayariga)
+      - Grandview_Heights_High_School (dor:Grandview_Heights_High_School) --doo:colour--> White (dor:White)
+      - Bill_Wall (dor:Bill_Wall) --dop:cteam--> Grandview_Heights_High_School (dor:Grandview_Heights_High_School)
+  '9':
+    attributes:
+      Artpodgotovka: (leader^='http://dbpedia.org/resource/Vyacheslav_Maltsev')
+      Vyacheslav_Maltsev: (birth date^='1964-06-07', date^='2017-04-13')
+    relationships:
+      - Artpodgotovka (dor:Artpodgotovka) --doo:colour--> White (dor:White)
+      - Artpodgotovka (dor:Artpodgotovka) --doo:leader--> Vyacheslav_Maltsev (dor:Vyacheslav_Maltsev)
+      - Grandview_Heights_High_School (dor:Grandview_Heights_High_School) --doo:colour--> White (dor:White)
+      - Bill_Wall (dor:Bill_Wall) --dop:cteam--> Grandview_Heights_High_School (dor:Grandview_Heights_High_School)
+  '10':
+    attributes:
+      Blake_Ahearn: (birth date^='1984-05-27', active years end year^='2015')
+      Ainārs_Šlesers: (birth date^='1970-01-22')
+      For_a_Good_Latvia: (leader^='http://dbpedia.org/resource/Ainārs_Šlesers')
+    relationships:
+      - For_a_Good_Latvia (dor:For_a_Good_Latvia) --doo:colour--> Maroon_(color) (<http://dbpedia.org/resource/Maroon_(color)>)
+      - For_a_Good_Latvia (dor:For_a_Good_Latvia) --doo:leader--> Ainārs_Šlesers (<http://dbpedia.org/resource/Ainārs_Šlesers>)
+      - De_Smet_Jesuit_High_School (dor:De_Smet_Jesuit_High_School) --doo:colour--> Maroon_(color) (<http://dbpedia.org/resource/Maroon_(color)>)
+      - Blake_Ahearn (dor:Blake_Ahearn) --dop:cteam--> De_Smet_Jesuit_High_School (dor:De_Smet_Jesuit_High_School)
+attributes:
+  person: --birth date^ (dop:birthDate)--> date | --active years end year^ (doo:activeYearsEndYear)--> gYear | --awards^ (dop:awards)--> Resource | --occupation^ (doo:occupation)--> Resource | --date^ (dop:date)--> langString | --board^ (doo:board)--> Resource | --cname^ (dop:cname)--> langString
+  political party: --leader^ (doo:leader)--> Resource | --last^ (dop:last)--> langString
+  basketball player: --birth date^ (doo:birthDate)--> date | --active years end year^ (doo:activeYearsEndYear)--> gYear
+subgraph_id: 438
+relationships:
+  - political party --doo:colour--> colour
+  - political party --doo:leader--> person
+  - school --doo:colour--> colour
+  - basketball player --dop:cteam--> school

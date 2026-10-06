@@ -1,0 +1,154 @@
+types:
+  city: doo:City
+  company: doo:Company
+  country: doo:Country
+  Location: doo:Location
+  automobile: doo:Automobile
+  wrestling event: doo:WrestlingEvent
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      AMC_Ambassador: (caption^='1958')
+      Triplemanía_Regia: (caption^='Promotional poster featuring Pagano, Blue Demon Jr., LA Park, Kenny Omega, Psycho Clown, and Lady Shani')
+      American_Motors_Corporation: (Wikipage page ID^='176551')
+    relationships:
+      - Triplemanía_Regia (<http://dbpedia.org/resource/Triplemanía_Regia>) --dop:city--> Monterrey,_Mexico (<http://dbpedia.org/resource/Monterrey,_Mexico>)
+      - AMC_Ambassador (dor:AMC_Ambassador) --dop:assembly--> Monterrey,_Mexico (<http://dbpedia.org/resource/Monterrey,_Mexico>)
+      - AMC_Ambassador (dor:AMC_Ambassador) --dop:assembly--> Costa_Rica (dor:Costa_Rica)
+      - Triplemanía_Regia (<http://dbpedia.org/resource/Triplemanía_Regia>) --doo:location--> Monterrey,_Mexico (<http://dbpedia.org/resource/Monterrey,_Mexico>)
+      - AMC_Ambassador (dor:AMC_Ambassador) --doo:manufacturer--> American_Motors_Corporation (dor:American_Motors_Corporation)
+      - Triplemanía_Regia (<http://dbpedia.org/resource/Triplemanía_Regia>) --doo:location--> Mexico (dor:Mexico)
+  '2':
+    attributes:
+      AMC_Ambassador: (caption^='1958')
+      Triplemanía_Regia: (caption^='Promotional poster featuring Pagano, Blue Demon Jr., LA Park, Kenny Omega, Psycho Clown, and Lady Shani')
+      American_Motors_Corporation: (Wikipage page ID^='176551')
+    relationships:
+      - Triplemanía_Regia (<http://dbpedia.org/resource/Triplemanía_Regia>) --dop:city--> Monterrey,_Mexico (<http://dbpedia.org/resource/Monterrey,_Mexico>)
+      - AMC_Ambassador (dor:AMC_Ambassador) --dop:assembly--> Monterrey,_Mexico (<http://dbpedia.org/resource/Monterrey,_Mexico>)
+      - AMC_Ambassador (dor:AMC_Ambassador) --dop:assembly--> United_States (dor:United_States)
+      - Triplemanía_Regia (<http://dbpedia.org/resource/Triplemanía_Regia>) --doo:location--> Monterrey,_Mexico (<http://dbpedia.org/resource/Monterrey,_Mexico>)
+      - AMC_Ambassador (dor:AMC_Ambassador) --doo:manufacturer--> American_Motors_Corporation (dor:American_Motors_Corporation)
+      - Triplemanía_Regia (<http://dbpedia.org/resource/Triplemanía_Regia>) --doo:location--> Mexico (dor:Mexico)
+  '3':
+    attributes:
+      Detroit: (area total (m2)^='370083401.0859')
+      Michigan: (elevation (μ)^='270.0')
+      Chrysler_Corporation: (Wikipage page ID^='5103417')
+      Hell_in_a_Cell_(2017): (caption^='Promotional poster featuring Shane McMahon and Kevin Owens')
+      Chrysler_300_non-letter_series: (caption^='1964')
+    relationships:
+      - Hell_in_a_Cell_(2017) (<http://dbpedia.org/resource/Hell_in_a_Cell_(2017)>) --dop:city--> Detroit (dor:Detroit)
+      - Chrysler_300_non-letter_series (dor:Chrysler_300_non-letter_series) --dop:assembly--> Detroit (dor:Detroit)
+      - Chrysler_300_non-letter_series (dor:Chrysler_300_non-letter_series) --dop:assembly--> United_States (dor:United_States)
+      - Hell_in_a_Cell_(2017) (<http://dbpedia.org/resource/Hell_in_a_Cell_(2017)>) --doo:location--> Detroit (dor:Detroit)
+      - Chrysler_300_non-letter_series (dor:Chrysler_300_non-letter_series) --doo:manufacturer--> Chrysler_Corporation (dor:Chrysler_Corporation)
+      - Hell_in_a_Cell_(2017) (<http://dbpedia.org/resource/Hell_in_a_Cell_(2017)>) --doo:location--> Michigan (dor:Michigan)
+  '4':
+    attributes:
+      Detroit: (area total (m2)^='370083401.0859')
+      Michigan: (elevation (μ)^='270.0')
+      Chrysler_Corporation: (Wikipage page ID^='5103417')
+      Over_the_Limit_(2010): (caption^='Promotional poster featuring Edge')
+      Chrysler_300_non-letter_series: (caption^='1964')
+    relationships:
+      - Over_the_Limit_(2010) (<http://dbpedia.org/resource/Over_the_Limit_(2010)>) --dop:city--> Detroit (dor:Detroit)
+      - Chrysler_300_non-letter_series (dor:Chrysler_300_non-letter_series) --dop:assembly--> Detroit (dor:Detroit)
+      - Chrysler_300_non-letter_series (dor:Chrysler_300_non-letter_series) --dop:assembly--> United_States (dor:United_States)
+      - Over_the_Limit_(2010) (<http://dbpedia.org/resource/Over_the_Limit_(2010)>) --doo:location--> Detroit (dor:Detroit)
+      - Chrysler_300_non-letter_series (dor:Chrysler_300_non-letter_series) --doo:manufacturer--> Chrysler_Corporation (dor:Chrysler_Corporation)
+      - Over_the_Limit_(2010) (<http://dbpedia.org/resource/Over_the_Limit_(2010)>) --doo:location--> Michigan (dor:Michigan)
+  '5':
+    attributes:
+      Windsor,_Ontario: (area total (m2)^='146320000.0')
+      Shawnee,_Oklahoma: (elevation (μ)^='323.0')
+      DeSoto_Powermaster: (caption^='1953')
+      DeSoto_(automobile): (Wikipage page ID^='2718932')
+    relationships:
+      - Impact_One_Night_Only_(2018) (<http://dbpedia.org/resource/Impact_One_Night_Only_(2018)>) --dop:city--> Windsor,_Ontario (<http://dbpedia.org/resource/Windsor,_Ontario>)
+      - DeSoto_Powermaster (dor:DeSoto_Powermaster) --dop:assembly--> Windsor,_Ontario (<http://dbpedia.org/resource/Windsor,_Ontario>)
+      - DeSoto_Powermaster (dor:DeSoto_Powermaster) --dop:assembly--> Canada (dor:Canada)
+      - Impact_One_Night_Only_(2018) (<http://dbpedia.org/resource/Impact_One_Night_Only_(2018)>) --doo:location--> Windsor,_Ontario (<http://dbpedia.org/resource/Windsor,_Ontario>)
+      - DeSoto_Powermaster (dor:DeSoto_Powermaster) --doo:manufacturer--> DeSoto_(automobile) (<http://dbpedia.org/resource/DeSoto_(automobile)>)
+      - Impact_One_Night_Only_(2018) (<http://dbpedia.org/resource/Impact_One_Night_Only_(2018)>) --doo:location--> Shawnee,_Oklahoma (<http://dbpedia.org/resource/Shawnee,_Oklahoma>)
+  '6':
+    attributes:
+      Lockdown_(2020): (caption^='Promotional poster featuring several Impact Wrestling wrestlers')
+      Windsor,_Ontario: (area total (m2)^='146320000.0')
+      DeSoto_Powermaster: (caption^='1953')
+      DeSoto_(automobile): (Wikipage page ID^='2718932')
+    relationships:
+      - Lockdown_(2020) (<http://dbpedia.org/resource/Lockdown_(2020)>) --dop:city--> Windsor,_Ontario (<http://dbpedia.org/resource/Windsor,_Ontario>)
+      - DeSoto_Powermaster (dor:DeSoto_Powermaster) --dop:assembly--> Windsor,_Ontario (<http://dbpedia.org/resource/Windsor,_Ontario>)
+      - DeSoto_Powermaster (dor:DeSoto_Powermaster) --dop:assembly--> Canada (dor:Canada)
+      - Lockdown_(2020) (<http://dbpedia.org/resource/Lockdown_(2020)>) --doo:location--> Windsor,_Ontario (<http://dbpedia.org/resource/Windsor,_Ontario>)
+      - DeSoto_Powermaster (dor:DeSoto_Powermaster) --doo:manufacturer--> DeSoto_(automobile) (<http://dbpedia.org/resource/DeSoto_(automobile)>)
+      - Lockdown_(2020) (<http://dbpedia.org/resource/Lockdown_(2020)>) --doo:location--> Canada (dor:Canada)
+  '7':
+    attributes:
+      Dodge_Super_Bee: (caption^='1969')
+      Chrysler_Corporation: (Wikipage page ID^='5103417')
+      San_Jose,_California: (elevation (μ)^='25.0')
+    relationships:
+      - NJPW_Showdown (dor:NJPW_Showdown) --dop:city--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Dodge_Super_Bee (dor:Dodge_Super_Bee) --dop:assembly--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Dodge_Super_Bee (dor:Dodge_Super_Bee) --dop:assembly--> Mexico (dor:Mexico)
+      - NJPW_Showdown (dor:NJPW_Showdown) --doo:location--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Dodge_Super_Bee (dor:Dodge_Super_Bee) --doo:manufacturer--> Chrysler_Corporation (dor:Chrysler_Corporation)
+      - NJPW_Showdown (dor:NJPW_Showdown) --doo:location--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+  '8':
+    attributes:
+      Chrysler_LLC: (Wikipage page ID^='12613749')
+      Dodge_Super_Bee: (caption^='1969')
+      San_Jose,_California: (elevation (μ)^='25.0')
+    relationships:
+      - NJPW_Showdown (dor:NJPW_Showdown) --dop:city--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Dodge_Super_Bee (dor:Dodge_Super_Bee) --dop:assembly--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Dodge_Super_Bee (dor:Dodge_Super_Bee) --dop:assembly--> Mexico (dor:Mexico)
+      - NJPW_Showdown (dor:NJPW_Showdown) --doo:location--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Dodge_Super_Bee (dor:Dodge_Super_Bee) --doo:manufacturer--> Chrysler_LLC (dor:Chrysler_LLC)
+      - NJPW_Showdown (dor:NJPW_Showdown) --doo:location--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+  '9':
+    attributes:
+      DaimlerChrysler: (Wikipage page ID^='13580283')
+      Dodge_Super_Bee: (caption^='1969')
+      San_Jose,_California: (elevation (μ)^='25.0')
+    relationships:
+      - NJPW_Showdown (dor:NJPW_Showdown) --dop:city--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Dodge_Super_Bee (dor:Dodge_Super_Bee) --dop:assembly--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Dodge_Super_Bee (dor:Dodge_Super_Bee) --dop:assembly--> Mexico (dor:Mexico)
+      - NJPW_Showdown (dor:NJPW_Showdown) --doo:location--> Los_Angeles,_California (<http://dbpedia.org/resource/Los_Angeles,_California>)
+      - Dodge_Super_Bee (dor:Dodge_Super_Bee) --doo:manufacturer--> DaimlerChrysler (dor:DaimlerChrysler)
+      - NJPW_Showdown (dor:NJPW_Showdown) --doo:location--> San_Jose,_California (<http://dbpedia.org/resource/San_Jose,_California>)
+  '10':
+    attributes:
+      Okayama: (area total (m2)^='789920000.0')
+      Mitsubishi_Motors: (Wikipage page ID^='203872')
+      Destruction_in_Okayama_(2014): (caption^='Promotional poster for the event, featuring various NJPW wrestlers')
+    relationships:
+      - Destruction_in_Okayama_(2014) (<http://dbpedia.org/resource/Destruction_in_Okayama_(2014)>) --dop:city--> Okayama (dor:Okayama)
+      - Eagle_Summit (dor:Eagle_Summit) --dop:assembly--> Okayama (dor:Okayama)
+      - Eagle_Summit (dor:Eagle_Summit) --dop:assembly--> Japan (dor:Japan)
+      - Destruction_in_Okayama_(2014) (<http://dbpedia.org/resource/Destruction_in_Okayama_(2014)>) --doo:location--> Okayama (dor:Okayama)
+      - Eagle_Summit (dor:Eagle_Summit) --doo:manufacturer--> Mitsubishi_Motors (dor:Mitsubishi_Motors)
+      - Destruction_in_Okayama_(2014) (<http://dbpedia.org/resource/Destruction_in_Okayama_(2014)>) --doo:location--> Japan (dor:Japan)
+attributes:
+  city: --Apr low F^ (dop:aprLowF)--> double | --area total (m2)^ (doo:areaTotal)--> double
+  company: --Wikipage page ID^ (doo:wikiPageID)--> int
+  country: --Aug low C^ (dop:augLowC)--> double
+  Location: --Aug low C^ (dop:augLowC)--> double | --Apr sun^ (dop:aprSun)--> double | --Center^ (dop:center)--> langString | --elevation (μ)^ (doo:elevation)--> double | --line^ (dop:line)--> langString | --bot^ (dop:bot)--> langString | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int
+  automobile: --caption^ (dop:caption)--> langString
+  wrestling event: --caption^ (dop:caption)--> langString
+subgraph_id: 941
+relationships:
+  - wrestling event --dop:city--> city
+  - automobile --dop:assembly--> city
+  - automobile --dop:assembly--> country
+  - wrestling event --doo:location--> city
+  - automobile --doo:manufacturer--> company
+  - wrestling event --doo:location--> Location

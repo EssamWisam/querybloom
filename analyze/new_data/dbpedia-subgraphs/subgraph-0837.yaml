@@ -1,0 +1,88 @@
+types:
+  venue: doo:Venue
+  architect: doo:Architect
+  college coach: doo:CollegeCoach
+  radio station: doo:RadioStation
+  american football Team: doo:AmericanFootballTeam
+  american football player: doo:AmericanFootballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      WBEV-FM: (class^='A', affiliations='Green Bay Packers football', airdate^='1967')
+      Abe_Stuber: (death date^='1989-11-20')
+      Milwaukee_County_Stadium: (cost ($)^='5900000.0', owner^='http://dbpedia.org/resource/Milwaukee_County,_Wisconsin')
+    relationships:
+      - Milwaukee_County_Stadium (dor:Milwaukee_County_Stadium) --doo:tenant--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - A._Al_Moore__Al_Moore__1 (dor:A._Al_Moore__Al_Moore__1) --doo:formerTeam--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - WBEV-FM (dor:WBEV-FM) --doo:broadcastNetwork--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - Abe_Stuber (dor:Abe_Stuber) --dop:coachTeam--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - Milwaukee_County_Stadium (dor:Milwaukee_County_Stadium) --dop:architect--> Osborn_Engineering (dor:Osborn_Engineering)
+  '2':
+    attributes:
+      WDUZ: '(class^=''WDUZ-FM: C3'', affiliations=''http://dbpedia.org/resource/CBS_Sports_Radio'', airdate^=''WDUZ-FM:'')'
+      Abe_Stuber: (death date^='1989-11-20')
+      Milwaukee_County_Stadium: (cost ($)^='5900000.0', owner^='http://dbpedia.org/resource/Milwaukee_County,_Wisconsin')
+    relationships:
+      - Milwaukee_County_Stadium (dor:Milwaukee_County_Stadium) --doo:tenant--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - A._Al_Moore__Al_Moore__1 (dor:A._Al_Moore__Al_Moore__1) --doo:formerTeam--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - WDUZ (dor:WDUZ) --doo:broadcastNetwork--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - Abe_Stuber (dor:Abe_Stuber) --dop:coachTeam--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - Milwaukee_County_Stadium (dor:Milwaukee_County_Stadium) --dop:architect--> Osborn_Engineering (dor:Osborn_Engineering)
+  '3':
+    attributes:
+      WKTY: (class^='B', affiliations='http://dbpedia.org/resource/CBS_Sports_Radio', airdate^='1948-05-27')
+      Abe_Stuber: (death date^='1989-11-20')
+      Milwaukee_County_Stadium: (cost ($)^='5900000.0', owner^='http://dbpedia.org/resource/Milwaukee_County,_Wisconsin')
+    relationships:
+      - Milwaukee_County_Stadium (dor:Milwaukee_County_Stadium) --doo:tenant--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - A._Al_Moore__Al_Moore__1 (dor:A._Al_Moore__Al_Moore__1) --doo:formerTeam--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - WKTY (dor:WKTY) --doo:broadcastNetwork--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - Abe_Stuber (dor:Abe_Stuber) --dop:coachTeam--> Green_Bay_Packers (dor:Green_Bay_Packers)
+      - Milwaukee_County_Stadium (dor:Milwaukee_County_Stadium) --dop:architect--> Osborn_Engineering (dor:Osborn_Engineering)
+  '4':
+    attributes:
+      Empower_Field_at_Mile_High: (cost ($)^='4.009E8', owner^='Metropolitan Football Stadium District')
+    relationships:
+      - Empower_Field_at_Mile_High (dor:Empower_Field_at_Mile_High) --doo:tenant--> Denver_Broncos (dor:Denver_Broncos)
+      - A._D._Whitfield (dor:A._D._Whitfield) --doo:formerTeam--> Denver_Broncos (dor:Denver_Broncos)
+      - CFAC (dor:CFAC) --doo:broadcastNetwork--> Denver_Broncos (dor:Denver_Broncos)
+      - Bishop_Harris (dor:Bishop_Harris) --dop:coachTeam--> Denver_Broncos (dor:Denver_Broncos)
+      - Empower_Field_at_Mile_High (dor:Empower_Field_at_Mile_High) --dop:architect--> Fentress_Architects (dor:Fentress_Architects)
+  '5':
+    attributes:
+      KRFX: (class^='0.0', affiliations='http://dbpedia.org/resource/Denver_Broncos', airdate^='1961-06-01')
+      Empower_Field_at_Mile_High: (cost ($)^='4.009E8', owner^='Metropolitan Football Stadium District')
+    relationships:
+      - Empower_Field_at_Mile_High (dor:Empower_Field_at_Mile_High) --doo:tenant--> Denver_Broncos (dor:Denver_Broncos)
+      - A._D._Whitfield (dor:A._D._Whitfield) --doo:formerTeam--> Denver_Broncos (dor:Denver_Broncos)
+      - KRFX (dor:KRFX) --doo:broadcastNetwork--> Denver_Broncos (dor:Denver_Broncos)
+      - Bishop_Harris (dor:Bishop_Harris) --dop:coachTeam--> Denver_Broncos (dor:Denver_Broncos)
+      - Empower_Field_at_Mile_High (dor:Empower_Field_at_Mile_High) --dop:architect--> Fentress_Architects (dor:Fentress_Architects)
+  '6':
+    attributes:
+      KRSJ: (class^='1.0', affiliations='http://dbpedia.org/resource/Colorado_Avalanche')
+      Empower_Field_at_Mile_High: (cost ($)^='4.009E8', owner^='Metropolitan Football Stadium District')
+    relationships:
+      - Empower_Field_at_Mile_High (dor:Empower_Field_at_Mile_High) --doo:tenant--> Denver_Broncos (dor:Denver_Broncos)
+      - A._D._Whitfield (dor:A._D._Whitfield) --doo:formerTeam--> Denver_Broncos (dor:Denver_Broncos)
+      - KRSJ (dor:KRSJ) --doo:broadcastNetwork--> Denver_Broncos (dor:Denver_Broncos)
+      - Bishop_Harris (dor:Bishop_Harris) --dop:coachTeam--> Denver_Broncos (dor:Denver_Broncos)
+      - Empower_Field_at_Mile_High (dor:Empower_Field_at_Mile_High) --dop:architect--> Fentress_Architects (dor:Fentress_Architects)
+attributes:
+  venue: --cost ($)^ (doo:cost)--> poundSterling | --owner^ (dop:owner)--> langString
+  architect: --death date^ (doo:deathDate)--> date
+  college coach: --death date^ (dop:deathDate)--> date
+  radio station: --class^ (dop:class)--> nicaraguanCÃ³rdoba | --affiliations (dop:affiliations)--> Resource | --airdate^ (dop:airdate)--> date
+  american football player: --current team^ (dop:currentTeam)--> langString | --align^ (dop:align)--> langString | --caption^ (dop:caption)--> langString
+subgraph_id: 837
+relationships:
+  - venue --doo:tenant--> american football Team
+  - american football player --doo:formerTeam--> american football Team
+  - radio station --doo:broadcastNetwork--> american football Team
+  - college coach --dop:coachTeam--> american football Team
+  - venue --dop:architect--> architect

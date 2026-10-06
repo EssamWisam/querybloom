@@ -1,0 +1,82 @@
+types:
+  movie: doo:Film
+  person: doo:Person
+  writer: doo:Writer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Michel_Vinaver: (birth date^='1927-01-13', death date^='2022-05-01')
+    relationships:
+      - Michel_Vinaver (dor:Michel_Vinaver) --doo:child--> Anouk_Grinberg (dor:Anouk_Grinberg)
+      - 1,_2,_3,_Sun (<http://dbpedia.org/resource/1,_2,_3,_Sun>) --doo:starring--> Anouk_Grinberg (dor:Anouk_Grinberg)
+  '2':
+    attributes:
+      Harivansh_Rai_Bachchan: (birth date^='1907-11-27', death date^='2003-01-18')
+    relationships:
+      - Harivansh_Rai_Bachchan (dor:Harivansh_Rai_Bachchan) --doo:child--> Amitabh_Bachchan (dor:Amitabh_Bachchan)
+      - 102_Not_Out (dor:102_Not_Out) --doo:starring--> Amitabh_Bachchan (dor:Amitabh_Bachchan)
+  '3':
+    attributes:
+      Cesar_Romero: (width^='150', death date^='1994-01-01')
+      José_Martí: (birth date^='1853-01-28', death date^='1895-05-19')
+    relationships:
+      - José_Martí (<http://dbpedia.org/resource/José_Martí>) --doo:child--> Cesar_Romero (dor:Cesar_Romero)
+      - 15_Maiden_Lane (dor:15_Maiden_Lane) --doo:starring--> Cesar_Romero (dor:Cesar_Romero)
+  '4':
+    attributes:
+      Konkona_Sen_Sharma: (width^='250')
+    relationships:
+      - Mukul_Sharma_(writer) (<http://dbpedia.org/resource/Mukul_Sharma_(writer)>) --doo:child--> Konkona_Sen_Sharma (dor:Konkona_Sen_Sharma)
+      - 15_Park_Avenue (dor:15_Park_Avenue) --doo:starring--> Konkona_Sen_Sharma (dor:Konkona_Sen_Sharma)
+  '5':
+    attributes:
+      Nicolas_Cage: (width^='22.0')
+      August_Coppola: (birth date^='1934-02-16', death date^='2009-10-27')
+    relationships:
+      - August_Coppola (dor:August_Coppola) --doo:child--> Nicolas_Cage (dor:Nicolas_Cage)
+      - 211_(film) (<http://dbpedia.org/resource/211_(film)>) --doo:starring--> Nicolas_Cage (dor:Nicolas_Cage)
+  '6':
+    attributes:
+      Shanta_Gokhale: (birth date^='1939-08-14')
+    relationships:
+      - Shanta_Gokhale (dor:Shanta_Gokhale) --doo:child--> Renuka_Shahane (dor:Renuka_Shahane)
+      - 3_Storeys (dor:3_Storeys) --doo:starring--> Renuka_Shahane (dor:Renuka_Shahane)
+  '7':
+    attributes:
+      Nicolas_Cage: (width^='22.0')
+      August_Coppola: (birth date^='1934-02-16', death date^='2009-10-27')
+    relationships:
+      - August_Coppola (dor:August_Coppola) --doo:child--> Nicolas_Cage (dor:Nicolas_Cage)
+      - 8mm_(film) (<http://dbpedia.org/resource/8mm_(film)>) --doo:starring--> Nicolas_Cage (dor:Nicolas_Cage)
+  '8':
+    attributes:
+      Sharman_Macdonald: (birth date^='1951-02-08')
+    relationships:
+      - Sharman_Macdonald (dor:Sharman_Macdonald) --doo:child--> Keira_Knightley (dor:Keira_Knightley)
+      - A_Dangerous_Method (dor:A_Dangerous_Method) --doo:starring--> Keira_Knightley (dor:Keira_Knightley)
+  '9':
+    attributes:
+      Chips_Hardy: (birth date^='1950-01-23')
+    relationships:
+      - Chips_Hardy (dor:Chips_Hardy) --doo:child--> Tom_Hardy (dor:Tom_Hardy)
+      - A_for_Andromeda_(2006_film) (<http://dbpedia.org/resource/A_for_Andromeda_(2006_film)>) --doo:starring--> Tom_Hardy (dor:Tom_Hardy)
+  '10':
+    attributes:
+      John_Mortimer: (birth date^='1923-04-21', death date^='2009-01-16')
+      Emily_Mortimer: (IMDB id^='0607865')
+    relationships:
+      - John_Mortimer (dor:John_Mortimer) --doo:child--> Emily_Mortimer (dor:Emily_Mortimer)
+      - A_Foreign_Affair_(2003_film) (<http://dbpedia.org/resource/A_Foreign_Affair_(2003_film)>) --doo:starring--> Emily_Mortimer (dor:Emily_Mortimer)
+attributes:
+  movie: --number of episodes^ (doo:numberOfEpisodes)--> int | --footer^ (dop:footer)--> langString
+  person: --width^ (dop:width)--> perCent | --IMDB id^ (doo:imdbId)--> string | --before^ (dop:before)--> langString | --death date^ (dop:deathDate)--> int | --1p^ (dop:1p)--> int | --class^ (dop:class)--> langString
+  writer: --1a^ (dop:1a)--> langString | --birth date^ (dop:birthDate)--> date | --death date^ (doo:deathDate)--> date | --parents^ (dop:parents)--> langString
+subgraph_id: 101
+relationships:
+  - writer --doo:child--> person
+  - movie --doo:starring--> person

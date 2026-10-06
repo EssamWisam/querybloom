@@ -1,0 +1,97 @@
+types:
+  town: doo:Town
+  company: doo:Company
+  building: doo:Building
+  newspaper: doo:Newspaper
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Gensler: (service^='http://dbpedia.org/resource/Architecture')
+      São_Paulo: '(has abstract^=''( 다른 뜻에 대해서는 상파울루 (동음이의) 문서를 참고하십시오.) 상파울루(브라질 포르투갈어: São Paulo)는 브라질 남부 상파울루주의 주도이다. 브라질에서 가장 인구가 많은 도시이다. 면적은 1,523.0 km2, 인구는 1,233만명(2020년)이다. 브라질 최대의 도시이며, 브라질 뿐 아니라 남아메리카와 남반구 전체에서 가장 큰 세계적인 도시이...'')'
+    relationships:
+      - Agência_Pública (<http://dbpedia.org/resource/Agência_Pública>) --doo:headquarter--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - Arena_Corinthians (dor:Arena_Corinthians) --doo:location--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - Arena_Corinthians (dor:Arena_Corinthians) --doo:architect--> Gensler (dor:Gensler)
+  '2':
+    attributes:
+      Gensler: (service^='http://dbpedia.org/resource/Architecture')
+      São_Paulo: '(has abstract^=''( 다른 뜻에 대해서는 상파울루 (동음이의) 문서를 참고하십시오.) 상파울루(브라질 포르투갈어: São Paulo)는 브라질 남부 상파울루주의 주도이다. 브라질에서 가장 인구가 많은 도시이다. 면적은 1,523.0 km2, 인구는 1,233만명(2020년)이다. 브라질 최대의 도시이며, 브라질 뿐 아니라 남아메리카와 남반구 전체에서 가장 큰 세계적인 도시이...'')'
+    relationships:
+      - Billboard_Brasil (dor:Billboard_Brasil) --doo:headquarter--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - Arena_Corinthians (dor:Arena_Corinthians) --doo:location--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - Arena_Corinthians (dor:Arena_Corinthians) --doo:architect--> Gensler (dor:Gensler)
+  '3':
+    attributes:
+      Gensler: (service^='http://dbpedia.org/resource/Architecture')
+      São_Paulo: '(has abstract^=''( 다른 뜻에 대해서는 상파울루 (동음이의) 문서를 참고하십시오.) 상파울루(브라질 포르투갈어: São Paulo)는 브라질 남부 상파울루주의 주도이다. 브라질에서 가장 인구가 많은 도시이다. 면적은 1,523.0 km2, 인구는 1,233만명(2020년)이다. 브라질 최대의 도시이며, 브라질 뿐 아니라 남아메리카와 남반구 전체에서 가장 큰 세계적인 도시이...'')'
+    relationships:
+      - Brasil_de_Fato (dor:Brasil_de_Fato) --doo:headquarter--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - Arena_Corinthians (dor:Arena_Corinthians) --doo:location--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - Arena_Corinthians (dor:Arena_Corinthians) --doo:architect--> Gensler (dor:Gensler)
+  '4':
+    attributes:
+      Shanghai: (has abstract^=' (info) (上海市; Shànghǎishì) är en megastad i Folkrepubliken Kina, belägen vid Yangtzes delta mot Östkinesiska havet. Shanghai är ett av de fyra storstadsområdena i Kina som är ställda direkt under land...')
+    relationships:
+      - Israel's_Messenger (<http://dbpedia.org/resource/Israel's_Messenger>) --doo:headquarter--> Shanghai (dor:Shanghai)
+      - Aurora_Plaza (dor:Aurora_Plaza) --doo:location--> Shanghai (dor:Shanghai)
+      - Aurora_Plaza (dor:Aurora_Plaza) --doo:architect--> Nikken_Sekkei (dor:Nikken_Sekkei)
+  '5':
+    attributes:
+      Shanghai: (has abstract^=' (info) (上海市; Shànghǎishì) är en megastad i Folkrepubliken Kina, belägen vid Yangtzes delta mot Östkinesiska havet. Shanghai är ett av de fyra storstadsområdena i Kina som är ställda direkt under land...')
+    relationships:
+      - Jiefang_Daily (dor:Jiefang_Daily) --doo:headquarter--> Shanghai (dor:Shanghai)
+      - Aurora_Plaza (dor:Aurora_Plaza) --doo:location--> Shanghai (dor:Shanghai)
+      - Aurora_Plaza (dor:Aurora_Plaza) --doo:architect--> Nikken_Sekkei (dor:Nikken_Sekkei)
+  '6':
+    attributes:
+      Shanghai: (has abstract^=' (info) (上海市; Shànghǎishì) är en megastad i Folkrepubliken Kina, belägen vid Yangtzes delta mot Östkinesiska havet. Shanghai är ett av de fyra storstadsområdena i Kina som är ställda direkt under land...')
+    relationships:
+      - Nash_Put'_(newspaper) (<http://dbpedia.org/resource/Nash_Put'_(newspaper)>) --doo:headquarter--> Shanghai (dor:Shanghai)
+      - Aurora_Plaza (dor:Aurora_Plaza) --doo:location--> Shanghai (dor:Shanghai)
+      - Aurora_Plaza (dor:Aurora_Plaza) --doo:architect--> Nikken_Sekkei (dor:Nikken_Sekkei)
+  '7':
+    attributes:
+      Stockholm: '(has abstract^=''( 다른 뜻에 대해서는 스톡홀름 (동음이의) 문서를 참고하십시오.) 스톡홀름(스웨덴어: Stockholm [stɔkːhɔlm])은 스웨덴의 수도이자 스칸디나비아반도 최대 도시이다. 많은 섬을 끼고 있어 "북방의 베네치아"라고도 불린다. 회토리예트(Hötorget)에 위치한 콘서트홀(Konserthuset)에서는 매년 노벨상 시상식이 열리며, 1912년에는 ...'')'
+      Ricardo_Bofill_Taller_de_Arquitectura: (founder^='http://dbpedia.org/resource/Ricardo_Bofill')
+    relationships:
+      - Aftonbladet (dor:Aftonbladet) --doo:headquarter--> Stockholm (dor:Stockholm)
+      - Bofills_båge (<http://dbpedia.org/resource/Bofills_båge>) --doo:location--> Stockholm (dor:Stockholm)
+      - Bofills_båge (<http://dbpedia.org/resource/Bofills_båge>) --doo:architect--> Ricardo_Bofill_Taller_de_Arquitectura (dor:Ricardo_Bofill_Taller_de_Arquitectura)
+  '8':
+    attributes:
+      Stockholm: '(has abstract^=''( 다른 뜻에 대해서는 스톡홀름 (동음이의) 문서를 참고하십시오.) 스톡홀름(스웨덴어: Stockholm [stɔkːhɔlm])은 스웨덴의 수도이자 스칸디나비아반도 최대 도시이다. 많은 섬을 끼고 있어 "북방의 베네치아"라고도 불린다. 회토리예트(Hötorget)에 위치한 콘서트홀(Konserthuset)에서는 매년 노벨상 시상식이 열리며, 1912년에는 ...'')'
+      Ricardo_Bofill_Taller_de_Arquitectura: (founder^='http://dbpedia.org/resource/Ricardo_Bofill')
+    relationships:
+      - Dagen_(1896-1920) (<http://dbpedia.org/resource/Dagen_(1896-1920)>) --doo:headquarter--> Stockholm (dor:Stockholm)
+      - Bofills_båge (<http://dbpedia.org/resource/Bofills_båge>) --doo:location--> Stockholm (dor:Stockholm)
+      - Bofills_båge (<http://dbpedia.org/resource/Bofills_båge>) --doo:architect--> Ricardo_Bofill_Taller_de_Arquitectura (dor:Ricardo_Bofill_Taller_de_Arquitectura)
+  '9':
+    attributes:
+      Stockholm: '(has abstract^=''( 다른 뜻에 대해서는 스톡홀름 (동음이의) 문서를 참고하십시오.) 스톡홀름(스웨덴어: Stockholm [stɔkːhɔlm])은 스웨덴의 수도이자 스칸디나비아반도 최대 도시이다. 많은 섬을 끼고 있어 "북방의 베네치아"라고도 불린다. 회토리예트(Hötorget)에 위치한 콘서트홀(Konserthuset)에서는 매년 노벨상 시상식이 열리며, 1912년에는 ...'')'
+      Ricardo_Bofill_Taller_de_Arquitectura: (founder^='http://dbpedia.org/resource/Ricardo_Bofill')
+    relationships:
+      - Dagens_industri (dor:Dagens_industri) --doo:headquarter--> Stockholm (dor:Stockholm)
+      - Bofills_båge (<http://dbpedia.org/resource/Bofills_båge>) --doo:location--> Stockholm (dor:Stockholm)
+      - Bofills_båge (<http://dbpedia.org/resource/Bofills_båge>) --doo:architect--> Ricardo_Bofill_Taller_de_Arquitectura (dor:Ricardo_Bofill_Taller_de_Arquitectura)
+  '10':
+    attributes:
+      RMJM: (service^='http://dbpedia.org/resource/Architecture')
+      Tianjin: '(has abstract^=''( 비슷한 이름의 덴진 (후쿠오카시)에 관해서는 해당 문서를 참조하십시오.) 톈진(중국어: 天津, 병음: Tiānjīn) 또는 천진은 중화인민공화국 동부의 직할시이다. 하이허 강 하구, 보하이 만 연안에 자리 잡고 있다. 동쪽은 황해와 접해 있고, 서쪽, 남쪽, 북쪽은 허베이성과 접한다. 베이징과는 북서쪽으로 닿아 있다.'')'
+    relationships:
+      - Metro_Express_(Chinese_newspaper) (<http://dbpedia.org/resource/Metro_Express_(Chinese_newspaper)>) --doo:headquarter--> Tianjin (dor:Tianjin)
+      - Bohai_Bank_Tower (dor:Bohai_Bank_Tower) --doo:location--> Tianjin (dor:Tianjin)
+      - Bohai_Bank_Tower (dor:Bohai_Bank_Tower) --doo:architect--> RMJM (dor:RMJM)
+attributes:
+  town: --arc-gapA^ (dop:arcGapa)--> double | --has abstract^ (doo:abstract)--> langString | --reason^ (dop:reason)--> langString | --Apr record high F^ (dop:aprRecordHighF)--> int
+  company: --logo width^ (dop:logoWidth)--> int | --founder^ (dop:founder)--> langString | --owner^ (doo:owner)--> Resource | --service^ (doo:service)--> Resource
+  building: --alt^ (dop:alt)--> langString | --builder^ (dop:builder)--> Resource
+subgraph_id: 38
+relationships:
+  - newspaper --doo:headquarter--> town
+  - building --doo:location--> town
+  - building --doo:architect--> company

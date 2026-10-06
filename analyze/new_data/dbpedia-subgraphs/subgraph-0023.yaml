@@ -1,0 +1,88 @@
+types:
+  movie: doo:Film
+  country: doo:Country
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric', caption^='Racial and ethnic groups in the United States')
+      10.5:_Apocalypse: (producer^='Randi Richmond', release date^='2006-05-21')
+    relationships:
+      - 10.5:_Apocalypse (<http://dbpedia.org/resource/10.5:_Apocalypse>) --doo:previousWork--> 10.5_(miniseries) (<http://dbpedia.org/resource/10.5_(miniseries)>)
+      - 10.5_(miniseries) (<http://dbpedia.org/resource/10.5_(miniseries)>) --doo:country--> United_States (dor:United_States)
+  '2':
+    attributes:
+      Hong_Kong: (direction^='horizontal', Link from a Wikipage to an external page^='http://data.parliament.uk/writtenevidence/committeeevidence.svc/evidencedocument/foreign-affairs-committee/the-uks-relations-with-hong-kong-30-years-after-the-joint-declaration/written/14357.pdf')
+      Only_You_(2011_TV_series): (release date^='2011-02-21')
+    relationships:
+      - Only_You_(2011_TV_series) (<http://dbpedia.org/resource/Only_You_(2011_TV_series)>) --doo:previousWork--> 7_Days_in_Life (dor:7_Days_in_Life)
+      - 7_Days_in_Life (dor:7_Days_in_Life) --doo:country--> Hong_Kong (dor:Hong_Kong)
+  '3':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric', caption^='Racial and ethnic groups in the United States')
+      Francis_Albert_Sinatra_Does_His_Thing: (producer^='http://dbpedia.org/resource/Ernest_Chambers_(producer)', release date^='1968-11-25')
+    relationships:
+      - Francis_Albert_Sinatra_Does_His_Thing (dor:Francis_Albert_Sinatra_Does_His_Thing) --doo:previousWork--> A_Man_and_His_Music_+_Ella_+_Jobim (<http://dbpedia.org/resource/A_Man_and_His_Music_+_Ella_+_Jobim>)
+      - A_Man_and_His_Music_+_Ella_+_Jobim (<http://dbpedia.org/resource/A_Man_and_His_Music_+_Ella_+_Jobim>) --doo:country--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Son_of_Fred: (release date^='1956-09-17')
+      United_Kingdom: (direction^='vertical', Link from a Wikipage to an external page^='http://www.churchofscotland.org.uk/about_us/how_we_are_organised', caption^='--09-08')
+    relationships:
+      - Son_of_Fred (dor:Son_of_Fred) --doo:previousWork--> A_Show_Called_Fred (dor:A_Show_Called_Fred)
+      - A_Show_Called_Fred (dor:A_Show_Called_Fred) --doo:country--> United_Kingdom (dor:United_Kingdom)
+  '5':
+    attributes:
+      Singapore: (Link from a Wikipage to an external page^='http://app.www.sg/who/4/Our-History.aspx%7Caccess-date=11')
+      Yours_Fatefully: (producer^='Soh Bee Lian 苏美莲', opening theme^='http://dbpedia.org/resource/Olivia_Ong', release date^='2012-05-29')
+    relationships:
+      - Yours_Fatefully (dor:Yours_Fatefully) --doo:previousWork--> Absolutely_Charming (dor:Absolutely_Charming)
+      - Absolutely_Charming (dor:Absolutely_Charming) --doo:country--> Singapore (dor:Singapore)
+  '6':
+    attributes:
+      Colombia: (direction^='horizontal', Link from a Wikipage to an external page^='http://www.colombia.travel/', caption^='Amerindian population of Colombia by municipality in 2005.')
+      Graduados_(Colombian_TV_series): (release date^='2013-09-18')
+    relationships:
+      - Graduados_(Colombian_TV_series) (<http://dbpedia.org/resource/Graduados_(Colombian_TV_series)>) --doo:previousWork--> Allá_te_espero (<http://dbpedia.org/resource/Allá_te_espero>)
+      - Allá_te_espero (<http://dbpedia.org/resource/Allá_te_espero>) --doo:country--> Colombia (dor:Colombia)
+  '7':
+    attributes:
+      Brazil: (direction^='horizontal', Link from a Wikipage to an external page^='http://www.dezenovevinte.net/ensino_artistico/mecenato_dpedro.htm%7Cvolume=I%7Cissue=1%7Cdate=May', caption^='41.0')
+      Caminos_de_Guanajuato: (opening theme^='http://dbpedia.org/resource/Concha_Buika', release date^='2015-05-11')
+    relationships:
+      - Caminos_de_Guanajuato (dor:Caminos_de_Guanajuato) --doo:previousWork--> Amor_à_Vida (<http://dbpedia.org/resource/Amor_à_Vida>)
+      - Amor_à_Vida (<http://dbpedia.org/resource/Amor_à_Vida>) --doo:country--> Brazil (dor:Brazil)
+  '8':
+    attributes:
+      Brazil: (direction^='horizontal', Link from a Wikipage to an external page^='http://www.dezenovevinte.net/ensino_artistico/mecenato_dpedro.htm%7Cvolume=I%7Cissue=1%7Cdate=May', caption^='41.0')
+      Em_Família_(TV_series): (opening theme^='http://dbpedia.org/resource/Eu_Sei_Que_Vou_Te_Amar', release date^='2014-02-03')
+    relationships:
+      - Em_Família_(TV_series) (<http://dbpedia.org/resource/Em_Família_(TV_series)>) --doo:previousWork--> Amor_à_Vida (<http://dbpedia.org/resource/Amor_à_Vida>)
+      - Amor_à_Vida (<http://dbpedia.org/resource/Amor_à_Vida>) --doo:country--> Brazil (dor:Brazil)
+  '9':
+    attributes:
+      Brazil: (direction^='horizontal', Link from a Wikipage to an external page^='http://www.dezenovevinte.net/ensino_artistico/mecenato_dpedro.htm%7Cvolume=I%7Cissue=1%7Cdate=May', caption^='41.0')
+      Corações_Feridos: (release date^='2012-01-16')
+    relationships:
+      - Corações_Feridos (<http://dbpedia.org/resource/Corações_Feridos>) --doo:previousWork--> Amor_e_Revolução (<http://dbpedia.org/resource/Amor_e_Revolução>)
+      - Amor_e_Revolução (<http://dbpedia.org/resource/Amor_e_Revolução>) --doo:country--> Brazil (dor:Brazil)
+  '10':
+    attributes:
+      El_magnate: (opening theme^='http://dbpedia.org/resource/Luis_Miguel')
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric', caption^='Racial and ethnic groups in the United States')
+    relationships:
+      - El_magnate (dor:El_magnate) --doo:previousWork--> Angélica,_mi_vida (<http://dbpedia.org/resource/Angélica,_mi_vida>)
+      - Angélica,_mi_vida (<http://dbpedia.org/resource/Angélica,_mi_vida>) --doo:country--> United_States (dor:United_States)
+attributes:
+  movie: --award^ (dop:award)--> langString | --url^ (dop:url)--> Resource
+  country: --direction^ (dop:direction)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --caption^ (dop:caption)--> langString
+  television show: --producer^ (dop:producer)--> langString | --holder^ (dop:holder)--> langString | --opening theme^ (doo:openingTheme)--> Resource | --align^ (dop:align)--> langString | --artist^ (dop:artist)--> langString | --release date^ (doo:releaseDate)--> date | --person^ (doo:person)--> Resource
+subgraph_id: 23
+relationships:
+  - television show --doo:previousWork--> movie
+  - movie --doo:country--> country

@@ -1,0 +1,104 @@
+types:
+  company: doo:Company
+  country: doo:Country
+  radio station: doo:RadioStation
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abdullahi_Qarshe: (genre^='http://dbpedia.org/resource/Balwo', associated band^='http://dbpedia.org/resource/Waaberi')
+      Channel_Four_Television_Corporation: (industry^='http://dbpedia.org/resource/Mass_media')
+    relationships:
+      - Channel_Four_Television_Corporation (dor:Channel_Four_Television_Corporation) --dop:areaServed--> United_Kingdom (dor:United_Kingdom)
+      - 4Music (dor:4Music) --doo:owningCompany--> Channel_Four_Television_Corporation (dor:Channel_Four_Television_Corporation)
+      - Abdullahi_Qarshe (dor:Abdullahi_Qarshe) --doo:deathPlace--> United_Kingdom (dor:United_Kingdom)
+  '2':
+    attributes:
+      Abdullahi_Qarshe: (genre^='http://dbpedia.org/resource/Balwo', associated band^='http://dbpedia.org/resource/Waaberi')
+      Channel_Four_Television_Corporation: (industry^='http://dbpedia.org/resource/Mass_media')
+    relationships:
+      - Channel_Four_Television_Corporation (dor:Channel_Four_Television_Corporation) --dop:areaServed--> United_Kingdom (dor:United_Kingdom)
+      - 4seven (dor:4seven) --doo:owningCompany--> Channel_Four_Television_Corporation (dor:Channel_Four_Television_Corporation)
+      - Abdullahi_Qarshe (dor:Abdullahi_Qarshe) --doo:deathPlace--> United_Kingdom (dor:United_Kingdom)
+  '3':
+    attributes:
+      Abdullahi_Qarshe: (genre^='http://dbpedia.org/resource/Balwo', associated band^='http://dbpedia.org/resource/Waaberi')
+      Channel_Four_Television_Corporation: (industry^='http://dbpedia.org/resource/Mass_media')
+    relationships:
+      - Channel_Four_Television_Corporation (dor:Channel_Four_Television_Corporation) --dop:areaServed--> United_Kingdom (dor:United_Kingdom)
+      - Box_Hits (dor:Box_Hits) --doo:owningCompany--> Channel_Four_Television_Corporation (dor:Channel_Four_Television_Corporation)
+      - Abdullahi_Qarshe (dor:Abdullahi_Qarshe) --doo:deathPlace--> United_Kingdom (dor:United_Kingdom)
+  '4':
+    attributes:
+      Arthur_J._Lamb: (genre^='http://dbpedia.org/resource/Oldtime')
+      Cox_Communications: (products^='Cable television, broadband internet, VoIP, wireless, Home Security, Business services, [[#Cox High Speed Internet', product^='http://dbpedia.org/resource/Broadband_internet', industry^='http://dbpedia.org/resource/Telecommunications')
+    relationships:
+      - Cox_Communications (dor:Cox_Communications) --dop:areaServed--> Rhode_Island (dor:Rhode_Island)
+      - Hot_Choice (dor:Hot_Choice) --doo:owningCompany--> Cox_Communications (dor:Cox_Communications)
+      - Arthur_J._Lamb (dor:Arthur_J._Lamb) --doo:deathPlace--> Rhode_Island (dor:Rhode_Island)
+  '5':
+    attributes:
+      Arthur_J._Lamb: (genre^='http://dbpedia.org/resource/Oldtime')
+      Cox_Communications: (products^='Cable television, broadband internet, VoIP, wireless, Home Security, Business services, [[#Cox High Speed Internet', product^='http://dbpedia.org/resource/Broadband_internet', industry^='http://dbpedia.org/resource/Telecommunications')
+    relationships:
+      - Cox_Communications (dor:Cox_Communications) --dop:areaServed--> Rhode_Island (dor:Rhode_Island)
+      - In_Demand (dor:In_Demand) --doo:owningCompany--> Cox_Communications (dor:Cox_Communications)
+      - Arthur_J._Lamb (dor:Arthur_J._Lamb) --doo:deathPlace--> Rhode_Island (dor:Rhode_Island)
+  '6':
+    attributes:
+      Eddie_Zack: (genre^='http://dbpedia.org/resource/Country_music')
+      Cox_Communications: (products^='Cable television, broadband internet, VoIP, wireless, Home Security, Business services, [[#Cox High Speed Internet', product^='http://dbpedia.org/resource/Broadband_internet', industry^='http://dbpedia.org/resource/Telecommunications')
+    relationships:
+      - Cox_Communications (dor:Cox_Communications) --dop:areaServed--> Rhode_Island (dor:Rhode_Island)
+      - Hot_Choice (dor:Hot_Choice) --doo:owningCompany--> Cox_Communications (dor:Cox_Communications)
+      - Eddie_Zack (dor:Eddie_Zack) --doo:deathPlace--> Rhode_Island (dor:Rhode_Island)
+  '7':
+    attributes:
+      Dreamia: (products^='Television channels', product^='http://dbpedia.org/resource/Television_channel', industry^='http://dbpedia.org/resource/Television')
+      Portugal: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Portugal')
+      António_Variações: (genre^='http://dbpedia.org/resource/Folk_music')
+    relationships:
+      - Dreamia (dor:Dreamia) --dop:areaServed--> Portugal (dor:Portugal)
+      - MOV_(TV_channel) (<http://dbpedia.org/resource/MOV_(TV_channel)>) --doo:owningCompany--> Dreamia (dor:Dreamia)
+      - António_Variações (<http://dbpedia.org/resource/António_Variações>) --doo:deathPlace--> Portugal (dor:Portugal)
+  '8':
+    attributes:
+      Dreamia: (products^='Television channels', product^='http://dbpedia.org/resource/Television_channel', industry^='http://dbpedia.org/resource/Television')
+      Portugal: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Portugal')
+      Bana_(singer): (genre^='http://dbpedia.org/resource/Coladeira')
+    relationships:
+      - Dreamia (dor:Dreamia) --dop:areaServed--> Portugal (dor:Portugal)
+      - MOV_(TV_channel) (<http://dbpedia.org/resource/MOV_(TV_channel)>) --doo:owningCompany--> Dreamia (dor:Dreamia)
+      - Bana_(singer) (<http://dbpedia.org/resource/Bana_(singer)>) --doo:deathPlace--> Portugal (dor:Portugal)
+  '9':
+    attributes:
+      Dreamia: (products^='Television channels', product^='http://dbpedia.org/resource/Television_channel', industry^='http://dbpedia.org/resource/Television')
+      Portugal: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Portugal')
+      Carlos_Paredes: (genre^='http://dbpedia.org/resource/Classical_music')
+    relationships:
+      - Dreamia (dor:Dreamia) --dop:areaServed--> Portugal (dor:Portugal)
+      - MOV_(TV_channel) (<http://dbpedia.org/resource/MOV_(TV_channel)>) --doo:owningCompany--> Dreamia (dor:Dreamia)
+      - Carlos_Paredes (dor:Carlos_Paredes) --doo:deathPlace--> Portugal (dor:Portugal)
+  '10':
+    attributes:
+      Sri_Lanka: (religion^='http://dbpedia.org/resource/Buddhism_in_Sri_Lanka')
+      M._K._Rocksamy: (birthYear='1932')
+      Independent_Television_Network: (products^='Broadcasting Network', industry^='Television')
+    relationships:
+      - Independent_Television_Network (dor:Independent_Television_Network) --dop:areaServed--> Sri_Lanka (dor:Sri_Lanka)
+      - Vasantham_TV (dor:Vasantham_TV) --doo:owningCompany--> Independent_Television_Network (dor:Independent_Television_Network)
+      - M._K._Rocksamy (dor:M._K._Rocksamy) --doo:deathPlace--> Sri_Lanka (dor:Sri_Lanka)
+attributes:
+  company: --original name^ (doo:originalName)--> langString | --products^ (dop:products)--> langString | --url^ (dop:url)--> Resource | --product^ (doo:product)--> Resource | --industry^ (dop:industry)--> Resource
+  country: --religion^ (doo:religion)--> Resource | --Aug low C^ (dop:augLowC)--> double
+  musical artist: --genre^ (doo:genre)--> Resource | --birthYear (doo:birthYear)--> gYear | --associated band^ (doo:associatedBand)--> Resource | --2a^ (dop:2a)--> langString
+subgraph_id: 662
+relationships:
+  - company --dop:areaServed--> country
+  - radio station --doo:owningCompany--> company
+  - musical artist --doo:deathPlace--> country

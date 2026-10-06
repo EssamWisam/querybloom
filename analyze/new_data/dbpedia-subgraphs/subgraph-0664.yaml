@@ -1,0 +1,108 @@
+types:
+  company: doo:Company
+  Location: doo:Location
+  law firm: doo:LawFirm
+  radio station: doo:RadioStation
+  fictional character: doo:FictionalCharacter
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      WWPR-FM: (airdate^='1953-12-14')
+      Premiere_Networks: (Link from a Wikipage to an external page^='http://engineering.premiereradio.com')
+    relationships:
+      - Adam_Ross_(CSI:_NY) (<http://dbpedia.org/resource/Adam_Ross_(CSI:_NY)>) --dop:data--> New_York_City (dor:New_York_City)
+      - WWPR-FM (dor:WWPR-FM) --doo:city--> New_York_City (dor:New_York_City)
+      - WWPR-FM (dor:WWPR-FM) --doo:broadcastNetwork--> Premiere_Networks (dor:Premiere_Networks)
+      - Bernstein_Litowitz_Berger_&_Grossmann (<http://dbpedia.org/resource/Bernstein_Litowitz_Berger_&_Grossmann>) --doo:headquarter--> New_York_City (dor:New_York_City)
+  '2':
+    attributes:
+      WWPR-FM: (airdate^='1953-12-14')
+      Premiere_Networks: (Link from a Wikipage to an external page^='http://engineering.premiereradio.com')
+    relationships:
+      - Adam_Ross_(CSI:_NY) (<http://dbpedia.org/resource/Adam_Ross_(CSI:_NY)>) --dop:data--> New_York_City (dor:New_York_City)
+      - WWPR-FM (dor:WWPR-FM) --doo:city--> New_York_City (dor:New_York_City)
+      - WWPR-FM (dor:WWPR-FM) --doo:broadcastNetwork--> Premiere_Networks (dor:Premiere_Networks)
+      - Boies_Schiller_Flexner_LLP (dor:Boies_Schiller_Flexner_LLP) --doo:headquarter--> New_York_City (dor:New_York_City)
+  '3':
+    attributes:
+      WWPR-FM: (airdate^='1953-12-14')
+      Premiere_Networks: (Link from a Wikipage to an external page^='http://engineering.premiereradio.com')
+    relationships:
+      - Adam_Ross_(CSI:_NY) (<http://dbpedia.org/resource/Adam_Ross_(CSI:_NY)>) --dop:data--> New_York_City (dor:New_York_City)
+      - WWPR-FM (dor:WWPR-FM) --doo:city--> New_York_City (dor:New_York_City)
+      - WWPR-FM (dor:WWPR-FM) --doo:broadcastNetwork--> Premiere_Networks (dor:Premiere_Networks)
+      - Cadwalader,_Wickersham_&_Taft (<http://dbpedia.org/resource/Cadwalader,_Wickersham_&_Taft>) --doo:headquarter--> New_York_City (dor:New_York_City)
+  '4':
+    attributes:
+      BBC: (Link from a Wikipage to an external page^='http://pid.emory.edu/ark:/25593/8xzxr')
+      KCRW: (airdate^='1947')
+    relationships:
+      - Alex_Kelly_(The_O.C.) (<http://dbpedia.org/resource/Alex_Kelly_(The_O.C.)>) --dop:data--> California (dor:California)
+      - KCRW (dor:KCRW) --doo:city--> California (dor:California)
+      - KCRW (dor:KCRW) --doo:broadcastNetwork--> BBC (dor:BBC)
+      - Allen_Matkins (dor:Allen_Matkins) --doo:headquarter--> California (dor:California)
+  '5':
+    attributes:
+      KCRW: (airdate^='1947')
+      Public_Radio_International: (Link from a Wikipage to an external page^='https://www.pri.org')
+    relationships:
+      - Alex_Kelly_(The_O.C.) (<http://dbpedia.org/resource/Alex_Kelly_(The_O.C.)>) --dop:data--> California (dor:California)
+      - KCRW (dor:KCRW) --doo:city--> California (dor:California)
+      - KCRW (dor:KCRW) --doo:broadcastNetwork--> Public_Radio_International (dor:Public_Radio_International)
+      - Allen_Matkins (dor:Allen_Matkins) --doo:headquarter--> California (dor:California)
+  '6':
+    attributes: {}
+    relationships:
+      - Alex_Kelly_(The_O.C.) (<http://dbpedia.org/resource/Alex_Kelly_(The_O.C.)>) --dop:data--> California (dor:California)
+      - KIBS (dor:KIBS) --doo:city--> California (dor:California)
+      - KIBS (dor:KIBS) --doo:broadcastNetwork--> Westwood_One (dor:Westwood_One)
+      - Allen_Matkins (dor:Allen_Matkins) --doo:headquarter--> California (dor:California)
+  '7':
+    attributes:
+      WFED: (airdate^='1926-09-25')
+      Associated_Press: (Link from a Wikipage to an external page^='https://apnews.com/article/social-media-media-business-arts-and-entertainment-55cee73bd1da80790ad4aacf3cb2e339')
+    relationships:
+      - Avery_Ryan (dor:Avery_Ryan) --dop:data--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - WFED (dor:WFED) --doo:city--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - WFED (dor:WFED) --doo:broadcastNetwork--> Associated_Press (dor:Associated_Press)
+      - Arent_Fox_Schiff (dor:Arent_Fox_Schiff) --doo:headquarter--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '8':
+    attributes:
+      WTEM: (airdate^='1923-08-01')
+    relationships:
+      - Avery_Ryan (dor:Avery_Ryan) --dop:data--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - WTEM (dor:WTEM) --doo:city--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - WTEM (dor:WTEM) --doo:broadcastNetwork--> Westwood_One (dor:Westwood_One)
+      - Arent_Fox_Schiff (dor:Arent_Fox_Schiff) --doo:headquarter--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '9':
+    attributes:
+      WFED: (airdate^='1926-09-25')
+      Associated_Press: (Link from a Wikipage to an external page^='https://apnews.com/article/social-media-media-business-arts-and-entertainment-55cee73bd1da80790ad4aacf3cb2e339')
+    relationships:
+      - Avery_Ryan (dor:Avery_Ryan) --dop:data--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - WFED (dor:WFED) --doo:city--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - WFED (dor:WFED) --doo:broadcastNetwork--> Associated_Press (dor:Associated_Press)
+      - Bancroft_PLLC (dor:Bancroft_PLLC) --doo:headquarter--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+  '10':
+    attributes: {}
+    relationships:
+      - Catherine_Willows (dor:Catherine_Willows) --dop:data--> Los_Angeles (dor:Los_Angeles)
+      - KABC_(AM) (<http://dbpedia.org/resource/KABC_(AM)>) --doo:city--> Los_Angeles (dor:Los_Angeles)
+      - KABC_(AM) (<http://dbpedia.org/resource/KABC_(AM)>) --doo:broadcastNetwork--> Westwood_One (dor:Westwood_One)
+      - Girardi_&_Keese (<http://dbpedia.org/resource/Girardi_&_Keese>) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+attributes:
+  company: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --align^ (dop:align)--> langString
+  Location: --founder^ (doo:founder)--> Resource | --frazioni^ (doo:frazioni)--> Resource | --coordinates^ (dop:coordinates)--> double | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --wordnet_type (dop:wordnet_type)--> Resource | --territory^ (doo:territory)--> Resource
+  radio station: --airdate^ (dop:airdate)--> date
+  fictional character: --affiliation^ (dop:affiliation)--> langString | --alias^ (dop:alias)--> langString | --relatives^ (dop:relatives)--> langString
+subgraph_id: 664
+relationships:
+  - fictional character --dop:data--> Location
+  - radio station --doo:city--> Location
+  - radio station --doo:broadcastNetwork--> company
+  - law firm --doo:headquarter--> Location

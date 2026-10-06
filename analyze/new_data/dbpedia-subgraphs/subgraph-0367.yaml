@@ -1,0 +1,89 @@
+types:
+  song: doo:Song
+  movie: doo:Film
+  company: doo:Company
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Sanford_and_Son_Theme_(The_Streetbeater): (caption^='19737.0')
+    relationships:
+      - Sanford_and_Son_Theme_(The_Streetbeater) (<http://dbpedia.org/resource/Sanford_and_Son_Theme_(The_Streetbeater)>) --dop:composer--> Quincy_Jones (dor:Quincy_Jones)
+      - A_Great_Day_in_Harlem_(film) (<http://dbpedia.org/resource/A_Great_Day_in_Harlem_(film)>) --dop:starring--> Quincy_Jones (dor:Quincy_Jones)
+      - Sanford_and_Son_Theme_(The_Streetbeater) (<http://dbpedia.org/resource/Sanford_and_Son_Theme_(The_Streetbeater)>) --doo:recordLabel--> A&M_Records (<http://dbpedia.org/resource/A&M_Records>)
+  '2':
+    attributes:
+      Beetlebum: (release date^='1997-01-20')
+    relationships:
+      - Beetlebum (dor:Beetlebum) --dop:composer--> Damon_Albarn (dor:Damon_Albarn)
+      - Anna_and_the_Moods (dor:Anna_and_the_Moods) --dop:starring--> Damon_Albarn (dor:Damon_Albarn)
+      - Beetlebum (dor:Beetlebum) --doo:recordLabel--> Food_Records (dor:Food_Records)
+  '3':
+    attributes:
+      Beetlebum: (release date^='1997-01-20')
+    relationships:
+      - Beetlebum (dor:Beetlebum) --dop:composer--> Damon_Albarn (dor:Damon_Albarn)
+      - Anna_and_the_Moods (dor:Anna_and_the_Moods) --dop:starring--> Damon_Albarn (dor:Damon_Albarn)
+      - Beetlebum (dor:Beetlebum) --doo:recordLabel--> Parlophone (dor:Parlophone)
+  '4':
+    attributes:
+      Coffee_&_TV: (release date^='1999-06-28')
+    relationships:
+      - Coffee_&_TV (<http://dbpedia.org/resource/Coffee_&_TV>) --dop:composer--> Damon_Albarn (dor:Damon_Albarn)
+      - Anna_and_the_Moods (dor:Anna_and_the_Moods) --dop:starring--> Damon_Albarn (dor:Damon_Albarn)
+      - Coffee_&_TV (<http://dbpedia.org/resource/Coffee_&_TV>) --doo:recordLabel--> EMI_Records (dor:EMI_Records)
+  '5':
+    attributes:
+      Scream_(Tiësto_and_John_Christian_song): (release date^='2017-09-08')
+    relationships:
+      - Scream_(Tiësto_and_John_Christian_song) (<http://dbpedia.org/resource/Scream_(Tiësto_and_John_Christian_song)>) --dop:composer--> Tiësto (<http://dbpedia.org/resource/Tiësto>)
+      - Avicii:_True_Stories (<http://dbpedia.org/resource/Avicii:_True_Stories>) --dop:starring--> Tiësto (<http://dbpedia.org/resource/Tiësto>)
+      - Scream_(Tiësto_and_John_Christian_song) (<http://dbpedia.org/resource/Scream_(Tiësto_and_John_Christian_song)>) --doo:recordLabel--> Spinnin'_Records (<http://dbpedia.org/resource/Spinnin'_Records>)
+  '6':
+    attributes:
+      Fat_(song): (release date^='1988-04-12')
+    relationships:
+      - Fat_(song) (<http://dbpedia.org/resource/Fat_(song)>) --dop:composer--> Michael_Jackson (dor:Michael_Jackson)
+      - Bad_25_(film) (<http://dbpedia.org/resource/Bad_25_(film)>) --dop:starring--> Michael_Jackson (dor:Michael_Jackson)
+      - Fat_(song) (<http://dbpedia.org/resource/Fat_(song)>) --doo:recordLabel--> Scotti_Brothers_Records (dor:Scotti_Brothers_Records)
+  '7':
+    attributes:
+      Tanha_Dil_Tanha_Safar: (release date^='2000-01-02')
+    relationships:
+      - Tanha_Dil_Tanha_Safar (dor:Tanha_Dil_Tanha_Safar) --dop:composer--> Shaan_(singer) (<http://dbpedia.org/resource/Shaan_(singer)>)
+      - Balwinder_Singh_Famous_Ho_Gaya (dor:Balwinder_Singh_Famous_Ho_Gaya) --dop:starring--> Shaan_(singer) (<http://dbpedia.org/resource/Shaan_(singer)>)
+      - Tanha_Dil_Tanha_Safar (dor:Tanha_Dil_Tanha_Safar) --doo:recordLabel--> Virgin_Records (dor:Virgin_Records)
+  '8':
+    attributes:
+      4st_7lb: (recorded in^='http://dbpedia.org/resource/Cardiff', release date^='1994-08-29')
+    relationships:
+      - 4st_7lb (dor:4st_7lb) --dop:composer--> James_Dean_Bradfield (dor:James_Dean_Bradfield)
+      - Beautiful_Mistake_(film) (<http://dbpedia.org/resource/Beautiful_Mistake_(film)>) --dop:starring--> James_Dean_Bradfield (dor:James_Dean_Bradfield)
+      - 4st_7lb (dor:4st_7lb) --doo:recordLabel--> Epic_Records (dor:Epic_Records)
+  '9':
+    attributes: {}
+    relationships:
+      - If_You_Were_Still_Around (dor:If_You_Were_Still_Around) --dop:composer--> John_Cale (dor:John_Cale)
+      - Beautiful_Mistake_(film) (<http://dbpedia.org/resource/Beautiful_Mistake_(film)>) --dop:starring--> John_Cale (dor:John_Cale)
+      - If_You_Were_Still_Around (dor:If_You_Were_Still_Around) --doo:recordLabel--> ZE_Records (dor:ZE_Records)
+  '10':
+    attributes:
+      Kevin_Carter_(song): (release date^='1996-09-30')
+    relationships:
+      - Kevin_Carter_(song) (<http://dbpedia.org/resource/Kevin_Carter_(song)>) --dop:composer--> James_Dean_Bradfield (dor:James_Dean_Bradfield)
+      - Beautiful_Mistake_(film) (<http://dbpedia.org/resource/Beautiful_Mistake_(film)>) --dop:starring--> James_Dean_Bradfield (dor:James_Dean_Bradfield)
+      - Kevin_Carter_(song) (<http://dbpedia.org/resource/Kevin_Carter_(song)>) --doo:recordLabel--> Epic_Records (dor:Epic_Records)
+attributes:
+  song: --recorded in^ (doo:recordedIn)--> Resource | --release date^ (doo:releaseDate)--> date | --caption^ (dop:caption)--> langString
+  movie: --image^ (dop:image)--> langString | --bot^ (dop:bot)--> langString | --align^ (dop:align)--> langString | --b^ (dop:b)--> langString
+  company: --area served^ (dop:areaServed)--> int | --logo^ (dop:logo)--> langString | --product^ (doo:product)--> Resource | --owner^ (dop:owner)--> Resource
+subgraph_id: 367
+relationships:
+  - song --dop:composer--> musical artist
+  - movie --dop:starring--> musical artist
+  - song --doo:recordLabel--> company

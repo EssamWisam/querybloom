@@ -1,0 +1,49 @@
+types:
+  person: doo:Person
+  company: doo:Company
+  station: doo:Station
+  administrative region: doo:AdministrativeRegion
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Pennsylvania: (nickname^='Keystone State; Quaker State')
+      Hancock_station: (line^='http://dbpedia.org/resource/Round_Top_Branch')
+    relationships:
+      - Hancock_station (dor:Hancock_station) --dop:borough--> Pennsylvania (dor:Pennsylvania)
+      - Aaron_Anderson_(Medal_of_Honor) (<http://dbpedia.org/resource/Aaron_Anderson_(Medal_of_Honor)>) --doo:restingPlace--> Pennsylvania (dor:Pennsylvania)
+      - 84_Lumber (dor:84_Lumber) --doo:location--> Pennsylvania (dor:Pennsylvania)
+      - Hancock_station (dor:Hancock_station) --dop:line--> Round_Top_Branch (dor:Round_Top_Branch)
+  '2':
+    attributes:
+      Pennsylvania: (nickname^='Keystone State; Quaker State')
+    relationships:
+      - Hancock_station (dor:Hancock_station) --dop:borough--> Pennsylvania (dor:Pennsylvania)
+      - Adolph_E._Borie (dor:Adolph_E._Borie) --doo:restingPlace--> Pennsylvania (dor:Pennsylvania)
+      - 84_Lumber (dor:84_Lumber) --doo:location--> Pennsylvania (dor:Pennsylvania)
+      - Hancock_station (dor:Hancock_station) --dop:line--> Round_Top_Branch (dor:Round_Top_Branch)
+  '3':
+    attributes:
+      Pennsylvania: (nickname^='Keystone State; Quaker State')
+      Hancock_station: (line^='http://dbpedia.org/resource/Round_Top_Branch')
+    relationships:
+      - Hancock_station (dor:Hancock_station) --dop:borough--> Pennsylvania (dor:Pennsylvania)
+      - Alexander_Calvin_Elliott (dor:Alexander_Calvin_Elliott) --doo:restingPlace--> Pennsylvania (dor:Pennsylvania)
+      - 84_Lumber (dor:84_Lumber) --doo:location--> Pennsylvania (dor:Pennsylvania)
+      - Hancock_station (dor:Hancock_station) --dop:line--> Round_Top_Branch (dor:Round_Top_Branch)
+attributes:
+  person: --domesticpartner^ (dop:domesticpartner)--> langString | --header^ (dop:header)--> langString | --title^ (doo:title)--> langString
+  station: --opening date^ (doo:openingDate)--> date | --owned^ (dop:owned)--> Resource | --line^ (dop:line)--> Resource | --distance (dop:distance)--> langString
+  administrative region: --Apr record high C^ (dop:aprRecordHighC)--> double | --nickname^ (dop:nickname)--> langString
+  public transit system: --marks^ (dop:marks)--> langString
+subgraph_id: 972
+relationships:
+  - station --dop:borough--> administrative region
+  - person --doo:restingPlace--> administrative region
+  - company --doo:location--> administrative region
+  - station --dop:line--> public transit system

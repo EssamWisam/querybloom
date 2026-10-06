@@ -1,0 +1,125 @@
+types:
+  Food: doo:Food
+  venue: doo:Venue
+  Location: doo:Location
+  rugby club: doo:RugbyClub
+  rugby player: doo:RugbyPlayer
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Stadio_Brianteo: (tenants^='http://dbpedia.org/resource/A.C._Milan_Women')
+      Alberto_Benettin: (birth place^='http://dbpedia.org/resource/Italy')
+    relationships:
+      - Alberto_Benettin (dor:Alberto_Benettin) --dop:birthPlace--> Italy (dor:Italy)
+      - '''O_pere_e_''o_musso (<http://dbpedia.org/resource/''O_pere_e_''o_musso>) --doo:country--> Italy (dor:Italy)'
+      - Alberto_Benettin (dor:Alberto_Benettin) --dop:clubs--> Aironi (dor:Aironi)
+      - Stadio_Brianteo (dor:Stadio_Brianteo) --dop:tenants--> Aironi (dor:Aironi)
+      - '''O_pere_e_''o_musso (<http://dbpedia.org/resource/''O_pere_e_''o_musso>) --doo:region--> Campania (dor:Campania)'
+  '2':
+    attributes:
+      Alberto_Benettin: (birth place^='http://dbpedia.org/resource/Italy')
+      Stadio_Luigi_Zaffanella: (tenants^='http://dbpedia.org/resource/Aironi')
+    relationships:
+      - Alberto_Benettin (dor:Alberto_Benettin) --dop:birthPlace--> Italy (dor:Italy)
+      - '''O_pere_e_''o_musso (<http://dbpedia.org/resource/''O_pere_e_''o_musso>) --doo:country--> Italy (dor:Italy)'
+      - Alberto_Benettin (dor:Alberto_Benettin) --dop:clubs--> Aironi (dor:Aironi)
+      - Stadio_Luigi_Zaffanella (dor:Stadio_Luigi_Zaffanella) --dop:tenants--> Aironi (dor:Aironi)
+      - '''O_pere_e_''o_musso (<http://dbpedia.org/resource/''O_pere_e_''o_musso>) --doo:region--> Campania (dor:Campania)'
+  '3':
+    attributes:
+      Alberto_Lucchese: (birth place^='http://dbpedia.org/resource/Italy')
+      Stadio_Comunale_di_Monigo: (tenants^='http://dbpedia.org/resource/Benetton_Rugby')
+    relationships:
+      - Alberto_Lucchese (dor:Alberto_Lucchese) --dop:birthPlace--> Italy (dor:Italy)
+      - '''O_pere_e_''o_musso (<http://dbpedia.org/resource/''O_pere_e_''o_musso>) --doo:country--> Italy (dor:Italy)'
+      - Alberto_Lucchese (dor:Alberto_Lucchese) --dop:clubs--> Benetton_Rugby (dor:Benetton_Rugby)
+      - Stadio_Comunale_di_Monigo (dor:Stadio_Comunale_di_Monigo) --dop:tenants--> Benetton_Rugby (dor:Benetton_Rugby)
+      - '''O_pere_e_''o_musso (<http://dbpedia.org/resource/''O_pere_e_''o_musso>) --doo:region--> Campania (dor:Campania)'
+  '4':
+    attributes:
+      Welford_Road_Stadium: (tenants^='http://dbpedia.org/resource/Leicester_Tigers')
+      Harold_Day_(sportsman): (birth place^='http://dbpedia.org/resource/Bengal')
+    relationships:
+      - Harold_Day_(sportsman) (<http://dbpedia.org/resource/Harold_Day_(sportsman)>) --dop:birthPlace--> India (dor:India)
+      - Aam_papad (dor:Aam_papad) --doo:country--> India (dor:India)
+      - Harold_Day_(sportsman) (<http://dbpedia.org/resource/Harold_Day_(sportsman)>) --dop:clubs--> Leicester_Tigers (dor:Leicester_Tigers)
+      - Welford_Road_Stadium (dor:Welford_Road_Stadium) --dop:tenants--> Leicester_Tigers (dor:Leicester_Tigers)
+      - Aam_papad (dor:Aam_papad) --doo:region--> Coastal_Andhra (dor:Coastal_Andhra)
+  '5':
+    attributes:
+      Pardeep_Singh_(rugby_union): (birth place^='http://dbpedia.org/resource/India')
+      Stadio_Sergio_Lanfranchi_(original): (tenants^='http://dbpedia.org/resource/Crociati_Parma_Rugby_FC')
+    relationships:
+      - Pardeep_Singh_(rugby_union) (<http://dbpedia.org/resource/Pardeep_Singh_(rugby_union)>) --dop:birthPlace--> India (dor:India)
+      - Aam_papad (dor:Aam_papad) --doo:country--> India (dor:India)
+      - Pardeep_Singh_(rugby_union) (<http://dbpedia.org/resource/Pardeep_Singh_(rugby_union)>) --dop:clubs--> Crociati_Parma_Rugby_FC (dor:Crociati_Parma_Rugby_FC)
+      - Stadio_Sergio_Lanfranchi_(original) (<http://dbpedia.org/resource/Stadio_Sergio_Lanfranchi_(original)>) --dop:tenants--> Crociati_Parma_Rugby_FC (dor:Crociati_Parma_Rugby_FC)
+      - Aam_papad (dor:Aam_papad) --doo:region--> Coastal_Andhra (dor:Coastal_Andhra)
+  '6':
+    attributes:
+      Stadio_Sergio_Lanfranchi: (tenants^='http://dbpedia.org/resource/Crociati_Parma_Rugby_FC')
+      Pardeep_Singh_(rugby_union): (birth place^='http://dbpedia.org/resource/India')
+    relationships:
+      - Pardeep_Singh_(rugby_union) (<http://dbpedia.org/resource/Pardeep_Singh_(rugby_union)>) --dop:birthPlace--> India (dor:India)
+      - Aam_papad (dor:Aam_papad) --doo:country--> India (dor:India)
+      - Pardeep_Singh_(rugby_union) (<http://dbpedia.org/resource/Pardeep_Singh_(rugby_union)>) --dop:clubs--> Crociati_Parma_Rugby_FC (dor:Crociati_Parma_Rugby_FC)
+      - Stadio_Sergio_Lanfranchi (dor:Stadio_Sergio_Lanfranchi) --dop:tenants--> Crociati_Parma_Rugby_FC (dor:Crociati_Parma_Rugby_FC)
+      - Aam_papad (dor:Aam_papad) --doo:region--> Coastal_Andhra (dor:Coastal_Andhra)
+  '7':
+    attributes:
+      Aviva_Stadium: (tenants^='http://dbpedia.org/resource/Ireland_national_rugby_union_team')
+      Jeremy_Loughman: (birth place^='http://dbpedia.org/resource/Reno,_Nevada')
+    relationships:
+      - Jeremy_Loughman (dor:Jeremy_Loughman) --dop:birthPlace--> United_States (dor:United_States)
+      - Adobe_bread (dor:Adobe_bread) --doo:country--> United_States (dor:United_States)
+      - Jeremy_Loughman (dor:Jeremy_Loughman) --dop:clubs--> Leinster_Rugby (dor:Leinster_Rugby)
+      - Aviva_Stadium (dor:Aviva_Stadium) --dop:tenants--> Leinster_Rugby (dor:Leinster_Rugby)
+      - Adobe_bread (dor:Adobe_bread) --doo:region--> Southwestern_United_States (dor:Southwestern_United_States)
+  '8':
+    attributes:
+      Lansdowne_Road: (tenants^='http://dbpedia.org/resource/Ireland_national_rugby_union_team')
+      Jeremy_Loughman: (birth place^='http://dbpedia.org/resource/Reno,_Nevada')
+    relationships:
+      - Jeremy_Loughman (dor:Jeremy_Loughman) --dop:birthPlace--> United_States (dor:United_States)
+      - Adobe_bread (dor:Adobe_bread) --doo:country--> United_States (dor:United_States)
+      - Jeremy_Loughman (dor:Jeremy_Loughman) --dop:clubs--> Leinster_Rugby (dor:Leinster_Rugby)
+      - Lansdowne_Road (dor:Lansdowne_Road) --dop:tenants--> Leinster_Rugby (dor:Leinster_Rugby)
+      - Adobe_bread (dor:Adobe_bread) --doo:region--> Southwestern_United_States (dor:Southwestern_United_States)
+  '9':
+    attributes:
+      Thomond_Park: (tenants^='http://dbpedia.org/resource/Limerick_FC')
+      Jeremy_Loughman: (birth place^='http://dbpedia.org/resource/Reno,_Nevada')
+    relationships:
+      - Jeremy_Loughman (dor:Jeremy_Loughman) --dop:birthPlace--> United_States (dor:United_States)
+      - Adobe_bread (dor:Adobe_bread) --doo:country--> United_States (dor:United_States)
+      - Jeremy_Loughman (dor:Jeremy_Loughman) --dop:clubs--> Munster_Rugby (dor:Munster_Rugby)
+      - Thomond_Park (dor:Thomond_Park) --dop:tenants--> Munster_Rugby (dor:Munster_Rugby)
+      - Adobe_bread (dor:Adobe_bread) --doo:region--> Southwestern_United_States (dor:Southwestern_United_States)
+  '10':
+    attributes:
+      Alexandre_Lapandry: (birth place^='http://dbpedia.org/resource/France')
+      Stade_Marcel-Michelin: (tenants^='http://dbpedia.org/resource/ASM_Clermont_Auvergne')
+    relationships:
+      - Alexandre_Lapandry (dor:Alexandre_Lapandry) --dop:birthPlace--> France (dor:France)
+      - Alicot (dor:Alicot) --doo:country--> France (dor:France)
+      - Alexandre_Lapandry (dor:Alexandre_Lapandry) --dop:clubs--> ASM_Clermont_Auvergne (dor:ASM_Clermont_Auvergne)
+      - Stade_Marcel-Michelin (dor:Stade_Marcel-Michelin) --dop:tenants--> ASM_Clermont_Auvergne (dor:ASM_Clermont_Auvergne)
+      - Alicot (dor:Alicot) --doo:region--> Languedoc (dor:Languedoc)
+attributes:
+  venue: --tenants^ (dop:tenants)--> int
+  Location: --Apr record low F^ (dop:aprRecordLowF)--> langString | --winner^ (dop:winner)--> langString | --discoverer^ (doo:discoverer)--> Resource
+  rugby player: --bot^ (dop:bot)--> langString | --birth place^ (dop:birthPlace)--> langString
+  administrative region: --coroner^ (dop:coroner)--> langString | --Aug rain days^ (dop:augRainDays)--> double | --Apr sun^ (dop:aprSun)--> int | --Apr record high C^ (dop:aprRecordHighC)--> double
+subgraph_id: 856
+relationships:
+  - rugby player --dop:birthPlace--> Location
+  - Food --doo:country--> Location
+  - rugby player --dop:clubs--> rugby club
+  - venue --dop:tenants--> rugby club
+  - Food --doo:region--> administrative region

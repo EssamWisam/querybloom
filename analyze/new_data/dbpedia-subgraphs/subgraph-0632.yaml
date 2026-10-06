@@ -1,0 +1,122 @@
+types:
+  cleric: doo:Cleric
+  weapon: doo:Weapon
+  company: doo:Company
+  Location: doo:Location
+  mountain: doo:Mountain
+  politician: doo:Politician
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Mary_Barra: (spouse^='Anthony Barra')
+      M551_Sheridan: (image size^='300')
+      A._Theodore_Eastman: (death date^='2018-04-26')
+    relationships:
+      - M551_Sheridan (dor:M551_Sheridan) --dop:designer--> General_Motors (dor:General_Motors)
+      - M551_Sheridan (dor:M551_Sheridan) --doo:origin--> United_States (dor:United_States)
+      - 8517_Peak (dor:8517_Peak) --doo:locatedInArea--> United_States (dor:United_States)
+      - General_Motors (dor:General_Motors) --doo:keyPerson--> Mary_Barra (dor:Mary_Barra)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --dop:deathPlace--> United_States (dor:United_States)
+  '2':
+    attributes:
+      Mary_Barra: (spouse^='Anthony Barra')
+      M551_Sheridan: (image size^='300')
+      A._Theodore_Eastman: (death date^='2018-04-26')
+    relationships:
+      - M551_Sheridan (dor:M551_Sheridan) --dop:designer--> General_Motors (dor:General_Motors)
+      - M551_Sheridan (dor:M551_Sheridan) --doo:origin--> United_States (dor:United_States)
+      - Abercrombie_Mountain (dor:Abercrombie_Mountain) --doo:locatedInArea--> United_States (dor:United_States)
+      - General_Motors (dor:General_Motors) --doo:keyPerson--> Mary_Barra (dor:Mary_Barra)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --dop:deathPlace--> United_States (dor:United_States)
+  '3':
+    attributes:
+      Mary_Barra: (spouse^='Anthony Barra')
+      M551_Sheridan: (image size^='300')
+      A._Theodore_Eastman: (death date^='2018-04-26')
+    relationships:
+      - M551_Sheridan (dor:M551_Sheridan) --dop:designer--> General_Motors (dor:General_Motors)
+      - M551_Sheridan (dor:M551_Sheridan) --doo:origin--> United_States (dor:United_States)
+      - Abrams_Mountain (dor:Abrams_Mountain) --doo:locatedInArea--> United_States (dor:United_States)
+      - General_Motors (dor:General_Motors) --doo:keyPerson--> Mary_Barra (dor:Mary_Barra)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --dop:deathPlace--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Turkey: (align^='left')
+      Ali_Koç: (spouse^='2005')
+      Andrew_Stratelates: (death date^='AD 300')
+      MKE_120_mm_tank_gun: (image size^='300')
+    relationships:
+      - MKE_120_mm_tank_gun (dor:MKE_120_mm_tank_gun) --dop:designer--> Otokar (dor:Otokar)
+      - MKE_120_mm_tank_gun (dor:MKE_120_mm_tank_gun) --doo:origin--> Turkey (dor:Turkey)
+      - Acıgöl–Nevşehir (<http://dbpedia.org/resource/Acıgöl–Nevşehir>) --doo:locatedInArea--> Turkey (dor:Turkey)
+      - Otokar (dor:Otokar) --doo:keyPerson--> Ali_Koç (<http://dbpedia.org/resource/Ali_Koç>)
+      - Andrew_Stratelates (dor:Andrew_Stratelates) --dop:deathPlace--> Turkey (dor:Turkey)
+  '5':
+    attributes:
+      Turkey: (align^='left')
+      Ali_Koç: (spouse^='2005')
+      Andrew_Stratelates: (death date^='AD 300')
+    relationships:
+      - Otokar_Akrep (dor:Otokar_Akrep) --dop:designer--> Otokar (dor:Otokar)
+      - Otokar_Akrep (dor:Otokar_Akrep) --doo:origin--> Turkey (dor:Turkey)
+      - Acıgöl–Nevşehir (<http://dbpedia.org/resource/Acıgöl–Nevşehir>) --doo:locatedInArea--> Turkey (dor:Turkey)
+      - Otokar (dor:Otokar) --doo:keyPerson--> Ali_Koç (<http://dbpedia.org/resource/Ali_Koç>)
+      - Andrew_Stratelates (dor:Andrew_Stratelates) --dop:deathPlace--> Turkey (dor:Turkey)
+  '6':
+    attributes:
+      Turkey: (align^='left')
+      Ali_Koç: (spouse^='2005')
+      Andrew_Stratelates: (death date^='AD 300')
+    relationships:
+      - Otokar_Arma (dor:Otokar_Arma) --dop:designer--> Otokar (dor:Otokar)
+      - Otokar_Arma (dor:Otokar_Arma) --doo:origin--> Turkey (dor:Turkey)
+      - Acıgöl–Nevşehir (<http://dbpedia.org/resource/Acıgöl–Nevşehir>) --doo:locatedInArea--> Turkey (dor:Turkey)
+      - Otokar (dor:Otokar) --doo:keyPerson--> Ali_Koç (<http://dbpedia.org/resource/Ali_Koç>)
+      - Andrew_Stratelates (dor:Andrew_Stratelates) --dop:deathPlace--> Turkey (dor:Turkey)
+  '7':
+    attributes:
+      Brendan_Nelson: (spouse^='1981')
+      Francis_Murphy_(bishop): (death date^='1858-04-26')
+    relationships:
+      - Hawkei (dor:Hawkei) --dop:designer--> Boeing_Australia (dor:Boeing_Australia)
+      - Hawkei (dor:Hawkei) --doo:origin--> Australia (dor:Australia)
+      - Adamsons_Peak (dor:Adamsons_Peak) --doo:locatedInArea--> Australia (dor:Australia)
+      - Boeing_Australia (dor:Boeing_Australia) --doo:keyPerson--> Brendan_Nelson (dor:Brendan_Nelson)
+      - Francis_Murphy_(bishop) (<http://dbpedia.org/resource/Francis_Murphy_(bishop)>) --dop:deathPlace--> Australia (dor:Australia)
+  '8':
+    attributes:
+      Brendan_Nelson: (spouse^='1981')
+    relationships:
+      - Hawkei (dor:Hawkei) --dop:designer--> Boeing_Australia (dor:Boeing_Australia)
+      - Hawkei (dor:Hawkei) --doo:origin--> Australia (dor:Australia)
+      - Artillery_Knob (dor:Artillery_Knob) --doo:locatedInArea--> Australia (dor:Australia)
+      - Boeing_Australia (dor:Boeing_Australia) --doo:keyPerson--> Brendan_Nelson (dor:Brendan_Nelson)
+      - Francis_Murphy_(bishop) (<http://dbpedia.org/resource/Francis_Murphy_(bishop)>) --dop:deathPlace--> Australia (dor:Australia)
+  '9':
+    attributes:
+      Brendan_Nelson: (spouse^='1981')
+      Francis_Murphy_(bishop): (death date^='1858-04-26')
+    relationships:
+      - Hawkei (dor:Hawkei) --dop:designer--> Boeing_Australia (dor:Boeing_Australia)
+      - Hawkei (dor:Hawkei) --doo:origin--> Australia (dor:Australia)
+      - Bald_Hill_(Australia) (<http://dbpedia.org/resource/Bald_Hill_(Australia)>) --doo:locatedInArea--> Australia (dor:Australia)
+      - Boeing_Australia (dor:Boeing_Australia) --doo:keyPerson--> Brendan_Nelson (dor:Brendan_Nelson)
+      - Francis_Murphy_(bishop) (<http://dbpedia.org/resource/Francis_Murphy_(bishop)>) --dop:deathPlace--> Australia (dor:Australia)
+attributes:
+  cleric: --death date^ (dop:deathDate)--> date
+  weapon: --image size^ (dop:imageSize)--> int
+  Location: --area^ (dop:area)--> squareKilometre | --align^ (dop:align)--> langString | --1y^ (dop:1y)--> int
+  mountain: --Center^ (dop:center)--> langString
+  politician: --spouse^ (dop:spouse)--> Resource | --death place^ (dop:deathPlace)--> langString | --date^ (dop:date)--> langString | --active years end date^ (doo:activeYearsEndDate)--> date
+subgraph_id: 632
+relationships:
+  - weapon --dop:designer--> company
+  - weapon --doo:origin--> Location
+  - mountain --doo:locatedInArea--> Location
+  - company --doo:keyPerson--> politician
+  - cleric --dop:deathPlace--> Location

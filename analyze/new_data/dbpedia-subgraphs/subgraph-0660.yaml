@@ -1,0 +1,110 @@
+types:
+  person: doo:Person
+  country: doo:Country
+  soccer club: doo:SoccerClub
+  soccer player: doo:SoccerPlayer
+  soccer club season: doo:SoccerClubSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Federation_of_Malaya: (Link from a Wikipage to an external page^='http://www.nationalarchives.gov.uk/documents/migrated-archives-guidance.pdf')
+      Acryl_Sani_Abdullah_Sani: (birth place^='http://dbpedia.org/resource/Federation_of_Malaya', spouse^='Zaitun Mohd Isa')
+    relationships:
+      - Polis_Diraja_Malaysia_FC (dor:Polis_Diraja_Malaysia_FC) --doo:owner--> Acryl_Sani_Abdullah_Sani (dor:Acryl_Sani_Abdullah_Sani)
+      - 2021_Polis_Diraja_Malaysia_FC_season (dor:2021_Polis_Diraja_Malaysia_FC_season) --dop:club--> Polis_Diraja_Malaysia_FC (dor:Polis_Diraja_Malaysia_FC)
+      - Acryl_Sani_Abdullah_Sani (dor:Acryl_Sani_Abdullah_Sani) --doo:birthPlace--> Federation_of_Malaya (dor:Federation_of_Malaya)
+      - 2021_Polis_Diraja_Malaysia_FC_season (dor:2021_Polis_Diraja_Malaysia_FC_season) --doo:manager--> Wan_Rohaimi_Wan_Ismail (dor:Wan_Rohaimi_Wan_Ismail)
+  '2':
+    attributes:
+      Alona_Barkat: (birth place^='http://dbpedia.org/resource/Ashkelon', known for^='Owner of Hapoel Be''er Sheva')
+    relationships:
+      - Hapoel_Be'er_Sheva_F.C. (<http://dbpedia.org/resource/Hapoel_Be'er_Sheva_F.C.>) --doo:owner--> Alona_Barkat (dor:Alona_Barkat)
+      - 2014–15_Hapoel_Be'er_Sheva_F.C._season (<http://dbpedia.org/resource/2014–15_Hapoel_Be'er_Sheva_F.C._season>) --dop:club--> Hapoel_Be'er_Sheva_F.C. (<http://dbpedia.org/resource/Hapoel_Be'er_Sheva_F.C.>)
+      - Alona_Barkat (dor:Alona_Barkat) --doo:birthPlace--> State_of_Israel (dor:State_of_Israel)
+      - 2014–15_Hapoel_Be'er_Sheva_F.C._season (<http://dbpedia.org/resource/2014–15_Hapoel_Be'er_Sheva_F.C._season>) --doo:manager--> Elisha_Levy (dor:Elisha_Levy)
+  '3':
+    attributes:
+      Alona_Barkat: (birth place^='http://dbpedia.org/resource/Ashkelon', known for^='Owner of Hapoel Be''er Sheva')
+    relationships:
+      - Hapoel_Be'er_Sheva_F.C. (<http://dbpedia.org/resource/Hapoel_Be'er_Sheva_F.C.>) --doo:owner--> Alona_Barkat (dor:Alona_Barkat)
+      - 2015–16_Hapoel_Be'er_Sheva_F.C._season (<http://dbpedia.org/resource/2015–16_Hapoel_Be'er_Sheva_F.C._season>) --dop:club--> Hapoel_Be'er_Sheva_F.C. (<http://dbpedia.org/resource/Hapoel_Be'er_Sheva_F.C.>)
+      - Alona_Barkat (dor:Alona_Barkat) --doo:birthPlace--> State_of_Israel (dor:State_of_Israel)
+      - 2015–16_Hapoel_Be'er_Sheva_F.C._season (<http://dbpedia.org/resource/2015–16_Hapoel_Be'er_Sheva_F.C._season>) --doo:manager--> Barak_Bakhar (dor:Barak_Bakhar)
+  '4':
+    attributes:
+      Angola: (Link from a Wikipage to an external page^='http://hrw.org/reports/2005/angola0305/')
+      Bento_Kangamba: (birth place^='http://dbpedia.org/resource/Angola', spouse^='Avelina Escórcio Dos Santos')
+    relationships:
+      - Kabuscorp_S.C.P. (<http://dbpedia.org/resource/Kabuscorp_S.C.P.>) --doo:owner--> Bento_Kangamba (dor:Bento_Kangamba)
+      - 2018–19_Kabuscorp_S.C.P._season (<http://dbpedia.org/resource/2018–19_Kabuscorp_S.C.P._season>) --dop:club--> Kabuscorp_S.C.P. (<http://dbpedia.org/resource/Kabuscorp_S.C.P.>)
+      - Bento_Kangamba (dor:Bento_Kangamba) --doo:birthPlace--> Angola (dor:Angola)
+      - 2018–19_Kabuscorp_S.C.P._season (<http://dbpedia.org/resource/2018–19_Kabuscorp_S.C.P._season>) --doo:manager--> Paulo_Torres (dor:Paulo_Torres)
+  '5':
+    attributes:
+      Boris_Romanovich_Rotenberg: (birth place^='http://dbpedia.org/resource/Leningrad', known for^='Co-founder of SMP Bank')
+      Russian_Soviet_Federative_Socialist_Republic: (Link from a Wikipage to an external page^='http://constitution.garant.ru/DOC_0000810003000.htm')
+    relationships:
+      - PFC_Sochi (dor:PFC_Sochi) --doo:owner--> Boris_Romanovich_Rotenberg (dor:Boris_Romanovich_Rotenberg)
+      - 2019–20_PFC_Sochi_season (<http://dbpedia.org/resource/2019–20_PFC_Sochi_season>) --dop:club--> PFC_Sochi (dor:PFC_Sochi)
+      - Boris_Romanovich_Rotenberg (dor:Boris_Romanovich_Rotenberg) --doo:birthPlace--> Russian_Soviet_Federative_Socialist_Republic (dor:Russian_Soviet_Federative_Socialist_Republic)
+      - 2019–20_PFC_Sochi_season (<http://dbpedia.org/resource/2019–20_PFC_Sochi_season>) --doo:manager--> Aleksandr_Tochilin (dor:Aleksandr_Tochilin)
+  '6':
+    attributes:
+      Boris_Romanovich_Rotenberg: (birth place^='http://dbpedia.org/resource/Leningrad', known for^='Co-founder of SMP Bank')
+      Russian_Soviet_Federative_Socialist_Republic: (Link from a Wikipage to an external page^='http://constitution.garant.ru/DOC_0000810003000.htm')
+    relationships:
+      - PFC_Sochi (dor:PFC_Sochi) --doo:owner--> Boris_Romanovich_Rotenberg (dor:Boris_Romanovich_Rotenberg)
+      - 2019–20_PFC_Sochi_season (<http://dbpedia.org/resource/2019–20_PFC_Sochi_season>) --dop:club--> PFC_Sochi (dor:PFC_Sochi)
+      - Boris_Romanovich_Rotenberg (dor:Boris_Romanovich_Rotenberg) --doo:birthPlace--> Russian_Soviet_Federative_Socialist_Republic (dor:Russian_Soviet_Federative_Socialist_Republic)
+      - 2019–20_PFC_Sochi_season (<http://dbpedia.org/resource/2019–20_PFC_Sochi_season>) --doo:manager--> Roman_Berezovsky (dor:Roman_Berezovsky)
+  '7':
+    attributes:
+      Soviet_Union: (Link from a Wikipage to an external page^='http://ariwatch.com/VS/JD/ImpressionsOfSovietRussia.htm')
+      Boris_Romanovich_Rotenberg: (birth place^='http://dbpedia.org/resource/Leningrad', known for^='Co-founder of SMP Bank')
+    relationships:
+      - PFC_Sochi (dor:PFC_Sochi) --doo:owner--> Boris_Romanovich_Rotenberg (dor:Boris_Romanovich_Rotenberg)
+      - 2019–20_PFC_Sochi_season (<http://dbpedia.org/resource/2019–20_PFC_Sochi_season>) --dop:club--> PFC_Sochi (dor:PFC_Sochi)
+      - Boris_Romanovich_Rotenberg (dor:Boris_Romanovich_Rotenberg) --doo:birthPlace--> Soviet_Union (dor:Soviet_Union)
+      - 2019–20_PFC_Sochi_season (<http://dbpedia.org/resource/2019–20_PFC_Sochi_season>) --doo:manager--> Aleksandr_Tochilin (dor:Aleksandr_Tochilin)
+  '8':
+    attributes:
+      Italy: (Link from a Wikipage to an external page^='http://eudocs.lib.byu.edu/index.php/History_of_Italy:_Primary_Documents')
+      Claudio_Lotito: (birth place^='http://dbpedia.org/resource/Italy')
+    relationships:
+      - S.S._Lazio (dor:S.S._Lazio) --doo:owner--> Claudio_Lotito (dor:Claudio_Lotito)
+      - 1979–80_S.S._Lazio_season (<http://dbpedia.org/resource/1979–80_S.S._Lazio_season>) --dop:club--> S.S._Lazio (dor:S.S._Lazio)
+      - Claudio_Lotito (dor:Claudio_Lotito) --doo:birthPlace--> Italy (dor:Italy)
+      - 1979–80_S.S._Lazio_season (<http://dbpedia.org/resource/1979–80_S.S._Lazio_season>) --doo:manager--> Luigi_Simoni (dor:Luigi_Simoni)
+  '9':
+    attributes:
+      Rome: (Link from a Wikipage to an external page^='http://en.museicapitolini.org/')
+      Claudio_Lotito: (birth place^='http://dbpedia.org/resource/Italy')
+    relationships:
+      - S.S._Lazio (dor:S.S._Lazio) --doo:owner--> Claudio_Lotito (dor:Claudio_Lotito)
+      - 1979–80_S.S._Lazio_season (<http://dbpedia.org/resource/1979–80_S.S._Lazio_season>) --dop:club--> S.S._Lazio (dor:S.S._Lazio)
+      - Claudio_Lotito (dor:Claudio_Lotito) --doo:birthPlace--> Rome (dor:Rome)
+      - 1979–80_S.S._Lazio_season (<http://dbpedia.org/resource/1979–80_S.S._Lazio_season>) --doo:manager--> Luigi_Simoni (dor:Luigi_Simoni)
+  '10':
+    attributes:
+      Italy: (Link from a Wikipage to an external page^='http://eudocs.lib.byu.edu/index.php/History_of_Italy:_Primary_Documents')
+      Claudio_Lotito: (birth place^='http://dbpedia.org/resource/Italy')
+    relationships:
+      - S.S._Lazio (dor:S.S._Lazio) --doo:owner--> Claudio_Lotito (dor:Claudio_Lotito)
+      - 1984–85_S.S._Lazio_season (<http://dbpedia.org/resource/1984–85_S.S._Lazio_season>) --dop:club--> S.S._Lazio (dor:S.S._Lazio)
+      - Claudio_Lotito (dor:Claudio_Lotito) --doo:birthPlace--> Italy (dor:Italy)
+      - 1984–85_S.S._Lazio_season (<http://dbpedia.org/resource/1984–85_S.S._Lazio_season>) --doo:manager--> Juan_Carlos_Lorenzo (dor:Juan_Carlos_Lorenzo)
+attributes:
+  person: --quoted^ (dop:quoted)--> langString | --children^ (dop:children)--> Resource | --birth place^ (doo:birthPlace)--> Resource | --quote^ (dop:quote)--> langString | --known for^ (dop:knownFor)--> int | --mother^ (dop:mother)--> Resource | --spouse^ (dop:spouse)--> int | --death date^ (dop:deathDate)--> gMonthDay | --width^ (dop:width)--> perCent
+  country: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  soccer player: --image size^ (dop:imageSize)--> int | --image upright^ (dop:imageUpright)--> int
+subgraph_id: 660
+relationships:
+  - soccer club --doo:owner--> person
+  - soccer club season --dop:club--> soccer club
+  - person --doo:birthPlace--> country
+  - soccer club season --doo:manager--> soccer player

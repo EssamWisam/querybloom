@@ -1,0 +1,83 @@
+types:
+  school: doo:School
+  language: doo:Language
+  settlement: doo:Settlement
+  university: doo:University
+  radio station: doo:RadioStation
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      KBSB: (alias^='FM 90')
+      Minnesota: (elevation (μ)^='365.76')
+    relationships:
+      - Ojibwe_language (dor:Ojibwe_language) --doo:spokenIn--> Minnesota (dor:Minnesota)
+      - KBSB (dor:KBSB) --doo:city--> Minnesota (dor:Minnesota)
+      - Aastad_Township,_Otter_Tail_County,_Minnesota (<http://dbpedia.org/resource/Aastad_Township,_Otter_Tail_County,_Minnesota>) --doo:subdivision--> Minnesota (dor:Minnesota)
+      - Parry_Sound_High_School (dor:Parry_Sound_High_School) --doo:language--> Ojibwe_language (dor:Ojibwe_language)
+      - KBSB (dor:KBSB) --dop:owner--> Bemidji_State_University (dor:Bemidji_State_University)
+  '2':
+    attributes:
+      KBSB: (alias^='FM 90')
+      Minnesota: (elevation (μ)^='365.76')
+    relationships:
+      - Ojibwe_language (dor:Ojibwe_language) --doo:spokenIn--> Minnesota (dor:Minnesota)
+      - KBSB (dor:KBSB) --doo:city--> Minnesota (dor:Minnesota)
+      - Acoma_Township,_McLeod_County,_Minnesota (<http://dbpedia.org/resource/Acoma_Township,_McLeod_County,_Minnesota>) --doo:subdivision--> Minnesota (dor:Minnesota)
+      - Parry_Sound_High_School (dor:Parry_Sound_High_School) --doo:language--> Ojibwe_language (dor:Ojibwe_language)
+      - KBSB (dor:KBSB) --dop:owner--> Bemidji_State_University (dor:Bemidji_State_University)
+  '3':
+    attributes:
+      KBSB: (alias^='FM 90')
+      Minnesota: (elevation (μ)^='365.76')
+    relationships:
+      - Ojibwe_language (dor:Ojibwe_language) --doo:spokenIn--> Minnesota (dor:Minnesota)
+      - KBSB (dor:KBSB) --doo:city--> Minnesota (dor:Minnesota)
+      - Acton_Township,_Meeker_County,_Minnesota (<http://dbpedia.org/resource/Acton_Township,_Meeker_County,_Minnesota>) --doo:subdivision--> Minnesota (dor:Minnesota)
+      - Parry_Sound_High_School (dor:Parry_Sound_High_School) --doo:language--> Ojibwe_language (dor:Ojibwe_language)
+      - KBSB (dor:KBSB) --dop:owner--> Bemidji_State_University (dor:Bemidji_State_University)
+  '4':
+    attributes:
+      Michigan: (elevation (μ)^='270.0')
+    relationships:
+      - Quebec_French (dor:Quebec_French) --doo:spokenIn--> Michigan (dor:Michigan)
+      - WCMV-FM (dor:WCMV-FM) --doo:city--> Michigan (dor:Michigan)
+      - Acme_Township,_Michigan (<http://dbpedia.org/resource/Acme_Township,_Michigan>) --doo:subdivision--> Michigan (dor:Michigan)
+      - St._Thomas_High_School_(Quebec) (<http://dbpedia.org/resource/St._Thomas_High_School_(Quebec)>) --doo:language--> Quebec_French (dor:Quebec_French)
+      - WCMV-FM (dor:WCMV-FM) --dop:owner--> Central_Michigan_University (dor:Central_Michigan_University)
+  '5':
+    attributes:
+      Michigan: (elevation (μ)^='270.0')
+    relationships:
+      - Quebec_French (dor:Quebec_French) --doo:spokenIn--> Michigan (dor:Michigan)
+      - WCMV-FM (dor:WCMV-FM) --doo:city--> Michigan (dor:Michigan)
+      - Ada_Township,_Michigan (<http://dbpedia.org/resource/Ada_Township,_Michigan>) --doo:subdivision--> Michigan (dor:Michigan)
+      - St._Thomas_High_School_(Quebec) (<http://dbpedia.org/resource/St._Thomas_High_School_(Quebec)>) --doo:language--> Quebec_French (dor:Quebec_French)
+      - WCMV-FM (dor:WCMV-FM) --dop:owner--> Central_Michigan_University (dor:Central_Michigan_University)
+  '6':
+    attributes:
+      Michigan: (elevation (μ)^='270.0')
+    relationships:
+      - Quebec_French (dor:Quebec_French) --doo:spokenIn--> Michigan (dor:Michigan)
+      - WCMV-FM (dor:WCMV-FM) --doo:city--> Michigan (dor:Michigan)
+      - Adams_Township,_Arenac_County,_Michigan (<http://dbpedia.org/resource/Adams_Township,_Arenac_County,_Michigan>) --doo:subdivision--> Michigan (dor:Michigan)
+      - St._Thomas_High_School_(Quebec) (<http://dbpedia.org/resource/St._Thomas_High_School_(Quebec)>) --doo:language--> Quebec_French (dor:Quebec_French)
+      - WCMV-FM (dor:WCMV-FM) --dop:owner--> Central_Michigan_University (dor:Central_Michigan_University)
+attributes:
+  school: --region^ (doo:region)--> Resource
+  settlement: --date^ (dop:date)--> langString | --quote^ (dop:quote)--> langString | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double
+  university: --affiliation^ (dop:affiliation)--> langString | --last^ (dop:last)--> langString | --campus^ (doo:campus)--> Resource
+  radio station: --affiliations^ (dop:affiliations)--> langString | --alias^ (doo:alias)--> langString
+  administrative region: --line^ (dop:line)--> int | --c^ (dop:c)--> langString | --elevation (μ)^ (doo:elevation)--> double | --abolished^ (dop:abolished)--> int
+subgraph_id: 839
+relationships:
+  - language --doo:spokenIn--> administrative region
+  - radio station --doo:city--> administrative region
+  - settlement --doo:subdivision--> administrative region
+  - school --doo:language--> language
+  - radio station --dop:owner--> university

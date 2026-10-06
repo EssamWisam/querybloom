@@ -1,0 +1,102 @@
+types:
+  horse: doo:Horse
+  Location: doo:Location
+  RaceHorse: doo:RaceHorse
+  horse race: doo:HorseRace
+  racecourse: doo:Racecourse
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A_Bit_O'Gold: (owner^='http://dbpedia.org/resource/Catherine_Day_Phillips')
+    relationships:
+      - Nijinsky_(horse) (<http://dbpedia.org/resource/Nijinsky_(horse)>) --doo:honours--> Nijinsky_Stakes_(Canada) (<http://dbpedia.org/resource/Nijinsky_Stakes_(Canada)>)
+      - Nijinsky_Stakes_(Canada) (<http://dbpedia.org/resource/Nijinsky_Stakes_(Canada)>) --doo:location--> Woodbine_Racetrack (dor:Woodbine_Racetrack)
+      - A_Bit_O'Gold (<http://dbpedia.org/resource/A_Bit_O'Gold>) --doo:race--> Nijinsky_Stakes_(Canada) (<http://dbpedia.org/resource/Nijinsky_Stakes_(Canada)>)
+      - Nijinsky_Stakes_(Canada) (<http://dbpedia.org/resource/Nijinsky_Stakes_(Canada)>) --doo:location--> Toronto (dor:Toronto)
+  '2':
+    attributes:
+      A_Bit_O'Gold: (owner^='http://dbpedia.org/resource/Catherine_Day_Phillips')
+    relationships:
+      - Sky_Classic (dor:Sky_Classic) --doo:honours--> Sky_Classic_Stakes (dor:Sky_Classic_Stakes)
+      - Sky_Classic_Stakes (dor:Sky_Classic_Stakes) --doo:location--> Woodbine_Racetrack (dor:Woodbine_Racetrack)
+      - A_Bit_O'Gold (<http://dbpedia.org/resource/A_Bit_O'Gold>) --doo:race--> Sky_Classic_Stakes (dor:Sky_Classic_Stakes)
+      - Sky_Classic_Stakes (dor:Sky_Classic_Stakes) --doo:location--> Toronto (dor:Toronto)
+  '3':
+    attributes:
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - Awesome_Again (dor:Awesome_Again) --doo:honours--> Awesome_Again_Stakes (dor:Awesome_Again_Stakes)
+      - Awesome_Again_Stakes (dor:Awesome_Again_Stakes) --doo:location--> Santa_Anita_Park (dor:Santa_Anita_Park)
+      - Accelerate_(horse) (<http://dbpedia.org/resource/Accelerate_(horse)>) --doo:race--> Awesome_Again_Stakes (dor:Awesome_Again_Stakes)
+      - Awesome_Again_Stakes (dor:Awesome_Again_Stakes) --doo:location--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Achieved: (owner^='http://dbpedia.org/resource/Robert_Sangster')
+    relationships:
+      - The_Tetrarch (dor:The_Tetrarch) --doo:honours--> Tetrarch_Stakes (dor:Tetrarch_Stakes)
+      - Tetrarch_Stakes (dor:Tetrarch_Stakes) --doo:location--> Curragh_Racecourse (dor:Curragh_Racecourse)
+      - Achieved (dor:Achieved) --doo:race--> Tetrarch_Stakes (dor:Tetrarch_Stakes)
+      - Tetrarch_Stakes (dor:Tetrarch_Stakes) --doo:location--> County_Kildare (dor:County_Kildare)
+  '5':
+    attributes:
+      Achilles_of_Troy: (owner^='http://dbpedia.org/resource/Paraneck_Stable')
+    relationships:
+      - Count_Fleet (dor:Count_Fleet) --doo:honours--> Count_Fleet_Stakes (dor:Count_Fleet_Stakes)
+      - Count_Fleet_Stakes (dor:Count_Fleet_Stakes) --doo:location--> Aqueduct_Racetrack (dor:Aqueduct_Racetrack)
+      - Achilles_of_Troy (dor:Achilles_of_Troy) --doo:race--> Count_Fleet_Stakes (dor:Count_Fleet_Stakes)
+      - Count_Fleet_Stakes (dor:Count_Fleet_Stakes) --doo:location--> Queens (dor:Queens)
+  '6':
+    attributes:
+      Affectionately: (owner^='http://dbpedia.org/resource/Ethel_D._Jacobs')
+    relationships:
+      - Top_Flight (dor:Top_Flight) --doo:honours--> Top_Flight_Handicap (dor:Top_Flight_Handicap)
+      - Top_Flight_Handicap (dor:Top_Flight_Handicap) --doo:location--> Aqueduct_Racetrack (dor:Aqueduct_Racetrack)
+      - Affectionately (dor:Affectionately) --doo:race--> Top_Flight_Handicap (dor:Top_Flight_Handicap)
+      - Top_Flight_Handicap (dor:Top_Flight_Handicap) --doo:location--> Queens (dor:Queens)
+  '7':
+    attributes:
+      Affectionately: (owner^='http://dbpedia.org/resource/Ethel_D._Jacobs')
+    relationships:
+      - Vagrancy_(horse) (<http://dbpedia.org/resource/Vagrancy_(horse)>) --doo:honours--> Vagrancy_Handicap (dor:Vagrancy_Handicap)
+      - Vagrancy_Handicap (dor:Vagrancy_Handicap) --doo:location--> Belmont_Park (dor:Belmont_Park)
+      - Affectionately (dor:Affectionately) --doo:race--> Vagrancy_Handicap (dor:Vagrancy_Handicap)
+      - Vagrancy_Handicap (dor:Vagrancy_Handicap) --doo:location--> Elmont,_New_York (<http://dbpedia.org/resource/Elmont,_New_York>)
+  '8':
+    attributes:
+      Aggressor_(horse): (owner^='http://dbpedia.org/resource/Harold_Augustus_Wernher')
+    relationships:
+      - Brigadier_Gerard_(horse) (<http://dbpedia.org/resource/Brigadier_Gerard_(horse)>) --doo:honours--> Brigadier_Gerard_Stakes (dor:Brigadier_Gerard_Stakes)
+      - Brigadier_Gerard_Stakes (dor:Brigadier_Gerard_Stakes) --doo:location--> Sandown_Park_Racecourse (dor:Sandown_Park_Racecourse)
+      - Aggressor_(horse) (<http://dbpedia.org/resource/Aggressor_(horse)>) --doo:race--> Brigadier_Gerard_Stakes (dor:Brigadier_Gerard_Stakes)
+      - Brigadier_Gerard_Stakes (dor:Brigadier_Gerard_Stakes) --doo:location--> Esher (dor:Esher)
+  '9':
+    attributes:
+      Surrey: (Apr rain days^='9.3')
+      Aggressor_(horse): (owner^='http://dbpedia.org/resource/Harold_Augustus_Wernher')
+    relationships:
+      - Brigadier_Gerard_(horse) (<http://dbpedia.org/resource/Brigadier_Gerard_(horse)>) --doo:honours--> Brigadier_Gerard_Stakes (dor:Brigadier_Gerard_Stakes)
+      - Brigadier_Gerard_Stakes (dor:Brigadier_Gerard_Stakes) --doo:location--> Sandown_Park_Racecourse (dor:Sandown_Park_Racecourse)
+      - Aggressor_(horse) (<http://dbpedia.org/resource/Aggressor_(horse)>) --doo:race--> Brigadier_Gerard_Stakes (dor:Brigadier_Gerard_Stakes)
+      - Brigadier_Gerard_Stakes (dor:Brigadier_Gerard_Stakes) --doo:location--> Surrey (dor:Surrey)
+  '10':
+    attributes:
+      Aggressor_(horse): (owner^='http://dbpedia.org/resource/Harold_Augustus_Wernher')
+    relationships:
+      - Solario (dor:Solario) --doo:honours--> Solario_Stakes (dor:Solario_Stakes)
+      - Solario_Stakes (dor:Solario_Stakes) --doo:location--> Sandown_Park_Racecourse (dor:Sandown_Park_Racecourse)
+      - Aggressor_(horse) (<http://dbpedia.org/resource/Aggressor_(horse)>) --doo:race--> Solario_Stakes (dor:Solario_Stakes)
+      - Solario_Stakes (dor:Solario_Stakes) --doo:location--> Esher (dor:Esher)
+attributes:
+  horse: --owner^ (doo:owner)--> Resource
+  Location: --chapter^ (dop:chapter)--> langString | --building start date^ (doo:buildingStartDate)--> string | --c^ (dop:c)--> langString | --footer^ (dop:footer)--> langString | --1y^ (dop:1y)--> int | --designated other1 color^ (dop:designatedOther1Color)--> langString | --Apr rain days^ (dop:aprRainDays)--> int | --class (dop:class)--> langString | --age^ (dop:age)--> langString | --length m^ (dop:lengthM)--> int
+subgraph_id: 353
+relationships:
+  - RaceHorse --doo:honours--> horse race
+  - horse race --doo:location--> racecourse
+  - horse --doo:race--> horse race
+  - horse race --doo:location--> Location

@@ -1,0 +1,124 @@
+types:
+  city: doo:City
+  soccer tournoment: doo:SoccerTournament
+  soccer club season: doo:SoccerClubSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwors: http://www.w3.org/2000/01/rdf-schema#
+instances:
+  '1':
+    attributes:
+      Austin,_Texas: (named for^='http://dbpedia.org/resource/Stephen_F._Austin')
+      1997_U.S._Open_Cup: (champions^='', RD3-team^='D.C. United')
+      1997_San_Jose_Clash_season: (location^='Washington, D.C.')
+    relationships:
+      - 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup) --dop:location--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - 1997_San_Jose_Clash_season (dor:1997_San_Jose_Clash_season) --wwors:seeAlso--> 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup)
+  '2':
+    attributes:
+      1997_U.S._Open_Cup: (champions^='', RD3-team^='D.C. United')
+      Cupertino,_California: (Aug high F^='76', named for^='http://dbpedia.org/resource/Saint_Joseph_of_Cupertino')
+      1997_San_Jose_Clash_season: (location^='Washington, D.C.')
+    relationships:
+      - 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup) --dop:location--> Cupertino,_California (<http://dbpedia.org/resource/Cupertino,_California>)
+      - 1997_San_Jose_Clash_season (dor:1997_San_Jose_Clash_season) --wwors:seeAlso--> 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup)
+  '3':
+    attributes:
+      1997_San_Jose_Clash_season: (location^='Washington, D.C.')
+    relationships:
+      - 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup) --dop:location--> East_Providence,_Rhode_Island (<http://dbpedia.org/resource/East_Providence,_Rhode_Island>)
+      - 1997_San_Jose_Clash_season (dor:1997_San_Jose_Clash_season) --wwors:seeAlso--> 1997_U.S._Open_Cup (dor:1997_U.S._Open_Cup)
+  '4':
+    attributes:
+      1998_D.C._United_season: (location^='Columbus, Ohio')
+    relationships:
+      - 1998_CONCACAF_Champions'_Cup (<http://dbpedia.org/resource/1998_CONCACAF_Champions'_Cup>) --dop:location--> Alajuela (dor:Alajuela)
+      - 1998_D.C._United_season (dor:1998_D.C._United_season) --wwors:seeAlso--> 1998_CONCACAF_Champions'_Cup (<http://dbpedia.org/resource/1998_CONCACAF_Champions'_Cup>)
+  '5':
+    attributes:
+      Colón,_Panama: (Aug high F^='85')
+      1998_D.C._United_season: (location^='Columbus, Ohio')
+    relationships:
+      - 1998_CONCACAF_Champions'_Cup (<http://dbpedia.org/resource/1998_CONCACAF_Champions'_Cup>) --dop:location--> Colón,_Panama (<http://dbpedia.org/resource/Colón,_Panama>)
+      - 1998_D.C._United_season (dor:1998_D.C._United_season) --wwors:seeAlso--> 1998_CONCACAF_Champions'_Cup (<http://dbpedia.org/resource/1998_CONCACAF_Champions'_Cup>)
+  '6':
+    attributes:
+      Guatemala_City: (Aug high C^='25.5', Apr rain mm^='31', Apr high C^='27.8')
+      1998_D.C._United_season: (location^='Columbus, Ohio')
+    relationships:
+      - 1998_CONCACAF_Champions'_Cup (<http://dbpedia.org/resource/1998_CONCACAF_Champions'_Cup>) --dop:location--> Guatemala_City (dor:Guatemala_City)
+      - 1998_D.C._United_season (dor:1998_D.C._United_season) --wwors:seeAlso--> 1998_CONCACAF_Champions'_Cup (<http://dbpedia.org/resource/1998_CONCACAF_Champions'_Cup>)
+  '7':
+    attributes:
+      2000_U.S._Open_Cup: (champions^='', RD3-team^='Chicago Fire', RD5-team^='Chicago Fire')
+      2000_San_Jose_Earthquakes_season: (location^='Washington, D.C.')
+    relationships:
+      - 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup) --dop:location--> Blaine,_Minnesota (<http://dbpedia.org/resource/Blaine,_Minnesota>)
+      - 2000_San_Jose_Earthquakes_season (dor:2000_San_Jose_Earthquakes_season) --wwors:seeAlso--> 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup)
+  '8':
+    attributes:
+      2000_U.S._Open_Cup: (champions^='', RD3-team^='Chicago Fire', RD5-team^='Chicago Fire')
+      Charleston,_South_Carolina: (named for^='http://dbpedia.org/resource/Charles_II_of_England')
+      2000_San_Jose_Earthquakes_season: (location^='Washington, D.C.')
+    relationships:
+      - 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup) --dop:location--> Charleston,_South_Carolina (<http://dbpedia.org/resource/Charleston,_South_Carolina>)
+      - 2000_San_Jose_Earthquakes_season (dor:2000_San_Jose_Earthquakes_season) --wwors:seeAlso--> 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup)
+  '9':
+    attributes:
+      Columbus,_Ohio: (named for^='http://dbpedia.org/resource/Christopher_Columbus')
+      2000_U.S._Open_Cup: (champions^='', RD3-team^='Chicago Fire', RD5-team^='Chicago Fire')
+      2000_San_Jose_Earthquakes_season: (location^='Washington, D.C.')
+    relationships:
+      - 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup) --dop:location--> Columbus,_Ohio (<http://dbpedia.org/resource/Columbus,_Ohio>)
+      - 2000_San_Jose_Earthquakes_season (dor:2000_San_Jose_Earthquakes_season) --wwors:seeAlso--> 2000_U.S._Open_Cup (dor:2000_U.S._Open_Cup)
+  '10':
+    attributes:
+      Birmingham: (Aug high C^='21', Apr high C^='12.1')
+      2000–01_FA_Cup: (champions^='http://dbpedia.org/resource/Liverpool_F.C.')
+      2000–01_Arsenal_F.C._season: (location^='Amsterdam, Netherlands', lowest attendance^='26105')
+    relationships:
+      - 2000–01_FA_Cup (<http://dbpedia.org/resource/2000–01_FA_Cup>) --dop:location--> Birmingham (dor:Birmingham)
+      - 2000–01_Arsenal_F.C._season (<http://dbpedia.org/resource/2000–01_Arsenal_F.C._season>) --wwors:seeAlso--> 2000–01_FA_Cup (<http://dbpedia.org/resource/2000–01_FA_Cup>)
+qa_result:
+  status: completed
+  cost_usd: 0.247365
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.042047400000000006
+        total_tokens: 4123
+        prompt_tokens: 2249
+        completion_tokens: 1874
+      generate:
+        cost_usd: 0.06392260000000001
+        total_tokens: 6499
+        prompt_tokens: 3924
+        completion_tokens: 2575
+      verify_1:
+        cost_usd: 0.03274200000000001
+        total_tokens: 4953
+        prompt_tokens: 4421
+        completion_tokens: 532
+      complexity:
+        cost_usd: 0.10865300000000001
+        total_tokens: 10205
+        prompt_tokens: 5791
+        completion_tokens: 4414
+    total_tokens: 25780
+    prompt_tokens: 16385
+    total_cost_usd: 0.24736500000000006
+    completion_tokens: 9395
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --Aug high F^ (dop:augHighF)--> double | --named for^ (dop:namedFor)--> langString | --Aug high C^ (dop:augHighC)--> int | --Apr rain mm^ (dop:aprRainMm)--> double | --Apr high C^ (dop:aprHighC)--> double
+  soccer tournoment: --champions^ (dop:champions)--> Resource | --RD3-team^ (dop:rd3Team)--> langString | --RD5-team^ (dop:rd5Team)--> langString
+  soccer club season: --location^ (dop:location)--> langString | --lowest attendance^ (dop:lowestAttendance)--> int
+subgraph_id: 174
+relationships:
+  - soccer tournoment --dop:location--> city
+  - soccer club season --wwors:seeAlso--> soccer tournoment

@@ -1,0 +1,95 @@
+types:
+  airport: doo:Airport
+  building: doo:Building
+  organisation: doo:Organisation
+  government agency: doo:GovernmentAgency
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ministry_of_Defence_(India): (logo^='Flag of the Ministry of Defence of India.svg', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abbr')
+      Secretariat_Building,_New_Delhi: (building start date^='1912')
+    relationships:
+      - Air_Force_Academy_(India)__Indian_Air_Force_Academy__1 (<http://dbpedia.org/resource/Air_Force_Academy_(India)__Indian_Air_Force_Academy__1>) --doo:operator--> Indian_Air_Force (dor:Indian_Air_Force)
+      - Air_Force_Academy_(India)__Indian_Air_Force_Academy__1 (<http://dbpedia.org/resource/Air_Force_Academy_(India)__Indian_Air_Force_Academy__1>) --doo:owner--> Ministry_of_Defence_(India) (<http://dbpedia.org/resource/Ministry_of_Defence_(India)>)
+      - Ministry_of_Defence_(India) (<http://dbpedia.org/resource/Ministry_of_Defence_(India)>) --doo:headquarter--> Secretariat_Building,_New_Delhi (<http://dbpedia.org/resource/Secretariat_Building,_New_Delhi>)
+  '2':
+    attributes:
+      Singha_Durbar: (cost^='Unknown')
+      Government_of_Nepal: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Asia_topic')
+    relationships:
+      - Bajhang_Airport (dor:Bajhang_Airport) --doo:operator--> Civil_Aviation_Authority_of_Nepal (dor:Civil_Aviation_Authority_of_Nepal)
+      - Bajhang_Airport (dor:Bajhang_Airport) --doo:owner--> Government_of_Nepal (dor:Government_of_Nepal)
+      - Government_of_Nepal (dor:Government_of_Nepal) --doo:headquarter--> Singha_Durbar (dor:Singha_Durbar)
+  '3':
+    attributes:
+      Singha_Durbar: (cost^='Unknown')
+      Government_of_Nepal: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Asia_topic')
+    relationships:
+      - Bajura_Airport (dor:Bajura_Airport) --doo:operator--> Civil_Aviation_Authority_of_Nepal (dor:Civil_Aviation_Authority_of_Nepal)
+      - Bajura_Airport (dor:Bajura_Airport) --doo:owner--> Government_of_Nepal (dor:Government_of_Nepal)
+      - Government_of_Nepal (dor:Government_of_Nepal) --doo:headquarter--> Singha_Durbar (dor:Singha_Durbar)
+  '4':
+    attributes:
+      Singha_Durbar: (cost^='Unknown')
+      Government_of_Nepal: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Asia_topic')
+    relationships:
+      - Bhadrapur_Airport (dor:Bhadrapur_Airport) --doo:operator--> Civil_Aviation_Authority_of_Nepal (dor:Civil_Aviation_Authority_of_Nepal)
+      - Bhadrapur_Airport (dor:Bhadrapur_Airport) --doo:owner--> Government_of_Nepal (dor:Government_of_Nepal)
+      - Government_of_Nepal (dor:Government_of_Nepal) --doo:headquarter--> Singha_Durbar (dor:Singha_Durbar)
+  '5':
+    attributes:
+      Air_Ministry: (logo^='File:Royal Coat of Arms of the United Kingdom .svg', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Breighton_Aerodrome (dor:Breighton_Aerodrome) --doo:operator--> Royal_Air_Force (dor:Royal_Air_Force)
+      - Breighton_Aerodrome (dor:Breighton_Aerodrome) --doo:owner--> Air_Ministry (dor:Air_Ministry)
+      - Air_Ministry (dor:Air_Ministry) --doo:headquarter--> Ministry_of_Defence_Main_Building (dor:Ministry_of_Defence_Main_Building)
+  '6':
+    attributes:
+      National_Park_Service: (budget ($)^='3.265E9', logo^='Guidon of the United States National Park Service.svg', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Chicken_Strip (dor:Chicken_Strip) --doo:operator--> National_Park_Service (dor:National_Park_Service)
+      - Chicken_Strip (dor:Chicken_Strip) --doo:owner--> National_Park_Service (dor:National_Park_Service)
+      - National_Park_Service (dor:National_Park_Service) --doo:headquarter--> Main_Interior_Building (dor:Main_Interior_Building)
+  '7':
+    attributes: {}
+    relationships:
+      - Grapevine_Airstrip (dor:Grapevine_Airstrip) --doo:operator--> United_States_Forest_Service (dor:United_States_Forest_Service)
+      - Grapevine_Airstrip (dor:Grapevine_Airstrip) --doo:owner--> United_States_Forest_Service (dor:United_States_Forest_Service)
+      - United_States_Forest_Service (dor:United_States_Forest_Service) --doo:headquarter--> Sidney_Yates_Building (dor:Sidney_Yates_Building)
+  '8':
+    attributes:
+      United_States_Department_of_the_Interior: (budget ($)^='1.76E10', logo^='Flag of the United States Department of the Interior.svgborder', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - Henderson_Field_(Midway_Atoll)__Henderson_Field__1 (<http://dbpedia.org/resource/Henderson_Field_(Midway_Atoll)__Henderson_Field__1>) --doo:operator--> Chugach_Alaska_Corporation (dor:Chugach_Alaska_Corporation)
+      - Henderson_Field_(Midway_Atoll)__Henderson_Field__1 (<http://dbpedia.org/resource/Henderson_Field_(Midway_Atoll)__Henderson_Field__1>) --doo:owner--> United_States_Department_of_the_Interior (dor:United_States_Department_of_the_Interior)
+      - United_States_Department_of_the_Interior (dor:United_States_Department_of_the_Interior) --doo:headquarter--> Main_Interior_Building (dor:Main_Interior_Building)
+  '9':
+    attributes:
+      Air_Ministry: (logo^='File:Royal Coat of Arms of the United Kingdom .svg', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Hunsdon_Airfield (dor:Hunsdon_Airfield) --doo:operator--> Royal_Air_Force (dor:Royal_Air_Force)
+      - Hunsdon_Airfield (dor:Hunsdon_Airfield) --doo:owner--> Air_Ministry (dor:Air_Ministry)
+      - Air_Ministry (dor:Air_Ministry) --doo:headquarter--> Ministry_of_Defence_Main_Building (dor:Ministry_of_Defence_Main_Building)
+  '10':
+    attributes:
+      The_Pentagon: (cost^='8.3E7')
+      United_States_Marine_Corps: (alt^='color photograph of David H. Berger')
+      United_States_Department_of_the_Navy: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Marine_Corps_Auxiliary_Landing_Field_Bogue (dor:Marine_Corps_Auxiliary_Landing_Field_Bogue) --doo:operator--> United_States_Marine_Corps (dor:United_States_Marine_Corps)
+      - Marine_Corps_Auxiliary_Landing_Field_Bogue (dor:Marine_Corps_Auxiliary_Landing_Field_Bogue) --doo:owner--> United_States_Department_of_the_Navy (dor:United_States_Department_of_the_Navy)
+      - United_States_Department_of_the_Navy (dor:United_States_Department_of_the_Navy) --doo:headquarter--> The_Pentagon (dor:The_Pentagon)
+attributes:
+  building: --header^ (dop:header)--> langString | --cost^ (dop:cost)--> poundSterling | --partof^ (dop:partof)--> langString | --building start date^ (doo:buildingStartDate)--> string | --bot^ (dop:bot)--> langString
+  organisation: --alt^ (dop:alt)--> langString | --affiliations^ (dop:affiliations)--> langString
+  government agency: --budget ($)^ (doo:budget)--> euro | --logo^ (dop:logo)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --formation^ (dop:formation)--> date
+subgraph_id: 807
+relationships:
+  - airport --doo:operator--> organisation
+  - airport --doo:owner--> government agency
+  - government agency --doo:headquarter--> building

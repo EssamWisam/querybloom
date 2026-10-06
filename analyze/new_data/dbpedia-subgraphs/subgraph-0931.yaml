@@ -1,0 +1,139 @@
+types:
+  city: doo:City
+  park: doo:Park
+  writer: doo:Writer
+  company: doo:Company
+  settlement: doo:Settlement
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Phoenix,_Arizona: (named for^='http://dbpedia.org/resource/Phoenix_(mythology)')
+      Alexandra_Bracken: (birth place^='Phoenix, Arizona, U.S.')
+      Gene_C._Reid_Park: (operator^='Tucson Parks and Recreation')
+      Abrazo_Community_Health_Network: (products^='Acute care hospitals and emergency centers, health care services, emergency room services, urgent care  services and medical group primary care facilities')
+    relationships:
+      - Arizona_Territory (dor:Arizona_Territory) --doo:capital--> Phoenix,_Arizona (<http://dbpedia.org/resource/Phoenix,_Arizona>)
+      - Arizona_Territory (dor:Arizona_Territory) --doo:capital--> Tucson,_Arizona (<http://dbpedia.org/resource/Tucson,_Arizona>)
+      - Abrazo_Community_Health_Network (dor:Abrazo_Community_Health_Network) --doo:location--> Phoenix,_Arizona (<http://dbpedia.org/resource/Phoenix,_Arizona>)
+      - Gene_C._Reid_Park (dor:Gene_C._Reid_Park) --doo:location--> Tucson,_Arizona (<http://dbpedia.org/resource/Tucson,_Arizona>)
+      - Alexandra_Bracken (dor:Alexandra_Bracken) --doo:birthPlace--> Phoenix,_Arizona (<http://dbpedia.org/resource/Phoenix,_Arizona>)
+  '2':
+    attributes:
+      Allison_DuBois: (birth date^='1972-01-24', birth place^='Phoenix, Arizona, U.S.')
+      Phoenix,_Arizona: (named for^='http://dbpedia.org/resource/Phoenix_(mythology)')
+      Gene_C._Reid_Park: (operator^='Tucson Parks and Recreation')
+    relationships:
+      - Arizona_Territory (dor:Arizona_Territory) --doo:capital--> Phoenix,_Arizona (<http://dbpedia.org/resource/Phoenix,_Arizona>)
+      - Arizona_Territory (dor:Arizona_Territory) --doo:capital--> Tucson,_Arizona (<http://dbpedia.org/resource/Tucson,_Arizona>)
+      - Abrazo_Community_Health_Network (dor:Abrazo_Community_Health_Network) --doo:location--> Phoenix,_Arizona (<http://dbpedia.org/resource/Phoenix,_Arizona>)
+      - Gene_C._Reid_Park (dor:Gene_C._Reid_Park) --doo:location--> Tucson,_Arizona (<http://dbpedia.org/resource/Tucson,_Arizona>)
+      - Allison_DuBois (dor:Allison_DuBois) --doo:birthPlace--> Phoenix,_Arizona (<http://dbpedia.org/resource/Phoenix,_Arizona>)
+  '3':
+    attributes:
+      Phoenix,_Arizona: (named for^='http://dbpedia.org/resource/Phoenix_(mythology)')
+      Gene_C._Reid_Park: (operator^='Tucson Parks and Recreation')
+      Amanda_Brown_(novelist): (birth date^='1970-10-06', birth place^='http://dbpedia.org/resource/Phoenix,_Arizona')
+      Abrazo_Community_Health_Network: (products^='Acute care hospitals and emergency centers, health care services, emergency room services, urgent care  services and medical group primary care facilities')
+    relationships:
+      - Arizona_Territory (dor:Arizona_Territory) --doo:capital--> Phoenix,_Arizona (<http://dbpedia.org/resource/Phoenix,_Arizona>)
+      - Arizona_Territory (dor:Arizona_Territory) --doo:capital--> Tucson,_Arizona (<http://dbpedia.org/resource/Tucson,_Arizona>)
+      - Abrazo_Community_Health_Network (dor:Abrazo_Community_Health_Network) --doo:location--> Phoenix,_Arizona (<http://dbpedia.org/resource/Phoenix,_Arizona>)
+      - Gene_C._Reid_Park (dor:Gene_C._Reid_Park) --doo:location--> Tucson,_Arizona (<http://dbpedia.org/resource/Tucson,_Arizona>)
+      - Amanda_Brown_(novelist) (<http://dbpedia.org/resource/Amanda_Brown_(novelist)>) --doo:birthPlace--> Phoenix,_Arizona (<http://dbpedia.org/resource/Phoenix,_Arizona>)
+  '4':
+    attributes:
+      Sarajevo: (Apr precipitation mm^='77')
+      Banjalučka_Pivara: (products^='Beers and lagers')
+      Ivan_Franjo_Jukić: (birth date^='1818-07-08', birth place^='http://dbpedia.org/resource/Banja_Luka')
+    relationships:
+      - Bosnia_Eyalet (dor:Bosnia_Eyalet) --doo:capital--> Banja_Luka (dor:Banja_Luka)
+      - Bosnia_Eyalet (dor:Bosnia_Eyalet) --doo:capital--> Sarajevo (dor:Sarajevo)
+      - Banjalučka_Pivara (<http://dbpedia.org/resource/Banjalučka_Pivara>) --doo:location--> Banja_Luka (dor:Banja_Luka)
+      - Nijaz_Duraković_Park (<http://dbpedia.org/resource/Nijaz_Duraković_Park>) --doo:location--> Sarajevo (dor:Sarajevo)
+      - Ivan_Franjo_Jukić (<http://dbpedia.org/resource/Ivan_Franjo_Jukić>) --doo:birthPlace--> Banja_Luka (dor:Banja_Luka)
+  '5':
+    attributes:
+      Sarajevo: (Apr precipitation mm^='77')
+      Banjalučka_Pivara: (products^='Beers and lagers')
+      Nasiha_Kapidžić-Hadžić: (birth date^='1932-12-06', birth place^='http://dbpedia.org/resource/Banja_Luka')
+    relationships:
+      - Bosnia_Eyalet (dor:Bosnia_Eyalet) --doo:capital--> Banja_Luka (dor:Banja_Luka)
+      - Bosnia_Eyalet (dor:Bosnia_Eyalet) --doo:capital--> Sarajevo (dor:Sarajevo)
+      - Banjalučka_Pivara (<http://dbpedia.org/resource/Banjalučka_Pivara>) --doo:location--> Banja_Luka (dor:Banja_Luka)
+      - Nijaz_Duraković_Park (<http://dbpedia.org/resource/Nijaz_Duraković_Park>) --doo:location--> Sarajevo (dor:Sarajevo)
+      - Nasiha_Kapidžić-Hadžić (<http://dbpedia.org/resource/Nasiha_Kapidžić-Hadžić>) --doo:birthPlace--> Banja_Luka (dor:Banja_Luka)
+  '6':
+    attributes:
+      Sarajevo: (Apr precipitation mm^='77')
+      Pošte_Srpske: (products^='First-class and domestic mail, logistics')
+      Ivan_Franjo_Jukić: (birth date^='1818-07-08', birth place^='http://dbpedia.org/resource/Banja_Luka')
+    relationships:
+      - Bosnia_Eyalet (dor:Bosnia_Eyalet) --doo:capital--> Banja_Luka (dor:Banja_Luka)
+      - Bosnia_Eyalet (dor:Bosnia_Eyalet) --doo:capital--> Sarajevo (dor:Sarajevo)
+      - Pošte_Srpske (<http://dbpedia.org/resource/Pošte_Srpske>) --doo:location--> Banja_Luka (dor:Banja_Luka)
+      - Nijaz_Duraković_Park (<http://dbpedia.org/resource/Nijaz_Duraković_Park>) --doo:location--> Sarajevo (dor:Sarajevo)
+      - Ivan_Franjo_Jukić (<http://dbpedia.org/resource/Ivan_Franjo_Jukić>) --doo:birthPlace--> Banja_Luka (dor:Banja_Luka)
+  '7':
+    attributes:
+      Shimla: (named for^='http://dbpedia.org/resource/Kali_Bari,_Shimla')
+      Alice_Mary_Gordon: (birth date^='1854-10-22', birth place^='http://dbpedia.org/resource/Shimla')
+      Garden_of_Springs,_Chandigarh: (operator^='Chandigarh Tourism Department')
+    relationships:
+      - East_Punjab (dor:East_Punjab) --doo:capital--> Shimla (dor:Shimla)
+      - East_Punjab (dor:East_Punjab) --doo:capital--> Chandigarh (dor:Chandigarh)
+      - Church's_Auxiliary_for_Social_Action (<http://dbpedia.org/resource/Church's_Auxiliary_for_Social_Action>) --doo:location--> Shimla (dor:Shimla)
+      - Garden_of_Springs,_Chandigarh (<http://dbpedia.org/resource/Garden_of_Springs,_Chandigarh>) --doo:location--> Chandigarh (dor:Chandigarh)
+      - Alice_Mary_Gordon (dor:Alice_Mary_Gordon) --doo:birthPlace--> Shimla (dor:Shimla)
+  '8':
+    attributes:
+      Shimla: (named for^='http://dbpedia.org/resource/Kali_Bari,_Shimla')
+      Ashok_Chopra: (birth date^='1949-02-26', birth place^='Shimla, Himachal Pradesh, India')
+      Garden_of_Springs,_Chandigarh: (operator^='Chandigarh Tourism Department')
+    relationships:
+      - East_Punjab (dor:East_Punjab) --doo:capital--> Shimla (dor:Shimla)
+      - East_Punjab (dor:East_Punjab) --doo:capital--> Chandigarh (dor:Chandigarh)
+      - Church's_Auxiliary_for_Social_Action (<http://dbpedia.org/resource/Church's_Auxiliary_for_Social_Action>) --doo:location--> Shimla (dor:Shimla)
+      - Garden_of_Springs,_Chandigarh (<http://dbpedia.org/resource/Garden_of_Springs,_Chandigarh>) --doo:location--> Chandigarh (dor:Chandigarh)
+      - Ashok_Chopra (dor:Ashok_Chopra) --doo:birthPlace--> Shimla (dor:Shimla)
+  '9':
+    attributes:
+      Shimla: (named for^='http://dbpedia.org/resource/Kali_Bari,_Shimla')
+      Chandrakant_Keni: (birth date^='1934', birth place^='Shimla, India', awards^='Sahitya Academy Award')
+      Garden_of_Springs,_Chandigarh: (operator^='Chandigarh Tourism Department')
+    relationships:
+      - East_Punjab (dor:East_Punjab) --doo:capital--> Shimla (dor:Shimla)
+      - East_Punjab (dor:East_Punjab) --doo:capital--> Chandigarh (dor:Chandigarh)
+      - Church's_Auxiliary_for_Social_Action (<http://dbpedia.org/resource/Church's_Auxiliary_for_Social_Action>) --doo:location--> Shimla (dor:Shimla)
+      - Garden_of_Springs,_Chandigarh (<http://dbpedia.org/resource/Garden_of_Springs,_Chandigarh>) --doo:location--> Chandigarh (dor:Chandigarh)
+      - Chandrakant_Keni (dor:Chandrakant_Keni) --doo:birthPlace--> Shimla (dor:Shimla)
+  '10':
+    attributes:
+      Colonial_Quarter: (operator^='Colonial Quarter, LLC')
+      Pensacola,_Florida: (Apr record low F^='33', Apr high F^='77.6')
+      Kimberly_Willis_Holt: (birth place^='http://dbpedia.org/resource/Pensacola,_Florida')
+    relationships:
+      - Florida_Territory (dor:Florida_Territory) --doo:capital--> Pensacola,_Florida (<http://dbpedia.org/resource/Pensacola,_Florida>)
+      - Florida_Territory (dor:Florida_Territory) --doo:capital--> St._Augustine,_Florida (<http://dbpedia.org/resource/St._Augustine,_Florida>)
+      - Abeka (dor:Abeka) --doo:location--> Pensacola,_Florida (<http://dbpedia.org/resource/Pensacola,_Florida>)
+      - Colonial_Quarter (dor:Colonial_Quarter) --doo:location--> St._Augustine,_Florida (<http://dbpedia.org/resource/St._Augustine,_Florida>)
+      - Kimberly_Willis_Holt (dor:Kimberly_Willis_Holt) --doo:birthPlace--> Pensacola,_Florida (<http://dbpedia.org/resource/Pensacola,_Florida>)
+attributes:
+  city: --named for^ (dop:namedFor)--> langString | --Apr record low F^ (dop:aprRecordLowF)--> int | --Apr high F^ (dop:aprHighF)--> int
+  park: --operator^ (dop:operator)--> Resource
+  writer: --birth date^ (dop:birthDate)--> date | --alt^ (dop:alt)--> langString | --birth place^ (dop:birthPlace)--> langString | --awards^ (dop:awards)--> int
+  company: --products^ (dop:products)--> Resource | --url^ (dop:url)--> Resource
+  settlement: --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int
+  administrative region: --Aug low C^ (dop:augLowC)--> int | --Apr record high C^ (dop:aprRecordHighC)--> int
+subgraph_id: 931
+relationships:
+  - administrative region --doo:capital--> city
+  - administrative region --doo:capital--> settlement
+  - company --doo:location--> city
+  - park --doo:location--> settlement
+  - writer --doo:birthPlace--> city

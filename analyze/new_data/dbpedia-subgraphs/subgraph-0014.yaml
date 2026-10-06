@@ -1,0 +1,76 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  cricketer: doo:Cricketer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Chennai: (country^='http://dbpedia.org/resource/India')
+    relationships:
+      - A._G._Kripal_Singh (dor:A._G._Kripal_Singh) --dop:birthPlace--> Chennai (dor:Chennai)
+      - A._G._Kripal_Singh (dor:A._G._Kripal_Singh) --doo:deathPlace--> Chennai (dor:Chennai)
+  '2':
+    attributes: {}
+    relationships:
+      - A._G._Kripal_Singh (dor:A._G._Kripal_Singh) --dop:birthPlace--> Madras_State (dor:Madras_State)
+      - A._G._Kripal_Singh (dor:A._G._Kripal_Singh) --doo:deathPlace--> Chennai (dor:Chennai)
+  '3':
+    attributes: {}
+    relationships:
+      - A._G._Milkha_Singh (dor:A._G._Milkha_Singh) --dop:birthPlace--> British_Raj (dor:British_Raj)
+      - A._G._Milkha_Singh (dor:A._G._Milkha_Singh) --doo:deathPlace--> Chennai (dor:Chennai)
+  '4':
+    attributes:
+      Karachi: (Aug precipitation days^='3.3', country^='http://dbpedia.org/resource/Pakistan')
+    relationships:
+      - Abdul_Aziz_(Sindh_cricketer) (<http://dbpedia.org/resource/Abdul_Aziz_(Sindh_cricketer)>) --dop:birthPlace--> Karachi (dor:Karachi)
+      - Abdul_Aziz_(Sindh_cricketer) (<http://dbpedia.org/resource/Abdul_Aziz_(Sindh_cricketer)>) --doo:deathPlace--> Karachi (dor:Karachi)
+  '5':
+    attributes:
+      Sindh: (country^='http://dbpedia.org/resource/Pakistan')
+    relationships:
+      - Abdul_Aziz_(Sindh_cricketer) (<http://dbpedia.org/resource/Abdul_Aziz_(Sindh_cricketer)>) --dop:birthPlace--> Sindh (dor:Sindh)
+      - Abdul_Aziz_(Sindh_cricketer) (<http://dbpedia.org/resource/Abdul_Aziz_(Sindh_cricketer)>) --doo:deathPlace--> Karachi (dor:Karachi)
+  '6':
+    attributes:
+      Lahore: (country^='http://dbpedia.org/resource/Pakistan')
+    relationships:
+      - Abdul_Hafeez_Kardar (dor:Abdul_Hafeez_Kardar) --dop:birthPlace--> Lahore (dor:Lahore)
+      - Abdul_Hafeez_Kardar (dor:Abdul_Hafeez_Kardar) --doo:deathPlace--> Islamabad (dor:Islamabad)
+  '7':
+    attributes:
+      Amritsar: (country^='http://dbpedia.org/resource/India')
+    relationships:
+      - Abdur_Rehman_(cricketer,_born_1917) (<http://dbpedia.org/resource/Abdur_Rehman_(cricketer,_born_1917)>) --dop:birthPlace--> Amritsar (dor:Amritsar)
+      - Abdur_Rehman_(cricketer,_born_1917) (<http://dbpedia.org/resource/Abdur_Rehman_(cricketer,_born_1917)>) --doo:deathPlace--> Lahore (dor:Lahore)
+  '8':
+    attributes: {}
+    relationships:
+      - Abu_Fuard (dor:Abu_Fuard) --dop:birthPlace--> Sri_Lanka (dor:Sri_Lanka)
+      - Abu_Fuard (dor:Abu_Fuard) --doo:deathPlace--> Colombo (dor:Colombo)
+  '9':
+    attributes:
+      Bristol: (motto^='(With courage and industry)')
+      Blandford_Forum: (country^='http://dbpedia.org/resource/United_Kingdom')
+    relationships:
+      - Ælfric_Harrison (<http://dbpedia.org/resource/Ælfric_Harrison>) --dop:birthPlace--> Blandford_Forum (dor:Blandford_Forum)
+      - Ælfric_Harrison (<http://dbpedia.org/resource/Ælfric_Harrison>) --doo:deathPlace--> Bristol (dor:Bristol)
+  '10':
+    attributes:
+      Dorset: (country^='http://dbpedia.org/resource/United_Kingdom')
+      Bristol: (motto^='(With courage and industry)')
+    relationships:
+      - Ælfric_Harrison (<http://dbpedia.org/resource/Ælfric_Harrison>) --dop:birthPlace--> Dorset (dor:Dorset)
+      - Ælfric_Harrison (<http://dbpedia.org/resource/Ælfric_Harrison>) --doo:deathPlace--> Bristol (dor:Bristol)
+attributes:
+  city: --motto^ (doo:motto)--> string | --Apr rain mm^ (dop:aprRainMm)--> double | --bot^ (dop:bot)--> langString | --Aug precipitation inch^ (dop:augPrecipitationInch)--> double
+  Location: --area^ (dop:area)--> squareKilometre | --added^ (dop:added)--> date | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --auto^ (dop:auto)--> langString | --named for^ (dop:namedFor)--> Resource | --certain^ (dop:certain)--> langString | --country^ (doo:country)--> Resource
+subgraph_id: 14
+relationships:
+  - cricketer --dop:birthPlace--> Location
+  - cricketer --doo:deathPlace--> city

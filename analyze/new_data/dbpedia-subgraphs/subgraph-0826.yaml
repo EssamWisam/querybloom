@@ -1,0 +1,114 @@
+types:
+  city: doo:City
+  town: doo:Town
+  person: doo:Person
+  school: doo:School
+  politician: doo:Politician
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A-Lin: (spouse^='')
+      Chen_Po-wei: (birth date^='1985-07-10')
+    relationships:
+      - A-Lin (dor:A-Lin) --doo:birthPlace--> Kaohsiung (dor:Kaohsiung)
+      - Kaohsiung_Municipal_Hsin_Chuang_High_School__Kaohsiung_Municipal_Hsin-Chuang_Senior_High_School__1 (dor:Kaohsiung_Municipal_Hsin_Chuang_High_School__Kaohsiung_Municipal_Hsin-Chuang_Senior_High_School__1) --doo:city--> Kaohsiung (dor:Kaohsiung)
+      - Chen_Po-wei (dor:Chen_Po-wei) --doo:birthPlace--> Kaohsiung (dor:Kaohsiung)
+      - Kaohsiung (dor:Kaohsiung) --doo:subdivision--> Sanmin_District (dor:Sanmin_District)
+  '2':
+    attributes:
+      A-Lin: (spouse^='')
+      Chen_Po-wei: (birth date^='1985-07-10')
+    relationships:
+      - A-Lin (dor:A-Lin) --doo:birthPlace--> Kaohsiung (dor:Kaohsiung)
+      - Kaohsiung_Municipal_Kaohsiung_Senior_High_School (dor:Kaohsiung_Municipal_Kaohsiung_Senior_High_School) --doo:city--> Kaohsiung (dor:Kaohsiung)
+      - Chen_Po-wei (dor:Chen_Po-wei) --doo:birthPlace--> Kaohsiung (dor:Kaohsiung)
+      - Kaohsiung (dor:Kaohsiung) --doo:subdivision--> Sanmin_District (dor:Sanmin_District)
+  '3':
+    attributes:
+      A-Lin: (spouse^='')
+      Chen-Yuan_Lee: (birth date^='1915-12-04')
+    relationships:
+      - A-Lin (dor:A-Lin) --doo:birthPlace--> Kaohsiung (dor:Kaohsiung)
+      - Kaohsiung_Municipal_Hsin_Chuang_High_School__Kaohsiung_Municipal_Hsin-Chuang_Senior_High_School__1 (dor:Kaohsiung_Municipal_Hsin_Chuang_High_School__Kaohsiung_Municipal_Hsin-Chuang_Senior_High_School__1) --doo:city--> Kaohsiung (dor:Kaohsiung)
+      - Chen-Yuan_Lee (dor:Chen-Yuan_Lee) --doo:birthPlace--> Kaohsiung (dor:Kaohsiung)
+      - Kaohsiung (dor:Kaohsiung) --doo:subdivision--> Sanmin_District (dor:Sanmin_District)
+  '4':
+    attributes:
+      Belgrade: (UTC offset^='+1')
+      Branko_Pešić: (birth date^='1922-10-01')
+    relationships:
+      - A._S._Patrić (<http://dbpedia.org/resource/A._S._Patrić>) --doo:birthPlace--> Zemun (dor:Zemun)
+      - Zemun_Gymnasium (dor:Zemun_Gymnasium) --doo:city--> Zemun (dor:Zemun)
+      - Branko_Pešić (<http://dbpedia.org/resource/Branko_Pešić>) --doo:birthPlace--> Zemun (dor:Zemun)
+      - Zemun (dor:Zemun) --doo:subdivision--> Belgrade (dor:Belgrade)
+  '5':
+    attributes:
+      Belgrade: (UTC offset^='+1')
+      Branko_Ružić_(politician): (birth date^='1975-12-14')
+    relationships:
+      - A._S._Patrić (<http://dbpedia.org/resource/A._S._Patrić>) --doo:birthPlace--> Zemun (dor:Zemun)
+      - Zemun_Gymnasium (dor:Zemun_Gymnasium) --doo:city--> Zemun (dor:Zemun)
+      - Branko_Ružić_(politician) (<http://dbpedia.org/resource/Branko_Ružić_(politician)>) --doo:birthPlace--> Zemun (dor:Zemun)
+      - Zemun (dor:Zemun) --doo:subdivision--> Belgrade (dor:Belgrade)
+  '6':
+    attributes:
+      Belgrade: (UTC offset^='+1')
+      Dimitrije_Davidović: (birth date^='1789-10-12')
+    relationships:
+      - A._S._Patrić (<http://dbpedia.org/resource/A._S._Patrić>) --doo:birthPlace--> Zemun (dor:Zemun)
+      - Zemun_Gymnasium (dor:Zemun_Gymnasium) --doo:city--> Zemun (dor:Zemun)
+      - Dimitrije_Davidović (<http://dbpedia.org/resource/Dimitrije_Davidović>) --doo:birthPlace--> Zemun (dor:Zemun)
+      - Zemun (dor:Zemun) --doo:subdivision--> Belgrade (dor:Belgrade)
+  '7':
+    attributes:
+      Madurai: (UTC offset^='+5:30')
+      A._V._Meiyappan: (spouse^='Alamelu Meiyappan', deathDate='1979-08-12')
+      Fakkir_Mohamed_Ibrahim_Kalifulla: (birth date^='1951-07-23')
+    relationships:
+      - A._V._Meiyappan (dor:A._V._Meiyappan) --doo:birthPlace--> Karaikudi (dor:Karaikudi)
+      - SMSV._Hr._Sec_School (dor:SMSV._Hr._Sec_School) --doo:city--> Karaikudi (dor:Karaikudi)
+      - Fakkir_Mohamed_Ibrahim_Kalifulla (dor:Fakkir_Mohamed_Ibrahim_Kalifulla) --doo:birthPlace--> Karaikudi (dor:Karaikudi)
+      - Karaikudi (dor:Karaikudi) --doo:subdivision--> Madurai (dor:Madurai)
+  '8':
+    attributes:
+      Madurai: (UTC offset^='+5:30')
+      A._V._Meiyappan: (spouse^='Alamelu Meiyappan', deathDate='1979-08-12')
+      Suba_Veerapandian: (birth date^='1952-04-22')
+    relationships:
+      - A._V._Meiyappan (dor:A._V._Meiyappan) --doo:birthPlace--> Karaikudi (dor:Karaikudi)
+      - SMSV._Hr._Sec_School (dor:SMSV._Hr._Sec_School) --doo:city--> Karaikudi (dor:Karaikudi)
+      - Suba_Veerapandian (dor:Suba_Veerapandian) --doo:birthPlace--> Karaikudi (dor:Karaikudi)
+      - Karaikudi (dor:Karaikudi) --doo:subdivision--> Madurai (dor:Madurai)
+  '9':
+    attributes:
+      Alonso_Fernández_de_Heredia: (birth date^='unknown')
+    relationships:
+      - Adriana_Abenia (dor:Adriana_Abenia) --doo:birthPlace--> Zaragoza (dor:Zaragoza)
+      - College_of_the_Savior (dor:College_of_the_Savior) --doo:city--> Zaragoza (dor:Zaragoza)
+      - Alonso_Fernández_de_Heredia (<http://dbpedia.org/resource/Alonso_Fernández_de_Heredia>) --doo:birthPlace--> Zaragoza (dor:Zaragoza)
+      - Zaragoza (dor:Zaragoza) --doo:subdivision--> Delicias_(Zaragoza) (<http://dbpedia.org/resource/Delicias_(Zaragoza)>)
+  '10':
+    attributes:
+      Antonio_Ejarque_Pina: (birth date^='1905-03-25')
+    relationships:
+      - Adriana_Abenia (dor:Adriana_Abenia) --doo:birthPlace--> Zaragoza (dor:Zaragoza)
+      - College_of_the_Savior (dor:College_of_the_Savior) --doo:city--> Zaragoza (dor:Zaragoza)
+      - Antonio_Ejarque_Pina (dor:Antonio_Ejarque_Pina) --doo:birthPlace--> Zaragoza (dor:Zaragoza)
+      - Zaragoza (dor:Zaragoza) --doo:subdivision--> Delicias_(Zaragoza) (<http://dbpedia.org/resource/Delicias_(Zaragoza)>)
+attributes:
+  city: --UTC offset^ (doo:utcOffset)--> string
+  town: --quote^ (dop:quote)--> int
+  person: --spouse^ (dop:spouse)--> int | --honorific suffix^ (dop:honorificSuffix)--> Resource | --deathDate (dop:deathDate)--> langString | --image^ (dop:image)--> langString
+  school: --colour^ (doo:colour)--> Resource | --affiliation^ (dop:affiliation)--> Resource | --affiliations^ (dop:affiliations)--> langString
+  politician: --birth date^ (dop:birthDate)--> date
+subgraph_id: 826
+relationships:
+  - person --doo:birthPlace--> town
+  - school --doo:city--> town
+  - politician --doo:birthPlace--> town
+  - town --doo:subdivision--> city

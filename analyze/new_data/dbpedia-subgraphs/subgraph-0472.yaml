@@ -1,0 +1,83 @@
+types:
+  city: doo:City
+  museum: doo:Museum
+  architect: doo:Architect
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Adolf_Cluss: (awards^='Fellow of the American Institute of Architects')
+      Washington,_D.C.: '(area code^=''202, 771 (overlay)'', Link from a Wikipage to an external page^=''http://dc.gov/'', footer^=''Left to right from the top: The Basilica of the National Shrine of the Immaculate Conception; the Islamic Center of Washington; the Sixth & I Historic Synagogue; St. John''''s Episcopal Church'', motto^=''('', type^=''http://dbpedia.org/resource/Capital_city'', area total (m2)^=''176999787.4604'')'
+    relationships:
+      - Arts_and_Industries_Building (dor:Arts_and_Industries_Building) --doo:location--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Adolf_Cluss (dor:Adolf_Cluss) --doo:significantBuilding--> Arts_and_Industries_Building (dor:Arts_and_Industries_Building)
+  '2':
+    attributes:
+      Alberto_Alfonso: (awards^='2011')
+      St._Petersburg,_Florida: (area code^='727', Link from a Wikipage to an external page^='http://digital.lib.usf.edu/%3Fw33', Apr low F^='66.3', Apr high F^='81.6', motto^='"Always in Season"', type^='http://dbpedia.org/resource/City_(Florida)', elevation (μ)^='13.4', area total (m2)^='350917489.0694', Apr record low F^='45')
+    relationships:
+      - Morean_Arts_Center (dor:Morean_Arts_Center) --doo:location--> St._Petersburg,_Florida (<http://dbpedia.org/resource/St._Petersburg,_Florida>)
+      - Alberto_Alfonso (dor:Alberto_Alfonso) --doo:significantBuilding--> Morean_Arts_Center (dor:Morean_Arts_Center)
+  '3':
+    attributes:
+      Lisbon: (area code^='(+351) 21 XXX XXXX', Link from a Wikipage to an external page^='http://eleicoes.cne.pt/sel_eleicoes.cfm%3Fm=vector', footer^='Estádio da Luz , home to S.L. Benfica, and Estádio do Alvalade , home to Sporting CP.', motto^='("Very Noble and Always Loyal")', type^='http://dbpedia.org/resource/Capital_city', elevation (μ)^='2.0', area total (m2)^='100050000.0')
+      Amanda_Levete: (awards^='http://dbpedia.org/resource/RIBA_Stirling_Prize')
+    relationships:
+      - Museum_of_Art,_Architecture_and_Technology (<http://dbpedia.org/resource/Museum_of_Art,_Architecture_and_Technology>) --doo:location--> Lisbon (dor:Lisbon)
+      - Amanda_Levete (dor:Amanda_Levete) --doo:significantBuilding--> Museum_of_Art,_Architecture_and_Technology (<http://dbpedia.org/resource/Museum_of_Art,_Architecture_and_Technology>)
+  '4':
+    attributes:
+      London: (Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1', b^='no', type^='http://dbpedia.org/resource/Capital_city', elevation (μ)^='11.0', area total (m2)^='1572030000.0')
+      Amanda_Levete: (awards^='http://dbpedia.org/resource/RIBA_Stirling_Prize')
+    relationships:
+      - Victoria_and_Albert_Museum (dor:Victoria_and_Albert_Museum) --doo:location--> London (dor:London)
+      - Amanda_Levete (dor:Amanda_Levete) --doo:significantBuilding--> Victoria_and_Albert_Museum (dor:Victoria_and_Albert_Museum)
+  '5':
+    attributes:
+      Vancouver: (area code^='604,778, 236, 672', Link from a Wikipage to an external page^='https://archive.org/details/rushforspoilscom0000robi/page/172', motto^='"By sea land and air we prosper"')
+      Arthur_Erickson: (awards^='Gold Medal of the Royal Architectural Institute of Canada')
+    relationships:
+      - Museum_of_Anthropology_at_UBC (dor:Museum_of_Anthropology_at_UBC) --doo:location--> Vancouver (dor:Vancouver)
+      - Arthur_Erickson (dor:Arthur_Erickson) --doo:significantBuilding--> Museum_of_Anthropology_at_UBC (dor:Museum_of_Anthropology_at_UBC)
+  '6':
+    attributes:
+      Arthur_Erickson: (awards^='Gold Medal of the Royal Architectural Institute of Canada')
+      Tacoma,_Washington: (Link from a Wikipage to an external page^='http://digitalcollections.lib.washington.edu/cdm/search/collection/waite/searchterm/tacoma/field/title/mode/all/conn/and/cosuppress/', Apr low F^='43.7', Apr high F^='59.8', Apr record low F^='29')
+    relationships:
+      - Museum_of_Glass (dor:Museum_of_Glass) --doo:location--> Tacoma,_Washington (<http://dbpedia.org/resource/Tacoma,_Washington>)
+      - Arthur_Erickson (dor:Arthur_Erickson) --doo:significantBuilding--> Museum_of_Glass (dor:Museum_of_Glass)
+  '7':
+    attributes:
+      Vienna: (Link from a Wikipage to an external page^='http://geschichtewiki.wien.gv.at/', type^='http://dbpedia.org/resource/Capital_city', elevation (μ)^='150.876')
+    relationships:
+      - Kunsthistorisches_Museum (dor:Kunsthistorisches_Museum) --doo:location--> Vienna (dor:Vienna)
+      - Baron_Karl_von_Hasenauer (dor:Baron_Karl_von_Hasenauer) --doo:significantBuilding--> Kunsthistorisches_Museum (dor:Kunsthistorisches_Museum)
+  '8':
+    attributes:
+      Athens: (area code^='21', Link from a Wikipage to an external page^='http://www.cityofathens.gr/en/', type^='http://dbpedia.org/resource/Capital_city', area total (m2)^='38964000.0')
+    relationships:
+      - Acropolis_Museum (dor:Acropolis_Museum) --doo:location--> Athens (dor:Athens)
+      - Bernard_Tschumi (dor:Bernard_Tschumi) --doo:significantBuilding--> Acropolis_Museum (dor:Acropolis_Museum)
+  '9':
+    attributes:
+      Lahore: (area code^='042', Link from a Wikipage to an external page^='http://lahore.gop.pk/', type^='http://dbpedia.org/resource/City', elevation (μ)^='217.0', area total (m2)^='1772000000.0', float^='right')
+    relationships:
+      - Lahore_Museum (dor:Lahore_Museum) --doo:location--> Lahore (dor:Lahore)
+      - Bhai_Ram_Singh (dor:Bhai_Ram_Singh) --doo:significantBuilding--> Lahore_Museum (dor:Lahore_Museum)
+  '10':
+    attributes:
+      Caracas: (area code^='212', Link from a Wikipage to an external page^='http://www.caracas.gob.ve/', footer^='Sabana Grande, downtown and financial district in Caracas Metropolitan Area', motto^='''''Seguid El Ejemplo', type^='http://dbpedia.org/resource/List_of_cities_and_towns_in_Venezuela', elevation (μ)^='900.0', area total (m2)^='433000000.0')
+    relationships:
+      - Museo_de_Bellas_Artes_(Caracas) (<http://dbpedia.org/resource/Museo_de_Bellas_Artes_(Caracas)>) --doo:location--> Caracas (dor:Caracas)
+      - Carlos_Raúl_Villanueva (<http://dbpedia.org/resource/Carlos_Raúl_Villanueva>) --doo:significantBuilding--> Museo_de_Bellas_Artes_(Caracas) (<http://dbpedia.org/resource/Museo_de_Bellas_Artes_(Caracas)>)
+attributes:
+  city: --area code^ (doo:areaCode)--> string | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --Apr low F^ (dop:aprLowF)--> int | --Apr high F^ (dop:aprHighF)--> int | --footer^ (dop:footer)--> langString | --b^ (dop:b)--> langString | --motto^ (doo:motto)--> string | --type^ (doo:type)--> Resource | --elevation (μ)^ (doo:elevation)--> double | --area total (m2)^ (doo:areaTotal)--> double | --Apr record low F^ (dop:aprRecordLowF)--> int | --float^ (dop:float)--> langString
+  architect: --awards^ (dop:awards)--> langString
+subgraph_id: 472
+relationships:
+  - museum --doo:location--> city
+  - architect --doo:significantBuilding--> museum

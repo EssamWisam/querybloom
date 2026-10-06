@@ -1,0 +1,48 @@
+types:
+  sea: doo:Sea
+  city: doo:City
+  country: doo:Country
+  military unit: doo:MilitaryUnit
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Pakistan: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - 10th_Baluch_Regiment (dor:10th_Baluch_Regiment) --doo:country--> Pakistan (dor:Pakistan)
+      - Operation_Python (dor:Operation_Python) --doo:place--> Pakistan (dor:Pakistan)
+      - Operation_Python (dor:Operation_Python) --doo:place--> Arabian_Sea (dor:Arabian_Sea)
+      - Gorakhpur_(Rawalpindi) (<http://dbpedia.org/resource/Gorakhpur_(Rawalpindi)>) --doo:governmentType--> Pakistan (dor:Pakistan)
+  '2':
+    attributes:
+      Pakistan: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+      111th_Infantry_Brigade_(Pakistan): (anniversaries^='http://dbpedia.org/resource/Defence_Day')
+    relationships:
+      - 111th_Infantry_Brigade_(Pakistan) (<http://dbpedia.org/resource/111th_Infantry_Brigade_(Pakistan)>) --doo:country--> Pakistan (dor:Pakistan)
+      - Operation_Python (dor:Operation_Python) --doo:place--> Pakistan (dor:Pakistan)
+      - Operation_Python (dor:Operation_Python) --doo:place--> Arabian_Sea (dor:Arabian_Sea)
+      - Gorakhpur_(Rawalpindi) (<http://dbpedia.org/resource/Gorakhpur_(Rawalpindi)>) --doo:governmentType--> Pakistan (dor:Pakistan)
+  '3':
+    attributes:
+      Pakistan: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!')
+    relationships:
+      - 11th_Cavalry_(Frontier_Force) (<http://dbpedia.org/resource/11th_Cavalry_(Frontier_Force)>) --doo:country--> Pakistan (dor:Pakistan)
+      - Operation_Python (dor:Operation_Python) --doo:place--> Pakistan (dor:Pakistan)
+      - Operation_Python (dor:Operation_Python) --doo:place--> Arabian_Sea (dor:Arabian_Sea)
+      - Gorakhpur_(Rawalpindi) (<http://dbpedia.org/resource/Gorakhpur_(Rawalpindi)>) --doo:governmentType--> Pakistan (dor:Pakistan)
+attributes:
+  city: --Aug low F^ (dop:augLowF)--> int | --float^ (dop:float)--> langString | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> double
+  country: --footer^ (dop:footer)--> langString | --last^ (dop:last)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --2a^ (dop:2a)--> langString
+  military unit: --anniversaries^ (dop:anniversaries)--> date | --direction^ (dop:direction)--> langString
+  military conflict: --status^ (doo:status)--> string | --last^ (dop:last)--> langString
+subgraph_id: 835
+relationships:
+  - military unit --doo:country--> country
+  - military conflict --doo:place--> country
+  - military conflict --doo:place--> sea
+  - city --doo:governmentType--> country

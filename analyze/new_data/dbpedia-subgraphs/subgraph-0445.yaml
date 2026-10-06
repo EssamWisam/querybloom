@@ -1,0 +1,77 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  cricketer: doo:Cricketer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Chennai: (b^='yes', area code^='+91-44')
+    relationships:
+      - A._G._Kripal_Singh (dor:A._G._Kripal_Singh) --doo:deathPlace--> Chennai (dor:Chennai)
+      - Keelkattalai (dor:Keelkattalai) --doo:type--> Chennai (dor:Chennai)
+  '2':
+    attributes:
+      Chennai: (b^='yes', area code^='+91-44')
+    relationships:
+      - A._G._Milkha_Singh (dor:A._G._Milkha_Singh) --doo:deathPlace--> Chennai (dor:Chennai)
+      - Keelkattalai (dor:Keelkattalai) --doo:type--> Chennai (dor:Chennai)
+  '3':
+    attributes:
+      Karachi: (Apr record high C^='44.4', Apr precipitation mm^='3', area code^='021')
+    relationships:
+      - Abdul_Aziz_(Sindh_cricketer) (<http://dbpedia.org/resource/Abdul_Aziz_(Sindh_cricketer)>) --doo:deathPlace--> Karachi (dor:Karachi)
+      - Gulshan-e-Hadeed (dor:Gulshan-e-Hadeed) --doo:type--> Karachi (dor:Karachi)
+  '4':
+    attributes:
+      Islamabad: (area code^='051')
+    relationships:
+      - Abdul_Hafeez_Kardar (dor:Abdul_Hafeez_Kardar) --doo:deathPlace--> Islamabad (dor:Islamabad)
+      - France_Colony,_Islamabad (<http://dbpedia.org/resource/France_Colony,_Islamabad>) --doo:type--> Islamabad (dor:Islamabad)
+  '5':
+    attributes:
+      Karachi: (Apr record high C^='44.4', Apr precipitation mm^='3', area code^='021')
+    relationships:
+      - Abdul_Kadir_(cricketer)__Abdul_Kadir_Jamali__1 (<http://dbpedia.org/resource/Abdul_Kadir_(cricketer)__Abdul_Kadir_Jamali__1>) --doo:deathPlace--> Karachi (dor:Karachi)
+      - Gulshan-e-Hadeed (dor:Gulshan-e-Hadeed) --doo:type--> Karachi (dor:Karachi)
+  '6':
+    attributes:
+      Auckland: (Apr record high C^='26.5', area code^='09', named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland')
+    relationships:
+      - Adam_Glen (dor:Adam_Glen) --doo:deathPlace--> Auckland (dor:Auckland)
+      - East_Auckland (dor:East_Auckland) --doo:type--> Auckland (dor:Auckland)
+  '7':
+    attributes:
+      Karachi: (Apr record high C^='44.4', Apr precipitation mm^='3', area code^='021')
+    relationships:
+      - Afaq_Hussain (dor:Afaq_Hussain) --doo:deathPlace--> Karachi (dor:Karachi)
+      - Gulshan-e-Hadeed (dor:Gulshan-e-Hadeed) --doo:type--> Karachi (dor:Karachi)
+  '8':
+    attributes:
+      Islamabad: (area code^='051')
+    relationships:
+      - Ahmed_Raza_(general) (<http://dbpedia.org/resource/Ahmed_Raza_(general)>) --doo:deathPlace--> Islamabad (dor:Islamabad)
+      - France_Colony,_Islamabad (<http://dbpedia.org/resource/France_Colony,_Islamabad>) --doo:type--> Islamabad (dor:Islamabad)
+  '9':
+    attributes:
+      Mumbai: (b^='yes', area code^='+91-22', named after^='http://dbpedia.org/resource/Mumbadevi')
+    relationships:
+      - Ajit_Wadekar (dor:Ajit_Wadekar) --doo:deathPlace--> Mumbai (dor:Mumbai)
+      - Eastern_Suburbs_(Mumbai) (<http://dbpedia.org/resource/Eastern_Suburbs_(Mumbai)>) --doo:type--> Mumbai (dor:Mumbai)
+  '10':
+    attributes:
+      Mumbai: (b^='yes', area code^='+91-22', named after^='http://dbpedia.org/resource/Mumbadevi')
+    relationships:
+      - Ajit_Wadekar (dor:Ajit_Wadekar) --doo:deathPlace--> Mumbai (dor:Mumbai)
+      - Kamathipura (dor:Kamathipura) --doo:type--> Mumbai (dor:Mumbai)
+attributes:
+  city: --Apr record high C^ (dop:aprRecordHighC)--> int | --b^ (dop:b)--> langString | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --c^ (dop:c)--> langString | --area code^ (doo:areaCode)--> string | --named after^ (doo:namedAfter)--> Resource
+  Location: --outflow^ (doo:outflow)--> Resource | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --2y^ (dop:2y)--> int | --date^ (dop:date)--> langString | --image width^ (dop:imageWidth)--> int | --Aug rain days^ (dop:augRainDays)--> double
+subgraph_id: 445
+relationships:
+  - cricketer --doo:deathPlace--> city
+  - Location --doo:type--> city

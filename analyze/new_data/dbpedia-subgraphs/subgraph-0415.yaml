@@ -1,0 +1,113 @@
+types:
+  song: doo:Song
+  album: doo:Album
+  person: doo:Person
+  musical artist: doo:MusicalArtist
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doow: http://dbpedia.org/ontology/Work/
+instances:
+  '1':
+    attributes:
+      Free_Meek: (runtime (m)^='-48.0')
+      Alicia_Keys: (awards^='http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Alicia_Keys', Wikipage page ID^='59720')
+    relationships:
+      - Alicia_Keys (dor:Alicia_Keys) --doo:spouse--> Swizz_Beatz (dor:Swizz_Beatz)
+      - ..._And_Then_There_Was_X (<http://dbpedia.org/resource/..._And_Then_There_Was_X>) --dop:extra--> Swizz_Beatz (dor:Swizz_Beatz)
+      - Free_Meek (dor:Free_Meek) --doo:starring--> Swizz_Beatz (dor:Swizz_Beatz)
+      - Party_Up_(Up_in_Here) (<http://dbpedia.org/resource/Party_Up_(Up_in_Here)>) --doo:album--> ..._And_Then_There_Was_X (<http://dbpedia.org/resource/..._And_Then_There_Was_X>)
+  '2':
+    attributes:
+      Free_Meek: (runtime (m)^='-48.0')
+      Alicia_Keys: (awards^='http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Alicia_Keys', Wikipage page ID^='59720')
+    relationships:
+      - Alicia_Keys (dor:Alicia_Keys) --doo:spouse--> Swizz_Beatz (dor:Swizz_Beatz)
+      - ..._And_Then_There_Was_X (<http://dbpedia.org/resource/..._And_Then_There_Was_X>) --dop:extra--> Swizz_Beatz (dor:Swizz_Beatz)
+      - Free_Meek (dor:Free_Meek) --doo:starring--> Swizz_Beatz (dor:Swizz_Beatz)
+      - What_These_Bitches_Want (dor:What_These_Bitches_Want) --doo:album--> ..._And_Then_There_Was_X (<http://dbpedia.org/resource/..._And_Then_There_Was_X>)
+  '3':
+    attributes:
+      Meet_the_Barkers: (runtime (m)^='30.0')
+      Kourtney_Kardashian: (mother^='http://dbpedia.org/resource/Kris_Jenner', Wikipage page ID^='14254953')
+    relationships:
+      - Kourtney_Kardashian (dor:Kourtney_Kardashian) --doo:spouse--> Travis_Barker (dor:Travis_Barker)
+      - '%3F_(XXXTentacion_album) (<http://dbpedia.org/resource/%3F_(XXXTentacion_album)>) --dop:extra--> Travis_Barker (dor:Travis_Barker)'
+      - Meet_the_Barkers (dor:Meet_the_Barkers) --doo:starring--> Travis_Barker (dor:Travis_Barker)
+      - Changes_(XXXTentacion_song) (<http://dbpedia.org/resource/Changes_(XXXTentacion_song)>) --doo:album--> %3F_(XXXTentacion_album) (<http://dbpedia.org/resource/%3F_(XXXTentacion_album)>)
+  '4':
+    attributes:
+      Meet_the_Barkers: (runtime (m)^='30.0')
+      Kourtney_Kardashian: (mother^='http://dbpedia.org/resource/Kris_Jenner', Wikipage page ID^='14254953')
+    relationships:
+      - Kourtney_Kardashian (dor:Kourtney_Kardashian) --doo:spouse--> Travis_Barker (dor:Travis_Barker)
+      - '%3F_(XXXTentacion_album) (<http://dbpedia.org/resource/%3F_(XXXTentacion_album)>) --dop:extra--> Travis_Barker (dor:Travis_Barker)'
+      - Meet_the_Barkers (dor:Meet_the_Barkers) --doo:starring--> Travis_Barker (dor:Travis_Barker)
+      - Hope_(XXXTentacion_song) (<http://dbpedia.org/resource/Hope_(XXXTentacion_song)>) --doo:album--> %3F_(XXXTentacion_album) (<http://dbpedia.org/resource/%3F_(XXXTentacion_album)>)
+  '5':
+    attributes:
+      Kourtney_Kardashian: (mother^='http://dbpedia.org/resource/Kris_Jenner', Wikipage page ID^='14254953')
+    relationships:
+      - Kourtney_Kardashian (dor:Kourtney_Kardashian) --doo:spouse--> Travis_Barker (dor:Travis_Barker)
+      - '%3F_(XXXTentacion_album) (<http://dbpedia.org/resource/%3F_(XXXTentacion_album)>) --dop:extra--> Travis_Barker (dor:Travis_Barker)'
+      - Meet_the_Barkers (dor:Meet_the_Barkers) --doo:starring--> Travis_Barker (dor:Travis_Barker)
+      - Moonlight_(XXXTentacion_song) (<http://dbpedia.org/resource/Moonlight_(XXXTentacion_song)>) --doo:album--> %3F_(XXXTentacion_album) (<http://dbpedia.org/resource/%3F_(XXXTentacion_album)>)
+  '6':
+    attributes:
+      Grace_Gummer: (Wikipage page ID^='25766730')
+      Amy_Winehouse:_Back_to_Black: (runtime (m)^='91.0')
+    relationships:
+      - Grace_Gummer (dor:Grace_Gummer) --doo:spouse--> Mark_Ronson (dor:Mark_Ronson)
+      - 19_(Adele_album) (<http://dbpedia.org/resource/19_(Adele_album)>) --dop:extra--> Mark_Ronson (dor:Mark_Ronson)
+      - Amy_Winehouse:_Back_to_Black (<http://dbpedia.org/resource/Amy_Winehouse:_Back_to_Black>) --doo:starring--> Mark_Ronson (dor:Mark_Ronson)
+      - Chasing_Pavements (dor:Chasing_Pavements) --doo:album--> 19_(Adele_album) (<http://dbpedia.org/resource/19_(Adele_album)>)
+  '7':
+    attributes:
+      Amy_Winehouse:_Back_to_Black: (runtime (m)^='91.0')
+    relationships:
+      - Grace_Gummer (dor:Grace_Gummer) --doo:spouse--> Mark_Ronson (dor:Mark_Ronson)
+      - 19_(Adele_album) (<http://dbpedia.org/resource/19_(Adele_album)>) --dop:extra--> Mark_Ronson (dor:Mark_Ronson)
+      - Amy_Winehouse:_Back_to_Black (<http://dbpedia.org/resource/Amy_Winehouse:_Back_to_Black>) --doo:starring--> Mark_Ronson (dor:Mark_Ronson)
+      - Cold_Shoulder_(song) (<http://dbpedia.org/resource/Cold_Shoulder_(song)>) --doo:album--> 19_(Adele_album) (<http://dbpedia.org/resource/19_(Adele_album)>)
+  '8':
+    attributes:
+      Grace_Gummer: (Wikipage page ID^='25766730')
+      Amy_Winehouse:_Back_to_Black: (runtime (m)^='91.0')
+    relationships:
+      - Grace_Gummer (dor:Grace_Gummer) --doo:spouse--> Mark_Ronson (dor:Mark_Ronson)
+      - 19_(Adele_album) (<http://dbpedia.org/resource/19_(Adele_album)>) --dop:extra--> Mark_Ronson (dor:Mark_Ronson)
+      - Amy_Winehouse:_Back_to_Black (<http://dbpedia.org/resource/Amy_Winehouse:_Back_to_Black>) --doo:starring--> Mark_Ronson (dor:Mark_Ronson)
+      - Hometown_Glory (dor:Hometown_Glory) --doo:album--> 19_(Adele_album) (<http://dbpedia.org/resource/19_(Adele_album)>)
+  '9':
+    attributes:
+      David_Foster: (genre^='', genre^='http://dbpedia.org/resource/Classical_music')
+      Linda_Thompson_(actress): (Wikipage page ID^='1812954')
+    relationships:
+      - Linda_Thompson_(actress) (<http://dbpedia.org/resource/Linda_Thompson_(actress)>) --doo:spouse--> David_Foster (dor:David_Foster)
+      - A_Collection:_Greatest_Hits...and_More (<http://dbpedia.org/resource/A_Collection:_Greatest_Hits...and_More>) --dop:extra--> David_Foster (dor:David_Foster)
+      - Celebrity_Duets (dor:Celebrity_Duets) --doo:starring--> David_Foster (dor:David_Foster)
+      - Someone_That_I_Used_to_Love__Someone_That_I_Used_to_Love__1 (dor:Someone_That_I_Used_to_Love__Someone_That_I_Used_to_Love__1) --doo:album--> A_Collection:_Greatest_Hits...and_More (<http://dbpedia.org/resource/A_Collection:_Greatest_Hits...and_More>)
+  '10':
+    attributes:
+      David_Foster: (genre^='', genre^='http://dbpedia.org/resource/Classical_music')
+      The_Princes_of_Malibu: (runtime (m)^='22.0')
+      Linda_Thompson_(actress): (Wikipage page ID^='1812954')
+    relationships:
+      - Linda_Thompson_(actress) (<http://dbpedia.org/resource/Linda_Thompson_(actress)>) --doo:spouse--> David_Foster (dor:David_Foster)
+      - A_Collection:_Greatest_Hits...and_More (<http://dbpedia.org/resource/A_Collection:_Greatest_Hits...and_More>) --dop:extra--> David_Foster (dor:David_Foster)
+      - The_Princes_of_Malibu (dor:The_Princes_of_Malibu) --doo:starring--> David_Foster (dor:David_Foster)
+      - Someone_That_I_Used_to_Love__Someone_That_I_Used_to_Love__1 (dor:Someone_That_I_Used_to_Love__Someone_That_I_Used_to_Love__1) --doo:album--> A_Collection:_Greatest_Hits...and_More (<http://dbpedia.org/resource/A_Collection:_Greatest_Hits...and_More>)
+attributes:
+  album: --runtime (doo:runtime)--> double
+  person: --mother^ (dop:mother)--> langString | --last^ (dop:last)--> langString | --relations^ (dop:relations)--> Resource | --awards^ (dop:awards)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int
+  musical artist: --genre^ (dop:genre)--> langString | --reason^ (dop:reason)--> langString | --genre^ (doo:genre)--> Resource
+  television show: --quote^ (dop:quote)--> langString | --aux^ (dop:aux)--> double | --runtime (m)^ (doow:runtime)--> minute
+subgraph_id: 415
+relationships:
+  - person --doo:spouse--> musical artist
+  - album --dop:extra--> musical artist
+  - television show --doo:starring--> musical artist
+  - song --doo:album--> album

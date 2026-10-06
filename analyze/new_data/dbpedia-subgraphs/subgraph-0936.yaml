@@ -1,0 +1,110 @@
+types:
+  school: doo:School
+  Location: doo:Location
+  baseball team: doo:BaseballTeam
+  college coach: doo:CollegeCoach
+  baseball player: doo:BaseballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Josh_Blankenship: (awards^='Big Sky Newcomer of the Year')
+      Muskogee,_Oklahoma: (source^='https://wrcc.dri.edu/cgi-bin/cliMAIN.pl%3Fok6130', has abstract^='Muskogee – miasto w Stanach Zjednoczonych, w stanie Oklahoma, siedziba administracyjna hrabstwa Muskogee. Według spisu w 2020 roku liczy 36,9 tys. mieszkańców. Z Muskogee pochodzi Carrie Underwood, am...', area total km^='115.21')
+    relationships:
+      - Ab_Wright (dor:Ab_Wright) --doo:deathPlace--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+      - Muskogee_High_School (dor:Muskogee_High_School) --dop:city--> Muskogee,_Oklahoma (<http://dbpedia.org/resource/Muskogee,_Oklahoma>)
+      - Josh_Blankenship (dor:Josh_Blankenship) --dop:coachTeam--> Muskogee_High_School (dor:Muskogee_High_School)
+      - Ab_Wright (dor:Ab_Wright) --doo:debutTeam--> Cleveland_Indians (dor:Cleveland_Indians)
+  '2':
+    attributes:
+      Bob_Dozier: (awards^='Michigan High School Football Coaches Association Hall of Fame')
+    relationships:
+      - Abbie_Johnson (dor:Abbie_Johnson) --doo:deathPlace--> Detroit (dor:Detroit)
+      - Mackenzie_High_School_(Michigan) (<http://dbpedia.org/resource/Mackenzie_High_School_(Michigan)>) --dop:city--> Detroit (dor:Detroit)
+      - Bob_Dozier (dor:Bob_Dozier) --dop:coachTeam--> Mackenzie_High_School_(Michigan) (<http://dbpedia.org/resource/Mackenzie_High_School_(Michigan)>)
+      - Abbie_Johnson (dor:Abbie_Johnson) --doo:debutTeam--> Louisville_Colonels (dor:Louisville_Colonels)
+  '3':
+    attributes:
+      Detroit: '(source^=''—Martin Luther King Jr.'', has abstract^=''( 다른 뜻에 대해서는 디트로이트 (동음이의) 문서를 참고하십시오.) 디트로이트 시(영어: City of Detroit 시티 오브 디트로이트[*])는 미국 미시간주에서 가장 큰 도시이자 미시간주 남동단 웨인군의 중심 소재지이다. 디트로이트는 미국 동북부 지역 디트로이트 강을 낀 주요 항구도시이며, 캐나다 남부 온타리오주 윈저의 북쪽에 위치한 유일한 미국의 ...'', area total km^=''370.09'')'
+    relationships:
+      - Abbie_Johnson (dor:Abbie_Johnson) --doo:deathPlace--> Detroit (dor:Detroit)
+      - Frank_Cody_High_School (dor:Frank_Cody_High_School) --dop:city--> Detroit (dor:Detroit)
+      - Ernie_Zeigler (dor:Ernie_Zeigler) --dop:coachTeam--> Frank_Cody_High_School (dor:Frank_Cody_High_School)
+      - Abbie_Johnson (dor:Abbie_Johnson) --doo:debutTeam--> Louisville_Colonels (dor:Louisville_Colonels)
+  '4':
+    attributes:
+      Detroit: '(source^=''—Martin Luther King Jr.'', has abstract^=''( 다른 뜻에 대해서는 디트로이트 (동음이의) 문서를 참고하십시오.) 디트로이트 시(영어: City of Detroit 시티 오브 디트로이트[*])는 미국 미시간주에서 가장 큰 도시이자 미시간주 남동단 웨인군의 중심 소재지이다. 디트로이트는 미국 동북부 지역 디트로이트 강을 낀 주요 항구도시이며, 캐나다 남부 온타리오주 윈저의 북쪽에 위치한 유일한 미국의 ...'', area total km^=''370.09'')'
+      Perry_Watson: (awards^='Horizon League Coach of the Year')
+    relationships:
+      - Abbie_Johnson (dor:Abbie_Johnson) --doo:deathPlace--> Detroit (dor:Detroit)
+      - Southwestern_High_School_(Michigan) (<http://dbpedia.org/resource/Southwestern_High_School_(Michigan)>) --dop:city--> Detroit (dor:Detroit)
+      - Perry_Watson (dor:Perry_Watson) --dop:coachTeam--> Southwestern_High_School_(Michigan) (<http://dbpedia.org/resource/Southwestern_High_School_(Michigan)>)
+      - Abbie_Johnson (dor:Abbie_Johnson) --doo:debutTeam--> Louisville_Colonels (dor:Louisville_Colonels)
+  '5':
+    attributes: {}
+    relationships:
+      - Abe_Kruger (dor:Abe_Kruger) --doo:deathPlace--> Elmira,_New_York (<http://dbpedia.org/resource/Elmira,_New_York>)
+      - Notre_Dame_High_School_(Elmira,_New_York) (<http://dbpedia.org/resource/Notre_Dame_High_School_(Elmira,_New_York)>) --dop:city--> Elmira,_New_York (<http://dbpedia.org/resource/Elmira,_New_York>)
+      - Gerald_Everling (dor:Gerald_Everling) --dop:coachTeam--> Notre_Dame_High_School_(Elmira,_New_York) (<http://dbpedia.org/resource/Notre_Dame_High_School_(Elmira,_New_York)>)
+      - Abe_Kruger (dor:Abe_Kruger) --doo:debutTeam--> Brooklyn_Superbas (dor:Brooklyn_Superbas)
+  '6':
+    attributes:
+      Philadelphia: '(has abstract^=''( 다른 뜻에 대해서는 필라델피아 (동음이의) 문서를 참고하십시오.) 필라델피아 시(영어: City of Philadelphia)는 펜실베이니아주에서 가장 큰 도시로, 미국 독립시기인 18세기에 미국의 수도였다. 현재는 미국 북동부에서 두 번째로 큰 도시이자 미국 전체에서 다섯 번째로 큰 도시이다. 도시는 델라웨어 강과 스퀼킬 강에 따라 미국 북동부에 자리...'', area total km^=''369.59'')'
+    relationships:
+      - Abe_Wolstenholme (dor:Abe_Wolstenholme) --doo:deathPlace--> Philadelphia (dor:Philadelphia)
+      - St._Joseph's_Preparatory_School (<http://dbpedia.org/resource/St._Joseph's_Preparatory_School>) --dop:city--> Philadelphia (dor:Philadelphia)
+      - Ank_Scanlan (dor:Ank_Scanlan) --dop:coachTeam--> St._Joseph's_Preparatory_School (<http://dbpedia.org/resource/St._Joseph's_Preparatory_School>)
+      - Abe_Wolstenholme (dor:Abe_Wolstenholme) --doo:debutTeam--> Philadelphia_Quakers_(NL) (<http://dbpedia.org/resource/Philadelphia_Quakers_(NL)>)
+  '7':
+    attributes:
+      Philadelphia: '(has abstract^=''( 다른 뜻에 대해서는 필라델피아 (동음이의) 문서를 참고하십시오.) 필라델피아 시(영어: City of Philadelphia)는 펜실베이니아주에서 가장 큰 도시로, 미국 독립시기인 18세기에 미국의 수도였다. 현재는 미국 북동부에서 두 번째로 큰 도시이자 미국 전체에서 다섯 번째로 큰 도시이다. 도시는 델라웨어 강과 스퀼킬 강에 따라 미국 북동부에 자리...'', area total km^=''369.59'')'
+      Chris_Roulhac: (awards^='PSAC Coach of the Year')
+    relationships:
+      - Abe_Wolstenholme (dor:Abe_Wolstenholme) --doo:deathPlace--> Philadelphia (dor:Philadelphia)
+      - George_Washington_High_School_(Philadelphia) (<http://dbpedia.org/resource/George_Washington_High_School_(Philadelphia)>) --dop:city--> Philadelphia (dor:Philadelphia)
+      - Chris_Roulhac (dor:Chris_Roulhac) --dop:coachTeam--> George_Washington_High_School_(Philadelphia) (<http://dbpedia.org/resource/George_Washington_High_School_(Philadelphia)>)
+      - Abe_Wolstenholme (dor:Abe_Wolstenholme) --doo:debutTeam--> Philadelphia_Quakers_(NL) (<http://dbpedia.org/resource/Philadelphia_Quakers_(NL)>)
+  '8':
+    attributes:
+      Dave_Duke: (awards^='ECC Coach of the Year')
+      Philadelphia: '(has abstract^=''( 다른 뜻에 대해서는 필라델피아 (동음이의) 문서를 참고하십시오.) 필라델피아 시(영어: City of Philadelphia)는 펜실베이니아주에서 가장 큰 도시로, 미국 독립시기인 18세기에 미국의 수도였다. 현재는 미국 북동부에서 두 번째로 큰 도시이자 미국 전체에서 다섯 번째로 큰 도시이다. 도시는 델라웨어 강과 스퀼킬 강에 따라 미국 북동부에 자리...'', area total km^=''369.59'')'
+    relationships:
+      - Abe_Wolstenholme (dor:Abe_Wolstenholme) --doo:deathPlace--> Philadelphia (dor:Philadelphia)
+      - Saints_John_Neumann_and_Maria_Goretti_Catholic_High_School (dor:Saints_John_Neumann_and_Maria_Goretti_Catholic_High_School) --dop:city--> Philadelphia (dor:Philadelphia)
+      - Dave_Duke (dor:Dave_Duke) --dop:coachTeam--> Saints_John_Neumann_and_Maria_Goretti_Catholic_High_School (dor:Saints_John_Neumann_and_Maria_Goretti_Catholic_High_School)
+      - Abe_Wolstenholme (dor:Abe_Wolstenholme) --doo:debutTeam--> Philadelphia_Quakers_(NL) (<http://dbpedia.org/resource/Philadelphia_Quakers_(NL)>)
+  '9':
+    attributes:
+      New_Orleans: |-
+        (source^='NOAA', has abstract^='( 음악가에 대해서는 뉴올리언스 (음악가) 문서를 참고하십시오.)( NOLA는 여기로 연결됩니다. 음반에 대해서는 NOLA (음반) 문서를 참고하십시오.)
+        뉴올리언스(영어: New Orleans, 프랑스어: La Nouvelle-Orléans, 스페인어: Nueva Orleans)는 미국 루이지애나주 남부의 미시시피 강 어귀로부터 상류로 170km에 위치한...', area total km^='906.1')
+      Duane_Reboul: (awards^='*Big South Coach of the Year')
+    relationships:
+      - Abner_Powell (dor:Abner_Powell) --doo:deathPlace--> New_Orleans (dor:New_Orleans)
+      - De_La_Salle_High_School_(New_Orleans) (<http://dbpedia.org/resource/De_La_Salle_High_School_(New_Orleans)>) --dop:city--> New_Orleans (dor:New_Orleans)
+      - Duane_Reboul (dor:Duane_Reboul) --dop:coachTeam--> De_La_Salle_High_School_(New_Orleans) (<http://dbpedia.org/resource/De_La_Salle_High_School_(New_Orleans)>)
+      - Abner_Powell (dor:Abner_Powell) --doo:debutTeam--> Washington_Nationals_(UA) (<http://dbpedia.org/resource/Washington_Nationals_(UA)>)
+  '10':
+    attributes:
+      New_Orleans: |-
+        (source^='NOAA', has abstract^='( 음악가에 대해서는 뉴올리언스 (음악가) 문서를 참고하십시오.)( NOLA는 여기로 연결됩니다. 음반에 대해서는 NOLA (음반) 문서를 참고하십시오.)
+        뉴올리언스(영어: New Orleans, 프랑스어: La Nouvelle-Orléans, 스페인어: Nueva Orleans)는 미국 루이지애나주 남부의 미시시피 강 어귀로부터 상류로 170km에 위치한...', area total km^='906.1')
+      Duane_Reboul: (awards^='*Big South Coach of the Year')
+    relationships:
+      - Abner_Powell (dor:Abner_Powell) --doo:deathPlace--> New_Orleans (dor:New_Orleans)
+      - Jesuit_High_School_(New_Orleans) (<http://dbpedia.org/resource/Jesuit_High_School_(New_Orleans)>) --dop:city--> New_Orleans (dor:New_Orleans)
+      - Duane_Reboul (dor:Duane_Reboul) --dop:coachTeam--> Jesuit_High_School_(New_Orleans) (<http://dbpedia.org/resource/Jesuit_High_School_(New_Orleans)>)
+      - Abner_Powell (dor:Abner_Powell) --doo:debutTeam--> Washington_Nationals_(UA) (<http://dbpedia.org/resource/Washington_Nationals_(UA)>)
+attributes:
+  Location: --source^ (dop:source)--> langString | --has abstract^ (doo:abstract)--> langString | --district^ (doo:district)--> Resource | --partof^ (dop:partof)--> langString | --length m^ (dop:lengthM)--> int | --area total km^ (dop:areaTotalKm)--> double | --2a^ (dop:2a)--> langString | --opened^ (dop:opened)--> int | --footer align^ (dop:footerAlign)--> langString
+  college coach: --awards^ (dop:awards)--> Resource
+subgraph_id: 936
+relationships:
+  - baseball player --doo:deathPlace--> Location
+  - school --dop:city--> Location
+  - college coach --dop:coachTeam--> school
+  - baseball player --doo:debutTeam--> baseball team

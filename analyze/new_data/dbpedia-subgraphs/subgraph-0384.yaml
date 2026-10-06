@@ -1,0 +1,80 @@
+types:
+  country: doo:Country
+  politician: doo:Politician
+  time period: doo:TimePeriod
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abai_Tasbolatov: (Wikipage page ID^='64626956', birth place^='http://dbpedia.org/resource/Kazakh_SSR')
+    relationships:
+      - Abai_Tasbolatov (dor:Abai_Tasbolatov) --dop:1namedata--> Kabibulla_Dzhakupov (dor:Kabibulla_Dzhakupov)
+      - Abai_Tasbolatov (dor:Abai_Tasbolatov) --doo:birthPlace--> Soviet_Union (dor:Soviet_Union)
+  '2':
+    attributes:
+      Abdul_Rahman_Abbas: (Wikipage page ID^='20022918', birth place^='http://dbpedia.org/resource/Kepala_Batas,_Penang')
+    relationships:
+      - Abdul_Rahman_Abbas (dor:Abdul_Rahman_Abbas) --dop:1namedata--> Koh_Tsu_Koon (dor:Koh_Tsu_Koon)
+      - Abdul_Rahman_Abbas (dor:Abdul_Rahman_Abbas) --doo:birthPlace--> Straits_Settlements (dor:Straits_Settlements)
+  '3':
+    attributes:
+      Affendi_Buang: (Wikipage page ID^='62851629', birth place^='Kuching, Crown Colony of Sarawak')
+    relationships:
+      - Affendi_Buang (dor:Affendi_Buang) --dop:1namedata--> Ismail_Sabri_Yaakob (dor:Ismail_Sabri_Yaakob)
+      - Affendi_Buang (dor:Affendi_Buang) --doo:birthPlace--> Crown_Colony_of_Sarawak (dor:Crown_Colony_of_Sarawak)
+  '4':
+    attributes:
+      Malaysia: (image^='--06-21')
+      Afif_Bahardin: (Wikipage page ID^='45433274', birth place^='http://dbpedia.org/resource/Malaysia')
+    relationships:
+      - Afif_Bahardin (dor:Afif_Bahardin) --dop:1namedata--> Nik_Nazmi_Nik_Ahmad (dor:Nik_Nazmi_Nik_Ahmad)
+      - Afif_Bahardin (dor:Afif_Bahardin) --doo:birthPlace--> Malaysia (dor:Malaysia)
+  '5':
+    attributes:
+      Aleksander_Zawadzki: (death place^='http://dbpedia.org/resource/Polish_People''s_Republic', Wikipage page ID^='558195', birth place^='http://dbpedia.org/resource/Będzin')
+    relationships:
+      - Aleksander_Zawadzki (dor:Aleksander_Zawadzki) --dop:1namedata--> Edward_Ochab (dor:Edward_Ochab)
+      - Aleksander_Zawadzki (dor:Aleksander_Zawadzki) --doo:birthPlace--> Congress_Poland (dor:Congress_Poland)
+  '6':
+    attributes:
+      Aleksander_Zawadzki: (death place^='http://dbpedia.org/resource/Polish_People''s_Republic', Wikipage page ID^='558195', birth place^='http://dbpedia.org/resource/Będzin')
+    relationships:
+      - Aleksander_Zawadzki (dor:Aleksander_Zawadzki) --dop:1namedata--> Edward_Ochab (dor:Edward_Ochab)
+      - Aleksander_Zawadzki (dor:Aleksander_Zawadzki) --doo:birthPlace--> Piotrków_Governorate (<http://dbpedia.org/resource/Piotrków_Governorate>)
+  '7':
+    attributes:
+      England: (image^='After Hans Holbein the Younger  - Henry VIII  - RCIN 404438 - Royal Collection.jpg')
+      Alexander_Grantham: (death place^='London, England', id^='gov.archives.arc.95916', Wikipage page ID^='1983544', birth place^='http://dbpedia.org/resource/England')
+    relationships:
+      - Alexander_Grantham (dor:Alexander_Grantham) --dop:1namedata--> Robert_Black_(colonial_administrator) (<http://dbpedia.org/resource/Robert_Black_(colonial_administrator)>)
+      - Alexander_Grantham (dor:Alexander_Grantham) --doo:birthPlace--> England (dor:England)
+  '8':
+    attributes:
+      Nazi_Germany: (image^='Bundesarchiv Bild 102-14468, Berlin, NS-Boykott gegen jüdische Geschäfte crop.jpg')
+      Alfred_Dregger: (death place^='http://dbpedia.org/resource/Fulda', Wikipage page ID^='2348763', birth place^='Münster, Province of Westphalia, Weimar Republic, Nazi Germany')
+    relationships:
+      - Alfred_Dregger (dor:Alfred_Dregger) --dop:1namedata--> Rudolf_Seiters (dor:Rudolf_Seiters)
+      - Alfred_Dregger (dor:Alfred_Dregger) --doo:birthPlace--> Nazi_Germany (dor:Nazi_Germany)
+  '9':
+    attributes:
+      Alfred_Dregger: (death place^='http://dbpedia.org/resource/Fulda', Wikipage page ID^='2348763', birth place^='Münster, Province of Westphalia, Weimar Republic, Nazi Germany')
+    relationships:
+      - Alfred_Dregger (dor:Alfred_Dregger) --dop:1namedata--> Rudolf_Seiters (dor:Rudolf_Seiters)
+      - Alfred_Dregger (dor:Alfred_Dregger) --doo:birthPlace--> Province_of_Westphalia (dor:Province_of_Westphalia)
+  '10':
+    attributes:
+      Alfred_Dregger: (death place^='http://dbpedia.org/resource/Fulda', Wikipage page ID^='2348763', birth place^='Münster, Province of Westphalia, Weimar Republic, Nazi Germany')
+    relationships:
+      - Alfred_Dregger (dor:Alfred_Dregger) --dop:1namedata--> Rudolf_Seiters (dor:Rudolf_Seiters)
+      - Alfred_Dregger (dor:Alfred_Dregger) --doo:birthPlace--> Weimar_Republic (dor:Weimar_Republic)
+attributes:
+  country: --image^ (dop:image)--> langString | --Aug high C^ (dop:augHighC)--> double
+  politician: --2a^ (dop:2a)--> langString | --death place^ (dop:deathPlace)--> langString | --id^ (dop:id)--> langString | --data^ (dop:data)--> Resource | --Wikipage page ID^ (doo:wikiPageID)--> int | --birth place^ (dop:birthPlace)--> langString | --source^ (dop:source)--> langString | --awards^ (dop:awards)--> int | --mother^ (doo:mother)--> Resource
+subgraph_id: 384
+relationships:
+  - politician --dop:1namedata--> time period
+  - politician --doo:birthPlace--> country

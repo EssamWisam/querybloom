@@ -1,0 +1,111 @@
+types:
+  song: doo:Song
+  movie: doo:Film
+  person: doo:Person
+  single: doo:Single
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doow: http://dbpedia.org/ontology/Work/
+instances:
+  '1':
+    attributes:
+      ¡Cuatro!: (runtime (m)^='105.0', cinematography^='http://dbpedia.org/resource/Chris_Dugan')
+      Oakland,_California: (Apr record high F^='97', area total (m2)^='202096772.2495')
+    relationships:
+      - Nice_Guys_Finish_Last (dor:Nice_Guys_Finish_Last) --dop:writer--> Mike_Dirnt (dor:Mike_Dirnt)
+      - Nice_Guys_Finish_Last (dor:Nice_Guys_Finish_Last) --doo:subsequentWork--> Minority_(Green_Day_song) (<http://dbpedia.org/resource/Minority_(Green_Day_song)>)
+      - Minority_(Green_Day_song) (<http://dbpedia.org/resource/Minority_(Green_Day_song)>) --doo:recordedIn--> Oakland,_California (<http://dbpedia.org/resource/Oakland,_California>)
+      - ¡Cuatro! (<http://dbpedia.org/resource/¡Cuatro!>) --dop:starring--> Mike_Dirnt (dor:Mike_Dirnt)
+  '2':
+    attributes:
+      '''R_Xmas': (runtime (m)^='85.0')
+      California: (area total (m2)^='163696000000.0')
+    relationships:
+      - O.G._Original_Gangster_(song) (<http://dbpedia.org/resource/O.G._Original_Gangster_(song)>) --dop:writer--> Ice-T (dor:Ice-T)
+      - O.G._Original_Gangster_(song) (<http://dbpedia.org/resource/O.G._Original_Gangster_(song)>) --doo:subsequentWork--> I_Ain't_New_Ta_This (<http://dbpedia.org/resource/I_Ain't_New_Ta_This>)
+      - I_Ain't_New_Ta_This (<http://dbpedia.org/resource/I_Ain't_New_Ta_This>) --doo:recordedIn--> California (dor:California)
+      - '''R_Xmas (<http://dbpedia.org/resource/''R_Xmas>) --dop:starring--> Ice-T (dor:Ice-T)'
+  '3':
+    attributes:
+      65_Revisited: (runtime (m)^='65.0', cinematography^='http://dbpedia.org/resource/D._A._Pennebaker')
+      New_York_City: (area total (m2)^='1223588082.966')
+    relationships:
+      - Mozambique_(song) (<http://dbpedia.org/resource/Mozambique_(song)>) --dop:writer--> Bob_Dylan (dor:Bob_Dylan)
+      - Mozambique_(song) (<http://dbpedia.org/resource/Mozambique_(song)>) --doo:subsequentWork--> Rita_May_(song) (<http://dbpedia.org/resource/Rita_May_(song)>)
+      - Rita_May_(song) (<http://dbpedia.org/resource/Rita_May_(song)>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - 65_Revisited (dor:65_Revisited) --dop:starring--> Bob_Dylan (dor:Bob_Dylan)
+  '4':
+    attributes:
+      65_Revisited: (runtime (m)^='65.0', cinematography^='http://dbpedia.org/resource/D._A._Pennebaker')
+      New_York_City: (area total (m2)^='1223588082.966')
+    relationships:
+      - Tangled_Up_in_Blue (dor:Tangled_Up_in_Blue) --dop:writer--> Bob_Dylan (dor:Bob_Dylan)
+      - Tangled_Up_in_Blue (dor:Tangled_Up_in_Blue) --doo:subsequentWork--> Hurricane_(Bob_Dylan_song) (<http://dbpedia.org/resource/Hurricane_(Bob_Dylan_song)>)
+      - Hurricane_(Bob_Dylan_song) (<http://dbpedia.org/resource/Hurricane_(Bob_Dylan_song)>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - 65_Revisited (dor:65_Revisited) --dop:starring--> Bob_Dylan (dor:Bob_Dylan)
+  '5':
+    attributes:
+      A_Certain_Sacrifice: (runtime (m)^='60.0', cinematography^='http://dbpedia.org/resource/Stephen_Jon_Lewicki')
+    relationships:
+      - Take_a_Bow_(Madonna_song) (<http://dbpedia.org/resource/Take_a_Bow_(Madonna_song)>) --dop:writer--> Madonna (dor:Madonna)
+      - Take_a_Bow_(Madonna_song) (<http://dbpedia.org/resource/Take_a_Bow_(Madonna_song)>) --doo:subsequentWork--> Bedtime_Story_(Madonna_song) (<http://dbpedia.org/resource/Bedtime_Story_(Madonna_song)>)
+      - Bedtime_Story_(Madonna_song) (<http://dbpedia.org/resource/Bedtime_Story_(Madonna_song)>) --doo:recordedIn--> Encino,_Los_Angeles (<http://dbpedia.org/resource/Encino,_Los_Angeles>)
+      - A_Certain_Sacrifice (dor:A_Certain_Sacrifice) --dop:starring--> Madonna (dor:Madonna)
+  '6':
+    attributes:
+      California: (area total (m2)^='163696000000.0')
+      A_Certain_Sacrifice: (runtime (m)^='60.0', cinematography^='http://dbpedia.org/resource/Stephen_Jon_Lewicki')
+    relationships:
+      - Who's_That_Chick%3F (<http://dbpedia.org/resource/Who's_That_Chick%3F>) --dop:writer--> Madonna (dor:Madonna)
+      - Who's_That_Chick%3F (<http://dbpedia.org/resource/Who's_That_Chick%3F>) --doo:subsequentWork--> Wet_(Snoop_Dogg_song) (<http://dbpedia.org/resource/Wet_(Snoop_Dogg_song)>)
+      - Wet_(Snoop_Dogg_song) (<http://dbpedia.org/resource/Wet_(Snoop_Dogg_song)>) --doo:recordedIn--> California (dor:California)
+      - A_Certain_Sacrifice (dor:A_Certain_Sacrifice) --dop:starring--> Madonna (dor:Madonna)
+  '7':
+    attributes:
+      A_Certain_Sacrifice: (runtime (m)^='60.0', cinematography^='http://dbpedia.org/resource/Stephen_Jon_Lewicki')
+      Hollywood,_Los_Angeles: (image size^='300', Apr record high F^='106')
+    relationships:
+      - Who's_That_Chick%3F (<http://dbpedia.org/resource/Who's_That_Chick%3F>) --dop:writer--> Madonna (dor:Madonna)
+      - Who's_That_Chick%3F (<http://dbpedia.org/resource/Who's_That_Chick%3F>) --doo:subsequentWork--> Wet_(Snoop_Dogg_song) (<http://dbpedia.org/resource/Wet_(Snoop_Dogg_song)>)
+      - Wet_(Snoop_Dogg_song) (<http://dbpedia.org/resource/Wet_(Snoop_Dogg_song)>) --doo:recordedIn--> Hollywood,_Los_Angeles (<http://dbpedia.org/resource/Hollywood,_Los_Angeles>)
+      - A_Certain_Sacrifice (dor:A_Certain_Sacrifice) --dop:starring--> Madonna (dor:Madonna)
+  '8':
+    attributes:
+      New_York_City: (area total (m2)^='1223588082.966')
+      A_Day_in_the_Life_(film): (artist^='http://dbpedia.org/resource/Various_Artists', runtime (m)^='90.0')
+    relationships:
+      - Throw_Ya_Gunz (dor:Throw_Ya_Gunz) --dop:writer--> Fredro_Starr (dor:Fredro_Starr)
+      - Throw_Ya_Gunz (dor:Throw_Ya_Gunz) --doo:subsequentWork--> Slam_(Onyx_song) (<http://dbpedia.org/resource/Slam_(Onyx_song)>)
+      - Slam_(Onyx_song) (<http://dbpedia.org/resource/Slam_(Onyx_song)>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - A_Day_in_the_Life_(film) (<http://dbpedia.org/resource/A_Day_in_the_Life_(film)>) --dop:starring--> Fredro_Starr (dor:Fredro_Starr)
+  '9':
+    attributes:
+      California: (area total (m2)^='163696000000.0')
+      Air_Rage_(film): (runtime (m)^='99.0', cinematography^='http://dbpedia.org/resource/Mac_Ahlberg')
+    relationships:
+      - O.G._Original_Gangster_(song) (<http://dbpedia.org/resource/O.G._Original_Gangster_(song)>) --dop:writer--> Ice-T (dor:Ice-T)
+      - O.G._Original_Gangster_(song) (<http://dbpedia.org/resource/O.G._Original_Gangster_(song)>) --doo:subsequentWork--> I_Ain't_New_Ta_This (<http://dbpedia.org/resource/I_Ain't_New_Ta_This>)
+      - I_Ain't_New_Ta_This (<http://dbpedia.org/resource/I_Ain't_New_Ta_This>) --doo:recordedIn--> California (dor:California)
+      - Air_Rage_(film) (<http://dbpedia.org/resource/Air_Rage_(film)>) --dop:starring--> Ice-T (dor:Ice-T)
+  '10':
+    attributes:
+      Los_Angeles: (area total (m2)^='1299008536.739')
+      All_I_Want_for_Christmas_Is_You_(film): (runtime (m)^='91.0')
+    relationships:
+      - Make_It_Happen_(Mariah_Carey_song) (<http://dbpedia.org/resource/Make_It_Happen_(Mariah_Carey_song)>) --dop:writer--> Mariah_Carey (dor:Mariah_Carey)
+      - Make_It_Happen_(Mariah_Carey_song) (<http://dbpedia.org/resource/Make_It_Happen_(Mariah_Carey_song)>) --doo:subsequentWork--> I'll_Be_There_(Jackson_5_song) (<http://dbpedia.org/resource/I'll_Be_There_(Jackson_5_song)>)
+      - I'll_Be_There_(Jackson_5_song) (<http://dbpedia.org/resource/I'll_Be_There_(Jackson_5_song)>) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+      - All_I_Want_for_Christmas_Is_You_(film) (<http://dbpedia.org/resource/All_I_Want_for_Christmas_Is_You_(film)>) --dop:starring--> Mariah_Carey (dor:Mariah_Carey)
+attributes:
+  movie: --artist^ (dop:artist)--> langString | --border^ (dop:border)--> langString | --runtime (m)^ (doow:runtime)--> minute | --number of episodes^ (doo:numberOfEpisodes)--> int | --cinematography^ (doo:cinematography)--> Resource
+  Location: --founder^ (dop:founder)--> langString | --2a^ (dop:2a)--> langString | --image size^ (dop:imageSize)--> int | --certain^ (dop:certain)--> langString | --Apr record high F^ (dop:aprRecordHighF)--> double | --area total (m2)^ (doo:areaTotal)--> double
+subgraph_id: 636
+relationships:
+  - single --dop:writer--> person
+  - single --doo:subsequentWork--> song
+  - song --doo:recordedIn--> Location
+  - movie --dop:starring--> person

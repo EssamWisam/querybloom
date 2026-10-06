@@ -1,0 +1,103 @@
+types:
+  grape: doo:Grape
+  writer: doo:Writer
+  country: doo:Country
+  Location: doo:Location
+  wine region: doo:WineRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Texas_wine (dor:Texas_wine) --doo:subregion--> Texas_High_Plains_AVA (dor:Texas_High_Plains_AVA)
+      - Texas_High_Plains_AVA (dor:Texas_High_Plains_AVA) --dop:grapes--> Aglianico (dor:Aglianico)
+      - Texas_wine (dor:Texas_wine) --dop:grapes--> Aglianico (dor:Aglianico)
+      - Aglianico (dor:Aglianico) --doo:origin--> Italy (dor:Italy)
+      - Ada_Gobetti (dor:Ada_Gobetti) --doo:nationality--> Italy (dor:Italy)
+  '2':
+    attributes: {}
+    relationships:
+      - Texas_wine (dor:Texas_wine) --doo:subregion--> Texas_High_Plains_AVA (dor:Texas_High_Plains_AVA)
+      - Texas_High_Plains_AVA (dor:Texas_High_Plains_AVA) --dop:grapes--> Aglianico (dor:Aglianico)
+      - Texas_wine (dor:Texas_wine) --dop:grapes--> Aglianico (dor:Aglianico)
+      - Aglianico (dor:Aglianico) --doo:origin--> Italy (dor:Italy)
+      - Adriano_Politi (dor:Adriano_Politi) --doo:nationality--> Italy (dor:Italy)
+  '3':
+    attributes: {}
+    relationships:
+      - Texas_wine (dor:Texas_wine) --doo:subregion--> Texas_High_Plains_AVA (dor:Texas_High_Plains_AVA)
+      - Texas_High_Plains_AVA (dor:Texas_High_Plains_AVA) --dop:grapes--> Aglianico (dor:Aglianico)
+      - Texas_wine (dor:Texas_wine) --dop:grapes--> Aglianico (dor:Aglianico)
+      - Aglianico (dor:Aglianico) --doo:origin--> Italy (dor:Italy)
+      - Alain_Elkann (dor:Alain_Elkann) --doo:nationality--> Italy (dor:Italy)
+  '4':
+    attributes: {}
+    relationships:
+      - Maryland_wine (dor:Maryland_wine) --doo:subregion--> Catoctin_AVA (dor:Catoctin_AVA)
+      - Catoctin_AVA (dor:Catoctin_AVA) --dop:grapes--> Albariño (<http://dbpedia.org/resource/Albariño>)
+      - Maryland_wine (dor:Maryland_wine) --dop:grapes--> Albariño (<http://dbpedia.org/resource/Albariño>)
+      - Albariño (<http://dbpedia.org/resource/Albariño>) --doo:origin--> Portugal (dor:Portugal)
+      - Alberto_de_Lacerda (dor:Alberto_de_Lacerda) --doo:nationality--> Portugal (dor:Portugal)
+  '5':
+    attributes: {}
+    relationships:
+      - Maryland_wine (dor:Maryland_wine) --doo:subregion--> Catoctin_AVA (dor:Catoctin_AVA)
+      - Catoctin_AVA (dor:Catoctin_AVA) --dop:grapes--> Albariño (<http://dbpedia.org/resource/Albariño>)
+      - Maryland_wine (dor:Maryland_wine) --dop:grapes--> Albariño (<http://dbpedia.org/resource/Albariño>)
+      - Albariño (<http://dbpedia.org/resource/Albariño>) --doo:origin--> Portugal (dor:Portugal)
+      - Ángela_de_Azevedo (<http://dbpedia.org/resource/Ángela_de_Azevedo>) --doo:nationality--> Portugal (dor:Portugal)
+  '6':
+    attributes: {}
+    relationships:
+      - Maryland_wine (dor:Maryland_wine) --doo:subregion--> Catoctin_AVA (dor:Catoctin_AVA)
+      - Catoctin_AVA (dor:Catoctin_AVA) --dop:grapes--> Albariño (<http://dbpedia.org/resource/Albariño>)
+      - Maryland_wine (dor:Maryland_wine) --dop:grapes--> Albariño (<http://dbpedia.org/resource/Albariño>)
+      - Albariño (<http://dbpedia.org/resource/Albariño>) --doo:origin--> Portugal (dor:Portugal)
+      - Angelina_Vidal (dor:Angelina_Vidal) --doo:nationality--> Portugal (dor:Portugal)
+  '7':
+    attributes: {}
+    relationships:
+      - Arizona_wine (dor:Arizona_wine) --doo:subregion--> Sonoita_AVA (dor:Sonoita_AVA)
+      - Sonoita_AVA (dor:Sonoita_AVA) --dop:grapes--> Cabernet_Franc (dor:Cabernet_Franc)
+      - Arizona_wine (dor:Arizona_wine) --dop:grapes--> Cabernet_Franc (dor:Cabernet_Franc)
+      - Cabernet_Franc (dor:Cabernet_Franc) --doo:origin--> France (dor:France)
+      - Abdel_Raouf_Dafri (dor:Abdel_Raouf_Dafri) --doo:nationality--> France (dor:France)
+  '8':
+    attributes: {}
+    relationships:
+      - Arizona_wine (dor:Arizona_wine) --doo:subregion--> Sonoita_AVA (dor:Sonoita_AVA)
+      - Sonoita_AVA (dor:Sonoita_AVA) --dop:grapes--> Cabernet_Franc (dor:Cabernet_Franc)
+      - Arizona_wine (dor:Arizona_wine) --dop:grapes--> Cabernet_Franc (dor:Cabernet_Franc)
+      - Cabernet_Franc (dor:Cabernet_Franc) --doo:origin--> France (dor:France)
+      - Achille_Maffre_de_Baugé (<http://dbpedia.org/resource/Achille_Maffre_de_Baugé>) --doo:nationality--> France (dor:France)
+  '9':
+    attributes: {}
+    relationships:
+      - Arizona_wine (dor:Arizona_wine) --doo:subregion--> Sonoita_AVA (dor:Sonoita_AVA)
+      - Sonoita_AVA (dor:Sonoita_AVA) --dop:grapes--> Cabernet_Franc (dor:Cabernet_Franc)
+      - Arizona_wine (dor:Arizona_wine) --dop:grapes--> Cabernet_Franc (dor:Cabernet_Franc)
+      - Cabernet_Franc (dor:Cabernet_Franc) --doo:origin--> France (dor:France)
+      - Adélaïde_Dufrénoy (<http://dbpedia.org/resource/Adélaïde_Dufrénoy>) --doo:nationality--> France (dor:France)
+  '10':
+    attributes: {}
+    relationships:
+      - Kentucky_wine (dor:Kentucky_wine) --doo:subregion--> Ohio_River_Valley_AVA (dor:Ohio_River_Valley_AVA)
+      - Ohio_River_Valley_AVA (dor:Ohio_River_Valley_AVA) --dop:grapes--> Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>)
+      - Kentucky_wine (dor:Kentucky_wine) --dop:grapes--> Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>)
+      - Catawba_(grape) (<http://dbpedia.org/resource/Catawba_(grape)>) --doo:origin--> United_States (dor:United_States)
+      - A._Minor_Griswold (dor:A._Minor_Griswold) --doo:nationality--> United_States (dor:United_States)
+attributes:
+  writer: --d^ (dop:d)--> langString | --alma mater^ (dop:almaMater)--> langString
+  country: --leader^ (dop:leader)--> langString
+  Location: --built^ (dop:built)--> langString | --mouth place^ (doo:mouthPlace)--> Resource | --builder^ (dop:builder)--> Resource | --founder^ (dop:founder)--> langString | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --altname^ (dop:altname)--> langString | --Aug high F^ (dop:augHighF)--> double | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --arc-text-colorB^ (dop:arcTextColorb)--> langString
+subgraph_id: 686
+relationships:
+  - Location --doo:subregion--> wine region
+  - wine region --dop:grapes--> grape
+  - Location --dop:grapes--> grape
+  - grape --doo:origin--> country
+  - writer --doo:nationality--> country

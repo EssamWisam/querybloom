@@ -1,0 +1,94 @@
+types:
+  person: doo:Person
+  office holder: doo:OfficeHolder
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Michigan: (align^='left')
+      Abbie_Johnson: (birth date^='1871-01-19')
+      Aaron_T._Bliss: (after^='http://dbpedia.org/resource/Fred_M._Warner', party^='http://dbpedia.org/resource/Republican_Party_(United_States)')
+    relationships:
+      - Abbie_Johnson (dor:Abbie_Johnson) --dop:deathPlace--> Michigan (dor:Michigan)
+      - Aaron_T._Bliss (dor:Aaron_T._Bliss) --doo:region--> Michigan (dor:Michigan)
+  '2':
+    attributes:
+      Michigan: (align^='left')
+      Aaron_T._Bliss: (after^='http://dbpedia.org/resource/Fred_M._Warner', party^='http://dbpedia.org/resource/Republican_Party_(United_States)')
+      Adrian_Lawrence_Greene: (birth date^='1848-04-10')
+    relationships:
+      - Adrian_Lawrence_Greene (dor:Adrian_Lawrence_Greene) --dop:deathPlace--> Michigan (dor:Michigan)
+      - Aaron_T._Bliss (dor:Aaron_T._Bliss) --doo:region--> Michigan (dor:Michigan)
+  '3':
+    attributes:
+      Michigan: (align^='left')
+      Aaron_T._Bliss: (after^='http://dbpedia.org/resource/Fred_M._Warner', party^='http://dbpedia.org/resource/Republican_Party_(United_States)')
+      Agnes_E._Wells: (birth date^='1876-01-04')
+    relationships:
+      - Agnes_E._Wells (dor:Agnes_E._Wells) --dop:deathPlace--> Michigan (dor:Michigan)
+      - Aaron_T._Bliss (dor:Aaron_T._Bliss) --doo:region--> Michigan (dor:Michigan)
+  '4':
+    attributes:
+      Albert_G._Riddle: (after^='http://dbpedia.org/resource/James_A._Garfield', party^='http://dbpedia.org/resource/United_States_Republican_Party')
+      Adoniram_J._Warner: (birth date^='1834-01-13')
+    relationships:
+      - Adoniram_J._Warner (dor:Adoniram_J._Warner) --dop:deathPlace--> Ohio (dor:Ohio)
+      - Albert_G._Riddle (dor:Albert_G._Riddle) --doo:region--> Ohio (dor:Ohio)
+  '5':
+    attributes:
+      Albert_G._Riddle: (after^='http://dbpedia.org/resource/James_A._Garfield', party^='http://dbpedia.org/resource/United_States_Republican_Party')
+      Albert_C._Thompson: (birth date^='1842-01-23')
+    relationships:
+      - Albert_C._Thompson (dor:Albert_C._Thompson) --dop:deathPlace--> Ohio (dor:Ohio)
+      - Albert_G._Riddle (dor:Albert_G._Riddle) --doo:region--> Ohio (dor:Ohio)
+  '6':
+    attributes:
+      Albert_G._Riddle: (after^='http://dbpedia.org/resource/James_A._Garfield', party^='http://dbpedia.org/resource/United_States_Republican_Party')
+      Alexander_Campbell_(American_politician): (birth date^='1779')
+    relationships:
+      - Alexander_Campbell_(American_politician) (<http://dbpedia.org/resource/Alexander_Campbell_(American_politician)>) --dop:deathPlace--> Ohio (dor:Ohio)
+      - Albert_G._Riddle (dor:Albert_G._Riddle) --doo:region--> Ohio (dor:Ohio)
+  '7':
+    attributes:
+      Massachusetts: (align^='right')
+      A._David_Mazzone: (birth date^='1928-06-03')
+      Alexander_De_Witt: (after^='http://dbpedia.org/resource/Eli_Thayer', party^='http://dbpedia.org/resource/Democratic_Party_(United_States)')
+    relationships:
+      - A._David_Mazzone (dor:A._David_Mazzone) --dop:deathPlace--> Massachusetts (dor:Massachusetts)
+      - Alexander_De_Witt (dor:Alexander_De_Witt) --doo:region--> Massachusetts (dor:Massachusetts)
+  '8':
+    attributes:
+      Massachusetts: (align^='right')
+      Alexander_De_Witt: (after^='http://dbpedia.org/resource/Eli_Thayer', party^='http://dbpedia.org/resource/Democratic_Party_(United_States)')
+      A._Leon_Higginbotham_Jr.: (birth date^='1928-02-25')
+    relationships:
+      - A._Leon_Higginbotham_Jr. (<http://dbpedia.org/resource/A._Leon_Higginbotham_Jr.>) --dop:deathPlace--> Massachusetts (dor:Massachusetts)
+      - Alexander_De_Witt (dor:Alexander_De_Witt) --doo:region--> Massachusetts (dor:Massachusetts)
+  '9':
+    attributes:
+      Aaron_Daggett: (birth date^='1837-06-14')
+      Massachusetts: (align^='right')
+      Alexander_De_Witt: (after^='http://dbpedia.org/resource/Eli_Thayer', party^='http://dbpedia.org/resource/Democratic_Party_(United_States)')
+    relationships:
+      - Aaron_Daggett (dor:Aaron_Daggett) --dop:deathPlace--> Massachusetts (dor:Massachusetts)
+      - Alexander_De_Witt (dor:Alexander_De_Witt) --doo:region--> Massachusetts (dor:Massachusetts)
+  '10':
+    attributes:
+      Bill_Bunten: (party^='http://dbpedia.org/resource/Republican_Party_(United_States)')
+      A._P._Førster: (birth date^='1819')
+    relationships:
+      - A._P._Førster (<http://dbpedia.org/resource/A._P._Førster>) --dop:deathPlace--> Kansas (dor:Kansas)
+      - Bill_Bunten (dor:Bill_Bunten) --doo:region--> Kansas (dor:Kansas)
+attributes:
+  person: --birth date^ (dop:birthDate)--> date | --group^ (dop:group)--> langString | --birth date^ (dop:birthDate)--> langString
+  office holder: --2p (dop:2p)--> int | --child^ (doo:child)--> Resource | --after^ (dop:after)--> langString | --party^ (doo:party)--> Resource | --nickname^ (dop:nickname)--> langString | --relations^ (dop:relations)--> langString
+  administrative region: --founding year^ (doo:foundingYear)--> gYear | --align^ (dop:align)--> langString | --Apr high C^ (dop:aprHighC)--> int
+subgraph_id: 349
+relationships:
+  - person --dop:deathPlace--> administrative region
+  - office holder --doo:region--> administrative region

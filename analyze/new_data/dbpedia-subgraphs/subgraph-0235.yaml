@@ -1,0 +1,98 @@
+types:
+  person: doo:Person
+  disease: doo:Disease
+  criminal: doo:Criminal
+  scientist: doo:Scientist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Daniel_Daneshvar: (known for^='Study of chronic traumatic encephalopathy')
+    relationships:
+      - Francisco_Rafael_Arellano_Félix (<http://dbpedia.org/resource/Francisco_Rafael_Arellano_Félix>) --doo:deathCause--> Traumatic_brain_injury (dor:Traumatic_brain_injury)
+      - Daniel_Daneshvar (dor:Daniel_Daneshvar) --doo:knownFor--> Traumatic_brain_injury (dor:Traumatic_brain_injury)
+      - Alison_Cernich (dor:Alison_Cernich) --doo:academicDiscipline--> Traumatic_brain_injury (dor:Traumatic_brain_injury)
+  '2':
+    attributes:
+      Daniel_Daneshvar: (known for^='Study of chronic traumatic encephalopathy')
+    relationships:
+      - Francisco_Rafael_Arellano_Félix (<http://dbpedia.org/resource/Francisco_Rafael_Arellano_Félix>) --doo:deathCause--> Traumatic_brain_injury (dor:Traumatic_brain_injury)
+      - Daniel_Daneshvar (dor:Daniel_Daneshvar) --doo:knownFor--> Traumatic_brain_injury (dor:Traumatic_brain_injury)
+      - Janet_Leathem (dor:Janet_Leathem) --doo:academicDiscipline--> Traumatic_brain_injury (dor:Traumatic_brain_injury)
+  '3':
+    attributes:
+      Ross_Zafonte: (known for^='Study of traumatic brain injury')
+    relationships:
+      - Francisco_Rafael_Arellano_Félix (<http://dbpedia.org/resource/Francisco_Rafael_Arellano_Félix>) --doo:deathCause--> Traumatic_brain_injury (dor:Traumatic_brain_injury)
+      - Ross_Zafonte (dor:Ross_Zafonte) --doo:knownFor--> Traumatic_brain_injury (dor:Traumatic_brain_injury)
+      - Alison_Cernich (dor:Alison_Cernich) --doo:academicDiscipline--> Traumatic_brain_injury (dor:Traumatic_brain_injury)
+  '4':
+    attributes:
+      Allan_Ronald: (awards^='http://dbpedia.org/resource/Order_of_Canada', birth date^='1938-08-24')
+      David_Celentano: (alt^='Photo of David Celentano', known for^='HIV/AIDS and STI research')
+    relationships:
+      - Walter_De_Giusti (dor:Walter_De_Giusti) --doo:deathCause--> AIDS (dor:AIDS)
+      - David_Celentano (dor:David_Celentano) --doo:knownFor--> AIDS (dor:AIDS)
+      - Allan_Ronald (dor:Allan_Ronald) --doo:academicDiscipline--> AIDS (dor:AIDS)
+  '5':
+    attributes:
+      Mark_Wainberg: (awards^='http://dbpedia.org/resource/National_Order_of_Quebec', birth date^='1945-04-21')
+      David_Celentano: (alt^='Photo of David Celentano', known for^='HIV/AIDS and STI research')
+    relationships:
+      - Walter_De_Giusti (dor:Walter_De_Giusti) --doo:deathCause--> AIDS (dor:AIDS)
+      - David_Celentano (dor:David_Celentano) --doo:knownFor--> AIDS (dor:AIDS)
+      - Mark_Wainberg (dor:Mark_Wainberg) --doo:academicDiscipline--> AIDS (dor:AIDS)
+  '6':
+    attributes:
+      David_Celentano: (alt^='Photo of David Celentano', known for^='HIV/AIDS and STI research')
+      Philip_A._Pizzo: (birth date^='December 1944')
+    relationships:
+      - Walter_De_Giusti (dor:Walter_De_Giusti) --doo:deathCause--> AIDS (dor:AIDS)
+      - David_Celentano (dor:David_Celentano) --doo:knownFor--> AIDS (dor:AIDS)
+      - Philip_A._Pizzo (dor:Philip_A._Pizzo) --doo:academicDiscipline--> AIDS (dor:AIDS)
+qa_result:
+  status: completed
+  cost_usd: 0.288165
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0552974
+        total_tokens: 4727
+        prompt_tokens: 2171
+        completion_tokens: 2556
+      generate:
+        cost_usd: 0.09170760000000001
+        total_tokens: 7724
+        prompt_tokens: 3705
+        completion_tokens: 4019
+      verify_1:
+        cost_usd: 0.032772
+        total_tokens: 4770
+        prompt_tokens: 4175
+        completion_tokens: 595
+      complexity:
+        cost_usd: 0.108388
+        total_tokens: 9714
+        prompt_tokens: 5154
+        completion_tokens: 4560
+    total_tokens: 26935
+    prompt_tokens: 15205
+    total_cost_usd: 0.288165
+    completion_tokens: 11730
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --header^ (dop:header)--> langString | --differentFrom (wwoo:differentFrom)--> Resource | --relatives^ (dop:relatives)--> Resource | --after^ (dop:after)--> Resource | --colwidth^ (dop:colwidth)--> int | --death cause^ (doo:deathCause)--> Resource | --alt^ (dop:alt)--> langString | --known for^ (dop:knownFor)--> Resource
+  criminal: --children^ (dop:children)--> int | --alias^ (doo:alias)--> langString | --parents^ (dop:parents)--> langString
+  scientist: --awards^ (dop:awards)--> langString | --birth date^ (dop:birthDate)--> date
+subgraph_id: 235
+relationships:
+  - criminal --doo:deathCause--> disease
+  - person --doo:knownFor--> disease
+  - scientist --doo:academicDiscipline--> disease

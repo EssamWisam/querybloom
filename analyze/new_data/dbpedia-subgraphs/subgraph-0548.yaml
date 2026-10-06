@@ -1,0 +1,91 @@
+types:
+  city: doo:City
+  company: doo:Company
+  television season: doo:TelevisionSeason
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      ABS-CBN_Corporation: (area served^='Worldwide', logo^='ABS-CBN .svg', products^='http://dbpedia.org/resource/Broadcast_syndication')
+    relationships:
+      - Ang_Probinsyano_(season_1) (<http://dbpedia.org/resource/Ang_Probinsyano_(season_1)>) --doo:network--> ABS-CBN (dor:ABS-CBN)
+      - ABS-CBN (dor:ABS-CBN) --dop:owner--> ABS-CBN_Corporation (dor:ABS-CBN_Corporation)
+      - ABS-CBN_Corporation (dor:ABS-CBN_Corporation) --doo:headquarter--> ABS-CBN_Broadcasting_Center (dor:ABS-CBN_Broadcasting_Center)
+  '2':
+    attributes:
+      ABS-CBN_Corporation: (area served^='Worldwide', logo^='ABS-CBN .svg', products^='http://dbpedia.org/resource/Broadcast_syndication')
+    relationships:
+      - Ang_Probinsyano_(season_2) (<http://dbpedia.org/resource/Ang_Probinsyano_(season_2)>) --doo:network--> ABS-CBN (dor:ABS-CBN)
+      - ABS-CBN (dor:ABS-CBN) --dop:owner--> ABS-CBN_Corporation (dor:ABS-CBN_Corporation)
+      - ABS-CBN_Corporation (dor:ABS-CBN_Corporation) --doo:headquarter--> ABS-CBN_Broadcasting_Center (dor:ABS-CBN_Broadcasting_Center)
+  '3':
+    attributes:
+      ABS-CBN_Corporation: (area served^='Worldwide', logo^='ABS-CBN .svg', products^='http://dbpedia.org/resource/Broadcast_syndication')
+    relationships:
+      - Ang_Probinsyano_(season_3) (<http://dbpedia.org/resource/Ang_Probinsyano_(season_3)>) --doo:network--> ABS-CBN (dor:ABS-CBN)
+      - ABS-CBN (dor:ABS-CBN) --dop:owner--> ABS-CBN_Corporation (dor:ABS-CBN_Corporation)
+      - ABS-CBN_Corporation (dor:ABS-CBN_Corporation) --doo:headquarter--> ABS-CBN_Broadcasting_Center (dor:ABS-CBN_Broadcasting_Center)
+  '4':
+    attributes:
+      AMC_Networks: (logo^='AMC Networks 2021 logo.svg', products^='')
+      New_York_City: '(footer^=''Clockwise, from upper left: Chinatown, Manhattan (曼哈頓華埠), home to the highest concentration of Chinese people in the Western Hemisphere; Lower Manhattan''''s Little Italy; Upper Manhattan''''s Spanish Harle...'')'
+    relationships:
+      - Better_Call_Saul_(season_1) (<http://dbpedia.org/resource/Better_Call_Saul_(season_1)>) --doo:network--> AMC_(TV_channel) (<http://dbpedia.org/resource/AMC_(TV_channel)>)
+      - AMC_(TV_channel) (<http://dbpedia.org/resource/AMC_(TV_channel)>) --dop:owner--> AMC_Networks (dor:AMC_Networks)
+      - AMC_Networks (dor:AMC_Networks) --doo:headquarter--> New_York_City (dor:New_York_City)
+  '5':
+    attributes:
+      AMC_Networks: (logo^='AMC Networks 2021 logo.svg', products^='')
+      New_York_City: '(footer^=''Clockwise, from upper left: Chinatown, Manhattan (曼哈頓華埠), home to the highest concentration of Chinese people in the Western Hemisphere; Lower Manhattan''''s Little Italy; Upper Manhattan''''s Spanish Harle...'')'
+    relationships:
+      - Better_Call_Saul_(season_2) (<http://dbpedia.org/resource/Better_Call_Saul_(season_2)>) --doo:network--> AMC_(TV_channel) (<http://dbpedia.org/resource/AMC_(TV_channel)>)
+      - AMC_(TV_channel) (<http://dbpedia.org/resource/AMC_(TV_channel)>) --dop:owner--> AMC_Networks (dor:AMC_Networks)
+      - AMC_Networks (dor:AMC_Networks) --doo:headquarter--> New_York_City (dor:New_York_City)
+  '6':
+    attributes:
+      AMC_Networks: (logo^='AMC Networks 2021 logo.svg', products^='')
+      New_York_City: '(footer^=''Clockwise, from upper left: Chinatown, Manhattan (曼哈頓華埠), home to the highest concentration of Chinese people in the Western Hemisphere; Lower Manhattan''''s Little Italy; Upper Manhattan''''s Spanish Harle...'')'
+    relationships:
+      - Better_Call_Saul_(season_3) (<http://dbpedia.org/resource/Better_Call_Saul_(season_3)>) --doo:network--> AMC_(TV_channel) (<http://dbpedia.org/resource/AMC_(TV_channel)>)
+      - AMC_(TV_channel) (<http://dbpedia.org/resource/AMC_(TV_channel)>) --dop:owner--> AMC_Networks (dor:AMC_Networks)
+      - AMC_Networks (dor:AMC_Networks) --doo:headquarter--> New_York_City (dor:New_York_City)
+  '7':
+    attributes: {}
+    relationships:
+      - Food_Wars!_Shokugeki_no_Soma_(season_1) (<http://dbpedia.org/resource/Food_Wars!_Shokugeki_no_Soma_(season_1)>) --doo:network--> Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting)
+      - Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting) --dop:owner--> Chunichi_Shimbun (dor:Chunichi_Shimbun)
+      - Chunichi_Shimbun (dor:Chunichi_Shimbun) --doo:headquarter--> Nagoya,_Aichi (<http://dbpedia.org/resource/Nagoya,_Aichi>)
+  '8':
+    attributes: {}
+    relationships:
+      - List_of_Linebarrels_of_Iron_episodes (dor:List_of_Linebarrels_of_Iron_episodes) --doo:network--> Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting)
+      - Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting) --dop:owner--> Chunichi_Shimbun (dor:Chunichi_Shimbun)
+      - Chunichi_Shimbun (dor:Chunichi_Shimbun) --doo:headquarter--> Nagoya,_Aichi (<http://dbpedia.org/resource/Nagoya,_Aichi>)
+  '9':
+    attributes: {}
+    relationships:
+      - List_of_The_Case_Study_of_Vanitas_episodes (dor:List_of_The_Case_Study_of_Vanitas_episodes) --doo:network--> Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting)
+      - Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting) --dop:owner--> Chunichi_Shimbun (dor:Chunichi_Shimbun)
+      - Chunichi_Shimbun (dor:Chunichi_Shimbun) --doo:headquarter--> Nagoya,_Aichi (<http://dbpedia.org/resource/Nagoya,_Aichi>)
+  '10':
+    attributes:
+      Comcast: (area served^='Worldwide; mostly United States and Europe', logo^='Comcast Logo.svg', products^='')
+      Philadelphia: (founder^='http://dbpedia.org/resource/William_Penn', footer^='Citizens Bank Park, home of the Phillies since 2004, and Lincoln Financial Field, home of the Eagles since 2003')
+    relationships:
+      - 30_Rock_(season_1) (<http://dbpedia.org/resource/30_Rock_(season_1)>) --doo:network--> NBC (dor:NBC)
+      - NBC (dor:NBC) --dop:owner--> Comcast (dor:Comcast)
+      - Comcast (dor:Comcast) --doo:headquarter--> Philadelphia (dor:Philadelphia)
+attributes:
+  city: --Aug precipitation days^ (dop:augPrecipitationDays)--> double | --Apr record low C^ (dop:aprRecordLowC)--> double | --founder^ (dop:founder)--> langString | --reason^ (dop:reason)--> langString | --footer^ (dop:footer)--> langString
+  company: --area served^ (dop:areaServed)--> langString | --logo^ (dop:logo)--> Resource | --products^ (dop:products)--> Resource
+  television season: --bgcolor^ (dop:bgcolor)--> langString | --aux^ (dop:aux)--> double
+subgraph_id: 548
+relationships:
+  - television season --doo:network--> television station
+  - television station --dop:owner--> company
+  - company --doo:headquarter--> city

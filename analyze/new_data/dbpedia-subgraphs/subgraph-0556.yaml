@@ -1,0 +1,75 @@
+types:
+  city: doo:City
+  song: doo:Song
+  single: doo:Single
+  golf tournament: doo:GolfTournament
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Black_Cat_(song): (align^='right')
+      1916_U.S._Open_(golf): (champion^='http://dbpedia.org/resource/Chick_Evans')
+      Love_Will_Never_Do_(Without_You): (Wikipage page ID^='1685806')
+    relationships:
+      - Black_Cat_(song) (<http://dbpedia.org/resource/Black_Cat_(song)>) --doo:recordedIn--> Minneapolis,_Minnesota (<http://dbpedia.org/resource/Minneapolis,_Minnesota>)
+      - Black_Cat_(song) (<http://dbpedia.org/resource/Black_Cat_(song)>) --doo:subsequentWork--> Love_Will_Never_Do_(Without_You) (<http://dbpedia.org/resource/Love_Will_Never_Do_(Without_You)>)
+      - 1916_U.S._Open_(golf) (<http://dbpedia.org/resource/1916_U.S._Open_(golf)>) --dop:location--> Minneapolis,_Minnesota (<http://dbpedia.org/resource/Minneapolis,_Minnesota>)
+  '2':
+    attributes:
+      1916_U.S._Open_(golf): (champion^='http://dbpedia.org/resource/Chick_Evans')
+      Alright_(Janet_Jackson_song): (Wikipage page ID^='1685756')
+    relationships:
+      - Escapade_(song) (<http://dbpedia.org/resource/Escapade_(song)>) --doo:recordedIn--> Minneapolis,_Minnesota (<http://dbpedia.org/resource/Minneapolis,_Minnesota>)
+      - Escapade_(song) (<http://dbpedia.org/resource/Escapade_(song)>) --doo:subsequentWork--> Alright_(Janet_Jackson_song) (<http://dbpedia.org/resource/Alright_(Janet_Jackson_song)>)
+      - 1916_U.S._Open_(golf) (<http://dbpedia.org/resource/1916_U.S._Open_(golf)>) --dop:location--> Minneapolis,_Minnesota (<http://dbpedia.org/resource/Minneapolis,_Minnesota>)
+  '3':
+    attributes:
+      Cool_(The_Time_song): (Wikipage page ID^='7173343')
+      1916_U.S._Open_(golf): (champion^='http://dbpedia.org/resource/Chick_Evans')
+    relationships:
+      - Get_It_Up (dor:Get_It_Up) --doo:recordedIn--> Minneapolis,_Minnesota (<http://dbpedia.org/resource/Minneapolis,_Minnesota>)
+      - Get_It_Up (dor:Get_It_Up) --doo:subsequentWork--> Cool_(The_Time_song) (<http://dbpedia.org/resource/Cool_(The_Time_song)>)
+      - 1916_U.S._Open_(golf) (<http://dbpedia.org/resource/1916_U.S._Open_(golf)>) --dop:location--> Minneapolis,_Minnesota (<http://dbpedia.org/resource/Minneapolis,_Minnesota>)
+  '4':
+    attributes:
+      Big_Chips: (Wikipage page ID^='23175383')
+      99_Problems: (id^='9795')
+      Los_Angeles: (area total (m2)^='1299008536.739')
+      1929_PGA_Championship: (champion^='http://dbpedia.org/resource/Leo_Diegel')
+    relationships:
+      - 99_Problems (dor:99_Problems) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+      - 99_Problems (dor:99_Problems) --doo:subsequentWork--> Big_Chips (dor:Big_Chips)
+      - 1929_PGA_Championship (dor:1929_PGA_Championship) --dop:location--> Los_Angeles (dor:Los_Angeles)
+  '5':
+    attributes:
+      Los_Angeles: (area total (m2)^='1299008536.739')
+      1929_PGA_Championship: (champion^='http://dbpedia.org/resource/Leo_Diegel')
+      A_Fine_Romance_(song): (composer^='http://dbpedia.org/resource/Jerome_Kern')
+      The_Way_You_Look_Tonight: (Wikipage page ID^='5123371')
+    relationships:
+      - A_Fine_Romance_(song) (<http://dbpedia.org/resource/A_Fine_Romance_(song)>) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+      - A_Fine_Romance_(song) (<http://dbpedia.org/resource/A_Fine_Romance_(song)>) --doo:subsequentWork--> The_Way_You_Look_Tonight (dor:The_Way_You_Look_Tonight)
+      - 1929_PGA_Championship (dor:1929_PGA_Championship) --dop:location--> Los_Angeles (dor:Los_Angeles)
+  '6':
+    attributes:
+      Los_Angeles: (area total (m2)^='1299008536.739')
+      1929_PGA_Championship: (champion^='http://dbpedia.org/resource/Leo_Diegel')
+      Don't_Worry_(Chingy_song): (Wikipage page ID^='7347368')
+    relationships:
+      - All_Nite_(Don't_Stop) (<http://dbpedia.org/resource/All_Nite_(Don't_Stop)>) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+      - All_Nite_(Don't_Stop) (<http://dbpedia.org/resource/All_Nite_(Don't_Stop)>) --doo:subsequentWork--> Don't_Worry_(Chingy_song) (<http://dbpedia.org/resource/Don't_Worry_(Chingy_song)>)
+      - 1929_PGA_Championship (dor:1929_PGA_Championship) --dop:location--> Los_Angeles (dor:Los_Angeles)
+attributes:
+  city: --area total (m2)^ (doo:areaTotal)--> double | --Apr record low F^ (dop:aprRecordLowF)--> int | --Center^ (dop:center)--> langString | --Aug rain days^ (dop:augRainDays)--> int | --Apr low F^ (dop:aprLowF)--> double
+  song: --Wikipage page ID^ (doo:wikiPageID)--> int | --reason^ (dop:reason)--> langString
+  single: --id^ (dop:id)--> langString | --align^ (dop:align)--> langString | --composer^ (dop:composer)--> langString
+  golf tournament: --champion^ (doo:champion)--> Resource
+subgraph_id: 556
+relationships:
+  - single --doo:recordedIn--> city
+  - single --doo:subsequentWork--> song
+  - golf tournament --dop:location--> city

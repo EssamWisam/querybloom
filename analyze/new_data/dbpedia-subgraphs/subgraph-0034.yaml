@@ -1,0 +1,93 @@
+types:
+  Location: doo:Location
+  politician: doo:Politician
+  political party: doo:PoliticalParty
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      John_Dryden: (id^='Dryden,+John', birth date^='1631-08-19')
+    relationships:
+      - Rockingham_Whigs (dor:Rockingham_Whigs) --doo:headquarter--> Northamptonshire (dor:Northamptonshire)
+      - Aldwincle (dor:Aldwincle) --doo:country--> Northamptonshire (dor:Northamptonshire)
+      - John_Dryden (dor:John_Dryden) --dop:birthPlace--> Aldwincle (dor:Aldwincle)
+  '2':
+    attributes:
+      Henry_James_(civil_servant): (birth date^='1919-12-12')
+    relationships:
+      - Communist_Party_of_Great_Britain_(Marxist–Leninist)__Communist_Party_of_Great_Britain_Marxist–Leninist__1 (<http://dbpedia.org/resource/Communist_Party_of_Great_Britain_(Marxist–Leninist)__Communist_Party_of_Great_Britain_Marxist–Leninist__1>) --doo:headquarter--> West_Midlands_(county) (<http://dbpedia.org/resource/West_Midlands_(county)>)
+      - Alum_Rock,_Birmingham (<http://dbpedia.org/resource/Alum_Rock,_Birmingham>) --doo:country--> West_Midlands_(county) (<http://dbpedia.org/resource/West_Midlands_(county)>)
+      - Henry_James_(civil_servant) (<http://dbpedia.org/resource/Henry_James_(civil_servant)>) --dop:birthPlace--> Alum_Rock,_Birmingham (<http://dbpedia.org/resource/Alum_Rock,_Birmingham>)
+  '3':
+    attributes:
+      New_Nationalist_Party_(UK): (colour^='http://dbpedia.org/resource/Black')
+      Henry_James_(civil_servant): (birth date^='1919-12-12')
+    relationships:
+      - New_Nationalist_Party_(UK) (<http://dbpedia.org/resource/New_Nationalist_Party_(UK)>) --doo:headquarter--> West_Midlands_(county) (<http://dbpedia.org/resource/West_Midlands_(county)>)
+      - Alum_Rock,_Birmingham (<http://dbpedia.org/resource/Alum_Rock,_Birmingham>) --doo:country--> West_Midlands_(county) (<http://dbpedia.org/resource/West_Midlands_(county)>)
+      - Henry_James_(civil_servant) (<http://dbpedia.org/resource/Henry_James_(civil_servant)>) --dop:birthPlace--> Alum_Rock,_Birmingham (<http://dbpedia.org/resource/Alum_Rock,_Birmingham>)
+  '4':
+    attributes:
+      Jeremy_Akerman: (id^='15193', birth date^='1942-05-28')
+      Independent_Kidderminster_Hospital_and_Health_Concern: (colour^='http://dbpedia.org/resource/Black')
+    relationships:
+      - Independent_Kidderminster_Hospital_and_Health_Concern (dor:Independent_Kidderminster_Hospital_and_Health_Concern) --doo:headquarter--> Worcestershire (dor:Worcestershire)
+      - Alvechurch (dor:Alvechurch) --doo:country--> Worcestershire (dor:Worcestershire)
+      - Jeremy_Akerman (dor:Jeremy_Akerman) --dop:birthPlace--> Alvechurch (dor:Alvechurch)
+  '5':
+    attributes:
+      Charles_Chauncy: (display^='Charles Chauncy')
+    relationships:
+      - Christian_Peoples_Alliance (dor:Christian_Peoples_Alliance) --doo:headquarter--> Hertfordshire (dor:Hertfordshire)
+      - Ardeley (dor:Ardeley) --doo:country--> Hertfordshire (dor:Hertfordshire)
+      - Charles_Chauncy (dor:Charles_Chauncy) --dop:birthPlace--> Ardeley (dor:Ardeley)
+  '6':
+    attributes:
+      Henry_Cartwright: (birth date^='1814-09-01')
+    relationships:
+      - Rockingham_Whigs (dor:Rockingham_Whigs) --doo:headquarter--> Northamptonshire (dor:Northamptonshire)
+      - Aynho (dor:Aynho) --doo:country--> Northamptonshire (dor:Northamptonshire)
+      - Henry_Cartwright (dor:Henry_Cartwright) --dop:birthPlace--> Aynho (dor:Aynho)
+  '7':
+    attributes:
+      Edward_Montagu,_1st_Earl_of_Sandwich: (birth date^='1625-07-27')
+    relationships:
+      - Rockingham_Whigs (dor:Rockingham_Whigs) --doo:headquarter--> Northamptonshire (dor:Northamptonshire)
+      - Barnwell,_Northamptonshire (<http://dbpedia.org/resource/Barnwell,_Northamptonshire>) --doo:country--> Northamptonshire (dor:Northamptonshire)
+      - Edward_Montagu,_1st_Earl_of_Sandwich (<http://dbpedia.org/resource/Edward_Montagu,_1st_Earl_of_Sandwich>) --dop:birthPlace--> Barnwell,_Northamptonshire (<http://dbpedia.org/resource/Barnwell,_Northamptonshire>)
+  '8':
+    attributes:
+      George_Glover_Campbell: (birth date^='1887-03-02')
+    relationships:
+      - British_National_Party (dor:British_National_Party) --doo:headquarter--> Cumbria (dor:Cumbria)
+      - Barrow-in-Furness (dor:Barrow-in-Furness) --doo:country--> Cumbria (dor:Cumbria)
+      - George_Glover_Campbell (dor:George_Glover_Campbell) --dop:birthPlace--> Barrow-in-Furness (dor:Barrow-in-Furness)
+  '9':
+    attributes:
+      Peter_B._Teeley: (birth date^='1940-01-12')
+    relationships:
+      - British_National_Party (dor:British_National_Party) --doo:headquarter--> Cumbria (dor:Cumbria)
+      - Barrow-in-Furness (dor:Barrow-in-Furness) --doo:country--> Cumbria (dor:Cumbria)
+      - Peter_B._Teeley (dor:Peter_B._Teeley) --dop:birthPlace--> Barrow-in-Furness (dor:Barrow-in-Furness)
+  '10':
+    attributes:
+      George_Glover_Campbell: (birth date^='1887-03-02')
+    relationships:
+      - Putting_Cumbria_First (dor:Putting_Cumbria_First) --doo:headquarter--> Cumbria (dor:Cumbria)
+      - Barrow-in-Furness (dor:Barrow-in-Furness) --doo:country--> Cumbria (dor:Cumbria)
+      - George_Glover_Campbell (dor:George_Glover_Campbell) --dop:birthPlace--> Barrow-in-Furness (dor:Barrow-in-Furness)
+attributes:
+  Location: --Apr rain mm^ (dop:aprRainMm)--> int | --Apr record low C^ (dop:aprRecordLowC)--> langString | --year of construction^ (doo:yearOfConstruction)--> gYear | --length (μ)^ (doo:length)--> double | --arc-gapA^ (dop:arcGapa)--> int | --age^ (dop:age)--> second
+  politician: --id^ (dop:id)--> langString | --display^ (dop:display)--> langString | --birth date^ (dop:birthDate)--> date
+  political party: --colour^ (doo:colour)--> Resource
+  administrative region: --source^ (dop:source)--> langString
+subgraph_id: 34
+relationships:
+  - political party --doo:headquarter--> administrative region
+  - Location --doo:country--> administrative region
+  - politician --dop:birthPlace--> Location

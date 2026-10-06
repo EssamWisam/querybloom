@@ -1,0 +1,77 @@
+types:
+  dam: doo:Dam
+  Location: doo:Location
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Bhupinder_Singh_Hooda (dor:Bhupinder_Singh_Hooda) --doo:birthPlace--> India (dor:India)
+      - Hyderabad_District,_Sindh (<http://dbpedia.org/resource/Hyderabad_District,_Sindh>) --wwoo:differentFrom--> India (dor:India)
+      - Adavinainar_Dam (dor:Adavinainar_Dam) --doo:country--> India (dor:India)
+      - Deepender_Singh_Hooda (dor:Deepender_Singh_Hooda) --dop:father--> Bhupinder_Singh_Hooda (dor:Bhupinder_Singh_Hooda)
+  '2':
+    attributes: {}
+    relationships:
+      - Shibu_Soren (dor:Shibu_Soren) --doo:birthPlace--> India (dor:India)
+      - Hyderabad_District,_Sindh (<http://dbpedia.org/resource/Hyderabad_District,_Sindh>) --wwoo:differentFrom--> India (dor:India)
+      - Adavinainar_Dam (dor:Adavinainar_Dam) --doo:country--> India (dor:India)
+      - Hemant_Soren (dor:Hemant_Soren) --dop:father--> Shibu_Soren (dor:Shibu_Soren)
+  '3':
+    attributes: {}
+    relationships:
+      - Narayan_Rane (dor:Narayan_Rane) --doo:birthPlace--> India (dor:India)
+      - Hyderabad_District,_Sindh (<http://dbpedia.org/resource/Hyderabad_District,_Sindh>) --wwoo:differentFrom--> India (dor:India)
+      - Adavinainar_Dam (dor:Adavinainar_Dam) --doo:country--> India (dor:India)
+      - Nilesh_Narayan_Rane (dor:Nilesh_Narayan_Rane) --dop:father--> Narayan_Rane (dor:Narayan_Rane)
+qa_result:
+  status: completed
+  cost_usd: 0.208455
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0313174
+        total_tokens: 3336
+        prompt_tokens: 1915
+        completion_tokens: 1421
+      generate:
+        cost_usd: 0.0563226
+        total_tokens: 5789
+        prompt_tokens: 3484
+        completion_tokens: 2305
+      verify_1:
+        cost_usd: 0.024657000000000005
+        total_tokens: 3717
+        prompt_tokens: 3312
+        completion_tokens: 405
+      complexity:
+        cost_usd: 0.09615800000000002
+        total_tokens: 8561
+        prompt_tokens: 4432
+        completion_tokens: 4129
+    total_tokens: 21403
+    prompt_tokens: 13143
+    total_cost_usd: 0.20845500000000003
+    completion_tokens: 8260
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Location: --anthem^ (doo:anthem)--> Resource | --Aug low F^ (dop:augLowF)--> int | --builder^ (dop:builder)--> langString | --designated other1 name^ (dop:designatedOther1Name)--> langString | --named after^ (dop:namedAfter)--> Resource
+  politician: --1namedata^ (dop:1namedata)--> langString | --known for^ (dop:knownFor)--> langString
+  office holder: --award^ (doo:award)--> Resource
+  administrative region: --date^ (dop:date)--> langString | --named for^ (dop:namedFor)--> langString | --winner^ (dop:winner)--> langString
+subgraph_id: 272
+relationships:
+  - politician --doo:birthPlace--> Location
+  - administrative region --wwoo:differentFrom--> Location
+  - dam --doo:country--> Location
+  - office holder --dop:father--> politician

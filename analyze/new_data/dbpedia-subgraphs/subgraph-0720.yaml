@@ -1,0 +1,112 @@
+types:
+  artist: doo:Artist
+  person: doo:Person
+  economist: doo:Economist
+  university: doo:University
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      A._K._Ramanujan: (almaMater='http://dbpedia.org/resource/Deccan_College_(Pune)', awards^='MacArthur Fellowship, Sahitya Akademi Award and Padma Shree', birth place^='http://dbpedia.org/resource/British_India')
+      Indiana_University: (page length (characters) of wiki page^='25691', city^='http://dbpedia.org/resource/Bloomington,_Indiana')
+    relationships:
+      - David_B._Audretsch (dor:David_B._Audretsch) --doo:field--> Innovation (dor:Innovation)
+      - David_B._Audretsch (dor:David_B._Audretsch) --doo:institution--> Indiana_University (dor:Indiana_University)
+      - Bhaskar_Chakravorti (dor:Bhaskar_Chakravorti) --doo:academicDiscipline--> Innovation (dor:Innovation)
+      - A._K._Ramanujan (dor:A._K._Ramanujan) --dop:almaMater--> Indiana_University (dor:Indiana_University)
+  '2':
+    attributes:
+      Abdul_Rahman_Habil: (almaMater='http://dbpedia.org/resource/Indiana_University', bot^='InternetArchiveBot')
+      Indiana_University: (page length (characters) of wiki page^='25691', city^='http://dbpedia.org/resource/Bloomington,_Indiana')
+    relationships:
+      - David_B._Audretsch (dor:David_B._Audretsch) --doo:field--> Innovation (dor:Innovation)
+      - David_B._Audretsch (dor:David_B._Audretsch) --doo:institution--> Indiana_University (dor:Indiana_University)
+      - Bhaskar_Chakravorti (dor:Bhaskar_Chakravorti) --doo:academicDiscipline--> Innovation (dor:Innovation)
+      - Abdul_Rahman_Habil (dor:Abdul_Rahman_Habil) --dop:almaMater--> Indiana_University (dor:Indiana_University)
+  '3':
+    attributes:
+      Adrianne_Wadewitz: (almaMater='http://dbpedia.org/resource/Columbia_University', birth place^='http://dbpedia.org/resource/Omaha,_Nebraska')
+      Indiana_University: (page length (characters) of wiki page^='25691', city^='http://dbpedia.org/resource/Bloomington,_Indiana')
+    relationships:
+      - David_B._Audretsch (dor:David_B._Audretsch) --doo:field--> Innovation (dor:Innovation)
+      - David_B._Audretsch (dor:David_B._Audretsch) --doo:institution--> Indiana_University (dor:Indiana_University)
+      - Bhaskar_Chakravorti (dor:Bhaskar_Chakravorti) --doo:academicDiscipline--> Innovation (dor:Innovation)
+      - Adrianne_Wadewitz (dor:Adrianne_Wadewitz) --dop:almaMater--> Indiana_University (dor:Indiana_University)
+  '4':
+    attributes:
+      University_of_Illinois: (page length (characters) of wiki page^='53')
+    relationships:
+      - Stephen_Leeb (dor:Stephen_Leeb) --doo:field--> Psychology (dor:Psychology)
+      - Stephen_Leeb (dor:Stephen_Leeb) --doo:institution--> University_of_Illinois (dor:University_of_Illinois)
+      - Bradford_Keeney (dor:Bradford_Keeney) --doo:academicDiscipline--> Psychology (dor:Psychology)
+      - Abdul_Qayum_Wardak (dor:Abdul_Qayum_Wardak) --dop:almaMater--> University_of_Illinois (dor:University_of_Illinois)
+  '5':
+    attributes:
+      Albert_C._Martin_Sr.: (birth place^='http://dbpedia.org/resource/LaSalle,_Illinois')
+      University_of_Illinois: (page length (characters) of wiki page^='53')
+    relationships:
+      - Stephen_Leeb (dor:Stephen_Leeb) --doo:field--> Psychology (dor:Psychology)
+      - Stephen_Leeb (dor:Stephen_Leeb) --doo:institution--> University_of_Illinois (dor:University_of_Illinois)
+      - Bradford_Keeney (dor:Bradford_Keeney) --doo:academicDiscipline--> Psychology (dor:Psychology)
+      - Albert_C._Martin_Sr. (<http://dbpedia.org/resource/Albert_C._Martin_Sr.>) --dop:almaMater--> University_of_Illinois (dor:University_of_Illinois)
+  '6':
+    attributes:
+      Allan_M._Campbell: (almaMater='http://dbpedia.org/resource/University_of_California,_Berkeley', spouse^='Alice del Campillo Campbell')
+      University_of_Illinois: (page length (characters) of wiki page^='53')
+    relationships:
+      - Stephen_Leeb (dor:Stephen_Leeb) --doo:field--> Psychology (dor:Psychology)
+      - Stephen_Leeb (dor:Stephen_Leeb) --doo:institution--> University_of_Illinois (dor:University_of_Illinois)
+      - Bradford_Keeney (dor:Bradford_Keeney) --doo:academicDiscipline--> Psychology (dor:Psychology)
+      - Allan_M._Campbell (dor:Allan_M._Campbell) --dop:almaMater--> University_of_Illinois (dor:University_of_Illinois)
+  '7':
+    attributes:
+      Abdiweli_Gaas: (almaMater='http://dbpedia.org/resource/George_Mason_University', birth place^='http://dbpedia.org/resource/Dhusamareb', title^='http://dbpedia.org/resource/Prime_Minister_of_Somalia')
+      George_Mason_University: (image upright^='0.7', page length (characters) of wiki page^='104166', city^='http://dbpedia.org/resource/Fairfax_County,_Virginia')
+    relationships:
+      - Walter_E._Williams (dor:Walter_E._Williams) --doo:field--> Education (dor:Education)
+      - Walter_E._Williams (dor:Walter_E._Williams) --doo:institution--> George_Mason_University (dor:George_Mason_University)
+      - Brian_Harvey_(lecturer) (<http://dbpedia.org/resource/Brian_Harvey_(lecturer)>) --doo:academicDiscipline--> Education (dor:Education)
+      - Abdiweli_Gaas (dor:Abdiweli_Gaas) --dop:almaMater--> George_Mason_University (dor:George_Mason_University)
+  '8':
+    attributes:
+      Abdullah_Saeed: (almaMater='http://dbpedia.org/resource/Temple_University', birth place^='http://dbpedia.org/resource/Hanover,_NH')
+      Temple_University: (image upright^='0.7', page length (characters) of wiki page^='75752', city^='http://dbpedia.org/resource/Philadelphia')
+    relationships:
+      - Walter_E._Williams (dor:Walter_E._Williams) --doo:field--> Education (dor:Education)
+      - Walter_E._Williams (dor:Walter_E._Williams) --doo:institution--> Temple_University (dor:Temple_University)
+      - Brian_Harvey_(lecturer) (<http://dbpedia.org/resource/Brian_Harvey_(lecturer)>) --doo:academicDiscipline--> Education (dor:Education)
+      - Abdullah_Saeed (dor:Abdullah_Saeed) --dop:almaMater--> Temple_University (dor:Temple_University)
+  '9':
+    attributes:
+      Adam_Kwasman: (almaMater='http://dbpedia.org/resource/George_Mason_University', spouse^='Orit Kwasman', birth place^='http://dbpedia.org/resource/Tucson,_Arizona')
+      George_Mason_University: (image upright^='0.7', page length (characters) of wiki page^='104166', city^='http://dbpedia.org/resource/Fairfax_County,_Virginia')
+    relationships:
+      - Walter_E._Williams (dor:Walter_E._Williams) --doo:field--> Education (dor:Education)
+      - Walter_E._Williams (dor:Walter_E._Williams) --doo:institution--> George_Mason_University (dor:George_Mason_University)
+      - Brian_Harvey_(lecturer) (<http://dbpedia.org/resource/Brian_Harvey_(lecturer)>) --doo:academicDiscipline--> Education (dor:Education)
+      - Adam_Kwasman (dor:Adam_Kwasman) --dop:almaMater--> George_Mason_University (dor:George_Mason_University)
+  '10':
+    attributes:
+      A._James_Kerley: (almaMater='http://dbpedia.org/resource/Florida_State_University', bot^='InternetArchiveBot', title^='President of')
+      Florida_State_University: (image upright^='0.7', page length (characters) of wiki page^='204896', city^='http://dbpedia.org/resource/Tallahassee,_Florida')
+    relationships:
+      - Bruce_L._Benson (dor:Bruce_L._Benson) --doo:field--> Criminal_justice (dor:Criminal_justice)
+      - Bruce_L._Benson (dor:Bruce_L._Benson) --doo:institution--> Florida_State_University (dor:Florida_State_University)
+      - Cassia_Spohn (dor:Cassia_Spohn) --doo:academicDiscipline--> Criminal_justice (dor:Criminal_justice)
+      - A._James_Kerley (dor:A._James_Kerley) --dop:almaMater--> Florida_State_University (dor:Florida_State_University)
+attributes:
+  artist: --death date^ (dop:deathDate)--> date
+  person: --image upright^ (dop:imageUpright)--> double | --almaMater (doo:almaMater)--> Resource | --awards^ (dop:awards)--> Resource | --bot^ (dop:bot)--> langString | --spouse^ (dop:spouse)--> langString | --birth place^ (doo:birthPlace)--> Resource | --title^ (dop:title)--> langString | --parents^ (dop:parents)--> Resource
+  university: --image upright^ (dop:imageUpright)--> double | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --city^ (doo:city)--> Resource
+  music genre: --1a^ (dop:1a)--> langString
+subgraph_id: 720
+relationships:
+  - economist --doo:field--> music genre
+  - economist --doo:institution--> university
+  - artist --doo:academicDiscipline--> music genre
+  - person --dop:almaMater--> university

@@ -1,0 +1,88 @@
+types:
+  Location: doo:Location
+  radio station: doo:RadioStation
+  soccer club season: doo:SoccerClubSeason
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      2012–13_1._FC_Köln_season: (highest attendance^='46000', agf^='14')
+    relationships:
+      - 1LIVE (dor:1LIVE) --doo:city--> Cologne (dor:Cologne)
+      - 1LIVE (dor:1LIVE) --dop:area--> North_Rhine-Westphalia (dor:North_Rhine-Westphalia)
+      - 2012–13_1._FC_Köln_season (<http://dbpedia.org/resource/2012–13_1._FC_Köln_season>) --doo:homeStadium--> North_Rhine-Westphalia (dor:North_Rhine-Westphalia)
+  '2':
+    attributes: {}
+    relationships:
+      - 1LIVE (dor:1LIVE) --doo:city--> Cologne (dor:Cologne)
+      - 1LIVE (dor:1LIVE) --dop:area--> North_Rhine-Westphalia (dor:North_Rhine-Westphalia)
+      - 2012–13_Alemannia_Aachen_season (<http://dbpedia.org/resource/2012–13_Alemannia_Aachen_season>) --doo:homeStadium--> North_Rhine-Westphalia (dor:North_Rhine-Westphalia)
+  '3':
+    attributes: {}
+    relationships:
+      - 1LIVE (dor:1LIVE) --doo:city--> Cologne (dor:Cologne)
+      - 1LIVE (dor:1LIVE) --dop:area--> North_Rhine-Westphalia (dor:North_Rhine-Westphalia)
+      - 2012–13_Arminia_Bielefeld_season (<http://dbpedia.org/resource/2012–13_Arminia_Bielefeld_season>) --doo:homeStadium--> North_Rhine-Westphalia (dor:North_Rhine-Westphalia)
+  '4':
+    attributes: {}
+    relationships:
+      - 89.0_RTL (dor:89.0_RTL) --doo:city--> Saxony-Anhalt (dor:Saxony-Anhalt)
+      - 89.0_RTL (dor:89.0_RTL) --dop:area--> Saxony-Anhalt (dor:Saxony-Anhalt)
+      - 2012–13_Hallescher_FC_season (<http://dbpedia.org/resource/2012–13_Hallescher_FC_season>) --doo:homeStadium--> Saxony-Anhalt (dor:Saxony-Anhalt)
+  '5':
+    attributes:
+      2012–13_Hannover_96_season: (highest attendance^='49000')
+    relationships:
+      - 89.0_RTL (dor:89.0_RTL) --doo:city--> Saxony-Anhalt (dor:Saxony-Anhalt)
+      - 89.0_RTL (dor:89.0_RTL) --dop:area--> Lower_Saxony (dor:Lower_Saxony)
+      - 2012–13_Hannover_96_season (<http://dbpedia.org/resource/2012–13_Hannover_96_season>) --doo:homeStadium--> Lower_Saxony (dor:Lower_Saxony)
+  '6':
+    attributes: {}
+    relationships:
+      - 89.0_RTL (dor:89.0_RTL) --doo:city--> Saxony-Anhalt (dor:Saxony-Anhalt)
+      - 89.0_RTL (dor:89.0_RTL) --dop:area--> Lower_Saxony (dor:Lower_Saxony)
+      - 2012–13_VfL_Wolfsburg_season (<http://dbpedia.org/resource/2012–13_VfL_Wolfsburg_season>) --doo:homeStadium--> Lower_Saxony (dor:Lower_Saxony)
+  '7':
+    attributes:
+      2019–20_Michigan_Stars_FC_season: (agf^='1')
+    relationships:
+      - CHKS-FM (dor:CHKS-FM) --doo:city--> Sarnia (dor:Sarnia)
+      - CHKS-FM (dor:CHKS-FM) --dop:area--> Michigan (dor:Michigan)
+      - 2019–20_Michigan_Stars_FC_season (<http://dbpedia.org/resource/2019–20_Michigan_Stars_FC_season>) --doo:homeStadium--> Michigan (dor:Michigan)
+  '8':
+    attributes:
+      2020–21_Michigan_Stars_FC_season: (highest attendance^='2837', agf^='1')
+    relationships:
+      - CHKS-FM (dor:CHKS-FM) --doo:city--> Sarnia (dor:Sarnia)
+      - CHKS-FM (dor:CHKS-FM) --dop:area--> Michigan (dor:Michigan)
+      - 2020–21_Michigan_Stars_FC_season (<http://dbpedia.org/resource/2020–21_Michigan_Stars_FC_season>) --doo:homeStadium--> Michigan (dor:Michigan)
+  '9':
+    attributes:
+      CHOK: (broadcast network^='http://dbpedia.org/resource/Toronto_Blue_Jays_Radio_Network')
+      2019–20_Michigan_Stars_FC_season: (agf^='1')
+    relationships:
+      - CHOK (dor:CHOK) --doo:city--> Sarnia (dor:Sarnia)
+      - CHOK (dor:CHOK) --dop:area--> Michigan (dor:Michigan)
+      - 2019–20_Michigan_Stars_FC_season (<http://dbpedia.org/resource/2019–20_Michigan_Stars_FC_season>) --doo:homeStadium--> Michigan (dor:Michigan)
+  '10':
+    attributes:
+      2015_St_Patrick's_Athletic_F.C._season: (highest attendance^='2591', agf^='26')
+    relationships:
+      - Dublin's_Q102 (<http://dbpedia.org/resource/Dublin's_Q102>) --doo:city--> Dublin (dor:Dublin)
+      - Dublin's_Q102 (<http://dbpedia.org/resource/Dublin's_Q102>) --dop:area--> County_Dublin (dor:County_Dublin)
+      - 2015_St_Patrick's_Athletic_F.C._season (<http://dbpedia.org/resource/2015_St_Patrick's_Athletic_F.C._season>) --doo:homeStadium--> County_Dublin (dor:County_Dublin)
+attributes:
+  Location: --url^ (dop:url)--> langString | --government type^ (doo:governmentType)--> Resource | --caption align^ (dop:captionAlign)--> langString | --affiliation^ (dop:affiliation)--> Resource | --align^ (dop:align)--> langString | --age^ (dop:age)--> second | --reason^ (dop:reason)--> langString
+  radio station: --broadcast network^ (doo:broadcastNetwork)--> Resource
+  soccer club season: --highest attendance^ (dop:highestAttendance)--> langString | --agf^ (dop:agf)--> int
+  administrative region: --image upright^ (dop:imageUpright)--> double | --Apr high C^ (dop:aprHighC)--> double
+subgraph_id: 613
+relationships:
+  - radio station --doo:city--> Location
+  - radio station --dop:area--> administrative region
+  - soccer club season --doo:homeStadium--> administrative region

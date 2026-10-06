@@ -1,0 +1,50 @@
+types:
+  island: doo:Island
+  person: doo:Person
+  country: doo:Country
+  cardinal: doo:Cardinal
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Gallic_Wars: (commander^='')
+      Great_Britain: (elevation (μ)^='1345.0')
+    relationships:
+      - Great_Britain (dor:Great_Britain) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - François-Désiré_Mathieu (<http://dbpedia.org/resource/François-Désiré_Mathieu>) --doo:deathPlace--> United_Kingdom (dor:United_Kingdom)
+      - Abbie_Hunnisett (dor:Abbie_Hunnisett) --doo:nationality--> Great_Britain (dor:Great_Britain)
+      - Gallic_Wars (dor:Gallic_Wars) --doo:place--> Great_Britain (dor:Great_Britain)
+  '2':
+    attributes:
+      Gallic_Wars: (commander^='')
+      Great_Britain: (elevation (μ)^='1345.0')
+    relationships:
+      - Great_Britain (dor:Great_Britain) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - François-Désiré_Mathieu (<http://dbpedia.org/resource/François-Désiré_Mathieu>) --doo:deathPlace--> United_Kingdom (dor:United_Kingdom)
+      - Abdul_Buhari (dor:Abdul_Buhari) --doo:nationality--> Great_Britain (dor:Great_Britain)
+      - Gallic_Wars (dor:Gallic_Wars) --doo:place--> Great_Britain (dor:Great_Britain)
+  '3':
+    attributes:
+      Gallic_Wars: (commander^='')
+      Great_Britain: (elevation (μ)^='1345.0')
+    relationships:
+      - Great_Britain (dor:Great_Britain) --dop:country--> United_Kingdom (dor:United_Kingdom)
+      - François-Désiré_Mathieu (<http://dbpedia.org/resource/François-Désiré_Mathieu>) --doo:deathPlace--> United_Kingdom (dor:United_Kingdom)
+      - Ada_F._Kay (dor:Ada_F._Kay) --doo:nationality--> Great_Britain (dor:Great_Britain)
+      - Gallic_Wars (dor:Gallic_Wars) --doo:place--> Great_Britain (dor:Great_Britain)
+attributes:
+  island: --elevation (μ)^ (doo:elevation)--> double
+  person: --spouse^ (dop:spouse)--> Resource | --alma mater^ (dop:almaMater)--> langString | --employer^ (dop:employer)--> langString
+  country: --caption align^ (dop:captionAlign)--> langString
+  military conflict: --status^ (doo:status)--> string | --direction^ (dop:direction)--> langString | --commander^ (dop:commander)--> Resource
+subgraph_id: 852
+relationships:
+  - island --dop:country--> country
+  - cardinal --doo:deathPlace--> country
+  - person --doo:nationality--> island
+  - military conflict --doo:place--> island

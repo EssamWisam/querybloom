@@ -1,0 +1,60 @@
+types:
+  company: doo:Company
+  settlement: doo:Settlement
+  military unit: doo:MilitaryUnit
+  space mission: doo:SpaceMission
+  television show: doo:TelevisionShow
+  military structure: doo:MilitaryStructure
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      PBS_NewsHour: (image size^='160')
+      Arlington_County,_Virginia: (subject='http://dbpedia.org/resource/Category:1801_establishments_in_Virginia')
+    relationships:
+      - Discoverer_1 (dor:Discoverer_1) --dop:manufacturer--> Douglas_Aircraft_Company (dor:Douglas_Aircraft_Company)
+      - Discoverer_1 (dor:Discoverer_1) --doo:manufacturer--> Douglas_Aircraft_Company (dor:Douglas_Aircraft_Company)
+      - Discoverer_1 (dor:Discoverer_1) --doo:operator--> United_States_Air_Force (dor:United_States_Air_Force)
+      - Buckingham_Army_Airfield (dor:Buckingham_Army_Airfield) --doo:builder--> United_States_Air_Force (dor:United_States_Air_Force)
+      - United_States_Air_Force (dor:United_States_Air_Force) --dop:garrison--> Arlington_County,_Virginia (<http://dbpedia.org/resource/Arlington_County,_Virginia>)
+      - PBS_NewsHour (dor:PBS_NewsHour) --doo:location--> Arlington_County,_Virginia (<http://dbpedia.org/resource/Arlington_County,_Virginia>)
+  '2':
+    attributes:
+      PBS_NewsHour: (image size^='160')
+      Arlington_County,_Virginia: (subject='http://dbpedia.org/resource/Category:1801_establishments_in_Virginia')
+    relationships:
+      - Discoverer_10 (dor:Discoverer_10) --dop:manufacturer--> Lockheed_Corporation (dor:Lockheed_Corporation)
+      - Discoverer_10 (dor:Discoverer_10) --doo:manufacturer--> Lockheed_Corporation (dor:Lockheed_Corporation)
+      - Discoverer_10 (dor:Discoverer_10) --doo:operator--> United_States_Air_Force (dor:United_States_Air_Force)
+      - Buckingham_Army_Airfield (dor:Buckingham_Army_Airfield) --doo:builder--> United_States_Air_Force (dor:United_States_Air_Force)
+      - United_States_Air_Force (dor:United_States_Air_Force) --dop:garrison--> Arlington_County,_Virginia (<http://dbpedia.org/resource/Arlington_County,_Virginia>)
+      - PBS_NewsHour (dor:PBS_NewsHour) --doo:location--> Arlington_County,_Virginia (<http://dbpedia.org/resource/Arlington_County,_Virginia>)
+  '3':
+    attributes:
+      PBS_NewsHour: (image size^='160')
+      Arlington_County,_Virginia: (subject='http://dbpedia.org/resource/Category:1801_establishments_in_Virginia')
+    relationships:
+      - Discoverer_11 (dor:Discoverer_11) --dop:manufacturer--> Lockheed_Corporation (dor:Lockheed_Corporation)
+      - Discoverer_11 (dor:Discoverer_11) --doo:manufacturer--> Lockheed_Corporation (dor:Lockheed_Corporation)
+      - Discoverer_11 (dor:Discoverer_11) --doo:operator--> United_States_Air_Force (dor:United_States_Air_Force)
+      - Buckingham_Army_Airfield (dor:Buckingham_Army_Airfield) --doo:builder--> United_States_Air_Force (dor:United_States_Air_Force)
+      - United_States_Air_Force (dor:United_States_Air_Force) --dop:garrison--> Arlington_County,_Virginia (<http://dbpedia.org/resource/Arlington_County,_Virginia>)
+      - PBS_NewsHour (dor:PBS_NewsHour) --doo:location--> Arlington_County,_Virginia (<http://dbpedia.org/resource/Arlington_County,_Virginia>)
+attributes:
+  company: --direction (dop:direction)--> langString
+  settlement: --Aug low F^ (dop:augLowF)--> double | --subject (podt:subject)--> Resource | --borough^ (dop:borough)--> langString | --width (dop:width)--> langString
+  military unit: --reason^ (dop:reason)--> langString
+  television show: --last^ (dop:last)--> langString | --footer^ (dop:footer)--> langString | --image size^ (dop:imageSize)--> int
+subgraph_id: 955
+relationships:
+  - space mission --dop:manufacturer--> company
+  - space mission --doo:manufacturer--> company
+  - space mission --doo:operator--> military unit
+  - military structure --doo:builder--> military unit
+  - military unit --dop:garrison--> settlement
+  - television show --doo:location--> settlement

@@ -1,0 +1,88 @@
+types:
+  place: doo:Place
+  country: doo:Country
+  Location: doo:Location
+  radio station: doo:RadioStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Addington,_London: (subject='http://dbpedia.org/resource/Category:Areas_of_London')
+    relationships:
+      - BBC_Radio_Kent (dor:BBC_Radio_Kent) --dop:area--> Kent (dor:Kent)
+      - Addington,_London (<http://dbpedia.org/resource/Addington,_London>) --wwoo:differentFrom--> Kent (dor:Kent)
+      - Abbey_Gate,_Kent (<http://dbpedia.org/resource/Abbey_Gate,_Kent>) --doo:country--> Kent (dor:Kent)
+  '2':
+    attributes:
+      Addington,_London: (subject='http://dbpedia.org/resource/Category:Areas_of_London')
+    relationships:
+      - BBC_South_East (dor:BBC_South_East) --dop:area--> Kent (dor:Kent)
+      - Addington,_London (<http://dbpedia.org/resource/Addington,_London>) --wwoo:differentFrom--> Kent (dor:Kent)
+      - Abbey_Gate,_Kent (<http://dbpedia.org/resource/Abbey_Gate,_Kent>) --doo:country--> Kent (dor:Kent)
+  '3':
+    attributes:
+      Addington,_London: (subject='http://dbpedia.org/resource/Category:Areas_of_London')
+    relationships:
+      - Heart_Kent (dor:Heart_Kent) --dop:area--> Kent (dor:Kent)
+      - Addington,_London (<http://dbpedia.org/resource/Addington,_London>) --wwoo:differentFrom--> Kent (dor:Kent)
+      - Abbey_Gate,_Kent (<http://dbpedia.org/resource/Abbey_Gate,_Kent>) --doo:country--> Kent (dor:Kent)
+  '4':
+    attributes:
+      Afik: (subject='http://dbpedia.org/resource/Category:1972_establishments_in_the_Israeli_Military_Governorate')
+    relationships:
+      - History_(European_TV_channel) (<http://dbpedia.org/resource/History_(European_TV_channel)>) --dop:area--> Israel (dor:Israel)
+      - Afik (dor:Afik) --wwoo:differentFrom--> Israel (dor:Israel)
+      - '''Ara (<http://dbpedia.org/resource/''Ara>) --doo:country--> Israel (dor:Israel)'
+  '5':
+    attributes:
+      Afik: (subject='http://dbpedia.org/resource/Category:1972_establishments_in_the_Israeli_Military_Governorate')
+    relationships:
+      - Israeli_Network (dor:Israeli_Network) --dop:area--> Israel (dor:Israel)
+      - Afik (dor:Afik) --wwoo:differentFrom--> Israel (dor:Israel)
+      - '''Ara (<http://dbpedia.org/resource/''Ara>) --doo:country--> Israel (dor:Israel)'
+  '6':
+    attributes:
+      Afik: (subject='http://dbpedia.org/resource/Category:1972_establishments_in_the_Israeli_Military_Governorate')
+    relationships:
+      - History_(European_TV_channel) (<http://dbpedia.org/resource/History_(European_TV_channel)>) --dop:area--> Israel (dor:Israel)
+      - Afik (dor:Afik) --wwoo:differentFrom--> Israel (dor:Israel)
+      - Abu_Ghosh (dor:Abu_Ghosh) --doo:country--> Israel (dor:Israel)
+  '7':
+    attributes:
+      India: (last^='Roger')
+      Agra,_Punjab: (subject='http://dbpedia.org/resource/Category:Populated_places_in_Sahiwal_District')
+    relationships:
+      - 92.7_Big_FM (dor:92.7_Big_FM) --dop:area--> India (dor:India)
+      - Agra,_Punjab (<http://dbpedia.org/resource/Agra,_Punjab>) --wwoo:differentFrom--> India (dor:India)
+      - 1_SGM (dor:1_SGM) --doo:country--> India (dor:India)
+  '8':
+    attributes:
+      India: (last^='Roger')
+      Agra,_Punjab: (subject='http://dbpedia.org/resource/Category:Populated_places_in_Sahiwal_District')
+    relationships:
+      - Adithya_TV (dor:Adithya_TV) --dop:area--> India (dor:India)
+      - Agra,_Punjab (<http://dbpedia.org/resource/Agra,_Punjab>) --wwoo:differentFrom--> India (dor:India)
+      - 1_SGM (dor:1_SGM) --doo:country--> India (dor:India)
+  '9':
+    attributes:
+      India: (last^='Roger')
+      Agra,_Punjab: (subject='http://dbpedia.org/resource/Category:Populated_places_in_Sahiwal_District')
+    relationships:
+      - AIR_FM_Gold (dor:AIR_FM_Gold) --dop:area--> India (dor:India)
+      - Agra,_Punjab (<http://dbpedia.org/resource/Agra,_Punjab>) --wwoo:differentFrom--> India (dor:India)
+      - 1_SGM (dor:1_SGM) --doo:country--> India (dor:India)
+attributes:
+  place: --building end date^ (doo:buildingEndDate)--> string
+  country: --last^ (dop:last)--> langString | --header^ (dop:header)--> langString
+  Location: --subject (podt:subject)--> Resource | --length m^ (dop:lengthM)--> int | --Apr sun^ (dop:aprSun)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --population total^ (doo:populationTotal)--> int | --url^ (dop:url)--> Resource | --group^ (dop:group)--> Resource
+subgraph_id: 609
+relationships:
+  - radio station --dop:area--> country
+  - Location --wwoo:differentFrom--> country
+  - place --doo:country--> country

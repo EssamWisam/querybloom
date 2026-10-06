@@ -1,0 +1,90 @@
+types:
+  city: doo:City
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Hadera: (has abstract^='Chadera (auch Hadera, hebräisch חדרה [xa''dɛra], arabisch الخضيرة, Al-Ḫuḍayraḧ) ist eine Stadt in Nordisrael (Bezirk Haifa) am Mittelmeer.')
+      Tel_Aviv: (Aug rain days^='0')
+    relationships:
+      - 1954–55_Beitar_Tel_Aviv_F.C._season (<http://dbpedia.org/resource/1954–55_Beitar_Tel_Aviv_F.C._season>) --doo:ground--> Tel_Aviv (dor:Tel_Aviv)
+      - 1954–55_Beitar_Tel_Aviv_F.C._season (<http://dbpedia.org/resource/1954–55_Beitar_Tel_Aviv_F.C._season>) --dop:location--> Hadera (dor:Hadera)
+  '2':
+    attributes:
+      Haifa: (has abstract^='Cathair i dtuaisceart Iosrael is ea Haifa. Calafort tábhachtach atá ann. Tá 281,087 duine ina gcónaí sa chathair féin (2017), 600,000 sa cheantar uirbeach agus 1,050,000 sa réigiún uirbeach. Is é an c...')
+      Tel_Aviv: (Aug rain days^='0')
+    relationships:
+      - 1954–55_Beitar_Tel_Aviv_F.C._season (<http://dbpedia.org/resource/1954–55_Beitar_Tel_Aviv_F.C._season>) --doo:ground--> Tel_Aviv (dor:Tel_Aviv)
+      - 1954–55_Beitar_Tel_Aviv_F.C._season (<http://dbpedia.org/resource/1954–55_Beitar_Tel_Aviv_F.C._season>) --dop:location--> Haifa (dor:Haifa)
+  '3':
+    attributes:
+      Tel_Aviv: (Aug rain days^='0')
+      Jerusalem: '(has abstract^=''( 다른 뜻에 대해서는 예루살렘 (동음이의) 문서를 참고하십시오.) 예루살렘(히브리어: יְרוּשָׁלַיִם 예루샬라임, 아랍어: القدس 알쿠드스[*], 영어: Jerusalem, 문화어: 꾸드스)은 예로부터 종교 분쟁에서 불씨가 되어온 중동에 있는 도시다. 예루살렘은 팔레스타인 중심부의 지중해 연안 평야와 요르단 강에서 이어지는 그레이트 리프트 밸...'')'
+    relationships:
+      - 1954–55_Beitar_Tel_Aviv_F.C._season (<http://dbpedia.org/resource/1954–55_Beitar_Tel_Aviv_F.C._season>) --doo:ground--> Tel_Aviv (dor:Tel_Aviv)
+      - 1954–55_Beitar_Tel_Aviv_F.C._season (<http://dbpedia.org/resource/1954–55_Beitar_Tel_Aviv_F.C._season>) --dop:location--> Jerusalem (dor:Jerusalem)
+  '4':
+    attributes:
+      Bochum: (has abstract^='Bochum – miasto na prawach powiatu położone w zachodniej części Niemiec, w kraju związkowym Nadrenia Północna-Westfalia, w rejencji Arnsberg, w środku Zagłębia Ruhry (niem. Ruhrgebiet). Duży ośrodek p...')
+      Dortmund: (Aug rain days^='16')
+      1975–76_VfL_Bochum_season: (lowest attendance^='10000')
+    relationships:
+      - 1975–76_VfL_Bochum_season (<http://dbpedia.org/resource/1975–76_VfL_Bochum_season>) --doo:ground--> Dortmund (dor:Dortmund)
+      - 1975–76_VfL_Bochum_season (<http://dbpedia.org/resource/1975–76_VfL_Bochum_season>) --dop:location--> Bochum (dor:Bochum)
+  '5':
+    attributes:
+      Dortmund: (Aug rain days^='16')
+      Braunschweig: (has abstract^='Braunschweig (A.F.I. [ˈb̥ʀɑʊ̯nʃʷv̥aɪ̯kʰ]), Brunsvic en la seva forma catalanitzada, és una ciutat alemanya de la regió de la Baixa Saxònia. És al nord de les muntanyes Harz, al punt navegable a l''edat...')
+      1975–76_VfL_Bochum_season: (lowest attendance^='10000')
+    relationships:
+      - 1975–76_VfL_Bochum_season (<http://dbpedia.org/resource/1975–76_VfL_Bochum_season>) --doo:ground--> Dortmund (dor:Dortmund)
+      - 1975–76_VfL_Bochum_season (<http://dbpedia.org/resource/1975–76_VfL_Bochum_season>) --dop:location--> Braunschweig (dor:Braunschweig)
+  '6':
+    attributes:
+      Bremen: (has abstract^='( 다른 뜻에 대해서는 브레멘 (동음이의) 문서를 참고하십시오.) 브레멘(Bremen)은 독일 북서부의 자유시로, 베저 강 연안에 있다. 브레멘주의 주도이다.')
+      Dortmund: (Aug rain days^='16')
+      1975–76_VfL_Bochum_season: (lowest attendance^='10000')
+    relationships:
+      - 1975–76_VfL_Bochum_season (<http://dbpedia.org/resource/1975–76_VfL_Bochum_season>) --doo:ground--> Dortmund (dor:Dortmund)
+      - 1975–76_VfL_Bochum_season (<http://dbpedia.org/resource/1975–76_VfL_Bochum_season>) --dop:location--> Bremen (dor:Bremen)
+  '7':
+    attributes:
+      Tbilisi: (Aug rain days^='8', bgcolor^='#B0C4DE')
+      Gori,_Georgia: '(has abstract^=''Gori (em georgiano: გორი) é uma cidade industrial na região de Ibéria Interior, na Geórgia. A cidade foi fundada por um dos maiores reis da Geórgia, Davi o Construtor (1089-1125). Sua população atual ...'')'
+    relationships:
+      - 1990_FC_Dinamo_Tbilisi_season (dor:1990_FC_Dinamo_Tbilisi_season) --doo:ground--> Tbilisi (dor:Tbilisi)
+      - 1990_FC_Dinamo_Tbilisi_season (dor:1990_FC_Dinamo_Tbilisi_season) --dop:location--> Gori,_Georgia (<http://dbpedia.org/resource/Gori,_Georgia>)
+  '8':
+    attributes:
+      Tbilisi: (Aug rain days^='8', bgcolor^='#B0C4DE')
+      Lanchkhuti: '(has abstract^=''Lančchuti (gruzínsky: ლანჩხუთი) je město v západogruzínském regionu Gurie. Žije v něm 6395 obyvatel (2014). Lančchuti získala statut města v roce 1961. Prochází tudy železnice spojující Samtredii s Ba...'')'
+    relationships:
+      - 1990_FC_Dinamo_Tbilisi_season (dor:1990_FC_Dinamo_Tbilisi_season) --doo:ground--> Tbilisi (dor:Tbilisi)
+      - 1990_FC_Dinamo_Tbilisi_season (dor:1990_FC_Dinamo_Tbilisi_season) --dop:location--> Lanchkhuti (dor:Lanchkhuti)
+  '9':
+    attributes:
+      Tbilisi: (Aug rain days^='8', bgcolor^='#B0C4DE')
+      Ozurgeti: (has abstract^='Osurgeti (georgisch ოზურგეთი) ist eine Stadt in Georgien. Das Verwaltungszentrum der Region Gurien und gleichnamigen Munizipalität hat 14.785 Einwohner (Stand 2014). Es wird von den Flüssen und Bschus...')
+    relationships:
+      - 1990_FC_Dinamo_Tbilisi_season (dor:1990_FC_Dinamo_Tbilisi_season) --doo:ground--> Tbilisi (dor:Tbilisi)
+      - 1990_FC_Dinamo_Tbilisi_season (dor:1990_FC_Dinamo_Tbilisi_season) --dop:location--> Ozurgeti (dor:Ozurgeti)
+  '10':
+    attributes:
+      Aberdeen: '(has abstract^=''( 다른 뜻에 대해서는 애버딘 (동음이의) 문서를 참고하십시오.) 애버딘(영어: Aberdeen, 스코트어: Aiberdeen, 스코틀랜드 게일어: Obar Dheathain)은 영국 스코틀랜드의 해안 도시로, 스코틀랜드의 32개 지방 자치 의회 구역 중 하나이다. 어업과 상업이 발달해 있다. 선사 시대 마을의 흔적이 디 강과 입구 주위에 있는 것으로 보아...'')'
+    relationships:
+      - 1996–97_Celtic_F.C._season (<http://dbpedia.org/resource/1996–97_Celtic_F.C._season>) --doo:ground--> Glasgow (dor:Glasgow)
+      - 1996–97_Celtic_F.C._season (<http://dbpedia.org/resource/1996–97_Celtic_F.C._season>) --dop:location--> Aberdeen (dor:Aberdeen)
+attributes:
+  city: --founder^ (doo:founder)--> Resource | --Aug high F^ (dop:augHighF)--> double | --Apr low F^ (dop:aprLowF)--> double | --has abstract^ (doo:abstract)--> langString
+  settlement: --Apr low F^ (dop:aprLowF)--> double | --Aug rain days^ (dop:augRainDays)--> int | --bgcolor^ (dop:bgcolor)--> langString | --Aug rain days^ (dop:augRainDays)--> double
+  soccer club: --lowest attendance^ (dop:lowestAttendance)--> int
+subgraph_id: 93
+relationships:
+  - soccer club --doo:ground--> settlement
+  - soccer club --dop:location--> city

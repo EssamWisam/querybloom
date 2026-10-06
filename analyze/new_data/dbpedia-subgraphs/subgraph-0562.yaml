@@ -1,0 +1,72 @@
+types:
+  Election: doo:Election
+  time period: doo:TimePeriod
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwors: http://www.w3.org/2000/01/rdf-schema#
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - 1994_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/1994_Cook_County,_Illinois_elections>) --wwors:seeAlso--> Cook_County_Board_of_Commissioners_10th_district (dor:Cook_County_Board_of_Commissioners_10th_district)
+      - 1994_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/1994_Cook_County,_Illinois_elections>) --dop:afterElection--> David_Orr (dor:David_Orr)
+  '2':
+    attributes: {}
+    relationships:
+      - 1994_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/1994_Cook_County,_Illinois_elections>) --wwors:seeAlso--> Cook_County_Board_of_Commissioners_11th_district (dor:Cook_County_Board_of_Commissioners_11th_district)
+      - 1994_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/1994_Cook_County,_Illinois_elections>) --dop:afterElection--> David_Orr (dor:David_Orr)
+  '3':
+    attributes: {}
+    relationships:
+      - 1994_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/1994_Cook_County,_Illinois_elections>) --wwors:seeAlso--> Cook_County_Board_of_Commissioners_12th_district (dor:Cook_County_Board_of_Commissioners_12th_district)
+      - 1994_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/1994_Cook_County,_Illinois_elections>) --dop:afterElection--> David_Orr (dor:David_Orr)
+  '4':
+    attributes:
+      2006_Cook_County,_Illinois_elections: (2blank^='Races won')
+    relationships:
+      - 2006_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/2006_Cook_County,_Illinois_elections>) --wwors:seeAlso--> Cook_County_Board_of_Commissioners_10th_district (dor:Cook_County_Board_of_Commissioners_10th_district)
+      - 2006_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/2006_Cook_County,_Illinois_elections>) --dop:afterElection--> Todd_Stroger (dor:Todd_Stroger)
+  '5':
+    attributes:
+      2006_Cook_County,_Illinois_elections: (2blank^='Races won')
+    relationships:
+      - 2006_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/2006_Cook_County,_Illinois_elections>) --wwors:seeAlso--> Cook_County_Board_of_Commissioners_11th_district (dor:Cook_County_Board_of_Commissioners_11th_district)
+      - 2006_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/2006_Cook_County,_Illinois_elections>) --dop:afterElection--> Todd_Stroger (dor:Todd_Stroger)
+  '6':
+    attributes:
+      2006_Cook_County,_Illinois_elections: (2blank^='Races won')
+    relationships:
+      - 2006_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/2006_Cook_County,_Illinois_elections>) --wwors:seeAlso--> Cook_County_Board_of_Commissioners_12th_district (dor:Cook_County_Board_of_Commissioners_12th_district)
+      - 2006_Cook_County,_Illinois_elections (<http://dbpedia.org/resource/2006_Cook_County,_Illinois_elections>) --dop:afterElection--> Todd_Stroger (dor:Todd_Stroger)
+  '7':
+    attributes: {}
+    relationships:
+      - 2018_United_States_House_of_Representatives_elections_in_Connecticut (dor:2018_United_States_House_of_Representatives_elections_in_Connecticut) --wwors:seeAlso--> Connecticut's_1st_congressional_district (<http://dbpedia.org/resource/Connecticut's_1st_congressional_district>)
+      - 2018_United_States_House_of_Representatives_elections_in_Connecticut (dor:2018_United_States_House_of_Representatives_elections_in_Connecticut) --dop:afterElection--> John_B._Larson (dor:John_B._Larson)
+  '8':
+    attributes: {}
+    relationships:
+      - 2018_United_States_House_of_Representatives_elections_in_Connecticut (dor:2018_United_States_House_of_Representatives_elections_in_Connecticut) --wwors:seeAlso--> Connecticut's_2nd_congressional_district (<http://dbpedia.org/resource/Connecticut's_2nd_congressional_district>)
+      - 2018_United_States_House_of_Representatives_elections_in_Connecticut (dor:2018_United_States_House_of_Representatives_elections_in_Connecticut) --dop:afterElection--> John_B._Larson (dor:John_B._Larson)
+  '9':
+    attributes: {}
+    relationships:
+      - 2018_United_States_House_of_Representatives_elections_in_Connecticut (dor:2018_United_States_House_of_Representatives_elections_in_Connecticut) --wwors:seeAlso--> Connecticut's_3rd_congressional_district (<http://dbpedia.org/resource/Connecticut's_3rd_congressional_district>)
+      - 2018_United_States_House_of_Representatives_elections_in_Connecticut (dor:2018_United_States_House_of_Representatives_elections_in_Connecticut) --dop:afterElection--> John_B._Larson (dor:John_B._Larson)
+  '10':
+    attributes:
+      2018_United_States_House_of_Representatives_elections_in_New_Jersey: (winner^='Democratic Party')
+    relationships:
+      - 2018_United_States_House_of_Representatives_elections_in_New_Jersey (dor:2018_United_States_House_of_Representatives_elections_in_New_Jersey) --wwors:seeAlso--> New_Jersey's_10th_congressional_district (<http://dbpedia.org/resource/New_Jersey's_10th_congressional_district>)
+      - 2018_United_States_House_of_Representatives_elections_in_New_Jersey (dor:2018_United_States_House_of_Representatives_elections_in_New_Jersey) --dop:afterElection--> Albio_Sires (dor:Albio_Sires)
+attributes:
+  Election: --2blank^ (dop:2blank)--> langString | --3blank^ (dop:3blank)--> langString | --winner^ (dop:winner)--> Resource | --3data^ (dop:3data)--> int
+  administrative region: --elevation (μ)^ (doo:elevation)--> double | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --Apr sun^ (dop:aprSun)--> int | --Aug rain days^ (dop:augRainDays)--> double | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --Apr low C^ (dop:aprLowC)--> double | --affiliation^ (dop:affiliation)--> Resource | --reason^ (dop:reason)--> langString
+subgraph_id: 562
+relationships:
+  - Election --wwors:seeAlso--> administrative region
+  - Election --dop:afterElection--> time period

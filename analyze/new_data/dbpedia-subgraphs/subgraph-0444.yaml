@@ -1,0 +1,95 @@
+types:
+  athlete: doo:Athlete
+  railway line: doo:RailwayLine
+  train station: doo:RailwayStation
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Gyeongwon_Line: (operator^='http://dbpedia.org/resource/Korail', status^='Operational')
+      Gyeonggi_Province: (caption^='Religion in Gyeonggi-do')
+      Baengmagoji_station: (platform='1')
+    relationships:
+      - Baengmagoji_station (dor:Baengmagoji_station) --dop:line--> Gyeongwon_Line (dor:Gyeongwon_Line)
+      - Gyeongwon_Line (dor:Gyeongwon_Line) --doo:location--> Gyeonggi_Province (dor:Gyeonggi_Province)
+      - Ahn_Jung-hwan (dor:Ahn_Jung-hwan) --doo:birthPlace--> Gyeonggi_Province (dor:Gyeonggi_Province)
+  '2':
+    attributes:
+      Aimé_Fritz: (death date^='1950-01-28')
+      Strasbourg–Basel_railway: (operator^='http://dbpedia.org/resource/SNCF', status^='Operational')
+    relationships:
+      - Basel_St._Johann_railway_station (dor:Basel_St._Johann_railway_station) --dop:line--> Strasbourg–Basel_railway (<http://dbpedia.org/resource/Strasbourg–Basel_railway>)
+      - Strasbourg–Basel_railway (<http://dbpedia.org/resource/Strasbourg–Basel_railway>) --doo:location--> Alsace (dor:Alsace)
+      - Aimé_Fritz (<http://dbpedia.org/resource/Aimé_Fritz>) --doo:birthPlace--> Alsace (dor:Alsace)
+  '3':
+    attributes:
+      Hokkaido: (align^='right', caption^='http://dbpedia.org/resource/Hokkaido_University_Botanical_Gardens')
+    relationships:
+      - Kami-Nopporo_Station (dor:Kami-Nopporo_Station) --dop:line--> Chitose_Line (dor:Chitose_Line)
+      - Chitose_Line (dor:Chitose_Line) --doo:location--> Hokkaido (dor:Hokkaido)
+      - Akemi_Taniguchi (dor:Akemi_Taniguchi) --doo:birthPlace--> Hokkaido (dor:Hokkaido)
+  '4':
+    attributes:
+      Hokkaido: (align^='right', caption^='http://dbpedia.org/resource/Hokkaido_University_Botanical_Gardens')
+    relationships:
+      - New_Chitose_Airport_Station (dor:New_Chitose_Airport_Station) --dop:line--> Chitose_Line (dor:Chitose_Line)
+      - Chitose_Line (dor:Chitose_Line) --doo:location--> Hokkaido (dor:Hokkaido)
+      - Akemi_Taniguchi (dor:Akemi_Taniguchi) --doo:birthPlace--> Hokkaido (dor:Hokkaido)
+  '5':
+    attributes:
+      Hokkaido: (align^='right', caption^='http://dbpedia.org/resource/Hokkaido_University_Botanical_Gardens')
+      Hakodate_Main_Line: (operator^='http://dbpedia.org/resource/JR_Freight')
+    relationships:
+      - Akaigawa_Station (dor:Akaigawa_Station) --dop:line--> Hakodate_Main_Line (dor:Hakodate_Main_Line)
+      - Hakodate_Main_Line (dor:Hakodate_Main_Line) --doo:location--> Hokkaido (dor:Hokkaido)
+      - Akemi_Taniguchi (dor:Akemi_Taniguchi) --doo:birthPlace--> Hokkaido (dor:Hokkaido)
+  '6':
+    attributes: {}
+    relationships:
+      - Asabu_Station (dor:Asabu_Station) --dop:line--> Namboku_Line_(Sapporo) (<http://dbpedia.org/resource/Namboku_Line_(Sapporo)>)
+      - Namboku_Line_(Sapporo) (<http://dbpedia.org/resource/Namboku_Line_(Sapporo)>) --doo:location--> Hokkaidō (<http://dbpedia.org/resource/Hokkaidō>)
+      - Asahikuni_Masuo (dor:Asahikuni_Masuo) --doo:birthPlace--> Hokkaidō (<http://dbpedia.org/resource/Hokkaidō>)
+  '7':
+    attributes: {}
+    relationships:
+      - Hiragishi_Station_(Sapporo) (<http://dbpedia.org/resource/Hiragishi_Station_(Sapporo)>) --dop:line--> Namboku_Line_(Sapporo) (<http://dbpedia.org/resource/Namboku_Line_(Sapporo)>)
+      - Namboku_Line_(Sapporo) (<http://dbpedia.org/resource/Namboku_Line_(Sapporo)>) --doo:location--> Hokkaidō (<http://dbpedia.org/resource/Hokkaidō>)
+      - Asahikuni_Masuo (dor:Asahikuni_Masuo) --doo:birthPlace--> Hokkaidō (<http://dbpedia.org/resource/Hokkaidō>)
+  '8':
+    attributes: {}
+    relationships:
+      - Horohira-Bashi_Station (dor:Horohira-Bashi_Station) --dop:line--> Namboku_Line_(Sapporo) (<http://dbpedia.org/resource/Namboku_Line_(Sapporo)>)
+      - Namboku_Line_(Sapporo) (<http://dbpedia.org/resource/Namboku_Line_(Sapporo)>) --doo:location--> Hokkaidō (<http://dbpedia.org/resource/Hokkaidō>)
+      - Asahikuni_Masuo (dor:Asahikuni_Masuo) --doo:birthPlace--> Hokkaidō (<http://dbpedia.org/resource/Hokkaidō>)
+  '9':
+    attributes:
+      Askeaton_railway_station: (platform='1')
+      Billy_Ringrose_(equestrian): (death date^='2020-04-30')
+      Limerick–Foynes_railway_line: (operator^='http://dbpedia.org/resource/Irish_Rail', status^='Under construction')
+    relationships:
+      - Askeaton_railway_station (dor:Askeaton_railway_station) --dop:line--> Limerick–Foynes_railway_line (<http://dbpedia.org/resource/Limerick–Foynes_railway_line>)
+      - Limerick–Foynes_railway_line (<http://dbpedia.org/resource/Limerick–Foynes_railway_line>) --doo:location--> County_Limerick (dor:County_Limerick)
+      - Billy_Ringrose_(equestrian) (<http://dbpedia.org/resource/Billy_Ringrose_(equestrian)>) --doo:birthPlace--> County_Limerick (dor:County_Limerick)
+  '10':
+    attributes:
+      Gyeongjeon_Line: (operator^='http://dbpedia.org/resource/Korail', status^='Operational')
+    relationships:
+      - Banseong_station (dor:Banseong_station) --dop:line--> Gyeongjeon_Line (dor:Gyeongjeon_Line)
+      - Gyeongjeon_Line (dor:Gyeongjeon_Line) --doo:location--> South_Gyeongsang_Province (dor:South_Gyeongsang_Province)
+      - Byeon_Jin-su (dor:Byeon_Jin-su) --doo:birthPlace--> South_Gyeongsang_Province (dor:South_Gyeongsang_Province)
+attributes:
+  athlete: --id^ (dop:id)--> int | --club^ (doo:club)--> Resource | --death date^ (dop:deathDate)--> date
+  railway line: --operator^ (doo:operator)--> Resource | --status^ (doo:status)--> string
+  train station: --platform (dop:platform)--> int
+  administrative region: --align^ (dop:align)--> langString | --Apr record low C^ (dop:aprRecordLowC)--> int | --Aug high C^ (dop:augHighC)--> int | --bot^ (dop:bot)--> langString | --caption^ (dop:caption)--> langString | --differentFrom (wwoo:differentFrom)--> Resource
+subgraph_id: 444
+relationships:
+  - train station --dop:line--> railway line
+  - railway line --doo:location--> administrative region
+  - athlete --doo:birthPlace--> administrative region

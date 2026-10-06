@@ -1,0 +1,112 @@
+types:
+  city: doo:City
+  ship: doo:Ship
+  soccer club: doo:SoccerClub
+  soccer manager: doo:SoccerManager
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Cologne: (area^='405.15', source='Data derived from Deutscher Wetterdienst', Apr precipitation mm^='48.2')
+      Albrecht_Brandi: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-person-noun-1')
+      Alexander_Voigt: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-soccer_player-noun-1')
+    relationships:
+      - Albrecht_Brandi (dor:Albrecht_Brandi) --dop:deathPlace--> Cologne (dor:Cologne)
+      - Alexander_Voigt (dor:Alexander_Voigt) --dop:birthPlace--> Cologne (dor:Cologne)
+      - Albrecht_Brandi (dor:Albrecht_Brandi) --doo:militaryUnit--> German_cruiser_Karlsruhe (dor:German_cruiser_Karlsruhe)
+      - Alexander_Voigt (dor:Alexander_Voigt) --doo:managerClub--> FC_Viktoria_Köln (<http://dbpedia.org/resource/FC_Viktoria_Köln>)
+  '2':
+    attributes:
+      Cologne: (area^='405.15', source='Data derived from Deutscher Wetterdienst', Apr precipitation mm^='48.2')
+      Albrecht_Brandi: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-person-noun-1')
+      Alexander_Voigt: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-soccer_player-noun-1')
+    relationships:
+      - Albrecht_Brandi (dor:Albrecht_Brandi) --dop:deathPlace--> Cologne (dor:Cologne)
+      - Alexander_Voigt (dor:Alexander_Voigt) --dop:birthPlace--> Cologne (dor:Cologne)
+      - Albrecht_Brandi (dor:Albrecht_Brandi) --doo:militaryUnit--> German_cruiser_Karlsruhe (dor:German_cruiser_Karlsruhe)
+      - Alexander_Voigt (dor:Alexander_Voigt) --doo:managerClub--> Fortuna_Sittard (dor:Fortuna_Sittard)
+  '3':
+    attributes:
+      Cologne: (area^='405.15', source='Data derived from Deutscher Wetterdienst', Apr precipitation mm^='48.2')
+      Albrecht_Brandi: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-person-noun-1')
+      Alexander_Voigt: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-soccer_player-noun-1')
+    relationships:
+      - Albrecht_Brandi (dor:Albrecht_Brandi) --dop:deathPlace--> Cologne (dor:Cologne)
+      - Alexander_Voigt (dor:Alexander_Voigt) --dop:birthPlace--> Cologne (dor:Cologne)
+      - Albrecht_Brandi (dor:Albrecht_Brandi) --doo:militaryUnit--> German_cruiser_Karlsruhe (dor:German_cruiser_Karlsruhe)
+      - Alexander_Voigt (dor:Alexander_Voigt) --doo:managerClub--> Sportfreunde_Siegen (dor:Sportfreunde_Siegen)
+  '4':
+    attributes:
+      Pensacola,_Florida: (b^='no', source='http://dbpedia.org/resource/NOAA')
+    relationships:
+      - Cook_Cleland (dor:Cook_Cleland) --dop:deathPlace--> Pensacola,_Florida (<http://dbpedia.org/resource/Pensacola,_Florida>)
+      - Jon_Akin (dor:Jon_Akin) --dop:birthPlace--> Pensacola,_Florida (<http://dbpedia.org/resource/Pensacola,_Florida>)
+      - Cook_Cleland (dor:Cook_Cleland) --doo:militaryUnit--> USS_Lexington_(CV-16) (<http://dbpedia.org/resource/USS_Lexington_(CV-16)>)
+      - Jon_Akin (dor:Jon_Akin) --doo:managerClub--> Oglethorpe_University (dor:Oglethorpe_University)
+  '5':
+    attributes:
+      New_Delhi: (source='India Meterological Department')
+    relationships:
+      - Daya_Shankar_(admiral) (<http://dbpedia.org/resource/Daya_Shankar_(admiral)>) --dop:deathPlace--> New_Delhi (dor:New_Delhi)
+      - Eric_Benny (dor:Eric_Benny) --dop:birthPlace--> New_Delhi (dor:New_Delhi)
+      - Daya_Shankar_(admiral) (<http://dbpedia.org/resource/Daya_Shankar_(admiral)>) --doo:militaryUnit--> HMIS_Hindustan (dor:HMIS_Hindustan)
+      - Eric_Benny (dor:Eric_Benny) --doo:managerClub--> India_national_football_team (dor:India_national_football_team)
+  '6':
+    attributes:
+      New_Delhi: (source='India Meterological Department')
+    relationships:
+      - Daya_Shankar_(admiral) (<http://dbpedia.org/resource/Daya_Shankar_(admiral)>) --dop:deathPlace--> New_Delhi (dor:New_Delhi)
+      - Eric_Benny (dor:Eric_Benny) --dop:birthPlace--> New_Delhi (dor:New_Delhi)
+      - Daya_Shankar_(admiral) (<http://dbpedia.org/resource/Daya_Shankar_(admiral)>) --doo:militaryUnit--> HMIS_Hindustan (dor:HMIS_Hindustan)
+      - Eric_Benny (dor:Eric_Benny) --doo:managerClub--> Indian_Arrows (dor:Indian_Arrows)
+  '7':
+    attributes:
+      New_Delhi: (source='India Meterological Department')
+    relationships:
+      - Daya_Shankar_(admiral) (<http://dbpedia.org/resource/Daya_Shankar_(admiral)>) --dop:deathPlace--> New_Delhi (dor:New_Delhi)
+      - Eric_Benny (dor:Eric_Benny) --dop:birthPlace--> New_Delhi (dor:New_Delhi)
+      - Daya_Shankar_(admiral) (<http://dbpedia.org/resource/Daya_Shankar_(admiral)>) --doo:militaryUnit--> HMIS_Lawrence (dor:HMIS_Lawrence)
+      - Eric_Benny (dor:Eric_Benny) --doo:managerClub--> India_national_football_team (dor:India_national_football_team)
+  '8':
+    attributes:
+      Edward_D._Robie: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-person-noun-1')
+      Alan_Woods_(soccer): (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-soccer_player-noun-1')
+    relationships:
+      - Edward_D._Robie (dor:Edward_D._Robie) --dop:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Alan_Woods_(soccer) (<http://dbpedia.org/resource/Alan_Woods_(soccer)>) --dop:birthPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Edward_D._Robie (dor:Edward_D._Robie) --doo:militaryUnit--> USS_Dictator_(1863) (<http://dbpedia.org/resource/USS_Dictator_(1863)>)
+      - Alan_Woods_(soccer) (<http://dbpedia.org/resource/Alan_Woods_(soccer)>) --doo:managerClub--> Oglethorpe_University (dor:Oglethorpe_University)
+  '9':
+    attributes:
+      Edward_D._Robie: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-person-noun-1')
+      Alan_Woods_(soccer): (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-soccer_player-noun-1')
+      USS_Lancaster_(1858): (type^='http://dbpedia.org/resource/Sloop-of-war')
+    relationships:
+      - Edward_D._Robie (dor:Edward_D._Robie) --dop:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Alan_Woods_(soccer) (<http://dbpedia.org/resource/Alan_Woods_(soccer)>) --dop:birthPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Edward_D._Robie (dor:Edward_D._Robie) --doo:militaryUnit--> USS_Lancaster_(1858) (<http://dbpedia.org/resource/USS_Lancaster_(1858)>)
+      - Alan_Woods_(soccer) (<http://dbpedia.org/resource/Alan_Woods_(soccer)>) --doo:managerClub--> Oglethorpe_University (dor:Oglethorpe_University)
+  '10':
+    attributes:
+      Edward_D._Robie: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-person-noun-1')
+    relationships:
+      - Edward_D._Robie (dor:Edward_D._Robie) --dop:deathPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Nate_Burkey (dor:Nate_Burkey) --dop:birthPlace--> Washington,_D.C. (<http://dbpedia.org/resource/Washington,_D.C.>)
+      - Edward_D._Robie (dor:Edward_D._Robie) --doo:militaryUnit--> USS_Dictator_(1863) (<http://dbpedia.org/resource/USS_Dictator_(1863)>)
+      - Nate_Burkey (dor:Nate_Burkey) --doo:managerClub--> Philippines_national_football_team (dor:Philippines_national_football_team)
+attributes:
+  city: --area^ (dop:area)--> double | --b^ (dop:b)--> langString | --source (dop:source)--> Resource | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int
+  ship: --type^ (doo:type)--> Resource | --cost^ (dop:cost)--> langString
+  soccer manager: --wordnet_type (dop:wordnet_type)--> Resource
+  military person: --quote^ (dop:quote)--> langString | --wordnet_type (dop:wordnet_type)--> Resource | --source^ (dop:source)--> langString
+subgraph_id: 528
+relationships:
+  - military person --dop:deathPlace--> city
+  - soccer manager --dop:birthPlace--> city
+  - military person --doo:militaryUnit--> ship
+  - soccer manager --doo:managerClub--> soccer club

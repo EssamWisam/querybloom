@@ -1,0 +1,93 @@
+types:
+  politician: doo:Politician
+  university: doo:University
+  time period: doo:TimePeriod
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Virginia_Tech: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''', image upright^='0.7')
+      Alexander_R._Hobbs: (birth name^='Alexander Raleigh Hobbs')
+    relationships:
+      - '%22Bulldog%22_Ben_Robinson (<http://dbpedia.org/resource/%22Bulldog%22_Ben_Robinson>) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)'
+      - Alexander_R._Hobbs (dor:Alexander_R._Hobbs) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Alexander_R._Hobbs (dor:Alexander_R._Hobbs) --doo:almaMater--> Virginia_Tech (dor:Virginia_Tech)
+  '2':
+    attributes:
+      Manhattan_College: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Annapolis_Group', image upright^='0.6')
+    relationships:
+      - '%22Bulldog%22_Ben_Robinson (<http://dbpedia.org/resource/%22Bulldog%22_Ben_Robinson>) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)'
+      - Andrew_Lawrence_Somers (dor:Andrew_Lawrence_Somers) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Andrew_Lawrence_Somers (dor:Andrew_Lawrence_Somers) --doo:almaMater--> Manhattan_College (dor:Manhattan_College)
+  '3':
+    attributes:
+      New_York_University: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:!', image upright^='0.7', founder^='http://dbpedia.org/resource/Albert_Gallatin')
+    relationships:
+      - '%22Bulldog%22_Ben_Robinson (<http://dbpedia.org/resource/%22Bulldog%22_Ben_Robinson>) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)'
+      - Andrew_Lawrence_Somers (dor:Andrew_Lawrence_Somers) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Andrew_Lawrence_Somers (dor:Andrew_Lawrence_Somers) --doo:almaMater--> New_York_University (dor:New_York_University)
+  '4':
+    attributes:
+      Stetson_University: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''', image upright^='0.7', founder^='Henry Addison DeLand')
+    relationships:
+      - 2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1 (<http://dbpedia.org/resource/2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1>) --doo:party--> Republican_Party_(United_States) (<http://dbpedia.org/resource/Republican_Party_(United_States)>)
+      - Albert_W._Johnson (dor:Albert_W._Johnson) --doo:party--> Republican_Party_(United_States) (<http://dbpedia.org/resource/Republican_Party_(United_States)>)
+      - Albert_W._Johnson (dor:Albert_W._Johnson) --doo:almaMater--> Stetson_University (dor:Stetson_University)
+  '5':
+    attributes:
+      University_of_Pennsylvania: (Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^='http://commons.dbpedia.org/resource/File:Proposals_Relating_to_the_Education_of_Youth_in_Pensilvania_(UC)_-_Benjamin_Franklin_(1931_1749).djvu', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:''', image upright^='0.7', founder^='http://dbpedia.org/resource/Benjamin_Franklin')
+    relationships:
+      - 2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1 (<http://dbpedia.org/resource/2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1>) --doo:party--> Republican_Party_(United_States) (<http://dbpedia.org/resource/Republican_Party_(United_States)>)
+      - Albert_W._Johnson (dor:Albert_W._Johnson) --doo:party--> Republican_Party_(United_States) (<http://dbpedia.org/resource/Republican_Party_(United_States)>)
+      - Albert_W._Johnson (dor:Albert_W._Johnson) --doo:almaMater--> University_of_Pennsylvania (dor:University_of_Pennsylvania)
+  '6':
+    attributes:
+      Southwestern_College_(California): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - 2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1 (<http://dbpedia.org/resource/2008_United_States_House_of_Representatives_elections_in_New_Mexico__Edward_R._Tinsley,_III__1>) --doo:party--> Republican_Party_(United_States) (<http://dbpedia.org/resource/Republican_Party_(United_States)>)
+      - Brian_Bilbray (dor:Brian_Bilbray) --doo:party--> Republican_Party_(United_States) (<http://dbpedia.org/resource/Republican_Party_(United_States)>)
+      - Brian_Bilbray (dor:Brian_Bilbray) --doo:almaMater--> Southwestern_College_(California) (<http://dbpedia.org/resource/Southwestern_College_(California)>)
+  '7':
+    attributes:
+      Yangon_Institute_of_Education: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:R_from_move')
+    relationships:
+      - A_Zin_Latt (dor:A_Zin_Latt) --doo:party--> National_League_for_Democracy (dor:National_League_for_Democracy)
+      - Mahn_Johnny (dor:Mahn_Johnny) --doo:party--> National_League_for_Democracy (dor:National_League_for_Democracy)
+      - Mahn_Johnny (dor:Mahn_Johnny) --doo:almaMater--> Yangon_Institute_of_Education (dor:Yangon_Institute_of_Education)
+  '8':
+    attributes: {}
+    relationships:
+      - A_Zin_Latt (dor:A_Zin_Latt) --doo:party--> National_League_for_Democracy (dor:National_League_for_Democracy)
+      - Phyo_Min_Thein (dor:Phyo_Min_Thein) --doo:party--> National_League_for_Democracy (dor:National_League_for_Democracy)
+      - Phyo_Min_Thein (dor:Phyo_Min_Thein) --doo:almaMater--> Yangon_University (dor:Yangon_University)
+  '9':
+    attributes:
+      University_of_Medicine_1,_Yangon: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - A_Zin_Latt (dor:A_Zin_Latt) --doo:party--> National_League_for_Democracy (dor:National_League_for_Democracy)
+      - Win_Myat_Aye (dor:Win_Myat_Aye) --doo:party--> National_League_for_Democracy (dor:National_League_for_Democracy)
+      - Win_Myat_Aye (dor:Win_Myat_Aye) --doo:almaMater--> University_of_Medicine_1,_Yangon (<http://dbpedia.org/resource/University_of_Medicine_1,_Yangon>)
+  '10':
+    attributes:
+      A._Boyd_Ferris: (death date^='1989-07-31')
+      Liberal_Party_of_Canada: (founder^='http://dbpedia.org/resource/George_Brown_(Canadian_politician)')
+      Concordia_University_(Montreal): (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:R_from_unnecessary_disambiguation')
+    relationships:
+      - A._Boyd_Ferris (dor:A._Boyd_Ferris) --doo:party--> Liberal_Party_of_Canada (dor:Liberal_Party_of_Canada)
+      - Anthony_Housefather (dor:Anthony_Housefather) --doo:party--> Liberal_Party_of_Canada (dor:Liberal_Party_of_Canada)
+      - Anthony_Housefather (dor:Anthony_Housefather) --doo:almaMater--> Concordia_University_(Montreal) (<http://dbpedia.org/resource/Concordia_University_(Montreal)>)
+attributes:
+  politician: --parents^ (dop:parents)--> Resource | --2pp^ (dop:2pp)--> int | --profession^ (doo:profession)--> Resource | --death date^ (dop:deathDate)--> gMonthDay
+  university: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --image upright^ (dop:imageUpright)--> double | --Closed^ (dop:closed)--> int | --founder^ (dop:founder)--> langString
+  time period: --birth name^ (doo:birthName)--> langString
+  political party: --reason^ (dop:reason)--> langString | --founder^ (dop:founder)--> Resource
+subgraph_id: 569
+relationships:
+  - politician --doo:party--> political party
+  - time period --doo:party--> political party
+  - time period --doo:almaMater--> university

@@ -1,0 +1,138 @@
+types:
+  road: doo:Road
+  settlement: doo:Settlement
+  political party: doo:PoliticalParty
+  ice hockey player: doo:IceHockeyPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Jefferson_Highway: (Wikipage page ID^='343274')
+    relationships:
+      - Jefferson_Highway (dor:Jefferson_Highway) --doo:routeEnd--> Manitoba (dor:Manitoba)
+      - Co-operative_Commonwealth_Federation_(Manitoba) (<http://dbpedia.org/resource/Co-operative_Commonwealth_Federation_(Manitoba)>) --doo:headquarter--> Manitoba (dor:Manitoba)
+      - Ab_McDonald (dor:Ab_McDonald) --doo:deathPlace--> Manitoba (dor:Manitoba)
+  '2':
+    attributes:
+      Winnipeg: (type^='http://dbpedia.org/resource/List_of_cities_in_Manitoba')
+      Jefferson_Highway: (Wikipage page ID^='343274')
+    relationships:
+      - Jefferson_Highway (dor:Jefferson_Highway) --doo:routeEnd--> Winnipeg (dor:Winnipeg)
+      - Co-operative_Commonwealth_Federation_(Manitoba) (<http://dbpedia.org/resource/Co-operative_Commonwealth_Federation_(Manitoba)>) --doo:headquarter--> Winnipeg (dor:Winnipeg)
+      - Ab_McDonald (dor:Ab_McDonald) --doo:deathPlace--> Winnipeg (dor:Winnipeg)
+  '3':
+    attributes:
+      Winnipeg: (type^='http://dbpedia.org/resource/List_of_cities_in_Manitoba')
+      Manitoba_Highway_3: (Wikipage page ID^='3323969')
+    relationships:
+      - Manitoba_Highway_3 (dor:Manitoba_Highway_3) --doo:routeEnd--> Winnipeg (dor:Winnipeg)
+      - Co-operative_Commonwealth_Federation_(Manitoba) (<http://dbpedia.org/resource/Co-operative_Commonwealth_Federation_(Manitoba)>) --doo:headquarter--> Winnipeg (dor:Winnipeg)
+      - Ab_McDonald (dor:Ab_McDonald) --doo:deathPlace--> Winnipeg (dor:Winnipeg)
+  '4':
+    attributes:
+      Edmonton: (type^='http://dbpedia.org/resource/List_of_cities_in_Alberta', named for^='http://dbpedia.org/resource/Edmonton,_London')
+      Alberta_Highway_16X: (Wikipage page ID^='24306080')
+      Alberta_Advantage_Party: (leader^='http://dbpedia.org/resource/Marilyn_Burns_(politician)', leader^='http://dbpedia.org/resource/Marilyn_Burns_(politician)')
+    relationships:
+      - Alberta_Highway_16X (dor:Alberta_Highway_16X) --doo:routeEnd--> Edmonton (dor:Edmonton)
+      - Alberta_Advantage_Party (dor:Alberta_Advantage_Party) --doo:headquarter--> Edmonton (dor:Edmonton)
+      - Ab_Newsome (dor:Ab_Newsome) --doo:deathPlace--> Edmonton (dor:Edmonton)
+  '5':
+    attributes:
+      Alberta_Advantage_Party: (leader^='http://dbpedia.org/resource/Marilyn_Burns_(politician)', leader^='http://dbpedia.org/resource/Marilyn_Burns_(politician)')
+      British_Columbia_Highway_3: (Wikipage page ID^='13000166')
+    relationships:
+      - British_Columbia_Highway_3 (dor:British_Columbia_Highway_3) --doo:routeEnd--> Alberta (dor:Alberta)
+      - Alberta_Advantage_Party (dor:Alberta_Advantage_Party) --doo:headquarter--> Alberta (dor:Alberta)
+      - Ab_Newsome (dor:Ab_Newsome) --doo:deathPlace--> Alberta (dor:Alberta)
+  '6':
+    attributes:
+      Alberta_Advantage_Party: (leader^='http://dbpedia.org/resource/Marilyn_Burns_(politician)', leader^='http://dbpedia.org/resource/Marilyn_Burns_(politician)')
+      British_Columbia_Highway_93: (Wikipage page ID^='679202')
+    relationships:
+      - British_Columbia_Highway_93 (dor:British_Columbia_Highway_93) --doo:routeEnd--> Alberta (dor:Alberta)
+      - Alberta_Advantage_Party (dor:Alberta_Advantage_Party) --doo:headquarter--> Alberta (dor:Alberta)
+      - Ab_Newsome (dor:Ab_Newsome) --doo:deathPlace--> Alberta (dor:Alberta)
+  '7':
+    attributes:
+      California: (area total (m2)^='163696000000.0', align^='left', width^='150')
+      Nevada_State_Route_28: (Wikipage page ID^='2229588')
+    relationships:
+      - Nevada_State_Route_28 (dor:Nevada_State_Route_28) --doo:routeEnd--> California (dor:California)
+      - American_Freedom_Party (dor:American_Freedom_Party) --doo:headquarter--> California (dor:California)
+      - Abbie_Newell (dor:Abbie_Newell) --doo:deathPlace--> California (dor:California)
+  '8':
+    attributes:
+      California: (area total (m2)^='163696000000.0', align^='left', width^='150')
+      U.S._Route_95_in_Arizona: (Wikipage page ID^='12518302')
+    relationships:
+      - U.S._Route_95_in_Arizona (dor:U.S._Route_95_in_Arizona) --doo:routeEnd--> California (dor:California)
+      - American_Freedom_Party (dor:American_Freedom_Party) --doo:headquarter--> California (dor:California)
+      - Abbie_Newell (dor:Abbie_Newell) --doo:deathPlace--> California (dor:California)
+  '9':
+    attributes:
+      California: (area total (m2)^='163696000000.0', align^='left', width^='150')
+      Nevada_State_Route_28: (Wikipage page ID^='2229588')
+      Black_Panther_Party__Black_Panther_Party__1: (leader^='http://dbpedia.org/resource/Huey_P._Newton')
+    relationships:
+      - Nevada_State_Route_28 (dor:Nevada_State_Route_28) --doo:routeEnd--> California (dor:California)
+      - Black_Panther_Party__Black_Panther_Party__1 (dor:Black_Panther_Party__Black_Panther_Party__1) --doo:headquarter--> California (dor:California)
+      - Abbie_Newell (dor:Abbie_Newell) --doo:deathPlace--> California (dor:California)
+  '10':
+    attributes:
+      Dundas_Street: (Wikipage page ID^='62102908')
+      Animal_Protection_Party_of_Canada: (leader^='http://dbpedia.org/resource/Liz_White_(activist)', leader^='http://dbpedia.org/resource/Liz_White_(activist)')
+    relationships:
+      - Dundas_Street (dor:Dundas_Street) --doo:routeEnd--> Toronto (dor:Toronto)
+      - Animal_Protection_Party_of_Canada (dor:Animal_Protection_Party_of_Canada) --doo:headquarter--> Toronto (dor:Toronto)
+      - Ace_Bailey (dor:Ace_Bailey) --doo:deathPlace--> Toronto (dor:Toronto)
+qa_result:
+  status: completed
+  cost_usd: 0.426397
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.05133240000000001
+        total_tokens: 4648
+        prompt_tokens: 2330
+        completion_tokens: 2318
+      generate:
+        cost_usd: 0.08487760000000001
+        total_tokens: 7819
+        prompt_tokens: 4287
+        completion_tokens: 3532
+      verify_1:
+        cost_usd: 0.06769700000000001
+        total_tokens: 6796
+        prompt_tokens: 4548
+        completion_tokens: 2248
+      verify_2:
+        cost_usd: 0.031032000000000004
+        total_tokens: 5049
+        prompt_tokens: 4663
+        completion_tokens: 386
+      complexity:
+        cost_usd: 0.19145800000000002
+        total_tokens: 13914
+        prompt_tokens: 5216
+        completion_tokens: 8698
+    total_tokens: 38226
+    prompt_tokens: 21044
+    total_cost_usd: 0.426397
+    completion_tokens: 17182
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  road: --area^ (dop:area)--> langString | --Wikipage page ID^ (doo:wikiPageID)--> int
+  settlement: --type^ (doo:type)--> Resource | --area total (m2)^ (doo:areaTotal)--> double | --align^ (dop:align)--> langString | --Apr low C^ (dop:aprLowC)--> double | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --width^ (dop:width)--> langString | --named for^ (dop:namedFor)--> Resource | --Apr high F^ (dop:aprHighF)--> double
+  political party: --leader^ (dop:leader)--> langString | --last^ (dop:last)--> langString | --leader^ (doo:leader)--> Resource
+subgraph_id: 197
+relationships:
+  - road --doo:routeEnd--> settlement
+  - political party --doo:headquarter--> settlement
+  - ice hockey player --doo:deathPlace--> settlement

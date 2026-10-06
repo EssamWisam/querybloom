@@ -1,0 +1,98 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  locomotive: doo:Locomotive
+  military unit: doo:MilitaryUnit
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Manchester: (direction^='horizontal')
+    relationships:
+      - 44th_Anti-Aircraft_Brigade_(United_Kingdom) (<http://dbpedia.org/resource/44th_Anti-Aircraft_Brigade_(United_Kingdom)>) --dop:garrison--> Newport,_Isle_of_Wight (<http://dbpedia.org/resource/Newport,_Isle_of_Wight>)
+      - 44th_Anti-Aircraft_Brigade_(United_Kingdom) (<http://dbpedia.org/resource/44th_Anti-Aircraft_Brigade_(United_Kingdom)>) --dop:garrison--> Manchester (dor:Manchester)
+      - 6029 (dor:6029) --doo:builder--> Manchester (dor:Manchester)
+  '2':
+    attributes:
+      Manchester: (direction^='horizontal')
+      Oswaldtwistle: (district^='http://dbpedia.org/resource/Hyndburn')
+    relationships:
+      - 56th_(East_Lancashire)_Light_Anti-Aircraft_Regiment,_Royal_Artillery (<http://dbpedia.org/resource/56th_(East_Lancashire)_Light_Anti-Aircraft_Regiment,_Royal_Artillery>) --dop:garrison--> Oswaldtwistle (dor:Oswaldtwistle)
+      - 56th_(East_Lancashire)_Light_Anti-Aircraft_Regiment,_Royal_Artillery (<http://dbpedia.org/resource/56th_(East_Lancashire)_Light_Anti-Aircraft_Regiment,_Royal_Artillery>) --dop:garrison--> Manchester (dor:Manchester)
+      - 6029 (dor:6029) --doo:builder--> Manchester (dor:Manchester)
+  '3':
+    attributes:
+      Manchester: (direction^='horizontal')
+    relationships:
+      - Northern_Command_(United_Kingdom) (<http://dbpedia.org/resource/Northern_Command_(United_Kingdom)>) --dop:garrison--> Newcastle_upon_Tyne (dor:Newcastle_upon_Tyne)
+      - Northern_Command_(United_Kingdom) (<http://dbpedia.org/resource/Northern_Command_(United_Kingdom)>) --dop:garrison--> Manchester (dor:Manchester)
+      - 6029 (dor:6029) --doo:builder--> Manchester (dor:Manchester)
+  '4':
+    attributes:
+      Newcastle_upon_Tyne: (area total km^='115.1', Apr record low C^='-2')
+    relationships:
+      - 204_(Tyneside_Scottish)_Battery_Royal_Artillery (<http://dbpedia.org/resource/204_(Tyneside_Scottish)_Battery_Royal_Artillery>) --dop:garrison--> Kingston_Park (dor:Kingston_Park)
+      - 204_(Tyneside_Scottish)_Battery_Royal_Artillery (<http://dbpedia.org/resource/204_(Tyneside_Scottish)_Battery_Royal_Artillery>) --dop:garrison--> Newcastle_upon_Tyne (dor:Newcastle_upon_Tyne)
+      - Adler_(locomotive) (<http://dbpedia.org/resource/Adler_(locomotive)>) --doo:builder--> Newcastle_upon_Tyne (dor:Newcastle_upon_Tyne)
+  '5':
+    attributes:
+      Newcastle_upon_Tyne: (area total km^='115.1', Apr record low C^='-2')
+    relationships:
+      - Durham_Light_Infantry (dor:Durham_Light_Infantry) --dop:garrison--> City_of_Sunderland (dor:City_of_Sunderland)
+      - Durham_Light_Infantry (dor:Durham_Light_Infantry) --dop:garrison--> Newcastle_upon_Tyne (dor:Newcastle_upon_Tyne)
+      - Adler_(locomotive) (<http://dbpedia.org/resource/Adler_(locomotive)>) --doo:builder--> Newcastle_upon_Tyne (dor:Newcastle_upon_Tyne)
+  '6':
+    attributes:
+      Newcastle_upon_Tyne: (area total km^='115.1', Apr record low C^='-2')
+    relationships:
+      - Durham_Light_Infantry (dor:Durham_Light_Infantry) --dop:garrison--> Durham,_England (<http://dbpedia.org/resource/Durham,_England>)
+      - Durham_Light_Infantry (dor:Durham_Light_Infantry) --dop:garrison--> Newcastle_upon_Tyne (dor:Newcastle_upon_Tyne)
+      - Adler_(locomotive) (<http://dbpedia.org/resource/Adler_(locomotive)>) --doo:builder--> Newcastle_upon_Tyne (dor:Newcastle_upon_Tyne)
+  '7':
+    attributes:
+      Belfast: (Apr record low C^='-5.6')
+      BNCR_Class_A: (axleload^='+')
+      Antrim,_County_Antrim: (district^='http://dbpedia.org/resource/Antrim_and_Newtownabbey')
+    relationships:
+      - 102nd_Heavy_Anti-Aircraft_Regiment,_Royal_Artillery (<http://dbpedia.org/resource/102nd_Heavy_Anti-Aircraft_Regiment,_Royal_Artillery>) --dop:garrison--> Antrim,_County_Antrim (<http://dbpedia.org/resource/Antrim,_County_Antrim>)
+      - 102nd_Heavy_Anti-Aircraft_Regiment,_Royal_Artillery (<http://dbpedia.org/resource/102nd_Heavy_Anti-Aircraft_Regiment,_Royal_Artillery>) --dop:garrison--> Belfast (dor:Belfast)
+      - BNCR_Class_A (dor:BNCR_Class_A) --doo:builder--> Belfast (dor:Belfast)
+  '8':
+    attributes:
+      Belfast: (Apr record low C^='-5.6')
+      BNCR_Class_A: (axleload^='+')
+      Holywood,_County_Down: (district^='http://dbpedia.org/resource/Ards_and_North_Down_Borough_Council')
+    relationships:
+      - 3rd_Anti-Aircraft_Brigade_(United_Kingdom) (<http://dbpedia.org/resource/3rd_Anti-Aircraft_Brigade_(United_Kingdom)>) --dop:garrison--> Holywood,_County_Down (<http://dbpedia.org/resource/Holywood,_County_Down>)
+      - 3rd_Anti-Aircraft_Brigade_(United_Kingdom) (<http://dbpedia.org/resource/3rd_Anti-Aircraft_Brigade_(United_Kingdom)>) --dop:garrison--> Belfast (dor:Belfast)
+      - BNCR_Class_A (dor:BNCR_Class_A) --doo:builder--> Belfast (dor:Belfast)
+  '9':
+    attributes:
+      Belfast: (Apr record low C^='-5.6')
+      BNCR_Class_A: (axleload^='+')
+      Bangor,_County_Down: (district^='http://dbpedia.org/resource/Ards_and_North_Down_Borough_Council')
+    relationships:
+      - Antrim_Fortress_Royal_Engineers (dor:Antrim_Fortress_Royal_Engineers) --dop:garrison--> Bangor,_County_Down (<http://dbpedia.org/resource/Bangor,_County_Down>)
+      - Antrim_Fortress_Royal_Engineers (dor:Antrim_Fortress_Royal_Engineers) --dop:garrison--> Belfast (dor:Belfast)
+      - BNCR_Class_A (dor:BNCR_Class_A) --doo:builder--> Belfast (dor:Belfast)
+  '10':
+    attributes:
+      Tallinn: (area total km^='159.2', Apr record low C^='-12')
+    relationships:
+      - 3rd_Division_(Estonia) (<http://dbpedia.org/resource/3rd_Division_(Estonia)>) --dop:garrison--> Estonia (dor:Estonia)
+      - 3rd_Division_(Estonia) (<http://dbpedia.org/resource/3rd_Division_(Estonia)>) --dop:garrison--> Tallinn (dor:Tallinn)
+      - Franz_Krull_Sk_class (dor:Franz_Krull_Sk_class) --doo:builder--> Tallinn (dor:Tallinn)
+attributes:
+  city: --direction^ (dop:direction)--> langString | --Aug high F^ (dop:augHighF)--> int | --area total km^ (dop:areaTotalKm)--> double | --Apr record low C^ (dop:aprRecordLowC)--> int
+  Location: --district^ (doo:district)--> Resource | --architecture (dop:architecture)--> langString | --certain^ (dop:certain)--> langString | --architect^ (dop:architect)--> langString | --Apr record high F^ (dop:aprRecordHighF)--> int
+  locomotive: --axleload^ (dop:axleload)--> langString
+  military unit: --2a^ (dop:2a)--> langString
+subgraph_id: 812
+relationships:
+  - military unit --dop:garrison--> Location
+  - military unit --dop:garrison--> city
+  - locomotive --doo:builder--> city

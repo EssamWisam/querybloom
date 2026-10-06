@@ -1,0 +1,90 @@
+types:
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ernest_Bai_Koroma: (1namedata^='http://dbpedia.org/resource/Osman_Foday_Yansaneh', birth date^='1953-10-02')
+    relationships:
+      - Abdul_Serry-Kamal (dor:Abdul_Serry-Kamal) --doo:president--> Ernest_Bai_Koroma (dor:Ernest_Bai_Koroma)
+      - All_People's_Congress (<http://dbpedia.org/resource/All_People's_Congress>) --dop:leader--> Ernest_Bai_Koroma (dor:Ernest_Bai_Koroma)
+  '2':
+    attributes:
+      Ernest_Bai_Koroma: (1namedata^='http://dbpedia.org/resource/Osman_Foday_Yansaneh', birth date^='1953-10-02')
+      Alfred_Paolo_Conteh: (predecessor='http://dbpedia.org/resource/Ahmad_Tejan_Kabbah')
+    relationships:
+      - Alfred_Paolo_Conteh (dor:Alfred_Paolo_Conteh) --doo:president--> Ernest_Bai_Koroma (dor:Ernest_Bai_Koroma)
+      - All_People's_Congress (<http://dbpedia.org/resource/All_People's_Congress>) --dop:leader--> Ernest_Bai_Koroma (dor:Ernest_Bai_Koroma)
+  '3':
+    attributes:
+      Alpha_Kanu: (predecessor='http://dbpedia.org/resource/Abubakarr_Jalloh_(politician)')
+      Ernest_Bai_Koroma: (1namedata^='http://dbpedia.org/resource/Osman_Foday_Yansaneh', birth date^='1953-10-02')
+    relationships:
+      - Alpha_Kanu (dor:Alpha_Kanu) --doo:president--> Ernest_Bai_Koroma (dor:Ernest_Bai_Koroma)
+      - All_People's_Congress (<http://dbpedia.org/resource/All_People's_Congress>) --dop:leader--> Ernest_Bai_Koroma (dor:Ernest_Bai_Koroma)
+  '4':
+    attributes:
+      Alfons_Goppel: (predecessor='Otto Bezold', after^='http://dbpedia.org/resource/Franz_Josef_Strauss')
+      Gustav_Heinemann: (birth date^='1899-07-23')
+    relationships:
+      - Alfons_Goppel (dor:Alfons_Goppel) --doo:president--> Gustav_Heinemann (dor:Gustav_Heinemann)
+      - All-German_People's_Party (<http://dbpedia.org/resource/All-German_People's_Party>) --dop:leader--> Gustav_Heinemann (dor:Gustav_Heinemann)
+  '5':
+    attributes:
+      Gustav_Heinemann: (birth date^='1899-07-23')
+      Herbert_Weichmann: (predecessor='http://dbpedia.org/resource/Klaus_Schütz')
+    relationships:
+      - Herbert_Weichmann (dor:Herbert_Weichmann) --doo:president--> Gustav_Heinemann (dor:Gustav_Heinemann)
+      - All-German_People's_Party (<http://dbpedia.org/resource/All-German_People's_Party>) --dop:leader--> Gustav_Heinemann (dor:Gustav_Heinemann)
+  '6':
+    attributes:
+      Vladimir_Putin: (spouse^='http://dbpedia.org/resource/Lyudmila_Putina', 1namedata^='http://dbpedia.org/resource/Alexander_Lukashenko', birth date^='1952-10-07', residence^='http://dbpedia.org/resource/Moscow')
+      Igor_Konashenkov: (predecessor='office established')
+      All-Russia_People's_Front: (affiliation^='http://dbpedia.org/resource/A_Just_Russia_—_For_Truth')
+    relationships:
+      - Igor_Konashenkov (dor:Igor_Konashenkov) --doo:president--> Vladimir_Putin (dor:Vladimir_Putin)
+      - All-Russia_People's_Front (<http://dbpedia.org/resource/All-Russia_People's_Front>) --dop:leader--> Vladimir_Putin (dor:Vladimir_Putin)
+  '7':
+    attributes:
+      Vladimir_Putin: (spouse^='http://dbpedia.org/resource/Lyudmila_Putina', 1namedata^='http://dbpedia.org/resource/Alexander_Lukashenko', birth date^='1952-10-07', residence^='http://dbpedia.org/resource/Moscow')
+      Magomedsalam_Magomedov: (predecessor='http://dbpedia.org/resource/Mukhu_Aliyev')
+      All-Russia_People's_Front: (affiliation^='http://dbpedia.org/resource/A_Just_Russia_—_For_Truth')
+    relationships:
+      - Magomedsalam_Magomedov (dor:Magomedsalam_Magomedov) --doo:president--> Vladimir_Putin (dor:Vladimir_Putin)
+      - All-Russia_People's_Front (<http://dbpedia.org/resource/All-Russia_People's_Front>) --dop:leader--> Vladimir_Putin (dor:Vladimir_Putin)
+  '8':
+    attributes:
+      Mukhu_Aliyev: (predecessor='http://dbpedia.org/resource/Magomedali_Magomedov')
+      Vladimir_Putin: (spouse^='http://dbpedia.org/resource/Lyudmila_Putina', 1namedata^='http://dbpedia.org/resource/Alexander_Lukashenko', birth date^='1952-10-07', residence^='http://dbpedia.org/resource/Moscow')
+      All-Russia_People's_Front: (affiliation^='http://dbpedia.org/resource/A_Just_Russia_—_For_Truth')
+    relationships:
+      - Mukhu_Aliyev (dor:Mukhu_Aliyev) --doo:president--> Vladimir_Putin (dor:Vladimir_Putin)
+      - All-Russia_People's_Front (<http://dbpedia.org/resource/All-Russia_People's_Front>) --dop:leader--> Vladimir_Putin (dor:Vladimir_Putin)
+  '9':
+    attributes:
+      Vicente_Fox: (spouse^='http://dbpedia.org/resource/Marta_Sahagún', birth date^='1942-07-02')
+      Alejandro_Gertz_Manero: (predecessor='Office established')
+    relationships:
+      - Alejandro_Gertz_Manero (dor:Alejandro_Gertz_Manero) --doo:president--> Vicente_Fox (dor:Vicente_Fox)
+      - Alliance_for_Change_(Mexico) (<http://dbpedia.org/resource/Alliance_for_Change_(Mexico)>) --dop:leader--> Vicente_Fox (dor:Vicente_Fox)
+  '10':
+    attributes:
+      Vicente_Fox: (spouse^='http://dbpedia.org/resource/Marta_Sahagún', birth date^='1942-07-02')
+      Javier_Usabiaga_Arroyo: (predecessor='http://dbpedia.org/resource/Romárico_Arroyo_Marroquín', after^='http://dbpedia.org/resource/Francisco_Mayorga_Castañeda')
+    relationships:
+      - Javier_Usabiaga_Arroyo (dor:Javier_Usabiaga_Arroyo) --doo:president--> Vicente_Fox (dor:Vicente_Fox)
+      - Alliance_for_Change_(Mexico) (<http://dbpedia.org/resource/Alliance_for_Change_(Mexico)>) --dop:leader--> Vicente_Fox (dor:Vicente_Fox)
+attributes:
+  politician: --relatives^ (dop:relatives)--> Resource | --2y^ (dop:2y)--> int | --predecessor (dop:predecessor)--> langString | --after^ (dop:after)--> langString
+  office holder: --spouse^ (doo:spouse)--> Resource | --1namedata^ (dop:1namedata)--> Resource | --regent^ (dop:regent)--> Resource | --birth date^ (doo:birthDate)--> date | --residence^ (doo:residence)--> Resource
+  political party: --affiliation^ (dop:affiliation)--> langString
+subgraph_id: 577
+relationships:
+  - politician --doo:president--> office holder
+  - political party --dop:leader--> office holder

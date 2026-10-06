@@ -1,0 +1,101 @@
+types:
+  Location: doo:Location
+  politician: doo:Politician
+  body of water: doo:BodyOfWater
+  office holder: doo:OfficeHolder
+  football match: doo:FootballMatch
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      California: (country^='California', area total (km2)^='163696.0')
+    relationships:
+      - Soccer_Bowl_2017 (dor:Soccer_Bowl_2017) --dop:location--> California (dor:California)
+      - Alamitos_Bay (dor:Alamitos_Bay) --doo:location--> California (dor:California)
+      - Jerry_Brown (dor:Jerry_Brown) --doo:birthPlace--> California (dor:California)
+      - Jerry_Brown (dor:Jerry_Brown) --dop:parents--> Pat_Brown (dor:Pat_Brown)
+  '2':
+    attributes:
+      California: (country^='California', area total (km2)^='163696.0')
+    relationships:
+      - Soccer_Bowl_2017 (dor:Soccer_Bowl_2017) --dop:location--> California (dor:California)
+      - Alamitos_Bay (dor:Alamitos_Bay) --doo:location--> California (dor:California)
+      - Katherine_Feinstein (dor:Katherine_Feinstein) --doo:birthPlace--> California (dor:California)
+      - Katherine_Feinstein (dor:Katherine_Feinstein) --dop:parents--> Dianne_Feinstein (dor:Dianne_Feinstein)
+  '3':
+    attributes:
+      Oslo: (Apr high C^='11', area total (km2)^='480.0')
+    relationships:
+      - 1982_Norwegian_Football_Cup_Final (dor:1982_Norwegian_Football_Cup_Final) --dop:location--> Oslo (dor:Oslo)
+      - Alnsjøen (<http://dbpedia.org/resource/Alnsjøen>) --doo:location--> Oslo (dor:Oslo)
+      - Jens_Stoltenberg (dor:Jens_Stoltenberg) --doo:birthPlace--> Oslo (dor:Oslo)
+      - Jens_Stoltenberg (dor:Jens_Stoltenberg) --dop:parents--> Thorvald_Stoltenberg (dor:Thorvald_Stoltenberg)
+  '4':
+    attributes:
+      Oslo: (Apr high C^='11', area total (km2)^='480.0')
+    relationships:
+      - 1982_Norwegian_Football_Cup_Final (dor:1982_Norwegian_Football_Cup_Final) --dop:location--> Oslo (dor:Oslo)
+      - Alnsjøen (<http://dbpedia.org/resource/Alnsjøen>) --doo:location--> Oslo (dor:Oslo)
+      - Mina_Gerhardsen (dor:Mina_Gerhardsen) --doo:birthPlace--> Oslo (dor:Oslo)
+      - Mina_Gerhardsen (dor:Mina_Gerhardsen) --dop:parents--> Rune_Gerhardsen (dor:Rune_Gerhardsen)
+  '5':
+    attributes:
+      Oslo: (Apr high C^='11', area total (km2)^='480.0')
+    relationships:
+      - 1982_Norwegian_Football_Cup_Final (dor:1982_Norwegian_Football_Cup_Final) --dop:location--> Oslo (dor:Oslo)
+      - Alnsjøen (<http://dbpedia.org/resource/Alnsjøen>) --doo:location--> Oslo (dor:Oslo)
+      - Rune_Gerhardsen (dor:Rune_Gerhardsen) --doo:birthPlace--> Oslo (dor:Oslo)
+      - Rune_Gerhardsen (dor:Rune_Gerhardsen) --dop:parents--> Einar_Gerhardsen (dor:Einar_Gerhardsen)
+  '6':
+    attributes:
+      California: (country^='California', area total (km2)^='163696.0')
+    relationships:
+      - Soccer_Bowl_2017 (dor:Soccer_Bowl_2017) --dop:location--> California (dor:California)
+      - Balsam_Forebay (dor:Balsam_Forebay) --doo:location--> California (dor:California)
+      - Jerry_Brown (dor:Jerry_Brown) --doo:birthPlace--> California (dor:California)
+      - Jerry_Brown (dor:Jerry_Brown) --dop:parents--> Pat_Brown (dor:Pat_Brown)
+  '7':
+    attributes: {}
+    relationships:
+      - 2015_Coupe_de_France_Final (dor:2015_Coupe_de_France_Final) --dop:location--> Paris (dor:Paris)
+      - Bassin_de_la_Villette (dor:Bassin_de_la_Villette) --doo:location--> Paris (dor:Paris)
+      - Claude_Chirac (dor:Claude_Chirac) --doo:birthPlace--> Paris (dor:Paris)
+      - Claude_Chirac (dor:Claude_Chirac) --dop:parents--> Jacques_Chirac (dor:Jacques_Chirac)
+  '8':
+    attributes: {}
+    relationships:
+      - 2015_Coupe_de_France_Final (dor:2015_Coupe_de_France_Final) --dop:location--> Paris (dor:Paris)
+      - Bassin_de_la_Villette (dor:Bassin_de_la_Villette) --doo:location--> Paris (dor:Paris)
+      - Pierre_Joxe (dor:Pierre_Joxe) --doo:birthPlace--> Paris (dor:Paris)
+      - Pierre_Joxe (dor:Pierre_Joxe) --dop:parents--> Louis_Joxe (dor:Louis_Joxe)
+  '9':
+    attributes: {}
+    relationships:
+      - 2015_Coupe_de_France_Final (dor:2015_Coupe_de_France_Final) --dop:location--> Paris (dor:Paris)
+      - Bassin_de_la_Villette (dor:Bassin_de_la_Villette) --doo:location--> Paris (dor:Paris)
+      - R._S._Reynolds_Hitt (dor:R._S._Reynolds_Hitt) --doo:birthPlace--> Paris (dor:Paris)
+      - R._S._Reynolds_Hitt (dor:R._S._Reynolds_Hitt) --dop:parents--> Robert_R._Hitt (dor:Robert_R._Hitt)
+  '10':
+    attributes:
+      Montreal: (area total (km2)^='431.5')
+    relationships:
+      - 2019_Canadian_Championship_Final (dor:2019_Canadian_Championship_Final) --dop:location--> Montreal (dor:Montreal)
+      - Beaver_Lake_(Montreal) (<http://dbpedia.org/resource/Beaver_Lake_(Montreal)>) --doo:location--> Montreal (dor:Montreal)
+      - Françoise_David (<http://dbpedia.org/resource/Françoise_David>) --doo:birthPlace--> Montreal (dor:Montreal)
+      - Françoise_David (<http://dbpedia.org/resource/Françoise_David>) --dop:parents--> Paul_David (dor:Paul_David)
+attributes:
+  Location: --alt^ (dop:alt)--> langString | --Apr high C^ (dop:aprHighC)--> int | --differentFrom (wwoo:differentFrom)--> Resource | --country^ (dop:country)--> langString | --d^ (dop:d)--> langString | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --altname^ (dop:altname)--> langString | --designated other1 name^ (dop:designatedOther1Name)--> langString | --abolished^ (dop:abolished)--> date
+  politician: --winner^ (dop:winner)--> langString
+  office holder: --2pp^ (dop:2pp)--> int | --reason^ (dop:reason)--> langString
+subgraph_id: 703
+relationships:
+  - football match --dop:location--> Location
+  - body of water --doo:location--> Location
+  - politician --doo:birthPlace--> Location
+  - politician --dop:parents--> office holder

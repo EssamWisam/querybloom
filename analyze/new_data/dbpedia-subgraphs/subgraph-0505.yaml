@@ -1,0 +1,112 @@
+types:
+  river: doo:River
+  Location: doo:Location
+  mountain: doo:Mountain
+  scientist: doo:Scientist
+  settlement: doo:Settlement
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      California: (colwidth^='20', motto^='"Eureka"')
+    relationships:
+      - Acker_Peak (dor:Acker_Peak) --doo:locatedInArea--> Tuolumne_County,_California (<http://dbpedia.org/resource/Tuolumne_County,_California>)
+      - Tuolumne_County,_California (<http://dbpedia.org/resource/Tuolumne_County,_California>) --doo:subdivision--> California (dor:California)
+      - Cherry_Creek_(Tuolumne_River_tributary) (<http://dbpedia.org/resource/Cherry_Creek_(Tuolumne_River_tributary)>) --doo:mouthPlace--> Tuolumne_County,_California (<http://dbpedia.org/resource/Tuolumne_County,_California>)
+      - Acker_Peak (dor:Acker_Peak) --doo:locatedInArea--> California (dor:California)
+      - Bernie_May_(geneticist) (<http://dbpedia.org/resource/Bernie_May_(geneticist)>) --doo:residence--> California (dor:California)
+  '2':
+    attributes:
+      California: (colwidth^='20')
+    relationships:
+      - Acker_Peak (dor:Acker_Peak) --doo:locatedInArea--> Tuolumne_County,_California (<http://dbpedia.org/resource/Tuolumne_County,_California>)
+      - Tuolumne_County,_California (<http://dbpedia.org/resource/Tuolumne_County,_California>) --doo:subdivision--> Sierra_Nevada (dor:Sierra_Nevada)
+      - Cherry_Creek_(Tuolumne_River_tributary) (<http://dbpedia.org/resource/Cherry_Creek_(Tuolumne_River_tributary)>) --doo:mouthPlace--> Tuolumne_County,_California (<http://dbpedia.org/resource/Tuolumne_County,_California>)
+      - Acker_Peak (dor:Acker_Peak) --doo:locatedInArea--> California (dor:California)
+      - Bernie_May_(geneticist) (<http://dbpedia.org/resource/Bernie_May_(geneticist)>) --doo:residence--> California (dor:California)
+  '3':
+    attributes:
+      California: (colwidth^='20', motto^='"Eureka"')
+    relationships:
+      - Acker_Peak (dor:Acker_Peak) --doo:locatedInArea--> Tuolumne_County,_California (<http://dbpedia.org/resource/Tuolumne_County,_California>)
+      - Tuolumne_County,_California (<http://dbpedia.org/resource/Tuolumne_County,_California>) --doo:subdivision--> California (dor:California)
+      - Cherry_Creek_(Tuolumne_River_tributary) (<http://dbpedia.org/resource/Cherry_Creek_(Tuolumne_River_tributary)>) --doo:mouthPlace--> Tuolumne_County,_California (<http://dbpedia.org/resource/Tuolumne_County,_California>)
+      - Acker_Peak (dor:Acker_Peak) --doo:locatedInArea--> California (dor:California)
+      - Bonnie_Bergin (dor:Bonnie_Bergin) --doo:residence--> California (dor:California)
+  '4':
+    attributes:
+      Alaska: (motto^='North to the Future')
+    relationships:
+      - Amherst_Peak (dor:Amherst_Peak) --doo:locatedInArea--> Juneau,_Alaska (<http://dbpedia.org/resource/Juneau,_Alaska>)
+      - Juneau,_Alaska (<http://dbpedia.org/resource/Juneau,_Alaska>) --doo:subdivision--> Alaska (dor:Alaska)
+      - Endicott_River (dor:Endicott_River) --doo:mouthPlace--> Juneau,_Alaska (<http://dbpedia.org/resource/Juneau,_Alaska>)
+      - Amherst_Peak (dor:Amherst_Peak) --doo:locatedInArea--> Alaska (dor:Alaska)
+      - Syun-Ichi_Akasofu (dor:Syun-Ichi_Akasofu) --doo:residence--> Alaska (dor:Alaska)
+  '5':
+    attributes:
+      Alaska: (motto^='North to the Future')
+    relationships:
+      - Amherst_Peak (dor:Amherst_Peak) --doo:locatedInArea--> Juneau,_Alaska (<http://dbpedia.org/resource/Juneau,_Alaska>)
+      - Juneau,_Alaska (<http://dbpedia.org/resource/Juneau,_Alaska>) --doo:subdivision--> Alaska (dor:Alaska)
+      - King_Salmon_River_(Admiralty_Island) (<http://dbpedia.org/resource/King_Salmon_River_(Admiralty_Island)>) --doo:mouthPlace--> Juneau,_Alaska (<http://dbpedia.org/resource/Juneau,_Alaska>)
+      - Amherst_Peak (dor:Amherst_Peak) --doo:locatedInArea--> Alaska (dor:Alaska)
+      - Syun-Ichi_Akasofu (dor:Syun-Ichi_Akasofu) --doo:residence--> Alaska (dor:Alaska)
+  '6':
+    attributes:
+      Alaska: (motto^='North to the Future')
+    relationships:
+      - Amherst_Peak (dor:Amherst_Peak) --doo:locatedInArea--> Juneau,_Alaska (<http://dbpedia.org/resource/Juneau,_Alaska>)
+      - Juneau,_Alaska (<http://dbpedia.org/resource/Juneau,_Alaska>) --doo:subdivision--> Alaska (dor:Alaska)
+      - Whiting_River (dor:Whiting_River) --doo:mouthPlace--> Juneau,_Alaska (<http://dbpedia.org/resource/Juneau,_Alaska>)
+      - Amherst_Peak (dor:Amherst_Peak) --doo:locatedInArea--> Alaska (dor:Alaska)
+      - Syun-Ichi_Akasofu (dor:Syun-Ichi_Akasofu) --doo:residence--> Alaska (dor:Alaska)
+  '7':
+    attributes:
+      New_York_(state): (motto^='Ever upward')
+    relationships:
+      - Armlin_Hill (dor:Armlin_Hill) --doo:locatedInArea--> Middleburgh_(village),_New_York (<http://dbpedia.org/resource/Middleburgh_(village),_New_York>)
+      - Middleburgh_(village),_New_York (<http://dbpedia.org/resource/Middleburgh_(village),_New_York>) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Line_Creek_(Schoharie_Creek_tributary) (<http://dbpedia.org/resource/Line_Creek_(Schoharie_Creek_tributary)>) --doo:mouthPlace--> Middleburgh_(village),_New_York (<http://dbpedia.org/resource/Middleburgh_(village),_New_York>)
+      - Armlin_Hill (dor:Armlin_Hill) --doo:locatedInArea--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Benjamin_Hsiao (dor:Benjamin_Hsiao) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '8':
+    attributes: {}
+    relationships:
+      - Armlin_Hill (dor:Armlin_Hill) --doo:locatedInArea--> Middleburgh_(village),_New_York (<http://dbpedia.org/resource/Middleburgh_(village),_New_York>)
+      - Middleburgh_(village),_New_York (<http://dbpedia.org/resource/Middleburgh_(village),_New_York>) --doo:subdivision--> Schoharie_County,_New_York (<http://dbpedia.org/resource/Schoharie_County,_New_York>)
+      - Line_Creek_(Schoharie_Creek_tributary) (<http://dbpedia.org/resource/Line_Creek_(Schoharie_Creek_tributary)>) --doo:mouthPlace--> Middleburgh_(village),_New_York (<http://dbpedia.org/resource/Middleburgh_(village),_New_York>)
+      - Armlin_Hill (dor:Armlin_Hill) --doo:locatedInArea--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Benjamin_Hsiao (dor:Benjamin_Hsiao) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '9':
+    attributes:
+      New_York_(state): (motto^='Ever upward')
+    relationships:
+      - Armlin_Hill (dor:Armlin_Hill) --doo:locatedInArea--> Middleburgh_(village),_New_York (<http://dbpedia.org/resource/Middleburgh_(village),_New_York>)
+      - Middleburgh_(village),_New_York (<http://dbpedia.org/resource/Middleburgh_(village),_New_York>) --doo:subdivision--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Line_Creek_(Schoharie_Creek_tributary) (<http://dbpedia.org/resource/Line_Creek_(Schoharie_Creek_tributary)>) --doo:mouthPlace--> Middleburgh_(village),_New_York (<http://dbpedia.org/resource/Middleburgh_(village),_New_York>)
+      - Armlin_Hill (dor:Armlin_Hill) --doo:locatedInArea--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Bolortsetseg_Minjin (dor:Bolortsetseg_Minjin) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '10':
+    attributes: {}
+    relationships:
+      - Badger_Mountain_(Benton_County,_Washington) (<http://dbpedia.org/resource/Badger_Mountain_(Benton_County,_Washington)>) --doo:locatedInArea--> Richland,_Washington (<http://dbpedia.org/resource/Richland,_Washington>)
+      - Richland,_Washington (<http://dbpedia.org/resource/Richland,_Washington>) --doo:subdivision--> Benton_County,_Washington (<http://dbpedia.org/resource/Benton_County,_Washington>)
+      - Amon_Creek (dor:Amon_Creek) --doo:mouthPlace--> Richland,_Washington (<http://dbpedia.org/resource/Richland,_Washington>)
+      - Badger_Mountain_(Benton_County,_Washington) (<http://dbpedia.org/resource/Badger_Mountain_(Benton_County,_Washington)>) --doo:locatedInArea--> Washington_(U.S._state) (<http://dbpedia.org/resource/Washington_(U.S._state)>)
+      - Ken_Hinckley (dor:Ken_Hinckley) --doo:residence--> Washington_(U.S._state) (<http://dbpedia.org/resource/Washington_(U.S._state)>)
+attributes:
+  Location: --motto^ (doo:motto)--> string | --religion^ (doo:religion)--> Resource | --border^ (dop:border)--> langString | --arc-gapA^ (dop:arcGapa)--> int | --frazioni^ (doo:frazioni)--> Resource | --Apr rain days^ (dop:aprRainDays)--> double
+  settlement: --Aug low C^ (dop:augLowC)--> int | --data^ (dop:data)--> int | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int
+  administrative region: --colwidth^ (dop:colwidth)--> int
+subgraph_id: 505
+relationships:
+  - mountain --doo:locatedInArea--> settlement
+  - settlement --doo:subdivision--> Location
+  - river --doo:mouthPlace--> settlement
+  - mountain --doo:locatedInArea--> administrative region
+  - scientist --doo:residence--> administrative region

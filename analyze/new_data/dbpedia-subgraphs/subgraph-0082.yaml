@@ -1,0 +1,78 @@
+types:
+  hotel: doo:Hotel
+  Location: doo:Location
+  Australian rules football player: doo:AustralianRulesFootballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Hobart: (populationTotal='247068')
+      Icon_Complex: (opening date^='2018-05-03')
+    relationships:
+      - Icon_Complex (dor:Icon_Complex) --doo:location--> Hobart (dor:Hobart)
+      - Aaron_Cornelius (dor:Aaron_Cornelius) --doo:birthPlace--> Hobart (dor:Hobart)
+  '2':
+    attributes:
+      Hobart: (populationTotal='247068')
+      Wrest_Point_Hotel_Casino: (opening date^='1973-02-10')
+    relationships:
+      - Wrest_Point_Hotel_Casino (dor:Wrest_Point_Hotel_Casino) --doo:location--> Hobart (dor:Hobart)
+      - Aaron_Cornelius (dor:Aaron_Cornelius) --doo:birthPlace--> Hobart (dor:Hobart)
+  '3':
+    attributes:
+      Pago_Pago: (populationTotal='3656', Aug high F^='84.8')
+    relationships:
+      - Rainmaker_Hotel (dor:Rainmaker_Hotel) --doo:location--> Pago_Pago (dor:Pago_Pago)
+      - Aaron_Edwards__Aaron_Edwards__1 (dor:Aaron_Edwards__Aaron_Edwards__1) --doo:birthPlace--> Pago_Pago (dor:Pago_Pago)
+  '4':
+    attributes:
+      Samoa: (capital^='http://dbpedia.org/resource/Apia')
+    relationships:
+      - Sheraton_Samoa_Aggie_Grey's_Hotel_&_Bungalows (<http://dbpedia.org/resource/Sheraton_Samoa_Aggie_Grey's_Hotel_&_Bungalows>) --doo:location--> Samoa (dor:Samoa)
+      - Aaron_Edwards__Aaron_Edwards__1 (dor:Aaron_Edwards__Aaron_Edwards__1) --doo:birthPlace--> Samoa (dor:Samoa)
+  '5':
+    attributes:
+      Hobart: (populationTotal='247068')
+      Icon_Complex: (opening date^='2018-05-03')
+    relationships:
+      - Icon_Complex (dor:Icon_Complex) --doo:location--> Hobart (dor:Hobart)
+      - Aaron_Hall_(footballer) (<http://dbpedia.org/resource/Aaron_Hall_(footballer)>) --doo:birthPlace--> Hobart (dor:Hobart)
+  '6':
+    attributes:
+      Auckland: (named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland', title^='Adjacent cities and districts')
+    relationships:
+      - Metropolis_(Auckland_building) (<http://dbpedia.org/resource/Metropolis_(Auckland_building)>) --doo:location--> Auckland (dor:Auckland)
+      - Abe_McDougall (dor:Abe_McDougall) --doo:birthPlace--> Auckland (dor:Auckland)
+  '7':
+    attributes: {}
+    relationships:
+      - Federal_Coffee_Palace (dor:Federal_Coffee_Palace) --doo:location--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+      - Adam_Bentick (dor:Adam_Bentick) --doo:birthPlace--> Victoria_(Australia) (<http://dbpedia.org/resource/Victoria_(Australia)>)
+  '8':
+    attributes: {}
+    relationships:
+      - 443_Queen_Street,_Brisbane (<http://dbpedia.org/resource/443_Queen_Street,_Brisbane>) --doo:location--> Australia (dor:Australia)
+      - Adam_McPhee (dor:Adam_McPhee) --doo:birthPlace--> Australia (dor:Australia)
+  '9':
+    attributes:
+      Australia: (capital^='http://dbpedia.org/resource/Canberra', title^='Articles related to Australia')
+    relationships:
+      - Federal_Coffee_Palace (dor:Federal_Coffee_Palace) --doo:location--> Australia (dor:Australia)
+      - Adam_McPhee (dor:Adam_McPhee) --doo:birthPlace--> Australia (dor:Australia)
+  '10':
+    attributes:
+      Melbourne: (populationTotal='4917750')
+    relationships:
+      - Federal_Coffee_Palace (dor:Federal_Coffee_Palace) --doo:location--> Melbourne (dor:Melbourne)
+      - Adam_McPhee (dor:Adam_McPhee) --doo:birthPlace--> Melbourne (dor:Melbourne)
+attributes:
+  hotel: --opening date^ (doo:openingDate)--> date
+  Location: --named after^ (doo:namedAfter)--> Resource | --abolished^ (dop:abolished)--> int | --quote^ (dop:quote)--> langString | --populationTotal (doo:populationTotal)--> int | --built^ (dop:built)--> int | --Aug high F^ (dop:augHighF)--> double | --capital^ (doo:capital)--> Resource | --district^ (doo:district)--> Resource | --title^ (dop:title)--> langString | --b^ (dop:b)--> langString
+subgraph_id: 82
+relationships:
+  - hotel --doo:location--> Location
+  - Australian rules football player --doo:birthPlace--> Location

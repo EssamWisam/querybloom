@@ -1,0 +1,50 @@
+types:
+  train: doo:Train
+  settlement: doo:Settlement
+  railway line: doo:RailwayLine
+  train station: doo:RailwayStation
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Mesocco: (Apr precipitation days^='10.1', page length (characters) of wiki page^='15483', subject='http://dbpedia.org/resource/Category:Cultural_property_of_national_significance_in_Graubünden')
+      RABe_520: (capacity^='1')
+    relationships:
+      - RABe_520 (dor:RABe_520) --doo:operator--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Castione-Arbedo_railway_station (dor:Castione-Arbedo_railway_station) --dop:owned--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Castione-Arbedo_railway_station (dor:Castione-Arbedo_railway_station) --doo:servingRailwayLine--> Bellinzona–Mesocco_railway (<http://dbpedia.org/resource/Bellinzona–Mesocco_railway>)
+      - Bellinzona–Mesocco_railway (<http://dbpedia.org/resource/Bellinzona–Mesocco_railway>) --doo:routeEnd--> Mesocco (dor:Mesocco)
+  '2':
+    attributes:
+      Mesocco: (Apr precipitation days^='10.1', page length (characters) of wiki page^='15483', subject='http://dbpedia.org/resource/Category:Cultural_property_of_national_significance_in_Graubünden')
+      SBB_Bem_550: (capacity^='79')
+    relationships:
+      - SBB_Bem_550 (dor:SBB_Bem_550) --doo:operator--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Castione-Arbedo_railway_station (dor:Castione-Arbedo_railway_station) --dop:owned--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Castione-Arbedo_railway_station (dor:Castione-Arbedo_railway_station) --doo:servingRailwayLine--> Bellinzona–Mesocco_railway (<http://dbpedia.org/resource/Bellinzona–Mesocco_railway>)
+      - Bellinzona–Mesocco_railway (<http://dbpedia.org/resource/Bellinzona–Mesocco_railway>) --doo:routeEnd--> Mesocco (dor:Mesocco)
+  '3':
+    attributes:
+      Mesocco: (Apr precipitation days^='10.1', page length (characters) of wiki page^='15483', subject='http://dbpedia.org/resource/Category:Cultural_property_of_national_significance_in_Graubünden')
+      SBB_RABe_501: (capacity^='4')
+    relationships:
+      - SBB_RABe_501 (dor:SBB_RABe_501) --doo:operator--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Castione-Arbedo_railway_station (dor:Castione-Arbedo_railway_station) --dop:owned--> Swiss_Federal_Railways (dor:Swiss_Federal_Railways)
+      - Castione-Arbedo_railway_station (dor:Castione-Arbedo_railway_station) --doo:servingRailwayLine--> Bellinzona–Mesocco_railway (<http://dbpedia.org/resource/Bellinzona–Mesocco_railway>)
+      - Bellinzona–Mesocco_railway (<http://dbpedia.org/resource/Bellinzona–Mesocco_railway>) --doo:routeEnd--> Mesocco (dor:Mesocco)
+attributes:
+  train: --multipleworking^ (dop:multipleworking)--> langString | --family^ (dop:family)--> Resource | --capacity^ (doo:capacity)--> int
+  settlement: --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --direction^ (dop:direction)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --subject (podt:subject)--> Resource | --header^ (dop:header)--> langString | --float^ (dop:float)--> langString
+  public transit system: --operator^ (doo:operator)--> Resource
+subgraph_id: 683
+relationships:
+  - train --doo:operator--> public transit system
+  - train station --dop:owned--> public transit system
+  - train station --doo:servingRailwayLine--> railway line
+  - railway line --doo:routeEnd--> settlement

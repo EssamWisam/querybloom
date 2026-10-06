@@ -1,0 +1,86 @@
+types:
+  Band: doo:Band
+  country: doo:Country
+  Location: doo:Location
+  city district: doo:CityDistrict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      New_York_(state): (commons^='yes')
+    relationships:
+      - Augustines_(band) (<http://dbpedia.org/resource/Augustines_(band)>) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Augustines_(band) (<http://dbpedia.org/resource/Augustines_(band)>) --doo:hometown--> United_States (dor:United_States)
+      - Augustines_(band) (<http://dbpedia.org/resource/Augustines_(band)>) --doo:hometown--> Brooklyn (dor:Brooklyn)
+  '2':
+    attributes:
+      New_York_(state): (commons^='yes')
+    relationships:
+      - Autobody_(band)__Autobody__1 (<http://dbpedia.org/resource/Autobody_(band)__Autobody__1>) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Autobody_(band)__Autobody__1 (<http://dbpedia.org/resource/Autobody_(band)__Autobody__1>) --doo:hometown--> United_States (dor:United_States)
+      - Autobody_(band)__Autobody__1 (<http://dbpedia.org/resource/Autobody_(band)__Autobody__1>) --doo:hometown--> Brooklyn (dor:Brooklyn)
+  '3':
+    attributes:
+      New_York_(state): (commons^='yes')
+    relationships:
+      - Azar_Swan (dor:Azar_Swan) --doo:hometown--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Azar_Swan (dor:Azar_Swan) --doo:hometown--> United_States (dor:United_States)
+      - Azar_Swan (dor:Azar_Swan) --doo:hometown--> Brooklyn (dor:Brooklyn)
+  '4':
+    attributes:
+      Birmingham: (Apr record high C^='25.5', Apr record low C^='-6.6', commons^='yes')
+    relationships:
+      - Beat_Union (dor:Beat_Union) --doo:hometown--> Birmingham (dor:Birmingham)
+      - Beat_Union (dor:Beat_Union) --doo:hometown--> United_Kingdom (dor:United_Kingdom)
+      - Beat_Union (dor:Beat_Union) --doo:hometown--> Redditch (dor:Redditch)
+  '5':
+    attributes: {}
+    relationships:
+      - Beat_Union (dor:Beat_Union) --doo:hometown--> Bromsgrove (dor:Bromsgrove)
+      - Beat_Union (dor:Beat_Union) --doo:hometown--> United_Kingdom (dor:United_Kingdom)
+      - Beat_Union (dor:Beat_Union) --doo:hometown--> Redditch (dor:Redditch)
+  '6':
+    attributes:
+      Limerick: (Apr record high C^='23.5', Apr record low C^='-4.1')
+    relationships:
+      - Giveamanakick (dor:Giveamanakick) --doo:hometown--> Limerick (dor:Limerick)
+      - Giveamanakick (dor:Giveamanakick) --doo:hometown--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - Giveamanakick (dor:Giveamanakick) --doo:hometown--> Castletroy (dor:Castletroy)
+  '7':
+    attributes:
+      London: (alt^='Asian', commons^='yes')
+    relationships:
+      - Jammz (dor:Jammz) --doo:hometown--> London (dor:London)
+      - Jammz (dor:Jammz) --doo:hometown--> England (dor:England)
+      - Jammz (dor:Jammz) --doo:hometown--> London_Borough_of_Hackney (dor:London_Borough_of_Hackney)
+  '8':
+    attributes: {}
+    relationships:
+      - Lucy_Rahman (dor:Lucy_Rahman) --doo:hometown--> Ilford (dor:Ilford)
+      - Lucy_Rahman (dor:Lucy_Rahman) --doo:hometown--> England (dor:England)
+      - Lucy_Rahman (dor:Lucy_Rahman) --doo:hometown--> London_Borough_of_Redbridge (dor:London_Borough_of_Redbridge)
+  '9':
+    attributes:
+      London: (alt^='Asian', commons^='yes')
+    relationships:
+      - Lucy_Rahman (dor:Lucy_Rahman) --doo:hometown--> London (dor:London)
+      - Lucy_Rahman (dor:Lucy_Rahman) --doo:hometown--> England (dor:England)
+      - Lucy_Rahman (dor:Lucy_Rahman) --doo:hometown--> London_Borough_of_Redbridge (dor:London_Borough_of_Redbridge)
+  '10':
+    attributes: {}
+    relationships:
+      - Pimpbot (dor:Pimpbot) --doo:hometown--> United_States (dor:United_States)
+      - Pimpbot (dor:Pimpbot) --doo:hometown--> Hawaii (dor:Hawaii)
+      - Pimpbot (dor:Pimpbot) --doo:hometown--> Waikiki (dor:Waikiki)
+attributes:
+  country: --Aug low C^ (dop:augLowC)--> double
+  Location: --founder^ (dop:founder)--> Resource | --c^ (dop:c)--> langString | --id^ (dop:id)--> int | --last^ (dop:last)--> langString | --founder^ (dop:founder)--> langString | --Apr record high C^ (dop:aprRecordHighC)--> int | --Apr record low C^ (dop:aprRecordLowC)--> double | --alt^ (dop:alt)--> langString | --commons^ (dop:commons)--> langString | --access-date^ (dop:accessDate)--> date
+subgraph_id: 490
+relationships:
+  - Band --doo:hometown--> Location
+  - Band --doo:hometown--> country
+  - Band --doo:hometown--> city district

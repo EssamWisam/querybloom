@@ -1,0 +1,90 @@
+types:
+  cleric: doo:Cleric
+  writer: doo:Writer
+  country: doo:Country
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Adam_Houghton (dor:Adam_Houghton) --doo:religion--> Catholic_Church (dor:Catholic_Church)
+      - Adam_Houghton (dor:Adam_Houghton) --doo:nationality--> Kingdom_of_England (dor:Kingdom_of_England)
+      - Frances_Manners,_Baroness_Bergavenny (<http://dbpedia.org/resource/Frances_Manners,_Baroness_Bergavenny>) --doo:citizenship--> Kingdom_of_England (dor:Kingdom_of_England)
+  '2':
+    attributes: {}
+    relationships:
+      - Adam_Houghton (dor:Adam_Houghton) --doo:religion--> Catholic_Church (dor:Catholic_Church)
+      - Adam_Houghton (dor:Adam_Houghton) --doo:nationality--> Kingdom_of_England (dor:Kingdom_of_England)
+      - Mary_Cary_(prophetess) (<http://dbpedia.org/resource/Mary_Cary_(prophetess)>) --doo:citizenship--> Kingdom_of_England (dor:Kingdom_of_England)
+  '3':
+    attributes:
+      Philippines: (caption^='http://dbpedia.org/resource/Bongbong_Marcos')
+    relationships:
+      - Adolfo_Tito_Yllana (dor:Adolfo_Tito_Yllana) --doo:religion--> Roman_Catholic_Church (dor:Roman_Catholic_Church)
+      - Adolfo_Tito_Yllana (dor:Adolfo_Tito_Yllana) --doo:nationality--> Philippines (dor:Philippines)
+      - Adelina_Gurrea (dor:Adelina_Gurrea) --doo:citizenship--> Philippines (dor:Philippines)
+  '4':
+    attributes:
+      Philippines: (caption^='http://dbpedia.org/resource/Bongbong_Marcos')
+    relationships:
+      - Adolfo_Tito_Yllana (dor:Adolfo_Tito_Yllana) --doo:religion--> Roman_Catholic_Church (dor:Roman_Catholic_Church)
+      - Adolfo_Tito_Yllana (dor:Adolfo_Tito_Yllana) --doo:nationality--> Philippines (dor:Philippines)
+      - Alex_Tizon (dor:Alex_Tizon) --doo:citizenship--> Philippines (dor:Philippines)
+  '5':
+    attributes:
+      Philippines: (caption^='http://dbpedia.org/resource/Bongbong_Marcos')
+      Leona_Florentino: (children^='5')
+    relationships:
+      - Adolfo_Tito_Yllana (dor:Adolfo_Tito_Yllana) --doo:religion--> Roman_Catholic_Church (dor:Roman_Catholic_Church)
+      - Adolfo_Tito_Yllana (dor:Adolfo_Tito_Yllana) --doo:nationality--> Philippines (dor:Philippines)
+      - Leona_Florentino (dor:Leona_Florentino) --doo:citizenship--> Philippines (dor:Philippines)
+  '6':
+    attributes:
+      United_Kingdom: (caption^='--09-08')
+    relationships:
+      - Alfred_Tucker (dor:Alfred_Tucker) --doo:religion--> Anglicanism (dor:Anglicanism)
+      - Alfred_Tucker (dor:Alfred_Tucker) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Adolf_Fierla (dor:Adolf_Fierla) --doo:citizenship--> United_Kingdom (dor:United_Kingdom)
+  '7':
+    attributes:
+      United_Kingdom: (caption^='--09-08')
+    relationships:
+      - Alfred_Tucker (dor:Alfred_Tucker) --doo:religion--> Anglicanism (dor:Anglicanism)
+      - Alfred_Tucker (dor:Alfred_Tucker) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - Antoine_Cassar (dor:Antoine_Cassar) --doo:citizenship--> United_Kingdom (dor:United_Kingdom)
+  '8':
+    attributes:
+      United_Kingdom: (caption^='--09-08')
+      David_L._Williams_(film_director): (children^='3')
+    relationships:
+      - Alfred_Tucker (dor:Alfred_Tucker) --doo:religion--> Anglicanism (dor:Anglicanism)
+      - Alfred_Tucker (dor:Alfred_Tucker) --doo:nationality--> United_Kingdom (dor:United_Kingdom)
+      - David_L._Williams_(film_director) (<http://dbpedia.org/resource/David_L._Williams_(film_director)>) --doo:citizenship--> United_Kingdom (dor:United_Kingdom)
+  '9':
+    attributes:
+      Yugoslavia: (caption^='Banovinas of Yugoslavia, 1929–39. After 1939 the Sava and Littoral banovinas were merged into the Banovina of Croatia.')
+    relationships:
+      - Aloysius_Stepinac (dor:Aloysius_Stepinac) --doo:religion--> Catholic_Church (dor:Catholic_Church)
+      - Aloysius_Stepinac (dor:Aloysius_Stepinac) --doo:nationality--> Yugoslavia (dor:Yugoslavia)
+      - Esad_Mekuli (dor:Esad_Mekuli) --doo:citizenship--> Yugoslavia (dor:Yugoslavia)
+  '10':
+    attributes:
+      Montenegro: (caption^='(President)')
+    relationships:
+      - Amfilohije,_Metropolitan_of_Montenegro (<http://dbpedia.org/resource/Amfilohije,_Metropolitan_of_Montenegro>) --doo:religion--> Eastern_Orthodoxy (dor:Eastern_Orthodoxy)
+      - Amfilohije,_Metropolitan_of_Montenegro (<http://dbpedia.org/resource/Amfilohije,_Metropolitan_of_Montenegro>) --doo:nationality--> Montenegro (dor:Montenegro)
+      - Hajro_Ulqinaku (dor:Hajro_Ulqinaku) --doo:citizenship--> Montenegro (dor:Montenegro)
+attributes:
+  writer: --1y^ (dop:1y)--> int | --children^ (dop:children)--> langString | --id^ (dop:id)--> int
+  country: --leader^ (dop:leader)--> Resource
+  Location: --designated other1 color^ (dop:designatedOther1Color)--> langString | --area^ (dop:area)--> squareKilometre | --Apr high C^ (dop:aprHighC)--> int | --designated other1 name^ (dop:designatedOther1Name)--> langString | --caption^ (dop:caption)--> langString
+subgraph_id: 66
+relationships:
+  - cleric --doo:religion--> country
+  - cleric --doo:nationality--> Location
+  - writer --doo:citizenship--> Location

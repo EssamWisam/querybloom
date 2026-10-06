@@ -1,0 +1,88 @@
+types:
+  city: doo:City
+  scientist: doo:Scientist
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Kolkata: (population total^='4496694')
+      Arup_Kumar_Kundu: (known for^='Author of ''Bedside Clinics in Medicine'' Part I & Part II; ''Beginner''s Guide to Clinical Medicine''; ''MCQs in Internal Medicine'' and ''Pearls in Medicine for Students''')
+    relationships:
+      - Arup_Kumar_Kundu (dor:Arup_Kumar_Kundu) --doo:institution--> Kolkata (dor:Kolkata)
+      - A._B._A._Ghani_Khan_Choudhury (dor:A._B._A._Ghani_Khan_Choudhury) --dop:deathPlace--> Kolkata (dor:Kolkata)
+  '2':
+    attributes:
+      Kolkata: (population total^='4496694')
+      Devi_Shetty: (known for^='Founder & Chairman, Narayana Health')
+    relationships:
+      - Devi_Shetty (dor:Devi_Shetty) --doo:institution--> Kolkata (dor:Kolkata)
+      - A._B._A._Ghani_Khan_Choudhury (dor:A._B._A._Ghani_Khan_Choudhury) --dop:deathPlace--> Kolkata (dor:Kolkata)
+  '3':
+    attributes:
+      Kolkata: (population total^='4496694')
+      Mrinal_Kumar_Das_Gupta: |-
+        (known for^='* Discovery of the first double radio source Cygnus A
+        * First Intensity interferometer
+        * First to design, fabricate and operate a long base line post detection correlator radio interferometer
+        * Cygnus...')
+    relationships:
+      - Mrinal_Kumar_Das_Gupta (dor:Mrinal_Kumar_Das_Gupta) --doo:institution--> Kolkata (dor:Kolkata)
+      - A._B._A._Ghani_Khan_Choudhury (dor:A._B._A._Ghani_Khan_Choudhury) --dop:deathPlace--> Kolkata (dor:Kolkata)
+  '4':
+    attributes:
+      Chicago: '(population total^=''2746388'', footer^=''Top: Soldier Field; Bottom: Wrigley Field'')'
+      Edmund_Heller: (known for^='Zoology and African expeditions')
+    relationships:
+      - Edmund_Heller (dor:Edmund_Heller) --doo:institution--> Chicago (dor:Chicago)
+      - A._F._Maciejewski (dor:A._F._Maciejewski) --dop:deathPlace--> Chicago (dor:Chicago)
+  '5':
+    attributes:
+      London: (population total^='8799800')
+    relationships:
+      - Arthur_St_George_Huggett (dor:Arthur_St_George_Huggett) --doo:institution--> London (dor:London)
+      - A._J._Mundella (dor:A._J._Mundella) --dop:deathPlace--> London (dor:London)
+  '6':
+    attributes:
+      London: (population total^='8799800')
+    relationships:
+      - Chris_Colton (dor:Chris_Colton) --doo:institution--> London (dor:London)
+      - A._J._Mundella (dor:A._J._Mundella) --dop:deathPlace--> London (dor:London)
+  '7':
+    attributes:
+      London: (population total^='8799800')
+      Christo_Albertyn_Smith: (known for^='Common names of South African plants')
+    relationships:
+      - Christo_Albertyn_Smith (dor:Christo_Albertyn_Smith) --doo:institution--> London (dor:London)
+      - A._J._Mundella (dor:A._J._Mundella) --dop:deathPlace--> London (dor:London)
+  '8':
+    attributes:
+      Mumbai: (population total^='12478447', named for^='http://dbpedia.org/resource/Mumbadevi')
+    relationships:
+      - A._B._Walawalkar (dor:A._B._Walawalkar) --doo:institution--> Mumbai (dor:Mumbai)
+      - A._R._Antulay (dor:A._R._Antulay) --dop:deathPlace--> Mumbai (dor:Mumbai)
+  '9':
+    attributes:
+      Mumbai: (population total^='12478447', named for^='http://dbpedia.org/resource/Mumbadevi')
+      Arun_K._Pati: (known for^='Quantum no-hiding theorem')
+    relationships:
+      - Arun_K._Pati (dor:Arun_K._Pati) --doo:institution--> Mumbai (dor:Mumbai)
+      - A._R._Antulay (dor:A._R._Antulay) --dop:deathPlace--> Mumbai (dor:Mumbai)
+  '10':
+    attributes:
+      Mumbai: (population total^='12478447', named for^='http://dbpedia.org/resource/Mumbadevi')
+    relationships:
+      - S._G._Dani (dor:S._G._Dani) --doo:institution--> Mumbai (dor:Mumbai)
+      - A._R._Antulay (dor:A._R._Antulay) --dop:deathPlace--> Mumbai (dor:Mumbai)
+attributes:
+  city: --population total^ (doo:populationTotal)--> int | --footer^ (dop:footer)--> langString | --named for^ (dop:namedFor)--> langString | --Aug rain days^ (dop:augRainDays)--> int | --Center^ (dop:center)--> langString | --Apr low C^ (dop:aprLowC)--> double
+  scientist: --known for^ (dop:knownFor)--> Resource
+  office holder: --award^ (doo:award)--> Resource | --1p^ (dop:1p)--> int | --title^ (doo:title)--> langString | --parent^ (doo:parent)--> Resource
+subgraph_id: 33
+relationships:
+  - scientist --doo:institution--> city
+  - office holder --dop:deathPlace--> city

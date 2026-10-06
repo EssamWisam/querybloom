@@ -1,0 +1,117 @@
+types:
+  event: doo:Event
+  venue: doo:Venue
+  soccer club: doo:SoccerClub
+  soccer manager: doo:SoccerManager
+  soccer club season: doo:SoccerClubSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ron_Suart: (birth date^='1920-11-18')
+      Port_Vale_F.C.: (manager^='http://dbpedia.org/resource/Darrell_Clarke')
+      Athletic_Ground_(Cobridge): (cost ($)^='1500.0')
+    relationships:
+      - 1958–59_Blackpool_F.C._season (<http://dbpedia.org/resource/1958–59_Blackpool_F.C._season>) --doo:season--> 1958–59_in_English_football (<http://dbpedia.org/resource/1958–59_in_English_football>)
+      - 1958–59_in_English_football (<http://dbpedia.org/resource/1958–59_in_English_football>) --dop:champions--> Port_Vale_F.C. (<http://dbpedia.org/resource/Port_Vale_F.C.>)
+      - Athletic_Ground_(Cobridge) (<http://dbpedia.org/resource/Athletic_Ground_(Cobridge)>) --doo:tenant--> Port_Vale_F.C. (<http://dbpedia.org/resource/Port_Vale_F.C.>)
+      - 1958–59_Blackpool_F.C._season (<http://dbpedia.org/resource/1958–59_Blackpool_F.C._season>) --doo:manager--> Ron_Suart (dor:Ron_Suart)
+  '2':
+    attributes:
+      Ron_Suart: (birth date^='1920-11-18')
+      Wolverhampton_Wanderers_F.C.: (manager^='http://dbpedia.org/resource/Julen_Lopetegui')
+    relationships:
+      - 1958–59_Blackpool_F.C._season (<http://dbpedia.org/resource/1958–59_Blackpool_F.C._season>) --doo:season--> 1958–59_in_English_football (<http://dbpedia.org/resource/1958–59_in_English_football>)
+      - 1958–59_in_English_football (<http://dbpedia.org/resource/1958–59_in_English_football>) --dop:champions--> Wolverhampton_Wanderers_F.C. (<http://dbpedia.org/resource/Wolverhampton_Wanderers_F.C.>)
+      - Dudley_Road (dor:Dudley_Road) --doo:tenant--> Wolverhampton_Wanderers_F.C. (<http://dbpedia.org/resource/Wolverhampton_Wanderers_F.C.>)
+      - 1958–59_Blackpool_F.C._season (<http://dbpedia.org/resource/1958–59_Blackpool_F.C._season>) --doo:manager--> Ron_Suart (dor:Ron_Suart)
+  '3':
+    attributes:
+      Ron_Suart: (birth date^='1920-11-18')
+      Sheffield_Wednesday_F.C.: (manager^='http://dbpedia.org/resource/Darren_Moore')
+    relationships:
+      - 1958–59_Blackpool_F.C._season (<http://dbpedia.org/resource/1958–59_Blackpool_F.C._season>) --doo:season--> 1958–59_in_English_football (<http://dbpedia.org/resource/1958–59_in_English_football>)
+      - 1958–59_in_English_football (<http://dbpedia.org/resource/1958–59_in_English_football>) --dop:champions--> Sheffield_Wednesday_F.C. (<http://dbpedia.org/resource/Sheffield_Wednesday_F.C.>)
+      - Hillsborough_Stadium (dor:Hillsborough_Stadium) --doo:tenant--> Sheffield_Wednesday_F.C. (<http://dbpedia.org/resource/Sheffield_Wednesday_F.C.>)
+      - 1958–59_Blackpool_F.C._season (<http://dbpedia.org/resource/1958–59_Blackpool_F.C._season>) --doo:manager--> Ron_Suart (dor:Ron_Suart)
+  '4':
+    attributes:
+      Liverpool_F.C.: (manager^='http://dbpedia.org/resource/Jürgen_Klopp')
+      Malky_MacDonald: (birth date^='1913-10-26')
+    relationships:
+      - 1963–64_Brentford_F.C._season (<http://dbpedia.org/resource/1963–64_Brentford_F.C._season>) --doo:season--> 1963–64_in_English_football (<http://dbpedia.org/resource/1963–64_in_English_football>)
+      - 1963–64_in_English_football (<http://dbpedia.org/resource/1963–64_in_English_football>) --dop:champions--> Liverpool_F.C. (<http://dbpedia.org/resource/Liverpool_F.C.>)
+      - Anfield (dor:Anfield) --doo:tenant--> Liverpool_F.C. (<http://dbpedia.org/resource/Liverpool_F.C.>)
+      - 1963–64_Brentford_F.C._season (<http://dbpedia.org/resource/1963–64_Brentford_F.C._season>) --doo:manager--> Malky_MacDonald (dor:Malky_MacDonald)
+  '5':
+    attributes:
+      Malky_MacDonald: (birth date^='1913-10-26')
+      Coventry_City_F.C.: (manager^='http://dbpedia.org/resource/Mark_Robins')
+      Coventry_Building_Society_Arena: (cost ($)^='1.13E8')
+    relationships:
+      - 1963–64_Brentford_F.C._season (<http://dbpedia.org/resource/1963–64_Brentford_F.C._season>) --doo:season--> 1963–64_in_English_football (<http://dbpedia.org/resource/1963–64_in_English_football>)
+      - 1963–64_in_English_football (<http://dbpedia.org/resource/1963–64_in_English_football>) --dop:champions--> Coventry_City_F.C. (<http://dbpedia.org/resource/Coventry_City_F.C.>)
+      - Coventry_Building_Society_Arena (dor:Coventry_Building_Society_Arena) --doo:tenant--> Coventry_City_F.C. (<http://dbpedia.org/resource/Coventry_City_F.C.>)
+      - 1963–64_Brentford_F.C._season (<http://dbpedia.org/resource/1963–64_Brentford_F.C._season>) --doo:manager--> Malky_MacDonald (dor:Malky_MacDonald)
+  '6':
+    attributes:
+      Malky_MacDonald: (birth date^='1913-10-26')
+      Leeds_United_F.C.: (manager^='http://dbpedia.org/resource/Jesse_Marsch', date^='August 2022')
+    relationships:
+      - 1963–64_Brentford_F.C._season (<http://dbpedia.org/resource/1963–64_Brentford_F.C._season>) --doo:season--> 1963–64_in_English_football (<http://dbpedia.org/resource/1963–64_in_English_football>)
+      - 1963–64_in_English_football (<http://dbpedia.org/resource/1963–64_in_English_football>) --dop:champions--> Leeds_United_F.C. (<http://dbpedia.org/resource/Leeds_United_F.C.>)
+      - Elland_Road (dor:Elland_Road) --doo:tenant--> Leeds_United_F.C. (<http://dbpedia.org/resource/Leeds_United_F.C.>)
+      - 1963–64_Brentford_F.C._season (<http://dbpedia.org/resource/1963–64_Brentford_F.C._season>) --doo:manager--> Malky_MacDonald (dor:Malky_MacDonald)
+  '7':
+    attributes:
+      Stan_Mortensen: (birth date^='1921-05-26')
+      Derby_County_F.C.: (manager^='http://dbpedia.org/resource/Paul_Warne', date^='2010-04-14')
+    relationships:
+      - 1968–69_Blackpool_F.C._season (<http://dbpedia.org/resource/1968–69_Blackpool_F.C._season>) --doo:season--> 1968–69_in_English_football (<http://dbpedia.org/resource/1968–69_in_English_football>)
+      - 1968–69_in_English_football (<http://dbpedia.org/resource/1968–69_in_English_football>) --dop:champions--> Derby_County_F.C. (<http://dbpedia.org/resource/Derby_County_F.C.>)
+      - Baseball_Ground (dor:Baseball_Ground) --doo:tenant--> Derby_County_F.C. (<http://dbpedia.org/resource/Derby_County_F.C.>)
+      - 1968–69_Blackpool_F.C._season (<http://dbpedia.org/resource/1968–69_Blackpool_F.C._season>) --doo:manager--> Stan_Mortensen (dor:Stan_Mortensen)
+  '8':
+    attributes:
+      Stan_Mortensen: (birth date^='1921-05-26')
+      Doncaster_Rovers_F.C.: (manager^='http://dbpedia.org/resource/Danny_Schofield')
+    relationships:
+      - 1968–69_Blackpool_F.C._season (<http://dbpedia.org/resource/1968–69_Blackpool_F.C._season>) --doo:season--> 1968–69_in_English_football (<http://dbpedia.org/resource/1968–69_in_English_football>)
+      - 1968–69_in_English_football (<http://dbpedia.org/resource/1968–69_in_English_football>) --dop:champions--> Doncaster_Rovers_F.C. (<http://dbpedia.org/resource/Doncaster_Rovers_F.C.>)
+      - Belle_Vue_(Doncaster)__Belle_Vue__1 (<http://dbpedia.org/resource/Belle_Vue_(Doncaster)__Belle_Vue__1>) --doo:tenant--> Doncaster_Rovers_F.C. (<http://dbpedia.org/resource/Doncaster_Rovers_F.C.>)
+      - 1968–69_Blackpool_F.C._season (<http://dbpedia.org/resource/1968–69_Blackpool_F.C._season>) --doo:manager--> Stan_Mortensen (dor:Stan_Mortensen)
+  '9':
+    attributes:
+      Watford_F.C.: (manager^='http://dbpedia.org/resource/Slaven_Bilić', date^='2014-07-23')
+      Stan_Mortensen: (birth date^='1921-05-26')
+    relationships:
+      - 1968–69_Blackpool_F.C._season (<http://dbpedia.org/resource/1968–69_Blackpool_F.C._season>) --doo:season--> 1968–69_in_English_football (<http://dbpedia.org/resource/1968–69_in_English_football>)
+      - 1968–69_in_English_football (<http://dbpedia.org/resource/1968–69_in_English_football>) --dop:champions--> Watford_F.C. (<http://dbpedia.org/resource/Watford_F.C.>)
+      - Cassio_Road (dor:Cassio_Road) --doo:tenant--> Watford_F.C. (<http://dbpedia.org/resource/Watford_F.C.>)
+      - 1968–69_Blackpool_F.C._season (<http://dbpedia.org/resource/1968–69_Blackpool_F.C._season>) --doo:manager--> Stan_Mortensen (dor:Stan_Mortensen)
+  '10':
+    attributes:
+      Jan_Fuglset: (birth date^='1945-10-01')
+      Lillestrøm_SK: (manager^='http://dbpedia.org/resource/Geir_Bakke', season^='http://dbpedia.org/resource/2022_Eliteserien')
+      Åråsen_Stadion: (cost ($)^='3.0E8')
+    relationships:
+      - 1974_Molde_FK_season (dor:1974_Molde_FK_season) --doo:season--> 1974_in_Norwegian_football (dor:1974_in_Norwegian_football)
+      - 1974_in_Norwegian_football (dor:1974_in_Norwegian_football) --dop:champions--> Lillestrøm_SK (<http://dbpedia.org/resource/Lillestrøm_SK>)
+      - Åråsen_Stadion (<http://dbpedia.org/resource/Åråsen_Stadion>) --doo:tenant--> Lillestrøm_SK (<http://dbpedia.org/resource/Lillestrøm_SK>)
+      - 1974_Molde_FK_season (dor:1974_Molde_FK_season) --doo:manager--> Jan_Fuglset (dor:Jan_Fuglset)
+attributes:
+  event: --aet^ (dop:aet)--> langString
+  venue: --cost ($)^ (doo:cost)--> poundSterling | --cost ($)^ (doo:cost)--> usDollar
+  soccer club: --manager^ (doo:manager)--> Resource | --date^ (dop:date)--> gMonthDay | --squad number^ (doo:squadNumber)--> int | --season^ (doo:season)--> Resource
+  soccer manager: --birth date^ (dop:birthDate)--> date
+  soccer club season: --aet^ (dop:aet)--> langString | --c^ (dop:c)--> int
+subgraph_id: 128
+relationships:
+  - soccer club season --doo:season--> event
+  - event --dop:champions--> soccer club
+  - venue --doo:tenant--> soccer club
+  - soccer club season --doo:manager--> soccer manager

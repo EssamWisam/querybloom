@@ -1,0 +1,114 @@
+types:
+  bridge: doo:Bridge
+  cleric: doo:Cleric
+  country: doo:Country
+  diocese: doo:Diocese
+  Christian Bishop: doo:ChristianBishop
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.', Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric')
+      A._Theodore_Eastman: (death date^='2018-04-26')
+    relationships:
+      - 11th_Street_Bridges (dor:11th_Street_Bridges) --doo:locatedInArea--> United_States (dor:United_States)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --doo:deathPlace--> United_States (dor:United_States)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --doo:diocese--> Episcopal_Diocese_of_Maryland (dor:Episcopal_Diocese_of_Maryland)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --doo:diocese--> Episcopal_Diocese_of_Maryland (dor:Episcopal_Diocese_of_Maryland)
+  '2':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.', Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric')
+    relationships:
+      - 11th_Street_Bridges (dor:11th_Street_Bridges) --doo:locatedInArea--> United_States (dor:United_States)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --doo:deathPlace--> United_States (dor:United_States)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --doo:diocese--> Episcopal_Diocese_of_Maryland (dor:Episcopal_Diocese_of_Maryland)
+      - Amy_Richter (dor:Amy_Richter) --doo:diocese--> Episcopal_Diocese_of_Maryland (dor:Episcopal_Diocese_of_Maryland)
+  '3':
+    attributes:
+      United_States: (capital^='http://dbpedia.org/resource/Washington,_D.C.', Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric')
+      David_Leighton: (death date^='2013-08-07')
+    relationships:
+      - 11th_Street_Bridges (dor:11th_Street_Bridges) --doo:locatedInArea--> United_States (dor:United_States)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --doo:deathPlace--> United_States (dor:United_States)
+      - A._Theodore_Eastman (dor:A._Theodore_Eastman) --doo:diocese--> Episcopal_Diocese_of_Maryland (dor:Episcopal_Diocese_of_Maryland)
+      - David_Leighton (dor:David_Leighton) --doo:diocese--> Episcopal_Diocese_of_Maryland (dor:Episcopal_Diocese_of_Maryland)
+  '4':
+    attributes:
+      Jordan: (capital^='http://dbpedia.org/resource/Amman', Link from a Wikipage to an external page^='http://www.jordan.gov.jo/wps/portal')
+      Abdoun_Bridge: (builder^='http://dbpedia.org/resource/Larsen_&_Toubro')
+      Coptic_Orthodox_Archdiocese_of_Jerusalem: (border^='Oriental Orthodox')
+    relationships:
+      - Abdoun_Bridge (dor:Abdoun_Bridge) --doo:locatedInArea--> Jordan (dor:Jordan)
+      - Basil_IV_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Basil_IV_(Coptic_archbishop_of_Jerusalem)>) --doo:deathPlace--> Jordan (dor:Jordan)
+      - Basil_IV_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Basil_IV_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+      - Abraham_II_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Abraham_II_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+  '5':
+    attributes:
+      Jordan: (capital^='http://dbpedia.org/resource/Amman', Link from a Wikipage to an external page^='http://www.jordan.gov.jo/wps/portal')
+      Abdoun_Bridge: (builder^='http://dbpedia.org/resource/Larsen_&_Toubro')
+      Coptic_Orthodox_Archdiocese_of_Jerusalem: (border^='Oriental Orthodox')
+    relationships:
+      - Abdoun_Bridge (dor:Abdoun_Bridge) --doo:locatedInArea--> Jordan (dor:Jordan)
+      - Basil_IV_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Basil_IV_(Coptic_archbishop_of_Jerusalem)>) --doo:deathPlace--> Jordan (dor:Jordan)
+      - Basil_IV_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Basil_IV_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+      - Antonius_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Antonius_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+  '6':
+    attributes:
+      Jordan: (capital^='http://dbpedia.org/resource/Amman', Link from a Wikipage to an external page^='http://www.jordan.gov.jo/wps/portal')
+      Abdoun_Bridge: (builder^='http://dbpedia.org/resource/Larsen_&_Toubro')
+      Coptic_Orthodox_Archdiocese_of_Jerusalem: (border^='Oriental Orthodox')
+      Basil_III_(Coptic_archbishop_of_Jerusalem): (death date^='1935-05-09')
+    relationships:
+      - Abdoun_Bridge (dor:Abdoun_Bridge) --doo:locatedInArea--> Jordan (dor:Jordan)
+      - Basil_IV_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Basil_IV_(Coptic_archbishop_of_Jerusalem)>) --doo:deathPlace--> Jordan (dor:Jordan)
+      - Basil_IV_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Basil_IV_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+      - Basil_III_(Coptic_archbishop_of_Jerusalem) (<http://dbpedia.org/resource/Basil_III_(Coptic_archbishop_of_Jerusalem)>) --doo:diocese--> Coptic_Orthodox_Archdiocese_of_Jerusalem (dor:Coptic_Orthodox_Archdiocese_of_Jerusalem)
+  '7':
+    attributes:
+      India: (last^='Roger', url^='https://books.google.com/books%3Fid=Vr2qnK_QOuAC&pg=PA1140', capital^='http://dbpedia.org/resource/New_Delhi', Link from a Wikipage to an external page^='https://archive.org/details/encyclopaediaofi0000raja')
+      Abraham_Viruthakulangara: (death date^='2018-04-19')
+    relationships:
+      - Abdullah_Bridge (dor:Abdullah_Bridge) --doo:locatedInArea--> India (dor:India)
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:deathPlace--> India (dor:India)
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:diocese--> Roman_Catholic_Archdiocese_of_Nagpur (dor:Roman_Catholic_Archdiocese_of_Nagpur)
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:diocese--> Roman_Catholic_Archdiocese_of_Nagpur (dor:Roman_Catholic_Archdiocese_of_Nagpur)
+  '8':
+    attributes:
+      India: (last^='Roger', url^='https://books.google.com/books%3Fid=Vr2qnK_QOuAC&pg=PA1140', capital^='http://dbpedia.org/resource/New_Delhi', Link from a Wikipage to an external page^='https://archive.org/details/encyclopaediaofi0000raja')
+    relationships:
+      - Abdullah_Bridge (dor:Abdullah_Bridge) --doo:locatedInArea--> India (dor:India)
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:deathPlace--> India (dor:India)
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:diocese--> Roman_Catholic_Archdiocese_of_Nagpur (dor:Roman_Catholic_Archdiocese_of_Nagpur)
+      - Elias_Joseph_Gonsalves (dor:Elias_Joseph_Gonsalves) --doo:diocese--> Roman_Catholic_Archdiocese_of_Nagpur (dor:Roman_Catholic_Archdiocese_of_Nagpur)
+  '9':
+    attributes:
+      India: (last^='Roger', url^='https://books.google.com/books%3Fid=Vr2qnK_QOuAC&pg=PA1140', capital^='http://dbpedia.org/resource/New_Delhi', Link from a Wikipage to an external page^='https://archive.org/details/encyclopaediaofi0000raja')
+      Ignatius_D'Cunha: (death date^='2007-10-11')
+    relationships:
+      - Abdullah_Bridge (dor:Abdullah_Bridge) --doo:locatedInArea--> India (dor:India)
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:deathPlace--> India (dor:India)
+      - Abraham_Viruthakulangara (dor:Abraham_Viruthakulangara) --doo:diocese--> Roman_Catholic_Archdiocese_of_Nagpur (dor:Roman_Catholic_Archdiocese_of_Nagpur)
+      - Ignatius_D'Cunha (<http://dbpedia.org/resource/Ignatius_D'Cunha>) --doo:diocese--> Roman_Catholic_Archdiocese_of_Nagpur (dor:Roman_Catholic_Archdiocese_of_Nagpur)
+  '10':
+    attributes:
+      Spain: (capital^='http://dbpedia.org/resource/Madrid', Link from a Wikipage to an external page^='http://www.ifs.du.edu/ifs/frm_CountryProfile.aspx%3FCountry=ES')
+    relationships:
+      - Abetxuko_Bridge (dor:Abetxuko_Bridge) --doo:locatedInArea--> Spain (dor:Spain)
+      - Albino_González_y_Menédez_Reigada (<http://dbpedia.org/resource/Albino_González_y_Menédez_Reigada>) --doo:deathPlace--> Spain (dor:Spain)
+      - Albino_González_y_Menédez_Reigada (<http://dbpedia.org/resource/Albino_González_y_Menédez_Reigada>) --doo:diocese--> Roman_Catholic_Diocese_of_Córdoba (<http://dbpedia.org/resource/Roman_Catholic_Diocese_of_Córdoba>)
+      - Adolfo_Pérez_y_Muñoz (<http://dbpedia.org/resource/Adolfo_Pérez_y_Muñoz>) --doo:diocese--> Roman_Catholic_Diocese_of_Córdoba (<http://dbpedia.org/resource/Roman_Catholic_Diocese_of_Córdoba>)
+attributes:
+  bridge: --closing date^ (doo:closingDate)--> date | --builder^ (dop:builder)--> langString
+  cleric: --death date^ (dop:deathDate)--> date | --1p^ (dop:1p)--> int
+  country: --last^ (dop:last)--> langString | --url^ (dop:url)--> Resource | --capital^ (doo:capital)--> Resource | --leader^ (dop:leader)--> Resource | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --quote^ (dop:quote)--> langString
+  diocese: --border^ (dop:border)--> langString | --location^ (doo:location)--> Resource
+subgraph_id: 947
+relationships:
+  - bridge --doo:locatedInArea--> country
+  - Christian Bishop --doo:deathPlace--> country
+  - Christian Bishop --doo:diocese--> diocese
+  - cleric --doo:diocese--> diocese

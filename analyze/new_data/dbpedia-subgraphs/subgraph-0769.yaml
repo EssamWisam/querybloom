@@ -1,0 +1,127 @@
+types:
+  venue: doo:Venue
+  soccer league: doo:SoccerLeague
+  australian football Team: doo:AustralianFootballTeam
+  Australian rules football player: doo:AustralianRulesFootballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Aaron_Hamill: (weight (g)^='94000.0')
+      Docklands_Stadium: |-
+        (tenants^='; Australian Football League
+
+        Essendon Football Club', architect^='Populous in association with Daryl Jackson', operator^='Australian Football League')
+      Australian_Football_League: (founding year^='1896', float^='center')
+    relationships:
+      - Docklands_Stadium (dor:Docklands_Stadium) --doo:tenant--> Carlton_Football_Club (dor:Carlton_Football_Club)
+      - Docklands_Stadium (dor:Docklands_Stadium) --doo:tenant--> Australian_Football_League (dor:Australian_Football_League)
+      - Aaron_Hamill (dor:Aaron_Hamill) --dop:club--> Carlton_Football_Club (dor:Carlton_Football_Club)
+  '2':
+    attributes:
+      Aaron_Hamill: (weight (g)^='94000.0')
+      Docklands_Stadium: |-
+        (tenants^='; Australian Football League
+
+        Essendon Football Club', architect^='Populous in association with Daryl Jackson', operator^='Australian Football League')
+      Australian_Football_League: (founding year^='1896', float^='center')
+    relationships:
+      - Docklands_Stadium (dor:Docklands_Stadium) --doo:tenant--> St_Kilda_Football_Club (dor:St_Kilda_Football_Club)
+      - Docklands_Stadium (dor:Docklands_Stadium) --doo:tenant--> Australian_Football_League (dor:Australian_Football_League)
+      - Aaron_Hamill (dor:Aaron_Hamill) --dop:club--> St_Kilda_Football_Club (dor:St_Kilda_Football_Club)
+  '3':
+    attributes:
+      Aaron_Hamill: (weight (g)^='94000.0')
+      Junction_Oval: |-
+        (tenants^='; Cricket
+
+        Victoria cricket team', operator^='http://dbpedia.org/resource/Cricket_Victoria')
+      Australian_Football_League: (founding year^='1896', float^='center')
+    relationships:
+      - Junction_Oval (dor:Junction_Oval) --doo:tenant--> St_Kilda_Football_Club (dor:St_Kilda_Football_Club)
+      - Junction_Oval (dor:Junction_Oval) --doo:tenant--> Australian_Football_League (dor:Australian_Football_League)
+      - Aaron_Hamill (dor:Aaron_Hamill) --dop:club--> St_Kilda_Football_Club (dor:St_Kilda_Football_Club)
+  '4':
+    attributes:
+      AFL_Women's: (founding year^='2016')
+      Aaron_Henneman: (weight (g)^='100000.0')
+      Princes_Park_(stadium): |-
+        (tenants^='; Carlton Football Club
+
+        Administration & Training', operator^='http://dbpedia.org/resource/Carlton_Football_Club')
+    relationships:
+      - Princes_Park_(stadium) (<http://dbpedia.org/resource/Princes_Park_(stadium)>) --doo:tenant--> Essendon_Football_Club (dor:Essendon_Football_Club)
+      - Princes_Park_(stadium) (<http://dbpedia.org/resource/Princes_Park_(stadium)>) --doo:tenant--> AFL_Women's (<http://dbpedia.org/resource/AFL_Women's>)
+      - Aaron_Henneman (dor:Aaron_Henneman) --dop:club--> Essendon_Football_Club (dor:Essendon_Football_Club)
+  '5':
+    attributes:
+      VFL_Women's: (founding year^='2016')
+      Aaron_Henneman: (weight (g)^='100000.0')
+      Princes_Park_(stadium): |-
+        (tenants^='; Carlton Football Club
+
+        Administration & Training', operator^='http://dbpedia.org/resource/Carlton_Football_Club')
+    relationships:
+      - Princes_Park_(stadium) (<http://dbpedia.org/resource/Princes_Park_(stadium)>) --doo:tenant--> Essendon_Football_Club (dor:Essendon_Football_Club)
+      - Princes_Park_(stadium) (<http://dbpedia.org/resource/Princes_Park_(stadium)>) --doo:tenant--> VFL_Women's (<http://dbpedia.org/resource/VFL_Women's>)
+      - Aaron_Henneman (dor:Aaron_Henneman) --dop:club--> Essendon_Football_Club (dor:Essendon_Football_Club)
+  '6':
+    attributes:
+      Aaron_Henneman: (weight (g)^='100000.0')
+      Windy_Hill,_Essendon: (tenants^='Administration & Training')
+      Essendon_District_Football_League: (founding year^='1930', float^='right')
+    relationships:
+      - Windy_Hill,_Essendon (<http://dbpedia.org/resource/Windy_Hill,_Essendon>) --doo:tenant--> Essendon_Football_Club (dor:Essendon_Football_Club)
+      - Windy_Hill,_Essendon (<http://dbpedia.org/resource/Windy_Hill,_Essendon>) --doo:tenant--> Essendon_District_Football_League (dor:Essendon_District_Football_League)
+      - Aaron_Henneman (dor:Aaron_Henneman) --dop:club--> Essendon_Football_Club (dor:Essendon_Football_Club)
+  '7':
+    attributes:
+      Eureka_Stadium: (tenants^='GWV Rebels', cost^='$21.976 million   and $6.35 million', architect^='http://dbpedia.org/resource/Peddle_Thorp', operator^='City of Ballarat')
+      Aaron_James_(footballer): (weight (g)^='102000.0')
+      Ballarat_Football_League: (founding year^='1893')
+    relationships:
+      - Eureka_Stadium (dor:Eureka_Stadium) --doo:tenant--> Western_Bulldogs (dor:Western_Bulldogs)
+      - Eureka_Stadium (dor:Eureka_Stadium) --doo:tenant--> Ballarat_Football_League (dor:Ballarat_Football_League)
+      - Aaron_James_(footballer) (<http://dbpedia.org/resource/Aaron_James_(footballer)>) --dop:club--> Western_Bulldogs (dor:Western_Bulldogs)
+  '8':
+    attributes:
+      AFL_Women's: (founding year^='2016')
+      Olympic_Park_Oval: (tenants^='Administration & Training', operator^='Melbourne & Olympic Parks Trust')
+      Aaron_James_(footballer): (weight (g)^='102000.0')
+    relationships:
+      - Olympic_Park_Oval (dor:Olympic_Park_Oval) --doo:tenant--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+      - Olympic_Park_Oval (dor:Olympic_Park_Oval) --doo:tenant--> AFL_Women's (<http://dbpedia.org/resource/AFL_Women's>)
+      - Aaron_James_(footballer) (<http://dbpedia.org/resource/Aaron_James_(footballer)>) --dop:club--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+  '9':
+    attributes:
+      Olympic_Park_Oval: (tenants^='Administration & Training', operator^='Melbourne & Olympic Parks Trust')
+      Victorian_Football_League: (founding year^='1877', float^='left')
+    relationships:
+      - Olympic_Park_Oval (dor:Olympic_Park_Oval) --doo:tenant--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+      - Olympic_Park_Oval (dor:Olympic_Park_Oval) --doo:tenant--> Victorian_Football_League (dor:Victorian_Football_League)
+      - Aaron_James_(footballer) (<http://dbpedia.org/resource/Aaron_James_(footballer)>) --dop:club--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+  '10':
+    attributes:
+      AFL_Women's: (founding year^='2016')
+      Abe_McDougall: (death date^='1948-03-09', death date^='1948-03-09')
+      Princes_Park_(stadium): |-
+        (tenants^='; Carlton Football Club
+
+        Administration & Training', operator^='http://dbpedia.org/resource/Carlton_Football_Club')
+    relationships:
+      - Princes_Park_(stadium) (<http://dbpedia.org/resource/Princes_Park_(stadium)>) --doo:tenant--> Fitzroy_Football_Club (dor:Fitzroy_Football_Club)
+      - Princes_Park_(stadium) (<http://dbpedia.org/resource/Princes_Park_(stadium)>) --doo:tenant--> AFL_Women's (<http://dbpedia.org/resource/AFL_Women's>)
+      - Abe_McDougall (dor:Abe_McDougall) --dop:club--> Fitzroy_Football_Club (dor:Fitzroy_Football_Club)
+attributes:
+  venue: --tenants^ (dop:tenants)--> Resource | --cost^ (dop:cost)--> usDollar | --architect^ (dop:architect)--> Resource | --operator^ (dop:operator)--> Resource
+  soccer league: --founding year^ (doo:foundingYear)--> gYear | --float^ (dop:float)--> langString
+  Australian rules football player: --weight (g)^ (doo:weight)--> double | --death date^ (doo:deathDate)--> date | --death date^ (dop:deathDate)--> date
+subgraph_id: 769
+relationships:
+  - venue --doo:tenant--> australian football Team
+  - venue --doo:tenant--> soccer league
+  - Australian rules football player --dop:club--> australian football Team

@@ -1,0 +1,110 @@
+types:
+  city: doo:City
+  politician: doo:Politician
+  soccer player: doo:SoccerPlayer
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Santiago: (Apr precipitation days^='1.4')
+      Andrés_Allamand: (birth place^='http://dbpedia.org/resource/Chile')
+      Alejandro_Trujillo: (birth place^='http://dbpedia.org/resource/Chile_national_football_team')
+    relationships:
+      - Andrés_Allamand (<http://dbpedia.org/resource/Andrés_Allamand>) --doo:region--> Santiago_Metropolitan_Region (dor:Santiago_Metropolitan_Region)
+      - Andrés_Allamand (<http://dbpedia.org/resource/Andrés_Allamand>) --dop:birthPlace--> Santiago (dor:Santiago)
+      - Alejandro_Trujillo (dor:Alejandro_Trujillo) --doo:deathPlace--> Santiago (dor:Santiago)
+  '2':
+    attributes:
+      Santiago: (Apr precipitation days^='1.4')
+      Elson_Beiruth: (birth place^='http://dbpedia.org/resource/São_João_da_Barra')
+      Andrés_Allamand: (birth place^='http://dbpedia.org/resource/Chile')
+    relationships:
+      - Andrés_Allamand (<http://dbpedia.org/resource/Andrés_Allamand>) --doo:region--> Santiago_Metropolitan_Region (dor:Santiago_Metropolitan_Region)
+      - Andrés_Allamand (<http://dbpedia.org/resource/Andrés_Allamand>) --dop:birthPlace--> Santiago (dor:Santiago)
+      - Elson_Beiruth (dor:Elson_Beiruth) --doo:deathPlace--> Santiago (dor:Santiago)
+  '3':
+    attributes:
+      Santiago: (Apr precipitation days^='1.4')
+      Enrique_Iturra: (birth place^='http://dbpedia.org/resource/Santiago')
+      Andrés_Allamand: (birth place^='http://dbpedia.org/resource/Chile')
+    relationships:
+      - Andrés_Allamand (<http://dbpedia.org/resource/Andrés_Allamand>) --doo:region--> Santiago_Metropolitan_Region (dor:Santiago_Metropolitan_Region)
+      - Andrés_Allamand (<http://dbpedia.org/resource/Andrés_Allamand>) --dop:birthPlace--> Santiago (dor:Santiago)
+      - Enrique_Iturra (dor:Enrique_Iturra) --doo:deathPlace--> Santiago (dor:Santiago)
+  '4':
+    attributes:
+      Baltimore: (Apr precipitation days^='11')
+      Doug_Millward: (birth place^='http://dbpedia.org/resource/Sheffield')
+    relationships:
+      - Charles_Carnan_Ridgely (dor:Charles_Carnan_Ridgely) --doo:region--> Baltimore_County (dor:Baltimore_County)
+      - Charles_Carnan_Ridgely (dor:Charles_Carnan_Ridgely) --dop:birthPlace--> Baltimore (dor:Baltimore)
+      - Doug_Millward (dor:Doug_Millward) --doo:deathPlace--> Baltimore (dor:Baltimore)
+  '5':
+    attributes:
+      Alf_Burnett: (birth place^='http://dbpedia.org/resource/Aberdeen')
+      Lincoln,_England: (Apr precipitation days^='9')
+      Charles_Clarke_(Canadian_politician): (birth place^='http://dbpedia.org/resource/Lincoln,_England')
+    relationships:
+      - Charles_Clarke_(Canadian_politician) (<http://dbpedia.org/resource/Charles_Clarke_(Canadian_politician)>) --doo:region--> Wellington_East_(electoral_district) (<http://dbpedia.org/resource/Wellington_East_(electoral_district)>)
+      - Charles_Clarke_(Canadian_politician) (<http://dbpedia.org/resource/Charles_Clarke_(Canadian_politician)>) --dop:birthPlace--> Lincoln,_England (<http://dbpedia.org/resource/Lincoln,_England>)
+      - Alf_Burnett (dor:Alf_Burnett) --doo:deathPlace--> Lincoln,_England (<http://dbpedia.org/resource/Lincoln,_England>)
+  '6':
+    attributes:
+      Lincoln,_England: (Apr precipitation days^='9')
+      Harold_Riley_(footballer): (birth place^='http://dbpedia.org/resource/Hollinwood,_Greater_Manchester')
+      Charles_Clarke_(Canadian_politician): (birth place^='http://dbpedia.org/resource/Lincoln,_England')
+    relationships:
+      - Charles_Clarke_(Canadian_politician) (<http://dbpedia.org/resource/Charles_Clarke_(Canadian_politician)>) --doo:region--> Wellington_East_(electoral_district) (<http://dbpedia.org/resource/Wellington_East_(electoral_district)>)
+      - Charles_Clarke_(Canadian_politician) (<http://dbpedia.org/resource/Charles_Clarke_(Canadian_politician)>) --dop:birthPlace--> Lincoln,_England (<http://dbpedia.org/resource/Lincoln,_England>)
+      - Harold_Riley_(footballer) (<http://dbpedia.org/resource/Harold_Riley_(footballer)>) --doo:deathPlace--> Lincoln,_England (<http://dbpedia.org/resource/Lincoln,_England>)
+  '7':
+    attributes:
+      Jim_Grummett_Sr.: (birth place^='http://dbpedia.org/resource/Birdwell,_South_Yorkshire')
+      Lincoln,_England: (Apr precipitation days^='9')
+      Charles_Clarke_(Canadian_politician): (birth place^='http://dbpedia.org/resource/Lincoln,_England')
+    relationships:
+      - Charles_Clarke_(Canadian_politician) (<http://dbpedia.org/resource/Charles_Clarke_(Canadian_politician)>) --doo:region--> Wellington_East_(electoral_district) (<http://dbpedia.org/resource/Wellington_East_(electoral_district)>)
+      - Charles_Clarke_(Canadian_politician) (<http://dbpedia.org/resource/Charles_Clarke_(Canadian_politician)>) --dop:birthPlace--> Lincoln,_England (<http://dbpedia.org/resource/Lincoln,_England>)
+      - Jim_Grummett_Sr. (<http://dbpedia.org/resource/Jim_Grummett_Sr.>) --doo:deathPlace--> Lincoln,_England (<http://dbpedia.org/resource/Lincoln,_England>)
+  '8':
+    attributes:
+      Adrian_Ford: (birth place^='http://dbpedia.org/resource/Ohio')
+      Youngstown,_Ohio: (Apr precipitation days^='15')
+      Charles_J._Carney: (birth place^='http://dbpedia.org/resource/Youngstown,_Ohio')
+    relationships:
+      - Charles_J._Carney (dor:Charles_J._Carney) --doo:region--> Ohio's_19th_congressional_district (<http://dbpedia.org/resource/Ohio's_19th_congressional_district>)
+      - Charles_J._Carney (dor:Charles_J._Carney) --dop:birthPlace--> Youngstown,_Ohio (<http://dbpedia.org/resource/Youngstown,_Ohio>)
+      - Adrian_Ford (dor:Adrian_Ford) --doo:deathPlace--> Youngstown,_Ohio (<http://dbpedia.org/resource/Youngstown,_Ohio>)
+  '9':
+    attributes:
+      Ohio: (reason^='no disease has been mentioned yet', nickname^='Birthplace of Aviation; The Heart of It All')
+      Adrian_Ford: (birth place^='http://dbpedia.org/resource/Ohio')
+      Youngstown,_Ohio: (Apr precipitation days^='15')
+      Charles_J._Carney: (birth place^='http://dbpedia.org/resource/Youngstown,_Ohio')
+    relationships:
+      - Charles_J._Carney (dor:Charles_J._Carney) --doo:region--> Ohio (dor:Ohio)
+      - Charles_J._Carney (dor:Charles_J._Carney) --dop:birthPlace--> Youngstown,_Ohio (<http://dbpedia.org/resource/Youngstown,_Ohio>)
+      - Adrian_Ford (dor:Adrian_Ford) --doo:deathPlace--> Youngstown,_Ohio (<http://dbpedia.org/resource/Youngstown,_Ohio>)
+  '10':
+    attributes:
+      Charles_R._Imbrecht: (birth place^='http://dbpedia.org/resource/Ventura,_California')
+      Jim_Winkler_(American_football): (birth place^='http://dbpedia.org/resource/Moody,_Texas')
+    relationships:
+      - Charles_R._Imbrecht (dor:Charles_R._Imbrecht) --doo:region--> California's_36th_State_Assembly_district (<http://dbpedia.org/resource/California's_36th_State_Assembly_district>)
+      - Charles_R._Imbrecht (dor:Charles_R._Imbrecht) --dop:birthPlace--> Ventura,_California (<http://dbpedia.org/resource/Ventura,_California>)
+      - Jim_Winkler_(American_football) (<http://dbpedia.org/resource/Jim_Winkler_(American_football)>) --doo:deathPlace--> Ventura,_California (<http://dbpedia.org/resource/Ventura,_California>)
+attributes:
+  city: --Apr precipitation days^ (dop:aprPrecipitationDays)--> int
+  politician: --colwidth^ (dop:colwidth)--> int | --bot^ (dop:bot)--> langString | --width^ (dop:width)--> int | --birth place^ (doo:birthPlace)--> Resource | --title^ (dop:title)--> Resource
+  soccer player: --url^ (dop:url)--> Resource | --width^ (dop:width)--> perCent | --birth place^ (doo:birthPlace)--> Resource
+  administrative region: --reason^ (dop:reason)--> langString | --id^ (dop:id)--> langString | --nickname^ (dop:nickname)--> langString | --Aug high C^ (dop:augHighC)--> double
+subgraph_id: 642
+relationships:
+  - politician --doo:region--> administrative region
+  - politician --dop:birthPlace--> city
+  - soccer player --doo:deathPlace--> city

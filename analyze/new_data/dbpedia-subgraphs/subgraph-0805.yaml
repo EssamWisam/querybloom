@@ -1,0 +1,116 @@
+types:
+  city: doo:City
+  wrestler: doo:Wrestler
+  politician: doo:Politician
+  settlement: doo:Settlement
+  darts player: doo:DartsPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      London: (area total (km2)^='1572.03')
+      A._G._Stephen: (birth place^='http://dbpedia.org/resource/Banff,_Aberdeenshire')
+    relationships:
+      - Jimmy_Havoc (dor:Jimmy_Havoc) --doo:billed--> London (dor:London)
+      - Aaron_Beeney (dor:Aaron_Beeney) --doo:hometown--> London (dor:London)
+      - Jimmy_Havoc (dor:Jimmy_Havoc) --doo:billed--> Camden_Town (dor:Camden_Town)
+      - A._G._Stephen (dor:A._G._Stephen) --dop:deathPlace--> London (dor:London)
+  '2':
+    attributes:
+      London: (area total (km2)^='1572.03')
+      A._J._Mundella: (birth place^='Leicester, Leicestershire')
+    relationships:
+      - Jimmy_Havoc (dor:Jimmy_Havoc) --doo:billed--> London (dor:London)
+      - Aaron_Beeney (dor:Aaron_Beeney) --doo:hometown--> London (dor:London)
+      - Jimmy_Havoc (dor:Jimmy_Havoc) --doo:billed--> Camden_Town (dor:Camden_Town)
+      - A._J._Mundella (dor:A._J._Mundella) --dop:deathPlace--> London (dor:London)
+  '3':
+    attributes:
+      London: (area total (km2)^='1572.03')
+      A._T._Moorthy: (birth place^='http://dbpedia.org/resource/Batticaloa_District')
+    relationships:
+      - Jimmy_Havoc (dor:Jimmy_Havoc) --doo:billed--> London (dor:London)
+      - Aaron_Beeney (dor:Aaron_Beeney) --doo:hometown--> London (dor:London)
+      - Jimmy_Havoc (dor:Jimmy_Havoc) --doo:billed--> Camden_Town (dor:Camden_Town)
+      - A._T._Moorthy (dor:A._T._Moorthy) --dop:deathPlace--> London (dor:London)
+  '4':
+    attributes:
+      Berlin: (Apr precipitation days^='9')
+      Zagreb: (Apr sun^='168', Aug precipitation mm^='92.3', area total (km2)^='641.0')
+      Adolf_Mošinsky: (birth place^='http://dbpedia.org/resource/Austrian_Empire')
+    relationships:
+      - Wesna (dor:Wesna) --doo:billed--> Zagreb (dor:Zagreb)
+      - Alan_Ljubić (<http://dbpedia.org/resource/Alan_Ljubić>) --doo:hometown--> Zagreb (dor:Zagreb)
+      - Wesna (dor:Wesna) --doo:billed--> Berlin (dor:Berlin)
+      - Adolf_Mošinsky (<http://dbpedia.org/resource/Adolf_Mošinsky>) --dop:deathPlace--> Zagreb (dor:Zagreb)
+  '5':
+    attributes:
+      Berlin: (Apr precipitation days^='9')
+      Zagreb: (Apr sun^='168', Aug precipitation mm^='92.3', area total (km2)^='641.0')
+      Andrija_Artuković: (birth place^='http://dbpedia.org/resource/Austria-Hungary')
+    relationships:
+      - Wesna (dor:Wesna) --doo:billed--> Zagreb (dor:Zagreb)
+      - Alan_Ljubić (<http://dbpedia.org/resource/Alan_Ljubić>) --doo:hometown--> Zagreb (dor:Zagreb)
+      - Wesna (dor:Wesna) --doo:billed--> Berlin (dor:Berlin)
+      - Andrija_Artuković (<http://dbpedia.org/resource/Andrija_Artuković>) --dop:deathPlace--> Zagreb (dor:Zagreb)
+  '6':
+    attributes:
+      Berlin: (Apr precipitation days^='9')
+      Zagreb: (Apr sun^='168', Aug precipitation mm^='92.3', area total (km2)^='641.0')
+      Ankica_Tuđman: (birth place^='http://dbpedia.org/resource/Kingdom_of_Yugoslavia')
+    relationships:
+      - Wesna (dor:Wesna) --doo:billed--> Zagreb (dor:Zagreb)
+      - Alan_Ljubić (<http://dbpedia.org/resource/Alan_Ljubić>) --doo:hometown--> Zagreb (dor:Zagreb)
+      - Wesna (dor:Wesna) --doo:billed--> Berlin (dor:Berlin)
+      - Ankica_Tuđman (<http://dbpedia.org/resource/Ankica_Tuđman>) --dop:deathPlace--> Zagreb (dor:Zagreb)
+  '7':
+    attributes:
+      Bangkok: (Apr sun^='256.7', area total (km2)^='1568.737', Apr rain mm^='91.4')
+      Chaophraya_Bodindecha: (birth place^='http://dbpedia.org/resource/Bangkok', original name^='เจ้าพระยาบดินทรเดชา')
+    relationships:
+      - Hercules_(wrestler) (<http://dbpedia.org/resource/Hercules_(wrestler)>) --doo:billed--> Bangkok (dor:Bangkok)
+      - Attapol_Eupakaree (dor:Attapol_Eupakaree) --doo:hometown--> Bangkok (dor:Bangkok)
+      - Hercules_(wrestler) (<http://dbpedia.org/resource/Hercules_(wrestler)>) --doo:billed--> Tampa,_Florida (<http://dbpedia.org/resource/Tampa,_Florida>)
+      - Chaophraya_Bodindecha (dor:Chaophraya_Bodindecha) --dop:deathPlace--> Bangkok (dor:Bangkok)
+  '8':
+    attributes:
+      Bangkok: (Apr sun^='256.7', area total (km2)^='1568.737', Apr rain mm^='91.4')
+      Chaophraya_Bodindechanuchit_(Yaem_na_Nakhon): (birth place^='http://dbpedia.org/resource/Nakhon_Si_Thammarat_province', original name^='เจ้าพระยาบดินทรเดชานุชิต')
+    relationships:
+      - Hercules_(wrestler) (<http://dbpedia.org/resource/Hercules_(wrestler)>) --doo:billed--> Bangkok (dor:Bangkok)
+      - Attapol_Eupakaree (dor:Attapol_Eupakaree) --doo:hometown--> Bangkok (dor:Bangkok)
+      - Hercules_(wrestler) (<http://dbpedia.org/resource/Hercules_(wrestler)>) --doo:billed--> Tampa,_Florida (<http://dbpedia.org/resource/Tampa,_Florida>)
+      - Chaophraya_Bodindechanuchit_(Yaem_na_Nakhon) (<http://dbpedia.org/resource/Chaophraya_Bodindechanuchit_(Yaem_na_Nakhon)>) --dop:deathPlace--> Bangkok (dor:Bangkok)
+  '9':
+    attributes:
+      Bangkok: (Apr sun^='256.7', area total (km2)^='1568.737', Apr rain mm^='91.4')
+      Chaophraya_Nakhon_(Nu): (birth place^='http://dbpedia.org/resource/Phra_Nakhon_Si_Ayutthaya_(city)', original name^='(หนู)')
+    relationships:
+      - Hercules_(wrestler) (<http://dbpedia.org/resource/Hercules_(wrestler)>) --doo:billed--> Bangkok (dor:Bangkok)
+      - Attapol_Eupakaree (dor:Attapol_Eupakaree) --doo:hometown--> Bangkok (dor:Bangkok)
+      - Hercules_(wrestler) (<http://dbpedia.org/resource/Hercules_(wrestler)>) --doo:billed--> Tampa,_Florida (<http://dbpedia.org/resource/Tampa,_Florida>)
+      - Chaophraya_Nakhon_(Nu) (<http://dbpedia.org/resource/Chaophraya_Nakhon_(Nu)>) --dop:deathPlace--> Bangkok (dor:Bangkok)
+  '10':
+    attributes:
+      Allan_MacNab: (birth place^='Newark , Upper Canada')
+      Buffalo,_New_York: (named after^='http://dbpedia.org/resource/Buffalo_River_(New_York)')
+    relationships:
+      - John_Foti (dor:John_Foti) --doo:billed--> Hamilton,_Ontario (<http://dbpedia.org/resource/Hamilton,_Ontario>)
+      - Avtar_Gill_(darts_player) (<http://dbpedia.org/resource/Avtar_Gill_(darts_player)>) --doo:hometown--> Hamilton,_Ontario (<http://dbpedia.org/resource/Hamilton,_Ontario>)
+      - John_Foti (dor:John_Foti) --doo:billed--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+      - Allan_MacNab (dor:Allan_MacNab) --dop:deathPlace--> Hamilton,_Ontario (<http://dbpedia.org/resource/Hamilton,_Ontario>)
+attributes:
+  city: --Apr sun^ (dop:aprSun)--> double | --Apr high F^ (dop:aprHighF)--> double | --named for^ (dop:namedFor)--> langString | --Aug precipitation mm^ (dop:augPrecipitationMm)--> int | --Apr high F^ (dop:aprHighF)--> int | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --Apr rain mm^ (dop:aprRainMm)--> int
+  politician: --birth place^ (dop:birthPlace)--> langString | --original name^ (doo:originalName)--> langString
+  settlement: --named after^ (doo:namedAfter)--> Resource | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --frazioni^ (doo:frazioni)--> Resource
+subgraph_id: 805
+relationships:
+  - wrestler --doo:billed--> city
+  - darts player --doo:hometown--> city
+  - wrestler --doo:billed--> settlement
+  - politician --dop:deathPlace--> city

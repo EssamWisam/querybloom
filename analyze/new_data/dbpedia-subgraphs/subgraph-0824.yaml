@@ -1,0 +1,104 @@
+types:
+  city: doo:City
+  athlete: doo:Athlete
+  village: doo:Village
+  Location: doo:Location
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Algonquin,_Illinois: (subdivision^='http://dbpedia.org/resource/Algonquin_Township,_McHenry_County,_Illinois')
+    relationships:
+      - Algonquin,_Illinois (<http://dbpedia.org/resource/Algonquin,_Illinois>) --doo:country--> United_States (dor:United_States)
+      - Algonquin_Township,_McHenry_County,_Illinois (<http://dbpedia.org/resource/Algonquin_Township,_McHenry_County,_Illinois>) --doo:subdivision--> Algonquin,_Illinois (<http://dbpedia.org/resource/Algonquin,_Illinois>)
+      - Aage_Brix (dor:Aage_Brix) --dop:deathPlace--> United_States (dor:United_States)
+      - Aage_Brix (dor:Aage_Brix) --doo:birthPlace--> Lexington,_Nebraska (<http://dbpedia.org/resource/Lexington,_Nebraska>)
+  '2':
+    attributes:
+      Bronx_Community_Board_11: (subdivision^='http://dbpedia.org/resource/Allerton,_Bronx')
+    relationships:
+      - Bronx_Community_Board_11 (dor:Bronx_Community_Board_11) --doo:country--> United_States (dor:United_States)
+      - Allerton,_Bronx (<http://dbpedia.org/resource/Allerton,_Bronx>) --doo:subdivision--> Bronx_Community_Board_11 (dor:Bronx_Community_Board_11)
+      - Aage_Brix (dor:Aage_Brix) --dop:deathPlace--> United_States (dor:United_States)
+      - Aage_Brix (dor:Aage_Brix) --doo:birthPlace--> Lexington,_Nebraska (<http://dbpedia.org/resource/Lexington,_Nebraska>)
+  '3':
+    attributes:
+      Manhattan_Community_Board_3: (subdivision^='http://dbpedia.org/resource/Alphabet_City,_Manhattan')
+    relationships:
+      - Manhattan_Community_Board_3 (dor:Manhattan_Community_Board_3) --doo:country--> United_States (dor:United_States)
+      - Alphabet_City,_Manhattan (<http://dbpedia.org/resource/Alphabet_City,_Manhattan>) --doo:subdivision--> Manhattan_Community_Board_3 (dor:Manhattan_Community_Board_3)
+      - Aage_Brix (dor:Aage_Brix) --dop:deathPlace--> United_States (dor:United_States)
+      - Aage_Brix (dor:Aage_Brix) --doo:birthPlace--> Lexington,_Nebraska (<http://dbpedia.org/resource/Lexington,_Nebraska>)
+  '4':
+    attributes:
+      Driouch: (subdivision^='http://dbpedia.org/resource/Driouch_Province')
+    relationships:
+      - Driouch (dor:Driouch) --doo:country--> Morocco (dor:Morocco)
+      - Driouch_Province (dor:Driouch_Province) --doo:subdivision--> Driouch (dor:Driouch)
+      - Abdelkader_El_Brazi (dor:Abdelkader_El_Brazi) --dop:deathPlace--> Morocco (dor:Morocco)
+      - Abdelkader_El_Brazi (dor:Abdelkader_El_Brazi) --doo:birthPlace--> Berkane (dor:Berkane)
+  '5':
+    attributes:
+      Fquih_Ben_Salah: (subdivision^='http://dbpedia.org/resource/Béni_Mellal-Khénifra')
+    relationships:
+      - Fquih_Ben_Salah (dor:Fquih_Ben_Salah) --doo:country--> Morocco (dor:Morocco)
+      - Fquih_Ben_Salah_Province (dor:Fquih_Ben_Salah_Province) --doo:subdivision--> Fquih_Ben_Salah (dor:Fquih_Ben_Salah)
+      - Abdelkader_El_Brazi (dor:Abdelkader_El_Brazi) --dop:deathPlace--> Morocco (dor:Morocco)
+      - Abdelkader_El_Brazi (dor:Abdelkader_El_Brazi) --doo:birthPlace--> Berkane (dor:Berkane)
+  '6':
+    attributes:
+      Al_Fida: (subdivision^='http://dbpedia.org/resource/Al_Fida_-_Mers_Sultan')
+    relationships:
+      - Al_Fida (dor:Al_Fida) --doo:country--> Morocco (dor:Morocco)
+      - Mechouar,_Casablanca (<http://dbpedia.org/resource/Mechouar,_Casablanca>) --doo:subdivision--> Al_Fida (dor:Al_Fida)
+      - Abdelkader_El_Brazi (dor:Abdelkader_El_Brazi) --dop:deathPlace--> Morocco (dor:Morocco)
+      - Abdelkader_El_Brazi (dor:Abdelkader_El_Brazi) --doo:birthPlace--> Berkane (dor:Berkane)
+  '7':
+    attributes:
+      Aougrout: (subdivision^='http://dbpedia.org/resource/Adrar_Province')
+    relationships:
+      - Aougrout (dor:Aougrout) --doo:country--> Algeria (dor:Algeria)
+      - Aougrout_District (dor:Aougrout_District) --doo:subdivision--> Aougrout (dor:Aougrout)
+      - Abderrahmane_Meziani (dor:Abderrahmane_Meziani) --dop:deathPlace--> Algeria (dor:Algeria)
+      - Abderrahmane_Meziani (dor:Abderrahmane_Meziani) --doo:birthPlace--> Algiers (dor:Algiers)
+  '8':
+    attributes:
+      Fenoughil: (subdivision^='http://dbpedia.org/resource/Adrar_Province')
+    relationships:
+      - Fenoughil (dor:Fenoughil) --doo:country--> Algeria (dor:Algeria)
+      - Fenoughil_District (dor:Fenoughil_District) --doo:subdivision--> Fenoughil (dor:Fenoughil)
+      - Abderrahmane_Meziani (dor:Abderrahmane_Meziani) --dop:deathPlace--> Algeria (dor:Algeria)
+      - Abderrahmane_Meziani (dor:Abderrahmane_Meziani) --doo:birthPlace--> Algiers (dor:Algiers)
+  '9':
+    attributes:
+      Mérine_District: (subdivision^='http://dbpedia.org/resource/Merine')
+    relationships:
+      - Mérine_District (<http://dbpedia.org/resource/Mérine_District>) --doo:country--> Algeria (dor:Algeria)
+      - Merine (dor:Merine) --doo:subdivision--> Mérine_District (<http://dbpedia.org/resource/Mérine_District>)
+      - Abderrahmane_Meziani (dor:Abderrahmane_Meziani) --dop:deathPlace--> Algeria (dor:Algeria)
+      - Abderrahmane_Meziani (dor:Abderrahmane_Meziani) --doo:birthPlace--> Algiers (dor:Algiers)
+  '10':
+    attributes:
+      Bamarni: (subdivision^='http://dbpedia.org/resource/Amadiya_District')
+    relationships:
+      - Bamarni (dor:Bamarni) --doo:country--> Iraq (dor:Iraq)
+      - Araden (dor:Araden) --doo:subdivision--> Bamarni (dor:Bamarni)
+      - Abdul_Mahdi_Hadi (dor:Abdul_Mahdi_Hadi) --dop:deathPlace--> Iraq (dor:Iraq)
+      - Abdul_Mahdi_Hadi (dor:Abdul_Mahdi_Hadi) --doo:birthPlace--> Basra (dor:Basra)
+attributes:
+  city: --Apr low F^ (dop:aprLowF)--> int
+  athlete: --caption^ (dop:caption)--> langString
+  village: --subdivision^ (doo:subdivision)--> Resource | --Apr high F^ (dop:aprHighF)--> int
+  Location: --Apr record low C^ (dop:aprRecordLowC)--> langString | --Apr high F^ (dop:aprHighF)--> int | --Apr sun^ (dop:aprSun)--> int
+  settlement: --Apr low C^ (dop:aprLowC)--> double | --source^ (dop:source)--> Resource | --Apr rain days^ (dop:aprRainDays)--> double | --width^ (dop:width)--> int | --Aug low F^ (dop:augLowF)--> double
+subgraph_id: 824
+relationships:
+  - village --doo:country--> Location
+  - settlement --doo:subdivision--> village
+  - athlete --dop:deathPlace--> Location
+  - athlete --doo:birthPlace--> city

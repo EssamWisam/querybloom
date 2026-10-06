@@ -1,0 +1,51 @@
+types:
+  album: doo:Album
+  company: doo:Company
+  scientist: doo:Scientist
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      32_Records: (founder^='Joel Dorn, Robert Miller', founding year^='1995')
+      Clarence_Lusane: (caption^='Clarence Lusane in 2012')
+    relationships:
+      - Jazz (dor:Jazz) --dop:instruments--> Drum_kit (dor:Drum_kit)
+      - 32_Records (dor:32_Records) --doo:genre--> Jazz (dor:Jazz)
+      - ¡Viva_Nueva! (<http://dbpedia.org/resource/¡Viva_Nueva!>) --dop:genre--> Jazz (dor:Jazz)
+      - Clarence_Lusane (dor:Clarence_Lusane) --doo:academicDiscipline--> Jazz (dor:Jazz)
+  '2':
+    attributes:
+      Guitar: (background^='string')
+      32_Records: (founder^='Joel Dorn, Robert Miller', founding year^='1995')
+      Clarence_Lusane: (caption^='Clarence Lusane in 2012')
+    relationships:
+      - Jazz (dor:Jazz) --dop:instruments--> Guitar (dor:Guitar)
+      - 32_Records (dor:32_Records) --doo:genre--> Jazz (dor:Jazz)
+      - ¡Viva_Nueva! (<http://dbpedia.org/resource/¡Viva_Nueva!>) --dop:genre--> Jazz (dor:Jazz)
+      - Clarence_Lusane (dor:Clarence_Lusane) --doo:academicDiscipline--> Jazz (dor:Jazz)
+  '3':
+    attributes:
+      32_Records: (founder^='Joel Dorn, Robert Miller', founding year^='1995')
+      Clarence_Lusane: (caption^='Clarence Lusane in 2012')
+    relationships:
+      - Jazz (dor:Jazz) --dop:instruments--> Hammond_organ (dor:Hammond_organ)
+      - 32_Records (dor:32_Records) --doo:genre--> Jazz (dor:Jazz)
+      - ¡Viva_Nueva! (<http://dbpedia.org/resource/¡Viva_Nueva!>) --dop:genre--> Jazz (dor:Jazz)
+      - Clarence_Lusane (dor:Clarence_Lusane) --doo:academicDiscipline--> Jazz (dor:Jazz)
+attributes:
+  company: --original name^ (doo:originalName)--> langString | --founder^ (dop:founder)--> langString | --formation date^ (doo:formationDate)--> date | --former name^ (doo:formerName)--> langString | --area served^ (dop:areaServed)--> int | --direction^ (dop:direction)--> langString | --founding year^ (doo:foundingYear)--> gYear
+  scientist: --birth name^ (doo:birthName)--> langString | --caption^ (dop:caption)--> langString
+  music genre: --align^ (dop:align)--> langString | --2p^ (dop:2p)--> int
+  musical artist: --d^ (dop:d)--> langString | --background^ (dop:background)--> langString
+subgraph_id: 833
+relationships:
+  - music genre --dop:instruments--> musical artist
+  - company --doo:genre--> music genre
+  - album --dop:genre--> music genre
+  - scientist --doo:academicDiscipline--> music genre

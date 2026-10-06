@@ -1,0 +1,123 @@
+types:
+  city: doo:City
+  gymnast: doo:Gymnast
+  ethnic group: doo:EthnicGroup
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Anglo-Indian_Canadians (dor:Anglo-Indian_Canadians) --doo:populationPlace--> Winnipeg (dor:Winnipeg)
+      - Anglo-Indian_Canadians (dor:Anglo-Indian_Canadians) --doo:related--> English_Canadians (dor:English_Canadians)
+      - Gabby_May (dor:Gabby_May) --doo:hometown--> Winnipeg (dor:Winnipeg)
+  '2':
+    attributes: {}
+    relationships:
+      - Arabs_in_Bulgaria (dor:Arabs_in_Bulgaria) --doo:populationPlace--> Sofia (dor:Sofia)
+      - Arabs_in_Bulgaria (dor:Arabs_in_Bulgaria) --doo:related--> Arab_Argentine (dor:Arab_Argentine)
+      - Boryana_Kaleyn (dor:Boryana_Kaleyn) --doo:hometown--> Sofia (dor:Sofia)
+  '3':
+    attributes:
+      Sofia: (width^='250')
+    relationships:
+      - Arabs_in_Bulgaria (dor:Arabs_in_Bulgaria) --doo:populationPlace--> Sofia (dor:Sofia)
+      - Arabs_in_Bulgaria (dor:Arabs_in_Bulgaria) --doo:related--> Arab_Brazilian (dor:Arab_Brazilian)
+      - Boryana_Kaleyn (dor:Boryana_Kaleyn) --doo:hometown--> Sofia (dor:Sofia)
+  '4':
+    attributes:
+      Sofia: (width^='250')
+    relationships:
+      - Arabs_in_Bulgaria (dor:Arabs_in_Bulgaria) --doo:populationPlace--> Sofia (dor:Sofia)
+      - Arabs_in_Bulgaria (dor:Arabs_in_Bulgaria) --doo:related--> Arab_Mexican (dor:Arab_Mexican)
+      - Boryana_Kaleyn (dor:Boryana_Kaleyn) --doo:hometown--> Sofia (dor:Sofia)
+  '5':
+    attributes:
+      Bucharest: (width^='80.0', Apr rain days^='11')
+    relationships:
+      - Arabs_in_Romania (dor:Arabs_in_Romania) --doo:populationPlace--> Bucharest (dor:Bucharest)
+      - Arabs_in_Romania (dor:Arabs_in_Romania) --doo:related--> Arab_Argentine (dor:Arab_Argentine)
+      - Alexandra_Eremia (dor:Alexandra_Eremia) --doo:hometown--> Bucharest (dor:Bucharest)
+  '6':
+    attributes:
+      Bucharest: (width^='80.0', Apr rain days^='11')
+    relationships:
+      - Arabs_in_Romania (dor:Arabs_in_Romania) --doo:populationPlace--> Bucharest (dor:Bucharest)
+      - Arabs_in_Romania (dor:Arabs_in_Romania) --doo:related--> Arab_Brazilian (dor:Arab_Brazilian)
+      - Alexandra_Eremia (dor:Alexandra_Eremia) --doo:hometown--> Bucharest (dor:Bucharest)
+  '7':
+    attributes:
+      Bucharest: (width^='80.0', Apr rain days^='11')
+    relationships:
+      - Arabs_in_Romania (dor:Arabs_in_Romania) --doo:populationPlace--> Bucharest (dor:Bucharest)
+      - Arabs_in_Romania (dor:Arabs_in_Romania) --doo:related--> Arab_Mexican (dor:Arab_Mexican)
+      - Alexandra_Eremia (dor:Alexandra_Eremia) --doo:hometown--> Bucharest (dor:Bucharest)
+  '8':
+    attributes:
+      Amsterdam: (width^='200')
+    relationships:
+      - Armenians_in_the_Netherlands (dor:Armenians_in_the_Netherlands) --doo:populationPlace--> Amsterdam (dor:Amsterdam)
+      - Armenians_in_the_Netherlands (dor:Armenians_in_the_Netherlands) --doo:related--> Cherkesogai (dor:Cherkesogai)
+      - Elze_Geurts (dor:Elze_Geurts) --doo:hometown--> Amsterdam (dor:Amsterdam)
+  '9':
+    attributes:
+      Amsterdam: (width^='200')
+    relationships:
+      - Armenians_in_the_Netherlands (dor:Armenians_in_the_Netherlands) --doo:populationPlace--> Amsterdam (dor:Amsterdam)
+      - Armenians_in_the_Netherlands (dor:Armenians_in_the_Netherlands) --doo:related--> Hamshenis (dor:Hamshenis)
+      - Elze_Geurts (dor:Elze_Geurts) --doo:hometown--> Amsterdam (dor:Amsterdam)
+  '10':
+    attributes: {}
+    relationships:
+      - Assyrian_Australians (dor:Assyrian_Australians) --doo:populationPlace--> Melbourne (dor:Melbourne)
+      - Assyrian_Australians (dor:Assyrian_Australians) --doo:related--> Assyrians_in_the_United_Kingdom (dor:Assyrians_in_the_United_Kingdom)
+      - Alexandra_Kiroi-Bogatyreva (dor:Alexandra_Kiroi-Bogatyreva) --doo:hometown--> Melbourne (dor:Melbourne)
+qa_result:
+  status: completed
+  cost_usd: 0.373937
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.050637400000000006
+        total_tokens: 4479
+        prompt_tokens: 2151
+        completion_tokens: 2328
+      generate:
+        cost_usd: 0.1094426
+        total_tokens: 8697
+        prompt_tokens: 3820
+        completion_tokens: 4877
+      verify_1:
+        cost_usd: 0.062312000000000006
+        total_tokens: 6016
+        prompt_tokens: 3867
+        completion_tokens: 2149
+      verify_2:
+        cost_usd: 0.031597
+        total_tokens: 4484
+        prompt_tokens: 3872
+        completion_tokens: 612
+      complexity:
+        cost_usd: 0.119948
+        total_tokens: 10178
+        prompt_tokens: 5002
+        completion_tokens: 5176
+    total_tokens: 33854
+    prompt_tokens: 18712
+    total_cost_usd: 0.373937
+    completion_tokens: 15142
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --width^ (dop:width)--> langString | --reason^ (dop:reason)--> langString | --Aug high F^ (dop:augHighF)--> double | --Apr rain days^ (dop:aprRainDays)--> double | --Apr rain days^ (dop:aprRainDays)--> int
+  television show: --voice^ (doo:voice)--> Resource | --airdate^ (dop:airdate)--> int | --release date^ (doo:releaseDate)--> date | --artist^ (dop:artist)--> langString | --creator (agent)^ (doo:creator)--> Resource
+subgraph_id: 280
+relationships:
+  - ethnic group --doo:populationPlace--> city
+  - ethnic group --doo:related--> television show
+  - gymnast --doo:hometown--> city

@@ -1,0 +1,135 @@
+types:
+  school: doo:School
+  country: doo:Country
+  settlement: doo:Settlement
+  organisation: doo:Organisation
+  office holder: doo:OfficeHolder
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Brasília: (area total (m2)^='5801998125.203')
+      Bruno_Araújo: (birth name^='Bruno Cavalcanti de Araújo')
+    relationships:
+      - Brazilian_Social_Democracy_Party__Brazilian_Social_Democracy_Party__1 (dor:Brazilian_Social_Democracy_Party__Brazilian_Social_Democracy_Party__1) --doo:headquarter--> Brasília (<http://dbpedia.org/resource/Brasília>)
+      - Brazilian_Social_Democracy_Party__Brazilian_Social_Democracy_Party__1 (dor:Brazilian_Social_Democracy_Party__Brazilian_Social_Democracy_Party__1) --doo:headquarter--> Brazil (dor:Brazil)
+      - Colégio_Marista_Dom_Silvério (<http://dbpedia.org/resource/Colégio_Marista_Dom_Silvério>) --doo:country--> Brazil (dor:Brazil)
+      - Brazilian_Social_Democracy_Party__Brazilian_Social_Democracy_Party__1 (dor:Brazilian_Social_Democracy_Party__Brazilian_Social_Democracy_Party__1) --doo:president--> Bruno_Araújo (<http://dbpedia.org/resource/Bruno_Araújo>)
+      - Colégio_Marista_Dom_Silvério (<http://dbpedia.org/resource/Colégio_Marista_Dom_Silvério>) --doo:affiliation--> Marist_Brothers (dor:Marist_Brothers)
+  '2':
+    attributes:
+      Spain: '(motto^=''(English: "Further Beyond")'')'
+      Barcelona: (area total (m2)^='101400000.0')
+      Laureano_López_Rodó: (birth name^='Laureano López Rodó')
+    relationships:
+      - Catalan_Regional_Action (dor:Catalan_Regional_Action) --doo:headquarter--> Barcelona (dor:Barcelona)
+      - Catalan_Regional_Action (dor:Catalan_Regional_Action) --doo:headquarter--> Spain (dor:Spain)
+      - Lycée_Français_René-Verneau (<http://dbpedia.org/resource/Lycée_Français_René-Verneau>) --doo:country--> Spain (dor:Spain)
+      - Catalan_Regional_Action (dor:Catalan_Regional_Action) --doo:president--> Laureano_López_Rodó (<http://dbpedia.org/resource/Laureano_López_Rodó>)
+      - Lycée_Français_René-Verneau (<http://dbpedia.org/resource/Lycée_Français_René-Verneau>) --doo:affiliation--> Mission_laïque_française (<http://dbpedia.org/resource/Mission_laïque_française>)
+  '3':
+    attributes:
+      Spain: '(motto^=''(English: "Further Beyond")'')'
+      Catalonia: (area total (m2)^='32113860000.0')
+      Laureano_López_Rodó: (birth name^='Laureano López Rodó')
+    relationships:
+      - Catalan_Regional_Action (dor:Catalan_Regional_Action) --doo:headquarter--> Catalonia (dor:Catalonia)
+      - Catalan_Regional_Action (dor:Catalan_Regional_Action) --doo:headquarter--> Spain (dor:Spain)
+      - Lycée_Français_René-Verneau (<http://dbpedia.org/resource/Lycée_Français_René-Verneau>) --doo:country--> Spain (dor:Spain)
+      - Catalan_Regional_Action (dor:Catalan_Regional_Action) --doo:president--> Laureano_López_Rodó (<http://dbpedia.org/resource/Laureano_López_Rodó>)
+      - Lycée_Français_René-Verneau (<http://dbpedia.org/resource/Lycée_Français_René-Verneau>) --doo:affiliation--> Mission_laïque_française (<http://dbpedia.org/resource/Mission_laïque_française>)
+  '4':
+    attributes:
+      São_Paulo: (area total (m2)^='1521110000.0')
+    relationships:
+      - Christian_Democracy_(Brazil) (<http://dbpedia.org/resource/Christian_Democracy_(Brazil)>) --doo:headquarter--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - Christian_Democracy_(Brazil) (<http://dbpedia.org/resource/Christian_Democracy_(Brazil)>) --doo:headquarter--> Brazil (dor:Brazil)
+      - Colégio_Marista_Dom_Silvério (<http://dbpedia.org/resource/Colégio_Marista_Dom_Silvério>) --doo:country--> Brazil (dor:Brazil)
+      - Christian_Democracy_(Brazil) (<http://dbpedia.org/resource/Christian_Democracy_(Brazil)>) --doo:president--> José_Maria_Eymael (<http://dbpedia.org/resource/José_Maria_Eymael>)
+      - Colégio_Marista_Dom_Silvério (<http://dbpedia.org/resource/Colégio_Marista_Dom_Silvério>) --doo:affiliation--> Marist_Brothers (dor:Marist_Brothers)
+  '5':
+    attributes:
+      Argentina: (motto^='')
+      Gerardo_Zamora: (spouse^='http://dbpedia.org/resource/Claudia_Ledesma_Abdala')
+      Santiago_del_Estero: (area total (m2)^='2116000000.0')
+      Colegio_Nacional_de_Buenos_Aires: (city^='http://dbpedia.org/resource/Buenos_Aires')
+    relationships:
+      - Civic_Front_for_Santiago (dor:Civic_Front_for_Santiago) --doo:headquarter--> Santiago_del_Estero (dor:Santiago_del_Estero)
+      - Civic_Front_for_Santiago (dor:Civic_Front_for_Santiago) --doo:headquarter--> Argentina (dor:Argentina)
+      - Colegio_Nacional_de_Buenos_Aires (dor:Colegio_Nacional_de_Buenos_Aires) --doo:country--> Argentina (dor:Argentina)
+      - Civic_Front_for_Santiago (dor:Civic_Front_for_Santiago) --doo:president--> Gerardo_Zamora (dor:Gerardo_Zamora)
+      - Colegio_Nacional_de_Buenos_Aires (dor:Colegio_Nacional_de_Buenos_Aires) --doo:affiliation--> University_of_Buenos_Aires (dor:University_of_Buenos_Aires)
+  '6':
+    attributes:
+      Argentina: (motto^='')
+      Gerardo_Zamora: (spouse^='http://dbpedia.org/resource/Claudia_Ledesma_Abdala')
+      Santiago_del_Estero: (area total (m2)^='2116000000.0')
+      Escuela_Superior_de_Comercio_Carlos_Pellegrini: (city^='http://dbpedia.org/resource/Buenos_Aires')
+    relationships:
+      - Civic_Front_for_Santiago (dor:Civic_Front_for_Santiago) --doo:headquarter--> Santiago_del_Estero (dor:Santiago_del_Estero)
+      - Civic_Front_for_Santiago (dor:Civic_Front_for_Santiago) --doo:headquarter--> Argentina (dor:Argentina)
+      - Escuela_Superior_de_Comercio_Carlos_Pellegrini (dor:Escuela_Superior_de_Comercio_Carlos_Pellegrini) --doo:country--> Argentina (dor:Argentina)
+      - Civic_Front_for_Santiago (dor:Civic_Front_for_Santiago) --doo:president--> Gerardo_Zamora (dor:Gerardo_Zamora)
+      - Escuela_Superior_de_Comercio_Carlos_Pellegrini (dor:Escuela_Superior_de_Comercio_Carlos_Pellegrini) --doo:affiliation--> University_of_Buenos_Aires (dor:University_of_Buenos_Aires)
+  '7':
+    attributes:
+      Argentina: (motto^='')
+      Gerardo_Zamora: (spouse^='http://dbpedia.org/resource/Claudia_Ledesma_Abdala')
+      Santiago_del_Estero: (area total (m2)^='2116000000.0')
+      Rafael_Hernández_National_College: (city^='http://dbpedia.org/resource/La_Plata')
+    relationships:
+      - Civic_Front_for_Santiago (dor:Civic_Front_for_Santiago) --doo:headquarter--> Santiago_del_Estero (dor:Santiago_del_Estero)
+      - Civic_Front_for_Santiago (dor:Civic_Front_for_Santiago) --doo:headquarter--> Argentina (dor:Argentina)
+      - Rafael_Hernández_National_College (<http://dbpedia.org/resource/Rafael_Hernández_National_College>) --doo:country--> Argentina (dor:Argentina)
+      - Civic_Front_for_Santiago (dor:Civic_Front_for_Santiago) --doo:president--> Gerardo_Zamora (dor:Gerardo_Zamora)
+      - Rafael_Hernández_National_College (<http://dbpedia.org/resource/Rafael_Hernández_National_College>) --doo:affiliation--> National_University_of_La_Plata (dor:National_University_of_La_Plata)
+  '8':
+    attributes:
+      Spain: '(motto^=''(English: "Further Beyond")'')'
+      Valencia: (area total (m2)^='134650000.0')
+    relationships:
+      - Communist_Party_of_the_Valencian_Country (dor:Communist_Party_of_the_Valencian_Country) --doo:headquarter--> Valencia (dor:Valencia)
+      - Communist_Party_of_the_Valencian_Country (dor:Communist_Party_of_the_Valencian_Country) --doo:headquarter--> Spain (dor:Spain)
+      - Lycée_Français_René-Verneau (<http://dbpedia.org/resource/Lycée_Français_René-Verneau>) --doo:country--> Spain (dor:Spain)
+      - Communist_Party_of_the_Valencian_Country (dor:Communist_Party_of_the_Valencian_Country) --doo:president--> Javier_Parra (dor:Javier_Parra)
+      - Lycée_Français_René-Verneau (<http://dbpedia.org/resource/Lycée_Français_René-Verneau>) --doo:affiliation--> Mission_laïque_française (<http://dbpedia.org/resource/Mission_laïque_française>)
+  '9':
+    attributes:
+      Dili: (area total (m2)^='178620000.0')
+      East_Timor: (motto^='"Unity, Action, Progress"')
+      Francisco_Guterres: (spouse^='http://dbpedia.org/resource/Cidália_Lopes_Nobre_Mouzinho_Guterres')
+    relationships:
+      - Fretilin (dor:Fretilin) --doo:headquarter--> Dili (dor:Dili)
+      - Fretilin (dor:Fretilin) --doo:headquarter--> East_Timor (dor:East_Timor)
+      - Dili_International_School (dor:Dili_International_School) --doo:country--> East_Timor (dor:East_Timor)
+      - Fretilin (dor:Fretilin) --doo:president--> Francisco_Guterres (dor:Francisco_Guterres)
+      - Dili_International_School (dor:Dili_International_School) --doo:affiliation--> Haileybury_(Melbourne) (<http://dbpedia.org/resource/Haileybury_(Melbourne)>)
+  '10':
+    attributes:
+      Malaysia: (motto^='"Unity is Strength"')
+      Putrajaya: (area total (m2)^='49000000.0')
+      Mukhriz_Mahathir: (birth name^='Mukhriz bin Mahathir')
+      Bukit_Jalil_Sports_School: (city^='http://dbpedia.org/resource/Kuala_Lumpur')
+    relationships:
+      - Homeland_Fighters'_Party (<http://dbpedia.org/resource/Homeland_Fighters'_Party>) --doo:headquarter--> Putrajaya (dor:Putrajaya)
+      - Homeland_Fighters'_Party (<http://dbpedia.org/resource/Homeland_Fighters'_Party>) --doo:headquarter--> Malaysia (dor:Malaysia)
+      - Bukit_Jalil_Sports_School (dor:Bukit_Jalil_Sports_School) --doo:country--> Malaysia (dor:Malaysia)
+      - Homeland_Fighters'_Party (<http://dbpedia.org/resource/Homeland_Fighters'_Party>) --doo:president--> Mukhriz_Mahathir (dor:Mukhriz_Mahathir)
+      - Bukit_Jalil_Sports_School (dor:Bukit_Jalil_Sports_School) --doo:affiliation--> Ministry_of_Higher_Education_(Malaysia) (<http://dbpedia.org/resource/Ministry_of_Higher_Education_(Malaysia)>)
+attributes:
+  school: --city^ (dop:city)--> Resource
+  country: --motto^ (doo:motto)--> string
+  settlement: --url^ (dop:url)--> Resource | --area total (m2)^ (doo:areaTotal)--> double
+  office holder: --b (dop:b)--> langString | --spouse^ (doo:spouse)--> Resource | --birth name^ (dop:birthName)--> langString | --mother^ (dop:mother)--> Resource | --1a (dop:1a)--> langString | --lowest attendance^ (dop:lowestAttendance)--> int
+subgraph_id: 764
+relationships:
+  - political party --doo:headquarter--> settlement
+  - political party --doo:headquarter--> country
+  - school --doo:country--> country
+  - political party --doo:president--> office holder
+  - school --doo:affiliation--> organisation

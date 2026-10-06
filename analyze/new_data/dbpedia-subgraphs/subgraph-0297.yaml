@@ -1,0 +1,125 @@
+types:
+  horse: doo:Horse
+  saint: doo:Saint
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Canada: (width^='35.0')
+      A_Bit_O'Gold: (owner^='http://dbpedia.org/resource/Catherine_Day_Phillips')
+      Alodie-Virginie_Paradis: (beatified date^='1984-09-11')
+    relationships:
+      - A_Bit_O'Gold (<http://dbpedia.org/resource/A_Bit_O'Gold>) --dop:country--> Canada (dor:Canada)
+      - Alodie-Virginie_Paradis (dor:Alodie-Virginie_Paradis) --doo:deathPlace--> Canada (dor:Canada)
+  '2':
+    attributes:
+      Canada: (width^='35.0')
+      A_Bit_O'Gold: (owner^='http://dbpedia.org/resource/Catherine_Day_Phillips')
+      André_Bessette: (beatified date^='1982-05-23')
+    relationships:
+      - A_Bit_O'Gold (<http://dbpedia.org/resource/A_Bit_O'Gold>) --dop:country--> Canada (dor:Canada)
+      - André_Bessette (<http://dbpedia.org/resource/André_Bessette>) --doo:deathPlace--> Canada (dor:Canada)
+  '3':
+    attributes:
+      Canada: (width^='35.0')
+      A_Bit_O'Gold: (owner^='http://dbpedia.org/resource/Catherine_Day_Phillips')
+    relationships:
+      - A_Bit_O'Gold (<http://dbpedia.org/resource/A_Bit_O'Gold>) --dop:country--> Canada (dor:Canada)
+      - Catherine_Aurelia_Caouette (dor:Catherine_Aurelia_Caouette) --doo:deathPlace--> Canada (dor:Canada)
+  '4':
+    attributes:
+      A_Gleam: (owner^='Calumet Farm')
+    relationships:
+      - A_Gleam (dor:A_Gleam) --dop:country--> United_States (dor:United_States)
+      - Demetrius_Augustine_Gallitzin (dor:Demetrius_Augustine_Gallitzin) --doo:deathPlace--> United_States (dor:United_States)
+  '5':
+    attributes:
+      A_Gleam: (owner^='Calumet Farm')
+      Elizabeth_Ann_Seton: (beatified date^='1963-03-17')
+    relationships:
+      - A_Gleam (dor:A_Gleam) --dop:country--> United_States (dor:United_States)
+      - Elizabeth_Ann_Seton (dor:Elizabeth_Ann_Seton) --doo:deathPlace--> United_States (dor:United_States)
+  '6':
+    attributes:
+      A_Gleam: (owner^='Calumet Farm')
+    relationships:
+      - A_Gleam (dor:A_Gleam) --dop:country--> United_States (dor:United_States)
+      - Félix_Varela (<http://dbpedia.org/resource/Félix_Varela>) --doo:deathPlace--> United_States (dor:United_States)
+  '7':
+    attributes:
+      Ireland: (area total (km2)^='84421.0')
+      Abermaid: (owner^='Roderic More O''Ferrall')
+    relationships:
+      - Abermaid (dor:Abermaid) --dop:country--> Ireland (dor:Ireland)
+      - Ailill_the_Second (dor:Ailill_the_Second) --doo:deathPlace--> Ireland (dor:Ireland)
+  '8':
+    attributes:
+      Ireland: (area total (km2)^='84421.0')
+      Abermaid: (owner^='Roderic More O''Ferrall')
+    relationships:
+      - Abermaid (dor:Abermaid) --dop:country--> Ireland (dor:Ireland)
+      - Assicus (dor:Assicus) --doo:deathPlace--> Ireland (dor:Ireland)
+  '9':
+    attributes:
+      Abermaid: (owner^='Roderic More O''Ferrall')
+    relationships:
+      - Abermaid (dor:Abermaid) --dop:country--> Ireland (dor:Ireland)
+      - Auxilius_of_Ireland (dor:Auxilius_of_Ireland) --doo:deathPlace--> Ireland (dor:Ireland)
+  '10':
+    attributes:
+      Germany: (width^='132')
+      Acatenango_(horse): (owner^='Gestut Faehrhof')
+    relationships:
+      - Acatenango_(horse) (<http://dbpedia.org/resource/Acatenango_(horse)>) --dop:country--> Germany (dor:Germany)
+      - Adelaide,_Abbess_of_Vilich__Adelaide_of_Vilich__1 (<http://dbpedia.org/resource/Adelaide,_Abbess_of_Vilich__Adelaide_of_Vilich__1>) --doo:deathPlace--> Germany (dor:Germany)
+qa_result:
+  status: completed
+  cost_usd: 0.288087
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.016712400000000002
+        total_tokens: 2647
+        prompt_tokens: 1970
+        completion_tokens: 677
+      generate:
+        cost_usd: 0.12161260000000002
+        total_tokens: 9073
+        prompt_tokens: 3510
+        completion_tokens: 5563
+      verify_1:
+        cost_usd: 0.037457000000000004
+        total_tokens: 4546
+        prompt_tokens: 3564
+        completion_tokens: 982
+      verify_2:
+        cost_usd: 0.025407000000000002
+        total_tokens: 3945
+        prompt_tokens: 3566
+        completion_tokens: 379
+      complexity:
+        cost_usd: 0.086898
+        total_tokens: 8203
+        prompt_tokens: 4572
+        completion_tokens: 3631
+    total_tokens: 28414
+    prompt_tokens: 17182
+    total_cost_usd: 0.28808700000000004
+    completion_tokens: 11232
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  horse: --owner^ (dop:owner)--> Resource
+  saint: --beatified date^ (doo:beatifiedDate)--> date
+  Location: --group^ (dop:group)--> langString | --located in area^ (doo:locatedInArea)--> Resource | --last^ (dop:last)--> langString | --width^ (dop:width)--> int | --arc-angleA^ (dop:arcAnglea)--> int | --coroner^ (dop:coroner)--> langString | --area total (km2)^ (doop:areaTotal)--> squareKilometre | --border^ (dop:border)--> langString | --Aug high F^ (dop:augHighF)--> double | --added (dop:added)--> date
+subgraph_id: 297
+relationships:
+  - horse --dop:country--> Location
+  - saint --doo:deathPlace--> Location

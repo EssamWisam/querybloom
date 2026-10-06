@@ -1,0 +1,52 @@
+types:
+  Election: doo:Election
+  politician: doo:Politician
+  time period: doo:TimePeriod
+  office holder: doo:OfficeHolder
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abraham_Ribicoff: (birthName='Abraham Alexander Ribicoff')
+      Adriano_Espaillat: (spouse^='1979', title^='from the 31st district')
+      1974_United_States_Senate_elections: (leader^='http://dbpedia.org/resource/Hugh_Scott', alliance^='http://dbpedia.org/resource/Liberal_Party_of_New_York')
+    relationships:
+      - 1974_United_States_Senate_elections (dor:1974_United_States_Senate_elections) --dop:alliance--> Liberal_Party_of_New_York (dor:Liberal_Party_of_New_York)
+      - Adriano_Espaillat (dor:Adriano_Espaillat) --doo:party--> Liberal_Party_of_New_York (dor:Liberal_Party_of_New_York)
+      - 1974_United_States_Senate_elections (dor:1974_United_States_Senate_elections) --dop:beforeElection--> Howard_Metzenbaum (dor:Howard_Metzenbaum)
+      - 1974_United_States_Senate_elections (dor:1974_United_States_Senate_elections) --dop:beforeElection--> Abraham_Ribicoff (dor:Abraham_Ribicoff)
+  '2':
+    attributes:
+      Adriano_Espaillat: (spouse^='1979', title^='from the 31st district')
+      Adlai_Stevenson_III: (birthName='Adlai Ewing Stevenson III', class^='3')
+      1974_United_States_Senate_elections: (leader^='http://dbpedia.org/resource/Hugh_Scott', alliance^='http://dbpedia.org/resource/Liberal_Party_of_New_York')
+    relationships:
+      - 1974_United_States_Senate_elections (dor:1974_United_States_Senate_elections) --dop:alliance--> Liberal_Party_of_New_York (dor:Liberal_Party_of_New_York)
+      - Adriano_Espaillat (dor:Adriano_Espaillat) --doo:party--> Liberal_Party_of_New_York (dor:Liberal_Party_of_New_York)
+      - 1974_United_States_Senate_elections (dor:1974_United_States_Senate_elections) --dop:beforeElection--> Howard_Metzenbaum (dor:Howard_Metzenbaum)
+      - 1974_United_States_Senate_elections (dor:1974_United_States_Senate_elections) --dop:beforeElection--> Adlai_Stevenson_III (dor:Adlai_Stevenson_III)
+  '3':
+    attributes:
+      Alan_Bible: (birthName='Alan Harvey Bible', class^='3')
+      Adriano_Espaillat: (spouse^='1979', title^='from the 31st district')
+      1974_United_States_Senate_elections: (leader^='http://dbpedia.org/resource/Hugh_Scott', alliance^='http://dbpedia.org/resource/Liberal_Party_of_New_York')
+    relationships:
+      - 1974_United_States_Senate_elections (dor:1974_United_States_Senate_elections) --dop:alliance--> Liberal_Party_of_New_York (dor:Liberal_Party_of_New_York)
+      - Adriano_Espaillat (dor:Adriano_Espaillat) --doo:party--> Liberal_Party_of_New_York (dor:Liberal_Party_of_New_York)
+      - 1974_United_States_Senate_elections (dor:1974_United_States_Senate_elections) --dop:beforeElection--> Howard_Metzenbaum (dor:Howard_Metzenbaum)
+      - 1974_United_States_Senate_elections (dor:1974_United_States_Senate_elections) --dop:beforeElection--> Alan_Bible (dor:Alan_Bible)
+attributes:
+  Election: --2pp chg^ (dop:2ppChg)--> langString | --leader^ (dop:leader)--> langString | --alliance^ (dop:alliance)--> Resource | --5data^ (dop:5data)--> int
+  politician: --birthName (dop:birthName)--> langString | --class^ (dop:class)--> int
+  office holder: --spouse^ (dop:spouse)--> int | --title^ (dop:title)--> Resource
+subgraph_id: 600
+relationships:
+  - Election --dop:alliance--> political party
+  - office holder --doo:party--> political party
+  - Election --dop:beforeElection--> time period
+  - Election --dop:beforeElection--> politician

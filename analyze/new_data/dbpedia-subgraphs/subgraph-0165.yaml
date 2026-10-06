@@ -1,0 +1,109 @@
+types:
+  school: doo:School
+  athlete: doo:Athlete
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Santa_Sabina_College (dor:Santa_Sabina_College) --doo:location--> Strathfield,_New_South_Wales (<http://dbpedia.org/resource/Strathfield,_New_South_Wales>)
+      - '''Jock''_Tradd (<http://dbpedia.org/resource/''Jock''_Tradd>) --dop:birthPlace--> Strathfield,_New_South_Wales (<http://dbpedia.org/resource/Strathfield,_New_South_Wales>)'
+  '2':
+    attributes:
+      2_Tuff_Tony: (caption^='Tony in 2008')
+      Louisville,_Kentucky: (named for^='http://dbpedia.org/resource/Louis_XVI_of_France')
+    relationships:
+      - Calloway_County_High_School (dor:Calloway_County_High_School) --doo:location--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 2_Tuff_Tony (dor:2_Tuff_Tony) --dop:birthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+  '3':
+    attributes:
+      2_Tuff_Tony: (caption^='Tony in 2008')
+      Louisville,_Kentucky: (named for^='http://dbpedia.org/resource/Louis_XVI_of_France')
+    relationships:
+      - Flaget_High_School (dor:Flaget_High_School) --doo:location--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 2_Tuff_Tony (dor:2_Tuff_Tony) --dop:birthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+  '4':
+    attributes:
+      2_Tuff_Tony: (caption^='Tony in 2008')
+      Louisville,_Kentucky: (named for^='http://dbpedia.org/resource/Louis_XVI_of_France')
+    relationships:
+      - Portland_Christian_School (dor:Portland_Christian_School) --doo:location--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 2_Tuff_Tony (dor:2_Tuff_Tony) --dop:birthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+  '5':
+    attributes: {}
+    relationships:
+      - Chennai_Public_School (dor:Chennai_Public_School) --doo:location--> Chennai (dor:Chennai)
+      - A_I_Harrsha (dor:A_I_Harrsha) --dop:birthPlace--> Chennai (dor:Chennai)
+  '6':
+    attributes: {}
+    relationships:
+      - D.A.V._Boys_Senior_Secondary_School (dor:D.A.V._Boys_Senior_Secondary_School) --doo:location--> Chennai (dor:Chennai)
+      - A_I_Harrsha (dor:A_I_Harrsha) --dop:birthPlace--> Chennai (dor:Chennai)
+  '7':
+    attributes: {}
+    relationships:
+      - Gill_Adarsh_Matriculation_Higher_Secondary_School (dor:Gill_Adarsh_Matriculation_Higher_Secondary_School) --doo:location--> Chennai (dor:Chennai)
+      - A_I_Harrsha (dor:A_I_Harrsha) --dop:birthPlace--> Chennai (dor:Chennai)
+  '8':
+    attributes:
+      Kandy: (Apr low C^='20')
+    relationships:
+      - Dharmaraja_College (dor:Dharmaraja_College) --doo:location--> Kandy (dor:Kandy)
+      - A._C._M._Lafir (dor:A._C._M._Lafir) --dop:birthPlace--> Kandy (dor:Kandy)
+  '9':
+    attributes:
+      Kandy: (Apr low C^='20')
+    relationships:
+      - Good_Shepherd_Convent,_Kandy (<http://dbpedia.org/resource/Good_Shepherd_Convent,_Kandy>) --doo:location--> Kandy (dor:Kandy)
+      - A._C._M._Lafir (dor:A._C._M._Lafir) --dop:birthPlace--> Kandy (dor:Kandy)
+  '10':
+    attributes:
+      Kandy: (Apr low C^='20')
+    relationships:
+      - Hillwood_College (dor:Hillwood_College) --doo:location--> Kandy (dor:Kandy)
+      - A._C._M._Lafir (dor:A._C._M._Lafir) --dop:birthPlace--> Kandy (dor:Kandy)
+qa_result:
+  status: completed
+  cost_usd: 0.265705
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0338924
+        total_tokens: 3539
+        prompt_tokens: 2014
+        completion_tokens: 1525
+      generate:
+        cost_usd: 0.0590726
+        total_tokens: 5814
+        prompt_tokens: 3334
+        completion_tokens: 2480
+      verify_1:
+        cost_usd: 0.030207000000000005
+        total_tokens: 3993
+        prompt_tokens: 3310
+        completion_tokens: 683
+      complexity:
+        cost_usd: 0.14253300000000002
+        total_tokens: 10762
+        prompt_tokens: 4275
+        completion_tokens: 6487
+    total_tokens: 24108
+    prompt_tokens: 12933
+    total_cost_usd: 0.265705
+    completion_tokens: 11175
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  school: --opened^ (dop:opened)--> int | --alt^ (dop:alt)--> langString
+  athlete: --bot^ (dop:bot)--> langString | --before (dop:before)--> langString | --caption^ (dop:caption)--> langString
+  settlement: --display^ (dop:display)--> langString | --data^ (dop:data)--> double | --c^ (dop:c)--> langString | --aprLowF (dop:aprLowF)--> double | --Apr low C^ (dop:aprLowC)--> int | --named for^ (dop:namedFor)--> Resource
+subgraph_id: 165
+relationships:
+  - school --doo:location--> settlement
+  - athlete --dop:birthPlace--> settlement

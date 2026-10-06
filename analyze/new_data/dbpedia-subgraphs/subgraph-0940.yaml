@@ -1,0 +1,80 @@
+types:
+  Food: doo:Food
+  insect: doo:Insect
+  country: doo:Country
+  scientist: doo:Scientist
+  politician: doo:Politician
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Hong_Kong: (caption align^='center')
+    relationships:
+      - Chinese_almond_biscuit (dor:Chinese_almond_biscuit) --doo:ingredient--> Mung_bean (dor:Mung_bean)
+      - Chinese_almond_biscuit (dor:Chinese_almond_biscuit) --doo:region--> Hong_Kong (dor:Hong_Kong)
+      - Albert_Cheng_(politician) (<http://dbpedia.org/resource/Albert_Cheng_(politician)>) --doo:nationality--> Hong_Kong (dor:Hong_Kong)
+      - Chinese_almond_biscuit (dor:Chinese_almond_biscuit) --doo:region--> Guangdong (dor:Guangdong)
+      - Charles_K._Kao (dor:Charles_K._Kao) --dop:deathPlace--> Hong_Kong (dor:Hong_Kong)
+  '2':
+    attributes:
+      Hong_Kong: (caption align^='center')
+    relationships:
+      - Chinese_almond_biscuit (dor:Chinese_almond_biscuit) --doo:ingredient--> Mung_bean (dor:Mung_bean)
+      - Chinese_almond_biscuit (dor:Chinese_almond_biscuit) --doo:region--> Hong_Kong (dor:Hong_Kong)
+      - Albert_Cheng_(politician) (<http://dbpedia.org/resource/Albert_Cheng_(politician)>) --doo:nationality--> Hong_Kong (dor:Hong_Kong)
+      - Chinese_almond_biscuit (dor:Chinese_almond_biscuit) --doo:region--> Guangdong (dor:Guangdong)
+      - David_Todd_(haematologist) (<http://dbpedia.org/resource/David_Todd_(haematologist)>) --dop:deathPlace--> Hong_Kong (dor:Hong_Kong)
+  '3':
+    attributes:
+      Hong_Kong: (caption align^='center')
+    relationships:
+      - Chinese_almond_biscuit (dor:Chinese_almond_biscuit) --doo:ingredient--> Mung_bean (dor:Mung_bean)
+      - Chinese_almond_biscuit (dor:Chinese_almond_biscuit) --doo:region--> Hong_Kong (dor:Hong_Kong)
+      - Albert_Cheng_(politician) (<http://dbpedia.org/resource/Albert_Cheng_(politician)>) --doo:nationality--> Hong_Kong (dor:Hong_Kong)
+      - Chinese_almond_biscuit (dor:Chinese_almond_biscuit) --doo:region--> Guangdong (dor:Guangdong)
+      - Shiu-Ying_Hu (dor:Shiu-Ying_Hu) --dop:deathPlace--> Hong_Kong (dor:Hong_Kong)
+  '4':
+    attributes:
+      India: (capital^='http://dbpedia.org/resource/New_Delhi')
+      Darjeeling_district: (Apr record low C^='1')
+    relationships:
+      - Kinema (dor:Kinema) --doo:ingredient--> Soybean (dor:Soybean)
+      - Kinema (dor:Kinema) --doo:region--> India (dor:India)
+      - A_P_Singh (dor:A_P_Singh) --doo:nationality--> India (dor:India)
+      - Kinema (dor:Kinema) --doo:region--> Darjeeling_district (dor:Darjeeling_district)
+      - Abraham_Wald (dor:Abraham_Wald) --dop:deathPlace--> India (dor:India)
+  '5':
+    attributes:
+      India: (capital^='http://dbpedia.org/resource/New_Delhi')
+    relationships:
+      - Kinema (dor:Kinema) --doo:ingredient--> Soybean (dor:Soybean)
+      - Kinema (dor:Kinema) --doo:region--> India (dor:India)
+      - A_P_Singh (dor:A_P_Singh) --doo:nationality--> India (dor:India)
+      - Kinema (dor:Kinema) --doo:region--> Kalimpong_district (dor:Kalimpong_district)
+      - Abraham_Wald (dor:Abraham_Wald) --dop:deathPlace--> India (dor:India)
+  '6':
+    attributes:
+      India: (capital^='http://dbpedia.org/resource/New_Delhi')
+      Darjeeling_district: (Apr record low C^='1')
+    relationships:
+      - Kinema (dor:Kinema) --doo:ingredient--> Soybean (dor:Soybean)
+      - Kinema (dor:Kinema) --doo:region--> India (dor:India)
+      - A_P_Singh (dor:A_P_Singh) --doo:nationality--> India (dor:India)
+      - Kinema (dor:Kinema) --doo:region--> Darjeeling_district (dor:Darjeeling_district)
+      - Ahmad_Salahuddin (dor:Ahmad_Salahuddin) --dop:deathPlace--> India (dor:India)
+attributes:
+  country: --capital^ (doo:capital)--> Resource | --quote^ (dop:quote)--> langString | --caption align^ (dop:captionAlign)--> langString
+  politician: --1p^ (dop:1p)--> int | --original name^ (doo:originalName)--> langString | --deathDate (dop:deathDate)--> date | --2pp^ (dop:2pp)--> int | --parents^ (dop:parents)--> Resource
+  administrative region: --Apr record low C^ (dop:aprRecordLowC)--> int
+subgraph_id: 940
+relationships:
+  - Food --doo:ingredient--> insect
+  - Food --doo:region--> country
+  - politician --doo:nationality--> country
+  - Food --doo:region--> administrative region
+  - scientist --dop:deathPlace--> country

@@ -1,0 +1,104 @@
+types:
+  colour: doo:Colour
+  sports team: doo:SportsTeam
+  military unit: doo:MilitaryUnit
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Red: (source^='http://dbpedia.org/resource/X11_color_names')
+      149th_Infantry_Regiment_(United_States): (caption^='149')
+    relationships:
+      - 149th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/149th_Infantry_Regiment_(United_States)>) --doo:colour--> Red (dor:Red)
+      - CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>) --doo:colour--> Red (dor:Red)
+      - Antonis_Constantinides (dor:Antonis_Constantinides) --dop:cteam--> CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>)
+  '2':
+    attributes:
+      16th_Punjab_Regiment: (caption^='Regimental cap badge of the 16th')
+    relationships:
+      - 16th_Punjab_Regiment (dor:16th_Punjab_Regiment) --doo:colour--> White (dor:White)
+      - CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>) --doo:colour--> White (dor:White)
+      - Antonis_Constantinides (dor:Antonis_Constantinides) --dop:cteam--> CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>)
+  '3':
+    attributes:
+      Red: (source^='http://dbpedia.org/resource/X11_color_names')
+      1st_Infantry_Regiment_(Thailand): (caption^='Rajawallop insignia, the official emblem of the 1st Infantry Regiment, King''s Close Bodyguard')
+    relationships:
+      - 1st_Infantry_Regiment_(Thailand) (<http://dbpedia.org/resource/1st_Infantry_Regiment_(Thailand)>) --doo:colour--> Red (dor:Red)
+      - CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>) --doo:colour--> Red (dor:Red)
+      - Antonis_Constantinides (dor:Antonis_Constantinides) --dop:cteam--> CS_Dinamo_București (<http://dbpedia.org/resource/CS_Dinamo_București>)
+  '4':
+    attributes:
+      Blue: (source^='http://dbpedia.org/resource/HTML_color_names')
+      Dimitrios_Itoudis: (Link from a Wikipage to an external page^='http://www.bdasportsinternational.com/dimitris-itoudis/')
+      11th_Infantry_Regiment_(Thailand): (caption^='Emblem of the 11th Infantry Regiment, King''s Guard')
+    relationships:
+      - 11th_Infantry_Regiment_(Thailand) (<http://dbpedia.org/resource/11th_Infantry_Regiment_(Thailand)>) --doo:colour--> Blue (dor:Blue)
+      - Philippos_Thessaloniki_B.C. (<http://dbpedia.org/resource/Philippos_Thessaloniki_B.C.>) --doo:colour--> Blue (dor:Blue)
+      - Dimitrios_Itoudis (dor:Dimitrios_Itoudis) --dop:cteam--> Philippos_Thessaloniki_B.C. (<http://dbpedia.org/resource/Philippos_Thessaloniki_B.C.>)
+  '5':
+    attributes:
+      Dimitrios_Itoudis: (Link from a Wikipage to an external page^='http://www.bdasportsinternational.com/dimitris-itoudis/')
+      16th_Punjab_Regiment: (caption^='Regimental cap badge of the 16th')
+    relationships:
+      - 16th_Punjab_Regiment (dor:16th_Punjab_Regiment) --doo:colour--> White (dor:White)
+      - Philippos_Thessaloniki_B.C. (<http://dbpedia.org/resource/Philippos_Thessaloniki_B.C.>) --doo:colour--> White (dor:White)
+      - Dimitrios_Itoudis (dor:Dimitrios_Itoudis) --dop:cteam--> Philippos_Thessaloniki_B.C. (<http://dbpedia.org/resource/Philippos_Thessaloniki_B.C.>)
+  '6':
+    attributes:
+      Blue: (source^='http://dbpedia.org/resource/HTML_color_names')
+      Dimitrios_Itoudis: (Link from a Wikipage to an external page^='http://www.bdasportsinternational.com/dimitris-itoudis/')
+      2nd_Infantry_Division_(United_States): (caption^='2')
+    relationships:
+      - 2nd_Infantry_Division_(United_States) (<http://dbpedia.org/resource/2nd_Infantry_Division_(United_States)>) --doo:colour--> Blue (dor:Blue)
+      - Philippos_Thessaloniki_B.C. (<http://dbpedia.org/resource/Philippos_Thessaloniki_B.C.>) --doo:colour--> Blue (dor:Blue)
+      - Dimitrios_Itoudis (dor:Dimitrios_Itoudis) --dop:cteam--> Philippos_Thessaloniki_B.C. (<http://dbpedia.org/resource/Philippos_Thessaloniki_B.C.>)
+  '7':
+    attributes:
+      Yellow: (source^='https://web.archive.org/web/20120626160106/http://www.tintbook.com/ CMYK')
+      Ilias_Papatheodorou: (Link from a Wikipage to an external page^='http://basketball.eurobasket.com/coach/Ilias_Papatheodorou/AE-Nea-Kifisia-Dimoulas-Athens/26224')
+    relationships:
+      - 11th_Mississippi_Cavalry_Regiment (dor:11th_Mississippi_Cavalry_Regiment) --doo:colour--> Yellow (dor:Yellow)
+      - Athinaikos_A.C. (<http://dbpedia.org/resource/Athinaikos_A.C.>) --doo:colour--> Yellow (dor:Yellow)
+      - Ilias_Papatheodorou (dor:Ilias_Papatheodorou) --dop:cteam--> Athinaikos_A.C. (<http://dbpedia.org/resource/Athinaikos_A.C.>)
+  '8':
+    attributes:
+      Red: (source^='http://dbpedia.org/resource/X11_color_names')
+      Ilias_Papatheodorou: (Link from a Wikipage to an external page^='http://basketball.eurobasket.com/coach/Ilias_Papatheodorou/AE-Nea-Kifisia-Dimoulas-Athens/26224')
+      149th_Infantry_Regiment_(United_States): (caption^='149')
+    relationships:
+      - 149th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/149th_Infantry_Regiment_(United_States)>) --doo:colour--> Red (dor:Red)
+      - Athinaikos_A.C. (<http://dbpedia.org/resource/Athinaikos_A.C.>) --doo:colour--> Red (dor:Red)
+      - Ilias_Papatheodorou (dor:Ilias_Papatheodorou) --dop:cteam--> Athinaikos_A.C. (<http://dbpedia.org/resource/Athinaikos_A.C.>)
+  '9':
+    attributes:
+      Yellow: (source^='https://web.archive.org/web/20120626160106/http://www.tintbook.com/ CMYK')
+      Ilias_Papatheodorou: (Link from a Wikipage to an external page^='http://basketball.eurobasket.com/coach/Ilias_Papatheodorou/AE-Nea-Kifisia-Dimoulas-Athens/26224')
+      1st_Arkansas_Cavalry_Regiment_(Dobbin's): (caption^='Regimental Color of Dobbins'' Arkansas Cavalry')
+    relationships:
+      - 1st_Arkansas_Cavalry_Regiment_(Dobbin's) (<http://dbpedia.org/resource/1st_Arkansas_Cavalry_Regiment_(Dobbin's)>) --doo:colour--> Yellow (dor:Yellow)
+      - Athinaikos_A.C. (<http://dbpedia.org/resource/Athinaikos_A.C.>) --doo:colour--> Yellow (dor:Yellow)
+      - Ilias_Papatheodorou (dor:Ilias_Papatheodorou) --dop:cteam--> Athinaikos_A.C. (<http://dbpedia.org/resource/Athinaikos_A.C.>)
+  '10':
+    attributes:
+      Gold_(color): (source^='Crayola/Maerz and Paul')
+      Johnny_Neumann: (Link from a Wikipage to an external page^='http://web.legabasket.it/player/%3Fid=NEU-JOH', active years start year^='1971', death date^='2019-04-23', weight (g)^='90720.0', death date^='2019-04-23', active years end year^='1982', college^='http://dbpedia.org/resource/Ole_Miss_Rebels_men''s_basketball')
+      149th_Infantry_Regiment_(United_States): (caption^='149')
+    relationships:
+      - 149th_Infantry_Regiment_(United_States) (<http://dbpedia.org/resource/149th_Infantry_Regiment_(United_States)>) --doo:colour--> Gold_(color) (<http://dbpedia.org/resource/Gold_(color)>)
+      - Louisville_Shooters (dor:Louisville_Shooters) --doo:colour--> Gold_(color) (<http://dbpedia.org/resource/Gold_(color)>)
+      - Johnny_Neumann (dor:Johnny_Neumann) --dop:cteam--> Louisville_Shooters (dor:Louisville_Shooters)
+attributes:
+  colour: --source^ (dop:source)--> Resource
+  military unit: --width^ (dop:width)--> int | --caption^ (dop:caption)--> langString
+  basketball player: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --active years start year^ (doo:activeYearsStartYear)--> gYear | --death date^ (dop:deathDate)--> date | --weight (g)^ (doo:weight)--> double | --death date^ (doo:deathDate)--> date | --active years end year^ (doo:activeYearsEndYear)--> gYear | --college^ (doo:college)--> Resource
+subgraph_id: 727
+relationships:
+  - military unit --doo:colour--> colour
+  - sports team --doo:colour--> colour
+  - basketball player --dop:cteam--> sports team

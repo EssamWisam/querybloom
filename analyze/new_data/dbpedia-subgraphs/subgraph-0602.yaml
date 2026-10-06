@@ -1,0 +1,106 @@
+types:
+  writer: doo:Writer
+  legislature: doo:Legislature
+  office holder: doo:OfficeHolder
+  political party: doo:PoliticalParty
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Anwar_Ibrahim: (spouse^='')
+      Ismail_Johari: (death date^='2017-07-16', death date^='2017-07-16')
+    relationships:
+      - People's_Justice_Party_(Malaysia) (<http://dbpedia.org/resource/People's_Justice_Party_(Malaysia)>) --dop:founder--> Anwar_Ibrahim (dor:Anwar_Ibrahim)
+      - Ampang_Jaya_Municipal_Council (dor:Ampang_Jaya_Municipal_Council) --doo:politicalPartyInLegislature--> People's_Justice_Party_(Malaysia) (<http://dbpedia.org/resource/People's_Justice_Party_(Malaysia)>)
+      - People's_Justice_Party_(Malaysia) (<http://dbpedia.org/resource/People's_Justice_Party_(Malaysia)>) --doo:headquarter--> Selangor (dor:Selangor)
+      - Ismail_Johari (dor:Ismail_Johari) --doo:birthPlace--> Selangor (dor:Selangor)
+  '2':
+    attributes:
+      Ismail_Johari: (death date^='2017-07-16', death date^='2017-07-16')
+      Wan_Azizah_Wan_Ismail: (spouse^='', before^='Anwar Ibrahim')
+    relationships:
+      - People's_Justice_Party_(Malaysia) (<http://dbpedia.org/resource/People's_Justice_Party_(Malaysia)>) --dop:founder--> Wan_Azizah_Wan_Ismail (dor:Wan_Azizah_Wan_Ismail)
+      - Ampang_Jaya_Municipal_Council (dor:Ampang_Jaya_Municipal_Council) --doo:politicalPartyInLegislature--> People's_Justice_Party_(Malaysia) (<http://dbpedia.org/resource/People's_Justice_Party_(Malaysia)>)
+      - People's_Justice_Party_(Malaysia) (<http://dbpedia.org/resource/People's_Justice_Party_(Malaysia)>) --doo:headquarter--> Selangor (dor:Selangor)
+      - Ismail_Johari (dor:Ismail_Johari) --doo:birthPlace--> Selangor (dor:Selangor)
+  '3':
+    attributes:
+      Anwar_Ibrahim: (spouse^='')
+      Raja_Ali_Haji: (death date^='1873')
+    relationships:
+      - People's_Justice_Party_(Malaysia) (<http://dbpedia.org/resource/People's_Justice_Party_(Malaysia)>) --dop:founder--> Anwar_Ibrahim (dor:Anwar_Ibrahim)
+      - Ampang_Jaya_Municipal_Council (dor:Ampang_Jaya_Municipal_Council) --doo:politicalPartyInLegislature--> People's_Justice_Party_(Malaysia) (<http://dbpedia.org/resource/People's_Justice_Party_(Malaysia)>)
+      - People's_Justice_Party_(Malaysia) (<http://dbpedia.org/resource/People's_Justice_Party_(Malaysia)>) --doo:headquarter--> Selangor (dor:Selangor)
+      - Raja_Ali_Haji (dor:Raja_Ali_Haji) --doo:birthPlace--> Selangor (dor:Selangor)
+  '4':
+    attributes:
+      Emmanuelle_Arsan: (death date^='2005-06-12', death date^='2005-06-12')
+      Khuang_Aphaiwong: (spouse^='http://dbpedia.org/resource/Lekha_Aphaiwong', before^='http://dbpedia.org/resource/Plaek_Phibunsongkhram')
+    relationships:
+      - Democrat_Party_(Thailand) (<http://dbpedia.org/resource/Democrat_Party_(Thailand)>) --dop:founder--> Khuang_Aphaiwong (dor:Khuang_Aphaiwong)
+      - Bangkok_Metropolitan_Council (dor:Bangkok_Metropolitan_Council) --doo:politicalPartyInLegislature--> Democrat_Party_(Thailand) (<http://dbpedia.org/resource/Democrat_Party_(Thailand)>)
+      - Democrat_Party_(Thailand) (<http://dbpedia.org/resource/Democrat_Party_(Thailand)>) --doo:headquarter--> Bangkok (dor:Bangkok)
+      - Emmanuelle_Arsan (dor:Emmanuelle_Arsan) --doo:birthPlace--> Bangkok (dor:Bangkok)
+  '5':
+    attributes:
+      Kulap_Saipradit: (death date^='1974-06-16', death date^='1974-06-16')
+      Khuang_Aphaiwong: (spouse^='http://dbpedia.org/resource/Lekha_Aphaiwong', before^='http://dbpedia.org/resource/Plaek_Phibunsongkhram')
+    relationships:
+      - Democrat_Party_(Thailand) (<http://dbpedia.org/resource/Democrat_Party_(Thailand)>) --dop:founder--> Khuang_Aphaiwong (dor:Khuang_Aphaiwong)
+      - Bangkok_Metropolitan_Council (dor:Bangkok_Metropolitan_Council) --doo:politicalPartyInLegislature--> Democrat_Party_(Thailand) (<http://dbpedia.org/resource/Democrat_Party_(Thailand)>)
+      - Democrat_Party_(Thailand) (<http://dbpedia.org/resource/Democrat_Party_(Thailand)>) --doo:headquarter--> Bangkok (dor:Bangkok)
+      - Kulap_Saipradit (dor:Kulap_Saipradit) --doo:birthPlace--> Bangkok (dor:Bangkok)
+  '6':
+    attributes:
+      Khuang_Aphaiwong: (spouse^='http://dbpedia.org/resource/Lekha_Aphaiwong', before^='http://dbpedia.org/resource/Plaek_Phibunsongkhram')
+    relationships:
+      - Democrat_Party_(Thailand) (<http://dbpedia.org/resource/Democrat_Party_(Thailand)>) --dop:founder--> Khuang_Aphaiwong (dor:Khuang_Aphaiwong)
+      - Bangkok_Metropolitan_Council (dor:Bangkok_Metropolitan_Council) --doo:politicalPartyInLegislature--> Democrat_Party_(Thailand) (<http://dbpedia.org/resource/Democrat_Party_(Thailand)>)
+      - Democrat_Party_(Thailand) (<http://dbpedia.org/resource/Democrat_Party_(Thailand)>) --doo:headquarter--> Bangkok (dor:Bangkok)
+      - Pieretta_Dawn (dor:Pieretta_Dawn) --doo:birthPlace--> Bangkok (dor:Bangkok)
+  '7':
+    attributes:
+      Fuad_Masum: (spouse^='1968', b^='no')
+      Haji_Qadir_Koyi: (death date^='1897')
+      Kurdistan_Region_Parliament: (leader^='http://dbpedia.org/resource/Rewaz_Fayeq')
+    relationships:
+      - Patriotic_Union_of_Kurdistan (dor:Patriotic_Union_of_Kurdistan) --dop:founder--> Fuad_Masum (dor:Fuad_Masum)
+      - Kurdistan_Region_Parliament (dor:Kurdistan_Region_Parliament) --doo:politicalPartyInLegislature--> Patriotic_Union_of_Kurdistan (dor:Patriotic_Union_of_Kurdistan)
+      - Patriotic_Union_of_Kurdistan (dor:Patriotic_Union_of_Kurdistan) --doo:headquarter--> Kurdistan_Region (dor:Kurdistan_Region)
+      - Haji_Qadir_Koyi (dor:Haji_Qadir_Koyi) --doo:birthPlace--> Kurdistan_Region (dor:Kurdistan_Region)
+  '8':
+    attributes:
+      Jalal_Talabani: (spouse^='1970')
+      Haji_Qadir_Koyi: (death date^='1897')
+      Kurdistan_Region_Parliament: (leader^='http://dbpedia.org/resource/Rewaz_Fayeq')
+    relationships:
+      - Patriotic_Union_of_Kurdistan (dor:Patriotic_Union_of_Kurdistan) --dop:founder--> Jalal_Talabani (dor:Jalal_Talabani)
+      - Kurdistan_Region_Parliament (dor:Kurdistan_Region_Parliament) --doo:politicalPartyInLegislature--> Patriotic_Union_of_Kurdistan (dor:Patriotic_Union_of_Kurdistan)
+      - Patriotic_Union_of_Kurdistan (dor:Patriotic_Union_of_Kurdistan) --doo:headquarter--> Kurdistan_Region (dor:Kurdistan_Region)
+      - Haji_Qadir_Koyi (dor:Haji_Qadir_Koyi) --doo:birthPlace--> Kurdistan_Region (dor:Kurdistan_Region)
+  '9':
+    attributes:
+      Fuad_Masum: (spouse^='1968', b^='no')
+      Sherko_Bekas: (death date^='2013-08-04', death date^='2013-08-04')
+      Kurdistan_Region_Parliament: (leader^='http://dbpedia.org/resource/Rewaz_Fayeq')
+    relationships:
+      - Patriotic_Union_of_Kurdistan (dor:Patriotic_Union_of_Kurdistan) --dop:founder--> Fuad_Masum (dor:Fuad_Masum)
+      - Kurdistan_Region_Parliament (dor:Kurdistan_Region_Parliament) --doo:politicalPartyInLegislature--> Patriotic_Union_of_Kurdistan (dor:Patriotic_Union_of_Kurdistan)
+      - Patriotic_Union_of_Kurdistan (dor:Patriotic_Union_of_Kurdistan) --doo:headquarter--> Kurdistan_Region (dor:Kurdistan_Region)
+      - Sherko_Bekas (dor:Sherko_Bekas) --doo:birthPlace--> Kurdistan_Region (dor:Kurdistan_Region)
+attributes:
+  writer: --1p^ (dop:1p)--> int | --float^ (dop:float)--> langString | --death date^ (doo:deathDate)--> date | --death date^ (dop:deathDate)--> date
+  legislature: --leader^ (doo:leader)--> Resource
+  office holder: --issue^ (dop:issue)--> Resource | --spouse^ (dop:spouse)--> langString | --before^ (dop:before)--> langString | --b^ (dop:b)--> langString
+  administrative region: --abolished^ (dop:abolished)--> int
+subgraph_id: 602
+relationships:
+  - political party --dop:founder--> office holder
+  - legislature --doo:politicalPartyInLegislature--> political party
+  - political party --doo:headquarter--> administrative region
+  - writer --doo:birthPlace--> administrative region

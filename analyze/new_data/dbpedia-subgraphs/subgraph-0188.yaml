@@ -1,0 +1,162 @@
+types:
+  road: doo:Road
+  person: doo:Person
+  school: doo:School
+  city district: doo:CityDistrict
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      A._Joseph_Valicenti: (birth place^='http://dbpedia.org/resource/Braddock,_Pennsylvania')
+      Bedford,_Pennsylvania: (area total km^='2.88')
+      Bedford_High_School_(Pennsylvania): (city^='http://dbpedia.org/resource/Bedford,_Pennsylvania')
+    relationships:
+      - Bedford,_Pennsylvania (<http://dbpedia.org/resource/Bedford,_Pennsylvania>) --doo:subdivision--> Pennsylvania (dor:Pennsylvania)
+      - Pennsylvania_Route_31 (dor:Pennsylvania_Route_31) --doo:routeEnd--> Bedford,_Pennsylvania (<http://dbpedia.org/resource/Bedford,_Pennsylvania>)
+      - A._Joseph_Valicenti (dor:A._Joseph_Valicenti) --dop:deathPlace--> Pennsylvania (dor:Pennsylvania)
+      - Bedford_High_School_(Pennsylvania) (<http://dbpedia.org/resource/Bedford_High_School_(Pennsylvania)>) --doo:city--> Bedford,_Pennsylvania (<http://dbpedia.org/resource/Bedford,_Pennsylvania>)
+  '2':
+    attributes:
+      A._Joseph_Valicenti: (birth place^='http://dbpedia.org/resource/Braddock,_Pennsylvania')
+      Bedford,_Pennsylvania: (area total km^='2.88')
+      Bedford_High_School_(Pennsylvania): (city^='http://dbpedia.org/resource/Bedford,_Pennsylvania')
+    relationships:
+      - Bedford,_Pennsylvania (<http://dbpedia.org/resource/Bedford,_Pennsylvania>) --doo:subdivision--> Pennsylvania (dor:Pennsylvania)
+      - Pennsylvania_Route_326 (dor:Pennsylvania_Route_326) --doo:routeEnd--> Bedford,_Pennsylvania (<http://dbpedia.org/resource/Bedford,_Pennsylvania>)
+      - A._Joseph_Valicenti (dor:A._Joseph_Valicenti) --dop:deathPlace--> Pennsylvania (dor:Pennsylvania)
+      - Bedford_High_School_(Pennsylvania) (<http://dbpedia.org/resource/Bedford_High_School_(Pennsylvania)>) --doo:city--> Bedford,_Pennsylvania (<http://dbpedia.org/resource/Bedford,_Pennsylvania>)
+  '3':
+    attributes:
+      Abner_Lacock: (birth place^='http://dbpedia.org/resource/Alexandria,_Virginia')
+      Bedford,_Pennsylvania: (area total km^='2.88')
+      Bedford_High_School_(Pennsylvania): (city^='http://dbpedia.org/resource/Bedford,_Pennsylvania')
+    relationships:
+      - Bedford,_Pennsylvania (<http://dbpedia.org/resource/Bedford,_Pennsylvania>) --doo:subdivision--> Pennsylvania (dor:Pennsylvania)
+      - Pennsylvania_Route_31 (dor:Pennsylvania_Route_31) --doo:routeEnd--> Bedford,_Pennsylvania (<http://dbpedia.org/resource/Bedford,_Pennsylvania>)
+      - Abner_Lacock (dor:Abner_Lacock) --dop:deathPlace--> Pennsylvania (dor:Pennsylvania)
+      - Bedford_High_School_(Pennsylvania) (<http://dbpedia.org/resource/Bedford_High_School_(Pennsylvania)>) --doo:city--> Bedford,_Pennsylvania (<http://dbpedia.org/resource/Bedford,_Pennsylvania>)
+  '4':
+    attributes:
+      Camp_Hill,_Pennsylvania: (area total km^='5.5')
+      Cedar_Cliff_High_School: (city^='http://dbpedia.org/resource/Camp_Hill,_Pennsylvania')
+    relationships:
+      - Camp_Hill,_Pennsylvania (<http://dbpedia.org/resource/Camp_Hill,_Pennsylvania>) --doo:subdivision--> Cumberland_County,_Pennsylvania (<http://dbpedia.org/resource/Cumberland_County,_Pennsylvania>)
+      - Pennsylvania_Route_641 (dor:Pennsylvania_Route_641) --doo:routeEnd--> Camp_Hill,_Pennsylvania (<http://dbpedia.org/resource/Camp_Hill,_Pennsylvania>)
+      - Alec_Devon_Kreider (dor:Alec_Devon_Kreider) --dop:deathPlace--> Cumberland_County,_Pennsylvania (<http://dbpedia.org/resource/Cumberland_County,_Pennsylvania>)
+      - Cedar_Cliff_High_School (dor:Cedar_Cliff_High_School) --doo:city--> Camp_Hill,_Pennsylvania (<http://dbpedia.org/resource/Camp_Hill,_Pennsylvania>)
+  '5':
+    attributes:
+      Camp_Hill,_Pennsylvania: (area total km^='5.5')
+      Trinity_High_School_(Camp_Hill,_Pennsylvania): (city^='http://dbpedia.org/resource/Camp_Hill,_Pennsylvania')
+    relationships:
+      - Camp_Hill,_Pennsylvania (<http://dbpedia.org/resource/Camp_Hill,_Pennsylvania>) --doo:subdivision--> Cumberland_County,_Pennsylvania (<http://dbpedia.org/resource/Cumberland_County,_Pennsylvania>)
+      - Pennsylvania_Route_641 (dor:Pennsylvania_Route_641) --doo:routeEnd--> Camp_Hill,_Pennsylvania (<http://dbpedia.org/resource/Camp_Hill,_Pennsylvania>)
+      - Alec_Devon_Kreider (dor:Alec_Devon_Kreider) --dop:deathPlace--> Cumberland_County,_Pennsylvania (<http://dbpedia.org/resource/Cumberland_County,_Pennsylvania>)
+      - Trinity_High_School_(Camp_Hill,_Pennsylvania) (<http://dbpedia.org/resource/Trinity_High_School_(Camp_Hill,_Pennsylvania)>) --doo:city--> Camp_Hill,_Pennsylvania (<http://dbpedia.org/resource/Camp_Hill,_Pennsylvania>)
+  '6':
+    attributes:
+      Michael_Needham: (birth place^='http://dbpedia.org/resource/Scranton,_Pennsylvania')
+      Clarks_Summit,_Pennsylvania: (area total km^='4.11')
+      Abington_Heights_High_School: (city^='Clarks Summit')
+    relationships:
+      - Clarks_Summit,_Pennsylvania (<http://dbpedia.org/resource/Clarks_Summit,_Pennsylvania>) --doo:subdivision--> Lackawanna_County,_Pennsylvania (<http://dbpedia.org/resource/Lackawanna_County,_Pennsylvania>)
+      - Interstate_476 (dor:Interstate_476) --doo:routeEnd--> Clarks_Summit,_Pennsylvania (<http://dbpedia.org/resource/Clarks_Summit,_Pennsylvania>)
+      - Michael_Needham (dor:Michael_Needham) --dop:deathPlace--> Lackawanna_County,_Pennsylvania (<http://dbpedia.org/resource/Lackawanna_County,_Pennsylvania>)
+      - Abington_Heights_High_School (dor:Abington_Heights_High_School) --doo:city--> Clarks_Summit,_Pennsylvania (<http://dbpedia.org/resource/Clarks_Summit,_Pennsylvania>)
+  '7':
+    attributes:
+      Michael_Needham: (birth place^='http://dbpedia.org/resource/Scranton,_Pennsylvania')
+      Clarks_Summit,_Pennsylvania: (area total km^='4.11')
+      Scranton_School_for_Deaf_and_Hard-of-Hearing_Children: (city^='http://dbpedia.org/resource/Clarks_Summit,_Pennsylvania')
+    relationships:
+      - Clarks_Summit,_Pennsylvania (<http://dbpedia.org/resource/Clarks_Summit,_Pennsylvania>) --doo:subdivision--> Lackawanna_County,_Pennsylvania (<http://dbpedia.org/resource/Lackawanna_County,_Pennsylvania>)
+      - Interstate_476 (dor:Interstate_476) --doo:routeEnd--> Clarks_Summit,_Pennsylvania (<http://dbpedia.org/resource/Clarks_Summit,_Pennsylvania>)
+      - Michael_Needham (dor:Michael_Needham) --dop:deathPlace--> Lackawanna_County,_Pennsylvania (<http://dbpedia.org/resource/Lackawanna_County,_Pennsylvania>)
+      - Scranton_School_for_Deaf_and_Hard-of-Hearing_Children (dor:Scranton_School_for_Deaf_and_Hard-of-Hearing_Children) --doo:city--> Clarks_Summit,_Pennsylvania (<http://dbpedia.org/resource/Clarks_Summit,_Pennsylvania>)
+  '8':
+    attributes:
+      Chester_H._Gross: (birth place^='http://dbpedia.org/resource/East_Manchester_Township,_York_County,_Pennsylvania')
+      Dallastown,_Pennsylvania: (area total km^='2.03')
+      York_County,_Pennsylvania: (differentFrom='http://dbpedia.org/resource/Pennsylvania')
+      Dallastown_Area_High_School: (city^='http://dbpedia.org/resource/Dallastown,_Pennsylvania')
+    relationships:
+      - Dallastown,_Pennsylvania (<http://dbpedia.org/resource/Dallastown,_Pennsylvania>) --doo:subdivision--> York_County,_Pennsylvania (<http://dbpedia.org/resource/York_County,_Pennsylvania>)
+      - Pennsylvania_Route_214 (dor:Pennsylvania_Route_214) --doo:routeEnd--> Dallastown,_Pennsylvania (<http://dbpedia.org/resource/Dallastown,_Pennsylvania>)
+      - Chester_H._Gross (dor:Chester_H._Gross) --dop:deathPlace--> York_County,_Pennsylvania (<http://dbpedia.org/resource/York_County,_Pennsylvania>)
+      - Dallastown_Area_High_School (dor:Dallastown_Area_High_School) --doo:city--> Dallastown,_Pennsylvania (<http://dbpedia.org/resource/Dallastown,_Pennsylvania>)
+  '9':
+    attributes:
+      Evelyn_Hoey: (birth place^='http://dbpedia.org/resource/Minneapolis,_Minnesota')
+      Downingtown,_Pennsylvania: (area total km^='5.76', Apr high F^='61')
+      Bishop_Shanahan_High_School: (city^='http://dbpedia.org/resource/Downingtown,_Pennsylvania')
+      Chester_County,_Pennsylvania: (differentFrom='http://dbpedia.org/resource/Chester')
+    relationships:
+      - Downingtown,_Pennsylvania (<http://dbpedia.org/resource/Downingtown,_Pennsylvania>) --doo:subdivision--> Chester_County,_Pennsylvania (<http://dbpedia.org/resource/Chester_County,_Pennsylvania>)
+      - Pennsylvania_Route_282 (dor:Pennsylvania_Route_282) --doo:routeEnd--> Downingtown,_Pennsylvania (<http://dbpedia.org/resource/Downingtown,_Pennsylvania>)
+      - Evelyn_Hoey (dor:Evelyn_Hoey) --dop:deathPlace--> Chester_County,_Pennsylvania (<http://dbpedia.org/resource/Chester_County,_Pennsylvania>)
+      - Bishop_Shanahan_High_School (dor:Bishop_Shanahan_High_School) --doo:city--> Downingtown,_Pennsylvania (<http://dbpedia.org/resource/Downingtown,_Pennsylvania>)
+  '10':
+    attributes:
+      Kay_Lahusen: (birth place^='Cincinnati, Ohio, U.S.')
+      Downingtown,_Pennsylvania: (area total km^='5.76', Apr high F^='61')
+      Bishop_Shanahan_High_School: (city^='http://dbpedia.org/resource/Downingtown,_Pennsylvania')
+      Chester_County,_Pennsylvania: (differentFrom='http://dbpedia.org/resource/Chester')
+    relationships:
+      - Downingtown,_Pennsylvania (<http://dbpedia.org/resource/Downingtown,_Pennsylvania>) --doo:subdivision--> Chester_County,_Pennsylvania (<http://dbpedia.org/resource/Chester_County,_Pennsylvania>)
+      - Pennsylvania_Route_282 (dor:Pennsylvania_Route_282) --doo:routeEnd--> Downingtown,_Pennsylvania (<http://dbpedia.org/resource/Downingtown,_Pennsylvania>)
+      - Kay_Lahusen (dor:Kay_Lahusen) --dop:deathPlace--> Chester_County,_Pennsylvania (<http://dbpedia.org/resource/Chester_County,_Pennsylvania>)
+      - Bishop_Shanahan_High_School (dor:Bishop_Shanahan_High_School) --doo:city--> Downingtown,_Pennsylvania (<http://dbpedia.org/resource/Downingtown,_Pennsylvania>)
+qa_result:
+  status: completed
+  cost_usd: 0.508277
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.08807740000000001
+        total_tokens: 6639
+        prompt_tokens: 2535
+        completion_tokens: 4104
+      generate:
+        cost_usd: 0.12448760000000002
+        total_tokens: 10611
+        prompt_tokens: 5369
+        completion_tokens: 5242
+      verify_1:
+        cost_usd: 0.06601200000000002
+        total_tokens: 7884
+        prompt_tokens: 6111
+        completion_tokens: 1773
+      verify_2:
+        cost_usd: 0.055297000000000006
+        total_tokens: 7367
+        prompt_tokens: 6136
+        completion_tokens: 1231
+      complexity:
+        cost_usd: 0.17440300000000003
+        total_tokens: 14217
+        prompt_tokens: 6757
+        completion_tokens: 7460
+    total_tokens: 46718
+    prompt_tokens: 26908
+    total_cost_usd: 0.5082770000000001
+    completion_tokens: 19810
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --d^ (dop:d)--> langString | --birth place^ (dop:birthPlace)--> Resource
+  school: --bot^ (dop:bot)--> langString | --city^ (dop:city)--> langString
+  city district: --motto^ (doo:motto)--> string | --named for^ (dop:namedFor)--> langString | --area total km^ (dop:areaTotalKm)--> double | --Apr high F^ (dop:aprHighF)--> double
+  administrative region: --image width^ (dop:imageWidth)--> int | --area^ (dop:area)--> int | --differentFrom (wwoo:differentFrom)--> Resource | --Apr record low C^ (dop:aprRecordLowC)--> int
+subgraph_id: 188
+relationships:
+  - city district --doo:subdivision--> administrative region
+  - road --doo:routeEnd--> city district
+  - person --dop:deathPlace--> administrative region
+  - school --doo:city--> city district

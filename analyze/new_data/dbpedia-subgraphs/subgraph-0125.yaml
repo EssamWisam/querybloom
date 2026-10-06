@@ -1,0 +1,99 @@
+types:
+  city: doo:City
+  artist: doo:Artist
+  school: doo:School
+  country: doo:Country
+  bus company: doo:BusCompany
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Pasadena_Transit (dor:Pasadena_Transit) --doo:headquarter--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+      - A._B._Frost (dor:A._B._Frost) --dop:deathPlace--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+      - Mayfield_Senior_School (dor:Mayfield_Senior_School) --dop:city--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+      - Mayfield_Senior_School (dor:Mayfield_Senior_School) --doo:religion--> Roman_Catholic_Church (dor:Roman_Catholic_Church)
+  '2':
+    attributes:
+      Catholic_Church: (alt^='Saint Peter''s Basilica')
+    relationships:
+      - MTA_Regional_Bus_Operations (dor:MTA_Regional_Bus_Operations) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - A._E._Hayward (dor:A._E._Hayward) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - Convent_of_the_Sacred_Heart_(New_York_City) (<http://dbpedia.org/resource/Convent_of_the_Sacred_Heart_(New_York_City)>) --dop:city--> New_York_City (dor:New_York_City)
+      - Convent_of_the_Sacred_Heart_(New_York_City) (<http://dbpedia.org/resource/Convent_of_the_Sacred_Heart_(New_York_City)>) --doo:religion--> Catholic_Church (dor:Catholic_Church)
+  '3':
+    attributes: {}
+    relationships:
+      - MTA_Regional_Bus_Operations (dor:MTA_Regional_Bus_Operations) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - A._E._Hayward (dor:A._E._Hayward) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - De_La_Salle_Institute_(Manhattan) (<http://dbpedia.org/resource/De_La_Salle_Institute_(Manhattan)>) --dop:city--> New_York_City (dor:New_York_City)
+      - De_La_Salle_Institute_(Manhattan) (<http://dbpedia.org/resource/De_La_Salle_Institute_(Manhattan)>) --doo:religion--> Roman_Catholic_Church (dor:Roman_Catholic_Church)
+  '4':
+    attributes:
+      Catholic_Church: (alt^='Saint Peter''s Basilica')
+    relationships:
+      - MTA_Regional_Bus_Operations (dor:MTA_Regional_Bus_Operations) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - A._E._Hayward (dor:A._E._Hayward) --dop:deathPlace--> New_York_City (dor:New_York_City)
+      - Loyola_School_(New_York_City) (<http://dbpedia.org/resource/Loyola_School_(New_York_City)>) --dop:city--> New_York_City (dor:New_York_City)
+      - Loyola_School_(New_York_City) (<http://dbpedia.org/resource/Loyola_School_(New_York_City)>) --doo:religion--> Catholic_Church (dor:Catholic_Church)
+  '5':
+    attributes: {}
+    relationships:
+      - Pasadena_Transit (dor:Pasadena_Transit) --doo:headquarter--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+      - Adelaide_Hanscom_Leeson (dor:Adelaide_Hanscom_Leeson) --dop:deathPlace--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+      - Mayfield_Senior_School (dor:Mayfield_Senior_School) --dop:city--> Pasadena,_California (<http://dbpedia.org/resource/Pasadena,_California>)
+      - Mayfield_Senior_School (dor:Mayfield_Senior_School) --doo:religion--> Roman_Catholic_Church (dor:Roman_Catholic_Church)
+  '6':
+    attributes:
+      Catholic_Church: (alt^='Saint Peter''s Basilica')
+    relationships:
+      - Chariot_(company) (<http://dbpedia.org/resource/Chariot_(company)>) --doo:headquarter--> San_Francisco (dor:San_Francisco)
+      - Adelia_Sarah_Gates (dor:Adelia_Sarah_Gates) --dop:deathPlace--> San_Francisco (dor:San_Francisco)
+      - Immaculate_Conception_Academy_(California) (<http://dbpedia.org/resource/Immaculate_Conception_Academy_(California)>) --dop:city--> San_Francisco (dor:San_Francisco)
+      - Immaculate_Conception_Academy_(California) (<http://dbpedia.org/resource/Immaculate_Conception_Academy_(California)>) --doo:religion--> Catholic_Church (dor:Catholic_Church)
+  '7':
+    attributes: {}
+    relationships:
+      - VIA_Metropolitan_Transit (dor:VIA_Metropolitan_Transit) --doo:headquarter--> San_Antonio (dor:San_Antonio)
+      - Adolph_Hofner (dor:Adolph_Hofner) --dop:deathPlace--> San_Antonio (dor:San_Antonio)
+      - Lutheran_High_School_of_San_Antonio (dor:Lutheran_High_School_of_San_Antonio) --dop:city--> San_Antonio (dor:San_Antonio)
+      - Lutheran_High_School_of_San_Antonio (dor:Lutheran_High_School_of_San_Antonio) --doo:religion--> Lutheranism (dor:Lutheranism)
+  '8':
+    attributes:
+      Hinduism: (alt^='Durga')
+    relationships:
+      - First_Student_UK (dor:First_Student_UK) --doo:headquarter--> London (dor:London)
+      - Albert_Angus_Turbayne (dor:Albert_Angus_Turbayne) --dop:deathPlace--> London (dor:London)
+      - Avanti_House_Secondary_School (dor:Avanti_House_Secondary_School) --dop:city--> London (dor:London)
+      - Avanti_House_Secondary_School (dor:Avanti_House_Secondary_School) --doo:religion--> Hinduism (dor:Hinduism)
+  '9':
+    attributes:
+      Hinduism: (alt^='Durga')
+    relationships:
+      - First_Student_UK (dor:First_Student_UK) --doo:headquarter--> London (dor:London)
+      - Albert_Angus_Turbayne (dor:Albert_Angus_Turbayne) --dop:deathPlace--> London (dor:London)
+      - The_Swaminarayan_School (dor:The_Swaminarayan_School) --dop:city--> London (dor:London)
+      - The_Swaminarayan_School (dor:The_Swaminarayan_School) --doo:religion--> Hinduism (dor:Hinduism)
+  '10':
+    attributes:
+      Hinduism: (alt^='Durga')
+    relationships:
+      - Metroline (dor:Metroline) --doo:headquarter--> London (dor:London)
+      - Albert_Angus_Turbayne (dor:Albert_Angus_Turbayne) --dop:deathPlace--> London (dor:London)
+      - Avanti_House_Secondary_School (dor:Avanti_House_Secondary_School) --dop:city--> London (dor:London)
+      - Avanti_House_Secondary_School (dor:Avanti_House_Secondary_School) --doo:religion--> Hinduism (dor:Hinduism)
+attributes:
+  city: --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double
+  artist: --bot^ (dop:bot)--> langString
+  school: --status^ (doo:status)--> string
+  country: --alt^ (dop:alt)--> langString | --leader^ (dop:leader)--> langString | --original name^ (doo:originalName)--> langString
+subgraph_id: 125
+relationships:
+  - bus company --doo:headquarter--> city
+  - artist --dop:deathPlace--> city
+  - school --dop:city--> city
+  - school --doo:religion--> country

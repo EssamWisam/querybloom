@@ -1,0 +1,142 @@
+types:
+  athlete: doo:Athlete
+  settlement: doo:Settlement
+  soccer club: doo:SoccerClub
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Auckland: (source='MetService', named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland', areaCode='09')
+      Southern_United_FC: (nickname^='Southern')
+      '%22Mad%22_Mike_Whiddett': (has abstract^='Michael Whiddett (born 1981) also known as "Mad Mike", is a New Zealand drifting racer. He is sponsored by Red Bull. Whiddett has also raced motocross from the age of six and placed second at the New ...')
+    relationships:
+      - 2018–19_New_Zealand_Football_Championship (<http://dbpedia.org/resource/2018–19_New_Zealand_Football_Championship>) --dop:location--> Auckland (dor:Auckland)
+      - '%22Mad%22_Mike_Whiddett (<http://dbpedia.org/resource/%22Mad%22_Mike_Whiddett>) --doo:birthPlace--> Auckland (dor:Auckland)'
+      - Southern_United_FC (dor:Southern_United_FC) --doo:season--> 2018–19_New_Zealand_Football_Championship (<http://dbpedia.org/resource/2018–19_New_Zealand_Football_Championship>)
+  '2':
+    attributes:
+      Auckland: (source='MetService', named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland', areaCode='09')
+      Auckland_City_FC: (nickname^='City', image size^='260')
+      '%22Mad%22_Mike_Whiddett': (has abstract^='Michael Whiddett (born 1981) also known as "Mad Mike", is a New Zealand drifting racer. He is sponsored by Red Bull. Whiddett has also raced motocross from the age of six and placed second at the New ...')
+    relationships:
+      - 2022_New_Zealand_National_League (dor:2022_New_Zealand_National_League) --dop:location--> Auckland (dor:Auckland)
+      - '%22Mad%22_Mike_Whiddett (<http://dbpedia.org/resource/%22Mad%22_Mike_Whiddett>) --doo:birthPlace--> Auckland (dor:Auckland)'
+      - Auckland_City_FC (dor:Auckland_City_FC) --doo:season--> 2022_New_Zealand_National_League (dor:2022_New_Zealand_National_League)
+  '3':
+    attributes:
+      Auckland: (source='MetService', named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland', areaCode='09')
+      Auckland_United_FC: (image size^='150')
+      '%22Mad%22_Mike_Whiddett': (has abstract^='Michael Whiddett (born 1981) also known as "Mad Mike", is a New Zealand drifting racer. He is sponsored by Red Bull. Whiddett has also raced motocross from the age of six and placed second at the New ...')
+    relationships:
+      - 2022_New_Zealand_National_League (dor:2022_New_Zealand_National_League) --dop:location--> Auckland (dor:Auckland)
+      - '%22Mad%22_Mike_Whiddett (<http://dbpedia.org/resource/%22Mad%22_Mike_Whiddett>) --doo:birthPlace--> Auckland (dor:Auckland)'
+      - Auckland_United_FC (dor:Auckland_United_FC) --doo:season--> 2022_New_Zealand_National_League (dor:2022_New_Zealand_National_League)
+  '4':
+    attributes:
+      2_Tuff_Tony: (has abstract^='2・タフ・トニー（2 Tuff Tony | トゥー・タフ・トニー，1974年6月6日 - ）―本名：トニー・ボーチャディング(Tony Borcherding)―は、アメリカ合衆国ケンタッキー州ルイビル出身のプロレスラー。身長おおよそ180センチメートル、体重おおよそ110キログラム。')
+      Louisville,_Kentucky: (named after^='http://dbpedia.org/resource/Louis_XVI_of_France', areaCode='502')
+      2015_Arizona_United_SC_season: (date^='2015-02-26')
+    relationships:
+      - 2015_USL_season (dor:2015_USL_season) --dop:location--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 2_Tuff_Tony (dor:2_Tuff_Tony) --doo:birthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 2015_Arizona_United_SC_season (dor:2015_Arizona_United_SC_season) --doo:season--> 2015_USL_season (dor:2015_USL_season)
+  '5':
+    attributes:
+      2_Tuff_Tony: (has abstract^='2・タフ・トニー（2 Tuff Tony | トゥー・タフ・トニー，1974年6月6日 - ）―本名：トニー・ボーチャディング(Tony Borcherding)―は、アメリカ合衆国ケンタッキー州ルイビル出身のプロレスラー。身長おおよそ180センチメートル、体重おおよそ110キログラム。')
+      Louisville,_Kentucky: (named after^='http://dbpedia.org/resource/Louis_XVI_of_France', areaCode='502')
+      2015_Harrisburg_City_Islanders_season: (date^='--03-08')
+    relationships:
+      - 2015_USL_season (dor:2015_USL_season) --dop:location--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 2_Tuff_Tony (dor:2_Tuff_Tony) --doo:birthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 2015_Harrisburg_City_Islanders_season (dor:2015_Harrisburg_City_Islanders_season) --doo:season--> 2015_USL_season (dor:2015_USL_season)
+  '6':
+    attributes:
+      2_Tuff_Tony: (has abstract^='2・タフ・トニー（2 Tuff Tony | トゥー・タフ・トニー，1974年6月6日 - ）―本名：トニー・ボーチャディング(Tony Borcherding)―は、アメリカ合衆国ケンタッキー州ルイビル出身のプロレスラー。身長おおよそ180センチメートル、体重おおよそ110キログラム。')
+      Louisville,_Kentucky: (named after^='http://dbpedia.org/resource/Louis_XVI_of_France', areaCode='502')
+      2015_Louisville_City_FC_season: (date^='Oct 10, 2015')
+    relationships:
+      - 2015_USL_season (dor:2015_USL_season) --dop:location--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 2_Tuff_Tony (dor:2_Tuff_Tony) --doo:birthPlace--> Louisville,_Kentucky (<http://dbpedia.org/resource/Louisville,_Kentucky>)
+      - 2015_Louisville_City_FC_season (dor:2015_Louisville_City_FC_season) --doo:season--> 2015_USL_season (dor:2015_USL_season)
+  '7':
+    attributes:
+      2011_Barcelona_Sporting_Club_season: (date^='1')
+    relationships:
+      - 2011_in_Ecuadorian_football (dor:2011_in_Ecuadorian_football) --dop:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - 911_(wrestler)__911__1 (<http://dbpedia.org/resource/911_(wrestler)__911__1>) --doo:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - 2011_Barcelona_Sporting_Club_season (dor:2011_Barcelona_Sporting_Club_season) --doo:season--> 2011_in_Ecuadorian_football (dor:2011_in_Ecuadorian_football)
+  '8':
+    attributes:
+      New_York_City: (named after^='http://dbpedia.org/resource/James_II_of_England', areaCode='212/646/332,718/347/929,917')
+      2011_Barcelona_Sporting_Club_season: (date^='1')
+    relationships:
+      - 2011_in_Ecuadorian_football (dor:2011_in_Ecuadorian_football) --dop:location--> New_York_City (dor:New_York_City)
+      - 911_(wrestler)__911__1 (<http://dbpedia.org/resource/911_(wrestler)__911__1>) --doo:birthPlace--> New_York_City (dor:New_York_City)
+      - 2011_Barcelona_Sporting_Club_season (dor:2011_Barcelona_Sporting_Club_season) --doo:season--> 2011_in_Ecuadorian_football (dor:2011_in_Ecuadorian_football)
+  '9':
+    attributes:
+      2011_Liga_Deportiva_Universitaria_de_Quito_season: (date^='--01-15')
+    relationships:
+      - 2011_in_Ecuadorian_football (dor:2011_in_Ecuadorian_football) --dop:location--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - 911_(wrestler)__911__1 (<http://dbpedia.org/resource/911_(wrestler)__911__1>) --doo:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - 2011_Liga_Deportiva_Universitaria_de_Quito_season (dor:2011_Liga_Deportiva_Universitaria_de_Quito_season) --doo:season--> 2011_in_Ecuadorian_football (dor:2011_in_Ecuadorian_football)
+  '10':
+    attributes:
+      Chennai: (areaCode='+91-44')
+      A_I_Harrsha: (has abstract^='Asshok Iyengar Harrsha Vardhan (born 8 December 1990) is an Indian cricketer. He made his first-class debut for Hyderabad in the 2014–15 Ranji Trophy on 13 January 2015.')
+      Fateh_Hyderabad_AFC: (nickname^='Nizams', image size^='200')
+    relationships:
+      - 2017–18_I-League_2nd_Division (<http://dbpedia.org/resource/2017–18_I-League_2nd_Division>) --dop:location--> Chennai (dor:Chennai)
+      - A_I_Harrsha (dor:A_I_Harrsha) --doo:birthPlace--> Chennai (dor:Chennai)
+      - Fateh_Hyderabad_AFC (dor:Fateh_Hyderabad_AFC) --doo:season--> 2017–18_I-League_2nd_Division (<http://dbpedia.org/resource/2017–18_I-League_2nd_Division>)
+qa_result:
+  status: completed
+  cost_usd: 0.399887
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.056687400000000006
+        total_tokens: 4867
+        prompt_tokens: 2265
+        completion_tokens: 2602
+      generate:
+        cost_usd: 0.1087676
+        total_tokens: 9606
+        prompt_tokens: 5077
+        completion_tokens: 4529
+      verify_1:
+        cost_usd: 0.051247
+        total_tokens: 6881
+        prompt_tokens: 5758
+        completion_tokens: 1123
+      verify_2:
+        cost_usd: 0.035977
+        total_tokens: 6128
+        prompt_tokens: 5772
+        completion_tokens: 356
+      complexity:
+        cost_usd: 0.147208
+        total_tokens: 12459
+        prompt_tokens: 6226
+        completion_tokens: 6233
+    total_tokens: 39941
+    prompt_tokens: 25098
+    total_cost_usd: 0.399887
+    completion_tokens: 14843
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  athlete: --has abstract^ (doo:abstract)--> langString
+  settlement: --founding year^ (doo:foundingYear)--> gYear | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --source (dop:source)--> langString | --named after^ (doo:namedAfter)--> Resource | --display^ (dop:display)--> langString | --areaCode (doo:areaCode)--> string | --winner^ (dop:winner)--> langString
+  soccer club: --nickname^ (dop:nickname)--> langString | --image size^ (dop:imageSize)--> int | --date^ (dop:date)--> gMonthDay
+subgraph_id: 233
+relationships:
+  - football league season --dop:location--> settlement
+  - athlete --doo:birthPlace--> settlement
+  - soccer club --doo:season--> football league season

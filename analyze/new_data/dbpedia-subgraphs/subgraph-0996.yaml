@@ -1,0 +1,119 @@
+types:
+  Band: doo:Band
+  song: doo:Song
+  movie: doo:Film
+  person: doo:Person
+  record label: doo:RecordLabel
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Romeo_Must_Die: (Wikipage revision ID^='1123078542', distributor^='http://dbpedia.org/resource/Warner_Bros.')
+    relationships:
+      - Blackstreet (dor:Blackstreet) --doo:formerBandMember--> Dave_Hollister (dor:Dave_Hollister)
+      - Blackstreet (dor:Blackstreet) --dop:pastMembers--> Dave_Hollister (dor:Dave_Hollister)
+      - Blackstreet (dor:Blackstreet) --doo:recordLabel--> DreamWorks_Records (dor:DreamWorks_Records)
+      - Deep_and_Meaningless (dor:Deep_and_Meaningless) --dop:writer--> Blackstreet (dor:Blackstreet)
+      - Romeo_Must_Die (dor:Romeo_Must_Die) --dop:extra--> Dave_Hollister (dor:Dave_Hollister)
+  '2':
+    attributes: {}
+    relationships:
+      - Blackstreet (dor:Blackstreet) --doo:formerBandMember--> Dave_Hollister (dor:Dave_Hollister)
+      - Blackstreet (dor:Blackstreet) --dop:pastMembers--> Dave_Hollister (dor:Dave_Hollister)
+      - Blackstreet (dor:Blackstreet) --doo:recordLabel--> Interscope_Records (dor:Interscope_Records)
+      - Deep_and_Meaningless (dor:Deep_and_Meaningless) --dop:writer--> Blackstreet (dor:Blackstreet)
+      - Romeo_Must_Die (dor:Romeo_Must_Die) --dop:extra--> Dave_Hollister (dor:Dave_Hollister)
+  '3':
+    attributes:
+      The_Brothers_(2001_film): (Wikipage revision ID^='1107609665', distributor^='http://dbpedia.org/resource/Sony_Pictures_Releasing')
+    relationships:
+      - Blackstreet (dor:Blackstreet) --doo:formerBandMember--> Dave_Hollister (dor:Dave_Hollister)
+      - Blackstreet (dor:Blackstreet) --dop:pastMembers--> Dave_Hollister (dor:Dave_Hollister)
+      - Blackstreet (dor:Blackstreet) --doo:recordLabel--> DreamWorks_Records (dor:DreamWorks_Records)
+      - Deep_and_Meaningless (dor:Deep_and_Meaningless) --dop:writer--> Blackstreet (dor:Blackstreet)
+      - The_Brothers_(2001_film) (<http://dbpedia.org/resource/The_Brothers_(2001_film)>) --dop:extra--> Dave_Hollister (dor:Dave_Hollister)
+  '4':
+    attributes:
+      Can_(band): (associated musical artist^='http://dbpedia.org/resource/Phew_(singer)')
+      Palermo_Shooting: (Wikipage revision ID^='1112379558', distributor^='http://dbpedia.org/resource/Senator_Film')
+    relationships:
+      - Can_(band) (<http://dbpedia.org/resource/Can_(band)>) --doo:formerBandMember--> Irmin_Schmidt (dor:Irmin_Schmidt)
+      - Can_(band) (<http://dbpedia.org/resource/Can_(band)>) --dop:pastMembers--> Damo_Suzuki (dor:Damo_Suzuki)
+      - Can_(band) (<http://dbpedia.org/resource/Can_(band)>) --doo:recordLabel--> Liberty_Records (dor:Liberty_Records)
+      - Halleluhwah (dor:Halleluhwah) --dop:writer--> Can_(band) (<http://dbpedia.org/resource/Can_(band)>)
+      - Palermo_Shooting (dor:Palermo_Shooting) --dop:extra--> Irmin_Schmidt (dor:Irmin_Schmidt)
+  '5':
+    attributes:
+      Palermo_Shooting: (Wikipage revision ID^='1112379558', distributor^='http://dbpedia.org/resource/Senator_Film')
+    relationships:
+      - Can_(band) (<http://dbpedia.org/resource/Can_(band)>) --doo:formerBandMember--> Irmin_Schmidt (dor:Irmin_Schmidt)
+      - Can_(band) (<http://dbpedia.org/resource/Can_(band)>) --dop:pastMembers--> Damo_Suzuki (dor:Damo_Suzuki)
+      - Can_(band) (<http://dbpedia.org/resource/Can_(band)>) --doo:recordLabel--> Mute_Records (dor:Mute_Records)
+      - Halleluhwah (dor:Halleluhwah) --dop:writer--> Can_(band) (<http://dbpedia.org/resource/Can_(band)>)
+      - Palermo_Shooting (dor:Palermo_Shooting) --dop:extra--> Irmin_Schmidt (dor:Irmin_Schmidt)
+  '6':
+    attributes:
+      Can_(band): (associated musical artist^='http://dbpedia.org/resource/Phew_(singer)')
+      Palermo_Shooting: (Wikipage revision ID^='1112379558', distributor^='http://dbpedia.org/resource/Senator_Film')
+    relationships:
+      - Can_(band) (<http://dbpedia.org/resource/Can_(band)>) --doo:formerBandMember--> Irmin_Schmidt (dor:Irmin_Schmidt)
+      - Can_(band) (<http://dbpedia.org/resource/Can_(band)>) --dop:pastMembers--> Damo_Suzuki (dor:Damo_Suzuki)
+      - Can_(band) (<http://dbpedia.org/resource/Can_(band)>) --doo:recordLabel--> Spoon_Records (dor:Spoon_Records)
+      - Halleluhwah (dor:Halleluhwah) --dop:writer--> Can_(band) (<http://dbpedia.org/resource/Can_(band)>)
+      - Palermo_Shooting (dor:Palermo_Shooting) --dop:extra--> Irmin_Schmidt (dor:Irmin_Schmidt)
+  '7':
+    attributes:
+      Grinderman: (associated musical artist^='http://dbpedia.org/resource/Dirty_Three')
+      September_Songs_–_The_Music_of_Kurt_Weill: (Wikipage revision ID^='1119895620', distributor^='http://dbpedia.org/resource/Rhombus_Media')
+    relationships:
+      - Grinderman (dor:Grinderman) --doo:formerBandMember--> Nick_Cave (dor:Nick_Cave)
+      - Grinderman (dor:Grinderman) --dop:pastMembers--> Jim_Sclavunos (dor:Jim_Sclavunos)
+      - Grinderman (dor:Grinderman) --doo:recordLabel--> Mute_Records (dor:Mute_Records)
+      - (I_Don't_Need_You_To)_Set_Me_Free (<http://dbpedia.org/resource/(I_Don't_Need_You_To)_Set_Me_Free>) --dop:writer--> Grinderman (dor:Grinderman)
+      - September_Songs_–_The_Music_of_Kurt_Weill (<http://dbpedia.org/resource/September_Songs_–_The_Music_of_Kurt_Weill>) --dop:extra--> Nick_Cave (dor:Nick_Cave)
+  '8':
+    attributes:
+      Grinderman: (associated musical artist^='http://dbpedia.org/resource/Dirty_Three')
+      September_Songs_–_The_Music_of_Kurt_Weill: (Wikipage revision ID^='1119895620', distributor^='http://dbpedia.org/resource/Rhombus_Media')
+    relationships:
+      - Grinderman (dor:Grinderman) --doo:formerBandMember--> Nick_Cave (dor:Nick_Cave)
+      - Grinderman (dor:Grinderman) --dop:pastMembers--> Martyn_P._Casey (dor:Martyn_P._Casey)
+      - Grinderman (dor:Grinderman) --doo:recordLabel--> Mute_Records (dor:Mute_Records)
+      - (I_Don't_Need_You_To)_Set_Me_Free (<http://dbpedia.org/resource/(I_Don't_Need_You_To)_Set_Me_Free>) --dop:writer--> Grinderman (dor:Grinderman)
+      - September_Songs_–_The_Music_of_Kurt_Weill (<http://dbpedia.org/resource/September_Songs_–_The_Music_of_Kurt_Weill>) --dop:extra--> Nick_Cave (dor:Nick_Cave)
+  '9':
+    attributes:
+      Manto_(2015_film): (Wikipage revision ID^='1123986113', distributor^='http://dbpedia.org/resource/Geo_Films')
+      Overload_(Pakistani_band): (image size^='250', associated musical artist^='http://dbpedia.org/resource/Atif_Aslam')
+    relationships:
+      - Overload_(Pakistani_band) (<http://dbpedia.org/resource/Overload_(Pakistani_band)>) --doo:formerBandMember--> Meesha_Shafi (dor:Meesha_Shafi)
+      - Overload_(Pakistani_band) (<http://dbpedia.org/resource/Overload_(Pakistani_band)>) --dop:pastMembers--> Farhad_Humayun (dor:Farhad_Humayun)
+      - Overload_(Pakistani_band) (<http://dbpedia.org/resource/Overload_(Pakistani_band)>) --doo:recordLabel--> Universal_Music (dor:Universal_Music)
+      - Nimmi_Nimmi (dor:Nimmi_Nimmi) --dop:writer--> Overload_(Pakistani_band) (<http://dbpedia.org/resource/Overload_(Pakistani_band)>)
+      - Manto_(2015_film) (<http://dbpedia.org/resource/Manto_(2015_film)>) --dop:extra--> Meesha_Shafi (dor:Meesha_Shafi)
+  '10':
+    attributes:
+      Manto_(2015_film): (Wikipage revision ID^='1123986113', distributor^='http://dbpedia.org/resource/Geo_Films')
+      Overload_(Pakistani_band): (image size^='250', associated musical artist^='http://dbpedia.org/resource/Atif_Aslam')
+    relationships:
+      - Overload_(Pakistani_band) (<http://dbpedia.org/resource/Overload_(Pakistani_band)>) --doo:formerBandMember--> Meesha_Shafi (dor:Meesha_Shafi)
+      - Overload_(Pakistani_band) (<http://dbpedia.org/resource/Overload_(Pakistani_band)>) --dop:pastMembers--> Mahmood_Rahman (dor:Mahmood_Rahman)
+      - Overload_(Pakistani_band) (<http://dbpedia.org/resource/Overload_(Pakistani_band)>) --doo:recordLabel--> Universal_Music (dor:Universal_Music)
+      - Nimmi_Nimmi (dor:Nimmi_Nimmi) --dop:writer--> Overload_(Pakistani_band) (<http://dbpedia.org/resource/Overload_(Pakistani_band)>)
+      - Manto_(2015_film) (<http://dbpedia.org/resource/Manto_(2015_film)>) --dop:extra--> Meesha_Shafi (dor:Meesha_Shafi)
+attributes:
+  Band: --image size^ (dop:imageSize)--> int | --quote^ (dop:quote)--> langString | --associated musical artist^ (doo:associatedMusicalArtist)--> Resource | --bot^ (dop:bot)--> langString
+  movie: --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --distributor^ (doo:distributor)--> Resource | --display^ (dop:display)--> langString | --release date^ (doo:releaseDate)--> date
+  person: --board^ (doo:board)--> Resource | --notable works^ (dop:notableWorks)--> Resource
+subgraph_id: 996
+relationships:
+  - Band --doo:formerBandMember--> musical artist
+  - Band --dop:pastMembers--> person
+  - Band --doo:recordLabel--> record label
+  - song --dop:writer--> Band
+  - movie --dop:extra--> musical artist

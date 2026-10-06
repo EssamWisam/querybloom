@@ -1,0 +1,97 @@
+types:
+  book: doo:Book
+  country: doo:Country
+  Location: doo:Location
+  music genre: doo:MusicGenre
+  body of water: doo:BodyOfWater
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Anchar_Lake (dor:Anchar_Lake) --doo:location--> India (dor:India)
+      - A_for_Prayagraj (dor:A_for_Prayagraj) --doo:country--> India (dor:India)
+      - A_for_Prayagraj (dor:A_for_Prayagraj) --doo:nonFictionSubject--> Biographical (dor:Biographical)
+      - Khushal_Sar (dor:Khushal_Sar) --doo:outflow--> Anchar_Lake (dor:Anchar_Lake)
+  '2':
+    attributes: {}
+    relationships:
+      - Anchar_Lake (dor:Anchar_Lake) --doo:location--> India (dor:India)
+      - A_for_Prayagraj (dor:A_for_Prayagraj) --doo:country--> India (dor:India)
+      - A_for_Prayagraj (dor:A_for_Prayagraj) --doo:nonFictionSubject--> Historical (dor:Historical)
+      - Khushal_Sar (dor:Khushal_Sar) --doo:outflow--> Anchar_Lake (dor:Anchar_Lake)
+  '3':
+    attributes: {}
+    relationships:
+      - Anchar_Lake (dor:Anchar_Lake) --doo:location--> India (dor:India)
+      - A_New_Silk_Road (dor:A_New_Silk_Road) --doo:country--> India (dor:India)
+      - A_New_Silk_Road (dor:A_New_Silk_Road) --doo:nonFictionSubject--> Geopolitics (dor:Geopolitics)
+      - Khushal_Sar (dor:Khushal_Sar) --doo:outflow--> Anchar_Lake (dor:Anchar_Lake)
+  '4':
+    attributes:
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - Ballantyne_Lake (dor:Ballantyne_Lake) --doo:location--> United_States (dor:United_States)
+      - 54-40_or_Fight_(book) (<http://dbpedia.org/resource/54-40_or_Fight_(book)>) --doo:country--> United_States (dor:United_States)
+      - 54-40_or_Fight_(book) (<http://dbpedia.org/resource/54-40_or_Fight_(book)>) --doo:nonFictionSubject--> American_history (dor:American_history)
+      - Duck_Lake_(Blue_Earth_County,_Minnesota) (<http://dbpedia.org/resource/Duck_Lake_(Blue_Earth_County,_Minnesota)>) --doo:outflow--> Ballantyne_Lake (dor:Ballantyne_Lake)
+  '5':
+    attributes:
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - Ballantyne_Lake (dor:Ballantyne_Lake) --doo:location--> United_States (dor:United_States)
+      - 700_Sundays (dor:700_Sundays) --doo:country--> United_States (dor:United_States)
+      - 700_Sundays (dor:700_Sundays) --doo:nonFictionSubject--> Autobiography (dor:Autobiography)
+      - Duck_Lake_(Blue_Earth_County,_Minnesota) (<http://dbpedia.org/resource/Duck_Lake_(Blue_Earth_County,_Minnesota)>) --doo:outflow--> Ballantyne_Lake (dor:Ballantyne_Lake)
+  '6':
+    attributes:
+      United_States: (footer^='The landing of the first Africans in Virginia in 1619  is considered the start of African slavery in the colonial history of the United States. The Mayflower Compact signed on the Mayflower  in 1620 s...')
+    relationships:
+      - Ballantyne_Lake (dor:Ballantyne_Lake) --doo:location--> United_States (dor:United_States)
+      - A_Guide_Book_of_United_States_Coins (dor:A_Guide_Book_of_United_States_Coins) --doo:country--> United_States (dor:United_States)
+      - A_Guide_Book_of_United_States_Coins (dor:A_Guide_Book_of_United_States_Coins) --doo:nonFictionSubject--> Numismatics (dor:Numismatics)
+      - Duck_Lake_(Blue_Earth_County,_Minnesota) (<http://dbpedia.org/resource/Duck_Lake_(Blue_Earth_County,_Minnesota)>) --doo:outflow--> Ballantyne_Lake (dor:Ballantyne_Lake)
+  '7':
+    attributes: {}
+    relationships:
+      - Broken_Bay (dor:Broken_Bay) --doo:location--> Australia (dor:Australia)
+      - Australian_Dictionary_of_Biography__Australian_Dictionary_of_Biography__1 (dor:Australian_Dictionary_of_Biography__Australian_Dictionary_of_Biography__1) --doo:country--> Australia (dor:Australia)
+      - Australian_Dictionary_of_Biography__Australian_Dictionary_of_Biography__1 (dor:Australian_Dictionary_of_Biography__Australian_Dictionary_of_Biography__1) --doo:nonFictionSubject--> Biography (dor:Biography)
+      - Akuna_Bay (dor:Akuna_Bay) --doo:outflow--> Broken_Bay (dor:Broken_Bay)
+  '8':
+    attributes: {}
+    relationships:
+      - Broken_Bay (dor:Broken_Bay) --doo:location--> Australia (dor:Australia)
+      - Australian_Pharmaceutical_Formulary (dor:Australian_Pharmaceutical_Formulary) --doo:country--> Australia (dor:Australia)
+      - Australian_Pharmaceutical_Formulary (dor:Australian_Pharmaceutical_Formulary) --doo:nonFictionSubject--> Medicine (dor:Medicine)
+      - Akuna_Bay (dor:Akuna_Bay) --doo:outflow--> Broken_Bay (dor:Broken_Bay)
+  '9':
+    attributes: {}
+    relationships:
+      - Broken_Bay (dor:Broken_Bay) --doo:location--> Australia (dor:Australia)
+      - Golden_Wattle_Cookery_Book (dor:Golden_Wattle_Cookery_Book) --doo:country--> Australia (dor:Australia)
+      - Golden_Wattle_Cookery_Book (dor:Golden_Wattle_Cookery_Book) --doo:nonFictionSubject--> Cooking (dor:Cooking)
+      - Akuna_Bay (dor:Akuna_Bay) --doo:outflow--> Broken_Bay (dor:Broken_Bay)
+  '10':
+    attributes:
+      Eagle_Creek_(Burnaby): (outflow^='http://dbpedia.org/resource/Burnaby_Lake')
+    relationships:
+      - Eagle_Creek_(Burnaby) (<http://dbpedia.org/resource/Eagle_Creek_(Burnaby)>) --doo:location--> Canada (dor:Canada)
+      - Becoming_Batman (dor:Becoming_Batman) --doo:country--> Canada (dor:Canada)
+      - Becoming_Batman (dor:Becoming_Batman) --doo:nonFictionSubject--> Superhero (dor:Superhero)
+      - Squint_Lake (dor:Squint_Lake) --doo:outflow--> Eagle_Creek_(Burnaby) (<http://dbpedia.org/resource/Eagle_Creek_(Burnaby)>)
+attributes:
+  book: --release date^ (doo:releaseDate)--> date
+  country: --footer^ (dop:footer)--> langString
+  Location: --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --area^ (dop:area)--> squareKilometre | --2a^ (dop:2a)--> langString | --1a^ (dop:1a)--> langString | --administrator^ (dop:administrator)--> Resource | --date^ (dop:date)--> langString | --owner^ (dop:owner)--> langString
+  body of water: --outflow^ (doo:outflow)--> Resource
+subgraph_id: 806
+relationships:
+  - body of water --doo:location--> country
+  - book --doo:country--> country
+  - book --doo:nonFictionSubject--> music genre
+  - Location --doo:outflow--> body of water

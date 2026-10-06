@@ -1,0 +1,79 @@
+types:
+  city: doo:City
+  office holder: doo:OfficeHolder
+  baseball player: doo:BaseballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Portland,_Oregon: (named for^='http://dbpedia.org/resource/Portland,_Maine', source^='NOAA')
+      2008_Vancouver_Whitecaps_FC_season: (al='5')
+    relationships:
+      - 2008_Vancouver_Whitecaps_FC_season (dor:2008_Vancouver_Whitecaps_FC_season) --dop:location--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - Ad_Liska (dor:Ad_Liska) --dop:deathPlace--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+  '2':
+    attributes:
+      Portland,_Oregon: (named for^='http://dbpedia.org/resource/Portland,_Maine', source^='NOAA')
+    relationships:
+      - 2010_Vancouver_Whitecaps_FC_season (dor:2010_Vancouver_Whitecaps_FC_season) --dop:location--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - Ad_Liska (dor:Ad_Liska) --dop:deathPlace--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+  '3':
+    attributes:
+      Portland,_Oregon: (named for^='http://dbpedia.org/resource/Portland,_Maine', source^='NOAA')
+      2011_Houston_Dynamo_season: (al='6')
+    relationships:
+      - 2011_Houston_Dynamo_season (dor:2011_Houston_Dynamo_season) --dop:location--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+      - Ad_Liska (dor:Ad_Liska) --dop:deathPlace--> Portland,_Oregon (<http://dbpedia.org/resource/Portland,_Oregon>)
+  '4':
+    attributes: {}
+    relationships:
+      - 2010_Vancouver_Whitecaps_FC_season (dor:2010_Vancouver_Whitecaps_FC_season) --dop:location--> Tampa,_Florida (<http://dbpedia.org/resource/Tampa,_Florida>)
+      - Agapito_Mayor (dor:Agapito_Mayor) --dop:deathPlace--> Tampa,_Florida (<http://dbpedia.org/resource/Tampa,_Florida>)
+  '5':
+    attributes:
+      2010_Houston_Dynamo_season: (al='9')
+    relationships:
+      - 2010_Houston_Dynamo_season (dor:2010_Houston_Dynamo_season) --dop:location--> San_Francisco,_California (<http://dbpedia.org/resource/San_Francisco,_California>)
+      - Al_Dwight (dor:Al_Dwight) --dop:deathPlace--> San_Francisco,_California (<http://dbpedia.org/resource/San_Francisco,_California>)
+  '6':
+    attributes:
+      Austin,_Texas: (named for^='http://dbpedia.org/resource/Stephen_F._Austin')
+      2010_Houston_Dynamo_season: (al='9')
+    relationships:
+      - 2010_Houston_Dynamo_season (dor:2010_Houston_Dynamo_season) --dop:location--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - Al_Hollingsworth_(baseball) (<http://dbpedia.org/resource/Al_Hollingsworth_(baseball)>) --dop:deathPlace--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+  '7':
+    attributes:
+      Austin,_Texas: (named for^='http://dbpedia.org/resource/Stephen_F._Austin')
+    relationships:
+      - 2010_Vancouver_Whitecaps_FC_season (dor:2010_Vancouver_Whitecaps_FC_season) --dop:location--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - Al_Hollingsworth_(baseball) (<http://dbpedia.org/resource/Al_Hollingsworth_(baseball)>) --dop:deathPlace--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+  '8':
+    attributes:
+      Bradenton,_Florida: '(source^=''Florida: A Guide to the Southernmost State'')'
+      2008_Toronto_FC_season: (id^='Chairman', al='11')
+    relationships:
+      - 2008_Toronto_FC_season (dor:2008_Toronto_FC_season) --dop:location--> Bradenton,_Florida (<http://dbpedia.org/resource/Bradenton,_Florida>)
+      - Alan_Brice (dor:Alan_Brice) --dop:deathPlace--> Bradenton,_Florida (<http://dbpedia.org/resource/Bradenton,_Florida>)
+  '9':
+    attributes:
+      2010_Houston_Dynamo_season: (al='9')
+    relationships:
+      - 2010_Houston_Dynamo_season (dor:2010_Houston_Dynamo_season) --dop:location--> Seattle,_Washington (<http://dbpedia.org/resource/Seattle,_Washington>)
+      - Alan_Strange (dor:Alan_Strange) --dop:deathPlace--> Seattle,_Washington (<http://dbpedia.org/resource/Seattle,_Washington>)
+  '10':
+    attributes: {}
+    relationships:
+      - 2011_Houston_Dynamo_season (dor:2011_Houston_Dynamo_season) --dop:location--> Seattle,_Washington (<http://dbpedia.org/resource/Seattle,_Washington>)
+      - Alan_Strange (dor:Alan_Strange) --dop:deathPlace--> Seattle,_Washington (<http://dbpedia.org/resource/Seattle,_Washington>)
+attributes:
+  city: --Aug low C^ (dop:augLowC)--> int | --named for^ (dop:namedFor)--> Resource | --source^ (dop:source)--> Resource
+  office holder: --id^ (dop:id)--> langString | --direction^ (dop:direction)--> langString | --mother^ (dop:mother)--> langString | --al (dop:al)--> int | --child^ (doo:child)--> Resource
+subgraph_id: 484
+relationships:
+  - office holder --dop:location--> city
+  - baseball player --dop:deathPlace--> city

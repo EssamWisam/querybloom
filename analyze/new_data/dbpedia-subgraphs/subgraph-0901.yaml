@@ -1,0 +1,114 @@
+types:
+  company: doo:Company
+  automobile: doo:Automobile
+  radio station: doo:RadioStation
+  administrative region: doo:AdministrativeRegion
+  cultivar (cultivated variety): doo:CultivatedVariety
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doom: http://dbpedia.org/ontology/MeanOfTransportation/
+instances:
+  '1':
+    attributes:
+      Norfolk: (Link from a Wikipage to an external page^='http://www.norfolk.gov.uk')
+      Breckland_Beira: (manufacturer^='http://dbpedia.org/resource/Breckland_Technologies', weight (kg)^='1400.0')
+      Bernard_Matthews_Ltd: (founded by^='http://dbpedia.org/resource/Bernard_Matthews', owner^='http://dbpedia.org/resource/Ranjit_Singh_Boparan')
+      The_Beach_(UK_radio_station): (airdate^='1996-09-29')
+    relationships:
+      - The_Beach_(UK_radio_station) (<http://dbpedia.org/resource/The_Beach_(UK_radio_station)>) --dop:city--> Norfolk (dor:Norfolk)
+      - Bernard_Matthews_Ltd (dor:Bernard_Matthews_Ltd) --doo:location--> Norfolk (dor:Norfolk)
+      - Golden_Noble (dor:Golden_Noble) --doo:origin--> Norfolk (dor:Norfolk)
+      - Breckland_Beira (dor:Breckland_Beira) --dop:assembly--> Norfolk (dor:Norfolk)
+  '2':
+    attributes:
+      Norfolk: (Link from a Wikipage to an external page^='http://www.norfolk.gov.uk')
+      Breckland_Beira: (manufacturer^='http://dbpedia.org/resource/Breckland_Technologies', weight (kg)^='1400.0')
+      Bernard_Matthews_Ltd: (founded by^='http://dbpedia.org/resource/Bernard_Matthews', owner^='http://dbpedia.org/resource/Ranjit_Singh_Boparan')
+      The_Beach_(UK_radio_station): (airdate^='1996-09-29')
+    relationships:
+      - The_Beach_(UK_radio_station) (<http://dbpedia.org/resource/The_Beach_(UK_radio_station)>) --dop:city--> Norfolk (dor:Norfolk)
+      - Bernard_Matthews_Ltd (dor:Bernard_Matthews_Ltd) --doo:location--> Norfolk (dor:Norfolk)
+      - Norfolk_Biffin (dor:Norfolk_Biffin) --doo:origin--> Norfolk (dor:Norfolk)
+      - Breckland_Beira (dor:Breckland_Beira) --dop:assembly--> Norfolk (dor:Norfolk)
+  '3':
+    attributes:
+      Norfolk: (Link from a Wikipage to an external page^='http://www.norfolk.gov.uk')
+      Breckland_Beira: (manufacturer^='http://dbpedia.org/resource/Breckland_Technologies', weight (kg)^='1400.0')
+      The_Beach_(UK_radio_station): (airdate^='1996-09-29')
+    relationships:
+      - The_Beach_(UK_radio_station) (<http://dbpedia.org/resource/The_Beach_(UK_radio_station)>) --dop:city--> Norfolk (dor:Norfolk)
+      - East_Norfolk_Railway (dor:East_Norfolk_Railway) --doo:location--> Norfolk (dor:Norfolk)
+      - Golden_Noble (dor:Golden_Noble) --doo:origin--> Norfolk (dor:Norfolk)
+      - Breckland_Beira (dor:Breckland_Beira) --dop:assembly--> Norfolk (dor:Norfolk)
+  '4':
+    attributes:
+      KABU: (airdate^='1999')
+      North_Dakota: (Link from a Wikipage to an external page^='http://plainshumanities.unl.edu/encyclopedia/')
+      Case_STX_Steiger: (manufacturer^='http://dbpedia.org/resource/Case_IH')
+    relationships:
+      - KABU (dor:KABU) --dop:city--> North_Dakota (dor:North_Dakota)
+      - Bismarck,_Washburn_and_Great_Falls_Railway (<http://dbpedia.org/resource/Bismarck,_Washburn_and_Great_Falls_Railway>) --doo:location--> North_Dakota (dor:North_Dakota)
+      - Red_Norland (dor:Red_Norland) --doo:origin--> North_Dakota (dor:North_Dakota)
+      - Case_STX_Steiger (dor:Case_STX_Steiger) --dop:assembly--> North_Dakota (dor:North_Dakota)
+  '5':
+    attributes:
+      North_Dakota: (Link from a Wikipage to an external page^='http://plainshumanities.unl.edu/encyclopedia/')
+      Case_STX_Steiger: (manufacturer^='http://dbpedia.org/resource/Case_IH')
+    relationships:
+      - KAOC (dor:KAOC) --dop:city--> North_Dakota (dor:North_Dakota)
+      - Bismarck,_Washburn_and_Great_Falls_Railway (<http://dbpedia.org/resource/Bismarck,_Washburn_and_Great_Falls_Railway>) --doo:location--> North_Dakota (dor:North_Dakota)
+      - Red_Norland (dor:Red_Norland) --doo:origin--> North_Dakota (dor:North_Dakota)
+      - Case_STX_Steiger (dor:Case_STX_Steiger) --dop:assembly--> North_Dakota (dor:North_Dakota)
+  '6':
+    attributes:
+      KDLR: (airdate^='1925-01-31')
+      North_Dakota: (Link from a Wikipage to an external page^='http://plainshumanities.unl.edu/encyclopedia/')
+    relationships:
+      - KDLR (dor:KDLR) --dop:city--> North_Dakota (dor:North_Dakota)
+      - Bismarck,_Washburn_and_Great_Falls_Railway (<http://dbpedia.org/resource/Bismarck,_Washburn_and_Great_Falls_Railway>) --doo:location--> North_Dakota (dor:North_Dakota)
+      - Red_Norland (dor:Red_Norland) --doo:origin--> North_Dakota (dor:North_Dakota)
+      - Case_STX_Steiger (dor:Case_STX_Steiger) --dop:assembly--> North_Dakota (dor:North_Dakota)
+  '7':
+    attributes:
+      KAAN-FM: (airdate^='1978-10-27')
+      Missouri: (Link from a Wikipage to an external page^='http://digital.library.umsystem.edu/cgi/i/image/image-idx%3Fc=platic;')
+      Chevrolet_Impala_(fourth_generation): (manufacturer^='Chevrolet')
+    relationships:
+      - KAAN-FM (dor:KAAN-FM) --dop:city--> Missouri (dor:Missouri)
+      - America's_Incredible_Pizza_Company (<http://dbpedia.org/resource/America's_Incredible_Pizza_Company>) --doo:location--> Missouri (dor:Missouri)
+      - Ulmus_×_intermedia_'Coolshade' (<http://dbpedia.org/resource/Ulmus_×_intermedia_'Coolshade'>) --doo:origin--> Missouri (dor:Missouri)
+      - Chevrolet_Impala_(fourth_generation) (<http://dbpedia.org/resource/Chevrolet_Impala_(fourth_generation)>) --dop:assembly--> Missouri (dor:Missouri)
+  '8':
+    attributes:
+      KALM: (airdate^='1953')
+      Missouri: (Link from a Wikipage to an external page^='http://digital.library.umsystem.edu/cgi/i/image/image-idx%3Fc=platic;')
+      Chevrolet_Impala_(fourth_generation): (manufacturer^='Chevrolet')
+    relationships:
+      - KALM (dor:KALM) --dop:city--> Missouri (dor:Missouri)
+      - America's_Incredible_Pizza_Company (<http://dbpedia.org/resource/America's_Incredible_Pizza_Company>) --doo:location--> Missouri (dor:Missouri)
+      - Ulmus_×_intermedia_'Coolshade' (<http://dbpedia.org/resource/Ulmus_×_intermedia_'Coolshade'>) --doo:origin--> Missouri (dor:Missouri)
+      - Chevrolet_Impala_(fourth_generation) (<http://dbpedia.org/resource/Chevrolet_Impala_(fourth_generation)>) --dop:assembly--> Missouri (dor:Missouri)
+  '9':
+    attributes:
+      KATI: (airdate^='1982-05-18')
+      Missouri: (Link from a Wikipage to an external page^='http://digital.library.umsystem.edu/cgi/i/image/image-idx%3Fc=platic;')
+      Chevrolet_Impala_(fourth_generation): (manufacturer^='Chevrolet')
+    relationships:
+      - KATI (dor:KATI) --dop:city--> Missouri (dor:Missouri)
+      - America's_Incredible_Pizza_Company (<http://dbpedia.org/resource/America's_Incredible_Pizza_Company>) --doo:location--> Missouri (dor:Missouri)
+      - Ulmus_×_intermedia_'Coolshade' (<http://dbpedia.org/resource/Ulmus_×_intermedia_'Coolshade'>) --doo:origin--> Missouri (dor:Missouri)
+      - Chevrolet_Impala_(fourth_generation) (<http://dbpedia.org/resource/Chevrolet_Impala_(fourth_generation)>) --dop:assembly--> Missouri (dor:Missouri)
+attributes:
+  company: --founded by^ (doo:foundedBy)--> Resource | --owner^ (doo:owner)--> Resource
+  automobile: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --manufacturer^ (dop:manufacturer)--> langString | --weight (kg)^ (doom:weight)--> kilogram
+  radio station: --airdate^ (dop:airdate)--> date
+  administrative region: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --abolished^ (dop:abolished)--> int | --c^ (dop:c)--> langString | --Aug rain days^ (dop:augRainDays)--> double | --government type^ (doo:governmentType)--> Resource
+subgraph_id: 901
+relationships:
+  - radio station --dop:city--> administrative region
+  - company --doo:location--> administrative region
+  - cultivar (cultivated variety) --doo:origin--> administrative region
+  - automobile --dop:assembly--> administrative region

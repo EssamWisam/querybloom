@@ -1,0 +1,103 @@
+types:
+  river: doo:River
+  country: doo:Country
+  village: doo:Village
+  Location: doo:Location
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Castile_and_León: (population total^='2447519')
+      Abbey_of_Santa_María_la_Real_de_Las_Huelgas: (Link from a Wikipage to an external page^='http://monasteriodelashuelgas.org/')
+    relationships:
+      - Abbey_of_Santa_María_la_Real_de_Las_Huelgas (<http://dbpedia.org/resource/Abbey_of_Santa_María_la_Real_de_Las_Huelgas>) --doo:location--> Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>)
+      - Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>) --doo:subdivision--> Province_of_Ávila (<http://dbpedia.org/resource/Province_of_Ávila>)
+      - Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>) --doo:country--> Spain (dor:Spain)
+      - Arandilla_(river) (<http://dbpedia.org/resource/Arandilla_(river)>) --doo:mouthMountain--> Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>)
+  '2':
+    attributes:
+      Castile_and_León: (population total^='2447519')
+      Abbey_of_Santa_María_la_Real_de_Las_Huelgas: (Link from a Wikipage to an external page^='http://monasteriodelashuelgas.org/')
+    relationships:
+      - Abbey_of_Santa_María_la_Real_de_Las_Huelgas (<http://dbpedia.org/resource/Abbey_of_Santa_María_la_Real_de_Las_Huelgas>) --doo:location--> Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>)
+      - Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>) --doo:subdivision--> Province_of_Burgos (dor:Province_of_Burgos)
+      - Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>) --doo:country--> Spain (dor:Spain)
+      - Arandilla_(river) (<http://dbpedia.org/resource/Arandilla_(river)>) --doo:mouthMountain--> Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>)
+  '3':
+    attributes:
+      Castile_and_León: (population total^='2447519')
+      Abbey_of_Santa_María_la_Real_de_Las_Huelgas: (Link from a Wikipage to an external page^='http://monasteriodelashuelgas.org/')
+    relationships:
+      - Abbey_of_Santa_María_la_Real_de_Las_Huelgas (<http://dbpedia.org/resource/Abbey_of_Santa_María_la_Real_de_Las_Huelgas>) --doo:location--> Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>)
+      - Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>) --doo:subdivision--> Province_of_León (<http://dbpedia.org/resource/Province_of_León>)
+      - Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>) --doo:country--> Spain (dor:Spain)
+      - Arandilla_(river) (<http://dbpedia.org/resource/Arandilla_(river)>) --doo:mouthMountain--> Castile_and_León (<http://dbpedia.org/resource/Castile_and_León>)
+  '4':
+    attributes: {}
+    relationships:
+      - Ardcanaght_Stones (dor:Ardcanaght_Stones) --doo:location--> Castlemaine,_County_Kerry (<http://dbpedia.org/resource/Castlemaine,_County_Kerry>)
+      - Castlemaine,_County_Kerry (<http://dbpedia.org/resource/Castlemaine,_County_Kerry>) --doo:subdivision--> County_Kerry (dor:County_Kerry)
+      - Castlemaine,_County_Kerry (<http://dbpedia.org/resource/Castlemaine,_County_Kerry>) --doo:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - River_Maine_(County_Kerry) (<http://dbpedia.org/resource/River_Maine_(County_Kerry)>) --doo:mouthMountain--> Castlemaine,_County_Kerry (<http://dbpedia.org/resource/Castlemaine,_County_Kerry>)
+  '5':
+    attributes: {}
+    relationships:
+      - Ardcanaght_Stones (dor:Ardcanaght_Stones) --doo:location--> Castlemaine,_County_Kerry (<http://dbpedia.org/resource/Castlemaine,_County_Kerry>)
+      - Castlemaine,_County_Kerry (<http://dbpedia.org/resource/Castlemaine,_County_Kerry>) --doo:subdivision--> Munster (dor:Munster)
+      - Castlemaine,_County_Kerry (<http://dbpedia.org/resource/Castlemaine,_County_Kerry>) --doo:country--> Republic_of_Ireland (dor:Republic_of_Ireland)
+      - River_Maine_(County_Kerry) (<http://dbpedia.org/resource/River_Maine_(County_Kerry)>) --doo:mouthMountain--> Castlemaine,_County_Kerry (<http://dbpedia.org/resource/Castlemaine,_County_Kerry>)
+  '6':
+    attributes:
+      Kuala_Belait: (population total^='4259')
+    relationships:
+      - Belait_Beach (dor:Belait_Beach) --doo:location--> Kuala_Belait (dor:Kuala_Belait)
+      - Kuala_Belait (dor:Kuala_Belait) --doo:subdivision--> Belait_District (dor:Belait_District)
+      - Kuala_Belait (dor:Kuala_Belait) --doo:country--> Brunei (dor:Brunei)
+      - Belait_River (dor:Belait_River) --doo:mouthMountain--> Kuala_Belait (dor:Kuala_Belait)
+  '7':
+    attributes:
+      Kuala_Belait: (population total^='4259')
+    relationships:
+      - Belait_Beach (dor:Belait_Beach) --doo:location--> Kuala_Belait (dor:Kuala_Belait)
+      - Kuala_Belait (dor:Kuala_Belait) --doo:subdivision--> Mukim_Kuala_Belait (dor:Mukim_Kuala_Belait)
+      - Kuala_Belait (dor:Kuala_Belait) --doo:country--> Brunei (dor:Brunei)
+      - Belait_River (dor:Belait_River) --doo:mouthMountain--> Kuala_Belait (dor:Kuala_Belait)
+  '8':
+    attributes:
+      Lyons,_Illinois: (population total^='10817')
+    relationships:
+      - Chicago_Portage_National_Historic_Site__Chicago_Portage_National_Historic_Site__1 (dor:Chicago_Portage_National_Historic_Site__Chicago_Portage_National_Historic_Site__1) --doo:location--> Lyons,_Illinois (<http://dbpedia.org/resource/Lyons,_Illinois>)
+      - Lyons,_Illinois (<http://dbpedia.org/resource/Lyons,_Illinois>) --doo:subdivision--> Cook_County,_Illinois (<http://dbpedia.org/resource/Cook_County,_Illinois>)
+      - Lyons,_Illinois (<http://dbpedia.org/resource/Lyons,_Illinois>) --doo:country--> United_States (dor:United_States)
+      - Salt_Creek_(Des_Plaines_River_tributary) (<http://dbpedia.org/resource/Salt_Creek_(Des_Plaines_River_tributary)>) --doo:mouthMountain--> Lyons,_Illinois (<http://dbpedia.org/resource/Lyons,_Illinois>)
+  '9':
+    attributes:
+      Lyons,_Illinois: (population total^='10817')
+      Chicago_Portage_National_Historic_Site: (Link from a Wikipage to an external page^='http://drupal.library.cmu.edu/chicago/')
+    relationships:
+      - Chicago_Portage_National_Historic_Site (dor:Chicago_Portage_National_Historic_Site) --doo:location--> Lyons,_Illinois (<http://dbpedia.org/resource/Lyons,_Illinois>)
+      - Lyons,_Illinois (<http://dbpedia.org/resource/Lyons,_Illinois>) --doo:subdivision--> Cook_County,_Illinois (<http://dbpedia.org/resource/Cook_County,_Illinois>)
+      - Lyons,_Illinois (<http://dbpedia.org/resource/Lyons,_Illinois>) --doo:country--> United_States (dor:United_States)
+      - Salt_Creek_(Des_Plaines_River_tributary) (<http://dbpedia.org/resource/Salt_Creek_(Des_Plaines_River_tributary)>) --doo:mouthMountain--> Lyons,_Illinois (<http://dbpedia.org/resource/Lyons,_Illinois>)
+  '10':
+    attributes:
+      Sleepy_Hollow,_New_York: (population total^='9986')
+    relationships:
+      - Edward_Harden_Mansion (dor:Edward_Harden_Mansion) --doo:location--> Sleepy_Hollow,_New_York (<http://dbpedia.org/resource/Sleepy_Hollow,_New_York>)
+      - Sleepy_Hollow,_New_York (<http://dbpedia.org/resource/Sleepy_Hollow,_New_York>) --doo:subdivision--> Mount_Pleasant,_New_York (<http://dbpedia.org/resource/Mount_Pleasant,_New_York>)
+      - Sleepy_Hollow,_New_York (<http://dbpedia.org/resource/Sleepy_Hollow,_New_York>) --doo:country--> United_States (dor:United_States)
+      - Pocantico_River (dor:Pocantico_River) --doo:mouthMountain--> Sleepy_Hollow,_New_York (<http://dbpedia.org/resource/Sleepy_Hollow,_New_York>)
+attributes:
+  village: --population total^ (doo:populationTotal)--> int | --reason^ (dop:reason)--> langString
+  Location: --subdivision^ (doo:subdivision)--> Resource | --group^ (dop:group)--> Resource | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --Aug low F^ (dop:augLowF)--> double | --designated nrhp type^ (dop:designatedNrhpType)--> date | --district^ (doo:district)--> Resource | --nickname^ (dop:nickname)--> langString
+subgraph_id: 652
+relationships:
+  - Location --doo:location--> village
+  - village --doo:subdivision--> settlement
+  - village --doo:country--> country
+  - river --doo:mouthMountain--> village

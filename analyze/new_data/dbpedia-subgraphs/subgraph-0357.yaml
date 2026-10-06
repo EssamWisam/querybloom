@@ -1,0 +1,75 @@
+types:
+  town: doo:Town
+  person: doo:Person
+  country: doo:Country
+  Location: doo:Location
+  radio station: doo:RadioStation
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Spogmai_FM (dor:Spogmai_FM) --doo:city--> Kabul (dor:Kabul)
+      - Bashir_Ahmad_Bezan (dor:Bashir_Ahmad_Bezan) --doo:birthPlace--> Kabul (dor:Kabul)
+      - 1973_Afghan_coup_d'état (<http://dbpedia.org/resource/1973_Afghan_coup_d'état>) --doo:place--> Kabul (dor:Kabul)
+      - Bashir_Ahmad_Bezan (dor:Bashir_Ahmad_Bezan) --doo:stateOfOrigin--> Afghanistan (dor:Afghanistan)
+      - Kabul (dor:Kabul) --doo:type--> Municipality (dor:Municipality)
+  '2':
+    attributes:
+      United_Kingdom: (title^='Handel''s "Zadok the Priest", HWV 258, coronation anthem for George II')
+    relationships:
+      - Spogmai_FM (dor:Spogmai_FM) --doo:city--> Kabul (dor:Kabul)
+      - Mehran_Marri (dor:Mehran_Marri) --doo:birthPlace--> Kabul (dor:Kabul)
+      - 1973_Afghan_coup_d'état (<http://dbpedia.org/resource/1973_Afghan_coup_d'état>) --doo:place--> Kabul (dor:Kabul)
+      - Mehran_Marri (dor:Mehran_Marri) --doo:stateOfOrigin--> United_Kingdom (dor:United_Kingdom)
+      - Kabul (dor:Kabul) --doo:type--> Municipality (dor:Municipality)
+  '3':
+    attributes: {}
+    relationships:
+      - Spogmai_FM (dor:Spogmai_FM) --doo:city--> Kabul (dor:Kabul)
+      - Nilofar_Bayat (dor:Nilofar_Bayat) --doo:birthPlace--> Kabul (dor:Kabul)
+      - 1973_Afghan_coup_d'état (<http://dbpedia.org/resource/1973_Afghan_coup_d'état>) --doo:place--> Kabul (dor:Kabul)
+      - Nilofar_Bayat (dor:Nilofar_Bayat) --doo:stateOfOrigin--> Afghanistan (dor:Afghanistan)
+      - Kabul (dor:Kabul) --doo:type--> Municipality (dor:Municipality)
+  '4':
+    attributes:
+      United_Kingdom: (title^='Handel''s "Zadok the Priest", HWV 258, coronation anthem for George II')
+    relationships:
+      - BBC_Radio_Berkshire (dor:BBC_Radio_Berkshire) --doo:city--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Kristian_Callaghan (dor:Kristian_Callaghan) --doo:birthPlace--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Battle_of_Reading_(1688) (<http://dbpedia.org/resource/Battle_of_Reading_(1688)>) --doo:place--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Kristian_Callaghan (dor:Kristian_Callaghan) --doo:stateOfOrigin--> United_Kingdom (dor:United_Kingdom)
+      - Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>) --doo:type--> City_status_in_the_United_Kingdom (dor:City_status_in_the_United_Kingdom)
+  '5':
+    attributes:
+      United_Kingdom: (title^='Handel''s "Zadok the Priest", HWV 258, coronation anthem for George II')
+    relationships:
+      - Blast_1386AM (dor:Blast_1386AM) --doo:city--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Kristian_Callaghan (dor:Kristian_Callaghan) --doo:birthPlace--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Battle_of_Reading_(1688) (<http://dbpedia.org/resource/Battle_of_Reading_(1688)>) --doo:place--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Kristian_Callaghan (dor:Kristian_Callaghan) --doo:stateOfOrigin--> United_Kingdom (dor:United_Kingdom)
+      - Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>) --doo:type--> City_status_in_the_United_Kingdom (dor:City_status_in_the_United_Kingdom)
+  '6':
+    attributes: {}
+    relationships:
+      - BBC_Radio_Berkshire (dor:BBC_Radio_Berkshire) --doo:city--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Sam_Townsend (dor:Sam_Townsend) --doo:birthPlace--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Battle_of_Reading_(1688) (<http://dbpedia.org/resource/Battle_of_Reading_(1688)>) --doo:place--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Sam_Townsend (dor:Sam_Townsend) --doo:stateOfOrigin--> Great_Britain (dor:Great_Britain)
+      - Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>) --doo:type--> City_status_in_the_United_Kingdom (dor:City_status_in_the_United_Kingdom)
+attributes:
+  town: --Apr high F^ (dop:aprHighF)--> double | --arc-textB^ (dop:arcTextb)--> langString
+  person: --last^ (dop:last)--> langString | --source^ (dop:source)--> langString
+  Location: --title^ (dop:title)--> langString | --Aug low F^ (dop:augLowF)--> double | --Aug low F^ (dop:augLowF)--> int | --data^ (dop:data)--> double | --former name^ (doo:formerName)--> langString | --arc-radiusB^ (dop:arcRadiusb)--> double
+subgraph_id: 357
+relationships:
+  - radio station --doo:city--> town
+  - person --doo:birthPlace--> town
+  - military conflict --doo:place--> town
+  - person --doo:stateOfOrigin--> Location
+  - town --doo:type--> country

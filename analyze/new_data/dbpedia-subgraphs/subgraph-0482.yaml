@@ -1,0 +1,123 @@
+types:
+  Band: doo:Band
+  song: doo:Song
+  record label: doo:RecordLabel
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      ¡Corre!: (subject='http://dbpedia.org/resource/Category:2011_singles')
+      Jesse_&_Joy: (current members^='Jesse Eduardo Huerta Uecke', caption^='Jesse  and Joy  in 2017')
+      Fuego_ardiente: (starring^='')
+    relationships:
+      - ¡Corre! (<http://dbpedia.org/resource/¡Corre!>) --doo:recordLabel--> Warner_Music (dor:Warner_Music)
+      - ¡Corre! (<http://dbpedia.org/resource/¡Corre!>) --dop:artist--> Jesse_&_Joy (<http://dbpedia.org/resource/Jesse_&_Joy>)
+      - Fuego_ardiente (dor:Fuego_ardiente) --doo:composer--> Jesse_&_Joy (<http://dbpedia.org/resource/Jesse_&_Joy>)
+  '2':
+    attributes:
+      Thalía: (caption^='Thalía in 2006')
+      Antes_muerta_que_Lichita: (starring^='')
+      ¿A_quién_le_importa%3F: (subject='http://dbpedia.org/resource/Category:1986_songs')
+    relationships:
+      - ¿A_quién_le_importa%3F (<http://dbpedia.org/resource/¿A_quién_le_importa%3F>) --doo:recordLabel--> EMI_Music (dor:EMI_Music)
+      - ¿A_quién_le_importa%3F (<http://dbpedia.org/resource/¿A_quién_le_importa%3F>) --dop:artist--> Thalía (<http://dbpedia.org/resource/Thalía>)
+      - Antes_muerta_que_Lichita (dor:Antes_muerta_que_Lichita) --doo:composer--> Thalía (<http://dbpedia.org/resource/Thalía>)
+  '3':
+    attributes:
+      Thalía: (caption^='Thalía in 2006')
+      ¿A_quién_le_importa%3F: (subject='http://dbpedia.org/resource/Category:1986_songs')
+      Maria_Mercedes_(Philippine_TV_series): (starring^='')
+    relationships:
+      - ¿A_quién_le_importa%3F (<http://dbpedia.org/resource/¿A_quién_le_importa%3F>) --doo:recordLabel--> EMI_Music (dor:EMI_Music)
+      - ¿A_quién_le_importa%3F (<http://dbpedia.org/resource/¿A_quién_le_importa%3F>) --dop:artist--> Thalía (<http://dbpedia.org/resource/Thalía>)
+      - Maria_Mercedes_(Philippine_TV_series) (<http://dbpedia.org/resource/Maria_Mercedes_(Philippine_TV_series)>) --doo:composer--> Thalía (<http://dbpedia.org/resource/Thalía>)
+  '4':
+    attributes:
+      Zoey_101: (starring^='', Link from a Wikipage to an external page^='http://www.nick.com/zoey-101/', channel^='http://dbpedia.org/resource/Nickelodeon')
+      Britney_Spears: (caption^='Spears in 2013')
+      ...Baby_One_More_Time_(song): (producer^='http://dbpedia.org/resource/Max_Martin', subject='http://dbpedia.org/resource/Category:1998_debut_singles')
+    relationships:
+      - ...Baby_One_More_Time_(song) (<http://dbpedia.org/resource/...Baby_One_More_Time_(song)>) --doo:recordLabel--> Jive_Records (dor:Jive_Records)
+      - ...Baby_One_More_Time_(song) (<http://dbpedia.org/resource/...Baby_One_More_Time_(song)>) --dop:artist--> Britney_Spears (dor:Britney_Spears)
+      - Zoey_101 (dor:Zoey_101) --doo:composer--> Britney_Spears (dor:Britney_Spears)
+  '5':
+    attributes:
+      Papa_Roach: |-
+        (current members^='* Jacoby Shaddix
+        * Jerry Horton
+        * Tobin Esperance
+        * Tony Palermo', caption^='Papa Roach performing in 2018 at the Reload Festival.')
+      ...To_Be_Loved: (producer^='http://dbpedia.org/resource/Howard_Benson', subject='http://dbpedia.org/resource/Category:2006_singles')
+    relationships:
+      - ...To_Be_Loved (<http://dbpedia.org/resource/...To_Be_Loved>) --doo:recordLabel--> Geffen_Records (dor:Geffen_Records)
+      - ...To_Be_Loved (<http://dbpedia.org/resource/...To_Be_Loved>) --dop:artist--> Papa_Roach (dor:Papa_Roach)
+      - Scarred_(TV_series) (<http://dbpedia.org/resource/Scarred_(TV_series)>) --doo:composer--> Papa_Roach (dor:Papa_Roach)
+  '6':
+    attributes:
+      '''39': (producer^='http://dbpedia.org/resource/Queen_(band)', subject='http://dbpedia.org/resource/Category:1975_songs')
+      Queen_(band): |-
+        (current members^='* Brian May
+        * Roger Taylor', caption^='Clockwise from top left: Brian May, Freddie Mercury, Roger Taylor, John Deacon')
+      When_Harvey_Met_Bob: (starring^='Chris Dunlop', Link from a Wikipage to an external page^='http://www.bbc.co.uk/programmes/b00wympz')
+    relationships:
+      - '''39 (<http://dbpedia.org/resource/''39>) --doo:recordLabel--> Elektra_Records (dor:Elektra_Records)'
+      - '''39 (<http://dbpedia.org/resource/''39>) --dop:artist--> Queen_(band) (<http://dbpedia.org/resource/Queen_(band)>)'
+      - When_Harvey_Met_Bob (dor:When_Harvey_Met_Bob) --doo:composer--> Queen_(band) (<http://dbpedia.org/resource/Queen_(band)>)
+  '7':
+    attributes:
+      '''39': (producer^='http://dbpedia.org/resource/Queen_(band)', subject='http://dbpedia.org/resource/Category:1975_songs')
+      Queen_(band): |-
+        (current members^='* Brian May
+        * Roger Taylor', caption^='Clockwise from top left: Brian May, Freddie Mercury, Roger Taylor, John Deacon')
+      When_Harvey_Met_Bob: (starring^='Chris Dunlop', Link from a Wikipage to an external page^='http://www.bbc.co.uk/programmes/b00wympz')
+    relationships:
+      - '''39 (<http://dbpedia.org/resource/''39>) --doo:recordLabel--> EMI_Records (dor:EMI_Records)'
+      - '''39 (<http://dbpedia.org/resource/''39>) --dop:artist--> Queen_(band) (<http://dbpedia.org/resource/Queen_(band)>)'
+      - When_Harvey_Met_Bob (dor:When_Harvey_Met_Bob) --doo:composer--> Queen_(band) (<http://dbpedia.org/resource/Queen_(band)>)
+  '8':
+    attributes:
+      R.E.M.: '(caption^=''R.E.M. in concert in Padua, Italy, in 2003. From left to right: Mike Mills , Michael Stipe, touring drummer Bill Rieflin, and Peter Buck'')'
+      (Don't_Go_Back_To)_Rockville: (producer^='http://dbpedia.org/resource/Don_Dixon_(musician)', subject='http://dbpedia.org/resource/Category:1984_singles')
+      Get_a_Life_(American_TV_series): (starring^='http://dbpedia.org/resource/Bob_Elliott_(comedian)', Link from a Wikipage to an external page^='https://www.usatoday.com/story/popcandy/2012/11/02/simpsons-david-mirkin-get-a-life-chris-elliott/1677585/')
+    relationships:
+      - (Don't_Go_Back_To)_Rockville (<http://dbpedia.org/resource/(Don't_Go_Back_To)_Rockville>) --doo:recordLabel--> IRS_Records (dor:IRS_Records)
+      - (Don't_Go_Back_To)_Rockville (<http://dbpedia.org/resource/(Don't_Go_Back_To)_Rockville>) --dop:artist--> R.E.M. (<http://dbpedia.org/resource/R.E.M.>)
+      - Get_a_Life_(American_TV_series) (<http://dbpedia.org/resource/Get_a_Life_(American_TV_series)>) --doo:composer--> R.E.M. (<http://dbpedia.org/resource/R.E.M.>)
+  '9':
+    attributes:
+      Brandy_Norwood: (caption^='Norwood during an interview in 2019')
+      Brandy:_Special_Delivery: (starring^='Robert "Big Bert" Smith', channel^='http://dbpedia.org/resource/MTV')
+      (Everything_I_Do)_I_Do_It_for_You: (producer^='http://dbpedia.org/resource/Robert_John_%22Mutt%22_Lange', subject='http://dbpedia.org/resource/Category:1990s_ballads')
+    relationships:
+      - (Everything_I_Do)_I_Do_It_for_You (<http://dbpedia.org/resource/(Everything_I_Do)_I_Do_It_for_You>) --doo:recordLabel--> A&M_Records (<http://dbpedia.org/resource/A&M_Records>)
+      - (Everything_I_Do)_I_Do_It_for_You (<http://dbpedia.org/resource/(Everything_I_Do)_I_Do_It_for_You>) --dop:artist--> Brandy_Norwood (dor:Brandy_Norwood)
+      - Brandy:_Special_Delivery (<http://dbpedia.org/resource/Brandy:_Special_Delivery>) --doo:composer--> Brandy_Norwood (dor:Brandy_Norwood)
+  '10':
+    attributes:
+      Devo: |-
+        (current members^='* Mark Mothersbaugh
+        * Bob Mothersbaugh
+        * Gerald Casale
+        * Josh Freese
+        * Josh Hager', caption^='Devo performing live at the Forecastle Festival, in Louisville, Kentucky, 2010')
+      Monster_Man_(TV_series): (starring^='http://dbpedia.org/resource/Cleve_Hall', Link from a Wikipage to an external page^='http://www.sotaproductions.net/main/', channel^='http://dbpedia.org/resource/Syfy')
+      (I_Can't_Get_No)_Satisfaction: (producer^='http://dbpedia.org/resource/Andrew_Loog_Oldham', subject='http://dbpedia.org/resource/Category:1965_singles')
+    relationships:
+      - (I_Can't_Get_No)_Satisfaction (<http://dbpedia.org/resource/(I_Can't_Get_No)_Satisfaction>) --doo:recordLabel--> Decca_Records (dor:Decca_Records)
+      - (I_Can't_Get_No)_Satisfaction (<http://dbpedia.org/resource/(I_Can't_Get_No)_Satisfaction>) --dop:artist--> Devo (dor:Devo)
+      - Monster_Man_(TV_series) (<http://dbpedia.org/resource/Monster_Man_(TV_series)>) --doo:composer--> Devo (dor:Devo)
+attributes:
+  Band: --current members^ (dop:currentMembers)--> Resource | --caption^ (dop:caption)--> langString
+  song: --producer^ (doo:producer)--> Resource | --subject (podt:subject)--> Resource
+  television show: --starring^ (dop:starring)--> Resource | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --header^ (dop:header)--> langString | --voice^ (doo:voice)--> Resource | --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --direction^ (dop:direction)--> langString | --c^ (dop:c)--> langString | --channel^ (doo:channel)--> Resource
+subgraph_id: 482
+relationships:
+  - song --doo:recordLabel--> record label
+  - song --dop:artist--> Band
+  - television show --doo:composer--> Band

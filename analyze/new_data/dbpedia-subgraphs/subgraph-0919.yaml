@@ -1,0 +1,72 @@
+types:
+  person: doo:Person
+  athlete: doo:Athlete
+  congressman: doo:Congressman
+  soccer club: doo:SoccerClub
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      California: (area code^='209 213 310 323 408 415 510 530 559 562 619 626 650 661 707 714 760 805 818 831 858 909 916 925 949')
+      2014_Isla_Vista_killings: (title^='2014')
+    relationships:
+      - Braheme_Days_Jr. (<http://dbpedia.org/resource/Braheme_Days_Jr.>) --doo:residence--> California (dor:California)
+      - Everett_G._Burkhalter (dor:Everett_G._Burkhalter) --doo:region--> California (dor:California)
+      - 2014_Isla_Vista_killings (dor:2014_Isla_Vista_killings) --doo:deathPlace--> California (dor:California)
+      - Braheme_Days_Jr. (<http://dbpedia.org/resource/Braheme_Days_Jr.>) --dop:collegeteam--> UCLA_Bruins (dor:UCLA_Bruins)
+  '2':
+    attributes:
+      California: (area code^='209 213 310 323 408 415 510 530 559 562 619 626 650 661 707 714 760 805 818 831 858 909 916 925 949')
+      A._A._Allen: (title^='Head of A. A. Allen Revivals, Inc.')
+    relationships:
+      - Braheme_Days_Jr. (<http://dbpedia.org/resource/Braheme_Days_Jr.>) --doo:residence--> California (dor:California)
+      - Everett_G._Burkhalter (dor:Everett_G._Burkhalter) --doo:region--> California (dor:California)
+      - A._A._Allen (dor:A._A._Allen) --doo:deathPlace--> California (dor:California)
+      - Braheme_Days_Jr. (<http://dbpedia.org/resource/Braheme_Days_Jr.>) --dop:collegeteam--> UCLA_Bruins (dor:UCLA_Bruins)
+  '3':
+    attributes:
+      California: (area code^='209 213 310 323 408 415 510 530 559 562 619 626 650 661 707 714 760 805 818 831 858 909 916 925 949')
+      A._A._H._Tuttle: (title^='California State Assemblyman, 7th District')
+    relationships:
+      - Braheme_Days_Jr. (<http://dbpedia.org/resource/Braheme_Days_Jr.>) --doo:residence--> California (dor:California)
+      - Everett_G._Burkhalter (dor:Everett_G._Burkhalter) --doo:region--> California (dor:California)
+      - A._A._H._Tuttle (dor:A._A._H._Tuttle) --doo:deathPlace--> California (dor:California)
+      - Braheme_Days_Jr. (<http://dbpedia.org/resource/Braheme_Days_Jr.>) --dop:collegeteam--> UCLA_Bruins (dor:UCLA_Bruins)
+  '4':
+    attributes:
+      Adoniram_J._Warner: (resting place^='http://dbpedia.org/resource/Marietta,_Ohio')
+    relationships:
+      - David_Payne_(hurdler) (<http://dbpedia.org/resource/David_Payne_(hurdler)>) --doo:residence--> Ohio (dor:Ohio)
+      - Albert_G._Riddle (dor:Albert_G._Riddle) --doo:region--> Ohio (dor:Ohio)
+      - Adoniram_J._Warner (dor:Adoniram_J._Warner) --doo:deathPlace--> Ohio (dor:Ohio)
+      - David_Payne_(hurdler) (<http://dbpedia.org/resource/David_Payne_(hurdler)>) --dop:collegeteam--> Cincinnati_Bearcats (dor:Cincinnati_Bearcats)
+  '5':
+    attributes: {}
+    relationships:
+      - David_Payne_(hurdler) (<http://dbpedia.org/resource/David_Payne_(hurdler)>) --doo:residence--> Ohio (dor:Ohio)
+      - Albert_G._Riddle (dor:Albert_G._Riddle) --doo:region--> Ohio (dor:Ohio)
+      - Adrian_Ford (dor:Adrian_Ford) --doo:deathPlace--> Ohio (dor:Ohio)
+      - David_Payne_(hurdler) (<http://dbpedia.org/resource/David_Payne_(hurdler)>) --dop:collegeteam--> Cincinnati_Bearcats (dor:Cincinnati_Bearcats)
+  '6':
+    attributes:
+      Albert_C._Thompson: (title^='Judge of the United States District Court for the Southern District of Ohio', resting place^='http://dbpedia.org/resource/Ohio')
+    relationships:
+      - David_Payne_(hurdler) (<http://dbpedia.org/resource/David_Payne_(hurdler)>) --doo:residence--> Ohio (dor:Ohio)
+      - Albert_G._Riddle (dor:Albert_G._Riddle) --doo:region--> Ohio (dor:Ohio)
+      - Albert_C._Thompson (dor:Albert_C._Thompson) --doo:deathPlace--> Ohio (dor:Ohio)
+      - David_Payne_(hurdler) (<http://dbpedia.org/resource/David_Payne_(hurdler)>) --dop:collegeteam--> Cincinnati_Bearcats (dor:Cincinnati_Bearcats)
+attributes:
+  person: --title^ (dop:title)--> langString | --resting place^ (doo:restingPlace)--> Resource | --alt^ (dop:alt)--> langString | --by^ (dop:by)--> langString | --url^ (dop:url)--> Resource | --author^ (dop:author)--> langString
+  soccer club: --colwidth^ (dop:colwidth)--> int
+  administrative region: --named for^ (dop:namedFor)--> Resource | --area code^ (doo:areaCode)--> string | --named for^ (dop:namedFor)--> langString | --Apr rain mm^ (dop:aprRainMm)--> double
+subgraph_id: 919
+relationships:
+  - athlete --doo:residence--> administrative region
+  - congressman --doo:region--> administrative region
+  - person --doo:deathPlace--> administrative region
+  - athlete --dop:collegeteam--> soccer club

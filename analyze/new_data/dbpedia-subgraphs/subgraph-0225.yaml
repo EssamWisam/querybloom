@@ -1,0 +1,141 @@
+types:
+  town: doo:Town
+  athlete: doo:Athlete
+  automobile: doo:Automobile
+  soccer player: doo:SoccerPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bursa: (UTC offset^='+3', Aug high C^='31.7', Apr precipitation mm^='68.6')
+      Ahmet_Peker: (birth date^='1989-11-04', birth place^='İskilip, Çorum Province, Turkey', club^='http://dbpedia.org/resource/Bursa')
+      Bülent_Bal: (birth date^='1977-08-05')
+    relationships:
+      - Bülent_Bal (<http://dbpedia.org/resource/Bülent_Bal>) --dop:birthPlace--> Bursa (dor:Bursa)
+      - Ahmet_Peker (dor:Ahmet_Peker) --doo:club--> Bursa (dor:Bursa)
+      - Fiat_Bravo_and_Brava (dor:Fiat_Bravo_and_Brava) --dop:assembly--> Bursa (dor:Bursa)
+  '2':
+    attributes:
+      Bursa: (UTC offset^='+3', Aug high C^='31.7', Apr precipitation mm^='68.6')
+      Ahmet_Peker: (birth date^='1989-11-04', birth place^='İskilip, Çorum Province, Turkey', club^='http://dbpedia.org/resource/Bursa')
+      Buluthan_Bulut: (birth date^='2002-07-21')
+    relationships:
+      - Buluthan_Bulut (dor:Buluthan_Bulut) --dop:birthPlace--> Bursa (dor:Bursa)
+      - Ahmet_Peker (dor:Ahmet_Peker) --doo:club--> Bursa (dor:Bursa)
+      - Fiat_Bravo_and_Brava (dor:Fiat_Bravo_and_Brava) --dop:assembly--> Bursa (dor:Bursa)
+  '3':
+    attributes:
+      Bursa: (UTC offset^='+3', Aug high C^='31.7', Apr precipitation mm^='68.6')
+      Ahmet_Peker: (birth date^='1989-11-04', birth place^='İskilip, Çorum Province, Turkey', club^='http://dbpedia.org/resource/Bursa')
+      Eriş_Özkan: (birth date^='1981-09-01')
+    relationships:
+      - Eriş_Özkan (<http://dbpedia.org/resource/Eriş_Özkan>) --dop:birthPlace--> Bursa (dor:Bursa)
+      - Ahmet_Peker (dor:Ahmet_Peker) --doo:club--> Bursa (dor:Bursa)
+      - Fiat_Bravo_and_Brava (dor:Fiat_Bravo_and_Brava) --dop:assembly--> Bursa (dor:Bursa)
+  '4':
+    attributes:
+      Istanbul: (UTC offset^='+3', Aug high C^='26.6', Apr precipitation mm^='43.1')
+      Ayhan_Gezen: (birth date^='1972-06-23')
+      Ayhan_Karakuş: (birth date^='1989-10-13', birth place^='Sivas, Turkey', club^='http://dbpedia.org/resource/Istanbul')
+    relationships:
+      - Ayhan_Gezen (dor:Ayhan_Gezen) --dop:birthPlace--> Istanbul (dor:Istanbul)
+      - Ayhan_Karakuş (<http://dbpedia.org/resource/Ayhan_Karakuş>) --doo:club--> Istanbul (dor:Istanbul)
+      - Ford_Escort_(Europe) (<http://dbpedia.org/resource/Ford_Escort_(Europe)>) --dop:assembly--> Istanbul (dor:Istanbul)
+  '5':
+    attributes:
+      Istanbul: (UTC offset^='+3', Aug high C^='26.6', Apr precipitation mm^='43.1')
+      Ayhan_Karakuş: (birth date^='1989-10-13', birth place^='Sivas, Turkey', club^='http://dbpedia.org/resource/Istanbul')
+      Batur_Altıparmak: (birth date^='1971-01-01')
+    relationships:
+      - Batur_Altıparmak (<http://dbpedia.org/resource/Batur_Altıparmak>) --dop:birthPlace--> Istanbul (dor:Istanbul)
+      - Ayhan_Karakuş (<http://dbpedia.org/resource/Ayhan_Karakuş>) --doo:club--> Istanbul (dor:Istanbul)
+      - Ford_Escort_(Europe) (<http://dbpedia.org/resource/Ford_Escort_(Europe)>) --dop:assembly--> Istanbul (dor:Istanbul)
+  '6':
+    attributes:
+      Istanbul: (UTC offset^='+3', Aug high C^='26.6', Apr precipitation mm^='43.1')
+      Ayhan_Karakuş: (birth date^='1989-10-13', birth place^='Sivas, Turkey', club^='http://dbpedia.org/resource/Istanbul')
+      Baykal_Kulaksızoğlu: (birth date^='1983-05-12')
+    relationships:
+      - Baykal_Kulaksızoğlu (<http://dbpedia.org/resource/Baykal_Kulaksızoğlu>) --dop:birthPlace--> Istanbul (dor:Istanbul)
+      - Ayhan_Karakuş (<http://dbpedia.org/resource/Ayhan_Karakuş>) --doo:club--> Istanbul (dor:Istanbul)
+      - Ford_Escort_(Europe) (<http://dbpedia.org/resource/Ford_Escort_(Europe)>) --dop:assembly--> Istanbul (dor:Istanbul)
+  '7':
+    attributes:
+      Shanghai: (UTC offset^='+08:00')
+      Bai_Jiajun: (birth date^='1991-03-20')
+      Chen_Xinyi: (birth date^='1998-01-02', birth place^='http://dbpedia.org/resource/China', club^='http://dbpedia.org/resource/Shanghai')
+    relationships:
+      - Bai_Jiajun (dor:Bai_Jiajun) --dop:birthPlace--> Shanghai (dor:Shanghai)
+      - Chen_Xinyi (dor:Chen_Xinyi) --doo:club--> Shanghai (dor:Shanghai)
+      - Cadillac_CTS (dor:Cadillac_CTS) --dop:assembly--> Shanghai (dor:Shanghai)
+  '8':
+    attributes:
+      Bai_Lili: (birth date^='1978-10-29')
+      Shanghai: (UTC offset^='+08:00')
+      Chen_Xinyi: (birth date^='1998-01-02', birth place^='http://dbpedia.org/resource/China', club^='http://dbpedia.org/resource/Shanghai')
+    relationships:
+      - Bai_Lili (dor:Bai_Lili) --dop:birthPlace--> Shanghai (dor:Shanghai)
+      - Chen_Xinyi (dor:Chen_Xinyi) --doo:club--> Shanghai (dor:Shanghai)
+      - Cadillac_CTS (dor:Cadillac_CTS) --dop:assembly--> Shanghai (dor:Shanghai)
+  '9':
+    attributes:
+      Bian_Jun: (birth date^='1977-07-15')
+      Shanghai: (UTC offset^='+08:00')
+      Chen_Xinyi: (birth date^='1998-01-02', birth place^='http://dbpedia.org/resource/China', club^='http://dbpedia.org/resource/Shanghai')
+    relationships:
+      - Bian_Jun (dor:Bian_Jun) --dop:birthPlace--> Shanghai (dor:Shanghai)
+      - Chen_Xinyi (dor:Chen_Xinyi) --doo:club--> Shanghai (dor:Shanghai)
+      - Cadillac_CTS (dor:Cadillac_CTS) --dop:assembly--> Shanghai (dor:Shanghai)
+  '10':
+    attributes:
+      Erlon_Silva: (birth date^='1991-06-23', caption^='Silva at the 2016 Olympics', birth place^='http://dbpedia.org/resource/Brazil', club^='http://dbpedia.org/resource/Rio_de_Janeiro')
+      Aarón_Wergifker: (birth date^='1914-08-15')
+    relationships:
+      - Aarón_Wergifker (<http://dbpedia.org/resource/Aarón_Wergifker>) --dop:birthPlace--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - Erlon_Silva (dor:Erlon_Silva) --doo:club--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+      - Chery_QQ3 (dor:Chery_QQ3) --dop:assembly--> São_Paulo (<http://dbpedia.org/resource/São_Paulo>)
+qa_result:
+  status: completed
+  cost_usd: 0.31558
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.026617400000000003
+        total_tokens: 3320
+        prompt_tokens: 2207
+        completion_tokens: 1113
+      generate:
+        cost_usd: 0.1078776
+        total_tokens: 9095
+        prompt_tokens: 4455
+        completion_tokens: 4640
+      verify_1:
+        cost_usd: 0.040622000000000005
+        total_tokens: 5659
+        prompt_tokens: 4837
+        completion_tokens: 822
+      complexity:
+        cost_usd: 0.140463
+        total_tokens: 11662
+        prompt_tokens: 5613
+        completion_tokens: 6049
+    total_tokens: 29736
+    prompt_tokens: 17112
+    total_cost_usd: 0.31558
+    completion_tokens: 12624
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  town: --Apr record low F^ (dop:aprRecordLowF)--> int | --UTC offset^ (doo:utcOffset)--> string | --arc-textB^ (dop:arcTextb)--> langString | --Aug high F^ (dop:augHighF)--> int | --Aug high C^ (dop:augHighC)--> int | --arc-textA^ (dop:arcTexta)--> langString | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int
+  athlete: --birth date^ (doo:birthDate)--> date | --caption^ (dop:caption)--> langString | --birth place^ (dop:birthPlace)--> langString | --club^ (doo:club)--> Resource
+  soccer player: --caption^ (dop:caption)--> langString | --birth date^ (dop:birthDate)--> date
+subgraph_id: 225
+relationships:
+  - soccer player --dop:birthPlace--> town
+  - athlete --doo:club--> town
+  - automobile --dop:assembly--> town

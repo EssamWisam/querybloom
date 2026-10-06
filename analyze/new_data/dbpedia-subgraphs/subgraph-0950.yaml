@@ -1,0 +1,51 @@
+types:
+  album: doo:Album
+  movie: doo:Film
+  artist: doo:Artist
+  person: doo:Person
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      9500_Liberty: (Wikipage page ID^='28997437')
+      Edgar_Froese: (image upright^='1.2')
+    relationships:
+      - A_Brief_History_of_Ambient (dor:A_Brief_History_of_Ambient) --dop:extra--> Michael_Brook (dor:Michael_Brook)
+      - 9500_Liberty (dor:9500_Liberty) --doo:musicComposer--> Michael_Brook (dor:Michael_Brook)
+      - A_Brief_History_of_Ambient (dor:A_Brief_History_of_Ambient) --dop:extra--> Edgar_Froese (dor:Edgar_Froese)
+      - Bianca_Froese-Acquaye (dor:Bianca_Froese-Acquaye) --doo:spouse--> Edgar_Froese (dor:Edgar_Froese)
+  '2':
+    attributes:
+      Edgar_Froese: (image upright^='1.2')
+      Affliction_(1997_film): (Wikipage page ID^='171559')
+    relationships:
+      - A_Brief_History_of_Ambient (dor:A_Brief_History_of_Ambient) --dop:extra--> Michael_Brook (dor:Michael_Brook)
+      - Affliction_(1997_film) (<http://dbpedia.org/resource/Affliction_(1997_film)>) --doo:musicComposer--> Michael_Brook (dor:Michael_Brook)
+      - A_Brief_History_of_Ambient (dor:A_Brief_History_of_Ambient) --dop:extra--> Edgar_Froese (dor:Edgar_Froese)
+      - Bianca_Froese-Acquaye (dor:Bianca_Froese-Acquaye) --doo:spouse--> Edgar_Froese (dor:Edgar_Froese)
+  '3':
+    attributes:
+      Edgar_Froese: (image upright^='1.2')
+      Albino_Alligator: (Wikipage page ID^='3505437')
+    relationships:
+      - A_Brief_History_of_Ambient (dor:A_Brief_History_of_Ambient) --dop:extra--> Michael_Brook (dor:Michael_Brook)
+      - Albino_Alligator (dor:Albino_Alligator) --doo:musicComposer--> Michael_Brook (dor:Michael_Brook)
+      - A_Brief_History_of_Ambient (dor:A_Brief_History_of_Ambient) --dop:extra--> Edgar_Froese (dor:Edgar_Froese)
+      - Bianca_Froese-Acquaye (dor:Bianca_Froese-Acquaye) --doo:spouse--> Edgar_Froese (dor:Edgar_Froese)
+attributes:
+  album: --width^ (dop:width)--> perCent
+  movie: --Wikipage page ID^ (doo:wikiPageID)--> int
+  artist: --death date^ (dop:deathDate)--> int
+  person: --image upright^ (dop:imageUpright)--> double | --death cause^ (doo:deathCause)--> Resource | --known for^ (dop:knownFor)--> Resource | --footer^ (dop:footer)--> langString | --known for^ (dop:knownFor)--> int | --after^ (dop:after)--> langString
+  musical artist: --width^ (dop:width)--> int
+subgraph_id: 950
+relationships:
+  - album --dop:extra--> musical artist
+  - movie --doo:musicComposer--> musical artist
+  - album --dop:extra--> person
+  - artist --doo:spouse--> person

@@ -1,0 +1,103 @@
+types:
+  city: doo:City
+  artist: doo:Artist
+  Location: doo:Location
+  politician: doo:Politician
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      New_York_City: (align^='left', type^='http://dbpedia.org/resource/City_(New_York)')
+    relationships:
+      - A._Barton_Hepburn (dor:A._Barton_Hepburn) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - A._Barton_Hepburn (dor:A._Barton_Hepburn) --dop:birthPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Roman_Catholic_Archdiocese_of_New_York (dor:Roman_Catholic_Archdiocese_of_New_York) --doo:territory--> New_York_City (dor:New_York_City)
+      - A._E._Hayward (dor:A._E._Hayward) --dop:deathPlace--> New_York_City (dor:New_York_City)
+  '2':
+    attributes:
+      New_York_City: (align^='left', type^='http://dbpedia.org/resource/City_(New_York)')
+    relationships:
+      - Abner_Nash (dor:Abner_Nash) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Abner_Nash (dor:Abner_Nash) --dop:birthPlace--> Prince_Edward_County,_Virginia (<http://dbpedia.org/resource/Prince_Edward_County,_Virginia>)
+      - Roman_Catholic_Archdiocese_of_New_York (dor:Roman_Catholic_Archdiocese_of_New_York) --doo:territory--> New_York_City (dor:New_York_City)
+      - A._E._Hayward (dor:A._E._Hayward) --dop:deathPlace--> New_York_City (dor:New_York_City)
+  '3':
+    attributes:
+      New_York_City: (align^='left', type^='http://dbpedia.org/resource/City_(New_York)')
+    relationships:
+      - Ādolfs_Bļodnieks (<http://dbpedia.org/resource/Ādolfs_Bļodnieks>) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Ādolfs_Bļodnieks (<http://dbpedia.org/resource/Ādolfs_Bļodnieks>) --dop:birthPlace--> Courland_Governorate (dor:Courland_Governorate)
+      - Roman_Catholic_Archdiocese_of_New_York (dor:Roman_Catholic_Archdiocese_of_New_York) --doo:territory--> New_York_City (dor:New_York_City)
+      - A._E._Hayward (dor:A._E._Hayward) --dop:deathPlace--> New_York_City (dor:New_York_City)
+  '4':
+    attributes:
+      Jakarta: (align^='right', type^='http://dbpedia.org/resource/Capital_districts_and_territories')
+    relationships:
+      - A._J._Witono (dor:A._J._Witono) --doo:deathPlace--> Jakarta (dor:Jakarta)
+      - A._J._Witono (dor:A._J._Witono) --dop:birthPlace--> Yogyakarta (dor:Yogyakarta)
+      - Roman_Catholic_Archdiocese_of_Jakarta (dor:Roman_Catholic_Archdiocese_of_Jakarta) --doo:territory--> Jakarta (dor:Jakarta)
+      - A._T._Mahmud (dor:A._T._Mahmud) --dop:deathPlace--> Jakarta (dor:Jakarta)
+  '5':
+    attributes:
+      Jakarta: (align^='right', type^='http://dbpedia.org/resource/Capital_districts_and_territories')
+    relationships:
+      - Alex_Asmasoebrata (dor:Alex_Asmasoebrata) --doo:deathPlace--> Jakarta (dor:Jakarta)
+      - Alex_Asmasoebrata (dor:Alex_Asmasoebrata) --dop:birthPlace--> Jakarta (dor:Jakarta)
+      - Roman_Catholic_Archdiocese_of_Jakarta (dor:Roman_Catholic_Archdiocese_of_Jakarta) --doo:territory--> Jakarta (dor:Jakarta)
+      - A._T._Mahmud (dor:A._T._Mahmud) --dop:deathPlace--> Jakarta (dor:Jakarta)
+  '6':
+    attributes:
+      Jakarta: (align^='right', type^='http://dbpedia.org/resource/Capital_districts_and_territories')
+    relationships:
+      - Ali_Sastroamidjojo (dor:Ali_Sastroamidjojo) --doo:deathPlace--> Jakarta (dor:Jakarta)
+      - Ali_Sastroamidjojo (dor:Ali_Sastroamidjojo) --dop:birthPlace--> Grabag,_Purworejo (<http://dbpedia.org/resource/Grabag,_Purworejo>)
+      - Roman_Catholic_Archdiocese_of_Jakarta (dor:Roman_Catholic_Archdiocese_of_Jakarta) --doo:territory--> Jakarta (dor:Jakarta)
+      - A._T._Mahmud (dor:A._T._Mahmud) --dop:deathPlace--> Jakarta (dor:Jakarta)
+  '7':
+    attributes:
+      Oslo: (align^='left', type^='http://dbpedia.org/resource/Capital_city')
+    relationships:
+      - Aaslaug_Aasland (dor:Aaslaug_Aasland) --doo:deathPlace--> Oslo (dor:Oslo)
+      - Aaslaug_Aasland (dor:Aaslaug_Aasland) --dop:birthPlace--> Rogaland (dor:Rogaland)
+      - Diocese_of_Oslo__Oslo__1 (dor:Diocese_of_Oslo__Oslo__1) --doo:territory--> Oslo (dor:Oslo)
+      - Aage_Teigen (dor:Aage_Teigen) --dop:deathPlace--> Oslo (dor:Oslo)
+  '8':
+    attributes:
+      Oslo: (align^='left', type^='http://dbpedia.org/resource/Capital_city')
+    relationships:
+      - Anders_Frihagen (dor:Anders_Frihagen) --doo:deathPlace--> Oslo (dor:Oslo)
+      - Anders_Frihagen (dor:Anders_Frihagen) --dop:birthPlace--> Møre_og_Romsdal (<http://dbpedia.org/resource/Møre_og_Romsdal>)
+      - Diocese_of_Oslo__Oslo__1 (dor:Diocese_of_Oslo__Oslo__1) --doo:territory--> Oslo (dor:Oslo)
+      - Aage_Teigen (dor:Aage_Teigen) --dop:deathPlace--> Oslo (dor:Oslo)
+  '9':
+    attributes:
+      Oslo: (align^='left', type^='http://dbpedia.org/resource/Capital_city')
+    relationships:
+      - Anders_Venger (dor:Anders_Venger) --doo:deathPlace--> Oslo (dor:Oslo)
+      - Anders_Venger (dor:Anders_Venger) --dop:birthPlace--> Akershus (dor:Akershus)
+      - Diocese_of_Oslo__Oslo__1 (dor:Diocese_of_Oslo__Oslo__1) --doo:territory--> Oslo (dor:Oslo)
+      - Aage_Teigen (dor:Aage_Teigen) --dop:deathPlace--> Oslo (dor:Oslo)
+  '10':
+    attributes:
+      Baltimore: (type^='http://dbpedia.org/resource/Independent_city_(United_States)')
+    relationships:
+      - Alexander_Harvey_II (dor:Alexander_Harvey_II) --doo:deathPlace--> Baltimore (dor:Baltimore)
+      - Alexander_Harvey_II (dor:Alexander_Harvey_II) --dop:birthPlace--> Maryland (dor:Maryland)
+      - Episcopal_Diocese_of_Maryland (dor:Episcopal_Diocese_of_Maryland) --doo:territory--> Baltimore (dor:Baltimore)
+      - Adalbert_J._Volck (dor:Adalbert_J._Volck) --dop:deathPlace--> Baltimore (dor:Baltimore)
+attributes:
+  city: --align^ (dop:align)--> langString | --type^ (doo:type)--> Resource | --original name^ (doo:originalName)--> langString
+  Location: --Aug low F^ (dop:augLowF)--> int | --width^ (dop:width)--> int | --operator^ (dop:operator)--> langString | --Apr high F^ (dop:aprHighF)--> int | --Apr record high F^ (dop:aprRecordHighF)--> int | --eponym^ (dop:eponym)--> Resource
+  administrative region: --differentFrom (wwoo:differentFrom)--> Resource
+subgraph_id: 889
+relationships:
+  - politician --doo:deathPlace--> city
+  - politician --dop:birthPlace--> administrative region
+  - Location --doo:territory--> city
+  - artist --dop:deathPlace--> city

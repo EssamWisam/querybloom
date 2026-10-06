@@ -1,0 +1,74 @@
+types:
+  Anime: doo:Anime
+  settlement: doo:Settlement
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      91_Days: (last^='2016-10-01')
+      Chūbu_region: (subject='http://dbpedia.org/resource/Category:Chūbu_region')
+    relationships:
+      - Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting) --dop:area--> Chūbu_region (<http://dbpedia.org/resource/Chūbu_region>)
+      - 91_Days (dor:91_Days) --doo:network--> Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting)
+  '2':
+    attributes:
+      Chūbu_region: (subject='http://dbpedia.org/resource/Category:Chūbu_region')
+    relationships:
+      - Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting) --dop:area--> Chūbu_region (<http://dbpedia.org/resource/Chūbu_region>)
+      - A_Certain_Magical_Index__tv_series__1 (dor:A_Certain_Magical_Index__tv_series__1) --doo:network--> Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting)
+  '3':
+    attributes:
+      Chūbu_region: (subject='http://dbpedia.org/resource/Category:Chūbu_region')
+    relationships:
+      - Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting) --dop:area--> Chūbu_region (<http://dbpedia.org/resource/Chūbu_region>)
+      - A_Channel_(manga)__tv_series__1 (<http://dbpedia.org/resource/A_Channel_(manga)__tv_series__1>) --doo:network--> Chubu-Nippon_Broadcasting (dor:Chubu-Nippon_Broadcasting)
+qa_result:
+  status: completed
+  cost_usd: 0.409312
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0284224
+        total_tokens: 3462
+        prompt_tokens: 2276
+        completion_tokens: 1186
+      generate:
+        cost_usd: 0.09175760000000001
+        total_tokens: 7128
+        prompt_tokens: 2907
+        completion_tokens: 4221
+      verify_1:
+        cost_usd: 0.11123200000000001
+        total_tokens: 8048
+        prompt_tokens: 3315
+        completion_tokens: 4733
+      verify_2:
+        cost_usd: 0.031317000000000005
+        total_tokens: 4035
+        prompt_tokens: 3292
+        completion_tokens: 743
+      complexity:
+        cost_usd: 0.14658300000000002
+        total_tokens: 10930
+        prompt_tokens: 4229
+        completion_tokens: 6701
+    total_tokens: 33603
+    prompt_tokens: 16019
+    total_cost_usd: 0.409312
+    completion_tokens: 17584
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Anime: --last^ (dop:last)--> date
+  settlement: --Apr record high F^ (dop:aprRecordHighF)--> int | --founding year^ (doo:foundingYear)--> gYear | --reason^ (dop:reason)--> langString | --elevation (μ)^ (doo:elevation)--> double | --subject (podt:subject)--> Resource | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --Aug low F^ (dop:augLowF)--> double | --Apr record high C^ (dop:aprRecordHighC)--> double | --district^ (doo:district)--> Resource | --float^ (dop:float)--> langString | --width^ (dop:width)--> langString | --Aug high C^ (dop:augHighC)--> double
+subgraph_id: 167
+relationships:
+  - television station --dop:area--> settlement
+  - Anime --doo:network--> television station

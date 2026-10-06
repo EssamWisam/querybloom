@@ -1,0 +1,82 @@
+types:
+  town: doo:Town
+  Location: doo:Location
+  politician: doo:Politician
+  radio station: doo:RadioStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - David_M._Westcott (dor:David_M._Westcott) --doo:birthPlace--> Cornwall,_New_York (<http://dbpedia.org/resource/Cornwall,_New_York>)
+      - WWLE (dor:WWLE) --doo:city--> Cornwall,_New_York (<http://dbpedia.org/resource/Cornwall,_New_York>)
+      - A._Walsh_Stone_House_and_Farm_Complex (dor:A._Walsh_Stone_House_and_Farm_Complex) --doo:location--> Cornwall,_New_York (<http://dbpedia.org/resource/Cornwall,_New_York>)
+  '2':
+    attributes: {}
+    relationships:
+      - William_S._Hixon (dor:William_S._Hixon) --doo:birthPlace--> Cornwall,_New_York (<http://dbpedia.org/resource/Cornwall,_New_York>)
+      - WWLE (dor:WWLE) --doo:city--> Cornwall,_New_York (<http://dbpedia.org/resource/Cornwall,_New_York>)
+      - A._Walsh_Stone_House_and_Farm_Complex (dor:A._Walsh_Stone_House_and_Farm_Complex) --doo:location--> Cornwall,_New_York (<http://dbpedia.org/resource/Cornwall,_New_York>)
+  '3':
+    attributes:
+      Erwin,_Tennessee: (Apr precipitation inch^='3.99')
+    relationships:
+      - David_Price_(American_politician) (<http://dbpedia.org/resource/David_Price_(American_politician)>) --doo:birthPlace--> Erwin,_Tennessee (<http://dbpedia.org/resource/Erwin,_Tennessee>)
+      - WEMB (dor:WEMB) --doo:city--> Erwin,_Tennessee (<http://dbpedia.org/resource/Erwin,_Tennessee>)
+      - A.R._Brown_House (dor:A.R._Brown_House) --doo:location--> Erwin,_Tennessee (<http://dbpedia.org/resource/Erwin,_Tennessee>)
+  '4':
+    attributes:
+      Erwin,_Tennessee: (Apr precipitation inch^='3.99')
+    relationships:
+      - David_Price_(American_politician) (<http://dbpedia.org/resource/David_Price_(American_politician)>) --doo:birthPlace--> Erwin,_Tennessee (<http://dbpedia.org/resource/Erwin,_Tennessee>)
+      - WXIS (dor:WXIS) --doo:city--> Erwin,_Tennessee (<http://dbpedia.org/resource/Erwin,_Tennessee>)
+      - A.R._Brown_House (dor:A.R._Brown_House) --doo:location--> Erwin,_Tennessee (<http://dbpedia.org/resource/Erwin,_Tennessee>)
+  '5':
+    attributes: {}
+    relationships:
+      - Angela_Browning (dor:Angela_Browning) --doo:birthPlace--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - BBC_Radio_Berkshire (dor:BBC_Radio_Berkshire) --doo:city--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Abbey_Gateway,_Reading (<http://dbpedia.org/resource/Abbey_Gateway,_Reading>) --doo:location--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+  '6':
+    attributes: {}
+    relationships:
+      - Angela_Browning (dor:Angela_Browning) --doo:birthPlace--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Blast_1386AM (dor:Blast_1386AM) --doo:city--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Abbey_Gateway,_Reading (<http://dbpedia.org/resource/Abbey_Gateway,_Reading>) --doo:location--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+  '7':
+    attributes: {}
+    relationships:
+      - Angela_Browning (dor:Angela_Browning) --doo:birthPlace--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Heart_Berkshire (dor:Heart_Berkshire) --doo:city--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - Abbey_Gateway,_Reading (<http://dbpedia.org/resource/Abbey_Gateway,_Reading>) --doo:location--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+  '8':
+    attributes: {}
+    relationships:
+      - Abiel_Foster (dor:Abiel_Foster) --doo:birthPlace--> Andover,_Massachusetts (<http://dbpedia.org/resource/Andover,_Massachusetts>)
+      - WXRV (dor:WXRV) --doo:city--> Andover,_Massachusetts (<http://dbpedia.org/resource/Andover,_Massachusetts>)
+      - Abbot_Tavern (dor:Abbot_Tavern) --doo:location--> Andover,_Massachusetts (<http://dbpedia.org/resource/Andover,_Massachusetts>)
+  '9':
+    attributes: {}
+    relationships:
+      - Amos_Abbott (dor:Amos_Abbott) --doo:birthPlace--> Andover,_Massachusetts (<http://dbpedia.org/resource/Andover,_Massachusetts>)
+      - WXRV (dor:WXRV) --doo:city--> Andover,_Massachusetts (<http://dbpedia.org/resource/Andover,_Massachusetts>)
+      - Abbot_Tavern (dor:Abbot_Tavern) --doo:location--> Andover,_Massachusetts (<http://dbpedia.org/resource/Andover,_Massachusetts>)
+  '10':
+    attributes: {}
+    relationships:
+      - Arthur_Sherburne_Hardy (dor:Arthur_Sherburne_Hardy) --doo:birthPlace--> Andover,_Massachusetts (<http://dbpedia.org/resource/Andover,_Massachusetts>)
+      - WXRV (dor:WXRV) --doo:city--> Andover,_Massachusetts (<http://dbpedia.org/resource/Andover,_Massachusetts>)
+      - Abbot_Tavern (dor:Abbot_Tavern) --doo:location--> Andover,_Massachusetts (<http://dbpedia.org/resource/Andover,_Massachusetts>)
+attributes:
+  town: --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double
+  Location: --group^ (dop:group)--> Resource | --2y^ (dop:2y)--> int | --Aug low C^ (dop:augLowC)--> int | --2p^ (dop:2p)--> int | --motto^ (doo:motto)--> string | --id^ (dop:id)--> int
+  politician: --known for^ (dop:knownFor)--> langString
+subgraph_id: 524
+relationships:
+  - politician --doo:birthPlace--> town
+  - radio station --doo:city--> town
+  - Location --doo:location--> town

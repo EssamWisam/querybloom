@@ -1,0 +1,88 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  trade union: doo:TradeUnion
+  office holder: doo:OfficeHolder
+  military person: doo:MilitaryPerson
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Clarence_Norman_Jr.: (after^='http://dbpedia.org/resource/Ivan_C._Lafayette')
+    relationships:
+      - Arthur_Eve (dor:Arthur_Eve) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Jack_Martin_(executive) (<http://dbpedia.org/resource/Jack_Martin_(executive)>) --doo:knownFor--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Clarence_Norman_Jr. (<http://dbpedia.org/resource/Clarence_Norman_Jr.>) --dop:predecessor--> Arthur_Eve (dor:Arthur_Eve)
+      - Democrats_Abroad (dor:Democrats_Abroad) --doo:affiliation--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Arthur_Eve (dor:Arthur_Eve) --doo:residence--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+  '2':
+    attributes:
+      Clarence_Norman_Jr.: (after^='http://dbpedia.org/resource/Ivan_C._Lafayette')
+    relationships:
+      - Arthur_Eve (dor:Arthur_Eve) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Jack_Martin_(executive) (<http://dbpedia.org/resource/Jack_Martin_(executive)>) --doo:knownFor--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Clarence_Norman_Jr. (<http://dbpedia.org/resource/Clarence_Norman_Jr.>) --dop:predecessor--> Arthur_Eve (dor:Arthur_Eve)
+      - Organizing_for_America (dor:Organizing_for_America) --doo:affiliation--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Arthur_Eve (dor:Arthur_Eve) --doo:residence--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+  '3':
+    attributes:
+      Clarence_Norman_Jr.: (after^='http://dbpedia.org/resource/Ivan_C._Lafayette')
+    relationships:
+      - Arthur_Eve (dor:Arthur_Eve) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Mary_Crane_Hone (dor:Mary_Crane_Hone) --doo:knownFor--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Clarence_Norman_Jr. (<http://dbpedia.org/resource/Clarence_Norman_Jr.>) --dop:predecessor--> Arthur_Eve (dor:Arthur_Eve)
+      - Democrats_Abroad (dor:Democrats_Abroad) --doo:affiliation--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Arthur_Eve (dor:Arthur_Eve) --doo:residence--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+qa_result:
+  status: completed
+  cost_usd: 0.247642
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.034852400000000006
+        total_tokens: 3362
+        prompt_tokens: 1714
+        completion_tokens: 1648
+      generate:
+        cost_usd: 0.0617026
+        total_tokens: 6403
+        prompt_tokens: 3944
+        completion_tokens: 2459
+      verify_1:
+        cost_usd: 0.03543700000000001
+        total_tokens: 4697
+        prompt_tokens: 3900
+        completion_tokens: 797
+      verify_2:
+        cost_usd: 0.036612000000000006
+        total_tokens: 4920
+        prompt_tokens: 4119
+        completion_tokens: 801
+      complexity:
+        cost_usd: 0.079038
+        total_tokens: 7795
+        prompt_tokens: 4552
+        completion_tokens: 3243
+    total_tokens: 27177
+    prompt_tokens: 18229
+    total_cost_usd: 0.247642
+    completion_tokens: 8948
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --alias^ (doo:alias)--> langString | --last^ (dop:last)--> langString | --b^ (dop:b)--> langString | --cname^ (dop:cname)--> langString | --spouse^ (dop:spouse)--> langString
+  Location: --coroner (dop:coroner)--> langString | --line^ (dop:line)--> int
+  office holder: --al^ (dop:al)--> int | --after^ (dop:after)--> Resource
+subgraph_id: 301
+relationships:
+  - military person --doo:party--> political party
+  - person --doo:knownFor--> political party
+  - office holder --dop:predecessor--> military person
+  - trade union --doo:affiliation--> political party
+  - military person --doo:residence--> Location

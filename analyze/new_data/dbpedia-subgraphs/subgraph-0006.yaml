@@ -1,0 +1,72 @@
+types:
+  movie: doo:Film
+  person: doo:Person
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Amitabh_Bachchan: (spouse^='1973')
+    relationships:
+      - 102_Not_Out (dor:102_Not_Out) --dop:music--> Amitabh_Bachchan (dor:Amitabh_Bachchan)
+      - 102_Not_Out (dor:102_Not_Out) --dop:lyrics--> Amitabh_Bhattacharya (dor:Amitabh_Bhattacharya)
+  '2':
+    attributes: {}
+    relationships:
+      - 102_Not_Out (dor:102_Not_Out) --dop:music--> Salim–Sulaiman (<http://dbpedia.org/resource/Salim–Sulaiman>)
+      - 102_Not_Out (dor:102_Not_Out) --dop:lyrics--> Amitabh_Bhattacharya (dor:Amitabh_Bhattacharya)
+  '3':
+    attributes: {}
+    relationships:
+      - 123_(film) (<http://dbpedia.org/resource/123_(film)>) --dop:music--> Deva_(composer) (<http://dbpedia.org/resource/Deva_(composer)>)
+      - 123_(film) (<http://dbpedia.org/resource/123_(film)>) --dop:lyrics--> K._Kalyan (dor:K._Kalyan)
+  '4':
+    attributes:
+      Ilaiyaraaja: (align^='center', width^='50.0')
+      Gangai_Amaran: (instrument^='http://dbpedia.org/resource/Guitar')
+      16_Vayathinile: (align^='right')
+    relationships:
+      - 16_Vayathinile (dor:16_Vayathinile) --dop:music--> Ilaiyaraaja (dor:Ilaiyaraaja)
+      - 16_Vayathinile (dor:16_Vayathinile) --dop:lyrics--> Gangai_Amaran (dor:Gangai_Amaran)
+  '5':
+    attributes: {}
+    relationships:
+      - 18_Pages (dor:18_Pages) --dop:music--> Gopi_Sundar (dor:Gopi_Sundar)
+      - 18_Pages (dor:18_Pages) --dop:lyrics--> Sri_Mani (dor:Sri_Mani)
+  '6':
+    attributes: {}
+    relationships:
+      - 25_Kille (dor:25_Kille) --dop:music--> Jaidev_Kumar (dor:Jaidev_Kumar)
+      - 25_Kille (dor:25_Kille) --dop:lyrics--> Babu_Singh_Maan (dor:Babu_Singh_Maan)
+  '7':
+    attributes: {}
+    relationships:
+      - 25_Kille (dor:25_Kille) --dop:music--> Jaidev_Kumar (dor:Jaidev_Kumar)
+      - 25_Kille (dor:25_Kille) --dop:lyrics--> Happy_Raikoti (dor:Happy_Raikoti)
+  '8':
+    attributes: {}
+    relationships:
+      - 3_Dev (dor:3_Dev) --dop:music--> Sajid–Wajid (<http://dbpedia.org/resource/Sajid–Wajid>)
+      - 3_Dev (dor:3_Dev) --dop:lyrics--> Amitabh_Bhattacharya (dor:Amitabh_Bhattacharya)
+  '9':
+    attributes: {}
+    relationships:
+      - 30_Rojullo_Preminchadam_Ela (dor:30_Rojullo_Preminchadam_Ela) --dop:music--> Anup_Rubens (dor:Anup_Rubens)
+      - 30_Rojullo_Preminchadam_Ela (dor:30_Rojullo_Preminchadam_Ela) --dop:lyrics--> Anup_Rubens (dor:Anup_Rubens)
+  '10':
+    attributes: {}
+    relationships:
+      - 3688 (dor:3688) --dop:music--> Gu_Yue (dor:Gu_Yue)
+      - 3688 (dor:3688) --dop:lyrics--> Liu_Chia-chang (dor:Liu_Chia-chang)
+attributes:
+  movie: --align^ (dop:align)--> langString | --image^ (dop:image)--> langString
+  person: --align^ (dop:align)--> langString | --spouse^ (dop:spouse)--> Resource | --width^ (dop:width)--> perCent | --alt^ (dop:alt)--> langString | --domesticpartner^ (dop:domesticpartner)--> langString
+  musical artist: --d^ (dop:d)--> langString | --before^ (dop:before)--> langString | --instrument^ (doo:instrument)--> Resource | --background^ (dop:background)--> langString
+subgraph_id: 6
+relationships:
+  - movie --dop:music--> person
+  - movie --dop:lyrics--> musical artist

@@ -1,0 +1,81 @@
+types:
+  politician: doo:Politician
+  settlement: doo:Settlement
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Tamil_Nadu: (width^='(175 * 374 / 599) round 0')
+      A._P._J._Abdul_Kalam: (reason^='The given references say the BJP didnt back arnab and other, they dont never mention that the BJP backed Kalam', d^='Q9513')
+    relationships:
+      - Adithya_TV (dor:Adithya_TV) --doo:headquarter--> Tamil_Nadu (dor:Tamil_Nadu)
+      - A._P._J._Abdul_Kalam (dor:A._P._J._Abdul_Kalam) --doo:restingPlace--> Tamil_Nadu (dor:Tamil_Nadu)
+  '2':
+    attributes:
+      Tamil_Nadu: (width^='(175 * 374 / 599) round 0')
+      A._P._J._Abdul_Kalam: (reason^='The given references say the BJP didnt back arnab and other, they dont never mention that the BJP backed Kalam', d^='Q9513')
+    relationships:
+      - Captain_TV (dor:Captain_TV) --doo:headquarter--> Tamil_Nadu (dor:Tamil_Nadu)
+      - A._P._J._Abdul_Kalam (dor:A._P._J._Abdul_Kalam) --doo:restingPlace--> Tamil_Nadu (dor:Tamil_Nadu)
+  '3':
+    attributes:
+      Tamil_Nadu: (width^='(175 * 374 / 599) round 0')
+      A._P._J._Abdul_Kalam: (reason^='The given references say the BJP didnt back arnab and other, they dont never mention that the BJP backed Kalam', d^='Q9513')
+    relationships:
+      - Chithiram_TV (dor:Chithiram_TV) --doo:headquarter--> Tamil_Nadu (dor:Tamil_Nadu)
+      - A._P._J._Abdul_Kalam (dor:A._P._J._Abdul_Kalam) --doo:restingPlace--> Tamil_Nadu (dor:Tamil_Nadu)
+  '4':
+    attributes:
+      Kuching: (width^='300')
+      Abang_Muhammad_Salahuddin: (before^='http://dbpedia.org/resource/Ahmad_Zaidi_Adruce')
+    relationships:
+      - TVS_(TV_channel) (<http://dbpedia.org/resource/TVS_(TV_channel)>) --doo:headquarter--> Kuching (dor:Kuching)
+      - Abang_Muhammad_Salahuddin (dor:Abang_Muhammad_Salahuddin) --doo:restingPlace--> Kuching (dor:Kuching)
+  '5':
+    attributes:
+      Sarawak: (width^='150', date^='September 2022')
+      Abang_Muhammad_Salahuddin: (before^='http://dbpedia.org/resource/Ahmad_Zaidi_Adruce')
+    relationships:
+      - TVS_(TV_channel) (<http://dbpedia.org/resource/TVS_(TV_channel)>) --doo:headquarter--> Sarawak (dor:Sarawak)
+      - Abang_Muhammad_Salahuddin (dor:Abang_Muhammad_Salahuddin) --doo:restingPlace--> Sarawak (dor:Sarawak)
+  '6':
+    attributes:
+      Medina: (Apr record low C^='11.5', date^='December 2015')
+    relationships:
+      - Saudi_2 (dor:Saudi_2) --doo:headquarter--> Medina (dor:Medina)
+      - Abd_al-Fattah_Abu_Ghudda (dor:Abd_al-Fattah_Abu_Ghudda) --doo:restingPlace--> Medina (dor:Medina)
+  '7':
+    attributes:
+      Algiers: (Apr record low C^='-0.8', date^='January 2011')
+    relationships:
+      - Dzaïr_News (<http://dbpedia.org/resource/Dzaïr_News>) --doo:headquarter--> Algiers (dor:Algiers)
+      - Abdelaziz_Bouteflika (dor:Abdelaziz_Bouteflika) --doo:restingPlace--> Algiers (dor:Algiers)
+  '8':
+    attributes:
+      Algiers: (Apr record low C^='-0.8', date^='January 2011')
+    relationships:
+      - Dzaïr_TV (<http://dbpedia.org/resource/Dzaïr_TV>) --doo:headquarter--> Algiers (dor:Algiers)
+      - Abdelaziz_Bouteflika (dor:Abdelaziz_Bouteflika) --doo:restingPlace--> Algiers (dor:Algiers)
+  '9':
+    attributes:
+      Algiers: (Apr record low C^='-0.8', date^='January 2011')
+    relationships:
+      - Echorouk_News (dor:Echorouk_News) --doo:headquarter--> Algiers (dor:Algiers)
+      - Abdelaziz_Bouteflika (dor:Abdelaziz_Bouteflika) --doo:restingPlace--> Algiers (dor:Algiers)
+  '10':
+    attributes: {}
+    relationships:
+      - Star_Tamil_TV (dor:Star_Tamil_TV) --doo:headquarter--> Colombo,_Sri_Lanka (<http://dbpedia.org/resource/Colombo,_Sri_Lanka>)
+      - Abdul_Caffoor_Mohamad_Ameer (dor:Abdul_Caffoor_Mohamad_Ameer) --doo:restingPlace--> Colombo,_Sri_Lanka (<http://dbpedia.org/resource/Colombo,_Sri_Lanka>)
+attributes:
+  politician: --class^ (dop:class)--> int | --parents^ (dop:parents)--> Resource | --reason^ (dop:reason)--> langString | --before^ (dop:before)--> langString | --2p^ (dop:2p)--> int | --d^ (dop:d)--> langString
+  settlement: --Apr record low C^ (dop:aprRecordLowC)--> langString | --founding year^ (doo:foundingYear)--> gYear | --width^ (dop:width)--> langString | --date^ (dop:date)--> date
+subgraph_id: 575
+relationships:
+  - television station --doo:headquarter--> settlement
+  - politician --doo:restingPlace--> settlement

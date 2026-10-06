@@ -1,0 +1,113 @@
+types:
+  person: doo:Person
+  language: doo:Language
+  newspaper: doo:Newspaper
+  music genre: doo:MusicGenre
+  "Ø±Û\x8CÚ\x88Û\x8CÙ\x88 Ù¾Ø±Ù\x88Ú¯Ø±Ø§Ù\N": doo:RadioProgram
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      German_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+    relationships:
+      - Der_Herr_der_Ringe (dor:Der_Herr_der_Ringe) --doo:format--> Radio_drama (dor:Radio_drama)
+      - Der_Herr_der_Ringe (dor:Der_Herr_der_Ringe) --doo:language--> German_language (dor:German_language)
+      - Jules_Horne (dor:Jules_Horne) --doo:occupation--> Radio_drama (dor:Radio_drama)
+      - .ch_(newspaper) (<http://dbpedia.org/resource/.ch_(newspaper)>) --doo:language--> German_language (dor:German_language)
+  '2':
+    attributes:
+      Leslie_Edgley: (birth date^='1912-10-14')
+      German_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+    relationships:
+      - Der_Herr_der_Ringe (dor:Der_Herr_der_Ringe) --doo:format--> Radio_drama (dor:Radio_drama)
+      - Der_Herr_der_Ringe (dor:Der_Herr_der_Ringe) --doo:language--> German_language (dor:German_language)
+      - Leslie_Edgley (dor:Leslie_Edgley) --doo:occupation--> Radio_drama (dor:Radio_drama)
+      - .ch_(newspaper) (<http://dbpedia.org/resource/.ch_(newspaper)>) --doo:language--> German_language (dor:German_language)
+  '3':
+    attributes:
+      Yuri_Rasovsky: (birth date^='1944-07-29')
+      German_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+    relationships:
+      - Der_Herr_der_Ringe (dor:Der_Herr_der_Ringe) --doo:format--> Radio_drama (dor:Radio_drama)
+      - Der_Herr_der_Ringe (dor:Der_Herr_der_Ringe) --doo:language--> German_language (dor:German_language)
+      - Yuri_Rasovsky (dor:Yuri_Rasovsky) --doo:occupation--> Radio_drama (dor:Radio_drama)
+      - .ch_(newspaper) (<http://dbpedia.org/resource/.ch_(newspaper)>) --doo:language--> German_language (dor:German_language)
+  '4':
+    attributes:
+      Anita_Erskine: (state of origin^='http://dbpedia.org/resource/Ghanaian_people', birth date^='1978-12-03')
+      Danish_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+    relationships:
+      - The_Black_Boy_Scouts (dor:The_Black_Boy_Scouts) --doo:format--> Talk_show (dor:Talk_show)
+      - The_Black_Boy_Scouts (dor:The_Black_Boy_Scouts) --doo:language--> Danish_language (dor:Danish_language)
+      - Anita_Erskine (dor:Anita_Erskine) --doo:occupation--> Talk_show (dor:Talk_show)
+      - 24timer (dor:24timer) --doo:language--> Danish_language (dor:Danish_language)
+  '5':
+    attributes:
+      Ben_Ferguson: (birth date^='1981-08-28')
+      Danish_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+    relationships:
+      - The_Black_Boy_Scouts (dor:The_Black_Boy_Scouts) --doo:format--> Talk_show (dor:Talk_show)
+      - The_Black_Boy_Scouts (dor:The_Black_Boy_Scouts) --doo:language--> Danish_language (dor:Danish_language)
+      - Ben_Ferguson (dor:Ben_Ferguson) --doo:occupation--> Talk_show (dor:Talk_show)
+      - 24timer (dor:24timer) --doo:language--> Danish_language (dor:Danish_language)
+  '6':
+    attributes:
+      Benneth_Nwankwo: (state of origin^='http://dbpedia.org/resource/Nigerians', birth date^='1995-02-22')
+      Danish_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+    relationships:
+      - The_Black_Boy_Scouts (dor:The_Black_Boy_Scouts) --doo:format--> Talk_show (dor:Talk_show)
+      - The_Black_Boy_Scouts (dor:The_Black_Boy_Scouts) --doo:language--> Danish_language (dor:Danish_language)
+      - Benneth_Nwankwo (dor:Benneth_Nwankwo) --doo:occupation--> Talk_show (dor:Talk_show)
+      - 24timer (dor:24timer) --doo:language--> Danish_language (dor:Danish_language)
+  '7':
+    attributes:
+      Politics: (footer^='An Iraqi woman voting in a parliamentary election in Iraq; Nene Teye Kwesi Agyeman, a Shai Chief of Ghana; inauguration of Park Geun-hye as President of South Korea; Hemicycle of the European Parliame...')
+      A._J._Ranasinghe: (birth date^='1927-01-04')
+      English_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+    relationships:
+      - Imus_in_the_Morning (dor:Imus_in_the_Morning) --doo:format--> Politics (dor:Politics)
+      - Imus_in_the_Morning (dor:Imus_in_the_Morning) --doo:language--> English_language (dor:English_language)
+      - A._J._Ranasinghe (dor:A._J._Ranasinghe) --doo:occupation--> Politics (dor:Politics)
+      - 7days (dor:7days) --doo:language--> English_language (dor:English_language)
+  '8':
+    attributes:
+      Adam_Curtis: (birth date^='1955-05-26')
+      English_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+    relationships:
+      - Pulse_of_the_Planet (dor:Pulse_of_the_Planet) --doo:format--> Documentary (dor:Documentary)
+      - Pulse_of_the_Planet (dor:Pulse_of_the_Planet) --doo:language--> English_language (dor:English_language)
+      - Adam_Curtis (dor:Adam_Curtis) --doo:occupation--> Documentary (dor:Documentary)
+      - 7days (dor:7days) --doo:language--> English_language (dor:English_language)
+  '9':
+    attributes:
+      Politics: (footer^='An Iraqi woman voting in a parliamentary election in Iraq; Nene Teye Kwesi Agyeman, a Shai Chief of Ghana; inauguration of Park Geun-hye as President of South Korea; Hemicycle of the European Parliame...')
+      English_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+      Ahmet_Baitursynuly: (state of origin^='http://dbpedia.org/resource/Kazakhs', birth date^='1872-09-05')
+    relationships:
+      - Imus_in_the_Morning (dor:Imus_in_the_Morning) --doo:format--> Politics (dor:Politics)
+      - Imus_in_the_Morning (dor:Imus_in_the_Morning) --doo:language--> English_language (dor:English_language)
+      - Ahmet_Baitursynuly (dor:Ahmet_Baitursynuly) --doo:occupation--> Politics (dor:Politics)
+      - 7days (dor:7days) --doo:language--> English_language (dor:English_language)
+  '10':
+    attributes:
+      Olivia_O'Leary: (state of origin^='http://dbpedia.org/resource/Irish_people')
+      Portuguese_language: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-language-noun-1')
+    relationships:
+      - Observatório_da_Imprensa__Observatório_da_Imprensa__1 (<http://dbpedia.org/resource/Observatório_da_Imprensa__Observatório_da_Imprensa__1>) --doo:format--> Current_affairs_(news_format) (<http://dbpedia.org/resource/Current_affairs_(news_format)>)
+      - Observatório_da_Imprensa__Observatório_da_Imprensa__1 (<http://dbpedia.org/resource/Observatório_da_Imprensa__Observatório_da_Imprensa__1>) --doo:language--> Portuguese_language (dor:Portuguese_language)
+      - Olivia_O'Leary (<http://dbpedia.org/resource/Olivia_O'Leary>) --doo:occupation--> Current_affairs_(news_format) (<http://dbpedia.org/resource/Current_affairs_(news_format)>)
+      - A_Aurora_do_Lima (dor:A_Aurora_do_Lima) --doo:language--> Portuguese_language (dor:Portuguese_language)
+attributes:
+  person: --authorlink^ (dop:authorlink)--> langString | --relations^ (dop:relations)--> Resource | --state of origin^ (doo:stateOfOrigin)--> Resource | --1a^ (dop:1a)--> langString | --parent^ (doo:parent)--> Resource | --honorific suffix^ (dop:honorificSuffix)--> langString | --birth date^ (doo:birthDate)--> date
+  language: --wordnet_type (dop:wordnet_type)--> Resource
+  music genre: --footer^ (dop:footer)--> langString
+subgraph_id: 137
+relationships:
+  - "Ø±Û\x8CÚ\x88Û\x8CÙ\x88 Ù¾Ø±Ù\x88Ú¯Ø±Ø§Ù\N --doo:format--> music genre"
+  - "Ø±Û\x8CÚ\x88Û\x8CÙ\x88 Ù¾Ø±Ù\x88Ú¯Ø±Ø§Ù\N --doo:language--> language"
+  - person --doo:occupation--> music genre
+  - newspaper --doo:language--> language

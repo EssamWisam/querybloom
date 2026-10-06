@@ -1,0 +1,91 @@
+types:
+  Location: doo:Location
+  office holder: doo:OfficeHolder
+  political party: doo:PoliticalParty
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Mo_Mowlam: (spouse^='1995')
+      Canterbury: (Aug high C^='22.8', Aug low C^='12.8')
+    relationships:
+      - Mo_Mowlam (dor:Mo_Mowlam) --doo:deathPlace--> Canterbury (dor:Canterbury)
+      - Canterbury_Province (dor:Canterbury_Province) --doo:namedAfter--> Canterbury (dor:Canterbury)
+      - Mo_Mowlam (dor:Mo_Mowlam) --doo:party--> Labour_Party_(UK) (<http://dbpedia.org/resource/Labour_Party_(UK)>)
+  '2':
+    attributes:
+      David_Penhaligon: (spouse^='1968')
+    relationships:
+      - David_Penhaligon (dor:David_Penhaligon) --doo:deathPlace--> Cornwall (dor:Cornwall)
+      - Cornwall_County,_Jamaica (<http://dbpedia.org/resource/Cornwall_County,_Jamaica>) --doo:namedAfter--> Cornwall (dor:Cornwall)
+      - David_Penhaligon (dor:David_Penhaligon) --doo:party--> Liberal_Party_(UK) (<http://dbpedia.org/resource/Liberal_Party_(UK)>)
+  '3':
+    attributes:
+      Edward_Eliot,_3rd_Earl_of_St_Germans: (spouse^='')
+    relationships:
+      - Edward_Eliot,_3rd_Earl_of_St_Germans (<http://dbpedia.org/resource/Edward_Eliot,_3rd_Earl_of_St_Germans>) --doo:deathPlace--> Cornwall (dor:Cornwall)
+      - Cornwall_County,_Jamaica (<http://dbpedia.org/resource/Cornwall_County,_Jamaica>) --doo:namedAfter--> Cornwall (dor:Cornwall)
+      - Edward_Eliot,_3rd_Earl_of_St_Germans (<http://dbpedia.org/resource/Edward_Eliot,_3rd_Earl_of_St_Germans>) --doo:party--> Conservative_Party_(UK) (<http://dbpedia.org/resource/Conservative_Party_(UK)>)
+  '4':
+    attributes:
+      Edward_Eliot,_3rd_Earl_of_St_Germans: (spouse^='')
+    relationships:
+      - Edward_Eliot,_3rd_Earl_of_St_Germans (<http://dbpedia.org/resource/Edward_Eliot,_3rd_Earl_of_St_Germans>) --doo:deathPlace--> Cornwall (dor:Cornwall)
+      - Cornwall_County,_Jamaica (<http://dbpedia.org/resource/Cornwall_County,_Jamaica>) --doo:namedAfter--> Cornwall (dor:Cornwall)
+      - Edward_Eliot,_3rd_Earl_of_St_Germans (<http://dbpedia.org/resource/Edward_Eliot,_3rd_Earl_of_St_Germans>) --doo:party--> Liberal_Party_(UK) (<http://dbpedia.org/resource/Liberal_Party_(UK)>)
+  '5':
+    attributes:
+      Basil_Mramba: (spouse^='Awaichi Mramba')
+      Dar_es_Salaam: (Aug high C^='29.4', Aug low C^='18.1')
+    relationships:
+      - Basil_Mramba (dor:Basil_Mramba) --doo:deathPlace--> Dar_es_Salaam (dor:Dar_es_Salaam)
+      - Dar_es_Salaam_Region (dor:Dar_es_Salaam_Region) --doo:namedAfter--> Dar_es_Salaam (dor:Dar_es_Salaam)
+      - Basil_Mramba (dor:Basil_Mramba) --doo:party--> Chama_Cha_Mapinduzi (dor:Chama_Cha_Mapinduzi)
+  '6':
+    attributes:
+      Dar_es_Salaam: (Aug high C^='29.4', Aug low C^='18.1')
+    relationships:
+      - Benjamin_Mkapa (dor:Benjamin_Mkapa) --doo:deathPlace--> Dar_es_Salaam (dor:Dar_es_Salaam)
+      - Dar_es_Salaam_Region (dor:Dar_es_Salaam_Region) --doo:namedAfter--> Dar_es_Salaam (dor:Dar_es_Salaam)
+      - Benjamin_Mkapa (dor:Benjamin_Mkapa) --doo:party--> Chama_Cha_Mapinduzi (dor:Chama_Cha_Mapinduzi)
+  '7':
+    attributes:
+      Dar_es_Salaam: (Aug high C^='29.4', Aug low C^='18.1')
+      Benjamin_Mkapa: (spouse^='http://dbpedia.org/resource/Anna_Mkapa')
+    relationships:
+      - Benjamin_Mkapa (dor:Benjamin_Mkapa) --doo:deathPlace--> Dar_es_Salaam (dor:Dar_es_Salaam)
+      - Dar_es_Salaam_Region (dor:Dar_es_Salaam_Region) --doo:namedAfter--> Dar_es_Salaam (dor:Dar_es_Salaam)
+      - Benjamin_Mkapa (dor:Benjamin_Mkapa) --doo:party--> Tanganyika_African_National_Union (dor:Tanganyika_African_National_Union)
+  '8':
+    attributes:
+      Dodoma: (Aug high C^='27.3', Aug low C^='14.2')
+    relationships:
+      - Augustine_Mahiga (dor:Augustine_Mahiga) --doo:deathPlace--> Dodoma (dor:Dodoma)
+      - Dodoma_Region (dor:Dodoma_Region) --doo:namedAfter--> Dodoma (dor:Dodoma)
+      - Augustine_Mahiga (dor:Augustine_Mahiga) --doo:party--> Chama_Cha_Mapinduzi (dor:Chama_Cha_Mapinduzi)
+  '9':
+    attributes: {}
+    relationships:
+      - Frederick_E._Crane (dor:Frederick_E._Crane) --doo:deathPlace--> Garden_City,_New_York (<http://dbpedia.org/resource/Garden_City,_New_York>)
+      - East_Garden_City,_New_York (<http://dbpedia.org/resource/East_Garden_City,_New_York>) --doo:namedAfter--> Garden_City,_New_York (<http://dbpedia.org/resource/Garden_City,_New_York>)
+      - Frederick_E._Crane (dor:Frederick_E._Crane) --doo:party--> Republican_Party_(United_States) (<http://dbpedia.org/resource/Republican_Party_(United_States)>)
+  '10':
+    attributes: {}
+    relationships:
+      - Bernard_Braine (dor:Bernard_Braine) --doo:deathPlace--> Essex (dor:Essex)
+      - Essex_County,_Ontario (<http://dbpedia.org/resource/Essex_County,_Ontario>) --doo:namedAfter--> Essex (dor:Essex)
+      - Bernard_Braine (dor:Bernard_Braine) --doo:party--> Conservative_Party_(UK) (<http://dbpedia.org/resource/Conservative_Party_(UK)>)
+attributes:
+  Location: --Aug high C^ (dop:augHighC)--> int | --Aug low C^ (dop:augLowC)--> double | --display^ (dop:display)--> langString | --age^ (dop:age)--> Resource
+  office holder: --spouse^ (dop:spouse)--> langString | --award^ (doo:award)--> Resource | --nickname^ (dop:nickname)--> langString | --parents^ (dop:parents)--> langString
+  political party: --religion^ (doo:religion)--> Resource
+subgraph_id: 368
+relationships:
+  - office holder --doo:deathPlace--> Location
+  - administrative region --doo:namedAfter--> Location
+  - office holder --doo:party--> political party

@@ -1,0 +1,141 @@
+types:
+  city: doo:City
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+  military person: doo:MilitaryPerson
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Mahmoud_el-Sisi: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_year_and_age')
+      Abdel_Fattah_el-Sisi: (parents^='Said Hussein Khalili al-Sisi')
+    relationships:
+      - Abdel_Fattah_el-Sisi (dor:Abdel_Fattah_el-Sisi) --doo:party--> Independent_politician (dor:Independent_politician)
+      - Abdel_Fattah_el-Sisi (dor:Abdel_Fattah_el-Sisi) --doo:birthPlace--> Cairo (dor:Cairo)
+      - A._P._Herbert (dor:A._P._Herbert) --doo:party--> Independent_politician (dor:Independent_politician)
+      - Abdel_Fattah_el-Sisi (dor:Abdel_Fattah_el-Sisi) --doo:child--> Mahmoud_el-Sisi (dor:Mahmoud_el-Sisi)
+  '2':
+    attributes:
+      William_Franklin: (relation^='http://dbpedia.org/resource/Francis_Folger_Franklin', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Benjamin_Franklin (dor:Benjamin_Franklin) --doo:party--> Independent_politician (dor:Independent_politician)
+      - Benjamin_Franklin (dor:Benjamin_Franklin) --doo:birthPlace--> Boston (dor:Boston)
+      - A._P._Herbert (dor:A._P._Herbert) --doo:party--> Independent_politician (dor:Independent_politician)
+      - Benjamin_Franklin (dor:Benjamin_Franklin) --doo:child--> William_Franklin (dor:William_Franklin)
+  '3':
+    attributes:
+      Mark_McClellan: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Carole_Keeton_Strayhorn (dor:Carole_Keeton_Strayhorn) --doo:party--> Independent_politician (dor:Independent_politician)
+      - Carole_Keeton_Strayhorn (dor:Carole_Keeton_Strayhorn) --doo:birthPlace--> Austin,_Texas (<http://dbpedia.org/resource/Austin,_Texas>)
+      - A._P._Herbert (dor:A._P._Herbert) --doo:party--> Independent_politician (dor:Independent_politician)
+      - Carole_Keeton_Strayhorn (dor:Carole_Keeton_Strayhorn) --doo:child--> Mark_McClellan (dor:Mark_McClellan)
+  '4':
+    attributes:
+      Adlai_Stevenson_III: (relation^='http://dbpedia.org/resource/Adlai_Stevenson_I', birth name^='Adlai Ewing Stevenson III', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:1976_United_States_presidential_election')
+    relationships:
+      - Adlai_Stevenson_II (dor:Adlai_Stevenson_II) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Adlai_Stevenson_II (dor:Adlai_Stevenson_II) --doo:birthPlace--> Los_Angeles (dor:Los_Angeles)
+      - A._William_Sweeney (dor:A._William_Sweeney) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Adlai_Stevenson_II (dor:Adlai_Stevenson_II) --doo:child--> Adlai_Stevenson_III (dor:Adlai_Stevenson_III)
+  '5':
+    attributes:
+      Ajay_Pittman: (birth name^='Ayshia K. M. Pittman', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - Anastasia_Pittman (dor:Anastasia_Pittman) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Anastasia_Pittman (dor:Anastasia_Pittman) --doo:birthPlace--> Miami (dor:Miami)
+      - A._William_Sweeney (dor:A._William_Sweeney) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Anastasia_Pittman (dor:Anastasia_Pittman) --doo:child--> Ajay_Pittman (dor:Ajay_Pittman)
+  '6':
+    attributes:
+      Cecile_Richards: (relation^='http://dbpedia.org/resource/Ann_Richards', residence^='http://dbpedia.org/resource/New_York_City', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age')
+    relationships:
+      - Ann_Richards (dor:Ann_Richards) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Ann_Richards (dor:Ann_Richards) --doo:birthPlace--> Lacy_Lakeview,_Texas (<http://dbpedia.org/resource/Lacy_Lakeview,_Texas>)
+      - A._William_Sweeney (dor:A._William_Sweeney) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - Ann_Richards (dor:Ann_Richards) --doo:child--> Cecile_Richards (dor:Cecile_Richards)
+  '7':
+    attributes:
+      Chaudhry_Farrukh_Altaf: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Infobox_officeholder')
+    relationships:
+      - Chaudhry_Altaf_Hussain (dor:Chaudhry_Altaf_Hussain) --doo:party--> Pakistan_Peoples_Party (dor:Pakistan_Peoples_Party)
+      - Chaudhry_Altaf_Hussain (dor:Chaudhry_Altaf_Hussain) --doo:birthPlace--> Dina,_Pakistan (<http://dbpedia.org/resource/Dina,_Pakistan>)
+      - Abdul_Qadir_Baloch (dor:Abdul_Qadir_Baloch) --doo:party--> Pakistan_Peoples_Party (dor:Pakistan_Peoples_Party)
+      - Chaudhry_Altaf_Hussain (dor:Chaudhry_Altaf_Hussain) --doo:child--> Chaudhry_Farrukh_Altaf (dor:Chaudhry_Farrukh_Altaf)
+  '8':
+    attributes:
+      Hasnain_Mirza: (relation^='http://dbpedia.org/resource/Qazi_Abdul_Majeed_Abid', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Birth_date_and_age')
+    relationships:
+      - Fahmida_Mirza (dor:Fahmida_Mirza) --doo:party--> Pakistan_Peoples_Party (dor:Pakistan_Peoples_Party)
+      - Fahmida_Mirza (dor:Fahmida_Mirza) --doo:birthPlace--> Karachi (dor:Karachi)
+      - Abdul_Qadir_Baloch (dor:Abdul_Qadir_Baloch) --doo:party--> Pakistan_Peoples_Party (dor:Pakistan_Peoples_Party)
+      - Fahmida_Mirza (dor:Fahmida_Mirza) --doo:child--> Hasnain_Mirza (dor:Hasnain_Mirza)
+  '9':
+    attributes:
+      Hina_Rabbani_Khar: (relation^='http://dbpedia.org/resource/Aaminah_Haq', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Anchor')
+    relationships:
+      - Ghulam_Noor_Rabbani_Khar (dor:Ghulam_Noor_Rabbani_Khar) --doo:party--> Pakistan_Peoples_Party (dor:Pakistan_Peoples_Party)
+      - Ghulam_Noor_Rabbani_Khar (dor:Ghulam_Noor_Rabbani_Khar) --doo:birthPlace--> Muzaffargarh (dor:Muzaffargarh)
+      - Abdul_Qadir_Baloch (dor:Abdul_Qadir_Baloch) --doo:party--> Pakistan_Peoples_Party (dor:Pakistan_Peoples_Party)
+      - Ghulam_Noor_Rabbani_Khar (dor:Ghulam_Noor_Rabbani_Khar) --doo:child--> Hina_Rabbani_Khar (dor:Hina_Rabbani_Khar)
+  '10':
+    attributes:
+      Abraham_Lincoln: (alt^='A bearded Abraham Lincoln showing his head and shoulders')
+      Robert_Todd_Lincoln: (relation^='http://dbpedia.org/resource/Lincoln_family_tree', birth name^='Robert Todd Lincoln', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Abraham_Lincoln')
+    relationships:
+      - Abraham_Lincoln (dor:Abraham_Lincoln) --doo:party--> Republican_Party_(United_States) (<http://dbpedia.org/resource/Republican_Party_(United_States)>)
+      - Abraham_Lincoln (dor:Abraham_Lincoln) --doo:birthPlace--> Hodgenville,_Kentucky (<http://dbpedia.org/resource/Hodgenville,_Kentucky>)
+      - Abner_C._Harding (dor:Abner_C._Harding) --doo:party--> Republican_Party_(United_States) (<http://dbpedia.org/resource/Republican_Party_(United_States)>)
+      - Abraham_Lincoln (dor:Abraham_Lincoln) --doo:child--> Robert_Todd_Lincoln (dor:Robert_Todd_Lincoln)
+qa_result:
+  status: completed
+  cost_usd: 0.382842
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0505974
+        total_tokens: 4609
+        prompt_tokens: 2327
+        completion_tokens: 2282
+      generate:
+        cost_usd: 0.07179260000000001
+        total_tokens: 7644
+        prompt_tokens: 4926
+        completion_tokens: 2718
+      verify_1:
+        cost_usd: 0.09520700000000001
+        total_tokens: 8881
+        prompt_tokens: 5494
+        completion_tokens: 3387
+      verify_2:
+        cost_usd: 0.051997
+        total_tokens: 6719
+        prompt_tokens: 5492
+        completion_tokens: 1227
+      complexity:
+        cost_usd: 0.11324800000000002
+        total_tokens: 10809
+        prompt_tokens: 6290
+        completion_tokens: 4519
+    total_tokens: 38662
+    prompt_tokens: 24529
+    total_cost_usd: 0.38284200000000007
+    completion_tokens: 14133
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --Aug rain days^ (dop:augRainDays)--> int
+  politician: --image size^ (dop:imageSize)--> int | --relation^ (doo:relation)--> Resource | --knownFor (dop:knownFor)--> langString | --residence^ (doo:residence)--> Resource | --birth name^ (dop:birthName)--> langString | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource
+  office holder: --parents^ (dop:parents)--> langString | --issue^ (dop:issue)--> langString | --alt^ (dop:alt)--> langString
+subgraph_id: 281
+relationships:
+  - office holder --doo:party--> political party
+  - office holder --doo:birthPlace--> city
+  - military person --doo:party--> political party
+  - office holder --doo:child--> politician

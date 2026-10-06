@@ -1,0 +1,107 @@
+types:
+  book: doo:Book
+  comic: doo:Comic
+  company: doo:Company
+  comics creator: doo:ComicsCreator
+  fictional character: doo:FictionalCharacter
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      First_Comics: (subject='http://dbpedia.org/resource/Category:1983_comics_debuts')
+    relationships:
+      - A_Rebel_in_Time (dor:A_Rebel_in_Time) --doo:coverArtist--> Howard_Chaykin (dor:Howard_Chaykin)
+      - Dominic_Fortune (dor:Dominic_Fortune) --doo:creator--> Howard_Chaykin (dor:Howard_Chaykin)
+      - American_Flagg! (<http://dbpedia.org/resource/American_Flagg!>) --doo:writer--> Howard_Chaykin (dor:Howard_Chaykin)
+      - American_Flagg! (<http://dbpedia.org/resource/American_Flagg!>) --doo:publisher--> First_Comics (dor:First_Comics)
+  '2':
+    attributes:
+      First_Comics: (subject='http://dbpedia.org/resource/Category:1983_comics_debuts')
+    relationships:
+      - A_Rebel_in_Time (dor:A_Rebel_in_Time) --doo:coverArtist--> Howard_Chaykin (dor:Howard_Chaykin)
+      - Lady_Blackhawk (dor:Lady_Blackhawk) --doo:creator--> Howard_Chaykin (dor:Howard_Chaykin)
+      - American_Flagg! (<http://dbpedia.org/resource/American_Flagg!>) --doo:writer--> Howard_Chaykin (dor:Howard_Chaykin)
+      - American_Flagg! (<http://dbpedia.org/resource/American_Flagg!>) --doo:publisher--> First_Comics (dor:First_Comics)
+  '3':
+    attributes:
+      First_Comics: (subject='http://dbpedia.org/resource/Category:1983_comics_debuts')
+    relationships:
+      - A_Rebel_in_Time (dor:A_Rebel_in_Time) --doo:coverArtist--> Howard_Chaykin (dor:Howard_Chaykin)
+      - Lady_Gorgon (dor:Lady_Gorgon) --doo:creator--> Howard_Chaykin (dor:Howard_Chaykin)
+      - American_Flagg! (<http://dbpedia.org/resource/American_Flagg!>) --doo:writer--> Howard_Chaykin (dor:Howard_Chaykin)
+      - American_Flagg! (<http://dbpedia.org/resource/American_Flagg!>) --doo:publisher--> First_Comics (dor:First_Comics)
+  '4':
+    attributes:
+      Bill_the_Cat__Bill_the_Cat__1: (first appearance^='June 13, 1982')
+      The_Library_of_American_Comics: (subject='http://dbpedia.org/resource/Category:American_companies_established_in_2007')
+    relationships:
+      - A_Wish_for_Wings_That_Work (dor:A_Wish_for_Wings_That_Work) --doo:coverArtist--> Berkeley_Breathed (dor:Berkeley_Breathed)
+      - Bill_the_Cat__Bill_the_Cat__1 (dor:Bill_the_Cat__Bill_the_Cat__1) --doo:creator--> Berkeley_Breathed (dor:Berkeley_Breathed)
+      - Bloom_County:_The_Complete_Library (<http://dbpedia.org/resource/Bloom_County:_The_Complete_Library>) --doo:writer--> Berkeley_Breathed (dor:Berkeley_Breathed)
+      - Bloom_County:_The_Complete_Library (<http://dbpedia.org/resource/Bloom_County:_The_Complete_Library>) --doo:publisher--> The_Library_of_American_Comics (dor:The_Library_of_American_Comics)
+  '5':
+    attributes:
+      Bobbi_Harlow: (name^='Bobbi Harlow')
+      The_Library_of_American_Comics: (subject='http://dbpedia.org/resource/Category:American_companies_established_in_2007')
+    relationships:
+      - A_Wish_for_Wings_That_Work (dor:A_Wish_for_Wings_That_Work) --doo:coverArtist--> Berkeley_Breathed (dor:Berkeley_Breathed)
+      - Bobbi_Harlow (dor:Bobbi_Harlow) --doo:creator--> Berkeley_Breathed (dor:Berkeley_Breathed)
+      - Bloom_County:_The_Complete_Library (<http://dbpedia.org/resource/Bloom_County:_The_Complete_Library>) --doo:writer--> Berkeley_Breathed (dor:Berkeley_Breathed)
+      - Bloom_County:_The_Complete_Library (<http://dbpedia.org/resource/Bloom_County:_The_Complete_Library>) --doo:publisher--> The_Library_of_American_Comics (dor:The_Library_of_American_Comics)
+  '6':
+    attributes:
+      Cutter_John: (name^='Cutter John')
+      The_Library_of_American_Comics: (subject='http://dbpedia.org/resource/Category:American_companies_established_in_2007')
+    relationships:
+      - A_Wish_for_Wings_That_Work (dor:A_Wish_for_Wings_That_Work) --doo:coverArtist--> Berkeley_Breathed (dor:Berkeley_Breathed)
+      - Cutter_John (dor:Cutter_John) --doo:creator--> Berkeley_Breathed (dor:Berkeley_Breathed)
+      - Bloom_County:_The_Complete_Library (<http://dbpedia.org/resource/Bloom_County:_The_Complete_Library>) --doo:writer--> Berkeley_Breathed (dor:Berkeley_Breathed)
+      - Bloom_County:_The_Complete_Library (<http://dbpedia.org/resource/Bloom_County:_The_Complete_Library>) --doo:publisher--> The_Library_of_American_Comics (dor:The_Library_of_American_Comics)
+  '7':
+    attributes:
+      Kitchen_Sink_Press: (subject='http://dbpedia.org/resource/Category:1970_establishments_in_Wisconsin')
+    relationships:
+      - After_Silence (dor:After_Silence) --doo:coverArtist--> Dave_McKean (dor:Dave_McKean)
+      - Black_Orchid_(character) (<http://dbpedia.org/resource/Black_Orchid_(character)>) --doo:creator--> Dave_McKean (dor:Dave_McKean)
+      - Cages_(comics) (<http://dbpedia.org/resource/Cages_(comics)>) --doo:writer--> Dave_McKean (dor:Dave_McKean)
+      - Cages_(comics) (<http://dbpedia.org/resource/Cages_(comics)>) --doo:publisher--> Kitchen_Sink_Press (dor:Kitchen_Sink_Press)
+  '8':
+    attributes:
+      Tundra_Publishing: (subject='http://dbpedia.org/resource/Category:1990_establishments_in_Massachusetts')
+    relationships:
+      - After_Silence (dor:After_Silence) --doo:coverArtist--> Dave_McKean (dor:Dave_McKean)
+      - Black_Orchid_(character) (<http://dbpedia.org/resource/Black_Orchid_(character)>) --doo:creator--> Dave_McKean (dor:Dave_McKean)
+      - Cages_(comics) (<http://dbpedia.org/resource/Cages_(comics)>) --doo:writer--> Dave_McKean (dor:Dave_McKean)
+      - Cages_(comics) (<http://dbpedia.org/resource/Cages_(comics)>) --doo:publisher--> Tundra_Publishing (dor:Tundra_Publishing)
+  '9':
+    attributes:
+      DC_Comics: (subject='http://dbpedia.org/resource/Category:1934_establishments_in_New_York_City')
+    relationships:
+      - Batman_Animated (dor:Batman_Animated) --doo:coverArtist--> Bruce_Timm (dor:Bruce_Timm)
+      - Andrea_Beaumont (dor:Andrea_Beaumont) --doo:creator--> Bruce_Timm (dor:Bruce_Timm)
+      - The_Batman_Adventures:_Mad_Love (<http://dbpedia.org/resource/The_Batman_Adventures:_Mad_Love>) --doo:writer--> Bruce_Timm (dor:Bruce_Timm)
+      - The_Batman_Adventures:_Mad_Love (<http://dbpedia.org/resource/The_Batman_Adventures:_Mad_Love>) --doo:publisher--> DC_Comics (dor:DC_Comics)
+  '10':
+    attributes:
+      DC_Comics: (subject='http://dbpedia.org/resource/Category:1934_establishments_in_New_York_City')
+    relationships:
+      - Batman_Animated (dor:Batman_Animated) --doo:coverArtist--> Bruce_Timm (dor:Bruce_Timm)
+      - Batman_(Terry_McGinnis) (<http://dbpedia.org/resource/Batman_(Terry_McGinnis)>) --doo:creator--> Bruce_Timm (dor:Bruce_Timm)
+      - The_Batman_Adventures:_Mad_Love (<http://dbpedia.org/resource/The_Batman_Adventures:_Mad_Love>) --doo:writer--> Bruce_Timm (dor:Bruce_Timm)
+      - The_Batman_Adventures:_Mad_Love (<http://dbpedia.org/resource/The_Batman_Adventures:_Mad_Love>) --doo:publisher--> DC_Comics (dor:DC_Comics)
+attributes:
+  book: --release date^ (doo:releaseDate)--> date | --source (dop:source)--> langString | --align^ (dop:align)--> langString | --1a^ (dop:1a)--> langString
+  comic: --quote^ (dop:quote)--> langString
+  company: --subject (podt:subject)--> Resource | --products^ (dop:products)--> langString
+  fictional character: --child^ (doo:child)--> Resource | --family^ (dop:family)--> Resource | --name^ (dop:name)--> langString | --first appearance^ (doo:firstAppearance)--> string
+subgraph_id: 961
+relationships:
+  - book --doo:coverArtist--> comics creator
+  - fictional character --doo:creator--> comics creator
+  - comic --doo:writer--> comics creator
+  - comic --doo:publisher--> company

@@ -1,0 +1,46 @@
+types:
+  priest: doo:Priest
+  tenure: doo:Tenure
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - D._N._Aidit__Tenure__2 (dor:D._N._Aidit__Tenure__2) --doo:constituencyDistrict--> Central_Java (dor:Central_Java)
+      - Fransiskus_Xaverius_Sukendar_Wignyosumarta (dor:Fransiskus_Xaverius_Sukendar_Wignyosumarta) --doo:diocese--> Central_Java (dor:Central_Java)
+  '2':
+    attributes: {}
+    relationships:
+      - M._H._Lukman__Tenure__1 (dor:M._H._Lukman__Tenure__1) --doo:constituencyDistrict--> Central_Java (dor:Central_Java)
+      - Fransiskus_Xaverius_Sukendar_Wignyosumarta (dor:Fransiskus_Xaverius_Sukendar_Wignyosumarta) --doo:diocese--> Central_Java (dor:Central_Java)
+  '3':
+    attributes: {}
+    relationships:
+      - Sarino_Mangunpranoto__Tenure__2 (dor:Sarino_Mangunpranoto__Tenure__2) --doo:constituencyDistrict--> Central_Java (dor:Central_Java)
+      - Fransiskus_Xaverius_Sukendar_Wignyosumarta (dor:Fransiskus_Xaverius_Sukendar_Wignyosumarta) --doo:diocese--> Central_Java (dor:Central_Java)
+  '4':
+    attributes: {}
+    relationships:
+      - Abraham_X._Parker__Tenure__4 (dor:Abraham_X._Parker__Tenure__4) --doo:constituencyDistrict--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Preston_Washington (dor:Preston_Washington) --doo:diocese--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '5':
+    attributes: {}
+    relationships:
+      - Adam_Clayton_Powell_IV__Tenure__1 (dor:Adam_Clayton_Powell_IV__Tenure__1) --doo:constituencyDistrict--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Preston_Washington (dor:Preston_Washington) --doo:diocese--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '6':
+    attributes: {}
+    relationships:
+      - Adele_Cohen__Tenure__1 (dor:Adele_Cohen__Tenure__1) --doo:constituencyDistrict--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Preston_Washington (dor:Preston_Washington) --doo:diocese--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+attributes:
+  Location: --last^ (dop:last)--> langString | --Aug low F^ (dop:augLowF)--> int | --Apr rain mm^ (dop:aprRainMm)--> double | --Aug high F^ (dop:augHighF)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --designated other1 date^ (dop:designatedOther1Date)--> int | --1y^ (dop:1y)--> int | --builder^ (dop:builder)--> Resource | --Aug low C^ (dop:augLowC)--> double | --architecture^ (dop:architecture)--> Resource | --footer^ (dop:footer)--> langString | --Aug precipitation inch^ (dop:augPrecipitationInch)--> double | --building end date^ (doo:buildingEndDate)--> string
+subgraph_id: 560
+relationships:
+  - tenure --doo:constituencyDistrict--> Location
+  - priest --doo:diocese--> Location

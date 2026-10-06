@@ -1,0 +1,85 @@
+types:
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Sun_Fo: (children^='Nora Sun', title^='http://dbpedia.org/resource/List_of_Presidents_of_the_Examination_Yuan')
+      1911_Revolution: (is part of military conflict^='http://dbpedia.org/resource/Anti-Qing_sentiment')
+    relationships:
+      - 1911_Revolution (dor:1911_Revolution) --doo:commander--> Sun_Yat-sen (dor:Sun_Yat-sen)
+      - Sun_Fo (dor:Sun_Fo) --dop:relations--> Sun_Yat-sen (dor:Sun_Yat-sen)
+  '2':
+    attributes:
+      Yasin_al-Hashimi: (title^='http://dbpedia.org/resource/Prime_Minister_of_Iraq')
+      1941_Iraqi_coup_d'état: (is part of military conflict^='http://dbpedia.org/resource/World_War_II')
+    relationships:
+      - 1941_Iraqi_coup_d'état (<http://dbpedia.org/resource/1941_Iraqi_coup_d'état>) --doo:commander--> Taha_al-Hashimi (dor:Taha_al-Hashimi)
+      - Yasin_al-Hashimi (dor:Yasin_al-Hashimi) --dop:relations--> Taha_al-Hashimi (dor:Taha_al-Hashimi)
+  '3':
+    attributes:
+      1948_Arab–Israeli_War: (is part of military conflict^='http://dbpedia.org/resource/1948_Palestine_war')
+    relationships:
+      - 1948_Arab–Israeli_War (<http://dbpedia.org/resource/1948_Arab–Israeli_War>) --doo:commander--> Muzahim_al-Pachachi (dor:Muzahim_al-Pachachi)
+      - Hamdi_al-Pachachi (dor:Hamdi_al-Pachachi) --dop:relations--> Muzahim_al-Pachachi (dor:Muzahim_al-Pachachi)
+  '4':
+    attributes:
+      Álvaro_Gómez_Hurtado: (children^='Álvaro José Gómez Escobar')
+      1953_Colombian_coup_d'état: (is part of military conflict^='http://dbpedia.org/resource/La_Violencia')
+    relationships:
+      - 1953_Colombian_coup_d'état (<http://dbpedia.org/resource/1953_Colombian_coup_d'état>) --doo:commander--> Laureano_Gómez (<http://dbpedia.org/resource/Laureano_Gómez>)
+      - Álvaro_Gómez_Hurtado (<http://dbpedia.org/resource/Álvaro_Gómez_Hurtado>) --dop:relations--> Laureano_Gómez (<http://dbpedia.org/resource/Laureano_Gómez>)
+  '5':
+    attributes:
+      Samuel_Moreno_Rojas: (children^='Mateo Moreno González', birth name^='Samuel Gustavo Moreno Rojas')
+      1953_Colombian_coup_d'état: (is part of military conflict^='http://dbpedia.org/resource/La_Violencia')
+    relationships:
+      - 1953_Colombian_coup_d'état (<http://dbpedia.org/resource/1953_Colombian_coup_d'état>) --doo:commander--> Gustavo_Rojas_Pinilla (dor:Gustavo_Rojas_Pinilla)
+      - Samuel_Moreno_Rojas (dor:Samuel_Moreno_Rojas) --dop:relations--> Gustavo_Rojas_Pinilla (dor:Gustavo_Rojas_Pinilla)
+  '6':
+    attributes:
+      Duncan_Sandys: (children^='4', title^='Member of Parliament for Norwood')
+      1953_Iranian_coup_d'état: (is part of military conflict^='http://dbpedia.org/resource/Abadan_Crisis')
+    relationships:
+      - 1953_Iranian_coup_d'état (<http://dbpedia.org/resource/1953_Iranian_coup_d'état>) --doo:commander--> Winston_Churchill (dor:Winston_Churchill)
+      - Duncan_Sandys (dor:Duncan_Sandys) --dop:relations--> Winston_Churchill (dor:Winston_Churchill)
+  '7':
+    attributes:
+      1953_Iranian_coup_d'état: (is part of military conflict^='http://dbpedia.org/resource/Abadan_Crisis')
+      John_Russell,_1st_Earl_of_Bedford: (children^='http://dbpedia.org/resource/Francis_Russell,_2nd_Earl_of_Bedford', birth name^='John Russell', title^='Lord High Admiral')
+    relationships:
+      - 1953_Iranian_coup_d'état (<http://dbpedia.org/resource/1953_Iranian_coup_d'état>) --doo:commander--> Winston_Churchill (dor:Winston_Churchill)
+      - John_Russell,_1st_Earl_of_Bedford (<http://dbpedia.org/resource/John_Russell,_1st_Earl_of_Bedford>) --dop:relations--> Winston_Churchill (dor:Winston_Churchill)
+  '8':
+    attributes:
+      Tuğrul_Türkeş: (birth name^='Yıldırım Tuğrul Türkeş')
+    relationships:
+      - 1960_Turkish_coup_d'état (<http://dbpedia.org/resource/1960_Turkish_coup_d'état>) --doo:commander--> Alparslan_Türkeş (<http://dbpedia.org/resource/Alparslan_Türkeş>)
+      - Tuğrul_Türkeş (<http://dbpedia.org/resource/Tuğrul_Türkeş>) --dop:relations--> Alparslan_Türkeş (<http://dbpedia.org/resource/Alparslan_Türkeş>)
+  '9':
+    attributes:
+      Erdal_İnönü: (title^='http://dbpedia.org/resource/List_of_Deputy_Prime_Ministers_of_Turkey')
+    relationships:
+      - 1962_Turkish_coup_d'état_attempt (<http://dbpedia.org/resource/1962_Turkish_coup_d'état_attempt>) --doo:commander--> İsmet_İnönü (<http://dbpedia.org/resource/İsmet_İnönü>)
+      - Erdal_İnönü (<http://dbpedia.org/resource/Erdal_İnönü>) --dop:relations--> İsmet_İnönü (<http://dbpedia.org/resource/İsmet_İnönü>)
+  '10':
+    attributes:
+      Leonel_Brizola: (children^='João Otávio', birth name^='Leonel de Moura Brizola', title^='23')
+      1964_Brazilian_coup_d'état: (is part of military conflict^='http://dbpedia.org/resource/Cold_War')
+    relationships:
+      - 1964_Brazilian_coup_d'état (<http://dbpedia.org/resource/1964_Brazilian_coup_d'état>) --doo:commander--> João_Goulart (<http://dbpedia.org/resource/João_Goulart>)
+      - Leonel_Brizola (dor:Leonel_Brizola) --dop:relations--> João_Goulart (<http://dbpedia.org/resource/João_Goulart>)
+attributes:
+  politician: --relatives^ (dop:relatives)--> langString | --display^ (dop:display)--> langString
+  office holder: --quote^ (dop:quote)--> langString | --children^ (dop:children)--> int | --birth name^ (dop:birthName)--> langString | --2a^ (dop:2a)--> langString | --title^ (dop:title)--> Resource
+  military conflict: --is part of military conflict^ (doo:isPartOfMilitaryConflict)--> Resource | --1y^ (dop:1y)--> int
+subgraph_id: 365
+relationships:
+  - military conflict --doo:commander--> politician
+  - office holder --dop:relations--> politician

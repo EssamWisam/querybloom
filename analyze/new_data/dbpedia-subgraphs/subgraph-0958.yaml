@@ -1,0 +1,116 @@
+types:
+  city: doo:City
+  tenure: doo:Tenure
+  politician: doo:Politician
+  military unit: doo:MilitaryUnit
+  military service: doo:MilitaryService
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Norfolk,_Virginia: (area total (km2)^='249.6748538363904')
+      A._Jay_Cristol__MilitaryService__1: (military unit^='http://dbpedia.org/resource/Judge_Advocate_General''s_Corps,_U.S._Navy')
+    relationships:
+      - United_States_Navy_Reserve (dor:United_States_Navy_Reserve) --doo:garrison--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - Francis_Mallory (dor:Francis_Mallory) --dop:deathPlace--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - A._Jay_Cristol__MilitaryService__1 (dor:A._Jay_Cristol__MilitaryService__1) --doo:militaryUnit--> United_States_Navy_Reserve (dor:United_States_Navy_Reserve)
+      - George_Loyall__Tenure__1 (dor:George_Loyall__Tenure__1) --doo:successor--> Francis_Mallory (dor:Francis_Mallory)
+  '2':
+    attributes:
+      Norfolk,_Virginia: (area total (km2)^='249.6748538363904')
+      A._Jay_Cristol__MilitaryService__1: (military unit^='http://dbpedia.org/resource/Judge_Advocate_General''s_Corps,_U.S._Navy')
+    relationships:
+      - United_States_Navy_Reserve (dor:United_States_Navy_Reserve) --doo:garrison--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - Francis_Mallory (dor:Francis_Mallory) --dop:deathPlace--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - A._Jay_Cristol__MilitaryService__1 (dor:A._Jay_Cristol__MilitaryService__1) --doo:militaryUnit--> United_States_Navy_Reserve (dor:United_States_Navy_Reserve)
+      - Joel_Holleman__Tenure__2 (dor:Joel_Holleman__Tenure__2) --doo:successor--> Francis_Mallory (dor:Francis_Mallory)
+  '3':
+    attributes:
+      Norfolk,_Virginia: (area total (km2)^='249.6748538363904')
+      A._Jay_Cristol__MilitaryService__1: (military unit^='http://dbpedia.org/resource/Judge_Advocate_General''s_Corps,_U.S._Navy')
+    relationships:
+      - United_States_Navy_Reserve (dor:United_States_Navy_Reserve) --doo:garrison--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - George_E._Bowden (dor:George_E._Bowden) --dop:deathPlace--> Norfolk,_Virginia (<http://dbpedia.org/resource/Norfolk,_Virginia>)
+      - A._Jay_Cristol__MilitaryService__1 (dor:A._Jay_Cristol__MilitaryService__1) --doo:militaryUnit--> United_States_Navy_Reserve (dor:United_States_Navy_Reserve)
+      - Harry_Libbey__Tenure__1 (dor:Harry_Libbey__Tenure__1) --doo:successor--> George_E._Bowden (dor:George_E._Bowden)
+  '4':
+    attributes:
+      Islamabad: (area total (km2)^='220.0')
+      A._W._Bhombal__MilitaryService__1: (military unit^='http://dbpedia.org/resource/Pakistan_Navy')
+    relationships:
+      - Pakistan_Navy (dor:Pakistan_Navy) --doo:garrison--> Islamabad (dor:Islamabad)
+      - Abdul_Sattar_(diplomat) (<http://dbpedia.org/resource/Abdul_Sattar_(diplomat)>) --dop:deathPlace--> Islamabad (dor:Islamabad)
+      - A._W._Bhombal__MilitaryService__1 (dor:A._W._Bhombal__MilitaryService__1) --doo:militaryUnit--> Pakistan_Navy (dor:Pakistan_Navy)
+      - Sartaj_Aziz__Tenure__2 (dor:Sartaj_Aziz__Tenure__2) --doo:successor--> Abdul_Sattar_(diplomat) (<http://dbpedia.org/resource/Abdul_Sattar_(diplomat)>)
+  '5':
+    attributes:
+      Islamabad: (area total (km2)^='220.0')
+      A._W._Bhombal__MilitaryService__1: (military unit^='http://dbpedia.org/resource/Pakistan_Navy')
+    relationships:
+      - Pakistan_Navy (dor:Pakistan_Navy) --doo:garrison--> Islamabad (dor:Islamabad)
+      - Abdul_Sattar_(diplomat) (<http://dbpedia.org/resource/Abdul_Sattar_(diplomat)>) --dop:deathPlace--> Islamabad (dor:Islamabad)
+      - A._W._Bhombal__MilitaryService__1 (dor:A._W._Bhombal__MilitaryService__1) --doo:militaryUnit--> Pakistan_Navy (dor:Pakistan_Navy)
+      - Siddiq_Khan_Kanju__Tenure__2 (dor:Siddiq_Khan_Kanju__Tenure__2) --doo:successor--> Abdul_Sattar_(diplomat) (<http://dbpedia.org/resource/Abdul_Sattar_(diplomat)>)
+  '6':
+    attributes:
+      Islamabad: (area total (km2)^='220.0')
+      A._W._Bhombal__MilitaryService__1: (military unit^='http://dbpedia.org/resource/Pakistan_Navy')
+    relationships:
+      - Pakistan_Navy (dor:Pakistan_Navy) --doo:garrison--> Islamabad (dor:Islamabad)
+      - Akram_Zaki (dor:Akram_Zaki) --dop:deathPlace--> Islamabad (dor:Islamabad)
+      - A._W._Bhombal__MilitaryService__1 (dor:A._W._Bhombal__MilitaryService__1) --doo:militaryUnit--> Pakistan_Navy (dor:Pakistan_Navy)
+      - Sahabzada_Yaqub_Khan__Tenure__2 (dor:Sahabzada_Yaqub_Khan__Tenure__2) --doo:successor--> Akram_Zaki (dor:Akram_Zaki)
+  '7':
+    attributes:
+      Kandy: (area total (km2)^='28.53')
+      Force_136: (active years end year^='1946')
+      E._A._Nugawela: (spouse^='Louise Gooneratna')
+      Abdul_Razak_Hussein__MilitaryService__1: (military unit^='http://dbpedia.org/resource/Force_136')
+    relationships:
+      - Force_136 (dor:Force_136) --doo:garrison--> Kandy (dor:Kandy)
+      - E._A._Nugawela (dor:E._A._Nugawela) --dop:deathPlace--> Kandy (dor:Kandy)
+      - Abdul_Razak_Hussein__MilitaryService__1 (dor:Abdul_Razak_Hussein__MilitaryService__1) --doo:militaryUnit--> Force_136 (dor:Force_136)
+      - C._W._W._Kannangara__Tenure__2 (dor:C._W._W._Kannangara__Tenure__2) --doo:successor--> E._A._Nugawela (dor:E._A._Nugawela)
+  '8':
+    attributes:
+      27th_Mohammad_Rasulullah_Division: (active years end year^='2008')
+      Abolfazl_Ghana'ati__MilitaryService__1: (military unit^='http://dbpedia.org/resource/27th_Mohammad_Rasulullah_Division')
+    relationships:
+      - 27th_Mohammad_Rasulullah_Division (dor:27th_Mohammad_Rasulullah_Division) --doo:garrison--> Tehran (dor:Tehran)
+      - Abbas_Duzduzani (dor:Abbas_Duzduzani) --dop:deathPlace--> Tehran (dor:Tehran)
+      - Abolfazl_Ghana'ati__MilitaryService__1 (<http://dbpedia.org/resource/Abolfazl_Ghana'ati__MilitaryService__1>) --doo:militaryUnit--> 27th_Mohammad_Rasulullah_Division (dor:27th_Mohammad_Rasulullah_Division)
+      - Nasser_Minachi__Tenure__1 (dor:Nasser_Minachi__Tenure__1) --doo:successor--> Abbas_Duzduzani (dor:Abbas_Duzduzani)
+  '9':
+    attributes:
+      27th_Mohammad_Rasulullah_Division: (active years end year^='2008')
+      Abolfazl_Ghana'ati__MilitaryService__1: (military unit^='http://dbpedia.org/resource/27th_Mohammad_Rasulullah_Division')
+    relationships:
+      - 27th_Mohammad_Rasulullah_Division (dor:27th_Mohammad_Rasulullah_Division) --doo:garrison--> Tehran (dor:Tehran)
+      - Abdolhossein_Hazhir (dor:Abdolhossein_Hazhir) --dop:deathPlace--> Tehran (dor:Tehran)
+      - Abolfazl_Ghana'ati__MilitaryService__1 (<http://dbpedia.org/resource/Abolfazl_Ghana'ati__MilitaryService__1>) --doo:militaryUnit--> 27th_Mohammad_Rasulullah_Division (dor:27th_Mohammad_Rasulullah_Division)
+      - Ebrahim_Hakimi__Tenure__1 (dor:Ebrahim_Hakimi__Tenure__1) --doo:successor--> Abdolhossein_Hazhir (dor:Abdolhossein_Hazhir)
+  '10':
+    attributes:
+      27th_Mohammad_Rasulullah_Division: (active years end year^='2008')
+      Abolfazl_Ghana'ati__MilitaryService__1: (military unit^='http://dbpedia.org/resource/27th_Mohammad_Rasulullah_Division')
+    relationships:
+      - 27th_Mohammad_Rasulullah_Division (dor:27th_Mohammad_Rasulullah_Division) --doo:garrison--> Tehran (dor:Tehran)
+      - Abdollah_Riazi (dor:Abdollah_Riazi) --dop:deathPlace--> Tehran (dor:Tehran)
+      - Abolfazl_Ghana'ati__MilitaryService__1 (<http://dbpedia.org/resource/Abolfazl_Ghana'ati__MilitaryService__1>) --doo:militaryUnit--> 27th_Mohammad_Rasulullah_Division (dor:27th_Mohammad_Rasulullah_Division)
+      - Reza_Hekmat__Tenure__2 (dor:Reza_Hekmat__Tenure__2) --doo:successor--> Abdollah_Riazi (dor:Abdollah_Riazi)
+attributes:
+  city: --area total (km2)^ (doop:areaTotal)--> squareKilometre
+  politician: --spouse^ (doo:spouse)--> Resource | --url^ (dop:url)--> Resource | --footer^ (dop:footer)--> langString | --2p^ (dop:2p)--> int | --1y^ (dop:1y)--> int | --display^ (dop:display)--> langString | --spouse^ (dop:spouse)--> Resource | --honours^ (doo:honours)--> Resource
+  military unit: --active years end year^ (doo:activeYearsEndYear)--> gYear | --url^ (dop:url)--> Resource
+  military service: --military unit^ (doo:militaryUnit)--> Resource
+subgraph_id: 958
+relationships:
+  - military unit --doo:garrison--> city
+  - politician --dop:deathPlace--> city
+  - military service --doo:militaryUnit--> military unit
+  - tenure --doo:successor--> politician

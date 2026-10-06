@@ -1,0 +1,117 @@
+types:
+  person: doo:Person
+  tenure: doo:Tenure
+  country: doo:Country
+  organisation: doo:Organisation
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Haider_Khan_Hoti: '(alma mater^=''http://dbpedia.org/resource/Aitchison_College'', has abstract^=''Ameer Haider Khan Hoti (en ourdou : امیر حیدر خان ہوتی), né à Mardan dans la Province de la Frontière-du-Nord-Ouest le 5 février 1971, est un homme politique pakistanais. Il a été ministre en chef de ...'')'
+      Acid_Survivors_Trust_International: (subject='http://dbpedia.org/resource/Category:Acid_attack_victims')
+    relationships:
+      - Afrasiab_Khattak__Tenure__2 (dor:Afrasiab_Khattak__Tenure__2) --doo:president--> Asfandyar_Wali_Khan (dor:Asfandyar_Wali_Khan)
+      - Haider_Khan_Hoti (dor:Haider_Khan_Hoti) --dop:relatives--> Asfandyar_Wali_Khan (dor:Asfandyar_Wali_Khan)
+      - Asfandyar_Wali_Khan (dor:Asfandyar_Wali_Khan) --doo:residence--> Pakistan (dor:Pakistan)
+      - Acid_Survivors_Trust_International (dor:Acid_Survivors_Trust_International) --doo:location--> Pakistan (dor:Pakistan)
+  '2':
+    attributes:
+      Sangeen_Wali_Khan: '(has abstract^=''Sangeen Wali Khan (Urdu: سنگين ولی خان‎) (June 7, 1959 – June 28, 2008) was a politician in Pakistan. He was son of Khan Abdul Wali Khan and Nasim Wali Khan, and the half brother of Asfandyar Wali Kha...'')'
+      Acid_Survivors_Trust_International: (subject='http://dbpedia.org/resource/Category:Acid_attack_victims')
+    relationships:
+      - Afrasiab_Khattak__Tenure__2 (dor:Afrasiab_Khattak__Tenure__2) --doo:president--> Asfandyar_Wali_Khan (dor:Asfandyar_Wali_Khan)
+      - Sangeen_Wali_Khan (dor:Sangeen_Wali_Khan) --dop:relatives--> Asfandyar_Wali_Khan (dor:Asfandyar_Wali_Khan)
+      - Asfandyar_Wali_Khan (dor:Asfandyar_Wali_Khan) --doo:residence--> Pakistan (dor:Pakistan)
+      - Acid_Survivors_Trust_International (dor:Acid_Survivors_Trust_International) --doo:location--> Pakistan (dor:Pakistan)
+  '3':
+    attributes:
+      Haider_Khan_Hoti: '(alma mater^=''http://dbpedia.org/resource/Aitchison_College'', has abstract^=''Ameer Haider Khan Hoti (en ourdou : امیر حیدر خان ہوتی), né à Mardan dans la Province de la Frontière-du-Nord-Ouest le 5 février 1971, est un homme politique pakistanais. Il a été ministre en chef de ...'')'
+      Adam_Motor_Company: (subject='http://dbpedia.org/resource/Category:Defunct_motor_vehicle_manufacturers_of_Pakistan')
+    relationships:
+      - Afrasiab_Khattak__Tenure__2 (dor:Afrasiab_Khattak__Tenure__2) --doo:president--> Asfandyar_Wali_Khan (dor:Asfandyar_Wali_Khan)
+      - Haider_Khan_Hoti (dor:Haider_Khan_Hoti) --dop:relatives--> Asfandyar_Wali_Khan (dor:Asfandyar_Wali_Khan)
+      - Asfandyar_Wali_Khan (dor:Asfandyar_Wali_Khan) --doo:residence--> Pakistan (dor:Pakistan)
+      - Adam_Motor_Company (dor:Adam_Motor_Company) --doo:location--> Pakistan (dor:Pakistan)
+  '4':
+    attributes:
+      Kim_Il-sung: (after^='http://dbpedia.org/resource/Yang_Hyong-sop', before^='http://dbpedia.org/resource/Choe_Yong-gon_(army_commander)')
+      Kim_Jong-suk_(politician): (spouse^='http://dbpedia.org/resource/Ho_Dam', has abstract^='Kim Jong-suk (born 1931) is a North Korean government official. She is the chairwoman of the Committee for Cultural Relations with Foreign Countries. In 2017, she was appointed to the Diplomatic Commi...')
+      Central_Bureau_of_Statistics_(North_Korea): (subject='http://dbpedia.org/resource/Category:1952_establishments_in_North_Korea')
+    relationships:
+      - Han_Ik-su__Tenure__1 (dor:Han_Ik-su__Tenure__1) --doo:president--> Kim_Il-sung (dor:Kim_Il-sung)
+      - Kim_Jong-suk_(politician) (<http://dbpedia.org/resource/Kim_Jong-suk_(politician)>) --dop:relatives--> Kim_Il-sung (dor:Kim_Il-sung)
+      - Kim_Il-sung (dor:Kim_Il-sung) --doo:residence--> North_Korea (dor:North_Korea)
+      - Central_Bureau_of_Statistics_(North_Korea) (<http://dbpedia.org/resource/Central_Bureau_of_Statistics_(North_Korea)>) --doo:location--> North_Korea (dor:North_Korea)
+  '5':
+    attributes:
+      Kim_Il-sung: (after^='http://dbpedia.org/resource/Yang_Hyong-sop', before^='http://dbpedia.org/resource/Choe_Yong-gon_(army_commander)')
+      Kim_Jong-suk_(politician): (spouse^='http://dbpedia.org/resource/Ho_Dam', has abstract^='Kim Jong-suk (born 1931) is a North Korean government official. She is the chairwoman of the Committee for Cultural Relations with Foreign Countries. In 2017, she was appointed to the Diplomatic Commi...')
+      Central_Bureau_of_Statistics_(North_Korea): (subject='http://dbpedia.org/resource/Category:1952_establishments_in_North_Korea')
+    relationships:
+      - Hyon_Mu-gwang__Tenure__1 (dor:Hyon_Mu-gwang__Tenure__1) --doo:president--> Kim_Il-sung (dor:Kim_Il-sung)
+      - Kim_Jong-suk_(politician) (<http://dbpedia.org/resource/Kim_Jong-suk_(politician)>) --dop:relatives--> Kim_Il-sung (dor:Kim_Il-sung)
+      - Kim_Il-sung (dor:Kim_Il-sung) --doo:residence--> North_Korea (dor:North_Korea)
+      - Central_Bureau_of_Statistics_(North_Korea) (<http://dbpedia.org/resource/Central_Bureau_of_Statistics_(North_Korea)>) --doo:location--> North_Korea (dor:North_Korea)
+  '6':
+    attributes:
+      Kim_Il-sung: (after^='http://dbpedia.org/resource/Yang_Hyong-sop', before^='http://dbpedia.org/resource/Choe_Yong-gon_(army_commander)')
+      Kim_Jong-suk_(politician): (spouse^='http://dbpedia.org/resource/Ho_Dam', has abstract^='Kim Jong-suk (born 1931) is a North Korean government official. She is the chairwoman of the Committee for Cultural Relations with Foreign Countries. In 2017, she was appointed to the Diplomatic Commi...')
+      Central_Bureau_of_Statistics_(North_Korea): (subject='http://dbpedia.org/resource/Category:1952_establishments_in_North_Korea')
+    relationships:
+      - Kang_Ryang-uk__Tenure__1 (dor:Kang_Ryang-uk__Tenure__1) --doo:president--> Kim_Il-sung (dor:Kim_Il-sung)
+      - Kim_Jong-suk_(politician) (<http://dbpedia.org/resource/Kim_Jong-suk_(politician)>) --dop:relatives--> Kim_Il-sung (dor:Kim_Il-sung)
+      - Kim_Il-sung (dor:Kim_Il-sung) --doo:residence--> North_Korea (dor:North_Korea)
+      - Central_Bureau_of_Statistics_(North_Korea) (<http://dbpedia.org/resource/Central_Bureau_of_Statistics_(North_Korea)>) --doo:location--> North_Korea (dor:North_Korea)
+  '7':
+    attributes:
+      Mahathir_Mohamad: (after^='Abdullah Ahmad Badawi', before^='Hussein Onn')
+      Ismail_Mohamed_Ali: (has abstract^='Tun Ismail Mohamad Ali (16 September 1918 – 19 Juli 1998) adalah mantan Gubernur Bank Negara Malaysia dan tokoh pembangunan ekonomi kaum Melayu bumiputera.', resting place^='http://dbpedia.org/resource/Jalan_Ampang_Muslim_Cemetery')
+    relationships:
+      - Abdul_Rahim_Thamby_Chik__Tenure__2 (dor:Abdul_Rahim_Thamby_Chik__Tenure__2) --doo:president--> Mahathir_Mohamad (dor:Mahathir_Mohamad)
+      - Ismail_Mohamed_Ali (dor:Ismail_Mohamed_Ali) --dop:relatives--> Mahathir_Mohamad (dor:Mahathir_Mohamad)
+      - Mahathir_Mohamad (dor:Mahathir_Mohamad) --doo:residence--> Malaysia (dor:Malaysia)
+      - 1Malaysia_Development_Berhad__1Malaysia_Development_Berhad__1 (dor:1Malaysia_Development_Berhad__1Malaysia_Development_Berhad__1) --doo:location--> Malaysia (dor:Malaysia)
+  '8':
+    attributes:
+      Mahathir_Mohamad: (after^='Abdullah Ahmad Badawi', before^='Hussein Onn')
+      Ismail_Mohamed_Ali: (has abstract^='Tun Ismail Mohamad Ali (16 September 1918 – 19 Juli 1998) adalah mantan Gubernur Bank Negara Malaysia dan tokoh pembangunan ekonomi kaum Melayu bumiputera.', resting place^='http://dbpedia.org/resource/Jalan_Ampang_Muslim_Cemetery')
+    relationships:
+      - Anwar_Ibrahim__Tenure__15 (dor:Anwar_Ibrahim__Tenure__15) --doo:president--> Mahathir_Mohamad (dor:Mahathir_Mohamad)
+      - Ismail_Mohamed_Ali (dor:Ismail_Mohamed_Ali) --dop:relatives--> Mahathir_Mohamad (dor:Mahathir_Mohamad)
+      - Mahathir_Mohamad (dor:Mahathir_Mohamad) --doo:residence--> Malaysia (dor:Malaysia)
+      - 1Malaysia_Development_Berhad__1Malaysia_Development_Berhad__1 (dor:1Malaysia_Development_Berhad__1Malaysia_Development_Berhad__1) --doo:location--> Malaysia (dor:Malaysia)
+  '9':
+    attributes:
+      Mahathir_Mohamad: (after^='Abdullah Ahmad Badawi', before^='Hussein Onn')
+      Ismail_Mohamed_Ali: (has abstract^='Tun Ismail Mohamad Ali (16 September 1918 – 19 Juli 1998) adalah mantan Gubernur Bank Negara Malaysia dan tokoh pembangunan ekonomi kaum Melayu bumiputera.', resting place^='http://dbpedia.org/resource/Jalan_Ampang_Muslim_Cemetery')
+    relationships:
+      - Azalina_Othman_Said__Tenure__1 (dor:Azalina_Othman_Said__Tenure__1) --doo:president--> Mahathir_Mohamad (dor:Mahathir_Mohamad)
+      - Ismail_Mohamed_Ali (dor:Ismail_Mohamed_Ali) --dop:relatives--> Mahathir_Mohamad (dor:Mahathir_Mohamad)
+      - Mahathir_Mohamad (dor:Mahathir_Mohamad) --doo:residence--> Malaysia (dor:Malaysia)
+      - 1Malaysia_Development_Berhad__1Malaysia_Development_Berhad__1 (dor:1Malaysia_Development_Berhad__1Malaysia_Development_Berhad__1) --doo:location--> Malaysia (dor:Malaysia)
+  '10':
+    attributes:
+      1-India_Family_Mart: (subject='http://dbpedia.org/resource/Category:Companies_based_in_Delhi')
+      Abhishek_Banerjee_(politician): (alma mater^='Indian Institute of Planning and Management', has abstract^='Abhishek Banerjee (born 7 November 1987) is an Indian politician. He is the bhaipo of Mamata Banerjee and a member of the All India Trinamool Congress and he is currently serving as a Member of Parlia...')
+    relationships:
+      - Yashwant_Sinha__Tenure__1 (dor:Yashwant_Sinha__Tenure__1) --doo:president--> Mamata_Banerjee (dor:Mamata_Banerjee)
+      - Abhishek_Banerjee_(politician) (<http://dbpedia.org/resource/Abhishek_Banerjee_(politician)>) --dop:relatives--> Mamata_Banerjee (dor:Mamata_Banerjee)
+      - Mamata_Banerjee (dor:Mamata_Banerjee) --doo:residence--> India (dor:India)
+      - 1-India_Family_Mart (dor:1-India_Family_Mart) --doo:location--> India (dor:India)
+attributes:
+  person: --2pp^ (dop:2pp)--> int | --alma mater^ (dop:almaMater)--> Resource | --spouse^ (doo:spouse)--> Resource | --has abstract^ (doo:abstract)--> langString | --resting place^ (doo:restingPlace)--> Resource
+  country: --2p^ (dop:2p)--> int
+  organisation: --founded by^ (doo:foundedBy)--> Resource | --subject (podt:subject)--> Resource
+  office holder: --after^ (dop:after)--> Resource | --1a^ (dop:1a)--> langString | --direction^ (dop:direction)--> langString | --before^ (dop:before)--> langString
+subgraph_id: 317
+relationships:
+  - tenure --doo:president--> office holder
+  - person --dop:relatives--> office holder
+  - office holder --doo:residence--> country
+  - organisation --doo:location--> country

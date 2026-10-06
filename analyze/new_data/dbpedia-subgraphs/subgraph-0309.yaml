@@ -1,0 +1,102 @@
+types:
+  lake: doo:Lake
+  river: doo:River
+  Location: doo:Location
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Münster: (date^='August 2010', Apr low C^='3')
+    relationships:
+      - Gievenbach (dor:Gievenbach) --doo:mouthMountain--> Aasee_(Münster) (<http://dbpedia.org/resource/Aasee_(Münster)>)
+      - Aasee_(Münster) (<http://dbpedia.org/resource/Aasee_(Münster)>) --doo:location--> Münster (<http://dbpedia.org/resource/Münster>)
+  '2':
+    attributes:
+      North_Rhine-Westphalia: (date^='March 2022')
+    relationships:
+      - Gievenbach (dor:Gievenbach) --doo:mouthMountain--> Aasee_(Münster) (<http://dbpedia.org/resource/Aasee_(Münster)>)
+      - Aasee_(Münster) (<http://dbpedia.org/resource/Aasee_(Münster)>) --doo:location--> North_Rhine-Westphalia (dor:North_Rhine-Westphalia)
+  '3':
+    attributes:
+      California: (date^='2020-10-13')
+    relationships:
+      - San_Gabriel_River_(California) (<http://dbpedia.org/resource/San_Gabriel_River_(California)>) --doo:mouthMountain--> Alamitos_Bay (dor:Alamitos_Bay)
+      - Alamitos_Bay (dor:Alamitos_Bay) --doo:location--> California (dor:California)
+  '4':
+    attributes:
+      Long_Beach,_California: (date^='August 2010', Apr record low F^='38')
+    relationships:
+      - San_Gabriel_River_(California) (<http://dbpedia.org/resource/San_Gabriel_River_(California)>) --doo:mouthMountain--> Alamitos_Bay (dor:Alamitos_Bay)
+      - Alamitos_Bay (dor:Alamitos_Bay) --doo:location--> Long_Beach,_California (<http://dbpedia.org/resource/Long_Beach,_California>)
+  '5':
+    attributes: {}
+    relationships:
+      - Ekalluk_River (dor:Ekalluk_River) --doo:mouthMountain--> Albert_Edward_Bay (dor:Albert_Edward_Bay)
+      - Albert_Edward_Bay (dor:Albert_Edward_Bay) --doo:location--> Victoria_Island (dor:Victoria_Island)
+  '6':
+    attributes: {}
+    relationships:
+      - Antainambalana_River (dor:Antainambalana_River) --doo:mouthMountain--> Antongil_Bay (dor:Antongil_Bay)
+      - Antongil_Bay (dor:Antongil_Bay) --doo:location--> Analanjirofo (dor:Analanjirofo)
+  '7':
+    attributes: {}
+    relationships:
+      - Antainambalana_River (dor:Antainambalana_River) --doo:mouthMountain--> Antongil_Bay (dor:Antongil_Bay)
+      - Antongil_Bay (dor:Antongil_Bay) --doo:location--> Madagascar (dor:Madagascar)
+  '8':
+    attributes: {}
+    relationships:
+      - Digul (dor:Digul) --doo:mouthMountain--> Arafura_Sea (dor:Arafura_Sea)
+      - Arafura_Sea (dor:Arafura_Sea) --doo:location--> Oceania (dor:Oceania)
+  '9':
+    attributes: {}
+    relationships:
+      - Maro_River (dor:Maro_River) --doo:mouthMountain--> Arafura_Sea (dor:Arafura_Sea)
+      - Arafura_Sea (dor:Arafura_Sea) --doo:location--> Oceania (dor:Oceania)
+  '10':
+    attributes: {}
+    relationships:
+      - Pulau_River (dor:Pulau_River) --doo:mouthMountain--> Arafura_Sea (dor:Arafura_Sea)
+      - Arafura_Sea (dor:Arafura_Sea) --doo:location--> Oceania (dor:Oceania)
+qa_result:
+  status: completed
+  cost_usd: 0.278225
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.051322400000000004
+        total_tokens: 4490
+        prompt_tokens: 2120
+        completion_tokens: 2370
+      generate:
+        cost_usd: 0.0671376
+        total_tokens: 6152
+        prompt_tokens: 3247
+        completion_tokens: 2905
+      verify_1:
+        cost_usd: 0.036217
+        total_tokens: 4259
+        prompt_tokens: 3264
+        completion_tokens: 995
+      complexity:
+        cost_usd: 0.123548
+        total_tokens: 9845
+        prompt_tokens: 4318
+        completion_tokens: 5527
+    total_tokens: 24746
+    prompt_tokens: 12949
+    total_cost_usd: 0.278225
+    completion_tokens: 11797
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Location: --original name^ (doo:originalName)--> langString | --administrator^ (dop:administrator)--> Resource | --added^ (dop:added)--> date | --date^ (dop:date)--> date | --bot^ (dop:bot)--> langString | --Apr low C^ (dop:aprLowC)--> double | --Apr record low F^ (dop:aprRecordLowF)--> double | --garrison^ (dop:garrison)--> int | --winner^ (dop:winner)--> langString
+subgraph_id: 309
+relationships:
+  - river --doo:mouthMountain--> lake
+  - lake --doo:location--> Location

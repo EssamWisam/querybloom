@@ -1,0 +1,103 @@
+types:
+  venue: doo:Venue
+  sports team: doo:SportsTeam
+  australian football Team: doo:AustralianFootballTeam
+  Australian rules football player: doo:AustralianRulesFootballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Docklands_Stadium: |-
+        (architect^='http://dbpedia.org/resource/Daryl_Jackson', capacity^='47000', owner^='http://dbpedia.org/resource/Australian_Football_League', tenants='; Australian Football League
+
+        Essendon Football Club', seating capacity^='47000', opened^='2000-03-09', operator^='Australian Football League')
+    relationships:
+      - Aaron_Hamill (dor:Aaron_Hamill) --doo:debutTeam--> Carlton_Football_Club (dor:Carlton_Football_Club)
+      - Docklands_Stadium (dor:Docklands_Stadium) --doo:tenant--> Carlton_Football_Club (dor:Carlton_Football_Club)
+      - Docklands_Stadium (dor:Docklands_Stadium) --dop:tenants--> North_Melbourne_Football_Club (dor:North_Melbourne_Football_Club)
+  '2':
+    attributes:
+      Docklands_Stadium: |-
+        (architect^='http://dbpedia.org/resource/Daryl_Jackson', capacity^='47000', owner^='http://dbpedia.org/resource/Australian_Football_League', tenants='; Australian Football League
+
+        Essendon Football Club', seating capacity^='47000', opened^='2000-03-09', operator^='Australian Football League')
+    relationships:
+      - Aaron_Hamill (dor:Aaron_Hamill) --doo:debutTeam--> Carlton_Football_Club (dor:Carlton_Football_Club)
+      - Docklands_Stadium (dor:Docklands_Stadium) --doo:tenant--> Carlton_Football_Club (dor:Carlton_Football_Club)
+      - Docklands_Stadium (dor:Docklands_Stadium) --dop:tenants--> St_Kilda_Football_Club (dor:St_Kilda_Football_Club)
+  '3':
+    attributes:
+      Docklands_Stadium: |-
+        (architect^='http://dbpedia.org/resource/Daryl_Jackson', capacity^='47000', owner^='http://dbpedia.org/resource/Australian_Football_League', tenants='; Australian Football League
+
+        Essendon Football Club', seating capacity^='47000', opened^='2000-03-09', operator^='Australian Football League')
+    relationships:
+      - Aaron_Hamill (dor:Aaron_Hamill) --doo:debutTeam--> Carlton_Football_Club (dor:Carlton_Football_Club)
+      - Docklands_Stadium (dor:Docklands_Stadium) --doo:tenant--> Carlton_Football_Club (dor:Carlton_Football_Club)
+      - Docklands_Stadium (dor:Docklands_Stadium) --dop:tenants--> Western_Bulldogs (dor:Western_Bulldogs)
+  '4':
+    attributes:
+      Perth_Stadium: (architect^='http://dbpedia.org/resource/Hassell_(architecture_firm)', owner^='http://dbpedia.org/resource/Government_of_Western_Australia', caption^='View eastward in January 2018', tenants='2021', seating capacity^='60000', opened^='2017-12-11', operator^='VenuesLive')
+    relationships:
+      - Adam_Campbell_(Australian_footballer) (<http://dbpedia.org/resource/Adam_Campbell_(Australian_footballer)>) --doo:debutTeam--> Fremantle_Football_Club (dor:Fremantle_Football_Club)
+      - Perth_Stadium (dor:Perth_Stadium) --doo:tenant--> Fremantle_Football_Club (dor:Fremantle_Football_Club)
+      - Perth_Stadium (dor:Perth_Stadium) --dop:tenants--> Fremantle_Football_Club (dor:Fremantle_Football_Club)
+  '5':
+    attributes:
+      Lathlain_Park: (capacity^='6500', owner^='http://dbpedia.org/resource/Town_of_Victoria_Park', caption^='Lathlain Park in 2019', tenants='', seating capacity^='6500', opened^='1959-08-25', built^='1959')
+    relationships:
+      - Adam_Cockie (dor:Adam_Cockie) --doo:debutTeam--> West_Coast_Eagles (dor:West_Coast_Eagles)
+      - Lathlain_Park (dor:Lathlain_Park) --doo:tenant--> West_Coast_Eagles (dor:West_Coast_Eagles)
+      - Lathlain_Park (dor:Lathlain_Park) --dop:tenants--> West_Coast_Eagles (dor:West_Coast_Eagles)
+  '6':
+    attributes:
+      Perth_Stadium: (architect^='http://dbpedia.org/resource/Hassell_(architecture_firm)', owner^='http://dbpedia.org/resource/Government_of_Western_Australia', caption^='View eastward in January 2018', tenants='2021', seating capacity^='60000', opened^='2017-12-11', operator^='VenuesLive')
+    relationships:
+      - Adam_Cockie (dor:Adam_Cockie) --doo:debutTeam--> West_Coast_Eagles (dor:West_Coast_Eagles)
+      - Perth_Stadium (dor:Perth_Stadium) --doo:tenant--> West_Coast_Eagles (dor:West_Coast_Eagles)
+      - Perth_Stadium (dor:Perth_Stadium) --dop:tenants--> Fremantle_Football_Club (dor:Fremantle_Football_Club)
+  '7':
+    attributes:
+      Melbourne_Cricket_Ground: |-
+        (capacity^='100024', caption^='Panorama of the MCG before', tenants='; Australian Football League
+        Melbourne Football Club', seating capacity^='100024', operator^='http://dbpedia.org/resource/Melbourne_Cricket_Club')
+    relationships:
+      - Adam_Iacobucci (dor:Adam_Iacobucci) --doo:debutTeam--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+      - Melbourne_Cricket_Ground (dor:Melbourne_Cricket_Ground) --doo:tenant--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+      - Melbourne_Cricket_Ground (dor:Melbourne_Cricket_Ground) --dop:tenants--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+  '8':
+    attributes:
+      Melbourne_Sports_and_Entertainment_Centre: (architect^='http://dbpedia.org/resource/John_and_Phyllis_Murphy', capacity^='5500', tenants='1956', seating capacity^='5500', cost^='1.05E7', opened^='1956-11-22')
+    relationships:
+      - Adam_Iacobucci (dor:Adam_Iacobucci) --doo:debutTeam--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+      - Melbourne_Sports_and_Entertainment_Centre (dor:Melbourne_Sports_and_Entertainment_Centre) --doo:tenant--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+      - Melbourne_Sports_and_Entertainment_Centre (dor:Melbourne_Sports_and_Entertainment_Centre) --dop:tenants--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+  '9':
+    attributes:
+      Melbourne_Sports_and_Entertainment_Centre: (architect^='http://dbpedia.org/resource/John_and_Phyllis_Murphy', capacity^='5500', tenants='1956', seating capacity^='5500', cost^='1.05E7', opened^='1956-11-22')
+    relationships:
+      - Adam_Iacobucci (dor:Adam_Iacobucci) --doo:debutTeam--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+      - Melbourne_Sports_and_Entertainment_Centre (dor:Melbourne_Sports_and_Entertainment_Centre) --doo:tenant--> Collingwood_Football_Club (dor:Collingwood_Football_Club)
+      - Melbourne_Sports_and_Entertainment_Centre (dor:Melbourne_Sports_and_Entertainment_Centre) --dop:tenants--> Southern_Melbourne_Saints (dor:Southern_Melbourne_Saints)
+  '10':
+    attributes:
+      Adelaide_Oval: |-
+        (owner^='http://dbpedia.org/resource/South_Australian_Government', caption^='The renovated Adelaide Oval in 2015', tenants='; Cricket
+
+        Australia', seating capacity^='53500', opened^='1871', operator^='http://dbpedia.org/resource/Adelaide_Oval_Stadium_Management_Authority')
+    relationships:
+      - Adam_Morgan_(Australian_footballer) (<http://dbpedia.org/resource/Adam_Morgan_(Australian_footballer)>) --doo:debutTeam--> Port_Adelaide_Football_Club (dor:Port_Adelaide_Football_Club)
+      - Adelaide_Oval (dor:Adelaide_Oval) --doo:tenant--> Port_Adelaide_Football_Club (dor:Port_Adelaide_Football_Club)
+      - Adelaide_Oval (dor:Adelaide_Oval) --dop:tenants--> Adelaide_Football_Club (dor:Adelaide_Football_Club)
+attributes:
+  venue: --architect^ (doo:architect)--> Resource | --capacity^ (dop:capacity)--> langString | --owner^ (doo:owner)--> Resource | --caption^ (dop:caption)--> langString | --tenants (dop:tenants)--> int | --seating capacity^ (doo:seatingCapacity)--> int | --cost^ (dop:cost)--> langString | --opened^ (dop:opened)--> date | --built^ (dop:built)--> int | --operator^ (dop:operator)--> langString
+  sports team: --Association^ (dop:association)--> langString | --last^ (dop:last)--> langString
+subgraph_id: 596
+relationships:
+  - Australian rules football player --doo:debutTeam--> australian football Team
+  - venue --doo:tenant--> australian football Team
+  - venue --dop:tenants--> sports team

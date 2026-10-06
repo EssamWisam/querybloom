@@ -1,0 +1,142 @@
+types:
+  athlete: doo:Athlete
+  country: doo:Country
+  Location: doo:Location
+  politician: doo:Politician
+  olympic event: doo:OlympicEvent
+  tennis player: doo:TennisPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Alberto_Brizzi: (birth date^='1984-03-26')
+      Ernesto_Nathan: (title^='http://dbpedia.org/resource/Mayor_of_Rome')
+    relationships:
+      - Alberto_Brizzi (dor:Alberto_Brizzi) --doo:birthPlace--> Italy (dor:Italy)
+      - Ernesto_Nathan (dor:Ernesto_Nathan) --doo:residence--> Italy (dor:Italy)
+      - Alberto_Brizzi (dor:Alberto_Brizzi) --doo:country--> Italy (dor:Italy)
+      - Abdon_Pamich (dor:Abdon_Pamich) --doo:residence--> Italy (dor:Italy)
+      - Ernesto_Nathan (dor:Ernesto_Nathan) --dop:deathPlace--> Italy (dor:Italy)
+      - Athletics_at_the_1960_Summer_Olympics_–_Men's_50_kilometres_walk (<http://dbpedia.org/resource/Athletics_at_the_1960_Summer_Olympics_–_Men's_50_kilometres_walk>) --dop:bronze--> Abdon_Pamich (dor:Abdon_Pamich)
+  '2':
+    attributes:
+      Italy: (width^='126')
+      Ernesto_Nathan: (title^='http://dbpedia.org/resource/Mayor_of_Rome')
+      Andrea_Gaudenzi: (birth date^='1973-07-30')
+    relationships:
+      - Andrea_Gaudenzi (dor:Andrea_Gaudenzi) --doo:birthPlace--> Italy (dor:Italy)
+      - Ernesto_Nathan (dor:Ernesto_Nathan) --doo:residence--> Italy (dor:Italy)
+      - Andrea_Gaudenzi (dor:Andrea_Gaudenzi) --doo:country--> Italy (dor:Italy)
+      - Abdon_Pamich (dor:Abdon_Pamich) --doo:residence--> Italy (dor:Italy)
+      - Ernesto_Nathan (dor:Ernesto_Nathan) --dop:deathPlace--> Italy (dor:Italy)
+      - Athletics_at_the_1960_Summer_Olympics_–_Men's_50_kilometres_walk (<http://dbpedia.org/resource/Athletics_at_the_1960_Summer_Olympics_–_Men's_50_kilometres_walk>) --dop:bronze--> Abdon_Pamich (dor:Abdon_Pamich)
+  '3':
+    attributes:
+      Italy: (width^='126')
+      Ernesto_Nathan: (title^='http://dbpedia.org/resource/Mayor_of_Rome')
+      Cristiano_Caratti: (birth date^='1970-05-24')
+    relationships:
+      - Cristiano_Caratti (dor:Cristiano_Caratti) --doo:birthPlace--> Italy (dor:Italy)
+      - Ernesto_Nathan (dor:Ernesto_Nathan) --doo:residence--> Italy (dor:Italy)
+      - Cristiano_Caratti (dor:Cristiano_Caratti) --doo:country--> Italy (dor:Italy)
+      - Abdon_Pamich (dor:Abdon_Pamich) --doo:residence--> Italy (dor:Italy)
+      - Ernesto_Nathan (dor:Ernesto_Nathan) --dop:deathPlace--> Italy (dor:Italy)
+      - Athletics_at_the_1960_Summer_Olympics_–_Men's_50_kilometres_walk (<http://dbpedia.org/resource/Athletics_at_the_1960_Summer_Olympics_–_Men's_50_kilometres_walk>) --dop:bronze--> Abdon_Pamich (dor:Abdon_Pamich)
+  '4':
+    attributes:
+      Ben_Westlund: (title^='http://dbpedia.org/resource/Oregon_State_Treasurer')
+      Aaron_Krickstein: (birth date^='1967-08-02')
+    relationships:
+      - Aaron_Krickstein (dor:Aaron_Krickstein) --doo:birthPlace--> United_States (dor:United_States)
+      - Ben_Westlund (dor:Ben_Westlund) --doo:residence--> United_States (dor:United_States)
+      - Aaron_Krickstein (dor:Aaron_Krickstein) --doo:country--> United_States (dor:United_States)
+      - Adam_Rippon (dor:Adam_Rippon) --doo:residence--> United_States (dor:United_States)
+      - Ben_Westlund (dor:Ben_Westlund) --dop:deathPlace--> United_States (dor:United_States)
+      - Figure_skating_at_the_2018_Winter_Olympics_–_Team_event (<http://dbpedia.org/resource/Figure_skating_at_the_2018_Winter_Olympics_–_Team_event>) --dop:bronze--> Adam_Rippon (dor:Adam_Rippon)
+  '5':
+    attributes:
+      Alex_Kim: (birth date^='1978-12-20')
+      Ben_Westlund: (title^='http://dbpedia.org/resource/Oregon_State_Treasurer')
+    relationships:
+      - Alex_Kim (dor:Alex_Kim) --doo:birthPlace--> United_States (dor:United_States)
+      - Ben_Westlund (dor:Ben_Westlund) --doo:residence--> United_States (dor:United_States)
+      - Alex_Kim (dor:Alex_Kim) --doo:country--> United_States (dor:United_States)
+      - Adam_Rippon (dor:Adam_Rippon) --doo:residence--> United_States (dor:United_States)
+      - Ben_Westlund (dor:Ben_Westlund) --dop:deathPlace--> United_States (dor:United_States)
+      - Figure_skating_at_the_2018_Winter_Olympics_–_Team_event (<http://dbpedia.org/resource/Figure_skating_at_the_2018_Winter_Olympics_–_Team_event>) --dop:bronze--> Adam_Rippon (dor:Adam_Rippon)
+  '6':
+    attributes:
+      Ali_Hamadeh: (birth date^='1974-09-05')
+      Ben_Westlund: (title^='http://dbpedia.org/resource/Oregon_State_Treasurer')
+    relationships:
+      - Ali_Hamadeh (dor:Ali_Hamadeh) --doo:birthPlace--> United_States (dor:United_States)
+      - Ben_Westlund (dor:Ben_Westlund) --doo:residence--> United_States (dor:United_States)
+      - Ali_Hamadeh (dor:Ali_Hamadeh) --doo:country--> Lebanon (dor:Lebanon)
+      - Adam_Rippon (dor:Adam_Rippon) --doo:residence--> United_States (dor:United_States)
+      - Ben_Westlund (dor:Ben_Westlund) --dop:deathPlace--> United_States (dor:United_States)
+      - Figure_skating_at_the_2018_Winter_Olympics_–_Team_event (<http://dbpedia.org/resource/Figure_skating_at_the_2018_Winter_Olympics_–_Team_event>) --dop:bronze--> Adam_Rippon (dor:Adam_Rippon)
+  '7':
+    attributes:
+      Illinois: (nickname^='Land of Lincoln, Prairie State, The Inland Empire State')
+      Aja_Evans: (collegeteam^='http://dbpedia.org/resource/Illinois_Fighting_Illini')
+      Carrie_Neely: (birth date^='1876-01-24')
+      Fred_A._Busse: (title^='Republican nominee for Illinois Treasurer')
+    relationships:
+      - Carrie_Neely (dor:Carrie_Neely) --doo:birthPlace--> Illinois (dor:Illinois)
+      - Fred_A._Busse (dor:Fred_A._Busse) --doo:residence--> Illinois (dor:Illinois)
+      - Carrie_Neely (dor:Carrie_Neely) --doo:country--> United_States (dor:United_States)
+      - Aja_Evans (dor:Aja_Evans) --doo:residence--> Illinois (dor:Illinois)
+      - Fred_A._Busse (dor:Fred_A._Busse) --dop:deathPlace--> Illinois (dor:Illinois)
+      - Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman (<http://dbpedia.org/resource/Bobsleigh_at_the_2014_Winter_Olympics_–_Two-woman>) --dop:bronze--> Aja_Evans (dor:Aja_Evans)
+  '8':
+    attributes:
+      Quebec_City: (nickname^='')
+      Claude_Béchard: (title^='Minister of Agriculture, Fisheries and Food')
+      Marie-Ève_Pelletier: (birth date^='1982-05-18')
+    relationships:
+      - Marie-Ève_Pelletier (<http://dbpedia.org/resource/Marie-Ève_Pelletier>) --doo:birthPlace--> Quebec_City (dor:Quebec_City)
+      - Claude_Béchard (<http://dbpedia.org/resource/Claude_Béchard>) --doo:residence--> Quebec_City (dor:Quebec_City)
+      - Marie-Ève_Pelletier (<http://dbpedia.org/resource/Marie-Ève_Pelletier>) --doo:country--> Canada (dor:Canada)
+      - Alex_Beaulieu-Marchand (dor:Alex_Beaulieu-Marchand) --doo:residence--> Quebec_City (dor:Quebec_City)
+      - Claude_Béchard (<http://dbpedia.org/resource/Claude_Béchard>) --dop:deathPlace--> Quebec_City (dor:Quebec_City)
+      - Freestyle_skiing_at_the_2018_Winter_Olympics_–_Men's_slopestyle (<http://dbpedia.org/resource/Freestyle_skiing_at_the_2018_Winter_Olympics_–_Men's_slopestyle>) --dop:bronze--> Alex_Beaulieu-Marchand (dor:Alex_Beaulieu-Marchand)
+  '9':
+    attributes:
+      Quebec_City: (nickname^='')
+      Claude_Béchard: (title^='Minister of Agriculture, Fisheries and Food')
+      Pierre-Ludovic_Duclos: (birth date^='1986-01-08')
+    relationships:
+      - Pierre-Ludovic_Duclos (dor:Pierre-Ludovic_Duclos) --doo:birthPlace--> Quebec_City (dor:Quebec_City)
+      - Claude_Béchard (<http://dbpedia.org/resource/Claude_Béchard>) --doo:residence--> Quebec_City (dor:Quebec_City)
+      - Pierre-Ludovic_Duclos (dor:Pierre-Ludovic_Duclos) --doo:country--> Canada (dor:Canada)
+      - Alex_Beaulieu-Marchand (dor:Alex_Beaulieu-Marchand) --doo:residence--> Quebec_City (dor:Quebec_City)
+      - Claude_Béchard (<http://dbpedia.org/resource/Claude_Béchard>) --dop:deathPlace--> Quebec_City (dor:Quebec_City)
+      - Freestyle_skiing_at_the_2018_Winter_Olympics_–_Men's_slopestyle (<http://dbpedia.org/resource/Freestyle_skiing_at_the_2018_Winter_Olympics_–_Men's_slopestyle>) --dop:bronze--> Alex_Beaulieu-Marchand (dor:Alex_Beaulieu-Marchand)
+  '10':
+    attributes:
+      Quebec_City: (nickname^='')
+      Marie-Ève_Pelletier: (birth date^='1982-05-18')
+    relationships:
+      - Marie-Ève_Pelletier (<http://dbpedia.org/resource/Marie-Ève_Pelletier>) --doo:birthPlace--> Quebec_City (dor:Quebec_City)
+      - Edward_Bowen_(politician) (<http://dbpedia.org/resource/Edward_Bowen_(politician)>) --doo:residence--> Quebec_City (dor:Quebec_City)
+      - Marie-Ève_Pelletier (<http://dbpedia.org/resource/Marie-Ève_Pelletier>) --doo:country--> Canada (dor:Canada)
+      - Alex_Beaulieu-Marchand (dor:Alex_Beaulieu-Marchand) --doo:residence--> Quebec_City (dor:Quebec_City)
+      - Edward_Bowen_(politician) (<http://dbpedia.org/resource/Edward_Bowen_(politician)>) --dop:deathPlace--> Quebec_City (dor:Quebec_City)
+      - Freestyle_skiing_at_the_2018_Winter_Olympics_–_Men's_slopestyle (<http://dbpedia.org/resource/Freestyle_skiing_at_the_2018_Winter_Olympics_–_Men's_slopestyle>) --dop:bronze--> Alex_Beaulieu-Marchand (dor:Alex_Beaulieu-Marchand)
+attributes:
+  athlete: --collegeteam^ (dop:collegeteam)--> Resource
+  Location: --owner^ (dop:owner)--> langString | --architectural style^ (doo:architecturalStyle)--> Resource | --2a^ (dop:2a)--> langString | --mouth place^ (doo:mouthPlace)--> Resource | --operator^ (dop:operator)--> Resource | --nickname^ (dop:nickname)--> langString | --width^ (dop:width)--> langString | --area^ (dop:area)--> hectare
+  politician: --title^ (dop:title)--> langString | --child^ (doo:child)--> Resource | --image upright^ (dop:imageUpright)--> double
+  tennis player: --birth date^ (doo:birthDate)--> date
+subgraph_id: 977
+relationships:
+  - tennis player --doo:birthPlace--> Location
+  - politician --doo:residence--> Location
+  - tennis player --doo:country--> country
+  - athlete --doo:residence--> Location
+  - politician --dop:deathPlace--> Location
+  - olympic event --dop:bronze--> athlete

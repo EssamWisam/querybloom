@@ -1,0 +1,113 @@
+types:
+  single: doo:Single
+  country: doo:Country
+  Location: doo:Location
+  television show: doo:TelevisionShow
+  television station: doo:TelevisionStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Brazil: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Brazil')
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric')
+      As_Aventuras_de_Gui_&_Estopa: (release date^='2008-04-26')
+    relationships:
+      - As_Aventuras_de_Gui_&_Estopa (<http://dbpedia.org/resource/As_Aventuras_de_Gui_&_Estopa>) --doo:channel--> Cartoon_Network_(Latin_American_TV_channel) (<http://dbpedia.org/resource/Cartoon_Network_(Latin_American_TV_channel)>)
+      - Cartoon_Network_(Latin_American_TV_channel) (<http://dbpedia.org/resource/Cartoon_Network_(Latin_American_TV_channel)>) --doo:headquarter--> United_States (dor:United_States)
+      - (I_Can't_Help_You)_I'm_Falling_Too (<http://dbpedia.org/resource/(I_Can't_Help_You)_I'm_Falling_Too>) --doo:recordedIn--> United_States (dor:United_States)
+      - Cartoon_Network_(Latin_American_TV_channel) (<http://dbpedia.org/resource/Cartoon_Network_(Latin_American_TV_channel)>) --dop:area--> Brazil (dor:Brazil)
+  '2':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric')
+      As_Aventuras_de_Gui_&_Estopa: (release date^='2008-04-26')
+    relationships:
+      - As_Aventuras_de_Gui_&_Estopa (<http://dbpedia.org/resource/As_Aventuras_de_Gui_&_Estopa>) --doo:channel--> Cartoon_Network_(Latin_American_TV_channel) (<http://dbpedia.org/resource/Cartoon_Network_(Latin_American_TV_channel)>)
+      - Cartoon_Network_(Latin_American_TV_channel) (<http://dbpedia.org/resource/Cartoon_Network_(Latin_American_TV_channel)>) --doo:headquarter--> United_States (dor:United_States)
+      - (I_Can't_Help_You)_I'm_Falling_Too (<http://dbpedia.org/resource/(I_Can't_Help_You)_I'm_Falling_Too>) --doo:recordedIn--> United_States (dor:United_States)
+      - Cartoon_Network_(Latin_American_TV_channel) (<http://dbpedia.org/resource/Cartoon_Network_(Latin_American_TV_channel)>) --dop:area--> Latin_America (dor:Latin_America)
+  '3':
+    attributes:
+      United_States: (Link from a Wikipage to an external page^='https://archive.org/details/americancolonies00tayl_1%7Ceditor=Eric')
+      As_Aventuras_de_Gui_&_Estopa: (release date^='2008-04-26')
+    relationships:
+      - As_Aventuras_de_Gui_&_Estopa (<http://dbpedia.org/resource/As_Aventuras_de_Gui_&_Estopa>) --doo:channel--> Cartoon_Network_(Latin_American_TV_channel) (<http://dbpedia.org/resource/Cartoon_Network_(Latin_American_TV_channel)>)
+      - Cartoon_Network_(Latin_American_TV_channel) (<http://dbpedia.org/resource/Cartoon_Network_(Latin_American_TV_channel)>) --doo:headquarter--> United_States (dor:United_States)
+      - (I_Can't_Help_You)_I'm_Falling_Too (<http://dbpedia.org/resource/(I_Can't_Help_You)_I'm_Falling_Too>) --doo:recordedIn--> United_States (dor:United_States)
+      - Cartoon_Network_(Latin_American_TV_channel) (<http://dbpedia.org/resource/Cartoon_Network_(Latin_American_TV_channel)>) --dop:area--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Malta: (religion^='http://dbpedia.org/resource/Christianity')
+      London: (subdivision^='http://dbpedia.org/resource/City_of_London', Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1', width^='215')
+      Chorlton_and_the_Wheelies: (release date^='1976-09-26', theme music composer^='Joe Griffiths')
+    relationships:
+      - Chorlton_and_the_Wheelies (dor:Chorlton_and_the_Wheelies) --doo:channel--> Cartoon_Network_Too (dor:Cartoon_Network_Too)
+      - Cartoon_Network_Too (dor:Cartoon_Network_Too) --doo:headquarter--> London (dor:London)
+      - (If_There_Was)_Any_Other_Way (<http://dbpedia.org/resource/(If_There_Was)_Any_Other_Way>) --doo:recordedIn--> London (dor:London)
+      - Cartoon_Network_Too (dor:Cartoon_Network_Too) --dop:area--> Malta (dor:Malta)
+  '5':
+    attributes:
+      London: (subdivision^='http://dbpedia.org/resource/City_of_London', Link from a Wikipage to an external page^='http://www.british-history.ac.uk/place.aspx%3Fregion=1', width^='215')
+      Republic_of_Ireland: (religion^='http://dbpedia.org/resource/Catholic_Church_in_Ireland')
+      Chorlton_and_the_Wheelies: (release date^='1976-09-26', theme music composer^='Joe Griffiths')
+    relationships:
+      - Chorlton_and_the_Wheelies (dor:Chorlton_and_the_Wheelies) --doo:channel--> Cartoon_Network_Too (dor:Cartoon_Network_Too)
+      - Cartoon_Network_Too (dor:Cartoon_Network_Too) --doo:headquarter--> London (dor:London)
+      - (If_There_Was)_Any_Other_Way (<http://dbpedia.org/resource/(If_There_Was)_Any_Other_Way>) --doo:recordedIn--> London (dor:London)
+      - Cartoon_Network_Too (dor:Cartoon_Network_Too) --dop:area--> Republic_of_Ireland (dor:Republic_of_Ireland)
+  '6':
+    attributes:
+      Chorlton_and_the_Wheelies: (release date^='1976-09-26', theme music composer^='Joe Griffiths')
+    relationships:
+      - Chorlton_and_the_Wheelies (dor:Chorlton_and_the_Wheelies) --doo:channel--> Cartoon_Network_Too (dor:Cartoon_Network_Too)
+      - Cartoon_Network_Too (dor:Cartoon_Network_Too) --doo:headquarter--> London (dor:London)
+      - (If_There_Was)_Any_Other_Way (<http://dbpedia.org/resource/(If_There_Was)_Any_Other_Way>) --doo:recordedIn--> London (dor:London)
+      - Cartoon_Network_Too (dor:Cartoon_Network_Too) --dop:area--> United_Kingdom (dor:United_Kingdom)
+  '7':
+    attributes:
+      New_York_City: (subdivision^='http://dbpedia.org/resource/Brooklyn', Link from a Wikipage to an external page^='http://collections.mcny.org/', width^='225')
+      Blush:_The_Search_for_the_Next_Great_Makeup_Artist: (release date^='2008-11-11', theme music composer^='Jeff Lippencott')
+    relationships:
+      - Blush:_The_Search_for_the_Next_Great_Makeup_Artist (<http://dbpedia.org/resource/Blush:_The_Search_for_the_Next_Great_Makeup_Artist>) --doo:channel--> Lifetime_(TV_network) (<http://dbpedia.org/resource/Lifetime_(TV_network)>)
+      - Lifetime_(TV_network) (<http://dbpedia.org/resource/Lifetime_(TV_network)>) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - Lifetime_(TV_network) (<http://dbpedia.org/resource/Lifetime_(TV_network)>) --dop:area--> Latin_America (dor:Latin_America)
+  '8':
+    attributes:
+      New_York_City: (subdivision^='http://dbpedia.org/resource/Brooklyn', Link from a Wikipage to an external page^='http://collections.mcny.org/', width^='225')
+      Bring_It!_(TV_series): (release date^='2014-03-05')
+    relationships:
+      - Bring_It!_(TV_series) (<http://dbpedia.org/resource/Bring_It!_(TV_series)>) --doo:channel--> Lifetime_(TV_network) (<http://dbpedia.org/resource/Lifetime_(TV_network)>)
+      - Lifetime_(TV_network) (<http://dbpedia.org/resource/Lifetime_(TV_network)>) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - Lifetime_(TV_network) (<http://dbpedia.org/resource/Lifetime_(TV_network)>) --dop:area--> Latin_America (dor:Latin_America)
+  '9':
+    attributes:
+      Fox_Report: (release date^='1999-09-13')
+      New_York_City: (subdivision^='http://dbpedia.org/resource/Brooklyn', Link from a Wikipage to an external page^='http://collections.mcny.org/', width^='225')
+    relationships:
+      - Fox_Report (dor:Fox_Report) --doo:channel--> Fox_News (dor:Fox_News)
+      - Fox_News (dor:Fox_News) --doo:headquarter--> New_York_City (dor:New_York_City)
+      - (She_Was_A)_Hotel_Detective (<http://dbpedia.org/resource/(She_Was_A)_Hotel_Detective>) --doo:recordedIn--> New_York_City (dor:New_York_City)
+      - Fox_News (dor:Fox_News) --dop:area--> Canada (dor:Canada)
+  '10':
+    attributes:
+      Los_Angeles: (subdivision^='http://dbpedia.org/resource/California', Link from a Wikipage to an external page^='https://archive.org/details/bohemianlosangel0000hure', width^='210')
+    relationships:
+      - The_John_Kerwin_Show (dor:The_John_Kerwin_Show) --doo:channel--> Jewish_Life_Television (dor:Jewish_Life_Television)
+      - Jewish_Life_Television (dor:Jewish_Life_Television) --doo:headquarter--> Los_Angeles (dor:Los_Angeles)
+      - 99_Problems (dor:99_Problems) --doo:recordedIn--> Los_Angeles (dor:Los_Angeles)
+      - Jewish_Life_Television (dor:Jewish_Life_Television) --dop:area--> North_America (dor:North_America)
+attributes:
+  country: --c^ (dop:c)--> langString | --religion^ (doo:religion)--> Resource
+  Location: --subdivision^ (doo:subdivision)--> Resource | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --width^ (dop:width)--> perCent | --Aug precipitation days^ (dop:augPrecipitationDays)--> double
+  television show: --publication date^ (doo:publicationDate)--> date | --release date^ (doo:releaseDate)--> date | --executive producer^ (doo:executiveProducer)--> Resource | --theme music composer^ (dop:themeMusicComposer)--> langString
+subgraph_id: 800
+relationships:
+  - television show --doo:channel--> television station
+  - television station --doo:headquarter--> Location
+  - single --doo:recordedIn--> Location
+  - television station --dop:area--> country

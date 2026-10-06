@@ -1,0 +1,103 @@
+types:
+  country: doo:Country
+  language: doo:Language
+  software: doo:Software
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      010_Editor: (Wikipage revision ID^='1109217710')
+      ABC_islands_(Leeward_Antilles): (Link from a Wikipage to an external page^='http://narin.com/curacao/compare.html')
+    relationships:
+      - 010_Editor (dor:010_Editor) --doo:language--> English_language (dor:English_language)
+      - 010_Editor (dor:010_Editor) --dop:genre--> Hex_editor (dor:Hex_editor)
+      - ABC_islands_(Leeward_Antilles) (<http://dbpedia.org/resource/ABC_islands_(Leeward_Antilles)>) --doo:language--> English_language (dor:English_language)
+  '2':
+    attributes:
+      010_Editor: (Wikipage revision ID^='1109217710')
+      ABC_islands_(Leeward_Antilles): (Link from a Wikipage to an external page^='http://narin.com/curacao/compare.html')
+    relationships:
+      - 010_Editor (dor:010_Editor) --doo:language--> English_language (dor:English_language)
+      - 010_Editor (dor:010_Editor) --dop:genre--> Text_editor (dor:Text_editor)
+      - ABC_islands_(Leeward_Antilles) (<http://dbpedia.org/resource/ABC_islands_(Leeward_Antilles)>) --doo:language--> English_language (dor:English_language)
+  '3':
+    attributes:
+      3D_Virtual_Creature_Evolution: (platform^='http://dbpedia.org/resource/Linux', Wikipage revision ID^='1086466052')
+      ABC_islands_(Leeward_Antilles): (Link from a Wikipage to an external page^='http://narin.com/curacao/compare.html')
+    relationships:
+      - 3D_Virtual_Creature_Evolution (dor:3D_Virtual_Creature_Evolution) --doo:language--> English_language (dor:English_language)
+      - 3D_Virtual_Creature_Evolution (dor:3D_Virtual_Creature_Evolution) --dop:genre--> Computer_simulation (dor:Computer_simulation)
+      - ABC_islands_(Leeward_Antilles) (<http://dbpedia.org/resource/ABC_islands_(Leeward_Antilles)>) --doo:language--> English_language (dor:English_language)
+  '4':
+    attributes:
+      ABViewer: (Wikipage revision ID^='1091804632')
+      Abkhazia: (Link from a Wikipage to an external page^='http://alertnet.org/db/crisisprofiles/GG_OSS.htm%3Fv=in_detail', capital^='http://dbpedia.org/resource/Sukhumi')
+      Russian_language: (differentFrom='http://dbpedia.org/resource/Rusyn_language')
+    relationships:
+      - ABViewer (dor:ABViewer) --doo:language--> Russian_language (dor:Russian_language)
+      - ABViewer (dor:ABViewer) --dop:genre--> Computer-aided_design (dor:Computer-aided_design)
+      - Abkhazia (dor:Abkhazia) --doo:language--> Russian_language (dor:Russian_language)
+  '5':
+    attributes:
+      Abkhazia: (Link from a Wikipage to an external page^='http://alertnet.org/db/crisisprofiles/GG_OSS.htm%3Fv=in_detail', capital^='http://dbpedia.org/resource/Sukhumi')
+      Adobe_Photoshop: (platform^='http://dbpedia.org/resource/AArch64', Wikipage revision ID^='1117940564')
+      Russian_language: (differentFrom='http://dbpedia.org/resource/Rusyn_language')
+    relationships:
+      - Adobe_Photoshop (dor:Adobe_Photoshop) --doo:language--> Russian_language (dor:Russian_language)
+      - Adobe_Photoshop (dor:Adobe_Photoshop) --dop:genre--> Raster_graphics_editor (dor:Raster_graphics_editor)
+      - Abkhazia (dor:Abkhazia) --doo:language--> Russian_language (dor:Russian_language)
+  '6':
+    attributes:
+      Abkhazia: (Link from a Wikipage to an external page^='http://alertnet.org/db/crisisprofiles/GG_OSS.htm%3Fv=in_detail', capital^='http://dbpedia.org/resource/Sukhumi')
+      Russian_language: (differentFrom='http://dbpedia.org/resource/Rusyn_language')
+      Affinity_Designer: (Wikipage revision ID^='1121716319')
+    relationships:
+      - Affinity_Designer (dor:Affinity_Designer) --doo:language--> Russian_language (dor:Russian_language)
+      - Affinity_Designer (dor:Affinity_Designer) --dop:genre--> Vector_graphics_editor (dor:Vector_graphics_editor)
+      - Abkhazia (dor:Abkhazia) --doo:language--> Russian_language (dor:Russian_language)
+  '7':
+    attributes:
+      GIMP: (Wikipage revision ID^='1124506485')
+    relationships:
+      - GIMP (dor:GIMP) --doo:language--> Georgian_language (dor:Georgian_language)
+      - GIMP (dor:GIMP) --dop:genre--> Raster_graphics_editor (dor:Raster_graphics_editor)
+      - Adjarian_Autonomous_Soviet_Socialist_Republic (dor:Adjarian_Autonomous_Soviet_Socialist_Republic) --doo:language--> Georgian_language (dor:Georgian_language)
+  '8':
+    attributes:
+      OpenBoard_(keyboard): (Wikipage revision ID^='1120481615')
+    relationships:
+      - OpenBoard_(keyboard) (<http://dbpedia.org/resource/OpenBoard_(keyboard)>) --doo:language--> Georgian_language (dor:Georgian_language)
+      - OpenBoard_(keyboard) (<http://dbpedia.org/resource/OpenBoard_(keyboard)>) --dop:genre--> Virtual_keyboard (dor:Virtual_keyboard)
+      - Adjarian_Autonomous_Soviet_Socialist_Republic (dor:Adjarian_Autonomous_Soviet_Socialist_Republic) --doo:language--> Georgian_language (dor:Georgian_language)
+  '9':
+    attributes:
+      Adobe_Photoshop: (platform^='http://dbpedia.org/resource/AArch64', Wikipage revision ID^='1117940564')
+      Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester: (Link from a Wikipage to an external page^='http://lex.justice.md/viewdoc.php%3Faction=view&view=doc&id=313004&lang=1', capital^='http://dbpedia.org/resource/Tiraspol')
+    relationships:
+      - Adobe_Photoshop (dor:Adobe_Photoshop) --doo:language--> Romanian_language (dor:Romanian_language)
+      - Adobe_Photoshop (dor:Adobe_Photoshop) --dop:genre--> Raster_graphics_editor (dor:Raster_graphics_editor)
+      - Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester (dor:Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester) --doo:language--> Romanian_language (dor:Romanian_language)
+  '10':
+    attributes:
+      EasyEDA: (platform^='http://dbpedia.org/resource/Linux', Wikipage revision ID^='1073469437')
+      Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester: (Link from a Wikipage to an external page^='http://lex.justice.md/viewdoc.php%3Faction=view&view=doc&id=313004&lang=1', capital^='http://dbpedia.org/resource/Tiraspol')
+    relationships:
+      - EasyEDA (dor:EasyEDA) --doo:language--> Ukrainian_language (dor:Ukrainian_language)
+      - EasyEDA (dor:EasyEDA) --dop:genre--> Electronic_design_automation (dor:Electronic_design_automation)
+      - Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester (dor:Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester) --doo:language--> Ukrainian_language (dor:Ukrainian_language)
+attributes:
+  country: --quote^ (dop:quote)--> langString | --align^ (dop:align)--> langString | --Aug low C^ (dop:augLowC)--> double | --footer (dop:footer)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --capital^ (doo:capital)--> Resource | --c^ (dop:c)--> langString
+  language: --differentFrom (wwoo:differentFrom)--> Resource
+  software: --platform^ (dop:platform)--> Resource | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int
+  music genre: --2y^ (dop:2y)--> int
+subgraph_id: 450
+relationships:
+  - software --doo:language--> language
+  - software --dop:genre--> music genre
+  - country --doo:language--> language

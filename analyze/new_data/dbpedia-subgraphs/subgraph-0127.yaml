@@ -1,0 +1,74 @@
+types:
+  military person: doo:MilitaryPerson
+  political party: doo:PoliticalParty
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Abu_Mahdi_al-Muhandis (dor:Abu_Mahdi_al-Muhandis) --dop:birthPlace--> Abu_Al-Khaseeb_District (dor:Abu_Al-Khaseeb_District)
+      - Abu_Mahdi_al-Muhandis (dor:Abu_Mahdi_al-Muhandis) --doo:party--> Islamic_Dawa_Party (dor:Islamic_Dawa_Party)
+  '2':
+    attributes: {}
+    relationships:
+      - Abu_Mahdi_al-Muhandis (dor:Abu_Mahdi_al-Muhandis) --dop:birthPlace--> Abu_Al-Khaseeb_District (dor:Abu_Al-Khaseeb_District)
+      - Abu_Mahdi_al-Muhandis (dor:Abu_Mahdi_al-Muhandis) --doo:party--> Islamic_Supreme_Council_of_Iraq (dor:Islamic_Supreme_Council_of_Iraq)
+  '3':
+    attributes:
+      Afzal_Rahman_Khan: (honours^='http://dbpedia.org/resource/Hilal-e-Jurat')
+      Gurdaspur_district: (area total km^='2610')
+    relationships:
+      - Afzal_Rahman_Khan (dor:Afzal_Rahman_Khan) --dop:birthPlace--> Gurdaspur_district (dor:Gurdaspur_district)
+      - Afzal_Rahman_Khan (dor:Afzal_Rahman_Khan) --doo:party--> Independent_(politician) (<http://dbpedia.org/resource/Independent_(politician)>)
+  '4':
+    attributes:
+      Afzal_Rahman_Khan: (honours^='http://dbpedia.org/resource/Hilal-e-Jurat')
+    relationships:
+      - Afzal_Rahman_Khan (dor:Afzal_Rahman_Khan) --dop:birthPlace--> Punjab_Province_(British_India) (<http://dbpedia.org/resource/Punjab_Province_(British_India)>)
+      - Afzal_Rahman_Khan (dor:Afzal_Rahman_Khan) --doo:party--> Independent_(politician) (<http://dbpedia.org/resource/Independent_(politician)>)
+  '5':
+    attributes:
+      Entre_Ríos_Province: (area total km^='78781')
+    relationships:
+      - Agustín_Pedro_Justo (<http://dbpedia.org/resource/Agustín_Pedro_Justo>) --dop:birthPlace--> Entre_Ríos_Province (<http://dbpedia.org/resource/Entre_Ríos_Province>)
+      - Agustín_Pedro_Justo (<http://dbpedia.org/resource/Agustín_Pedro_Justo>) --doo:party--> Concordancia_(Argentina) (<http://dbpedia.org/resource/Concordancia_(Argentina)>)
+  '6':
+    attributes:
+      Entre_Ríos_Province: (area total km^='78781')
+    relationships:
+      - Agustín_Pedro_Justo (<http://dbpedia.org/resource/Agustín_Pedro_Justo>) --dop:birthPlace--> Entre_Ríos_Province (<http://dbpedia.org/resource/Entre_Ríos_Province>)
+      - Agustín_Pedro_Justo (<http://dbpedia.org/resource/Agustín_Pedro_Justo>) --doo:party--> Radical_Civic_Union (dor:Radical_Civic_Union)
+  '7':
+    attributes: {}
+    relationships:
+      - Ahmad_al-Ghashmi (dor:Ahmad_al-Ghashmi) --dop:birthPlace--> Hamdan_District (dor:Hamdan_District)
+      - Ahmad_al-Ghashmi (dor:Ahmad_al-Ghashmi) --doo:party--> Military_of_Yemen (dor:Military_of_Yemen)
+  '8':
+    attributes: {}
+    relationships:
+      - Ahmed_Izzet_Pasha (dor:Ahmed_Izzet_Pasha) --dop:birthPlace--> Neapoli,_Kozani (<http://dbpedia.org/resource/Neapoli,_Kozani>)
+      - Ahmed_Izzet_Pasha (dor:Ahmed_Izzet_Pasha) --doo:party--> Committee_of_Union_and_Progress (dor:Committee_of_Union_and_Progress)
+  '9':
+    attributes:
+      Montana: (area total km^='380800')
+    relationships:
+      - Al_Melvin_(politician) (<http://dbpedia.org/resource/Al_Melvin_(politician)>) --dop:birthPlace--> Montana (dor:Montana)
+      - Al_Melvin_(politician) (<http://dbpedia.org/resource/Al_Melvin_(politician)>) --doo:party--> Republican_Party_(United_States) (<http://dbpedia.org/resource/Republican_Party_(United_States)>)
+  '10':
+    attributes: {}
+    relationships:
+      - Albert_G._Jenkins (dor:Albert_G._Jenkins) --dop:birthPlace--> Cabell_County,_West_Virginia (<http://dbpedia.org/resource/Cabell_County,_West_Virginia>)
+      - Albert_G._Jenkins (dor:Albert_G._Jenkins) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+attributes:
+  military person: --reason^ (dop:reason)--> langString | --honours^ (doo:honours)--> Resource | --children^ (dop:children)--> langString | --battle^ (doo:battle)--> Resource
+  political party: --reason^ (dop:reason)--> langString
+  administrative region: --Apr rain days^ (dop:aprRainDays)--> double | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --Apr record high C^ (dop:aprRecordHighC)--> double | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --Aug precipitation mm^ (dop:augPrecipitationMm)--> double | --area total km^ (dop:areaTotalKm)--> int | --Apr low C^ (dop:aprLowC)--> int | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double
+subgraph_id: 127
+relationships:
+  - military person --dop:birthPlace--> administrative region
+  - military person --doo:party--> political party

@@ -1,0 +1,81 @@
+types:
+  person: doo:Person
+  politician: doo:Politician
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Chris_Patten: (d^='Q23368')
+      A._N._Sherwin-White: (subject='http://dbpedia.org/resource/Category:1911_births', death place^='http://dbpedia.org/resource/Fifield,_Oxfordshire')
+    relationships:
+      - A._N._Sherwin-White (dor:A._N._Sherwin-White) --doo:employer--> University_of_Oxford (dor:University_of_Oxford)
+      - University_of_Oxford (dor:University_of_Oxford) --doo:chancellor--> Chris_Patten (dor:Chris_Patten)
+  '2':
+    attributes:
+      Abena_Oduro: (alma mater^='University of Glasgow', subject='http://dbpedia.org/resource/Category:1959_births')
+    relationships:
+      - Abena_Oduro (dor:Abena_Oduro) --doo:employer--> University_of_Ghana (dor:University_of_Ghana)
+      - University_of_Ghana (dor:University_of_Ghana) --doo:chancellor--> Mary_Chinery-Hesse (dor:Mary_Chinery-Hesse)
+  '3':
+    attributes:
+      Agnes_M._Herzberg: (subject='http://dbpedia.org/resource/Category:Academics_of_Imperial_College_London')
+    relationships:
+      - Agnes_M._Herzberg (dor:Agnes_M._Herzberg) --doo:employer--> Queen's_University_at_Kingston (<http://dbpedia.org/resource/Queen's_University_at_Kingston>)
+      - Queen's_University_at_Kingston (<http://dbpedia.org/resource/Queen's_University_at_Kingston>) --doo:chancellor--> Murray_Sinclair (dor:Murray_Sinclair)
+  '4':
+    attributes:
+      Halimah_Yacob: (d^='y')
+      Ajith_Madurapperuma: (subject='http://dbpedia.org/resource/Category:Academics_of_the_University_of_Colombo')
+    relationships:
+      - Ajith_Madurapperuma (dor:Ajith_Madurapperuma) --doo:employer--> National_University_of_Singapore (dor:National_University_of_Singapore)
+      - National_University_of_Singapore (dor:National_University_of_Singapore) --doo:chancellor--> Halimah_Yacob (dor:Halimah_Yacob)
+  '5':
+    attributes:
+      Allan_L._Drash: (alma mater^='Vanderbilt University,  University of Virginia School of Medicine', subject='http://dbpedia.org/resource/Category:1931_births')
+    relationships:
+      - Allan_L._Drash (dor:Allan_L._Drash) --doo:employer--> University_of_Pittsburgh (dor:University_of_Pittsburgh)
+      - University_of_Pittsburgh (dor:University_of_Pittsburgh) --doo:chancellor--> Patrick_D._Gallagher (dor:Patrick_D._Gallagher)
+  '6':
+    attributes:
+      Anatole_Boris_Volkov: (subject='http://dbpedia.org/resource/Category:1924_births', death place^='http://dbpedia.org/resource/Lakeland,_Florida')
+    relationships:
+      - Anatole_Boris_Volkov (dor:Anatole_Boris_Volkov) --doo:employer--> McMaster_University (dor:McMaster_University)
+      - McMaster_University (dor:McMaster_University) --doo:chancellor--> Santee_Smith (dor:Santee_Smith)
+  '7':
+    attributes:
+      Andrea_Doucet: (subject='http://dbpedia.org/resource/Category:21st-century_Canadian_non-fiction_writers')
+    relationships:
+      - Andrea_Doucet (dor:Andrea_Doucet) --doo:employer--> Carleton_University (dor:Carleton_University)
+      - Carleton_University (dor:Carleton_University) --doo:chancellor--> Yaprak_Baltacioğlu (<http://dbpedia.org/resource/Yaprak_Baltacioğlu>)
+  '8':
+    attributes:
+      Andrew_David_Irvine: (subject='http://dbpedia.org/resource/Category:1958_births')
+    relationships:
+      - Andrew_David_Irvine (dor:Andrew_David_Irvine) --doo:employer--> University_of_British_Columbia (dor:University_of_British_Columbia)
+      - University_of_British_Columbia (dor:University_of_British_Columbia) --doo:chancellor--> Steven_Point (dor:Steven_Point)
+  '9':
+    attributes:
+      Andrew_Hunt_(historian): (alma mater^='http://dbpedia.org/resource/University_of_Utah', subject='http://dbpedia.org/resource/Category:1968_births')
+    relationships:
+      - Andrew_Hunt_(historian) (<http://dbpedia.org/resource/Andrew_Hunt_(historian)>) --doo:employer--> University_of_Waterloo (dor:University_of_Waterloo)
+      - University_of_Waterloo (dor:University_of_Waterloo) --doo:chancellor--> Dominic_Barton (dor:Dominic_Barton)
+  '10':
+    attributes:
+      Andrew_Read: (alma mater^='http://dbpedia.org/resource/University_of_Cambridge', subject='http://dbpedia.org/resource/Category:1939_births')
+    relationships:
+      - Andrew_Read (dor:Andrew_Read) --doo:employer--> University_of_Warwick (dor:University_of_Warwick)
+      - University_of_Warwick (dor:University_of_Warwick) --doo:chancellor--> Catherine_Ashton (dor:Catherine_Ashton)
+attributes:
+  person: --alma mater^ (dop:almaMater)--> langString | --1y^ (dop:1y)--> int | --quote^ (dop:quote)--> langString | --subject (podt:subject)--> Resource | --width^ (dop:width)--> perCent | --death place^ (doo:deathPlace)--> Resource
+  politician: --death cause^ (doo:deathCause)--> Resource | --d^ (dop:d)--> langString | --relations^ (dop:relations)--> Resource
+  university: --chairman^ (doo:chairman)--> Resource
+subgraph_id: 73
+relationships:
+  - person --doo:employer--> university
+  - university --doo:chancellor--> politician

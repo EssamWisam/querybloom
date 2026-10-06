@@ -1,0 +1,83 @@
+types:
+  park: doo:Park
+  office holder: doo:OfficeHolder
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      John_Adams: (spouse^='http://dbpedia.org/resource/Abigail_Adams', alt^='60.0')
+      Adams_County,_Ohio: (date^='2019-12-03')
+    relationships:
+      - Adams_Lake_State_Park (dor:Adams_Lake_State_Park) --doo:location--> Adams_County,_Ohio (<http://dbpedia.org/resource/Adams_County,_Ohio>)
+      - Adams_County,_Ohio (<http://dbpedia.org/resource/Adams_County,_Ohio>) --dop:namedFor--> John_Adams (dor:John_Adams)
+  '2':
+    attributes:
+      Joseph_Anderson: (before^='http://dbpedia.org/resource/Daniel_Smith_(surveyor)')
+    relationships:
+      - Norris_Dam_State_Park (dor:Norris_Dam_State_Park) --doo:location--> Anderson_County,_Tennessee (<http://dbpedia.org/resource/Anderson_County,_Tennessee>)
+      - Anderson_County,_Tennessee (<http://dbpedia.org/resource/Anderson_County,_Tennessee>) --dop:namedFor--> Joseph_Anderson (dor:Joseph_Anderson)
+  '3':
+    attributes:
+      Abraham_Baldwin: (before^='Converted from district seats')
+    relationships:
+      - Historic_Blakeley_State_Park (dor:Historic_Blakeley_State_Park) --doo:location--> Baldwin_County,_Alabama (<http://dbpedia.org/resource/Baldwin_County,_Alabama>)
+      - Baldwin_County,_Alabama (<http://dbpedia.org/resource/Baldwin_County,_Alabama>) --dop:namedFor--> Abraham_Baldwin (dor:Abraham_Baldwin)
+  '4':
+    attributes:
+      Thomas_Hart_Benton_(politician): (id^='Benton,+Thomas+Hart')
+    relationships:
+      - Washburne_State_Wayside (dor:Washburne_State_Wayside) --doo:location--> Benton_County,_Oregon (<http://dbpedia.org/resource/Benton_County,_Oregon>)
+      - Benton_County,_Oregon (<http://dbpedia.org/resource/Benton_County,_Oregon>) --dop:namedFor--> Thomas_Hart_Benton_(politician) (<http://dbpedia.org/resource/Thomas_Hart_Benton_(politician)>)
+  '5':
+    attributes:
+      Thomas_Hart_Benton_(politician): (id^='Benton,+Thomas+Hart')
+    relationships:
+      - Willamette_Floodplain (dor:Willamette_Floodplain) --doo:location--> Benton_County,_Oregon (<http://dbpedia.org/resource/Benton_County,_Oregon>)
+      - Benton_County,_Oregon (<http://dbpedia.org/resource/Benton_County,_Oregon>) --dop:namedFor--> Thomas_Hart_Benton_(politician) (<http://dbpedia.org/resource/Thomas_Hart_Benton_(politician)>)
+  '6':
+    attributes:
+      Benton_County,_Washington: (date^='December 2017')
+      Thomas_Hart_Benton_(politician): (id^='Benton,+Thomas+Hart')
+    relationships:
+      - Columbia_Park_(Tri-Cities) (<http://dbpedia.org/resource/Columbia_Park_(Tri-Cities)>) --doo:location--> Benton_County,_Washington (<http://dbpedia.org/resource/Benton_County,_Washington>)
+      - Benton_County,_Washington (<http://dbpedia.org/resource/Benton_County,_Washington>) --dop:namedFor--> Thomas_Hart_Benton_(politician) (<http://dbpedia.org/resource/Thomas_Hart_Benton_(politician)>)
+  '7':
+    attributes:
+      Charles_Pratt,_1st_Earl_Camden: (before^='http://dbpedia.org/resource/Edward_Poore')
+    relationships:
+      - Wharton_State_Forest (dor:Wharton_State_Forest) --doo:location--> Camden_County,_New_Jersey (<http://dbpedia.org/resource/Camden_County,_New_Jersey>)
+      - Camden_County,_New_Jersey (<http://dbpedia.org/resource/Camden_County,_New_Jersey>) --dop:namedFor--> Charles_Pratt,_1st_Earl_Camden (<http://dbpedia.org/resource/Charles_Pratt,_1st_Earl_Camden>)
+  '8':
+    attributes:
+      Carroll_County,_New_Hampshire: (differentFrom='http://dbpedia.org/resource/Carroll')
+      Charles_Carroll_of_Carrollton: (alt^='Oval portrait of a man from the bust up, facing the viewer. He has with gray hair and is wearing a blue jacket with a brown lapel, and white cravat around his neck', before^='None')
+    relationships:
+      - Crawford_Notch_State_Park (dor:Crawford_Notch_State_Park) --doo:location--> Carroll_County,_New_Hampshire (<http://dbpedia.org/resource/Carroll_County,_New_Hampshire>)
+      - Carroll_County,_New_Hampshire (<http://dbpedia.org/resource/Carroll_County,_New_Hampshire>) --dop:namedFor--> Charles_Carroll_of_Carrollton (dor:Charles_Carroll_of_Carrollton)
+  '9':
+    attributes:
+      Carroll_County,_New_Hampshire: (differentFrom='http://dbpedia.org/resource/Carroll')
+      Charles_Carroll_of_Carrollton: (alt^='Oval portrait of a man from the bust up, facing the viewer. He has with gray hair and is wearing a blue jacket with a brown lapel, and white cravat around his neck', before^='None')
+    relationships:
+      - Echo_Lake_State_Park (dor:Echo_Lake_State_Park) --doo:location--> Carroll_County,_New_Hampshire (<http://dbpedia.org/resource/Carroll_County,_New_Hampshire>)
+      - Carroll_County,_New_Hampshire (<http://dbpedia.org/resource/Carroll_County,_New_Hampshire>) --dop:namedFor--> Charles_Carroll_of_Carrollton (dor:Charles_Carroll_of_Carrollton)
+  '10':
+    attributes:
+      Carroll_County,_New_Hampshire: (differentFrom='http://dbpedia.org/resource/Carroll')
+      Charles_Carroll_of_Carrollton: (alt^='Oval portrait of a man from the bust up, facing the viewer. He has with gray hair and is wearing a blue jacket with a brown lapel, and white cravat around his neck', before^='None')
+    relationships:
+      - Governor_Wentworth_Historic_Site (dor:Governor_Wentworth_Historic_Site) --doo:location--> Carroll_County,_New_Hampshire (<http://dbpedia.org/resource/Carroll_County,_New_Hampshire>)
+      - Carroll_County,_New_Hampshire (<http://dbpedia.org/resource/Carroll_County,_New_Hampshire>) --dop:namedFor--> Charles_Carroll_of_Carrollton (dor:Charles_Carroll_of_Carrollton)
+attributes:
+  office holder: --award^ (doo:award)--> Resource | --spouse^ (doo:spouse)--> Resource | --assembly^ (dop:assembly)--> langString | --id^ (dop:id)--> langString | --alt^ (dop:alt)--> langString | --before^ (dop:before)--> langString
+  administrative region: --align^ (dop:align)--> langString | --c^ (dop:c)--> langString | --image width^ (dop:imageWidth)--> int | --Aug low C^ (dop:augLowC)--> double | --elevation (μ)^ (doo:elevation)--> double | --date^ (dop:date)--> langString | --differentFrom (wwoo:differentFrom)--> Resource
+subgraph_id: 16
+relationships:
+  - park --doo:location--> administrative region
+  - administrative region --dop:namedFor--> office holder

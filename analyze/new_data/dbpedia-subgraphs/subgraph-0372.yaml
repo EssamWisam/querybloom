@@ -1,0 +1,97 @@
+types:
+  Band: doo:Band
+  song: doo:Song
+  album: doo:Album
+  sound: doo:Sound
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      ...And_Justice_for_All_(song): (auteur^='http://dbpedia.org/resource/James_Hetfield')
+      ...And_Justice_for_All_(album): (name^='...And Justice for All', music^='')
+    relationships:
+      - ...And_Justice_for_All_(album) (<http://dbpedia.org/resource/...And_Justice_for_All_(album)>) --dop:writer--> Diamond_Head_(English_band) (<http://dbpedia.org/resource/Diamond_Head_(English_band)>)
+      - ...And_Justice_for_All_(album) (<http://dbpedia.org/resource/...And_Justice_for_All_(album)>) --doo:soundRecording--> ...And_Justice_for_All_(album)__Sound__1 (<http://dbpedia.org/resource/...And_Justice_for_All_(album)__Sound__1>)
+      - ...And_Justice_for_All_(song) (<http://dbpedia.org/resource/...And_Justice_for_All_(song)>) --doo:album--> ...And_Justice_for_All_(album) (<http://dbpedia.org/resource/...And_Justice_for_All_(album)>)
+  '2':
+    attributes:
+      ...And_Justice_for_All_(song): (auteur^='http://dbpedia.org/resource/James_Hetfield')
+      ...And_Justice_for_All_(album): (name^='...And Justice for All', music^='')
+    relationships:
+      - ...And_Justice_for_All_(album) (<http://dbpedia.org/resource/...And_Justice_for_All_(album)>) --dop:writer--> Diamond_Head_(English_band) (<http://dbpedia.org/resource/Diamond_Head_(English_band)>)
+      - ...And_Justice_for_All_(album) (<http://dbpedia.org/resource/...And_Justice_for_All_(album)>) --doo:soundRecording--> ...And_Justice_for_All_(album)__Sound__2 (<http://dbpedia.org/resource/...And_Justice_for_All_(album)__Sound__2>)
+      - ...And_Justice_for_All_(song) (<http://dbpedia.org/resource/...And_Justice_for_All_(song)>) --doo:album--> ...And_Justice_for_All_(album) (<http://dbpedia.org/resource/...And_Justice_for_All_(album)>)
+  '3':
+    attributes:
+      Eye_of_the_Beholder_(song): (auteur^='http://dbpedia.org/resource/James_Hetfield')
+      ...And_Justice_for_All_(album): (name^='...And Justice for All', music^='')
+    relationships:
+      - ...And_Justice_for_All_(album) (<http://dbpedia.org/resource/...And_Justice_for_All_(album)>) --dop:writer--> Diamond_Head_(English_band) (<http://dbpedia.org/resource/Diamond_Head_(English_band)>)
+      - ...And_Justice_for_All_(album) (<http://dbpedia.org/resource/...And_Justice_for_All_(album)>) --doo:soundRecording--> ...And_Justice_for_All_(album)__Sound__1 (<http://dbpedia.org/resource/...And_Justice_for_All_(album)__Sound__1>)
+      - Eye_of_the_Beholder_(song) (<http://dbpedia.org/resource/Eye_of_the_Beholder_(song)>) --doo:album--> ...And_Justice_for_All_(album) (<http://dbpedia.org/resource/...And_Justice_for_All_(album)>)
+  '4':
+    attributes:
+      20_Y.O.: (name^='20')
+      Call_on_Me_(Janet_Jackson_song): (auteur^='http://dbpedia.org/resource/Jermaine_Dupri')
+    relationships:
+      - 20_Y.O. (<http://dbpedia.org/resource/20_Y.O.>) --dop:writer--> Janet_Jackson (dor:Janet_Jackson)
+      - 20_Y.O. (<http://dbpedia.org/resource/20_Y.O.>) --doo:soundRecording--> 20_Y.O.__Sound__1 (dor:20_Y.O.__Sound__1)
+      - Call_on_Me_(Janet_Jackson_song) (<http://dbpedia.org/resource/Call_on_Me_(Janet_Jackson_song)>) --doo:album--> 20_Y.O. (<http://dbpedia.org/resource/20_Y.O.>)
+  '5':
+    attributes:
+      20_Y.O.: (name^='20')
+      Call_on_Me_(Janet_Jackson_song): (auteur^='http://dbpedia.org/resource/Jermaine_Dupri')
+    relationships:
+      - 20_Y.O. (<http://dbpedia.org/resource/20_Y.O.>) --dop:writer--> Nelly (dor:Nelly)
+      - 20_Y.O. (<http://dbpedia.org/resource/20_Y.O.>) --doo:soundRecording--> 20_Y.O.__Sound__1 (dor:20_Y.O.__Sound__1)
+      - Call_on_Me_(Janet_Jackson_song) (<http://dbpedia.org/resource/Call_on_Me_(Janet_Jackson_song)>) --doo:album--> 20_Y.O. (<http://dbpedia.org/resource/20_Y.O.>)
+  '6':
+    attributes:
+      20_Y.O.: (name^='20')
+    relationships:
+      - 20_Y.O. (<http://dbpedia.org/resource/20_Y.O.>) --dop:writer--> Janet_Jackson (dor:Janet_Jackson)
+      - 20_Y.O. (<http://dbpedia.org/resource/20_Y.O.>) --doo:soundRecording--> 20_Y.O.__Sound__1 (dor:20_Y.O.__Sound__1)
+      - So_Excited (dor:So_Excited) --doo:album--> 20_Y.O. (<http://dbpedia.org/resource/20_Y.O.>)
+  '7':
+    attributes:
+      Forgot_About_Dre: (extra^='')
+      2001_(Dr._Dre_album): (name^='2001')
+    relationships:
+      - 2001_(Dr._Dre_album) (<http://dbpedia.org/resource/2001_(Dr._Dre_album)>) --dop:writer--> Jay-Z (dor:Jay-Z)
+      - 2001_(Dr._Dre_album) (<http://dbpedia.org/resource/2001_(Dr._Dre_album)>) --doo:soundRecording--> 2001_(Dr._Dre_album)__Sound__1 (<http://dbpedia.org/resource/2001_(Dr._Dre_album)__Sound__1>)
+      - Forgot_About_Dre (dor:Forgot_About_Dre) --doo:album--> 2001_(Dr._Dre_album) (<http://dbpedia.org/resource/2001_(Dr._Dre_album)>)
+  '8':
+    attributes:
+      Forgot_About_Dre: (extra^='')
+      2001_(Dr._Dre_album): (name^='2001')
+    relationships:
+      - 2001_(Dr._Dre_album) (<http://dbpedia.org/resource/2001_(Dr._Dre_album)>) --dop:writer--> Snoop_Dogg (dor:Snoop_Dogg)
+      - 2001_(Dr._Dre_album) (<http://dbpedia.org/resource/2001_(Dr._Dre_album)>) --doo:soundRecording--> 2001_(Dr._Dre_album)__Sound__1 (<http://dbpedia.org/resource/2001_(Dr._Dre_album)__Sound__1>)
+      - Forgot_About_Dre (dor:Forgot_About_Dre) --doo:album--> 2001_(Dr._Dre_album) (<http://dbpedia.org/resource/2001_(Dr._Dre_album)>)
+  '9':
+    attributes:
+      Forgot_About_Dre: (extra^='')
+    relationships:
+      - 2001_(Dr._Dre_album) (<http://dbpedia.org/resource/2001_(Dr._Dre_album)>) --dop:writer--> Xzibit (dor:Xzibit)
+      - 2001_(Dr._Dre_album) (<http://dbpedia.org/resource/2001_(Dr._Dre_album)>) --doo:soundRecording--> 2001_(Dr._Dre_album)__Sound__1 (<http://dbpedia.org/resource/2001_(Dr._Dre_album)__Sound__1>)
+      - Forgot_About_Dre (dor:Forgot_About_Dre) --doo:album--> 2001_(Dr._Dre_album) (<http://dbpedia.org/resource/2001_(Dr._Dre_album)>)
+  '10':
+    attributes:
+      24K_Magic_(song): (auteur^='http://dbpedia.org/resource/Brody_Brown', source^='artist')
+      24K_Magic_(album): (name^='24')
+    relationships:
+      - 24K_Magic_(album) (<http://dbpedia.org/resource/24K_Magic_(album)>) --dop:writer--> Shai_(band) (<http://dbpedia.org/resource/Shai_(band)>)
+      - 24K_Magic_(album) (<http://dbpedia.org/resource/24K_Magic_(album)>) --doo:soundRecording--> 24K_Magic_(album)__Sound__1 (<http://dbpedia.org/resource/24K_Magic_(album)__Sound__1>)
+      - 24K_Magic_(song) (<http://dbpedia.org/resource/24K_Magic_(song)>) --doo:album--> 24K_Magic_(album) (<http://dbpedia.org/resource/24K_Magic_(album)>)
+attributes:
+  song: --extra^ (dop:extra)--> langString | --auteur^ (doo:writer)--> Resource | --source^ (dop:source)--> langString | --all lyrics^ (dop:allLyrics)--> langString
+  album: --wordnet_type (dop:wordnet_type)--> Resource | --airdate^ (dop:airdate)--> int | --name^ (dop:name)--> langString | --accessdate^ (dop:accessdate)--> gMonthDay | --music^ (dop:music)--> langString
+subgraph_id: 372
+relationships:
+  - album --dop:writer--> Band
+  - album --doo:soundRecording--> sound
+  - song --doo:album--> album

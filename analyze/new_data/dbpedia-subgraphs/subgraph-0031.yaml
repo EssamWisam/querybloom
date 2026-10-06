@@ -1,0 +1,87 @@
+types:
+  rugby club: doo:RugbyClub
+  soccer club: doo:SoccerClub
+  soccer league: doo:SoccerLeague
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Bedford_Blues: (ground^='http://dbpedia.org/resource/Goldington_Road', league^='http://dbpedia.org/resource/RFU_Championship')
+      RFU_Championship: (participant^='12')
+    relationships:
+      - Bedford_Blues (dor:Bedford_Blues) --dop:league--> RFU_Championship (dor:RFU_Championship)
+      - 2010–11_Cornish_Pirates_season (<http://dbpedia.org/resource/2010–11_Cornish_Pirates_season>) --dop:league--> RFU_Championship (dor:RFU_Championship)
+  '2':
+    attributes:
+      Cornish_Pirates: (ground^='http://dbpedia.org/resource/Mennaye_Field', league^='http://dbpedia.org/resource/RFU_Championship')
+      RFU_Championship: (participant^='12')
+    relationships:
+      - Cornish_Pirates (dor:Cornish_Pirates) --dop:league--> RFU_Championship (dor:RFU_Championship)
+      - 2010–11_Cornish_Pirates_season (<http://dbpedia.org/resource/2010–11_Cornish_Pirates_season>) --dop:league--> RFU_Championship (dor:RFU_Championship)
+  '3':
+    attributes:
+      RFU_Championship: (participant^='12')
+      Ealing_Trailfinders_Rugby_Club: (ground^='http://dbpedia.org/resource/Trailfinders_Sports_Ground', nickname^='The Trailsmen', league^='http://dbpedia.org/resource/RFU_Championship')
+    relationships:
+      - Ealing_Trailfinders_Rugby_Club (dor:Ealing_Trailfinders_Rugby_Club) --dop:league--> RFU_Championship (dor:RFU_Championship)
+      - 2010–11_Cornish_Pirates_season (<http://dbpedia.org/resource/2010–11_Cornish_Pirates_season>) --dop:league--> RFU_Championship (dor:RFU_Championship)
+  '4':
+    attributes:
+      PRO_Rugby: (logo^='PRO Rugby logo.png', participant^='5')
+      Denver_Stampede: (ground^='http://dbpedia.org/resource/CIBER_Field_at_the_University_of_Denver_Soccer_Stadium', league^='http://dbpedia.org/resource/PRO_Rugby')
+    relationships:
+      - Denver_Stampede (dor:Denver_Stampede) --dop:league--> PRO_Rugby (dor:PRO_Rugby)
+      - 2016_Denver_Stampede_season (dor:2016_Denver_Stampede_season) --dop:league--> PRO_Rugby (dor:PRO_Rugby)
+  '5':
+    attributes:
+      PRO_Rugby: (logo^='PRO Rugby logo.png', participant^='5')
+      San_Diego_Breakers: (ground^='http://dbpedia.org/resource/Torero_Stadium', league^='http://dbpedia.org/resource/PRO_Rugby')
+    relationships:
+      - San_Diego_Breakers (dor:San_Diego_Breakers) --dop:league--> PRO_Rugby (dor:PRO_Rugby)
+      - 2016_Denver_Stampede_season (dor:2016_Denver_Stampede_season) --dop:league--> PRO_Rugby (dor:PRO_Rugby)
+  '6':
+    attributes:
+      PRO_Rugby: (logo^='PRO Rugby logo.png', participant^='5')
+      Denver_Stampede: (ground^='http://dbpedia.org/resource/CIBER_Field_at_the_University_of_Denver_Soccer_Stadium', league^='http://dbpedia.org/resource/PRO_Rugby')
+    relationships:
+      - Denver_Stampede (dor:Denver_Stampede) --dop:league--> PRO_Rugby (dor:PRO_Rugby)
+      - 2016_Ohio_Aviators_season (dor:2016_Ohio_Aviators_season) --dop:league--> PRO_Rugby (dor:PRO_Rugby)
+  '7':
+    attributes:
+      Pontypridd_RFC: (ground^='http://dbpedia.org/resource/Sardis_Road_ground', nickname^='Ponty, The Valley Commandos', league^='http://dbpedia.org/resource/Welsh_Premier_Division')
+      Welsh_Premier_Division: (logo^='The-Indigo-Group-Premiership-Logo-e1637233020918.png', participant^='12')
+    relationships:
+      - Pontypridd_RFC (dor:Pontypridd_RFC) --dop:league--> Welsh_Premier_Division (dor:Welsh_Premier_Division)
+      - Aberavon_RFC (dor:Aberavon_RFC) --dop:league--> Welsh_Premier_Division (dor:Welsh_Premier_Division)
+  '8':
+    attributes:
+      Super_Rugby: (logo^='Super Rugby Pacific logo.png', participant^='[[#Current franchises')
+      Chiefs_(rugby_union): (ground^='', league^='http://dbpedia.org/resource/Super_Rugby')
+    relationships:
+      - Chiefs_(rugby_union) (<http://dbpedia.org/resource/Chiefs_(rugby_union)>) --dop:league--> Super_Rugby (dor:Super_Rugby)
+      - ACT_Brumbies (dor:ACT_Brumbies) --dop:league--> Super_Rugby (dor:Super_Rugby)
+  '9':
+    attributes:
+      Super_Rugby: (logo^='Super Rugby Pacific logo.png', participant^='[[#Current franchises')
+      Queensland_Reds: (ground^='', league^='http://dbpedia.org/resource/Super_Rugby')
+    relationships:
+      - Queensland_Reds (dor:Queensland_Reds) --dop:league--> Super_Rugby (dor:Super_Rugby)
+      - ACT_Brumbies (dor:ACT_Brumbies) --dop:league--> Super_Rugby (dor:Super_Rugby)
+  '10':
+    attributes:
+      Super_Rugby: (logo^='Super Rugby Pacific logo.png', participant^='[[#Current franchises')
+      Western_Force: (ground^='', league^='http://dbpedia.org/resource/Super_Rugby')
+    relationships:
+      - Western_Force (dor:Western_Force) --dop:league--> Super_Rugby (dor:Super_Rugby)
+      - ACT_Brumbies (dor:ACT_Brumbies) --dop:league--> Super_Rugby (dor:Super_Rugby)
+attributes:
+  soccer club: --ground^ (dop:ground)--> langString | --nickname^ (dop:nickname)--> langString | --league^ (dop:league)--> Resource | --lowest attendance^ (dop:lowestAttendance)--> gMonthDay | --American^ (dop:american)--> langString | --formation date^ (doo:formationDate)--> date | --league topscorer^ (dop:leagueTopscorer)--> Resource
+  soccer league: --logo^ (dop:logo)--> langString | --participant^ (doo:participant)--> string
+subgraph_id: 31
+relationships:
+  - soccer club --dop:league--> soccer league
+  - rugby club --dop:league--> soccer league

@@ -1,0 +1,123 @@
+types:
+  city: doo:City
+  settlement: doo:Settlement
+  soccer player: doo:SoccerPlayer
+  soccer club season: doo:SoccerClubSeason
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Frankfurt: (Apr record high C^='30.3', caption^='Aerial view of the cathedral in May 1945')
+      Rudolf_Gramlich: (clubs^='SS Totenkopfstandarte Krakau')
+      1958–59_Eintracht_Frankfurt_season: (chairman^='http://dbpedia.org/resource/Rudolf_Gramlich')
+    relationships:
+      - 1958–59_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1958–59_Eintracht_Frankfurt_season>) --doo:season--> 1958–59_Oberliga (<http://dbpedia.org/resource/1958–59_Oberliga>)
+      - 1958–59_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1958–59_Eintracht_Frankfurt_season>) --doo:chairman--> Rudolf_Gramlich (dor:Rudolf_Gramlich)
+      - 1958–59_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1958–59_Eintracht_Frankfurt_season>) --dop:location--> Frankfurt (dor:Frankfurt)
+      - Rudolf_Gramlich (dor:Rudolf_Gramlich) --doo:birthPlace--> Offenbach_am_Main (dor:Offenbach_am_Main)
+  '2':
+    attributes:
+      Chișinău: (Apr record high C^='31.6', caption^='Romashka Tower, the tallest building in Moldova')
+      Rudolf_Gramlich: (clubs^='SS Totenkopfstandarte Krakau')
+      1959–60_Eintracht_Frankfurt_season: (chairman^='http://dbpedia.org/resource/Rudolf_Gramlich')
+    relationships:
+      - 1959–60_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1959–60_Eintracht_Frankfurt_season>) --doo:season--> 1959–60_Oberliga (<http://dbpedia.org/resource/1959–60_Oberliga>)
+      - 1959–60_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1959–60_Eintracht_Frankfurt_season>) --doo:chairman--> Rudolf_Gramlich (dor:Rudolf_Gramlich)
+      - 1959–60_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1959–60_Eintracht_Frankfurt_season>) --dop:location--> Chișinău (<http://dbpedia.org/resource/Chișinău>)
+      - Rudolf_Gramlich (dor:Rudolf_Gramlich) --doo:birthPlace--> Offenbach_am_Main (dor:Offenbach_am_Main)
+  '3':
+    attributes:
+      Frankfurt: (Apr record high C^='30.3', caption^='Aerial view of the cathedral in May 1945')
+      Rudolf_Gramlich: (clubs^='SS Totenkopfstandarte Krakau')
+      1959–60_Eintracht_Frankfurt_season: (chairman^='http://dbpedia.org/resource/Rudolf_Gramlich')
+    relationships:
+      - 1959–60_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1959–60_Eintracht_Frankfurt_season>) --doo:season--> 1959–60_Oberliga (<http://dbpedia.org/resource/1959–60_Oberliga>)
+      - 1959–60_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1959–60_Eintracht_Frankfurt_season>) --doo:chairman--> Rudolf_Gramlich (dor:Rudolf_Gramlich)
+      - 1959–60_Eintracht_Frankfurt_season (<http://dbpedia.org/resource/1959–60_Eintracht_Frankfurt_season>) --dop:location--> Frankfurt (dor:Frankfurt)
+      - Rudolf_Gramlich (dor:Rudolf_Gramlich) --doo:birthPlace--> Offenbach_am_Main (dor:Offenbach_am_Main)
+  '4':
+    attributes:
+      Turin: (Apr record high C^='31')
+      2005–06_Torino_F.C._season: (c^='2', chairman^='http://dbpedia.org/resource/Attilio_Romero')
+    relationships:
+      - 2005–06_Torino_F.C._season (<http://dbpedia.org/resource/2005–06_Torino_F.C._season>) --doo:season--> 2005–06_in_Italian_football (<http://dbpedia.org/resource/2005–06_in_Italian_football>)
+      - 2005–06_Torino_F.C._season (<http://dbpedia.org/resource/2005–06_Torino_F.C._season>) --doo:chairman--> Urbano_Cairo (dor:Urbano_Cairo)
+      - 2005–06_Torino_F.C._season (<http://dbpedia.org/resource/2005–06_Torino_F.C._season>) --dop:location--> Turin (dor:Turin)
+      - Urbano_Cairo (dor:Urbano_Cairo) --doo:birthPlace--> Milan (dor:Milan)
+  '5':
+    attributes:
+      London: (type^='http://dbpedia.org/resource/Capital_city', caption^='A bombed-out London street during the Blitz, World War II')
+      Bedford: (Apr record high C^='27.7')
+      Barry_Fry: (clubs^='http://dbpedia.org/resource/Bedford_Town_F.C.')
+      2009–10_Peterborough_United_F.C._season: (chairman^='http://dbpedia.org/resource/Barry_Fry')
+    relationships:
+      - 2009–10_Peterborough_United_F.C._season (<http://dbpedia.org/resource/2009–10_Peterborough_United_F.C._season>) --doo:season--> 2009–10_in_English_football (<http://dbpedia.org/resource/2009–10_in_English_football>)
+      - 2009–10_Peterborough_United_F.C._season (<http://dbpedia.org/resource/2009–10_Peterborough_United_F.C._season>) --doo:chairman--> Barry_Fry (dor:Barry_Fry)
+      - 2009–10_Peterborough_United_F.C._season (<http://dbpedia.org/resource/2009–10_Peterborough_United_F.C._season>) --dop:location--> London (dor:London)
+      - Barry_Fry (dor:Barry_Fry) --doo:birthPlace--> Bedford (dor:Bedford)
+  '6':
+    attributes:
+      Erik_Solér: (clubs^='http://dbpedia.org/resource/Aarhus_Gymnastik_Forening')
+      2010_New_York_Red_Bulls_season: (c^='http://dbpedia.org/resource/2010_Lamar_Hunt_U.S._Open_Cup', chairman^='http://dbpedia.org/resource/Erik_Solér')
+    relationships:
+      - 2010_New_York_Red_Bulls_season (dor:2010_New_York_Red_Bulls_season) --doo:season--> 2010_Major_League_Soccer_season (dor:2010_Major_League_Soccer_season)
+      - 2010_New_York_Red_Bulls_season (dor:2010_New_York_Red_Bulls_season) --doo:chairman--> Erik_Solér (<http://dbpedia.org/resource/Erik_Solér>)
+      - 2010_New_York_Red_Bulls_season (dor:2010_New_York_Red_Bulls_season) --dop:location--> Bradenton,_Florida (<http://dbpedia.org/resource/Bradenton,_Florida>)
+      - Erik_Solér (<http://dbpedia.org/resource/Erik_Solér>) --doo:birthPlace--> Lillestrøm (<http://dbpedia.org/resource/Lillestrøm>)
+  '7':
+    attributes:
+      Erik_Solér: (clubs^='http://dbpedia.org/resource/Aarhus_Gymnastik_Forening')
+      Orlando,_Florida: (type^='http://dbpedia.org/resource/List_of_municipalities_in_Florida', Apr record high F^='97')
+      2010_New_York_Red_Bulls_season: (c^='http://dbpedia.org/resource/2010_Lamar_Hunt_U.S._Open_Cup', chairman^='http://dbpedia.org/resource/Erik_Solér')
+    relationships:
+      - 2010_New_York_Red_Bulls_season (dor:2010_New_York_Red_Bulls_season) --doo:season--> 2010_Major_League_Soccer_season (dor:2010_Major_League_Soccer_season)
+      - 2010_New_York_Red_Bulls_season (dor:2010_New_York_Red_Bulls_season) --doo:chairman--> Erik_Solér (<http://dbpedia.org/resource/Erik_Solér>)
+      - 2010_New_York_Red_Bulls_season (dor:2010_New_York_Red_Bulls_season) --dop:location--> Orlando,_Florida (<http://dbpedia.org/resource/Orlando,_Florida>)
+      - Erik_Solér (<http://dbpedia.org/resource/Erik_Solér>) --doo:birthPlace--> Lillestrøm (<http://dbpedia.org/resource/Lillestrøm>)
+  '8':
+    attributes:
+      Erik_Solér: (clubs^='http://dbpedia.org/resource/Aarhus_Gymnastik_Forening')
+      2010_New_York_Red_Bulls_season: (c^='http://dbpedia.org/resource/2010_Lamar_Hunt_U.S._Open_Cup', chairman^='http://dbpedia.org/resource/Erik_Solér')
+    relationships:
+      - 2010_New_York_Red_Bulls_season (dor:2010_New_York_Red_Bulls_season) --doo:season--> 2010_Major_League_Soccer_season (dor:2010_Major_League_Soccer_season)
+      - 2010_New_York_Red_Bulls_season (dor:2010_New_York_Red_Bulls_season) --doo:chairman--> Erik_Solér (<http://dbpedia.org/resource/Erik_Solér>)
+      - 2010_New_York_Red_Bulls_season (dor:2010_New_York_Red_Bulls_season) --dop:location--> Santa_Clara,_California (<http://dbpedia.org/resource/Santa_Clara,_California>)
+      - Erik_Solér (<http://dbpedia.org/resource/Erik_Solér>) --doo:birthPlace--> Lillestrøm (<http://dbpedia.org/resource/Lillestrøm>)
+  '9':
+    attributes:
+      Utrecht: (Apr record high C^='28.9')
+      Erik_Tammer: (clubs^='→ ADO Den Haag')
+      2011_Dayton_Dutch_Lions_season: (chairman^='http://dbpedia.org/resource/Erik_Tammer')
+    relationships:
+      - 2011_Dayton_Dutch_Lions_season (dor:2011_Dayton_Dutch_Lions_season) --doo:season--> 2011_USL_Pro_season (dor:2011_USL_Pro_season)
+      - 2011_Dayton_Dutch_Lions_season (dor:2011_Dayton_Dutch_Lions_season) --doo:chairman--> Erik_Tammer (dor:Erik_Tammer)
+      - 2011_Dayton_Dutch_Lions_season (dor:2011_Dayton_Dutch_Lions_season) --dop:location--> Bellbrook,_Ohio (<http://dbpedia.org/resource/Bellbrook,_Ohio>)
+      - Erik_Tammer (dor:Erik_Tammer) --doo:birthPlace--> Utrecht (dor:Utrecht)
+  '10':
+    attributes:
+      Utrecht: (Apr record high C^='28.9')
+      Erik_Tammer: (clubs^='→ ADO Den Haag')
+      Richmond,_Virginia: (type^='http://dbpedia.org/resource/Independent_city_(United_States)', caption^='The Art Deco-styled Thomas Jefferson High School in the near West End', Apr record high F^='96')
+      2011_Dayton_Dutch_Lions_season: (chairman^='http://dbpedia.org/resource/Erik_Tammer')
+    relationships:
+      - 2011_Dayton_Dutch_Lions_season (dor:2011_Dayton_Dutch_Lions_season) --doo:season--> 2011_USL_Pro_season (dor:2011_USL_Pro_season)
+      - 2011_Dayton_Dutch_Lions_season (dor:2011_Dayton_Dutch_Lions_season) --doo:chairman--> Erik_Tammer (dor:Erik_Tammer)
+      - 2011_Dayton_Dutch_Lions_season (dor:2011_Dayton_Dutch_Lions_season) --dop:location--> Richmond,_Virginia (<http://dbpedia.org/resource/Richmond,_Virginia>)
+      - Erik_Tammer (dor:Erik_Tammer) --doo:birthPlace--> Utrecht (dor:Utrecht)
+attributes:
+  city: --type^ (doo:type)--> Resource | --Apr record high C^ (dop:aprRecordHighC)--> double | --caption^ (dop:caption)--> langString | --Apr record high F^ (dop:aprRecordHighF)--> int
+  settlement: --Apr record high C^ (dop:aprRecordHighC)--> int | --data^ (dop:data)--> double | --id^ (dop:id)--> langString
+  soccer player: --clubs^ (dop:clubs)--> langString
+  soccer club season: --c^ (dop:c)--> Resource | --chairman^ (doo:chairman)--> Resource
+  football league season: --header^ (dop:header)--> langString
+subgraph_id: 912
+relationships:
+  - soccer club season --doo:season--> football league season
+  - soccer club season --doo:chairman--> soccer player
+  - soccer club season --dop:location--> city
+  - soccer player --doo:birthPlace--> settlement

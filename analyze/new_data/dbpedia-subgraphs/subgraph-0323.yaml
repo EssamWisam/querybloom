@@ -1,0 +1,123 @@
+types:
+  architect: doo:Architect
+  settlement: doo:Settlement
+  university: doo:University
+  historic place: doo:HistoricPlace
+  historic building: doo:HistoricBuilding
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      1–3_Churchyard_Side,_Nantwich: (architect^='http://dbpedia.org/resource/Alfred_Waterhouse')
+      Church_of_St_John_the_Divine,_Brooklands: (country^='England', location^='http://dbpedia.org/resource/Brooklands,_Manchester', dedication^='http://dbpedia.org/resource/St_John_the_Divine')
+    relationships:
+      - Church_of_St_John_the_Divine,_Brooklands (<http://dbpedia.org/resource/Church_of_St_John_the_Divine,_Brooklands>) --dop:architect--> Alfred_Waterhouse (dor:Alfred_Waterhouse)
+      - Alfred_Waterhouse (dor:Alfred_Waterhouse) --doo:significantBuilding--> Girton_College,_Cambridge (<http://dbpedia.org/resource/Girton_College,_Cambridge>)
+      - 1–3_Churchyard_Side,_Nantwich (<http://dbpedia.org/resource/1–3_Churchyard_Side,_Nantwich>) --dop:architect--> Alfred_Waterhouse (dor:Alfred_Waterhouse)
+      - Church_of_St_John_the_Divine,_Brooklands (<http://dbpedia.org/resource/Church_of_St_John_the_Divine,_Brooklands>) --doo:location--> Sale,_Greater_Manchester (<http://dbpedia.org/resource/Sale,_Greater_Manchester>)
+  '2':
+    attributes:
+      University_College_Hospital: (country^='England')
+      1–3_Churchyard_Side,_Nantwich: (architect^='http://dbpedia.org/resource/Alfred_Waterhouse')
+      Church_of_St_John_the_Divine,_Brooklands: (country^='England', location^='http://dbpedia.org/resource/Brooklands,_Manchester', dedication^='http://dbpedia.org/resource/St_John_the_Divine')
+    relationships:
+      - Church_of_St_John_the_Divine,_Brooklands (<http://dbpedia.org/resource/Church_of_St_John_the_Divine,_Brooklands>) --dop:architect--> Alfred_Waterhouse (dor:Alfred_Waterhouse)
+      - Alfred_Waterhouse (dor:Alfred_Waterhouse) --doo:significantBuilding--> University_College_Hospital (dor:University_College_Hospital)
+      - 1–3_Churchyard_Side,_Nantwich (<http://dbpedia.org/resource/1–3_Churchyard_Side,_Nantwich>) --dop:architect--> Alfred_Waterhouse (dor:Alfred_Waterhouse)
+      - Church_of_St_John_the_Divine,_Brooklands (<http://dbpedia.org/resource/Church_of_St_John_the_Divine,_Brooklands>) --doo:location--> Sale,_Greater_Manchester (<http://dbpedia.org/resource/Sale,_Greater_Manchester>)
+  '3':
+    attributes:
+      1–3_Churchyard_Side,_Nantwich: (architect^='http://dbpedia.org/resource/Alfred_Waterhouse')
+      Victoria_University_of_Manchester: (country^='England, UK')
+      Church_of_St_John_the_Divine,_Brooklands: (country^='England', location^='http://dbpedia.org/resource/Brooklands,_Manchester', dedication^='http://dbpedia.org/resource/St_John_the_Divine')
+    relationships:
+      - Church_of_St_John_the_Divine,_Brooklands (<http://dbpedia.org/resource/Church_of_St_John_the_Divine,_Brooklands>) --dop:architect--> Alfred_Waterhouse (dor:Alfred_Waterhouse)
+      - Alfred_Waterhouse (dor:Alfred_Waterhouse) --doo:significantBuilding--> Victoria_University_of_Manchester (dor:Victoria_University_of_Manchester)
+      - 1–3_Churchyard_Side,_Nantwich (<http://dbpedia.org/resource/1–3_Churchyard_Side,_Nantwich>) --dop:architect--> Alfred_Waterhouse (dor:Alfred_Waterhouse)
+      - Church_of_St_John_the_Divine,_Brooklands (<http://dbpedia.org/resource/Church_of_St_John_the_Divine,_Brooklands>) --doo:location--> Sale,_Greater_Manchester (<http://dbpedia.org/resource/Sale,_Greater_Manchester>)
+  '4':
+    attributes:
+      Swiss_Cottage,_Rockfield: (architect^='http://dbpedia.org/resource/Aston_Webb')
+      University_of_Birmingham: (country^='http://dbpedia.org/resource/England')
+      French_Protestant_Church_of_London: (country^='http://dbpedia.org/resource/United_Kingdom', location^='http://dbpedia.org/resource/Soho')
+    relationships:
+      - French_Protestant_Church_of_London (dor:French_Protestant_Church_of_London) --dop:architect--> Aston_Webb (dor:Aston_Webb)
+      - Aston_Webb (dor:Aston_Webb) --doo:significantBuilding--> University_of_Birmingham (dor:University_of_Birmingham)
+      - Swiss_Cottage,_Rockfield (<http://dbpedia.org/resource/Swiss_Cottage,_Rockfield>) --dop:architect--> Aston_Webb (dor:Aston_Webb)
+      - French_Protestant_Church_of_London (dor:French_Protestant_Church_of_London) --doo:location--> Soho (dor:Soho)
+  '5':
+    attributes:
+      The_Hendre: (architect^='http://dbpedia.org/resource/Aston_Webb')
+      University_of_Birmingham: (country^='http://dbpedia.org/resource/England')
+      French_Protestant_Church_of_London: (country^='http://dbpedia.org/resource/United_Kingdom', location^='http://dbpedia.org/resource/Soho')
+    relationships:
+      - French_Protestant_Church_of_London (dor:French_Protestant_Church_of_London) --dop:architect--> Aston_Webb (dor:Aston_Webb)
+      - Aston_Webb (dor:Aston_Webb) --doo:significantBuilding--> University_of_Birmingham (dor:University_of_Birmingham)
+      - The_Hendre (dor:The_Hendre) --dop:architect--> Aston_Webb (dor:Aston_Webb)
+      - French_Protestant_Church_of_London (dor:French_Protestant_Church_of_London) --doo:location--> Soho (dor:Soho)
+  '6':
+    attributes:
+      Accra: (area total (m2)^='20400000.0', Aug low C^='22.2')
+      Swiss_Cottage,_Rockfield: (architect^='http://dbpedia.org/resource/Aston_Webb')
+      University_of_Birmingham: (country^='http://dbpedia.org/resource/England')
+      Holy_Trinity_Cathedral_(Accra): (country^='http://dbpedia.org/resource/Ghana', location^='http://dbpedia.org/resource/Accra')
+    relationships:
+      - Holy_Trinity_Cathedral_(Accra) (<http://dbpedia.org/resource/Holy_Trinity_Cathedral_(Accra)>) --dop:architect--> Aston_Webb (dor:Aston_Webb)
+      - Aston_Webb (dor:Aston_Webb) --doo:significantBuilding--> University_of_Birmingham (dor:University_of_Birmingham)
+      - Swiss_Cottage,_Rockfield (<http://dbpedia.org/resource/Swiss_Cottage,_Rockfield>) --dop:architect--> Aston_Webb (dor:Aston_Webb)
+      - Holy_Trinity_Cathedral_(Accra) (<http://dbpedia.org/resource/Holy_Trinity_Cathedral_(Accra)>) --doo:location--> Accra (dor:Accra)
+  '7':
+    attributes:
+      London: (area total (m2)^='1572030000.0')
+      Mount_Stewart: (architect^='http://dbpedia.org/resource/George_Dance_the_Younger')
+      Wesley's_Chapel: (country^='United Kingdom', location^='http://dbpedia.org/resource/City_Road')
+    relationships:
+      - Wesley's_Chapel (<http://dbpedia.org/resource/Wesley's_Chapel>) --dop:architect--> George_Dance_the_Younger (dor:George_Dance_the_Younger)
+      - George_Dance_the_Younger (dor:George_Dance_the_Younger) --doo:significantBuilding--> Royal_College_of_Surgeons (dor:Royal_College_of_Surgeons)
+      - Mount_Stewart (dor:Mount_Stewart) --dop:architect--> George_Dance_the_Younger (dor:George_Dance_the_Younger)
+      - Wesley's_Chapel (<http://dbpedia.org/resource/Wesley's_Chapel>) --doo:location--> London (dor:London)
+  '8':
+    attributes:
+      Mount_Stewart: (architect^='http://dbpedia.org/resource/George_Dance_the_Younger')
+      Wesley's_Chapel: (country^='United Kingdom', location^='http://dbpedia.org/resource/City_Road')
+    relationships:
+      - Wesley's_Chapel (<http://dbpedia.org/resource/Wesley's_Chapel>) --dop:architect--> George_Dance_the_Younger (dor:George_Dance_the_Younger)
+      - George_Dance_the_Younger (dor:George_Dance_the_Younger) --doo:significantBuilding--> Royal_College_of_Surgeons (dor:Royal_College_of_Surgeons)
+      - Mount_Stewart (dor:Mount_Stewart) --dop:architect--> George_Dance_the_Younger (dor:George_Dance_the_Younger)
+      - Wesley's_Chapel (<http://dbpedia.org/resource/Wesley's_Chapel>) --doo:location--> St_Luke's,_London (<http://dbpedia.org/resource/St_Luke's,_London>)
+  '9':
+    attributes:
+      Lanhydrock_House: (architect^='http://dbpedia.org/resource/George_Gilbert_Scott')
+      University_of_Glasgow: (country^='http://dbpedia.org/resource/Scotland')
+      All_Saints_Church,_Holdenby: (country^='England', location^='http://dbpedia.org/resource/Holdenby', dedication^='All Saints')
+    relationships:
+      - All_Saints_Church,_Holdenby (<http://dbpedia.org/resource/All_Saints_Church,_Holdenby>) --dop:architect--> George_Gilbert_Scott (dor:George_Gilbert_Scott)
+      - George_Gilbert_Scott (dor:George_Gilbert_Scott) --doo:significantBuilding--> University_of_Glasgow (dor:University_of_Glasgow)
+      - Lanhydrock_House (dor:Lanhydrock_House) --dop:architect--> George_Gilbert_Scott (dor:George_Gilbert_Scott)
+      - All_Saints_Church,_Holdenby (<http://dbpedia.org/resource/All_Saints_Church,_Holdenby>) --doo:location--> Holdenby (dor:Holdenby)
+  '10':
+    attributes:
+      Treverbyn_Vean: (architect^='http://dbpedia.org/resource/George_Gilbert_Scott')
+      University_of_Glasgow: (country^='http://dbpedia.org/resource/Scotland')
+      All_Saints_Church,_Holdenby: (country^='England', location^='http://dbpedia.org/resource/Holdenby', dedication^='All Saints')
+    relationships:
+      - All_Saints_Church,_Holdenby (<http://dbpedia.org/resource/All_Saints_Church,_Holdenby>) --dop:architect--> George_Gilbert_Scott (dor:George_Gilbert_Scott)
+      - George_Gilbert_Scott (dor:George_Gilbert_Scott) --doo:significantBuilding--> University_of_Glasgow (dor:University_of_Glasgow)
+      - Treverbyn_Vean (dor:Treverbyn_Vean) --dop:architect--> George_Gilbert_Scott (dor:George_Gilbert_Scott)
+      - All_Saints_Church,_Holdenby (<http://dbpedia.org/resource/All_Saints_Church,_Holdenby>) --doo:location--> Holdenby (dor:Holdenby)
+attributes:
+  settlement: --Apr low F^ (dop:aprLowF)--> int | --differentFrom (wwoo:differentFrom)--> Resource | --area^ (dop:area)--> double | --area total (m2)^ (doo:areaTotal)--> double | --Aug low C^ (dop:augLowC)--> double
+  university: --country^ (dop:country)--> langString
+  historic place: --architect^ (doo:architect)--> Resource | --architect^ (dop:architect)--> langString
+  historic building: --country^ (dop:country)--> langString | --location^ (doo:location)--> Resource | --dedication^ (dop:dedication)--> Resource
+subgraph_id: 323
+relationships:
+  - historic building --dop:architect--> architect
+  - architect --doo:significantBuilding--> university
+  - historic place --dop:architect--> architect
+  - historic building --doo:location--> settlement

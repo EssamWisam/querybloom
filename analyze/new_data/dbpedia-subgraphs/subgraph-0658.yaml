@@ -1,0 +1,56 @@
+types:
+  city: doo:City
+  athlete: doo:Athlete
+  station: doo:Station
+  Location: doo:Location
+  government agency: doo:GovernmentAgency
+  public transit system: doo:PublicTransitSystem
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Agnes_Knochenhauer: (birth place^='http://dbpedia.org/resource/Stockholm')
+      Finnish_Transport_Infrastructure_Agency: (budget ($)^='2.1E9')
+    relationships:
+      - Ainola_railway_station (dor:Ainola_railway_station) --dop:operator--> VR_Group (dor:VR_Group)
+      - Ainola_railway_station (dor:Ainola_railway_station) --dop:owned--> Finnish_Transport_Infrastructure_Agency (dor:Finnish_Transport_Infrastructure_Agency)
+      - VR_Group (dor:VR_Group) --dop:areaServed--> Sweden (dor:Sweden)
+      - Agnes_Knochenhauer (dor:Agnes_Knochenhauer) --doo:birthPlace--> Sweden (dor:Sweden)
+      - Agnes_Knochenhauer (dor:Agnes_Knochenhauer) --doo:club--> Sundbyberg (dor:Sundbyberg)
+  '2':
+    attributes:
+      Agnes_Knochenhauer: (birth place^='http://dbpedia.org/resource/Stockholm')
+      Finnish_Transport_Infrastructure_Agency: (budget ($)^='2.1E9')
+    relationships:
+      - Haapamäki_railway_station (<http://dbpedia.org/resource/Haapamäki_railway_station>) --dop:operator--> VR_Group (dor:VR_Group)
+      - Haapamäki_railway_station (<http://dbpedia.org/resource/Haapamäki_railway_station>) --dop:owned--> Finnish_Transport_Infrastructure_Agency (dor:Finnish_Transport_Infrastructure_Agency)
+      - VR_Group (dor:VR_Group) --dop:areaServed--> Sweden (dor:Sweden)
+      - Agnes_Knochenhauer (dor:Agnes_Knochenhauer) --doo:birthPlace--> Sweden (dor:Sweden)
+      - Agnes_Knochenhauer (dor:Agnes_Knochenhauer) --doo:club--> Sundbyberg (dor:Sundbyberg)
+  '3':
+    attributes:
+      Agnes_Knochenhauer: (birth place^='http://dbpedia.org/resource/Stockholm')
+      Finnish_Transport_Infrastructure_Agency: (budget ($)^='2.1E9')
+    relationships:
+      - Haarajoki_railway_station (dor:Haarajoki_railway_station) --dop:operator--> VR_Group (dor:VR_Group)
+      - Haarajoki_railway_station (dor:Haarajoki_railway_station) --dop:owned--> Finnish_Transport_Infrastructure_Agency (dor:Finnish_Transport_Infrastructure_Agency)
+      - VR_Group (dor:VR_Group) --dop:areaServed--> Sweden (dor:Sweden)
+      - Agnes_Knochenhauer (dor:Agnes_Knochenhauer) --doo:birthPlace--> Sweden (dor:Sweden)
+      - Agnes_Knochenhauer (dor:Agnes_Knochenhauer) --doo:club--> Sundbyberg (dor:Sundbyberg)
+attributes:
+  city: --Apr rain days^ (dop:aprRainDays)--> double | --wordnet_type (dop:wordnet_type)--> Resource | --aprLowF (dop:aprLowF)--> int | --area total km^ (dop:areaTotalKm)--> double | --float^ (dop:float)--> langString
+  athlete: --birth place^ (dop:birthPlace)--> langString
+  station: --distance^ (dop:distance)--> kilometre | --distance^ (dop:distance)--> langString
+  government agency: --budget ($)^ (doo:budget)--> euro
+  public transit system: --operator^ (dop:operator)--> langString
+subgraph_id: 658
+relationships:
+  - station --dop:operator--> public transit system
+  - station --dop:owned--> government agency
+  - public transit system --dop:areaServed--> Location
+  - athlete --doo:birthPlace--> Location
+  - athlete --doo:club--> city

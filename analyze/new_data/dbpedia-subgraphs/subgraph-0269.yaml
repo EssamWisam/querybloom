@@ -1,0 +1,132 @@
+types:
+  city: doo:City
+  railway line: doo:RailwayLine
+  tennis player: doo:TennisPlayer
+  football league season: doo:FootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Argyle_Line: (status^='Operational')
+    relationships:
+      - Aidan_McHugh (dor:Aidan_McHugh) --doo:birthPlace--> Glasgow (dor:Glasgow)
+      - 1890–91_Scottish_Football_League (<http://dbpedia.org/resource/1890–91_Scottish_Football_League>) --dop:location--> Glasgow (dor:Glasgow)
+      - Argyle_Line (dor:Argyle_Line) --doo:location--> Glasgow (dor:Glasgow)
+  '2':
+    attributes:
+      Argyle_Line: (status^='Operational')
+    relationships:
+      - Andy_Murray (dor:Andy_Murray) --doo:birthPlace--> Glasgow (dor:Glasgow)
+      - 1890–91_Scottish_Football_League (<http://dbpedia.org/resource/1890–91_Scottish_Football_League>) --dop:location--> Glasgow (dor:Glasgow)
+      - Argyle_Line (dor:Argyle_Line) --doo:location--> Glasgow (dor:Glasgow)
+  '3':
+    attributes:
+      Argyle_Line: (status^='Operational')
+    relationships:
+      - Donald_MacPhail_(tennis) (<http://dbpedia.org/resource/Donald_MacPhail_(tennis)>) --doo:birthPlace--> Glasgow (dor:Glasgow)
+      - 1890–91_Scottish_Football_League (<http://dbpedia.org/resource/1890–91_Scottish_Football_League>) --dop:location--> Glasgow (dor:Glasgow)
+      - Argyle_Line (dor:Argyle_Line) --doo:location--> Glasgow (dor:Glasgow)
+  '4':
+    attributes:
+      Buenos_Aires_Underground: (box width^='275')
+      1913_Argentine_Primera_División: (continentalcup1 qualifiers^='http://dbpedia.org/resource/Racing_Club_de_Avellaneda')
+    relationships:
+      - Alejandro_Ganzábal (<http://dbpedia.org/resource/Alejandro_Ganzábal>) --doo:birthPlace--> Buenos_Aires (dor:Buenos_Aires)
+      - 1913_Argentine_Primera_División (<http://dbpedia.org/resource/1913_Argentine_Primera_División>) --dop:location--> Buenos_Aires (dor:Buenos_Aires)
+      - Buenos_Aires_Underground (dor:Buenos_Aires_Underground) --doo:location--> Buenos_Aires (dor:Buenos_Aires)
+  '5':
+    attributes:
+      Buenos_Aires: (Aug high C^='17.7')
+      Buenos_Aires_Underground: (box width^='275')
+      1913_Argentine_Primera_División: (continentalcup1 qualifiers^='http://dbpedia.org/resource/Racing_Club_de_Avellaneda')
+    relationships:
+      - Alejandro_Gattiker (dor:Alejandro_Gattiker) --doo:birthPlace--> Buenos_Aires (dor:Buenos_Aires)
+      - 1913_Argentine_Primera_División (<http://dbpedia.org/resource/1913_Argentine_Primera_División>) --dop:location--> Buenos_Aires (dor:Buenos_Aires)
+      - Buenos_Aires_Underground (dor:Buenos_Aires_Underground) --doo:location--> Buenos_Aires (dor:Buenos_Aires)
+  '6':
+    attributes:
+      Buenos_Aires: (Aug high C^='17.7')
+      Buenos_Aires_Underground: (box width^='275')
+      1913_Argentine_Primera_División: (continentalcup1 qualifiers^='http://dbpedia.org/resource/Racing_Club_de_Avellaneda')
+    relationships:
+      - Andres_Dellatorre (dor:Andres_Dellatorre) --doo:birthPlace--> Buenos_Aires (dor:Buenos_Aires)
+      - 1913_Argentine_Primera_División (<http://dbpedia.org/resource/1913_Argentine_Primera_División>) --dop:location--> Buenos_Aires (dor:Buenos_Aires)
+      - Buenos_Aires_Underground (dor:Buenos_Aires_Underground) --doo:location--> Buenos_Aires (dor:Buenos_Aires)
+  '7':
+    attributes:
+      Athens: (Aug high C^='32.2')
+    relationships:
+      - Angeliki_Kanellopoulou (dor:Angeliki_Kanellopoulou) --doo:birthPlace--> Athens (dor:Athens)
+      - 1929–30_Panhellenic_Championship (<http://dbpedia.org/resource/1929–30_Panhellenic_Championship>) --dop:location--> Athens (dor:Athens)
+      - Line_1_(Athens_Metro) (<http://dbpedia.org/resource/Line_1_(Athens_Metro)>) --doo:location--> Athens (dor:Athens)
+  '8':
+    attributes:
+      Athens: (Aug high C^='32.2')
+    relationships:
+      - Annick_Sevenans (dor:Annick_Sevenans) --doo:birthPlace--> Athens (dor:Athens)
+      - 1929–30_Panhellenic_Championship (<http://dbpedia.org/resource/1929–30_Panhellenic_Championship>) --dop:location--> Athens (dor:Athens)
+      - Line_1_(Athens_Metro) (<http://dbpedia.org/resource/Line_1_(Athens_Metro)>) --doo:location--> Athens (dor:Athens)
+  '9':
+    attributes:
+      Athens: (Aug high C^='32.2')
+    relationships:
+      - Aristotelis_Thanos (dor:Aristotelis_Thanos) --doo:birthPlace--> Athens (dor:Athens)
+      - 1929–30_Panhellenic_Championship (<http://dbpedia.org/resource/1929–30_Panhellenic_Championship>) --dop:location--> Athens (dor:Athens)
+      - Line_1_(Athens_Metro) (<http://dbpedia.org/resource/Line_1_(Athens_Metro)>) --doo:location--> Athens (dor:Athens)
+  '10':
+    attributes:
+      Madrid: (Aug high C^='31.3')
+    relationships:
+      - Ainhoa_Goñi (<http://dbpedia.org/resource/Ainhoa_Goñi>) --doo:birthPlace--> Madrid (dor:Madrid)
+      - 1940–41_Segunda_División (<http://dbpedia.org/resource/1940–41_Segunda_División>) --dop:location--> Madrid (dor:Madrid)
+      - Alaris (dor:Alaris) --doo:location--> Madrid (dor:Madrid)
+qa_result:
+  status: completed
+  cost_usd: 0.346747
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.035227400000000006
+        total_tokens: 3752
+        prompt_tokens: 2209
+        completion_tokens: 1543
+      generate:
+        cost_usd: 0.0768376
+        total_tokens: 7264
+        prompt_tokens: 4083
+        completion_tokens: 3181
+      verify_1:
+        cost_usd: 0.11535700000000002
+        total_tokens: 8936
+        prompt_tokens: 4224
+        completion_tokens: 4712
+      verify_2:
+        cost_usd: 0.03386700000000001
+        total_tokens: 4929
+        prompt_tokens: 4314
+        completion_tokens: 615
+      complexity:
+        cost_usd: 0.085458
+        total_tokens: 8620
+        prompt_tokens: 5224
+        completion_tokens: 3396
+    total_tokens: 33501
+    prompt_tokens: 20054
+    total_cost_usd: 0.346747
+    completion_tokens: 13447
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --Aug high C^ (dop:augHighC)--> double | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --Aug high F^ (dop:augHighF)--> int | --named for^ (dop:namedFor)--> Resource
+  railway line: --route start^ (doo:routeStart)--> Resource | --status^ (doo:status)--> string | --box width^ (dop:boxWidth)--> int
+  football league season: --lowest attendance^ (dop:lowestAttendance)--> gMonthDay | --aggregate^ (dop:aggregate)--> langString | --continentalcup1 qualifiers^ (dop:continentalcup1Qualifiers)--> Resource
+subgraph_id: 269
+relationships:
+  - tennis player --doo:birthPlace--> city
+  - football league season --dop:location--> city
+  - railway line --doo:location--> city

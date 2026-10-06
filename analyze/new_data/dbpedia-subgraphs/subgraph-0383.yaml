@@ -1,0 +1,77 @@
+types:
+  road: doo:Road
+  country: doo:Country
+  Location: doo:Location
+  mountain: doo:Mountain
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Cascade_Peaks: (district^='http://dbpedia.org/resource/Hautes-Pyrénées')
+      Midi-Pyrénées: (area total (m2)^='45348000000.0')
+    relationships:
+      - Abel_Caballero (dor:Abel_Caballero) --dop:birthPlace--> Spain (dor:Spain)
+      - Cascade_Peaks (dor:Cascade_Peaks) --doo:locatedInArea--> Spain (dor:Spain)
+      - European_route_E1 (dor:European_route_E1) --doo:routeEnd--> Spain (dor:Spain)
+      - Cascade_Peaks (dor:Cascade_Peaks) --doo:region--> Midi-Pyrénées (<http://dbpedia.org/resource/Midi-Pyrénées>)
+  '2':
+    attributes:
+      Cascade_Peaks: (district^='http://dbpedia.org/resource/Hautes-Pyrénées')
+      Midi-Pyrénées: (area total (m2)^='45348000000.0')
+    relationships:
+      - Abel_Caballero (dor:Abel_Caballero) --dop:birthPlace--> Spain (dor:Spain)
+      - Cascade_Peaks (dor:Cascade_Peaks) --doo:locatedInArea--> Spain (dor:Spain)
+      - European_route_E15 (dor:European_route_E15) --doo:routeEnd--> Spain (dor:Spain)
+      - Cascade_Peaks (dor:Cascade_Peaks) --doo:region--> Midi-Pyrénées (<http://dbpedia.org/resource/Midi-Pyrénées>)
+  '3':
+    attributes:
+      Cascade_Peaks: (district^='http://dbpedia.org/resource/Hautes-Pyrénées')
+    relationships:
+      - Abel_Caballero (dor:Abel_Caballero) --dop:birthPlace--> Spain (dor:Spain)
+      - Cascade_Peaks (dor:Cascade_Peaks) --doo:locatedInArea--> Spain (dor:Spain)
+      - European_route_E5 (dor:European_route_E5) --doo:routeEnd--> Spain (dor:Spain)
+      - Cascade_Peaks (dor:Cascade_Peaks) --doo:region--> Midi-Pyrénées (<http://dbpedia.org/resource/Midi-Pyrénées>)
+  '4':
+    attributes:
+      Italy: (caption align^='center')
+      Sardinia: (area total (m2)^='24090000000.0')
+    relationships:
+      - Adriana_Poli_Bortone (dor:Adriana_Poli_Bortone) --dop:birthPlace--> Italy (dor:Italy)
+      - Molara_Island (dor:Molara_Island) --doo:locatedInArea--> Italy (dor:Italy)
+      - A8_autoroute (dor:A8_autoroute) --doo:routeEnd--> Italy (dor:Italy)
+      - Molara_Island (dor:Molara_Island) --doo:region--> Sardinia (dor:Sardinia)
+  '5':
+    attributes:
+      Italy: (caption align^='center')
+      Sardinia: (area total (m2)^='24090000000.0')
+    relationships:
+      - Adriana_Poli_Bortone (dor:Adriana_Poli_Bortone) --dop:birthPlace--> Italy (dor:Italy)
+      - Molara_Island (dor:Molara_Island) --doo:locatedInArea--> Italy (dor:Italy)
+      - European_route_E25 (dor:European_route_E25) --doo:routeEnd--> Italy (dor:Italy)
+      - Molara_Island (dor:Molara_Island) --doo:region--> Sardinia (dor:Sardinia)
+  '6':
+    attributes:
+      Italy: (caption align^='center')
+      Sardinia: (area total (m2)^='24090000000.0')
+    relationships:
+      - Adriana_Poli_Bortone (dor:Adriana_Poli_Bortone) --dop:birthPlace--> Italy (dor:Italy)
+      - Molara_Island (dor:Molara_Island) --doo:locatedInArea--> Italy (dor:Italy)
+      - European_route_E27 (dor:European_route_E27) --doo:routeEnd--> Italy (dor:Italy)
+      - Molara_Island (dor:Molara_Island) --doo:region--> Sardinia (dor:Sardinia)
+attributes:
+  road: --length m^ (dop:lengthM)--> int
+  country: --2a^ (dop:2a)--> langString | --caption align^ (dop:captionAlign)--> langString
+  Location: --borough^ (dop:borough)--> langString | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --bot^ (dop:bot)--> langString | --Aug low F^ (dop:augLowF)--> double | --area total (m2)^ (doo:areaTotal)--> double
+  mountain: --district^ (doo:district)--> Resource
+  office holder: --spouse^ (doo:spouse)--> Resource
+subgraph_id: 383
+relationships:
+  - office holder --dop:birthPlace--> country
+  - mountain --doo:locatedInArea--> country
+  - road --doo:routeEnd--> country
+  - mountain --doo:region--> Location

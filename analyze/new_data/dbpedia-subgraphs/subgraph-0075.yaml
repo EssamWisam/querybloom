@@ -1,0 +1,80 @@
+types:
+  city: doo:City
+  university: doo:University
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Lebanon,_Tennessee: (area total (m2)^='103800000.0')
+    relationships:
+      - A_C_Wharton (dor:A_C_Wharton) --dop:almaMater--> Tennessee_State_University (dor:Tennessee_State_University)
+      - A_C_Wharton (dor:A_C_Wharton) --doo:birthPlace--> Lebanon,_Tennessee (<http://dbpedia.org/resource/Lebanon,_Tennessee>)
+  '2':
+    attributes:
+      University_of_Madras: (nickname^='Madras Tigers')
+    relationships:
+      - A._Aiyappan (dor:A._Aiyappan) --dop:almaMater--> University_of_Madras (dor:University_of_Madras)
+      - A._Aiyappan (dor:A._Aiyappan) --doo:birthPlace--> Pavaratty (dor:Pavaratty)
+  '3':
+    attributes:
+      Thrissur: (Apr rain mm^='147', date^='May 2012', area total (m2)^='101420000.0')
+      University_of_Madras: (nickname^='Madras Tigers')
+    relationships:
+      - A._Aiyappan (dor:A._Aiyappan) --dop:almaMater--> University_of_Madras (dor:University_of_Madras)
+      - A._Aiyappan (dor:A._Aiyappan) --doo:birthPlace--> Thrissur (dor:Thrissur)
+  '4':
+    attributes: {}
+    relationships:
+      - A._Boyd_Ferris (dor:A._Boyd_Ferris) --dop:almaMater--> University_of_British_Columbia_Faculty_of_Law (dor:University_of_British_Columbia_Faculty_of_Law)
+      - A._Boyd_Ferris (dor:A._Boyd_Ferris) --doo:birthPlace--> Winnipeg,_Manitoba (<http://dbpedia.org/resource/Winnipeg,_Manitoba>)
+  '5':
+    attributes:
+      Newton,_Massachusetts: (area total (m2)^='47030000.0', motto^='"Liberty and Union"')
+    relationships:
+      - A._Joseph_DeNucci (dor:A._Joseph_DeNucci) --dop:almaMater--> Boston_University (dor:Boston_University)
+      - A._Joseph_DeNucci (dor:A._Joseph_DeNucci) --doo:birthPlace--> Newton,_Massachusetts (<http://dbpedia.org/resource/Newton,_Massachusetts>)
+  '6':
+    attributes:
+      Victoria,_Texas: (area total (m2)^='97300000.0')
+      Montana_State_University: (nickname^='http://dbpedia.org/resource/Montana_State_Bobcats')
+    relationships:
+      - A._L._Strand (dor:A._L._Strand) --dop:almaMater--> Montana_State_University (dor:Montana_State_University)
+      - A._L._Strand (dor:A._L._Strand) --doo:birthPlace--> Victoria,_Texas (<http://dbpedia.org/resource/Victoria,_Texas>)
+  '7':
+    attributes:
+      Victoria,_Texas: (area total (m2)^='97300000.0')
+    relationships:
+      - A._L._Strand (dor:A._L._Strand) --dop:almaMater--> University_of_Minnesota (dor:University_of_Minnesota)
+      - A._L._Strand (dor:A._L._Strand) --doo:birthPlace--> Victoria,_Texas (<http://dbpedia.org/resource/Victoria,_Texas>)
+  '8':
+    attributes:
+      Newport,_Rhode_Island: (date^='April 2021', area total (m2)^='29448164.81452')
+    relationships:
+      - A._LeRoy_Greason (dor:A._LeRoy_Greason) --dop:almaMater--> Harvard_University (dor:Harvard_University)
+      - A._LeRoy_Greason (dor:A._LeRoy_Greason) --doo:birthPlace--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+  '9':
+    attributes:
+      Newport,_Rhode_Island: (date^='April 2021', area total (m2)^='29448164.81452')
+    relationships:
+      - A._LeRoy_Greason (dor:A._LeRoy_Greason) --dop:almaMater--> Wesleyan_University (dor:Wesleyan_University)
+      - A._LeRoy_Greason (dor:A._LeRoy_Greason) --doo:birthPlace--> Newport,_Rhode_Island (<http://dbpedia.org/resource/Newport,_Rhode_Island>)
+  '10':
+    attributes:
+      A._N._R._Robinson: (active years end date^='1986-12-16')
+      Scarborough,_Tobago: (date^='April 2013', area total (m2)^='10000000.0')
+    relationships:
+      - A._N._R._Robinson (dor:A._N._R._Robinson) --dop:almaMater--> Oxford_University (dor:Oxford_University)
+      - A._N._R._Robinson (dor:A._N._R._Robinson) --doo:birthPlace--> Scarborough,_Tobago (<http://dbpedia.org/resource/Scarborough,_Tobago>)
+attributes:
+  city: --Apr rain mm^ (dop:aprRainMm)--> double | --b^ (dop:b)--> langString | --date^ (dop:date)--> langString | --area total (m2)^ (doo:areaTotal)--> double | --motto^ (doo:motto)--> string
+  university: --Closed^ (dop:closed)--> int | --nickname^ (dop:nickname)--> langString
+  office holder: --regent^ (dop:regent)--> Resource | --relation^ (doo:relation)--> Resource | --active years end date^ (doo:activeYearsEndDate)--> date | --float^ (dop:float)--> langString | --relations^ (dop:relations)--> Resource | --chairman^ (doo:chairman)--> Resource
+subgraph_id: 75
+relationships:
+  - office holder --dop:almaMater--> university
+  - office holder --doo:birthPlace--> city

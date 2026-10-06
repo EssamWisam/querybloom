@@ -1,0 +1,99 @@
+types:
+  song: doo:Song
+  album: doo:Album
+  venue: doo:Venue
+  single: doo:Single
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      ¡Damas_y_Caballeros!: (subject='http://dbpedia.org/resource/Category:2001_live_albums')
+      Immortality_(Celine_Dion_song): (release date^='1998-06-05', id^='3261')
+    relationships:
+      - Immortality_(Celine_Dion_song) (<http://dbpedia.org/resource/Immortality_(Celine_Dion_song)>) --doo:recordedIn--> Record_Plant (dor:Record_Plant)
+      - Immortality_(Celine_Dion_song) (<http://dbpedia.org/resource/Immortality_(Celine_Dion_song)>) --doo:previousWork--> My_Heart_Will_Go_On (dor:My_Heart_Will_Go_On)
+      - ¡Damas_y_Caballeros! (<http://dbpedia.org/resource/¡Damas_y_Caballeros!>) --dop:title--> My_Heart_Will_Go_On (dor:My_Heart_Will_Go_On)
+  '2':
+    attributes:
+      Le_Studio: (Closed^='2003')
+      ¡Policia!:_A_Tribute_to_the_Police: (subject='http://dbpedia.org/resource/Category:2005_compilation_albums')
+    relationships:
+      - King_of_Pain (dor:King_of_Pain) --doo:recordedIn--> Le_Studio (dor:Le_Studio)
+      - King_of_Pain (dor:King_of_Pain) --doo:previousWork--> Synchronicity_II (dor:Synchronicity_II)
+      - ¡Policia!:_A_Tribute_to_the_Police (<http://dbpedia.org/resource/¡Policia!:_A_Tribute_to_the_Police>) --dop:title--> Synchronicity_II (dor:Synchronicity_II)
+  '3':
+    attributes:
+      Le_Studio: (Closed^='2003')
+      ¡Policia!:_A_Tribute_to_the_Police: (subject='http://dbpedia.org/resource/Category:2005_compilation_albums')
+    relationships:
+      - Synchronicity_I (dor:Synchronicity_I) --doo:recordedIn--> Le_Studio (dor:Le_Studio)
+      - Synchronicity_I (dor:Synchronicity_I) --doo:previousWork--> Every_Breath_You_Take (dor:Every_Breath_You_Take)
+      - ¡Policia!:_A_Tribute_to_the_Police (<http://dbpedia.org/resource/¡Policia!:_A_Tribute_to_the_Police>) --dop:title--> Every_Breath_You_Take (dor:Every_Breath_You_Take)
+  '4':
+    attributes:
+      Le_Studio: (Closed^='2003')
+      Synchronicity_II: (release date^='1983-10-21')
+      ¡Policia!:_A_Tribute_to_the_Police: (subject='http://dbpedia.org/resource/Category:2005_compilation_albums')
+    relationships:
+      - Synchronicity_II (dor:Synchronicity_II) --doo:recordedIn--> Le_Studio (dor:Le_Studio)
+      - Synchronicity_II (dor:Synchronicity_II) --doo:previousWork--> Wrapped_Around_Your_Finger (dor:Wrapped_Around_Your_Finger)
+      - ¡Policia!:_A_Tribute_to_the_Police (<http://dbpedia.org/resource/¡Policia!:_A_Tribute_to_the_Police>) --dop:title--> Wrapped_Around_Your_Finger (dor:Wrapped_Around_Your_Finger)
+  '5':
+    attributes:
+      1:_The_Collection: (subject='http://dbpedia.org/resource/Category:2014_compilation_albums')
+    relationships:
+      - Lo_Mejor_de_Tu_Vida (dor:Lo_Mejor_de_Tu_Vida) --doo:recordedIn--> Record_Plant (dor:Record_Plant)
+      - Lo_Mejor_de_Tu_Vida (dor:Lo_Mejor_de_Tu_Vida) --doo:previousWork--> To_All_the_Girls_I've_Loved_Before (<http://dbpedia.org/resource/To_All_the_Girls_I've_Loved_Before>)
+      - 1:_The_Collection (<http://dbpedia.org/resource/1:_The_Collection>) --dop:title--> To_All_the_Girls_I've_Loved_Before (<http://dbpedia.org/resource/To_All_the_Girls_I've_Loved_Before>)
+  '6':
+    attributes:
+      100%25_Scooter_–_25_Years_Wild_&_Wicked: (subject='http://dbpedia.org/resource/Category:2017_compilation_albums')
+      I_Was_Made_for_Lovin'_You__I_Was_Made_for_Lovin'_You__1: (release date^='1998-09-21')
+    relationships:
+      - I_Was_Made_for_Lovin'_You__I_Was_Made_for_Lovin'_You__1 (<http://dbpedia.org/resource/I_Was_Made_for_Lovin'_You__I_Was_Made_for_Lovin'_You__1>) --doo:recordedIn--> Electric_Lady_Studios (dor:Electric_Lady_Studios)
+      - I_Was_Made_for_Lovin'_You__I_Was_Made_for_Lovin'_You__1 (<http://dbpedia.org/resource/I_Was_Made_for_Lovin'_You__I_Was_Made_for_Lovin'_You__1>) --doo:previousWork--> How_Much_Is_the_Fish%3F (<http://dbpedia.org/resource/How_Much_Is_the_Fish%3F>)
+      - 100%25_Scooter_–_25_Years_Wild_&_Wicked (<http://dbpedia.org/resource/100%25_Scooter_–_25_Years_Wild_&_Wicked>) --dop:title--> How_Much_Is_the_Fish%3F (<http://dbpedia.org/resource/How_Much_Is_the_Fish%3F>)
+  '7':
+    attributes:
+      1100_Bel_Air_Place: (subject='http://dbpedia.org/resource/Category:1984_albums', date^='1984-10-09', id^='56')
+    relationships:
+      - Lo_Mejor_de_Tu_Vida (dor:Lo_Mejor_de_Tu_Vida) --doo:recordedIn--> Record_Plant (dor:Record_Plant)
+      - Lo_Mejor_de_Tu_Vida (dor:Lo_Mejor_de_Tu_Vida) --doo:previousWork--> To_All_the_Girls_I've_Loved_Before (<http://dbpedia.org/resource/To_All_the_Girls_I've_Loved_Before>)
+      - 1100_Bel_Air_Place (dor:1100_Bel_Air_Place) --dop:title--> To_All_the_Girls_I've_Loved_Before (<http://dbpedia.org/resource/To_All_the_Girls_I've_Loved_Before>)
+  '8':
+    attributes:
+      13_(Black_Sabbath_album): (subject='http://dbpedia.org/resource/Category:2013_albums', id^='65')
+      End_of_the_Beginning_(song): (release date^='2013-05-15')
+    relationships:
+      - End_of_the_Beginning_(song) (<http://dbpedia.org/resource/End_of_the_Beginning_(song)>) --doo:recordedIn--> Shangri-La_(recording_studio) (<http://dbpedia.org/resource/Shangri-La_(recording_studio)>)
+      - End_of_the_Beginning_(song) (<http://dbpedia.org/resource/End_of_the_Beginning_(song)>) --doo:previousWork--> God_Is_Dead%3F (<http://dbpedia.org/resource/God_Is_Dead%3F>)
+      - 13_(Black_Sabbath_album) (<http://dbpedia.org/resource/13_(Black_Sabbath_album)>) --dop:title--> God_Is_Dead%3F (<http://dbpedia.org/resource/God_Is_Dead%3F>)
+  '9':
+    attributes:
+      1983_The_Hot_Ones: (subject='http://dbpedia.org/resource/Category:1983_compilation_albums')
+      Rebel_Yell_(song): (release date^='1983-10-24')
+    relationships:
+      - Rebel_Yell_(song) (<http://dbpedia.org/resource/Rebel_Yell_(song)>) --doo:recordedIn--> Electric_Lady_Studios (dor:Electric_Lady_Studios)
+      - Rebel_Yell_(song) (<http://dbpedia.org/resource/Rebel_Yell_(song)>) --doo:previousWork--> White_Wedding_(song) (<http://dbpedia.org/resource/White_Wedding_(song)>)
+      - 1983_The_Hot_Ones (dor:1983_The_Hot_Ones) --dop:title--> White_Wedding_(song) (<http://dbpedia.org/resource/White_Wedding_(song)>)
+  '10':
+    attributes:
+      1986_Way_to_Go: (subject='http://dbpedia.org/resource/Category:1986_compilation_albums')
+    relationships:
+      - I_Can't_Wait_(Stevie_Nicks_song) (<http://dbpedia.org/resource/I_Can't_Wait_(Stevie_Nicks_song)>) --doo:recordedIn--> The_Village_(studio) (<http://dbpedia.org/resource/The_Village_(studio)>)
+      - I_Can't_Wait_(Stevie_Nicks_song) (<http://dbpedia.org/resource/I_Can't_Wait_(Stevie_Nicks_song)>) --doo:previousWork--> Talk_to_Me_(Stevie_Nicks_song) (<http://dbpedia.org/resource/Talk_to_Me_(Stevie_Nicks_song)>)
+      - 1986_Way_to_Go (dor:1986_Way_to_Go) --dop:title--> Talk_to_Me_(Stevie_Nicks_song) (<http://dbpedia.org/resource/Talk_to_Me_(Stevie_Nicks_song)>)
+attributes:
+  song: --release date^ (doo:releaseDate)--> date | --id^ (dop:id)--> int
+  album: --subject (podt:subject)--> Resource | --date^ (dop:date)--> langString | --quote^ (dop:quote)--> langString | --id^ (dop:id)--> int
+  venue: --tenants^ (dop:tenants)--> int | --cost^ (dop:cost)--> langString | --Closed^ (dop:closed)--> int | --capacity^ (dop:capacity)--> int
+subgraph_id: 334
+relationships:
+  - song --doo:recordedIn--> venue
+  - song --doo:previousWork--> single
+  - album --dop:title--> single

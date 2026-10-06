@@ -1,0 +1,121 @@
+types:
+  town: doo:Town
+  venue: doo:Venue
+  soccer club season: doo:SoccerClubSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  doop: http://dbpedia.org/ontology/PopulatedPlace/
+instances:
+  '1':
+    attributes:
+      Luton: (government type^='http://dbpedia.org/resource/Unitary_authorities_of_England')
+      White_Hart_Lane: (opening date^='1899-09-04', caption^='White Hart Lane in 2011')
+    relationships:
+      - 1896–97_Tottenham_Hotspur_F.C._season (<http://dbpedia.org/resource/1896–97_Tottenham_Hotspur_F.C._season>) --dop:location--> Luton (dor:Luton)
+      - 1896–97_Tottenham_Hotspur_F.C._season (<http://dbpedia.org/resource/1896–97_Tottenham_Hotspur_F.C._season>) --doo:homeStadium--> White_Hart_Lane (dor:White_Hart_Lane)
+  '2':
+    attributes:
+      White_Hart_Lane: (opening date^='1899-09-04', caption^='White Hart Lane in 2011')
+      Reading,_Berkshire: (Apr precipitation days^='9.3', government type^='http://dbpedia.org/resource/Unitary_authorities_of_England', Apr precipitation mm^='48')
+    relationships:
+      - 1896–97_Tottenham_Hotspur_F.C._season (<http://dbpedia.org/resource/1896–97_Tottenham_Hotspur_F.C._season>) --dop:location--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - 1896–97_Tottenham_Hotspur_F.C._season (<http://dbpedia.org/resource/1896–97_Tottenham_Hotspur_F.C._season>) --doo:homeStadium--> White_Hart_Lane (dor:White_Hart_Lane)
+  '3':
+    attributes:
+      Luton: (government type^='http://dbpedia.org/resource/Unitary_authorities_of_England')
+      1897–98_Newcastle_United_F.C._season: (lowest attendance^='4000')
+    relationships:
+      - 1897–98_Newcastle_United_F.C._season (<http://dbpedia.org/resource/1897–98_Newcastle_United_F.C._season>) --dop:location--> Luton (dor:Luton)
+      - 1897–98_Newcastle_United_F.C._season (<http://dbpedia.org/resource/1897–98_Newcastle_United_F.C._season>) --doo:homeStadium--> St_James'_Park (<http://dbpedia.org/resource/St_James'_Park>)
+  '4':
+    attributes:
+      White_Hart_Lane: (opening date^='1899-09-04', caption^='White Hart Lane in 2011')
+      Reading,_Berkshire: (Apr precipitation days^='9.3', government type^='http://dbpedia.org/resource/Unitary_authorities_of_England', Apr precipitation mm^='48')
+    relationships:
+      - 1900–01_Tottenham_Hotspur_F.C._season (<http://dbpedia.org/resource/1900–01_Tottenham_Hotspur_F.C._season>) --dop:location--> Reading,_Berkshire (<http://dbpedia.org/resource/Reading,_Berkshire>)
+      - 1900–01_Tottenham_Hotspur_F.C._season (<http://dbpedia.org/resource/1900–01_Tottenham_Hotspur_F.C._season>) --doo:homeStadium--> White_Hart_Lane (dor:White_Hart_Lane)
+  '5':
+    attributes:
+      Leioa: (area total (km2)^='8.5')
+      Hippodrome_of_Lamiako: (opening date^='1887-09-18', caption^='Campo de Lamiako in 1900')
+    relationships:
+      - 1901–02_Athletic_Bilbao_season (<http://dbpedia.org/resource/1901–02_Athletic_Bilbao_season>) --dop:location--> Leioa (dor:Leioa)
+      - 1901–02_Athletic_Bilbao_season (<http://dbpedia.org/resource/1901–02_Athletic_Bilbao_season>) --doo:homeStadium--> Hippodrome_of_Lamiako (dor:Hippodrome_of_Lamiako)
+  '6':
+    attributes:
+      Luton: (government type^='http://dbpedia.org/resource/Unitary_authorities_of_England')
+      Spotland_Stadium: (caption^='Spotland Stadium in 2005')
+    relationships:
+      - 1910–11_Rochdale_A.F.C._season (<http://dbpedia.org/resource/1910–11_Rochdale_A.F.C._season>) --dop:location--> Luton (dor:Luton)
+      - 1910–11_Rochdale_A.F.C._season (<http://dbpedia.org/resource/1910–11_Rochdale_A.F.C._season>) --doo:homeStadium--> Spotland_Stadium (dor:Spotland_Stadium)
+  '7':
+    attributes:
+      Istanbul: (Apr precipitation days^='10', government type^='http://dbpedia.org/resource/Mayor–council_government', Apr precipitation mm^='43.1')
+      Şükrü_Saracoğlu_Stadium: (caption^='UEFA')
+    relationships:
+      - 1912–13_Galatasaray_S.K._season (<http://dbpedia.org/resource/1912–13_Galatasaray_S.K._season>) --dop:location--> Istanbul (dor:Istanbul)
+      - 1912–13_Galatasaray_S.K._season (<http://dbpedia.org/resource/1912–13_Galatasaray_S.K._season>) --doo:homeStadium--> Şükrü_Saracoğlu_Stadium (<http://dbpedia.org/resource/Şükrü_Saracoğlu_Stadium>)
+  '8':
+    attributes:
+      Getxo: (area total (km2)^='11.89')
+      1915–16_Madrid_FC_season: (aet^='yes')
+    relationships:
+      - 1915–16_Madrid_FC_season (<http://dbpedia.org/resource/1915–16_Madrid_FC_season>) --dop:location--> Getxo (dor:Getxo)
+      - 1915–16_Madrid_FC_season (<http://dbpedia.org/resource/1915–16_Madrid_FC_season>) --doo:homeStadium--> Campo_de_O'Donnell (<http://dbpedia.org/resource/Campo_de_O'Donnell>)
+  '9':
+    attributes:
+      Huelva: (Apr precipitation days^='6', Apr precipitation mm^='48', area total (km2)^='149.0')
+      1915–16_Madrid_FC_season: (aet^='yes')
+    relationships:
+      - 1915–16_Madrid_FC_season (<http://dbpedia.org/resource/1915–16_Madrid_FC_season>) --dop:location--> Huelva (dor:Huelva)
+      - 1915–16_Madrid_FC_season (<http://dbpedia.org/resource/1915–16_Madrid_FC_season>) --doo:homeStadium--> Campo_de_O'Donnell (<http://dbpedia.org/resource/Campo_de_O'Donnell>)
+  '10':
+    attributes:
+      Bilbao: (Aug rain days^='12', Apr precipitation days^='13', government type^='http://dbpedia.org/resource/Ayuntamiento_(Spain)', Apr precipitation mm^='107', area total (km2)^='41.5')
+      1916–17_Madrid_FC_season: (aet^='yes')
+    relationships:
+      - 1916–17_Madrid_FC_season (<http://dbpedia.org/resource/1916–17_Madrid_FC_season>) --dop:location--> Bilbao (dor:Bilbao)
+      - 1916–17_Madrid_FC_season (<http://dbpedia.org/resource/1916–17_Madrid_FC_season>) --doo:homeStadium--> Campo_de_O'Donnell (<http://dbpedia.org/resource/Campo_de_O'Donnell>)
+qa_result:
+  status: completed
+  cost_usd: 0.263595
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.04300740000000001
+        total_tokens: 4240
+        prompt_tokens: 2341
+        completion_tokens: 1899
+      generate:
+        cost_usd: 0.07519260000000001
+        total_tokens: 7214
+        prompt_tokens: 4126
+        completion_tokens: 3088
+      verify_1:
+        cost_usd: 0.036512
+        total_tokens: 5458
+        prompt_tokens: 4843
+        completion_tokens: 615
+      complexity:
+        cost_usd: 0.10888300000000001
+        total_tokens: 9897
+        prompt_tokens: 5365
+        completion_tokens: 4532
+    total_tokens: 26809
+    prompt_tokens: 16675
+    total_cost_usd: 0.263595
+    completion_tokens: 10134
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  town: --bot^ (dop:bot)--> langString | --Aug rain days^ (dop:augRainDays)--> int | --Apr rain mm^ (dop:aprRainMm)--> int | --auto^ (dop:auto)--> langString | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --government type^ (doo:governmentType)--> Resource | --Apr precipitation mm^ (dop:aprPrecipitationMm)--> int | --area total (km2)^ (doop:areaTotal)--> squareKilometre
+  venue: --opening date^ (doo:openingDate)--> date | --caption^ (dop:caption)--> langString
+  soccer club season: --lowest attendance^ (dop:lowestAttendance)--> langString | --aet^ (dop:aet)--> langString
+subgraph_id: 213
+relationships:
+  - soccer club season --dop:location--> town
+  - soccer club season --doo:homeStadium--> venue

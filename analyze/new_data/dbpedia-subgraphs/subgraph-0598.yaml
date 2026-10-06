@@ -1,0 +1,96 @@
+types:
+  book: doo:Book
+  city: doo:City
+  magazine: doo:Magazine
+  publisher: doo:Publisher
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  dor2: http://dbpedia.org/resource/11/22/
+instances:
+  '1':
+    attributes:
+      '''Tis': (followed by^='http://dbpedia.org/resource/Teacher_Man', page length (characters) of wiki page^='14649', previous work^='http://dbpedia.org/resource/Angela''s_Ashes')
+      New_York_City: '(footer^=''Clockwise, from upper left: Chinatown, Manhattan (曼哈頓華埠), home to the highest concentration of Chinese people in the Western Hemisphere; Lower Manhattan''''s Little Italy; Upper Manhattan''''s Spanish Harle...'', area total (m2)^=''1223588082.966'')'
+    relationships:
+      - '''Tis (<http://dbpedia.org/resource/''Tis>) --doo:publisher--> Charles_Scribner''s_Sons (<http://dbpedia.org/resource/Charles_Scribner''s_Sons>)'
+      - Scribner's_Magazine (<http://dbpedia.org/resource/Scribner's_Magazine>) --doo:publisher--> Charles_Scribner's_Sons (<http://dbpedia.org/resource/Charles_Scribner's_Sons>)
+      - Scribner's_Magazine (<http://dbpedia.org/resource/Scribner's_Magazine>) --doo:city--> New_York_City (dor:New_York_City)
+  '2':
+    attributes:
+      London: (area total (m2)^='1572030000.0')
+      100_Things_Successful_People_Do: (page length (characters) of wiki page^='9932')
+    relationships:
+      - 100_Things_Successful_People_Do (dor:100_Things_Successful_People_Do) --doo:publisher--> John_Murray_(publishing_house) (<http://dbpedia.org/resource/John_Murray_(publishing_house)>)
+      - The_Cornhill_Magazine (dor:The_Cornhill_Magazine) --doo:publisher--> John_Murray_(publishing_house) (<http://dbpedia.org/resource/John_Murray_(publishing_house)>)
+      - The_Cornhill_Magazine (dor:The_Cornhill_Magazine) --doo:city--> London (dor:London)
+  '3':
+    attributes:
+      '63': (page length (characters) of wiki page^='36211')
+      New_York_City: '(footer^=''Clockwise, from upper left: Chinatown, Manhattan (曼哈頓華埠), home to the highest concentration of Chinese people in the Western Hemisphere; Lower Manhattan''''s Little Italy; Upper Manhattan''''s Spanish Harle...'', area total (m2)^=''1223588082.966'')'
+    relationships:
+      - 63 (dor2:63) --doo:publisher--> Charles_Scribner's_Sons (<http://dbpedia.org/resource/Charles_Scribner's_Sons>)
+      - Scribner's_Magazine (<http://dbpedia.org/resource/Scribner's_Magazine>) --doo:publisher--> Charles_Scribner's_Sons (<http://dbpedia.org/resource/Charles_Scribner's_Sons>)
+      - Scribner's_Magazine (<http://dbpedia.org/resource/Scribner's_Magazine>) --doo:city--> New_York_City (dor:New_York_City)
+  '4':
+    attributes:
+      13_Above_the_Night_(anthology): (page length (characters) of wiki page^='2340')
+    relationships:
+      - 13_Above_the_Night_(anthology) (<http://dbpedia.org/resource/13_Above_the_Night_(anthology)>) --doo:publisher--> Dell_Publishing (dor:Dell_Publishing)
+      - Dell_Horoscope (dor:Dell_Horoscope) --doo:publisher--> Dell_Publishing (dor:Dell_Publishing)
+      - Dell_Horoscope (dor:Dell_Horoscope) --doo:city--> Norwalk,_Connecticut (<http://dbpedia.org/resource/Norwalk,_Connecticut>)
+  '5':
+    attributes:
+      17_X_Infinity: (page length (characters) of wiki page^='2372')
+    relationships:
+      - 17_X_Infinity (dor:17_X_Infinity) --doo:publisher--> Dell_Publishing (dor:Dell_Publishing)
+      - Dell_Horoscope (dor:Dell_Horoscope) --doo:publisher--> Dell_Publishing (dor:Dell_Publishing)
+      - Dell_Horoscope (dor:Dell_Horoscope) --doo:city--> Norwalk,_Connecticut (<http://dbpedia.org/resource/Norwalk,_Connecticut>)
+  '6':
+    attributes:
+      206_Bones: (followed by^='http://dbpedia.org/resource/Spider_Bones', page length (characters) of wiki page^='3095', previous work^='http://dbpedia.org/resource/Devil_Bones')
+      New_York_City: '(footer^=''Clockwise, from upper left: Chinatown, Manhattan (曼哈頓華埠), home to the highest concentration of Chinese people in the Western Hemisphere; Lower Manhattan''''s Little Italy; Upper Manhattan''''s Spanish Harle...'', area total (m2)^=''1223588082.966'')'
+    relationships:
+      - 206_Bones (dor:206_Bones) --doo:publisher--> Charles_Scribner's_Sons (<http://dbpedia.org/resource/Charles_Scribner's_Sons>)
+      - Scribner's_Magazine (<http://dbpedia.org/resource/Scribner's_Magazine>) --doo:publisher--> Charles_Scribner's_Sons (<http://dbpedia.org/resource/Charles_Scribner's_Sons>)
+      - Scribner's_Magazine (<http://dbpedia.org/resource/Scribner's_Magazine>) --doo:city--> New_York_City (dor:New_York_City)
+  '7':
+    attributes:
+      6_Great_Short_Novels_of_Science_Fiction: (page length (characters) of wiki page^='1975')
+    relationships:
+      - 6_Great_Short_Novels_of_Science_Fiction (dor:6_Great_Short_Novels_of_Science_Fiction) --doo:publisher--> Dell_Publishing (dor:Dell_Publishing)
+      - Dell_Horoscope (dor:Dell_Horoscope) --doo:publisher--> Dell_Publishing (dor:Dell_Publishing)
+      - Dell_Horoscope (dor:Dell_Horoscope) --doo:city--> Norwalk,_Connecticut (<http://dbpedia.org/resource/Norwalk,_Connecticut>)
+  '8':
+    attributes:
+      London: (area total (m2)^='1572030000.0')
+      A_Bit_of_Singing_and_Dancing: (page length (characters) of wiki page^='2239')
+    relationships:
+      - A_Bit_of_Singing_and_Dancing (dor:A_Bit_of_Singing_and_Dancing) --doo:publisher--> Hamish_Hamilton (dor:Hamish_Hamilton)
+      - Five_Dials (dor:Five_Dials) --doo:publisher--> Hamish_Hamilton (dor:Hamish_Hamilton)
+      - Five_Dials (dor:Five_Dials) --doo:city--> London (dor:London)
+  '9':
+    attributes:
+      London: (area total (m2)^='1572030000.0')
+      A_Captive_in_the_Land_(novel): (followed by^='My Brother Tom', page length (characters) of wiki page^='3013', previous work^='http://dbpedia.org/resource/The_Last_Exile')
+    relationships:
+      - A_Captive_in_the_Land_(novel) (<http://dbpedia.org/resource/A_Captive_in_the_Land_(novel)>) --doo:publisher--> Hamish_Hamilton (dor:Hamish_Hamilton)
+      - Five_Dials (dor:Five_Dials) --doo:publisher--> Hamish_Hamilton (dor:Hamish_Hamilton)
+      - Five_Dials (dor:Five_Dials) --doo:city--> London (dor:London)
+  '10':
+    attributes:
+      A_Day_in_Ostrobothnia: (page length (characters) of wiki page^='1950')
+    relationships:
+      - A_Day_in_Ostrobothnia (dor:A_Day_in_Ostrobothnia) --doo:publisher--> Otava_(publisher) (<http://dbpedia.org/resource/Otava_(publisher)>)
+      - Anna_(Finnish_magazine) (<http://dbpedia.org/resource/Anna_(Finnish_magazine)>) --doo:publisher--> Otava_(publisher) (<http://dbpedia.org/resource/Otava_(publisher)>)
+      - Anna_(Finnish_magazine) (<http://dbpedia.org/resource/Anna_(Finnish_magazine)>) --doo:city--> Helsinki (dor:Helsinki)
+attributes:
+  book: --2a^ (dop:2a)--> langString | --followed by^ (dop:followedBy)--> Resource | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int | --border^ (dop:border)--> langString | --1y^ (dop:1y)--> int | --cname^ (dop:cname)--> langString | --source^ (dop:source)--> langString | --previous work^ (doo:previousWork)--> Resource
+  city: --footer^ (dop:footer)--> langString | --area total (m2)^ (doo:areaTotal)--> double
+subgraph_id: 598
+relationships:
+  - book --doo:publisher--> publisher
+  - magazine --doo:publisher--> publisher
+  - magazine --doo:city--> city

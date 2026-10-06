@@ -1,0 +1,111 @@
+types:
+  city: doo:City
+  road: doo:Road
+  athlete: doo:Athlete
+  city district: doo:CityDistrict
+  basketball player: doo:BasketballPlayer
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Gopalapuram,_Chennai: (population total^='35359')
+      State_Highway_52_(Kerala): (route start^='http://dbpedia.org/resource/Palakkad')
+    relationships:
+      - Gopalapuram,_Chennai (<http://dbpedia.org/resource/Gopalapuram,_Chennai>) --doo:subdivision--> Chennai (dor:Chennai)
+      - State_Highway_52_(Kerala) (<http://dbpedia.org/resource/State_Highway_52_(Kerala)>) --doo:routeEnd--> Gopalapuram,_Chennai (<http://dbpedia.org/resource/Gopalapuram,_Chennai>)
+      - Abhay_Singh (dor:Abhay_Singh) --doo:residence--> Chennai (dor:Chennai)
+      - Akilan_Pari (dor:Akilan_Pari) --dop:birthPlace--> Chennai (dor:Chennai)
+  '2':
+    attributes:
+      Sardar_Patel_Road,_Chennai: (route start^='http://dbpedia.org/resource/Chennai')
+    relationships:
+      - Guindy (dor:Guindy) --doo:subdivision--> Chennai (dor:Chennai)
+      - Sardar_Patel_Road,_Chennai (<http://dbpedia.org/resource/Sardar_Patel_Road,_Chennai>) --doo:routeEnd--> Guindy (dor:Guindy)
+      - Abhay_Singh (dor:Abhay_Singh) --doo:residence--> Chennai (dor:Chennai)
+      - Akilan_Pari (dor:Akilan_Pari) --dop:birthPlace--> Chennai (dor:Chennai)
+  '3':
+    attributes:
+      Maduravoyal: (population total^='86195', float^='left')
+    relationships:
+      - Maduravoyal (dor:Maduravoyal) --doo:subdivision--> Chennai (dor:Chennai)
+      - Chennai_Port–Maduravoyal_Expressway (<http://dbpedia.org/resource/Chennai_Port–Maduravoyal_Expressway>) --doo:routeEnd--> Maduravoyal (dor:Maduravoyal)
+      - Abhay_Singh (dor:Abhay_Singh) --doo:residence--> Chennai (dor:Chennai)
+      - Akilan_Pari (dor:Akilan_Pari) --dop:birthPlace--> Chennai (dor:Chennai)
+  '4':
+    attributes:
+      Saint_Denis_Street: (route start^='http://dbpedia.org/resource/Old_Montreal')
+    relationships:
+      - Ahuntsic (dor:Ahuntsic) --doo:subdivision--> Montreal (dor:Montreal)
+      - Saint_Denis_Street (dor:Saint_Denis_Street) --doo:routeEnd--> Ahuntsic (dor:Ahuntsic)
+      - Aissa_Bouaraguia (dor:Aissa_Bouaraguia) --doo:residence--> Montreal (dor:Montreal)
+      - Joseph_Chartouny (dor:Joseph_Chartouny) --dop:birthPlace--> Montreal (dor:Montreal)
+  '5':
+    attributes:
+      Saint_Laurent_Boulevard: (route start^='http://dbpedia.org/resource/De_la_Commune_Street')
+    relationships:
+      - Ahuntsic (dor:Ahuntsic) --doo:subdivision--> Montreal (dor:Montreal)
+      - Saint_Laurent_Boulevard (dor:Saint_Laurent_Boulevard) --doo:routeEnd--> Ahuntsic (dor:Ahuntsic)
+      - Aissa_Bouaraguia (dor:Aissa_Bouaraguia) --doo:residence--> Montreal (dor:Montreal)
+      - Joseph_Chartouny (dor:Joseph_Chartouny) --dop:birthPlace--> Montreal (dor:Montreal)
+  '6':
+    attributes:
+      Saint_Urbain_Street: (route start^='http://dbpedia.org/resource/Old_Montreal')
+    relationships:
+      - Ahuntsic (dor:Ahuntsic) --doo:subdivision--> Montreal (dor:Montreal)
+      - Saint_Urbain_Street (dor:Saint_Urbain_Street) --doo:routeEnd--> Ahuntsic (dor:Ahuntsic)
+      - Aissa_Bouaraguia (dor:Aissa_Bouaraguia) --doo:residence--> Montreal (dor:Montreal)
+      - Joseph_Chartouny (dor:Joseph_Chartouny) --dop:birthPlace--> Montreal (dor:Montreal)
+  '7':
+    attributes:
+      Belgrade: (Apr precipitation days^='12.4', source^='Republic Hydrometeorological Service of Serbia')
+      Batajnica: (population total^='32853')
+      State_Road_100_(Serbia): (route start^='http://dbpedia.org/resource/Hungary')
+    relationships:
+      - Batajnica (dor:Batajnica) --doo:subdivision--> Belgrade (dor:Belgrade)
+      - State_Road_100_(Serbia) (<http://dbpedia.org/resource/State_Road_100_(Serbia)>) --doo:routeEnd--> Batajnica (dor:Batajnica)
+      - Aleksandra_Krunić (<http://dbpedia.org/resource/Aleksandra_Krunić>) --doo:residence--> Belgrade (dor:Belgrade)
+      - Adam_Mirković (<http://dbpedia.org/resource/Adam_Mirković>) --dop:birthPlace--> Belgrade (dor:Belgrade)
+  '8':
+    attributes:
+      Belgrade: (Apr precipitation days^='12.4', source^='Republic Hydrometeorological Service of Serbia')
+      Bogoslovija,_Belgrade: (population total^='7555')
+      State_Road_47_(Serbia): (route start^='http://dbpedia.org/resource/Belgrade')
+    relationships:
+      - Bogoslovija,_Belgrade (<http://dbpedia.org/resource/Bogoslovija,_Belgrade>) --doo:subdivision--> Belgrade (dor:Belgrade)
+      - State_Road_47_(Serbia) (<http://dbpedia.org/resource/State_Road_47_(Serbia)>) --doo:routeEnd--> Bogoslovija,_Belgrade (<http://dbpedia.org/resource/Bogoslovija,_Belgrade>)
+      - Aleksandra_Krunić (<http://dbpedia.org/resource/Aleksandra_Krunić>) --doo:residence--> Belgrade (dor:Belgrade)
+      - Adam_Mirković (<http://dbpedia.org/resource/Adam_Mirković>) --dop:birthPlace--> Belgrade (dor:Belgrade)
+  '9':
+    attributes:
+      Belgrade: (Apr precipitation days^='12.4', source^='Republic Hydrometeorological Service of Serbia')
+      State_Road_47_(Serbia): (route start^='http://dbpedia.org/resource/Belgrade')
+    relationships:
+      - Krnjača (<http://dbpedia.org/resource/Krnjača>) --doo:subdivision--> Belgrade (dor:Belgrade)
+      - State_Road_47_(Serbia) (<http://dbpedia.org/resource/State_Road_47_(Serbia)>) --doo:routeEnd--> Krnjača (<http://dbpedia.org/resource/Krnjača>)
+      - Aleksandra_Krunić (<http://dbpedia.org/resource/Aleksandra_Krunić>) --doo:residence--> Belgrade (dor:Belgrade)
+      - Adam_Mirković (<http://dbpedia.org/resource/Adam_Mirković>) --dop:birthPlace--> Belgrade (dor:Belgrade)
+  '10':
+    attributes:
+      Avenue_D_(Manhattan): (route start^='http://dbpedia.org/resource/Houston_Street_(Manhattan)')
+      Al_Green_(basketball): (active years end year^='1993')
+      Alphabet_City,_Manhattan: (population total^='45317')
+    relationships:
+      - Alphabet_City,_Manhattan (<http://dbpedia.org/resource/Alphabet_City,_Manhattan>) --doo:subdivision--> New_York_City (dor:New_York_City)
+      - Avenue_D_(Manhattan) (<http://dbpedia.org/resource/Avenue_D_(Manhattan)>) --doo:routeEnd--> Alphabet_City,_Manhattan (<http://dbpedia.org/resource/Alphabet_City,_Manhattan>)
+      - Alister_Walker (dor:Alister_Walker) --doo:residence--> New_York_City (dor:New_York_City)
+      - Al_Green_(basketball) (<http://dbpedia.org/resource/Al_Green_(basketball)>) --dop:birthPlace--> New_York_City (dor:New_York_City)
+attributes:
+  city: --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --source^ (dop:source)--> Resource | --Apr rain mm^ (dop:aprRainMm)--> int | --augRainDays (dop:augRainDays)--> double | --area^ (dop:area)--> double
+  road: --route start^ (doo:routeStart)--> Resource | --building start date^ (doo:buildingStartDate)--> string
+  city district: --population total^ (doo:populationTotal)--> int | --Apr precipitation inch^ (dop:aprPrecipitationInch)--> double | --float^ (dop:float)--> langString
+  basketball player: --active years end year^ (doo:activeYearsEndYear)--> gYear
+subgraph_id: 964
+relationships:
+  - city district --doo:subdivision--> city
+  - road --doo:routeEnd--> city district
+  - athlete --doo:residence--> city
+  - basketball player --dop:birthPlace--> city

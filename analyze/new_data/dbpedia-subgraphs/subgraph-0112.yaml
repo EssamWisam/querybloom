@@ -1,0 +1,56 @@
+types:
+  sound: doo:Sound
+  settlement: doo:Settlement
+  music genre: doo:MusicGenre
+  musical artist: doo:MusicalArtist
+  person function: doo:PersonFunction
+  fictional character: doo:FictionalCharacter
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Anita_Antoinette: (birth date^='1989-08-04', Link from a Wikipage to an external page^='http://www.anitaantoinette.com/')
+      Kingston,_Jamaica: (UTC offset^='−5')
+    relationships:
+      - Anita_Antoinette (dor:Anita_Antoinette) --doo:instrument--> Singing (dor:Singing)
+      - Anita_Antoinette (dor:Anita_Antoinette) --dop:instrument--> Acoustic_guitar (dor:Acoustic_guitar)
+      - Acoustic_guitar (dor:Acoustic_guitar) --doo:soundRecording--> Acoustic_guitar__Sound__1 (dor:Acoustic_guitar__Sound__1)
+      - Don_Cheto (dor:Don_Cheto) --doo:occupation--> Singing (dor:Singing)
+      - Anita_Antoinette (dor:Anita_Antoinette) --doo:birthPlace--> Kingston,_Jamaica (<http://dbpedia.org/resource/Kingston,_Jamaica>)
+  '2':
+    attributes:
+      Amsterdam: (UTC offset^='+1')
+      Beeb_Birtles: (birth date^='1948-11-28', Link from a Wikipage to an external page^='http://colsearch.nfsa.gov.au/nfsa/search/summary/summary.w3p;adv=no;group=;groupequals=;page=0;parentid=;query=Person%3A%22%2FPerson%2Fkey%2F1133-1%22;querytype=;resCount=10')
+    relationships:
+      - Beeb_Birtles (dor:Beeb_Birtles) --doo:instrument--> Singing (dor:Singing)
+      - Beeb_Birtles (dor:Beeb_Birtles) --dop:instrument--> Acoustic_guitar (dor:Acoustic_guitar)
+      - Acoustic_guitar (dor:Acoustic_guitar) --doo:soundRecording--> Acoustic_guitar__Sound__1 (dor:Acoustic_guitar__Sound__1)
+      - Don_Cheto (dor:Don_Cheto) --doo:occupation--> Singing (dor:Singing)
+      - Beeb_Birtles (dor:Beeb_Birtles) --doo:birthPlace--> Amsterdam (dor:Amsterdam)
+  '3':
+    attributes:
+      Bo_Bice: (birth date^='1975-11-01', Link from a Wikipage to an external page^='http://www.bobice.com')
+      Huntsville,_Alabama: (UTC offset^='−5')
+    relationships:
+      - Bo_Bice (dor:Bo_Bice) --doo:instrument--> Singing (dor:Singing)
+      - Bo_Bice (dor:Bo_Bice) --dop:instrument--> Acoustic_guitar (dor:Acoustic_guitar)
+      - Acoustic_guitar (dor:Acoustic_guitar) --doo:soundRecording--> Acoustic_guitar__Sound__1 (dor:Acoustic_guitar__Sound__1)
+      - Don_Cheto (dor:Don_Cheto) --doo:occupation--> Singing (dor:Singing)
+      - Bo_Bice (dor:Bo_Bice) --doo:birthPlace--> Huntsville,_Alabama (<http://dbpedia.org/resource/Huntsville,_Alabama>)
+attributes:
+  settlement: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --UTC offset^ (doo:utcOffset)--> string | --area^ (dop:area)--> double | --original name^ (doo:originalName)--> langString
+  music genre: --1p^ (dop:1p)--> int
+  musical artist: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --birth date^ (doo:birthDate)--> date | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --d^ (dop:d)--> langString | --birth year^ (doo:birthYear)--> gYear
+  person function: --mother^ (dop:mother)--> langString
+  fictional character: --last appearance^ (doo:lastAppearance)--> Resource
+subgraph_id: 112
+relationships:
+  - musical artist --doo:instrument--> person function
+  - musical artist --dop:instrument--> music genre
+  - music genre --doo:soundRecording--> sound
+  - fictional character --doo:occupation--> person function
+  - musical artist --doo:birthPlace--> settlement

@@ -1,0 +1,117 @@
+types:
+  country: doo:Country
+  politician: doo:Politician
+  military person: doo:MilitaryPerson
+  person function: doo:PersonFunction
+  military conflict: doo:MilitaryConflict
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Ibrahim_Nassar: '(has abstract^=''Ibrahim Nassar (Arabic: إبراهيم نصار‎; 1895–1985) was an Arab Palestinian rebel commander and politician.'', birth place^=''http://dbpedia.org/resource/Anabta'', party^=''http://dbpedia.org/resource/Arab_Nationalist_Movement'')'
+      Ottoman_Empire: (align^='left', leader^='http://dbpedia.org/resource/Mehmed_VI')
+    relationships:
+      - 1936–1939_Arab_revolt_in_Palestine (<http://dbpedia.org/resource/1936–1939_Arab_revolt_in_Palestine>) --dop:commander--> Ibrahim_Nassar (dor:Ibrahim_Nassar)
+      - 1936–1939_Arab_revolt_in_Palestine (<http://dbpedia.org/resource/1936–1939_Arab_revolt_in_Palestine>) --doo:commander--> Commander-in-chief (dor:Commander-in-chief)
+      - 1936–1939_Arab_revolt_in_Palestine (<http://dbpedia.org/resource/1936–1939_Arab_revolt_in_Palestine>) --dop:commander--> Abd_al-Qadir_al-Husayni (dor:Abd_al-Qadir_al-Husayni)
+      - Abd_al-Qadir_al-Husayni (dor:Abd_al-Qadir_al-Husayni) --dop:birthPlace--> Ottoman_Empire (dor:Ottoman_Empire)
+  '2':
+    attributes:
+      Isaac_Maliyamungu: (has abstract^='Isaac Maliyamungu, (died February 1984) also known as Isaac Lugonzo, was a military officer of the Uganda Army (UA) who served as one of President Idi Amin''s most important officials and supporters du...', birth place^='http://dbpedia.org/resource/Zaire', nickname^='"bad omen"')
+    relationships:
+      - 1971_Ugandan_coup_d'état (<http://dbpedia.org/resource/1971_Ugandan_coup_d'état>) --dop:commander--> Isaac_Maliyamungu (dor:Isaac_Maliyamungu)
+      - 1971_Ugandan_coup_d'état (<http://dbpedia.org/resource/1971_Ugandan_coup_d'état>) --doo:commander--> Superintendent_(police) (<http://dbpedia.org/resource/Superintendent_(police)>)
+      - 1971_Ugandan_coup_d'état (<http://dbpedia.org/resource/1971_Ugandan_coup_d'état>) --dop:commander--> Idi_Amin (dor:Idi_Amin)
+      - Idi_Amin (dor:Idi_Amin) --dop:birthPlace--> Uganda_Protectorate (dor:Uganda_Protectorate)
+  '3':
+    attributes:
+      Milton_Obote: (has abstract^='Apollo Milton Obote (* 28. Dezember 1924 in , Lango-Distrikt, Uganda; † 10. Oktober 2005 in Johannesburg, Südafrika) war ein ugandischer Politiker. Er war zunächst Ministerpräsident, dann Präsident Ug...', birth place^='http://dbpedia.org/resource/Apac', party^='http://dbpedia.org/resource/Uganda_People''s_Congress')
+    relationships:
+      - 1971_Ugandan_coup_d'état (<http://dbpedia.org/resource/1971_Ugandan_coup_d'état>) --dop:commander--> Milton_Obote (dor:Milton_Obote)
+      - 1971_Ugandan_coup_d'état (<http://dbpedia.org/resource/1971_Ugandan_coup_d'état>) --doo:commander--> Superintendent_(police) (<http://dbpedia.org/resource/Superintendent_(police)>)
+      - 1971_Ugandan_coup_d'état (<http://dbpedia.org/resource/1971_Ugandan_coup_d'état>) --dop:commander--> Idi_Amin (dor:Idi_Amin)
+      - Idi_Amin (dor:Idi_Amin) --dop:birthPlace--> Uganda_Protectorate (dor:Uganda_Protectorate)
+  '4':
+    attributes:
+      Abu_Bakr: (issue^='')
+      Khalid_ibn_al-Walid: (align^='upright')
+      Abd_al-Malik_ibn_Salih: '(has abstract^=''Abd al-Malik ibn Said ibn Alì (in greco antico: Ἀβιμελέχ, Abimelech, in fonti greche; 750 – al-Raqqa, 812) è stato un generale arabo, membro della dinastia degli Abbasidi, che fu governatore in Siria ...'')'
+    relationships:
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --dop:commander--> Abd_al-Malik_ibn_Salih (dor:Abd_al-Malik_ibn_Salih)
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --doo:commander--> Abu_Bakr (dor:Abu_Bakr)
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --dop:commander--> Khalid_ibn_al-Walid (dor:Khalid_ibn_al-Walid)
+      - Khalid_ibn_al-Walid (dor:Khalid_ibn_al-Walid) --dop:birthPlace--> Pre-Islamic_Arabia (dor:Pre-Islamic_Arabia)
+  '5':
+    attributes:
+      Umar: (issue^='', last^='Bonner')
+      Khalid_ibn_al-Walid: (align^='upright')
+      Abd_al-Malik_ibn_Salih: '(has abstract^=''Abd al-Malik ibn Said ibn Alì (in greco antico: Ἀβιμελέχ, Abimelech, in fonti greche; 750 – al-Raqqa, 812) è stato un generale arabo, membro della dinastia degli Abbasidi, che fu governatore in Siria ...'')'
+    relationships:
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --dop:commander--> Abd_al-Malik_ibn_Salih (dor:Abd_al-Malik_ibn_Salih)
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --doo:commander--> Umar (dor:Umar)
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --dop:commander--> Khalid_ibn_al-Walid (dor:Khalid_ibn_al-Walid)
+      - Khalid_ibn_al-Walid (dor:Khalid_ibn_al-Walid) --dop:birthPlace--> Pre-Islamic_Arabia (dor:Pre-Islamic_Arabia)
+  '6':
+    attributes:
+      Uthman: (issue^='')
+      Khalid_ibn_al-Walid: (align^='upright')
+      Abd_al-Malik_ibn_Salih: '(has abstract^=''Abd al-Malik ibn Said ibn Alì (in greco antico: Ἀβιμελέχ, Abimelech, in fonti greche; 750 – al-Raqqa, 812) è stato un generale arabo, membro della dinastia degli Abbasidi, che fu governatore in Siria ...'')'
+    relationships:
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --dop:commander--> Abd_al-Malik_ibn_Salih (dor:Abd_al-Malik_ibn_Salih)
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --doo:commander--> Uthman (dor:Uthman)
+      - Arab–Byzantine_wars (<http://dbpedia.org/resource/Arab–Byzantine_wars>) --dop:commander--> Khalid_ibn_al-Walid (dor:Khalid_ibn_al-Walid)
+      - Khalid_ibn_al-Walid (dor:Khalid_ibn_al-Walid) --dop:birthPlace--> Pre-Islamic_Arabia (dor:Pre-Islamic_Arabia)
+  '7':
+    attributes:
+      Leca_of_Cătun: (has abstract^='Leca or Lecca of Cătun, also known as Leca of Leurdeni, Leca Rudeanu, Comisul Leca, or Postelnico Leka (? – February or March 1616), was a Wallachian political figure, prominent under Princes Michael ...', birth place^='http://dbpedia.org/resource/Argeș_County')
+      Kingdom_of_Naples: (leader^='http://dbpedia.org/resource/Charles_I_of_Naples')
+      Michael_the_Brave: (issue^='Domnița Florica')
+    relationships:
+      - Battle_of_Mirăslău (<http://dbpedia.org/resource/Battle_of_Mirăslău>) --dop:commander--> Leca_of_Cătun (<http://dbpedia.org/resource/Leca_of_Cătun>)
+      - Battle_of_Mirăslău (<http://dbpedia.org/resource/Battle_of_Mirăslău>) --doo:commander--> Michael_the_Brave (dor:Michael_the_Brave)
+      - Battle_of_Mirăslău (<http://dbpedia.org/resource/Battle_of_Mirăslău>) --dop:commander--> Giorgio_Basta (dor:Giorgio_Basta)
+      - Giorgio_Basta (dor:Giorgio_Basta) --dop:birthPlace--> Kingdom_of_Naples (dor:Kingdom_of_Naples)
+  '8':
+    attributes:
+      Vespasian: (after^='Decimus Iunius Novius Priscus Rufus')
+      Aulus_Plautius: (has abstract^='Aulo Plaucio ​ (c. 5 a. C.-57 d. C.) fue un político y militar romano del siglo I que desarrolló su cursus honorum entre los gobiernos de Tiberio y Claudio. Dirigió la conquista romana de Britania en ...')
+    relationships:
+      - Battle_of_the_Medway (dor:Battle_of_the_Medway) --dop:commander--> Aulus_Plautius (dor:Aulus_Plautius)
+      - Battle_of_the_Medway (dor:Battle_of_the_Medway) --doo:commander--> Caratacus (dor:Caratacus)
+      - Battle_of_the_Medway (dor:Battle_of_the_Medway) --dop:commander--> Vespasian (dor:Vespasian)
+      - Vespasian (dor:Vespasian) --dop:birthPlace--> Roman_Italy (dor:Roman_Italy)
+  '9':
+    attributes:
+      England: (align^='left')
+      Stringer_Lawrence: (after^='http://dbpedia.org/resource/John_Adlercron', align^='right')
+      Joseph_François_Dupleix: (has abstract^='Joseph François Dupleix (* 1. Januar 1697 in Landrecies; † 10. November 1763) war Generalgouverneur der französischen Niederlassung in Indien und der große Rivale von Robert Clive, 1. Baron Clive.', birth place^='http://dbpedia.org/resource/Kingdom_of_France')
+      Muhammad_Ali_Khan_Wallajah: (issue^='')
+    relationships:
+      - First_Carnatic_War (dor:First_Carnatic_War) --dop:commander--> Joseph_François_Dupleix (<http://dbpedia.org/resource/Joseph_François_Dupleix>)
+      - First_Carnatic_War (dor:First_Carnatic_War) --doo:commander--> Muhammad_Ali_Khan_Wallajah (dor:Muhammad_Ali_Khan_Wallajah)
+      - First_Carnatic_War (dor:First_Carnatic_War) --dop:commander--> Stringer_Lawrence (dor:Stringer_Lawrence)
+      - Stringer_Lawrence (dor:Stringer_Lawrence) --dop:birthPlace--> England (dor:England)
+  '10':
+    attributes:
+      First_French_Empire: (leader^='--06-23')
+      Louis_Adolphe_Bonard: (has abstract^='Louis Adolphe Bonard (27 March 1805 – 31 March 1867) was a French admiral who served in the Mediterranean and then for many years in the Pacific.He was governor of French Guiana from 1853 to 1855, and...', birth place^='http://dbpedia.org/resource/Cherbourg')
+    relationships:
+      - Franco-Tahitian_War (dor:Franco-Tahitian_War) --dop:commander--> Louis_Adolphe_Bonard (dor:Louis_Adolphe_Bonard)
+      - Franco-Tahitian_War (dor:Franco-Tahitian_War) --doo:commander--> Teriitaria_II (dor:Teriitaria_II)
+      - Franco-Tahitian_War (dor:Franco-Tahitian_War) --dop:commander--> Armand_Joseph_Bruat (dor:Armand_Joseph_Bruat)
+      - Armand_Joseph_Bruat (dor:Armand_Joseph_Bruat) --dop:birthPlace--> First_French_Empire (dor:First_French_Empire)
+attributes:
+  country: --Aug high C^ (dop:augHighC)--> double | --align^ (dop:align)--> langString | --leader^ (dop:leader)--> Resource
+  politician: --has abstract^ (doo:abstract)--> langString | --birth place^ (doo:birthPlace)--> Resource | --honours^ (doo:honours)--> Resource | --nickname^ (dop:nickname)--> langString | --d^ (dop:d)--> langString | --party^ (doo:party)--> Resource
+  military person: --after^ (dop:after)--> langString | --align^ (dop:align)--> langString
+  person function: --issue^ (dop:issue)--> langString | --last^ (dop:last)--> langString
+subgraph_id: 567
+relationships:
+  - military conflict --dop:commander--> politician
+  - military conflict --doo:commander--> person function
+  - military conflict --dop:commander--> military person
+  - military person --dop:birthPlace--> country

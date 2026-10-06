@@ -1,0 +1,104 @@
+types:
+  city: doo:City
+  country: doo:Country
+  darts player: doo:DartsPlayer
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      England: (city^='Birmingham')
+      Admiralty_Central_Metallurgical_Laboratory: (headquarter^='http://dbpedia.org/resource/Emsworth')
+    relationships:
+      - Amit_Gilitwala (dor:Amit_Gilitwala) --doo:hometown--> England (dor:England)
+      - Admiralty_Central_Metallurgical_Laboratory (dor:Admiralty_Central_Metallurgical_Laboratory) --doo:headquarter--> England (dor:England)
+      - Amit_Gilitwala (dor:Amit_Gilitwala) --doo:hometown--> City_of_Preston,_Lancashire (<http://dbpedia.org/resource/City_of_Preston,_Lancashire>)
+  '2':
+    attributes:
+      England: (city^='Birmingham')
+      Admiralty_Civilian_Shore_Wireless_Service: (headquarter^='http://dbpedia.org/resource/England')
+    relationships:
+      - Amit_Gilitwala (dor:Amit_Gilitwala) --doo:hometown--> England (dor:England)
+      - Admiralty_Civilian_Shore_Wireless_Service (dor:Admiralty_Civilian_Shore_Wireless_Service) --doo:headquarter--> England (dor:England)
+      - Amit_Gilitwala (dor:Amit_Gilitwala) --doo:hometown--> City_of_Preston,_Lancashire (<http://dbpedia.org/resource/City_of_Preston,_Lancashire>)
+  '3':
+    attributes:
+      England: (city^='Birmingham')
+      Admiralty_Engineering_Laboratory: (headquarter^='http://dbpedia.org/resource/England')
+    relationships:
+      - Amit_Gilitwala (dor:Amit_Gilitwala) --doo:hometown--> England (dor:England)
+      - Admiralty_Engineering_Laboratory (dor:Admiralty_Engineering_Laboratory) --doo:headquarter--> England (dor:England)
+      - Amit_Gilitwala (dor:Amit_Gilitwala) --doo:hometown--> City_of_Preston,_Lancashire (<http://dbpedia.org/resource/City_of_Preston,_Lancashire>)
+  '4':
+    attributes:
+      Bremen: (Apr record low C^='-7.6', Apr low C^='3.4')
+      13th_Street_(German_TV_channel): (headquarter^='http://dbpedia.org/resource/Germany')
+    relationships:
+      - Andree_Welge (dor:Andree_Welge) --doo:hometown--> Germany (dor:Germany)
+      - 13th_Street_(German_TV_channel) (<http://dbpedia.org/resource/13th_Street_(German_TV_channel)>) --doo:headquarter--> Germany (dor:Germany)
+      - Andree_Welge (dor:Andree_Welge) --doo:hometown--> Bremen (dor:Bremen)
+  '5':
+    attributes:
+      9Live: (headquarter^='http://dbpedia.org/resource/Germany')
+      Bremen: (Apr record low C^='-7.6', Apr low C^='3.4')
+    relationships:
+      - Andree_Welge (dor:Andree_Welge) --doo:hometown--> Germany (dor:Germany)
+      - 9Live (dor:9Live) --doo:headquarter--> Germany (dor:Germany)
+      - Andree_Welge (dor:Andree_Welge) --doo:hometown--> Bremen (dor:Bremen)
+  '6':
+    attributes:
+      Bremen: (Apr record low C^='-7.6', Apr low C^='3.4')
+      A&E_(German_TV_channel): (headquarter^='http://dbpedia.org/resource/Germany')
+    relationships:
+      - Andree_Welge (dor:Andree_Welge) --doo:hometown--> Germany (dor:Germany)
+      - A&E_(German_TV_channel) (<http://dbpedia.org/resource/A&E_(German_TV_channel)>) --doo:headquarter--> Germany (dor:Germany)
+      - Andree_Welge (dor:Andree_Welge) --doo:hometown--> Bremen (dor:Bremen)
+  '7':
+    attributes:
+      Barbados: (motto^='"Pride and Industry"')
+      Bridgetown: (Apr record low C^='19', Apr low C^='24.2')
+      Caribbean_Broadcasting_Union: (headquarter^='http://dbpedia.org/resource/Barbados')
+    relationships:
+      - Anthony_Forde_(darts_player) (<http://dbpedia.org/resource/Anthony_Forde_(darts_player)>) --doo:hometown--> Barbados (dor:Barbados)
+      - Caribbean_Broadcasting_Union (dor:Caribbean_Broadcasting_Union) --doo:headquarter--> Barbados (dor:Barbados)
+      - Anthony_Forde_(darts_player) (<http://dbpedia.org/resource/Anthony_Forde_(darts_player)>) --doo:hometown--> Bridgetown (dor:Bridgetown)
+  '8':
+    attributes:
+      Barbados: (motto^='"Pride and Industry"')
+      Bridgetown: (Apr record low C^='19', Apr low C^='24.2')
+      Caribbean_Examinations_Council: (headquarter^='http://dbpedia.org/resource/Barbados')
+    relationships:
+      - Anthony_Forde_(darts_player) (<http://dbpedia.org/resource/Anthony_Forde_(darts_player)>) --doo:hometown--> Barbados (dor:Barbados)
+      - Caribbean_Examinations_Council (dor:Caribbean_Examinations_Council) --doo:headquarter--> Barbados (dor:Barbados)
+      - Anthony_Forde_(darts_player) (<http://dbpedia.org/resource/Anthony_Forde_(darts_player)>) --doo:hometown--> Bridgetown (dor:Bridgetown)
+  '9':
+    attributes:
+      Barbados: (motto^='"Pride and Industry"')
+      Bridgetown: (Apr record low C^='19', Apr low C^='24.2')
+      Trans_Island_Air_2000: (headquarter^='http://dbpedia.org/resource/Barbados')
+    relationships:
+      - Anthony_Forde_(darts_player) (<http://dbpedia.org/resource/Anthony_Forde_(darts_player)>) --doo:hometown--> Barbados (dor:Barbados)
+      - Trans_Island_Air_2000 (dor:Trans_Island_Air_2000) --doo:headquarter--> Barbados (dor:Barbados)
+      - Anthony_Forde_(darts_player) (<http://dbpedia.org/resource/Anthony_Forde_(darts_player)>) --doo:hometown--> Bridgetown (dor:Bridgetown)
+  '10':
+    attributes:
+      Espoo: (quote^='There was a great sawmill in Bastvik back in 1883, where great ships from faraway seas came to lade lumber. There were many great bridges so that vessels could be laden simultaneously. After bringing ...')
+      Finland: (city^='Espoo')
+      Air_Åland: (headquarter^='http://dbpedia.org/resource/Åland')
+    relationships:
+      - Arto_Lintunen (dor:Arto_Lintunen) --doo:hometown--> Finland (dor:Finland)
+      - Air_Åland (<http://dbpedia.org/resource/Air_Åland>) --doo:headquarter--> Finland (dor:Finland)
+      - Arto_Lintunen (dor:Arto_Lintunen) --doo:hometown--> Espoo (dor:Espoo)
+attributes:
+  city: --Apr record low C^ (dop:aprRecordLowC)--> int | --quote^ (dop:quote)--> langString | --named for^ (dop:namedFor)--> Resource | --direction^ (dop:direction)--> langString | --c^ (dop:c)--> langString | --Apr low C^ (dop:aprLowC)--> double
+  country: --city^ (dop:city)--> langString | --motto^ (doo:motto)--> string | --religion^ (doo:religion)--> Resource
+  organisation: --headquarter^ (doo:headquarter)--> Resource
+subgraph_id: 695
+relationships:
+  - darts player --doo:hometown--> country
+  - organisation --doo:headquarter--> country
+  - darts player --doo:hometown--> city

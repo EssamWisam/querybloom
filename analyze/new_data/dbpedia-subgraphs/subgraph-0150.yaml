@@ -1,0 +1,72 @@
+types:
+  ship: doo:Ship
+  company: doo:Company
+  government agency: doo:GovernmentAgency
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Admiralty_(United_Kingdom): (leader^='http://dbpedia.org/resource/First_Lord_of_the_Admiralty')
+    relationships:
+      - HMS_Argus_(1904) (<http://dbpedia.org/resource/HMS_Argus_(1904)>) --doo:owner--> Admiralty_(United_Kingdom) (<http://dbpedia.org/resource/Admiralty_(United_Kingdom)>)
+      - Admiralty_(United_Kingdom) (<http://dbpedia.org/resource/Admiralty_(United_Kingdom)>) --doo:jurisdiction--> Government_of_the_United_Kingdom (dor:Government_of_the_United_Kingdom)
+  '2':
+    attributes:
+      Admiralty_(United_Kingdom): (leader^='http://dbpedia.org/resource/First_Lord_of_the_Admiralty')
+    relationships:
+      - HMS_Manica (dor:HMS_Manica) --doo:owner--> Admiralty_(United_Kingdom) (<http://dbpedia.org/resource/Admiralty_(United_Kingdom)>)
+      - Admiralty_(United_Kingdom) (<http://dbpedia.org/resource/Admiralty_(United_Kingdom)>) --doo:jurisdiction--> Government_of_the_United_Kingdom (dor:Government_of_the_United_Kingdom)
+  '3':
+    attributes:
+      Admiralty_(United_Kingdom): (leader^='http://dbpedia.org/resource/First_Lord_of_the_Admiralty')
+    relationships:
+      - HMS_Montclare_(F85) (<http://dbpedia.org/resource/HMS_Montclare_(F85)>) --doo:owner--> Admiralty_(United_Kingdom) (<http://dbpedia.org/resource/Admiralty_(United_Kingdom)>)
+      - Admiralty_(United_Kingdom) (<http://dbpedia.org/resource/Admiralty_(United_Kingdom)>) --doo:jurisdiction--> Government_of_the_United_Kingdom (dor:Government_of_the_United_Kingdom)
+  '4':
+    attributes:
+      Japan_Meteorological_Agency: (budget ($)^='5.89E10')
+    relationships:
+      - MY_Age_of_Union (dor:MY_Age_of_Union) --doo:owner--> Japan_Meteorological_Agency (dor:Japan_Meteorological_Agency)
+      - Japan_Meteorological_Agency (dor:Japan_Meteorological_Agency) --doo:jurisdiction--> Government_of_Japan (dor:Government_of_Japan)
+  '5':
+    attributes:
+      Government_of_India: (reason^='Persistent disruptive editing')
+      Ministry_of_Earth_Sciences: (leader^='http://dbpedia.org/resource/Jitendra_Singh_(BJP_politician)')
+    relationships:
+      - FORV_Sagar_Sampada (dor:FORV_Sagar_Sampada) --doo:owner--> Ministry_of_Earth_Sciences (dor:Ministry_of_Earth_Sciences)
+      - Ministry_of_Earth_Sciences (dor:Ministry_of_Earth_Sciences) --doo:jurisdiction--> Government_of_India (dor:Government_of_India)
+  '6':
+    attributes:
+      Ministry_of_Finance_(Japan): (leader^='http://dbpedia.org/resource/Minister_of_Finance_(Japan)')
+    relationships:
+      - Sōya_(PL107) (<http://dbpedia.org/resource/Sōya_(PL107)>) --doo:owner--> Ministry_of_Finance_(Japan) (<http://dbpedia.org/resource/Ministry_of_Finance_(Japan)>)
+      - Ministry_of_Finance_(Japan) (<http://dbpedia.org/resource/Ministry_of_Finance_(Japan)>) --doo:jurisdiction--> Government_of_Japan (dor:Government_of_Japan)
+  '7':
+    attributes: {}
+    relationships:
+      - Cabo_Quilates (dor:Cabo_Quilates) --doo:owner--> Ministry_of_the_Maritime_Fleet (dor:Ministry_of_the_Maritime_Fleet)
+      - Ministry_of_the_Maritime_Fleet (dor:Ministry_of_the_Maritime_Fleet) --doo:jurisdiction--> Government_of_the_Soviet_Union (dor:Government_of_the_Soviet_Union)
+  '8':
+    attributes:
+      Ministry_of_Transportation_of_Ontario: (leader^='http://dbpedia.org/resource/Caroline_Mulroney')
+    relationships:
+      - MV_Frontenac_II (dor:MV_Frontenac_II) --doo:owner--> Ministry_of_Transportation_of_Ontario (dor:Ministry_of_Transportation_of_Ontario)
+      - Ministry_of_Transportation_of_Ontario (dor:Ministry_of_Transportation_of_Ontario) --doo:jurisdiction--> Government_of_Ontario (dor:Government_of_Ontario)
+  '9':
+    attributes:
+      Transport_Canada: (leader^='http://dbpedia.org/resource/Omar_Alghabra')
+    relationships:
+      - MS_Princess_of_Tasmania (dor:MS_Princess_of_Tasmania) --doo:owner--> Transport_Canada (dor:Transport_Canada)
+      - Transport_Canada (dor:Transport_Canada) --doo:jurisdiction--> Government_of_Canada (dor:Government_of_Canada)
+attributes:
+  ship: --partof^ (dop:partof)--> gMonthDay | --built^ (dop:built)--> int
+  company: --reason^ (dop:reason)--> langString | --bot^ (dop:bot)--> langString | --former name^ (doo:formerName)--> langString | --owner^ (dop:owner)--> Resource | --logo^ (dop:logo)--> langString
+  government agency: --budget ($)^ (doo:budget)--> euro | --leader^ (doo:leader)--> Resource
+subgraph_id: 150
+relationships:
+  - ship --doo:owner--> government agency
+  - government agency --doo:jurisdiction--> company

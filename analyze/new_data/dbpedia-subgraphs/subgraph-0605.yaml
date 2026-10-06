@@ -1,0 +1,51 @@
+types:
+  movie: doo:Film
+  athlete: doo:Athlete
+  country: doo:Country
+  Location: doo:Location
+  sports team: doo:SportsTeam
+  organisation: doo:Organisation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+instances:
+  '1':
+    attributes:
+      Toronto: (subject='http://dbpedia.org/resource/Category:1834_establishments_in_Canada')
+    relationships:
+      - Toronto_Titans (dor:Toronto_Titans) --dop:city--> Toronto (dor:Toronto)
+      - Bob_Woods_(curler) (<http://dbpedia.org/resource/Bob_Woods_(curler)>) --doo:club--> Toronto (dor:Toronto)
+      - Bob_Woods_(curler) (<http://dbpedia.org/resource/Bob_Woods_(curler)>) --doo:birthPlace--> Canada (dor:Canada)
+      - 2149:_The_Aftermath (<http://dbpedia.org/resource/2149:_The_Aftermath>) --doo:country--> Canada (dor:Canada)
+      - Toronto_Titans (dor:Toronto_Titans) --dop:association--> International_Swimming_League (dor:International_Swimming_League)
+  '2':
+    attributes:
+      Toronto: (subject='http://dbpedia.org/resource/Category:1834_establishments_in_Canada')
+    relationships:
+      - Toronto_Titans (dor:Toronto_Titans) --dop:city--> Toronto (dor:Toronto)
+      - Bob_Woods_(curler) (<http://dbpedia.org/resource/Bob_Woods_(curler)>) --doo:club--> Toronto (dor:Toronto)
+      - Bob_Woods_(curler) (<http://dbpedia.org/resource/Bob_Woods_(curler)>) --doo:birthPlace--> Canada (dor:Canada)
+      - 24_heures_ou_plus (dor:24_heures_ou_plus) --doo:country--> Canada (dor:Canada)
+      - Toronto_Titans (dor:Toronto_Titans) --dop:association--> International_Swimming_League (dor:International_Swimming_League)
+  '3':
+    attributes:
+      Toronto: (subject='http://dbpedia.org/resource/Category:1834_establishments_in_Canada')
+    relationships:
+      - Toronto_Titans (dor:Toronto_Titans) --dop:city--> Toronto (dor:Toronto)
+      - Bob_Woods_(curler) (<http://dbpedia.org/resource/Bob_Woods_(curler)>) --doo:club--> Toronto (dor:Toronto)
+      - Bob_Woods_(curler) (<http://dbpedia.org/resource/Bob_Woods_(curler)>) --doo:birthPlace--> Canada (dor:Canada)
+      - 3_Nafas_Likas (dor:3_Nafas_Likas) --doo:country--> Canada (dor:Canada)
+      - Toronto_Titans (dor:Toronto_Titans) --dop:association--> International_Swimming_League (dor:International_Swimming_League)
+attributes:
+  movie: --caption align^ (dop:captionAlign)--> langString
+  Location: --designated other1 link^ (dop:designatedOther1Link)--> langString | --wordnet_type (dop:wordnet_type)--> Resource | --line^ (dop:line)--> langString | --named after^ (dop:namedAfter)--> langString | --Apr sun^ (dop:aprSun)--> double | --area^ (dop:area)--> acre | --age^ (dop:age)--> second | --subject (podt:subject)--> Resource
+subgraph_id: 605
+relationships:
+  - sports team --dop:city--> Location
+  - athlete --doo:club--> Location
+  - athlete --doo:birthPlace--> country
+  - movie --doo:country--> country
+  - sports team --dop:association--> organisation

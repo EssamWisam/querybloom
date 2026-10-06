@@ -1,0 +1,45 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  university: doo:University
+  american football player: doo:AmericanFootballPlayer
+  national football league season: doo:NationalFootballLeagueSeason
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Accademia_Aeronautica (dor:Accademia_Aeronautica) --dop:country--> Italy (dor:Italy)
+      - Enio_Conti (dor:Enio_Conti) --dop:birthPlace--> Italy (dor:Italy)
+      - Enio_Conti (dor:Enio_Conti) --doo:formerTeam--> Steagles (dor:Steagles)
+      - Enio_Conti (dor:Enio_Conti) --dop:deathPlace--> Tallahassee,_Florida (<http://dbpedia.org/resource/Tallahassee,_Florida>)
+  '2':
+    attributes:
+      Tallahassee,_Florida: (population total^='196169')
+    relationships:
+      - Accademia_di_Belle_Arti_di_Perugia (dor:Accademia_di_Belle_Arti_di_Perugia) --dop:country--> Italy (dor:Italy)
+      - Enio_Conti (dor:Enio_Conti) --dop:birthPlace--> Italy (dor:Italy)
+      - Enio_Conti (dor:Enio_Conti) --doo:formerTeam--> Steagles (dor:Steagles)
+      - Enio_Conti (dor:Enio_Conti) --dop:deathPlace--> Tallahassee,_Florida (<http://dbpedia.org/resource/Tallahassee,_Florida>)
+  '3':
+    attributes:
+      Tallahassee,_Florida: (population total^='196169')
+    relationships:
+      - Accademia_Italiana (dor:Accademia_Italiana) --dop:country--> Italy (dor:Italy)
+      - Enio_Conti (dor:Enio_Conti) --dop:birthPlace--> Italy (dor:Italy)
+      - Enio_Conti (dor:Enio_Conti) --doo:formerTeam--> Steagles (dor:Steagles)
+      - Enio_Conti (dor:Enio_Conti) --dop:deathPlace--> Tallahassee,_Florida (<http://dbpedia.org/resource/Tallahassee,_Florida>)
+attributes:
+  city: --c^ (dop:c)--> langString | --quote^ (dop:quote)--> int | --population total^ (doo:populationTotal)--> int
+  Location: --arc-angleA^ (dop:arcAnglea)--> int | --Apr low C^ (dop:aprLowC)--> double | --mouth place^ (doo:mouthPlace)--> Resource | --Apr low C^ (dop:aprLowC)--> int | --designated other1 abbr^ (dop:designatedOther1Abbr)--> langString | --subdivision^ (doo:subdivision)--> Resource
+  american football player: --bot^ (dop:bot)--> langString
+subgraph_id: 646
+relationships:
+  - university --dop:country--> Location
+  - american football player --dop:birthPlace--> Location
+  - american football player --doo:formerTeam--> national football league season
+  - american football player --dop:deathPlace--> city

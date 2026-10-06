@@ -1,0 +1,107 @@
+types:
+  Location: doo:Location
+  settlement: doo:Settlement
+  body of water: doo:BodyOfWater
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      108_Mile_Lake: (elevation (μ)^='930.0')
+    relationships:
+      - 108_Mile_Lake (dor:108_Mile_Lake) --doo:location--> 108_Mile_Ranch (dor:108_Mile_Ranch)
+      - 108_Mile_Lake (dor:108_Mile_Lake) --doo:country--> Canada (dor:Canada)
+  '2':
+    attributes:
+      Aalkistensee: (elevation (μ)^='250.0')
+      Baden-Württemberg: (Apr high C^='19.4')
+    relationships:
+      - Aalkistensee (dor:Aalkistensee) --doo:location--> Baden-Württemberg (<http://dbpedia.org/resource/Baden-Württemberg>)
+      - Aalkistensee (dor:Aalkistensee) --doo:country--> Germany (dor:Germany)
+  '3':
+    attributes: {}
+    relationships:
+      - Aalupi_Lake (dor:Aalupi_Lake) --doo:location--> Kanepi_Parish (dor:Kanepi_Parish)
+      - Aalupi_Lake (dor:Aalupi_Lake) --doo:country--> Estonia (dor:Estonia)
+  '4':
+    attributes: {}
+    relationships:
+      - Aalupi_Lake (dor:Aalupi_Lake) --doo:location--> Põlva_County (<http://dbpedia.org/resource/Põlva_County>)
+      - Aalupi_Lake (dor:Aalupi_Lake) --doo:country--> Estonia (dor:Estonia)
+  '5':
+    attributes: {}
+    relationships:
+      - Aalupi_Lake (dor:Aalupi_Lake) --doo:location--> Rebaste,_Põlva_County (<http://dbpedia.org/resource/Rebaste,_Põlva_County>)
+      - Aalupi_Lake (dor:Aalupi_Lake) --doo:country--> Estonia (dor:Estonia)
+  '6':
+    attributes: {}
+    relationships:
+      - Ab-i_Istada (dor:Ab-i_Istada) --doo:location--> Ghazni_Province (dor:Ghazni_Province)
+      - Ab-i_Istada (dor:Ab-i_Istada) --doo:country--> Afghanistan (dor:Afghanistan)
+  '7':
+    attributes: {}
+    relationships:
+      - Ab-i_Istada (dor:Ab-i_Istada) --doo:location--> Nawa_District (dor:Nawa_District)
+      - Ab-i_Istada (dor:Ab-i_Istada) --doo:country--> Afghanistan (dor:Afghanistan)
+  '8':
+    attributes:
+      Abel_Lake: (elevation (μ)^='968.0')
+    relationships:
+      - Abel_Lake (dor:Abel_Lake) --doo:location--> South_Island (dor:South_Island)
+      - Abel_Lake (dor:Abel_Lake) --doo:country--> New_Zealand (dor:New_Zealand)
+  '9':
+    attributes:
+      La_Tuque,_Quebec: (Apr high C^='9.3', Apr precipitation days^='10.8', Apr rain mm^='49.2')
+      Aberdeen_Lake_(La_Tuque): (elevation (μ)^='429.0')
+    relationships:
+      - Aberdeen_Lake_(La_Tuque) (<http://dbpedia.org/resource/Aberdeen_Lake_(La_Tuque)>) --doo:location--> La_Tuque,_Quebec (<http://dbpedia.org/resource/La_Tuque,_Quebec>)
+      - Aberdeen_Lake_(La_Tuque) (<http://dbpedia.org/resource/Aberdeen_Lake_(La_Tuque)>) --doo:country--> Canada (dor:Canada)
+  '10':
+    attributes:
+      Aberdeen_Lake_(La_Tuque): (elevation (μ)^='429.0')
+    relationships:
+      - Aberdeen_Lake_(La_Tuque) (<http://dbpedia.org/resource/Aberdeen_Lake_(La_Tuque)>) --doo:location--> Mauricie (dor:Mauricie)
+      - Aberdeen_Lake_(La_Tuque) (<http://dbpedia.org/resource/Aberdeen_Lake_(La_Tuque)>) --doo:country--> Canada (dor:Canada)
+qa_result:
+  status: completed
+  cost_usd: 0.257735
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0283124
+        total_tokens: 3401
+        prompt_tokens: 2202
+        completion_tokens: 1199
+      generate:
+        cost_usd: 0.062112600000000004
+        total_tokens: 5915
+        prompt_tokens: 3266
+        completion_tokens: 2649
+      verify_1:
+        cost_usd: 0.033982000000000005
+        total_tokens: 4328
+        prompt_tokens: 3505
+        completion_tokens: 823
+      complexity:
+        cost_usd: 0.133328
+        total_tokens: 10421
+        prompt_tokens: 4434
+        completion_tokens: 5987
+    total_tokens: 24065
+    prompt_tokens: 13407
+    total_cost_usd: 0.25773500000000005
+    completion_tokens: 10658
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  Location: --architectural style^ (doo:architecturalStyle)--> Resource | --auto^ (dop:auto)--> langString | --architect^ (dop:architect)--> langString | --footer^ (dop:footer)--> langString | --eponym^ (dop:eponym)--> Resource | --footer align^ (dop:footerAlign)--> langString
+  settlement: --Apr high C^ (dop:aprHighC)--> double | --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --caption^ (dop:caption)--> langString | --Apr rain mm^ (dop:aprRainMm)--> double | --bot^ (dop:bot)--> langString
+  body of water: --elevation (μ)^ (doo:elevation)--> double
+subgraph_id: 205
+relationships:
+  - body of water --doo:location--> settlement
+  - body of water --doo:country--> Location

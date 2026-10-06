@@ -1,0 +1,174 @@
+types:
+  city: doo:City
+  company: doo:Company
+  building: doo:Building
+  university: doo:University
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      1_Pace_Plaza: (page length (characters) of wiki page^='5611')
+      New_York_City: (population total^='8804190')
+      New_York_(state): (align^='right', direction^='vertical')
+      Episcopal_Divinity_School: (city^='http://dbpedia.org/resource/New_York_(state)', type^='http://dbpedia.org/resource/Private_university')
+    relationships:
+      - Episcopal_Divinity_School (dor:Episcopal_Divinity_School) --doo:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Episcopal_Divinity_School (dor:Episcopal_Divinity_School) --dop:city--> New_York_City (dor:New_York_City)
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> New_York_City (dor:New_York_City)
+      - American_Overseas_Airlines (dor:American_Overseas_Airlines) --doo:headquarter--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '2':
+    attributes:
+      1_Pace_Plaza: (page length (characters) of wiki page^='5611')
+      New_York_City: (population total^='8804190')
+      New_York_(state): (align^='right', direction^='vertical')
+      Episcopal_Divinity_School: (city^='http://dbpedia.org/resource/New_York_(state)', type^='http://dbpedia.org/resource/Private_university')
+      Atlantic_Express_(bus_company): (logo^='Atlantic Express Logoae.png')
+    relationships:
+      - Episcopal_Divinity_School (dor:Episcopal_Divinity_School) --doo:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Episcopal_Divinity_School (dor:Episcopal_Divinity_School) --dop:city--> New_York_City (dor:New_York_City)
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> New_York_City (dor:New_York_City)
+      - Atlantic_Express_(bus_company) (<http://dbpedia.org/resource/Atlantic_Express_(bus_company)>) --doo:headquarter--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '3':
+    attributes:
+      Bandsintown: (logo^='Bandsintown logo.svg')
+      1_Pace_Plaza: (page length (characters) of wiki page^='5611')
+      New_York_City: (population total^='8804190')
+      New_York_(state): (align^='right', direction^='vertical')
+      Episcopal_Divinity_School: (city^='http://dbpedia.org/resource/New_York_(state)', type^='http://dbpedia.org/resource/Private_university')
+    relationships:
+      - Episcopal_Divinity_School (dor:Episcopal_Divinity_School) --doo:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Episcopal_Divinity_School (dor:Episcopal_Divinity_School) --dop:city--> New_York_City (dor:New_York_City)
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> New_York_City (dor:New_York_City)
+      - Bandsintown (dor:Bandsintown) --doo:headquarter--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '4':
+    attributes:
+      California: (align^='left', direction^='vertical')
+      100_Thieves: (logo^='100')
+      Los_Angeles: (population total^='3898747')
+      Cinema_Makeup_School: (city^='http://dbpedia.org/resource/California')
+      155_West_Washington_Boulevard: (architectural style^='http://dbpedia.org/resource/Romanesque_Revival_architecture', page length (characters) of wiki page^='4947')
+    relationships:
+      - Cinema_Makeup_School (dor:Cinema_Makeup_School) --doo:city--> California (dor:California)
+      - Cinema_Makeup_School (dor:Cinema_Makeup_School) --dop:city--> Los_Angeles (dor:Los_Angeles)
+      - 155_West_Washington_Boulevard (dor:155_West_Washington_Boulevard) --doo:city--> Los_Angeles (dor:Los_Angeles)
+      - 100_Thieves (dor:100_Thieves) --doo:headquarter--> California (dor:California)
+  '5':
+    attributes:
+      AC_Transit: (logo^='AC Transit logo  cropped.svg')
+      California: (align^='left', direction^='vertical')
+      Los_Angeles: (population total^='3898747')
+      Cinema_Makeup_School: (city^='http://dbpedia.org/resource/California')
+      155_West_Washington_Boulevard: (architectural style^='http://dbpedia.org/resource/Romanesque_Revival_architecture', page length (characters) of wiki page^='4947')
+    relationships:
+      - Cinema_Makeup_School (dor:Cinema_Makeup_School) --doo:city--> California (dor:California)
+      - Cinema_Makeup_School (dor:Cinema_Makeup_School) --dop:city--> Los_Angeles (dor:Los_Angeles)
+      - 155_West_Washington_Boulevard (dor:155_West_Washington_Boulevard) --doo:city--> Los_Angeles (dor:Los_Angeles)
+      - AC_Transit (dor:AC_Transit) --doo:headquarter--> California (dor:California)
+  '6':
+    attributes:
+      California: (align^='left', direction^='vertical')
+      Los_Angeles: (population total^='3898747')
+      Cinema_Makeup_School: (city^='http://dbpedia.org/resource/California')
+      Aelita_Software_Corporation: (logo^='Aelita-logo.png')
+      155_West_Washington_Boulevard: (architectural style^='http://dbpedia.org/resource/Romanesque_Revival_architecture', page length (characters) of wiki page^='4947')
+    relationships:
+      - Cinema_Makeup_School (dor:Cinema_Makeup_School) --doo:city--> California (dor:California)
+      - Cinema_Makeup_School (dor:Cinema_Makeup_School) --dop:city--> Los_Angeles (dor:Los_Angeles)
+      - 155_West_Washington_Boulevard (dor:155_West_Washington_Boulevard) --doo:city--> Los_Angeles (dor:Los_Angeles)
+      - Aelita_Software_Corporation (dor:Aelita_Software_Corporation) --doo:headquarter--> California (dor:California)
+  '7':
+    attributes:
+      Brussels: (align^='centre')
+      Cours_Florent: (city^='http://dbpedia.org/resource/Belgium', type^='http://dbpedia.org/resource/Private_school')
+      4_route_du_Champ_d'Entraînement: (architectural style^='http://dbpedia.org/resource/Neoclassical_architecture', page length (characters) of wiki page^='9535')
+    relationships:
+      - Cours_Florent (dor:Cours_Florent) --doo:city--> Brussels (dor:Brussels)
+      - Cours_Florent (dor:Cours_Florent) --dop:city--> Paris (dor:Paris)
+      - 4_route_du_Champ_d'Entraînement (<http://dbpedia.org/resource/4_route_du_Champ_d'Entraînement>) --doo:city--> Paris (dor:Paris)
+      - AB4 (dor:AB4) --doo:headquarter--> Brussels (dor:Brussels)
+  '8':
+    attributes:
+      Brussels: (align^='centre')
+      4_route_du_Champ_d'Entraînement: (architectural style^='http://dbpedia.org/resource/Neoclassical_architecture', page length (characters) of wiki page^='9535')
+      Institut_supérieur_européen_de_formation_par_l'action: (city^='http://dbpedia.org/resource/Bordeaux')
+    relationships:
+      - Institut_supérieur_européen_de_formation_par_l'action (<http://dbpedia.org/resource/Institut_supérieur_européen_de_formation_par_l'action>) --doo:city--> Brussels (dor:Brussels)
+      - Institut_supérieur_européen_de_formation_par_l'action (<http://dbpedia.org/resource/Institut_supérieur_européen_de_formation_par_l'action>) --dop:city--> Paris (dor:Paris)
+      - 4_route_du_Champ_d'Entraînement (<http://dbpedia.org/resource/4_route_du_Champ_d'Entraînement>) --doo:city--> Paris (dor:Paris)
+      - AB4 (dor:AB4) --doo:headquarter--> Brussels (dor:Brussels)
+  '9':
+    attributes:
+      Brussels: (align^='centre')
+      Cours_Florent: (city^='http://dbpedia.org/resource/Belgium', type^='http://dbpedia.org/resource/Private_school')
+      4_route_du_Champ_d'Entraînement: (architectural style^='http://dbpedia.org/resource/Neoclassical_architecture', page length (characters) of wiki page^='9535')
+      Association_Royale_des_Descendants_des_Lignages_de_Bruxelles: (logo^='File:Logo Association Royale des Descendants des Lignages de Bruxelles.png')
+    relationships:
+      - Cours_Florent (dor:Cours_Florent) --doo:city--> Brussels (dor:Brussels)
+      - Cours_Florent (dor:Cours_Florent) --dop:city--> Paris (dor:Paris)
+      - 4_route_du_Champ_d'Entraînement (<http://dbpedia.org/resource/4_route_du_Champ_d'Entraînement>) --doo:city--> Paris (dor:Paris)
+      - Association_Royale_des_Descendants_des_Lignages_de_Bruxelles (dor:Association_Royale_des_Descendants_des_Lignages_de_Bruxelles) --doo:headquarter--> Brussels (dor:Brussels)
+  '10':
+    attributes:
+      Chicago: (population total^='2746388')
+      Acquity_Group: (logo^='Acquity Group Acc Lockup BLK RGB.jpg')
+      725_West_Randolph: (page length (characters) of wiki page^='2758')
+      Moody_Bible_Institute: (city^='http://dbpedia.org/resource/Chicago', type^='http://dbpedia.org/resource/Private_university')
+    relationships:
+      - Moody_Bible_Institute (dor:Moody_Bible_Institute) --doo:city--> Illinois (dor:Illinois)
+      - Moody_Bible_Institute (dor:Moody_Bible_Institute) --dop:city--> Chicago (dor:Chicago)
+      - 725_West_Randolph (dor:725_West_Randolph) --doo:city--> Chicago (dor:Chicago)
+      - Acquity_Group (dor:Acquity_Group) --doo:headquarter--> Illinois (dor:Illinois)
+qa_result:
+  status: completed
+  cost_usd: 0.307382
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.037112400000000004
+        total_tokens: 3856
+        prompt_tokens: 2222
+        completion_tokens: 1634
+      generate:
+        cost_usd: 0.0839676
+        total_tokens: 8453
+        prompt_tokens: 5193
+        completion_tokens: 3260
+      verify_1:
+        cost_usd: 0.05021200000000001
+        total_tokens: 6899
+        prompt_tokens: 5851
+        completion_tokens: 1048
+      verify_2:
+        cost_usd: 0.040317000000000006
+        total_tokens: 6219
+        prompt_tokens: 5604
+        completion_tokens: 615
+      complexity:
+        cost_usd: 0.095773
+        total_tokens: 10236
+        prompt_tokens: 6691
+        completion_tokens: 3545
+    total_tokens: 35663
+    prompt_tokens: 25561
+    total_cost_usd: 0.307382
+    completion_tokens: 10102
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --Apr low F^ (dop:aprLowF)--> double | --Aug precipitation days^ (dop:augPrecipitationDays)--> int | --population total^ (doo:populationTotal)--> int
+  company: --quote^ (dop:quote)--> langString | --logo^ (dop:logo)--> Resource
+  building: --architectural style^ (dop:architecturalStyle)--> langString | --page length (characters) of wiki page^ (doo:wikiPageLength)--> int
+  university: --city^ (doo:city)--> Resource | --type^ (doo:type)--> Resource
+  administrative region: --align^ (dop:align)--> langString | --direction^ (dop:direction)--> langString
+subgraph_id: 180
+relationships:
+  - university --doo:city--> administrative region
+  - university --dop:city--> city
+  - building --doo:city--> city
+  - company --doo:headquarter--> administrative region

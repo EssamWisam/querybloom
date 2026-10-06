@@ -1,0 +1,100 @@
+types:
+  Location: doo:Location
+  building: doo:Building
+  politician: doo:Politician
+  military person: doo:MilitaryPerson
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      London: (d^='yes')
+      Ana_Irene_Delgado: (Link from a Wikipage to an external page^='https://fie.org/fie/structure/executive-committee')
+    relationships:
+      - '@sohoplace (<http://dbpedia.org/resource/@sohoplace>) --doo:city--> London (dor:London)'
+      - Ahmad_Ismail_Ali (dor:Ahmad_Ismail_Ali) --doo:deathPlace--> London (dor:London)
+      - Ana_Irene_Delgado (dor:Ana_Irene_Delgado) --doo:residence--> London (dor:London)
+  '2':
+    attributes:
+      London: (d^='yes')
+    relationships:
+      - '@sohoplace (<http://dbpedia.org/resource/@sohoplace>) --doo:city--> London (dor:London)'
+      - Ahmad_Ismail_Ali (dor:Ahmad_Ismail_Ali) --doo:deathPlace--> London (dor:London)
+      - Andrew_Edis (dor:Andrew_Edis) --doo:residence--> London (dor:London)
+  '3':
+    attributes:
+      London: (d^='yes')
+      Andrew_Feinstein: (Link from a Wikipage to an external page^='https://www.theguardian.com/profile/andrewfeinstein')
+    relationships:
+      - '@sohoplace (<http://dbpedia.org/resource/@sohoplace>) --doo:city--> London (dor:London)'
+      - Ahmad_Ismail_Ali (dor:Ahmad_Ismail_Ali) --doo:deathPlace--> London (dor:London)
+      - Andrew_Feinstein (dor:Andrew_Feinstein) --doo:residence--> London (dor:London)
+  '4':
+    attributes:
+      New_York_(state): (d^='yes')
+      Adolfo_Carrión_Jr.: (Link from a Wikipage to an external page^='http://old.gothamgazette.com/searchlight2001/feature_carrion.html')
+    relationships:
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Adolfo_Carrión_Jr. (<http://dbpedia.org/resource/Adolfo_Carrión_Jr.>) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '5':
+    attributes:
+      New_York_(state): (d^='yes')
+      Alanson_B._Houghton: (Link from a Wikipage to an external page^='http://politicalgraveyard.com/bio/houghtaling-housley.html', after^='http://dbpedia.org/resource/Charles_G._Dawes')
+    relationships:
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Alanson_B._Houghton (dor:Alanson_B._Houghton) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '6':
+    attributes:
+      Albert_A._Ultcht: (after^='Albert Vorkeller')
+      New_York_(state): (d^='yes')
+    relationships:
+      - 1_Pace_Plaza (dor:1_Pace_Plaza) --doo:city--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Abraham_Ten_Broeck (dor:Abraham_Ten_Broeck) --doo:deathPlace--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+      - Albert_A._Ultcht (dor:Albert_A._Ultcht) --doo:residence--> New_York_(state) (<http://dbpedia.org/resource/New_York_(state)>)
+  '7':
+    attributes:
+      Adrian_Benepe: (after^='http://dbpedia.org/resource/Veronica_M._White')
+      New_York_City: (d^='yes')
+    relationships:
+      - 1_Wall_Street_Court__1_Wall_Street_Court__1 (dor:1_Wall_Street_Court__1_Wall_Street_Court__1) --doo:city--> New_York_City (dor:New_York_City)
+      - Benjamin_Bristow (dor:Benjamin_Bristow) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Adrian_Benepe (dor:Adrian_Benepe) --doo:residence--> New_York_City (dor:New_York_City)
+  '8':
+    attributes:
+      New_York_City: (d^='yes')
+      Adriano_Espaillat: (Link from a Wikipage to an external page^='https://espaillat.house.gov')
+    relationships:
+      - 1_Wall_Street_Court__1_Wall_Street_Court__1 (dor:1_Wall_Street_Court__1_Wall_Street_Court__1) --doo:city--> New_York_City (dor:New_York_City)
+      - Benjamin_Bristow (dor:Benjamin_Bristow) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Adriano_Espaillat (dor:Adriano_Espaillat) --doo:residence--> New_York_City (dor:New_York_City)
+  '9':
+    attributes:
+      New_York_City: (d^='yes')
+      Andrew_H._Mickle: (after^='http://dbpedia.org/resource/William_Brady_(mayor)')
+    relationships:
+      - 1_Wall_Street_Court__1_Wall_Street_Court__1 (dor:1_Wall_Street_Court__1_Wall_Street_Court__1) --doo:city--> New_York_City (dor:New_York_City)
+      - Benjamin_Bristow (dor:Benjamin_Bristow) --doo:deathPlace--> New_York_City (dor:New_York_City)
+      - Andrew_H._Mickle (dor:Andrew_H._Mickle) --doo:residence--> New_York_City (dor:New_York_City)
+  '10':
+    attributes:
+      Alexander_Brush: (after^='http://dbpedia.org/resource/Grover_Cleveland')
+      Buffalo,_New_York: (d^='Q40435')
+    relationships:
+      - 10_Lafayette_Square__10_Lafayette_Square__1 (dor:10_Lafayette_Square__10_Lafayette_Square__1) --doo:city--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+      - George_Stoneman (dor:George_Stoneman) --doo:deathPlace--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+      - Alexander_Brush (dor:Alexander_Brush) --doo:residence--> Buffalo,_New_York (<http://dbpedia.org/resource/Buffalo,_New_York>)
+attributes:
+  Location: --reason^ (dop:reason)--> langString | --built^ (dop:built)--> langString | --area^ (dop:area)--> acre | --d^ (dop:d)--> langString
+  building: --caption^ (dop:caption)--> langString
+  politician: --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --after^ (dop:after)--> langString | --c^ (dop:c)--> langString
+  military person: --honorific suffix^ (dop:honorificSuffix)--> Resource
+subgraph_id: 612
+relationships:
+  - building --doo:city--> Location
+  - military person --doo:deathPlace--> Location
+  - politician --doo:residence--> Location

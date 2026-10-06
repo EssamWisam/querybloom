@@ -1,0 +1,133 @@
+types:
+  saint: doo:Saint
+  country: doo:Country
+  Location: doo:Location
+  cardinal: doo:Cardinal
+  politician: doo:Politician
+  office holder: doo:OfficeHolder
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Iacob_Lahovary: (death place^='http://dbpedia.org/resource/France', death place^='http://dbpedia.org/resource/France')
+      Alexandru_Lahovary: (death place^='http://dbpedia.org/resource/France')
+    relationships:
+      - August_Czartoryski (dor:August_Czartoryski) --doo:birthPlace--> Paris (dor:Paris)
+      - Alexandru_Lahovary (dor:Alexandru_Lahovary) --dop:deathPlace--> Paris (dor:Paris)
+      - Alexandru_Lahovary (dor:Alexandru_Lahovary) --doo:relation--> Iacob_Lahovary (dor:Iacob_Lahovary)
+      - France (dor:France) --doo:capital--> Paris (dor:Paris)
+      - Achille_Liénart (<http://dbpedia.org/resource/Achille_Liénart>) --doo:deathPlace--> France (dor:France)
+  '2':
+    attributes:
+      Ioan_Lahovary: (death place^='http://dbpedia.org/resource/Bucharest', death place^='http://dbpedia.org/resource/Bucharest')
+      Alexandru_Lahovary: (death place^='http://dbpedia.org/resource/France')
+    relationships:
+      - August_Czartoryski (dor:August_Czartoryski) --doo:birthPlace--> Paris (dor:Paris)
+      - Alexandru_Lahovary (dor:Alexandru_Lahovary) --dop:deathPlace--> Paris (dor:Paris)
+      - Alexandru_Lahovary (dor:Alexandru_Lahovary) --doo:relation--> Ioan_Lahovary (dor:Ioan_Lahovary)
+      - France (dor:France) --doo:capital--> Paris (dor:Paris)
+      - Achille_Liénart (<http://dbpedia.org/resource/Achille_Liénart>) --doo:deathPlace--> France (dor:France)
+  '3':
+    attributes:
+      Iacob_Lahovary: (death place^='http://dbpedia.org/resource/France', death place^='http://dbpedia.org/resource/France')
+      Alexandru_Lahovary: (death place^='http://dbpedia.org/resource/France')
+    relationships:
+      - Camille_de_Soyécourt (<http://dbpedia.org/resource/Camille_de_Soyécourt>) --doo:birthPlace--> Paris (dor:Paris)
+      - Alexandru_Lahovary (dor:Alexandru_Lahovary) --dop:deathPlace--> Paris (dor:Paris)
+      - Alexandru_Lahovary (dor:Alexandru_Lahovary) --doo:relation--> Iacob_Lahovary (dor:Iacob_Lahovary)
+      - France (dor:France) --doo:capital--> Paris (dor:Paris)
+      - Achille_Liénart (<http://dbpedia.org/resource/Achille_Liénart>) --doo:deathPlace--> France (dor:France)
+  '4':
+    attributes:
+      Madrid: (Aug low C^='18.8')
+      José_Calvo_Sotelo: (death place^='http://dbpedia.org/resource/Madrid')
+      Leopoldo_Calvo-Sotelo: (death place^='Pozuelo de Alarcón, Spain', death place^='http://dbpedia.org/resource/Pozuelo_de_Alarcón')
+    relationships:
+      - Alexia_González-Barros_González (<http://dbpedia.org/resource/Alexia_González-Barros_González>) --doo:birthPlace--> Madrid (dor:Madrid)
+      - José_Calvo_Sotelo (<http://dbpedia.org/resource/José_Calvo_Sotelo>) --dop:deathPlace--> Madrid (dor:Madrid)
+      - José_Calvo_Sotelo (<http://dbpedia.org/resource/José_Calvo_Sotelo>) --doo:relation--> Leopoldo_Calvo-Sotelo (dor:Leopoldo_Calvo-Sotelo)
+      - Francoist_Spain (dor:Francoist_Spain) --doo:capital--> Madrid (dor:Madrid)
+      - Agustín_Parrado_y_García (<http://dbpedia.org/resource/Agustín_Parrado_y_García>) --doo:deathPlace--> Francoist_Spain (dor:Francoist_Spain)
+  '5':
+    attributes:
+      Madrid: (Aug low C^='18.8')
+      José_Calvo_Sotelo: (death place^='http://dbpedia.org/resource/Madrid')
+      Leopoldo_Calvo-Sotelo: (death place^='Pozuelo de Alarcón, Spain', death place^='http://dbpedia.org/resource/Pozuelo_de_Alarcón')
+    relationships:
+      - Fernando_Rielo (dor:Fernando_Rielo) --doo:birthPlace--> Madrid (dor:Madrid)
+      - José_Calvo_Sotelo (<http://dbpedia.org/resource/José_Calvo_Sotelo>) --dop:deathPlace--> Madrid (dor:Madrid)
+      - José_Calvo_Sotelo (<http://dbpedia.org/resource/José_Calvo_Sotelo>) --doo:relation--> Leopoldo_Calvo-Sotelo (dor:Leopoldo_Calvo-Sotelo)
+      - Francoist_Spain (dor:Francoist_Spain) --doo:capital--> Madrid (dor:Madrid)
+      - Agustín_Parrado_y_García (<http://dbpedia.org/resource/Agustín_Parrado_y_García>) --doo:deathPlace--> Francoist_Spain (dor:Francoist_Spain)
+  '6':
+    attributes:
+      Madrid: (Aug low C^='18.8')
+      José_Calvo_Sotelo: (death place^='http://dbpedia.org/resource/Madrid')
+      Leopoldo_Calvo-Sotelo: (death place^='Pozuelo de Alarcón, Spain', death place^='http://dbpedia.org/resource/Pozuelo_de_Alarcón')
+    relationships:
+      - Guadalupe_Ortiz_de_Landázuri_Fernández_de_Heredia (<http://dbpedia.org/resource/Guadalupe_Ortiz_de_Landázuri_Fernández_de_Heredia>) --doo:birthPlace--> Madrid (dor:Madrid)
+      - José_Calvo_Sotelo (<http://dbpedia.org/resource/José_Calvo_Sotelo>) --dop:deathPlace--> Madrid (dor:Madrid)
+      - José_Calvo_Sotelo (<http://dbpedia.org/resource/José_Calvo_Sotelo>) --doo:relation--> Leopoldo_Calvo-Sotelo (dor:Leopoldo_Calvo-Sotelo)
+      - Francoist_Spain (dor:Francoist_Spain) --doo:capital--> Madrid (dor:Madrid)
+      - Agustín_Parrado_y_García (<http://dbpedia.org/resource/Agustín_Parrado_y_García>) --doo:deathPlace--> Francoist_Spain (dor:Francoist_Spain)
+  '7':
+    attributes:
+      Bogotá: (Aug low C^='8.9')
+      Laureano_Gómez: (death place^='Bogotá, D.C., Colombia', death place^='http://dbpedia.org/resource/Bogotá')
+      Álvaro_Gómez_Hurtado: (death place^='http://dbpedia.org/resource/Bogotá')
+    relationships:
+      - Rafaél_Manuel_Almansa_Riaño (<http://dbpedia.org/resource/Rafaél_Manuel_Almansa_Riaño>) --doo:birthPlace--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+      - Álvaro_Gómez_Hurtado (<http://dbpedia.org/resource/Álvaro_Gómez_Hurtado>) --dop:deathPlace--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+      - Álvaro_Gómez_Hurtado (<http://dbpedia.org/resource/Álvaro_Gómez_Hurtado>) --doo:relation--> Laureano_Gómez (<http://dbpedia.org/resource/Laureano_Gómez>)
+      - Colombia (dor:Colombia) --doo:capital--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+      - Aníbal_Muñoz_Duque (<http://dbpedia.org/resource/Aníbal_Muñoz_Duque>) --doo:deathPlace--> Colombia (dor:Colombia)
+  '8':
+    attributes:
+      Bogotá: (Aug low C^='8.9')
+      Jorge_Holguín: (death place^='Bogotá, Cundinamarca, Colombia', death place^='http://dbpedia.org/resource/Bogotá')
+      Carlos_Holguín_Mallarino: (death place^='http://dbpedia.org/resource/Bogotá')
+    relationships:
+      - Rafaél_Manuel_Almansa_Riaño (<http://dbpedia.org/resource/Rafaél_Manuel_Almansa_Riaño>) --doo:birthPlace--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+      - Carlos_Holguín_Mallarino (<http://dbpedia.org/resource/Carlos_Holguín_Mallarino>) --dop:deathPlace--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+      - Carlos_Holguín_Mallarino (<http://dbpedia.org/resource/Carlos_Holguín_Mallarino>) --doo:relation--> Jorge_Holguín (<http://dbpedia.org/resource/Jorge_Holguín>)
+      - Colombia (dor:Colombia) --doo:capital--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+      - Aníbal_Muñoz_Duque (<http://dbpedia.org/resource/Aníbal_Muñoz_Duque>) --doo:deathPlace--> Colombia (dor:Colombia)
+  '9':
+    attributes:
+      Bogotá: (Aug low C^='8.9')
+      Manuel_María_Mallarino: (death place^='http://dbpedia.org/resource/Bogotá', death place^='http://dbpedia.org/resource/Bogotá')
+      Carlos_Holguín_Mallarino: (death place^='http://dbpedia.org/resource/Bogotá')
+    relationships:
+      - Rafaél_Manuel_Almansa_Riaño (<http://dbpedia.org/resource/Rafaél_Manuel_Almansa_Riaño>) --doo:birthPlace--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+      - Carlos_Holguín_Mallarino (<http://dbpedia.org/resource/Carlos_Holguín_Mallarino>) --dop:deathPlace--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+      - Carlos_Holguín_Mallarino (<http://dbpedia.org/resource/Carlos_Holguín_Mallarino>) --doo:relation--> Manuel_María_Mallarino (<http://dbpedia.org/resource/Manuel_María_Mallarino>)
+      - Colombia (dor:Colombia) --doo:capital--> Bogotá (<http://dbpedia.org/resource/Bogotá>)
+      - Aníbal_Muñoz_Duque (<http://dbpedia.org/resource/Aníbal_Muñoz_Duque>) --doo:deathPlace--> Colombia (dor:Colombia)
+  '10':
+    attributes:
+      Warsaw: (Aug low C^='13.8')
+      August_Hlond: (religion^='http://dbpedia.org/resource/Roman_Catholic_Church')
+      Stanisław_Wojciechowski: (death place^='http://dbpedia.org/resource/Polish_People''s_Republic')
+    relationships:
+      - Alicja_Kotowska (dor:Alicja_Kotowska) --doo:birthPlace--> Warsaw (dor:Warsaw)
+      - Stanisław_Wojciechowski (<http://dbpedia.org/resource/Stanisław_Wojciechowski>) --dop:deathPlace--> Warsaw (dor:Warsaw)
+      - Stanisław_Wojciechowski (<http://dbpedia.org/resource/Stanisław_Wojciechowski>) --doo:relation--> Małgorzata_Kidawa-Błońska (<http://dbpedia.org/resource/Małgorzata_Kidawa-Błońska>)
+      - Poland (dor:Poland) --doo:capital--> Warsaw (dor:Warsaw)
+      - August_Hlond (dor:August_Hlond) --doo:deathPlace--> Poland (dor:Poland)
+attributes:
+  country: --quote^ (dop:quote)--> langString
+  Location: --2y^ (dop:2y)--> int | --Aug high F^ (dop:augHighF)--> int | --Aug low C^ (dop:augLowC)--> double | --named after^ (dop:namedAfter)--> Resource
+  cardinal: --religion^ (doo:religion)--> Resource
+  politician: --father^ (dop:father)--> langString | --death place^ (dop:deathPlace)--> Resource | --death place^ (doo:deathPlace)--> Resource
+  office holder: --death place^ (dop:deathPlace)--> langString | --chairman^ (doo:chairman)--> Resource | --active years start year^ (doo:activeYearsStartYear)--> gYear
+subgraph_id: 675
+relationships:
+  - saint --doo:birthPlace--> Location
+  - office holder --dop:deathPlace--> Location
+  - office holder --doo:relation--> politician
+  - country --doo:capital--> Location
+  - cardinal --doo:deathPlace--> country

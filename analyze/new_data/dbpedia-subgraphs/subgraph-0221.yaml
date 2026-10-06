@@ -1,0 +1,144 @@
+types:
+  city: doo:City
+  cleric: doo:Cleric
+  station: doo:Station
+  bus company: doo:BusCompany
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  podt: http://purl.org/dc/terms/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Adelaide: (Apr high C^='23', population total^='1387290', Apr record high C^='36.9')
+      Klemzig_Interchange: (subject='http://dbpedia.org/resource/Category:Adelaide_O-Bahn')
+      Francis_Murphy_(bishop): (successor^='http://dbpedia.org/resource/Patrick_Bonaventure_Geoghegan')
+    relationships:
+      - Klemzig_Interchange (dor:Klemzig_Interchange) --dop:owned--> Adelaide_Metro (dor:Adelaide_Metro)
+      - Adelaide_Metro (dor:Adelaide_Metro) --doo:headquarter--> Adelaide (dor:Adelaide)
+      - Francis_Murphy_(bishop) (<http://dbpedia.org/resource/Francis_Murphy_(bishop)>) --doo:diocese--> Adelaide (dor:Adelaide)
+  '2':
+    attributes:
+      Adelaide: (Apr high C^='23', population total^='1387290', Apr record high C^='36.9')
+      Paradise_Interchange: (subject='http://dbpedia.org/resource/Category:Adelaide_O-Bahn')
+      Francis_Murphy_(bishop): (successor^='http://dbpedia.org/resource/Patrick_Bonaventure_Geoghegan')
+    relationships:
+      - Paradise_Interchange (dor:Paradise_Interchange) --dop:owned--> Adelaide_Metro (dor:Adelaide_Metro)
+      - Adelaide_Metro (dor:Adelaide_Metro) --doo:headquarter--> Adelaide (dor:Adelaide)
+      - Francis_Murphy_(bishop) (<http://dbpedia.org/resource/Francis_Murphy_(bishop)>) --doo:diocese--> Adelaide (dor:Adelaide)
+  '3':
+    attributes:
+      Adelaide: (Apr high C^='23', population total^='1387290', Apr record high C^='36.9')
+      Francis_Murphy_(bishop): (successor^='http://dbpedia.org/resource/Patrick_Bonaventure_Geoghegan')
+      Tea_Tree_Plaza_Interchange: (subject='http://dbpedia.org/resource/Category:Adelaide_O-Bahn')
+    relationships:
+      - Tea_Tree_Plaza_Interchange (dor:Tea_Tree_Plaza_Interchange) --dop:owned--> Adelaide_Metro (dor:Adelaide_Metro)
+      - Adelaide_Metro (dor:Adelaide_Metro) --doo:headquarter--> Adelaide (dor:Adelaide)
+      - Francis_Murphy_(bishop) (<http://dbpedia.org/resource/Francis_Murphy_(bishop)>) --doo:diocese--> Adelaide (dor:Adelaide)
+  '4':
+    attributes:
+      Bangalore: (Apr high C^='33.8', population total^='8443675', Apr record high C^='38.3')
+      Kempegowda_Bus_Station: (subject='http://dbpedia.org/resource/Category:Buildings_and_structures_in_Bangalore')
+    relationships:
+      - Kempegowda_Bus_Station (dor:Kempegowda_Bus_Station) --dop:owned--> Bangalore_Metropolitan_Transport_Corporation (dor:Bangalore_Metropolitan_Transport_Corporation)
+      - Bangalore_Metropolitan_Transport_Corporation (dor:Bangalore_Metropolitan_Transport_Corporation) --doo:headquarter--> Bangalore (dor:Bangalore)
+      - Osthatheos_Issac (dor:Osthatheos_Issac) --doo:diocese--> Bangalore (dor:Bangalore)
+  '5':
+    attributes:
+      Commercial–Broadway_station: (subject='http://dbpedia.org/resource/Category:1985_establishments_in_British_Columbia')
+    relationships:
+      - Commercial–Broadway_station (<http://dbpedia.org/resource/Commercial–Broadway_station>) --dop:owned--> BC_Transit (dor:BC_Transit)
+      - BC_Transit (dor:BC_Transit) --doo:headquarter--> Victoria,_British_Columbia (<http://dbpedia.org/resource/Victoria,_British_Columbia>)
+      - Gary_Gordon_(bishop) (<http://dbpedia.org/resource/Gary_Gordon_(bishop)>) --doo:diocese--> Victoria,_British_Columbia (<http://dbpedia.org/resource/Victoria,_British_Columbia>)
+  '6':
+    attributes:
+      Mission_City_station: (subject='http://dbpedia.org/resource/Category:1995_establishments_in_British_Columbia')
+      Victoria,_British_Columbia: (Apr high C^='13.1', population total^='91867', named after^='http://dbpedia.org/resource/Queen_Victoria', Apr record high C^='25')
+    relationships:
+      - Mission_City_station (dor:Mission_City_station) --dop:owned--> BC_Transit (dor:BC_Transit)
+      - BC_Transit (dor:BC_Transit) --doo:headquarter--> Victoria,_British_Columbia (<http://dbpedia.org/resource/Victoria,_British_Columbia>)
+      - Gary_Gordon_(bishop) (<http://dbpedia.org/resource/Gary_Gordon_(bishop)>) --doo:diocese--> Victoria,_British_Columbia (<http://dbpedia.org/resource/Victoria,_British_Columbia>)
+  '7':
+    attributes:
+      Pitt_Meadows_station: (subject='http://dbpedia.org/resource/Category:Pitt_Meadows')
+      Victoria,_British_Columbia: (Apr high C^='13.1', population total^='91867', named after^='http://dbpedia.org/resource/Queen_Victoria', Apr record high C^='25')
+    relationships:
+      - Pitt_Meadows_station (dor:Pitt_Meadows_station) --dop:owned--> BC_Transit (dor:BC_Transit)
+      - BC_Transit (dor:BC_Transit) --doo:headquarter--> Victoria,_British_Columbia (<http://dbpedia.org/resource/Victoria,_British_Columbia>)
+      - Gary_Gordon_(bishop) (<http://dbpedia.org/resource/Gary_Gordon_(bishop)>) --doo:diocese--> Victoria,_British_Columbia (<http://dbpedia.org/resource/Victoria,_British_Columbia>)
+  '8':
+    attributes:
+      Chicago: (population total^='2746388')
+      Dinkha_IV: (successor^='http://dbpedia.org/resource/Gewargis_III')
+      103rd_station: (subject='http://dbpedia.org/resource/Category:CTA_Red_Line_stations')
+    relationships:
+      - 103rd_station (dor:103rd_station) --dop:owned--> Chicago_Transit_Authority (dor:Chicago_Transit_Authority)
+      - Chicago_Transit_Authority (dor:Chicago_Transit_Authority) --doo:headquarter--> Chicago (dor:Chicago)
+      - Dinkha_IV (dor:Dinkha_IV) --doo:diocese--> Chicago (dor:Chicago)
+  '9':
+    attributes:
+      Chicago: (population total^='2746388')
+      Dinkha_IV: (successor^='http://dbpedia.org/resource/Gewargis_III')
+      111th_station: (subject='http://dbpedia.org/resource/Category:CTA_Red_Line_stations')
+    relationships:
+      - 111th_station (dor:111th_station) --dop:owned--> Chicago_Transit_Authority (dor:Chicago_Transit_Authority)
+      - Chicago_Transit_Authority (dor:Chicago_Transit_Authority) --doo:headquarter--> Chicago (dor:Chicago)
+      - Dinkha_IV (dor:Dinkha_IV) --doo:diocese--> Chicago (dor:Chicago)
+  '10':
+    attributes:
+      Chicago: (population total^='2746388')
+      Dinkha_IV: (successor^='http://dbpedia.org/resource/Gewargis_III')
+      130th_station: (subject='http://dbpedia.org/resource/Category:Chicago_%22L%22_terminal_stations')
+    relationships:
+      - 130th_station (dor:130th_station) --dop:owned--> Chicago_Transit_Authority (dor:Chicago_Transit_Authority)
+      - Chicago_Transit_Authority (dor:Chicago_Transit_Authority) --doo:headquarter--> Chicago (dor:Chicago)
+      - Dinkha_IV (dor:Dinkha_IV) --doo:diocese--> Chicago (dor:Chicago)
+qa_result:
+  status: completed
+  cost_usd: 0.381857
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.029112400000000004
+        total_tokens: 3321
+        prompt_tokens: 2042
+        completion_tokens: 1279
+      generate:
+        cost_usd: 0.11376760000000001
+        total_tokens: 9343
+        prompt_tokens: 4393
+        completion_tokens: 4950
+      verify_1:
+        cost_usd: 0.082402
+        total_tokens: 7703
+        prompt_tokens: 4777
+        completion_tokens: 2926
+      verify_2:
+        cost_usd: 0.053957000000000005
+        total_tokens: 6304
+        prompt_tokens: 4808
+        completion_tokens: 1496
+      complexity:
+        cost_usd: 0.102618
+        total_tokens: 9739
+        prompt_tokens: 5572
+        completion_tokens: 4167
+    total_tokens: 36410
+    prompt_tokens: 21592
+    total_cost_usd: 0.38185700000000006
+    completion_tokens: 14818
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  city: --quote^ (dop:quote)--> langString | --Apr high C^ (dop:aprHighC)--> int | --population total^ (doo:populationTotal)--> int | --differentFrom (wwoo:differentFrom)--> Resource | --named after^ (doo:namedAfter)--> Resource | --Apr record high C^ (dop:aprRecordHighC)--> int
+  cleric: --successor^ (doo:successor)--> Resource
+  station: --Closed^ (dop:closed)--> int | --subject (podt:subject)--> Resource
+subgraph_id: 221
+relationships:
+  - station --dop:owned--> bus company
+  - bus company --doo:headquarter--> city
+  - cleric --doo:diocese--> city

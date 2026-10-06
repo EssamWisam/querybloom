@@ -1,0 +1,81 @@
+types:
+  person: doo:Person
+  Location: doo:Location
+  settlement: doo:Settlement
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Antoni_Bolesław_Dobrowolski: (death date^='1954-04-27')
+    relationships:
+      - A._B._Dobrowolski_Polar_Station (dor:A._B._Dobrowolski_Polar_Station) --dop:namedFor--> Antoni_Bolesław_Dobrowolski (<http://dbpedia.org/resource/Antoni_Bolesław_Dobrowolski>)
+      - A._B._Dobrowolski_Polar_Station (dor:A._B._Dobrowolski_Polar_Station) --doo:namedAfter--> Antoni_Bolesław_Dobrowolski (<http://dbpedia.org/resource/Antoni_Bolesław_Dobrowolski>)
+  '2':
+    attributes:
+      A._S._Rao: (death date^='2003-10-31')
+    relationships:
+      - A._S._Rao_Nagar (dor:A._S._Rao_Nagar) --dop:namedFor--> A._S._Rao (dor:A._S._Rao)
+      - A._S._Rao_Nagar (dor:A._S._Rao_Nagar) --doo:namedAfter--> A._S._Rao (dor:A._S._Rao)
+  '3':
+    attributes:
+      John_Quincy_Adams: (death date^='1848-02-23')
+    relationships:
+      - Adams_County,_Illinois (<http://dbpedia.org/resource/Adams_County,_Illinois>) --dop:namedFor--> John_Quincy_Adams (dor:John_Quincy_Adams)
+      - Adams_Township,_Warren_County,_Indiana (<http://dbpedia.org/resource/Adams_Township,_Warren_County,_Indiana>) --doo:namedAfter--> John_Quincy_Adams (dor:John_Quincy_Adams)
+  '4':
+    attributes:
+      John_Quincy_Adams: (death date^='1848-02-23')
+    relationships:
+      - Adams_County,_Indiana (<http://dbpedia.org/resource/Adams_County,_Indiana>) --dop:namedFor--> John_Quincy_Adams (dor:John_Quincy_Adams)
+      - Adams_Township,_Warren_County,_Indiana (<http://dbpedia.org/resource/Adams_Township,_Warren_County,_Indiana>) --doo:namedAfter--> John_Quincy_Adams (dor:John_Quincy_Adams)
+  '5':
+    attributes:
+      John_Quincy_Adams: (death date^='1848-02-23')
+    relationships:
+      - Adams_Township,_Warren_County,_Indiana (<http://dbpedia.org/resource/Adams_Township,_Warren_County,_Indiana>) --dop:namedFor--> John_Quincy_Adams (dor:John_Quincy_Adams)
+      - Adams_Township,_Warren_County,_Indiana (<http://dbpedia.org/resource/Adams_Township,_Warren_County,_Indiana>) --doo:namedAfter--> John_Quincy_Adams (dor:John_Quincy_Adams)
+  '6':
+    attributes:
+      Aglipay,_Quirino: (date^='2021-07-04')
+      Gregorio_Aglipay: (death date^='1940-09-01')
+    relationships:
+      - Aglipay,_Quirino (<http://dbpedia.org/resource/Aglipay,_Quirino>) --dop:namedFor--> Gregorio_Aglipay (dor:Gregorio_Aglipay)
+      - Aglipay,_Quirino (<http://dbpedia.org/resource/Aglipay,_Quirino>) --doo:namedAfter--> Gregorio_Aglipay (dor:Gregorio_Aglipay)
+  '7':
+    attributes:
+      Felipe_Agoncillo: (death date^='1941-09-29')
+      Agoncillo,_Batangas: (date^='2020-05-05')
+    relationships:
+      - Agoncillo,_Batangas (<http://dbpedia.org/resource/Agoncillo,_Batangas>) --dop:namedFor--> Felipe_Agoncillo (dor:Felipe_Agoncillo)
+      - Agoncillo,_Batangas (<http://dbpedia.org/resource/Agoncillo,_Batangas>) --doo:namedAfter--> Felipe_Agoncillo (dor:Felipe_Agoncillo)
+  '8':
+    attributes:
+      Águas_de_São_Pedro: (caption^='Angelo Franzin Educational and Cultural Center and EMEFASP III')
+    relationships:
+      - Saint-Pierre,_Quebec (<http://dbpedia.org/resource/Saint-Pierre,_Quebec>) --dop:namedFor--> Saint_Peter (dor:Saint_Peter)
+      - Águas_de_São_Pedro (<http://dbpedia.org/resource/Águas_de_São_Pedro>) --doo:namedAfter--> Saint_Peter (dor:Saint_Peter)
+  '9':
+    attributes:
+      San_Simon,_Pampanga: (date^='2020-05-05')
+      Águas_de_São_Pedro: (caption^='Angelo Franzin Educational and Cultural Center and EMEFASP III')
+    relationships:
+      - San_Simon,_Pampanga (<http://dbpedia.org/resource/San_Simon,_Pampanga>) --dop:namedFor--> Saint_Peter (dor:Saint_Peter)
+      - Águas_de_São_Pedro (<http://dbpedia.org/resource/Águas_de_São_Pedro>) --doo:namedAfter--> Saint_Peter (dor:Saint_Peter)
+  '10':
+    attributes:
+      Águas_de_São_Pedro: (caption^='Angelo Franzin Educational and Cultural Center and EMEFASP III')
+    relationships:
+      - São_Pedro,_São_Paulo (<http://dbpedia.org/resource/São_Pedro,_São_Paulo>) --dop:namedFor--> Saint_Peter (dor:Saint_Peter)
+      - Águas_de_São_Pedro (<http://dbpedia.org/resource/Águas_de_São_Pedro>) --doo:namedAfter--> Saint_Peter (dor:Saint_Peter)
+attributes:
+  person: --death date^ (doo:deathDate)--> date | --colwidth^ (dop:colwidth)--> int | --employer^ (dop:employer)--> langString
+  Location: --building start date^ (doo:buildingStartDate)--> string | --added^ (dop:added)--> date | --access-date^ (dop:accessDate)--> date | --reason^ (dop:reason)--> langString | --discoverer^ (doo:discoverer)--> Resource | --caption^ (dop:caption)--> langString | --builder^ (dop:builder)--> langString
+  settlement: --Apr precipitation days^ (dop:aprPrecipitationDays)--> int | --Aug high F^ (dop:augHighF)--> double | --date^ (dop:date)--> date
+subgraph_id: 385
+relationships:
+  - settlement --dop:namedFor--> person
+  - Location --doo:namedAfter--> person

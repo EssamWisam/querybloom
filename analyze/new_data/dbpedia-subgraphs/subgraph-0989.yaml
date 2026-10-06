@@ -1,0 +1,56 @@
+types:
+  horse: doo:Horse
+  museum: doo:Museum
+  company: doo:Company
+  RaceHorse: doo:RaceHorse
+  horse race: doo:HorseRace
+  jockey (horse racer): doo:Jockey
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Calumet_Farm: (Wikipage revision ID^='1104307658')
+      Citation_(horse): (race^='http://dbpedia.org/resource/American_Derby')
+    relationships:
+      - Armed (dor:Armed) --doo:breeder--> Calumet_Farm (dor:Calumet_Farm)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:raceHorse--> Armed (dor:Armed)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:race--> American_Classic_Races (dor:American_Classic_Races)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+      - Armed (dor:Armed) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:raceHorse--> Citation_(horse) (<http://dbpedia.org/resource/Citation_(horse)>)
+  '2':
+    attributes:
+      Calumet_Farm: (Wikipage revision ID^='1104307658')
+    relationships:
+      - Armed (dor:Armed) --doo:breeder--> Calumet_Farm (dor:Calumet_Farm)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:raceHorse--> Armed (dor:Armed)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:race--> American_Classic_Races (dor:American_Classic_Races)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+      - Armed (dor:Armed) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:raceHorse--> Coaltown (dor:Coaltown)
+  '3':
+    attributes:
+      Hill_Gail: (race^='http://dbpedia.org/resource/Arlington-Washington_Futurity_Stakes')
+      Calumet_Farm: (Wikipage revision ID^='1104307658')
+    relationships:
+      - Armed (dor:Armed) --doo:breeder--> Calumet_Farm (dor:Calumet_Farm)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:raceHorse--> Armed (dor:Armed)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:race--> American_Classic_Races (dor:American_Classic_Races)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+      - Armed (dor:Armed) --doo:honours--> National_Museum_of_Racing_and_Hall_of_Fame (dor:National_Museum_of_Racing_and_Hall_of_Fame)
+      - Ben_A._Jones (dor:Ben_A._Jones) --doo:raceHorse--> Hill_Gail (dor:Hill_Gail)
+attributes:
+  horse: --race^ (doo:race)--> Resource
+  company: --original name^ (doo:originalName)--> langString | --colwidth^ (dop:colwidth)--> int | --Wikipage revision ID^ (doo:wikiPageRevisionID)--> int | --data^ (dop:data)--> langString | --wordnet_type (dop:wordnet_type)--> Resource | --founder^ (dop:founder)--> langString | --founded by^ (doo:foundedBy)--> Resource | --founding year^ (doo:foundingYear)--> gYear
+subgraph_id: 989
+relationships:
+  - RaceHorse --doo:breeder--> company
+  - jockey (horse racer) --doo:raceHorse--> RaceHorse
+  - jockey (horse racer) --doo:race--> horse race
+  - jockey (horse racer) --doo:honours--> museum
+  - RaceHorse --doo:honours--> museum
+  - jockey (horse racer) --doo:raceHorse--> horse

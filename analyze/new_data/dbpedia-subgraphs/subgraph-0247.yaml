@@ -1,0 +1,129 @@
+types:
+  country: doo:Country
+  religious: doo:Religious
+  scientist: doo:Scientist
+  television show: doo:TelevisionShow
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+    relationships:
+      - Abbas_Eqbal_Kitabchi (dor:Abbas_Eqbal_Kitabchi) --dop:deathPlace--> United_States (dor:United_States)
+      - ¡Mucha_Lucha! (<http://dbpedia.org/resource/¡Mucha_Lucha!>) --doo:country--> United_States (dor:United_States)
+      - A._Milton_Musser (dor:A._Milton_Musser) --doo:nationality--> United_States (dor:United_States)
+  '2':
+    attributes:
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+    relationships:
+      - Abbas_Eqbal_Kitabchi (dor:Abbas_Eqbal_Kitabchi) --dop:deathPlace--> United_States (dor:United_States)
+      - ¿Qué_Pasa,_USA%3F (<http://dbpedia.org/resource/¿Qué_Pasa,_USA%3F>) --doo:country--> United_States (dor:United_States)
+      - A._Milton_Musser (dor:A._Milton_Musser) --doo:nationality--> United_States (dor:United_States)
+  '3':
+    attributes:
+      United_States: (anthem^='http://dbpedia.org/resource/The_Star-Spangled_Banner')
+    relationships:
+      - Abbas_Eqbal_Kitabchi (dor:Abbas_Eqbal_Kitabchi) --dop:deathPlace--> United_States (dor:United_States)
+      - ¿Quién_es_quién%3F (<http://dbpedia.org/resource/¿Quién_es_quién%3F>) --doo:country--> United_States (dor:United_States)
+      - A._Milton_Musser (dor:A._Milton_Musser) --doo:nationality--> United_States (dor:United_States)
+  '4':
+    attributes:
+      Saudi_Arabia: (anthem^='http://dbpedia.org/resource/National_Anthem_of_Saudi_Arabia')
+    relationships:
+      - Muhammad_Rafique_(mathematician) (<http://dbpedia.org/resource/Muhammad_Rafique_(mathematician)>) --dop:deathPlace--> Saudi_Arabia (dor:Saudi_Arabia)
+      - Awdat_Asoid (dor:Awdat_Asoid) --doo:country--> Saudi_Arabia (dor:Saudi_Arabia)
+      - Abdul_Aziz_al-Harbi (dor:Abdul_Aziz_al-Harbi) --doo:nationality--> Saudi_Arabia (dor:Saudi_Arabia)
+  '5':
+    attributes:
+      Saudi_Arabia: (anthem^='http://dbpedia.org/resource/National_Anthem_of_Saudi_Arabia')
+    relationships:
+      - Muhammad_Rafique_(mathematician) (<http://dbpedia.org/resource/Muhammad_Rafique_(mathematician)>) --dop:deathPlace--> Saudi_Arabia (dor:Saudi_Arabia)
+      - Doubt_(Arabic_TV_series) (<http://dbpedia.org/resource/Doubt_(Arabic_TV_series)>) --doo:country--> Saudi_Arabia (dor:Saudi_Arabia)
+      - Abdul_Aziz_al-Harbi (dor:Abdul_Aziz_al-Harbi) --doo:nationality--> Saudi_Arabia (dor:Saudi_Arabia)
+  '6':
+    attributes:
+      Saudi_Arabia: (anthem^='http://dbpedia.org/resource/National_Anthem_of_Saudi_Arabia')
+    relationships:
+      - Muhammad_Rafique_(mathematician) (<http://dbpedia.org/resource/Muhammad_Rafique_(mathematician)>) --dop:deathPlace--> Saudi_Arabia (dor:Saudi_Arabia)
+      - Ramez_Movie_Star (dor:Ramez_Movie_Star) --doo:country--> Saudi_Arabia (dor:Saudi_Arabia)
+      - Abdul_Aziz_al-Harbi (dor:Abdul_Aziz_al-Harbi) --doo:nationality--> Saudi_Arabia (dor:Saudi_Arabia)
+  '7':
+    attributes:
+      Pakistan: (float^='right')
+      Abdul_Qadeer_Khan: (children^='2')
+    relationships:
+      - Abdul_Qadeer_Khan (dor:Abdul_Qadeer_Khan) --dop:deathPlace--> Pakistan (dor:Pakistan)
+      - 1st_Indus_Drama_Awards (dor:1st_Indus_Drama_Awards) --doo:country--> Pakistan (dor:Pakistan)
+      - Abdul_Haq_Baloch_(politician) (<http://dbpedia.org/resource/Abdul_Haq_Baloch_(politician)>) --doo:nationality--> Pakistan (dor:Pakistan)
+  '8':
+    attributes:
+      Pakistan: (float^='right')
+      Abdul_Qadeer_Khan: (children^='2')
+    relationships:
+      - Abdul_Qadeer_Khan (dor:Abdul_Qadeer_Khan) --dop:deathPlace--> Pakistan (dor:Pakistan)
+      - 3_Idiots_(TV_series) (<http://dbpedia.org/resource/3_Idiots_(TV_series)>) --doo:country--> Pakistan (dor:Pakistan)
+      - Abdul_Haq_Baloch_(politician) (<http://dbpedia.org/resource/Abdul_Haq_Baloch_(politician)>) --doo:nationality--> Pakistan (dor:Pakistan)
+  '9':
+    attributes:
+      Pakistan: (float^='right')
+      Abdul_Qadeer_Khan: (children^='2')
+    relationships:
+      - Abdul_Qadeer_Khan (dor:Abdul_Qadeer_Khan) --dop:deathPlace--> Pakistan (dor:Pakistan)
+      - 4_Man_Show (dor:4_Man_Show) --doo:country--> Pakistan (dor:Pakistan)
+      - Abdul_Haq_Baloch_(politician) (<http://dbpedia.org/resource/Abdul_Haq_Baloch_(politician)>) --doo:nationality--> Pakistan (dor:Pakistan)
+  '10':
+    attributes: {}
+    relationships:
+      - Maarten_Buysman (dor:Maarten_Buysman) --dop:deathPlace--> Indonesia (dor:Indonesia)
+      - 2010_Panasonic_Gobel_Awards (dor:2010_Panasonic_Gobel_Awards) --doo:country--> Indonesia (dor:Indonesia)
+      - Abdul_Wahab_Hasbullah (dor:Abdul_Wahab_Hasbullah) --doo:nationality--> Indonesia (dor:Indonesia)
+qa_result:
+  status: completed
+  cost_usd: 0.419817
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.0414624
+        total_tokens: 4078
+        prompt_tokens: 2228
+        completion_tokens: 1850
+      generate:
+        cost_usd: 0.12522760000000002
+        total_tokens: 9688
+        prompt_tokens: 4089
+        completion_tokens: 5599
+      verify_1:
+        cost_usd: 0.084422
+        total_tokens: 7543
+        prompt_tokens: 4429
+        completion_tokens: 3114
+      verify_2:
+        cost_usd: 0.038187
+        total_tokens: 5235
+        prompt_tokens: 4434
+        completion_tokens: 801
+      complexity:
+        cost_usd: 0.13051800000000002
+        total_tokens: 10777
+        prompt_tokens: 5096
+        completion_tokens: 5681
+    total_tokens: 37321
+    prompt_tokens: 20276
+    total_cost_usd: 0.419817
+    completion_tokens: 17045
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  country: --anthem^ (doo:anthem)--> Resource | --float^ (dop:float)--> langString
+  scientist: --children^ (dop:children)--> langString | --doctoral student^ (doo:doctoralStudent)--> Resource | --birth name^ (dop:birthName)--> langString
+  television show: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --d^ (dop:d)--> langString | --person^ (doo:person)--> Resource | --relatives^ (dop:relatives)--> langString
+subgraph_id: 247
+relationships:
+  - scientist --dop:deathPlace--> country
+  - television show --doo:country--> country
+  - religious --doo:nationality--> country

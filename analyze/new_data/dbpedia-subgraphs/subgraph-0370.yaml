@@ -1,0 +1,74 @@
+types:
+  city: doo:City
+  Location: doo:Location
+  cricket team: doo:CricketTeam
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Patna: (Apr rain mm^='12.7')
+    relationships:
+      - 2014_Patna_Pirates_season (dor:2014_Patna_Pirates_season) --doo:ground--> Patna (dor:Patna)
+      - 2014_Patna_Pirates_season (dor:2014_Patna_Pirates_season) --dop:ground--> Bihar (dor:Bihar)
+  '2':
+    attributes:
+      Patna: (Apr rain mm^='12.7')
+    relationships:
+      - 2014_Patna_Pirates_season (dor:2014_Patna_Pirates_season) --doo:ground--> Patna (dor:Patna)
+      - 2014_Patna_Pirates_season (dor:2014_Patna_Pirates_season) --dop:ground--> Patna (dor:Patna)
+  '3':
+    attributes:
+      Patna: (Apr rain mm^='12.7')
+    relationships:
+      - 2015_Patna_Pirates_season (dor:2015_Patna_Pirates_season) --doo:ground--> Patna (dor:Patna)
+      - 2015_Patna_Pirates_season (dor:2015_Patna_Pirates_season) --dop:ground--> Bihar (dor:Bihar)
+  '4':
+    attributes:
+      Ranchi: (Apr rain mm^='21.8')
+    relationships:
+      - 2017_Patna_Pirates_season (dor:2017_Patna_Pirates_season) --doo:ground--> Ranchi (dor:Ranchi)
+      - 2017_Patna_Pirates_season (dor:2017_Patna_Pirates_season) --dop:ground--> Ranchi (dor:Ranchi)
+  '5':
+    attributes:
+      Canberra: (area^='814.2')
+    relationships:
+      - ACT_Meteors (dor:ACT_Meteors) --doo:ground--> Canberra (dor:Canberra)
+      - ACT_Meteors (dor:ACT_Meteors) --dop:ground--> Canberra (dor:Canberra)
+  '6':
+    attributes: {}
+    relationships:
+      - Amo_Sharks (dor:Amo_Sharks) --doo:ground--> Mazar-i-Sharif (dor:Mazar-i-Sharif)
+      - Amo_Sharks (dor:Amo_Sharks) --dop:ground--> Mazar-i-Sharif (dor:Mazar-i-Sharif)
+  '7':
+    attributes:
+      Visakhapatnam: (Apr rain mm^='25')
+    relationships:
+      - Andhra_cricket_team (dor:Andhra_cricket_team) --doo:ground--> Visakhapatnam (dor:Visakhapatnam)
+      - Andhra_cricket_team (dor:Andhra_cricket_team) --dop:ground--> Visakhapatnam (dor:Visakhapatnam)
+  '8':
+    attributes: {}
+    relationships:
+      - Andhra_women's_cricket_team (<http://dbpedia.org/resource/Andhra_women's_cricket_team>) --doo:ground--> Guntur (dor:Guntur)
+      - Andhra_women's_cricket_team (<http://dbpedia.org/resource/Andhra_women's_cricket_team>) --dop:ground--> Mulapadu (dor:Mulapadu)
+  '9':
+    attributes:
+      Auckland: (Apr rain mm^='99.4', named after^='http://dbpedia.org/resource/George_Eden,_1st_Earl_of_Auckland')
+    relationships:
+      - Auckland_Hearts (dor:Auckland_Hearts) --doo:ground--> Auckland (dor:Auckland)
+      - Auckland_Hearts (dor:Auckland_Hearts) --dop:ground--> Auckland (dor:Auckland)
+  '10':
+    attributes: {}
+    relationships:
+      - Bagmati_Province_cricket_team (dor:Bagmati_Province_cricket_team) --doo:ground--> Lalitpur,_Nepal (<http://dbpedia.org/resource/Lalitpur,_Nepal>)
+      - Bagmati_Province_cricket_team (dor:Bagmati_Province_cricket_team) --dop:ground--> Lalitpur,_Nepal (<http://dbpedia.org/resource/Lalitpur,_Nepal>)
+attributes:
+  city: --url^ (dop:url)--> Resource | --Apr low F^ (dop:aprLowF)--> double | --Apr rain mm^ (dop:aprRainMm)--> double | --named after^ (doo:namedAfter)--> Resource | --Apr high F^ (dop:aprHighF)--> double
+  Location: --number of members^ (doo:numberOfMembers)--> int | --built^ (dop:built)--> langString | --coroner^ (dop:coroner)--> langString | --area^ (dop:area)--> double | --coordinates^ (dop:coordinates)--> double | --country^ (dop:country)--> langString
+subgraph_id: 370
+relationships:
+  - cricket team --doo:ground--> city
+  - cricket team --dop:ground--> Location

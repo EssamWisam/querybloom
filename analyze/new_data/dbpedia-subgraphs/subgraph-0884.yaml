@@ -1,0 +1,118 @@
+types:
+  person: doo:Person
+  Election: doo:Election
+  politician: doo:Politician
+  soccer club: doo:SoccerClub
+  political party: doo:PoliticalParty
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Sun_Guangxin: (occupation^='http://dbpedia.org/resource/Sun_Guangxin__PersonFunction__1')
+      13th_National_People's_Congress: (secondLeader^='http://dbpedia.org/resource/Wu_Weihua', affiliation^='http://dbpedia.org/resource/Chinese_Communist_Party')
+    relationships:
+      - Sun_Guangxin (dor:Sun_Guangxin) --doo:party--> Chinese_Communist_Party (dor:Chinese_Communist_Party)
+      - 13th_National_People's_Congress (<http://dbpedia.org/resource/13th_National_People's_Congress>) --doo:affiliation--> Chinese_Communist_Party (dor:Chinese_Communist_Party)
+      - 13th_National_People's_Congress (<http://dbpedia.org/resource/13th_National_People's_Congress>) --doo:secondLeader--> Wu_Weihua (dor:Wu_Weihua)
+      - Xinjiang_Flying_Tigers (dor:Xinjiang_Flying_Tigers) --doo:owner--> Sun_Guangxin (dor:Sun_Guangxin)
+  '2':
+    attributes:
+      Howard_Schultz: (occupation^='http://dbpedia.org/resource/Businessperson')
+      James_Brooks_(politician): (death place^='Washington, D.C., U.S.')
+      1864–65_United_States_House_of_Representatives_elections: (secondLeader^='http://dbpedia.org/resource/James_Brooks_(politician)', affiliation^='http://dbpedia.org/resource/Democratic_Party_(United_States)')
+    relationships:
+      - Howard_Schultz (dor:Howard_Schultz) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - 1864–65_United_States_House_of_Representatives_elections (<http://dbpedia.org/resource/1864–65_United_States_House_of_Representatives_elections>) --doo:affiliation--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - 1864–65_United_States_House_of_Representatives_elections (<http://dbpedia.org/resource/1864–65_United_States_House_of_Representatives_elections>) --doo:secondLeader--> James_Brooks_(politician) (<http://dbpedia.org/resource/James_Brooks_(politician)>)
+      - Seattle_SuperSonics (dor:Seattle_SuperSonics) --doo:owner--> Howard_Schultz (dor:Howard_Schultz)
+  '3':
+    attributes:
+      James_Brooks_(politician): (death place^='Washington, D.C., U.S.')
+      1864–65_United_States_House_of_Representatives_elections: (secondLeader^='http://dbpedia.org/resource/James_Brooks_(politician)', affiliation^='http://dbpedia.org/resource/Democratic_Party_(United_States)')
+    relationships:
+      - Joe_Robbie (dor:Joe_Robbie) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - 1864–65_United_States_House_of_Representatives_elections (<http://dbpedia.org/resource/1864–65_United_States_House_of_Representatives_elections>) --doo:affiliation--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - 1864–65_United_States_House_of_Representatives_elections (<http://dbpedia.org/resource/1864–65_United_States_House_of_Representatives_elections>) --doo:secondLeader--> James_Brooks_(politician) (<http://dbpedia.org/resource/James_Brooks_(politician)>)
+      - Fort_Lauderdale_Strikers_(1988–1994) (<http://dbpedia.org/resource/Fort_Lauderdale_Strikers_(1988–1994)>) --doo:owner--> Joe_Robbie (dor:Joe_Robbie)
+  '4':
+    attributes:
+      James_Brooks_(politician): (death place^='Washington, D.C., U.S.')
+      1864–65_United_States_House_of_Representatives_elections: (secondLeader^='http://dbpedia.org/resource/James_Brooks_(politician)', affiliation^='http://dbpedia.org/resource/Democratic_Party_(United_States)')
+    relationships:
+      - John_Y._Brown_Jr. (<http://dbpedia.org/resource/John_Y._Brown_Jr.>) --doo:party--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - 1864–65_United_States_House_of_Representatives_elections (<http://dbpedia.org/resource/1864–65_United_States_House_of_Representatives_elections>) --doo:affiliation--> Democratic_Party_(United_States) (<http://dbpedia.org/resource/Democratic_Party_(United_States)>)
+      - 1864–65_United_States_House_of_Representatives_elections (<http://dbpedia.org/resource/1864–65_United_States_House_of_Representatives_elections>) --doo:secondLeader--> James_Brooks_(politician) (<http://dbpedia.org/resource/James_Brooks_(politician)>)
+      - Buffalo_Braves (dor:Buffalo_Braves) --doo:owner--> John_Y._Brown_Jr. (<http://dbpedia.org/resource/John_Y._Brown_Jr.>)
+  '5':
+    attributes:
+      George_Grey: (honorific suffix^='http://dbpedia.org/resource/Order_of_the_Bath', reason^='Constituency abolished, recreated in 1905', death place^='South Kensington, London, England')
+      Howard_Schultz: (occupation^='http://dbpedia.org/resource/Businessperson')
+      1879_New_Zealand_general_election: (secondLeader^='http://dbpedia.org/resource/George_Grey', affiliation^='http://dbpedia.org/resource/Independent_politician')
+    relationships:
+      - Howard_Schultz (dor:Howard_Schultz) --doo:party--> Independent_politician (dor:Independent_politician)
+      - 1879_New_Zealand_general_election (dor:1879_New_Zealand_general_election) --doo:affiliation--> Independent_politician (dor:Independent_politician)
+      - 1879_New_Zealand_general_election (dor:1879_New_Zealand_general_election) --doo:secondLeader--> George_Grey (dor:George_Grey)
+      - Seattle_SuperSonics (dor:Seattle_SuperSonics) --doo:owner--> Howard_Schultz (dor:Howard_Schultz)
+  '6':
+    attributes:
+      George_Grey: (honorific suffix^='http://dbpedia.org/resource/Order_of_the_Bath', reason^='Constituency abolished, recreated in 1905', death place^='South Kensington, London, England')
+      Howard_Schultz: (occupation^='http://dbpedia.org/resource/Businessperson')
+      1881_New_Zealand_general_election: (secondLeader^='http://dbpedia.org/resource/George_Grey', affiliation^='http://dbpedia.org/resource/Independent_politician')
+    relationships:
+      - Howard_Schultz (dor:Howard_Schultz) --doo:party--> Independent_politician (dor:Independent_politician)
+      - 1881_New_Zealand_general_election (dor:1881_New_Zealand_general_election) --doo:affiliation--> Independent_politician (dor:Independent_politician)
+      - 1881_New_Zealand_general_election (dor:1881_New_Zealand_general_election) --doo:secondLeader--> George_Grey (dor:George_Grey)
+      - Seattle_SuperSonics (dor:Seattle_SuperSonics) --doo:owner--> Howard_Schultz (dor:Howard_Schultz)
+  '7':
+    attributes:
+      Kuno_von_Westarp: (death place^='http://dbpedia.org/resource/Allied-occupied_Germany')
+      Reinhard_Rauball: (occupation^='http://dbpedia.org/resource/Lawyer')
+      1928_German_federal_election: (secondLeader^='http://dbpedia.org/resource/Kuno_von_Westarp', affiliation^='http://dbpedia.org/resource/German_National_People''s_Party')
+    relationships:
+      - Reinhard_Rauball (dor:Reinhard_Rauball) --doo:party--> Social_Democratic_Party_of_Germany (dor:Social_Democratic_Party_of_Germany)
+      - 1928_German_federal_election (dor:1928_German_federal_election) --doo:affiliation--> Social_Democratic_Party_of_Germany (dor:Social_Democratic_Party_of_Germany)
+      - 1928_German_federal_election (dor:1928_German_federal_election) --doo:secondLeader--> Kuno_von_Westarp (dor:Kuno_von_Westarp)
+      - Borussia_Dortmund_Youth_Sector (dor:Borussia_Dortmund_Youth_Sector) --doo:owner--> Reinhard_Rauball (dor:Reinhard_Rauball)
+  '8':
+    attributes:
+      Kuno_von_Westarp: (death place^='http://dbpedia.org/resource/Allied-occupied_Germany')
+      Reinhard_Rauball: (occupation^='http://dbpedia.org/resource/Lawyer')
+      1928_German_federal_election: (secondLeader^='http://dbpedia.org/resource/Kuno_von_Westarp', affiliation^='http://dbpedia.org/resource/German_National_People''s_Party')
+    relationships:
+      - Reinhard_Rauball (dor:Reinhard_Rauball) --doo:party--> Social_Democratic_Party_of_Germany (dor:Social_Democratic_Party_of_Germany)
+      - 1928_German_federal_election (dor:1928_German_federal_election) --doo:affiliation--> Social_Democratic_Party_of_Germany (dor:Social_Democratic_Party_of_Germany)
+      - 1928_German_federal_election (dor:1928_German_federal_election) --doo:secondLeader--> Kuno_von_Westarp (dor:Kuno_von_Westarp)
+      - Borussia_Dortmund (dor:Borussia_Dortmund) --doo:owner--> Reinhard_Rauball (dor:Reinhard_Rauball)
+  '9':
+    attributes:
+      Adolf_Hitler: (death place^='http://dbpedia.org/resource/Berlin')
+      Reinhard_Rauball: (occupation^='http://dbpedia.org/resource/Lawyer')
+      1930_German_federal_election: (secondLeader^='http://dbpedia.org/resource/Adolf_Hitler', affiliation^='http://dbpedia.org/resource/Nazi_Party')
+    relationships:
+      - Reinhard_Rauball (dor:Reinhard_Rauball) --doo:party--> Social_Democratic_Party_of_Germany (dor:Social_Democratic_Party_of_Germany)
+      - 1930_German_federal_election (dor:1930_German_federal_election) --doo:affiliation--> Social_Democratic_Party_of_Germany (dor:Social_Democratic_Party_of_Germany)
+      - 1930_German_federal_election (dor:1930_German_federal_election) --doo:secondLeader--> Adolf_Hitler (dor:Adolf_Hitler)
+      - Borussia_Dortmund_Youth_Sector (dor:Borussia_Dortmund_Youth_Sector) --doo:owner--> Reinhard_Rauball (dor:Reinhard_Rauball)
+  '10':
+    attributes:
+      1987_Mizoram_Legislative_Assembly_election: (secondLeader^='http://dbpedia.org/resource/Lal_Thanhawla', affiliation^='http://dbpedia.org/resource/Indian_National_Congress')
+    relationships:
+      - Robert_Romawia_Royte (dor:Robert_Romawia_Royte) --doo:party--> Mizo_National_Front (dor:Mizo_National_Front)
+      - 1987_Mizoram_Legislative_Assembly_election (dor:1987_Mizoram_Legislative_Assembly_election) --doo:affiliation--> Mizo_National_Front (dor:Mizo_National_Front)
+      - 1987_Mizoram_Legislative_Assembly_election (dor:1987_Mizoram_Legislative_Assembly_election) --doo:secondLeader--> Lal_Thanhawla (dor:Lal_Thanhawla)
+      - Aizawl_FC (dor:Aizawl_FC) --doo:owner--> Robert_Romawia_Royte (dor:Robert_Romawia_Royte)
+attributes:
+  person: --state of origin^ (doo:stateOfOrigin)--> Resource | --align^ (dop:align)--> langString | --occupation^ (doo:occupation)--> Resource | --awards^ (dop:awards)--> Resource
+  Election: --secondLeader^ (doo:secondLeader)--> Resource | --affiliation^ (doo:affiliation)--> Resource
+  politician: --assembly^ (dop:assembly)--> langString | --honorific suffix^ (dop:honorificSuffix)--> Resource | --reason^ (dop:reason)--> langString | --death place^ (dop:deathPlace)--> Resource
+  soccer club: --highest attendance^ (dop:highestAttendance)--> gMonthDay
+subgraph_id: 884
+relationships:
+  - person --doo:party--> political party
+  - Election --doo:affiliation--> political party
+  - Election --doo:secondLeader--> politician
+  - soccer club --doo:owner--> person

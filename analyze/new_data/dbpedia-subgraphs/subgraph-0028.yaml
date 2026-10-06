@@ -1,0 +1,87 @@
+types:
+  cleric: doo:Cleric
+  hospital: doo:Hospital
+  university: doo:University
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      University_of_Bologna: '(Link from a Wikipage to an external page^=''http://www.ba.unibo.it/%7CUniversity'', caption^=''http://dbpedia.org/resource/Seal_(emblem)'', city^=''Bologna, others: Cesena, Forlì, Ravenna, and Rimini'')'
+      Policlinico_Sant'Orsola-Malpighi: (affiliation^='http://dbpedia.org/resource/University_of_Bologna', country^='Italy', caption^='Policlinico Sant''Orsola-Malpighi. Photo by Paolo Monti, 1974.')
+    relationships:
+      - Achille_Manara (dor:Achille_Manara) --dop:almaMater--> University_of_Bologna (dor:University_of_Bologna)
+      - Policlinico_Sant'Orsola-Malpighi (<http://dbpedia.org/resource/Policlinico_Sant'Orsola-Malpighi>) --dop:affiliation--> University_of_Bologna (dor:University_of_Bologna)
+  '2':
+    attributes:
+      University_of_Bologna: '(Link from a Wikipage to an external page^=''http://www.ba.unibo.it/%7CUniversity'', caption^=''http://dbpedia.org/resource/Seal_(emblem)'', city^=''Bologna, others: Cesena, Forlì, Ravenna, and Rimini'')'
+      Policlinico_Sant'Orsola-Malpighi: (affiliation^='http://dbpedia.org/resource/University_of_Bologna', country^='Italy', caption^='Policlinico Sant''Orsola-Malpighi. Photo by Paolo Monti, 1974.')
+    relationships:
+      - Achille_Silvestrini (dor:Achille_Silvestrini) --dop:almaMater--> University_of_Bologna (dor:University_of_Bologna)
+      - Policlinico_Sant'Orsola-Malpighi (<http://dbpedia.org/resource/Policlinico_Sant'Orsola-Malpighi>) --dop:affiliation--> University_of_Bologna (dor:University_of_Bologna)
+  '3':
+    attributes:
+      University_of_Birmingham: (Link from a Wikipage to an external page^='http://www.birmingham.ac.uk/index.aspx', caption^='http://dbpedia.org/resource/Escutcheon_(heraldry)', city^='http://dbpedia.org/resource/Birmingham')
+      Birmingham_Children's_Hospital: (affiliation^='http://dbpedia.org/resource/University_of_Birmingham', country^='England', caption^='Birmingham Children''s Hospital')
+    relationships:
+      - Adam_Atkinson (dor:Adam_Atkinson) --dop:almaMater--> University_of_Birmingham (dor:University_of_Birmingham)
+      - Birmingham_Children's_Hospital (<http://dbpedia.org/resource/Birmingham_Children's_Hospital>) --dop:affiliation--> University_of_Birmingham (dor:University_of_Birmingham)
+  '4':
+    attributes:
+      New_Cross_Hospital: (affiliation^='http://dbpedia.org/resource/University_of_Birmingham', country^='UK', caption^='Heart and Lung Centre')
+      University_of_Birmingham: (Link from a Wikipage to an external page^='http://www.birmingham.ac.uk/index.aspx', caption^='http://dbpedia.org/resource/Escutcheon_(heraldry)', city^='http://dbpedia.org/resource/Birmingham')
+    relationships:
+      - Adam_Atkinson (dor:Adam_Atkinson) --dop:almaMater--> University_of_Birmingham (dor:University_of_Birmingham)
+      - New_Cross_Hospital (dor:New_Cross_Hospital) --dop:affiliation--> University_of_Birmingham (dor:University_of_Birmingham)
+  '5':
+    attributes:
+      University_of_Birmingham: (Link from a Wikipage to an external page^='http://www.birmingham.ac.uk/index.aspx', caption^='http://dbpedia.org/resource/Escutcheon_(heraldry)', city^='http://dbpedia.org/resource/Birmingham')
+      Queen_Elizabeth_Hospital_Birmingham_(1933–2010): (affiliation^='http://dbpedia.org/resource/University_of_Birmingham', country^='England', caption^='The hospital, from the south')
+    relationships:
+      - Adam_Atkinson (dor:Adam_Atkinson) --dop:almaMater--> University_of_Birmingham (dor:University_of_Birmingham)
+      - Queen_Elizabeth_Hospital_Birmingham_(1933–2010) (<http://dbpedia.org/resource/Queen_Elizabeth_Hospital_Birmingham_(1933–2010)>) --dop:affiliation--> University_of_Birmingham (dor:University_of_Birmingham)
+  '6':
+    attributes:
+      University_of_Ottawa: (Link from a Wikipage to an external page^='http://orbiscatholicussecundus.blogspot.com/2011/12/universitas-ottaviensis.html', caption^='Coat of arms of the University of Ottawa', city^='http://dbpedia.org/resource/Ottawa')
+      Children's_Hospital_of_Eastern_Ontario: (affiliation^='http://dbpedia.org/resource/University_of_Ottawa', country^='Canada', caption^='The main entrance to CHEO')
+    relationships:
+      - Adam_Exner (dor:Adam_Exner) --dop:almaMater--> University_of_Ottawa (dor:University_of_Ottawa)
+      - Children's_Hospital_of_Eastern_Ontario (<http://dbpedia.org/resource/Children's_Hospital_of_Eastern_Ontario>) --dop:affiliation--> University_of_Ottawa (dor:University_of_Ottawa)
+  '7':
+    attributes:
+      Montfort_Hospital: (affiliation^='http://dbpedia.org/resource/University_of_Ottawa', country^='Canada')
+      University_of_Ottawa: (Link from a Wikipage to an external page^='http://orbiscatholicussecundus.blogspot.com/2011/12/universitas-ottaviensis.html', caption^='Coat of arms of the University of Ottawa', city^='http://dbpedia.org/resource/Ottawa')
+    relationships:
+      - Adam_Exner (dor:Adam_Exner) --dop:almaMater--> University_of_Ottawa (dor:University_of_Ottawa)
+      - Montfort_Hospital (dor:Montfort_Hospital) --dop:affiliation--> University_of_Ottawa (dor:University_of_Ottawa)
+  '8':
+    attributes:
+      University_of_Ottawa: (Link from a Wikipage to an external page^='http://orbiscatholicussecundus.blogspot.com/2011/12/universitas-ottaviensis.html', caption^='Coat of arms of the University of Ottawa', city^='http://dbpedia.org/resource/Ottawa')
+      Ottawa_Civic_Hospital: (affiliation^='http://dbpedia.org/resource/University_of_Ottawa')
+    relationships:
+      - Adam_Exner (dor:Adam_Exner) --dop:almaMater--> University_of_Ottawa (dor:University_of_Ottawa)
+      - Ottawa_Civic_Hospital (dor:Ottawa_Civic_Hospital) --dop:affiliation--> University_of_Ottawa (dor:University_of_Ottawa)
+  '9':
+    attributes:
+      Churchill_Hospital: (affiliation^='http://dbpedia.org/resource/Oxford_Brookes_University', country^='UK', caption^='The front of Churchill Hospital')
+      University_of_Oxford: (Link from a Wikipage to an external page^='http://www.british-history.ac.uk/report.aspx%3Fcompid=63862%23n9', caption^='Lady Margaret Hall, founded in 1878', city^='http://dbpedia.org/resource/Oxford')
+    relationships:
+      - Adam_Houghton (dor:Adam_Houghton) --dop:almaMater--> University_of_Oxford (dor:University_of_Oxford)
+      - Churchill_Hospital (dor:Churchill_Hospital) --dop:affiliation--> University_of_Oxford (dor:University_of_Oxford)
+  '10':
+    attributes:
+      University_of_Oxford: (Link from a Wikipage to an external page^='http://www.british-history.ac.uk/report.aspx%3Fcompid=63862%23n9', caption^='Lady Margaret Hall, founded in 1878', city^='http://dbpedia.org/resource/Oxford')
+      Horton_General_Hospital: (affiliation^='http://dbpedia.org/resource/University_of_Oxford', caption^='Horton General Hospital in 2010')
+    relationships:
+      - Adam_Houghton (dor:Adam_Houghton) --dop:almaMater--> University_of_Oxford (dor:University_of_Oxford)
+      - Horton_General_Hospital (dor:Horton_General_Hospital) --dop:affiliation--> University_of_Oxford (dor:University_of_Oxford)
+attributes:
+  hospital: --opening date^ (doo:openingDate)--> date | --affiliation^ (dop:affiliation)--> Resource | --country^ (dop:country)--> langString | --caption^ (dop:caption)--> langString
+  university: --last^ (dop:last)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource | --caption^ (dop:caption)--> langString | --city^ (dop:city)--> langString | --float^ (dop:float)--> langString
+subgraph_id: 28
+relationships:
+  - cleric --dop:almaMater--> university
+  - hospital --dop:affiliation--> university

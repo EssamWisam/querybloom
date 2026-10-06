@@ -1,0 +1,118 @@
+types:
+  country: doo:Country
+  university: doo:University
+  musical artist: doo:MusicalArtist
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Abetifi_Presbyterian_College_of_Education: (city^='http://dbpedia.org/resource/Abetifi', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - $pacely (<http://dbpedia.org/resource/$pacely>) --doo:birthPlace--> Ghana (dor:Ghana)
+      - Abetifi_Presbyterian_College_of_Education (dor:Abetifi_Presbyterian_College_of_Education) --doo:country--> Ghana (dor:Ghana)
+  '2':
+    attributes:
+      Accra_College_of_Education: (city^='http://dbpedia.org/resource/Accra', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - $pacely (<http://dbpedia.org/resource/$pacely>) --doo:birthPlace--> Ghana (dor:Ghana)
+      - Accra_College_of_Education (dor:Accra_College_of_Education) --doo:country--> Ghana (dor:Ghana)
+  '3':
+    attributes:
+      Accra_College_of_Medicine: (city^='http://dbpedia.org/resource/Accra', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Coord')
+    relationships:
+      - $pacely (<http://dbpedia.org/resource/$pacely>) --doo:birthPlace--> Ghana (dor:Ghana)
+      - Accra_College_of_Medicine (dor:Accra_College_of_Medicine) --doo:country--> Ghana (dor:Ghana)
+  '4':
+    attributes:
+      Académie_Colarossi: (wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - 20syl (dor:20syl) --doo:birthPlace--> France (dor:France)
+      - Académie_Colarossi (<http://dbpedia.org/resource/Académie_Colarossi>) --doo:country--> France (dor:France)
+  '5':
+    attributes:
+      Académie_Julian: (city^='http://dbpedia.org/resource/Paris', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - 20syl (dor:20syl) --doo:birthPlace--> France (dor:France)
+      - Académie_Julian (<http://dbpedia.org/resource/Académie_Julian>) --doo:country--> France (dor:France)
+  '6':
+    attributes: {}
+    relationships:
+      - 20syl (dor:20syl) --doo:birthPlace--> France (dor:France)
+      - Académie_Moderne (<http://dbpedia.org/resource/Académie_Moderne>) --doo:country--> France (dor:France)
+  '7':
+    attributes:
+      2Baba: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1')
+      Abia_State_College_of_Education_(Technical): (city^='http://dbpedia.org/resource/Arochukwu', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Coord_missing')
+    relationships:
+      - 2Baba (dor:2Baba) --doo:birthPlace--> Nigeria (dor:Nigeria)
+      - Abia_State_College_of_Education_(Technical) (<http://dbpedia.org/resource/Abia_State_College_of_Education_(Technical)>) --doo:country--> Nigeria (dor:Nigeria)
+  '8':
+    attributes:
+      2Baba: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1')
+      Abia_State_University_Uturu: (city^='http://dbpedia.org/resource/Uturu', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Association_of_African_Universities')
+    relationships:
+      - 2Baba (dor:2Baba) --doo:birthPlace--> Nigeria (dor:Nigeria)
+      - Abia_State_University_Uturu (dor:Abia_State_University_Uturu) --doo:country--> Nigeria (dor:Nigeria)
+  '9':
+    attributes:
+      2Baba: (wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1')
+      Abubakar_Tafawa_Balewa_University: (city^='http://dbpedia.org/resource/Bauchi', wordnet_type='http://www.w3.org/2006/03/wn/wn20/instances/synset-university-noun-2', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Association_of_African_Universities')
+    relationships:
+      - 2Baba (dor:2Baba) --doo:birthPlace--> Nigeria (dor:Nigeria)
+      - Abubakar_Tafawa_Balewa_University (dor:Abubakar_Tafawa_Balewa_University) --doo:country--> Nigeria (dor:Nigeria)
+  '10':
+    attributes:
+      Liberia: (reason^='CIA Fact Book is no authority to populations in Liberia')
+      Adventist_University_of_West_Africa: (city^='http://dbpedia.org/resource/Schieffelin_Town', wikiPageUsesTemplate='http://dbpedia.org/resource/Template:Authority_control')
+    relationships:
+      - 2C_(musician) (<http://dbpedia.org/resource/2C_(musician)>) --doo:birthPlace--> Liberia (dor:Liberia)
+      - Adventist_University_of_West_Africa (dor:Adventist_University_of_West_Africa) --doo:country--> Liberia (dor:Liberia)
+qa_result:
+  status: completed
+  cost_usd: 0.332747
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.04913240000000001
+        total_tokens: 4463
+        prompt_tokens: 2230
+        completion_tokens: 2233
+      generate:
+        cost_usd: 0.0725626
+        total_tokens: 6673
+        prompt_tokens: 3580
+        completion_tokens: 3093
+      verify_1:
+        cost_usd: 0.06254700000000002
+        total_tokens: 6156
+        prompt_tokens: 4038
+        completion_tokens: 2118
+      verify_2:
+        cost_usd: 0.032537
+        total_tokens: 4663
+        prompt_tokens: 4048
+        completion_tokens: 615
+      complexity:
+        cost_usd: 0.115968
+        total_tokens: 9856
+        prompt_tokens: 4838
+        completion_tokens: 5018
+    total_tokens: 31811
+    prompt_tokens: 18734
+    total_cost_usd: 0.332747
+    completion_tokens: 13077
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  country: --reason^ (dop:reason)--> langString | --founding year^ (doo:foundingYear)--> gYear
+  university: --chairman^ (doo:chairman)--> Resource | --city^ (doo:city)--> Resource | --wordnet_type (dop:wordnet_type)--> Resource | --wikiPageUsesTemplate (dop:wikiPageUsesTemplate)--> Resource | --direction^ (dop:direction)--> langString | --former name^ (doo:formerName)--> langString
+  musical artist: --death place^ (dop:deathPlace)--> langString | --class^ (dop:class)--> langString | --wordnet_type (dop:wordnet_type)--> Resource
+subgraph_id: 187
+relationships:
+  - musical artist --doo:birthPlace--> country
+  - university --doo:country--> country

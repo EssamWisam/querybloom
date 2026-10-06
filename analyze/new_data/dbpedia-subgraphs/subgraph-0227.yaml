@@ -1,0 +1,135 @@
+types:
+  person: doo:Person
+  single: doo:Single
+  settlement: doo:Settlement
+  music genre: doo:MusicGenre
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Downey,_California: (UTC offset^='−7')
+    relationships:
+      - Achy_Breaky_Song (dor:Achy_Breaky_Song) --doo:genre--> Comedy_music (dor:Comedy_music)
+      - Achy_Breaky_Song (dor:Achy_Breaky_Song) --doo:artist--> %22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>)
+      - '%22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>) --doo:birthPlace--> Downey,_California (<http://dbpedia.org/resource/Downey,_California>)'
+  '2':
+    attributes:
+      Downey,_California: (UTC offset^='−7')
+    relationships:
+      - Achy_Breaky_Song (dor:Achy_Breaky_Song) --doo:genre--> Country_music (dor:Country_music)
+      - Achy_Breaky_Song (dor:Achy_Breaky_Song) --doo:artist--> %22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>)
+      - '%22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>) --doo:birthPlace--> Downey,_California (<http://dbpedia.org/resource/Downey,_California>)'
+  '3':
+    attributes:
+      Downey,_California: (UTC offset^='−7')
+    relationships:
+      - Achy_Breaky_Song (dor:Achy_Breaky_Song) --doo:genre--> Parody_music (dor:Parody_music)
+      - Achy_Breaky_Song (dor:Achy_Breaky_Song) --doo:artist--> %22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>)
+      - '%22Weird_Al%22_Yankovic (<http://dbpedia.org/resource/%22Weird_Al%22_Yankovic>) --doo:birthPlace--> Downey,_California (<http://dbpedia.org/resource/Downey,_California>)'
+  '4':
+    attributes:
+      2_Chainz: (spouse^='2018', alma mater^='http://dbpedia.org/resource/Virginia_State_University')
+      College_Park,_Georgia: (UTC offset^='-4')
+      Bandz_a_Make_Her_Dance: (title^='Bandz A Make Her Dance')
+    relationships:
+      - Bandz_a_Make_Her_Dance (dor:Bandz_a_Make_Her_Dance) --doo:genre--> Dirty_rap (dor:Dirty_rap)
+      - Bandz_a_Make_Her_Dance (dor:Bandz_a_Make_Her_Dance) --doo:artist--> 2_Chainz (dor:2_Chainz)
+      - 2_Chainz (dor:2_Chainz) --doo:birthPlace--> College_Park,_Georgia (<http://dbpedia.org/resource/College_Park,_Georgia>)
+  '5':
+    attributes:
+      2_Chainz: (spouse^='2018', alma mater^='http://dbpedia.org/resource/Virginia_State_University')
+      College_Park,_Georgia: (UTC offset^='-4')
+      Bandz_a_Make_Her_Dance: (title^='Bandz A Make Her Dance')
+    relationships:
+      - Bandz_a_Make_Her_Dance (dor:Bandz_a_Make_Her_Dance) --doo:genre--> Trap_music (dor:Trap_music)
+      - Bandz_a_Make_Her_Dance (dor:Bandz_a_Make_Her_Dance) --doo:artist--> 2_Chainz (dor:2_Chainz)
+      - 2_Chainz (dor:2_Chainz) --doo:birthPlace--> College_Park,_Georgia (<http://dbpedia.org/resource/College_Park,_Georgia>)
+  '6':
+    attributes:
+      2_Chainz: (spouse^='2018', alma mater^='http://dbpedia.org/resource/Virginia_State_University')
+      Big_Amount: (title^='Big Amount')
+      College_Park,_Georgia: (UTC offset^='-4')
+    relationships:
+      - Big_Amount (dor:Big_Amount) --doo:genre--> Hip_hop_music (dor:Hip_hop_music)
+      - Big_Amount (dor:Big_Amount) --doo:artist--> 2_Chainz (dor:2_Chainz)
+      - 2_Chainz (dor:2_Chainz) --doo:birthPlace--> College_Park,_Georgia (<http://dbpedia.org/resource/College_Park,_Georgia>)
+  '7':
+    attributes:
+      Tarpon_Springs,_Florida: (UTC offset^='-4')
+    relationships:
+      - You_Know_Me_(2_Pistols_song) (<http://dbpedia.org/resource/You_Know_Me_(2_Pistols_song)>) --doo:genre--> Hip_hop_music (dor:Hip_hop_music)
+      - You_Know_Me_(2_Pistols_song) (<http://dbpedia.org/resource/You_Know_Me_(2_Pistols_song)>) --doo:artist--> 2_Pistols (dor:2_Pistols)
+      - 2_Pistols (dor:2_Pistols) --doo:birthPlace--> Tarpon_Springs,_Florida (<http://dbpedia.org/resource/Tarpon_Springs,_Florida>)
+  '8':
+    attributes:
+      New_York_City: (float^='right', UTC offset^='−04:00')
+    relationships:
+      - 21_Questions (dor:21_Questions) --doo:genre--> Contemporary_R&B (<http://dbpedia.org/resource/Contemporary_R&B>)
+      - 21_Questions (dor:21_Questions) --doo:artist--> 50_Cent (dor:50_Cent)
+      - 50_Cent (dor:50_Cent) --doo:birthPlace--> New_York_City (dor:New_York_City)
+  '9':
+    attributes:
+      21_Questions: (title^='21')
+      New_York_City: (float^='right', UTC offset^='−04:00')
+    relationships:
+      - 21_Questions (dor:21_Questions) --doo:genre--> Hip_hop_music (dor:Hip_hop_music)
+      - 21_Questions (dor:21_Questions) --doo:artist--> 50_Cent (dor:50_Cent)
+      - 50_Cent (dor:50_Cent) --doo:birthPlace--> New_York_City (dor:New_York_City)
+  '10':
+    attributes:
+      New_York_City: (float^='right', UTC offset^='−04:00')
+    relationships:
+      - Amusement_Park_(song) (<http://dbpedia.org/resource/Amusement_Park_(song)>) --doo:genre--> Dirty_rap (dor:Dirty_rap)
+      - Amusement_Park_(song) (<http://dbpedia.org/resource/Amusement_Park_(song)>) --doo:artist--> 50_Cent (dor:50_Cent)
+      - 50_Cent (dor:50_Cent) --doo:birthPlace--> New_York_City (dor:New_York_City)
+qa_result:
+  status: completed
+  cost_usd: 0.305426
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.03406240000000001
+        total_tokens: 3831
+        prompt_tokens: 2392
+        completion_tokens: 1439
+      generate:
+        cost_usd: 0.07733700000000002
+        total_tokens: 7086
+        prompt_tokens: 4292
+        completion_tokens: 2794
+      verify_1:
+        cost_usd: 0.053722000000000006
+        total_tokens: 6485
+        prompt_tokens: 5065
+        completion_tokens: 1420
+      verify_2:
+        cost_usd: 0.045227
+        total_tokens: 5869
+        prompt_tokens: 4810
+        completion_tokens: 1059
+      complexity:
+        cost_usd: 0.09507800000000001
+        total_tokens: 9389
+        prompt_tokens: 5608
+        completion_tokens: 3781
+    total_tokens: 32660
+    prompt_tokens: 22167
+    total_cost_usd: 0.30542640000000004
+    completion_tokens: 10493
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --spouse^ (dop:spouse)--> int | --alma mater^ (doo:almaMater)--> Resource | --first appearance^ (doo:firstAppearance)--> string | --2a^ (dop:2a)--> langString
+  single: --title^ (dop:title)--> langString
+  settlement: --float^ (dop:float)--> langString | --Apr rain mm^ (dop:aprRainMm)--> int | --reason^ (dop:reason)--> langString | --UTC offset^ (doo:utcOffset)--> string | --Apr record high C^ (dop:aprRecordHighC)--> int | --date^ (dop:date)--> langString
+  music genre: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --2p^ (dop:2p)--> int
+subgraph_id: 227
+relationships:
+  - single --doo:genre--> music genre
+  - single --doo:artist--> person
+  - person --doo:birthPlace--> settlement

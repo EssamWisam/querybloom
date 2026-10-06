@@ -1,0 +1,107 @@
+types:
+  village: doo:Village
+  politician: doo:Politician
+  settlement: doo:Settlement
+  radio station: doo:RadioStation
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes:
+      Ontario: (date^='2007-10-01')
+      Simcoe,_Ontario: (Aug high C^='25.7')
+      Alexander_M._Hardy: (death date^='1927-08-31')
+      Aboriginal_Voices_Radio_Network: (owner^='Aboriginal Voices Radio Inc.', logo^='Aboriginal Voices logo.jpg')
+    relationships:
+      - Simcoe,_Ontario (<http://dbpedia.org/resource/Simcoe,_Ontario>) --wwoo:differentFrom--> Ontario (dor:Ontario)
+      - Alexander_M._Hardy (dor:Alexander_M._Hardy) --doo:birthPlace--> Simcoe,_Ontario (<http://dbpedia.org/resource/Simcoe,_Ontario>)
+      - Aboriginal_Voices_Radio_Network (dor:Aboriginal_Voices_Radio_Network) --dop:city--> Ontario (dor:Ontario)
+  '2':
+    attributes:
+      CBBS-FM: (owner^='http://dbpedia.org/resource/Canadian_Broadcasting_Corporation', logo^='File:Sudbury cbc music.svg')
+      Ontario: (date^='2007-10-01')
+      Simcoe,_Ontario: (Aug high C^='25.7')
+      Alexander_M._Hardy: (death date^='1927-08-31')
+    relationships:
+      - Simcoe,_Ontario (<http://dbpedia.org/resource/Simcoe,_Ontario>) --wwoo:differentFrom--> Ontario (dor:Ontario)
+      - Alexander_M._Hardy (dor:Alexander_M._Hardy) --doo:birthPlace--> Simcoe,_Ontario (<http://dbpedia.org/resource/Simcoe,_Ontario>)
+      - CBBS-FM (dor:CBBS-FM) --dop:city--> Ontario (dor:Ontario)
+  '3':
+    attributes:
+      CBBX-FM: (owner^='http://dbpedia.org/resource/Canadian_Broadcasting_Corporation')
+      Ontario: (date^='2007-10-01')
+      Simcoe,_Ontario: (Aug high C^='25.7')
+      Alexander_M._Hardy: (death date^='1927-08-31')
+    relationships:
+      - Simcoe,_Ontario (<http://dbpedia.org/resource/Simcoe,_Ontario>) --wwoo:differentFrom--> Ontario (dor:Ontario)
+      - Alexander_M._Hardy (dor:Alexander_M._Hardy) --doo:birthPlace--> Simcoe,_Ontario (<http://dbpedia.org/resource/Simcoe,_Ontario>)
+      - CBBX-FM (dor:CBBX-FM) --dop:city--> Ontario (dor:Ontario)
+  '4':
+    attributes:
+      Ohio: (date^='January 2019')
+      OWOW_Radio: (owner^='Wow Media, LLC', logo^='OWOW Radio logo.png')
+    relationships:
+      - West_Union,_Ohio (<http://dbpedia.org/resource/West_Union,_Ohio>) --wwoo:differentFrom--> Ohio (dor:Ohio)
+      - Andrew_Ellison (dor:Andrew_Ellison) --doo:birthPlace--> West_Union,_Ohio (<http://dbpedia.org/resource/West_Union,_Ohio>)
+      - OWOW_Radio (dor:OWOW_Radio) --dop:city--> Ohio (dor:Ohio)
+  '5':
+    attributes:
+      Ohio: (date^='January 2019')
+      W264AK: (owner^='http://dbpedia.org/resource/Cumulus_Media')
+    relationships:
+      - West_Union,_Ohio (<http://dbpedia.org/resource/West_Union,_Ohio>) --wwoo:differentFrom--> Ohio (dor:Ohio)
+      - Andrew_Ellison (dor:Andrew_Ellison) --doo:birthPlace--> West_Union,_Ohio (<http://dbpedia.org/resource/West_Union,_Ohio>)
+      - W264AK (dor:W264AK) --dop:city--> Ohio (dor:Ohio)
+  '6':
+    attributes:
+      Ohio: (date^='January 2019')
+      WAIS_(AM): (owner^='Nelsonville TV Cable, Inc.')
+    relationships:
+      - West_Union,_Ohio (<http://dbpedia.org/resource/West_Union,_Ohio>) --wwoo:differentFrom--> Ohio (dor:Ohio)
+      - Andrew_Ellison (dor:Andrew_Ellison) --doo:birthPlace--> West_Union,_Ohio (<http://dbpedia.org/resource/West_Union,_Ohio>)
+      - WAIS_(AM) (<http://dbpedia.org/resource/WAIS_(AM)>) --dop:city--> Ohio (dor:Ohio)
+  '7':
+    attributes:
+      KALH-LP: (owner^='Southwestern Trails Cultural Heritage Association', logo^='KALH-LP logo 2.png')
+      Francisco_Antonio_Manzanares: (death date^='1904-09-17')
+    relationships:
+      - Abiquiú,_New_Mexico (<http://dbpedia.org/resource/Abiquiú,_New_Mexico>) --wwoo:differentFrom--> New_Mexico (dor:New_Mexico)
+      - Francisco_Antonio_Manzanares (dor:Francisco_Antonio_Manzanares) --doo:birthPlace--> Abiquiú,_New_Mexico (<http://dbpedia.org/resource/Abiquiú,_New_Mexico>)
+      - KALH-LP (dor:KALH-LP) --dop:city--> New_Mexico (dor:New_Mexico)
+  '8':
+    attributes:
+      KATK-FM: (owner^='Carlsbad Radio, Inc.', logo^='File:KATK 92.1FM logo.jpg')
+      Francisco_Antonio_Manzanares: (death date^='1904-09-17')
+    relationships:
+      - Abiquiú,_New_Mexico (<http://dbpedia.org/resource/Abiquiú,_New_Mexico>) --wwoo:differentFrom--> New_Mexico (dor:New_Mexico)
+      - Francisco_Antonio_Manzanares (dor:Francisco_Antonio_Manzanares) --doo:birthPlace--> Abiquiú,_New_Mexico (<http://dbpedia.org/resource/Abiquiú,_New_Mexico>)
+      - KATK-FM (dor:KATK-FM) --dop:city--> New_Mexico (dor:New_Mexico)
+  '9':
+    attributes:
+      KCEI: (owner^='Cultural Energy', logo^='KCEI LOGO.png')
+      Francisco_Antonio_Manzanares: (death date^='1904-09-17')
+    relationships:
+      - Abiquiú,_New_Mexico (<http://dbpedia.org/resource/Abiquiú,_New_Mexico>) --wwoo:differentFrom--> New_Mexico (dor:New_Mexico)
+      - Francisco_Antonio_Manzanares (dor:Francisco_Antonio_Manzanares) --doo:birthPlace--> Abiquiú,_New_Mexico (<http://dbpedia.org/resource/Abiquiú,_New_Mexico>)
+      - KCEI (dor:KCEI) --dop:city--> New_Mexico (dor:New_Mexico)
+  '10':
+    attributes:
+      WBCR-FM: (owner^='The Board of Trustees/Beloit College')
+    relationships:
+      - Menomonee_Falls,_Wisconsin (<http://dbpedia.org/resource/Menomonee_Falls,_Wisconsin>) --wwoo:differentFrom--> Wisconsin (dor:Wisconsin)
+      - George_E._Hoyt (dor:George_E._Hoyt) --doo:birthPlace--> Menomonee_Falls,_Wisconsin (<http://dbpedia.org/resource/Menomonee_Falls,_Wisconsin>)
+      - WBCR-FM (dor:WBCR-FM) --dop:city--> Wisconsin (dor:Wisconsin)
+attributes:
+  village: --Aug high C^ (dop:augHighC)--> int
+  politician: --death cause^ (doo:deathCause)--> Resource | --death date^ (doo:deathDate)--> date | --image upright^ (dop:imageUpright)--> double
+  settlement: --date^ (dop:date)--> langString | --id^ (dop:id)--> langString | --government type^ (doo:governmentType)--> Resource | --Apr rain mm^ (dop:aprRainMm)--> int | --district^ (doo:district)--> Resource
+  radio station: --owner^ (dop:owner)--> Resource | --logo^ (dop:logo)--> int
+subgraph_id: 581
+relationships:
+  - village --wwoo:differentFrom--> settlement
+  - politician --doo:birthPlace--> village
+  - radio station --dop:city--> settlement

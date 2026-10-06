@@ -1,0 +1,52 @@
+types:
+  bank: doo:Bank
+  company: doo:Company
+  politician: doo:Politician
+  music genre: doo:MusicGenre
+  person function: doo:PersonFunction
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Cal_Holman: (party^='http://dbpedia.org/resource/Republican_Party_(United_States)', children^='Calvin Mark and Mary Morns')
+      Airtel_Payments_Bank: (industry^='http://dbpedia.org/resource/Financial_services')
+    relationships:
+      - Cal_Holman (dor:Cal_Holman) --doo:profession--> Banking (dor:Banking)
+      - Airtel_Payments_Bank (dor:Airtel_Payments_Bank) --dop:products--> Banking (dor:Banking)
+      - Airtel_Payments_Bank (dor:Airtel_Payments_Bank) --doo:owningCompany--> Bharti_Airtel (dor:Bharti_Airtel)
+      - Airtel_Payments_Bank (dor:Airtel_Payments_Bank) --doo:industry--> Financial_services (dor:Financial_services)
+  '2':
+    attributes:
+      Bharti_Airtel: (abstract='Bharti Airtel (vormals bekannt unter Bharti Tele-Ventures Limited (BTVL)) ist ein Telekommunikationsunternehmen aus Indien mit Firmensitz in Neu-Delhi. Das Unternehmen, das 1995 gegründet wurde, biete...')
+      Harri_Anne_Smith: (party^='http://dbpedia.org/resource/Alabama_Republican_Party')
+      Airtel_Payments_Bank: (industry^='http://dbpedia.org/resource/Financial_services')
+    relationships:
+      - Harri_Anne_Smith (dor:Harri_Anne_Smith) --doo:profession--> Banking (dor:Banking)
+      - Airtel_Payments_Bank (dor:Airtel_Payments_Bank) --dop:products--> Banking (dor:Banking)
+      - Airtel_Payments_Bank (dor:Airtel_Payments_Bank) --doo:owningCompany--> Bharti_Airtel (dor:Bharti_Airtel)
+      - Airtel_Payments_Bank (dor:Airtel_Payments_Bank) --doo:industry--> Financial_services (dor:Financial_services)
+  '3':
+    attributes:
+      Bharti_Airtel: (abstract='Bharti Airtel (vormals bekannt unter Bharti Tele-Ventures Limited (BTVL)) ist ein Telekommunikationsunternehmen aus Indien mit Firmensitz in Neu-Delhi. Das Unternehmen, das 1995 gegründet wurde, biete...')
+      Airtel_Payments_Bank: (industry^='http://dbpedia.org/resource/Financial_services')
+      Mariana_Durleșteanu: (predecessor^='http://dbpedia.org/resource/Mihai_Popov')
+    relationships:
+      - Mariana_Durleșteanu (<http://dbpedia.org/resource/Mariana_Durleșteanu>) --doo:profession--> Banking (dor:Banking)
+      - Airtel_Payments_Bank (dor:Airtel_Payments_Bank) --dop:products--> Banking (dor:Banking)
+      - Airtel_Payments_Bank (dor:Airtel_Payments_Bank) --doo:owningCompany--> Bharti_Airtel (dor:Bharti_Airtel)
+      - Airtel_Payments_Bank (dor:Airtel_Payments_Bank) --doo:industry--> Financial_services (dor:Financial_services)
+attributes:
+  bank: --industry^ (dop:industry)--> Resource | --key person^ (doo:keyPerson)--> Resource
+  company: --abstract (doo:abstract)--> langString | --width^ (dop:width)--> int
+  politician: --predecessor^ (dop:predecessor)--> Resource | --party^ (doo:party)--> Resource | --spouse^ (doo:spouse)--> Resource | --children^ (dop:children)--> langString | --quote^ (dop:quote)--> langString
+  music genre: --Link from a Wikipage to a Wikipage in a different language about the same or a related subject.^ (doo:wikiPageInterLanguageLink)--> Resource | --width^ (dop:width)--> int
+subgraph_id: 876
+relationships:
+  - politician --doo:profession--> person function
+  - bank --dop:products--> person function
+  - bank --doo:owningCompany--> company
+  - bank --doo:industry--> music genre

@@ -1,0 +1,115 @@
+types:
+  person: doo:Person
+  country: doo:Country
+  soccer manager: doo:SoccerManager
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Amparo_Alonso_Betanzos: (caption^='Amparo Alonso-Betanzo in 2014')
+    relationships:
+      - Antoni_Torres (dor:Antoni_Torres) --doo:deathPlace--> Spain (dor:Spain)
+      - Amparo_Alonso_Betanzos (dor:Amparo_Alonso_Betanzos) --doo:employer--> Spain (dor:Spain)
+  '2':
+    attributes:
+      Amparo_Alonso_Betanzos: (caption^='Amparo Alonso-Betanzo in 2014')
+    relationships:
+      - Antonio_Argilés (<http://dbpedia.org/resource/Antonio_Argilés>) --doo:deathPlace--> Spain (dor:Spain)
+      - Amparo_Alonso_Betanzos (dor:Amparo_Alonso_Betanzos) --doo:employer--> Spain (dor:Spain)
+  '3':
+    attributes:
+      Amparo_Alonso_Betanzos: (caption^='Amparo Alonso-Betanzo in 2014')
+    relationships:
+      - Antonio_Franco_(footballer,_born_1911) (<http://dbpedia.org/resource/Antonio_Franco_(footballer,_born_1911)>) --doo:deathPlace--> Spain (dor:Spain)
+      - Amparo_Alonso_Betanzos (dor:Amparo_Alonso_Betanzos) --doo:employer--> Spain (dor:Spain)
+  '4':
+    attributes:
+      Nigeria: (2p^='81')
+    relationships:
+      - Ajibade_Babalade (dor:Ajibade_Babalade) --doo:deathPlace--> Nigeria (dor:Nigeria)
+      - Ayoka_Olufunmilayo_Adebambo (dor:Ayoka_Olufunmilayo_Adebambo) --doo:employer--> Nigeria (dor:Nigeria)
+  '5':
+    attributes: {}
+    relationships:
+      - Amin_Nasir (dor:Amin_Nasir) --doo:deathPlace--> Singapore (dor:Singapore)
+      - Dave_Snowden__David_J._Snowden__1 (dor:Dave_Snowden__David_J._Snowden__1) --doo:employer--> Singapore (dor:Singapore)
+  '6':
+    attributes: {}
+    relationships:
+      - Darren_Stewart_(soccer) (<http://dbpedia.org/resource/Darren_Stewart_(soccer)>) --doo:deathPlace--> Singapore (dor:Singapore)
+      - Dave_Snowden__David_J._Snowden__1 (dor:Dave_Snowden__David_J._Snowden__1) --doo:employer--> Singapore (dor:Singapore)
+  '7':
+    attributes:
+      Doug_Dye: (death date^='2005-12-18')
+      New_Zealand: (alt^='A large mountain with a lake in the foreground')
+    relationships:
+      - George_Paterson_(footballer,_born_1914) (<http://dbpedia.org/resource/George_Paterson_(footballer,_born_1914)>) --doo:deathPlace--> New_Zealand (dor:New_Zealand)
+      - Doug_Dye (dor:Doug_Dye) --doo:employer--> New_Zealand (dor:New_Zealand)
+  '8':
+    attributes:
+      Doug_Dye: (death date^='2005-12-18')
+      New_Zealand: (alt^='A large mountain with a lake in the foreground')
+    relationships:
+      - Juan_Schwanner (dor:Juan_Schwanner) --doo:deathPlace--> New_Zealand (dor:New_Zealand)
+      - Doug_Dye (dor:Doug_Dye) --doo:employer--> New_Zealand (dor:New_Zealand)
+  '9':
+    attributes:
+      Edith_Smith_(police_officer): (death date^='1923-06-26', children^='4', caption^='Edith Smith in police uniform', death place^='http://dbpedia.org/resource/Cheshire')
+    relationships:
+      - Bert_Cooke (dor:Bert_Cooke) --doo:deathPlace--> England (dor:England)
+      - Edith_Smith_(police_officer) (<http://dbpedia.org/resource/Edith_Smith_(police_officer)>) --doo:employer--> England (dor:England)
+  '10':
+    attributes:
+      Edith_Smith_(police_officer): (death date^='1923-06-26', children^='4', caption^='Edith Smith in police uniform', death place^='http://dbpedia.org/resource/Cheshire')
+    relationships:
+      - Dick_Neilson (dor:Dick_Neilson) --doo:deathPlace--> United_Kingdom (dor:United_Kingdom)
+      - Edith_Smith_(police_officer) (<http://dbpedia.org/resource/Edith_Smith_(police_officer)>) --doo:employer--> United_Kingdom (dor:United_Kingdom)
+qa_result:
+  status: completed
+  cost_usd: 0.300232
+  llm_usage:
+    stages:
+      reword:
+        cost_usd: 0.038287400000000006
+        total_tokens: 3767
+        prompt_tokens: 2025
+        completion_tokens: 1742
+      generate:
+        cost_usd: 0.06499260000000001
+        total_tokens: 6230
+        prompt_tokens: 3494
+        completion_tokens: 2736
+      verify_1:
+        cost_usd: 0.04505200000000001
+        total_tokens: 5018
+        prompt_tokens: 3687
+        completion_tokens: 1331
+      verify_2:
+        cost_usd: 0.029897000000000007
+        total_tokens: 4264
+        prompt_tokens: 3692
+        completion_tokens: 572
+      complexity:
+        cost_usd: 0.12200300000000001
+        total_tokens: 9938
+        prompt_tokens: 4545
+        completion_tokens: 5393
+    total_tokens: 29217
+    prompt_tokens: 17443
+    total_cost_usd: 0.3002320000000001
+    completion_tokens: 11774
+  llm_run_id: 228bf97d-17d9-48bd-9a09-58a10d012c6c
+  skip_reason: ''
+  is_meaningful: true
+attributes:
+  person: --death date^ (dop:deathDate)--> int | --children^ (dop:children)--> int | --caption^ (dop:caption)--> langString | --death place^ (doo:deathPlace)--> Resource | --notable works^ (dop:notableWorks)--> int | --active years end year^ (doo:activeYearsEndYear)--> gYear
+  country: --2p^ (dop:2p)--> int | --alt^ (dop:alt)--> langString
+  soccer manager: --quote^ (dop:quote)--> langString
+subgraph_id: 190
+relationships:
+  - soccer manager --doo:deathPlace--> country
+  - person --doo:employer--> country

@@ -1,0 +1,89 @@
+types:
+  place: doo:Place
+  Location: doo:Location
+  squash player: doo:SquashPlayer
+  administrative region: doo:AdministrativeRegion
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+  wwoo: http://www.w3.org/2002/07/owl#
+instances:
+  '1':
+    attributes: {}
+    relationships:
+      - Almere (dor:Almere) --doo:subdivision--> Flevoland (dor:Flevoland)
+      - Natalie_Grinham (dor:Natalie_Grinham) --doo:residence--> Almere (dor:Almere)
+      - Weerwater (dor:Weerwater) --doo:location--> Almere (dor:Almere)
+  '2':
+    attributes: {}
+    relationships:
+      - Almere (dor:Almere) --doo:subdivision--> Flevoland (dor:Flevoland)
+      - Tommy_Berden (dor:Tommy_Berden) --doo:residence--> Almere (dor:Almere)
+      - Weerwater (dor:Weerwater) --doo:location--> Almere (dor:Almere)
+  '3':
+    attributes:
+      Amsterdam: (caption^='DeWolff performing at Paradiso', Apr precipitation days^='8.6')
+    relationships:
+      - Amsterdam (dor:Amsterdam) --doo:subdivision--> North_Holland (dor:North_Holland)
+      - Annelize_Naudé (<http://dbpedia.org/resource/Annelize_Naudé>) --doo:residence--> Amsterdam (dor:Amsterdam)
+      - Amsterdamse_Bos (dor:Amsterdamse_Bos) --doo:location--> Amsterdam (dor:Amsterdam)
+  '4':
+    attributes:
+      Amsterdam: (caption^='DeWolff performing at Paradiso', Apr precipitation days^='8.6')
+    relationships:
+      - Amsterdam (dor:Amsterdam) --doo:subdivision--> North_Holland (dor:North_Holland)
+      - Joseph_Kneipp (dor:Joseph_Kneipp) --doo:residence--> Amsterdam (dor:Amsterdam)
+      - Amsterdamse_Bos (dor:Amsterdamse_Bos) --doo:location--> Amsterdam (dor:Amsterdam)
+  '5':
+    attributes:
+      Amsterdam: (caption^='DeWolff performing at Paradiso', Apr precipitation days^='8.6')
+    relationships:
+      - Amsterdam (dor:Amsterdam) --doo:subdivision--> North_Holland (dor:North_Holland)
+      - Liz_Irving (dor:Liz_Irving) --doo:residence--> Amsterdam (dor:Amsterdam)
+      - Amsterdamse_Bos (dor:Amsterdamse_Bos) --doo:location--> Amsterdam (dor:Amsterdam)
+  '6':
+    attributes:
+      Aurora,_Colorado: (Apr precipitation inch^='2.08', Apr record low F^='−7')
+    relationships:
+      - Aurora,_Colorado (<http://dbpedia.org/resource/Aurora,_Colorado>) --doo:subdivision--> Adams_County,_Colorado (<http://dbpedia.org/resource/Adams_County,_Colorado>)
+      - Hashim_Khan (dor:Hashim_Khan) --doo:residence--> Aurora,_Colorado (<http://dbpedia.org/resource/Aurora,_Colorado>)
+      - Buckley_Space_Force_Base (dor:Buckley_Space_Force_Base) --doo:location--> Aurora,_Colorado (<http://dbpedia.org/resource/Aurora,_Colorado>)
+  '7':
+    attributes:
+      Aurora,_Colorado: (Apr precipitation inch^='2.08', Apr record low F^='−7')
+    relationships:
+      - Aurora,_Colorado (<http://dbpedia.org/resource/Aurora,_Colorado>) --doo:subdivision--> Arapahoe_County,_Colorado (<http://dbpedia.org/resource/Arapahoe_County,_Colorado>)
+      - Hashim_Khan (dor:Hashim_Khan) --doo:residence--> Aurora,_Colorado (<http://dbpedia.org/resource/Aurora,_Colorado>)
+      - Buckley_Space_Force_Base (dor:Buckley_Space_Force_Base) --doo:location--> Aurora,_Colorado (<http://dbpedia.org/resource/Aurora,_Colorado>)
+  '8':
+    attributes:
+      Colorado: (width^='100.0')
+      Aurora,_Colorado: (Apr precipitation inch^='2.08', Apr record low F^='−7')
+    relationships:
+      - Aurora,_Colorado (<http://dbpedia.org/resource/Aurora,_Colorado>) --doo:subdivision--> Colorado (dor:Colorado)
+      - Hashim_Khan (dor:Hashim_Khan) --doo:residence--> Aurora,_Colorado (<http://dbpedia.org/resource/Aurora,_Colorado>)
+      - Buckley_Space_Force_Base (dor:Buckley_Space_Force_Base) --doo:location--> Aurora,_Colorado (<http://dbpedia.org/resource/Aurora,_Colorado>)
+  '9':
+    attributes:
+      Barcelona: (caption^='Protest against independence in October 2017', Apr precipitation days^='5')
+    relationships:
+      - Barcelona (dor:Barcelona) --doo:subdivision--> Ciutat_Vella (dor:Ciutat_Vella)
+      - Edmon_López_Möller (<http://dbpedia.org/resource/Edmon_López_Möller>) --doo:residence--> Barcelona (dor:Barcelona)
+      - Chapel_of_Santa_Àgata (<http://dbpedia.org/resource/Chapel_of_Santa_Àgata>) --doo:location--> Barcelona (dor:Barcelona)
+  '10':
+    attributes:
+      Barcelona: (caption^='Protest against independence in October 2017', Apr precipitation days^='5')
+    relationships:
+      - Barcelona (dor:Barcelona) --doo:subdivision--> Eixample (dor:Eixample)
+      - Edmon_López_Möller (<http://dbpedia.org/resource/Edmon_López_Möller>) --doo:residence--> Barcelona (dor:Barcelona)
+      - Chapel_of_Santa_Àgata (<http://dbpedia.org/resource/Chapel_of_Santa_Àgata>) --doo:location--> Barcelona (dor:Barcelona)
+attributes:
+  Location: --Apr precipitation inch^ (dop:aprPrecipitationInch)--> int | --caption^ (dop:caption)--> langString | --Apr precipitation days^ (dop:aprPrecipitationDays)--> double | --designated other1 link^ (dop:designatedOther1Link)--> langString | --logo^ (dop:logo)--> langString | --eponym^ (dop:eponym)--> Resource | --operator^ (dop:operator)--> langString | --number of vineyards^ (doo:numberOfVineyards)--> int | --Apr record low F^ (dop:aprRecordLowF)--> double
+  administrative region: --Apr high C^ (dop:aprHighC)--> int | --differentFrom (wwoo:differentFrom)--> Resource | --width^ (dop:width)--> langString
+subgraph_id: 520
+relationships:
+  - Location --doo:subdivision--> administrative region
+  - squash player --doo:residence--> Location
+  - place --doo:location--> Location

@@ -1,0 +1,119 @@
+types:
+  city: doo:City
+  university: doo:University
+  college coach: doo:CollegeCoach
+  military person: doo:MilitaryPerson
+  wrestling event: doo:WrestlingEvent
+support: 100
+prefixes:
+  doo: http://dbpedia.org/ontology/
+  dop: http://dbpedia.org/property/
+  dor: http://dbpedia.org/resource/
+instances:
+  '1':
+    attributes:
+      Daryl_Caudle: (battle^='http://dbpedia.org/resource/Operation_Inherent_Resolve', birth place^='http://dbpedia.org/resource/Winston-Salem,_North_Carolina')
+      Winston-Salem,_North_Carolina: (Link from a Wikipage to an external page^='http://www.cityofws.org/')
+      North_Carolina_State_University: (motto^='"Think and Do"', city^='http://dbpedia.org/resource/Raleigh,_North_Carolina')
+    relationships:
+      - Daryl_Caudle (dor:Daryl_Caudle) --dop:almaMater--> North_Carolina_State_University (dor:North_Carolina_State_University)
+      - Daryl_Caudle (dor:Daryl_Caudle) --dop:birthPlace--> Winston-Salem,_North_Carolina (<http://dbpedia.org/resource/Winston-Salem,_North_Carolina>)
+      - Annette_Watts (dor:Annette_Watts) --dop:coachTeam--> North_Carolina_State_University (dor:North_Carolina_State_University)
+      - Fall_Brawl_(1999) (<http://dbpedia.org/resource/Fall_Brawl_(1999)>) --dop:city--> Winston-Salem,_North_Carolina (<http://dbpedia.org/resource/Winston-Salem,_North_Carolina>)
+  '2':
+    attributes:
+      Daryl_Caudle: (battle^='http://dbpedia.org/resource/Operation_Inherent_Resolve', birth place^='http://dbpedia.org/resource/Winston-Salem,_North_Carolina')
+      Winston-Salem,_North_Carolina: (Link from a Wikipage to an external page^='http://www.cityofws.org/')
+      North_Carolina_State_University: (motto^='"Think and Do"', city^='http://dbpedia.org/resource/Raleigh,_North_Carolina')
+    relationships:
+      - Daryl_Caudle (dor:Daryl_Caudle) --dop:almaMater--> North_Carolina_State_University (dor:North_Carolina_State_University)
+      - Daryl_Caudle (dor:Daryl_Caudle) --dop:birthPlace--> Winston-Salem,_North_Carolina (<http://dbpedia.org/resource/Winston-Salem,_North_Carolina>)
+      - Annette_Watts (dor:Annette_Watts) --dop:coachTeam--> North_Carolina_State_University (dor:North_Carolina_State_University)
+      - Throwback_Throwdown_III (dor:Throwback_Throwdown_III) --dop:city--> Winston-Salem,_North_Carolina (<http://dbpedia.org/resource/Winston-Salem,_North_Carolina>)
+  '3':
+    attributes:
+      George_W._Casey_Sr.: (battle^='http://dbpedia.org/resource/Korean_War', birth place^='http://dbpedia.org/resource/Boston,_Massachusetts')
+      Georgetown_University: (motto^='', city^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - George_W._Casey_Sr. (<http://dbpedia.org/resource/George_W._Casey_Sr.>) --dop:almaMater--> Georgetown_University (dor:Georgetown_University)
+      - George_W._Casey_Sr. (<http://dbpedia.org/resource/George_W._Casey_Sr.>) --dop:birthPlace--> Boston,_Massachusetts (<http://dbpedia.org/resource/Boston,_Massachusetts>)
+      - Bebe_Bryans (dor:Bebe_Bryans) --dop:coachTeam--> Georgetown_University (dor:Georgetown_University)
+      - Royal_Rumble_(2003) (<http://dbpedia.org/resource/Royal_Rumble_(2003)>) --dop:city--> Boston,_Massachusetts (<http://dbpedia.org/resource/Boston,_Massachusetts>)
+  '4':
+    attributes:
+      George_W._Casey_Sr.: (battle^='http://dbpedia.org/resource/Korean_War', birth place^='http://dbpedia.org/resource/Boston,_Massachusetts')
+      Georgetown_University: (motto^='', city^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - George_W._Casey_Sr. (<http://dbpedia.org/resource/George_W._Casey_Sr.>) --dop:almaMater--> Georgetown_University (dor:Georgetown_University)
+      - George_W._Casey_Sr. (<http://dbpedia.org/resource/George_W._Casey_Sr.>) --dop:birthPlace--> Boston,_Massachusetts (<http://dbpedia.org/resource/Boston,_Massachusetts>)
+      - Bebe_Bryans (dor:Bebe_Bryans) --dop:coachTeam--> Georgetown_University (dor:Georgetown_University)
+      - WrestleMania_XIV (dor:WrestleMania_XIV) --dop:city--> Boston,_Massachusetts (<http://dbpedia.org/resource/Boston,_Massachusetts>)
+  '5':
+    attributes:
+      George_W._Casey_Sr.: (battle^='http://dbpedia.org/resource/Korean_War', birth place^='http://dbpedia.org/resource/Boston,_Massachusetts')
+      Georgetown_University: (motto^='', city^='http://dbpedia.org/resource/Washington,_D.C.')
+    relationships:
+      - George_W._Casey_Sr. (<http://dbpedia.org/resource/George_W._Casey_Sr.>) --dop:almaMater--> Georgetown_University (dor:Georgetown_University)
+      - George_W._Casey_Sr. (<http://dbpedia.org/resource/George_W._Casey_Sr.>) --dop:birthPlace--> Boston,_Massachusetts (<http://dbpedia.org/resource/Boston,_Massachusetts>)
+      - Bebe_Bryans (dor:Bebe_Bryans) --dop:coachTeam--> Georgetown_University (dor:Georgetown_University)
+      - WWE_Super_Tuesday (dor:WWE_Super_Tuesday) --dop:city--> Boston,_Massachusetts (<http://dbpedia.org/resource/Boston,_Massachusetts>)
+  '6':
+    attributes:
+      Philadelphia: (width^='220', Link from a Wikipage to an external page^='http://philadelphiaencyclopedia.org/')
+      Charles_D._Griffin: (battle^='http://dbpedia.org/resource/Korean_War', birth place^='http://dbpedia.org/resource/Pennsylvania')
+      University_of_Michigan: (motto^='', city^='http://dbpedia.org/resource/Ann_Arbor,_Michigan')
+    relationships:
+      - Charles_D._Griffin (dor:Charles_D._Griffin) --dop:almaMater--> University_of_Michigan (dor:University_of_Michigan)
+      - Charles_D._Griffin (dor:Charles_D._Griffin) --dop:birthPlace--> Philadelphia (dor:Philadelphia)
+      - Bob_Thornbladh (dor:Bob_Thornbladh) --dop:coachTeam--> University_of_Michigan (dor:University_of_Michigan)
+      - Aniversario:_Never_Compromise (<http://dbpedia.org/resource/Aniversario:_Never_Compromise>) --dop:city--> Philadelphia (dor:Philadelphia)
+  '7':
+    attributes:
+      Philadelphia: (width^='220', Link from a Wikipage to an external page^='http://philadelphiaencyclopedia.org/')
+      Charles_D._Griffin: (battle^='http://dbpedia.org/resource/Korean_War', birth place^='http://dbpedia.org/resource/Pennsylvania')
+      University_of_Michigan: (motto^='', city^='http://dbpedia.org/resource/Ann_Arbor,_Michigan')
+    relationships:
+      - Charles_D._Griffin (dor:Charles_D._Griffin) --dop:almaMater--> University_of_Michigan (dor:University_of_Michigan)
+      - Charles_D._Griffin (dor:Charles_D._Griffin) --dop:birthPlace--> Philadelphia (dor:Philadelphia)
+      - Bob_Thornbladh (dor:Bob_Thornbladh) --dop:coachTeam--> University_of_Michigan (dor:University_of_Michigan)
+      - Battle_Riot_III (dor:Battle_Riot_III) --dop:city--> Philadelphia (dor:Philadelphia)
+  '8':
+    attributes:
+      Philadelphia: (width^='220', Link from a Wikipage to an external page^='http://philadelphiaencyclopedia.org/')
+      Charles_D._Griffin: (battle^='http://dbpedia.org/resource/Korean_War', birth place^='http://dbpedia.org/resource/Pennsylvania')
+      University_of_Michigan: (motto^='', city^='http://dbpedia.org/resource/Ann_Arbor,_Michigan')
+    relationships:
+      - Charles_D._Griffin (dor:Charles_D._Griffin) --dop:almaMater--> University_of_Michigan (dor:University_of_Michigan)
+      - Charles_D._Griffin (dor:Charles_D._Griffin) --dop:birthPlace--> Philadelphia (dor:Philadelphia)
+      - Bob_Thornbladh (dor:Bob_Thornbladh) --dop:coachTeam--> University_of_Michigan (dor:University_of_Michigan)
+      - Battleground_(2017) (<http://dbpedia.org/resource/Battleground_(2017)>) --dop:city--> Philadelphia (dor:Philadelphia)
+  '9':
+    attributes:
+      LeRoy_Pope_Walker: (birth place^='http://dbpedia.org/resource/Alabama')
+      Huntsville,_Alabama: (Link from a Wikipage to an external page^='http://huntsvillehistorycollection.org')
+      University_of_Alabama: (city^='http://dbpedia.org/resource/Tuscaloosa,_Alabama')
+    relationships:
+      - LeRoy_Pope_Walker (dor:LeRoy_Pope_Walker) --dop:almaMater--> University_of_Alabama (dor:University_of_Alabama)
+      - LeRoy_Pope_Walker (dor:LeRoy_Pope_Walker) --dop:birthPlace--> Huntsville,_Alabama (<http://dbpedia.org/resource/Huntsville,_Alabama>)
+      - Brittney_Ezell (dor:Brittney_Ezell) --dop:coachTeam--> University_of_Alabama (dor:University_of_Alabama)
+      - Genesis_(2014) (<http://dbpedia.org/resource/Genesis_(2014)>) --dop:city--> Huntsville,_Alabama (<http://dbpedia.org/resource/Huntsville,_Alabama>)
+  '10':
+    attributes:
+      Edward_Lunn_Young: (birth place^='http://dbpedia.org/resource/Florence,_South_Carolina')
+      Clemson_University: (city^='http://dbpedia.org/resource/Clemson,_South_Carolina')
+      Florence,_South_Carolina: (Link from a Wikipage to an external page^='http://www.cityofflorence.com/')
+    relationships:
+      - Edward_Lunn_Young (dor:Edward_Lunn_Young) --dop:almaMater--> Clemson_University (dor:Clemson_University)
+      - Edward_Lunn_Young (dor:Edward_Lunn_Young) --dop:birthPlace--> Florence,_South_Carolina (<http://dbpedia.org/resource/Florence,_South_Carolina>)
+      - Curley_Hallman (dor:Curley_Hallman) --dop:coachTeam--> Clemson_University (dor:Clemson_University)
+      - In_Your_House_8:_Beware_of_Dog (<http://dbpedia.org/resource/In_Your_House_8:_Beware_of_Dog>) --dop:city--> Florence,_South_Carolina (<http://dbpedia.org/resource/Florence,_South_Carolina>)
+attributes:
+  city: --bot^ (dop:bot)--> langString | --width^ (dop:width)--> int | --Apr record low C^ (dop:aprRecordLowC)--> langString | --Link from a Wikipage to an external page^ (doo:wikiPageExternalLink)--> Resource
+  university: --dean^ (doo:dean)--> Resource | --motto^ (doo:motto)--> string | --header^ (dop:header)--> langString | --city^ (dop:city)--> Resource
+  military person: --battle^ (doo:battle)--> Resource | --c^ (dop:c)--> langString | --birth place^ (dop:birthPlace)--> langString
+subgraph_id: 908
+relationships:
+  - military person --dop:almaMater--> university
+  - military person --dop:birthPlace--> city
+  - college coach --dop:coachTeam--> university
+  - wrestling event --dop:city--> city
