@@ -12,6 +12,7 @@
   import SettingsModal from "./SettingsModal.svelte";
   import QaPatternSamplesModal from "./QaPatternSamplesModal.svelte";
   import QaEvolution from "./QaEvolution.svelte";
+  import { STAGE_EXPORT_COLUMNS, stageExportColumns } from "../stageExportColumns.js";
   import {
     normalizeGraph,
     shortName,
@@ -121,6 +122,7 @@
   let exportFormat = "yaml";
   let exportQuerySelection = "all";
   let exportIncludeValidReason = false;
+  let exportIncludeStageColumns = false;
   let exportIgnoreNoResults = true;
   let exportIgnoreNeedsFix = false;
 
@@ -231,6 +233,7 @@
               reason,
               hasResults,
               isNeedsFix,
+              ...stageExportColumns(pair),
             };
           }),
         )
@@ -266,6 +269,7 @@
               reason,
               hasResults,
               isNeedsFix,
+              ...stageExportColumns(pair),
             };
           });
 
@@ -431,7 +435,26 @@
     );
   }
 
-  function buildYamlString(rows, includeValidReason) {
+  function yamlText(value) {
+    if (value == null) return " null";
+    return " " + JSON.stringify(value);
+  }
+
+  function yamlSparql(value) {
+    if (value == null) return " null";
+    return formatYamlBlockScalar(value, 4);
+  }
+
+  function appendStageYaml(lines, row) {
+    for (const column of STAGE_EXPORT_COLUMNS) {
+      const value = row[column];
+      lines.push(
+        `  ${column}:${column.endsWith("_sparql") ? yamlSparql(value) : yamlText(value)}`,
+      );
+    }
+  }
+
+  function buildYamlString(rows, includeValidReason, includeStageColumns) {
     const entries = rows.map((r, idx) => {
       const questionId = idx + 1;
       const lines = [
@@ -447,6 +470,7 @@
         lines.push('  valid: ""');
         lines.push('  reason: ""');
       }
+      if (includeStageColumns) appendStageYaml(lines, r);
       return lines.join("\n");
     });
     return entries.join("\n") + "\n";
@@ -467,7 +491,7 @@
     return str;
   }
 
-  function buildCsvString(rows, includeValidReason) {
+  function buildCsvString(rows, includeValidReason, includeStageColumns) {
     const headers = [
       "id",
       "src_id",
@@ -480,6 +504,7 @@
     if (includeValidReason) {
       headers.push("valid", "reason");
     }
+    if (includeStageColumns) headers.push(...STAGE_EXPORT_COLUMNS);
     const lines = [
       headers.join(","),
       ...rows.map((r, idx) => {
@@ -495,6 +520,9 @@
         ];
         if (includeValidReason) {
           cols.push("", "");
+        }
+        if (includeStageColumns) {
+          for (const column of STAGE_EXPORT_COLUMNS) cols.push(csvEscape(r[column]));
         }
         return cols.join(",");
       }),
@@ -519,6 +547,7 @@
       const yamlContent = buildYamlString(
         filteredExportRows,
         exportIncludeValidReason,
+        exportIncludeStageColumns,
       );
       triggerDownload(
         yamlContent,
@@ -527,7 +556,12 @@
       );
     } else {
       const csvContent =
-        "\uFEFF" + buildCsvString(filteredExportRows, exportIncludeValidReason);
+        "\uFEFF" +
+        buildCsvString(
+          filteredExportRows,
+          exportIncludeValidReason,
+          exportIncludeStageColumns,
+        );
       triggerDownload(
         csvContent,
         `${filenameBase}.csv`,
@@ -1554,6 +1588,22 @@
                   <span class="option-desc"
                     >Appends empty valid and reason columns/fields for external
                     annotation</span
+                  >
+                </div>
+              </label>
+              <label class="export-option-row">
+                <input
+                  type="checkbox"
+                  bind:checked={exportIncludeStageColumns}
+                />
+                <div class="option-text">
+                  <span class="option-title"
+                    >Include question and SPARQL at each stage</span
+                  >
+                  <span class="option-desc"
+                    >Adds the pair after generation, augmentation, the final
+                    verification, and rewording. A stage that left the pair
+                    unchanged is left empty</span
                   >
                 </div>
               </label>
