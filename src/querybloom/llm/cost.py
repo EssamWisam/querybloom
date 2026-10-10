@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, Optional
 from litellm import completion_cost, cost_per_token
+from litellm.cost_calculator import get_response_cost_from_hidden_params
 
 
 def calculate_completion_cost(
@@ -19,6 +20,16 @@ def calculate_completion_cost(
     resolved_model = model or getattr(response, "model", None)
     if isinstance(response, dict) and not resolved_model:
         resolved_model = response.get("model")
+
+    # 0. Provider-reported cost. OpenRouter returns `usage.cost` and LiteLLM stores it in
+    # `_hidden_params["additional_headers"]`. `completion_cost` does not read that field, so
+    # OpenRouter models absent from LiteLLM's price map (for example
+    # `openrouter/anthropic/claude-haiku-5.5`) returned 0.0 before this step existed.
+    hidden_params = getattr(response, "_hidden_params", None)
+    if isinstance(hidden_params, dict):
+        provider_cost = get_response_cost_from_hidden_params(hidden_params)
+        if provider_cost is not None:
+            return float(provider_cost)
 
     # 1. Try standard completion_cost with response object
     try:

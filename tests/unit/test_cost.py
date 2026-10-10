@@ -141,6 +141,39 @@ class TestLlmCost(unittest.TestCase):
             self.assertTrue(len(completed_events) > 0)
             self.assertEqual(completed_events[-1].data.get("cost_usd"), expected_cost)
 
+    def test_openrouter_provider_reported_cost_is_used(self):
+        """OpenRouter models are missing from LiteLLM's price map, so the cost must come from the provider.
+
+        The response mirrors a live OpenRouter call: `usage.cost` is surfaced by LiteLLM as
+        `llm_provider-x-litellm-response-cost` in `_hidden_params`.
+        """
+        from litellm import ModelResponse
+
+        response = ModelResponse(
+            model="anthropic/claude-haiku-5.5",
+            usage={"prompt_tokens": 13, "completion_tokens": 4, "total_tokens": 17},
+        )
+        response._hidden_params = {
+            "additional_headers": {"llm_provider-x-litellm-response-cost": 3.3e-06},
+        }
+
+        usage = extract_usage_and_cost(response, model="openrouter/anthropic/claude-haiku-5.5")
+        self.assertEqual(usage["total_tokens"], 17)
+        self.assertAlmostEqual(usage["cost_usd"], 3.3e-06)
+        self.assertAlmostEqual(
+            calculate_completion_cost(response, model="openrouter/anthropic/claude-haiku-5.5"),
+            3.3e-06,
+        )
+
+    def test_provider_reported_zero_cost_is_kept(self):
+        """A provider-reported 0 is a real value and must not fall through to the price map."""
+        from litellm import ModelResponse
+
+        response = ModelResponse(model="openai/gpt-5.6-sol", usage={"prompt_tokens": 9, "completion_tokens": 1, "total_tokens": 10})
+        response._hidden_params = {"additional_headers": {"llm_provider-x-litellm-response-cost": 0.0}}
+
+        self.assertEqual(calculate_completion_cost(response, model="openai/gpt-5.6-sol"), 0.0)
+
 
 if __name__ == "__main__":
     unittest.main()

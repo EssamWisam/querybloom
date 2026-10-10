@@ -907,13 +907,43 @@ async def _create_run_subgraph(run_id: str, request: SubgraphCreate, user: Supab
     return await _create_run_child(run_id, "subgraphs", _json_model_dump(request, exclude_none=True), user)
 
 
+_REST_PAGE_SIZE = 1000
+
+
+def _select_all_rows(
+    client: SupabaseClient,
+    access_token: str,
+    table: str,
+    params: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Read every row matching `params`, one page at a time.
+
+    PostgREST returns at most a capped number of rows per request (Supabase defaults to
+    1000) and drops the rest silently. With `created_at.asc` ordering, the dropped rows are
+    the newest ones, so a single request can lose the most recent generation.
+    `params` must have a deterministic `order` (ending in `id`) so offset paging is stable.
+    """
+    rows: list[dict[str, Any]] = []
+    while True:
+        page = client.rest_select(
+            access_token,
+            table,
+            {**params, "limit": str(_REST_PAGE_SIZE), "offset": str(len(rows))},
+        )
+        if not page:
+            return rows
+        rows.extend(page)
+
+
 @api_router.get("/runs/{run_id}/qa-pairs")
 async def _run_qa_pairs(
     run_id: str,
     active_only: bool = Query(default=True),
     user: SupabaseUser = Depends(require_user),
 ):
-    rows = await _list_run_children(run_id, "qa_pairs", "created_at.asc", user)
+    client = get_supabase_client(required=True)
+    params = {"select": "*", "run_id": f"eq.{run_id}", "order": "created_at.asc,id.asc"}
+    rows = await asyncio.to_thread(_select_all_rows, client, user.access_token, "qa_pairs", params)
     if active_only:
         rows = [row for row in rows if _is_active_qa_pair(row)]
     return rows

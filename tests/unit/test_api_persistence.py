@@ -259,3 +259,49 @@ def test_generation_keeps_legacy_qa_result_as_its_own_model():
     _table, payload = client.updates[0]
     assert payload["payload"]["qa_results_by_model"][""] == legacy_result
     assert payload["payload"]["qa_results_by_model"]["openrouter/x/y"]["llm_run_id"] == "llm-run-2"
+
+
+def _client_with_row_cap(rows, cap=1000):
+    """Fake PostgREST: each request returns at most `cap` rows, ignoring the rest silently."""
+
+    class Client:
+        def __init__(self):
+            self.calls = []
+
+        def rest_select(self, _access_token, _table, params):
+            self.calls.append(dict(params))
+            offset = int(params.get("offset", 0))
+            limit = min(int(params.get("limit", len(rows))), cap)
+            return rows[offset : offset + limit]
+
+    return Client()
+
+
+def test_run_qa_pairs_returns_newest_rows_beyond_one_request_cap(monkeypatch):
+    import asyncio
+    from types import SimpleNamespace
+
+    # 1200 older GPT rows (superseded), then 50 newer Haiku rows, in created_at order.
+    rows = [
+        {"id": f"gpt-{i:04d}", "metadata": {"model": "openai/gpt-5.6-sol", "active": False}}
+        for i in range(1200)
+    ]
+    rows += [
+        {
+            "id": f"haiku-{i:04d}",
+            "metadata": {"model": "openrouter/anthropic/claude-haiku-5.5", "active": True},
+        }
+        for i in range(50)
+    ]
+    client = _client_with_row_cap(rows)
+    monkeypatch.setattr(router, "get_supabase_client", lambda required=True: client)
+    user = SimpleNamespace(access_token=SERVICE_KEY)
+
+    all_rows = asyncio.run(router._run_qa_pairs("run-1", active_only=False, user=user))
+    assert len(all_rows) == 1250
+    assert all_rows[-1]["id"] == "haiku-0049"
+    assert [call["offset"] for call in client.calls] == ["0", "1000", "1250"]
+    assert all(call["order"] == "created_at.asc,id.asc" for call in client.calls)
+
+    active_rows = asyncio.run(router._run_qa_pairs("run-1", active_only=True, user=user))
+    assert [row["id"] for row in active_rows] == [f"haiku-{i:04d}" for i in range(50)]
