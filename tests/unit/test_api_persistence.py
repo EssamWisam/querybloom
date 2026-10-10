@@ -137,6 +137,14 @@ def test_meaningless_qa_result_is_persisted_without_qa_pair_rows():
     )
 
     assert client.inserts == []
+    qa_result = {
+        "status": "completed",
+        "is_meaningful": False,
+        "skip_reason": "No useful domain question can be generated.",
+        "cost_usd": 0.002,
+        "llm_usage": {"total_tokens": 42},
+        "llm_run_id": "llm-run-1",
+    }
     assert client.updates == [
         (
             SERVICE_KEY,
@@ -146,15 +154,108 @@ def test_meaningless_qa_result_is_persisted_without_qa_pair_rows():
                 "payload": {
                     "support": 7,
                     "types": ["Example"],
-                    "qa_result": {
-                        "status": "completed",
-                        "is_meaningful": False,
-                        "skip_reason": "No useful domain question can be generated.",
-                        "cost_usd": 0.002,
-                        "llm_usage": {"total_tokens": 42},
-                        "llm_run_id": "llm-run-1",
-                    },
+                    "qa_result": qa_result,
+                    "qa_results_by_model": {"openai/gpt-5.4": qa_result},
                 }
             },
         )
     ]
+
+
+def test_generation_replaces_only_the_same_model():
+    class Client:
+        def __init__(self):
+            self.updated_ids = []
+
+        def rest_select(self, _access_token, _table, _params):
+            return [
+                {"id": "same", "metadata": {"model": "openai/gpt-5.4", "active": True}},
+                {"id": "other", "metadata": {"model": "openrouter/x/y", "active": True}},
+                {"id": "legacy", "metadata": {"active": True}},
+                {"id": "old", "metadata": {"model": "openai/gpt-5.4", "active": False}},
+            ]
+
+        def rest_update(self, _access_token, _table, filters, _payload):
+            self.updated_ids.append(filters["id"])
+            return []
+
+    client = Client()
+    router._soft_delete_qa_pairs_for_subgraph(
+        client, IDENTITY, "sample-run-1", "subgraph-1", "llm-run-2", "openai/gpt-5.4"
+    )
+
+    assert client.updated_ids == ["eq.same"]
+
+
+def test_generation_with_new_model_keeps_existing_model_results():
+    class Client:
+        def __init__(self):
+            self.updates = []
+
+        def rest_select(self, _access_token, _table, _params):
+            return []
+
+        def rest_update(self, _access_token, table, _filters, payload):
+            self.updates.append((table, payload))
+            return []
+
+        def rest_insert(self, _access_token, _table, _payload):
+            return []
+
+    existing_gpt_result = {"status": "completed", "is_meaningful": True, "llm_run_id": "llm-old"}
+    client = Client()
+    router._persist_qa_pairs_for_subgraph_best_effort(
+        client,
+        IDENTITY,
+        "sample-run-1",
+        3,
+        {"is_meaningful": True, "qa_pairs": []},
+        "llm-run-2",
+        router.LLMRunRequest(endpoint="https://example.test/sparql", model="openrouter/x/y"),
+        {
+            3: {
+                "id": "subgraph-1",
+                "payload": {
+                    "qa_results_by_model": {"openai/gpt-5.4": existing_gpt_result},
+                    "qa_result": existing_gpt_result,
+                },
+            }
+        },
+    )
+
+    _table, payload = client.updates[0]
+    assert payload["payload"]["qa_results_by_model"]["openai/gpt-5.4"] == existing_gpt_result
+    assert payload["payload"]["qa_results_by_model"]["openrouter/x/y"]["llm_run_id"] == "llm-run-2"
+
+
+def test_generation_keeps_legacy_qa_result_as_its_own_model():
+    class Client:
+        def __init__(self):
+            self.updates = []
+
+        def rest_select(self, _access_token, _table, _params):
+            return []
+
+        def rest_update(self, _access_token, table, _filters, payload):
+            self.updates.append((table, payload))
+            return []
+
+        def rest_insert(self, _access_token, _table, _payload):
+            return []
+
+    legacy_result = {"status": "completed", "is_meaningful": True, "llm_run_id": "llm-old"}
+    client = Client()
+    router._persist_qa_pairs_for_subgraph_best_effort(
+        client,
+        IDENTITY,
+        "sample-run-1",
+        3,
+        {"is_meaningful": True, "qa_pairs": []},
+        "llm-run-2",
+        router.LLMRunRequest(endpoint="https://example.test/sparql", model="openrouter/x/y"),
+        {3: {"id": "subgraph-1", "payload": {"qa_result": legacy_result}}},
+    )
+
+    _table, payload = client.updates[0]
+    assert payload["payload"]["qa_results_by_model"][""] == legacy_result
+    assert payload["payload"]["qa_results_by_model"]["openrouter/x/y"]["llm_run_id"] == "llm-run-2"

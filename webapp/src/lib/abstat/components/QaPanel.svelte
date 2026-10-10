@@ -14,6 +14,18 @@
   import QaEvolution from "./QaEvolution.svelte";
   import { STAGE_EXPORT_COLUMNS, stageExportColumns } from "../stageExportColumns.js";
   import {
+    attributeQaResults,
+    capsuleModelKeys,
+    groupRowsByModel,
+    qaRowIsActive,
+    modelFileSlug,
+    modelLabel,
+    normalizeModelKey,
+    orderedUnion,
+    qaRowModelKey,
+    subgraphQaResultsByModel,
+  } from "../qaModels.js";
+  import {
     normalizeGraph,
     shortName,
     SUBGRAPH_PALETTE,
@@ -148,9 +160,22 @@
   let runningIndexes = new Set();
 
   /**
+   * QA entries (keyed by subgraph index) of the model currently shown. Every other
+   * model's entries live in `qaByModel`. Only `qaMap` changes while the user views a model.
    * @type {Record<number, any>}
    */
   let qaMap = {};
+  /**
+   * Model key -> qaMap-style entries for models that are not currently shown.
+   * The entry for `selectedModel` here is stale; read `bucketFor(model)` instead.
+   * @type {Record<string, Record<number, any>>}
+   */
+  let qaByModel = {};
+  /** Model key shown in `qaMap`, or null before any model is known. */
+  let selectedModel = null;
+  /** Model keys that have questions or results in this run, in first-seen order. */
+  let modelOrder = [];
+  $: capsuleModels = capsuleModelKeys(modelOrder, selectedModel, qaByModel);
 
   const ACTIVE_STATUSES = new Set([
     "pending",
@@ -368,14 +393,43 @@
     return restored;
   }
 
-  function buildQaMapFromSubgraphs(sourceSubgraphs = subgraphs) {
+  /** Model key the form would generate with: the OpenRouter id when set, else the dropdown model. */
+  function formModelKey() {
+    return normalizeModelKey(openRouterModelId(openrouterModel) || model);
+  }
+
+  /** Entries for `modelKey` regardless of whether it is the shown model. */
+  function bucketFor(modelKey) {
+    if (modelKey === selectedModel) return qaMap;
+    return Object.hasOwn(qaByModel, modelKey) ? qaByModel[modelKey] : {};
+  }
+
+  function resetModelState() {
+    qaMap = {};
+    qaByModel = {};
+    modelOrder = [];
+    selectedModel = null;
+  }
+
+  /** Shows `modelKey`'s questions: stores the current model's entries first, then loads the other model's. */
+  function switchModel(modelKey) {
+    if (modelKey === selectedModel) return;
+    // Read the target's stored entries before `selectedModel` changes, since bucketFor depends on it.
+    const nextEntries = bucketFor(modelKey);
+    if (selectedModel !== null) {
+      qaByModel = { ...qaByModel, [selectedModel]: qaMap };
+    }
+    selectedModel = modelKey;
+    qaMap = { ...nextEntries };
+    if (!modelOrder.includes(modelKey)) modelOrder = [...modelOrder, modelKey];
+  }
+
+  /** Entries for one model: the subgraph-level result each model wrote for its generation. */
+  function buildQaMapFromSubgraphs(sourceSubgraphs, resultsBySubgraph, modelKey) {
     const restored = {};
     for (const subgraph of sourceSubgraphs) {
-      const result =
-        subgraph?.subgraph?.qa_result ??
-        subgraph?.payload?.qa_result ??
-        subgraph?.qa_result;
       const index = Number(subgraph?.index ?? subgraph?.subgraph_index);
+      const result = resultsBySubgraph.get(index)?.[modelKey];
       if (result?.status !== "completed" || !Number.isFinite(index)) continue;
       restored[index] = {
         index,
@@ -395,21 +449,62 @@
     if (!force && runId === hydratedSampleRunId) return;
     const preserveCurrentRunState = runId === hydratedSampleRunId;
     const hydrationSequence = ++qaHydrationSequence;
-    if (!preserveCurrentRunState) qaMap = {};
+    if (!preserveCurrentRunState) resetModelState();
     hydratingQa = true;
     try {
-      const [rows, storedSubgraphs] = await Promise.all([
-        loadRunQaPairs(token, runId),
+      // Inactive rows are needed to attribute legacy results: a later run may have replaced them.
+      const [allRows, storedSubgraphs] = await Promise.all([
+        loadRunQaPairs(token, runId, { activeOnly: false }),
         loadRunSubgraphs(token, runId),
       ]);
       if (hydrationSequence !== qaHydrationSequence || runId !== sampleRunId)
         return;
-      const restored = {
-        ...buildQaMapFromSubgraphs(storedSubgraphs),
-        ...buildQaMapFromRows(rows),
-      };
-      const merged = { ...restored };
-      if (preserveCurrentRunState) {
+      const rows = allRows.filter(qaRowIsActive);
+      const rowsBySubgraphIndex = new Map();
+      for (const row of allRows) {
+        const index = Number(row?.metadata?.subgraph_index);
+        if (!Number.isFinite(index)) continue;
+        if (!rowsBySubgraphIndex.has(index)) rowsBySubgraphIndex.set(index, []);
+        rowsBySubgraphIndex.get(index).push(row);
+      }
+      const resultsBySubgraph = new Map(
+        storedSubgraphs.map((sg) => {
+          const index = Number(sg?.index ?? sg?.subgraph_index);
+          return [
+            index,
+            attributeQaResults(
+              subgraphQaResultsByModel(sg),
+              rowsBySubgraphIndex.get(index) ?? [],
+            ),
+          ];
+        }),
+      );
+      const { byModel: rowsByModel, order: rowModelOrder } =
+        groupRowsByModel(rows);
+      const modelKeys = orderedUnion(
+        rowModelOrder,
+        [...resultsBySubgraph.values()].flatMap((results) => Object.keys(results)),
+      );
+      /** @type {Record<string, Record<number, any>>} */
+      const maps = {};
+      for (const key of modelKeys) {
+        maps[key] = {
+          ...buildQaMapFromSubgraphs(storedSubgraphs, resultsBySubgraph, key),
+          ...buildQaMapFromRows(rowsByModel.get(key) ?? []),
+        };
+      }
+      // Keep the model being viewed when re-hydrating the same run; otherwise show the newest model.
+      const keepModel = preserveCurrentRunState ? selectedModel : null;
+      const newestRowModel = rows?.length
+        ? qaRowModelKey(rows[rows.length - 1])
+        : null;
+      const viewModel =
+        keepModel ??
+        newestRowModel ??
+        modelKeys.at(-1) ??
+        formModelKey();
+      const merged = { ...(maps[viewModel] ?? {}) };
+      if (preserveCurrentRunState && keepModel !== null) {
         for (const [idxStr, entry] of Object.entries(qaMap)) {
           if (
             entry.status === "failed" ||
@@ -419,6 +514,9 @@
           }
         }
       }
+      qaByModel = maps;
+      selectedModel = viewModel;
+      modelOrder = orderedUnion(modelKeys, [viewModel]);
       qaMap = merged;
       hydratedSampleRunId = runId;
     } catch (err) {
@@ -552,7 +650,7 @@
 
   function executeExport() {
     if (!filteredExportRows.length) return;
-    const filenameBase = `querybloom-qa-${sampleRunId || Date.now()}`;
+    const filenameBase = `querybloom-qa-${sampleRunId || Date.now()}-${modelFileSlug(selectedModel)}`;
     if (exportFormat === "yaml") {
       const yamlContent = buildYamlString(
         filteredExportRows,
@@ -1280,8 +1378,14 @@
       .map((sg) => sg.index);
   }
 
-  function generatedSelectionCount(indexes) {
-    return indexes.filter((index) => (qaMap[index]?.qa_pairs ?? []).length > 0)
+  /**
+   * Counts selected subgraphs whose questions a generation with `targetModel` would overwrite.
+   * Only that model's own questions count. Other models, including questions saved
+   * before a model was recorded, stay in place.
+   */
+  function generatedSelectionCount(indexes, targetModel) {
+    const sameModel = bucketFor(targetModel);
+    return indexes.filter((index) => (sameModel[index]?.qa_pairs ?? []).length > 0)
       .length;
   }
 
@@ -1303,6 +1407,9 @@
   async function generateSubgraphs(indexes) {
     const requested = [...new Set(indexes.map(Number))].filter(Number.isFinite);
     if (!requested.length) return;
+    // Results of this run go to the form's model, so show that model while it runs.
+    const targetModel = formModelKey();
+    switchModel(targetModel);
     error = "";
     running = true;
     runningIndexes = new Set(requested);
@@ -1323,7 +1430,7 @@
           request: {
             sample_run_id: sampleRunId,
             endpoint,
-            model: openRouterModelId(openrouterModel) || model,
+            model: targetModel,
             openrouter_provider: openrouterProvider.trim() || null,
             subgraph_indices: requested,
             verify_iterations: Number(verifyIterations),
@@ -1385,11 +1492,12 @@
   async function generateSelectedSubgraphs() {
     const requested = selectedGenerationIndexes();
     if (!requested.length) return;
-    const generatedCount = generatedSelectionCount(requested);
+    const targetModel = formModelKey();
+    const generatedCount = generatedSelectionCount(requested, targetModel);
     if (
       generatedCount > 0 &&
       !confirm(
-        `${generatedCount} selected subgraph${generatedCount === 1 ? " has" : "s have"} existing QA. Regenerate and overwrite them?`,
+        `${generatedCount} selected subgraph${generatedCount === 1 ? " has" : "s have"} existing QA from ${modelLabel(targetModel)}. Regenerate and overwrite them?`,
       )
     ) {
       return;
@@ -1953,6 +2061,30 @@
     </section>
   </SettingsModal>
 
+  {#if capsuleModels.length > 1}
+    <div
+      class="model-capsules"
+      role="tablist"
+      aria-label="Model whose questions are shown"
+    >
+      <span class="model-capsules-label">Questions by model</span>
+      {#each capsuleModels as key (key)}
+        <button
+          type="button"
+          role="tab"
+          class="model-capsule"
+          class:active={key === selectedModel}
+          aria-selected={key === selectedModel}
+          disabled={running}
+          title={modelLabel(key)}
+          on:click={() => switchModel(key)}
+        >
+          {key || "Unrecorded model"}
+        </button>
+      {/each}
+    </div>
+  {/if}
+
   <!-- Workspace: list + detail -->
   {#if qaList.length > 0}
     <div class="workspace">
@@ -2513,6 +2645,42 @@
   }
 
   /* ── Subgraph list ───────────────────────────────────── */
+  .model-capsules {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 4px 0;
+  }
+
+  .model-capsules-label {
+    font-size: 12px;
+    color: #5b6478;
+    margin-right: 4px;
+  }
+
+  .model-capsule {
+    border: 1px solid #cdd5e6;
+    border-radius: 999px;
+    background: #fff;
+    color: #2b3445;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    cursor: pointer;
+  }
+
+  .model-capsule.active {
+    background: #2f5bd3;
+    border-color: #2f5bd3;
+    color: #fff;
+  }
+
+  .model-capsule:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
   .sg-list {
     overflow-y: auto;
     border-right: 1px solid var(--border-default);

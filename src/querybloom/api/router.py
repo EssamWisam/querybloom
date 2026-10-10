@@ -519,13 +519,30 @@ def _is_active_qa_pair(row: dict[str, Any]) -> bool:
     return not metadata.get("deleted_at") and metadata.get("active", True) is not False
 
 
+def _qa_model_key(model: str | None) -> str:
+    """Normalized model key used to group QA rows and per-model results. "" means model not recorded."""
+    return (model or "").strip()
+
+
+def _qa_row_model_key(row: dict[str, Any]) -> str:
+    metadata = row.get("metadata") if isinstance(row.get("metadata"), dict) else {}
+    return _qa_model_key(metadata.get("model") if isinstance(metadata.get("model"), str) else None)
+
+
 def _soft_delete_qa_pairs_for_subgraph(
     client: SupabaseClient,
     identity: SupabasePersistenceIdentity,
     sample_run_id: str,
     subgraph_id: str,
     llm_run_id: str,
+    model: str | None,
 ) -> None:
+    """Deactivate active QA rows that a new generation with `model` replaces.
+
+    Only rows with the same model key are replaced. Questions saved before model
+    tracking (empty key) are their own bucket and stay active when any named model runs.
+    """
+    target_model = _qa_model_key(model)
     rows = client.rest_select(
         identity.access_token,
         "qa_pairs",
@@ -539,6 +556,8 @@ def _soft_delete_qa_pairs_for_subgraph(
     deleted_at = _now_iso()
     for row in rows:
         if not _is_active_qa_pair(row):
+            continue
+        if _qa_row_model_key(row) != target_model:
             continue
         metadata = row.get("metadata") if isinstance(row.get("metadata"), dict) else {}
         client.rest_update(
@@ -593,15 +612,34 @@ def _persist_qa_pairs_for_subgraph_best_effort(
         "llm_usage": result.get("llm_usage"),
         "llm_run_id": llm_run_id,
     }
+    model_key = _qa_model_key(llm_request.model)
+    existing_results = subgraph_payload.get("qa_results_by_model")
+    if isinstance(existing_results, dict):
+        qa_results_by_model = dict(existing_results)
+    else:
+        # Older subgraphs stored one qa_result with no model. Keep it under the
+        # unrecorded key so a later named-model generation does not drop it.
+        qa_results_by_model = {}
+        legacy_result = subgraph_payload.get("qa_result")
+        if isinstance(legacy_result, dict):
+            qa_results_by_model[""] = legacy_result
+    qa_results_by_model[model_key] = qa_result
+
     def persist() -> None:
         _soft_delete_qa_pairs_for_subgraph(
-            client, identity, sample_run_id, subgraph_id, llm_run_id
+            client, identity, sample_run_id, subgraph_id, llm_run_id, llm_request.model
         )
         client.rest_update(
             identity.access_token,
             "subgraphs",
             _id_filter(subgraph_id),
-            {"payload": {**subgraph_payload, "qa_result": qa_result}},
+            {
+                "payload": {
+                    **subgraph_payload,
+                    "qa_result": qa_result,
+                    "qa_results_by_model": qa_results_by_model,
+                }
+            },
         )
         now = _now_iso()
         rows: list[dict[str, Any]] = []
