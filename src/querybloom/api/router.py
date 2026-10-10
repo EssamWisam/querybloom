@@ -1438,6 +1438,8 @@ async def _abstat_llm(request: ABSTATLLMRunRequest, user: SupabaseUser = Depends
                 f"sample-run-{llm_request.sample_run_id}.yaml",
                 event_sink,
                 kg_title=llm_request.kg_title,
+                openrouter_provider=llm_request.openrouter_provider,
+                openrouter_allow_fallbacks=llm_request.openrouter_allow_fallbacks,
             )
         else:
             if not llm_request.input_yaml_path:
@@ -1614,6 +1616,8 @@ async def _abstat_llm_stream(request: ABSTATLLMRunRequest, user: SupabaseUser = 
                         event_sink,
                         stop_event,
                         kg_title=llm_request.kg_title,
+                        openrouter_provider=llm_request.openrouter_provider,
+                        openrouter_allow_fallbacks=llm_request.openrouter_allow_fallbacks,
                     )
                 else:
                     if not llm_request.input_yaml_path:

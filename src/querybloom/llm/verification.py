@@ -5,7 +5,7 @@ from __future__ import annotations
 from typing import Any, Dict, List, Optional, Tuple, Union
 from litellm import completion
 
-from querybloom.llm.client import parse_structured_response
+from querybloom.llm.client import litellm_model_kwargs, parse_structured_response
 from querybloom.llm.cost import extract_usage_and_cost
 from querybloom.llm.models import VerificationResult
 from querybloom.llm.prompts import render_verify_messages
@@ -20,6 +20,8 @@ def verify_qa_pairs(
     return_usage: bool = False,
     kg_title: Optional[str] = None,
     kg_description: Optional[str] = None,
+    openrouter_provider: Optional[str] = None,
+    openrouter_allow_fallbacks: Optional[bool] = None,
 ) -> Union[VerificationResult, Tuple[VerificationResult, Dict[str, Any]]]:
     """Call the LLM to verify executed QA pairs and return structured result."""
     messages = render_verify_messages(
@@ -30,14 +32,19 @@ def verify_qa_pairs(
         kg_title=kg_title,
         kg_description=kg_description,
     )
+    call = litellm_model_kwargs(
+        model,
+        openrouter_provider=openrouter_provider,
+        openrouter_allow_fallbacks=openrouter_allow_fallbacks,
+    )
     response = completion(
-        model=model,
         messages=messages,
         response_format=VerificationResult,
         reasoning_effort="high",
+        **call,
     )
     result = parse_structured_response(response, VerificationResult)
     if return_usage:
-        usage = extract_usage_and_cost(response, model=model)
+        usage = extract_usage_and_cost(response, model=call["model"])
         return result, usage
     return result

@@ -1,4 +1,4 @@
-"""LiteLLM structured response parsing utilities."""
+"""LiteLLM structured response parsing and OpenRouter call options."""
 
 from __future__ import annotations
 
@@ -7,6 +7,39 @@ from typing import Any, Type, TypeVar
 from pydantic import BaseModel
 
 T = TypeVar("T", bound=BaseModel)
+
+
+def litellm_model_kwargs(
+    model: str,
+    *,
+    openrouter_provider: str | None = None,
+    openrouter_allow_fallbacks: bool | None = None,
+) -> dict[str, Any]:
+    """Build the LiteLLM ``model`` and optional OpenRouter provider pin.
+
+    A model id that already starts with ``openrouter/`` is sent to OpenRouter
+    unchanged. When ``openrouter_provider`` is set, the call is routed through
+    OpenRouter (prefixing ``openrouter/`` if the id does not already have it)
+    and pinned to that provider. Fallbacks to other providers stay off unless
+    ``openrouter_allow_fallbacks`` is explicitly true.
+    """
+    resolved = (model or "").strip()
+    provider = (openrouter_provider or "").strip()
+    if provider and not resolved.startswith("openrouter/"):
+        resolved = f"openrouter/{resolved.lstrip('/')}"
+
+    kwargs: dict[str, Any] = {"model": resolved}
+    if provider:
+        allow_fallbacks = (
+            False if openrouter_allow_fallbacks is None else bool(openrouter_allow_fallbacks)
+        )
+        kwargs["extra_body"] = {
+            "provider": {
+                "order": [provider],
+                "allow_fallbacks": allow_fallbacks,
+            }
+        }
+    return kwargs
 
 
 def parse_structured_response(response: Any, model_class: Type[T]) -> T:

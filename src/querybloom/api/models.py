@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from typing import Any, Literal
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from querybloom.sampling_service import SamplingRunConfig
 
@@ -11,6 +11,8 @@ class LLMRunRequest(BaseModel):
     sample_run_id: str | None = None
     endpoint: str
     model: str = "openai/gpt-5.4"
+    openrouter_provider: str | None = None
+    openrouter_allow_fallbacks: bool | None = None
     template_path: str | None = None
     kg_title: str | None = None
     output_dir: str | None = None
@@ -26,11 +28,34 @@ class LLMRunRequest(BaseModel):
     reword_questions_step: bool = True
     run_id: str | None = None
 
+    @field_validator("model", mode="before")
+    @classmethod
+    def strip_model(cls, value: Any) -> Any:
+        if isinstance(value, str):
+            return value.strip()
+        return value
+
+    @field_validator("openrouter_provider", mode="before")
+    @classmethod
+    def blank_openrouter_provider(cls, value: Any) -> str | None:
+        if value is None:
+            return None
+        text = str(value).strip()
+        return text or None
+
 
 LLM_UI_FIELDS = {
     "model": {
         "label": "Model",
-        "description": "LiteLLM model identifier used by the generation, complexity, verifier, and rewording agents.",
+        "description": "LiteLLM model id used by the generation, complexity, verifier, and rewording agents. Presets call OpenAI or Gemini directly. Any OpenRouter model works as openrouter/author/model-name.",
+    },
+    "openrouter_provider": {
+        "label": "OpenRouter provider",
+        "description": "Optional OpenRouter provider slug, such as anthropic or google-vertex. When set, the model is sent through OpenRouter and pinned to this provider.",
+    },
+    "openrouter_allow_fallbacks": {
+        "label": "Allow OpenRouter fallbacks",
+        "description": "Allow OpenRouter to try other providers if the pinned provider cannot serve the request. Off by default, and only applies when a provider is set.",
     },
     "verify_iterations": {
         "label": "Verify iterations",
