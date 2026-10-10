@@ -17,14 +17,12 @@ def reword_questions(
     reword_template: Any = None,
     return_usage: bool = False,
     openrouter_provider: Optional[str] = None,
-    openrouter_allow_fallbacks: Optional[bool] = None,
 ) -> Union[RewordResult, Tuple[RewordResult, Dict[str, Any]]]:
     """Call the LLM to audit and fix NL question phrasing for the given pairs."""
     messages = render_reword_messages(qa_pairs, reword_template=reword_template)
     call = litellm_model_kwargs(
         model,
         openrouter_provider=openrouter_provider,
-        openrouter_allow_fallbacks=openrouter_allow_fallbacks,
     )
     response = completion(
         messages=messages,

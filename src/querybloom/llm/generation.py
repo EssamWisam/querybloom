@@ -26,7 +26,6 @@ def generate_questions_batch(
     kg_title: Optional[str] = None,
     kg_description: Optional[str] = None,
     openrouter_provider: Optional[str] = None,
-    openrouter_allow_fallbacks: Optional[bool] = None,
 ) -> List[SubgraphGenerationResult]:
     """
     Generate question-query pairs for multiple subgraphs using batch completion.
@@ -51,7 +50,6 @@ def generate_questions_batch(
     call = litellm_model_kwargs(
         model,
         openrouter_provider=openrouter_provider,
-        openrouter_allow_fallbacks=openrouter_allow_fallbacks,
     )
     responses = batch_completion(
         messages=messages_batch,
@@ -77,7 +75,6 @@ def generate_questions_single(
     kg_title: Optional[str] = None,
     kg_description: Optional[str] = None,
     openrouter_provider: Optional[str] = None,
-    openrouter_allow_fallbacks: Optional[bool] = None,
 ) -> SubgraphGenerationResult:
     """
     Generate question-query pairs for a single subgraph.
@@ -91,7 +88,6 @@ def generate_questions_single(
         kg_title=kg_title,
         kg_description=kg_description,
         openrouter_provider=openrouter_provider,
-        openrouter_allow_fallbacks=openrouter_allow_fallbacks,
     )
     return results[0]
 
@@ -111,7 +107,6 @@ def generate_and_execute(
     kg_description: Optional[str] = None,
     return_usage: bool = False,
     openrouter_provider: Optional[str] = None,
-    openrouter_allow_fallbacks: Optional[bool] = None,
 ) -> Tuple[SubgraphGenerationResult, List[Dict[str, Any]]] | Tuple[SubgraphGenerationResult, List[Dict[str, Any]], Dict[str, Any]]:
     """Generate QA pairs and execute them. Returns (gen_result, qa_pairs_dicts) or (gen_result, qa_pairs_dicts, usage)."""
     messages = render_prompt_messages(
@@ -133,7 +128,6 @@ def generate_and_execute(
     call = litellm_model_kwargs(
         model,
         openrouter_provider=openrouter_provider,
-        openrouter_allow_fallbacks=openrouter_allow_fallbacks,
     )
     response = completion(
         messages=messages,

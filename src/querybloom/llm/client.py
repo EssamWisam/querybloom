@@ -13,15 +13,13 @@ def litellm_model_kwargs(
     model: str,
     *,
     openrouter_provider: str | None = None,
-    openrouter_allow_fallbacks: bool | None = None,
 ) -> dict[str, Any]:
     """Build the LiteLLM ``model`` and optional OpenRouter provider pin.
 
     A model id that already starts with ``openrouter/`` is sent to OpenRouter
     unchanged. When ``openrouter_provider`` is set, the call is routed through
     OpenRouter (prefixing ``openrouter/`` if the id does not already have it)
-    and pinned to that provider. Fallbacks to other providers stay off unless
-    ``openrouter_allow_fallbacks`` is explicitly true.
+    and pinned to that provider with fallbacks disabled.
     """
     resolved = (model or "").strip()
     provider = (openrouter_provider or "").strip()
@@ -30,13 +28,10 @@ def litellm_model_kwargs(
 
     kwargs: dict[str, Any] = {"model": resolved}
     if provider:
-        allow_fallbacks = (
-            False if openrouter_allow_fallbacks is None else bool(openrouter_allow_fallbacks)
-        )
         kwargs["extra_body"] = {
             "provider": {
                 "order": [provider],
-                "allow_fallbacks": allow_fallbacks,
+                "allow_fallbacks": False,
             }
         }
     return kwargs

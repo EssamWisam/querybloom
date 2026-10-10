@@ -21,7 +21,6 @@ def introduce_complexity(
     kg_title: Optional[str] = None,
     kg_description: Optional[str] = None,
     openrouter_provider: Optional[str] = None,
-    openrouter_allow_fallbacks: Optional[bool] = None,
 ) -> Union[ComplexityIntroducerResult, Tuple[ComplexityIntroducerResult, Dict[str, Any]]]:
     """Call the LLM to augment each QA pair with one non-trivial complexity construct."""
     messages = render_complexity_messages(
@@ -35,7 +34,6 @@ def introduce_complexity(
     call = litellm_model_kwargs(
         model,
         openrouter_provider=openrouter_provider,
-        openrouter_allow_fallbacks=openrouter_allow_fallbacks,
     )
     response = completion(
         messages=messages,

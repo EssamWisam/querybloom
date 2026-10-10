@@ -12,7 +12,6 @@ class LLMRunRequest(BaseModel):
     endpoint: str
     model: str = "openai/gpt-5.4"
     openrouter_provider: str | None = None
-    openrouter_allow_fallbacks: bool | None = None
     template_path: str | None = None
     kg_title: str | None = None
     output_dir: str | None = None
@@ -47,15 +46,15 @@ class LLMRunRequest(BaseModel):
 LLM_UI_FIELDS = {
     "model": {
         "label": "Model",
-        "description": "LiteLLM model id used by the generation, complexity, verifier, and rewording agents. Presets call OpenAI or Gemini directly. Any OpenRouter model works as openrouter/author/model-name.",
+        "description": "LiteLLM model identifier used by the generation, complexity, verifier, and rewording agents.",
+    },
+    "openrouter_model": {
+        "label": "OpenRouter model",
+        "description": "Optional OpenRouter model id, such as anthropic/claude-sonnet-4.5. When filled, this is used instead of the model selected above.",
     },
     "openrouter_provider": {
         "label": "OpenRouter provider",
-        "description": "Optional OpenRouter provider slug, such as anthropic or google-vertex. When set, the model is sent through OpenRouter and pinned to this provider.",
-    },
-    "openrouter_allow_fallbacks": {
-        "label": "Allow OpenRouter fallbacks",
-        "description": "Allow OpenRouter to try other providers if the pinned provider cannot serve the request. Off by default, and only applies when a provider is set.",
+        "description": "Optional OpenRouter provider slug, such as anthropic or google-vertex. When set, the request is pinned to that provider and fallbacks are disabled.",
     },
     "verify_iterations": {
         "label": "Verify iterations",

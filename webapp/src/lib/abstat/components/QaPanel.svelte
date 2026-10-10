@@ -46,6 +46,14 @@
     return llmFields[key]?.description ?? fallback;
   }
 
+  function openRouterModelId(value) {
+    const typed = String(value || "").trim();
+    if (!typed) return "";
+    return typed.startsWith("openrouter/")
+      ? typed
+      : `openrouter/${typed.replace(/^\/+/, "")}`;
+  }
+
   function statusLabel(status, isMeaningful) {
     if (status === "completed" && isMeaningful === false) return "Meaningless";
     if (status === "generated") return "Drafted";
@@ -92,9 +100,8 @@
   ];
 
   let model = MODEL_OPTIONS[0];
+  let openrouterModel = "";
   let openrouterProvider = "";
-  let openrouterAllowFallbacks = false;
-  $: if (!openrouterProvider.trim()) openrouterAllowFallbacks = false;
   let verifyIterations = 0;
   let focusEntityQa = false;
   let entsRatio = 0.4;
@@ -1316,11 +1323,8 @@
           request: {
             sample_run_id: sampleRunId,
             endpoint,
-            model: model.trim(),
+            model: openRouterModelId(openrouterModel) || model,
             openrouter_provider: openrouterProvider.trim() || null,
-            openrouter_allow_fallbacks: openrouterProvider.trim()
-              ? openrouterAllowFallbacks
-              : null,
             subgraph_indices: requested,
             verify_iterations: Number(verifyIterations),
             focus_entity_qa: focusEntityQa,
@@ -1696,23 +1700,34 @@
           <FieldHelp
             description={fieldDescription(
               "model",
-              "LiteLLM model id used by the generation, complexity, verifier, and rewording agents. Presets call OpenAI or Gemini directly. Any OpenRouter model works as openrouter/author/model-name.",
+              "LiteLLM model identifier used by the generation, complexity, verifier, and rewording agents.",
+            )}
+          />
+        </span>
+        <select bind:value={model}>
+          {#each MODEL_OPTIONS as option}
+            <option value={option}>{option}</option>
+          {/each}
+        </select>
+      </label>
+      <label>
+        <span class="label-row">
+          <span class="label-text"
+            >{fieldLabel("openrouter_model", "OpenRouter model")}</span
+          >
+          <FieldHelp
+            description={fieldDescription(
+              "openrouter_model",
+              "Optional OpenRouter model id, such as anthropic/claude-sonnet-4.5. When filled, this is used instead of the model selected above.",
             )}
           />
         </span>
         <input
-          bind:value={model}
-          list="qa-model-options"
-          required
+          bind:value={openrouterModel}
           spellcheck="false"
           autocomplete="off"
-          placeholder="openrouter/author/model-name"
+          placeholder="anthropic/claude-sonnet-4.5"
         />
-        <datalist id="qa-model-options">
-          {#each MODEL_OPTIONS as option}
-            <option value={option}></option>
-          {/each}
-        </datalist>
       </label>
       <label>
         <span class="label-row">
@@ -1722,7 +1737,7 @@
           <FieldHelp
             description={fieldDescription(
               "openrouter_provider",
-              "Optional OpenRouter provider slug, such as anthropic or google-vertex. When set, the model is sent through OpenRouter and pinned to this provider.",
+              "Optional OpenRouter provider slug, such as anthropic or google-vertex. When set, the request is pinned to that provider and fallbacks are disabled.",
             )}
           />
         </span>
@@ -1731,27 +1746,6 @@
           spellcheck="false"
           autocomplete="off"
           placeholder="anthropic, google-vertex, together"
-        />
-      </label>
-      <label class="checkbox-field">
-        <span class="label-row">
-          <span class="label-text"
-            >{fieldLabel(
-              "openrouter_allow_fallbacks",
-              "Allow OpenRouter fallbacks",
-            )}</span
-          >
-          <FieldHelp
-            description={fieldDescription(
-              "openrouter_allow_fallbacks",
-              "Allow OpenRouter to try other providers if the pinned provider cannot serve the request. Off by default, and only applies when a provider is set.",
-            )}
-          />
-        </span>
-        <input
-          bind:checked={openrouterAllowFallbacks}
-          type="checkbox"
-          disabled={!openrouterProvider.trim()}
         />
       </label>
       <label>
@@ -2404,7 +2398,8 @@
     text-transform: uppercase;
   }
 
-  input {
+  input,
+  select {
     width: 100%;
     border: 1px solid #d8deed;
     border-radius: 6px;

@@ -46,7 +46,6 @@ def process_single_subgraph_pipeline(
     kg_title: Optional[str] = None,
     kg_description: Optional[str] = None,
     openrouter_provider: Optional[str] = None,
-    openrouter_allow_fallbacks: Optional[bool] = None,
 ) -> Dict[str, Any]:
     """
     Execute full multi-agent pipeline for a single subgraph:
@@ -101,7 +100,6 @@ def process_single_subgraph_pipeline(
         kg_description=kg_description,
         return_usage=True,
         openrouter_provider=openrouter_provider,
-        openrouter_allow_fallbacks=openrouter_allow_fallbacks,
     )
     if isinstance(gen_usage, dict):
         subgraph_usage["total_cost_usd"] += gen_usage.get("cost_usd", 0.0)
@@ -133,7 +131,6 @@ def process_single_subgraph_pipeline(
             kg_title=kg_title,
             kg_description=kg_description,
             openrouter_provider=openrouter_provider,
-            openrouter_allow_fallbacks=openrouter_allow_fallbacks,
         )
         if isinstance(ci_usage, dict):
             subgraph_usage["total_cost_usd"] += ci_usage.get("cost_usd", 0.0)
@@ -186,7 +183,6 @@ def process_single_subgraph_pipeline(
                 reword_template,
                 return_usage=True,
                 openrouter_provider=openrouter_provider,
-                openrouter_allow_fallbacks=openrouter_allow_fallbacks,
             )
             if isinstance(rw_usage, dict):
                 subgraph_usage["total_cost_usd"] += rw_usage.get("cost_usd", 0.0)
@@ -281,7 +277,6 @@ def process_single_subgraph_pipeline(
             kg_title=kg_title,
             kg_description=kg_description,
             openrouter_provider=openrouter_provider,
-            openrouter_allow_fallbacks=openrouter_allow_fallbacks,
         )
         if isinstance(v_usage, dict):
             subgraph_usage["total_cost_usd"] += v_usage.get("cost_usd", 0.0)
@@ -362,7 +357,6 @@ def process_single_subgraph_pipeline(
                 reword_template,
                 return_usage=True,
                 openrouter_provider=openrouter_provider,
-                openrouter_allow_fallbacks=openrouter_allow_fallbacks,
             )
             if isinstance(rw_usage, dict):
                 subgraph_usage["total_cost_usd"] += rw_usage.get("cost_usd", 0.0)
@@ -455,7 +449,6 @@ def process_subgraphs_data(
     kg_title: Optional[str] = None,
     kg_description: Optional[str] = None,
     openrouter_provider: Optional[str] = None,
-    openrouter_allow_fallbacks: Optional[bool] = None,
 ) -> Tuple[List[Dict[str, Any]], Optional[str]]:
     """
     Process subgraphs in memory, generate questions, execute queries,
@@ -534,7 +527,6 @@ def process_subgraphs_data(
             "endpoint": endpoint,
             "model": model,
             "openrouter_provider": openrouter_provider,
-            "openrouter_allow_fallbacks": openrouter_allow_fallbacks,
             "num_subgraphs": len(indexed_subgraphs),
             "subgraph_indices": [index for index, _ in indexed_subgraphs],
             "max_workers": max_workers,
@@ -568,7 +560,6 @@ def process_subgraphs_data(
                 kg_title,
                 kg_description,
                 openrouter_provider,
-                openrouter_allow_fallbacks,
             ): (output_index, source_index)
             for output_index, (source_index, sg) in enumerate(indexed_subgraphs)
         }
@@ -702,7 +693,6 @@ def process_subgraphs_yaml(
     kg_title: Optional[str] = None,
     kg_description: Optional[str] = None,
     openrouter_provider: Optional[str] = None,
-    openrouter_allow_fallbacks: Optional[bool] = None,
 ) -> str:
     """Backward-compatible file-based wrapper around process_subgraphs_data."""
     with open(input_yaml_path, "r") as f:
@@ -734,7 +724,6 @@ def process_subgraphs_yaml(
         kg_title=kg_title,
         kg_description=kg_description,
         openrouter_provider=openrouter_provider,
-        openrouter_allow_fallbacks=openrouter_allow_fallbacks,
     )
     assert output_path is not None
     return output_path

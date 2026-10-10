@@ -38,12 +38,11 @@ class OpenRouterRoutingTests(unittest.TestCase):
         kwargs = litellm_model_kwargs(
             "openrouter/google/gemini-2.5-pro",
             openrouter_provider="google-vertex",
-            openrouter_allow_fallbacks=True,
         )
         self.assertEqual(kwargs["model"], "openrouter/google/gemini-2.5-pro")
         self.assertEqual(
             kwargs["extra_body"]["provider"],
-            {"order": ["google-vertex"], "allow_fallbacks": True},
+            {"order": ["google-vertex"], "allow_fallbacks": False},
         )
 
     def test_blank_provider_is_ignored(self):
@@ -57,7 +56,6 @@ class OpenRouterRoutingTests(unittest.TestCase):
             endpoint="https://example.test/sparql",
             model="  openrouter/meta-llama/llama-3.3-70b-instruct  ",
             openrouter_provider="  ",
-            openrouter_allow_fallbacks=False,
         )
         self.assertEqual(
             request.model,
